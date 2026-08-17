@@ -1,0 +1,204 @@
+{
+  "id": "MDH-003",
+  "idioma": "es",
+  "titulo_trabajo": "«Todavía es pronto para reírse de eso»",
+  "tesis": "Lo que convierte una desgracia en un chiste no es el tiempo: es la distancia. Y la distancia se puede medir, mover y calcular mal.",
+  "pilares": [
+    "A"
+  ],
+  "duracion_objetivo_s": 360,
+  "bloqueos": [],
+  "notas_humor": [
+    "Gancho: la incomodidad del propio espectador, señalada antes de que la sienta.",
+    "Escena 9: literalismo — tomar en serio la idea de una 'distancia' hasta convertirla en un mando.",
+    "Escena 21: rebaja tras el dato más duro del vídeo.",
+    "Cierre: callback al tropiezo del gancho."
+  ],
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "etiqueta": "Episodio 03",
+      "titulo": "«Todavía es *pronto*»",
+      "subtitulo": "La caducidad exacta de esa frase",
+      "narracion": "Alguien se tropieza en la calle y se levanta riéndose. Todo el mundo se ríe con él."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Ahora imagina que no se levanta.",
+      "narracion": "Ahora imagina exactamente la misma escena, con la misma persona y la misma acera, pero que no se levanta.",
+      "pausa_despues_s": 0.9
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Mismo suceso. La gracia se ha *evaporado*.",
+      "narracion": "Mismo suceso, misma física, misma caída. Y la gracia ha desaparecido por completo. Lo que ha cambiado no es lo que ha pasado: es cuánto duele."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Existe una *magnitud* que gobierna eso. Y se ha medido.",
+      "narracion": "Y aquí viene lo interesante: existe una magnitud que gobierna ese salto, tiene nombre, y se ha medido en el laboratorio."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 1",
+      "titulo": "La *distancia psicológica*",
+      "narracion": "Se llama distancia psicológica, y es la sensación de lo lejos que algo está de ti."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Se mide en cuatro ejes",
+      "puntos": [
+        "*Tiempo*: hace cuánto",
+        "*Espacio*: a cuántos kilómetros",
+        "*Social*: cuánto conoces a quien le pasó",
+        "*Hipotético*: si pasó o solo podría pasar"
+      ],
+      "narracion": "Se mueve en cuatro ejes. Cuánto tiempo hace. A qué distancia física ocurrió. Cuánto conoces a quien le pasó. Y si pasó de verdad o solo podría haber pasado.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Muévelos y la *misma historia* cambia de sitio.",
+      "narracion": "Mueve cualquiera de los cuatro y la misma historia cambia de categoría. Deja de ser una desgracia y pasa a ser una anécdota. O al revés."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 2",
+      "titulo": "Y ahora la parte *rara*",
+      "narracion": "Y aquí es donde el asunto se pone contraintuitivo, porque la relación no es la que casi todo el mundo asume."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "No es «más distancia, más gracia». Depende de *cuánto duele*.",
+      "narracion": "La idea intuitiva es que cuanta más distancia, más gracia. Pero en los experimentos no sale eso. Sale algo más fino: depende del tamaño de la desgracia.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "El giro del experimento",
+      "et_a": "Desgracia grave",
+      "a": "Necesita *más* distancia para tener gracia.",
+      "et_b": "Desgracia leve",
+      "b": "Con demasiada distancia deja de importar. Y sin gracia.",
+      "narracion": "Una desgracia grave necesita distancia para volverse graciosa. Pero una desgracia leve funciona justo al revés: si la alejas demasiado, deja de importarle a nadie, y algo que no le importa a nadie tampoco hace gracia.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Demasiado cerca *duele*. Demasiado lejos *aburre*.",
+      "narracion": "Demasiado cerca duele. Demasiado lejos aburre. El humor vive en una franja estrecha entre las dos, y esa franja se mueve según lo grave que sea aquello de lo que hablas.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Que es exactamente lo que decía el episodio anterior, con otras palabras.",
+      "narracion": "Si te suena, es porque lo es. Es la violación benigna otra vez: lo grave aporta la violación y la distancia aporta lo benigno. La distancia es el mando con el que regulas cuánto de inofensivo resulta algo.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 3",
+      "titulo": "La curva del *«todavía es pronto»*",
+      "narracion": "Vale. Si el tiempo es uno de los ejes, entonces la frase «todavía es pronto» debería tener una fecha. Y alguien fue a buscarla."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "En 2012 el huracán *Sandy* golpeó la costa este de Estados Unidos.",
+      "narracion": "En dos mil doce, el huracán Sandy golpeó la costa este de Estados Unidos. Un equipo de investigadores hizo algo que solo se puede hacer en la era de las redes: siguió durante meses las reacciones humorísticas al desastre, día a día.",
+      "fuente": "A04"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Al principio, casi nada. Después, *cada vez más*. Y luego, otra vez menos.",
+      "narracion": "Al principio, casi nadie bromeaba. Con los días, las bromas fueron aumentando. Llegaron a un máximo. Y a partir de ahí volvieron a caer.",
+      "fuente": "A04"
+    },
+    {
+      "tipo": "dato",
+      "cifra": "≈1 mes",
+      "pie": "El punto en el que el humor sobre el desastre alcanzó su _máximo_. Antes era pronto. Después, ya daba igual",
+      "narracion": "El máximo llegó alrededor de un mes después. Antes de eso, era demasiado pronto. Después, la gente simplemente había dejado de pensar en ello.",
+      "fuente": "A04"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "El humor sobre una tragedia tiene una *ventana*. Se abre y se cierra.",
+      "narracion": "Es decir: el humor sobre una tragedia no aparece y se queda. Tiene una ventana que se abre y se vuelve a cerrar.",
+      "fuente": "A04"
+    },
+    {
+      "tipo": "cita",
+      "texto": "Comedia es tragedia más tiempo.",
+      "autor": "Atribuido a Steve Allen. Ahora con una gráfica detrás",
+      "narracion": "La vieja fórmula, comedia igual a tragedia más tiempo, resulta que es correcta solo a medias. El tiempo abre la ventana, sí. Pero también la cierra.",
+      "fuente": "A04"
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 4",
+      "titulo": "Cómo usar esto *el lunes*",
+      "narracion": "Y ahora lo práctico, porque esto no va de huracanes."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Cuando algo te sale mal, tienes *un mando*, no una condena.",
+      "narracion": "Va de que cuando algo te sale mal —una reunión desastrosa, una cita horrible, un error tonto delante de gente— tienes un mando de distancia y puedes girarlo tú."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Cómo se gira el mando",
+      "puntos": [
+        "Cámbialo de *tiempo*: «dentro de un año esto será una anécdota»",
+        "Cámbialo de *persona*: cuéntalo como si le hubiera pasado a otro",
+        "Cámbialo a *hipotético*: «imagina que además hubiera…»"
+      ],
+      "narracion": "Puedes moverlo en el tiempo, diciéndote que dentro de un año esto será una anécdota. Puedes moverlo en lo social, contándolo como si le hubiera pasado a un conocido. O puedes llevarlo a lo hipotético, exagerándolo hasta que sea evidentemente falso.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Que es, literalmente, en qué consiste una *anécdota*.",
+      "narracion": "Esas tres cosas son exactamente lo que hace alguien cuando convierte un mal día en una buena historia. No es que tenga más gracia que tú. Es que ha movido el mando antes.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "El límite",
+      "titulo": "Y la parte que hay que decir en voz alta",
+      "narracion": "Ahora, el aviso."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Tu distancia no es la de *quien te escucha*. Nunca lo es del todo.",
+      "narracion": "La distancia es tuya. Quien te escucha tiene la suya, y no tienen por qué coincidir. Eso explica por qué alguien puede bromear sobre su propia enfermedad y ofenderse muchísimo si bromeas tú.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "No es hipocresía. Es que *no estáis a la misma distancia*.",
+      "narracion": "No es hipocresía ni doble rasero. Es que no estáis en el mismo punto de la curva. Y quien está más cerca del suceso tiene derecho a fijar dónde está la línea.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Regla práctica: el humor sobre el dolor lo *abre* quien lo ha vivido.",
+      "narracion": "De ahí sale una regla bastante fiable: sobre el dolor propio, bromeas cuando quieras. Sobre el ajeno, esperas a que lo abra quien lo ha vivido."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "«Es que era una broma» no cambia la distancia de nadie.",
+      "narracion": "Y si te pasas, la frase «es que era una broma» no arregla nada, porque no mueve la distancia de la otra persona ni un milímetro. Lo único que la mueve es haberla calculado antes."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "El que se tropezó al principio se reía porque *ya se había levantado*.",
+      "narracion": "Y el que se tropezó al principio del vídeo se reía porque ya se había levantado."
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "No es el tiempo. Es la *distancia*.",
+      "subtitulo": "En el próximo episodio: casi nadie se ríe de los chistes, y hay grabaciones que lo demuestran.",
+      "narracion": "Así que no es que sea pronto. Es que aún estás demasiado cerca. En el próximo episodio: resulta que casi nadie se ríe de los chistes, y hay mil doscientas grabaciones que lo demuestran."
+    }
+  ]
+}

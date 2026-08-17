@@ -1,0 +1,179 @@
+{
+  "id": "MDH-007",
+  "idioma": "es",
+  "titulo_trabajo": "El miedo a que se rían de ti tiene nombre",
+  "tesis": "El miedo a hacer el ridículo es un rasgo medible llamado gelotofobia, distorsiona cómo interpretas la risa ajena, y hay entrenamientos que actúan justo sobre eso.",
+  "pilares": ["J", "H"],
+  "duracion_objetivo_s": 370,
+  "bloqueos": [],
+  "notas_humor": [
+    "Gancho: el humor aquí es mínimo y deliberado. Es el episodio más delicado del calendario.",
+    "Escena 12: única broma clara del bloque teórico, para aliviar tensión.",
+    "Escena 19: humor situacional sobre lo absurdo del ejercicio de improvisación.",
+    "Cierre: sin chiste. El remate necesita silencio."
+  ],
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "etiqueta": "Episodio 07",
+      "titulo": "El miedo a que se rían de ti *tiene nombre*",
+      "subtitulo": "Y escala de medida, y tratamiento",
+      "narracion": "Vas andando por la calle. Un grupo de gente se ríe cerca de ti."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "¿Tu primer pensamiento es que se ríen *de algo*… o *de ti*?",
+      "narracion": "Y quiero que respondas con sinceridad a una sola pregunta: ¿tu primer pensamiento ha sido que se ríen de algo, o que se ríen de ti?",
+      "pausa_despues_s": 1.0
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Esa diferencia está estudiada. Y tiene nombre.",
+      "narracion": "Esa diferencia, que parece una tontería, está estudiada desde hace más de quince años y tiene nombre propio."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 1",
+      "titulo": "*Gelotofobia*",
+      "subtitulo": "Del griego «gelos», risa. El miedo a ser objeto de risa.",
+      "narracion": "Se llama gelotofobia. Del griego gelos, risa. Es el miedo a que se rían de uno, y en el grupo de Willibald Ruch, en Zúrich, se ha convertido en un rasgo que se puede medir con un cuestionario.",
+      "fuente": "J02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "No es timidez. No es ansiedad social sin más.",
+      "narracion": "Y no es lo mismo que ser tímido, ni que tener ansiedad social genérica. Es algo más específico: la risa ajena, en concreto, se interpreta por defecto como una agresión dirigida.",
+      "fuente": "J02"
+    },
+    {
+      "tipo": "diagrama",
+      "titulo": "Tres posiciones ante la risa",
+      "pasos": [
+        {"titulo": "Gelotofobia", "pie": "temo que se rían de mí"},
+        {"titulo": "Gelotofilia", "pie": "disfruto siendo el motivo"},
+        {"titulo": "Katagelasticismo", "pie": "disfruto riéndome de otros"}
+      ],
+      "narracion": "De hecho el mismo grupo describió tres posiciones distintas ante esto. La gelotofobia, que es temer ser objeto de risa. La gelotofilia, que es disfrutar siéndolo. Y el katagelasticismo, que es disfrutar riéndose de los demás.",
+      "fuente": "J01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y son *independientes*. Se puede temer la risa y a la vez usarla contra otros.",
+      "narracion": "Y lo interesante es que son bastante independientes entre sí. Se puede temer profundamente que se rían de ti y, al mismo tiempo, reírte de otros con crueldad. De hecho es una combinación más frecuente de lo que parece.",
+      "fuente": "J01"
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 2",
+      "titulo": "Lo que le hace a tu *percepción*",
+      "narracion": "Lo que más me interesa de todo esto no es la etiqueta. Es lo que le hace a tu manera de leer a la gente."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Quien puntúa alto tiende a leer la risa *ambigua* como hostil.",
+      "narracion": "Quien puntúa alto en gelotofobia tiende a interpretar la risa ambigua —esa que no sabes de qué va— como dirigida contra él. Y la mayoría de la risa que oyes al cabo del día es exactamente ambigua.",
+      "fuente": "J02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y ahí empieza un bucle bastante cruel.",
+      "narracion": "Con lo cual empieza un bucle que se retroalimenta solo."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "El bucle",
+      "puntos": [
+        "Interpretas la risa como *amenaza*",
+        "Te retiras, te pones serio, te tensas",
+        "Los demás te leen distante. Y hay *menos* risa compartida"
+      ],
+      "narracion": "Interpretas la risa como amenaza. Te retiras un poco, te pones serio, te tensas. Los demás te leen como distante. Y acabas teniendo menos risa compartida, que era justo lo que querías.",
+      "fuente": "J02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "La profecía se cumple sola, con una eficacia *casi admirable*.",
+      "narracion": "Es una profecía autocumplida de una eficiencia casi admirable, si no fuera porque duele."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 3",
+      "titulo": "Dónde se *rompe* el bucle",
+      "narracion": "Y aquí es donde el vídeo se pone útil, porque el bucle tiene un punto débil."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "No en el miedo. En la *interpretación*.",
+      "narracion": "El punto débil no está en el miedo, que es difícil de atacar de frente. Está en el paso de la interpretación: en ese instante en que decides qué significaba esa risa."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Ejercicio: cuando oigas una risa, busca *tres explicaciones* que no seas tú.",
+      "narracion": "El ejercicio es este. Cada vez que oigas una risa que no sabes de qué va, obligate a generar tres explicaciones alternativas que no tengan nada que ver contigo. Un mensaje en el móvil. Una broma privada. Algo que pasó hace diez minutos.",
+      "fuente": "J02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "No es pensar en positivo. Es *no aceptar la primera lectura* como un hecho.",
+      "narracion": "No se trata de convencerte de que nadie se ríe nunca de nadie, porque a veces sí. Se trata de dejar de tratar tu primera interpretación como si fuera un dato."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 4",
+      "titulo": "Y la vía más rara: la *improvisación*",
+      "narracion": "Y hay una segunda vía, mucho menos obvia, que a mí me parece la más interesante de todo el episodio."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Se han estudiado talleres de *improvisación teatral* como intervención.",
+      "narracion": "Se han estudiado programas de improvisación teatral aplicada como intervención psicológica. Gente normal, sin experiencia, haciendo ejercicios de improvisación durante unas semanas.",
+      "fuente": "H05"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Los resultados apuntan a _menos ansiedad social_ y más tolerancia a la incertidumbre.",
+      "narracion": "Y los resultados apuntan en la dirección esperada: menos ansiedad social y más tolerancia a la incertidumbre, que es la capacidad de estar en una situación sin saber cómo va a acabar sin que eso te bloquee.",
+      "fuente": "H05"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Tiene sentido: en improvisación *fallar es el ejercicio*.",
+      "narracion": "Y tiene todo el sentido del mundo si piensas en qué se hace ahí. En improvisación te subes sin guion, dices una tontería, se ríen, y el ejercicio continúa. Fallar en público deja de ser el desastre y pasa a ser, literalmente, el temario.",
+      "fuente": "H06"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Es exposición gradual disfrazada de *actividad divertida*.",
+      "narracion": "Es exposición gradual, que es el tratamiento estándar para los miedos, solo que disfrazada de plan de los martes por la tarde.",
+      "fuente": "H05"
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "El límite",
+      "titulo": "Con cuidado aquí",
+      "narracion": "Y ahora la parte que hay que decir con mucho cuidado."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Esto no es un diagnóstico y este vídeo no es terapia.",
+      "narracion": "La gelotofobia se describe como un rasgo con distintos grados, no como una enfermedad con una línea clara. Un cuestionario no diagnostica a nadie, y desde luego un vídeo tampoco.",
+      "fuente": "J02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Si te está limitando la vida, eso ya no es un ejercicio: es *ayuda profesional*.",
+      "narracion": "Si esto que estás oyendo te resulta demasiado familiar, y te está condicionando el trabajo o las relaciones, entonces lo que corresponde no es un ejercicio de un vídeo de YouTube: es hablarlo con un profesional. Se trabaja bien y se trabaja rápido."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y hay una asimetría que conviene recordar.",
+      "narracion": "Termino con una asimetría que se me quedó dando vueltas mientras preparaba esto."
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "La risa que temes casi nunca *sabe que existes*.",
+      "subtitulo": "En el próximo episodio: cómo se construye un chiste pieza a pieza, y por qué casi todos tienen exactamente la misma arquitectura.",
+      "narracion": "La risa que más temes, esa del grupo de la calle, casi nunca sabe que existes. En el próximo episodio cerramos la temporada por donde empezó todo: cómo se construye un chiste, pieza a pieza."
+    }
+  ]
+}

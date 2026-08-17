@@ -1,0 +1,175 @@
+{
+  "id": "MDH-006",
+  "idioma": "es",
+  "titulo_trabajo": "Humor en el trabajo sin arruinarte la carrera",
+  "tesis": "Intentar un chiste en el trabajo casi siempre te hace parecer más seguro; que además te suba el estatus depende de si aciertas con lo apropiado.",
+  "pilares": [
+    "D",
+    "G"
+  ],
+  "duracion_objetivo_s": 380,
+  "bloqueos": [],
+  "notas_humor": [
+    "Gancho: situación reconocible con coste real. La violación es la vergüenza laboral.",
+    "Escena 11: regla de tres en los tipos de broma segura.",
+    "Escena 18: rebaja tras el dato sobre el sarcasmo.",
+    "Cierre: callback a la reunión del gancho."
+  ],
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "etiqueta": "Episodio 06",
+      "titulo": "Humor en el trabajo *sin* arruinarte la carrera",
+      "subtitulo": "El experimento que midió exactamente dónde está la línea",
+      "narracion": "Estás en una reunión. Se te ocurre algo gracioso. Y tienes medio segundo para decidir si lo dices."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Si sale bien, eres *el que cae bien*. Si sale mal, eres *el otro*.",
+      "narracion": "Si sale bien, eres esa persona que cae bien a todo el mundo. Si sale mal, eres el que dijo aquello en la reunión de marzo y todavía se comenta."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Buenas noticias: esa apuesta *se ha medido*.",
+      "narracion": "La buena noticia es que esa apuesta se ha medido en el laboratorio, con dinero real y con evaluaciones de estatus reales. Y el resultado tiene un giro que no esperarías."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 1",
+      "titulo": "El experimento",
+      "narracion": "Un equipo de investigadores diseñó varios estudios sobre humor y estatus en contextos profesionales.",
+      "fuente": "D01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Unos hacían una broma *apropiada*. Otros una *inapropiada*. Otros ninguna.",
+      "narracion": "La idea es simple: unas personas hacían una broma apropiada al contexto, otras una claramente inapropiada, y otras no hacían ninguna. Después se medía cómo las valoraba quien escuchaba.",
+      "fuente": "D01"
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Lo que salió",
+      "et_a": "Broma apropiada",
+      "a": "Sube la *competencia* percibida. Y sube el estatus.",
+      "et_b": "Broma inapropiada",
+      "b": "Sube la confianza percibida. Y hunde el estatus.",
+      "narracion": "Con la broma apropiada, quien la contaba parecía más competente y ganaba estatus. Con la inapropiada, el estatus se hundía.",
+      "fuente": "D01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Hasta aquí, lo esperable. Ahora el *giro*.",
+      "narracion": "Hasta aquí, lo que cualquiera habría dicho. Pero hay un detalle que cambia toda la lectura."
+    },
+    {
+      "tipo": "dato",
+      "cifra": "Incluso fallando",
+      "pie": "quien intentaba una broma era percibido como _más seguro de sí mismo_ que quien no lo intentaba",
+      "narracion": "Incluso quienes contaban la broma inapropiada eran percibidos como más seguros de sí mismos que quienes no contaban ninguna. El mero hecho de arriesgarse comunica confianza.",
+      "fuente": "D01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Lo caro no es *intentarlo*. Lo caro es *acertar mal*.",
+      "narracion": "Y eso invierte el consejo habitual. El error no está en intentar ser gracioso en el trabajo. El error está en calcular mal qué es apropiado. Son dos problemas distintos, y solo el segundo tiene arreglo por prudencia.",
+      "fuente": "D01"
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 2",
+      "titulo": "Entonces, ¿qué es *apropiado*?",
+      "narracion": "Lo cual nos lleva a la pregunta útil: qué cuenta como apropiado."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Las tres bromas seguras",
+      "puntos": [
+        "Sobre la *situación* que compartís todos",
+        "Sobre *ti mismo*, pero desde arriba",
+        "Sobre algo *ya resuelto*, nunca en curso"
+      ],
+      "narracion": "Tres categorías que casi nunca fallan. La primera: bromear sobre la situación que estáis viviendo todos, que es el terreno más seguro que existe.",
+      "fuente": "D02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y la tercera: sobre un problema *ya resuelto*. Nunca sobre uno abierto.",
+      "narracion": "La segunda: bromear sobre ti mismo, pero desde una posición cómoda y no desde la disculpa. Y la tercera: bromear sobre un problema ya resuelto, nunca sobre uno que sigue abierto.",
+      "fuente": "D02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y una zona con *cuchillas*: el sarcasmo.",
+      "narracion": "Y luego está el sarcasmo, que merece párrafo aparte porque es la herramienta más poderosa y la más peligrosa del repertorio."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Exige *confianza previa*. Sin ella, no es ingenio: es desprecio.",
+      "narracion": "El sarcasmo entre personas que ya se tienen confianza funciona como una señal de complicidad. Entre personas que no la tienen, se lee directamente como desprecio. Y el remitente casi nunca percibe esa diferencia, porque para él la intención estaba clarísima.",
+      "fuente": "D02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Regla: nunca seas *el primero* en usar sarcasmo en una relación.",
+      "narracion": "De ahí una regla muy práctica: no seas nunca el primero en introducir sarcasmo en una relación profesional. Espera a que lo haga el otro. Es una señal explícita de que ese terreno está abierto."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 3",
+      "titulo": "Si mandas, cambian las *reglas*",
+      "narracion": "Y hay un caso especial que conviene conocer, seas jefe o tengas uno."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "El humor de quien manda pesa *más*. En las dos direcciones.",
+      "narracion": "Cuando quien bromea tiene poder sobre quien escucha, todo se amplifica. El humor de un jefe se ha estudiado como un recurso que puede mejorar la relación con el equipo, pero la asimetría también hace que una broma a costa de alguien duela mucho más.",
+      "fuente": "G01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Porque quien está debajo *tiene que reírse*. Y eso no es una risa.",
+      "narracion": "Porque quien está por debajo no tiene la opción de no reírse. Y una risa obligatoria no es información: es protocolo.",
+      "fuente": "G01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Si mandas: bromea *hacia arriba* o hacia ti. Nunca hacia abajo.",
+      "narracion": "Así que si tienes gente a cargo, la regla se simplifica muchísimo: bromea sobre ti, sobre la empresa o sobre la situación. Hacia abajo, nunca."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "El límite",
+      "titulo": "Y la dosis realista",
+      "narracion": "Ahora, la calibración honesta, porque hay mucho libro vendiendo el humor como si fuera magia."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Los efectos del humor en el trabajo son *reales* pero _moderados_.",
+      "narracion": "Los metaanálisis encuentran asociaciones positivas entre el humor y cosas como la cohesión, el desempeño o el desgaste. Son reales, y son moderadas. El humor no arregla un equipo roto ni compensa un mal salario.",
+      "fuente": "G02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y el humor forzado se detecta *igual que* una risa fingida.",
+      "narracion": "Y hay un fallo clásico: intentar ser el gracioso de la oficina a base de volumen. El humor forzado se detecta exactamente igual de bien que una risa fingida, y produce el efecto contrario.",
+      "fuente": "D07"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Una vez bien colocada vale más que quince intentos.",
+      "narracion": "Una intervención bien colocada en una reunión vale más que quince intentos a lo largo de la mañana. El humor en el trabajo es cuestión de puntería, no de frecuencia."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Dilo. Si va sobre la *situación* y no sobre nadie.",
+      "narracion": "Así que, volviendo a esa reunión del principio: dilo, si va sobre la situación y no sobre nadie. Los datos dicen que arriesgarte te hace parecer más seguro incluso cuando no funciona.",
+      "fuente": "D01"
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Intentarlo *casi siempre* suma. Fallar el objetivo, no.",
+      "subtitulo": "En el próximo episodio: el miedo a que se rían de ti tiene nombre, tiene escala de medida y tiene tratamiento.",
+      "narracion": "En el próximo episodio, el otro lado del asunto: el miedo a que se rían de ti, que tiene nombre propio, escala de medida y tratamiento."
+    }
+  ]
+}

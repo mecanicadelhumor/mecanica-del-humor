@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Guion de Mecánica del Humor",
+  "type": "object",
+  "required": ["id", "idioma", "titulo_trabajo", "tesis", "escenas"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^MDH-[0-9]{3}$"},
+    "idioma": {"enum": ["es", "en"]},
+    "titulo_trabajo": {"type": "string"},
+    "tesis": {"type": "string", "description": "La frase que el espectador debe poder repetir mañana."},
+    "pilares": {"type": "array", "items": {"type": "string", "pattern": "^[A-L]$"}},
+    "duracion_objetivo_s": {"type": "integer", "minimum": 240, "maximum": 540},
+    "bloqueos": {"type": "array", "items": {"type": "string"},
+                 "description": "Si no está vacío, el guion no pasa a producción."},
+    "notas_humor": {"type": "array", "items": {"type": "string"}},
+    "escenas": {
+      "type": "array", "minItems": 12,
+      "items": {
+        "type": "object",
+        "required": ["tipo", "narracion"],
+        "properties": {
+          "tipo": {"enum": ["titulo", "dato", "enunciado", "lista", "cita",
+                            "comparacion", "diagrama", "figura", "cierre"]},
+          "narracion": {"type": "string", "description": "Lo que se oye. Fija la duración."},
+          "fuente": {"type": "string", "description": "id de BIBLIOGRAFIA_CURADA.md. Obligatorio si hay cifras."},
+          "pausa_despues_s": {"type": "number", "default": 0.45},
+          "duracion_s": {"type": "number", "description": "La rellena voz.py. No la escribas a mano."},
+
+          "etiqueta": {"type": "string"},
+          "titulo": {"type": "string"},
+          "subtitulo": {"type": "string"},
+          "cifra": {"type": "string"},
+          "pie": {"type": "string"},
+          "texto": {"type": "string"},
+          "puntos": {"type": "array", "items": {"type": "string"}, "maxItems": 5},
+          "autor": {"type": "string"},
+          "a": {"type": "string"}, "b": {"type": "string"},
+          "et_a": {"type": "string"}, "et_b": {"type": "string"},
+          "pasos": {"type": "array", "maxItems": 5,
+                    "items": {"type": "object",
+                              "required": ["titulo"],
+                              "properties": {"titulo": {"type": "string"}, "pie": {"type": "string"}}}},
+          "imagen": {"type": "string"}
+        }
+      }
+    }
+  },
+  "$comment": "Resaltado en cualquier campo de texto: *ámbar* para el mecanismo, _cian_ para los datos. Un solo ámbar por escena."
+}

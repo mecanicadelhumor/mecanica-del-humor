@@ -1,0 +1,133 @@
+name: Producir vídeo
+
+# Las manos del sistema. Cowork escribe el guion y hace commit; esto lo
+# convierte en un mp4 listo para subir. Todo lo que necesita internet
+# (síntesis de voz, imágenes, subida a YouTube) ocurre aquí.
+
+on:
+  workflow_dispatch:
+    inputs:
+      guion:
+        description: "Ruta del guion, p. ej. 05_calendario/guiones/MDH-001.es.json"
+        required: true
+      subir:
+        description: "Subir a YouTube como privado al terminar"
+        type: boolean
+        default: false
+  push:
+    paths:
+      - "05_calendario/guiones/**.json"
+
+jobs:
+  producir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Determinar qué guiones producir
+        id: lista
+        run: |
+          if [ -n "${{ inputs.guion }}" ]; then
+            echo "guiones=${{ inputs.guion }}" >> $GITHUB_OUTPUT
+          else
+            # en un push, solo los guiones que han cambiado
+            CAMBIOS=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} \
+                      -- '05_calendario/guiones/*.json' | tr '\n' ' ')
+            echo "guiones=$CAMBIOS" >> $GITHUB_OUTPUT
+          fi
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter fonts-jetbrains-mono
+          pip install --quiet edge-tts playwright pillow matplotlib requests
+          playwright install --with-deps chromium
+
+      # ---------------------------------------------------------------
+      # 1. El portero. Si el guion incumple el contrato, aquí se para.
+      # ---------------------------------------------------------------
+      - name: Validar guion
+        run: python3 04_agentes/validar_guion.py ${{ steps.lista.outputs.guiones }}
+
+      # ---------------------------------------------------------------
+      # 2. Voz + subtítulos. Devuelve las duraciones reales de cada escena.
+      # ---------------------------------------------------------------
+      - name: Sintetizar narración
+        run: |
+          for G in ${{ steps.lista.outputs.guiones }}; do
+            ID=$(basename "$G" .json)
+            python3 03_produccion/pipeline/voz.py "$G" -o "build/$ID"
+          done
+
+      # ---------------------------------------------------------------
+      # 3. Render visual, ya sincronizado con la voz real.
+      # ---------------------------------------------------------------
+      - name: Renderizar vídeo mudo
+        run: |
+          for G in ${{ steps.lista.outputs.guiones }}; do
+            ID=$(basename "$G" .json)
+            python3 03_produccion/pipeline/render.py "build/$ID/guion.timed.json" \
+              -o "build/$ID/mudo.mp4" --fps 30
+          done
+
+      # ---------------------------------------------------------------
+      # 4. Montaje final: voz + música + subtítulos + normalización.
+      # ---------------------------------------------------------------
+      - name: Montar
+        run: |
+          MUSICA=""
+          if [ -f 03_produccion/assets/musica/cama.mp3 ]; then
+            MUSICA="--musica 03_produccion/assets/musica/cama.mp3"
+          fi
+          for G in ${{ steps.lista.outputs.guiones }}; do
+            ID=$(basename "$G" .json)
+            python3 03_produccion/pipeline/montaje.py "build/$ID" $MUSICA
+          done
+
+      - name: Generar miniatura
+        run: |
+          for G in ${{ steps.lista.outputs.guiones }}; do
+            ID=$(basename "$G" .json)
+            python3 03_produccion/pipeline/miniatura.py "$G" -o "build/$ID/miniatura.png"
+          done
+
+      # ---------------------------------------------------------------
+      # 5. Todo queda descargable aunque no se suba.
+      # ---------------------------------------------------------------
+      - name: Publicar artefactos
+        uses: actions/upload-artifact@v4
+        with:
+          name: videos
+          path: |
+            build/**/final.mp4
+            build/**/miniatura.png
+            build/**/subtitulos.srt
+            build/**/guion.timed.json
+          retention-days: 30
+
+      # ---------------------------------------------------------------
+      # 6. Subida opcional. Siempre en privado: publicar lo decides tú.
+      # ---------------------------------------------------------------
+      - name: Subir a YouTube (privado)
+        if: ${{ inputs.subir }}
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          pip install --quiet google-api-python-client google-auth-oauthlib
+          for G in ${{ steps.lista.outputs.guiones }}; do
+            ID=$(basename "$G" .json)
+            python3 03_produccion/pipeline/publicar.py "build/$ID" --estado private
+          done
+
+# NOTA: este archivo debe acabar en .github/workflows/producir.yml dentro del repositorio.
+# Se entrega aqui porque las rutas que empiezan por punto estan protegidas y no se pueden
+# escribir en tu disco desde la sesion remota. Muevelo con:
+#   mkdir .github\workflows && move 03_produccion\workflows\producir.yml .github\workflows\

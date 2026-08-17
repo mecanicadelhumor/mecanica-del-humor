@@ -1,0 +1,211 @@
+{
+  "id": "MDH-008",
+  "idioma": "es",
+  "titulo_trabajo": "Cómo se construye un chiste, pieza a pieza",
+  "tesis": "Casi todos los chistes tienen la misma arquitectura: una historia que crees estar oyendo, un punto de contacto ambiguo, y una segunda historia que encajaba desde el principio.",
+  "pilares": [
+    "I",
+    "L",
+    "A"
+  ],
+  "duracion_objetivo_s": 400,
+  "bloqueos": [],
+  "notas_humor": [
+    "El vídeo entero es una demostración: cada pieza explicada se ejecuta en la frase siguiente.",
+    "Escena 9: el chiste de ejemplo se desmonta en directo, y desmontarlo es el chiste.",
+    "Escena 17: regla de tres en los tipos de conector.",
+    "Cierre: callback estructural — el último párrafo tiene la misma forma que un chiste."
+  ],
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "etiqueta": "Episodio 08",
+      "titulo": "Cómo se construye un *chiste*",
+      "subtitulo": "Pieza a pieza, con plano de montaje",
+      "narracion": "Llevamos siete episodios explicando por qué te ríes. Hoy toca la parte de ingeniería: cómo se fabrica."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y sí: se fabrica. Hay *planos*.",
+      "narracion": "Porque un chiste se fabrica. Tiene piezas, tienen nombre, y llevan encajando de la misma manera desde hace bastante más tiempo del que existe la palabra comedia."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 1",
+      "titulo": "La arquitectura *mínima*",
+      "narracion": "Empecemos por la estructura mínima, que se la debemos sobre todo a la lingüística del humor y al oficio del stand-up, que llegaron a lo mismo por caminos distintos."
+    },
+    {
+      "tipo": "diagrama",
+      "titulo": "Las tres piezas",
+      "pasos": [
+        {
+          "titulo": "Historia 1",
+          "pie": "la que crees oír"
+        },
+        {
+          "titulo": "Conector",
+          "pie": "encaja en las dos"
+        },
+        {
+          "titulo": "Historia 2",
+          "pie": "estaba ahí desde el principio"
+        }
+      ],
+      "narracion": "Un chiste es una historia que crees estar oyendo, un elemento ambiguo que encaja en dos historias distintas, y una segunda historia que estaba ahí desde el principio y que no habías visto.",
+      "fuente": "I01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "El remate no *añade* nada. Solo te enseña lo que ya estaba.",
+      "narracion": "Fíjate en un detalle importantísimo: el remate no añade información nueva. Solo te obliga a releer lo anterior. Por eso un buen chiste da la sensación de que la respuesta estaba ahí todo el rato: es que estaba.",
+      "fuente": "I01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y por eso funciona: tu cerebro *detecta* y *resuelve*.",
+      "narracion": "Que es exactamente el modelo de dos fases del que hablamos en el episodio dos: primero detectas que algo no encaja, y luego lo encajas. Un chiste es una máquina para provocar esas dos cosas en ese orden.",
+      "fuente": "A05"
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 2",
+      "titulo": "El desmontaje",
+      "narracion": "Vamos a desmontar uno. Y aviso: al desmontarlo dejará de tener gracia, porque como vimos, si te doy la solución te quito el premio."
+    },
+    {
+      "tipo": "cita",
+      "texto": "Mi mujer me dijo que la dejara sola. Cuando volví, ya lo había hecho.",
+      "autor": "Un chiste cualquiera, a punto de ser desarmado",
+      "narracion": "El chiste es este: mi mujer me dijo que la dejara sola. Cuando volví, ya lo había hecho."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Las piezas de ese chiste",
+      "puntos": [
+        "*Historia 1*: ella quiere un rato de tranquilidad",
+        "*Conector*: «dejarla sola», que significa dos cosas",
+        "*Historia 2*: ella quería que se fuera. Del todo"
+      ],
+      "narracion": "La historia que crees estar oyendo es que alguien quiere un rato de tranquilidad. El conector es la expresión «dejarla sola», que significa dos cosas distintas. Y la segunda historia es que ella no quería un rato: quería que se fuera del todo.",
+      "fuente": "I01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Ese es el esqueleto. Aburrido, ¿verdad? Pues *todos* lo tienen.",
+      "narracion": "Ese es el esqueleto. Y ahora, la mala noticia para el romanticismo: prácticamente todos los chistes que has oído tienen esa misma forma por debajo."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 3",
+      "titulo": "Los *seis mandos*",
+      "narracion": "La lingüística del humor va un paso más allá y desglosa un chiste en seis recursos que se pueden variar por separado."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Los que más te sirven",
+      "puntos": [
+        "*Oposición* de guiones: las dos historias",
+        "*Mecanismo* lógico: cómo saltas de una a otra",
+        "*Objetivo*: sobre quién o qué va"
+      ],
+      "narracion": "Son seis, pero para escribir te sirven sobre todo tres: qué dos historias se oponen, qué mecanismo lógico te hace saltar de una a la otra, y sobre quién o qué va la cosa.",
+      "fuente": "I01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Toca uno y tienes un chiste *distinto*. Toca dos y tienes uno *nuevo*.",
+      "narracion": "Y esto es una herramienta de escritura brutal, porque significa que puedes coger un chiste que funciona, cambiar un solo mando y sale otro chiste. Cambia dos y ya no se parece al original.",
+      "fuente": "I01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Es lo que hacen los guionistas cuando dicen que están *versionando*.",
+      "narracion": "Es literalmente lo que hacen los equipos de guion de un late night cuando dicen que están versionando un chiste. No están inspirándose: están girando mandos."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 4",
+      "titulo": "Cómo se escribe uno *desde cero*",
+      "narracion": "Y ahora el método, que es lo que te llevas a casa. Va del revés de como todo el mundo lo intenta."
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "El error de dirección",
+      "et_a": "Lo que casi todos hacen",
+      "a": "Buscar un remate gracioso y ponerle delante una historia.",
+      "et_b": "Lo que funciona",
+      "b": "Buscar una *ambigüedad* real y construir hacia atrás.",
+      "narracion": "Casi todo el mundo intenta pensar un remate gracioso y luego montarle delante una historia. Y así no sale. Lo que funciona es lo contrario: buscas primero una ambigüedad real, algo que pueda significar dos cosas, y construyes hacia atrás.",
+      "fuente": "L01"
+    },
+    {
+      "tipo": "lista",
+      "titulo": "El método, en tres pasos",
+      "puntos": [
+        "Escribe una observación *tuya* y verdadera",
+        "Busca la *segunda lectura* que también encaja",
+        "Reescribe el principio para que _no_ se vea venir"
+      ],
+      "narracion": "Tres pasos. Uno: escribe una observación tuya y verdadera, no una idea graciosa. Dos: busca la segunda lectura que también encajaría con esa observación. Y tres, que es el que casi nadie hace: reescribe el principio para que nadie vea venir la segunda lectura.",
+      "fuente": "L01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "El trabajo real está en el *paso tres*. Siempre.",
+      "narracion": "El noventa por ciento del trabajo está en ese tercer paso. Escribir el remate es fácil. Esconder la pista sin hacer trampa es el oficio.",
+      "fuente": "L01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y hay una regla de oro: *la última palabra*.",
+      "narracion": "Y una regla técnica que vale más que muchos consejos: la palabra que activa la segunda historia debe ir al final de la frase. Si va antes, el espectador resuelve el chiste mientras tú sigues hablando, y cuando terminas ya no queda premio.",
+      "fuente": "L01"
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "El límite",
+      "titulo": "Y ahora lo que la estructura *no* te da",
+      "narracion": "Última parte, y es importante porque cierra la temporada entera."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "La estructura es *condición necesaria*. No suficiente.",
+      "narracion": "Puedes construir un chiste estructuralmente perfecto que no haga ninguna gracia. La estructura es condición necesaria, no suficiente.",
+      "fuente": "I01"
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Lo que falta, y ya lo sabes",
+      "puntos": [
+        "Que sea *benigno* para quien escucha",
+        "Que la *distancia* esté bien calculada",
+        "Que apunte donde no haga daño"
+      ],
+      "narracion": "Lo que falta es todo lo demás que hemos visto: que resulte benigno para quien escucha, que la distancia esté bien calculada y que apunte a un sitio que no deje factura.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "La estructura la escribes tú. Lo otro se decide en *la otra persona*.",
+      "narracion": "La estructura la escribes tú en tu casa. Lo demás se decide en la cabeza de la persona que te escucha. Y por eso ser gracioso nunca ha sido solo una habilidad técnica: es una habilidad social que usa una técnica."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Que es, más o menos, todo lo que este canal quería decir.",
+      "narracion": "Que es, más o menos, todo lo que este canal quería decir en sus primeros ocho episodios."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Escribe un chiste esta semana. Uno *malo* también cuenta.",
+      "narracion": "Ya tienes el plano completo: sabes qué es un chiste, por qué funciona, cuándo falla, hacia dónde apuntarlo y cómo montarlo. Escribe uno esta semana. Uno malo también cuenta.",
+      "fuente": "L01"
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Ya tienes el *plano completo*.",
+      "subtitulo": "Escribe un chiste esta semana. Uno malo cuenta.",
+      "narracion": "Porque en esto la única forma de escribir uno bueno es haber escrito antes unos cuantos malos. Yo he escrito ocho episodios sobre el humor sin haberme reído ni una vez, así que, de los dos, tú llevas ventaja."
+    }
+  ]
+}

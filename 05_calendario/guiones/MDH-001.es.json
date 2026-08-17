@@ -1,0 +1,290 @@
+{
+  "id": "MDH-001",
+  "idioma": "es",
+  "titulo_trabajo": "Nadie nace gracioso",
+  "tesis": "Tener gracia no es un rasgo con el que se nace: es una habilidad medible que responde al entrenamiento como cualquier otra.",
+  "pilares": [
+    "H",
+    "C",
+    "E"
+  ],
+  "duracion_objetivo_s": 380,
+  "bloqueos": [],
+  "notas_humor": [
+    "Gancho: violación benigna basada en la vergüenza compartida del chiste que muere. El espectador se ríe de sí mismo sin coste.",
+    "Escena 6: rebaja — frase solemne seguida de anticlímax de tres palabras.",
+    "Escena 12: autoconciencia del formato (voz sintética hablando de gracia). Se usa una sola vez más en el cierre.",
+    "Escena 20: especificidad cómica — el detalle del crédito académico hace el trabajo.",
+    "Escena 31: callback al silencio del gancho."
+  ],
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "etiqueta": "Episodio 01",
+      "titulo": "Nadie nace *gracioso*",
+      "subtitulo": "Y hay cincuenta años de investigación diciéndolo",
+      "narracion": "Piensa en la última vez que contaste algo que te parecía graciosísimo.",
+      "fuente": ""
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y en el *silencio* que vino después.",
+      "narracion": "Y en el silencio que vino después. Ese medio segundo en el que alguien dice «ah, claro» y tú te miras las manos.",
+      "pausa_despues_s": 0.9
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Si eso te ha pasado, tu conclusión probablemente fue: _yo no tengo gracia_.",
+      "narracion": "Si eso te ha pasado, seguramente sacaste la misma conclusión que casi todo el mundo: que tú no tienes gracia. Que es algo que se tiene o no se tiene."
+    },
+    {
+      "tipo": "dato",
+      "cifra": "50 años",
+      "pie": "midiendo _exactamente lo contrario_ de lo que crees sobre tu propia gracia",
+      "narracion": "Es la creencia más extendida que existe sobre el humor. Y también es la más fácil de desmontar, porque llevamos medio siglo midiendo exactamente lo contrario.",
+      "fuente": "H01"
+    },
+    {
+      "tipo": "titulo",
+      "titulo": "Lo que vas a poder hacer al terminar",
+      "subtitulo": "Saber qué se mide exactamente cuando se mide «tener gracia», qué parte de eso responde al entrenamiento, y un ejercicio de una semana con efectos comprobados.",
+      "narracion": "En los próximos seis minutos vas a ver qué se mide exactamente cuando se mide la gracia de alguien, qué parte de eso se puede entrenar, y un ejercicio concreto de una semana con efectos medidos que puedes empezar esta noche."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Bienvenido a *Mecánica del Humor*.",
+      "narracion": "Bienvenido a Mecánica del Humor. Aquí abrimos las cosas para ver cómo funcionan por dentro. Hoy toca abrirte a ti.",
+      "pausa_despues_s": 0.8
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 1",
+      "titulo": "Primero: *sí se puede medir*",
+      "narracion": "Empecemos por el problema evidente. Para saber si la gracia se entrena, primero hay que poder medirla. Y eso suena a imposible."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Suena imposible. No lo es.",
+      "narracion": "No lo es. La prueba estándar lleva décadas usándose y es humillantemente simple."
+    },
+    {
+      "tipo": "diagrama",
+      "titulo": "La prueba de producción de humor",
+      "pasos": [
+        {
+          "titulo": "Viñeta",
+          "pie": "sin pie de foto"
+        },
+        {
+          "titulo": "Escribes",
+          "pie": "el pie más gracioso"
+        },
+        {
+          "titulo": "Jueces",
+          "pie": "que no te conocen"
+        },
+        {
+          "titulo": "Puntuación",
+          "pie": "de 1 a 7"
+        }
+      ],
+      "narracion": "Te enseñan una viñeta sin texto. Escribes el pie que te parezca más gracioso. Y un grupo de jueces que no sabe quién eres puntúa cada respuesta.",
+      "fuente": "C04"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Los jueces *coinciden* entre ellos. Bastante.",
+      "narracion": "Y aquí está lo importante: los jueces coinciden entre ellos. Bastante. Lo suficiente como para que «esto tiene más gracia que esto» deje de ser una opinión y pase a ser un número con el que se puede trabajar.",
+      "fuente": "C04"
+    },
+    {
+      "tipo": "cita",
+      "texto": "En el momento en que tienes un número, tienes ciencia.",
+      "autor": "El principio de todo esto",
+      "narracion": "Y en el momento en que tienes un número, tienes ciencia. Puedes preguntarte por qué unas personas puntúan más alto que otras. Y si sabes por qué, puedes intentar moverlo."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Dicho por una *voz sintética*, admito que suena raro.",
+      "narracion": "Sí, esto lo está diciendo una voz sintética. Un canal sobre el humor narrado por algo que no se ha reído en su vida. Guárdate el chiste, que ya lo he pensado yo.",
+      "pausa_despues_s": 0.9
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 2",
+      "titulo": "Qué predice *tener gracia*",
+      "narracion": "Vale. Ya se puede medir. Segunda pregunta: qué predice puntuar alto."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "En 2020 se juntaron los estudios que existían sobre esto.",
+      "narracion": "En dos mil veinte se publicó un metaanálisis: es decir, se juntaron todos los estudios que habían medido esto y se miró qué salía en conjunto.",
+      "fuente": "C02"
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Lo que más se asocia a producir humor",
+      "puntos": [
+        "*Inteligencia*, sobre todo la verbal",
+        "*Apertura* a la experiencia",
+        "Nada más con una fuerza parecida"
+      ],
+      "narracion": "Dos cosas destacaron por encima del resto: la inteligencia, especialmente la verbal, y la apertura a la experiencia. Y luego, un escalón por debajo, casi todo lo demás.",
+      "fuente": "C02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Ninguna de las dos es «tener chispa».",
+      "narracion": "Fíjate en lo que no aparece. No aparece la extroversión como factor dominante. No aparece «ser una persona divertida». No aparece ese don misterioso que crees que le tocó a otro."
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Lo que el chiste realmente es",
+      "et_a": "Lo que creemos",
+      "a": "Un don. Chispa. Se tiene o no se tiene.",
+      "et_b": "Lo que se mide",
+      "b": "Encontrar *dos significados* en la misma frase, rápido.",
+      "narracion": "Porque producir humor, cuando lo desmontas, es una operación bastante concreta: coger una situación, encontrarle un segundo sentido que nadie estaba mirando, y decirlo antes de que se pase el momento.",
+      "fuente": "C02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Eso es *manejo del lenguaje* bajo presión de tiempo.",
+      "narracion": "Eso es manejo del lenguaje bajo presión de tiempo. Y el manejo del lenguaje bajo presión de tiempo es exactamente el tipo de cosa que mejora practicando."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 3",
+      "titulo": "La prueba de que *se entrena*",
+      "narracion": "Lo cual nos lleva a la parte que de verdad importa."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Si fuera un don, entrenarlo no cambiaría nada. Se probó.",
+      "narracion": "Si el sentido del humor fuera un rasgo fijo, entrenarlo no serviría de nada. Así que alguien lo probó."
+    },
+    {
+      "tipo": "dato",
+      "cifra": "8",
+      "pie": "semanas de _entrenamiento estructurado_ del sentido del humor, en el grupo de Willibald Ruch, en Zúrich",
+      "narracion": "En el grupo de Willibald Ruch, en la Universidad de Zúrich, pusieron a un grupo de personas a hacer un programa de ocho semanas de entrenamiento del sentido del humor. Ejercicios diarios, con estructura, como quien va al gimnasio.",
+      "fuente": "H01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Al terminar puntuaban _más alto_ en jovialidad. Y en *satisfacción con la vida*.",
+      "narracion": "Al terminar, los participantes puntuaban más alto en jovialidad, que es la tendencia estable a encontrarle el lado risueño a las cosas. Y también, y esto no se lo esperaba nadie, en satisfacción con la vida.",
+      "fuente": "H01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "No se les enseñaron chistes. Se les enseñó a *mirar*.",
+      "narracion": "Ojo a lo que esto significa. No les enseñaron chistes. Les enseñaron a mirar la realidad de otra manera. El humor no era el contenido del curso: era el efecto secundario."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y hay una versión que dura *una semana*.",
+      "narracion": "Y hay una versión mucho más corta que también se ha puesto a prueba, con una muestra grande y con grupo de control con placebo, que es como se hacen las cosas bien.",
+      "fuente": "H03"
+    },
+    {
+      "tipo": "lista",
+      "titulo": "El ejercicio completo",
+      "puntos": [
+        "Cada noche, durante *una semana*",
+        "Anota _tres cosas divertidas_ que te hayan pasado ese día",
+        "Y por qué te lo parecieron"
+      ],
+      "narracion": "El ejercicio entero es este. Cada noche, durante una semana, anotas tres cosas divertidas que te hayan pasado ese día. Y al lado, por qué te lo parecieron. Eso es todo.",
+      "fuente": "H03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "La felicidad medida subió. Los síntomas depresivos bajaron. Seguía ahí _seis meses después_.",
+      "narracion": "En quienes lo hicieron, la felicidad medida subió y los síntomas depresivos bajaron. Y el efecto seguía siendo detectable seis meses más tarde, con una semana de escribir tres frases.",
+      "fuente": "H03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "No funciona porque escribir sea mágico. Funciona porque *entrenas el detector*.",
+      "narracion": "Y funciona por una razón muy poco mágica. Si sabes que esta noche tienes que encontrar tres cosas divertidas, pasas el día buscándolas. Estás entrenando el detector, no el generador."
+    },
+    {
+      "tipo": "cita",
+      "texto": "El humor no es lo que dices. Es lo que eres capaz de ver antes de decir nada.",
+      "autor": "La conclusión práctica de todo lo anterior",
+      "narracion": "Y ese es el orden real de las cosas. Primero ves. Luego dices. Casi todo el mundo intenta arreglar la segunda parte."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "El límite",
+      "titulo": "Ahora, lo que *no* te van a contar",
+      "narracion": "Y aquí es donde este vídeo se separa de un vídeo de autoayuda."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Estos estudios miden _percepción y bienestar_, no si te vas a convertir en cómico profesional.",
+      "narracion": "Estos estudios miden sobre todo cómo percibes el humor y cómo te sientes. No miden si vas a convertirte en cómico profesional. Nadie ha demostrado eso, y quien te lo prometa te está vendiendo algo.",
+      "fuente": "H01"
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Lo honesto",
+      "et_a": "Lo que no dicen los datos",
+      "a": "Que en ocho semanas vas a llenar un teatro.",
+      "et_b": "Lo que sí dicen",
+      "b": "Que el punto de partida *no es fijo*. Y con eso basta.",
+      "narracion": "Lo que sí dicen los datos es lo único que hacía falta: que el punto de partida no es fijo. Que la frase «yo no tengo gracia» describe un estado, no una condición.",
+      "fuente": "H01"
+    },
+    {
+      "tipo": "dato",
+      "cifra": "30×",
+      "pie": "más probable que te rías si hay alguien delante que si estás _solo_. La risa no es una reacción: es un mensaje",
+      "narracion": "Y hay un último dato que conviene tener en la cabeza. Se ha observado que la risa es del orden de treinta veces más frecuente en compañía que a solas.",
+      "fuente": "E01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "La risa no es una *reacción*. Es algo que le haces a _otra persona_.",
+      "narracion": "Lo que significa que la risa no es principalmente una reacción a algo gracioso. Es algo que le haces a otra persona.",
+      "fuente": "E01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Que es justo por lo que aquel silencio *dolió tanto*.",
+      "narracion": "Que es exactamente por lo que aquel silencio del principio dolió tanto. No fue el chiste el que falló.",
+      "fuente": "E01",
+      "pausa_despues_s": 0.8
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Fue un intento de *conectar* que se quedó sin respuesta.",
+      "narracion": "Fue un intento de conectar que se quedó sin respuesta. Y eso ya no es una cuestión de gracia: es una habilidad social. Buena noticia, porque las habilidades sociales tienen literatura, tienen método y tienen entrenamiento.",
+      "fuente": "E01",
+      "pausa_despues_s": 0.8
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Tu tarea de esta semana",
+      "puntos": [
+        "Esta noche: *tres cosas divertidas* del día",
+        "Y por qué",
+        "Siete días. Ni uno más"
+      ],
+      "narracion": "Así que la tarea de esta semana es la del estudio. Esta noche, tres cosas divertidas del día, y por qué. Siete días. Ni uno más, que la gracia de este ejercicio es que se acaba.",
+      "fuente": "H03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Cuéntame en comentarios cuál fue *tu peor silencio*.",
+      "narracion": "Antes de irte: cuéntame en comentarios cuál fue tu peor silencio. Empiezo yo, que este vídeo lo narra una voz que todavía no sabe qué se siente."
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Nadie nace gracioso. Se *aprende a mirar*.",
+      "subtitulo": "En el próximo episodio: qué ocurre exactamente en tu cabeza en los doscientos milisegundos que tarda algo en hacerte gracia.",
+      "narracion": "Nadie nace gracioso. Se aprende a mirar. En el próximo episodio abrimos el mecanismo por dentro."
+    }
+  ]
+}

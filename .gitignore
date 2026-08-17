@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# Salidas del pipeline — se generan en cada ejecución de GitHub Actions,
+# no tienen que vivir en el repositorio.
+build/
+
+# Basura del sistema operativo
+Thumbs.db
+.DS_Store
+
+# Por si alguna vez aparece algo de esto por aquí: nunca debe llegar a git.
+.env
+*.pem
+*.key
+credentials.json
+token.json

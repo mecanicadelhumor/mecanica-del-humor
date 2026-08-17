@@ -1,0 +1,249 @@
+{
+  "id": "MDH-002",
+  "idioma": "es",
+  "titulo_trabajo": "Por qué te ríes: el mecanismo",
+  "tesis": "Algo te hace gracia cuando rompe una expectativa y a la vez te resulta inofensivo. Si falta cualquiera de las dos cosas, el chiste muere.",
+  "pilares": [
+    "A",
+    "F"
+  ],
+  "duracion_objetivo_s": 400,
+  "bloqueos": [],
+  "notas_humor": [
+    "Escena 4: la propia estructura del vídeo ejecuta una violación benigna (el ejemplo del cosquilleo).",
+    "Escena 13: regla de tres — dos ejemplos que crean patrón, el tercero lo rompe.",
+    "Escena 22: literalismo llevado hasta romperse.",
+    "Cierre: callback al ejemplo de la escena 4."
+  ],
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "etiqueta": "Episodio 02",
+      "titulo": "Por qué te ríes",
+      "subtitulo": "El mecanismo, pieza a pieza",
+      "narracion": "Un hombre entra en un bar. Y se agacha, porque el bar es de hierro y está a metro y medio del suelo."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Si has sonreído: ¿por qué exactamente?",
+      "narracion": "Si has sonreído, aunque sea por dentro, quiero que te pares un segundo en la pregunta importante. No en si tiene gracia. En por qué la tiene."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Hay una respuesta. Y cabe en *dos condiciones*.",
+      "narracion": "Porque hay una respuesta, es sorprendentemente precisa, y cabe entera en dos condiciones que se tienen que cumplir a la vez."
+    },
+    {
+      "tipo": "diagrama",
+      "titulo": "Las dos condiciones",
+      "pasos": [
+        {
+          "titulo": "Violación",
+          "pie": "algo no debería ser así"
+        },
+        {
+          "titulo": "Benigna",
+          "pie": "pero no pasa nada"
+        },
+        {
+          "titulo": "A la vez",
+          "pie": "esa es la clave"
+        }
+      ],
+      "narracion": "En dos mil diez, Peter McGraw y Caleb Warren publicaron la teoría de la violación benigna. Algo te hace gracia cuando viola cómo deberían ser las cosas, y al mismo tiempo te parece inofensivo. Las dos, simultáneamente.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Quita una de las dos y mira qué pasa",
+      "et_a": "Solo violación",
+      "a": "Amenaza. Asco. Ofensa. Nadie ríe.",
+      "et_b": "Solo benigno",
+      "b": "Todo en orden. Nadie ríe *tampoco*.",
+      "narracion": "Y esto se comprueba quitando una de las dos. Si solo hay violación, lo que sientes es amenaza, o asco, u ofensa.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "El humor vive en la *intersección*. Y es estrecha.",
+      "narracion": "Y si solo hay lo benigno, no pasa absolutamente nada y tampoco te ríes. El humor vive en la intersección de las dos, y es una intersección estrecha.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Ejemplo: las *cosquillas*.",
+      "narracion": "El ejemplo más limpio que existe son las cosquillas."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Un desconocido tocándote sin permiso. _Violación_. Alguien de confianza jugando. _Benigno_.",
+      "narracion": "Un desconocido metiéndote la mano en las costillas es una violación de tu espacio, sin más. Alguien de confianza haciendo lo mismo, en broma, es exactamente el mismo movimiento físico. Y te ríes.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "El gesto es idéntico. Lo que cambia es *quién* y *dónde*.",
+      "narracion": "El gesto es idéntico. Lo que cambia es el contexto. Por eso no puedes hacerte cosquillas a ti mismo: falta la violación. Tu cerebro sabe perfectamente lo que viene."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 2",
+      "titulo": "Qué pasa *dentro*",
+      "narracion": "Vale, esa es la lógica. Ahora la maquinaria."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "El chiste ocurre en _dos fases_. Siempre las mismas.",
+      "narracion": "Cuando escuchas un chiste, tu cerebro hace dos cosas distintas y en orden. Primero detecta que algo no encaja. Después intenta encajarlo.",
+      "fuente": "F02"
+    },
+    {
+      "tipo": "diagrama",
+      "titulo": "Las dos fases",
+      "pasos": [
+        {
+          "titulo": "Detección",
+          "pie": "esto no cuadra"
+        },
+        {
+          "titulo": "Resolución",
+          "pie": "ah, era eso"
+        },
+        {
+          "titulo": "Recompensa",
+          "pie": "y llega el premio"
+        }
+      ],
+      "narracion": "Las revisiones de neuroimagen describen ese patrón: unas zonas se encargan de detectar la incongruencia, otras de resolverla, y luego se enciende algo distinto.",
+      "fuente": "F02"
+    },
+    {
+      "tipo": "dato",
+      "cifra": "El mismo circuito",
+      "pie": "que se activa con la comida, el dinero y las drogas. Un chiste _te paga_",
+      "narracion": "Y lo que se enciende es el circuito de recompensa. El mismo que responde a la comida, al dinero o a las drogas. Cuando resuelves un chiste, tu cerebro te paga por haberlo resuelto.",
+      "fuente": "F01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Lo cual explica *tres cosas*.",
+      "narracion": "Y eso explica tres cosas que quizá te habías preguntado. Por qué la gente busca reírse activamente. Por qué compartir un chiste engancha tanto. Y por qué explicar un chiste lo destruye: si te doy la solución, te quito el premio."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Explicar un chiste no lo estropea por educación. Lo estropea *mecánicamente*.",
+      "narracion": "Fíjate que esto último no es una convención social. Es mecánico. El placer está en resolverlo tú.",
+      "pausa_despues_s": 0.8
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Parte 3",
+      "titulo": "Ahora, la parte *útil*",
+      "narracion": "Y aquí es donde esto deja de ser una curiosidad y se convierte en una herramienta."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Si tu chiste falló, falló *una de las dos*. Solo hay dos opciones.",
+      "narracion": "Porque si sabes que hacen falta dos condiciones, entonces cuando algo no funciona ya sabes dónde mirar. Solo hay dos sitios."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Diagnóstico en dos preguntas",
+      "puntos": [
+        "¿Faltó *violación*? Era obvio, previsible, ya lo sabían",
+        "¿Faltó lo *benigno*? Alguien se sintió señalado",
+        "Casi siempre es la _segunda_"
+      ],
+      "narracion": "Primera pregunta: ¿faltó violación? Es decir, era demasiado obvio, demasiado previsible, no rompía nada. Segunda: ¿faltó lo benigno? Alguien en esa mesa se sintió señalado. Y por experiencia acumulada de mucha gente, casi siempre es la segunda.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "La buena noticia: *lo benigno se puede fabricar*.",
+      "narracion": "Y aquí está la buena noticia, porque lo benigno no es una propiedad fija del chiste. Es algo que puedes construir alrededor de él."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Tres formas de hacer algo benigno",
+      "puntos": [
+        "Que la víctima seas *tú*",
+        "Señalar la *idea*, no a la persona",
+        "Marcar que es juego: tono, cara, ritmo"
+      ],
+      "narracion": "Tres palancas concretas. Una: que el objeto del chiste seas tú, porque nadie se ofende en tu nombre.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Dos: apunta a la *idea*, no a la persona.",
+      "narracion": "Dos: apuntar a la idea y no a la persona. Puedes destrozar un argumento sin tocar a quien lo dijo.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Tres: marca que es *juego*. Tono, cara, ritmo.",
+      "narracion": "Y tres: marcar explícitamente que es juego, con el tono, con la cara, con el ritmo. Es lo que hace un cómico al entrar al escenario: antes de decir nada, ya te ha avisado de que nada de lo que venga va en serio.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y la palanca de la otra condición: *ser específico*.",
+      "narracion": "Y si lo que falta es la violación, la palanca es la especificidad. Lo genérico nunca rompe nada porque ya lo esperábamos."
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "La misma queja, dos versiones",
+      "et_a": "Genérico",
+      "a": "«Los aviones son incómodos.»",
+      "et_b": "Específico",
+      "b": "«El brazo del asiento del medio pertenece a *quien lo tome primero* y esa es toda la ley que hay ahí arriba.»",
+      "narracion": "La misma queja, dos versiones. «Los aviones son incómodos»: cero."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "La segunda funciona porque *nombra* algo que viviste y nunca pusiste en palabras.",
+      "narracion": "La segunda funciona porque nombra algo que ya habías vivido y nunca habías puesto en palabras. Reconocimiento más ruptura.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Reconocimiento *más* ruptura. Eso es todo el truco.",
+      "narracion": "Reconocimiento más ruptura. Ese es el mecanismo completo, y ya lo tienes."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "El límite",
+      "titulo": "Dónde *no* llega esta teoría",
+      "narracion": "Ahora, la parte honesta."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "«Benigno» depende de _quién escucha_. Y eso no lo controlas del todo.",
+      "narracion": "La violación benigna no es una fórmula infalible, y su punto débil salta a la vista en cuanto lo piensas.",
+      "fuente": "A02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "El mismo chiste: inofensivo en una mesa, una *agresión* en la de al lado.",
+      "narracion": "Qué resulta benigno depende de quién esté escuchando. El mismo chiste puede ser inofensivo en una mesa y una agresión en la de al lado.",
+      "fuente": "A02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y hay una variable más que lo cambia todo: el *tiempo*.",
+      "narracion": "Hay además una variable que la teoría necesita para funcionar y que merece su propio episodio: la distancia. La distancia en el tiempo, en el espacio y en el afecto. Es lo que hace que la misma frase sea intolerable hoy y graciosa dentro de un año.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y si tu último chiste no funcionó: ya sabes *cuál de las dos* faltaba.",
+      "narracion": "Así que quédate con esto: violación más algo benigno, las dos a la vez. Y si tu último chiste no funcionó, ya sabes cuál de las dos faltaba."
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Violación *más* algo benigno. Nada más.",
+      "subtitulo": "En el próximo episodio: por qué «todavía es pronto para reírse de eso» tiene fecha de caducidad, y se ha medido.",
+      "narracion": "En el próximo episodio medimos la caducidad exacta del «todavía es pronto». Y sí: el bar de hierro estaba a metro y medio del suelo. Era una violación, era inofensiva, y por eso ha durado hasta aquí."
+    }
+  ]
+}
