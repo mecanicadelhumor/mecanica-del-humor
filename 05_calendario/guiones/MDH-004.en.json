@@ -1,0 +1,198 @@
+{
+  "id": "MDH-004",
+  "idioma": "en",
+  "titulo_trabajo": "Almost nobody laughs at jokes",
+  "tesis": "Laughter isn't a response to humor: it's a social signal used to bond. Which is why you can be liked without telling a single joke.",
+  "pilares": [
+    "E",
+    "D",
+    "A"
+  ],
+  "duracion_objetivo_s": 370,
+  "bloqueos": [],
+  "notas_humor": [
+    "Este episodio no necesita adaptación cultural: el estudio de Provine se hizo en centros comerciales y aceras estadounidenses, así que en inglés el ejemplo es memoria propia y no un caso extranjero. Se le deja el peso.",
+    "Las tres frases de la escena 6 se devuelven a su forma original en inglés («Where have you been?», «See you later», «Are you sure you know what you're doing?»): son las que Provine transcribió, no una traducción de la traducción.",
+    "Gancho: el dato es tan contraintuitivo que hace de chiste él solo. No hay juego de palabras que pueda romperse al cambiar de idioma.",
+    "Escena 18: autoconciencia del formato, una sola vez en el vídeo, con remate seco («a demonstration by absence») en vez de la frase larga del original español.",
+    "Cierre: callback a la frase banal del principio.",
+    "Ortografía americana en todo el guion."
+  ],
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "etiqueta": "Episode 04",
+      "titulo": "Almost nobody laughs at *jokes*",
+      "subtitulo": "And there are twelve hundred recordings that prove it",
+      "narracion": "In the nineteen nineties, a neuroscientist named Robert Provine got tired of studying laughter in a laboratory."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "So he went outside with a notebook.",
+      "narracion": "So he did something strange for a scientist. He went out into the street with a notebook and started writing down every time he heard somebody laugh.",
+      "fuente": "E02"
+    },
+    {
+      "tipo": "dato",
+      "cifra": "1,200",
+      "pie": "episodes of spontaneous laughter logged in malls, sidewalks and hallways. Each one with the line that came _immediately before_",
+      "narracion": "He collected around twelve hundred episodes of spontaneous laughter, in shopping malls, on sidewalks, in hallways. And for each one he recorded something nobody had recorded before: the exact sentence that came right before the laugh.",
+      "fuente": "E02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "The result doesn't fit anything you believe about laughing.",
+      "narracion": "The result is one of those findings that rearranges your head."
+    },
+    {
+      "tipo": "dato",
+      "cifra": "10–20%",
+      "pie": "of the lines before a laugh were _remotely_ joke-like. The rest, nothing",
+      "narracion": "Only around ten to twenty percent of those lines were even remotely joke-like. The rest — the overwhelming majority — weren't funny at all.",
+      "fuente": "E02"
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Real lines that got a laugh",
+      "puntos": [
+        "«Where have you been?»",
+        "«See you later»",
+        "«Are you sure you know what you're doing?»"
+      ],
+      "narracion": "We're talking about lines like «where have you been», «see you later», or «are you sure you know what you're doing». Nobody would be laughing at that. And yet they were.",
+      "fuente": "E02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "So if they're not laughing at the *content*… at what?",
+      "narracion": "Which leaves a fairly large question on the table. If people aren't laughing at what's being said, what are they laughing at?"
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Part 2",
+      "titulo": "Laughter isn't a reaction",
+      "narracion": "The answer is that laughter, almost always, isn't a reaction to anything. It's a message."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "A message that says: _this is going fine between us_.",
+      "narracion": "A very short and very old message, and roughly it says: whatever is happening between you and me is not a threat. We're good.",
+      "fuente": "A10"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "And two findings give it away.",
+      "narracion": "And there are two observations that make that pretty clear."
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Who actually laughs",
+      "et_a": "The listener",
+      "a": "Laughs less. Even though the ending is a surprise to them.",
+      "et_b": "The speaker",
+      "b": "Laughs _more_. And already knew the ending.",
+      "narracion": "The first: in those recordings, the person speaking laughs considerably more than the person listening. If laughter were a response to content, it would have to be the other way around — the one telling it already knows the ending.",
+      "fuente": "E02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Second: laughter never interrupts a sentence. It *punctuates* it.",
+      "narracion": "The second is even cleaner. Laughter almost never shows up in the middle of a sentence. It shows up at the end, in the pauses, exactly where a period or a comma would go. Provine said laughter punctuates speech.",
+      "fuente": "E02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "If it were involuntary, it would land *wherever it wanted*.",
+      "narracion": "Think about that. If it were an uncontrollable reaction, it would land wherever it liked. The fact that it respects grammar means something is managing it."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Part 3",
+      "titulo": "There are *two* laughs",
+      "narracion": "Although not all laughter is the same. There are two kinds, and your ear tells them apart even if you can't explain how."
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "The two laughs",
+      "et_a": "Spontaneous",
+      "a": "Fires on its own. Higher, more irregular. Hard to fake.",
+      "et_b": "Volitional",
+      "b": "You produce it on purpose. It sounds like *speech*.",
+      "narracion": "One is spontaneous: it fires by itself, sounds higher and more irregular, and is very hard to imitate. The other is volitional: you produce it deliberately, like another word, and acoustically it resembles speech more than it resembles real laughter.",
+      "fuente": "E04"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Played to listeners in _24 societies_, they told them apart above chance.",
+      "narracion": "And in one study, recordings of both were played to listeners in twenty-four different societies around the world. Above chance, they could tell which was which.",
+      "fuente": "D07"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "A *sincerity detector* that works without a shared language.",
+      "narracion": "Which means you are carrying around a fake-laugh detector that needs no common language. And it explains that uncomfortable feeling when somebody laughs at your joke a fraction too fast.",
+      "fuente": "D07"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Said by a voice that can produce *neither of them*.",
+      "narracion": "Yes: this is being told to you by a voice that can produce neither. Call it a demonstration by absence.",
+      "pausa_despues_s": 0.9
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Part 4",
+      "titulo": "What this changes *for you*",
+      "narracion": "And now the practical consequence, which is enormous and almost nobody draws it."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "If laughter is a *social signal*, the joke was never the target.",
+      "narracion": "If laughter is mainly a bonding signal and not a grade on your content, then trying to be funny by telling jokes is attacking the problem from the hardest possible angle."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "What actually gets a laugh",
+      "puntos": [
+        "*Presence*: look, respond, be there",
+        "Shared reference: the thing only the two of you get",
+        "Permission: laugh first, and at yourself"
+      ],
+      "narracion": "What really produces laughter in a conversation is something else: being present and responding for real; building shared references, the ones only the two of you get; and giving permission, by laughing first and at your own expense.",
+      "fuente": "E02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "None of that needs a *joke*. All of it can be trained.",
+      "narracion": "None of that requires a joke. And all of it is far easier to train than writing punchlines."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "The limit",
+      "titulo": "With one warning",
+      "narracion": "With one important warning, and it runs against the usual advice."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "*Volitional* laughter works too. But it shows.",
+      "narracion": "Laughing on purpose to smooth a situation is legitimate and everybody does it. The problem is that, as we just saw, the other person detects it. Laughing at everything constantly doesn't make you seem warm: it makes you seem nervous.",
+      "fuente": "D07"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Laughter is *information*. Give it away free and it stops informing.",
+      "narracion": "Laughter is information about what you approve of. Hand it out without discrimination and it stops meaning anything."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Next time, notice what they said *just before*. Probably nothing.",
+      "narracion": "So next time somebody laughs with you, notice what they said right before it. Odds are it was «see you later»."
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "You don't need *jokes*. You need presence.",
+      "subtitulo": "Next episode: the four humor styles, and which one is quietly costing you friends.",
+      "narracion": "Next episode: the four humor styles, and which one of them is costing you friends without you having noticed."
+    }
+  ]
+}
