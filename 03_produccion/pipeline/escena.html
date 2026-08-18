@@ -142,7 +142,7 @@ const PLANTILLAS = {
   },
   dato(d){
     return `<div class="caja" style="text-align:center">
-      <div class="u cifra">${rico(d.cifra)}</div>
+      <div class="u cifra" data-cuenta="${esc(d.cifra)}">${rico(d.cifra)}</div>
       <div class="u cifra-pie">${rico(d.pie)}</div>
     </div>`;
   },
@@ -216,6 +216,20 @@ function cargar(d){
 // suavizado (ease-out cúbico)
 function suave(x){ x = Math.max(0,Math.min(1,x)); return 1-Math.pow(1-x,3); }
 
+// Cuenta desde 0 hasta el número con el que empieza el texto, con "p" (0-1,
+// ya suavizado con la misma curva de entrada que el resto de la escena) como
+// fracción de avance. "50 años" -> cuenta 0..50 y deja " años" fijo detrás.
+// Si el texto no empieza por un número, se devuelve tal cual, sin animar.
+function contar(texto, p){
+  const m = String(texto).match(/^(\d+(?:[.,]\d+)?)(.*)$/);
+  if (!m) return rico(texto);
+  const objetivo = parseFloat(m[1].replace(",", "."));
+  const decimales = (m[1].split(/[.,]/)[1] || "").length;
+  const actual = objetivo * p;
+  const numTxt = decimales ? actual.toFixed(decimales) : String(Math.round(actual));
+  return rico(numTxt + m[2]);
+}
+
 function pintar(t){
   const escalonado = 0.16;              // desfase entre unidades, en segundos
   const entrada    = 0.55;              // lo que tarda cada unidad en entrar
@@ -228,6 +242,7 @@ function pintar(t){
     const dy = (1-p)*26 - fuera*14;
     el.style.opacity = op.toFixed(4);
     el.style.transform = `translateY(${dy.toFixed(2)}px)`;
+    if (el.dataset.cuenta) el.innerHTML = contar(el.dataset.cuenta, p);
   });
   // deriva lentísima de la retícula: da sensación de plano vivo sin distraer
   document.getElementById("reticula").style.backgroundPosition =

@@ -46,12 +46,16 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=True, salida=None)
     # --- cadena de audio ---
     if musica:
         # sidechaincompress: la voz (cadena lateral) comprime la música.
+        # La voz se usa dos veces (como cadena lateral y en la mezcla final),
+        # así que hay que duplicarla con asplit — FFmpeg no deja reutilizar
+        # una misma etiqueta de salida como entrada de dos filtros distintos.
         filtro_audio = (
             "[1:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,"
-            "highpass=f=80,acompressor=threshold=0.09:ratio=3:attack=15:release=180[voz];"
+            "highpass=f=80,acompressor=threshold=0.09:ratio=3:attack=15:release=180,"
+            "asplit=2[voz1][voz2];"
             f"[2:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,volume={vol_musica}[mus];"
-            "[mus][voz]sidechaincompress=threshold=0.02:ratio=14:attack=8:release=380[musduck];"
-            "[voz][musduck]amix=inputs=2:duration=first:dropout_transition=0,"
+            "[mus][voz1]sidechaincompress=threshold=0.02:ratio=14:attack=8:release=380[musduck];"
+            "[voz2][musduck]amix=inputs=2:duration=first:dropout_transition=0,"
             "loudnorm=I=-14:TP=-1.5:LRA=11[aout]"
         )
     else:
@@ -62,24 +66,28 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=True, salida=None)
         )
 
     # --- cadena de vídeo ---
+    # Respiración lentísima de zoom (1.0 -> 1.015 -> 1.0 cada 24s): da sensación
+    # de plano vivo durante los tramos estáticos de render.py sin recapturar ni
+    # un fotograma más con Playwright — es puro postprocesado de FFmpeg sobre
+    # el mudo.mp4 ya renderizado. El fps debe coincidir con el de render.py.
+    RESPIRACION = (
+        "zoompan=z='1.0+0.015*(1+sin(2*PI*on/720))/2':d=1:"
+        "x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1920x1080:fps=30"
+    )
     if quemar_subs and ass.exists():
-        filtro_video = f"[0:v]ass='{ass.as_posix()}'[vout]"
-        mapa_v = "[vout]"
+        filtro_video = f"[0:v]{RESPIRACION}[zoom];[zoom]ass='{ass.as_posix()}'[vout]"
     else:
-        filtro_video = None
-        mapa_v = "0:v"
+        filtro_video = f"[0:v]{RESPIRACION}[vout]"
+    mapa_v = "[vout]"
 
-    filtros = filtro_audio if filtro_video is None else f"{filtro_video};{filtro_audio}"
+    filtros = f"{filtro_video};{filtro_audio}"
 
     cmd = ["ffmpeg", "-y", *entradas,
            "-filter_complex", filtros,
            "-map", mapa_v, "-map", "[aout]",
-           "-c:v", "libx264" if filtro_video else "copy",
+           "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p",
            "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
-           "-shortest", "-movflags", "+faststart"]
-    if filtro_video:
-        cmd += ["-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p"]
-    cmd += [str(salida)]
+           "-shortest", "-movflags", "+faststart", str(salida)]
 
     ejecutar(cmd)
     mb = salida.stat().st_size / 1e6
