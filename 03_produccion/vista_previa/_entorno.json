@@ -1,0 +1,10 @@
+{
+  "tipografias_presentes": [
+    "Archivo Black",
+    "DejaVu Sans",
+    "Inter",
+    "JetBrains Mono"
+  ],
+  "escala": 0.5,
+  "_nota": "Si falta «Archivo Black», los títulos NO son los de producción."
+}
