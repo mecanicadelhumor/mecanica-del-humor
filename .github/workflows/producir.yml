@@ -24,7 +24,7 @@ jobs:
     timeout-minutes: 90
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Determinar qué guiones producir
         id: lista
@@ -38,7 +38,7 @@ jobs:
             echo "guiones=$CAMBIOS" >> $GITHUB_OUTPUT
           fi
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
@@ -46,7 +46,7 @@ jobs:
       - name: Instalar dependencias
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter fonts-jetbrains-mono
-          pip install --quiet edge-tts playwright pillow matplotlib requests
+          pip install --quiet -r requirements.txt
           playwright install --with-deps chromium
 
       # ---------------------------------------------------------------
@@ -121,13 +121,7 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: |
-          pip install --quiet google-api-python-client google-auth-oauthlib
           for G in ${{ steps.lista.outputs.guiones }}; do
             ID=$(basename "$G" .json)
             python3 03_produccion/pipeline/publicar.py "build/$ID" --estado private
           done
-
-# NOTA: este archivo debe acabar en .github/workflows/producir.yml dentro del repositorio.
-# Se entrega aqui porque las rutas que empiezan por punto estan protegidas y no se pueden
-# escribir en tu disco desde la sesion remota. Muevelo con:
-#   mkdir .github\workflows && move 03_produccion\workflows\producir.yml .github\workflows\
