@@ -113,7 +113,9 @@ def render(guion_path, salida, fps=30, escala=1.0, solo=None, verbose=True):
             fh.write(f"file '{ruta.name}'\nduration {d:.5f}\n")
         fh.write(f"file '{entradas[-1][0].name}'\n")   # el demuxer ignora el último duration
 
-    salida = Path(salida)
+    # Absoluta: el subproceso de FFmpeg de abajo corre con cwd=tmp, así que una
+    # ruta relativa se buscaría dentro de la carpeta temporal y no en el proyecto.
+    salida = Path(salida).resolve()
     salida.parent.mkdir(parents=True, exist_ok=True)
     cmd = ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lista),
            "-fps_mode", "cfr", "-r", str(fps),
