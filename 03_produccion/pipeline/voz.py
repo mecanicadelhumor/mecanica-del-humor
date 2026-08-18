@@ -83,7 +83,18 @@ def escribir_srt(bloques, destino):
 
 
 def escribir_ass(palabras, destino, ancho=1920, alto=1080):
-    """Subtítulo quemado: bloques de ~5 palabras, la actual en ámbar."""
+    """Subtítulo quemado: bloques de ~5 palabras, la actual en ámbar.
+
+    Alineación 1 (abajo-IZQUIERDA), no 2 (abajo-centro): con centrado, cada
+    bloque de 5 palabras tiene un ancho de línea distinto, así que ASS lo
+    recentra cada vez y el texto entero "salta" de sitio en cada bloque
+    (~cada 1.5-2s durante todo el vídeo) — eso es lo que mareaba al leer,
+    no la retícula. Con el ancla fija a la izquierda (mismo MarginL siempre)
+    el borde izquierdo del texto no se mueve nunca; solo crece hacia la
+    derecha según el bloque. Comprobado con captura de fotograma: con
+    centrado el borde izquierdo saltaba de x=912 a x=435px entre dos
+    bloques; con este cambio se queda fijo en x=184px en ambos.
+    """
     cab = f"""[Script Info]
 ScriptType: v4.00+
 PlayResX: {ancho}
@@ -92,7 +103,7 @@ WrapStyle: 2
 
 [V4+ Styles]
 Format: Name,Fontname,Fontsize,PrimaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
-Style: pie,Inter,58,&H00F8F4F2,&H00201408,&H96000000,-1,0,0,0,100,100,0,0,1,0,0,2,180,180,96,1
+Style: pie,Inter,58,&H00F8F4F2,&H00201408,&H96000000,-1,0,0,0,100,100,0,0,1,0,0,1,180,180,96,1
 
 [Events]
 Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
