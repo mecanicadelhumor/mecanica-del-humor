@@ -1,0 +1,17 @@
+{
+  "_nota": "Metadatos de publicación del canal inglés. Los escribirá el agente Empaquetador cuando esté montado; este primero va a mano. publicar.py lee este fichero por su nombre, que debe coincidir con el del guion sin extensión (MDH-001.en). Los capítulos, las fuentes y los créditos de música NO se ponen aquí: los genera publicar.py y los añade debajo de esta descripción.",
+  "titulo": "Nobody Is Born Funny — What 50 Years of Research Actually Found",
+  "descripcion": "Almost everybody believes being funny is something you either have or you don't. Half a century of research says otherwise: humor production can be measured, what predicts it isn't what you think, and it responds to training. This episode covers the standard test, the 2020 meta-analysis, the eight-week Zurich training program, and a one-week exercise you can start tonight — including the part self-help videos leave out.",
+  "etiquetas": [
+    "humor",
+    "psychology",
+    "science",
+    "social skills",
+    "sense of humor",
+    "humor research",
+    "self improvement",
+    "communication",
+    "comedy",
+    "personality"
+  ]
+}

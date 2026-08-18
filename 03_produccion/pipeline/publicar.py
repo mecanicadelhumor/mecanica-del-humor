@@ -28,6 +28,35 @@ from googleapiclient.http import MediaFileUpload
 AMBITOS = ["https://www.googleapis.com/auth/youtube.upload",
            "https://www.googleapis.com/auth/youtube.force-ssl"]
 
+# El andamiaje de la descripción (epígrafes y cierre) va en el idioma del
+# canal: una descripción inglesa con «Capítulos» y «Fuentes» delata que el
+# canal es una traducción de otro. El bloque de atribución de la música NO se
+# traduce: es el texto que exige quien licencia la pista.
+TEXTOS = {
+    "es": {
+        "capitulos": "Capítulos",
+        "empezamos": "Empezamos",
+        "fuentes": "Fuentes",
+        "musica": "Música",
+        "cierre": ("Guion documentado con investigación revisada por pares y producido "
+                   "con ayuda de IA. Si detectas un error, dímelo en comentarios y lo "
+                   "corrijo en pantalla."),
+    },
+    "en": {
+        "capitulos": "Chapters",
+        "empezamos": "Start",
+        "fuentes": "Sources",
+        "musica": "Music",
+        "cierre": ("Script sourced from peer-reviewed research and produced with the help "
+                   "of AI. If you spot an error, tell me in the comments and I'll correct "
+                   "it on screen."),
+    },
+}
+
+
+def textos(guion):
+    return TEXTOS.get(guion.get("idioma", "es"), TEXTOS["es"])
+
 
 def credenciales():
     faltan = [v for v in ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN")
@@ -53,7 +82,7 @@ def capitulos(guion):
             marcas.append(f"{m:02d}:{s:02d} {titulo}")
         reloj += e.get("duracion_s", 0)
     if marcas and not marcas[0].startswith("00:00"):
-        marcas.insert(0, "00:00 Empezamos")
+        marcas.insert(0, f"00:00 {textos(guion)['empezamos']}")
     return marcas if len(marcas) >= 3 else []
 
 
@@ -80,16 +109,17 @@ def creditos_musica(carpeta, raiz):
             f"{usada.get('sha256','?')[:12]}...) no está en creditos.json. "
             "Añade su bloque de atribución antes de publicar: en las CC BY "
             "publicar sin atribuir incumple la licencia.")
-    return ["\nMúsica"] + list(pista["atribucion"])
+    return list(pista["atribucion"])
 
 
 def descripcion(guion, meta, biblio, creditos=()):
+    T = textos(guion)
     L = []
     if meta.get("descripcion"):
         L.append(meta["descripcion"].strip())
     caps = capitulos(guion)
     if caps:
-        L.append("\nCapítulos\n" + "\n".join(caps))
+        L.append(f"\n{T['capitulos']}\n" + "\n".join(caps))
     citas = []
     for f in sorted({e["fuente"] for e in guion["escenas"] if e.get("fuente")}):
         o = biblio.get(f)
@@ -100,10 +130,10 @@ def descripcion(guion, meta, biblio, creditos=()):
             linea += f" https://doi.org/{o['doi']}"
         citas.append(linea)
     if citas:                      # sin esto quedaba un epígrafe "Fuentes" vacío
-        L += ["\nFuentes"] + citas
-    L += list(creditos)
-    L.append("\nGuion documentado con investigación revisada por pares y producido con ayuda de IA. "
-             "Si detectas un error, dímelo en comentarios y lo corrijo en pantalla.")
+        L += [f"\n{T['fuentes']}"] + citas
+    if creditos:
+        L += [f"\n{T['musica']}"] + list(creditos)
+    L.append("\n" + T["cierre"])
     return "\n".join(L)[:4900]
 
 

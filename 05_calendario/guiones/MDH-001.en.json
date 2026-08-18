@@ -1,0 +1,291 @@
+{
+  "id": "MDH-001",
+  "idioma": "en",
+  "titulo_trabajo": "Nobody is born funny",
+  "tesis": "Being funny is not a trait you are born with: it is a measurable skill that responds to training like any other.",
+  "pilares": [
+    "H",
+    "C",
+    "E"
+  ],
+  "duracion_objetivo_s": 380,
+  "bloqueos": [],
+  "notas_humor": [
+    "Gancho: violación benigna sobre la vergüenza compartida del chiste que muere. En inglés funciona igual, pero el remate va en el gesto ('you find your own hands very interesting') en vez de en la frase larga: el inglés aguanta peor la subordinada.",
+    "Escena 6: rebaja — frase solemne seguida de anticlímax de tres palabras ('Today we're opening you').",
+    "Escena 12: autoconciencia del formato. 'Save the joke. I already made it.' es más seco que el original español y aquí funciona mejor: el inglés premia el remate corto.",
+    "Escena 20: especificidad cómica — el detalle académico (Zurich, ocho semanas, 'like going to the gym') hace el trabajo solo.",
+    "Escena 31: callback al silencio del gancho.",
+    "Ortografía americana en todo el guion ('humor', no 'humour'), coherente con el nombre del canal y con la voz en-US."
+  ],
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "etiqueta": "Episode 01",
+      "titulo": "Nobody is born *funny*",
+      "subtitulo": "And there are fifty years of research saying so",
+      "narracion": "Think about the last time you told a story you were absolutely sure was hilarious.",
+      "fuente": ""
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "And the *silence* that followed.",
+      "narracion": "And the silence that came right after it. That half second where somebody says «oh, right», and you suddenly find your own hands very interesting.",
+      "pausa_despues_s": 0.9
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "If that's happened, your conclusion was probably: _I'm just not funny_.",
+      "narracion": "If that has happened to you, you probably drew the same conclusion almost everybody draws. That you're just not funny. That it's something you either have or you don't."
+    },
+    {
+      "tipo": "dato",
+      "cifra": "50 years",
+      "pie": "of research measuring _the exact opposite_ of what you believe about your own humor",
+      "narracion": "It is the most widespread belief there is about humor. It is also the easiest one to take apart, because we have spent half a century measuring the exact opposite.",
+      "fuente": "H01"
+    },
+    {
+      "tipo": "titulo",
+      "titulo": "What you'll be able to do by the end",
+      "subtitulo": "Know what is actually measured when someone measures «being funny», which part of it responds to training, and a one-week exercise with tested effects.",
+      "narracion": "In the next six minutes you will see what is actually being measured when somebody measures how funny you are, which part of that can be trained, and one specific one-week exercise, with measured effects, that you can start tonight."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Welcome to *Humor Mechanics*.",
+      "narracion": "Welcome to Humor Mechanics. This is where we open things up to see how they work on the inside. Today we're opening you.",
+      "pausa_despues_s": 0.8
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Part 1",
+      "titulo": "First: *it can be measured*",
+      "narracion": "Let's start with the obvious problem. To find out whether funny can be trained, you first have to be able to measure it. And that sounds impossible."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Sounds impossible. It isn't.",
+      "narracion": "It isn't. The standard test has been in use for decades, and it is humiliatingly simple."
+    },
+    {
+      "tipo": "diagrama",
+      "titulo": "The humor production test",
+      "pasos": [
+        {
+          "titulo": "Cartoon",
+          "pie": "with no caption"
+        },
+        {
+          "titulo": "You write",
+          "pie": "the funniest caption"
+        },
+        {
+          "titulo": "Judges",
+          "pie": "who don't know you"
+        },
+        {
+          "titulo": "Score",
+          "pie": "one to seven"
+        }
+      ],
+      "narracion": "They show you a cartoon with no caption. You write whatever caption strikes you as funniest. And a panel of judges who have no idea who you are scores every single answer.",
+      "fuente": "C04"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "The judges *agree* with each other. A lot.",
+      "narracion": "And here is the part that matters: the judges agree with each other. Quite a lot. Enough that «this is funnier than that» stops being an opinion and becomes a number you can actually work with.",
+      "fuente": "C04"
+    },
+    {
+      "tipo": "cita",
+      "texto": "The moment you have a number, you have science.",
+      "autor": "The principle behind all of this",
+      "narracion": "And the moment you have a number, you have science. You can start asking why some people score higher than others. And if you know why, you can try to move it."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Coming from a *synthetic voice*, I admit this sounds odd.",
+      "narracion": "Yes, a synthetic voice is saying all this. A channel about humor, narrated by something that has never laughed in its life. Save the joke. I already made it.",
+      "pausa_despues_s": 0.9
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Part 2",
+      "titulo": "What predicts *being funny*",
+      "narracion": "Fine. It can be measured. Second question: what predicts scoring high."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "In 2020, everything ever measured on this got pooled together.",
+      "narracion": "In twenty twenty a meta-analysis came out. Which means every study that had ever measured this was pooled together, to see what showed up across all of them.",
+      "fuente": "C02"
+    },
+    {
+      "tipo": "lista",
+      "titulo": "What's most associated with producing humor",
+      "puntos": [
+        "*Intelligence*, verbal above all",
+        "*Openness* to experience",
+        "Nothing else comes close"
+      ],
+      "narracion": "Two things stood out well above the rest: intelligence, verbal intelligence especially, and openness to experience. And then, a clear step below, almost everything else.",
+      "fuente": "C02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Neither one of them is «having a spark».",
+      "narracion": "Notice what is not on that list. Extraversion is not there as the dominant factor. «Being a fun person» is not there. That mysterious gift you assume somebody else was handed is not there either."
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "What a joke actually is",
+      "et_a": "What we believe",
+      "a": "A gift. A spark. You have it or you don't.",
+      "et_b": "What gets measured",
+      "b": "Finding *two meanings* in the same sentence, fast.",
+      "narracion": "Because producing humor, once you take it apart, is a fairly concrete operation: take a situation, find the second meaning nobody was looking at, and say it before the moment is gone.",
+      "fuente": "C02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "That is *handling language* under time pressure.",
+      "narracion": "That is handling language under time pressure. And handling language under time pressure is exactly the kind of thing that gets better with practice."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Part 3",
+      "titulo": "The proof that *it trains*",
+      "narracion": "Which brings us to the part that actually matters."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "If it were a gift, training it would change nothing. Somebody tested that.",
+      "narracion": "If a sense of humor were a fixed trait, training it would do absolutely nothing. So somebody went and tested it."
+    },
+    {
+      "tipo": "dato",
+      "cifra": "8",
+      "pie": "weeks of _structured training_ of the sense of humor, in Willibald Ruch's group, in Zurich",
+      "narracion": "In Willibald Ruch's group, at the University of Zurich, they put a set of people through an eight week sense of humor training program. Daily exercises, with structure, like somebody going to the gym.",
+      "fuente": "H01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Afterwards they scored _higher_ in cheerfulness. And in *life satisfaction*.",
+      "narracion": "By the end, participants scored higher in cheerfulness, which is the stable tendency to find the light side of things. And also, and nobody was expecting this one, in satisfaction with life.",
+      "fuente": "H01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Nobody taught them jokes. They were taught to *look*.",
+      "narracion": "Pay attention to what that means. They were not taught jokes. They were taught to look at reality a different way. Humor was not the content of the course. It was the side effect."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "And there's a version that takes *one week*.",
+      "narracion": "And there is a much shorter version that has also been put to the test, with a large sample and a placebo control group, which is how you do these things properly.",
+      "fuente": "H03"
+    },
+    {
+      "tipo": "lista",
+      "titulo": "The entire exercise",
+      "puntos": [
+        "Every night, for *one week*",
+        "Write down _three funny things_ from your day",
+        "And why they struck you that way"
+      ],
+      "narracion": "Here is the exercise, all of it. Every night, for one week, you write down three funny things that happened to you that day. And next to each one, why it struck you as funny. That is the whole thing.",
+      "fuente": "H03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Measured happiness went up. Depressive symptoms went down. Still there _six months later_.",
+      "narracion": "In the people who did it, measured happiness went up and depressive symptoms went down. And the effect was still detectable six months later, from one week of writing three sentences.",
+      "fuente": "H03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "It doesn't work because writing is magic. It works because you *train the detector*.",
+      "narracion": "And it works for a deeply unmagical reason. If you know that tonight you have to come up with three funny things, you spend the whole day hunting for them. You are training the detector, not the generator."
+    },
+    {
+      "tipo": "cita",
+      "texto": "Humor isn't what you say. It's what you can see before you say anything.",
+      "autor": "The practical conclusion of everything above",
+      "narracion": "And that is the real order of things. First you see. Then you say. Almost everybody is busy trying to fix the second part."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "The limit",
+      "titulo": "Now, what *nobody* will tell you",
+      "narracion": "And this is where this video parts ways with a self help video."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "These studies measure _perception and wellbeing_, not whether you'll become a professional comedian.",
+      "narracion": "These studies mostly measure how you perceive humor and how you feel. They do not measure whether you are going to become a professional comedian. Nobody has shown that, and anyone promising it is selling you something.",
+      "fuente": "H01"
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "The honest version",
+      "et_a": "What the data don't say",
+      "a": "That in eight weeks you'll be filling a theater.",
+      "et_b": "What they do say",
+      "b": "That the starting point *isn't fixed*. And that's enough.",
+      "narracion": "What the data do say is the only thing that was needed: that the starting point is not fixed. That the sentence «I'm not funny» describes a state, not a condition.",
+      "fuente": "H01"
+    },
+    {
+      "tipo": "dato",
+      "cifra": "30×",
+      "pie": "more likely you'll laugh with somebody there than when you're _on your own_. Laughter isn't a reaction: it's a message",
+      "narracion": "And there is one last number worth keeping in your head. Laughter has been observed to be on the order of thirty times more frequent in company than alone.",
+      "fuente": "E01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Laughter isn't a *reaction*. It's something you do to _another person_.",
+      "narracion": "Which means laughter is not primarily a reaction to something funny. It is something you do to another person.",
+      "fuente": "E01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Which is exactly why that silence *hurt so much*.",
+      "narracion": "Which is exactly why that silence at the start of this video hurt so much. It was not the joke that failed.",
+      "fuente": "E01",
+      "pausa_despues_s": 0.8
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "It was an attempt to *connect* that went unanswered.",
+      "narracion": "It was an attempt to connect that went unanswered. And that is not a question of being funny any more. It is a social skill. Which is good news, because social skills have literature, they have method, and they have training.",
+      "fuente": "E01",
+      "pausa_despues_s": 0.8
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Your assignment this week",
+      "puntos": [
+        "Tonight: *three funny things* from your day",
+        "And why",
+        "Seven days. Not one more"
+      ],
+      "narracion": "So your assignment this week is the one from the study. Tonight, three funny things from your day, and why. Seven days. Not one more, because the whole point of this exercise is that it ends.",
+      "fuente": "H03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Tell me in the comments about *your worst silence*.",
+      "narracion": "Before you go: tell me in the comments about your worst silence. I will start, since this video is narrated by a voice that still has no idea what that feels like."
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Nobody is born funny. You *learn to look*.",
+      "subtitulo": "Next episode: what exactly happens inside your head during the two hundred milliseconds it takes for something to strike you as funny.",
+      "narracion": "Nobody is born funny. You learn to look. Next episode we open the mechanism from the inside."
+    }
+  ]
+}
