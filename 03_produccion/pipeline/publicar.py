@@ -22,6 +22,7 @@ from pathlib import Path
 
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
 
 AMBITOS = ["https://www.googleapis.com/auth/youtube.upload",
@@ -116,19 +117,34 @@ def publicar(carpeta, estado="private", publicar_en=None):
     vid = respuesta["id"]
     print(f"Subido: https://youtu.be/{vid}  (estado: {estado})")
 
+    # La miniatura y los subtítulos son mejoras, no el objetivo: si uno de los
+    # dos falla (p. ej. 403 "forbidden" en miniaturas porque el canal aún no
+    # ha verificado el teléfono en youtube.com/verify) no debe tirar abajo la
+    # subida ya hecha ni impedir que se guarde publicado.json. Se avisa y se
+    # sigue; vuelve a lanzar publicar.py sobre el mismo vídeo cuando esté
+    # resuelto — YouTube deja repetir thumbnails().set() sin duplicar nada.
     mini = carpeta / "miniatura.png"
     if mini.exists():
-        yt.thumbnails().set(videoId=vid, media_body=MediaFileUpload(str(mini))).execute()
-        print("  miniatura puesta")
+        try:
+            yt.thumbnails().set(videoId=vid, media_body=MediaFileUpload(str(mini))).execute()
+            print("  miniatura puesta")
+        except HttpError as e:
+            print(f"  aviso: no se pudo poner la miniatura ({e}).")
+            if e.resp is not None and e.resp.status == 403:
+                print("  → probablemente el canal no ha verificado el teléfono: "
+                      "https://youtube.com/verify (desbloquea miniaturas personalizadas).")
 
     srt = carpeta / "subtitulos.srt"
     if srt.exists():
-        yt.captions().insert(
-            part="snippet",
-            body={"snippet": {"videoId": vid, "language": guion.get("idioma", "es"),
-                              "name": "Original", "isDraft": False}},
-            media_body=MediaFileUpload(str(srt))).execute()
-        print("  subtítulos subidos")
+        try:
+            yt.captions().insert(
+                part="snippet",
+                body={"snippet": {"videoId": vid, "language": guion.get("idioma", "es"),
+                                  "name": "Original", "isDraft": False}},
+                media_body=MediaFileUpload(str(srt))).execute()
+            print("  subtítulos subidos")
+        except HttpError as e:
+            print(f"  aviso: no se pudieron subir los subtítulos ({e}).")
 
     (carpeta / "publicado.json").write_text(
         json.dumps({"video_id": vid, "url": f"https://youtu.be/{vid}", "estado": estado},
