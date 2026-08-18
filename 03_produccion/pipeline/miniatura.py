@@ -143,7 +143,10 @@ def generar(guion_path, salida, texto=None, pie=None, cifra=None, sin_cifra=Fals
                           .replace("__N__", g["id"].replace("MDH-", "Nº "))
                           .replace("__TAM__", str(tamano(texto))))
 
-    tmp = Path(salida).with_suffix(".html")
+    # Absoluta: Path.as_uri() (usado más abajo para abrir el HTML en el
+    # navegador) exige sí o sí una ruta absoluta, si no falla con ValueError.
+    salida = Path(salida).resolve()
+    tmp = salida.with_suffix(".html")
     tmp.parent.mkdir(parents=True, exist_ok=True)
     tmp.write_text(html, encoding="utf-8")
 
