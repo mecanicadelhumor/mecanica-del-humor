@@ -220,6 +220,10 @@ function cargar(d){
   const f = PLANTILLAS[d.tipo] || PLANTILLAS.enunciado;
   document.getElementById("escena").innerHTML = f(d);
   document.getElementById("ref").textContent = d.ref || "";
+  // La marca la manda render.py según el idioma del guion (Mecánica del Humor
+  // / Humor Mechanics), así el mismo motor sirve para los dos canales.
+  if (d.marca) document.getElementById("firma").textContent = d.marca;
+  if (d.idioma) document.documentElement.lang = d.idioma;
   UNIDADES = Array.from(document.querySelectorAll(".u"));
   pintar(0);
   return UNIDADES.length;

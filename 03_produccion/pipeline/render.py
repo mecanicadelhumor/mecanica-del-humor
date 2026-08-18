@@ -35,12 +35,19 @@ PALABRAS_POR_MINUTO = 150
 MINIMO_S = 2.6
 COLA_S = 0.5
 
+# La firma de la esquina inferior izquierda es lo único de escena.html que
+# cambia con el idioma: cada canal tiene su nombre. Se inyecta por escena en
+# lugar de estar escrita a fuego en el HTML, para que el mismo motor sirva
+# para los dos canales sin duplicar ficheros.
+MARCAS = {"es": "Mecánica del Humor", "en": "Humor Mechanics"}
+
 
 def duracion_estimada(texto):
     return max(MINIMO_S, len((texto or "").split()) / PALABRAS_POR_MINUTO * 60 + COLA_S)
 
 
 def preparar(guion):
+    idioma = guion.get("idioma", "es")
     escenas = []
     for i, e in enumerate(guion["escenas"], 1):
         d = dict(e)
@@ -48,6 +55,8 @@ def preparar(guion):
             duracion_estimada(e.get("narracion", "")) + e.get("pausa_despues_s", 0.45))
         d["ref"] = e.get("fuente", "") or ""
         d["n"] = i
+        d["idioma"] = idioma
+        d["marca"] = MARCAS.get(idioma, MARCAS["es"])
         escenas.append(d)
     return escenas
 

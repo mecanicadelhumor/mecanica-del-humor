@@ -114,14 +114,27 @@ jobs:
       # ---------------------------------------------------------------
       # 6. Subida opcional. Siempre en privado: publicar lo decides tú.
       # ---------------------------------------------------------------
+      # Cada canal es una cuenta de marca distinta y necesita su propio
+      # refresh token: uno autoriza a subir a "Mecánica del Humor" y el otro a
+      # "Humor Mechanics". Se elige por el sufijo del guion (.es / .en).
       - name: Subir a YouTube (privado)
         if: ${{ inputs.subir }}
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
-          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          TOKEN_ES: ${{ secrets.YT_REFRESH_TOKEN }}
+          TOKEN_EN: ${{ secrets.YT_REFRESH_TOKEN_EN }}
         run: |
           for G in ${{ steps.lista.outputs.guiones }}; do
             ID=$(basename "$G" .json)
+            case "$ID" in
+              *.en) export YT_REFRESH_TOKEN="$TOKEN_EN"; CANAL="Humor Mechanics" ;;
+              *)    export YT_REFRESH_TOKEN="$TOKEN_ES"; CANAL="Mecánica del Humor" ;;
+            esac
+            if [ -z "$YT_REFRESH_TOKEN" ]; then
+              echo "::error::Falta el refresh token del canal $CANAL para $ID"
+              exit 1
+            fi
+            echo "Subiendo $ID al canal $CANAL"
             python3 03_produccion/pipeline/publicar.py "build/$ID" --estado private
           done

@@ -28,6 +28,11 @@ from playwright.sync_api import sync_playwright
 
 AQUI = Path(__file__).resolve().parent
 
+# Nombre del canal y forma de numerar el episodio, por idioma. En inglés "Nº"
+# no se usa: lo natural es "No.".
+MARCAS = {"es": "Mecánica del Humor", "en": "Humor Mechanics"}
+NUMERO = {"es": "Nº ", "en": "No. "}
+
 HTML_TEXTO = """<!DOCTYPE html><html><head><meta charset="utf-8"><style>
 :root{--fondo:#0B1220;--reticula:#16213A;--tinta:#F2F4F8;--tenue:#8A97AE;--ambar:#FFB020;--cian:#4CC9F0}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -51,7 +56,7 @@ h1{font-size:__TAM__px;line-height:.98;letter-spacing:-.025em}
   font-family:"JetBrains Mono","DejaVu Sans Mono",monospace;border:1px solid rgba(255,176,32,.5);padding:8px 14px}
 </style></head><body>
 <div id="r"></div><div id="c"><h1>__T__</h1><div id="p">__P__</div></div>
-<div id="v"></div><div id="m"></div><div id="f">Mecánica del Humor</div><div id="n">__N__</div>
+<div id="v"></div><div id="m"></div><div id="f">__MARCA__</div><div id="n">__N__</div>
 </body></html>"""
 
 HTML_CIFRA = """<!DOCTYPE html><html><head><meta charset="utf-8"><style>
@@ -77,7 +82,7 @@ h1{font-size:__TAM__px;line-height:1.08;letter-spacing:-.02em;margin-top:26px;ma
   font-family:"JetBrains Mono","DejaVu Sans Mono",monospace;border:1px solid rgba(255,176,32,.5);padding:8px 14px}
 </style></head><body>
 <div id="r"></div><div id="c"><div class="cif">__CIF__</div><h1>__T__</h1></div>
-<div id="v"></div><div id="m"></div><div id="f">Mecánica del Humor</div><div id="n">__N__</div>
+<div id="v"></div><div id="m"></div><div id="f">__MARCA__</div><div id="n">__N__</div>
 </body></html>"""
 
 
@@ -128,10 +133,15 @@ def generar(guion_path, salida, texto=None, pie=None, cifra=None, sin_cifra=Fals
     if not sin_cifra and cifra is None:
         cifra = cifra_mas_fuerte(g)
 
+    idioma = g.get("idioma", "es")
+    marca = MARCAS.get(idioma, MARCAS["es"])
+    numero = g["id"].replace("MDH-", NUMERO.get(idioma, NUMERO["es"]))
+
     if cifra:
         html = (HTML_CIFRA.replace("__CIF__", rico(cifra))
                            .replace("__T__", rico(texto))
-                           .replace("__N__", g["id"].replace("MDH-", "Nº "))
+                           .replace("__N__", numero)
+                           .replace("__MARCA__", marca)
                            .replace("__TAMCIF__", str(tamano_cifra(cifra)))
                            .replace("__TAM__", str(tamano_apoyo(texto))))
     else:
@@ -140,7 +150,8 @@ def generar(guion_path, salida, texto=None, pie=None, cifra=None, sin_cifra=Fals
             pie = pie[:93].rsplit(" ", 1)[0] + "…"
         html = (HTML_TEXTO.replace("__T__", rico(texto))
                           .replace("__P__", rico(pie))
-                          .replace("__N__", g["id"].replace("MDH-", "Nº "))
+                          .replace("__N__", numero)
+                          .replace("__MARCA__", marca)
                           .replace("__TAM__", str(tamano(texto))))
 
     # Absoluta: Path.as_uri() (usado más abajo para abrir el HTML en el

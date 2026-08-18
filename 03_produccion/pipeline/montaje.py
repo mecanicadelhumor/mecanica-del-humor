@@ -17,6 +17,8 @@ Produce:
     final.mp4
 """
 import argparse
+import hashlib
+import json
 import subprocess
 from pathlib import Path
 
@@ -139,6 +141,18 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=True, salida=None)
            "-shortest", "-movflags", "+faststart", str(salida)]
 
     ejecutar(cmd)
+
+    # Deja constancia de qué pista se usó. publicar.py la necesita para poner
+    # la atribución en la descripción del vídeo, que en las CC BY es obligación
+    # legal. Se guarda el sha256 y no solo el nombre porque cama.mp3 es una
+    # copia de otra pista: el hash identifica la música de verdad.
+    if musica:
+        m = Path(musica)
+        (carpeta / "musica.json").write_text(json.dumps({
+            "archivo": m.name,
+            "sha256": hashlib.sha256(m.read_bytes()).hexdigest(),
+        }, ensure_ascii=False, indent=2), encoding="utf-8")
+
     mb = salida.stat().st_size / 1e6
     print(f"Vídeo final: {salida}  ({mb:.1f} MB)")
     return salida

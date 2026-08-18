@@ -57,24 +57,51 @@ def capitulos(guion):
     return marcas if len(marcas) >= 3 else []
 
 
-def descripcion(guion, meta, biblio):
+def creditos_musica(carpeta, raiz):
+    """Bloque de atribución de la música usada, o [] si el vídeo no lleva.
+
+    montaje.py deja el sha256 de la pista en musica.json; aquí se busca ese
+    hash en assets/musica/creditos.json. Va por hash y no por nombre porque
+    cama.mp3 es una copia de otra pista y el nombre miente.
+    """
+    marca = carpeta / "musica.json"
+    if not marca.exists():
+        return []                      # vídeo sin música: nada que atribuir
+    usada = json.loads(marca.read_text(encoding="utf-8"))
+    indice = raiz / "03_produccion" / "assets" / "musica" / "creditos.json"
+    if not indice.exists():
+        raise SystemExit(f"Falta {indice}: no se puede atribuir la música y "
+                         "atribuirla es obligación de la licencia.")
+    pistas = json.loads(indice.read_text(encoding="utf-8"))["pistas"]
+    pista = pistas.get(usada.get("sha256"))
+    if not pista:
+        raise SystemExit(
+            f"La música usada ({usada.get('archivo')}, sha256 "
+            f"{usada.get('sha256','?')[:12]}...) no está en creditos.json. "
+            "Añade su bloque de atribución antes de publicar: en las CC BY "
+            "publicar sin atribuir incumple la licencia.")
+    return ["\nMúsica"] + list(pista["atribucion"])
+
+
+def descripcion(guion, meta, biblio, creditos=()):
     L = []
     if meta.get("descripcion"):
         L.append(meta["descripcion"].strip())
     caps = capitulos(guion)
     if caps:
         L.append("\nCapítulos\n" + "\n".join(caps))
-    fuentes = sorted({e["fuente"] for e in guion["escenas"] if e.get("fuente")})
-    if fuentes:
-        L.append("\nFuentes")
-        for f in fuentes:
-            o = biblio.get(f)
-            if not o:
-                continue
-            linea = f"· {o['autores']} ({o.get('anio','s.f.')}). {o['titulo']}. {o.get('fuente','')}"
-            if o.get("doi"):
-                linea += f" https://doi.org/{o['doi']}"
-            L.append(linea)
+    citas = []
+    for f in sorted({e["fuente"] for e in guion["escenas"] if e.get("fuente")}):
+        o = biblio.get(f)
+        if not o:
+            continue
+        linea = f"· {o['autores']} ({o.get('anio','s.f.')}). {o['titulo']}. {o.get('fuente','')}"
+        if o.get("doi"):
+            linea += f" https://doi.org/{o['doi']}"
+        citas.append(linea)
+    if citas:                      # sin esto quedaba un epígrafe "Fuentes" vacío
+        L += ["\nFuentes"] + citas
+    L += list(creditos)
     L.append("\nGuion documentado con investigación revisada por pares y producido con ayuda de IA. "
              "Si detectas un error, dímelo en comentarios y lo corrijo en pantalla.")
     return "\n".join(L)[:4900]
@@ -83,13 +110,30 @@ def descripcion(guion, meta, biblio):
 def publicar(carpeta, estado="private", publicar_en=None):
     carpeta = Path(carpeta)
     guion = json.loads((carpeta / "guion.timed.json").read_text(encoding="utf-8"))
-    meta_path = carpeta / "publicacion.json"
-    meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {}
-
     raiz = Path(__file__).resolve().parents[2]
+
+    # Título, descripción y etiquetas los escribe el agente Empaquetador, y su
+    # sitio canónico es el repositorio (queda versionado y revisable antes de
+    # publicar), no la carpeta build/ que se borra en cada ejecución:
+    #     05_calendario/publicaciones/<ID>.json      <- canónico
+    #     build/<ID>/publicacion.json                <- override puntual
+    # <ID> es el nombre de la carpeta de build, que ya distingue idioma
+    # (MDH-001.es / MDH-001.en). Si no hay ninguno de los dos, se cae al
+    # titulo_trabajo del guion, que sirve para una prueba privada pero no
+    # para publicar de cara al público.
+    meta = {}
+    for cand in (raiz / "05_calendario" / "publicaciones" / f"{carpeta.name}.json",
+                 carpeta / "publicacion.json"):
+        if cand.exists():
+            meta = json.loads(cand.read_text(encoding="utf-8"))
+            print(f"Metadatos de publicación: {cand}")
+    if not meta:
+        print("Aviso: sin publicacion.json — se usa el título de trabajo del guion.")
+
     sem = raiz / "01_bibliografia" / "data" / "semillas.json"
     biblio = {o["id"]: o for o in json.loads(sem.read_text(encoding="utf-8"))["obras"]} \
         if sem.exists() else {}
+    creditos = creditos_musica(carpeta, raiz)
 
     yt = build("youtube", "v3", credentials=credenciales(), cache_discovery=False)
     estado_dict = {"privacyStatus": estado, "selfDeclaredMadeForKids": False}
@@ -99,7 +143,7 @@ def publicar(carpeta, estado="private", publicar_en=None):
     cuerpo = {
         "snippet": {
             "title": (meta.get("titulo") or guion["titulo_trabajo"])[:100],
-            "description": descripcion(guion, meta, biblio),
+            "description": descripcion(guion, meta, biblio, creditos),
             "tags": meta.get("etiquetas", ["humor", "psicología", "ciencia", "habilidades sociales"])[:15],
             "categoryId": "27",                      # Educación
             "defaultLanguage": guion.get("idioma", "es"),

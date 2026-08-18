@@ -1,0 +1,41 @@
+{
+  "_nota": "Créditos de la música de cama, indexados por sha256 del mp3 y NO por su nombre. cama.mp3 es una copia byte a byte de una de las pistas, así que si algún día se cambia la pista por defecto la atribución sigue siendo la correcta sin tocar nada. montaje.py escribe el hash de la pista que usó en build/<ID>/musica.json y publicar.py busca aquí el bloque que hay que pegar en la descripción del vídeo. Si aparece una pista sin entrada aquí, publicar.py avisa en vez de publicar sin atribuir: para las CC BY 3.0 atribuir es obligación legal.",
+  "pistas": {
+    "4143a4c48067539963eeff663f43e8c1f880f4e4c1428972a69ed75d0aa28e44": {
+      "archivo": "cama_01_crying_over_you_christophermorrow.mp3",
+      "titulo": "Hip Hop Rap Instrumental (Crying Over You)",
+      "autor": "christophermorrow",
+      "licencia": "Creative Commons — Attribution 3.0 Unported (CC BY 3.0)",
+      "atribucion": [
+        "Hip Hop Rap Instrumental (Crying Over You) by christophermorrow",
+        "Creative Commons — Attribution 3.0 Unported (CC BY 3.0)",
+        "Free Download / Stream: http://bit.ly/2AHA5G9",
+        "Music promoted by Audio Library"
+      ]
+    },
+    "3f93cfef7318ae5e93a365a3fe16282de13c279e2733dd7c18fcfbe38f530c74": {
+      "archivo": "cama_02_dusk_next_route.mp3",
+      "titulo": "Dusk",
+      "autor": "Next Route",
+      "licencia": "https://license.declandp.info/NR",
+      "atribucion": [
+        "Music: Dusk by Next Route",
+        "Licencia: https://license.declandp.info/NR",
+        "Free Download / Stream: https://links.al/XQ5",
+        "Music promoted by Audio Library: https://links.al/youtube"
+      ]
+    },
+    "68fe871bcd427b465aa11f71d2f2fc889de234166af65fac305170c0f5bddd6b": {
+      "archivo": "cama_03_haru_lofi_roa.mp3",
+      "titulo": "Haru (LoFi version)",
+      "autor": "Roa",
+      "licencia": "Creative Commons — Attribution 3.0 Unported (CC BY 3.0)",
+      "atribucion": [
+        "Music: Haru (LoFi version) by Roa",
+        "Creative Commons — Attribution 3.0 Unported (CC BY 3.0)",
+        "Free Download / Stream: https://links.al/lLm",
+        "Music promoted by Audio Library: https://links.al/youtube"
+      ]
+    }
+  }
+}
