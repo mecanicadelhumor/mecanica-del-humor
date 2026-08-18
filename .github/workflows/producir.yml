@@ -244,12 +244,13 @@ jobs:
       - name: Expediente de calidad
         if: ${{ !cancelled() }}
         run: |
+          mkdir -p 05_calendario/qa
           while read -r ID; do
             [ -f "build/$ID/final.mp4" ] || continue
             python3 03_produccion/pipeline/qa.py "build/$ID" -o "05_calendario/qa/$ID"
           done < <(jq -r '.trabajos[].id' plan.json)
           # No dejamos crecer esto sin límite: solo los seis últimos vídeos.
-          ls -1d 05_calendario/qa/*/ 2>/dev/null | sort | head -n -6 | xargs -r rm -rf
+          { ls -1d 05_calendario/qa/*/ 2>/dev/null || true; } | sort | head -n -6 | xargs -r rm -rf
 
       # ---------------------------------------------------------------
       # El registro. Sin esto, saber qué vídeo salió ayer obliga a entrar
