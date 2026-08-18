@@ -1,0 +1,37 @@
+{
+  "_nota": "Qué se ha subido, cuándo y con qué guion. Lo escribe registrar.py al final de cada producción; lo leen el agente de revisión de calidad y el analista. «revisado» lo marca el agente de revisión cuando ya ha sacado conclusiones de ese vídeo, para no repasar dos veces lo mismo.",
+  "publicaciones": [
+    {
+      "id": "MDH-001.en",
+      "episodio": "MDH-001",
+      "idioma": "en",
+      "canal": "Humor Mechanics",
+      "titulo": "Nobody Is Born Funny — What 50 Years of Research Actually Found",
+      "guion": "05_calendario/guiones/MDH-001.en.json",
+      "video_id": null,
+      "url": null,
+      "estado": "public",
+      "publicar_en": null,
+      "musica": "cama.mp3",
+      "subido_utc": "2026-08-18T00:00:00Z",
+      "revisado": false,
+      "_pendiente": "Subido y publicado a mano antes de que existiera este registro: falta pegar el video_id y la url."
+    },
+    {
+      "id": "MDH-001.es",
+      "episodio": "MDH-001",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "Nadie nace gracioso — lo que 50 años de investigación han medido de verdad",
+      "guion": "05_calendario/guiones/MDH-001.es.json",
+      "video_id": null,
+      "url": null,
+      "estado": "public",
+      "publicar_en": null,
+      "musica": "cama.mp3",
+      "subido_utc": "2026-08-18T00:00:00Z",
+      "revisado": false,
+      "_pendiente": "Subido y publicado a mano antes de que existiera este registro: falta pegar el video_id y la url. El título y la descripción que hay en YouTube son los del guion, no los de publicaciones/MDH-001.es.json; hay que actualizarlos a mano una vez."
+    }
+  ]
+}

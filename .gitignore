@@ -20,3 +20,10 @@ Thumbs.db
 *.key
 credentials.json
 token.json
+
+# Credenciales locales para que Cowork pueda empujar al repositorio.
+# Nunca, bajo ningún concepto, deben viajar a git.
+.secrets/
+
+# Carpeta de tránsito: cosas que Cowork no puede borrar desde tu máquina.
+_to_delete/

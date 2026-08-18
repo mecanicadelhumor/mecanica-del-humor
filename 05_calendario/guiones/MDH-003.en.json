@@ -1,0 +1,224 @@
+{
+  "id": "MDH-003",
+  "idioma": "en",
+  "titulo_trabajo": "«Too soon»",
+  "tesis": "What turns a misfortune into a joke isn't time: it's distance. And distance can be measured, moved, and badly misjudged.",
+  "pilares": [
+    "A"
+  ],
+  "duracion_objetivo_s": 360,
+  "bloqueos": [],
+  "notas_humor": [
+    "El título español es una frase larga («todavía es pronto para reírse de eso»); en inglés existe la expresión hecha de dos palabras, «too soon», que además es un meme reconocible. El vídeo se construye alrededor de ella.",
+    "El huracán Sandy no necesita adaptación: para la audiencia estadounidense es memoria propia, no un ejemplo extranjero. Se le da más peso que en el original.",
+    "«Comedy is tragedy plus time» se cita en su idioma original (Steve Allen), no traducida de vuelta.",
+    "Escena 9: literalismo — tomarse en serio la idea de una «distancia» hasta convertirla en un mando físico.",
+    "Escena 18: rebaja tras el dato más duro del vídeo.",
+    "Cierre: callback al tropiezo del gancho.",
+    "Ortografía americana en todo el guion."
+  ],
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "etiqueta": "Episode 03",
+      "titulo": "«*Too soon*»",
+      "subtitulo": "The exact expiry date of that phrase",
+      "narracion": "Somebody trips on the sidewalk and gets up laughing. Everyone laughs with them."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Now imagine they don't get up.",
+      "narracion": "Now imagine the exact same scene. Same person, same sidewalk. Except they don't get up.",
+      "pausa_despues_s": 0.9
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Same sidewalk. Two endings.",
+      "et_a": "He gets up",
+      "et_b": "He doesn't",
+      "a": "Everyone laughs.",
+      "b": "The funny _evaporates_.",
+      "narracion": "Same event, same physics, same fall. And the humor is gone completely. What changed isn't what happened. It's how much it hurts."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "There is a *quantity* that governs that jump. It's been measured.",
+      "narracion": "And here's the interesting part: there is a quantity that governs that jump, it has a name, and it has been measured in a laboratory."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Part 1",
+      "titulo": "*Psychological distance*",
+      "narracion": "It's called psychological distance, and it's the sense of how far away from you something is."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "It moves on four axes",
+      "puntos": [
+        "*Time*: how long ago",
+        "Space: how many miles away",
+        "Social: how well you know who it happened to",
+        "Hypothetical: did it happen, or could it have"
+      ],
+      "narracion": "It moves on four axes. How long ago it was. How far away it physically happened. How well you know the person it happened to. And whether it really happened or only could have.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Move any one of them and the *same story* changes category.",
+      "narracion": "Move any one of the four and the same story changes category. It stops being a disaster and becomes an anecdote. Or the other way around."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Part 2",
+      "titulo": "And now the *strange* part",
+      "narracion": "And this is where it gets counterintuitive, because the relationship isn't the one almost everybody assumes."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "It isn't «more distance, more funny». It depends on *how much it hurts*.",
+      "narracion": "The intuitive idea is that the more distance, the funnier. That is not what comes out of the experiments. What comes out is finer: it depends on the size of the misfortune.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "The twist in the experiment",
+      "et_a": "Severe misfortune",
+      "a": "Needs *more* distance before it can be funny.",
+      "et_b": "Mild misfortune",
+      "b": "Push it too far and nobody cares. And nobody laughs _either_.",
+      "narracion": "A severe misfortune needs distance to become funny. A mild one works the other way around: push it too far away and it stops mattering to anyone, and something nobody cares about isn't funny either.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Too close hurts. Too far *bores*.",
+      "narracion": "Too close hurts. Too far bores. Humor lives in a narrow band between the two, and that band shifts depending on how serious the thing you're talking about is.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Which is last episode's idea, wearing a *different coat*.",
+      "narracion": "If that sounds familiar, it should. It's the benign violation again: the severity supplies the violation, and the distance supplies the benign. Distance is the dial you turn to set how harmless something feels.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Part 3",
+      "titulo": "The *«too soon»* curve",
+      "narracion": "All right. If time is one of the axes, then the phrase «too soon» ought to have a date on it. And somebody went looking for it."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "In 2012, Hurricane *Sandy* hit the east coast.",
+      "narracion": "In twenty twelve, Hurricane Sandy hit the east coast. A team of researchers did something you can only do in the age of social media: they tracked the jokes about it, day by day, for months.",
+      "fuente": "A04"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "At first, almost nothing. Then *more and more*. Then less again.",
+      "narracion": "At first, almost nobody was joking. As the days passed, the jokes increased. They hit a peak. And from there they fell back down.",
+      "fuente": "A04"
+    },
+    {
+      "tipo": "dato",
+      "cifra": "≈1 month",
+      "pie": "when humor about the disaster hit its _peak_. Before that, too soon. After that, nobody was thinking about it",
+      "narracion": "The peak arrived around a month later. Before that, it was too soon. After that, people had simply stopped thinking about it.",
+      "fuente": "A04"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Humor about a tragedy has a *window*. It opens and it shuts.",
+      "narracion": "Which means humor about a tragedy doesn't show up and stay. It has a window that opens and then closes again.",
+      "fuente": "A04"
+    },
+    {
+      "tipo": "cita",
+      "texto": "Comedy is tragedy plus time.",
+      "autor": "Attributed to Steve Allen. Now with a graph behind it",
+      "narracion": "So the old formula, comedy equals tragedy plus time, turns out to be half right. Time does open the window. It also closes it.",
+      "fuente": "A04"
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Part 4",
+      "titulo": "How to use this *on Monday*",
+      "narracion": "Now the practical part, because this isn't really about hurricanes."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "When something goes wrong, you have a *dial*. Not a sentence.",
+      "narracion": "It's about what happens when something goes badly for you. A disastrous meeting, a terrible date, a stupid mistake in front of people. You have a distance dial, and you're the one who turns it."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "How to turn the dial",
+      "puntos": [
+        "Move it in *time*: «a year from now this is a story»",
+        "Move it in person: tell it as if it happened to someone else",
+        "Move it to hypothetical: «imagine if it had also…»"
+      ],
+      "narracion": "Move it in time: a year from now, this is just a story. Move it socially: tell it as if it happened to an acquaintance. Or push it into the hypothetical, exaggerating until it's obviously false.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Those three things are, literally, what an *anecdote* is.",
+      "narracion": "Those three moves are exactly what somebody does when they turn a bad day into a good story. It isn't that they're funnier than you. It's that they moved the dial sooner.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "The limit",
+      "titulo": "And the part that has to be said *out loud*",
+      "narracion": "Now, the warning."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Your distance is not the distance of *whoever is listening*.",
+      "narracion": "The distance is yours. The person listening has their own, and they don't have to match.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Why they can and you can't",
+      "et_a": "They joke about their own illness",
+      "a": "Their distance. Their call.",
+      "et_b": "You joke about it",
+      "b": "You are _not standing where they are standing_.",
+      "narracion": "That's why someone can joke about their own illness and be genuinely offended if you do it.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "It isn't a double standard. You're at *different points on the curve*.",
+      "narracion": "It isn't hypocrisy and it isn't a double standard. You're simply not at the same point on the curve. And whoever is closest to the event gets to say where the line is."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "The rule that holds up",
+      "puntos": [
+        "Your own pain: joke whenever you want",
+        "Somebody else's: wait until *they* open it"
+      ],
+      "narracion": "Which gives a fairly reliable rule. About your own pain, joke whenever you like. About somebody else's, you wait until the person who lived it opens the door."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "«It was just a joke» moves *nobody's dial*.",
+      "narracion": "And if you overshoot, saying it was just a joke fixes nothing. It doesn't move the other person's distance a single inch. The only thing that ever moves it is having measured it beforehand."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "The one who tripped was laughing because he had *already gotten up*.",
+      "narracion": "And the man who tripped at the start of this video was laughing because he had already gotten up."
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "It isn't time. It's *distance*.",
+      "subtitulo": "Next episode: almost nobody laughs at jokes, and there are recordings that prove it.",
+      "narracion": "So it isn't that it's too soon. It's that you're still standing too close. Next episode: it turns out almost nobody laughs at jokes, and there are twelve hundred recordings that prove it."
+    }
+  ]
+}

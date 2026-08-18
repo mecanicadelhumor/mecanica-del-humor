@@ -1,0 +1,262 @@
+{
+  "id": "MDH-002",
+  "idioma": "en",
+  "titulo_trabajo": "Why you laugh: the mechanism",
+  "tesis": "Something is funny when it breaks an expectation and stays harmless at the same time. Take either one away and the joke dies.",
+  "pilares": [
+    "A",
+    "F"
+  ],
+  "duracion_objetivo_s": 380,
+  "bloqueos": [],
+  "notas_humor": [
+    "El gancho español era el juego de palabras con «bar» (local / barra de hierro). En inglés ese chiste es el original: «A man walks into a bar. Ouch.» — así que aquí no se adapta, se devuelve a su idioma, y además se acorta al remate de una palabra, que es lo que premia el inglés.",
+    "Escena 4: la propia estructura del vídeo ejecuta una violación benigna (el ejemplo del cosquilleo).",
+    "Escena 25: el reposabrazos del asiento del medio es un ejemplo mucho más doméstico en Estados Unidos que en España; se le deja el peso de la escena.",
+    "Escena 15: remate seco («I just took your payment») en vez de la explicación larga del original.",
+    "Cierre: callback al chiste del bar del primer segundo.",
+    "Ortografía americana en todo el guion, coherente con la voz en-US y con el nombre del canal."
+  ],
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "etiqueta": "Episode 02",
+      "titulo": "Why you *laugh*",
+      "subtitulo": "The mechanism, piece by piece",
+      "narracion": "A man walks into a bar. Ouch."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "If you smiled: *why*, exactly?",
+      "narracion": "If you smiled, even just on the inside, I want you to stop on the question that actually matters. Not whether it was funny. Why it was.",
+      "pausa_despues_s": 0.7
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "There is an answer. It fits in *two conditions*.",
+      "narracion": "Because there is an answer, it is surprisingly precise, and the whole thing fits into two conditions that have to be true at the same time."
+    },
+    {
+      "tipo": "diagrama",
+      "titulo": "The two conditions",
+      "pasos": [
+        {
+          "titulo": "Violation",
+          "pie": "something is not as it should be"
+        },
+        {
+          "titulo": "Benign",
+          "pie": "but nothing bad happens"
+        },
+        {
+          "titulo": "At once",
+          "pie": "that is the whole trick"
+        }
+      ],
+      "narracion": "In twenty ten, Peter McGraw and Caleb Warren published the benign violation theory. Something is funny when it violates how things ought to be, and at the same time strikes you as harmless. Both. Simultaneously.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Take one away and watch what happens",
+      "et_a": "Violation only",
+      "a": "Threat. Disgust. Offense. Nobody laughs.",
+      "et_b": "Benign only",
+      "b": "Everything is fine. Nobody laughs _either_.",
+      "narracion": "And you can test it by removing one. If all you have is the violation, what you feel is threat, or disgust, or offense.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Humor lives in the *overlap*. And the overlap is narrow.",
+      "narracion": "And if all you have is the harmless part, nothing happens at all, and you don't laugh either. Humor lives in the overlap between the two, and that overlap is narrow.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Cleanest example on earth: *tickling*.",
+      "narracion": "The cleanest example that exists is tickling."
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Same hand. Same ribs.",
+      "et_a": "A stranger",
+      "a": "A violation of your space. Nothing else.",
+      "et_b": "Someone you trust",
+      "b": "The exact same motion. And you _laugh_.",
+      "narracion": "A stranger putting a hand in your ribs is a violation of your space and nothing more. Someone you trust doing it as a joke is the identical physical movement. And you laugh.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "The gesture never changed. The *context* did.",
+      "narracion": "Which is also why you can't tickle yourself. The violation is missing. Your brain knows exactly what's coming."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Part 2",
+      "titulo": "What happens *inside*",
+      "narracion": "Fine. That's the logic. Now the machinery."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "A joke runs in _two phases_. Always the same two.",
+      "narracion": "When you hear a joke, your brain does two different things, in order. First it detects that something doesn't fit. Then it tries to make it fit.",
+      "fuente": "F02"
+    },
+    {
+      "tipo": "diagrama",
+      "titulo": "The two phases",
+      "pasos": [
+        {
+          "titulo": "Detection",
+          "pie": "this doesn't add up"
+        },
+        {
+          "titulo": "Resolution",
+          "pie": "oh — that's what it meant"
+        },
+        {
+          "titulo": "Reward",
+          "pie": "and then you get paid"
+        }
+      ],
+      "narracion": "Neuroimaging reviews describe that same pattern. Some regions handle spotting the incongruity, others handle resolving it, and then something else lights up entirely.",
+      "fuente": "F02"
+    },
+    {
+      "tipo": "dato",
+      "cifra": "The same circuit",
+      "pie": "that food, money and drugs run on. A joke _pays you_ for solving it",
+      "narracion": "What lights up is the reward circuit. The same one that responds to food, to money, to drugs. When you solve a joke, your brain pays you for having solved it.",
+      "fuente": "F01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Which explains *three things* you may have wondered about.",
+      "narracion": "Which explains three things you may have wondered about. Why people actively hunt for things to laugh at. Why sharing a joke is so compulsive. And why explaining a joke destroys it.",
+      "pausa_despues_s": 0.6
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Explaining a joke isn't rude. It's a *robbery*.",
+      "narracion": "That last one isn't a social convention. It's mechanical. The pleasure was in solving it yourself. Explain it, and I just took your payment.",
+      "pausa_despues_s": 0.8
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "Part 3",
+      "titulo": "Now the *useful* part",
+      "narracion": "And here is where this stops being trivia and turns into a tool."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "If your joke died, *one of the two* was missing. There is no third option.",
+      "narracion": "Because if you know it takes two conditions, then when something doesn't land you already know where to look. There are only two places."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Diagnosis in two questions",
+      "puntos": [
+        "No *violation*? It was obvious. They saw it coming",
+        "Not benign? Somebody at that table felt _targeted_",
+        "It is almost always the second one"
+      ],
+      "narracion": "First question: was there no violation? Too obvious, too predictable, it broke nothing. Second: was it not benign? Somebody at that table felt targeted. And it's almost always the second.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Good news: *benign is something you build*.",
+      "narracion": "And here is the good news, because benign is not a fixed property of the joke. It's something you construct around it."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Three ways to build it",
+      "puntos": [
+        "Make *yourself* the target",
+        "Aim at the idea, never at the person",
+        "Flag that it's play: tone, face, timing"
+      ],
+      "narracion": "Three concrete levers. One: make yourself the target, because nobody takes offense on your behalf.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Two: you can demolish an *argument* without touching who made it.",
+      "narracion": "Two: aim at the idea and not at the person. You can demolish an argument without laying a finger on whoever made it.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "cita",
+      "texto": "Before a comedian says a single word, they have already told you nothing that follows is serious.",
+      "autor": "Lever three: mark it as play",
+      "narracion": "And three: mark explicitly that this is play, with your tone, with your face, with your timing. It's what a comedian does walking onstage. Before saying anything, they've already warned you.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "And the lever for the other condition: *be specific*.",
+      "narracion": "And if what's missing is the violation, the lever is specificity. Generic never breaks anything, because we were already expecting it."
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Same complaint, two versions",
+      "et_a": "Generic",
+      "a": "«Flying is uncomfortable.»",
+      "et_b": "Specific",
+      "b": "«The middle armrest belongs to *whoever claims it first*, and that is the entire body of law up there.»",
+      "narracion": "Same complaint, two versions. Flying is uncomfortable: zero."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "The second one *names* something you lived through and never put into words.",
+      "narracion": "The second one works because it names something you had already lived through and never put into words. Recognition, plus rupture.",
+      "fuente": "A01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Recognition *plus* rupture. That is the entire trick.",
+      "narracion": "Recognition plus rupture. That's the whole mechanism, and you now have it."
+    },
+    {
+      "tipo": "titulo",
+      "etiqueta": "The limit",
+      "titulo": "Where this theory *stops*",
+      "narracion": "Now, the honest part."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "«Benign» depends on _who is listening_. You don't fully control that.",
+      "narracion": "Benign violation is not a foolproof formula, and its weak spot is obvious the second you think about it.",
+      "fuente": "A02"
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "One joke. Two tables. Four feet apart.",
+      "et_a": "This table",
+      "a": "Harmless. Everyone laughs.",
+      "et_b": "The next one",
+      "b": "An _assault_. Same words, same night.",
+      "narracion": "What counts as harmless depends on who is listening. The same joke can be harmless at one table and an assault at the one beside it.",
+      "fuente": "A02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "And one more variable changes everything: *distance*.",
+      "narracion": "There's also a variable the theory needs to work, and it deserves its own episode: distance. In time, in space, and in how much you care.",
+      "fuente": "A03"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "So if your last joke died: you now know *which of the two* was missing.",
+      "narracion": "So take this with you. Violation plus harmless, both at once. And if your last joke died, you now know which of the two was missing."
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Violation *plus* harmless. Nothing else.",
+      "subtitulo": "Next episode: «too soon» has an expiry date, and somebody went and measured it.",
+      "narracion": "Next episode we measure the exact expiry date of «too soon». And yes: the bar was iron, and it was at head height. A violation, harmless, and that's why it survived all the way here."
+    }
+  ]
+}

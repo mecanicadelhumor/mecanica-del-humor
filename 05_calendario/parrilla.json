@@ -1,0 +1,68 @@
+{
+  "_nota": "La parrilla es la única fuente de verdad sobre qué se produce y cuándo. La lee cola.py, que es quien decide el trabajo de cada día; el cron de GitHub Actions solo la ejecuta. Cambiar el ritmo del canal es cambiar este fichero, no el workflow.",
+
+  "_modos": {
+    "revision": "Sube en privado y sin fecha de publicación. Alguien (tú) lo revisa y le da a publicar a mano.",
+    "automatico": "Sube en privado con publishAt: YouTube lo hace público solo a la hora indicada. Entre la subida (03:00) y la publicación hay ~15 h de margen para cancelar."
+  },
+
+  "zona_horaria": "Europe/Madrid",
+
+  "_horas": "Hora local de publicación por canal. El canal inglés sale una hora antes: 17:00 CEST son las 11:00 de la mañana en la costa este de Estados Unidos, que es cuando despierta el grueso de su audiencia.",
+  "horas_publicacion": {
+    "es": "18:00",
+    "en": "17:00"
+  },
+
+  "_musica": "Rotación automática entre las pistas de assets/musica/creditos.json, por número de episodio. Los dos idiomas de un mismo episodio comparten pista para que suenen al mismo canal.",
+
+  "emisiones": [
+    {
+      "fecha": "2026-08-19",
+      "episodio": "MDH-002",
+      "idiomas": ["es", "en"],
+      "modo": "revision",
+      "nota": "Miércoles. Primer día de ritmo diario. Silvestre revisa y publica a mano."
+    },
+    {
+      "fecha": "2026-08-20",
+      "episodio": "MDH-003",
+      "idiomas": ["es", "en"],
+      "modo": "revision",
+      "nota": "Jueves. Por la noche se planifica la tanda 2."
+    },
+    {
+      "fecha": "2026-08-21",
+      "episodio": "MDH-004",
+      "idiomas": ["es", "en"],
+      "modo": "revision",
+      "nota": "Viernes. Último día con revisión manual."
+    },
+    {
+      "fecha": "2026-08-22",
+      "episodio": "MDH-005",
+      "idiomas": ["es", "en"],
+      "modo": "automatico",
+      "nota": "Sábado. A partir de aquí el canal vuela solo."
+    },
+    {
+      "fecha": "2026-08-23",
+      "episodio": "MDH-006",
+      "idiomas": ["es", "en"],
+      "modo": "automatico"
+    },
+    {
+      "fecha": "2026-08-24",
+      "episodio": "MDH-007",
+      "idiomas": ["es", "en"],
+      "modo": "automatico"
+    },
+    {
+      "fecha": "2026-08-25",
+      "episodio": "MDH-008",
+      "idiomas": ["es", "en"],
+      "modo": "automatico",
+      "nota": "Cierra la tanda 1. Los ocho formatos ya están en la calle; a partir de aquí manda la tanda 2."
+    }
+  ]
+}

@@ -1,42 +1,121 @@
 name: Producir vídeo
 
-# Las manos del sistema. Cowork escribe el guion y hace commit; esto lo
-# convierte en un mp4 listo para subir. Todo lo que necesita internet
-# (síntesis de voz, imágenes, subida a YouTube) ocurre aquí.
+# Las manos del sistema. La parrilla (05_calendario/parrilla.json) dice qué
+# toca hoy; esto lo convierte en dos mp4 —español e inglés— subidos a sus
+# canales. Todo lo que necesita internet (síntesis de voz, subida a YouTube)
+# ocurre aquí.
+#
+# El cron es lo que hace que el canal no dependa de que nadie se acuerde.
 
 on:
+  schedule:
+    # 01:00 UTC = 03:00 en España en horario de verano (02:00 en invierno).
+    # De madrugada: el runner está libre y el vídeo espera montado a que te
+    # levantes. La hora de PUBLICACIÓN no es esta: la fija la parrilla.
+    - cron: "0 1 * * *"
+
   workflow_dispatch:
     inputs:
       guion:
-        description: "Ruta del guion, p. ej. 05_calendario/guiones/MDH-001.es.json"
-        required: true
+        description: "Guion suelto, p. ej. 05_calendario/guiones/MDH-002.es.json (vacío = lo que toque hoy)"
+        required: false
+      fecha:
+        description: "Simular otro día de la parrilla (YYYY-MM-DD)"
+        required: false
+      estado:
+        description: "Estado de subida"
+        type: choice
+        options: [segun-parrilla, private, unlisted, public]
+        default: segun-parrilla
       subir:
-        description: "Subir a YouTube como privado al terminar"
+        description: "Subir a YouTube al terminar"
         type: boolean
-        default: false
+        default: true
+
   push:
     paths:
       - "05_calendario/guiones/**.json"
 
+# Nunca dos producciones a la vez: comparten cuota de la API de YouTube y el
+# registro de publicaciones se escribe en el repositorio.
+concurrency:
+  group: produccion
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
 jobs:
-  producir:
+  # -------------------------------------------------------------------------
+  # 1. Qué toca hoy. Es barato (segundos) y evita arrancar un runner con
+  #    ffmpeg y Chromium los días que no hay emisión.
+  # -------------------------------------------------------------------------
+  plan:
+    # Un push de guiones NO produce por defecto: escribir ocho guiones de
+    # golpe lanzaría ocho producciones. Para producir desde un commit, pon
+    # [producir] en el mensaje.
+    if: >-
+      github.event_name != 'push' ||
+      contains(github.event.head_commit.message, '[producir]')
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    outputs:
+      hay_trabajo: ${{ steps.cola.outputs.hay_trabajo }}
+      episodio: ${{ steps.cola.outputs.episodio }}
+      modo: ${{ steps.cola.outputs.modo }}
+      guiones: ${{ steps.cola.outputs.guiones }}
+      plan: ${{ steps.cola.outputs.plan }}
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0          # para poder ver qué guiones cambió un push
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Resolver la cola
+        id: cola
+        env:
+          GUION: ${{ inputs.guion }}
+          FECHA: ${{ inputs.fecha }}
+          ESTADO: ${{ inputs.estado }}
+          ANTES: ${{ github.event.before }}
+        run: |
+          if [ -z "$GUION" ] && [ "$GITHUB_EVENT_NAME" = "push" ]; then
+            GUION=$(git diff --name-only "$ANTES" "$GITHUB_SHA" \
+                    -- '05_calendario/guiones/*.json' | tr '\n' ' ')
+          fi
+          ARGS=()
+          [ -n "$GUION" ] && ARGS+=(--guion $GUION)
+          [ -n "$FECHA" ] && ARGS+=(--fecha "$FECHA")
+          [ -n "$ESTADO" ] && [ "$ESTADO" != "segun-parrilla" ] && ARGS+=(--estado "$ESTADO")
+          python3 03_produccion/pipeline/cola.py "${ARGS[@]}" --github-output
+
+  # -------------------------------------------------------------------------
+  # 2. La producción propiamente dicha.
+  # -------------------------------------------------------------------------
+  producir:
+    needs: plan
+    if: needs.plan.outputs.hay_trabajo == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    permissions:
+      contents: write           # para dejar el registro de publicaciones en el repo
 
     steps:
       - uses: actions/checkout@v6
 
-      - name: Determinar qué guiones producir
-        id: lista
+      - name: Recuperar el plan
+        env:
+          PLAN: ${{ needs.plan.outputs.plan }}
         run: |
-          if [ -n "${{ inputs.guion }}" ]; then
-            echo "guiones=${{ inputs.guion }}" >> $GITHUB_OUTPUT
-          else
-            # en un push, solo los guiones que han cambiado
-            CAMBIOS=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} \
-                      -- '05_calendario/guiones/*.json' | tr '\n' ' ')
-            echo "guiones=$CAMBIOS" >> $GITHUB_OUTPUT
-          fi
+          printf '%s' "$PLAN" > plan.json
+          {
+            echo "### ${{ needs.plan.outputs.episodio }} · modo ${{ needs.plan.outputs.modo }}"
+            jq -r '.trabajos[] | "- `\(.id)` → \(.estado)\(if .publicar_en then " · público el \(.publicar_en)" else "" end) · música: \(.musica | split("/") | last)"' plan.json
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - uses: actions/setup-python@v6
         with:
@@ -50,61 +129,67 @@ jobs:
           playwright install --with-deps chromium
 
       # ---------------------------------------------------------------
-      # 1. El portero. Si el guion incumple el contrato, aquí se para.
+      # El portero. Si un guion incumple el contrato, aquí se para.
       # ---------------------------------------------------------------
-      - name: Validar guion
-        run: python3 04_agentes/validar_guion.py ${{ steps.lista.outputs.guiones }}
+      - name: Validar guiones
+        run: python3 04_agentes/validar_guion.py ${{ needs.plan.outputs.guiones }}
 
       # ---------------------------------------------------------------
-      # 2. Voz + subtítulos. Devuelve las duraciones reales de cada escena.
+      # Voz + subtítulos. Devuelve las duraciones reales de cada escena.
       # ---------------------------------------------------------------
       - name: Sintetizar narración
         run: |
-          for G in ${{ steps.lista.outputs.guiones }}; do
-            ID=$(basename "$G" .json)
+          while IFS=$'\t' read -r ID G; do
+            echo "::group::voz $ID"
             python3 03_produccion/pipeline/voz.py "$G" -o "build/$ID"
-          done
+            echo "::endgroup::"
+          done < <(jq -r '.trabajos[] | [.id, .guion] | @tsv' plan.json)
 
       # ---------------------------------------------------------------
-      # 3. Render visual, ya sincronizado con la voz real.
+      # Render visual, ya sincronizado con la voz real.
       # ---------------------------------------------------------------
       - name: Renderizar vídeo mudo
         run: |
-          for G in ${{ steps.lista.outputs.guiones }}; do
-            ID=$(basename "$G" .json)
+          while read -r ID; do
+            echo "::group::render $ID"
             python3 03_produccion/pipeline/render.py "build/$ID/guion.timed.json" \
               -o "build/$ID/mudo.mp4" --fps 30
-          done
+            echo "::endgroup::"
+          done < <(jq -r '.trabajos[].id' plan.json)
 
       # ---------------------------------------------------------------
-      # 4. Montaje final: voz + música + subtítulos + normalización.
+      # Montaje final: voz + música + subtítulos + normalización.
+      # La pista de música la elige cola.py rotando entre las tres, así
+      # que dos episodios seguidos no suenan igual.
       # ---------------------------------------------------------------
       - name: Montar
         run: |
-          MUSICA=""
-          if [ -f 03_produccion/assets/musica/cama.mp3 ]; then
-            MUSICA="--musica 03_produccion/assets/musica/cama.mp3"
-          fi
-          for G in ${{ steps.lista.outputs.guiones }}; do
-            ID=$(basename "$G" .json)
-            python3 03_produccion/pipeline/montaje.py "build/$ID" $MUSICA
-          done
+          while IFS=$'\t' read -r ID MUS; do
+            echo "::group::montaje $ID"
+            if [ -n "$MUS" ] && [ -f "$MUS" ]; then
+              python3 03_produccion/pipeline/montaje.py "build/$ID" --musica "$MUS"
+            else
+              echo "::warning::$ID se monta sin música (no encuentro «$MUS»)"
+              python3 03_produccion/pipeline/montaje.py "build/$ID"
+            fi
+            echo "::endgroup::"
+          done < <(jq -r '.trabajos[] | [.id, .musica] | @tsv' plan.json)
 
-      - name: Generar miniatura
+      - name: Generar miniaturas
         run: |
-          for G in ${{ steps.lista.outputs.guiones }}; do
-            ID=$(basename "$G" .json)
+          while IFS=$'\t' read -r ID G; do
             python3 03_produccion/pipeline/miniatura.py "$G" -o "build/$ID/miniatura.png"
-          done
+          done < <(jq -r '.trabajos[] | [.id, .guion] | @tsv' plan.json)
 
       # ---------------------------------------------------------------
-      # 5. Todo queda descargable aunque no se suba.
+      # Todo queda descargable aunque no se suba.
       # ---------------------------------------------------------------
       - name: Publicar artefactos
         uses: actions/upload-artifact@v4
         with:
-          name: videos
+          name: ${{ needs.plan.outputs.episodio }}
           path: |
+            plan.json
             build/**/final.mp4
             build/**/miniatura.png
             build/**/subtitulos.srt
@@ -114,29 +199,72 @@ jobs:
           retention-days: 30
 
       # ---------------------------------------------------------------
-      # 6. Subida opcional. Siempre en privado: publicar lo decides tú.
+      # Subida. Cada canal es una cuenta de marca distinta y tiene su
+      # propio refresh token; se elige por el idioma del trabajo.
+      #
+      # En modo «revisión» sube en privado y sin fecha: publicas tú.
+      # En modo «automático» sube en privado con publishAt, y es YouTube
+      # quien lo hace público a la hora de la parrilla — con ~15 h de
+      # margen entre la subida y la publicación para cancelarlo.
       # ---------------------------------------------------------------
-      # Cada canal es una cuenta de marca distinta y necesita su propio
-      # refresh token: uno autoriza a subir a "Mecánica del Humor" y el otro a
-      # "Humor Mechanics". Se elige por el sufijo del guion (.es / .en).
-      - name: Subir a YouTube (privado)
-        if: ${{ inputs.subir }}
+      - name: Subir a YouTube
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.subir }}
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           TOKEN_ES: ${{ secrets.YT_REFRESH_TOKEN }}
           TOKEN_EN: ${{ secrets.YT_REFRESH_TOKEN_EN }}
         run: |
-          for G in ${{ steps.lista.outputs.guiones }}; do
-            ID=$(basename "$G" .json)
-            case "$ID" in
-              *.en) export YT_REFRESH_TOKEN="$TOKEN_EN"; CANAL="Humor Mechanics" ;;
-              *)    export YT_REFRESH_TOKEN="$TOKEN_ES"; CANAL="Mecánica del Humor" ;;
+          while IFS=$'\t' read -r ID IDIOMA ESTADO CUANDO; do
+            case "$IDIOMA" in
+              en) export YT_REFRESH_TOKEN="$TOKEN_EN"; CANAL="Humor Mechanics" ;;
+              *)  export YT_REFRESH_TOKEN="$TOKEN_ES"; CANAL="Mecánica del Humor" ;;
             esac
             if [ -z "$YT_REFRESH_TOKEN" ]; then
               echo "::error::Falta el refresh token del canal $CANAL para $ID"
               exit 1
             fi
-            echo "Subiendo $ID al canal $CANAL"
-            python3 03_produccion/pipeline/publicar.py "build/$ID" --estado private
-          done
+            echo "::group::subida $ID → $CANAL"
+            if [ -n "$CUANDO" ]; then
+              python3 03_produccion/pipeline/publicar.py "build/$ID" \
+                --estado "$ESTADO" --publicar-en "$CUANDO"
+            else
+              python3 03_produccion/pipeline/publicar.py "build/$ID" --estado "$ESTADO"
+            fi
+            echo "::endgroup::"
+          done < <(jq -r '.trabajos[] | [.id, .idioma, .estado, (.publicar_en // "")] | @tsv' plan.json)
+
+      # ---------------------------------------------------------------
+      # El expediente de calidad: seis fotogramas y las medidas de audio
+      # y ritmo de cada vídeo, en el repositorio. Los artefactos de
+      # Actions exigen credenciales; el repositorio es público. Esto es
+      # lo que permite que la revisión nocturna vea de verdad el vídeo
+      # en vez de suponer.
+      # ---------------------------------------------------------------
+      - name: Expediente de calidad
+        if: ${{ !cancelled() }}
+        run: |
+          while read -r ID; do
+            [ -f "build/$ID/final.mp4" ] || continue
+            python3 03_produccion/pipeline/qa.py "build/$ID" -o "05_calendario/qa/$ID"
+          done < <(jq -r '.trabajos[].id' plan.json)
+          # No dejamos crecer esto sin límite: solo los seis últimos vídeos.
+          ls -1d 05_calendario/qa/*/ 2>/dev/null | sort | head -n -6 | xargs -r rm -rf
+
+      # ---------------------------------------------------------------
+      # El registro. Sin esto, saber qué vídeo salió ayer obliga a entrar
+      # en YouTube a mano; con esto, el agente que revisa la calidad lo
+      # lee del repositorio. Es la memoria del canal.
+      # ---------------------------------------------------------------
+      - name: Registrar lo publicado
+        if: ${{ !cancelled() }}
+        run: |
+          python3 03_produccion/pipeline/registrar.py plan.json build
+          git add -A 05_calendario/registro_publicaciones.json 05_calendario/qa
+          if ! git diff --cached --quiet; then
+            git config user.name  "Mecánica del Humor (bot)"
+            git config user.email "mecanicadelhumor@users.noreply.github.com"
+            git commit -m "Registro y expediente de calidad: ${{ needs.plan.outputs.episodio }}"
+            git pull --rebase --autostash origin "$GITHUB_REF_NAME"
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          fi
