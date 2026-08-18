@@ -154,8 +154,17 @@ async def principal(guion_path, salida, voz=None):
     with lista.open("w", encoding="utf-8") as fh:
         for mp3, _ in partes:
             fh.write(f"file '{mp3.resolve()}'\nfile '{silencio.resolve()}'\n")
+    # Re-codificar, NO "-c copy". Cada MP3 lleva su propio retardo de codificador
+    # (~40 ms), y al pegarlos en crudo ese retardo se acumula en cada junta: la
+    # narración sale más larga que la suma de sus trozos, mientras que los
+    # subtítulos y las duraciones de escena se calcularon sobre los trozos
+    # sueltos. El resultado es una deriva creciente entre imagen, voz y
+    # subtítulos. Medido con la estructura de MDH-001 (38 escenas + 38
+    # silencios): "-c copy" se va +3,82 s al final; re-codificando el resultado
+    # es exacto a la muestra.
     subprocess.run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lista),
-                    "-c", "copy", str(salida / "voz.mp3")], check=True, capture_output=True)
+                    "-c:a", "libmp3lame", "-q:a", "2", "-ar", "24000", "-ac", "1",
+                    str(salida / "voz.mp3")], check=True, capture_output=True)
 
     escribir_srt(bloques, salida / "subtitulos.srt")
     escribir_ass(palabras_todas, salida / "subtitulos.ass")

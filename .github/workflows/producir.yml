@@ -109,6 +109,8 @@ jobs:
             build/**/miniatura.png
             build/**/subtitulos.srt
             build/**/guion.timed.json
+            build/**/voz.mp3
+            build/**/voz/escena_*.mp3
           retention-days: 30
 
       # ---------------------------------------------------------------
