@@ -206,6 +206,7 @@ jobs:
             build/**/final.mp4
             build/**/miniatura.png
             build/**/subtitulos.srt
+            build/**/subtitulos.ass
             build/**/guion.timed.json
             build/**/voz.mp3
             build/**/voz/escena_*.mp3

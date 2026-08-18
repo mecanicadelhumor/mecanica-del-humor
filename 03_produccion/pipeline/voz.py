@@ -174,7 +174,15 @@ async def principal(guion_path, salida, voz=None):
                     str(salida / "voz.mp3")], check=True, capture_output=True)
 
     escribir_srt(bloques, salida / "subtitulos.srt")
+    # Sin marcas de tiempo por palabra no hay subtítulos quemados, y los
+    # subtítulos quemados son lo único que se mueve durante el tramo central de
+    # cada escena, que es estático por diseño. Un vídeo sin ellos se percibe
+    # como un pase de diapositivas. Hasta el 18/08 esto fallaba en silencio.
+    if not palabras_todas:
+        print("::warning::El sintetizador no ha devuelto marcas de tiempo por palabra "
+              "(WordBoundary). El vídeo saldrá SIN subtítulos quemados.")
     escribir_ass(palabras_todas, salida / "subtitulos.ass")
+    print(f"Marcas de palabra: {len(palabras_todas)}")
     guion["duracion_total_s"] = round(reloj, 2)
     guion["voz_usada"] = voz
     (salida / "guion.timed.json").write_text(

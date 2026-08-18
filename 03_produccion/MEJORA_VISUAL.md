@@ -128,6 +128,9 @@ propias variantes A/B cuando haya datos.
 | Ítem | Estado |
 |---|---|
 | Tipografía de titulares (Archivo Black no se instalaba en el runner) | corregido el 18/08 |
+| **Subtítulos quemados ausentes** — lo único que se movía en el tramo estático | instrumentado el 18/08, a confirmar el 19 |
+| Muestreo de fotogramas de QA a ciegas (caían en fundidos) | corregido el 18/08 |
+| Un solo resaltado ámbar por pantalla | corregido en MDH-002, vigilar en el resto |
 | V1 gráficas · V2 variantes de enunciado · V3 pictogramas · V4 acento por episodio | pendientes |
 | V5–V7 | pendientes |
 | V8–V9 | sin decidir |

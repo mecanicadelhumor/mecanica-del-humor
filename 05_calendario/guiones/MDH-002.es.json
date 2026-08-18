@@ -10,10 +10,11 @@
   "duracion_objetivo_s": 400,
   "bloqueos": [],
   "notas_humor": [
+    "Gancho: chiste nativo en español, no traducido. Su gracia no depende de ninguna palabra concreta, sino de que la bibliotecaria rompe una norma (no se asusta a quien viene a pedir un libro) sin que pase nada — es decir, el propio gancho es ya una violación benigna, que es justo lo que el vídeo va a explicar.",
     "Escena 4: la propia estructura del vídeo ejecuta una violación benigna (el ejemplo del cosquilleo).",
     "Escena 13: regla de tres — dos ejemplos que crean patrón, el tercero lo rompe.",
     "Escena 22: literalismo llevado hasta romperse.",
-    "Cierre: callback al ejemplo de la escena 4."
+    "Cierre: callback al chiste de la biblioteca, ya desmontado con las dos condiciones."
   ],
   "escenas": [
     {
@@ -21,7 +22,8 @@
       "etiqueta": "Episodio 02",
       "titulo": "Por qué te ríes",
       "subtitulo": "El mecanismo, pieza a pieza",
-      "narracion": "Un hombre entra en un bar. Y se agacha, porque el bar es de hierro y está a metro y medio del suelo."
+      "narracion": "Un hombre entra en una biblioteca y pide un libro sobre la paranoia. La bibliotecaria lo mira, se acerca, y le dice en voz baja: «están detrás de usted».",
+      "pausa_despues_s": 0.9
     },
     {
       "tipo": "enunciado",
@@ -82,7 +84,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "El gesto es idéntico. Lo que cambia es *quién* y *dónde*.",
+      "texto": "El gesto es idéntico. Lo que cambia es *quién y dónde*.",
       "narracion": "El gesto es idéntico. Lo que cambia es el contexto. Por eso no puedes hacerte cosquillas a ti mismo: falta la violación. Tu cerebro sabe perfectamente lo que viene."
     },
     {
@@ -127,7 +129,7 @@
     {
       "tipo": "enunciado",
       "texto": "Lo cual explica *tres cosas*.",
-      "narracion": "Y eso explica tres cosas que quizá te habías preguntado. Por qué la gente busca reírse activamente. Por qué compartir un chiste engancha tanto. Y por qué explicar un chiste lo destruye: si te doy la solución, te quito el premio."
+      "narracion": "Y eso explica tres cosas. Por qué la gente busca reírse activamente. Por qué compartir un chiste engancha tanto. Y por qué explicar un chiste lo destruye: si te doy la solución, te quito el premio."
     },
     {
       "tipo": "enunciado",
@@ -151,10 +153,10 @@
       "titulo": "Diagnóstico en dos preguntas",
       "puntos": [
         "¿Faltó *violación*? Era obvio, previsible, ya lo sabían",
-        "¿Faltó lo *benigno*? Alguien se sintió señalado",
+        "¿Faltó lo benigno? Alguien se sintió señalado",
         "Casi siempre es la _segunda_"
       ],
-      "narracion": "Primera pregunta: ¿faltó violación? Es decir, era demasiado obvio, demasiado previsible, no rompía nada. Segunda: ¿faltó lo benigno? Alguien en esa mesa se sintió señalado. Y por experiencia acumulada de mucha gente, casi siempre es la segunda.",
+      "narracion": "Primera pregunta: ¿faltó violación? Era demasiado obvio, demasiado previsible, no rompía nada. Segunda: ¿faltó lo benigno? Alguien en esa mesa se sintió señalado. Y casi siempre es la segunda.",
       "fuente": "A01"
     },
     {
@@ -243,7 +245,7 @@
       "tipo": "cierre",
       "titulo": "Violación *más* algo benigno. Nada más.",
       "subtitulo": "En el próximo episodio: por qué «todavía es pronto para reírse de eso» tiene fecha de caducidad, y se ha medido.",
-      "narracion": "En el próximo episodio medimos la caducidad exacta del «todavía es pronto». Y sí: el bar de hierro estaba a metro y medio del suelo. Era una violación, era inofensiva, y por eso ha durado hasta aquí."
+      "narracion": "En el próximo episodio medimos la caducidad exacta del «todavía es pronto». Y la bibliotecaria del principio: rompió una norma —a nadie se le susurra eso— y no pasaba absolutamente nada. Las dos cosas a la vez. Por eso ha llegado hasta aquí."
     }
   ]
 }

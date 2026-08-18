@@ -125,9 +125,16 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=True, salida=None)
         f"fade=t=in:st=0:d={FUNDE_IN}:c=black,"
         f"fade=t=out:st={dur_total - FUNDE_OUT:.3f}:d={FUNDE_OUT}:c=black"
     )
-    if quemar_subs and ass.exists():
+    # Un .ass sin líneas «Dialogue» se quema sin error y sin efecto: el vídeo
+    # sale limpio y nadie se entera. Se comprueba y se dice en voz alta.
+    n_subs = ass.read_text(encoding="utf-8", errors="ignore").count("Dialogue:") if ass.exists() else 0
+    if quemar_subs and n_subs:
         filtro_video = f"[0:v]{PAD}[pad];[pad]ass='{ass.as_posix()}'[vsub];[vsub]{FUNDE}[vout]"
+        print(f"Subtítulos quemados: {n_subs} líneas")
     else:
+        if quemar_subs:
+            motivo = "no existe subtitulos.ass" if not ass.exists() else "subtitulos.ass no tiene líneas"
+            print(f"::warning::Montando SIN subtítulos quemados: {motivo}.")
         filtro_video = f"[0:v]{PAD}[pad];[pad]{FUNDE}[vout]"
     mapa_v = "[vout]"
 

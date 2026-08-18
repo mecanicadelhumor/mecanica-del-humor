@@ -23,6 +23,7 @@ from pathlib import Path
 
 N_FOTOGRAMAS = 6
 ANCHO = 640          # suficiente para leer titulares y ver desencuadres
+PAD_INICIO = 0.6     # el mismo colchón que mete montaje.py al principio
 
 
 def ffprobe(ruta, entradas, stream=None):
@@ -70,6 +71,56 @@ def silencio_inicial(mp4):
     return None, None
 
 
+def instantes(carpeta, dur_total, n=N_FOTOGRAMAS):
+    """Momentos en los que de verdad hay algo que ver.
+
+    Muestrear a intervalos ciegos cae con frecuencia en mitad del fundido entre
+    dos escenas: el fotograma sale casi negro y no informa de nada. Pasó con el
+    primero de MDH-002.es, que salió al 20 % de opacidad. Con el guion
+    cronometrado sí se sabe dónde empieza cada escena, así que se apunta al 60 %
+    de su duración: la entrada escalonada ya ha terminado y la salida aún no ha
+    empezado.
+    """
+    ciego = [round(dur_total * (i + 0.5) / n, 2) for i in range(n)]
+    timed = carpeta / "guion.timed.json"
+    if not timed.exists():
+        return ciego
+    escenas = json.loads(timed.read_text(encoding="utf-8")).get("escenas", [])
+    tramos, reloj = [], PAD_INICIO
+    for e in escenas:
+        d = float(e.get("duracion_s") or 0)
+        if d >= 3.0:                     # las muy cortas no dan un buen fotograma
+            tramos.append((reloj, d))
+        reloj += d
+    if not tramos:
+        return ciego
+    elegidas = {round(i * (len(tramos) - 1) / max(n - 1, 1)) for i in range(n)}
+    return sorted(round(min(tramos[j][0] + max(tramos[j][1] * 0.6, 1.2),
+                            dur_total - 0.6), 2) for j in elegidas)
+
+
+def subtitulos(carpeta):
+    """Si el vídeo lleva o no subtítulos quemados, y de quién es la culpa.
+
+    Los subtítulos palabra a palabra no son un adorno: son lo único que se mueve
+    durante el tramo central de cada escena, que es estático por diseño. Un
+    vídeo sin ellos se percibe como una sucesión de diapositivas.
+    """
+    ass, srt = carpeta / "subtitulos.ass", carpeta / "subtitulos.srt"
+    n = ass.read_text(encoding="utf-8", errors="ignore").count("Dialogue:") if ass.exists() else 0
+    return {
+        "ass_existe": ass.exists(),
+        "lineas_ass": n,
+        "srt_existe": srt.exists(),
+        "quemados": bool(n),
+        "_nota": ("«quemados» en false significa que el vídeo sale sin subtítulos en pantalla. "
+                  "Si ass_existe es true y lineas_ass es 0, el fallo está en voz.py: el "
+                  "sintetizador no devolvió marcas de tiempo por palabra (WordBoundary). "
+                  "Si lineas_ass es alto y aun así no se ven en los fotogramas, el fallo "
+                  "está en el quemado de montaje.py."),
+    }
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("carpeta", help="build/<ID>")
@@ -85,9 +136,7 @@ def main():
     fmt = ffprobe(mp4, "format=duration,size,bit_rate").get("format", {})
     dur = float(fmt.get("duration", 0))
 
-    # Fotogramas repartidos, evitando el primer y el último medio segundo:
-    # ahí solo se ve el fundido a negro y no informan de nada.
-    marcas = [round(dur * (i + 0.5) / N_FOTOGRAMAS, 2) for i in range(N_FOTOGRAMAS)]
+    marcas = instantes(carpeta, dur)
     for i, t in enumerate(marcas, 1):
         subprocess.run(
             ["ffmpeg", "-y", "-loglevel", "error", "-ss", str(t), "-i", str(mp4),
@@ -120,6 +169,7 @@ def main():
         "silencio_inicial": {"empieza_s": ini, "acaba_s": fin,
                              "_nota": "Debe rondar 0.6 s: es el colchón de entrada. "
                                       "Un 0 aquí significa que el vídeo entra en seco."},
+        "subtitulos": subtitulos(carpeta),
         "musica": json.loads((carpeta / "musica.json").read_text(encoding="utf-8"))
                   if (carpeta / "musica.json").exists() else None,
         "guion": guion,
