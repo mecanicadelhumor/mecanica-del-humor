@@ -25,5 +25,9 @@ token.json
 # Nunca, bajo ningún concepto, deben viajar a git.
 .secrets/
 
-# Carpeta de tránsito: cosas que Cowork no puede borrar desde tu máquina.
+# Rastro del sincronizador de Windows.
+_sincronizar.log
+_sincronizar.tmp
+
+# Carpeta de transito: cosas que Cowork no puede borrar desde tu maquina.
 _to_delete/

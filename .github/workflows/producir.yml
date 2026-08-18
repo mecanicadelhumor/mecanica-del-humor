@@ -125,6 +125,19 @@ jobs:
       - name: Instalar dependencias
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter fonts-jetbrains-mono
+          mkdir -p "$HOME/.local/share/fonts"
+          # Archivo Black es la tipografía de titulares y NO está en los
+          # repositorios de Ubuntu. Sin esto los titulares caen a Inter y
+          # quedan MÁS LIGEROS que los enunciados, que piden peso 800: la
+          # jerarquía visual del vídeo sale invertida. Si la descarga falla no
+          # se para la producción, pero queda avisado en el log.
+          curl -sSL --retry 3 --max-time 60 \
+            -o "$HOME/.local/share/fonts/ArchivoBlack-Regular.ttf" \
+            https://raw.githubusercontent.com/google/fonts/main/ofl/archivoblack/ArchivoBlack-Regular.ttf \
+            || echo "::warning::No se pudo descargar Archivo Black; los titulares saldrán en Inter."
+          fc-cache -f > /dev/null
+          fc-list : family | grep -qi "archivo" \
+            || echo "::warning::Archivo Black NO está disponible: titulares en Inter."
           pip install --quiet -r requirements.txt
           playwright install --with-deps chromium
 

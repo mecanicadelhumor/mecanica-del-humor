@@ -1,0 +1,89 @@
+name: Vista previa del diseño
+
+# El espejo. Cada vez que alguien toca el motor visual, esto pinta el
+# muestrario completo con las tipografías de verdad y lo deja en
+# 03_produccion/vista_previa/ para que se pueda mirar antes de que el cambio
+# aparezca en un vídeo publicado.
+#
+# Sin esto, la única forma de ver el efecto de un cambio de diseño era esperar
+# a la producción de las 03:00 y descubrirlo en YouTube.
+
+on:
+  push:
+    paths:
+      - "03_produccion/pipeline/escena.html"
+      - "03_produccion/pipeline/vista.py"
+      - "03_produccion/pipeline/render.py"
+  workflow_dispatch:
+    inputs:
+      guion:
+        description: "Guion concreto (vacío = muestrario de los nueve tipos)"
+        required: false
+      escenas:
+        description: "Números de escena separados por comas, p. ej. 1,4,13"
+        required: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  vista:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependencias y tipografías
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-inter fonts-jetbrains-mono
+          mkdir -p "$HOME/.local/share/fonts"
+          # Archivo Black es la tipografía de titulares del sistema de diseño y
+          # NO está en los repositorios de Ubuntu. Sin este paso, los titulares
+          # caen a Inter y quedan más ligeros que los enunciados, que sí piden
+          # peso 800: la jerarquía se invierte sin que nadie lo note.
+          curl -sSL --retry 3 --max-time 60 \
+            -o "$HOME/.local/share/fonts/ArchivoBlack-Regular.ttf" \
+            https://raw.githubusercontent.com/google/fonts/main/ofl/archivoblack/ArchivoBlack-Regular.ttf \
+            || echo "::warning::No se pudo descargar Archivo Black; los titulares saldrán en Inter."
+          fc-cache -f > /dev/null
+          fc-list : family | grep -qi "archivo" && echo "Archivo Black instalada." \
+            || echo "::warning::Archivo Black NO está disponible en este runner."
+          pip install --quiet -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Pintar la vista previa
+        env:
+          GUION: ${{ inputs.guion }}
+          ESCENAS: ${{ inputs.escenas }}
+        run: |
+          ARGS=(-o 03_produccion/vista_previa)
+          [ -n "$GUION" ] && ARGS+=(--guion "$GUION")
+          [ -n "$ESCENAS" ] && ARGS+=(--escenas "$ESCENAS")
+          python3 03_produccion/pipeline/vista.py "${ARGS[@]}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vista-previa
+          path: 03_produccion/vista_previa/**
+          retention-days: 30
+
+      - name: Dejarla en el repositorio
+        run: |
+          git add -A 03_produccion/vista_previa
+          if ! git diff --cached --quiet; then
+            git config user.name  "Mecánica del Humor (bot)"
+            git config user.email "mecanicadelhumor@users.noreply.github.com"
+            git commit -m "Vista previa del diseño"
+            git pull --rebase --autostash origin "$GITHUB_REF_NAME"
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          fi

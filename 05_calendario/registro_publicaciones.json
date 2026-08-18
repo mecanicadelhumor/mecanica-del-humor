@@ -8,14 +8,13 @@
       "canal": "Humor Mechanics",
       "titulo": "Nobody Is Born Funny — What 50 Years of Research Actually Found",
       "guion": "05_calendario/guiones/MDH-001.en.json",
-      "video_id": null,
-      "url": null,
+      "video_id": "0s-agxJHC8I",
+      "url": "https://youtu.be/0s-agxJHC8I",
       "estado": "public",
       "publicar_en": null,
       "musica": "cama.mp3",
       "subido_utc": "2026-08-18T00:00:00Z",
-      "revisado": false,
-      "_pendiente": "Subido y publicado a mano antes de que existiera este registro: falta pegar el video_id y la url."
+      "revisado": false
     },
     {
       "id": "MDH-001.es",
@@ -24,14 +23,14 @@
       "canal": "Mecánica del Humor",
       "titulo": "Nadie nace gracioso — lo que 50 años de investigación han medido de verdad",
       "guion": "05_calendario/guiones/MDH-001.es.json",
-      "video_id": null,
-      "url": null,
+      "video_id": "nmADYAksYoo",
+      "url": "https://youtu.be/nmADYAksYoo",
       "estado": "public",
       "publicar_en": null,
       "musica": "cama.mp3",
       "subido_utc": "2026-08-18T00:00:00Z",
       "revisado": false,
-      "_pendiente": "Subido y publicado a mano antes de que existiera este registro: falta pegar el video_id y la url. El título y la descripción que hay en YouTube son los del guion, no los de publicaciones/MDH-001.es.json; hay que actualizarlos a mano una vez."
+      "_pendiente": "El título y la descripción que hay en YouTube son los del guion, no los de publicaciones/MDH-001.es.json; hay que actualizarlos a mano una vez."
     }
   ]
 }
