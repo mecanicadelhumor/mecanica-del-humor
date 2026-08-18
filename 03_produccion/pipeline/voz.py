@@ -31,10 +31,17 @@ try:
 except ImportError:
     raise SystemExit("Falta edge-tts.  pip install edge-tts")
 
+# Para inglés se usa la voz monolingüe, NO la variante "Multilingual". Es el
+# mismo locutor (Andrew), pero el modelo multilingüe existe para leer varios
+# idiomas con una sola voz, cosa que aquí no hace falta: cada canal tiene su
+# guion en su idioma. En MDH-001.en la variante multilingüe metió un falso
+# arranque audible antes de la primera palabra ("think" cortado antes de
+# "Think about..."), y en español, con voz monolingüe, no ocurrió.
 VOCES = {
     "es": "es-ES-AlvaroNeural",
     "es-f": "es-ES-ElviraNeural",
-    "en": "en-US-AndrewMultilingualNeural",
+    "en": "en-US-AndrewNeural",
+    "en-multi": "en-US-AndrewMultilingualNeural",   # solo si un guion mezcla idiomas
     "en-gb": "en-GB-RyanNeural",
 }
 
