@@ -103,6 +103,11 @@
     color:var(--ambar);border:1px solid rgba(255,176,32,.5);padding:10px 20px;margin-bottom:40px;
     font-family:"JetBrains Mono","DejaVu Sans Mono",monospace;
   }
+
+  /* motivo de marca: engranaje técnico en la esquina, fijo y discreto en
+     TODAS las escenas — refuerza "mecánica" sin depender del contenido de
+     cada guion y sin animarse (nada que capturar de más en render.py). */
+  #engranaje{position:absolute;right:64px;bottom:132px;opacity:.15;pointer-events:none}
 </style>
 </head>
 <body>
@@ -110,6 +115,13 @@
 <div id="escena"></div>
 <div id="vineta"></div>
 <div id="marco"></div>
+<svg id="engranaje" viewBox="0 0 120 120" width="104" height="104">
+  <g fill="none" stroke="#FFB020" stroke-width="4">
+    <circle cx="60" cy="60" r="34"/>
+    <circle cx="60" cy="60" r="13"/>
+    <g id="dientes" stroke-width="9"></g>
+  </g>
+</svg>
 <div id="firma">Mecánica del Humor</div>
 <div id="ref" class="mono"></div>
 
@@ -244,13 +256,29 @@ function pintar(t){
     el.style.transform = `translateY(${dy.toFixed(2)}px)`;
     if (el.dataset.cuenta) el.innerHTML = contar(el.dataset.cuenta, p);
   });
-  // deriva lentísima de la retícula: da sensación de plano vivo sin distraer
-  document.getElementById("reticula").style.backgroundPosition =
-      `${(t*3).toFixed(2)}px ${(t*1.6).toFixed(2)}px`;
+  // La retícula ya NO deriva: el barrido arriba/derecha/abajo/izquierda mareaba
+  // (feedback del 18/08). El plano vivo lo aporta ahora solo la respiración de
+  // zoom que aplica montaje.py sobre el vídeo ya renderizado, más los
+  // subtítulos quemados palabra a palabra durante el tramo estático.
   // Nota de diseño: el tramo central de cada escena es deliberadamente estático.
-  // El movimiento continuo lo aportan los subtítulos quemados, que resaltan
-  // palabra a palabra. Así el render captura ~2.000 fotogramas en vez de 13.000.
+  // Así el render captura ~2.000 fotogramas en vez de 13.000.
 }
+
+// Dibuja los dientes del engranaje de marca una sola vez (elemento estático,
+// no forma parte de UNIDADES ni de pintar(t): cero coste de captura extra).
+(function dibujarEngranaje(){
+  const cont = document.getElementById("dientes");
+  const N = 10, cx = 60, cy = 60, r1 = 30, r2 = 45;
+  for (let i = 0; i < N; i++){
+    const ang = (i / N) * 2 * Math.PI;
+    const linea = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    linea.setAttribute("x1", (cx + r1 * Math.cos(ang)).toFixed(2));
+    linea.setAttribute("y1", (cy + r1 * Math.sin(ang)).toFixed(2));
+    linea.setAttribute("x2", (cx + r2 * Math.cos(ang)).toFixed(2));
+    linea.setAttribute("y2", (cy + r2 * Math.sin(ang)).toFixed(2));
+    cont.appendChild(linea);
+  }
+})();
 
 window.cargar = cargar;
 window.pintar = pintar;

@@ -20,6 +20,14 @@ import argparse
 import subprocess
 from pathlib import Path
 
+# Colchón al principio y al final: sin esto el vídeo entra y sale en seco,
+# como si se hubiera cortado (feedback del 18/08). Se clona el primer/último
+# fotograma y se funde a negro/silencio en vez de cortar de golpe.
+PAD_INICIO = 0.6
+PAD_FIN = 1.0
+FUNDE_IN = 0.4
+FUNDE_OUT = 0.6
+
 
 def ejecutar(cmd):
     r = subprocess.run(cmd, capture_output=True, text=True)
@@ -27,6 +35,16 @@ def ejecutar(cmd):
         print(r.stderr[-3000:])
         raise SystemExit(f"FFmpeg falló: {' '.join(cmd[:6])}...")
     return r
+
+
+def duracion_s(ruta):
+    r = subprocess.run(
+        ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+         "-of", "default=noprint_wrappers=1:nokey=1", str(ruta)],
+        capture_output=True, text=True)
+    if r.returncode != 0 or not r.stdout.strip():
+        raise SystemExit(f"ffprobe falló al medir {ruta}: {r.stderr[-500:]}")
+    return float(r.stdout.strip())
 
 
 def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=True, salida=None):
@@ -43,7 +61,20 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=True, salida=None)
     if musica:
         entradas += ["-stream_loop", "-1", "-i", str(musica)]
 
+    # Duración del vídeo mudo ya renderizado: sobre ella calculamos dónde debe
+    # empezar el fundido de salida, una vez sumado el colchón de ambos lados.
+    dur_mudo = duracion_s(mudo)
+    dur_total = dur_mudo + PAD_INICIO + PAD_FIN
+
     # --- cadena de audio ---
+    # Colchón de audio: silencio al principio (adelay) y al final (apad), más
+    # un fundido de entrada/salida sobre ese silencio para que no suene a corte.
+    colchon_audio = (
+        f"adelay={int(round(PAD_INICIO * 1000))}|{int(round(PAD_INICIO * 1000))},"
+        f"apad=pad_dur={PAD_FIN},"
+        f"afade=t=in:st=0:d={FUNDE_IN},"
+        f"afade=t=out:st={dur_total - FUNDE_OUT:.3f}:d={FUNDE_OUT}"
+    )
     if musica:
         # sidechaincompress: la voz (cadena lateral) comprime la música.
         # La voz se usa dos veces (como cadena lateral y en la mezcla final),
@@ -56,13 +87,15 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=True, salida=None)
             f"[2:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,volume={vol_musica}[mus];"
             "[mus][voz1]sidechaincompress=threshold=0.02:ratio=14:attack=8:release=380[musduck];"
             "[voz2][musduck]amix=inputs=2:duration=first:dropout_transition=0,"
-            "loudnorm=I=-14:TP=-1.5:LRA=11[aout]"
+            "loudnorm=I=-14:TP=-1.5:LRA=11[apre];"
+            f"[apre]{colchon_audio}[aout]"
         )
     else:
         filtro_audio = (
             "[1:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,"
             "highpass=f=80,acompressor=threshold=0.09:ratio=3:attack=15:release=180,"
-            "loudnorm=I=-14:TP=-1.5:LRA=11[aout]"
+            "loudnorm=I=-14:TP=-1.5:LRA=11[apre];"
+            f"[apre]{colchon_audio}[aout]"
         )
 
     # --- cadena de vídeo ---
@@ -74,10 +107,29 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=True, salida=None)
         "zoompan=z='1.0+0.015*(1+sin(2*PI*on/720))/2':d=1:"
         "x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1920x1080:fps=30"
     )
+    # Colchón de vídeo: clona el primer/último fotograma (tpad) para no
+    # cortar en seco. Va ANTES del zoompan: encadenar zoompan->tpad cuelga
+    # FFmpeg indefinidamente (bug de interacción entre ambos filtros,
+    # comprobado en pruebas locales), y además así el colchón desplaza el
+    # contenido real +PAD_INICIO en la línea de tiempo igual que adelay hace
+    # con el audio, manteniendo sincronizados vídeo y voz/subtítulos.
+    PAD = (
+        f"tpad=start_duration={PAD_INICIO}:start_mode=clone:"
+        f"stop_duration={PAD_FIN}:stop_mode=clone"
+    )
+    # El fundido a negro va el último, sobre el vídeo ya paginado (y con subs
+    # quemados si los hay), con los mismos tiempos que el fundido de audio.
+    FUNDE = (
+        f"fade=t=in:st=0:d={FUNDE_IN}:c=black,"
+        f"fade=t=out:st={dur_total - FUNDE_OUT:.3f}:d={FUNDE_OUT}:c=black"
+    )
     if quemar_subs and ass.exists():
-        filtro_video = f"[0:v]{RESPIRACION}[zoom];[zoom]ass='{ass.as_posix()}'[vout]"
+        filtro_video = (
+            f"[0:v]{PAD}[pad];[pad]{RESPIRACION}[zoom];"
+            f"[zoom]ass='{ass.as_posix()}'[vsub];[vsub]{FUNDE}[vout]"
+        )
     else:
-        filtro_video = f"[0:v]{RESPIRACION}[vout]"
+        filtro_video = f"[0:v]{PAD}[pad];[pad]{RESPIRACION}[zoom];[zoom]{FUNDE}[vout]"
     mapa_v = "[vout]"
 
     filtros = f"{filtro_video};{filtro_audio}"
