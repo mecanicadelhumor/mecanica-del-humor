@@ -99,20 +99,20 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=True, salida=None)
         )
 
     # --- cadena de vídeo ---
-    # Respiración lentísima de zoom (1.0 -> 1.015 -> 1.0 cada 24s): da sensación
-    # de plano vivo durante los tramos estáticos de render.py sin recapturar ni
-    # un fotograma más con Playwright — es puro postprocesado de FFmpeg sobre
-    # el mudo.mp4 ya renderizado. El fps debe coincidir con el de render.py.
-    RESPIRACION = (
-        "zoompan=z='1.0+0.015*(1+sin(2*PI*on/720))/2':d=1:"
-        "x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1920x1080:fps=30"
-    )
-    # Colchón de vídeo: clona el primer/último fotograma (tpad) para no
-    # cortar en seco. Va ANTES del zoompan: encadenar zoompan->tpad cuelga
-    # FFmpeg indefinidamente (bug de interacción entre ambos filtros,
-    # comprobado en pruebas locales), y además así el colchón desplaza el
-    # contenido real +PAD_INICIO en la línea de tiempo igual que adelay hace
-    # con el audio, manteniendo sincronizados vídeo y voz/subtítulos.
+    # NO usar zoompan aquí. Se probó una "respiración" de zoom lentísima
+    # (1.0 -> 1.015 -> 1.0) y el resultado no es un zoom suave: zoompan trunca
+    # a entero el origen del recorte (x,y) en cada fotograma, así que la imagen
+    # da saltos erráticos de ±1px arriba/abajo/izquierda/derecha. Medido sobre
+    # una escena estática: 13 posiciones distintas del texto en 120 fotogramas
+    # con zoompan, frente a 1 sola sin él. Es imperceptible como "movimiento"
+    # pero hace incómoda la lectura, que es justo lo contrario de lo que busca
+    # el canal. El plano vivo lo aportan la entrada escalonada de cada unidad,
+    # la cifra que cuenta y los subtítulos quemados palabra a palabra.
+    #
+    # Colchón de vídeo: clona el primer/último fotograma (tpad) para no cortar
+    # en seco. Desplaza el contenido real +PAD_INICIO en la línea de tiempo,
+    # igual que adelay hace con el audio, así que vídeo, voz y subtítulos
+    # siguen sincronizados.
     PAD = (
         f"tpad=start_duration={PAD_INICIO}:start_mode=clone:"
         f"stop_duration={PAD_FIN}:stop_mode=clone"
@@ -124,12 +124,9 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=True, salida=None)
         f"fade=t=out:st={dur_total - FUNDE_OUT:.3f}:d={FUNDE_OUT}:c=black"
     )
     if quemar_subs and ass.exists():
-        filtro_video = (
-            f"[0:v]{PAD}[pad];[pad]{RESPIRACION}[zoom];"
-            f"[zoom]ass='{ass.as_posix()}'[vsub];[vsub]{FUNDE}[vout]"
-        )
+        filtro_video = f"[0:v]{PAD}[pad];[pad]ass='{ass.as_posix()}'[vsub];[vsub]{FUNDE}[vout]"
     else:
-        filtro_video = f"[0:v]{PAD}[pad];[pad]{RESPIRACION}[zoom];[zoom]{FUNDE}[vout]"
+        filtro_video = f"[0:v]{PAD}[pad];[pad]{FUNDE}[vout]"
     mapa_v = "[vout]"
 
     filtros = f"{filtro_video};{filtro_audio}"
