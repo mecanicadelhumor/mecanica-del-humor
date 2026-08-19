@@ -1,16 +1,23 @@
 {
   "id": "MDH-002.es",
-  "duracion_final_s": 335.93,
-  "tamano_mb": 19.0,
+  "duracion_final_s": 338.3,
+  "tamano_mb": 18.8,
   "audio": {
-    "lufs": -14.25,
-    "pico_dbtp": -1.22,
+    "lufs": -14.24,
+    "pico_dbtp": -1.3,
     "rango_lu": 3.1
   },
   "silencio_inicial": {
-    "empieza_s": -0.171,
+    "empieza_s": -0.17,
     "acaba_s": 0.629,
     "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
+  },
+  "subtitulos": {
+    "ass_existe": true,
+    "lineas_ass": 0,
+    "srt_existe": true,
+    "quemados": false,
+    "_nota": "«quemados» en false significa que el vídeo sale sin subtítulos en pantalla. Si ass_existe es true y lineas_ass es 0, el fallo está en voz.py: el sintetizador no devolvió marcas de tiempo por palabra (WordBoundary). Si lineas_ass es alto y aun así no se ven en los fotogramas, el fallo está en el quemado de montaje.py."
   },
   "musica": {
     "archivo": "cama_02_dusk_next_route.mp3",
@@ -21,7 +28,7 @@
     "idioma": "es",
     "voz": "es-ES-AlvaroNeural",
     "escenas": 32,
-    "duracion_narracion_s": 334.84,
+    "duracion_narracion_s": 337.47,
     "escenas_por_encima_de_14s": [
       [
         4,
@@ -33,11 +40,11 @@
       ],
       [
         14,
-        17.1
+        15.7
       ],
       [
         18,
-        20.4
+        17.3
       ],
       [
         22,
@@ -49,18 +56,18 @@
       ],
       [
         32,
-        15.1
+        18.5
       ]
     ],
-    "escena_mas_larga_s": 20.418
+    "escena_mas_larga_s": 18.498
   },
   "fotogramas_s": [
-    27.99,
-    83.98,
-    139.97,
-    195.96,
-    251.95,
-    307.94
+    7.52,
+    70.99,
+    136.8,
+    214.58,
+    269.73,
+    330.67
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
