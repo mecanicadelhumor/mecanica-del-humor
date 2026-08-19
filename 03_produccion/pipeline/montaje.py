@@ -29,6 +29,9 @@ PAD_INICIO = 0.6
 PAD_FIN = 1.0
 FUNDE_IN = 0.4
 FUNDE_OUT = 0.6
+# La música se apaga sola antes de que el amix la corte. Ver el comentario
+# largo en la cadena de audio.
+FUNDE_MUSICA = 1.5
 
 
 def ejecutar(cmd):
@@ -67,6 +70,10 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=True, salida=None)
     # empezar el fundido de salida, una vez sumado el colchón de ambos lados.
     dur_mudo = duracion_s(mudo)
     dur_total = dur_mudo + PAD_INICIO + PAD_FIN
+    # El amix lleva duration=first y su primera entrada es la voz, así que la
+    # mezcla termina exactamente cuando termina voz.mp3. Ese es el instante en
+    # el que hay que tener la música ya en silencio.
+    dur_voz = duracion_s(voz)
 
     # --- cadena de audio ---
     # Colchón de audio: silencio al principio (adelay) y al final (apad), más
@@ -87,7 +94,18 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=True, salida=None)
             "highpass=f=80,acompressor=threshold=0.09:ratio=3:attack=15:release=180,"
             "asplit=2[voz1][voz2];"
             f"[2:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,volume={vol_musica}[mus];"
-            "[mus][voz1]sidechaincompress=threshold=0.02:ratio=14:attack=8:release=380[musduck];"
+            "[mus][voz1]sidechaincompress=threshold=0.02:ratio=14:attack=8:release=380[musduck0];"
+            # La música se apaga ella sola antes del corte del amix.
+            #
+            # El afade=t=out del colchón NO servía para esto: se calcula sobre
+            # dur_total (mudo + los dos colchones) y arranca en
+            # dur_total-FUNDE_OUT, que cae 0,4 s DESPUÉS de que amix haya
+            # cortado ya la mezcla en dur_voz. Es decir, atenuaba el silencio
+            # del apad. Medido sobre una prueba sintética: la música se
+            # mantenía plana en -32,8 dBFS y caía a silencio digital en una
+            # sola ventana de 0,1 s. Eso es el corte seco que se oía al final.
+            f"[musduck0]afade=t=out:st={max(0.0, dur_voz - FUNDE_MUSICA):.3f}:"
+            f"d={FUNDE_MUSICA}[musduck];"
             "[voz2][musduck]amix=inputs=2:duration=first:dropout_transition=0,"
             "loudnorm=I=-14:TP=-1.5:LRA=11[apre];"
             f"[apre]{colchon_audio}[aout]"

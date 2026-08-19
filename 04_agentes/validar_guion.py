@@ -27,7 +27,7 @@ CAMPOS = {
     "titulo": ["titulo"], "dato": ["cifra", "pie"], "enunciado": ["texto"],
     "lista": ["puntos"], "cita": ["texto", "autor"],
     "comparacion": ["a", "b"], "diagrama": ["pasos"],
-    "figura": ["imagen"], "cierre": ["titulo"],
+    "figura": [], "cierre": ["titulo"],
 }
 TEXTUALES = ["titulo", "subtitulo", "texto", "cifra", "pie", "a", "b", "et_a", "et_b", "etiqueta"]
 # «Episodio 01» o «Parte 3» no son afirmaciones: no exigen fuente.
@@ -134,6 +134,13 @@ def validar(path):
             errores.append(f"Escena {i}: la narración parece cortada a media frase "
                            f"(«…{narr[-40:]}»). Lo que no se dice, quien escucha sin "
                            f"mirar la pantalla no lo recibe.")
+
+        # Una escena «figura» necesita o los datos (y figura.py hará el PNG
+        # antes del render) o una imagen ya puesta a mano. Sin ninguna de las
+        # dos sale un hueco en pantalla.
+        if t == "figura" and not e.get("figura") and not e.get("imagen"):
+            errores.append(f"Escena {i} (figura): necesita «figura» con los datos "
+                           f"o «imagen» con una ruta. No tiene ninguna de las dos.")
 
         if t == "lista" and len(e.get("puntos", [])) > 5:
             errores.append(f"Escena {i}: una lista de más de 5 puntos no se lee en pantalla.")

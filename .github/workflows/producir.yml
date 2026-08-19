@@ -159,6 +159,26 @@ jobs:
           done < <(jq -r '.trabajos[] | [.id, .guion] | @tsv' plan.json)
 
       # ---------------------------------------------------------------
+      # Figuras. Las escenas de tipo «figura» llevan los datos dentro del
+      # guion; figura.py los convierte en PNG con la paleta de marca (fondo
+      # transparente, para que no tape la retícula) y escribe la ruta de
+      # cada imagen en guion.timed.json, que es justo lo que lee render.py
+      # en el paso siguiente. Por eso va aquí y no antes: guion.timed.json
+      # lo crea voz.py.
+      #
+      # Un guion sin escenas de tipo «figura» no hace nada y sale con
+      # código 0, así que el paso es incondicional y no estorba.
+      # matplotlib ya estaba en requirements.txt.
+      # ---------------------------------------------------------------
+      - name: Dibujar las figuras
+        run: |
+          while read -r ID; do
+            echo "::group::figuras $ID"
+            python3 03_produccion/pipeline/figura.py "build/$ID/guion.timed.json"
+            echo "::endgroup::"
+          done < <(jq -r '.trabajos[].id' plan.json)
+
+      # ---------------------------------------------------------------
       # Render visual, ya sincronizado con la voz real.
       # ---------------------------------------------------------------
       - name: Renderizar vídeo mudo
@@ -208,6 +228,7 @@ jobs:
             build/**/subtitulos.srt
             build/**/subtitulos.ass
             build/**/guion.timed.json
+            build/**/figuras/*.png
             build/**/voz.mp3
             build/**/voz/escena_*.mp3
           retention-days: 30

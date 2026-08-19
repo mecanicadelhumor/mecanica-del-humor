@@ -396,3 +396,157 @@ estorba, bajarlo a aviso es cambiar una palabra, y está dicho en el comentario.
 Lo que **no** hace, y conviene tenerlo claro: no comprueba que el audio se
 entienda con los ojos cerrados. Eso exige entender el guion, y para eso está la
 lectura diaria. El portero solo reconoce la forma del corte.
+
+---
+
+## 19 de agosto · feedback del vídeo inglés ya publicado
+
+MDH-002.en quedó en estado aceptable y Silvestre lo programó para las 17:00. Seis
+observaciones suyas. Van por orden, con lo que se ha hecho en cada una.
+
+### 1. Sigue habiendo una sílaba suelta al empezar el audio inglés
+
+Confirmado que **la métrica actual no lo veía**. La ficha de MDH-002.en da
+`silencio_inicial.acaba_s = 0.629`, exactamente el valor correcto, y el defecto
+estaba ahí igual. La razón es que `silencio_inicial()` se para en el primer
+`silence_end` y devuelve. Si la secuencia real es «colchón, sílaba, hueco,
+narración», el primer silencio acaba justo donde debe y la medida sale limpia.
+
+*Hecho:* `qa.py` gana `arranque()`, que lista **todos** los silencios de los
+primeros 4 s con umbral de 0,12 s y marca el patrón. Probado contra dos casos
+sintéticos: audio continuo → `fragmento_antes_de_la_narracion: false`; audio con
+una sílaba de 0,18 s y un hueco de 0,35 s delante → `true`, y además devuelve
+`duracion_fragmento_s: 0.18`, que es exactamente la que se había inyectado.
+
+A partir de la próxima producción el fragmento deja de depender del oído de
+nadie y sale como un booleano en la ficha, en los dos idiomas. Eso es lo que
+permitirá saber si es solo del inglés, y si una eventual corrección funciona.
+
+*No hecho, y por qué:* la corrección en sí va en `voz.py`, que es fichero
+protegido, y **no se puede probar desde aquí**: el contenedor no llega al índice
+de paquetes, así que no hay `edge-tts` con el que reproducir el fallo. Proponer
+a ciegas un cambio en el fichero que ya costó un vídeo es exactamente lo que no
+hay que hacer. Primero el dato, luego el arreglo.
+
+### 2. La música se cortaba en seco al final — arreglado y medido
+
+Encontrado, y no era falta de fundido: **el fundido existía y actuaba sobre el
+silencio.**
+
+`amix` lleva `duration=first` y su primera entrada es la voz, así que la mezcla
+termina en `dur_voz`. El colchón posterior añade `apad` de 1 s de silencio, y el
+`afade=t=out` se calcula sobre `dur_total` arrancando en `dur_total - 0,6`, que
+cae **0,4 s después** de que la mezcla ya se haya cortado. Atenuaba el relleno.
+
+Medido sobre material sintético, envolvente en ventanas de 0,1 s:
+
+    ANTES     ...  10,4 s: −32,8 dB   10,5 s: −32,8 dB   10,6 s: silencio
+    DESPUÉS   ...  10,4 s: −51,0 dB   10,5 s: −57,6 dB   10,6 s: silencio
+
+*Hecho (pendiente de tu visto bueno, es `montaje.py`):* la música se apaga ella
+sola antes del corte, con un `afade` de 1,5 s aplicado a `[musduck]` —después
+del ducking, así que el sidechain sigue funcionando igual—. La voz **no** se
+toca: comprobado en el peor caso, con narración sonando hasta el último
+fotograma, la diferencia antes/después es de 0,0 dB en todo el tramo final.
+
+### 3. La llamada a comentar: sí, pero con pregunta concreta
+
+Recomendación: mantenerla, y que **no** sea una fórmula. La regla de «cero
+muletillas de YouTube» del prompt del guionista sigue vigente y no choca con
+esto: la muletilla es «déjamelo en los comentarios»; una pregunta que pide una
+historia propia es contenido.
+
+Funciona mejor porque el episodio ya le ha hecho recordar la historia al
+espectador: al terminar el 003 cualquiera tiene en la cabeza la anécdota que
+tardó en poder contar. Y el comentario que genera se lee bien, que es lo que
+hace que otros comenten debajo.
+
+*Hecho:* añadido al prompt del guionista, enganchado a la tarea de 24 horas que
+el cierre ya pedía, con ejemplos de lo que vale y lo que no.
+
+### 4. «violation» en inglés se queda
+
+De acuerdo con el criterio de Silvestre: en inglés el delito es *rape*, palabra
+distinta, así que *violation* no arrastra la segunda acepción. Los metadatos y
+el guion ingleses se quedan como están. En español sigue siendo «ruptura».
+
+Limpiados de paso los dos últimos «violación benigna» que quedaban en las
+`notas_humor` del guion español. Son internas —no salen ni en pantalla ni en
+audio— pero conviene que el término sea uno solo en todo el proyecto.
+
+*Cambio de rutina, a petición suya:* la revisión diaria pasa a leer **todos los
+guiones pendientes de producir**, no solo el del día siguiente. Recogido en las
+tareas programadas.
+
+### 5. La música repetida del 001 y el 002: no es la rotación
+
+Comprobado con los hashes de los ficheros:
+
+    cama.mp3                            3f93cfef…  ← la del episodio 1
+    cama_02_dusk_next_route.mp3         3f93cfef…  ← la del episodio 2
+
+Son **el mismo fichero byte a byte**. `cama.mp3` es la copia por defecto que ya
+estaba antes de que existiera la rotación, y da la casualidad de que es copia de
+la pista 02, que es justo la que a la rotación le tocaba dar al episodio 2. O
+sea: el 001 no pasó por la rotación, y el 002 sí, y coincidieron.
+
+**No hay nada que arreglar.** La rotación funciona. Los próximos:
+
+    MDH-003 → Haru (LoFi version), de Roa
+    MDH-004 → Crying Over You, de christophermorrow
+    MDH-005 → Dusk, de Next Route
+
+Tres episodios seguidos con tres pistas distintas.
+
+### 6. Sin figuras ni imágenes
+
+Sigue siendo V1 del backlog y sigue bloqueado por lo mismo: `figura.py` hay que
+invocarlo desde `producir.yml`, que no se toca sin permiso. Es la mejora de más
+impacto que queda pendiente y ya hay episodios que la piden a gritos —la curva
+del huracán Sandy en el 003, el reparto de estilos de humor en el 005—. Propuesta
+concreta en el resumen a Silvestre.
+
+---
+
+## 19 de agosto · fundido de música aplicado y V1 (figuras) construido
+
+Silvestre da el visto bueno a los dos cambios que estaban esperándolo.
+
+**`montaje.py`:** aplicado el `afade` de 1,5 s sobre `[musduck]`. Vuelto a medir
+con el fichero ya en su sitio: la cola pasa de −33 dB a −58 dB en el último
+segundo y medio en vez de caer de golpe. La voz sigue sin tocarse.
+
+**V1, figuras.** Hecho `figura.py` y probado de punta a punta: genera el PNG,
+escribe la ruta en el guion, y la escena renderizada por `escena.html` se ve
+como debe —transparente sobre la retícula, ámbar para lo que importa, cian para
+el resto, sin marco superior ni derecho—. Comprobadas las dos clases con datos
+de ejemplo, curva y barras.
+
+De paso, tres cosas que hacían falta y no estaban:
+
+- `escena.html`: la plantilla de `figura` ignoraba el campo `titulo`. Una gráfica
+  sin enunciado obliga al espectador a deducir qué está mirando. Ahora lo pinta
+  como ya hacían `lista` y `comparacion`.
+- `esquema_guion.json`: descrito el bloque `figura` (clase, x, y, etiquetas,
+  `destacar`, `marca`).
+- `validar_guion.py`: `imagen` deja de ser obligatorio en las escenas `figura`,
+  porque **el validador corre antes que figura.py** y la imagen todavía no
+  existe. A cambio, error si la escena no trae ni datos ni imagen. Los doce
+  guiones del repositorio siguen pasando.
+
+### Lo que NO se ha hecho, y es deliberado
+
+**Ningún guion usa todavía una escena `figura`.** El motor está, pero meter una
+exige números reales, y no los tengo.
+
+La curva del huracán Sandy del 003 es la candidata evidente: el episodio la
+describe en tres escenas seguidas («al principio casi nada, luego cada vez más,
+luego otra vez menos») y una gráfica la contaría mejor que las tres juntas. Pero
+los puntos de esa curva están en el artículo A04, no en mi cabeza. Dibujarla «a
+ojo» y ponerle debajo `fuente: A04` sería fabricar un dato con aspecto de dato
+verificado, que es justo lo que el criterio editorial del canal prohíbe y lo
+contrario de lo que el nombre del canal promete.
+
+Así que queda pendiente de que alguien saque las cifras del artículo. Es trabajo
+del verificador o de Silvestre, no mío desde aquí. Mientras tanto el paso del
+workflow es inocuo: sin escenas `figura`, no hace nada.

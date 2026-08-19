@@ -208,7 +208,10 @@ const PLANTILLAS = {
       </div></div>`;
   },
   figura(d){
+    // El titular va como en «lista» y «comparacion»: una gráfica sin enunciado
+    // obliga al espectador a deducir qué está mirando.
     return `<div class="caja" style="text-align:center">
+      ${d.titulo?`<h2 class="u" style="margin-bottom:36px">${rico(d.titulo)}</h2>`:""}
       <img class="u fig" src="${esc(d.imagen)}">
       ${d.pie?`<div class="u pie">${rico(d.pie)}</div>`:""}</div>`;
   },

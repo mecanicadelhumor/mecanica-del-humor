@@ -37,11 +37,33 @@ palabra**, que se aplican en `montaje.py` sobre el vídeo ya renderizado.
 
 ### Nivel 0 — mejor imagen, cero coste de render
 
-**V1. Gráficas de verdad (`tipo: figura`).** El esquema ya contempla escenas de
-tipo `figura` con una imagen, y `escena.html` ya sabe pintarlas. No existe quien
-las genere. Falta `03_produccion/pipeline/figura.py`: matplotlib con la paleta de
-marca (fondo `#0B1220`, ámbar `#FFB020`, cian `#4CC9F0`, sin marco superior ni
-derecho, tipografía Inter), invocado desde el workflow antes del render.
+**V1. Gráficas de verdad (`tipo: figura`).** ~~No existe quien las genere.~~
+**Hecho el 19/08.** `03_produccion/pipeline/figura.py` dibuja con matplotlib en
+la paleta de marca, **fondo transparente** —un PNG opaco taparía la retícula y
+dejaría un rectángulo plano en mitad de la pantalla—, sin marco superior ni
+derecho, Inter con respaldo. Dos clases: `linea` (con `marca` opcional para
+anotar un punto, p. ej. el máximo) y `barras` (con `destacar` para pintar una en
+ámbar y el resto en cian).
+
+Va en el workflow **entre `voz.py` y `render.py`**: necesita `guion.timed.json`,
+que lo crea voz.py, y le escribe dentro la ruta absoluta de cada PNG, que es lo
+que lee render.py. Sobre un guion sin escenas de tipo `figura` no hace nada y
+sale con código 0.
+
+Coste de render **cero**: la figura es una imagen estática, entra con el
+escalonado que render.py ya captura y no anima nada en el tramo central.
+
+También se tocaron `escena.html` (la plantilla de `figura` ignoraba el `titulo`;
+una gráfica sin enunciado obliga a deducir qué se está mirando), el esquema y el
+validador, que ahora acepta `figura` sin `imagen` si trae los datos —el validador
+corre antes que figura.py— y da error si no trae ninguna de las dos.
+
+**Lo que falta, y no es código:** ningún guion usa todavía una escena `figura`,
+porque **hacen falta los números reales**. La curva de Sandy del 003 y el reparto
+de estilos del 005 son las dos candidatas obvias, pero inventarse los puntos de
+la curva y ponerle `fuente: A04` sería fabricar un dato, que es exactamente lo
+que el criterio editorial del canal prohíbe. Los números tienen que salir del
+artículo, y eso es trabajo del verificador o de Silvestre.
 
 Es la mejora de mayor impacto y la más segura, porque añade un tipo de escena en
 vez de modificar los ocho existentes. Hay episodios que la piden a gritos: la
@@ -137,7 +159,7 @@ propias variantes A/B cuando haya datos.
 | Muestreo de fotogramas de QA a ciegas (caían en fundidos) | corregido el 18/08 |
 | Un solo resaltado ámbar por pantalla | corregido en MDH-002 y en MDH-003 (es) el 19/08 |
 | **V2 variantes de composición de `enunciado`** | hecho el 19/08, **a confirmar en la vista previa del 20** |
-| V1 gráficas (`figura.py`) | pendiente, **bloqueado**: exige tocar `producir.yml`, que necesita permiso de Silvestre |
+| **V1 gráficas (`figura.py`)** | motor hecho el 19/08. **Falta que un guion la use, y eso exige números reales de la fuente** |
 | V3 pictogramas · V4 acento por episodio | pendientes |
 | V5–V7 | pendientes |
 | V8–V9 | sin decidir |
