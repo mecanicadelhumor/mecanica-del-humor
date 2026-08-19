@@ -12,9 +12,9 @@
   "bloqueos": [],
   "notas_humor": [
     "Este episodio no necesita adaptación cultural: el estudio de Provine se hizo en centros comerciales y aceras estadounidenses, así que en inglés el ejemplo es memoria propia y no un caso extranjero. Se le deja el peso.",
-    "Las tres frases de la escena 6 se devuelven a su forma original en inglés («Where have you been?», «See you later», «Are you sure you know what you're doing?»): son las que Provine transcribió, no una traducción de la traducción.",
+    "Las tres frases de la escena 6 se devuelven a su forma original en inglés (“Where have you been?”, “See you later”, “Are you sure you know what you're doing?”): son las que Provine transcribió, no una traducción de la traducción.",
     "Gancho: el dato es tan contraintuitivo que hace de chiste él solo. No hay juego de palabras que pueda romperse al cambiar de idioma.",
-    "Escena 18: autoconciencia del formato, una sola vez en el vídeo, con remate seco («a demonstration by absence») en vez de la frase larga del original español.",
+    "Escena 18: autoconciencia del formato, una sola vez en el vídeo, con remate seco (“a demonstration by absence”) en vez de la frase larga del original español.",
     "Cierre: callback a la frase banal del principio.",
     "Ortografía americana en todo el guion."
   ],
@@ -55,11 +55,11 @@
       "tipo": "lista",
       "titulo": "Real lines that got a laugh",
       "puntos": [
-        "«Where have you been?»",
-        "«See you later»",
-        "«Are you sure you know what you're doing?»"
+        "“Where have you been?”",
+        "“See you later”",
+        "“Are you sure you know what you're doing?”"
       ],
-      "narracion": "We're talking about lines like «where have you been», «see you later», or «are you sure you know what you're doing». Nobody would be laughing at that. And yet they were.",
+      "narracion": "We're talking about lines like “where have you been”, “see you later”, or “are you sure you know what you're doing”. Nobody would be laughing at that. And yet they were.",
       "fuente": "E02"
     },
     {
@@ -186,7 +186,7 @@
     {
       "tipo": "enunciado",
       "texto": "Next time, notice what they said *just before*. Probably nothing.",
-      "narracion": "So next time somebody laughs with you, notice what they said right before it. Odds are it was «see you later»."
+      "narracion": "So next time somebody laughs with you, notice what they said right before it. Odds are it was “see you later”."
     },
     {
       "tipo": "cierre",

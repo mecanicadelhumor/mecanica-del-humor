@@ -257,3 +257,142 @@ textos cortos: lo suyo es juzgarla con el enunciado largo del muestrario.
    hipotético) se citan como A03. A03 los usa, pero la taxonomía es de la teoría
    del nivel de constructo (Trope y Liberman), que no está en la bibliografía.
    No es un error de dato; es una entrada que falta.
+
+---
+
+## 19 de agosto · segunda vuelta, con feedback de Silvestre
+
+Silvestre revisó MDH-002.es, lo borró de YouTube para reproducirlo, y pidió
+sacar el inglés hoy mismo. Tres cosas encontradas, dos de ellas graves.
+
+### 1. La escena 24 estaba truncada en el guion, en los dos idiomas
+
+Silvestre lo describió como un fallo de audio: «en el ejemplo del avión la
+segunda parte, el chiste en sí, no se lee, la voz dice "cero" y nada más».
+
+No es audio. Es el guion. La narración decía, literalmente y completa:
+
+    "La misma queja, dos versiones. «Los aviones son incómodos»: cero."
+
+Y ahí se acababa. El chiste —el del brazo del asiento del medio— está escrito
+en el panel B de la escena, o sea **en pantalla**, pero nunca estuvo en la
+narración. La voz leyó exactamente lo que había. El fallo estaba a la vista en
+el JSON desde el principio.
+
+**El guion inglés tenía el mismo corte, palabra por palabra:** «Same complaint,
+two versions. Flying is uncomfortable: zero.» De haberse producido anoche, el
+vídeo inglés habría salido con el mismo agujero.
+
+Corregidas las dos. Y una lección de sistema: `validar_guion.py` no detecta
+esto. Comprueba estructura, ámbares, fuentes y duraciones, pero no que la
+narración cubra lo que hay en pantalla. Un aviso barato sería *escena de tipo
+`comparacion` cuyo panel B no aparece de ninguna forma en la narración*, o más
+simple, *narración de menos de X caracteres en una escena que no es `titulo`*.
+Ninguna de las dos se ha implementado hoy: hacía falta sacar el vídeo. Queda
+propuesto.
+
+### 2. «Violación» fuera del canal español
+
+Decisión de Silvestre: la palabra tiene en español una segunda acepción que no
+tiene en inglés, y basta para que un clasificador entierre el vídeo. Sustituida
+por **«ruptura»**, que es la misma idea, funciona igual como sustantivo y encaja
+en todas las construcciones donde estaba.
+
+Tocadas nueve escenas de MDH-002.es (4, 5, 8, 9, 18, 23, 28, 31 y 32) y la 12
+de MDH-003.es. En la 8 «una violación de tu espacio» pasa a «invade tu espacio»,
+que en español es lo natural. El diagrama de las dos condiciones ahora dice
+«Ruptura / Benigna». El cierre, «Ruptura *más* algo benigno. Nada más.»
+
+También la descripción y las etiquetas de `publicaciones/MDH-002.es.json`.
+Escribí primero «teoría de la ruptura benigna (benign violation theory)» para no
+perder la búsqueda del término académico, y lo quité: metía en la descripción
+del vídeo español justo la palabra que se quería evitar, en otro idioma pero
+igual de legible para un clasificador. La atribución se sostiene con los nombres
+de McGraw y Warren.
+
+**En inglés no se toca.** «Benign violation» es el término académico y en inglés
+no arrastra la segunda acepción. Los metadatos ingleses se dejan como estaban.
+
+### 3. Comillas: angulares en español, inglesas en inglés
+
+Ayer lo dejé como pregunta y Silvestre lo ha resuelto. Convertidas « » → “ ” en
+`MDH-002.en`, `MDH-003.en`, `MDH-004.en` y en los metadatos de publicación
+correspondientes. **MDH-001.en no se toca: ya está publicado.**
+
+Faltaba una pieza que no estaba en los guiones: `escena.html` pone las comillas
+de las escenas de tipo `cita` **por CSS**, con `blockquote::before/after`, así
+que el canal inglés las habría sacado angulares aunque el guion no llevara
+ninguna. MDH-002.en tiene una `cita` (escena 22), o sea que habría salido hoy
+mismo. Ahora dependen de `html[lang]`, que `cargar()` ya fijaba con el idioma
+del guion.
+
+### 4. Sobre por qué no salió el inglés: lo que descarta el propio repositorio
+
+Sigue sin poder confirmarse sin el log. Pero conviene anotar lo que **no** es,
+para no volver a mirarlo: no es que faltara el guion (existe desde el 18), no es
+la poda de `qa/` (borra carpetas enteras, y con dos no borra ninguna), y no es
+un fallo de voz, render o montaje del inglés, porque esos pasos son bucles con
+`set -e` y habrían tumbado el job antes de subir el español, que sí se subió.
+
+Queda una hipótesis nueva que encaja mejor que las de ayer: que el inglés **sí
+se montara y fallara al subirse**, por el secreto `YT_REFRESH_TOKEN_EN`. El paso
+de subida hace `exit 1` explícito si ese token está vacío. Eso explicaría que no
+haya `publicado.json` ni entrada en el registro. Lo que no explica del todo es
+que tampoco haya carpeta en `qa/`, salvo que `qa.py` fallara después. Es lo
+primero que hay que mirar en el log, y es de comprobación inmediata: si el
+secreto no existe, no hay nada más que investigar.
+
+Por eso la recomendación para relanzar es **un idioma por ejecución**, no los
+dos en la misma. Aísla el fallo y quita de en medio el `timeout-minutes: 150`.
+
+---
+
+## 19 de agosto · tercera vuelta: el fallo estaba en las instrucciones
+
+Silvestre, sobre lo de «cero»: *«no tiene ningún sentido. Queda mal y no se
+entiende si no tienes la pantalla delante. Yo mismo consumo vídeos de YouTube
+sin tener la pantalla delante, por lo que el audio debe ser autosuficiente.»*
+
+Eso no es un incidente, es una regla de canal, y al ir a escribirla apareció de
+dónde salía el fallo. `04_agentes/prompts/guionista.md` decía:
+
+> **Nunca leas lo que está en pantalla.** El texto de la escena y la narración
+> dicen cosas complementarias, jamás la misma.
+
+La intención era buena —que el ojo y el oído no reciban lo mismo—, pero leída al
+pie de la letra dice exactamente lo que el guionista hizo: el chiste estaba en
+pantalla, así que no lo leyó. **El bug estaba en las instrucciones, no en la
+ejecución.** Y por eso salió idéntico en los dos idiomas: los dos guiones
+obedecieron la misma frase.
+
+Reescrita en tres reglas que no se pueden malinterpretar: el audio es
+autosuficiente; la pantalla no se lee palabra por palabra; y el criterio que
+resuelve la tensión entre ambas, *lo que la pantalla enseña, la narración lo
+dice con otras palabras — nunca se lo salta*. Con el caso de la escena 24
+escrito debajo, para que la próxima vez que alguien lea ese prompt sepa por qué
+está redactado así.
+
+### La comprobación automática: lo que se ha hecho y lo que se ha descartado
+
+Primero probé lo obvio: comprobar que el texto de pantalla está cubierto por la
+narración, midiendo solapamiento de palabras. **Descartado.** Con ventana de una
+escena marcaba 11 de 21 `comparacion` del repositorio; ampliando la ventana a
+las dos siguientes (porque la narración a menudo continúa en la escena de al
+lado) seguía marcando 10. Casi todos eran falsos positivos, y por una razón de
+fondo: castiga la paráfrasis, que es justamente lo que un guion bien escrito
+hace y lo que la regla de «ojo y oído distintos» exige. Un aviso que se equivoca
+la mitad de las veces es un aviso que nadie mira.
+
+Lo que sí se ha metido es una comprobación estrecha de la **firma** de una
+narración truncada: que acabe en dos puntos y una sola palabra
+(«…incómodos: cero.»), o colgando de dos puntos, coma o conjunción. Medido
+contra los doce guiones del repositorio: **cero falsos positivos**, y pilla las
+dos escenas 24 rotas.
+
+Va como **error**, no como aviso: para la producción. Parar una producción se
+arregla relanzándola; publicar un vídeo con el remate mudo, no. Si algún día
+estorba, bajarlo a aviso es cambiar una palabra, y está dicho en el comentario.
+
+Lo que **no** hace, y conviene tenerlo claro: no comprueba que el audio se
+entienda con los ojos cerrados. Eso exige entender el guion, y para eso está la
+lectura diaria. El portero solo reconoce la forma del corte.

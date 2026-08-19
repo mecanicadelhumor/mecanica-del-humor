@@ -10,10 +10,10 @@
   "duracion_objetivo_s": 380,
   "bloqueos": [],
   "notas_humor": [
-    "El gancho español era el juego de palabras con «bar» (local / barra de hierro). En inglés ese chiste es el original: «A man walks into a bar. Ouch.» — así que aquí no se adapta, se devuelve a su idioma, y además se acorta al remate de una palabra, que es lo que premia el inglés.",
+    "El gancho español era el juego de palabras con “bar” (local / barra de hierro). En inglés ese chiste es el original: “A man walks into a bar. Ouch.” — así que aquí no se adapta, se devuelve a su idioma, y además se acorta al remate de una palabra, que es lo que premia el inglés.",
     "Escena 4: la propia estructura del vídeo ejecuta una violación benigna (el ejemplo del cosquilleo).",
     "Escena 25: el reposabrazos del asiento del medio es un ejemplo mucho más doméstico en Estados Unidos que en España; se le deja el peso de la escena.",
-    "Escena 15: remate seco («I just took your payment») en vez de la explicación larga del original.",
+    "Escena 15: remate seco (“I just took your payment”) en vez de la explicación larga del original.",
     "Cierre: callback al chiste del bar del primer segundo.",
     "Ortografía americana en todo el guion, coherente con la voz en-US y con el nombre del canal."
   ],
@@ -62,7 +62,7 @@
       "et_a": "Violation only",
       "a": "Threat. Disgust. Offense. Nobody laughs.",
       "et_b": "Benign only",
-      "b": "Everything is fine. Nobody laughs _either_.",
+      "b": "Everything is fine. Nobody laughs either.",
       "narracion": "And you can test it by removing one. If all you have is the violation, what you feel is threat, or disgust, or offense.",
       "fuente": "A01"
     },
@@ -83,7 +83,7 @@
       "et_a": "A stranger",
       "a": "A violation of your space. Nothing else.",
       "et_b": "Someone you trust",
-      "b": "The exact same motion. And you _laugh_.",
+      "b": "The exact same motion. And you *laugh*.",
       "narracion": "A stranger putting a hand in your ribs is a violation of your space and nothing more. Someone you trust doing it as a joke is the identical physical movement. And you laugh.",
       "fuente": "A01"
     },
@@ -100,7 +100,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "A joke runs in _two phases_. Always the same two.",
+      "texto": "A joke runs in *two phases*. Always the same two.",
       "narracion": "When you hear a joke, your brain does two different things, in order. First it detects that something doesn't fit. Then it tries to make it fit.",
       "fuente": "F02"
     },
@@ -159,7 +159,7 @@
       "titulo": "Diagnosis in two questions",
       "puntos": [
         "No *violation*? It was obvious. They saw it coming",
-        "Not benign? Somebody at that table felt _targeted_",
+        "Not benign? Somebody at that table felt targeted",
         "It is almost always the second one"
       ],
       "narracion": "First question: was there no violation? Too obvious, too predictable, it broke nothing. Second: was it not benign? Somebody at that table felt targeted. And it's almost always the second.",
@@ -203,10 +203,10 @@
       "tipo": "comparacion",
       "titulo": "Same complaint, two versions",
       "et_a": "Generic",
-      "a": "«Flying is uncomfortable.»",
+      "a": "“Flying is uncomfortable.”",
       "et_b": "Specific",
-      "b": "«The middle armrest belongs to *whoever claims it first*, and that is the entire body of law up there.»",
-      "narracion": "Same complaint, two versions. Flying is uncomfortable: zero."
+      "b": "“The middle armrest belongs to *whoever claims it first*, and that is the entire body of law up there.”",
+      "narracion": "Same complaint, two versions. Flying is uncomfortable: zero. The middle armrest belongs to whoever claims it first, and that is the entire body of law up there: that one lands."
     },
     {
       "tipo": "enunciado",
@@ -227,7 +227,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "«Benign» depends on _who is listening_. You don't fully control that.",
+      "texto": "“Benign” depends on _who is listening_. You don't fully control that.",
       "narracion": "Benign violation is not a foolproof formula, and its weak spot is obvious the second you think about it.",
       "fuente": "A02"
     },
@@ -237,7 +237,7 @@
       "et_a": "This table",
       "a": "Harmless. Everyone laughs.",
       "et_b": "The next one",
-      "b": "An _assault_. Same words, same night.",
+      "b": "An *assault*. Same words, same night.",
       "narracion": "What counts as harmless depends on who is listening. The same joke can be harmless at one table and an assault at the one beside it.",
       "fuente": "A02"
     },
@@ -255,8 +255,8 @@
     {
       "tipo": "cierre",
       "titulo": "Violation *plus* harmless. Nothing else.",
-      "subtitulo": "Next episode: «too soon» has an expiry date, and somebody went and measured it.",
-      "narracion": "Next episode we measure the exact expiry date of «too soon». And yes: the bar was iron, and it was at head height. A violation, harmless, and that's why it survived all the way here."
+      "subtitulo": "Next episode: “too soon” has an expiry date, and somebody went and measured it.",
+      "narracion": "Next episode we measure the exact expiry date of “too soon”. And yes: the bar was iron, and it was at head height. A violation, harmless, and that's why it survived all the way here."
     }
   ]
 }

@@ -40,7 +40,7 @@
       "titulo": "Las dos condiciones",
       "pasos": [
         {
-          "titulo": "Violación",
+          "titulo": "Ruptura",
           "pie": "algo no debería ser así"
         },
         {
@@ -52,17 +52,17 @@
           "pie": "esa es la clave"
         }
       ],
-      "narracion": "En dos mil diez, Peter McGraw y Caleb Warren publicaron la teoría de la violación benigna. Algo te hace gracia cuando viola cómo deberían ser las cosas, y al mismo tiempo te parece inofensivo. Las dos, simultáneamente.",
+      "narracion": "En dos mil diez, Peter McGraw y Caleb Warren publicaron la teoría de la ruptura benigna. Algo te hace gracia cuando rompe cómo deberían ser las cosas, y al mismo tiempo te parece inofensivo. Las dos, simultáneamente.",
       "fuente": "A01"
     },
     {
       "tipo": "comparacion",
       "titulo": "Quita una de las dos y mira qué pasa",
-      "et_a": "Solo violación",
+      "et_a": "Solo ruptura",
       "a": "Amenaza. Asco. Ofensa. Nadie ríe.",
       "et_b": "Solo benigno",
       "b": "Todo en orden. Nadie ríe *tampoco*.",
-      "narracion": "Y esto se comprueba quitando una de las dos. Si solo hay violación, lo que sientes es amenaza, o asco, u ofensa.",
+      "narracion": "Y esto se comprueba quitando una de las dos. Si solo hay ruptura, lo que sientes es amenaza, o asco, u ofensa.",
       "fuente": "A01"
     },
     {
@@ -78,14 +78,14 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "Un desconocido tocándote sin permiso. _Violación_. Alguien de confianza jugando. _Benigno_.",
-      "narracion": "Un desconocido metiéndote la mano en las costillas es una violación de tu espacio, sin más. Alguien de confianza haciendo lo mismo, en broma, es exactamente el mismo movimiento físico. Y te ríes.",
+      "texto": "Un desconocido tocándote sin permiso. _Ruptura_. Alguien de confianza jugando. _Benigno_.",
+      "narracion": "Un desconocido metiéndote la mano en las costillas invade tu espacio, sin más. Alguien de confianza haciendo lo mismo, en broma, es exactamente el mismo movimiento físico. Y te ríes.",
       "fuente": "A01"
     },
     {
       "tipo": "enunciado",
       "texto": "El gesto es idéntico. Lo que cambia es *quién y dónde*.",
-      "narracion": "El gesto es idéntico. Lo que cambia es el contexto. Por eso no puedes hacerte cosquillas a ti mismo: falta la violación. Tu cerebro sabe perfectamente lo que viene."
+      "narracion": "El gesto es idéntico. Lo que cambia es el contexto. Por eso no puedes hacerte cosquillas a ti mismo: falta la ruptura. Tu cerebro sabe perfectamente lo que viene."
     },
     {
       "tipo": "titulo",
@@ -152,11 +152,11 @@
       "tipo": "lista",
       "titulo": "Diagnóstico en dos preguntas",
       "puntos": [
-        "¿Faltó *violación*? Era obvio, previsible, ya lo sabían",
+        "¿Faltó *ruptura*? Era obvio, previsible, ya lo sabían",
         "¿Faltó lo benigno? Alguien se sintió señalado",
         "Casi siempre es la _segunda_"
       ],
-      "narracion": "Primera pregunta: ¿faltó violación? Era demasiado obvio, demasiado previsible, no rompía nada. Segunda: ¿faltó lo benigno? Alguien en esa mesa se sintió señalado. Y casi siempre es la segunda.",
+      "narracion": "Primera pregunta: ¿faltó ruptura? Era demasiado obvio, demasiado previsible, no rompía nada. Segunda: ¿faltó lo benigno? Alguien en esa mesa se sintió señalado. Y casi siempre es la segunda.",
       "fuente": "A01"
     },
     {
@@ -169,7 +169,7 @@
       "titulo": "Tres formas de hacer algo benigno",
       "puntos": [
         "Que la víctima seas *tú*",
-        "Señalar la *idea*, no a la persona",
+        "Señalar la idea, no a la persona",
         "Marcar que es juego: tono, cara, ritmo"
       ],
       "narracion": "Tres palancas concretas. Una: que el objeto del chiste seas tú, porque nadie se ofende en tu nombre.",
@@ -190,7 +190,7 @@
     {
       "tipo": "enunciado",
       "texto": "Y la palanca de la otra condición: *ser específico*.",
-      "narracion": "Y si lo que falta es la violación, la palanca es la especificidad. Lo genérico nunca rompe nada porque ya lo esperábamos."
+      "narracion": "Y si lo que falta es la ruptura, la palanca es la especificidad. Lo genérico nunca rompe nada porque ya lo esperábamos."
     },
     {
       "tipo": "comparacion",
@@ -199,7 +199,7 @@
       "a": "«Los aviones son incómodos.»",
       "et_b": "Específico",
       "b": "«El brazo del asiento del medio pertenece a *quien lo tome primero* y esa es toda la ley que hay ahí arriba.»",
-      "narracion": "La misma queja, dos versiones. «Los aviones son incómodos»: cero."
+      "narracion": "La misma queja, dos versiones. «Los aviones son incómodos»: cero. «El brazo del asiento del medio pertenece a quien lo tome primero, y esa es toda la ley que hay ahí arriba»: eso ya es otra cosa."
     },
     {
       "tipo": "enunciado",
@@ -221,7 +221,7 @@
     {
       "tipo": "enunciado",
       "texto": "«Benigno» depende de _quién escucha_. Y eso no lo controlas del todo.",
-      "narracion": "La violación benigna no es una fórmula infalible, y su punto débil salta a la vista en cuanto lo piensas.",
+      "narracion": "La ruptura benigna no es una fórmula infalible, y su punto débil salta a la vista en cuanto lo piensas.",
       "fuente": "A02"
     },
     {
@@ -239,11 +239,11 @@
     {
       "tipo": "enunciado",
       "texto": "Y si tu último chiste no funcionó: ya sabes *cuál de las dos* faltaba.",
-      "narracion": "Así que quédate con esto: violación más algo benigno, las dos a la vez. Y si tu último chiste no funcionó, ya sabes cuál de las dos faltaba."
+      "narracion": "Así que quédate con esto: ruptura más algo benigno, las dos a la vez. Y si tu último chiste no funcionó, ya sabes cuál de las dos faltaba."
     },
     {
       "tipo": "cierre",
-      "titulo": "Violación *más* algo benigno. Nada más.",
+      "titulo": "Ruptura *más* algo benigno. Nada más.",
       "subtitulo": "En el próximo episodio: por qué «todavía es pronto para reírse de eso» tiene fecha de caducidad, y se ha medido.",
       "narracion": "En el próximo episodio medimos la caducidad exacta del «todavía es pronto». Y la bibliotecaria del principio: rompió una norma —a nadie se le susurra eso— y no pasaba absolutamente nada. Las dos cosas a la vez. Por eso ha llegado hasta aquí."
     }

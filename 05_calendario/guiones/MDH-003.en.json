@@ -1,7 +1,7 @@
 {
   "id": "MDH-003",
   "idioma": "en",
-  "titulo_trabajo": "«Too soon»",
+  "titulo_trabajo": "“Too soon”",
   "tesis": "What turns a misfortune into a joke isn't time: it's distance. And distance can be measured, moved, and badly misjudged.",
   "pilares": [
     "A"
@@ -9,10 +9,10 @@
   "duracion_objetivo_s": 360,
   "bloqueos": [],
   "notas_humor": [
-    "El título español es una frase larga («todavía es pronto para reírse de eso»); en inglés existe la expresión hecha de dos palabras, «too soon», que además es un meme reconocible. El vídeo se construye alrededor de ella.",
+    "El título español es una frase larga (“todavía es pronto para reírse de eso”); en inglés existe la expresión hecha de dos palabras, “too soon”, que además es un meme reconocible. El vídeo se construye alrededor de ella.",
     "El huracán Sandy no necesita adaptación: para la audiencia estadounidense es memoria propia, no un ejemplo extranjero. Se le da más peso que en el original.",
-    "«Comedy is tragedy plus time» se cita en su idioma original (Steve Allen), no traducida de vuelta.",
-    "Escena 9: literalismo — tomarse en serio la idea de una «distancia» hasta convertirla en un mando físico.",
+    "“Comedy is tragedy plus time” se cita en su idioma original (Steve Allen), no traducida de vuelta.",
+    "Escena 9: literalismo — tomarse en serio la idea de una “distancia” hasta convertirla en un mando físico.",
     "Escena 18: rebaja tras el dato más duro del vídeo.",
     "Cierre: callback al tropiezo del gancho.",
     "Ortografía americana en todo el guion."
@@ -21,7 +21,7 @@
     {
       "tipo": "titulo",
       "etiqueta": "Episode 03",
-      "titulo": "«*Too soon*»",
+      "titulo": "“*Too soon*”",
       "subtitulo": "The exact expiry date of that phrase",
       "narracion": "Somebody trips on the sidewalk and gets up laughing. Everyone laughs with them."
     },
@@ -76,7 +76,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "It isn't «more distance, more funny». It depends on *how much it hurts*.",
+      "texto": "It isn't “more distance, more funny”. It depends on *how much it hurts*.",
       "narracion": "The intuitive idea is that the more distance, the funnier. That is not what comes out of the experiments. What comes out is finer: it depends on the size of the misfortune.",
       "fuente": "A03"
     },
@@ -105,8 +105,8 @@
     {
       "tipo": "titulo",
       "etiqueta": "Part 3",
-      "titulo": "The *«too soon»* curve",
-      "narracion": "All right. If time is one of the axes, then the phrase «too soon» ought to have a date on it. And somebody went looking for it."
+      "titulo": "The *“too soon”* curve",
+      "narracion": "All right. If time is one of the axes, then the phrase “too soon” ought to have a date on it. And somebody went looking for it."
     },
     {
       "tipo": "enunciado",
@@ -155,9 +155,9 @@
       "tipo": "lista",
       "titulo": "How to turn the dial",
       "puntos": [
-        "Move it in *time*: «a year from now this is a story»",
+        "Move it in *time*: “a year from now this is a story”",
         "Move it in person: tell it as if it happened to someone else",
-        "Move it to hypothetical: «imagine if it had also…»"
+        "Move it to hypothetical: “imagine if it had also…”"
       ],
       "narracion": "Move it in time: a year from now, this is just a story. Move it socially: tell it as if it happened to an acquaintance. Or push it into the hypothetical, exaggerating until it's obviously false.",
       "fuente": "A03"
@@ -206,7 +206,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "«It was just a joke» moves *nobody's dial*.",
+      "texto": "“It was just a joke” moves *nobody's dial*.",
       "narracion": "And if you overshoot, saying it was just a joke fixes nothing. It doesn't move the other person's distance a single inch. The only thing that ever moves it is having measured it beforehand."
     },
     {

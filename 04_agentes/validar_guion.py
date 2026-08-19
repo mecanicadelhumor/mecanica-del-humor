@@ -33,6 +33,12 @@ TEXTUALES = ["titulo", "subtitulo", "texto", "cifra", "pie", "a", "b", "et_a", "
 # «Episodio 01» o «Parte 3» no son afirmaciones: no exigen fuente.
 CON_DATOS = ["subtitulo", "texto", "cifra", "pie", "a", "b"]
 
+# Firma de una narración que se quedó a medias: acaba en dos puntos y una sola
+# palabra («…los aviones son incómodos: cero.»), o directamente en dos puntos,
+# coma o punto y coma, o colgando de una conjunción. Ver el comentario largo
+# de más abajo, donde se usa.
+CORTADA = re.compile(r"(:\s*\S+\s*\.?|[:,;]|\b(y|o|pero|and|or|but)\s*\.?)\s*$", re.I)
+
 
 def dur(e):
     n = len((e.get("narracion") or "").split())
@@ -97,6 +103,37 @@ def validar(path):
         if len(pn.split()) >= 5 and pn.strip() and pn.strip() in nn:
             avisos.append(f"Escena {i}: el texto en pantalla es literal de la narración. "
                           f"El ojo y el oído deben recibir cosas distintas.")
+
+        # narración cortada a media frase
+        #
+        # De dónde sale esto: la escena 24 de MDH-002 se produjo con la
+        # narración «La misma queja, dos versiones. "Los aviones son
+        # incómodos": cero.» y ahí se acababa. El chiste —el remate entero de
+        # la escena— estaba escrito en el panel de pantalla pero no en la
+        # narración, así que la voz dijo «cero» y se calló. El guion inglés
+        # traía el mismo corte. Nadie lo detectó hasta que Silvestre lo oyó.
+        #
+        # La regla que hay detrás es de Silvestre y vale para todo el canal:
+        # **el audio tiene que ser autosuficiente**, porque mucha gente ve
+        # YouTube sin mirar la pantalla. Lo que está en pantalla y no se dice,
+        # para esa gente no existe.
+        #
+        # Esto NO comprueba esa regla —comprobarla de verdad exige entender el
+        # guion, y por eso la revisión diaria lee los guiones enteros—. Lo que
+        # detecta es la *firma* de una narración truncada: que acabe en dos
+        # puntos y una palabra suelta, o colgando de una conjunción. Probado
+        # contra los doce guiones del repositorio: cero falsos positivos y
+        # pilla las dos escenas 24.
+        #
+        # Es error y no aviso a propósito: parar una producción se arregla
+        # relanzándola; publicar un vídeo con un remate mudo, no. Si algún día
+        # molesta, bajarlo a «avisos» es cambiar una palabra en la línea de
+        # abajo.
+        narr = (e.get("narracion") or "").strip()
+        if narr and CORTADA.search(narr):
+            errores.append(f"Escena {i}: la narración parece cortada a media frase "
+                           f"(«…{narr[-40:]}»). Lo que no se dice, quien escucha sin "
+                           f"mirar la pantalla no lo recibe.")
 
         if t == "lista" and len(e.get("puntos", [])) > 5:
             errores.append(f"Escena {i}: una lista de más de 5 puntos no se lee en pantalla.")

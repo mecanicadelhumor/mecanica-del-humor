@@ -37,8 +37,24 @@ sabe más, has fallado.
 - **El número siempre concreto.** «Treinta veces más probable», no «mucho más probable».
 - **Cada 40 segundos, un giro:** una pregunta, un contraejemplo, un cambio de tono. La retención se
   pierde en las mesetas.
-- **Nunca leas lo que está en pantalla.** El texto de la escena y la narración dicen cosas
-  complementarias, jamás la misma.
+- **El audio tiene que ser autosuficiente.** Mucha gente escucha el vídeo sin mirarlo: en el móvil,
+  fregando, andando por la calle. Lo que está en pantalla y no se dice, para esa persona **no
+  existe**. Si una escena tiene un chiste, un ejemplo o un remate, va en la narración. Sin excepción.
+- **Pero no leas la pantalla palabra por palabra.** El texto de la escena es una compresión de lo
+  que se dice —un titular, no un subtítulo—, así que el ojo y el oído reciben formas distintas de la
+  misma idea.
+- Leídas deprisa las dos reglas parecen contradecirse. El criterio es: **lo que la pantalla enseña,
+  la narración lo dice con otras palabras.** Nunca «lo que la pantalla enseña, la narración se lo
+  salta».
+
+  Esto no es teórico. La escena 24 de MDH-002 se produjo con la narración «La misma queja, dos
+  versiones. "Los aviones son incómodos": cero.» y ahí se cortaba. El segundo ejemplo —que era el
+  chiste, y el único motivo de existir de la escena— estaba escrito en el panel de pantalla y en
+  ningún otro sitio. La voz dijo «cero» y se calló. El guion inglés traía el corte idéntico. La
+  versión anterior de esta misma lista decía «nunca leas lo que está en pantalla», y esa frase, leída
+  al pie de la letra, es justo lo que produce ese fallo. `validar_guion.py` para ahora la producción
+  si detecta una narración cortada así, pero el portero solo reconoce la forma: que el audio se
+  entienda con los ojos cerrados es cosa tuya.
 
 ## Cómo se usan las fuentes
 

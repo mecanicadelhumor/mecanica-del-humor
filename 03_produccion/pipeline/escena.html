@@ -99,8 +99,14 @@
   }
 
   blockquote{font-size:64px;line-height:1.28;font-family:"Inter","DejaVu Sans",sans-serif;font-style:italic;font-weight:500}
+  /* Las comillas de la cita las pone el CSS, así que tienen que cambiar con el
+     idioma del guion: angulares en español, inglesas en el canal inglés. El
+     idioma lo fija cargar() sobre <html lang>, igual que la firma de marca.
+     Sin esto, «Humor Mechanics» sacaba citas con comillas españolas. */
   blockquote::before{content:"«";color:var(--ambar);margin-right:8px}
   blockquote::after{content:"»";color:var(--ambar);margin-left:8px}
+  html[lang="en"] blockquote::before{content:"\201C"}
+  html[lang="en"] blockquote::after{content:"\201D"}
   .autor{font-size:34px;color:var(--tenue);margin-top:40px;font-family:"JetBrains Mono","DejaVu Sans Mono",monospace}
 
   .dos{display:grid;grid-template-columns:1fr 120px 1fr;align-items:center;gap:0}
