@@ -33,6 +33,21 @@
       "_pendiente": "El título y la descripción que hay en YouTube son los del guion, no los de publicaciones/MDH-001.es.json; hay que actualizarlos a mano una vez."
     },
     {
+      "id": "MDH-002.en",
+      "episodio": "MDH-002",
+      "idioma": "en",
+      "canal": "Humor Mechanics",
+      "titulo": "Why You Laugh: The Two Conditions Every Joke Has to Meet",
+      "guion": "05_calendario/guiones/MDH-002.en.json",
+      "video_id": "hUcF5oaV-ow",
+      "url": "https://youtu.be/hUcF5oaV-ow",
+      "estado": "private",
+      "publicar_en": null,
+      "musica": "cama_02_dusk_next_route.mp3",
+      "subido_utc": "2026-08-19T10:08:16Z",
+      "revisado": false
+    },
+    {
       "id": "MDH-002.es",
       "episodio": "MDH-002",
       "idioma": "es",
