@@ -123,8 +123,28 @@ jobs:
           cache: pip
 
       - name: Instalar dependencias
+        # Tope de paso, no solo de job. El 19/08 una produccion se quedo mas de
+        # una hora clavada aqui: apt esperaba un lock que no se soltaba y, sin
+        # tope, habria seguido hasta agotar los 150 minutos del job entero.
+        # Con esto falla en 20 y se puede relanzar enseguida.
+        timeout-minutes: 20
+        env:
+          # Sin esto, cualquier paquete que quiera preguntar algo deja apt
+          # esperando una respuesta que nadie va a teclear.
+          DEBIAN_FRONTEND: noninteractive
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter fonts-jetbrains-mono
+          # Los runners de Ubuntu arrancan a veces con unattended-upgrades
+          # sujetando /var/lib/dpkg/lock-frontend. apt no dice nada: se queda
+          # esperando en silencio. Se para el servicio y se espera al lock con
+          # un limite, en vez de bloquearse para siempre.
+          sudo systemctl stop unattended-upgrades 2>/dev/null || true
+          for i in $(seq 1 30); do
+            sudo fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1 || break
+            echo "dpkg ocupado; esperando ($i/30)"
+            sleep 10
+          done
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-inter fonts-jetbrains-mono
           mkdir -p "$HOME/.local/share/fonts"
           # Archivo Black es la tipografía de titulares y NO está en los
           # repositorios de Ubuntu. Sin esto los titulares caen a Inter y
@@ -139,6 +159,8 @@ jobs:
           fc-list : family | grep -qi "archivo" \
             || echo "::warning::Archivo Black NO está disponible: titulares en Inter."
           pip install --quiet -r requirements.txt
+          # --with-deps lanza su propio apt-get por dentro, asi que hereda el
+          # mismo riesgo de cuelgue que el de arriba.
           playwright install --with-deps chromium
 
       # ---------------------------------------------------------------
