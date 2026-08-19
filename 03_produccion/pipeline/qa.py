@@ -71,6 +71,63 @@ def silencio_inicial(mp4):
     return None, None
 
 
+def arranque(mp4, ventana=4.0):
+    """Radiografía del primer segundo de audio, para cazar el falso arranque.
+
+    `silencio_inicial` mira dónde acaba el PRIMER silencio y para ahí. Eso no
+    basta: si el sintetizador mete delante una sílaba suelta —el fallo que
+    Silvestre oyó en MDH-001.en y otra vez en MDH-002.en— la secuencia real es
+    «colchón, fragmento, otro silencio, narración de verdad», y el primer
+    silencio acaba exactamente donde debe. La métrica daba 0,629 s, o sea
+    correcta, mientras el defecto seguía ahí.
+
+    Aquí se listan TODOS los silencios de los primeros segundos, con un umbral
+    de duración más corto (0,12 s) para no perder los huecos pequeños. Si
+    después del colchón hay un trozo de audio breve y luego otro silencio, eso
+    es un fragmento y se marca.
+    """
+    r = subprocess.run(
+        ["ffmpeg", "-hide_banner", "-nostats", "-t", str(ventana), "-i", str(mp4),
+         "-af", "silencedetect=n=-45dB:d=0.12", "-f", "null", "-"],
+        capture_output=True, text=True)
+    silencios, abierto = [], None
+    for linea in r.stderr.splitlines():
+        if "silence_start" in linea:
+            try:
+                abierto = float(linea.split("silence_start:")[1].strip().split()[0])
+            except (IndexError, ValueError):
+                abierto = None
+        elif "silence_end" in linea and abierto is not None:
+            try:
+                silencios.append([round(abierto, 3),
+                                  round(float(linea.split("silence_end:")[1].split("|")[0]), 3)])
+            except (IndexError, ValueError):
+                pass
+            abierto = None
+    if abierto is not None:
+        silencios.append([round(abierto, 3), None])
+
+    # El primer silencio es el colchón de entrada que pone montaje.py. Si hay
+    # un segundo silencio que empieza dentro del primer segundo y medio de
+    # narración, lo que suena en medio es un fragmento, no una frase.
+    fragmento, dur_frag = False, None
+    if len(silencios) >= 2 and silencios[0][1] is not None:
+        hueco = silencios[1][0] - silencios[0][1]
+        if 0 < hueco < 0.9 and silencios[1][0] < 2.5:
+            fragmento, dur_frag = True, round(hueco, 3)
+
+    return {
+        "silencios_s": silencios,
+        "fragmento_antes_de_la_narracion": fragmento,
+        "duracion_fragmento_s": dur_frag,
+        "_nota": "Si «fragmento_antes_de_la_narracion» es true, el sintetizador ha metido "
+                 "una sílaba suelta delante de la primera frase: se oye un trozo de palabra "
+                 "que no pertenece a nada. Comprobado a mano en MDH-001.en y MDH-002.en. "
+                 "«silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe.",
+    }
+
+
+
 def instantes(carpeta, dur_total, n=N_FOTOGRAMAS):
     """Momentos en los que de verdad hay algo que ver.
 
@@ -169,6 +226,7 @@ def main():
         "silencio_inicial": {"empieza_s": ini, "acaba_s": fin,
                              "_nota": "Debe rondar 0.6 s: es el colchón de entrada. "
                                       "Un 0 aquí significa que el vídeo entra en seco."},
+        "arranque": arranque(mp4),
         "subtitulos": subtitulos(carpeta),
         "musica": json.loads((carpeta / "musica.json").read_text(encoding="utf-8"))
                   if (carpeta / "musica.json").exists() else None,

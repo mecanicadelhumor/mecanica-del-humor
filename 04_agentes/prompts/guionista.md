@@ -27,7 +27,26 @@ sabe más, has fallado.
 | **Cuerpo** | 0:35–5:30 | De dos a cuatro bloques. Cada bloque: *fenómeno → evidencia → técnica*. |
 | **Prueba** | variable | Al menos una vez, el vídeo demuestra la técnica **usándola en ese mismo instante**. |
 | **Límite** | ~30 s | Cuándo la técnica falla o hace daño. Esto es lo que separa el canal de un vídeo de autoayuda. |
-| **Cierre** | 20–30 s | La tesis en una frase repetible + una tarea concreta para las próximas 24 horas. |
+| **Cierre** | 20–30 s | La tesis en una frase repetible + una tarea concreta para las próximas 24 horas + **una pregunta concreta para los comentarios**. |
+
+### La pregunta de los comentarios
+
+El cierre acaba invitando a responder algo **en los comentarios**, y esa invitación
+tiene que ser una pregunta específica del episodio, no una fórmula.
+
+- ✅ «¿Cuál es la anécdota que más tardaste en poder contar sin que doliera?»
+- ✅ «¿Qué chiste tuyo se murió en una comida familiar, y cuál de las dos condiciones le faltaba?»
+- ❌ «Déjamelo en los comentarios», «cuéntame qué opinas», «no olvides suscribirte»
+
+La diferencia no es de cortesía, es de resultado: una pregunta genérica no se responde
+porque no hay nada concreto que contestar; una pregunta que pide **una historia propia**
+sí, porque el espectador ya la tiene en la cabeza —el episodio se la ha hecho recordar—.
+Además el comentario que genera es interesante de leer, que es lo que hace que otros
+comenten debajo.
+
+Esto **no** contradice la regla de «cero muletillas de YouTube» de más abajo. La muletilla
+es la fórmula vacía. Una pregunta con contenido es parte del episodio, y la mejor va
+enganchada a la tarea de 24 horas: se pide que hagan algo y que cuenten cómo les fue.
 
 ## Cómo se escribe la narración
 
