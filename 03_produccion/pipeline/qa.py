@@ -71,25 +71,13 @@ def silencio_inicial(mp4):
     return None, None
 
 
-def arranque(mp4, ventana=4.0):
-    """Radiografía del primer segundo de audio, para cazar el falso arranque.
-
-    `silencio_inicial` mira dónde acaba el PRIMER silencio y para ahí. Eso no
-    basta: si el sintetizador mete delante una sílaba suelta —el fallo que
-    Silvestre oyó en MDH-001.en y otra vez en MDH-002.en— la secuencia real es
-    «colchón, fragmento, otro silencio, narración de verdad», y el primer
-    silencio acaba exactamente donde debe. La métrica daba 0,629 s, o sea
-    correcta, mientras el defecto seguía ahí.
-
-    Aquí se listan TODOS los silencios de los primeros segundos, con un umbral
-    de duración más corto (0,12 s) para no perder los huecos pequeños. Si
-    después del colchón hay un trozo de audio breve y luego otro silencio, eso
-    es un fragmento y se marca.
-    """
-    r = subprocess.run(
-        ["ffmpeg", "-hide_banner", "-nostats", "-t", str(ventana), "-i", str(mp4),
-         "-af", "silencedetect=n=-45dB:d=0.12", "-f", "null", "-"],
-        capture_output=True, text=True)
+def _silencios(mp4, ventana=None, umbral_s=0.12):
+    """Todos los tramos de silencio del audio, en segundos."""
+    cmd = ["ffmpeg", "-hide_banner", "-nostats"]
+    if ventana:
+        cmd += ["-t", str(ventana)]
+    cmd += ["-i", str(mp4), "-af", f"silencedetect=n=-45dB:d={umbral_s}", "-f", "null", "-"]
+    r = subprocess.run(cmd, capture_output=True, text=True)
     silencios, abierto = [], None
     for linea in r.stderr.splitlines():
         if "silence_start" in linea:
@@ -106,26 +94,68 @@ def arranque(mp4, ventana=4.0):
             abierto = None
     if abierto is not None:
         silencios.append([round(abierto, 3), None])
+    return silencios
 
-    # El primer silencio es el colchón de entrada que pone montaje.py. Si hay
-    # un segundo silencio que empieza dentro del primer segundo y medio de
-    # narración, lo que suena en medio es un fragmento, no una frase.
-    fragmento, dur_frag = False, None
-    if len(silencios) >= 2 and silencios[0][1] is not None:
-        hueco = silencios[1][0] - silencios[0][1]
-        if 0 < hueco < 0.9 and silencios[1][0] < 2.5:
-            fragmento, dur_frag = True, round(hueco, 3)
 
+# Una isla de sonido más corta que esto, rodeada de silencio por los dos lados,
+# no es una frase: es un trozo de palabra.
+MAX_FRAGMENTO_S = 0.45
+
+
+def fragmentos(mp4):
+    """Sílabas sueltas en cualquier punto del vídeo, no solo al principio.
+
+    De dónde sale: Silvestre oyó «una sílaba que no pertenece a ninguna frase»
+    en MDH-001.en y MDH-002.en, las dos veces al empezar, y se dio por hecho
+    que era un falso arranque de la voz. El 19/08 apareció otra **en el minuto
+    5:35** de MDH-002.es. O sea que no es un problema del arranque: es que el
+    sintetizador mete de vez en cuando un trozo de palabra al principio de
+    CUALQUIER escena, y voz.py sintetiza cada escena por separado.
+
+    Se buscan islas de sonido más cortas que MAX_FRAGMENTO_S rodeadas de
+    silencio. Dentro de una escena el habla es continua y las pausas de 0,45 s
+    solo van entre escenas, así que una isla de tres décimas no es habla
+    normal. Se devuelven los instantes en mm:ss para poder ir a escucharlos.
+    """
+    sil = _silencios(mp4)
+    islas = []
+    for a, b in zip(sil, sil[1:]):
+        if a[1] is None:
+            continue
+        ini, fin = a[1], b[0]                    # sonido entre dos silencios
+        if 0 < fin - ini <= MAX_FRAGMENTO_S:
+            islas.append((round(ini, 3), round(fin - ini, 3)))
     return {
-        "silencios_s": silencios,
-        "fragmento_antes_de_la_narracion": fragmento,
-        "duracion_fragmento_s": dur_frag,
-        "_nota": "Si «fragmento_antes_de_la_narracion» es true, el sintetizador ha metido "
-                 "una sílaba suelta delante de la primera frase: se oye un trozo de palabra "
-                 "que no pertenece a nada. Comprobado a mano en MDH-001.en y MDH-002.en. "
-                 "«silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe.",
+        "instantes": [{"s": t, "mmss": f"{int(t // 60)}:{t % 60:04.1f}", "dura_s": d}
+                      for t, d in islas],
+        "cuantos": len(islas),
+        "_nota": "Cada entrada es un trozo de audio de menos de "
+                 f"{MAX_FRAGMENTO_S} s rodeado de silencio: casi seguro una sílaba suelta "
+                 "que el sintetizador ha metido al empezar una escena. «mmss» es el minuto "
+                 "exacto para ir a escucharlo. Debe estar vacío.",
     }
 
+
+def arranque(mp4, ventana=4.0):
+    """El colchón de entrada, y si hay algo antes de la primera frase.
+
+    Se mantiene aparte de fragmentos() porque aquí importa además que el
+    colchón de 0,6 s que pone montaje.py esté donde debe.
+    """
+    sil = _silencios(mp4, ventana=ventana)
+    fragmento, dur_frag = False, None
+    if len(sil) >= 2 and sil[0][1] is not None:
+        hueco = sil[1][0] - sil[0][1]
+        if 0 < hueco < 0.9 and sil[1][0] < 2.5:
+            fragmento, dur_frag = True, round(hueco, 3)
+    return {
+        "silencios_s": sil,
+        "fragmento_antes_de_la_narracion": fragmento,
+        "duracion_fragmento_s": dur_frag,
+        "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera "
+                 "frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada "
+                 "acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente).",
+    }
 
 
 def instantes(carpeta, dur_total, n=N_FOTOGRAMAS):
@@ -227,6 +257,7 @@ def main():
                              "_nota": "Debe rondar 0.6 s: es el colchón de entrada. "
                                       "Un 0 aquí significa que el vídeo entra en seco."},
         "arranque": arranque(mp4),
+        "fragmentos": fragmentos(mp4),
         "subtitulos": subtitulos(carpeta),
         "musica": json.loads((carpeta / "musica.json").read_text(encoding="utf-8"))
                   if (carpeta / "musica.json").exists() else None,

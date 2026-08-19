@@ -550,3 +550,115 @@ contrario de lo que el nombre del canal promete.
 Así que queda pendiente de que alguien saque las cifras del artículo. Es trabajo
 del verificador o de Silvestre, no mío desde aquí. Mientras tanto el paso del
 workflow es inocuo: sin escenas `figura`, no hace nada.
+
+---
+
+## 19 de agosto · feedback del vídeo español, y la sílaba no era del arranque
+
+MDH-002.es producido en **8 minutos** —dato útil: la producción entera es
+barata, así que el `timeout-minutes: 150` del job sobra con muchísimo margen y
+producir dos idiomas en la misma ejecución nunca fue un problema de tiempo—.
+Programado para las 17:00.
+
+### 1. La sílaba suelta NO es un falso arranque
+
+Es el hallazgo del día. Silvestre: *«en el minuto 5:35 se ha colado una sílaba
+suelta en el audio como las que tenía el vídeo en inglés al principio»*.
+
+Las dos veces anteriores apareció al empezar el vídeo, y de ahí salió el
+diagnóstico de «falso arranque de la voz» y el cambio a la voz monolingüe. Era
+un diagnóstico incompleto: **aparece al principio de cualquier escena**, no del
+vídeo. Encaja con cómo funciona `voz.py`, que hace una petición por escena — y
+también explica que el cambio a la voz monolingüe no lo arreglara del todo.
+
+Consecuencia inmediata: `arranque()`, que añadí esta misma mañana, mira solo los
+primeros 4 segundos. **No habría visto esta.**
+
+*Hecho:* `qa.py` gana `fragmentos()`, que recorre el vídeo **entero** buscando
+islas de sonido de menos de 0,45 s rodeadas de silencio, y devuelve el instante
+en `mm:ss` para ir a escucharlo. Probado con audio sintético: pilla una sílaba
+de 0,22 s metida a los 12,5 s y la reporta con el instante y la duración
+exactos; sobre audio limpio y sobre el vídeo de prueba, cero. `arranque()` se
+queda, porque comprueba además que el colchón de 0,6 s esté donde debe, pero el
+que manda ahora es `fragmentos()`.
+
+*Propuesto y no aplicado:* el recorte en `voz.py`, escena a escena. La detección
+está probada (una escena con sílaba de 0,20 s + hueco de 0,25 s devuelve 0,45 s;
+una limpia devuelve 0). Lo que **no** se puede probar aquí es el recorte sobre
+audio real de edge-tts, porque el contenedor no llega al índice de paquetes.
+`voz.py` ya costó un vídeo una vez, así que se queda como propuesta con el diff
+escrito. Ojo con un detalle que no es obvio: al recortar hay que **restar el
+mismo desplazamiento a las marcas de palabra**, o los subtítulos quedan
+adelantados esa cantidad durante toda la escena.
+
+### 2. Los subtítulos siguen rotos, y ya no hay duda de dónde
+
+El log de esta producción lo dice con todas las letras:
+
+    El sintetizador no ha devuelto marcas de tiempo por palabra (WordBoundary).
+    Montando SIN subtítulos quemados: subtitulos.ass no tiene líneas.
+
+Tercera producción seguida. Sigue siendo el defecto abierto más importante y
+sigue sin poder reproducirse desde el contenedor. La sospecha de siempre:
+`requirements.txt` no fija la versión de edge-tts.
+
+### 3. «Cero» seguía sin entenderse, y el arreglo de esta mañana era a medias
+
+Silvestre: *«lo de "cero" sigo sin entenderlo y creo que no se entiende»*. Tenía
+razón y el diagnóstico de la mañana se quedó corto. El problema no era solo que
+faltara la segunda mitad —eso ya se arregló—, sino que **«X: cero» es una
+construcción de texto escrito**. En una diapositiva se entiende; dicha en voz
+alta no significa nada.
+
+Reescrita en español hablado en los dos idiomas: «La primera: "los aviones son
+incómodos". Ahí no se ha reído nadie. La segunda: … Con esa sí.»
+
+*Regla nueva en el prompt del guionista:* nada de construcciones que solo
+funcionan escritas. Si al leerlo en alto hace falta ver la pantalla, está mal
+escrito.
+
+### 4. Transiciones entre bloques: el salto de ritmo
+
+Silvestre: *«hay un cambio abrupto cuando se pasa de la parte de ruptura/benigno
+a cuando habla de reconocimiento y familiaridad»*.
+
+Es un defecto de guion que ningún validador va a detectar. La causa de fondo es
+que la estructura se apoya en los rótulos de «Parte 2», «Parte 3» para marcar el
+cambio de bloque — y **el rótulo lo ve el ojo**. Quien escucha sin mirar, que es
+justo el caso que nos ocupa desde esta mañana, solo tiene la narración, y en la
+narración no hay puente ninguno.
+
+*Regla nueva en el prompt del guionista:* cada bloque entra desde el anterior con
+una frase de transición que diga de dónde vienes y adónde vas. No vale el rótulo.
+
+### 5. La voz suena robótica, sobre todo en español
+
+Anotado como objetivo abierto, con las palabras de Silvestre: *«los chistes no
+tienen mucha gracia porque están contados sin gracia»*. Es un límite real del
+formato, no un fallo puntual: `es-ES-AlvaroNeural` es correcta y plana.
+
+No hay decisión hoy porque no puedo escuchar candidatas desde aquí. Lo que se
+puede hacer cuando toque, y sin coste: `voz.py` ya acepta `--voz`, así que
+sintetizar el mismo párrafo con dos o tres voces y compararlas es una ejecución
+manual del workflow, no un cambio de código. Cuando Silvestre quiera, se prepara
+esa comparativa.
+
+### 6. Lo que ya estaba bien
+
+Sin cortes bruscos de entrada ni de salida: el fundido de música de esta mañana
+funciona. El cambio de «violación» por «ruptura» le parece elegante. El
+contenido, interesante.
+
+Pendientes que se resuelven solos en el 003, sin hacer nada más: la rotación de
+música (le toca Haru, de Roa — comprobado con `cola.py --fecha 2026-08-20`) y la
+pregunta de los comentarios, que ya está en el prompt del guionista pero solo
+afecta a los guiones que se escriban a partir de ahora. **Los guiones del 003 al
+008 no la llevan**, así que si se quiere en ellos hay que añadirla a mano en el
+cierre. Queda anotado para la revisión de mañana.
+
+### Comprobado antes de cerrar
+
+Simulacro de la producción de esta noche con lo que hay en GitHub: `cola.py`
+resuelve MDH-003 en los dos idiomas, modo revisión, música Haru, y
+`validar_guion.py` —con el nuevo error de narración cortada ya activo— pasa los
+dos guiones con código 0. **La producción de las 03:00 no se va a bloquear.**

@@ -56,6 +56,15 @@ enganchada a la tarea de 24 horas: se pide que hagan algo y que cuenten cómo le
 - **El número siempre concreto.** «Treinta veces más probable», no «mucho más probable».
 - **Cada 40 segundos, un giro:** una pregunta, un contraejemplo, un cambio de tono. La retención se
   pierde en las mesetas.
+- **Nada de construcciones que solo funcionan escritas.** Se escribe para el oído. «Los aviones son
+  incómodos: cero» se lee bien en una diapositiva y en voz alta no significa nada — pasó en MDH-002 y
+  Silvestre lo señaló dos veces. Si al leerlo en alto en tu cabeza hace falta ver la pantalla para
+  entenderlo, está mal escrito. Dilo como lo dirías hablando: «ahí no se ha reído nadie».
+- **Cada bloque entra desde el anterior.** Al pasar de una idea a otra hace falta **una frase de
+  transición** que diga de dónde vienes y adónde vas. Sin ella el vídeo da un salto: en MDH-002 se
+  pasaba de la ruptura benigna a «reconocimiento y familiaridad» sin puente, y se nota como un corte.
+  No vale un rótulo de «Parte 3»: el rótulo lo ve el ojo, y quien escucha sin mirar solo tiene la
+  narración. Una frase basta: «vale, ya sabes qué hace falta; ahora, de dónde sale que funcione».
 - **El audio tiene que ser autosuficiente.** Mucha gente escucha el vídeo sin mirarlo: en el móvil,
   fregando, andando por la calle. Lo que está en pantalla y no se dice, para esa persona **no
   existe**. Si una escena tiene un chiste, un ejemplo o un remate, va en la narración. Sin excepción.
