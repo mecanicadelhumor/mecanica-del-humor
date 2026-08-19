@@ -1,4 +1,10 @@
-edge-tts
+# Rango, no versión exacta. El 22/03/2026 la 7.2.x cambió el valor por defecto
+# de «boundary» a SentenceBoundary y eso dejó tres vídeos sin subtítulos: sin
+# tope, un cambio así vuelve a entrar solo. Y sin suelo, una versión vieja no
+# aceptaría el parámetro «boundary» que ahora pasa voz.py. Rango abierto dentro
+# de la major porque edge-tts necesita actualizarse cuando Microsoft cambia el
+# esquema de tokens: fijarla exacta congelaría el canal el día que eso pase.
+edge-tts>=7,<8
 playwright
 pillow
 matplotlib

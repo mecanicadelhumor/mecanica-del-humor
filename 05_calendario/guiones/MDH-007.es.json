@@ -3,7 +3,10 @@
   "idioma": "es",
   "titulo_trabajo": "El miedo a que se rían de ti tiene nombre",
   "tesis": "El miedo a hacer el ridículo es un rasgo medible llamado gelotofobia, distorsiona cómo interpretas la risa ajena, y hay entrenamientos que actúan justo sobre eso.",
-  "pilares": ["J", "H"],
+  "pilares": [
+    "J",
+    "H"
+  ],
   "duracion_objetivo_s": 370,
   "bloqueos": [],
   "notas_humor": [
@@ -22,7 +25,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "¿Tu primer pensamiento es que se ríen *de algo*… o *de ti*?",
+      "texto": "¿Tu primer pensamiento es que se ríen *de algo*… o de ti?",
       "narracion": "Y quiero que respondas con sinceridad a una sola pregunta: ¿tu primer pensamiento ha sido que se ríen de algo, o que se ríen de ti?",
       "pausa_despues_s": 1.0
     },
@@ -49,9 +52,18 @@
       "tipo": "diagrama",
       "titulo": "Tres posiciones ante la risa",
       "pasos": [
-        {"titulo": "Gelotofobia", "pie": "temo que se rían de mí"},
-        {"titulo": "Gelotofilia", "pie": "disfruto siendo el motivo"},
-        {"titulo": "Katagelasticismo", "pie": "disfruto riéndome de otros"}
+        {
+          "titulo": "Gelotofobia",
+          "pie": "temo que se rían de mí"
+        },
+        {
+          "titulo": "Gelotofilia",
+          "pie": "disfruto siendo el motivo"
+        },
+        {
+          "titulo": "Katagelasticismo",
+          "pie": "disfruto riéndome de otros"
+        }
       ],
       "narracion": "De hecho el mismo grupo describió tres posiciones distintas ante esto. La gelotofobia, que es temer ser objeto de risa. La gelotofilia, que es disfrutar siéndolo. Y el katagelasticismo, que es disfrutar riéndose de los demás.",
       "fuente": "J01"
@@ -85,7 +97,7 @@
       "puntos": [
         "Interpretas la risa como *amenaza*",
         "Te retiras, te pones serio, te tensas",
-        "Los demás te leen distante. Y hay *menos* risa compartida"
+        "Los demás te leen distante. Y hay menos risa compartida"
       ],
       "narracion": "Interpretas la risa como amenaza. Te retiras un poco, te pones serio, te tensas. Los demás te leen como distante. Y acabas teniendo menos risa compartida, que era justo lo que querías.",
       "fuente": "J02"
@@ -168,6 +180,12 @@
       "tipo": "enunciado",
       "texto": "Y hay una asimetría que conviene recordar.",
       "narracion": "Termino con una asimetría que se me quedó dando vueltas mientras preparaba esto."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "¿Te giraste alguna vez *convencido*?",
+      "narracion": "¿Te has girado alguna vez convencido de que se reían de ti? Cuenta en comentarios si acertaste o no.",
+      "pausa_despues_s": 0.7
     },
     {
       "tipo": "cierre",

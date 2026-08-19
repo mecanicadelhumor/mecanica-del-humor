@@ -215,6 +215,12 @@
       "narracion": "And the person who tripped at the start of this video was laughing because they had already gotten up."
     },
     {
+      "tipo": "enunciado",
+      "texto": "What's *yours*?",
+      "narracion": "Now yours: the thing that took you longest to be able to laugh about. Leave it in the comments with how long it took.",
+      "pausa_despues_s": 0.7
+    },
+    {
       "tipo": "cierre",
       "titulo": "It isn't time. It's *distance*.",
       "subtitulo": "Next episode: almost nobody laughs at jokes, and there are recordings that prove it.",

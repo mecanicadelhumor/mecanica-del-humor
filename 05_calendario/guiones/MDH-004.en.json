@@ -189,6 +189,12 @@
       "narracion": "So next time somebody laughs with you, notice what they said right before it. Odds are it was “see you later”."
     },
     {
+      "tipo": "enunciado",
+      "texto": "What do you laugh at when *there is no joke*?",
+      "narracion": "Listen to yourself today and note what you laugh at when there is no joke in sight. Leave it in the comments.",
+      "pausa_despues_s": 0.7
+    },
+    {
       "tipo": "cierre",
       "titulo": "You don't need *jokes*. You need presence.",
       "subtitulo": "Next episode: the four humor styles, and which one is quietly costing you friends.",

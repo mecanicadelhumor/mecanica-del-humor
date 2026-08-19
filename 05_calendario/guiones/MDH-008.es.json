@@ -63,7 +63,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "Y por eso funciona: tu cerebro *detecta* y *resuelve*.",
+      "texto": "Y por eso funciona: tu cerebro *detecta* y resuelve.",
       "narracion": "Que es exactamente el modelo de dos fases del que hablamos en el episodio dos: primero detectas que algo no encaja, y luego lo encajas. Un chiste es una máquina para provocar esas dos cosas en ese orden.",
       "fuente": "A05"
     },
@@ -84,8 +84,8 @@
       "titulo": "Las piezas de ese chiste",
       "puntos": [
         "*Historia 1*: ella quiere un rato de tranquilidad",
-        "*Conector*: «dejarla sola», que significa dos cosas",
-        "*Historia 2*: ella quería que se fuera. Del todo"
+        "Conector: «dejarla sola», que significa dos cosas",
+        "Historia 2: ella quería que se fuera. Del todo"
       ],
       "narracion": "La historia que crees estar oyendo es que alguien quiere un rato de tranquilidad. El conector es la expresión «dejarla sola», que significa dos cosas distintas. Y la segunda historia es que ella no quería un rato: quería que se fuera del todo.",
       "fuente": "I01"
@@ -106,15 +106,15 @@
       "titulo": "Los que más te sirven",
       "puntos": [
         "*Oposición* de guiones: las dos historias",
-        "*Mecanismo* lógico: cómo saltas de una a otra",
-        "*Objetivo*: sobre quién o qué va"
+        "Mecanismo lógico: cómo saltas de una a otra",
+        "Objetivo: sobre quién o qué va"
       ],
       "narracion": "Son seis, pero para escribir te sirven sobre todo tres: qué dos historias se oponen, qué mecanismo lógico te hace saltar de una a la otra, y sobre quién o qué va la cosa.",
       "fuente": "I01"
     },
     {
       "tipo": "enunciado",
-      "texto": "Toca uno y tienes un chiste *distinto*. Toca dos y tienes uno *nuevo*.",
+      "texto": "Toca uno y tienes un chiste *distinto*. Toca dos y tienes uno nuevo.",
       "narracion": "Y esto es una herramienta de escritura brutal, porque significa que puedes coger un chiste que funciona, cambiar un solo mando y sale otro chiste. Cambia dos y ya no se parece al original.",
       "fuente": "I01"
     },
@@ -144,7 +144,7 @@
       "titulo": "El método, en tres pasos",
       "puntos": [
         "Escribe una observación *tuya* y verdadera",
-        "Busca la *segunda lectura* que también encaja",
+        "Busca la segunda lectura que también encaja",
         "Reescribe el principio para que _no_ se vea venir"
       ],
       "narracion": "Tres pasos. Uno: escribe una observación tuya y verdadera, no una idea graciosa. Dos: busca la segunda lectura que también encajaría con esa observación. Y tres, que es el que casi nadie hace: reescribe el principio para que nadie vea venir la segunda lectura.",
@@ -179,7 +179,7 @@
       "titulo": "Lo que falta, y ya lo sabes",
       "puntos": [
         "Que sea *benigno* para quien escucha",
-        "Que la *distancia* esté bien calculada",
+        "Que la distancia esté bien calculada",
         "Que apunte donde no haga daño"
       ],
       "narracion": "Lo que falta es todo lo demás que hemos visto: que resulte benigno para quien escucha, que la distancia esté bien calculada y que apunte a un sitio que no deje factura.",
@@ -200,6 +200,12 @@
       "texto": "Escribe un chiste esta semana. Uno *malo* también cuenta.",
       "narracion": "Ya tienes el plano completo: sabes qué es un chiste, por qué funciona, cuándo falla, hacia dónde apuntarlo y cómo montarlo. Escribe uno esta semana. Uno malo también cuenta.",
       "fuente": "L01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "¿En qué palabra está *el giro*?",
+      "narracion": "Coge un chiste que te sepas de memoria y dime en comentarios en qué palabra exacta está el giro. Esa palabra es toda la máquina.",
+      "pausa_despues_s": 0.7
     },
     {
       "tipo": "cierre",

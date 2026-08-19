@@ -662,3 +662,106 @@ Simulacro de la producción de esta noche con lo que hay en GitHub: `cola.py`
 resuelve MDH-003 en los dos idiomas, modo revisión, música Haru, y
 `validar_guion.py` —con el nuevo error de narración cortada ya activo— pasa los
 dos guiones con código 0. **La producción de las 03:00 no se va a bloquear.**
+
+---
+
+## 19 de agosto, noche · los subtítulos: causa raíz encontrada y arreglada
+
+Tres producciones seguidas sin subtítulos quemados. Ya se sabe por qué, y no era
+ni la red ni el montaje.
+
+### La causa
+
+Como el contenedor no puede instalar `edge-tts` (sin acceso al índice de
+paquetes), se clonó **el código fuente de la librería** desde GitHub, que sí se
+puede leer. Y ahí estaba, en `src/edge_tts/communicate.py`:
+
+    def __init__(self, text, voice=DEFAULT_VOICE, *, rate="+0%", volume="+0%",
+                 pitch="+0Hz",
+                 boundary: Literal["WordBoundary","SentenceBoundary"] = "SentenceBoundary",
+                 ...)
+
+**edge-tts cambió el 22/03/2026 el valor por defecto de `boundary`** de
+`WordBoundary` a `SentenceBoundary` (commit `4bdb8e4`, versión 7.2.x). Ese
+parámetro decide literalmente lo que la librería pide al servicio de Microsoft
+en el mensaje `speech.config`. Reproducido ejecutando el mismo cálculo que hace
+la librería en sus líneas 428-436:
+
+    boundary por defecto (SentenceBoundary):
+        "sentenceBoundaryEnabled":"true","wordBoundaryEnabled":"false"
+    pidiéndolo explícitamente:
+        "sentenceBoundaryEnabled":"false","wordBoundaryEnabled":"true"
+
+Con `wordBoundaryEnabled` en `false`, **el servicio no manda ni un solo evento
+WordBoundary**. `voz.py` solo escuchaba `trozo["type"] == "WordBoundary"`, así
+que recogía cero marcas. El audio llega intacto —por eso el fallo era invisible
+escuchando el vídeo— y `escribir_ass()` produce un `.ass` con cabecera y sin una
+sola línea de diálogo, que `montaje.py` quema sin error y sin efecto.
+
+Y entró **solo**, sin que nadie tocara este repositorio, porque
+`requirements.txt` ponía `edge-tts` a secas: cada producción instalaba la última
+versión publicada. La hipótesis de la mañana («la versión sin fijar») era
+correcta; lo que faltaba era el mecanismo exacto.
+
+### El arreglo
+
+En `voz.py`, `_comunicar()` pide `boundary="WordBoundary"` de forma explícita,
+con reintento sin el parámetro para versiones anteriores a la 7, donde no
+existe. En `requirements.txt`, `edge-tts>=7,<8`: rango y no versión exacta,
+porque edge-tts necesita actualizarse cuando Microsoft cambia el esquema de
+tokens y congelarla pararía el canal el día que eso ocurra.
+
+Y un diagnóstico para que esto no vuelva a costar tres vídeos: si llegan marcas
+de frase y ninguna de palabra, `voz.py` escribe un `::error::` que nombra la
+causa exacta en vez del aviso genérico de antes.
+
+### Cómo se ha probado sin poder instalar edge-tts
+
+Con un doble de la librería que devuelve mp3 reales generados con ffmpeg y
+eventos `WordBoundary`, y que **registra con qué parámetros se le llama**. Se
+ejecutó `voz.py` entero contra él:
+
+- Las tres escenas piden `boundary="WordBoundary"`. Verificado leyendo el
+  registro del doble, no el código.
+- El `.ass` sale con **22 líneas `Dialogue`** donde antes salían 0.
+- Regresión: forzando el doble a comportarse como la 7.2.8 (ignorar el
+  parámetro), el `.ass` vuelve a salir con 0 líneas **y aparece el `::error::`
+  nuevo** nombrando la causa. El diagnóstico funciona.
+
+### De paso, el recorte de la sílaba suelta
+
+Aplicado también a `voz.py` en la misma sesión, ya que estaba abierto. Detecta
+el patrón —sonido de menos de 0,45 s seguido de silencio de al menos 0,15 s,
+dentro del primer segundo— y recorta. Probado con el mismo doble: la escena
+sucia se recorta 0,45 s y la limpia no se toca.
+
+El detalle que importa y no es obvio: **las marcas de palabra se desplazan lo
+mismo que el recorte**. Comprobado en el `.ass` generado: la primera marca de la
+escena recortada cae en 4,50 s y no en 4,95 s, que es donde habría quedado sin
+compensar — y con los subtítulos ya funcionando, ese desfase se habría visto en
+pantalla durante toda la escena.
+
+## Guiones 003 a 008
+
+- **Un solo ámbar por pantalla:** corregidas 15 escenas repartidas entre el 004,
+  005, 006, 007 y 008. La corrección quita la marca, no la palabra.
+- **La pregunta de los comentarios:** añadida al 003, 004, 006, 007 y 008 (el
+  005 ya tenía una, y es específica). Cada una pide **una historia propia**
+  ligada al tema del episodio, no un «déjamelo en comentarios».
+
+  Ojo con esto, que casi se cuela: al meterla dentro de la narración del cierre,
+  **cinco guiones pasaron de 20 segundos en esa escena, que es error grave del
+  validador**. Habría bloqueado la producción de esta noche. Corregido dándole
+  escena propia justo antes del cierre, que además es mejor: una pregunta
+  merece su pausa en vez de ir pegada al avance del episodio siguiente.
+
+- **Pendiente para mañana:** las frases de transición entre bloques. La regla
+  está en el prompt del guionista, pero aplicarla a los seis guiones exige
+  leerlos enteros y encontrar los saltos reales, no adivinarlos por la longitud
+  de la narración de los rótulos. Se hace en la lectura editorial de mañana.
+
+### Comprobado antes de cerrar
+
+`cola.py --fecha 2026-08-20` resuelve MDH-003 en los dos idiomas, modo revisión,
+música Haru de Roa. `validar_guion.py` pasa los doce guiones del repositorio con
+código 0. La producción de las 03:00 no se bloquea.

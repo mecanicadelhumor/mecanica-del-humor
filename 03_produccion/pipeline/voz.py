@@ -56,10 +56,101 @@ def hms(seg, coma=","):
     return f"{h:02d}:{m:02d}:{int(s):02d}{coma}{int(round((s%1)*1000)):03d}"
 
 
+# Recorte del fragmento inicial. Ver fragmento_inicial() más abajo.
+MAX_FRAG_S, MIN_HUECO_S, VENTANA_FRAG_S = 0.45, 0.15, 1.0
+
+
+def _comunicar(texto, voz):
+    """Crea el Communicate pidiendo EXPLÍCITAMENTE las marcas por palabra.
+
+    Aquí estuvo el fallo que dejó TRES vídeos seguidos sin subtítulos
+    quemados, del 18 al 19 de agosto.
+
+    edge-tts cambió el 22/03/2026 (commit 4bdb8e4, rama 7.2.x) el valor por
+    defecto del parámetro `boundary` de "WordBoundary" a "SentenceBoundary".
+    Ese valor decide literalmente lo que la librería le pide al servicio de
+    Microsoft en el mensaje speech.config:
+
+        boundary="SentenceBoundary"  ->  "wordBoundaryEnabled":"false"
+        boundary="WordBoundary"      ->  "wordBoundaryEnabled":"true"
+
+    Con el nuevo valor por defecto, el servicio **no manda ni un solo evento
+    WordBoundary**. El audio llega perfecto —por eso el fallo no se notaba
+    escuchando— y la lista de marcas se queda vacía, así que escribir_ass()
+    genera un .ass con cabecera y sin una sola línea de diálogo, y montaje.py
+    lo quema sin error y sin efecto.
+
+    Y entró solo, sin que nadie tocara este repositorio, porque
+    requirements.txt no fijaba la versión: cada producción instalaba la última
+    publicada. Ahora se hacen las dos cosas —fijar el rango de versión y pedir
+    el parámetro— porque cualquiera de las dos bastaría, pero juntas cierran
+    también la puerta a que vuelva por el otro lado.
+
+    Las versiones anteriores a la 7 no aceptan `boundary`; si no existe, se
+    reintenta sin él, que es justo el caso en el que el defecto por defecto
+    era el bueno.
+    """
+    try:
+        return edge_tts.Communicate(texto, voz, rate=RITMO, pitch=TONO,
+                                    boundary="WordBoundary")
+    except TypeError:
+        return edge_tts.Communicate(texto, voz, rate=RITMO, pitch=TONO)
+
+
+def fragmento_inicial(mp3):
+    """Segundos a recortar por delante, o 0 si la escena arranca limpia.
+
+    El sintetizador cuela de vez en cuando un trozo de palabra al principio de
+    una escena: se oye una sílaba que no pertenece a ninguna frase. Silvestre
+    lo detectó en MDH-001.en, en MDH-002.en y —esta es la que rompió el
+    diagnóstico anterior— en el minuto 5:35 de MDH-002.es. No es un «falso
+    arranque» del vídeo: como aquí se sintetiza una escena por petición, puede
+    caer al principio de cualquiera.
+
+    El patrón es inconfundible y por eso se puede recortar sin miedo: un trozo
+    de sonido de menos de MAX_FRAG_S seguido de un silencio de al menos
+    MIN_HUECO_S, todo dentro del primer segundo. El habla normal no hace eso.
+    Si no encaja exactamente, se devuelve 0 y no se toca nada.
+    """
+    r = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-t", str(VENTANA_FRAG_S + 1),
+                        "-i", str(mp3), "-af", "silencedetect=n=-45dB:d=0.10",
+                        "-f", "null", "-"], capture_output=True, text=True)
+    abierto = None
+    for linea in r.stderr.splitlines():
+        if "silence_start" in linea:
+            try:
+                abierto = float(linea.split("silence_start:")[1].strip().split()[0])
+            except (IndexError, ValueError):
+                abierto = None
+        elif "silence_end" in linea and abierto is not None:
+            try:
+                fin = float(linea.split("silence_end:")[1].split("|")[0])
+            except (IndexError, ValueError):
+                abierto = None
+                continue
+            if abierto <= MAX_FRAG_S and (fin - abierto) >= MIN_HUECO_S and fin <= VENTANA_FRAG_S:
+                return round(fin, 3)
+            abierto = None
+    return 0.0
+
+
+def _recortar(mp3, desde_s):
+    """Quita los primeros `desde_s` segundos del mp3, en su sitio."""
+    tmp = mp3.with_suffix(".rec.mp3")
+    subprocess.run(["ffmpeg", "-y", "-ss", str(desde_s), "-i", str(mp3),
+                    "-c:a", "libmp3lame", "-q:a", "2", str(tmp)],
+                   check=True, capture_output=True)
+    tmp.replace(mp3)
+
+
 async def sintetizar(texto, voz, destino):
-    """Devuelve (duracion_s, [(ini_s, fin_s, palabra), ...])."""
-    com = edge_tts.Communicate(texto, voz, rate=RITMO, pitch=TONO)
-    audio, palabras = bytearray(), []
+    """Devuelve (duracion_s, [(ini_s, fin_s, palabra), ...], n_marcas_de_frase).
+
+    La tercera cifra solo sirve para diagnosticar: si llegan marcas de frase y
+    ninguna de palabra, el problema es el parámetro `boundary` y no la red.
+    """
+    com = _comunicar(texto, voz)
+    audio, palabras, n_frases = bytearray(), [], 0
     async for trozo in com.stream():
         if trozo["type"] == "audio":
             audio.extend(trozo["data"])
@@ -67,9 +158,11 @@ async def sintetizar(texto, voz, destino):
             ini = trozo["offset"] / 1e7
             dur = trozo["duration"] / 1e7
             palabras.append((ini, ini + dur, trozo["text"]))
+        elif trozo["type"] == "SentenceBoundary":
+            n_frases += 1
     destino.write_bytes(bytes(audio))
     dur = palabras[-1][1] if palabras else 0.0
-    return dur, palabras
+    return dur, palabras, n_frases
 
 
 def duracion_real(path):
@@ -134,6 +227,7 @@ async def principal(guion_path, salida, voz=None):
     salida = Path(salida); (salida / "voz").mkdir(parents=True, exist_ok=True)
 
     reloj, bloques, palabras_todas, partes = 0.0, [], [], []
+    frases_totales, recortadas = 0, []
     for i, e in enumerate(guion["escenas"], 1):
         texto = (e.get("narracion") or "").strip()
         mp3 = salida / "voz" / f"escena_{i:03d}.mp3"
@@ -141,7 +235,18 @@ async def principal(guion_path, salida, voz=None):
             e["duracion_s"] = e.get("duracion_s", 3.0)
             reloj += e["duracion_s"]
             continue
-        _, pal = await sintetizar(texto, voz, mp3)
+        _, pal, n_fr = await sintetizar(texto, voz, mp3)
+        frases_totales += n_fr
+        # Sílaba suelta al principio de la escena: se recorta si el patrón
+        # encaja exactamente. Las marcas de palabra vienen referidas al audio
+        # SIN recortar, así que hay que restarles lo mismo o los subtítulos
+        # quedarían adelantados esa cantidad durante toda la escena.
+        recorte = fragmento_inicial(mp3)
+        if recorte:
+            _recortar(mp3, recorte)
+            pal = [(max(0.0, a - recorte), max(0.0, b - recorte), w) for a, b, w in pal]
+            recortadas.append((i, recorte))
+            print(f"  escena {i:>2}  recortada sílaba suelta de {recorte:.2f}s al principio")
         dur = duracion_real(mp3) or (pal[-1][1] if pal else 3.0)
         cola = e.get("pausa_despues_s", 0.45)      # respiración entre escenas
         e["duracion_s"] = round(dur + cola, 3)
@@ -179,10 +284,19 @@ async def principal(guion_path, salida, voz=None):
     # cada escena, que es estático por diseño. Un vídeo sin ellos se percibe
     # como un pase de diapositivas. Hasta el 18/08 esto fallaba en silencio.
     if not palabras_todas:
-        print("::warning::El sintetizador no ha devuelto marcas de tiempo por palabra "
-              "(WordBoundary). El vídeo saldrá SIN subtítulos quemados.")
+        if frases_totales:
+            print(f"::error::El servicio ha devuelto {frases_totales} marcas de FRASE y "
+                  "ninguna de PALABRA. Ese es el síntoma exacto de que «boundary» no está "
+                  "pidiendo WordBoundary: mira _comunicar() y la versión de edge-tts "
+                  "instalada (requirements.txt fija >=7,<8).")
+        else:
+            print("::warning::El sintetizador no ha devuelto marcas de tiempo por palabra "
+                  "(WordBoundary) ni de frase. El vídeo saldrá SIN subtítulos quemados.")
     escribir_ass(palabras_todas, salida / "subtitulos.ass")
     print(f"Marcas de palabra: {len(palabras_todas)}")
+    if recortadas:
+        detalle = ", ".join(f"escena {n} ({d:.2f}s)" for n, d in recortadas)
+        print(f"::warning::Sílabas sueltas recortadas en {len(recortadas)} escena(s): {detalle}")
     guion["duracion_total_s"] = round(reloj, 2)
     guion["voz_usada"] = voz
     (salida / "guion.timed.json").write_text(

@@ -207,6 +207,12 @@
       "narracion": "Y el que se tropezó al principio del vídeo se reía porque ya se había levantado."
     },
     {
+      "tipo": "enunciado",
+      "texto": "¿Cuál es *la tuya*?",
+      "narracion": "Y ahora la tuya: esa desgracia que tardaste meses en poder contar riéndote. Déjala en comentarios con los meses que tardaste.",
+      "pausa_despues_s": 0.7
+    },
+    {
       "tipo": "cierre",
       "titulo": "No es el tiempo. Es la *distancia*.",
       "subtitulo": "En el próximo episodio: casi nadie se ríe de los chistes, y hay grabaciones que lo demuestran.",

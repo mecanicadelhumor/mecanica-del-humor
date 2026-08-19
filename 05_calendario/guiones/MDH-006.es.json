@@ -25,7 +25,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "Si sale bien, eres *el que cae bien*. Si sale mal, eres *el otro*.",
+      "texto": "Si sale bien, eres *el que cae bien*. Si sale mal, eres el otro.",
       "narracion": "Si sale bien, eres esa persona que cae bien a todo el mundo. Si sale mal, eres el que dijo aquello en la reunión de marzo y todavía se comenta."
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "Unos hacían una broma *apropiada*. Otros una *inapropiada*. Otros ninguna.",
+      "texto": "Unos hacían una broma *apropiada*. Otros una inapropiada. Otros ninguna.",
       "narracion": "La idea es simple: unas personas hacían una broma apropiada al contexto, otras una claramente inapropiada, y otras no hacían ninguna. Después se medía cómo las valoraba quien escuchaba.",
       "fuente": "D01"
     },
@@ -70,7 +70,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "Lo caro no es *intentarlo*. Lo caro es *acertar mal*.",
+      "texto": "Lo caro no es *intentarlo*. Lo caro es acertar mal.",
       "narracion": "Y eso invierte el consejo habitual. El error no está en intentar ser gracioso en el trabajo. El error está en calcular mal qué es apropiado. Son dos problemas distintos, y solo el segundo tiene arreglo por prudencia.",
       "fuente": "D01"
     },
@@ -85,8 +85,8 @@
       "titulo": "Las tres bromas seguras",
       "puntos": [
         "Sobre la *situación* que compartís todos",
-        "Sobre *ti mismo*, pero desde arriba",
-        "Sobre algo *ya resuelto*, nunca en curso"
+        "Sobre ti mismo, pero desde arriba",
+        "Sobre algo ya resuelto, nunca en curso"
       ],
       "narracion": "Tres categorías que casi nunca fallan. La primera: bromear sobre la situación que estáis viviendo todos, que es el terreno más seguro que existe.",
       "fuente": "D02"
@@ -164,6 +164,12 @@
       "texto": "Dilo. Si va sobre la *situación* y no sobre nadie.",
       "narracion": "Así que, volviendo a esa reunión del principio: dilo, si va sobre la situación y no sobre nadie. Los datos dicen que arriesgarte te hace parecer más seguro incluso cuando no funciona.",
       "fuente": "D01"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "El que mejor salió y el que *peor*",
+      "narracion": "Cuéntame en comentarios el chiste que mejor te ha salido en el trabajo y el que peor. De los segundos se aprende más.",
+      "pausa_despues_s": 0.7
     },
     {
       "tipo": "cierre",

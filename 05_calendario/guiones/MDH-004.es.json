@@ -149,8 +149,8 @@
       "titulo": "Lo que sí hace reír",
       "puntos": [
         "*Presencia*: mirar, responder, estar",
-        "*Complicidad*: lo que solo entendéis vosotros dos",
-        "*Permiso*: reírte tú primero, y de ti"
+        "Complicidad: lo que solo entendéis vosotros dos",
+        "Permiso: reírte tú primero, y de ti"
       ],
       "narracion": "Lo que de verdad genera risa en una conversación es otra cosa: estar presente y responder de verdad; construir complicidad, esas referencias que solo entendéis vosotros dos; y dar permiso, riéndote tú primero y a tu costa.",
       "fuente": "E02"
@@ -183,8 +183,14 @@
       "narracion": "Así que la próxima vez que alguien se ría contigo, fíjate en qué dijo justo antes. Lo más probable es que fuera «nos vemos luego»."
     },
     {
+      "tipo": "enunciado",
+      "texto": "¿De qué te ríes cuando *no hay chiste*?",
+      "narracion": "Hoy escúchate a ti mismo y apunta de qué te ríes cuando no hay ningún chiste delante. Déjalo en comentarios.",
+      "pausa_despues_s": 0.7
+    },
+    {
       "tipo": "cierre",
-      "titulo": "No necesitas *chistes*. Necesitas *presencia*.",
+      "titulo": "No necesitas *chistes*. Necesitas presencia.",
       "subtitulo": "En el próximo episodio: los cuatro estilos de humor, y cuál de ellos te está costando amigos sin que lo sepas.",
       "narracion": "En el próximo episodio: los cuatro estilos de humor, y cuál de ellos te está costando amigos sin que te hayas dado cuenta."
     }

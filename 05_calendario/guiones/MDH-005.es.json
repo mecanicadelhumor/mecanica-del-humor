@@ -30,7 +30,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "Eso pasa porque el humor no es una *cantidad*. Es una *dirección*.",
+      "texto": "Eso pasa porque el humor no es una *cantidad*. Es una dirección.",
       "narracion": "Eso ocurre porque el humor no funciona como una cantidad, que se tiene más o menos. Funciona como una dirección: importa hacia dónde apunta."
     },
     {
@@ -151,7 +151,7 @@
       "titulo": "Dos sustituciones concretas",
       "puntos": [
         "Del agresivo: apunta a la *situación*, no a la persona",
-        "Del autodestructivo: ríete de lo que *hiciste*, no de lo que *eres*"
+        "Del autodestructivo: ríete de lo que hiciste, no de lo que eres"
       ],
       "narracion": "Dos sustituciones muy concretas. Si tiendes al agresivo, apunta a la situación en lugar de a la persona: casi siempre hay un chiste equivalente que no necesita víctima.",
       "fuente": "B01"
@@ -198,7 +198,7 @@
     },
     {
       "tipo": "cierre",
-      "titulo": "No es *cuánta* gracia tienes. Es *hacia dónde* apunta.",
+      "titulo": "No es *cuánta* gracia tienes. Es hacia dónde apunta.",
       "subtitulo": "En el próximo episodio: cuándo el humor sube tu estatus en el trabajo y cuándo lo hunde, con el experimento que lo midió.",
       "narracion": "Así que la pregunta no es cuánta gracia tienes, sino hacia dónde apunta. Dime en comentarios cuál de los cuatro eres tú. En el próximo episodio nos vamos al sitio donde equivocarse sale más caro: el trabajo."
     }
