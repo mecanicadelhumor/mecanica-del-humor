@@ -72,6 +72,22 @@
 
   .enunciado{font-size:72px;line-height:1.22;font-family:"Inter","DejaVu Sans",sans-serif;font-weight:800;letter-spacing:-.015em}
 
+  /* V2 — variantes de composición para «enunciado».
+     Es la mitad de las escenas de cada episodio y siempre se veía igual: un
+     bloque de texto centrado. Lo que rota no es el texto: es dónde se apoya.
+     La variante la fija el número de escena (d.n), no el azar — mismo guion,
+     mismo encuadre, mismo píxel. Coste de render cero: sigue habiendo una
+     sola unidad animable, así que render.py captura exactamente lo mismo.
+
+     La tercera variante ancla ARRIBA, no abajo. El backlog proponía «a pie de
+     pantalla», pero la banda inferior está reservada: los subtítulos quemados
+     van en alineación 1 (abajo-izquierda) con MarginV 96 y cuerpo 58, o sea
+     de ~900px hacia abajo. Un enunciado apoyado en el suelo se les montaría
+     encima en cuanto los subtítulos vuelvan. Despejar la mitad inferior rompe
+     la monotonía igual de bien y además les deja el sitio libre. */
+  .caja.enun-1{max-width:1120px;margin-right:auto}      /* a la izquierda, aire a la derecha */
+  .caja.enun-2{align-self:flex-start;max-width:1400px}  /* alta, mitad inferior despejada */
+
   ul.lista{list-style:none;font-family:"Inter","DejaVu Sans",sans-serif}
   ul.lista li{
     font-size:56px;line-height:1.25;margin:0 0 42px;padding-left:96px;position:relative;font-weight:600;
@@ -159,7 +175,10 @@ const PLANTILLAS = {
     </div>`;
   },
   enunciado(d){
-    return `<div class="caja"><div class="u enunciado">${rico(d.texto)}</div></div>`;
+    // La composición rota con el número de escena. Sin d.n (llamadas sueltas
+    // desde una consola) cae en la variante centrada de siempre.
+    const v = ((Number(d.n) || 0) % 3 + 3) % 3;
+    return `<div class="caja enun-${v}"><div class="u enunciado">${rico(d.texto)}</div></div>`;
   },
   lista(d){
     const li = d.puntos.map((p,i)=>

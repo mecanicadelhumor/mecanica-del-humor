@@ -34,10 +34,10 @@
     {
       "tipo": "comparacion",
       "titulo": "Same sidewalk. Two endings.",
-      "et_a": "He gets up",
-      "et_b": "He doesn't",
+      "et_a": "They get up",
+      "et_b": "They don't",
       "a": "Everyone laughs.",
-      "b": "The funny _evaporates_.",
+      "b": "The funny *evaporates*.",
       "narracion": "Same event, same physics, same fall. And the humor is gone completely. What changed isn't what happened. It's how much it hurts."
     },
     {
@@ -86,7 +86,7 @@
       "et_a": "Severe misfortune",
       "a": "Needs *more* distance before it can be funny.",
       "et_b": "Mild misfortune",
-      "b": "Push it too far and nobody cares. And nobody laughs _either_.",
+      "b": "Push it too far and nobody cares. And nobody laughs either.",
       "narracion": "A severe misfortune needs distance to become funny. A mild one works the other way around: push it too far away and it stops mattering to anyone, and something nobody cares about isn't funny either.",
       "fuente": "A03"
     },
@@ -186,7 +186,7 @@
       "et_a": "They joke about their own illness",
       "a": "Their distance. Their call.",
       "et_b": "You joke about it",
-      "b": "You are _not standing where they are standing_.",
+      "b": "You are not standing where they are standing.",
       "narracion": "That's why someone can joke about their own illness and be genuinely offended if you do it.",
       "fuente": "A03"
     },
@@ -211,8 +211,8 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "The one who tripped was laughing because he had *already gotten up*.",
-      "narracion": "And the man who tripped at the start of this video was laughing because he had already gotten up."
+      "texto": "They had *already gotten up*.",
+      "narracion": "And the person who tripped at the start of this video was laughing because they had already gotten up."
     },
     {
       "tipo": "cierre",

@@ -48,12 +48,17 @@ vez de modificar los ocho existentes. Hay episodios que la piden a gritos: la
 curva del humor sobre el huracán Sandy en el 003, el reparto de estilos de humor
 en el 005.
 
-**V2. Variantes de composición para `enunciado`.** Es el tipo de escena que ocupa
-la mitad del vídeo y siempre se ve igual: un bloque de texto centrado. Tres
-variantes alternándose por posición (texto a la izquierda con aire a la derecha,
-centrado, y a pie de pantalla con la parte superior despejada) rompen la
-monotonía sin tocar nada más. La variante se elige por el número de escena, de
-forma determinista: mismo guion, mismo resultado.
+**V2. Variantes de composición para `enunciado`.** ~~Es el tipo de escena que
+ocupa la mitad del vídeo y siempre se ve igual: un bloque de texto centrado.~~
+**Hecho el 19/08.** Tres variantes por número de escena (`d.n % 3`): centrada,
+a la izquierda con aire a la derecha, y alta con la mitad inferior despejada.
+
+Una desviación respecto a lo que proponía este documento: la tercera variante
+iba a ser «a pie de pantalla» y se ha hecho **al revés, anclada arriba**. La
+banda inferior no está libre: los subtítulos quemados van en alineación 1 con
+`MarginV 96` y cuerpo 58, o sea de ~900 px hacia abajo. Un enunciado apoyado en
+el suelo se les montaría encima en cuanto los subtítulos vuelvan a salir.
+Despejar la mitad inferior rompe la monotonía igual y además les deja el sitio.
 
 **V3. Pictogramas en `lista` y `diagrama`.** Los números en caja de `lista` y las
 cajas encadenadas de `diagrama` funcionan, pero son lo más genérico del sistema.
@@ -130,8 +135,10 @@ propias variantes A/B cuando haya datos.
 | Tipografía de titulares (Archivo Black no se instalaba en el runner) | corregido el 18/08 |
 | **Subtítulos quemados ausentes** — lo único que se movía en el tramo estático | instrumentado el 18/08, a confirmar el 19 |
 | Muestreo de fotogramas de QA a ciegas (caían en fundidos) | corregido el 18/08 |
-| Un solo resaltado ámbar por pantalla | corregido en MDH-002, vigilar en el resto |
-| V1 gráficas · V2 variantes de enunciado · V3 pictogramas · V4 acento por episodio | pendientes |
+| Un solo resaltado ámbar por pantalla | corregido en MDH-002 y en MDH-003 (es) el 19/08 |
+| **V2 variantes de composición de `enunciado`** | hecho el 19/08, **a confirmar en la vista previa del 20** |
+| V1 gráficas (`figura.py`) | pendiente, **bloqueado**: exige tocar `producir.yml`, que necesita permiso de Silvestre |
+| V3 pictogramas · V4 acento por episodio | pendientes |
 | V5–V7 | pendientes |
 | V8–V9 | sin decidir |
 

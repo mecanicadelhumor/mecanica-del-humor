@@ -31,6 +31,21 @@
       "subido_utc": "2026-08-18T00:00:00Z",
       "revisado": false,
       "_pendiente": "El título y la descripción que hay en YouTube son los del guion, no los de publicaciones/MDH-001.es.json; hay que actualizarlos a mano una vez."
+    },
+    {
+      "id": "MDH-002.es",
+      "episodio": "MDH-002",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "Por qué te ríes: las dos condiciones que cumple cualquier chiste",
+      "guion": "05_calendario/guiones/MDH-002.es.json",
+      "video_id": "NYNKFNJAsLc",
+      "url": "https://youtu.be/NYNKFNJAsLc",
+      "estado": "private",
+      "publicar_en": null,
+      "musica": "cama_02_dusk_next_route.mp3",
+      "subido_utc": "2026-08-19T03:42:51Z",
+      "revisado": true
     }
   ]
 }

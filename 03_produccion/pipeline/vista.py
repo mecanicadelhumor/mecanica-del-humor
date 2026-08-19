@@ -60,6 +60,19 @@ MUESTRARIO = [
     {"tipo": "cierre", "titulo": "Violación *más* algo benigno. Nada más.",
      "subtitulo": "En el próximo episodio: por qué «todavía es pronto para reírse de eso» tiene fecha de caducidad.",
      "narracion": "x"},
+    # Los dos enunciados de más van AL FINAL a propósito. «enunciado» tiene
+    # desde el 19/08 tres variantes de composición que dependen del número de
+    # escena, y con un solo ejemplo en el muestrario solo se vería una. Puestos
+    # aquí, el ejemplo de arriba cae en n=2 y estos en n=9 y n=10, así que la
+    # vista previa enseña las tres. Al final y no intercalados para no correr
+    # la numeración de los ocho muestrarios que ya existen: renumerarlos
+    # dejaría PNG huérfanos con el nombre viejo en el repositorio.
+    {"tipo": "enunciado",
+     "texto": "Nadie se ríe de un chiste que ya ha entendido. Se ríe *mientras* lo entiende.",
+     "narracion": "x"},
+    {"tipo": "enunciado",
+     "texto": "Demasiado cerca duele. Demasiado lejos *aburre*.",
+     "narracion": "x"},
 ]
 
 

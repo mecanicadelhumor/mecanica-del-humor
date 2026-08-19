@@ -1,0 +1,501 @@
+From 234956177d918a0e38b9d84f503a6a323434b793 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Revisi=C3=B3n=20de=20calidad=20=28agente=29?=
+ <mecanicadelhumor@users.noreply.github.com>
+Date: Wed, 19 Aug 2026 05:22:03 +0000
+Subject: [PATCH] Revision del 19/08: arregla el ritmo del 003 y da tres
+ composiciones al enunciado
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Guion de manana (MDH-003), los dos idiomas leidos enteros. Sin calcos: el
+ingles se apoya en "too soon", que es expresion propia, no una traduccion.
+
+Espanol: tres escenas con dos, tres y cuatro resaltados ambar se quedan en
+uno. Cinco "enunciado" seguidos justo antes del cierre (24-28) y otros tres
+al principio (2-3-4) se rompen convirtiendo la 3 y la 25 en comparacion y la
+26 en lista, que es como ya lo resolvia el guion ingles. La escena 28 repetia
+la narracion palabra por palabra en pantalla. Las dos escenas mas largas se
+recortan: 17,8s estimados a 150 ppm quedan muy cerca del maximo duro de 20s
+con la voz real a -4%.
+
+Ingles: el cian era para datos y se estaba usando como enfasis en tres
+escenas. Pronombre unificado en "they", que el gancho ya usaba.
+
+Diseno, un cambio: "enunciado" es la mitad de las escenas y siempre se veia
+igual. Ahora la composicion rota con el numero de escena — centrada, a la
+izquierda con aire a la derecha, y alta con la mitad inferior despejada. La
+tercera va anclada arriba y no "a pie de pantalla" como proponia el backlog,
+porque abajo van los subtitulos quemados (MarginV 96, cuerpo 58) y se
+solaparian en cuanto vuelvan a salir. Sigue habiendo una sola unidad
+animable: el coste de render no cambia.
+
+Confirmado lo que quedaba del 18: lineas_ass=0 con audio completo, o sea que
+las marcas WordBoundary no llegan y el fallo esta en voz.py, no en el
+quemado. No se toca; queda propuesto. Y el canal ingles se ha quedado hoy sin
+video: hace falta el log de Actions para saber por que.
+---
+ 03_produccion/MEJORA_VISUAL.md            |  23 ++-
+ 03_produccion/pipeline/escena.html        |  21 ++-
+ 03_produccion/pipeline/vista.py           |  13 ++
+ 05_calendario/MEJORAS.md                  | 169 ++++++++++++++++++++++
+ 05_calendario/guiones/MDH-003.en.json     |  14 +-
+ 05_calendario/guiones/MDH-003.es.json     |  46 +++---
+ 05_calendario/registro_publicaciones.json |   2 +-
+ 7 files changed, 254 insertions(+), 34 deletions(-)
+
+diff --git a/03_produccion/MEJORA_VISUAL.md b/03_produccion/MEJORA_VISUAL.md
+index 8a700bf..b512897 100644
+--- a/03_produccion/MEJORA_VISUAL.md
++++ b/03_produccion/MEJORA_VISUAL.md
+@@ -48,12 +48,17 @@ vez de modificar los ocho existentes. Hay episodios que la piden a gritos: la
+ curva del humor sobre el huracán Sandy en el 003, el reparto de estilos de humor
+ en el 005.
+ 
+-**V2. Variantes de composición para `enunciado`.** Es el tipo de escena que ocupa
+-la mitad del vídeo y siempre se ve igual: un bloque de texto centrado. Tres
+-variantes alternándose por posición (texto a la izquierda con aire a la derecha,
+-centrado, y a pie de pantalla con la parte superior despejada) rompen la
+-monotonía sin tocar nada más. La variante se elige por el número de escena, de
+-forma determinista: mismo guion, mismo resultado.
++**V2. Variantes de composición para `enunciado`.** ~~Es el tipo de escena que
++ocupa la mitad del vídeo y siempre se ve igual: un bloque de texto centrado.~~
++**Hecho el 19/08.** Tres variantes por número de escena (`d.n % 3`): centrada,
++a la izquierda con aire a la derecha, y alta con la mitad inferior despejada.
++
++Una desviación respecto a lo que proponía este documento: la tercera variante
++iba a ser «a pie de pantalla» y se ha hecho **al revés, anclada arriba**. La
++banda inferior no está libre: los subtítulos quemados van en alineación 1 con
++`MarginV 96` y cuerpo 58, o sea de ~900 px hacia abajo. Un enunciado apoyado en
++el suelo se les montaría encima en cuanto los subtítulos vuelvan a salir.
++Despejar la mitad inferior rompe la monotonía igual y además les deja el sitio.
+ 
+ **V3. Pictogramas en `lista` y `diagrama`.** Los números en caja de `lista` y las
+ cajas encadenadas de `diagrama` funcionan, pero son lo más genérico del sistema.
+@@ -130,8 +135,10 @@ propias variantes A/B cuando haya datos.
+ | Tipografía de titulares (Archivo Black no se instalaba en el runner) | corregido el 18/08 |
+ | **Subtítulos quemados ausentes** — lo único que se movía en el tramo estático | instrumentado el 18/08, a confirmar el 19 |
+ | Muestreo de fotogramas de QA a ciegas (caían en fundidos) | corregido el 18/08 |
+-| Un solo resaltado ámbar por pantalla | corregido en MDH-002, vigilar en el resto |
+-| V1 gráficas · V2 variantes de enunciado · V3 pictogramas · V4 acento por episodio | pendientes |
++| Un solo resaltado ámbar por pantalla | corregido en MDH-002 y en MDH-003 (es) el 19/08 |
++| **V2 variantes de composición de `enunciado`** | hecho el 19/08, **a confirmar en la vista previa del 20** |
++| V1 gráficas (`figura.py`) | pendiente, **bloqueado**: exige tocar `producir.yml`, que necesita permiso de Silvestre |
++| V3 pictogramas · V4 acento por episodio | pendientes |
+ | V5–V7 | pendientes |
+ | V8–V9 | sin decidir |
+ 
+diff --git a/03_produccion/pipeline/escena.html b/03_produccion/pipeline/escena.html
+index 98f2a5a..434083e 100644
+--- a/03_produccion/pipeline/escena.html
++++ b/03_produccion/pipeline/escena.html
+@@ -72,6 +72,22 @@
+ 
+   .enunciado{font-size:72px;line-height:1.22;font-family:"Inter","DejaVu Sans",sans-serif;font-weight:800;letter-spacing:-.015em}
+ 
++  /* V2 — variantes de composición para «enunciado».
++     Es la mitad de las escenas de cada episodio y siempre se veía igual: un
++     bloque de texto centrado. Lo que rota no es el texto: es dónde se apoya.
++     La variante la fija el número de escena (d.n), no el azar — mismo guion,
++     mismo encuadre, mismo píxel. Coste de render cero: sigue habiendo una
++     sola unidad animable, así que render.py captura exactamente lo mismo.
++
++     La tercera variante ancla ARRIBA, no abajo. El backlog proponía «a pie de
++     pantalla», pero la banda inferior está reservada: los subtítulos quemados
++     van en alineación 1 (abajo-izquierda) con MarginV 96 y cuerpo 58, o sea
++     de ~900px hacia abajo. Un enunciado apoyado en el suelo se les montaría
++     encima en cuanto los subtítulos vuelvan. Despejar la mitad inferior rompe
++     la monotonía igual de bien y además les deja el sitio libre. */
++  .caja.enun-1{max-width:1120px;margin-right:auto}      /* a la izquierda, aire a la derecha */
++  .caja.enun-2{align-self:flex-start;max-width:1400px}  /* alta, mitad inferior despejada */
++
+   ul.lista{list-style:none;font-family:"Inter","DejaVu Sans",sans-serif}
+   ul.lista li{
+     font-size:56px;line-height:1.25;margin:0 0 42px;padding-left:96px;position:relative;font-weight:600;
+@@ -159,7 +175,10 @@ const PLANTILLAS = {
+     </div>`;
+   },
+   enunciado(d){
+-    return `<div class="caja"><div class="u enunciado">${rico(d.texto)}</div></div>`;
++    // La composición rota con el número de escena. Sin d.n (llamadas sueltas
++    // desde una consola) cae en la variante centrada de siempre.
++    const v = ((Number(d.n) || 0) % 3 + 3) % 3;
++    return `<div class="caja enun-${v}"><div class="u enunciado">${rico(d.texto)}</div></div>`;
+   },
+   lista(d){
+     const li = d.puntos.map((p,i)=>
+diff --git a/03_produccion/pipeline/vista.py b/03_produccion/pipeline/vista.py
+index 4985209..0461f77 100644
+--- a/03_produccion/pipeline/vista.py
++++ b/03_produccion/pipeline/vista.py
+@@ -60,6 +60,19 @@ MUESTRARIO = [
+     {"tipo": "cierre", "titulo": "Violación *más* algo benigno. Nada más.",
+      "subtitulo": "En el próximo episodio: por qué «todavía es pronto para reírse de eso» tiene fecha de caducidad.",
+      "narracion": "x"},
++    # Los dos enunciados de más van AL FINAL a propósito. «enunciado» tiene
++    # desde el 19/08 tres variantes de composición que dependen del número de
++    # escena, y con un solo ejemplo en el muestrario solo se vería una. Puestos
++    # aquí, el ejemplo de arriba cae en n=2 y estos en n=9 y n=10, así que la
++    # vista previa enseña las tres. Al final y no intercalados para no correr
++    # la numeración de los ocho muestrarios que ya existen: renumerarlos
++    # dejaría PNG huérfanos con el nombre viejo en el repositorio.
++    {"tipo": "enunciado",
++     "texto": "Nadie se ríe de un chiste que ya ha entendido. Se ríe *mientras* lo entiende.",
++     "narracion": "x"},
++    {"tipo": "enunciado",
++     "texto": "Demasiado cerca duele. Demasiado lejos *aburre*.",
++     "narracion": "x"},
+ ]
+ 
+ 
+diff --git a/05_calendario/MEJORAS.md b/05_calendario/MEJORAS.md
+index c672464..547727d 100644
+--- a/05_calendario/MEJORAS.md
++++ b/05_calendario/MEJORAS.md
+@@ -88,3 +88,172 @@ funciona. Ningún agente estaba leyendo el guion antes de producirlo. La revisi
+ de las 07:00 pasa a revisar **también el episodio del día siguiente**, que
+ todavía no se ha producido y da veinte horas de margen. Un calco del inglés al
+ español, o al revés, es motivo de bloqueo.
++
++---
++
++## 19 de agosto · revisión de las 07:00
++
++Equipo de Silvestre apagado: trabajo hecho sobre un clon del repositorio público
++y entregado como paquete. Mirado: `parrilla.json`, `registro_publicaciones.json`,
++los seis fotogramas y la `ficha.json` de `qa/MDH-002.es/`, la vista previa del
++18/08, y los guiones `MDH-003.es` y `MDH-003.en` de principio a fin.
++
++### 1. El canal inglés se quedó sin vídeo. Hace falta mirar el log
++
++La parrilla pedía `["es", "en"]` para hoy y solo hay **MDH-002.es**
++(`youtu.be/NYNKFNJAsLc`, privado, subido a las 03:42 UTC). De **MDH-002.en** no
++hay ni entrada en el registro ni carpeta en `qa/`, y su guion existe desde el 18.
++
++Lo que se puede deducir sin el log, por cómo está escrito `producir.yml`:
++
++- `registrar.py` omite lo que no tenga `publicado.json`, y el paso de expediente
++  omite lo que no tenga `final.mp4`. Que falten **las dos cosas** dice que el
++  inglés no llegó a montarse, no que fallara al subirse.
++- Pero los pasos de voz, render y montaje son bucles `while` con `set -e`: si el
++  inglés hubiera reventado en cualquiera de ellos, el job habría muerto **antes**
++  de subir el español. Y el español se subió.
++
++Las dos cosas juntas solo encajan si **en el plan nunca hubo trabajo inglés**.
++Las dos causas compatibles con eso son (a) el job se lanzó a mano con
++`--guion .../MDH-002.es.json`, que produce un plan de uno solo, o (b) se agotó el
++`timeout-minutes: 150` — el commit sale 2 h 42 min después de la hora del cron.
++
++**No se toca nada.** Hay que abrir el run de esta noche y leer el paso «Recuperar
++el plan»: ahí está escrito, literalmente, si el plan traía uno o dos trabajos.
++
++### 2. Subtítulos quemados: confirmado, y el fallo está en `voz.py`
++
++Era lo que quedaba pendiente del 18. La ficha de hoy lo cierra:
++
++    "subtitulos": { "ass_existe": true, "lineas_ass": 0, "quemados": false }
++
++Con `lineas_ass` a 0, el `.ass` se escribió con cabecera y sin una sola línea de
++diálogo, así que `montaje.py` no tiene nada que quemar: **el fallo no está en el
++quemado, está en la síntesis**. `edge_tts` no devolvió ni un solo evento
++`WordBoundary`, pese a que el audio salió entero (338,3 s).
++
++Lo confirman los seis fotogramas: ninguno lleva subtítulo. El tramo central de
++cada escena vuelve a ser una diapositiva quieta.
++
++Dato que apunta a la causa y que no estaba anotado: **`requirements.txt` no fija
++la versión de `edge-tts`** (`edge-tts` a secas). Cada producción instala la
++última que haya publicada, así que un cambio de comportamiento aguas arriba entra
++solo, de un día para otro, sin que nadie toque el repositorio. Es la explicación
++más simple de que esto funcionara y dejara de funcionar.
++
++No se toca `voz.py` sin permiso, como manda el encargo. Propuesta para Silvestre
++en el resumen.
++
++### 3. Lo que sí está bien en MDH-002.es
++
++- Audio: −14,24 LUFS y pico −1,3 dBTP. Dentro de objetivo, mejor que ayer en pico.
++- Colchón de entrada: 0,629 s. Sin falso arranque.
++- **Los titulares ya salen en Archivo Black.** Se ve en el fotograma de portada:
++  «Por qué te ríes» es pesado y los enunciados quedan por debajo. La jerarquía
++  está del derecho por primera vez. La descarga de la fuente en el runner
++  funciona.
++- El muestreo de fotogramas ya no cae en fundidos: los seis son legibles.
++
++Dos cosas menores: en `qa/MDH-002.es/` hay **doce** .jpg y la ficha solo declara
++seis — los otros seis son de la prueba del 18 y nadie los limpia, porque la poda
++del workflow borra carpetas enteras, no ficheros sueltos dentro de una carpeta
++que se reescribe. Y el fotograma de la escena «Tres formas de hacer algo benigno»
++sigue llevando dos resaltados ámbar; ya estaba producido, no se toca.
++
++### 4. Guion de mañana (MDH-003): corregido en los dos idiomas
++
++Leídos enteros. No hay ningún calco como el del 002: el inglés está construido
++sobre «too soon», que es expresión hecha y meme propio, no una traducción del
++título español; y la cita de Steve Allen va en su idioma original. Las cifras
++tienen fuente y las fuentes existen y son las correctas (A03 = «Too close for
++comfort», A04 = el estudio del huracán Sandy). El callback cierra: el que se
++tropieza en la escena 1 vuelve en la penúltima, y se entiende.
++
++Lo que sí había, y se ha corregido:
++
++**Español** — era la versión más floja de las dos, y las correcciones son en su
++mayoría cosas que el guion inglés ya resolvía bien:
++
++- Escenas 6, 11 y 21: cuatro, dos y tres resaltados ámbar en la misma pantalla.
++  Reducidos a uno, siguiendo el criterio que el inglés ya aplicaba (resaltar solo
++  el primer elemento de la enumeración).
++- **Cinco escenas `enunciado` seguidas (24 a 28)**, justo antes del cierre: el
++  tramo más quieto del vídeo, y encima el que más peso emocional lleva. Y otras
++  tres seguidas al principio (2-3-4). Se han convertido la 3 en `comparacion`
++  («La misma acera. Dos finales.»), la 25 en `comparacion` y la 26 en `lista`.
++  Son las mismas soluciones que el guion inglés ya usaba en esos tres puntos: se
++  ha traído la estructura, no la traducción. Ninguna racha pasa ya de dos.
++- Escena 28: el texto en pantalla repetía la narración palabra por palabra. Ahora
++  el ojo recibe «Ya se había *levantado*.» y el oído la frase entera.
++- Escenas 14 y 21, las dos más largas (17,8 s y 17,3 s estimados): recortadas a
++  16,6 y 16,9. La estimación va a 150 ppm y la voz real va a −4 %, así que 17,8
++  estimados quedaban a un pelo del máximo duro de 20 s.
++- Las `notas_humor` señalaban escenas que no eran: el literalismo del «mando»
++  está en la 12, no en la 9, y la rebaja está en la 18, no en la 21. Corregido.
++
++**Inglés** — estaba mejor, y los arreglos son de sistema de color:
++
++- Escenas 3, 10 y 25 usaban el cian (`_así_`) como énfasis, cuando el cian es
++  para datos. En la 3 el resalte sí era el mecanismo y ha pasado a ámbar
++  (`*evaporates*`); en la 10 y la 25 se ha quitado la marca.
++- Pronombre inconsistente: el gancho decía «Somebody… laughs with **them**» y
++  luego las escenas 3 y 29 pasaban a «he». Unificado en «they».
++- Escena 29: mismo problema que la 28 española, texto en pantalla igual a la
++  narración. Cambiado.
++
++`validar_guion.py` pasa los dos sin errores. En español ya no queda ningún aviso
++de ámbar ni de racha de tipo; quedan los de escenas por encima de 14 s, que son
++inherentes al ritmo de este episodio.
++
++### 5. Mejora visual del día: V2, variantes de composición de `enunciado`
++
++Antes, la comprobación pendiente: la vista previa del 18 (`_entorno.json` dice
++`Archivo Black` presente, o sea que es fiable) confirma que el arreglo de la
++tipografía funcionó. El muestrario de `enunciado` se lee bien y no desborda. Se
++da por bueno.
++
++Elegido V2 y **no V1**, que va antes en el backlog: V1 exige invocar un
++`figura.py` nuevo desde `producir.yml`, y ese fichero no se toca sin permiso de
++Silvestre. Queda anotado como bloqueado en `MEJORA_VISUAL.md`, no como pendiente.
++
++V2 ataca justo lo que el validador viene señalando: el 48 % (es) y el 50 % (en)
++de las escenas de MDH-003 son `enunciado`, y todas se veían igual. Ahora la
++composición rota con el número de escena — centrada, a la izquierda con aire a la
++derecha, y alta con la mitad inferior despejada — de forma determinista.
++
++Desviación consciente respecto al backlog: la tercera variante iba a ser «a pie
++de pantalla» y se ha hecho **anclada arriba**. La banda de abajo está reservada a
++los subtítulos quemados (alineación 1, `MarginV 96`, cuerpo 58: de ~900 px hacia
++abajo). Apoyar un enunciado en el suelo habría creado una colisión el mismo día
++en que los subtítulos vuelvan a funcionar.
++
++**Coste de render: sin cambios.** La escena `enunciado` sigue teniendo una sola
++unidad animable — comprobado con `vista.py`, que informa «1 unidades» en las
++tres variantes—, así que `render.py` captura exactamente los mismos fotogramas
++que antes. No hay antes/después que anotar.
++
++Se han añadido dos `enunciado` más al muestrario de `vista.py`, al final para no
++correr la numeración de los ocho PNG que ya existen. Con eso el ejemplo de arriba
++cae en n=2 y los nuevos en n=9 y n=10, así que la vista previa enseña las tres
++variantes de una vez.
++
++**Pendiente para mañana:** mirar `03_produccion/vista_previa/muestrario_02`, `_09`
++y `_10_enunciado.png` con las tipografías reales y revertir si alguna variante
++desborda o queda peor. La variante de la izquierda es la que menos se nota con
++textos cortos: lo suyo es juzgarla con el enunciado largo del muestrario.
++
++### Para Silvestre, que no decido yo
++
++1. **`edge-tts` sin versión fijada en `requirements.txt`.** Fijarla a la última
++   que se sepa que devolvía `WordBoundary` es de una línea y es reversible, pero
++   toca la reproducibilidad de todo el pipeline. Y si al fijarla siguen sin salir
++   las marcas, entonces el cambio está en el servicio de Microsoft y hay que
++   pensar el plan B dentro de `voz.py`, que es fichero protegido.
++2. **Las comillas angulares « » en los guiones ingleses.** Están en los cuatro
++   (001, 002, 003 y 004), así que es convención de casa, no un descuido del 003.
++   Pero en inglés no se usan y en pantalla parecen francesas. Cambiarlo es
++   decisión de canal y afecta a episodios ya publicados, así que no se toca.
++3. **Los cuatro ejes de la distancia psicológica** (tiempo, espacio, social,
++   hipotético) se citan como A03. A03 los usa, pero la taxonomía es de la teoría
++   del nivel de constructo (Trope y Liberman), que no está en la bibliografía.
++   No es un error de dato; es una entrada que falta.
+diff --git a/05_calendario/guiones/MDH-003.en.json b/05_calendario/guiones/MDH-003.en.json
+index 61ee4a9..75f6b59 100644
+--- a/05_calendario/guiones/MDH-003.en.json
++++ b/05_calendario/guiones/MDH-003.en.json
+@@ -34,10 +34,10 @@
+     {
+       "tipo": "comparacion",
+       "titulo": "Same sidewalk. Two endings.",
+-      "et_a": "He gets up",
+-      "et_b": "He doesn't",
++      "et_a": "They get up",
++      "et_b": "They don't",
+       "a": "Everyone laughs.",
+-      "b": "The funny _evaporates_.",
++      "b": "The funny *evaporates*.",
+       "narracion": "Same event, same physics, same fall. And the humor is gone completely. What changed isn't what happened. It's how much it hurts."
+     },
+     {
+@@ -86,7 +86,7 @@
+       "et_a": "Severe misfortune",
+       "a": "Needs *more* distance before it can be funny.",
+       "et_b": "Mild misfortune",
+-      "b": "Push it too far and nobody cares. And nobody laughs _either_.",
++      "b": "Push it too far and nobody cares. And nobody laughs either.",
+       "narracion": "A severe misfortune needs distance to become funny. A mild one works the other way around: push it too far away and it stops mattering to anyone, and something nobody cares about isn't funny either.",
+       "fuente": "A03"
+     },
+@@ -186,7 +186,7 @@
+       "et_a": "They joke about their own illness",
+       "a": "Their distance. Their call.",
+       "et_b": "You joke about it",
+-      "b": "You are _not standing where they are standing_.",
++      "b": "You are not standing where they are standing.",
+       "narracion": "That's why someone can joke about their own illness and be genuinely offended if you do it.",
+       "fuente": "A03"
+     },
+@@ -211,8 +211,8 @@
+     },
+     {
+       "tipo": "enunciado",
+-      "texto": "The one who tripped was laughing because he had *already gotten up*.",
+-      "narracion": "And the man who tripped at the start of this video was laughing because he had already gotten up."
++      "texto": "They had *already gotten up*.",
++      "narracion": "And the person who tripped at the start of this video was laughing because they had already gotten up."
+     },
+     {
+       "tipo": "cierre",
+diff --git a/05_calendario/guiones/MDH-003.es.json b/05_calendario/guiones/MDH-003.es.json
+index 29c4d05..d36178f 100644
+--- a/05_calendario/guiones/MDH-003.es.json
++++ b/05_calendario/guiones/MDH-003.es.json
+@@ -10,8 +10,8 @@
+   "bloqueos": [],
+   "notas_humor": [
+     "Gancho: la incomodidad del propio espectador, señalada antes de que la sienta.",
+-    "Escena 9: literalismo — tomar en serio la idea de una 'distancia' hasta convertirla en un mando.",
+-    "Escena 21: rebaja tras el dato más duro del vídeo.",
++    "Escena 12: literalismo — tomar en serio la idea de una «distancia» hasta convertirla en un mando.",
++    "Escena 18: rebaja tras el dato más duro del vídeo («ahora con una gráfica detrás»).",
+     "Cierre: callback al tropiezo del gancho."
+   ],
+   "escenas": [
+@@ -29,8 +29,12 @@
+       "pausa_despues_s": 0.9
+     },
+     {
+-      "tipo": "enunciado",
+-      "texto": "Mismo suceso. La gracia se ha *evaporado*.",
++      "tipo": "comparacion",
++      "titulo": "La misma acera. Dos finales.",
++      "et_a": "Se levanta",
++      "a": "Todo el mundo se ríe.",
++      "et_b": "No se levanta",
++      "b": "La gracia se ha *evaporado*.",
+       "narracion": "Mismo suceso, misma física, misma caída. Y la gracia ha desaparecido por completo. Lo que ha cambiado no es lo que ha pasado: es cuánto duele."
+     },
+     {
+@@ -49,9 +53,9 @@
+       "titulo": "Se mide en cuatro ejes",
+       "puntos": [
+         "*Tiempo*: hace cuánto",
+-        "*Espacio*: a cuántos kilómetros",
+-        "*Social*: cuánto conoces a quien le pasó",
+-        "*Hipotético*: si pasó o solo podría pasar"
++        "Espacio: a cuántos kilómetros",
++        "Social: cuánto conoces a quien le pasó",
++        "Hipotético: si pasó o solo podría pasar"
+       ],
+       "narracion": "Se mueve en cuatro ejes. Cuánto tiempo hace. A qué distancia física ocurrió. Cuánto conoces a quien le pasó. Y si pasó de verdad o solo podría haber pasado.",
+       "fuente": "A03"
+@@ -85,7 +89,7 @@
+     },
+     {
+       "tipo": "enunciado",
+-      "texto": "Demasiado cerca *duele*. Demasiado lejos *aburre*.",
++      "texto": "Demasiado cerca duele. Demasiado lejos *aburre*.",
+       "narracion": "Demasiado cerca duele. Demasiado lejos aburre. El humor vive en una franja estrecha entre las dos, y esa franja se mueve según lo grave que sea aquello de lo que hablas.",
+       "fuente": "A03"
+     },
+@@ -104,7 +108,7 @@
+     {
+       "tipo": "enunciado",
+       "texto": "En 2012 el huracán *Sandy* golpeó la costa este de Estados Unidos.",
+-      "narracion": "En dos mil doce, el huracán Sandy golpeó la costa este de Estados Unidos. Un equipo de investigadores hizo algo que solo se puede hacer en la era de las redes: siguió durante meses las reacciones humorísticas al desastre, día a día.",
++      "narracion": "En dos mil doce, el huracán Sandy golpeó la costa este de Estados Unidos. Un equipo de investigadores hizo algo que solo permite la era de las redes: siguió las bromas sobre el desastre, día a día, durante meses.",
+       "fuente": "A04"
+     },
+     {
+@@ -149,10 +153,10 @@
+       "titulo": "Cómo se gira el mando",
+       "puntos": [
+         "Cámbialo de *tiempo*: «dentro de un año esto será una anécdota»",
+-        "Cámbialo de *persona*: cuéntalo como si le hubiera pasado a otro",
+-        "Cámbialo a *hipotético*: «imagina que además hubiera…»"
++        "Cámbialo de persona: cuéntalo como si le hubiera pasado a otro",
++        "Cámbialo a hipotético: «imagina que además hubiera…»"
+       ],
+-      "narracion": "Puedes moverlo en el tiempo, diciéndote que dentro de un año esto será una anécdota. Puedes moverlo en lo social, contándolo como si le hubiera pasado a un conocido. O puedes llevarlo a lo hipotético, exagerándolo hasta que sea evidentemente falso.",
++      "narracion": "Puedes moverlo en el tiempo: dentro de un año esto será una anécdota. Puedes moverlo en lo social, contándolo como si le hubiera pasado a un conocido. O llevarlo a lo hipotético, exagerándolo hasta que sea falso a ojos vista.",
+       "fuente": "A03"
+     },
+     {
+@@ -174,14 +178,22 @@
+       "fuente": "A03"
+     },
+     {
+-      "tipo": "enunciado",
+-      "texto": "No es hipocresía. Es que *no estáis a la misma distancia*.",
++      "tipo": "comparacion",
++      "titulo": "Por qué él sí y tú no",
++      "et_a": "Bromea sobre su enfermedad",
++      "a": "Su distancia. Su decisión.",
++      "et_b": "Bromeas tú",
++      "b": "Tú no estás donde está él.",
+       "narracion": "No es hipocresía ni doble rasero. Es que no estáis en el mismo punto de la curva. Y quien está más cerca del suceso tiene derecho a fijar dónde está la línea.",
+       "fuente": "A03"
+     },
+     {
+-      "tipo": "enunciado",
+-      "texto": "Regla práctica: el humor sobre el dolor lo *abre* quien lo ha vivido.",
++      "tipo": "lista",
++      "titulo": "La regla que aguanta",
++      "puntos": [
++        "Tu propio dolor: bromea cuando quieras",
++        "El ajeno: espera a que lo abra *quien lo ha vivido*"
++      ],
+       "narracion": "De ahí sale una regla bastante fiable: sobre el dolor propio, bromeas cuando quieras. Sobre el ajeno, esperas a que lo abra quien lo ha vivido."
+     },
+     {
+@@ -191,7 +203,7 @@
+     },
+     {
+       "tipo": "enunciado",
+-      "texto": "El que se tropezó al principio se reía porque *ya se había levantado*.",
++      "texto": "Ya se había *levantado*.",
+       "narracion": "Y el que se tropezó al principio del vídeo se reía porque ya se había levantado."
+     },
+     {
+diff --git a/05_calendario/registro_publicaciones.json b/05_calendario/registro_publicaciones.json
+index 6690c0b..0546422 100644
+--- a/05_calendario/registro_publicaciones.json
++++ b/05_calendario/registro_publicaciones.json
+@@ -45,7 +45,7 @@
+       "publicar_en": null,
+       "musica": "cama_02_dusk_next_route.mp3",
+       "subido_utc": "2026-08-19T03:42:51Z",
+-      "revisado": false
++      "revisado": true
+     }
+   ]
+ }
+-- 
+2.43.0
+

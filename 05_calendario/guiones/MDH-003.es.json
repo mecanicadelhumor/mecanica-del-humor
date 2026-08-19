@@ -10,8 +10,8 @@
   "bloqueos": [],
   "notas_humor": [
     "Gancho: la incomodidad del propio espectador, señalada antes de que la sienta.",
-    "Escena 9: literalismo — tomar en serio la idea de una 'distancia' hasta convertirla en un mando.",
-    "Escena 21: rebaja tras el dato más duro del vídeo.",
+    "Escena 12: literalismo — tomar en serio la idea de una «distancia» hasta convertirla en un mando.",
+    "Escena 18: rebaja tras el dato más duro del vídeo («ahora con una gráfica detrás»).",
     "Cierre: callback al tropiezo del gancho."
   ],
   "escenas": [
@@ -29,8 +29,12 @@
       "pausa_despues_s": 0.9
     },
     {
-      "tipo": "enunciado",
-      "texto": "Mismo suceso. La gracia se ha *evaporado*.",
+      "tipo": "comparacion",
+      "titulo": "La misma acera. Dos finales.",
+      "et_a": "Se levanta",
+      "a": "Todo el mundo se ríe.",
+      "et_b": "No se levanta",
+      "b": "La gracia se ha *evaporado*.",
       "narracion": "Mismo suceso, misma física, misma caída. Y la gracia ha desaparecido por completo. Lo que ha cambiado no es lo que ha pasado: es cuánto duele."
     },
     {
@@ -49,9 +53,9 @@
       "titulo": "Se mide en cuatro ejes",
       "puntos": [
         "*Tiempo*: hace cuánto",
-        "*Espacio*: a cuántos kilómetros",
-        "*Social*: cuánto conoces a quien le pasó",
-        "*Hipotético*: si pasó o solo podría pasar"
+        "Espacio: a cuántos kilómetros",
+        "Social: cuánto conoces a quien le pasó",
+        "Hipotético: si pasó o solo podría pasar"
       ],
       "narracion": "Se mueve en cuatro ejes. Cuánto tiempo hace. A qué distancia física ocurrió. Cuánto conoces a quien le pasó. Y si pasó de verdad o solo podría haber pasado.",
       "fuente": "A03"
@@ -85,7 +89,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "Demasiado cerca *duele*. Demasiado lejos *aburre*.",
+      "texto": "Demasiado cerca duele. Demasiado lejos *aburre*.",
       "narracion": "Demasiado cerca duele. Demasiado lejos aburre. El humor vive en una franja estrecha entre las dos, y esa franja se mueve según lo grave que sea aquello de lo que hablas.",
       "fuente": "A03"
     },
@@ -104,7 +108,7 @@
     {
       "tipo": "enunciado",
       "texto": "En 2012 el huracán *Sandy* golpeó la costa este de Estados Unidos.",
-      "narracion": "En dos mil doce, el huracán Sandy golpeó la costa este de Estados Unidos. Un equipo de investigadores hizo algo que solo se puede hacer en la era de las redes: siguió durante meses las reacciones humorísticas al desastre, día a día.",
+      "narracion": "En dos mil doce, el huracán Sandy golpeó la costa este de Estados Unidos. Un equipo de investigadores hizo algo que solo permite la era de las redes: siguió las bromas sobre el desastre, día a día, durante meses.",
       "fuente": "A04"
     },
     {
@@ -149,10 +153,10 @@
       "titulo": "Cómo se gira el mando",
       "puntos": [
         "Cámbialo de *tiempo*: «dentro de un año esto será una anécdota»",
-        "Cámbialo de *persona*: cuéntalo como si le hubiera pasado a otro",
-        "Cámbialo a *hipotético*: «imagina que además hubiera…»"
+        "Cámbialo de persona: cuéntalo como si le hubiera pasado a otro",
+        "Cámbialo a hipotético: «imagina que además hubiera…»"
       ],
-      "narracion": "Puedes moverlo en el tiempo, diciéndote que dentro de un año esto será una anécdota. Puedes moverlo en lo social, contándolo como si le hubiera pasado a un conocido. O puedes llevarlo a lo hipotético, exagerándolo hasta que sea evidentemente falso.",
+      "narracion": "Puedes moverlo en el tiempo: dentro de un año esto será una anécdota. Puedes moverlo en lo social, contándolo como si le hubiera pasado a un conocido. O llevarlo a lo hipotético, exagerándolo hasta que sea falso a ojos vista.",
       "fuente": "A03"
     },
     {
@@ -174,14 +178,22 @@
       "fuente": "A03"
     },
     {
-      "tipo": "enunciado",
-      "texto": "No es hipocresía. Es que *no estáis a la misma distancia*.",
+      "tipo": "comparacion",
+      "titulo": "Por qué él sí y tú no",
+      "et_a": "Bromea sobre su enfermedad",
+      "a": "Su distancia. Su decisión.",
+      "et_b": "Bromeas tú",
+      "b": "Tú no estás donde está él.",
       "narracion": "No es hipocresía ni doble rasero. Es que no estáis en el mismo punto de la curva. Y quien está más cerca del suceso tiene derecho a fijar dónde está la línea.",
       "fuente": "A03"
     },
     {
-      "tipo": "enunciado",
-      "texto": "Regla práctica: el humor sobre el dolor lo *abre* quien lo ha vivido.",
+      "tipo": "lista",
+      "titulo": "La regla que aguanta",
+      "puntos": [
+        "Tu propio dolor: bromea cuando quieras",
+        "El ajeno: espera a que lo abra *quien lo ha vivido*"
+      ],
       "narracion": "De ahí sale una regla bastante fiable: sobre el dolor propio, bromeas cuando quieras. Sobre el ajeno, esperas a que lo abra quien lo ha vivido."
     },
     {
@@ -191,7 +203,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "El que se tropezó al principio se reía porque *ya se había levantado*.",
+      "texto": "Ya se había *levantado*.",
       "narracion": "Y el que se tropezó al principio del vídeo se reía porque ya se había levantado."
     },
     {
