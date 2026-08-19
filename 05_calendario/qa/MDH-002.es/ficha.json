@@ -1,16 +1,27 @@
 {
   "id": "MDH-002.es",
-  "duracion_final_s": 338.3,
-  "tamano_mb": 18.8,
+  "duracion_final_s": 345.3,
+  "tamano_mb": 19.0,
   "audio": {
     "lufs": -14.24,
-    "pico_dbtp": -1.3,
+    "pico_dbtp": -0.9,
     "rango_lu": 3.1
   },
   "silencio_inicial": {
     "empieza_s": -0.17,
     "acaba_s": 0.629,
     "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
+  },
+  "arranque": {
+    "silencios_s": [
+      [
+        -0.085,
+        0.629
+      ]
+    ],
+    "fragmento_antes_de_la_narracion": false,
+    "duracion_fragmento_s": null,
+    "_nota": "Si «fragmento_antes_de_la_narracion» es true, el sintetizador ha metido una sílaba suelta delante de la primera frase: se oye un trozo de palabra que no pertenece a nada. Comprobado a mano en MDH-001.en y MDH-002.en. «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe."
   },
   "subtitulos": {
     "ass_existe": true,
@@ -28,15 +39,15 @@
     "idioma": "es",
     "voz": "es-ES-AlvaroNeural",
     "escenas": 32,
-    "duracion_narracion_s": 337.47,
+    "duracion_narracion_s": 344.46,
     "escenas_por_encima_de_14s": [
       [
         4,
-        16.4
+        16.3
       ],
       [
         8,
-        14.8
+        14.3
       ],
       [
         14,
@@ -44,11 +55,15 @@
       ],
       [
         18,
-        17.3
+        17.2
       ],
       [
         22,
         14.8
+      ],
+      [
+        24,
+        15.0
       ],
       [
         30,
@@ -63,11 +78,11 @@
   },
   "fotogramas_s": [
     7.52,
-    70.99,
-    136.8,
-    214.58,
-    269.73,
-    330.67
+    70.9,
+    136.0,
+    213.65,
+    276.83,
+    337.66
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
