@@ -28,8 +28,22 @@ Cada escena tiene tres tramos:
 coste del render. Las mejoras del nivel 0 y 1 son gratis porque ocurren en la
 entrada, que ya se captura. Las del nivel 2 hay que medirlas antes de adoptarlas.
 
-Lo que sí da vida al tramo central sin coste: los **subtítulos quemados palabra a
-palabra**, que se aplican en `montaje.py` sobre el vídeo ya renderizado.
+~~Lo que sí da vida al tramo central sin coste: los **subtítulos quemados palabra a
+palabra**, que se aplican en `montaje.py` sobre el vídeo ya renderizado.~~
+
+**Ya no.** El 20/08, viendo MDH-003.es terminado, Silvestre decidió quitarlos:
+palabra a palabra y sobre un diseño que ya es tipográfico, distraen más de lo que
+aportan. Los subtítulos de verdad los sube `publicar.py` a YouTube como pista
+aparte, así que la accesibilidad no se pierde —se gana: se pueden traducir,
+buscar y leer al tamaño de cada uno—.
+
+Lo que sí se pierde es lo otro: **el tramo central de cada escena vuelve a estar
+completamente quieto.** Era el único movimiento que había ahí y era gratis. Eso
+cambia las prioridades de este documento: los ítems de animación de la entrada
+(V5, V6, V7) dejan de ser adorno y pasan a ser lo que sostiene la atención, y V8
+—el acento a mitad de escena, el único que anima el tramo central— pasa de
+«sin decidir» a merecer la medición de coste que pide, porque ahora no compite
+con nada.
 
 ---
 
@@ -182,7 +196,8 @@ propias variantes A/B cuando haya datos.
 | **V1 gráficas (`figura.py`)** | motor hecho el 19/08. **Falta que un guion la use, y eso exige números reales de la fuente** |
 | V3 pictogramas · V4 acento por episodio | pendientes — V3 es el siguiente |
 | V5–V7 | pendientes |
-| V8–V9 | sin decidir |
+| **Subtítulos quemados** | **retirados el 20/08 por decisión de canal.** El `.srt` va a YouTube como pista aparte |
+| V8–V9 | sin decidir — **V8 sube de prioridad**: sin subtítulos quemados, nada se mueve en el tramo central |
 
 La revisión diaria de las 07:00 avanza este backlog de uno en uno y deja lo que
 observa en `05_calendario/MEJORAS.md`.

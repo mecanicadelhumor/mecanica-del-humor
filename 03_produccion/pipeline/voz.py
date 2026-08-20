@@ -83,7 +83,13 @@ def hms(seg, coma=","):
 
 
 # Recorte del fragmento inicial. Ver fragmento_inicial() más abajo.
-MAX_FRAG_S, MIN_HUECO_S, VENTANA_FRAG_S = 0.45, 0.15, 1.0
+# MIN_FRAG_S es el que faltaba y el que costó el arranque de MDH-003.es.
+# «abierto» es el instante en que empieza un silencio, así que para que lo de
+# delante sea una sílaba suelta tiene que haber sonado ALGO: si el silencio
+# empieza en 0 (o antes), lo de delante no es una sílaba, es el colchón de
+# entrada del propio mp3. Sin este suelo, el patrón encajaba en el colchón de
+# cualquier escena limpia.
+MIN_FRAG_S, MAX_FRAG_S, MIN_HUECO_S, VENTANA_FRAG_S = 0.05, 0.45, 0.15, 1.0
 
 
 def _comunicar(texto, voz):
@@ -155,7 +161,8 @@ def fragmento_inicial(mp3):
             except (IndexError, ValueError):
                 abierto = None
                 continue
-            if abierto <= MAX_FRAG_S and (fin - abierto) >= MIN_HUECO_S and fin <= VENTANA_FRAG_S:
+            if (MIN_FRAG_S <= abierto <= MAX_FRAG_S
+                    and (fin - abierto) >= MIN_HUECO_S and fin <= VENTANA_FRAG_S):
                 return round(fin, 3)
             abierto = None
     return 0.0
@@ -164,7 +171,11 @@ def fragmento_inicial(mp3):
 def _recortar(mp3, desde_s):
     """Quita los primeros `desde_s` segundos del mp3, en su sitio."""
     tmp = mp3.with_suffix(".rec.mp3")
-    subprocess.run(["ffmpeg", "-y", "-ss", str(desde_s), "-i", str(mp3),
+    # `atrim` y no «-ss antes de -i»: sobre un mp3, el salto de entrada va a la
+    # trama más cercana y se pasa. Medido, pedirle 0,250 s quitaba 0,261 s — y
+    # esos 11 ms se los come el ataque de la primera palabra.
+    subprocess.run(["ffmpeg", "-y", "-i", str(mp3),
+                    "-af", f"atrim=start={desde_s},asetpts=N/SR/TB",
                     "-c:a", "libmp3lame", "-q:a", "2", str(tmp)],
                    check=True, capture_output=True, stdin=subprocess.DEVNULL)
     tmp.replace(mp3)
@@ -270,6 +281,15 @@ async def principal(guion_path, salida, voz=None):
         # SIN recortar, así que hay que restarles lo mismo o los subtítulos
         # quedarían adelantados esa cantidad durante toda la escena.
         recorte = fragmento_inicial(mp3)
+        # Red de seguridad: edge-tts nos dice en qué milisegundo empieza la
+        # primera palabra. Si el recorte llega hasta ahí, lo que íbamos a tirar
+        # no era una sílaba de más: era el principio de la narración. Se avisa
+        # y no se toca. Esto es lo que impide que un fallo de detección se
+        # convierta otra vez en un vídeo al que le falta la primera palabra.
+        if recorte and pal and recorte > pal[0][0]:
+            print(f"::warning::escena {i}: recorte de {recorte:.2f}s descartado — "
+                  f"se metía en la primera palabra, que empieza en {pal[0][0]:.2f}s")
+            recorte = 0.0
         if recorte:
             _recortar(mp3, recorte)
             pal = [(max(0.0, a - recorte), max(0.0, b - recorte), w) for a, b, w in pal]

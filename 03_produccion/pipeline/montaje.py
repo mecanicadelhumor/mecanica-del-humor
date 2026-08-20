@@ -78,7 +78,7 @@ def duracion_s(ruta):
     return float(r.stdout.strip())
 
 
-def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=True, salida=None):
+def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=False, salida=None):
     carpeta = Path(carpeta)
     mudo = carpeta / "mudo.mp4"
     voz = carpeta / "voz.mp3"
@@ -169,9 +169,33 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=True, salida=None)
         f"fade=t=in:st=0:d={FUNDE_IN}:c=black,"
         f"fade=t=out:st={dur_total - FUNDE_OUT:.3f}:d={FUNDE_OUT}:c=black"
     )
-    # Un .ass sin líneas «Dialogue» se quema sin error y sin efecto: el vídeo
-    # sale limpio y nadie se entera. Se comprueba y se dice en voz alta.
+    # ---------------------------------------------------------------------
+    # Subtítulos quemados: APAGADOS por decisión de canal (20/08).
+    #
+    # Costó tres vídeos hacerlos funcionar, así que conviene dejar escrito por
+    # qué se apagan y que no es un fallo: con ellos en pantalla, Silvestre vio
+    # el vídeo terminado y distraen. Palabra a palabra, en la banda baja y
+    # sobre un diseño que ya es tipográfico, compiten con el propio texto de
+    # la escena en vez de acompañarlo.
+    #
+    # No se pierde accesibilidad: `publicar.py` sube `subtitulos.srt` a YouTube
+    # como pista de subtítulos de verdad, así que quien los quiera los activa
+    # con el botón y además puede traducirlos, buscarlos y leerlos a su tamaño.
+    # Eso es mejor que quemarlos, no peor.
+    #
+    # Lo que sí se pierde es movimiento: los subtítulos eran lo único que se
+    # movía durante el tramo central de cada escena. Está anotado en
+    # MEJORA_VISUAL.md, porque ahora los ítems de animación suben de prioridad.
+    #
+    # El `.ass` se sigue generando y `qa.py` sigue contando sus líneas: es el
+    # canario que avisa si edge-tts vuelve a dejar de mandar WordBoundary, y
+    # sin él ese fallo volvería a ser invisible. Volver a encenderlos es pasar
+    # `--con-subs`, o cambiar el False de arriba por True.
+    # ---------------------------------------------------------------------
     n_subs = ass.read_text(encoding="utf-8", errors="ignore").count("Dialogue:") if ass.exists() else 0
+    if not quemar_subs:
+        print(f"Subtítulos NO quemados (decisión de canal). "
+              f"El .ass tiene {n_subs} líneas y el .srt va a YouTube como pista aparte.")
     if quemar_subs and n_subs:
         filtro_video = f"[0:v]{PAD}[pad];[pad]ass='{ass.as_posix()}'[vsub];[vsub]{FUNDE}[vout]"
         print(f"Subtítulos quemados: {n_subs} líneas")
@@ -214,7 +238,10 @@ if __name__ == "__main__":
     ap.add_argument("carpeta")
     ap.add_argument("--musica", default=None)
     ap.add_argument("--vol-musica", type=float, default=0.14)
-    ap.add_argument("--sin-subs", action="store_true")
+    ap.add_argument("--sin-subs", action="store_true", help="(ya es el comportamiento por defecto)")
+    ap.add_argument("--con-subs", action="store_true", help="vuelve a quemar los subtítulos en el vídeo")
     ap.add_argument("-o", "--salida", default=None)
     a = ap.parse_args()
-    montar(a.carpeta, a.musica, a.vol_musica, not a.sin_subs, a.salida)
+    # Por defecto NO se queman. `--sin-subs` se mantiene por compatibilidad y
+    # ya no hace nada; para volver a quemarlos hay que pedirlo con `--con-subs`.
+    montar(a.carpeta, a.musica, a.vol_musica, a.con_subs, a.salida)

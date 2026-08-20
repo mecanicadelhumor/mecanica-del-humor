@@ -213,11 +213,16 @@ def instantes(carpeta, dur_total, n=N_FOTOGRAMAS):
 
 
 def subtitulos(carpeta):
-    """Si el vídeo lleva o no subtítulos quemados, y de quién es la culpa.
+    """Estado de los subtítulos. Desde el 20/08 lo esperado es NO quemarlos.
 
-    Los subtítulos palabra a palabra no son un adorno: son lo único que se mueve
-    durante el tramo central de cada escena, que es estático por diseño. Un
-    vídeo sin ellos se percibe como una sucesión de diapositivas.
+    Decisión de canal: distraen. Los subtítulos de verdad los sube publicar.py
+    a YouTube como pista aparte, así que quien los quiera los activa.
+
+    `lineas_ass` se sigue midiendo aunque ya no se queme nada, y esa es la
+    razón de que este bloque siga existiendo: es el canario de que edge-tts
+    devuelve marcas de palabra. El día que vuelva a mandar solo marcas de
+    frase, `lineas_ass` caerá a 0 — y ese fallo, sin nada que lo delate en
+    pantalla, sería otra vez invisible.
     """
     ass, srt = carpeta / "subtitulos.ass", carpeta / "subtitulos.srt"
     n = ass.read_text(encoding="utf-8", errors="ignore").count("Dialogue:") if ass.exists() else 0
@@ -226,11 +231,12 @@ def subtitulos(carpeta):
         "lineas_ass": n,
         "srt_existe": srt.exists(),
         "quemados": bool(n),
-        "_nota": ("«quemados» en false significa que el vídeo sale sin subtítulos en pantalla. "
-                  "Si ass_existe es true y lineas_ass es 0, el fallo está en voz.py: el "
-                  "sintetizador no devolvió marcas de tiempo por palabra (WordBoundary). "
-                  "Si lineas_ass es alto y aun así no se ven en los fotogramas, el fallo "
-                  "está en el quemado de montaje.py."),
+        "_esperado": {"quemados": False, "lineas_ass": "> 0"},
+        "_nota": ("Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un "
+                  "fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay "
+                  "que vigilar es «lineas_ass»: si cae a 0 con ass_existe en true, edge-tts "
+                  "ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá "
+                  "inservible. Ahora que no se quema nada, ese es el único aviso que queda."),
     }
 
 

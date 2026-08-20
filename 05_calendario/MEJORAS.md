@@ -1076,3 +1076,101 @@ conector, y la palabra que dispara la segunda historia —«trastero»— va la
 última, que es exactamente la regla que el propio episodio enseña en la escena
 19. El desmontaje de la escena 9 se ha reescrito para que señale la pieza
 correcta. Rastreados los doce guiones: no quedaba ningún otro caso.
+
+---
+
+## 20 de agosto, tarde · MDH-003.es visto por Silvestre
+
+Primer vídeo que sale con los subtítulos quemados funcionando (`lineas_ass: 793`)
+y con el recorte de sílabas activo. Cuatro observaciones suyas; dos son cambios.
+
+### 1. Los subtítulos quemados se retiran. No es un fallo: es una decisión
+
+*«No quedan bien. Distraen. Prefiero quitarlos en ambos idiomas y que la persona
+que quiera active los subtítulos de verdad.»*
+
+Costaron tres vídeos y la caza de la regresión de edge-tts, así que conviene
+dejar escrito **por qué se apagan**, para que nadie los vuelva a encender
+pensando que arregla algo. Palabra a palabra, en la banda baja y sobre un diseño
+que ya es tipográfico, compiten con el texto de la escena en vez de acompañarlo.
+
+*Hecho:* `montaje.py` deja de quemarlos por defecto (`quemar_subs=False`), con el
+motivo escrito encima del filtro. Se mantiene el interruptor: `--con-subs`
+vuelve a encenderlos y es de una palabra. Comprobado en el píxel sobre un vídeo
+de prueba con una línea de subtítulo bien visible: por defecto la banda inferior
+sale con un máximo de luminancia de 15 —limpia—, y con `--con-subs`, de 247.
+
+**Accesibilidad: no se pierde nada, se gana.** `publicar.py` ya subía
+`subtitulos.srt` a YouTube como pista de subtítulos desde el principio. Quien los
+quiera los activa con el botón, y además puede traducirlos, buscarlos y leerlos a
+su tamaño. Eso es mejor que quemarlos.
+
+**Lo que sí se pierde, y hay que decirlo:** los subtítulos eran *lo único que se
+movía* durante el tramo central de cada escena. Ese tramo vuelve a estar
+completamente quieto. Anotado en `MEJORA_VISUAL.md`: V5–V7 dejan de ser adorno y
+V8 —el único ítem que anima el centro— sube de prioridad.
+
+**El `.ass` se sigue generando y `qa.py` sigue contando sus líneas.** No es
+inercia: es el canario. Si edge-tts vuelve a mandar solo marcas de frase,
+`lineas_ass` cae a 0 y el `.srt` sale inservible — y ahora que no se quema nada,
+ese fallo no tendría ningún síntoma visible. La ficha lo dice explícitamente con
+un bloque `_esperado`, para que la revisión de mañana no lea `quemados: false`
+como una regresión.
+
+### 2. La sílaba falsa y la primera palabra: el recorte se equivocaba de silencio
+
+*«Al inicio hay una sílaba falsa y después empieza el audio sin la primera
+palabra.»*
+
+Las dos cosas a la vez, que parecían contradictorias, salen del mismo bug. Y la
+ficha de QA daba `fragmento_antes_de_la_narracion: false` y `fragmentos: 0`, o
+sea limpio, porque **el defecto lo fabricaba `voz.py` después de medir**.
+
+`fragmento_inicial()` busca el patrón «sonido corto + hueco» y **devuelve el
+primer silencio que encaja**. El problema es la condición:
+
+    if abierto <= MAX_FRAG_S and ...
+
+`abierto` es el instante en que *empieza* un silencio. Todo mp3 de edge-tts
+empieza con un colchón de silencio, así que el primer silencio del fichero
+empieza en 0 o en negativo — y `0 <= 0.45` es cierto. **Faltaba el suelo.** Sin
+él, el patrón encajaba en el colchón de entrada de cualquier escena limpia.
+
+Reproducido con cuatro casos sintéticos contra la función real:
+
+    caso                                        antes    después   correcto
+    colchón + habla (escena limpia)             0.250    0.000     0.000
+    colchón + ataque suave de palabra           0.000    0.000     0.000
+    sílaba + hueco + habla                      0.600    0.600     0.600
+    colchón + SÍLABA + hueco + habla            0.200    0.700     0.700
+
+La última fila es exactamente lo que oyó Silvestre: con un colchón delante, la
+función recortaba **el colchón y dejaba la sílaba**. Y la primera fila es la otra
+mitad: en las escenas limpias se llevaba el colchón de entrada, así que la
+narración arrancaba a hueso y el ataque de la primera palabra se perdía.
+
+*Hecho, tres cosas:*
+
+1. **`MIN_FRAG_S = 0.05`.** Para que lo de delante sea una sílaba tiene que haber
+   sonado algo. Si el silencio empieza en 0, lo de delante no es una sílaba: es
+   el colchón. Con el suelo puesto, el bucle descarta el colchón y sigue
+   buscando, y encuentra el hueco de verdad.
+2. **`_recortar` con `atrim` en vez de `-ss` antes de `-i`.** Sobre un mp3, el
+   salto de entrada va a la trama más cercana y se pasa. Medido sobre el caso
+   4: pidiendo 0,700 s, el método viejo dejaba 0,091 s de resto delante; con
+   `atrim`, el primer sonido cae en 0,000 s exacto.
+3. **Red de seguridad con las marcas de edge-tts.** El sintetizador dice en qué
+   milisegundo empieza la primera palabra. Si el recorte llega hasta ahí, lo que
+   se iba a tirar no era una sílaba de más: era el principio de la narración. Se
+   descarta el recorte y se escribe un `::warning::` con los dos números. Aunque
+   la detección vuelva a fallar algún día, **ya no puede comerse una palabra.**
+
+### 3. Lo que está bien y no se toca
+
+- **El fundido final funciona.** Confirmado de oído; era el cambio del 19 sobre
+  `[musduck]`.
+- **La música nueva** (Haru, de Roa) le gusta más que la anterior para este
+  episodio. La rotación queda como está.
+- **Sin figuras en el 003**, y es lo esperado: el motor está y ningún guion usa
+  todavía una escena `figura`, porque eso exige sacar los números reales del
+  artículo. Sigue pendiente de eso, no del código.
