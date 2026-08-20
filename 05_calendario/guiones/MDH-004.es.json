@@ -67,13 +67,13 @@
     },
     {
       "tipo": "titulo",
-      "etiqueta": "Parte 2",
+      "etiqueta": "Parte 1",
       "titulo": "La risa no es una reacción",
       "narracion": "La respuesta es que la risa, casi siempre, no es una reacción a nada. Es un mensaje."
     },
     {
       "tipo": "enunciado",
-      "texto": "Es un mensaje que dice: _esto va bien entre nosotros_.",
+      "texto": "Es un mensaje que dice: *esto va bien entre nosotros*.",
       "narracion": "Un mensaje muy corto y muy antiguo, que viene a decir: esto que está pasando entre tú y yo no es una amenaza. Vamos bien.",
       "fuente": "A10"
     },
@@ -101,7 +101,7 @@
     },
     {
       "tipo": "titulo",
-      "etiqueta": "Parte 3",
+      "etiqueta": "Parte 2",
       "titulo": "Hay *dos risas* distintas",
       "narracion": "Aunque no todas las risas son iguales. De hecho hay dos, y tu oído las distingue aunque tú no sepas explicar cómo."
     },
@@ -135,7 +135,7 @@
     },
     {
       "tipo": "titulo",
-      "etiqueta": "Parte 4",
+      "etiqueta": "Parte 3",
       "titulo": "Lo que esto cambia *para ti*",
       "narracion": "Y ahora la consecuencia práctica, que es enorme y casi nadie la saca."
     },
@@ -192,7 +192,7 @@
       "tipo": "cierre",
       "titulo": "No necesitas *chistes*. Necesitas presencia.",
       "subtitulo": "En el próximo episodio: los cuatro estilos de humor, y cuál de ellos te está costando amigos sin que lo sepas.",
-      "narracion": "En el próximo episodio: los cuatro estilos de humor, y cuál de ellos te está costando amigos sin que te hayas dado cuenta."
+      "narracion": "Así que no necesitas chistes: necesitas estar de verdad delante de alguien. En el próximo episodio: los cuatro estilos de humor, y cuál de ellos te está costando amigos sin que te hayas dado cuenta."
     }
   ]
 }

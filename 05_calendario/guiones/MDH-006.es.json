@@ -10,7 +10,7 @@
   "duracion_objetivo_s": 380,
   "bloqueos": [],
   "notas_humor": [
-    "Gancho: situación reconocible con coste real. La violación es la vergüenza laboral.",
+    "Gancho: situación reconocible con coste real. La ruptura es la vergüenza laboral.",
     "Escena 11: regla de tres en los tipos de broma segura.",
     "Escena 18: rebaja tras el dato sobre el sarcasmo.",
     "Cierre: callback a la reunión del gancho."
@@ -144,7 +144,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "Los efectos del humor en el trabajo son *reales* pero _moderados_.",
+      "texto": "Los efectos del humor en el trabajo son *reales* pero moderados.",
       "narracion": "Los metaanálisis encuentran asociaciones positivas entre el humor y cosas como la cohesión, el desempeño o el desgaste. Son reales, y son moderadas. El humor no arregla un equipo roto ni compensa un mal salario.",
       "fuente": "G02"
     },
@@ -175,7 +175,7 @@
       "tipo": "cierre",
       "titulo": "Intentarlo *casi siempre* suma. Fallar el objetivo, no.",
       "subtitulo": "En el próximo episodio: el miedo a que se rían de ti tiene nombre, tiene escala de medida y tiene tratamiento.",
-      "narracion": "En el próximo episodio, el otro lado del asunto: el miedo a que se rían de ti, que tiene nombre propio, escala de medida y tratamiento."
+      "narracion": "Así que intentarlo casi siempre suma; fallar el objetivo, no. En el próximo episodio, el otro lado del asunto: el miedo a que se rían de ti, que tiene nombre propio, escala de medida y tratamiento."
     }
   ]
 }

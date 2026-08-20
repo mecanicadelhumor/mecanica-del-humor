@@ -69,13 +69,13 @@
     },
     {
       "tipo": "titulo",
-      "etiqueta": "Part 2",
+      "etiqueta": "Part 1",
       "titulo": "Laughter isn't a reaction",
       "narracion": "The answer is that laughter, almost always, isn't a reaction to anything. It's a message."
     },
     {
       "tipo": "enunciado",
-      "texto": "A message that says: _this is going fine between us_.",
+      "texto": "A message that says: *this is going fine between us*.",
       "narracion": "A very short and very old message, and roughly it says: whatever is happening between you and me is not a threat. We're good.",
       "fuente": "A10"
     },
@@ -90,7 +90,7 @@
       "et_a": "The listener",
       "a": "Laughs less. Even though the ending is a surprise to them.",
       "et_b": "The speaker",
-      "b": "Laughs _more_. And already knew the ending.",
+      "b": "Laughs more. And already knew the ending.",
       "narracion": "The first: in those recordings, the person speaking laughs considerably more than the person listening. If laughter were a response to content, it would have to be the other way around — the one telling it already knows the ending.",
       "fuente": "E02"
     },
@@ -107,7 +107,7 @@
     },
     {
       "tipo": "titulo",
-      "etiqueta": "Part 3",
+      "etiqueta": "Part 2",
       "titulo": "There are *two* laughs",
       "narracion": "Although not all laughter is the same. There are two kinds, and your ear tells them apart even if you can't explain how."
     },
@@ -141,7 +141,7 @@
     },
     {
       "tipo": "titulo",
-      "etiqueta": "Part 4",
+      "etiqueta": "Part 3",
       "titulo": "What this changes *for you*",
       "narracion": "And now the practical consequence, which is enormous and almost nobody draws it."
     },
@@ -198,7 +198,7 @@
       "tipo": "cierre",
       "titulo": "You don't need *jokes*. You need presence.",
       "subtitulo": "Next episode: the four humor styles, and which one is quietly costing you friends.",
-      "narracion": "Next episode: the four humor styles, and which one of them is costing you friends without you having noticed."
+      "narracion": "So you don't need jokes: you need to actually be there with somebody. Next episode: the four humor styles, and which one of them is costing you friends without you having noticed."
     }
   ]
 }

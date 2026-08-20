@@ -121,7 +121,7 @@
     {
       "tipo": "enunciado",
       "texto": "Ejercicio: cuando oigas una risa, busca *tres explicaciones* que no seas tú.",
-      "narracion": "El ejercicio es este. Cada vez que oigas una risa que no sabes de qué va, obligate a generar tres explicaciones alternativas que no tengan nada que ver contigo. Un mensaje en el móvil. Una broma privada. Algo que pasó hace diez minutos.",
+      "narracion": "El ejercicio es este. Cada vez que oigas una risa que no sabes de qué va, oblígate a generar tres explicaciones alternativas que no tengan nada que ver contigo. Un mensaje en el móvil. Una broma privada. Algo que pasó hace diez minutos.",
       "fuente": "J02"
     },
     {
@@ -178,14 +178,14 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "Y hay una asimetría que conviene recordar.",
-      "narracion": "Termino con una asimetría que se me quedó dando vueltas mientras preparaba esto."
-    },
-    {
-      "tipo": "enunciado",
       "texto": "¿Te giraste alguna vez *convencido*?",
       "narracion": "¿Te has girado alguna vez convencido de que se reían de ti? Cuenta en comentarios si acertaste o no.",
       "pausa_despues_s": 0.7
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y hay una asimetría que conviene recordar.",
+      "narracion": "Termino con una asimetría que se me quedó dando vueltas mientras preparaba esto."
     },
     {
       "tipo": "cierre",

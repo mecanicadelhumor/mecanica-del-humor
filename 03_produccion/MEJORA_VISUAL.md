@@ -82,6 +82,25 @@ banda inferior no está libre: los subtítulos quemados van en alineación 1 con
 el suelo se les montaría encima en cuanto los subtítulos vuelvan a salir.
 Despejar la mitad inferior rompe la monotonía igual y además les deja el sitio.
 
+**Confirmado el 20/08** sobre `muestrario_02`, `_09` y `_10_enunciado.png`, que
+se pintaron con Archivo Black presente: las tres variantes se leen, ninguna
+desborda y la de la izquierda se distingue de la centrada incluso con el
+enunciado largo.
+
+**V2b. La viñeta iba encima del texto.** *Hecho el 20/08.* `#vineta` estaba
+**después** de `#escena` en el DOM, los dos con `inset:0` y sin `z-index`, así
+que el degradado radial que oscurece los bordes se pintaba también sobre las
+letras. El texto pegado al borde izquierdo perdía contraste, y V2 lo empeoró al
+mover el enunciado hacia ese lado. Movido `#vineta` justo detrás de `#reticula`:
+ahora viñetea el fondo y la retícula, que es para lo que está, y no el contenido.
+
+Medido con el muestrario entero antes y después, luminancia media de los píxeles
+de glifo en la banda izquierda: `enunciado 09` 217,6 → 233,3; `enunciado 10`
+216,8 → 233,4; `lista 04` 209,1 → 223,4; `comparacion 06` 206,9 → 219,9. En el
+centro, sin cambio hasta el decimal. Fondo: esquina 9, centro 18 — la viñeta
+sigue haciendo su trabajo. **Coste de render cero:** `vista.py` informa del
+mismo número de unidades animables en las diez escenas, salida idéntica al byte.
+
 **V3. Pictogramas en `lista` y `diagrama`.** Los números en caja de `lista` y las
 cajas encadenadas de `diagrama` funcionan, pero son lo más genérico del sistema.
 Un pequeño juego de iconos SVG propios —trazo de 3 px, mismo ámbar, dibujados en
@@ -158,9 +177,10 @@ propias variantes A/B cuando haya datos.
 | **Subtítulos quemados ausentes** — lo único que se movía en el tramo estático | instrumentado el 18/08, a confirmar el 19 |
 | Muestreo de fotogramas de QA a ciegas (caían en fundidos) | corregido el 18/08 |
 | Un solo resaltado ámbar por pantalla | corregido en MDH-002 y en MDH-003 (es) el 19/08 |
-| **V2 variantes de composición de `enunciado`** | hecho el 19/08, **a confirmar en la vista previa del 20** |
+| **V2 variantes de composición de `enunciado`** | hecho el 19/08, **confirmado el 20/08** en la vista previa con tipografías reales |
+| **Viñeta pintando encima del texto** (`#vineta` después de `#escena`) | corregido el 20/08, +7 % de contraste en el borde izquierdo, coste de render cero |
 | **V1 gráficas (`figura.py`)** | motor hecho el 19/08. **Falta que un guion la use, y eso exige números reales de la fuente** |
-| V3 pictogramas · V4 acento por episodio | pendientes |
+| V3 pictogramas · V4 acento por episodio | pendientes — V3 es el siguiente |
 | V5–V7 | pendientes |
 | V8–V9 | sin decidir |
 

@@ -765,3 +765,199 @@ pantalla durante toda la escena.
 `cola.py --fecha 2026-08-20` resuelve MDH-003 en los dos idiomas, modo revisión,
 música Haru de Roa. `validar_guion.py` pasa los doce guiones del repositorio con
 código 0. La producción de las 03:00 no se bloquea.
+
+---
+
+## 20 de agosto · revisión de las 07:00
+
+Equipo de Silvestre apagado; trabajo sobre un clon del repositorio público y
+entregado como paquete. Mirado: `origin/main` para comprobar que lo del 19 llegó,
+`parrilla.json` contra `registro_publicaciones.json`, los ocho guiones sin
+producir de principio a fin (003 y 004 en los dos idiomas, 005 a 008 en español),
+y la vista previa del diseño del 19.
+
+### 1. La producción de esta noche no ha dejado nada. Hoy no hay vídeo
+
+La parrilla pedía **MDH-003 en los dos idiomas** para hoy. En `origin/main` a las
+05:10 UTC —cuatro horas después del cron de la 01:00— no hay:
+
+- entrada de MDH-003 en `registro_publicaciones.json` (el registro sigue
+  terminando en MDH-002.en, subido ayer a las 10:08),
+- carpetas `qa/MDH-003.es` ni `qa/MDH-003.en`,
+- **ningún commit posterior al de Silvestre del 19/08 a las 15:34.**
+
+No es el caso del 19 (allí salió el español y faltó el inglés). Aquí no salió
+nada, y el job ni siquiera dejó el commit del registro, que es lo primero que
+escribe cuando algo llega a subirse.
+
+Lo que se descarta desde el repositorio, sin log:
+
+- **No es el contenido.** `cola.py --fecha 2026-08-20` resuelve los dos trabajos,
+  modo revisión, música Haru de Roa. `validar_guion.py` pasa los doce guiones con
+  código 0, con el error de narración cortada ya activo.
+- **No es sintaxis.** Los diez ficheros del pipeline y `validar_guion.py`
+  compilan; `producir.yml` y `vista.yml` son YAML válido y sus dos jobs se leen.
+- **No es que falten los guiones.** MDH-003.es y .en existen desde el 18.
+
+Queda una pista que apunta fuera del repositorio y conviene anotarla: **el
+workflow de vista previa tampoco ha vuelto a correr**. Su último commit es
+`b592f9a`, del 19 a las 09:59 UTC, y después hubo tres *push* que tocaban
+`escena.html` (`ff85505`, 13:57 CEST), que es una de sus rutas de disparo. Es
+posible que no commiteara por salir los PNG idénticos, pero **dos workflows
+distintos callados a la vez apunta a que Actions no está ejecutando nada**:
+cuota agotada, workflows deshabilitados, o el repositorio en pausa.
+
+**No se toca nada.** La comprobación es de treinta segundos y solo la puede hacer
+Silvestre: abrir la pestaña Actions. Si no hay run de hoy, el problema es de
+cuota o de habilitación, no del código. Si lo hay y falla, el paso «Recuperar el
+plan» dice si el plan traía uno o dos trabajos. Desde el contenedor la API de
+GitHub responde 403: el proxy deja clonar y no deja consultar.
+
+### 2. Lo del 19 sí está en GitHub. Comprobado uno por uno
+
+Antes de nada, la regla cero. Todo lo que se entregó ayer está aplicado y subido:
+
+- `voz.py` pide `boundary="WordBoundary"` explícito, con reintento para versiones
+  anteriores a la 7, y trae el recorte de la sílaba suelta con el desplazamiento
+  de las marcas de palabra.
+- `requirements.txt` fija `edge-tts>=7,<8`, con el porqué escrito encima.
+- `qa.py` tiene `arranque()` y `fragmentos()`.
+- `montaje.py` tiene el `afade` de 1,5 s sobre `[musduck]`.
+- `escena.html` pone las comillas de `cita` según `html[lang]`.
+- `guionista.md` tiene la sección de la pregunta de los comentarios.
+- `figura.py` existe y `producir.yml` lo invoca entre `voz.py` y `render.py`.
+- Ni un «violación» en los guiones españoles sin producir ni en los metadatos.
+
+Es decir: el arreglo de los subtítulos quemados **está en el repositorio y nunca
+se ha llegado a ejecutar**, porque la producción que tenía que estrenarlo es la
+que no ha corrido. Sigue sin haber una ficha que lo confirme.
+
+### 3. Lectura editorial de los ocho guiones pendientes
+
+Leídos enteros los ocho: 003.es, 003.en, 004.es, 004.en, 005.es, 006.es, 007.es
+y 008.es. No hay ningún calco entre idiomas ni ninguna cifra sin fuente —los
+identificadores de los doce guiones existen todos en `BIBLIOGRAFIA_CURADA.md`—.
+Lo encontrado y corregido, por orden de gravedad:
+
+**El cierre no se oía, en MDH-004 (los dos idiomas) y en MDH-006.** Es el mismo
+defecto de la escena 24 del 002, en el sitio que más duele. La escena `cierre`
+llevaba la tesis del episodio en el título de pantalla —«No necesitas *chistes*.
+Necesitas presencia.», «You don't need *jokes*. You need presence.»,
+«Intentarlo *casi siempre* suma. Fallar el objetivo, no.»— y la narración
+saltaba directamente al avance del episodio siguiente. Quien escucha sin mirar
+oía terminar el vídeo con publicidad del próximo y sin conclusión. El 003, el
+005, el 007 y el 008 sí rematan hablado; estos tres eran la excepción. Añadida
+la frase de cierre delante del avance en los tres.
+
+**MDH-007: la pregunta de comentarios partía el remate en dos.** La escena 25
+anunciaba «termino con una asimetría que se me quedó dando vueltas», y la
+asimetría —«la risa que más temes casi nunca sabe que existes»— estaba en el
+cierre, en la escena 27. En medio, la escena 26 pedía un comentario. El anuncio
+quedaba colgando y el remate llegaba después de un corte, en un episodio cuyas
+propias `notas_humor` piden «cierre sin chiste, el remate necesita silencio».
+Intercambiadas las escenas 25 y 26: la pregunta va ahora detrás de la nota sobre
+ayuda profesional y el bloque anuncio→asimetría→cierre queda seguido. Es un
+efecto colateral de haber metido ayer la pregunta en cinco guiones a la vez;
+conviene mirar dónde cae, no solo que esté.
+
+**MDH-004: el vídeo empezaba por la Parte 2.** Los rótulos eran «Parte 2»,
+«Parte 3» y «Parte 4», sin Parte 1 en ninguna parte. El 001, el 003 y el 006 al
+008 sí abren en «Parte 1». Renumerados a 1, 2 y 3 en los dos idiomas. El 002
+tiene el mismo fallo y ya está publicado: no se toca.
+
+**MDH-005: rótulo huérfano.** Los bloques se llaman «Los dos que suman» y «Los
+dos que restan», y el tercero era «Parte 3». En pantalla no se entiende de qué
+es la tercera parte. Pasa a «La palanca», que es de lo que va el bloque.
+
+**MDH-008: el análisis del chiste no era cierto en español.** La escena 9
+desmonta «mi mujer me dijo que la dejara sola; cuando volví, ya lo había hecho»
+y afirmaba que el conector es «*dejarla sola*, que significa dos cosas». No
+significa dos cosas: en español «dejar a alguien solo» solo quiere decir darle
+un rato de paz. La ambigüedad está en el verbo **«dejar»**, que vale para dar paz
+y para irse. Corregido el punto de la lista y la narración. En un episodio que
+enseña a desmontar chistes, señalar mal la pieza es el peor error posible.
+
+*Lo que no he tocado y decide él:* el chiste en sí es de importación —la versión
+inglesa, «my wife told me to leave her alone», gira más limpio— y en español el
+remate se apoya en un «ya lo había hecho» algo vago. Funciona, no está roto como
+lo del bar del 002, así que no lo sustituyo por mi cuenta. Si quiere uno nativo,
+la alternativa que propongo es «mi mujer me dijo que necesitaba espacio; ahora
+vivo en el garaje»: «espacio» es ambiguo de verdad en español y la palabra que
+resuelve va al final, que es justo la regla que el propio episodio enseña en la
+escena 19.
+
+**MDH-003: la transición al bloque «El límite».** Era «Ahora, el aviso.» / «Now,
+the warning.» y nada más. La regla nueva del prompt del guionista pide que cada
+bloque entre desde el anterior diciendo de dónde vienes y adónde vas; un rótulo
+no vale porque el rótulo lo ve el ojo. Reescritas las dos para que el puente
+esté en el audio. Repasados los demás saltos de bloque de los ocho guiones: los
+otros ya traían frase de transición. Con esto queda cerrado el pendiente de ayer.
+
+**Sistema de color.** Cian usado como énfasis y no como dato, corregido en cinco
+sitios: 004.es y 004.en escena 9 (pasa a ámbar), 004.en escena 11, 006.es escena
+21 —que además llevaba un ámbar en la misma pantalla— y 008.es escena 17. Los
+cian que sí son datos (`_24 sociedades_`, `_seis meses después_`) se quedan.
+
+**Menores.** «obligate» → «oblígate» en 007.es escena 15. Y el último «violación»
+del proyecto, en las `notas_humor` de 006.es, pasa a «ruptura».
+
+`validar_guion.py` pasa los doce guiones con código 0 después de todo esto. Ojo
+con un detalle que casi se cuela otra vez: alargar la narración de la escena 9
+del 008 la puso en 22,5 s, por encima del máximo duro de 20. Se detectó al
+validar y se recortó. **Cualquier retoque de narración hay que validarlo, aunque
+parezca una frase.**
+
+### 4. Mejora visual: la viñeta estaba oscureciendo el texto
+
+Primero la comprobación pendiente. La vista previa del 19 (`b592f9a`) se pintó
+sobre el `escena.html` que ya llevaba V2 y con Archivo Black presente, así que es
+fiable. Miradas `muestrario_02`, `_09` y `_10_enunciado.png`: las tres variantes
+de composición se leen bien, ninguna desborda y la de la izquierda se distingue
+de la centrada incluso con el enunciado largo. **V2 se da por bueno.**
+
+Y mirándolas apareció otra cosa. El `#vineta` —el degradado radial que oscurece
+los bordes— iba **después** de `#escena` en el DOM, los dos con `inset:0` y sin
+`z-index`, así que pintaba encima del texto. El texto que cae cerca del borde
+izquierdo se estaba oscureciendo.
+
+Medido, no estimado. Renderizando el muestrario entero antes y después del
+cambio y comparando la luminancia media de los píxeles de glifo en la banda
+izquierda:
+
+    enunciado 09   217,6 → 233,3
+    enunciado 10   216,8 → 233,4
+    lista 04       209,1 → 223,4
+    comparacion 06 206,9 → 219,9
+    centro         sin cambio, hasta el decimal
+
+Un 7 % de contraste recuperado en la primera palabra de cada línea, y cero
+cambios en el centro. El fondo se sigue viñeteando igual (esquina 9, centro 18):
+la viñeta ahora oscurece la retícula y el fondo, que es para lo que está, y deja
+en paz lo que hay que leer. **Coste de render: cero.** `vista.py` informa del
+mismo número de unidades animables escena por escena antes y después —salida
+idéntica al byte—, así que `render.py` captura exactamente los mismos fotogramas.
+
+*Desviación consciente del backlog:* tocaba V3 (pictogramas), que es el primer
+pendiente. Se deja para la próxima. Un defecto de legibilidad que afecta a los
+ocho tipos de escena y a todos los episodios va antes que un ítem de mejora, y
+la regla de un solo cambio por sesión impide hacer las dos cosas.
+
+*Pendiente para la próxima sesión:* mirar la vista previa con las tipografías
+reales y confirmar que la viñeta sigue haciendo su trabajo en el fondo. Aquí no
+se puede juzgar: el contenedor no tiene Archivo Black y la comparación de arriba
+vale porque es la misma tipografía en los dos lados, no porque el render sea el
+bueno. **Y si Actions no está corriendo, esa vista previa no va a existir**, así
+que la confirmación depende de lo primero de todo este informe.
+
+### 5. Suelto, para cuando haya un rato
+
+- **`revision-19-08.patch` está commiteado en la raíz del repositorio** (27 KB).
+  Es un `.patch` de la entrega del 19 que se coló al extraer el paquete. No hace
+  daño, pero no pinta nada ahí.
+- **Faltan los guiones ingleses del 005 al 008.** La parrilla pide `["es","en"]`
+  del 22 al 25 de agosto, en modo automático, y solo existen los españoles. El
+  sábado 22 el canal inglés se queda sin vídeo y sin nadie mirando, porque a
+  partir de ahí «el canal vuela solo». Hay dos días para escribirlos.
+- **Los cuatro ejes de la distancia psicológica** siguen citados como A03 sin que
+  la taxonomía de Trope y Liberman esté en la bibliografía. Sigue siendo una
+  entrada que falta, no un dato mal puesto.
