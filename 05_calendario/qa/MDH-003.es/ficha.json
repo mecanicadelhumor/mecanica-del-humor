@@ -1,22 +1,22 @@
 {
   "id": "MDH-003.es",
-  "duracion_final_s": 322.1,
-  "tamano_mb": 23.2,
+  "duracion_final_s": 329.9,
+  "tamano_mb": 20.1,
   "audio": {
-    "lufs": -14.2,
-    "pico_dbtp": -1.32,
-    "rango_lu": 2.4
+    "lufs": -14.22,
+    "pico_dbtp": -1.23,
+    "rango_lu": 2.6
   },
   "silencio_inicial": {
-    "empieza_s": -0.17,
-    "acaba_s": 0.619,
+    "empieza_s": -0.171,
+    "acaba_s": 0.847,
     "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
   },
   "arranque": {
     "silencios_s": [
       [
         -0.085,
-        0.619
+        0.847
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -33,7 +33,11 @@
     "lineas_ass": 793,
     "srt_existe": true,
     "quemados": true,
-    "_nota": "«quemados» en false significa que el vídeo sale sin subtítulos en pantalla. Si ass_existe es true y lineas_ass es 0, el fallo está en voz.py: el sintetizador no devolvió marcas de tiempo por palabra (WordBoundary). Si lineas_ass es alto y aun así no se ven en los fotogramas, el fallo está en el quemado de montaje.py."
+    "_esperado": {
+      "quemados": false,
+      "lineas_ass": "> 0"
+    },
+    "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass»: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Ahora que no se quema nada, ese es el único aviso que queda."
   },
   "musica": {
     "archivo": "cama_03_haru_lofi_roa.mp3",
@@ -44,38 +48,42 @@
     "idioma": "es",
     "voz": "es-ES-AlvaroNeural",
     "escenas": 30,
-    "duracion_narracion_s": 322.89,
+    "duracion_narracion_s": 328.94,
     "escenas_por_encima_de_14s": [
       [
         6,
-        14.2
+        14.4
       ],
       [
         10,
-        14.8
+        15.0
       ],
       [
         12,
-        14.3
+        14.5
       ],
       [
         14,
-        14.6
+        14.8
       ],
       [
         21,
-        15.7
+        15.9
+      ],
+      [
+        30,
+        14.1
       ]
     ],
-    "escena_mas_larga_s": 15.69
+    "escena_mas_larga_s": 15.906
   },
   "fotogramas_s": [
-    4.71,
-    61.92,
-    133.87,
-    193.04,
-    254.27,
-    317.95
+    4.83,
+    63.26,
+    136.4,
+    196.53,
+    259.02,
+    323.91
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
