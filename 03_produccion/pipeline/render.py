@@ -23,6 +23,32 @@ from pathlib import Path
 
 from playwright.sync_api import sync_playwright
 
+# ---------------------------------------------------------------------------
+# Todas las llamadas a ffmpeg/ffprobe de este fichero van con
+# `stdin=subprocess.DEVNULL`, y no es cosmético.
+#
+# ffmpeg, si no le cierras la entrada estándar, la LEE — espera pulsaciones
+# («q» para abortar, «+»/«-» para el nivel de log). En producción estos
+# scripts se llaman desde un bucle del workflow:
+#
+#     while read -r ID; do  python3 voz.py ...  ; done < <(jq ... plan.json)
+#
+# El cuerpo del bucle hereda como stdin el mismo descriptor del que `read`
+# está sacando las líneas. Cada ffmpeg que arranca se traga lo que quede de
+# ese descriptor, así que **el segundo trabajo del plan desaparece sin un
+# solo error**: el bucle no vuelve a iterar porque ya no hay nada que leer.
+#
+# Eso, y no otra cosa, es lo que dejó al canal inglés sin vídeo el 19 y el
+# 20 de agosto. No se veía porque no hay nada que ver: no falla, se salta.
+# El 20 salió a la luz porque `figura.py` —que no toca stdin— sí iteraba
+# sobre los dos trabajos y reventó al buscar el `guion.timed.json` del
+# inglés, que nunca se había llegado a generar.
+#
+# Reproducido con dos líneas de shell: con DEVNULL entran los dos IDs; sin
+# él, el segundo llega mutilado o no llega.
+# ---------------------------------------------------------------------------
+
+
 AQUI = Path(__file__).resolve().parent
 ESCENA_HTML = AQUI / "escena.html"
 
@@ -130,7 +156,8 @@ def render(guion_path, salida, fps=30, escala=1.0, solo=None, verbose=True):
            "-fps_mode", "cfr", "-r", str(fps),
            "-c:v", "libx264", "-preset", "medium", "-crf", "18",
            "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(salida)]
-    r = subprocess.run(cmd, capture_output=True, text=True, cwd=tmp)
+    r = subprocess.run(cmd, capture_output=True, text=True, cwd=tmp,
+                       stdin=subprocess.DEVNULL)
     if r.returncode != 0:
         print(r.stderr[-2500:])
         raise SystemExit("FFmpeg falló al montar el vídeo mudo")

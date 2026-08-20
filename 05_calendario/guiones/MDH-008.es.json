@@ -75,19 +75,19 @@
     },
     {
       "tipo": "cita",
-      "texto": "Mi mujer me dijo que la dejara sola. Cuando volví, ya lo había hecho.",
+      "texto": "Mi pareja me dijo que necesitaba espacio. Ahora duermo en el trastero.",
       "autor": "Un chiste cualquiera, a punto de ser desarmado",
-      "narracion": "El chiste es este: mi mujer me dijo que la dejara sola. Cuando volví, ya lo había hecho."
+      "narracion": "El chiste es este: mi pareja me dijo que necesitaba espacio. Ahora duermo en el trastero."
     },
     {
       "tipo": "lista",
       "titulo": "Las piezas de ese chiste",
       "puntos": [
-        "*Historia 1*: ella quiere un rato de tranquilidad",
-        "Conector: el verbo «dejar», que vale para las dos",
-        "Historia 2: ella quería que se fuera. Del todo"
+        "*Historia 1*: quiere un poco de distancia",
+        "Conector: «espacio», que vale para las dos",
+        "Historia 2: la distancia acabó midiéndose en metros"
       ],
-      "narracion": "La historia que crees estar oyendo es que alguien quiere un rato de tranquilidad. El conector es el verbo «dejar», que sirve para dar paz y también para irse. Y la segunda historia es que ella no quería un rato: quería que se fuera del todo.",
+      "narracion": "La historia que crees estar oyendo es que alguien pide un poco de distancia. El conector es «espacio», que sirve para el ánimo y también para los metros cuadrados. Y la segunda historia es que esa distancia acabó midiéndose en metros.",
       "fuente": "I01"
     },
     {

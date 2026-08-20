@@ -121,4 +121,10 @@ pinta en cian (datos, cifras, etiquetas). **Un solo resaltado ámbar por escena.
 - Decir «la ciencia ha demostrado» cuando hay un solo estudio con 40 personas.
 - Usar «psicólogos dicen» sin decir quién y cuándo.
 - Escribir un chiste a costa de un grupo de personas. A costa de una idea, todos los que quieras.
+- **Chistes de «mi mujer…», «mi marido…», la suegra o la rubia.** Es humor a costa de un
+  grupo con disfraz de anécdota doméstica, y además está gastado. Decisión de canal, 20/08.
+  Si el chiste necesita una relación de pareja, **«mi pareja»** funciona igual de bien, no
+  señala a nadie y en español arrastra la concordancia sin delatar de quién se habla.
+  Vale para los ejemplos que solo ilustran y para los que el vídeo desmonta: si aparece en
+  pantalla o en el audio, cuenta.
 - Cerrar con «dale a like y suscríbete» sin haber dado antes una razón para hacerlo.

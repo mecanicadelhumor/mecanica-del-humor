@@ -26,6 +26,32 @@ import json
 import subprocess
 from pathlib import Path
 
+# ---------------------------------------------------------------------------
+# Todas las llamadas a ffmpeg/ffprobe de este fichero van con
+# `stdin=subprocess.DEVNULL`, y no es cosmético.
+#
+# ffmpeg, si no le cierras la entrada estándar, la LEE — espera pulsaciones
+# («q» para abortar, «+»/«-» para el nivel de log). En producción estos
+# scripts se llaman desde un bucle del workflow:
+#
+#     while read -r ID; do  python3 voz.py ...  ; done < <(jq ... plan.json)
+#
+# El cuerpo del bucle hereda como stdin el mismo descriptor del que `read`
+# está sacando las líneas. Cada ffmpeg que arranca se traga lo que quede de
+# ese descriptor, así que **el segundo trabajo del plan desaparece sin un
+# solo error**: el bucle no vuelve a iterar porque ya no hay nada que leer.
+#
+# Eso, y no otra cosa, es lo que dejó al canal inglés sin vídeo el 19 y el
+# 20 de agosto. No se veía porque no hay nada que ver: no falla, se salta.
+# El 20 salió a la luz porque `figura.py` —que no toca stdin— sí iteraba
+# sobre los dos trabajos y reventó al buscar el `guion.timed.json` del
+# inglés, que nunca se había llegado a generar.
+#
+# Reproducido con dos líneas de shell: con DEVNULL entran los dos IDs; sin
+# él, el segundo llega mutilado o no llega.
+# ---------------------------------------------------------------------------
+
+
 try:
     import edge_tts
 except ImportError:
@@ -114,7 +140,8 @@ def fragmento_inicial(mp3):
     """
     r = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-t", str(VENTANA_FRAG_S + 1),
                         "-i", str(mp3), "-af", "silencedetect=n=-45dB:d=0.10",
-                        "-f", "null", "-"], capture_output=True, text=True)
+                        "-f", "null", "-"], capture_output=True, text=True,
+                       stdin=subprocess.DEVNULL)
     abierto = None
     for linea in r.stderr.splitlines():
         if "silence_start" in linea:
@@ -139,7 +166,7 @@ def _recortar(mp3, desde_s):
     tmp = mp3.with_suffix(".rec.mp3")
     subprocess.run(["ffmpeg", "-y", "-ss", str(desde_s), "-i", str(mp3),
                     "-c:a", "libmp3lame", "-q:a", "2", str(tmp)],
-                   check=True, capture_output=True)
+                   check=True, capture_output=True, stdin=subprocess.DEVNULL)
     tmp.replace(mp3)
 
 
@@ -168,7 +195,8 @@ async def sintetizar(texto, voz, destino):
 def duracion_real(path):
     """Duración exacta del mp3 según ffprobe (más fiable que la última palabra)."""
     r = subprocess.run(["ffprobe", "-v", "quiet", "-show_entries", "format=duration",
-                        "-of", "csv=p=0", str(path)], capture_output=True, text=True)
+                        "-of", "csv=p=0", str(path)], capture_output=True, text=True,
+                       stdin=subprocess.DEVNULL)
     try:
         return float(r.stdout.strip())
     except ValueError:
@@ -262,7 +290,7 @@ async def principal(guion_path, salida, voz=None):
     silencio = salida / "voz" / "_silencio.mp3"
     subprocess.run(["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono",
                     "-t", "0.45", "-q:a", "9", str(silencio)],
-                   check=True, capture_output=True)
+                   check=True, capture_output=True, stdin=subprocess.DEVNULL)
     with lista.open("w", encoding="utf-8") as fh:
         for mp3, _ in partes:
             fh.write(f"file '{mp3.resolve()}'\nfile '{silencio.resolve()}'\n")
@@ -276,7 +304,8 @@ async def principal(guion_path, salida, voz=None):
     # es exacto a la muestra.
     subprocess.run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lista),
                     "-c:a", "libmp3lame", "-q:a", "2", "-ar", "24000", "-ac", "1",
-                    str(salida / "voz.mp3")], check=True, capture_output=True)
+                    str(salida / "voz.mp3")], check=True, capture_output=True,
+                   stdin=subprocess.DEVNULL)
 
     escribir_srt(bloques, salida / "subtitulos.srt")
     # Sin marcas de tiempo por palabra no hay subtítulos quemados, y los

@@ -21,6 +21,32 @@ import json
 import subprocess
 from pathlib import Path
 
+# ---------------------------------------------------------------------------
+# Todas las llamadas a ffmpeg/ffprobe de este fichero van con
+# `stdin=subprocess.DEVNULL`, y no es cosmético.
+#
+# ffmpeg, si no le cierras la entrada estándar, la LEE — espera pulsaciones
+# («q» para abortar, «+»/«-» para el nivel de log). En producción estos
+# scripts se llaman desde un bucle del workflow:
+#
+#     while read -r ID; do  python3 voz.py ...  ; done < <(jq ... plan.json)
+#
+# El cuerpo del bucle hereda como stdin el mismo descriptor del que `read`
+# está sacando las líneas. Cada ffmpeg que arranca se traga lo que quede de
+# ese descriptor, así que **el segundo trabajo del plan desaparece sin un
+# solo error**: el bucle no vuelve a iterar porque ya no hay nada que leer.
+#
+# Eso, y no otra cosa, es lo que dejó al canal inglés sin vídeo el 19 y el
+# 20 de agosto. No se veía porque no hay nada que ver: no falla, se salta.
+# El 20 salió a la luz porque `figura.py` —que no toca stdin— sí iteraba
+# sobre los dos trabajos y reventó al buscar el `guion.timed.json` del
+# inglés, que nunca se había llegado a generar.
+#
+# Reproducido con dos líneas de shell: con DEVNULL entran los dos IDs; sin
+# él, el segundo llega mutilado o no llega.
+# ---------------------------------------------------------------------------
+
+
 N_FOTOGRAMAS = 6
 ANCHO = 640          # suficiente para leer titulares y ver desencuadres
 PAD_INICIO = 0.6     # el mismo colchón que mete montaje.py al principio
@@ -32,7 +58,7 @@ def ffprobe(ruta, entradas, stream=None):
     if stream:
         cmd += ["-select_streams", stream]
     cmd.append(str(ruta))
-    r = subprocess.run(cmd, capture_output=True, text=True)
+    r = subprocess.run(cmd, capture_output=True, text=True, stdin=subprocess.DEVNULL)
     return json.loads(r.stdout or "{}")
 
 
@@ -42,7 +68,7 @@ def medir_audio(mp4):
         ["ffmpeg", "-hide_banner", "-nostats", "-i", str(mp4),
          "-af", "loudnorm=I=-14:TP=-1.5:LRA=11:print_format=json",
          "-f", "null", "-"],
-        capture_output=True, text=True)
+        capture_output=True, text=True, stdin=subprocess.DEVNULL)
     salida = r.stderr
     try:
         bloque = salida[salida.rindex("{"):salida.rindex("}") + 1]
@@ -59,7 +85,7 @@ def silencio_inicial(mp4):
     r = subprocess.run(
         ["ffmpeg", "-hide_banner", "-nostats", "-i", str(mp4),
          "-af", "silencedetect=n=-45dB:d=0.2", "-f", "null", "-"],
-        capture_output=True, text=True)
+        capture_output=True, text=True, stdin=subprocess.DEVNULL)
     for linea in r.stderr.splitlines():
         if "silence_end" in linea:
             try:
@@ -77,7 +103,7 @@ def _silencios(mp4, ventana=None, umbral_s=0.12):
     if ventana:
         cmd += ["-t", str(ventana)]
     cmd += ["-i", str(mp4), "-af", f"silencedetect=n=-45dB:d={umbral_s}", "-f", "null", "-"]
-    r = subprocess.run(cmd, capture_output=True, text=True)
+    r = subprocess.run(cmd, capture_output=True, text=True, stdin=subprocess.DEVNULL)
     silencios, abierto = [], None
     for linea in r.stderr.splitlines():
         if "silence_start" in linea:
@@ -228,7 +254,8 @@ def main():
         subprocess.run(
             ["ffmpeg", "-y", "-loglevel", "error", "-ss", str(t), "-i", str(mp4),
              "-frames:v", "1", "-vf", f"scale={ANCHO}:-2", "-q:v", "4",
-             str(salida / f"f{i}_{t:g}s.jpg")], check=True)
+             str(salida / f"f{i}_{t:g}s.jpg")], check=True,
+            stdin=subprocess.DEVNULL)
 
     guion = {}
     timed = carpeta / "guion.timed.json"

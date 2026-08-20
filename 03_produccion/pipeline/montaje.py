@@ -22,6 +22,32 @@ import json
 import subprocess
 from pathlib import Path
 
+# ---------------------------------------------------------------------------
+# Todas las llamadas a ffmpeg/ffprobe de este fichero van con
+# `stdin=subprocess.DEVNULL`, y no es cosmético.
+#
+# ffmpeg, si no le cierras la entrada estándar, la LEE — espera pulsaciones
+# («q» para abortar, «+»/«-» para el nivel de log). En producción estos
+# scripts se llaman desde un bucle del workflow:
+#
+#     while read -r ID; do  python3 voz.py ...  ; done < <(jq ... plan.json)
+#
+# El cuerpo del bucle hereda como stdin el mismo descriptor del que `read`
+# está sacando las líneas. Cada ffmpeg que arranca se traga lo que quede de
+# ese descriptor, así que **el segundo trabajo del plan desaparece sin un
+# solo error**: el bucle no vuelve a iterar porque ya no hay nada que leer.
+#
+# Eso, y no otra cosa, es lo que dejó al canal inglés sin vídeo el 19 y el
+# 20 de agosto. No se veía porque no hay nada que ver: no falla, se salta.
+# El 20 salió a la luz porque `figura.py` —que no toca stdin— sí iteraba
+# sobre los dos trabajos y reventó al buscar el `guion.timed.json` del
+# inglés, que nunca se había llegado a generar.
+#
+# Reproducido con dos líneas de shell: con DEVNULL entran los dos IDs; sin
+# él, el segundo llega mutilado o no llega.
+# ---------------------------------------------------------------------------
+
+
 # Colchón al principio y al final: sin esto el vídeo entra y sale en seco,
 # como si se hubiera cortado (feedback del 18/08). Se clona el primer/último
 # fotograma y se funde a negro/silencio en vez de cortar de golpe.
@@ -35,7 +61,7 @@ FUNDE_MUSICA = 1.5
 
 
 def ejecutar(cmd):
-    r = subprocess.run(cmd, capture_output=True, text=True)
+    r = subprocess.run(cmd, capture_output=True, text=True, stdin=subprocess.DEVNULL)
     if r.returncode != 0:
         print(r.stderr[-3000:])
         raise SystemExit(f"FFmpeg falló: {' '.join(cmd[:6])}...")
@@ -46,7 +72,7 @@ def duracion_s(ruta):
     r = subprocess.run(
         ["ffprobe", "-v", "error", "-show_entries", "format=duration",
          "-of", "default=noprint_wrappers=1:nokey=1", str(ruta)],
-        capture_output=True, text=True)
+        capture_output=True, text=True, stdin=subprocess.DEVNULL)
     if r.returncode != 0 or not r.stdout.strip():
         raise SystemExit(f"ffprobe falló al medir {ruta}: {r.stderr[-500:]}")
     return float(r.stdout.strip())

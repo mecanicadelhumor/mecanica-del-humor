@@ -961,3 +961,118 @@ que la confirmación depende de lo primero de todo este informe.
 - **Los cuatro ejes de la distancia psicológica** siguen citados como A03 sin que
   la taxonomía de Trope y Liberman esté en la bibliografía. Sigue siendo una
   entrada que falta, no un dato mal puesto.
+
+---
+
+## 20 de agosto, mañana · por qué el canal inglés lleva dos días sin vídeo
+
+`figura.py` no ha roto nada. Ha destapado un fallo que llevaba dos producciones
+comiéndose el segundo idioma **en silencio**.
+
+### El error que se ve
+
+    figuras MDH-003.es
+    figuras MDH-003.en
+    FileNotFoundError: 'build/MDH-003.en/guion.timed.json'
+
+El paso de figuras itera sobre los **dos** trabajos del plan. El inglés no tiene
+`guion.timed.json` porque **`voz.py` nunca llegó a ejecutarse para el inglés**.
+
+### La causa
+
+`producir.yml` recorre el plan así:
+
+    while IFS=$'\t' read -r ID G; do
+      python3 03_produccion/pipeline/voz.py "$G" -o "build/$ID"
+    done < <(jq -r '.trabajos[] | [.id, .guion] | @tsv' plan.json)
+
+El cuerpo del bucle hereda como entrada estándar **el mismo descriptor del que
+`read` está sacando las líneas**. Y ffmpeg, si no le cierras la entrada estándar,
+la lee: espera pulsaciones de teclado —«q» para abortar, «+» y «-» para el nivel
+de log—. Así que cada ffmpeg que arranca dentro del bucle se traga lo que quede
+del descriptor. `voz.py` llama a ffmpeg una vez por escena; con treinta escenas
+no queda nada. El bucle no vuelve a iterar porque ya no hay nada que leer, y
+**termina con código 0**: no falla, se salta el trabajo.
+
+Ninguna de las llamadas a `ffmpeg`/`ffprobe` del repositorio pasaba
+`stdin=subprocess.DEVNULL` ni `-nostdin`. Once llamadas en cuatro ficheros.
+
+### La prueba
+
+Sobre el código real, cargando `voz.py` y `qa.py` y ejercitando sus cinco
+llamadas a ffmpeg dentro de un bucle idéntico al del workflow:
+
+    ÁRBOL ORIGINAL       OK -> MDH-003.es
+                         OK -> en              ← ffmpeg se comió 9 caracteres
+
+    ÁRBOL ARREGLADO      OK -> MDH-003.es
+                         OK -> MDH-003.en
+
+Con cinco llamadas se pierden nueve caracteres; con las de un episodio entero se
+pierde la línea completa y el trabajo desaparece.
+
+### Lo que esto reescribe del 19/08
+
+La conclusión de ayer —«las dos cosas juntas solo encajan si en el plan nunca
+hubo trabajo inglés»— **era falsa**. El plan sí traía los dos. El razonamiento
+tenía un agujero: se daba por hecho que un bucle `while` con `set -e` o procesa
+todos los elementos o revienta. Hay una tercera salida, y es esta: que el bucle
+deje de tener elementos que procesar. Queda descartada también la hipótesis del
+`YT_REFRESH_TOKEN_EN` vacío: el inglés no falló al subirse, no llegó a existir.
+
+Y explica lo de anoche sin necesidad de mirar Actions: la producción **sí corrió**
+y murió en el paso de figuras, que es el primero cuyo bucle no arranca ningún
+ffmpeg —matplotlib no toca stdin— y por eso fue el primero en iterar dos veces y
+tropezar. El paso de figuras se añadió ayer; sin él, hoy habríamos vuelto a tener
+un español publicado, un inglés desaparecido y ninguna pista.
+
+### El arreglo
+
+`stdin=subprocess.DEVNULL` en las once llamadas: cinco en `voz.py`, cinco en
+`qa.py`, dos en `montaje.py` y una en `render.py`. En los cuatro ficheros queda
+escrito arriba por qué está ahí, porque es de las cosas que alguien quita por
+parecer ruido.
+
+`voz.py` y `montaje.py` son ficheros protegidos. Se tocan porque el fallo está
+literalmente dentro de ellos y porque el cambio es de una palabra por llamada,
+reversible y sin efecto sobre lo que hace ffmpeg: cerrarle una entrada que nunca
+debió leer. La lógica de síntesis, recorte, marcas de palabra y mezcla no se ha
+tocado.
+
+### Propuesta que no aplico: el cinturón, además de los tirantes
+
+El arreglo de arriba es suficiente **hoy**. Pero deja el workflow con la misma
+trampa armada para el día que alguien meta en un bucle una herramienta que lea
+stdin. Blindarlo son cinco `< /dev/null`, uno por bucle, en `producir.yml`:
+
+    -            python3 03_produccion/pipeline/voz.py "$G" -o "build/$ID"
+    +            python3 03_produccion/pipeline/voz.py "$G" -o "build/$ID" < /dev/null
+
+Los cinco bucles con `while read` son: «Sintetizar narración», «Dibujar las
+figuras», «Renderizar vídeo mudo», «Montar» y «Generar miniaturas». `producir.yml`
+no se toca sin permiso, así que queda propuesto y no hecho.
+
+### Cómo confirmarlo en el log de anoche, gratis
+
+Abrir el paso **«Sintetizar narración»**. Tiene que haber dos grupos, `voz
+MDH-003.es` y `voz MDH-003.en`. **Va a haber uno.** Eso es el fallo entero, visto
+desde fuera.
+
+### Y el chiste del 008: regla nueva de canal
+
+Silvestre: los chistes de «mi mujer…» tienen un tono machista que no va en el
+canal. Recogido en `guionista.md`, dentro de «Lo que nunca haces», junto con la
+suegra y la rubia, y con la salida práctica: si el chiste necesita una pareja,
+**«mi pareja»** funciona igual y en español arrastra la concordancia sin delatar
+de quién se habla.
+
+Sustituido el chiste de ejemplo de la escena 8 del 008. El nuevo resuelve además
+lo que quedaba abierto de ayer —que «dejarla sola» no es ambiguo en español—:
+
+    Mi pareja me dijo que necesitaba espacio. Ahora duermo en el trastero.
+
+«Espacio» sí significa dos cosas en español, el conector es de verdad un
+conector, y la palabra que dispara la segunda historia —«trastero»— va la
+última, que es exactamente la regla que el propio episodio enseña en la escena
+19. El desmontaje de la escena 9 se ha reescrito para que señale la pieza
+correcta. Rastreados los doce guiones: no quedaba ningún otro caso.
