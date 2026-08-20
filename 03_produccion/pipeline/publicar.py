@@ -28,6 +28,27 @@ from googleapiclient.http import MediaFileUpload
 AMBITOS = ["https://www.googleapis.com/auth/youtube.upload",
            "https://www.googleapis.com/auth/youtube.force-ssl"]
 
+# Series del canal. Cada guion declara la suya en «serie» y aquí se convierte en
+# una lista de reproducción de YouTube, creándola la primera vez.
+#
+# Por qué importa: desde febrero de 2026 YouTube reduce las notificaciones a los
+# espectadores poco activos, así que la campanita ya no es un canal fiable de
+# retorno. Lo que hace volver a alguien es reconocer una serie por su nombre.
+DESCRIPCION_SERIE = {
+    "Desmonta el chiste": "Un chiste, dos segundos de silencio, y el despiece: "
+                          "qué expectativa se rompió, por qué fue inofensiva y "
+                          "dónde estaba la bisagra.",
+    "El experimento": "Un estudio real con un resultado que no te esperas, "
+                      "contado en menos de un minuto. La fuente, en la descripción.",
+    "Esto no tiene gracia y esto sí": "Dos chistes casi idénticos. Uno funciona y "
+                                      "otro no. La diferencia se nota antes de que "
+                                      "nadie la explique.",
+    "Diagnósticos": "Qué dice de ti la clase de humor que usas, según la taxonomía "
+                    "de estilos de humor que se usa en investigación.",
+    "Mecanismos": "Cómo funciona una pieza del humor por dentro, con las fuentes "
+                  "delante y el sitio donde falla al final.",
+}
+
 # El andamiaje de la descripción (epígrafes y cierre) va en el idioma del
 # canal: una descripción inglesa con «Capítulos» y «Fuentes» delata que el
 # canal es una traducción de otro. El bloque de atribución de la música NO se
@@ -117,7 +138,9 @@ def descripcion(guion, meta, biblio, creditos=()):
     L = []
     if meta.get("descripcion"):
         L.append(meta["descripcion"].strip())
-    caps = capitulos(guion)
+    # Los capítulos son del episodio largo. Un Short de cuarenta segundos con
+    # una tabla de capítulos delante es ruido en la descripción.
+    caps = [] if guion.get("formato") == "corto" else capitulos(guion)
     if caps:
         L.append(f"\n{T['capitulos']}\n" + "\n".join(caps))
     citas = []
@@ -135,6 +158,48 @@ def descripcion(guion, meta, biblio, creditos=()):
         L += [f"\n{T['musica']}"] + list(creditos)
     L.append("\n" + T["cierre"])
     return "\n".join(L)[:4900]
+
+
+def lista_de_serie(yt, serie):
+    """Devuelve el id de la lista de la serie, creándola si hace falta.
+
+    Las listas SÍ están en la API de datos v3 (a diferencia de las pantallas
+    finales, las tarjetas y el fijado de comentarios, que no lo están y por eso
+    no se automatizan aquí). Coste de cuota: 1 por la búsqueda, 50 por crearla,
+    y la creación ocurre una sola vez por serie en toda la vida del canal.
+    """
+    pagina = None
+    while True:
+        r = yt.playlists().list(part="snippet", mine=True, maxResults=50,
+                                pageToken=pagina).execute()
+        for pl in r.get("items", []):
+            if pl["snippet"]["title"] == serie:
+                return pl["id"]
+        pagina = r.get("nextPageToken")
+        if not pagina:
+            break
+    nueva = yt.playlists().insert(
+        part="snippet,status",
+        body={"snippet": {"title": serie,
+                          "description": DESCRIPCION_SERIE.get(serie, "")},
+              "status": {"privacyStatus": "public"}}).execute()
+    print(f"  lista creada: «{serie}»")
+    return nueva["id"]
+
+
+def primer_comentario(guion, meta):
+    """La pregunta del episodio, publicada como primer comentario.
+
+    NO es un comentario que finge ser un espectador: es contenido editorial,
+    lo escribe el guionista y va firmado por el canal. Esa distinción es la
+    regla 7 de 00_estrategia/REGLAS.md y no se cruza.
+
+    Fijarlo no está en la API v3. O se acepta sin fijar, o son diez segundos a
+    mano; no vale la pena forzarlo.
+    """
+    if meta.get("primer_comentario"):
+        return meta["primer_comentario"]
+    return guion.get("pregunta_comentarios") or None
 
 
 def publicar(carpeta, estado="private", publicar_en=None):
@@ -220,8 +285,41 @@ def publicar(carpeta, estado="private", publicar_en=None):
         except HttpError as e:
             print(f"  aviso: no se pudieron subir los subtítulos ({e}).")
 
+    # --- serie -> lista de reproducción ------------------------------------
+    serie = guion.get("serie") or meta.get("serie")
+    if serie:
+        try:
+            pl = lista_de_serie(yt, serie)
+            yt.playlistItems().insert(
+                part="snippet",
+                body={"snippet": {"playlistId": pl,
+                                  "resourceId": {"kind": "youtube#video", "videoId": vid}}}
+            ).execute()
+            print(f"  añadido a la lista «{serie}»")
+        except HttpError as e:
+            print(f"  aviso: no se pudo añadir a la lista «{serie}» ({e}).")
+
+    # --- la pregunta, como primer comentario --------------------------------
+    # Solo si el vídeo ya es público: en un vídeo privado el comentario no se
+    # puede insertar, y en uno programado llegaría antes que el vídeo.
+    pregunta = primer_comentario(guion, meta)
+    if pregunta and estado == "public":
+        try:
+            yt.commentThreads().insert(
+                part="snippet",
+                body={"snippet": {"videoId": vid, "topLevelComment": {"snippet": {
+                    "textOriginal": pregunta}}}}).execute()
+            print("  pregunta publicada como primer comentario")
+        except HttpError as e:
+            print(f"  aviso: no se pudo publicar el primer comentario ({e}).")
+    elif pregunta:
+        print("  (el primer comentario se publicará cuando el vídeo sea público)")
+
     (carpeta / "publicado.json").write_text(
-        json.dumps({"video_id": vid, "url": f"https://youtu.be/{vid}", "estado": estado},
+        json.dumps({"video_id": vid, "url": f"https://youtu.be/{vid}", "estado": estado,
+                    "formato": guion.get("formato", "largo"),
+                    "serie": serie or "",
+                    "pregunta_pendiente": bool(pregunta and estado != "public")},
                    ensure_ascii=False, indent=2), encoding="utf-8")
     return vid
 

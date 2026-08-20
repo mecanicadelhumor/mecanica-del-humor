@@ -1,0 +1,41 @@
+{
+  "id": "MDS-001",
+  "formato": "corto",
+  "serie": "Desmonta el chiste",
+  "idioma": "es",
+  "titulo_trabajo": "Por qué te has reído de esto",
+  "tesis": "Un chiste funciona cuando rompe una expectativa sin que pase nada malo.",
+  "pilares": ["A"],
+  "notas_humor": [
+    "El chiste va en el segundo cero. Nada delante: ni marca, ni rótulo, ni 'hoy te explico'.",
+    "El remate se separa del planteamiento en dos escenas para que exista la pausa.",
+    "La reacción del personaje llega DESPUÉS del remate, nunca antes."
+  ],
+  "escenas": [
+    { "tipo": "enunciado", "narracion": "Mi pareja me dijo que necesitaba espacio.",
+      "texto": "Mi pareja me dijo que necesitaba *espacio*.",
+      "personaje": "neutra", "pausa_despues_s": 0.5 },
+
+    { "tipo": "enunciado", "narracion": "Ahora duermo en el trastero.",
+      "texto": "Ahora duermo en el *trastero*.",
+      "personaje": "rie", "pausa_despues_s": 1.3 },
+
+    { "tipo": "enunciado", "narracion": "Si te has reído, han pasado dos cosas a la vez. Y las dos hacen falta.",
+      "texto": "Han pasado _dos cosas_ a la vez.",
+      "etiqueta": "El despiece", "personaje": "piensa", "pausa_despues_s": 0.4 },
+
+    { "tipo": "lista", "narracion": "Una: esperabas una conversación sobre la relación y te has encontrado un trastero. Dos: nadie ha salido herido.",
+      "titulo": "Las dos piezas",
+      "puntos": ["Una expectativa *rota*", "Y nada malo _de verdad_"],
+      "personaje": "entiende", "pausa_despues_s": 0.4 },
+
+    { "tipo": "enunciado", "narracion": "La bisagra es la palabra espacio, que significa dos cosas. Y va la última a propósito: si la dices antes, se te ve venir.",
+      "texto": "La bisagra: *espacio* va la última.",
+      "personaje": "duda", "pausa_despues_s": 0.5 },
+
+    { "tipo": "cierre", "narracion": "Falla cuando lo inofensivo se rompe. Cuéntaselo a alguien que acabe de discutir con su pareja y verás.",
+      "titulo": "Y falla cuando deja de ser *inofensivo*",
+      "subtitulo": "Ruptura benigna · McGraw y Warren",
+      "personaje": "no", "pausa_despues_s": 0.2 }
+  ]
+}

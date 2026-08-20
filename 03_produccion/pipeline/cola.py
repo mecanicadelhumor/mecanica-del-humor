@@ -125,15 +125,26 @@ def rel(p):
     return str(Path(p).resolve().relative_to(RAIZ)).replace("\\", "/")
 
 
-def trabajo(episodio, idioma, modo, fecha, horas, avisos):
+def trabajo(episodio, idioma, modo, fecha, horas, avisos, hora_fija=None):
     guion = GUIONES / f"{episodio}.{idioma}.json"
     if not guion.exists():
         avisos.append(f"No existe {rel(guion)}: se salta el canal «{idioma}» de {episodio}.")
         return None
 
+    # El formato lo declara el propio guion. cola.py lo copia al plan para que
+    # el workflow pueda ramificar sin volver a abrir el JSON, y para que quede
+    # escrito en el log de qué se produjo cada día.
+    try:
+        formato = json.loads(guion.read_text(encoding="utf-8")).get("formato", "largo")
+    except Exception:
+        formato = "largo"
+
     estado, publicar_en = "private", None
     if modo == "automatico":
-        hora = horas.get(idioma, "18:00")
+        # hora_fija: una emisión puede tener su propia hora. Los Shorts salen a
+        # una hora distinta del episodio largo, y no tiene sentido meter eso en
+        # horas_publicacion, que va por idioma.
+        hora = hora_fija or horas.get(idioma, "18:00")
         instante = a_utc(fecha, hora)
         if instante > datetime.now(timezone.utc) + timedelta(minutes=MARGEN_MIN):
             publicar_en = instante.strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -148,6 +159,7 @@ def trabajo(episodio, idioma, modo, fecha, horas, avisos):
         "id": f"{episodio}.{idioma}",
         "guion": rel(guion),
         "idioma": idioma,
+        "formato": formato,
         "musica": rel(pista) if pista else "",
         "estado": estado,
         "publicar_en": publicar_en,
@@ -173,7 +185,9 @@ def plan_del_dia(fecha=None, episodio=None, estado=None):
                 "avisos": [f"No hay emisión programada para el {fecha}."]}
 
     modo = emision.get("modo", "revision")
-    trabajos = [t for t in (trabajo(emision["episodio"], idi, modo, fecha, horas, avisos)
+    hora_fija = emision.get("hora")
+    trabajos = [t for t in (trabajo(emision["episodio"], idi, modo, fecha, horas,
+                                    avisos, hora_fija)
                             for idi in emision.get("idiomas", ["es"])) if t]
     if estado:                                    # override manual del formulario
         for t in trabajos:
@@ -184,6 +198,7 @@ def plan_del_dia(fecha=None, episodio=None, estado=None):
         "fecha": str(fecha),
         "episodio": emision["episodio"],
         "modo": modo,
+        "formato": trabajos[0]["formato"] if trabajos else "largo",
         "guiones": " ".join(t["guion"] for t in trabajos),
         "trabajos": trabajos,
         "avisos": avisos,
@@ -203,14 +218,19 @@ def plan_suelto(rutas, estado=None):
         episodio = ident.split(".")[0]
         idioma = ident.split(".")[-1] if "." in ident else "es"
         pista = musica_de(episodio)
+        try:
+            formato = json.loads(p.read_text(encoding="utf-8")).get("formato", "largo")
+        except Exception:
+            formato = "largo"
         trabajos.append({
-            "id": ident, "guion": rel(p), "idioma": idioma,
+            "id": ident, "guion": rel(p), "idioma": idioma, "formato": formato,
             "musica": rel(pista) if pista else "",
             "estado": estado or "private", "publicar_en": None,
         })
     return {"hay_trabajo": bool(trabajos), "fecha": str(hoy_madrid()),
             "episodio": trabajos[0]["id"].split(".")[0] if trabajos else "",
             "modo": "manual",
+            "formato": trabajos[0]["formato"] if trabajos else "largo",
             "guiones": " ".join(t["guion"] for t in trabajos),
             "trabajos": trabajos, "avisos": []}
 

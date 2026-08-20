@@ -67,6 +67,11 @@ COLA_S = 0.5
 # para los dos canales sin duplicar ficheros.
 MARCAS = {"es": "Mecánica del Humor", "en": "Humor Mechanics"}
 
+# Los dos formatos del canal. El vertical es para Shorts: 1080x1920, que es lo
+# que YouTube clasifica automáticamente como Short al subirlo por la API — no
+# hay casilla que marcar ni hace falta la etiqueta #shorts.
+LIENZO = {"largo": (1920, 1080), "corto": (1080, 1920)}
+
 
 def duracion_estimada(texto):
     return max(MINIMO_S, len((texto or "").split()) / PALABRAS_POR_MINUTO * 60 + COLA_S)
@@ -74,6 +79,7 @@ def duracion_estimada(texto):
 
 def preparar(guion):
     idioma = guion.get("idioma", "es")
+    formato = guion.get("formato", "largo")
     escenas = []
     for i, e in enumerate(guion["escenas"], 1):
         d = dict(e)
@@ -83,6 +89,7 @@ def preparar(guion):
         d["n"] = i
         d["idioma"] = idioma
         d["marca"] = MARCAS.get(idioma, MARCAS["es"])
+        d["formato"] = formato
         escenas.append(d)
     return escenas
 
@@ -90,6 +97,7 @@ def preparar(guion):
 def render(guion_path, salida, fps=30, escala=1.0, solo=None, verbose=True):
     guion = json.loads(Path(guion_path).read_text(encoding="utf-8"))
     escenas = preparar(guion)
+    ancho, alto = LIENZO.get(guion.get("formato", "largo"), LIENZO["largo"])
     if solo:
         escenas = [e for e in escenas if e["n"] == solo]
 
@@ -98,14 +106,16 @@ def render(guion_path, salida, fps=30, escala=1.0, solo=None, verbose=True):
     entradas, capturados, total_s = [], 0, 0.0
 
     if verbose:
-        print(f"Renderizando {len(escenas)} escenas · {int(1920*escala)}x{int(1080*escala)} @ {fps}fps")
+        print(f"Renderizando {len(escenas)} escenas · "
+              f"{int(ancho*escala)}x{int(alto*escala)} @ {fps}fps "
+              f"[{guion.get('formato', 'largo')}]")
 
     with sync_playwright() as p:
         nav = p.chromium.launch(args=["--force-color-profile=srgb",
                                       "--font-render-hinting=none",
                                       "--disable-lcd-text",
                                       "--hide-scrollbars"])
-        pag = nav.new_page(viewport={"width": 1920, "height": 1080},
+        pag = nav.new_page(viewport={"width": ancho, "height": alto},
                            device_scale_factor=escala)
         pag.goto(ESCENA_HTML.as_uri())
 

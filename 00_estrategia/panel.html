@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mecánica del Humor — Panel de estrategia</title>
+<style>
+  :root{
+    --surface:#0B1220;
+    --surface-2:#121B2E;
+    --surface-3:#18243B;
+    --line:#25334E;
+    --ink:#E9EFF8;
+    --ink-2:#AFBFD4;
+    --ink-3:#95A5BE;
+    --amber:#FFB020;
+    --cyan:#56CCF2;
+    --coral:#FF8A6B;
+    --good:#5FD68B;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--surface);
+    color:var(--ink);
+    font:16px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:48px 24px 96px}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.04em}
+
+  /* header */
+  header{border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:40px}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
+  h1{font-size:clamp(28px,4.2vw,44px);line-height:1.12;margin:12px 0 0;font-weight:800;letter-spacing:-.02em}
+  h1 em{font-style:normal;color:var(--amber)}
+  .sub{color:var(--ink-2);margin-top:14px;max-width:62ch;font-size:17px}
+
+  /* sections */
+  section{margin:52px 0}
+  h2{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);
+     font-weight:700;margin:0 0 20px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  h3{font-size:17px;margin:0 0 8px;font-weight:700}
+
+  /* kpi row */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+  .tile{background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:20px}
+  .tile .label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+  .tile .value{font-size:38px;font-weight:800;line-height:1.05;margin:10px 0 4px;letter-spacing:-.02em}
+  .tile .note{font-size:13px;color:var(--ink-2);line-height:1.45}
+  .v-amber{color:var(--amber)} .v-cyan{color:var(--cyan)} .v-coral{color:var(--coral)}
+
+  /* callout */
+  .callout{background:var(--surface-2);border-left:3px solid var(--amber);border-radius:0 10px 10px 0;
+           padding:22px 24px;font-size:19px;line-height:1.5}
+  .callout strong{color:var(--amber)}
+
+  /* three big cards */
+  .three{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+  .card{background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:22px;
+        transition:border-color .15s ease,background .15s ease}
+  .card:hover{border-color:var(--amber);background:var(--surface-3)}
+  .card .tag{font-size:11px;letter-spacing:.12em;color:var(--surface);background:var(--amber);
+             padding:3px 8px;border-radius:4px;font-weight:800;display:inline-block;margin-bottom:12px}
+  .card p{margin:0;color:var(--ink-2);font-size:15px}
+
+  /* tables */
+  table{width:100%;border-collapse:collapse;font-size:14.5px}
+  th{text-align:left;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);
+     font-weight:700;padding:0 12px 10px 0;border-bottom:1px solid var(--line)}
+  td{padding:12px 12px 12px 0;border-bottom:1px solid var(--surface-3);vertical-align:top;color:var(--ink-2)}
+  td.name{color:var(--ink);font-weight:600}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink)}
+  tbody tr:hover td{background:var(--surface-2)}
+
+  /* cause list */
+  .causes{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:0 28px}
+  .cause{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--surface-3)}
+  .cause .id{flex:0 0 34px;font-weight:800;color:var(--coral);font-size:14px;padding-top:2px}
+  .cause b{display:block;font-weight:650;color:var(--ink);margin-bottom:3px}
+  .cause span{color:var(--ink-2);font-size:14px}
+
+  /* changes grid */
+  .changes{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+  .chg{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:14px;
+       border-top:3px solid var(--line);transition:transform .12s ease}
+  .chg:hover{transform:translateY(-2px)}
+  .chg .code{font-weight:800;font-size:13px;letter-spacing:.05em}
+  .chg .ttl{font-size:14.5px;margin:5px 0 6px;color:var(--ink);font-weight:600;line-height:1.35}
+  .chg .why{font-size:13px;color:var(--ink-3);line-height:1.45}
+  .f1{border-top-color:var(--amber)}   .f1 .code{color:var(--amber)}
+  .f2{border-top-color:var(--cyan)}    .f2 .code{color:var(--cyan)}
+  .f3{border-top-color:var(--coral)}   .f3 .code{color:var(--coral)}
+  .f4{border-top-color:var(--ink-3)}   .f4 .code{color:var(--ink-3)}
+
+  .legend{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:16px;font-size:13px;color:var(--ink-2)}
+  .legend i{display:inline-block;width:22px;height:3px;border-radius:2px;margin-right:7px;vertical-align:middle}
+
+  /* ladder */
+  .ladder{display:flex;flex-direction:column;gap:8px}
+  .step{display:grid;grid-template-columns:44px 1fr 130px;gap:16px;align-items:center;
+        background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:14px 18px}
+  .step .n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
+           background:var(--surface-3);color:var(--amber);font-weight:800;font-size:14px}
+  .step b{display:block;color:var(--ink);font-weight:650;font-size:15px}
+  .step span{color:var(--ink-3);font-size:13.5px}
+  .step .goal{text-align:right;font-weight:800;color:var(--amber);font-variant-numeric:tabular-nums;font-size:15px}
+
+  /* todo */
+  ol.todo{list-style:none;counter-reset:t;padding:0;margin:0}
+  ol.todo li{counter-increment:t;display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--surface-3);align-items:baseline}
+  ol.todo li::before{content:counter(t);flex:0 0 26px;height:26px;border-radius:50%;background:var(--surface-3);
+        color:var(--cyan);font-weight:800;font-size:13px;display:grid;place-items:center}
+  ol.todo b{color:var(--ink);font-weight:650}
+  ol.todo .t{margin-left:auto;color:var(--ink-3);font-size:13px;white-space:nowrap;padding-left:14px}
+
+  footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-3);font-size:13.5px}
+  footer code{color:var(--cyan);background:var(--surface-2);padding:2px 6px;border-radius:4px}
+  @media (max-width:560px){
+    .step{grid-template-columns:36px 1fr;}
+    .step .goal{grid-column:2;text-align:left}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow mono">Mecánica del Humor · 20 de agosto de 2026</div>
+  <h1>El canal no tiene un problema de calidad.<br>Tiene un problema de <em>distribución</em>.</h1>
+  <p class="sub">Cuatro vídeos publicados, unas veinte visualizaciones en total. Los vídeos están bien hechos.
+  Lo que falla es que se publican en la única superficie de YouTube a la que un canal sin audiencia no puede llegar.</p>
+</header>
+
+<section>
+  <h2>Dónde está el canal ahora</h2>
+  <div class="kpis">
+    <div class="tile">
+      <div class="label">Vistas por vídeo</div>
+      <div class="value v-coral">1–9</div>
+      <div class="note">Y parte son suyas y de su pareja.</div>
+    </div>
+    <div class="tile">
+      <div class="label">Referencia: Short</div>
+      <div class="value v-amber">50–500</div>
+      <div class="note">Lo que saca un canal de &lt;1.000 subs por Short en 48 h.</div>
+    </div>
+    <div class="tile">
+      <div class="label">Superficies en uso</div>
+      <div class="value v-coral">0 <span style="font-size:22px;color:var(--ink-3)">de 3</span></div>
+      <div class="note">Búsqueda, feed de Shorts y enlaces externos: ninguna.</div>
+    </div>
+    <div class="tile">
+      <div class="label">Shorts publicados</div>
+      <div class="value v-coral">0</div>
+      <div class="note">Es la única puerta que no exige tener público.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>El diagnóstico</h2>
+  <div class="callout">
+    Para un canal con cero suscriptores, YouTube solo tiene tres formas de enseñar un vídeo a alguien:
+    <strong>la búsqueda</strong>, <strong>el feed de Shorts</strong> y <strong>los enlaces desde fuera</strong>.
+    El sistema actual no usa ninguna de las tres. Nueve visualizaciones no es un veredicto sobre los vídeos:
+    es la consecuencia aritmética de publicar donde nadie puede verte.
+  </div>
+</section>
+
+<section>
+  <h2>Los tres cambios de los que depende todo</h2>
+  <div class="three">
+    <div class="card">
+      <span class="tag">C1</span>
+      <h3>Un canal, no dos</h3>
+      <p>Dos canales desde cero pagan dos arranques en frío. Desde febrero de 2026 YouTube dobla al inglés
+      gratis, con voz expresiva en español. Mantener dos canales es hoy estrictamente peor.</p>
+    </div>
+    <div class="card">
+      <span class="tag">C2</span>
+      <h3>Shorts a diario</h3>
+      <p>Cinco Shorts por semana, un vídeo largo. El pipeline ya puede producirlos: ≤180 s, 9:16, y YouTube
+      los clasifica solo al subirlos por la API. Coste marginal cero.</p>
+    </div>
+    <div class="card">
+      <span class="tag">C4 · C5</span>
+      <h3>Una cara y unas miniaturas que se vean</h3>
+      <p>El 89 % de los vídeos que rompen llevan cara o contraste extremo. Las actuales no llevan ninguna
+      de las dos. Un personaje en SVG resuelve las dos cosas a coste cero.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Las ocho causas</h2>
+  <div class="causes">
+    <div class="cause"><span class="id">D1</span><span><b>Dos canales desde cero</b>Dividen una señal que ya era nula, y el doblaje automático los hace innecesarios.</span></div>
+    <div class="cause"><span class="id">D2</span><span><b>Los temas los elige la bibliografía</b>«¿Qué puedo demostrar?» no es «¿qué quiere saber alguien?». Los títulos no responden a ninguna búsqueda.</span></div>
+    <div class="cause"><span class="id">D3</span><span><b>Cero Shorts</b>Se renuncia a la mayor superficie de descubrimiento que existe para quien no tiene público.</span></div>
+    <div class="cause"><span class="id">D4</span><span><b>Miniaturas invisibles</b>Azul marino sobre azul marino, sin cara y sin contraste. Elegantes y, en una cuadrícula, inexistentes.</span></div>
+    <div class="cause"><span class="id">D5</span><span><b>El render está optimizado contra la retención</b>Capturar solo lo que se mueve es lo que hace posible el coste cero, y es lo que congela la pantalla.</span></div>
+    <div class="cause"><span class="id">D6</span><span><b>Una sola voz sintética</b>Siete minutos de cadencia idéntica. Y un canal de humor sin nadie que conteste.</span></div>
+    <div class="cause"><span class="id">D7</span><span><b>Riesgo de política, no solo de crecimiento</b>Desde julio de 2026 YouTube desmonetiza el contenido «basado en plantillas» con apariencia de producción en masa.</span></div>
+    <div class="cause"><span class="id">D8</span><span><b>Habla de humor sin hacer gracia</b>El único problema que no se arregla con ingeniería, y el más grave.</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Los canales de referencia</h2>
+  <table>
+    <thead><tr><th>Canal</th><th>Idioma</th><th>Subs</th><th>Vídeos</th><th>Vídeos/mes</th><th>Por qué está aquí</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Charisma on Command</td><td>EN</td><td class="num">7,09 M</td><td class="num">442</td><td class="num">~3</td><td>El análogo exacto: habilidades sociales desmontadas pieza a pieza, sin apenas cara</td></tr>
+      <tr><td class="name">The School of Life</td><td>EN</td><td class="num">9,77 M</td><td class="num">1.230</td><td class="num">~8</td><td>El tono más cercano al de Mecánica del Humor</td></tr>
+      <tr><td class="name">Psych2Go</td><td>EN</td><td class="num">13,1 M</td><td class="num">4.050</td><td class="num">~28</td><td>Psicología divulgada sin una sola cara real</td></tr>
+      <tr><td class="name">Improvement Pill</td><td>EN</td><td class="num">3,77 M</td><td class="num">356</td><td class="num">~2,7</td><td>Autoayuda con estructura y producción barata</td></tr>
+      <tr><td class="name">QuantumFracture</td><td>ES</td><td class="num">4,02 M</td><td class="num">620</td><td class="num">~3,7</td><td>Ciencia dura hecha entretenida en español</td></tr>
+      <tr><td class="name">VisualPolitik</td><td>ES</td><td class="num">3,78 M</td><td class="num">1.340</td><td class="num">~11</td><td>Estructuralmente idéntico a este pipeline. El formato no es el problema</td></tr>
+      <tr><td class="name">Academia Play</td><td>ES</td><td class="num">3,76 M</td><td class="num">770</td><td class="num">~6</td><td>El faceless español de mayor recorrido</td></tr>
+      <tr><td class="name">Memorias de Pez</td><td>ES</td><td class="num">2,95 M</td><td class="num">1.140</td><td class="num">~10</td><td>Divulgación de nicho, voz en off, sin cara</td></tr>
+    </tbody>
+  </table>
+  <p class="sub" style="font-size:14px;margin-top:16px">
+    Datos de vidIQ, agosto de 2026. Salvo Psych2Go —que tiene equipo y una década de ventaja— todos sostienen
+    millones de suscriptores publicando entre <strong style="color:var(--amber)">tres y once veces al mes</strong>.
+    Mecánica del Humor pasó el 19 de agosto a publicar a diario en dos idiomas, con cero datos sobre qué funciona.
+  </p>
+</section>
+
+<section>
+  <h2>Los catorce cambios</h2>
+  <div class="legend">
+    <span><i style="background:var(--amber)"></i>Fase 1 · Distribución</span>
+    <span><i style="background:var(--cyan)"></i>Fase 2 · Empaquetado</span>
+    <span><i style="background:var(--coral)"></i>Fase 3 · Producto</span>
+    <span><i style="background:var(--ink-3)"></i>Fase 4 · Compuesto</span>
+  </div>
+  <div class="changes">
+    <div class="chg f1"><div class="code">C1</div><div class="ttl">Un solo canal + doblaje automático</div><div class="why">Deja de pagarse dos arranques en frío</div></div>
+    <div class="chg f1"><div class="code">C2</div><div class="ttl">Shorts como puerta de entrada</div><div class="why">Cinco formatos nativos, no recortes</div></div>
+    <div class="chg f1"><div class="code">C3</div><div class="ttl">Temas por demanda, filtro por bibliografía</div><div class="why">La demanda elige la pregunta; la evidencia decide si se responde</div></div>
+    <div class="chg f2"><div class="code">C4</div><div class="ttl">Un personaje: la cabeza mecánica</div><div class="why">Cara en miniatura, movimiento en pantalla y prueba de autoría</div></div>
+    <div class="chg f2"><div class="code">C5</div><div class="ttl">Miniaturas con contraste verificado</div><div class="why">Falla la producción si el ratio baja de 7:1</div></div>
+    <div class="chg f2"><div class="code">C9</div><div class="ttl">Los primeros quince segundos</div><div class="why">La primera risa antes del segundo 15</div></div>
+    <div class="chg f3"><div class="code">C6</div><div class="ttl">Movimiento sin coste de render</div><div class="why">Subtítulos quemados + capa viva en FFmpeg</div></div>
+    <div class="chg f3"><div class="code">C7</div><div class="ttl">Dos voces: narrador y escéptico</div><div class="why">Rompe la cadencia y mete la gracia en el formato</div></div>
+    <div class="chg f3"><div class="code">C8</div><div class="ttl">Un largo por semana, de 4 a 6 min</div><div class="why">Menos huella de producción en masa</div></div>
+    <div class="chg f4"><div class="code">C10</div><div class="ttl">Una página web por episodio</div><div class="why">GitHub Pages: tráfico externo y algo que suma a internet</div></div>
+    <div class="chg f4"><div class="code">C11</div><div class="ttl">El bucle de comentarios</div><div class="why">La pregunta al publicar; las respuestas alimentan los temas</div></div>
+    <div class="chg f4"><div class="code">C12</div><div class="ttl">Series con nombre y listas automáticas</div><div class="why">La campanita ya no basta desde febrero de 2026</div></div>
+    <div class="chg f4"><div class="code">C13</div><div class="ttl">TikTok, Reels, Bluesky, pódcast</div><div class="why">Cuentas de marca. Reddit automatizado, nunca</div></div>
+    <div class="chg f4"><div class="code">C14</div><div class="ttl">La escalera de métricas</div><div class="why">Revisión semanal, no tandas de cuatro semanas</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>La escalera de métricas — cada peldaño se mira solo si se pasó el anterior</h2>
+  <div class="ladder">
+    <div class="step"><span class="n">1</span><span><b>¿Existe? · Impresiones por semana</b><span>Si no se pasa, el problema es distribución → C1, C2, C3</span></span><span class="goal">≥ 5.000</span></div>
+    <div class="step"><span class="n">2</span><span><b>¿Se hace clic? · CTR de miniatura</b><span>Si no se pasa, el problema es empaquetado → C4, C5, títulos</span></span><span class="goal">≥ 4 %</span></div>
+    <div class="step"><span class="n">3</span><span><b>¿Se quedan? · Retención a los 30 s</b><span>Si no se pasa, el problema es el gancho → C9</span></span><span class="goal">≥ 60 %</span></div>
+    <div class="step"><span class="n">4</span><span><b>¿Aguantan? · Retención media</b><span>Si no se pasa, el problema es el ritmo → C6, C7, C8</span></span><span class="goal">≥ 45 % / 70 %</span></div>
+    <div class="step"><span class="n">5</span><span><b>¿Vuelven? · Suscriptores por mil vistas</b><span>Si no se pasa, el problema es la promesa del canal</span></span><span class="goal">≥ 5</span></div>
+  </div>
+  <p class="sub" style="font-size:14px;margin-top:18px">
+    Con veinte visualizaciones totales, medir CTR y retención es medir ruido. Lo primero que hay que
+    conseguir es que exista una impresión.
+    <strong style="color:var(--ink-2)">Si a las doce semanas el peldaño 1 sigue sin superarse</strong>, el problema
+    no son los Shorts ni las miniaturas: es que «la ciencia del humor» no es lo que la gente quiere ver, y
+    la conversación pasa a ser sobre ampliar el tema sin renunciar ni al método ni a las fuentes.
+  </p>
+</section>
+
+<section>
+  <h2>Lo único que no puede hacer el sistema — unas dos horas, ninguna se repite</h2>
+  <ol class="todo">
+    <li><b>Abrir la pestaña Actions</b> y ver por qué no hay ejecuciones desde el 19<span class="t">hoy · 2 min</span></li>
+    <li><b>Activar el doblaje automático</b> en Studio → Valores predeterminados de subida<span class="t">esta semana · 5 min</span></li>
+    <li><b>Verificar el teléfono</b> en youtube.com/verify — desbloquea miniaturas personalizadas<span class="t">esta semana · 3 min</span></li>
+    <li><b>Pausar @humormechanics</b> — ocultar vídeos y avisar en la descripción. No borrar<span class="t">esta semana · 10 min</span></li>
+    <li><b>Aprobar los cuatro primeros Shorts</b> antes de que el modo automático se active<span class="t">semana 2 · 15 min</span></li>
+    <li><b>Decidir sobre las dos voces</b> escuchando una muestra<span class="t">semana 2 · 10 min</span></li>
+    <li><b>Crear las cuentas de marca</b> en TikTok e Instagram — opcional<span class="t">semana 3 · 20 min</span></li>
+  </ol>
+</section>
+
+<footer>
+  El análisis completo está en <code>C:\MisProyectos\Humor\00_estrategia\</code>:
+  <code>REGLAS.md</code> (léelo siempre antes de tocar nada) ·
+  <code>PLAN_DE_CAMBIOS.md</code> (los 14 cambios, ejecutables) ·
+  <code>DIAGNOSTICO.md</code> (el porqué, con fuentes).
+  <br><br>
+  La única norma estricta se mantiene intacta: el canal sigue aportando aprendizaje real, con fuentes
+  verificables, y lejos del machismo, la xenofobia y la basura. Nada de lo propuesto aquí cuesta dinero
+  ni exige presencia recurrente de nadie.
+</footer>
+
+</div>
+</body>
+</html>

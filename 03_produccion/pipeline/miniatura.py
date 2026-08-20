@@ -1,175 +1,331 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-miniatura.py — genera la miniatura 1280x720 con la fórmula de marca.
+miniatura.py — la portada. Donde se juega el CTR antes que en ningún otro sitio.
 
-La miniatura de Mecánica del Humor debe parecer la figura de un paper, no un
-clickbait: fondo oscuro, retícula, y un solo acento ámbar señalando el punto
-clave. Se genera desde el mismo motor de escenas, así que nunca se desvía de
-la identidad del canal.
+QUÉ CAMBIÓ Y POR QUÉ (20 de agosto de 2026)
+-------------------------------------------
+Las miniaturas anteriores eran azul marino (#0B1220) sobre retícula azul marino,
+sin cara y sin ningún color de alto contraste. Eran elegantes y en una cuadrícula
+de YouTube desaparecían.
 
-Si el guion tiene alguna escena de tipo "dato" (una cifra que ya pasó por el
-Verificador, con su fuente), esa cifra se convierte en el elemento dominante
-de la miniatura — grande, en monoespaciada, con un titular corto de apoyo
-debajo. Es la palanca con más impacto en CTR por menos esfuerzo: promete un
-dato concreto y verificado, no una emoción fabricada. Si no hay ninguna
-escena de dato, se usa el formato anterior (titular + pie).
+El dato que manda aquí: de los vídeos que rompen, el 69 % llevan una cara humana
+en la miniatura (el 80 % entre los que más rompen) y el 89 % llevan **cara o color
+de altísimo contraste**. Una de las dos, siempre. Las viejas no llevaban ninguna.
+
+Las reglas nuevas, todas comprobables por código:
+
+  1. Fondo saturado o claro. El azul marino es el color del VÍDEO, no de la portada.
+  2. El Engranaje —el personaje— ocupando entre un cuarto y un tercio del encuadre.
+     Es la cara que un canal sin cara puede permitirse.
+  3. Cuatro palabras o menos. La mediana de los vídeos que rompen es cinco.
+  4. Nada en la esquina inferior derecha: ahí YouTube pinta la duración.
+  5. Contraste medido, no opinado: ratio WCAG >= 7:1 entre el texto y su fondo.
+     Si baja de ahí, esto sale con código 1 y la producción se para.
+  6. Tres variantes por vídeo, que cambian UN elemento cada vez, para poder
+     rotarlas con thumbnails.set() y comparar CTR sin gastar un euro.
 
     python3 miniatura.py guion.json -o miniatura.png
-    python3 miniatura.py guion.json -o m.png --texto "Nadie nace *gracioso*" --pie "Hay datos"
-    python3 miniatura.py guion.json -o m.png --sin-cifra   # fuerza el formato de texto
+    python3 miniatura.py guion.json -o mini.png --variantes      # a, b y c
+    python3 miniatura.py guion.json -o mini.png --texto "Nadie nace *gracioso*"
 """
 import argparse
 import json
 import re
+import sys
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
 
 AQUI = Path(__file__).resolve().parent
+PERSONAJE_SVG = AQUI.parents[1] / "02_marca" / "personaje.svg"
 
-# Nombre del canal y forma de numerar el episodio, por idioma. En inglés "Nº"
-# no se usa: lo natural es "No.".
 MARCAS = {"es": "Mecánica del Humor", "en": "Humor Mechanics"}
 NUMERO = {"es": "Nº ", "en": "No. "}
 
-HTML_TEXTO = """<!DOCTYPE html><html><head><meta charset="utf-8"><style>
-:root{--fondo:#0B1220;--reticula:#16213A;--tinta:#F2F4F8;--tenue:#8A97AE;--ambar:#FFB020;--cian:#4CC9F0}
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1280px;height:720px;overflow:hidden;background:var(--fondo);
-  font-family:"Archivo Black","Inter","DejaVu Sans",sans-serif;color:var(--tinta)}
-#r{position:absolute;inset:0;background-image:
-  linear-gradient(var(--reticula) 1px,transparent 1px),
-  linear-gradient(90deg,var(--reticula) 1px,transparent 1px);background-size:64px 64px;opacity:.6}
-#v{position:absolute;inset:0;background:radial-gradient(ellipse at 46% 44%,transparent 30%,rgba(0,0,0,.6) 100%)}
-#m{position:absolute;inset:34px;border:1px solid rgba(242,244,248,.12)}
-#m::before{content:"";position:absolute;top:-1px;left:-1px;width:26px;height:26px;
-  border:3px solid rgba(255,176,32,.6);border-right:0;border-bottom:0}
-#c{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:86px 96px}
-h1{font-size:__TAM__px;line-height:.98;letter-spacing:-.025em}
-.amb{color:var(--ambar)} .cia{color:var(--cian)}
-#p{margin-top:34px;font-size:30px;color:var(--tenue);font-family:"Inter","DejaVu Sans",sans-serif;
-  font-weight:500;letter-spacing:.02em;max-width:78%}
-#f{position:absolute;left:96px;bottom:52px;font-size:19px;letter-spacing:.26em;
-  text-transform:uppercase;color:var(--tenue)}
-#n{position:absolute;right:88px;top:74px;font-size:22px;color:var(--ambar);
-  font-family:"JetBrains Mono","DejaVu Sans Mono",monospace;border:1px solid rgba(255,176,32,.5);padding:8px 14px}
-</style></head><body>
-<div id="r"></div><div id="c"><h1>__T__</h1><div id="p">__P__</div></div>
-<div id="v"></div><div id="m"></div><div id="f">__MARCA__</div><div id="n">__N__</div>
-</body></html>"""
+LIENZO = {"largo": (1280, 720), "corto": (1080, 1920)}
 
-HTML_CIFRA = """<!DOCTYPE html><html><head><meta charset="utf-8"><style>
-:root{--fondo:#0B1220;--reticula:#16213A;--tinta:#F2F4F8;--tenue:#8A97AE;--ambar:#FFB020;--cian:#4CC9F0}
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1280px;height:720px;overflow:hidden;background:var(--fondo);
-  font-family:"Archivo Black","Inter","DejaVu Sans",sans-serif;color:var(--tinta)}
-#r{position:absolute;inset:0;background-image:
-  linear-gradient(var(--reticula) 1px,transparent 1px),
-  linear-gradient(90deg,var(--reticula) 1px,transparent 1px);background-size:64px 64px;opacity:.6}
-#v{position:absolute;inset:0;background:radial-gradient(ellipse at 46% 44%,transparent 30%,rgba(0,0,0,.6) 100%)}
-#m{position:absolute;inset:34px;border:1px solid rgba(242,244,248,.12)}
-#m::before{content:"";position:absolute;top:-1px;left:-1px;width:26px;height:26px;
-  border:3px solid rgba(255,176,32,.6);border-right:0;border-bottom:0}
-#c{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:70px 96px}
-.cif{font-family:"JetBrains Mono","IBM Plex Mono","DejaVu Sans Mono",monospace;
-  font-size:__TAMCIF__px;line-height:.85;letter-spacing:-.02em;color:var(--ambar)}
-h1{font-size:__TAM__px;line-height:1.08;letter-spacing:-.02em;margin-top:26px;max-width:94%}
-.amb{color:var(--ambar)} .cia{color:var(--cian)}
-#f{position:absolute;left:96px;bottom:52px;font-size:19px;letter-spacing:.26em;
-  text-transform:uppercase;color:var(--tenue)}
-#n{position:absolute;right:88px;top:74px;font-size:22px;color:var(--ambar);
-  font-family:"JetBrains Mono","DejaVu Sans Mono",monospace;border:1px solid rgba(255,176,32,.5);padding:8px 14px}
-</style></head><body>
-<div id="r"></div><div id="c"><div class="cif">__CIF__</div><h1>__T__</h1></div>
-<div id="v"></div><div id="m"></div><div id="f">__MARCA__</div><div id="n">__N__</div>
-</body></html>"""
+# ---------------------------------------------------------------------------
+# Temas. Cada uno es un fondo y una tinta, y los dos juntos pasan el 7:1.
+# El azul marino sigue existiendo — como acento y como color de la retícula —,
+# pero ya no es el fondo.
+# ---------------------------------------------------------------------------
+TEMAS = {
+    "ambar":   {"fondo": "#FFB020", "tinta": "#0B1220", "reja": "#E09512", "acento": "#0B1220"},
+    "cian":    {"fondo": "#4CC9F0", "tinta": "#08131F", "reja": "#3BAACC", "acento": "#08131F"},
+    "granate": {"fondo": "#8A0E22", "tinta": "#FFFFFF", "reja": "#6B0A1A", "acento": "#FFB020"},
+    "hueso":   {"fondo": "#F2EFE7", "tinta": "#0B1220", "reja": "#DAD6CC", "acento": "#B3123C"},
+}
+ORDEN_TEMAS = ["ambar", "cian", "granate", "hueso"]
 
 
-def rico(s):
+# ---------------------------------------------------------------------------
+# Contraste WCAG. Es aritmética, así que se calcula en vez de discutirse.
+# ---------------------------------------------------------------------------
+def _lin(c):
+    c = c / 255
+    return c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
+
+
+def luminancia(hexcol):
+    h = hexcol.lstrip("#")
+    r, g, b = (int(h[i:i + 2], 16) for i in (0, 2, 4))
+    return 0.2126 * _lin(r) + 0.7152 * _lin(g) + 0.0722 * _lin(b)
+
+
+def contraste(a, b):
+    la, lb = luminancia(a), luminancia(b)
+    hi, lo = max(la, lb), min(la, lb)
+    return (hi + 0.05) / (lo + 0.05)
+
+
+MIN_CONTRASTE = 7.0
+
+# Encoge el titular hasta que cabe en su caja. Se ejecuta en la página, después
+# de que las tipografías estén aplicadas: medir en Python sería adivinar.
+AJUSTE_JS = """
+() => {
+  const c = document.getElementById('c'), t = document.querySelector('h1');
+  const cif = document.querySelector('.cif');
+  // La cifra va en una sola línea; si no cabe a lo ancho, se encoge ella antes
+  // de tocar el titular. Es el elemento con más aire que ceder.
+  if (cif) {
+    let g = parseFloat(getComputedStyle(cif).fontSize), k = 0;
+    while (cif.scrollWidth > cif.clientWidth + 2 && g > 90 && k++ < 24) {
+      g *= 0.94; cif.style.fontSize = g + 'px';
+    }
+  }
+  let f = parseFloat(getComputedStyle(t).fontSize);
+  const cabe = () => c.scrollHeight <= c.clientHeight + 2
+                  && t.scrollWidth  <= t.clientWidth  + 2;
+  let n = 0;
+  while (!cabe() && f > 48 && n++ < 24) { f *= 0.94; t.style.fontSize = f + 'px'; }
+  return Math.round(f);
+}
+"""
+
+
+def rico(s, acento):
     s = (s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-    s = re.sub(r"\*([^*]+)\*", r'<span class="amb">\1</span>', s)
-    return re.sub(r"_([^_]+)_", r'<span class="cia">\1</span>', s)
+    s = re.sub(r"\*([^*]+)\*", f'<span style="color:{acento}">\\1</span>', s)
+    return re.sub(r"_([^_]+)_", f'<span style="color:{acento}">\\1</span>', s)
 
 
-def tamano(texto):
-    n = len(re.sub(r"[*_]", "", texto or ""))
-    if n <= 16:  return 128
-    if n <= 26:  return 104
-    if n <= 38:  return 86
-    return 72
+def limpiar(s):
+    return re.sub(r"[*_]", "", s or "").strip()
 
 
-def tamano_cifra(texto):
-    n = len(re.sub(r"[*_]", "", texto or ""))
-    if n <= 3:   return 340
-    if n <= 6:   return 260
-    if n <= 10:  return 190
-    return 150
+def palabras(s):
+    return len(limpiar(s).split())
 
 
-def tamano_apoyo(texto):
-    # El titular es de apoyo aquí, no el protagonista, así que va más contenido.
-    n = len(re.sub(r"[*_]", "", texto or ""))
-    if n <= 30:  return 68
-    if n <= 50:  return 56
-    return 46
+def acortar(texto, maximo=4):
+    """Cuatro palabras o menos. Si el titular es más largo, se queda con el
+    trozo que lleva el resaltado, que es donde el guionista puso el peso."""
+    t = limpiar(texto)
+    if len(t.split()) <= maximo:
+        return texto
+    m = re.search(r"[*_]([^*_]+)[*_]", texto or "")
+    if m:
+        pal = m.group(1).split()
+        if len(pal) <= maximo:
+            antes = limpiar(texto[:m.start()]).split()
+            hueco = maximo - len(pal)
+            return " ".join(antes[-hueco:]) + " *" + " ".join(pal) + "*" if hueco else "*" + m.group(1) + "*"
+    return " ".join(t.split()[:maximo])
+
+
+def tam_titular(texto, ancho):
+    n = len(limpiar(texto))
+    base = {True: [(10, 200), (18, 160), (26, 130), (99, 104)],
+            False: [(10, 168), (18, 136), (26, 112), (99, 90)]}[ancho >= 1280]
+    for tope, px in base:
+        if n <= tope:
+            return px
+    return base[-1][1]
+
+
+def tam_cifra(texto, ancho):
+    n = len(limpiar(texto))
+    esc = 1.0 if ancho >= 1280 else 0.86
+    for tope, px in [(3, 380), (6, 290), (10, 210), (99, 165)]:
+        if n <= tope:
+            return int(px * esc)
+    return int(165 * esc)
 
 
 def cifra_mas_fuerte(guion):
-    """Primera escena de tipo "dato" del guion — ya pasó por el Verificador,
-    así que la cifra viene con fuente detrás. None si el guion no tiene ninguna."""
     for e in guion.get("escenas", []):
         if e.get("tipo") == "dato" and e.get("cifra"):
             return e["cifra"]
     return None
 
 
-def generar(guion_path, salida, texto=None, pie=None, cifra=None, sin_cifra=False):
-    g = json.loads(Path(guion_path).read_text(encoding="utf-8"))
-    primera = g["escenas"][0]
-    texto = texto or primera.get("titulo") or g["titulo_trabajo"]
+def cara(expresion="duda"):
+    svg = PERSONAJE_SVG.read_text(encoding="utf-8")
+    svg = svg.split("\n", 1)[1]
+    return ('<svg id="cara" class="mdh-cara ex-%s" viewBox="20 20 172 160" '
+            'xmlns="http://www.w3.org/2000/svg">\n%s' % (expresion, svg))
 
+
+PLANTILLA = """<!DOCTYPE html><html lang="__LANG__"><head><meta charset="utf-8"><style>
+:root{--fondo:__FONDO__;--tinta:__TINTA__;--reja:__REJA__;--acento:__ACENTO__}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:__W__px;height:__H__px;overflow:hidden;background:var(--fondo);
+  font-family:"Archivo Black","Inter","DejaVu Sans",sans-serif;color:var(--tinta)}
+#r{position:absolute;inset:0;background-image:
+  linear-gradient(var(--reja) 2px,transparent 2px),
+  linear-gradient(90deg,var(--reja) 2px,transparent 2px);
+  background-size:__REJILLA__px __REJILLA__px;opacity:.5}
+#m{position:absolute;inset:__MARCO__px;border:3px solid var(--tinta);opacity:.22}
+#c{position:absolute;inset:0;display:flex;flex-direction:column;
+   justify-content:__JUSTIFY__;padding:__PAD__}
+.cif{font-family:"JetBrains Mono","DejaVu Sans Mono",monospace;font-size:__TAMCIF__px;
+     line-height:.9;letter-spacing:-.03em;margin-bottom:20px;white-space:nowrap}
+h1{font-size:__TAM__px;line-height:.98;letter-spacing:-.03em;max-width:__ANCHOTIT__}
+/* El personaje: entre 1/4 y 1/3 del encuadre. Es la cara del canal.
+   Los selectores llevan #cara delante A PROPÓSITO. personaje.svg trae su
+   propio <style> con reglas .mdh-cara, y como el SVG va después en el
+   documento, con la misma especificidad ganaría él: el personaje saldría
+   ámbar y cian sobre un fondo ámbar o cian, o sea invisible. Con el id
+   delante (1,1,0 contra 0,2,0) manda el tema de la miniatura. */
+#cara{position:absolute;__POSCARA__;width:__TAMCARA__px;height:__TAMCARA__px;
+      --am:var(--tinta);--ci:var(--tinta);--te:var(--tinta);--ti:var(--tinta)}
+#cara .chapa {stroke:var(--tinta);stroke-width:5.5}
+#cara .fino  {stroke:var(--tinta);opacity:.22}
+#cara .lente {stroke:var(--tinta);stroke-width:5}
+#cara .pupila{fill:var(--acento)}
+#cara .biela {fill:var(--tinta)}
+#cara .boca  {stroke:var(--tinta);stroke-width:7}
+#cara .remache{fill:var(--tinta);opacity:.5}
+#cara .eje   {stroke:var(--tinta);opacity:.55}
+#cara .diente{stroke:var(--tinta);opacity:.55}
+#f{position:absolute;left:__PADLAT__px;bottom:38px;font-size:__TAMFIRMA__px;
+   letter-spacing:.24em;text-transform:uppercase;opacity:.72}
+#n{position:absolute;right:__PADLAT__px;top:__TOPNUM__px;font-size:__TAMFIRMA__px;
+   font-family:"JetBrains Mono","DejaVu Sans Mono",monospace;
+   border:2px solid var(--tinta);padding:8px 14px;opacity:.72}
+</style></head><body>
+<div id="r"></div>
+<div id="c">__CUERPO__</div>
+__CARA__
+<div id="m"></div><div id="f">__MARCA__</div><div id="n">__N__</div>
+</body></html>"""
+
+
+def construir(texto, cifra, tema, formato, marca, numero, idioma, expresion, layout):
+    T = TEMAS[tema]
+    w, h = LIENZO[formato]
+    vertical = formato == "corto"
+
+    ratio = contraste(T["fondo"], T["tinta"])
+    if ratio < MIN_CONTRASTE:
+        raise SystemExit(
+            f"Contraste insuficiente en el tema «{tema}»: {ratio:.1f}:1 "
+            f"(mínimo {MIN_CONTRASTE}:1 entre {T['tinta']} y {T['fondo']}). "
+            f"Una miniatura que no se lee en un móvil no sirve de nada.")
+    r_ac = contraste(T["fondo"], T["acento"])
+    if r_ac < 4.5:
+        raise SystemExit(f"El acento del tema «{tema}» solo da {r_ac:.1f}:1 sobre su fondo.")
+
+    cuerpo = ""
+    if cifra and layout == "cifra":
+        cuerpo += f'<div class="cif">{rico(cifra, T["acento"])}</div>'
+    cuerpo += f'<h1>{rico(texto, T["acento"])}</h1>'
+
+    # El personaje va al lado contrario del texto y NUNCA en la esquina inferior
+    # derecha: ahí YouTube pinta la duración encima.
+    if vertical:
+        pos_cara = "left:50%;transform:translateX(-50%);bottom:520px"
+        tam_cara = 420                     # 39 % del ancho
+        pad = "300px 76px 980px"
+        justify = "flex-start"
+    else:
+        pos_cara = "right:56px;top:50%;transform:translateY(-50%)"
+        tam_cara = 360                     # 50 % del alto, 28 % del ancho
+        # 128px abajo: la firma va anclada a 38px del borde y NO está en el
+        # flujo de #c, así que sin ese hueco el titular se le monta encima.
+        pad = "72px 452px 128px 92px"      # el hueco de la derecha es para la cara
+        justify = "center"
+
+    return (PLANTILLA
+            .replace("__LANG__", idioma)
+            .replace("__FONDO__", T["fondo"]).replace("__TINTA__", T["tinta"])
+            .replace("__REJA__", T["reja"]).replace("__ACENTO__", T["acento"])
+            .replace("__W__", str(w)).replace("__H__", str(h))
+            .replace("__REJILLA__", "72" if vertical else "80")
+            .replace("__MARCO__", "40" if vertical else "30")
+            .replace("__PAD__", pad).replace("__JUSTIFY__", justify)
+            .replace("__TAM__", str(tam_titular(texto, w)))
+            .replace("__TAMCIF__", str(tam_cifra(cifra or "", w)))
+            .replace("__ANCHOTIT__", "100%" if vertical else "780px")
+            .replace("__POSCARA__", pos_cara).replace("__TAMCARA__", str(tam_cara))
+            .replace("__PADLAT__", "76" if vertical else "92")
+            .replace("__TOPNUM__", "150" if vertical else "56")
+            .replace("__TAMFIRMA__", "26" if vertical else "22")
+            .replace("__CUERPO__", cuerpo)
+            .replace("__CARA__", cara(expresion))
+            .replace("__MARCA__", marca).replace("__N__", numero)), (w, h), ratio
+
+
+def generar(guion_path, salida, texto=None, cifra=None, sin_cifra=False,
+            variantes=False, expresion="duda"):
+    g = json.loads(Path(guion_path).read_text(encoding="utf-8"))
+    formato = g.get("formato", "largo")
+    idioma = g.get("idioma", "es")
+    marca = MARCAS.get(idioma, MARCAS["es"])
+    numero = re.sub(r"^MD[HS]-", NUMERO.get(idioma, NUMERO["es"]), g["id"])
+
+    texto = texto or g["escenas"][0].get("titulo") or g["escenas"][0].get("texto") \
+        or g["titulo_trabajo"]
+    texto = acortar(texto, 4)
     if not sin_cifra and cifra is None:
         cifra = cifra_mas_fuerte(g)
 
-    idioma = g.get("idioma", "es")
-    marca = MARCAS.get(idioma, MARCAS["es"])
-    numero = g["id"].replace("MDH-", NUMERO.get(idioma, NUMERO["es"]))
+    # El tema base rota con el número de episodio: el canal se ve coherente y
+    # cada vídeo, distinto. Determinista — mismo guion, mismo tema, siempre.
+    n = int(re.sub(r"\D", "", g["id"]) or 0)
+    base = ORDEN_TEMAS[n % len(ORDEN_TEMAS)]
+    otro = ORDEN_TEMAS[(n + 2) % len(ORDEN_TEMAS)]
 
-    if cifra:
-        html = (HTML_CIFRA.replace("__CIF__", rico(cifra))
-                           .replace("__T__", rico(texto))
-                           .replace("__N__", numero)
-                           .replace("__MARCA__", marca)
-                           .replace("__TAMCIF__", str(tamano_cifra(cifra)))
-                           .replace("__TAM__", str(tamano_apoyo(texto))))
-    else:
-        pie = pie or primera.get("subtitulo") or g.get("tesis", "")
-        if len(pie) > 96:
-            pie = pie[:93].rsplit(" ", 1)[0] + "…"
-        html = (HTML_TEXTO.replace("__T__", rico(texto))
-                          .replace("__P__", rico(pie))
-                          .replace("__N__", numero)
-                          .replace("__MARCA__", marca)
-                          .replace("__TAM__", str(tamano(texto))))
+    # Tres variantes que cambian UN elemento cada una. Si cambian dos y el CTR
+    # se mueve, no se sabe cuál fue.
+    planes = [("a", base, "cifra" if cifra else "texto")]
+    if variantes:
+        planes += [("b", otro, "cifra" if cifra else "texto"),   # solo cambia el tema
+                   ("c", base, "texto")]                          # solo cambia el diseño
 
-    # Absoluta: Path.as_uri() (usado más abajo para abrir el HTML en el
-    # navegador) exige sí o sí una ruta absoluta, si no falla con ValueError.
     salida = Path(salida).resolve()
-    tmp = salida.with_suffix(".html")
-    tmp.parent.mkdir(parents=True, exist_ok=True)
-    tmp.write_text(html, encoding="utf-8")
-
+    salida.parent.mkdir(parents=True, exist_ok=True)
+    hechas = []
     with sync_playwright() as p:
         nav = p.chromium.launch(args=["--force-color-profile=srgb", "--hide-scrollbars"])
-        pag = nav.new_page(viewport={"width": 1280, "height": 720})
-        pag.goto(tmp.as_uri())
-        pag.screenshot(path=str(salida))
+        for sufijo, tema, layout in planes:
+            html, (w, h), ratio = construir(texto, cifra, tema, formato, marca,
+                                            numero, idioma, expresion, layout)
+            destino = salida if len(planes) == 1 else \
+                salida.with_name(f"{salida.stem}_{sufijo}{salida.suffix}")
+            tmp = destino.with_suffix(".html")
+            tmp.write_text(html, encoding="utf-8")
+            pag = nav.new_page(viewport={"width": w, "height": h})
+            pag.goto(tmp.as_uri())
+            # Ajuste automático: se encoge el titular hasta que el bloque cabe.
+            # Antes esto era un error y paraba la producción, lo cual castigaba
+            # a quien escribía un título de cinco palabras en vez de resolverlo.
+            # Un titular que desborda no se lee, pero encogerlo un 8 % sí.
+            # Ajuste automático: se encoge el titular hasta que el bloque cabe.
+            # Un titular que desborda no se lee, pero encogerlo un 6 % sí, y eso
+            # no debe costar una produccion entera.
+            px = pag.evaluate(AJUSTE_JS)
+            pag.screenshot(path=str(destino))
+            pag.close()
+            tmp.unlink(missing_ok=True)
+            print(f"Miniatura {destino.name}: tema {tema}, {layout}, "
+                  f"{palabras(texto)} palabras, titular {px}px, contraste {ratio:.1f}:1"
+                  + (f", cifra {limpiar(cifra)}" if cifra and layout == "cifra" else ""))
+            hechas.append(destino)
         nav.close()
-    tmp.unlink(missing_ok=True)
-    print(f"Miniatura: {salida}" + (f"  (cifra: {cifra})" if cifra else ""))
-    return salida
+    return hechas
 
 
 if __name__ == "__main__":
@@ -177,8 +333,11 @@ if __name__ == "__main__":
     ap.add_argument("guion")
     ap.add_argument("-o", "--salida", default="miniatura.png")
     ap.add_argument("--texto", default=None)
-    ap.add_argument("--pie", default=None)
     ap.add_argument("--cifra", default=None)
     ap.add_argument("--sin-cifra", action="store_true")
+    ap.add_argument("--variantes", action="store_true",
+                    help="genera _a, _b y _c para rotarlas y comparar CTR")
+    ap.add_argument("--expresion", default="duda",
+                    choices=["neutra", "duda", "entiende", "no", "rie", "piensa"])
     a = ap.parse_args()
-    generar(a.guion, a.salida, a.texto, a.pie, a.cifra, a.sin_cifra)
+    generar(a.guion, a.salida, a.texto, a.cifra, a.sin_cifra, a.variantes, a.expresion)

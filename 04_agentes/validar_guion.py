@@ -23,6 +23,41 @@ MAX_ESCENA = 20.0    # con la deriva lenta aguanta hasta aquí; más es narrativ
 MAX_IDEAL = 14.0
 MAX_SEGUIDAS = 2     # escenas consecutivas del mismo tipo
 
+# ---------------------------------------------------------------------------
+# Los dos formatos del canal.
+#
+# «largo» es el episodio semanal; «corto» es el Short diario, que es la puerta
+# de entrada del canal. Un Short no es un recorte del largo: es una pieza
+# entera, con su remate, que tiene que caber en la ventana que YouTube clasifica
+# automáticamente como Short (180 s) y —mucho más importante— en la paciencia
+# de alguien que está deslizando el dedo.
+#
+# 55 s no es el límite de YouTube, es el nuestro: por encima de eso el Short
+# deja de rematar y empieza a explicar.
+# ---------------------------------------------------------------------------
+LIMITES = {
+    "largo": {"min_s": 200, "max_s": 400, "min_escenas": 12, "max_escenas": 45},
+    "corto": {"min_s": 18,  "max_s": 55,  "min_escenas": 3,  "max_escenas": 8},
+}
+
+# Fórmulas prohibidas en las primeras 40 palabras. Ninguna es «mala escritura»:
+# todas son maneras de PROMETER el contenido en vez de darlo. Más del 55 % de
+# los espectadores se va en los primeros 30 segundos cuando la entrada es floja,
+# y este canal se juega ahí la mitad de todo.
+#
+# La lista se amplía. Lo que no se toca es el criterio: si la frase se puede
+# borrar y el vídeo sigue entendiéndose, es preámbulo.
+APERTURAS_PROHIBIDAS = [
+    r"\ben este v[ií]deo\b", r"\bhoy (te |os |vamos a |voy a )?(explico|explicamos|cuento|vemos)\b",
+    r"\bvamos a ver\b", r"\bte voy a (contar|explicar|ense[nñ]ar)\b",
+    r"\bbienvenid[oa]s?\b", r"\bhola,? (a )?tod[oa]s\b", r"\bqu[ée] tal\b",
+    r"\btodo el mundo cree\b", r"\bseguro que (alguna vez|te ha pasado)\b",
+    r"\ben el v[ií]deo de hoy\b", r"\bantes de empezar\b",
+    r"\bin this video\b", r"\btoday (i'?ll|we'?ll|i am going to)\b",
+    r"\bwelcome (back )?to\b", r"\bbefore we (start|begin)\b",
+    r"\beveryone (thinks|believes)\b",
+]
+
 CAMPOS = {
     "titulo": ["titulo"], "dato": ["cifra", "pie"], "enunciado": ["texto"],
     "lista": ["puntos"], "cita": ["texto", "autor"],
@@ -59,6 +94,12 @@ def normal(s):
 def validar(path):
     g = json.loads(Path(path).read_text(encoding="utf-8"))
     errores, avisos = [], []
+    formato = g.get("formato", "largo")
+    if formato not in LIMITES:
+        errores.append(f"«formato» debe ser «largo» o «corto», no «{formato}».")
+        formato = "largo"
+    L = LIMITES[formato]
+    corto = formato == "corto"
 
     if g.get("bloqueos"):
         errores.append(f"El guion trae bloqueos sin resolver: {g['bloqueos']}")
@@ -79,9 +120,12 @@ def validar(path):
             if not e.get(campo):
                 errores.append(f"Escena {i} ({t}): falta el campo obligatorio «{campo}».")
 
-        if d > MAX_ESCENA:
-            errores.append(f"Escena {i}: dura {d:.1f}s. Máximo {MAX_ESCENA}s — pártela en dos.")
-        elif d > MAX_IDEAL:
+        # En un Short ninguna escena puede pasar de 12 s: con seis escenas y
+        # 55 s de techo, una de 20 s se come el vídeo entero.
+        tope = 12.0 if corto else MAX_ESCENA
+        if d > tope:
+            errores.append(f"Escena {i}: dura {d:.1f}s. Máximo {tope}s — pártela en dos.")
+        elif not corto and d > MAX_IDEAL:
             avisos.append(f"Escena {i}: {d:.1f}s. Por encima de {MAX_IDEAL}s la pantalla se queda quieta.")
 
         pantalla = texto_pantalla(e)
@@ -155,18 +199,61 @@ def validar(path):
             avisos.append(f"Escena {i}: {racha} escenas «{t}» seguidas. Rompe el ritmo visual.")
         anterior = t
 
+    # ---------------------------------------------------------------------
+    # EL GANCHO. Los primeros quince segundos.
+    #
+    # Regla del canal: el vídeo abre con LA COSA, no con la promesa de la cosa.
+    # Un chiste, una escena concreta, o una pregunta que el espectador conteste
+    # en su cabeza antes de que acabe la frase. Nunca «en este vídeo vamos a».
+    # ---------------------------------------------------------------------
+    if escenas:
+        arranque = " ".join((escenas[0].get("narracion") or "").split()[:40]).lower()
+        for patron in APERTURAS_PROHIBIDAS:
+            if re.search(patron, arranque):
+                errores.append(
+                    f"Escena 1: el vídeo abre prometiendo contenido en vez de darlo "
+                    f"(«{re.search(patron, arranque).group(0)}»). Abre con el chiste, "
+                    f"con una escena concreta o con una pregunta.")
+                break
+        # Un rótulo de título por delante es el mismo preámbulo, en imagen.
+        if corto and escenas[0].get("tipo") == "titulo":
+            errores.append("Escena 1: un Short no empieza con un rótulo de título. "
+                           "Los tres primeros segundos deciden si te deslizan.")
+        if not corto and escenas[0].get("tipo") == "titulo" and dur(escenas[0]) > 8:
+            avisos.append(f"Escena 1: {dur(escenas[0]):.1f}s de rótulo antes de empezar. "
+                          f"Por encima de 8s es una portada, no un gancho.")
+
     # estructura
-    if tipos and tipos[0] != "titulo":
-        avisos.append("La primera escena no es de tipo «titulo».")
     if tipos and tipos[-1] != "cierre":
         errores.append("La última escena debe ser de tipo «cierre».")
 
-    # duración total
+    # ---------------------------------------------------------------------
+    # Reglas propias del Short
+    # ---------------------------------------------------------------------
+    if corto:
+        if not g.get("serie"):
+            avisos.append("El Short no declara «serie». Las series con nombre son lo que "
+                          "hace que alguien vuelva; la campanita ya no basta.")
+        if not any(e.get("personaje") for e in escenas):
+            avisos.append("Ninguna escena usa el personaje. En vertical es lo único que "
+                          "reacciona, y la reacción es la mitad del remate.")
+        # El remate: la última escena tiene que decir algo, no solo rotular.
+        ultima = escenas[-1] if escenas else {}
+        if len((ultima.get("narracion") or "").split()) < 6:
+            errores.append("El Short no remata: la última escena apenas tiene narración. "
+                           "Un Short sin remate es un recorte.")
+
+    # duración total y número de escenas
     m, s = divmod(total, 60)
-    if total < 240:
-        avisos.append(f"El vídeo dura {int(m)}m{int(s)}s: corto para el formato (mínimo 4 min).")
-    if total > 540:
-        errores.append(f"El vídeo dura {int(m)}m{int(s)}s: pasa de los 9 minutos. Recorta.")
+    if not L["min_escenas"] <= len(escenas) <= L["max_escenas"]:
+        errores.append(f"{len(escenas)} escenas para formato «{formato}»: "
+                       f"el rango es {L['min_escenas']}–{L['max_escenas']}.")
+    if total < L["min_s"]:
+        avisos.append(f"Dura {int(m)}m{s:04.1f}s: corto para el formato «{formato}» "
+                      f"(mínimo {L['min_s']}s).")
+    if total > L["max_s"]:
+        errores.append(f"Dura {int(m)}m{s:04.1f}s: pasa del máximo del formato "
+                       f"«{formato}» ({L['max_s']}s). Recorta.")
 
     # densidad de humor: el chistólogo debe haber dejado sus notas
     if not g.get("notas_humor"):
@@ -174,12 +261,14 @@ def validar(path):
 
     reparto = Counter(tipos)
     dominante, n_dom = reparto.most_common(1)[0]
-    if n_dom / len(tipos) > 0.45:
+    # En un Short de seis escenas, cuatro «enunciado» no son monotonía: son el
+    # formato. La regla de variedad visual es del episodio largo.
+    if not corto and n_dom / len(tipos) > 0.45:
         avisos.append(f"El {n_dom*100//len(tipos)}% de las escenas son «{dominante}». "
                       f"Demasiada monotonía visual.")
 
     print(f"\n{path}")
-    print(f"  {len(escenas)} escenas · {int(m)}m {s:04.1f}s · reparto {dict(reparto)}")
+    print(f"  [{formato}] {len(escenas)} escenas · {int(m)}m {s:04.1f}s · reparto {dict(reparto)}")
     fuentes = sorted({e["fuente"] for e in escenas if e.get("fuente")})
     print(f"  fuentes citadas: {', '.join(fuentes) or 'ninguna'}")
     if avisos:

@@ -12,13 +12,26 @@
  "properties": {
   "id": {
    "type": "string",
-   "pattern": "^MDH-[0-9]{3}$"
+   "pattern": "^MD[HS]-[0-9]{3}$",
+   "description": "MDH-### para episodios largos, MDS-### para Shorts. Numeraciones independientes."
   },
   "idioma": {
    "enum": [
     "es",
     "en"
    ]
+  },
+  "formato": {
+   "enum": [
+    "largo",
+    "corto"
+   ],
+   "default": "largo",
+   "description": "«largo»: episodio semanal 1920x1080, 12-45 escenas, 200-400 s. «corto»: Short diario 1080x1920, 3-8 escenas, 18-55 s. El Short no es un recorte del largo: es una pieza entera con su propio remate."
+  },
+  "serie": {
+   "type": "string",
+   "description": "Nombre de la serie a la que pertenece. publicar.py lo usa para meter el vídeo en su lista de reproducción. Series vivas: «Desmonta el chiste», «El experimento», «Mecanismos», «Diagnósticos»."
   },
   "titulo_trabajo": {
    "type": "string"
@@ -36,8 +49,9 @@
   },
   "duracion_objetivo_s": {
    "type": "integer",
-   "minimum": 240,
-   "maximum": 540
+   "minimum": 18,
+   "maximum": 540,
+   "description": "Orientativo. El límite real lo impone validar_guion.py según «formato»."
   },
   "bloqueos": {
    "type": "array",
@@ -54,7 +68,7 @@
   },
   "escenas": {
    "type": "array",
-   "minItems": 12,
+   "minItems": 3,
    "items": {
     "type": "object",
     "required": [
@@ -85,7 +99,8 @@
      },
      "pausa_despues_s": {
       "type": "number",
-      "default": 0.45
+      "default": 0.45,
+      "description": "Silencio después de la narración. En un remate, la pausa ES el chiste: 1,2-1,5 s entre el planteamiento y el remate."
      },
      "duracion_s": {
       "type": "number",
@@ -197,10 +212,30 @@
         }
        }
       }
+     },
+     "personaje": {
+      "enum": [
+       "neutra",
+       "duda",
+       "entiende",
+       "no",
+       "rie",
+       "piensa"
+      ],
+      "description": "Expresión del Engranaje, el personaje del canal (02_marca/personaje.svg). Si falta, no aparece. Entra el ÚLTIMO del escalonado: primero se lee la escena y después él reacciona. Coste de render cero — no se anima en el tramo central."
+     },
+     "voz": {
+      "enum": [
+       "narrador",
+       "esceptico"
+      ],
+      "default": "narrador",
+      "description": "Quién dice esta escena. «esceptico» es la voz que interrumpe con la objeción que el espectador está pensando: corta, menos de 12 palabras, y siempre antes de que el narrador la resuelva."
      }
     }
-   }
+   },
+   "description": "12-45 escenas en formato largo, 3-8 en corto. Lo comprueba validar_guion.py, que es quien conoce los límites de cada formato."
   }
  },
- "$comment": "Resaltado en cualquier campo de texto: *ámbar* para el mecanismo, _cian_ para los datos. Un solo ámbar por escena."
+ "$comment": "Resaltado en cualquier campo de texto: *ámbar* para el mecanismo, _cian_ para los datos. Un solo ámbar por escena. El audio tiene que ser autosuficiente: lo que está en pantalla y no se dice, quien escucha sin mirar no lo recibe."
 }

@@ -11,7 +11,7 @@
     --W:1920px; --H:1080px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html,body{width:1920px;height:1080px;overflow:hidden;background:var(--fondo)}
+  html,body{width:var(--W);height:var(--H);overflow:hidden;background:var(--fondo)}
   body{
     font-family:"Archivo Black","Inter","DejaVu Sans",sans-serif;
     color:var(--tinta);
@@ -31,6 +31,11 @@
   #vineta{
     position:absolute;inset:0;
     background:radial-gradient(ellipse at 50% 45%,transparent 35%,rgba(0,0,0,.55) 100%);
+  }
+  /* En vertical la elipse de la viñeta se estira sobre 1920 px de alto y deja
+     los extremos casi negros. Se abre el centro y se baja la intensidad. */
+  html[data-fmt="v"] #vineta{
+    background:radial-gradient(ellipse 90% 55% at 50% 42%,transparent 55%,rgba(0,0,0,.5) 100%);
   }
   #marco{
     position:absolute;inset:56px;border:1px solid rgba(242,244,248,.10);
@@ -126,10 +131,71 @@
     font-family:"JetBrains Mono","DejaVu Sans Mono",monospace;
   }
 
+
+  /* ================= FORMATO VERTICAL — Shorts 1080x1920 =================
+     No es el diseño horizontal reescalado: es otra escala tipográfica. En
+     horizontal el titular ocupa el 6 % del ancho; en vertical necesita el
+     11 % o no se lee en un móvil a un palmo de la cara.
+
+     Zonas seguras de YouTube Shorts, medidas sobre la interfaz real:
+       · arriba  ~150 px  (título del Short al desplegarse)
+       · abajo   ~400 px  (nombre de canal, descripción, sonido)
+       · derecha ~190 px  (me gusta, comentarios, compartir, remezclar)
+     Todo el contenido vive dentro de ese hueco. Lo comprueba validar_guion.py
+     midiendo el alto de la caja, no confiando en el ojo. */
+  html[data-fmt="v"]{--W:1080px; --H:1920px}
+  html[data-fmt="v"] #reticula{background-size:64px 64px}
+  html[data-fmt="v"] #marco{inset:44px}
+  /* El contenido NO se centra en el alto: se apoya en el tercio superior. En
+     un móvil el pulgar y la interfaz viven abajo, y el personaje ocupa la
+     banda inferior. Centrarlo dejaba un vacío arriba y otro abajo. */
+  html[data-fmt="v"] #escena{padding:300px 76px 700px;align-items:flex-start}
+  html[data-fmt="v"] .caja{max-width:100%}
+  /* Las tres variantes de composición de «enunciado» son horizontales: mueven
+     el bloque a izquierda o arriba dentro de un lienzo ancho. En vertical no
+     hay hueco lateral que aprovechar y el anclaje ya lo fija #escena, así que
+     se neutralizan: el Short siempre apoya arriba. */
+  html[data-fmt="v"] .caja.enun-1,
+  html[data-fmt="v"] .caja.enun-2{max-width:100%;margin-right:0;align-self:auto}
+  html[data-fmt="v"] h1{font-size:132px;line-height:1.0}
+  html[data-fmt="v"] h2{font-size:88px}
+  html[data-fmt="v"] .sub{font-size:44px;margin-top:30px}
+  html[data-fmt="v"] .enunciado{font-size:100px;line-height:1.14}
+  html[data-fmt="v"] .cifra{font-size:300px}
+  html[data-fmt="v"] .cifra-pie{font-size:52px}
+  html[data-fmt="v"] ul.lista li{font-size:72px;margin-bottom:56px;padding-left:112px}
+  html[data-fmt="v"] ul.lista li .n{width:72px;height:72px;font-size:32px}
+  html[data-fmt="v"] blockquote{font-size:70px}
+  html[data-fmt="v"] .autor{font-size:38px}
+  html[data-fmt="v"] .etiqueta{font-size:28px;margin-bottom:44px}
+  html[data-fmt="v"] .fig{max-height:900px}
+  /* la comparación se apila: dos paneles uno encima de otro, no lado a lado */
+  html[data-fmt="v"] .dos{grid-template-columns:1fr;grid-template-rows:auto 90px auto;gap:0}
+  html[data-fmt="v"] .panel{min-height:0;padding:44px 40px}
+  html[data-fmt="v"] .panel .tx{font-size:54px}
+  html[data-fmt="v"] .panel .et{font-size:28px}
+  html[data-fmt="v"] .vs{font-size:38px;line-height:90px}
+  html[data-fmt="v"] #firma{left:56px;bottom:auto;top:64px;font-size:24px}
+  html[data-fmt="v"] #ref{right:56px;bottom:auto;top:64px;font-size:24px}
+  html[data-fmt="v"] #engranaje{right:52px;bottom:470px}
+  html[data-fmt="v"] #personaje{right:auto;left:50%;transform:translateX(-50%);
+                                bottom:470px;width:300px;height:300px}
+
   /* motivo de marca: engranaje técnico en la esquina, fijo y discreto en
      TODAS las escenas — refuerza "mecánica" sin depender del contenido de
      cada guion y sin animarse (nada que capturar de más en render.py). */
   #engranaje{position:absolute;right:64px;bottom:132px;opacity:.15;pointer-events:none}
+  /* --- EL ENGRANAJE, el personaje. Ver 02_marca/personaje.svg ---------------
+     Solo aparece si la escena trae "personaje". Cuando aparece, se apaga el
+     engranaje decorativo de la esquina: dos engranajes en pantalla compiten y
+     ninguno significa nada. Entra con las demás unidades animables (clase .u),
+     así que su coste de captura es el de la entrada, que render.py ya graba.
+     NO se anima durante el tramo central: eso multiplicaría las capturas. */
+  #personaje{position:absolute;right:56px;bottom:118px;width:172px;height:172px;
+             pointer-events:none;display:none}
+  body.con-personaje #engranaje{display:none}
+  body.con-personaje #personaje{display:block}
+
 </style>
 </head>
 <body>
@@ -144,6 +210,105 @@
     <g id="dientes" stroke-width="9"></g>
   </g>
 </svg>
+<svg id="personaje" class="u mdh-cara ex-neutra" viewBox="20 20 172 160" xmlns="http://www.w3.org/2000/svg">
+  <!-- ================================================================
+       EL ENGRANAJE — el personaje de Mecánica del Humor.
+
+       Una cabeza dibujada como un plano de despiece: chapa, remaches,
+       dos lentes por ojos, dos bielas por cejas y una boca articulada.
+       No habla. Reacciona. Es el escéptico del canal.
+
+       Se usa en línea (inline) dentro de escena.html y miniatura.py, así
+       que no hay peticiones de red ni dependencias.
+
+       La expresión se cambia poniendo una clase en el propio <svg>:
+         ex-neutra · ex-duda · ex-entiende · ex-no · ex-rie · ex-piensa
+
+       Coste de render CERO: no se anima sola. Cambia en la entrada de
+       escena, que render.py ya captura.
+       ================================================================ -->
+  <style>
+    .mdh-cara{--am:#FFB020;--ci:#4CC9F0;--te:#8A97AE;--ti:#F2F4F8}
+    .mdh-cara .chapa{fill:none;stroke:var(--am);stroke-width:3.2}
+    .mdh-cara .fino {fill:none;stroke:var(--te);stroke-width:1.6;opacity:.75}
+    .mdh-cara .lente{fill:none;stroke:var(--ci);stroke-width:3}
+    .mdh-cara .pupila{fill:var(--ci)}
+    .mdh-cara .biela{fill:var(--ti);transform-box:fill-box;transform-origin:center}
+    .mdh-cara .boca {fill:none;stroke:var(--ti);stroke-width:4.4;stroke-linecap:round;display:none}
+    .mdh-cara .remache{fill:var(--te);opacity:.8}
+    .mdh-cara .diente{stroke:var(--am);stroke-width:4;opacity:.9}
+    .mdh-cara .eje{fill:none;stroke:var(--am);stroke-width:2.6;opacity:.9;
+                   transform-box:fill-box;transform-origin:center}
+
+    /* --- expresiones: qué boca se ve y cómo giran las bielas --- */
+    .ex-neutra   .b-recta   {display:block}
+    .ex-neutra   .ceja-i    {transform:rotate(0deg)}
+    .ex-neutra   .ceja-d    {transform:rotate(0deg)}
+
+    .ex-duda     .b-torcida {display:block}
+    .ex-duda     .ceja-i    {transform:translateY(-10px) rotate(-8deg)}
+    .ex-duda     .ceja-d    {transform:rotate(4deg)}
+
+    .ex-entiende .b-o       {display:block}
+    .ex-entiende .ceja-i    {transform:translateY(-9px)}
+    .ex-entiende .ceja-d    {transform:translateY(-9px)}
+
+    .ex-no       .b-plana   {display:block}
+    .ex-no       .ceja-i    {transform:translateY(6px)}
+    .ex-no       .ceja-d    {transform:translateY(6px)}
+
+    .ex-rie      .b-risa    {display:block}
+    .ex-rie      .ceja-i    {transform:rotate(-6deg) translateY(-6px)}
+    .ex-rie      .ceja-d    {transform:rotate(6deg) translateY(-6px)}
+
+    .ex-piensa   .b-torcida {display:block}
+    .ex-piensa   .ceja-i    {transform:translateY(-4px) rotate(-5deg)}
+    .ex-piensa   .ceja-d    {transform:translateY(2px) rotate(12deg)}
+    .ex-piensa   .eje       {transform:rotate(24deg)}
+  </style>
+
+  <!-- chapa: octógono achaflanado, como una pieza mecanizada -->
+  <path class="chapa" d="M62 26 h76 l24 24 v76 l-24 24 h-76 l-24 -24 v-76 z"/>
+  <path class="fino"  d="M70 36 h60 l18 18 v60 l-18 18 h-60 l-18 -18 v-60 z"/>
+
+  <!-- remaches de las cuatro esquinas -->
+  <circle class="remache" cx="62" cy="50"  r="3"/>
+  <circle class="remache" cx="138" cy="50"  r="3"/>
+  <circle class="remache" cx="62" cy="150" r="3"/>
+  <circle class="remache" cx="138" cy="150" r="3"/>
+
+  <!-- cejas: dos bielas. Son <rect> y no <line> a propósito: con fill-box, una
+       línea horizontal tiene caja de altura cero y el giro sale descentrado. -->
+  <rect class="biela ceja-i" x="58"  y="73.5" width="30" height="5" rx="2.5"/>
+  <rect class="biela ceja-d" x="112" y="73.5" width="30" height="5" rx="2.5"/>
+
+  <!-- ojos: dos lentes -->
+  <circle class="lente"  cx="74"  cy="98" r="13"/>
+  <circle class="pupila" cx="74"  cy="98" r="4.6"/>
+  <circle class="lente"  cx="126" cy="98" r="13"/>
+  <circle class="pupila" cx="126" cy="98" r="4.6"/>
+
+  <!-- bocas: solo una visible según la clase -->
+  <path class="boca b-recta"   d="M79 133 H121"/>
+  <path class="boca b-plana"   d="M84 134 H116"/>
+  <path class="boca b-torcida" d="M78 136 Q100 128 122 133"/>
+  <path class="boca b-o"       d="M100 133 m-11 0 a11 9 0 1 0 22 0 a11 9 0 1 0 -22 0"/>
+  <path class="boca b-risa"    d="M76 127 Q100 149 124 127"/>
+
+  <!-- engranaje de la sien: gira solo en «piensa» -->
+  <g class="eje">
+    <circle cx="166" cy="56" r="11"/>
+    <g class="diente">
+      <line x1="166" y1="40" x2="166" y2="47"/>
+      <line x1="166" y1="65" x2="166" y2="72"/>
+      <line x1="150" y1="56" x2="157" y2="56"/>
+      <line x1="175" y1="56" x2="182" y2="56"/>
+      <line x1="155" y1="45" x2="160" y2="50"/>
+      <line x1="172" y1="62" x2="177" y2="67"/>
+    </g>
+  </g>
+</svg>
+
 <div id="firma">Mecánica del Humor</div>
 <div id="ref" class="mono"></div>
 
@@ -184,7 +349,9 @@ const PLANTILLAS = {
     // La composición rota con el número de escena. Sin d.n (llamadas sueltas
     // desde una consola) cae en la variante centrada de siempre.
     const v = ((Number(d.n) || 0) % 3 + 3) % 3;
-    return `<div class="caja enun-${v}"><div class="u enunciado">${rico(d.texto)}</div></div>`;
+    return `<div class="caja enun-${v}">
+      ${d.etiqueta?`<div class="u etiqueta">${esc(d.etiqueta)}</div>`:""}
+      <div class="u enunciado">${rico(d.texto)}</div></div>`;
   },
   lista(d){
     const li = d.puntos.map((p,i)=>
@@ -245,6 +412,15 @@ const PLANTILLAS = {
 
 function cargar(d){
   DUR = d.duracion_s || 5;
+  // Formato: "corto" pinta 1080x1920. Lo fija render.py con el mismo dato que
+  // usa para el viewport, así no hay forma de que el tamaño de página y el de
+  // captura se desincronicen.
+  document.documentElement.dataset.fmt = (d.formato === "corto") ? "v" : "h";
+  // El personaje: si la escena no lo pide, no existe. Se pone la clase ANTES
+  // de recoger UNIDADES para que entre en el escalonado como una unidad más.
+  const cara = document.getElementById("personaje");
+  document.body.classList.toggle("con-personaje", !!d.personaje);
+  if (d.personaje) cara.setAttribute("class", "u mdh-cara ex-" + d.personaje);
   const f = PLANTILLAS[d.tipo] || PLANTILLAS.enunciado;
   document.getElementById("escena").innerHTML = f(d);
   document.getElementById("ref").textContent = d.ref || "";
@@ -252,7 +428,11 @@ function cargar(d){
   // / Humor Mechanics), así el mismo motor sirve para los dos canales.
   if (d.marca) document.getElementById("firma").textContent = d.marca;
   if (d.idioma) document.documentElement.lang = d.idioma;
-  UNIDADES = Array.from(document.querySelectorAll(".u"));
+  // El personaje va el ÚLTIMO del escalonado a propósito: primero se lee lo
+  // que dice la escena y después reacciona. Al revés, la reacción no significa
+  // nada porque llega antes que aquello a lo que reacciona.
+  UNIDADES = Array.from(document.querySelectorAll("#escena .u"));
+  if (d.personaje) UNIDADES.push(cara);
   pintar(0);
   return UNIDADES.length;
 }
