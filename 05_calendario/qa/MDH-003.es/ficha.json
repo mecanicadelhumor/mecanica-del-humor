@@ -1,0 +1,81 @@
+{
+  "id": "MDH-003.es",
+  "duracion_final_s": 322.1,
+  "tamano_mb": 23.2,
+  "audio": {
+    "lufs": -14.2,
+    "pico_dbtp": -1.32,
+    "rango_lu": 2.4
+  },
+  "silencio_inicial": {
+    "empieza_s": -0.17,
+    "acaba_s": 0.619,
+    "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
+  },
+  "arranque": {
+    "silencios_s": [
+      [
+        -0.085,
+        0.619
+      ]
+    ],
+    "fragmento_antes_de_la_narracion": false,
+    "duracion_fragmento_s": null,
+    "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente)."
+  },
+  "fragmentos": {
+    "instantes": [],
+    "cuantos": 0,
+    "_nota": "Cada entrada es un trozo de audio de menos de 0.45 s rodeado de silencio: casi seguro una sílaba suelta que el sintetizador ha metido al empezar una escena. «mmss» es el minuto exacto para ir a escucharlo. Debe estar vacío."
+  },
+  "subtitulos": {
+    "ass_existe": true,
+    "lineas_ass": 793,
+    "srt_existe": true,
+    "quemados": true,
+    "_nota": "«quemados» en false significa que el vídeo sale sin subtítulos en pantalla. Si ass_existe es true y lineas_ass es 0, el fallo está en voz.py: el sintetizador no devolvió marcas de tiempo por palabra (WordBoundary). Si lineas_ass es alto y aun así no se ven en los fotogramas, el fallo está en el quemado de montaje.py."
+  },
+  "musica": {
+    "archivo": "cama_03_haru_lofi_roa.mp3",
+    "sha256": "68fe871bcd427b465aa11f71d2f2fc889de234166af65fac305170c0f5bddd6b"
+  },
+  "guion": {
+    "titulo_trabajo": "«Todavía es pronto para reírse de eso»",
+    "idioma": "es",
+    "voz": "es-ES-AlvaroNeural",
+    "escenas": 30,
+    "duracion_narracion_s": 322.89,
+    "escenas_por_encima_de_14s": [
+      [
+        6,
+        14.2
+      ],
+      [
+        10,
+        14.8
+      ],
+      [
+        12,
+        14.3
+      ],
+      [
+        14,
+        14.6
+      ],
+      [
+        21,
+        15.7
+      ]
+    ],
+    "escena_mas_larga_s": 15.69
+  },
+  "fotogramas_s": [
+    4.71,
+    61.92,
+    133.87,
+    193.04,
+    254.27,
+    317.95
+  ],
+  "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
+}

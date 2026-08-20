@@ -61,6 +61,21 @@
       "musica": "cama_02_dusk_next_route.mp3",
       "subido_utc": "2026-08-19T03:42:51Z",
       "revisado": false
+    },
+    {
+      "id": "MDH-003.es",
+      "episodio": "MDH-003",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "«Todavía es pronto»: alguien midió cuánto hay que esperar exactamente",
+      "guion": "05_calendario/guiones/MDH-003.es.json",
+      "video_id": "dFOFzuzDn1o",
+      "url": "https://youtu.be/dFOFzuzDn1o",
+      "estado": "private",
+      "publicar_en": null,
+      "musica": "cama_03_haru_lofi_roa.mp3",
+      "subido_utc": "2026-08-20T08:04:11Z",
+      "revisado": false
     }
   ]
 }
