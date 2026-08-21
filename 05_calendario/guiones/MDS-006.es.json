@@ -1,0 +1,68 @@
+{
+  "id": "MDS-006",
+  "formato": "corto",
+  "serie": "Ríete primero, te explico después",
+  "idioma": "es",
+  "titulo_trabajo": "Por qué te ríes cuando no toca",
+  "tesis": "La risa no es una nota al contenido: es un mensaje que dice «no soy una amenaza», y por eso salta justo cuando lo eres.",
+  "pilares": [
+    "E",
+    "A"
+  ],
+  "pregunta_de_demanda": "por qué me río cuando no debo",
+  "notas_humor": [
+    "El chiste va en el segundo cero y es la propia pregunta del Short: la bronca en la que te entra la risa.",
+    "La explicación es el premio, no el peaje: nada de «hoy te explico».",
+    "Rebaja en la escena 3: la cifra grande seguida de la frase más sosa posible.",
+    "El cierre admite que no tenemos el estudio exacto. Es el momento más de marca del Short.",
+    "Corregido tras el verificador: «nadie lo ha medido» era una afirmación universal negativa sobre toda la literatura, que no podemos sostener. Acotado a nuestras fuentes. Y la hipótesis se marca como hipótesis en la escena 5, no solo en el cierre."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "narracion": "Me estaban echando la bronca en el trabajo y me entró la risa. No porque fuera gracioso.",
+      "texto": "Y encima se *nota*.",
+      "personaje": "rie",
+      "pausa_despues_s": 1.3
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Si te ha pasado, no eres mala persona. Es que te equivocas sobre qué es la risa.",
+      "texto": "No es un fallo de *carácter*.",
+      "personaje": "duda",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "dato",
+      "cifra": "10–20 %",
+      "pie": "de las frases que preceden a una risa tienen _algo_ de chiste. El resto, nada",
+      "narracion": "Alguien salió a apuntar de qué se reía la gente: entre una de cada diez y una de cada cinco risas seguía a algo gracioso.",
+      "fuente": "E02",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Y casi nunca parte una frase. Sale en las pausas, donde iría un punto.",
+      "texto": "La risa *puntúa* el habla.",
+      "fuente": "E02",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "La lectura más razonable, aunque nadie la haya medido, es que sea un mensaje: «no soy una amenaza».",
+      "texto": "Una lectura, no un *resultado*.",
+      "fuente": "A10",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.6
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla porque en nuestras fuentes no *está*",
+      "subtitulo": "Hay estudios de la risa social; de la nerviosa, en nuestro corpus no",
+      "narracion": "Y falla aquí: en nuestras fuentes no hay ni un estudio sobre la risa nerviosa. Es la mejor explicación, no la comprobada.",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

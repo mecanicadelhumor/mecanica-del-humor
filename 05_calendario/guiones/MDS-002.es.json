@@ -1,0 +1,68 @@
+{
+  "id": "MDS-002",
+  "formato": "corto",
+  "serie": "El experimento",
+  "idioma": "es",
+  "titulo_trabajo": "Por qué te ríes solo",
+  "tesis": "La risa no es una reacción al chiste: es una señal que necesita a otra persona delante.",
+  "pilares": [
+    "E"
+  ],
+  "pregunta_de_demanda": "por qué me río solo",
+  "notas_humor": [
+    "La risa va primero y es autobiográfica: reírse solo en el metro es la propia pregunta del Short, ejecutada.",
+    "Especificidad: no «un científico», sino un señor con una libreta en un centro comercial. Lo concreto tiene gracia; lo genérico no.",
+    "Rebaja en la escena 4: la frase más banal posible seguida de carcajada.",
+    "El personaje no aparece hasta después del remate de la escena 1."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "narracion": "Ayer me reí solo en el metro, mirando el móvil. Y levanté la vista muy despacio.",
+      "texto": "Nadie más se *reía*.",
+      "personaje": "rie",
+      "pausa_despues_s": 1.3
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Y resulta que eso es rarísimo. Lo sabemos porque en los noventa un señor salió a la calle con una libreta.",
+      "texto": "Un señor. Una *libreta*. Cero laboratorio.",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.4,
+      "fuente": "E02"
+    },
+    {
+      "tipo": "dato",
+      "cifra": "1.200",
+      "pie": "risas apuntadas en la acera, con la frase que venía _justo antes_",
+      "narracion": "Robert Provine anotó mil doscientas risas en aceras y centros comerciales, y qué se había dicho justo antes.",
+      "fuente": "E02",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Casi ninguna venía detrás de un chiste. Venían detrás de cosas como «nos vemos luego». Y la gente se reía igual.",
+      "texto": "Frases del tipo «nos vemos *luego*».",
+      "fuente": "E01",
+      "personaje": "duda",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "dato",
+      "cifra": "30 veces",
+      "pie": "más probable reírse _acompañado_ que a solas",
+      "narracion": "Y la risa aparece sobre todo con alguien delante: es unas treinta veces más probable acompañado que a solas.",
+      "fuente": "E01",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Reírte solo no te hace *raro*. Te hace poco frecuente",
+      "subtitulo": "Y falla: Provine contaba desde fuera, no medía cerebros",
+      "narracion": "Y falla: Provine contaba desde fuera, no medía cerebros. Reírte solo no te hace raro. Te hace poco frecuente.",
+      "personaje": "neutra",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

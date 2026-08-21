@@ -80,11 +80,38 @@ El paso de un modo a otro ya está escrito en `parrilla.json`. No hay que acorda
 | Día | Qué |
 |---|---|
 | **jue 20** | MDH-003 programado como estreno a las 18:00. Es el último vídeo del formato antiguo |
-| **jue 20, 22:00** | La planificación escribe los Shorts MDS-002 a MDS-005 y adapta el largo del sábado 29 |
+| **jue 20, 22:00** | ✅ **Hecho.** La planificación escribió MDS-002 a MDS-006 y adaptó MDH-004 al formato nuevo |
 | **vie 21 · sáb 22 · dom 23** | **Nada.** Tres días de pausa para cambiar de formato |
 
 Tres días sin publicar no cuestan nada con la audiencia que hay ahora, y evitan sacar dos
 vídeos más en el formato que ya sabemos que no funciona.
+
+---
+
+## La semana del 24 al 29, pieza a pieza
+
+**Todos los temas salen de `05_calendario/demanda.json`**, no de la bibliografía. Es el
+cambio de fondo del canal: la demanda elige la pregunta y la bibliografía decide si podemos
+responderla honestamente. Tres preguntas con demanda real se quedaron fuera por falta de
+fuente y están anotadas en `pendientes_de_fuente.md`.
+
+| Día | ID | Serie | La pregunta que responde | Fuentes |
+|---|---|---|---|---|
+| **lun 24** | MDS-001 | Desmonta el chiste | por qué nos reímos de un chiste | A01 |
+| **mar 25** | MDS-002 | El experimento | «por qué me río solo» | E01, E02 |
+| **mié 26** | MDS-003 | Esto no tiene gracia y esto sí | «por qué nos reímos cuando alguien se cae» | A01, A03 |
+| **jue 27** | MDS-004 | Diagnósticos | «qué dice de mí mi sentido del humor» | B01, B02 |
+| **vie 28** | MDS-005 | Desmonta el chiste | «por qué mis chistes no dan risa» | A01, A05, D01 |
+| **sáb 29** | MDH-004 | Mecanismos (largo, 5m02s) | «por qué nadie se ríe de mis chistes» | E01, E02, E04, D07, A10 |
+| **lun 31** | MDS-006 | Ríete primero, te explico después | «por qué me río cuando no debo» | E02, A10 |
+
+Cinco series distintas en seis Shorts. `MDS-006` estrena la quinta, que era la única sin
+estrenar, y con eso hay un dato de cada una antes de decidir cuál sobrevive.
+
+**Los seis siguen la misma regla de cierre:** todos terminan diciendo dónde falla lo que
+acaban de explicar. `MDS-006` es el caso extremo y el más de marca: termina admitiendo que
+no tenemos ni un estudio sobre la risa nerviosa y que lo anterior es la mejor explicación
+disponible, no la comprobada.
 
 ---
 
@@ -132,10 +159,23 @@ Eso se decide con la tabla delante, no por agotamiento.
 
 ## Material ya escrito, en reserva
 
-- **MDH-004** — adaptado al formato nuevo para el sábado 29.
-- **MDH-006, 007 y 008** — escritos y validados. Entran como largos de sábados siguientes
-  después de recortarlos a 4–6 minutos y rehacerles el gancho.
-- **MDH-005** — «Tu estilo de humor», que además da material para varios Shorts de la
-  serie «Diagnósticos».
+- **MDH-004** — ✅ adaptado al formato nuevo el 20/08 para el sábado 29. 30 escenas, 5m02s,
+  personaje en cuatro escenas, dos intervenciones del escéptico, «enunciado» al 43 %.
+- **MDH-005** — «Tu estilo de humor». Escrito y validado, pero **todavía en formato viejo**
+  (27 escenas, 62 % «enunciado», sin personaje ni escéptico, rótulo por delante). Está
+  programado para el **sábado 5 de septiembre**, así que hay que pasarlo por la misma
+  adaptación que MDH-004 antes de esa fecha. Da además material para la serie
+  «Diagnósticos».
+- **MDH-006, 007 y 008** — escritos y validados, mismo caso: 65 % de «enunciado», rótulo de
+  ocho segundos por delante y ningún personaje. Entran como largos de sábados siguientes
+  después de la adaptación.
+
+**Cómo se adapta un largo viejo** (el patrón está aplicado en MDH-004, cópialo de ahí):
+sacar el rótulo de la escena 1 y poner en su sitio una escena concreta con la primera risa
+antes del segundo quince; partir las escenas de más de catorce segundos; convertir
+«enunciado» en `comparacion`, `cita` y `diagrama` hasta bajar del 45 %; meter al personaje
+en tres o cuatro escenas, siempre reaccionando *después*; añadir una o dos intervenciones
+del escéptico de menos de doce palabras; y reescribir el título de publicación a la
+pregunta que la gente escribe.
 - **Los guiones ingleses** (`.en.json`) quedan archivados sin borrar, por si se reabre
   `@humormechanics`.

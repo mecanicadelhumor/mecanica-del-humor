@@ -1,0 +1,71 @@
+{
+  "id": "MDS-003",
+  "formato": "corto",
+  "serie": "Esto no tiene gracia y esto sí",
+  "idioma": "es",
+  "titulo_trabajo": "Por qué nos reímos cuando alguien se cae",
+  "tesis": "La misma caída hace gracia o no según si alguien ha salido herido de verdad; y la distancia ayuda o estorba según lo grave que sea.",
+  "pilares": [
+    "A"
+  ],
+  "pregunta_de_demanda": "por qué nos reímos cuando alguien se cae",
+  "notas_humor": [
+    "Se cuentan las dos versiones antes de explicar nada: el espectador nota la diferencia antes de que se la digan, y eso es lo que le retiene.",
+    "La segunda versión no es un chiste: es el mismo chiste al que se le ha quitado lo inofensivo. La incomodidad es el argumento.",
+    "El personaje pasa de reír a decir que no entre la escena 1 y la 2. Esa cara es media explicación.",
+    "Ningún chiste a costa de nadie real: el que se cae es un desconocido genérico y se levanta.",
+    "Corregido tras el verificador: A03 encuentra humor en las tragedias LEJANAS y en los percances CERCANOS. La versión anterior invertía la dirección del hallazgo sobre un resbalón, que es justo el caso en el que la cercanía ayuda."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "narracion": "Un tío resbala en la calle, se levanta de un salto y mira a ver si alguien lo ha visto.",
+      "texto": "Versión *uno*.",
+      "personaje": "rie",
+      "pausa_despues_s": 1.2
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Un tío resbala en la calle. Y no se levanta.",
+      "texto": "Versión *dos*.",
+      "personaje": "no",
+      "pausa_despues_s": 1.4
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "La misma caída, la misma acera",
+      "et_a": "Hace gracia",
+      "a": "Se rompe una norma y *no pasa nada*",
+      "et_b": "No hace ninguna",
+      "b": "Se rompe una norma y _pasa algo_",
+      "narracion": "Misma acera, misma caída, mismo tío. Lo único que cambia es si alguien ha salido herido de verdad.",
+      "fuente": "A01",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "cita",
+      "texto": "Lo cómico es lo *mecánico* incrustado sobre lo vivo",
+      "autor": "Henri Bergson · «La risa», 1900",
+      "narracion": "Bergson lo escribió en 1900, y es filosofía, no un experimento: nos reímos cuando alguien deja de moverse como persona.",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Y la distancia hace algo raro: una tragedia hace gracia cuando queda lejos, y un tropiezo, justo cuando queda cerca.",
+      "texto": "La *distancia* no funciona igual siempre.",
+      "fuente": "A03",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla en cuanto sube la *gravedad*",
+      "subtitulo": "La cercanía ayuda con el tropiezo y estorba con la desgracia",
+      "narracion": "Y falla en cuanto sube la gravedad: la misma acera con un hueso roto no tiene gracia desde ninguna distancia.",
+      "fuente": "A03",
+      "personaje": "duda",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

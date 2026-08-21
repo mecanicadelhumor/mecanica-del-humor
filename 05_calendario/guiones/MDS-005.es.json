@@ -1,0 +1,82 @@
+{
+  "id": "MDS-005",
+  "formato": "corto",
+  "serie": "Desmonta el chiste",
+  "idioma": "es",
+  "titulo_trabajo": "Por qué tus chistes no dan risa",
+  "tesis": "Una razón frecuente de que un chiste no funcione: la palabra que lo dispara llega antes de tiempo.",
+  "pilares": [
+    "A",
+    "L"
+  ],
+  "pregunta_de_demanda": "por qué mis chistes no dan risa",
+  "notas_humor": [
+    "El Short se abre con un chiste que NO funciona, a propósito. El silencio de después es el gancho: es la experiencia que el espectador ha venido a entender.",
+    "Demostrar en vez de contar: el mismo chiste se ejecuta bien dos escenas más tarde y ahí sí se ríe. La prueba es el propio vídeo.",
+    "Autoconciencia una sola vez, en la escena 2, y de tres palabras.",
+    "El personaje pone la cara del espectador un segundo antes de que el espectador la ponga.",
+    "Corregido tras el verificador: la «bisagra» no está en A01 (violación benigna: dos condiciones, no tres piezas). Se le atribuye a L01, que es de donde sale. Y el cierre ya dice dónde falla el mecanismo explicado, no solo un dato de otro tema."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "narracion": "Un chiste: el médico me dijo que dejara de respirar cuando le conté que me dolía al respirar.",
+      "texto": "Chiste número *uno*.",
+      "personaje": "neutra",
+      "pausa_despues_s": 1.4
+    },
+    {
+      "tipo": "titulo",
+      "titulo": "El mismo chiste. Otro *orden*",
+      "narracion": "¿No? Ya. A mí tampoco. El mismo chiste, con las mismas palabras en otro orden.",
+      "personaje": "no",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Fui al médico y le dije que me dolía al respirar. Me dijo que dejara de hacerlo.",
+      "texto": "Chiste número *dos*.",
+      "personaje": "rie",
+      "pausa_despues_s": 1.3
+    },
+    {
+      "tipo": "diagrama",
+      "titulo": "Las dos condiciones",
+      "pasos": [
+        {
+          "titulo": "La expectativa",
+          "pie": "un médico está para ayudarte"
+        },
+        {
+          "titulo": "La violación",
+          "pie": "te propone dejar de vivir"
+        },
+        {
+          "titulo": "Y es inofensiva",
+          "pie": "no le pasa nada a *nadie*"
+        }
+      ],
+      "narracion": "Dos condiciones: que rompa una norma, y que aun así no le pase nada a nadie.",
+      "fuente": "A01",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "La tercera pieza la nombra el oficio: el conector. En la primera iba delante, y si va delante ya lo has resuelto tú.",
+      "texto": "La bisagra tiene nombre: *conector*.",
+      "fuente": "L01",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.6
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla al revés de como *temes*",
+      "subtitulo": "Nadie ha medido mover la bisagra. Lo del chiste inapropiado, sí",
+      "narracion": "Y falla: nadie ha medido si mover la bisagra cambia la risa. Lo medido es otra cosa: el chiste malo no hunde; el inapropiado, sí.",
+      "fuente": "D01",
+      "personaje": "duda",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

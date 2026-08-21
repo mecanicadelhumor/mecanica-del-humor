@@ -1,17 +1,23 @@
 {
   "_nota": "Metadatos de publicación del canal español. Capítulos, fuentes y créditos de música los añade publicar.py debajo de esta descripción.",
-  "titulo": "Casi nadie se ríe de los chistes — y hay 1.200 grabaciones que lo prueban",
-  "descripcion": "Un neurocientífico salió a la calle con una libreta y anotó mil doscientos episodios de risa real en centros comerciales y aceras, junto con la frase exacta que venía justo antes de cada uno. Solo entre el 10 y el 20 % tenían algo remotamente parecido a un chiste. Este episodio explica qué es de verdad la risa (una señal social, no una nota a tu contenido), las dos observaciones que lo delatan, por qué tu oído distingue una risa fingida de una real incluso en veinticuatro sociedades distintas, y qué hacer en lugar de escribir remates. Termina con la advertencia que va en dirección contraria a lo que suele decirse.",
+  "titulo": "¿Por qué nadie se ríe de mis chistes? 1.200 risas anotadas en la calle",
+  "descripcion": "Si tus chistes no dan risa, puede que el problema no sean tus chistes. En los años noventa el neurocientífico Robert Provine se cansó del laboratorio, salió a la calle con una libreta y anotó unos mil doscientos episodios de risa espontánea junto con la frase exacta que venía justo antes. Solo entre el 10 y el 20 % tenían algo remotamente parecido a un chiste.\n\nEn este episodio: qué es de verdad la risa (una señal social, no una nota a tu contenido), las dos observaciones que lo delatan —quien habla se ríe más que quien escucha, y la risa cae donde iría un punto—, qué pasó cuando se pusieron grabaciones de risa real y fingida a oyentes de veinticuatro sociedades, y qué hacer en lugar de escribir remates.\n\nY termina donde termina siempre este canal: diciendo dónde falla. Provine observó, no experimentó, así que sabemos que la risa y la compañía van juntas, no cuál causa cuál.",
   "etiquetas": [
-    "humor",
-    "psicología",
+    "por qué nadie se ríe de mis chistes",
+    "por qué mis chistes no dan risa",
+    "por qué nos reímos",
     "risa",
     "robert provine",
-    "ciencia",
+    "psicología",
+    "ciencia del humor",
     "habilidades sociales",
-    "por qué nos reímos",
+    "sentido del humor",
+    "cómo ser gracioso",
     "comunicación",
-    "lenguaje corporal",
-    "carisma"
-  ]
+    "carisma",
+    "divulgación",
+    "psicología social",
+    "mecánica del humor"
+  ],
+  "primer_comentario": "Escúchate hoy y apunta de qué te ríes cuando no hay ningún chiste delante. ¿Qué se había dicho justo antes?"
 }

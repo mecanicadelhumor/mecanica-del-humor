@@ -1,0 +1,78 @@
+{
+  "id": "MDS-004",
+  "formato": "corto",
+  "serie": "Diagnósticos",
+  "idioma": "es",
+  "titulo_trabajo": "Los cuatro estilos de humor, y cuál te sale más caro",
+  "tesis": "Hay cuatro estilos de humor medidos, y dos de ellos se asocian con estar peor, no con caer peor.",
+  "pilares": [
+    "B"
+  ],
+  "pregunta_de_demanda": "qué dice de mí mi sentido del humor",
+  "notas_humor": [
+    "El gancho es humor autodestructivo ejecutado en directo: el Short empieza siendo el ejemplo del estilo que va a diagnosticar.",
+    "Regla de tres invertida en la lista: los dos primeros estilos suman, el tercero raspa y el cuarto es el del segundo cero.",
+    "El cierre desmonta el propio cuestionario. Es lo que separa esto de un horóscopo.",
+    "El personaje entra después del remate del gancho y no aparece en las seis escenas: una reacción constante deja de ser una reacción.",
+    "Corregido tras el verificador: B01 es un cuestionario autoinformado que correlaciona estilos con bienestar. No midió si la gente se aparta de ti. La versión anterior convertía esa correlación en una factura concreta, y encima en el título."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "narracion": "Cuando me dicen que soy gracioso, contesto que es lo único que tengo. Se ríen. Y no era un chiste.",
+      "texto": "«Es lo único que *tengo*».",
+      "personaje": "rie",
+      "pausa_despues_s": 1.3
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Eso tiene nombre y cuestionario: hay cuatro estilos de humor medidos, y no salen igual de baratos.",
+      "texto": "Cuatro estilos. *Dos precios*.",
+      "fuente": "B01",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Los cuatro estilos",
+      "puntos": [
+        "*Afiliativo*: reírse con el grupo",
+        "Automejorante: reírse de lo que te pasa",
+        "Agresivo: reírse a costa de alguien",
+        "Autodestructivo: reírse de ti para gustar"
+      ],
+      "narracion": "Afiliativo: reírse con la gente. Automejorante: de lo que te pasa. Agresivo: a costa de alguien. Autodestructivo: de ti, para gustar.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Los mismos cuatro, y con qué se asocian",
+      "et_a": "Se asocian a estar mejor",
+      "a": "Afiliativo y *automejorante*",
+      "et_b": "Se asocian a estar peor",
+      "b": "Agresivo y _autodestructivo_",
+      "narracion": "Los cuatro hacen reír. La diferencia está en con qué se asocia cada uno después.",
+      "fuente": "B01",
+      "personaje": "neutra",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Y ojo con lo que se midió: bienestar declarado en un cuestionario. No amigos, no gente apartándose. Bienestar.",
+      "texto": "Lo que se midió fue *bienestar*.",
+      "fuente": "B01",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.6
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla en cuanto te lo *crees*",
+      "subtitulo": "Hay quien dice que ese cuestionario mide más cosas que humor · Heintz y Ruch",
+      "narracion": "Y falla en cuanto te lo crees: hay quien dice que ese cuestionario mide más cosas que estilos de humor. No es un test.",
+      "fuente": "B02",
+      "personaje": "duda",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}
