@@ -34,9 +34,17 @@ Tres versiones en `02_marca/`:
 
 | Fichero | Cuándo |
 |---|---|
-| `avatar.png` | **el bueno.** Fondo ámbar, expresión de duda. Es el que más contrasta en un icono pequeño y el que mejor cuenta de qué va el canal |
-| `avatar_alt_neutra.png` | si la duda resulta demasiado escéptica |
+| `avatar.png` | **el bueno.** Fondo ámbar, media sonrisa |
 | `avatar_alt_oscuro.png` | fondo azul marino, por si alguna red recorta mal el ámbar |
+| `avatar_alt_claro.png` | fondo hueso, para fondos oscuros |
+
+> **Corregido el 21 de agosto.** La primera versión usaba la expresión «duda» y
+> salía descentrada. Silvestre tenía razón en las dos cosas: el `viewBox` no era
+> cuadrado —de ahí el desvío al recortar en círculo— y una boca curvada hacia
+> abajo, en un icono de treinta píxeles y sin contexto que la explique, no se lee
+> como escepticismo sino como tristeza. Un canal sobre humor no puede tener cara
+> de pena. Ahora el avatar lleva `ex-media`, una sonrisa contenida. «duda» se
+> queda para dentro de los vídeos, donde el guion la justifica.
 
 Son PNG de 1080×1080. Todas las redes los recortan en círculo y la cara está centrada
 con margen de sobra para eso.
@@ -138,6 +146,57 @@ decirlo claro:
 
 Si algún día te apetece participar de verdad porque el tema te interesa, adelante — pero
 como Silvestre, no como el canal, y sin que el sistema dependa de ello.
+
+---
+
+## 5. Nombres, descripciones y etiquetas de IA
+
+*Respuestas del 21 de agosto a lo que preguntaste. Copia y pega.*
+
+### La regla de fondo sobre las etiquetas de IA: **enciéndelas todas**
+
+No es una concesión, es la regla 7 de `REGLAS.md` aplicada. Este canal declara
+que usa IA porque es verdad, porque esconderlo es peor que decirlo, y porque las
+tres plataformas ya detectan contenido generado por su cuenta: una etiqueta puesta
+por ti dice «somos transparentes», una puesta por ellos dice «te hemos pillado».
+La de Instagram, además, **no penaliza el alcance**: Meta la trata como una
+herramienta de transparencia, no como un castigo.
+
+### Instagram
+
+| Campo | Qué poner |
+|---|---|
+| Nombre | `Mecánica del Humor` |
+| Presentación | `Por qué te ríes, explicado con investigación real.`<br>`Un hallazgo al día, con el estudio enlazado — y dónde falla.`<br>`Vídeos: youtube.com/@mecanicadelhumor` |
+| **Creador de IA** | **Actívalo.** Es voluntario, se pone en *Editar perfil*, y no perjudica el alcance |
+
+### Bluesky
+
+| Campo | Qué poner |
+|---|---|
+| Nombre para mostrar | `Mecánica del Humor` |
+| Descripción | `Por qué funciona un chiste, con la investigación delante.`<br>`Un hallazgo al día con su estudio enlazado, y siempre dónde falla.`<br>`Vídeos → youtube.com/@mecanicadelhumor` |
+| **Etiqueta de automatización** | **Actívala.** Las publicaciones las manda un script: en Bluesky declararlo es lo normal y evita que te reporten como bot de spam |
+
+### TikTok
+
+| Campo | Qué poner |
+|---|---|
+| Nombre | `Mecánica del Humor` — **cámbialo hoy**, aunque solo se pueda una vez cada siete días. Cuanto antes empiece a correr el plazo, mejor, y `mecanicadelhumor` en minúsculas y sin espacios parece un nombre de usuario, no una marca |
+| Nombre de usuario | `mecanicadelhumor` — **se queda como está.** Es el que va en las URL |
+| Bio (80 car.) | `Por qué te ríes, con la ciencia delante. Y dónde deja de funcionar.` (66) |
+
+**La fecha de nacimiento de TikTok: déjala.** Cambiarla exige mandarles el
+documento de identidad, y ni la cuenta está automatizada ni hay ningún riesgo
+inmediato que lo justifique. Tu incomodidad con eso es razonable y el coste de no
+hacerlo, ahora mismo, es cero. Si algún día hace falta, se replantea.
+
+### YouTube
+
+| Campo | Qué poner |
+|---|---|
+| Banner | `02_marca/banner_youtube.png`. 2048×1152, con todo lo importante dentro de la zona segura de 1235×338 que es lo único que se ve siempre |
+| Foto | `02_marca/avatar.png` (ya puesta) |
 
 ---
 

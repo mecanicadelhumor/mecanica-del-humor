@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 20 172 160" class="mdh-cara ex-neutra" role="img" aria-label="Mecánica del Humor">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 10 180 180" class="mdh-cara ex-neutra" role="img" aria-label="Mecánica del Humor">
   <!-- ================================================================
        EL ENGRANAJE — el personaje de Mecánica del Humor.
 
@@ -10,7 +10,14 @@
        que no hay peticiones de red ni dependencias.
 
        La expresión se cambia poniendo una clase en el propio <svg>:
-         ex-neutra · ex-duda · ex-entiende · ex-no · ex-rie · ex-piensa
+         ex-media · ex-neutra · ex-duda · ex-entiende · ex-no · ex-rie · ex-piensa
+
+       «media» es la sonrisa contenida, y es la que va en el avatar de marca.
+       La primera versión del avatar usaba «duda», y Silvestre tenía razón: en
+       un icono de treinta píxeles una boca curvada hacia abajo no se lee como
+       escepticismo, se lee como tristeza. Un canal sobre humor no puede tener
+       cara de pena. «duda» se queda para dentro de los vídeos, donde hay
+       contexto que la explica.
 
        Coste de render CERO: no se anima sola. Cambia en la entrada de
        escena, que render.py ya captura.
@@ -29,6 +36,10 @@
                    transform-box:fill-box;transform-origin:center}
 
     /* --- expresiones: qué boca se ve y cómo giran las bielas --- */
+    .ex-media    .b-media   {display:block}
+    .ex-media    .ceja-i    {transform:translateY(-4px)}
+    .ex-media    .ceja-d    {transform:translateY(-4px)}
+
     .ex-neutra   .b-recta   {display:block}
     .ex-neutra   .ceja-i    {transform:rotate(0deg)}
     .ex-neutra   .ceja-d    {transform:rotate(0deg)}
@@ -82,6 +93,7 @@
   <path class="boca b-torcida" d="M78 136 Q100 128 122 133"/>
   <path class="boca b-o"       d="M100 133 m-11 0 a11 9 0 1 0 22 0 a11 9 0 1 0 -22 0"/>
   <path class="boca b-risa"    d="M76 127 Q100 149 124 127"/>
+  <path class="boca b-media"   d="M81 129 Q100 142 119 129"/>
 
   <!-- engranaje de la sien: gira solo en «piensa» -->
   <g class="eje">

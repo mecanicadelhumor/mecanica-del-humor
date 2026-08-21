@@ -22,6 +22,30 @@ mejor de como lo encontró.
   está bien; enseñar **cómo usarlo con alguien que no lo sabe** no.
 - Autoayuda sin respaldo. Si no hay estudio, no hay vídeo.
 
+### El humor y la atracción: la regla que faltaba
+
+*Añadida el 21 de agosto, después de que la primera medición de demanda colara
+como candidata «a las mujeres les atraen los hombres graciosos».*
+
+La investigación sobre humor y selección de pareja existe y es seria. El problema
+no es el tema: es que contada de cierta manera se convierte, palabra por palabra,
+en contenido de manosfera. Así que:
+
+- **En Shorts, el tema está prohibido.** Cuarenta segundos no dan para el matiz
+  que esta materia necesita, y sin el matiz lo que queda es un consejo de ligue
+  con una cita académica de coartada.
+- **En episodio largo se puede, con tres condiciones.** Sujeto neutro («a la
+  gente», «quien escucha»), no «a las mujeres»; la asimetría entre producir y
+  apreciar humor se cuenta **como hallazgo discutido**, con su tamaño de efecto y
+  sus réplicas fallidas, nunca como instrucción; y el vídeo no puede terminar
+  enseñando a usar el humor con alguien que no sabe que lo están usando.
+- **Nunca se enseña el humor como táctica de seducción.** Está ya en la regla de
+  arriba —enseñar *por qué* funciona algo, sí; enseñar *cómo usarlo con alguien
+  que no lo sabe*, no— y este es su caso más frecuente.
+
+Cualquier candidato que dé por supuesto lo que una mujer o un hombre quiere,
+por el hecho de serlo, **se rechaza en la fase de demanda**, no en la de guion.
+
 **Cuando el tema sea incómodo** (humor negro, chistes sobre tragedias, el ridículo, la
 vergüenza), se trata como lo que es: un objeto de estudio. Se explica el mecanismo, se dice
 dónde falla y no se hace el chiste a costa de nadie real.
@@ -87,7 +111,18 @@ nombre, nunca con su cara, nunca con su imagen personal.
 - La música lleva su atribución literal. `publicar.py` ya bloquea la publicación si una
   pista no está en `creditos.json`; eso se queda.
 
-## 10. Cómo se cambian las cosas
+## 10. Un fichero, un dueño
+
+Dos agentes no escriben nunca el mismo fichero. La tabla de propiedad está en
+`00_estrategia/PROPIEDAD_DE_FICHEROS.md` y **es de obligado cumplimiento**: el 21
+de agosto la revisión diaria borró 188 líneas de bitácora de la planificación y
+revirtió un guion entero por no tenerla.
+
+Lo esencial: la bitácora va en `05_calendario/bitacora/<fecha>-<tarea>.md`, un
+fichero nuevo por ejecución. `MEJORAS.md` queda congelado como historia. Quien no
+es dueño de un guion no lo edita: escribe una nota en `05_calendario/revisiones/`.
+
+## 11. Cómo se cambian las cosas
 
 1. **Un cambio por producción.** Si entran dos y el resultado empeora, no se sabe cuál fue.
 2. **Mirar antes de publicar.** Cualquier cambio en `escena.html`, `render.py`, `vista.py`
@@ -101,7 +136,7 @@ nombre, nunca con su cara, nunca con su imagen personal.
    tocan sin permiso explícito de Silvestre en la conversación.
 8. **`MEJORAS.md` se añade al final, nunca se reescribe.**
 
-## 11. El criterio editorial que no se negocia
+## 12. El criterio editorial que no se negocia
 
 Cada vídeo termina explicando **dónde falla** lo que acaba de explicar: los estudios
 pequeños, las correlaciones que no son causas, las técnicas que se vuelven en contra.
@@ -114,7 +149,7 @@ nombre.
 **Esto vale también para los Shorts.** Un Short de cuarenta segundos también puede terminar
 con «y esto falla cuando…».
 
-## 12. Y una que es fácil de olvidar
+## 13. Y una que es fácil de olvidar
 
 **El canal va de humor. Tiene que hacer gracia.**
 

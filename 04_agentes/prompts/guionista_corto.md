@@ -98,6 +98,15 @@ se cambia el Short, no se cambia el dato.
 **Nada a costa de nadie.** Ningún chiste que necesite una víctima colectiva. Ver
 `00_estrategia/REGLAS.md`, regla 1.
 
+**Humor y atracción: prohibido en Short.** Sin excepciones. La investigación
+existe y es seria, pero cuarenta segundos no dan para el matiz que necesita, y sin
+el matiz lo que queda es un consejo de ligue con una cita académica de coartada.
+Si un candidato de `demanda.json` propone algo como «a las mujeres les atraen los
+hombres graciosos», se rechaza — y se rechaza también reformulado en neutro,
+porque el problema en formato corto no es el sujeto, es que no cabe la evidencia.
+Ese tema solo puede vivir en un episodio largo y con las tres condiciones de la
+regla correspondiente de `REGLAS.md`.
+
 ## De dónde salen los temas
 
 De `05_calendario/demanda.json` — las preguntas que la gente escribe de verdad—, cruzadas

@@ -1,6 +1,6 @@
 # Plan de cambios — Mecánica del Humor
 
-**Versión 2 · 20 de agosto de 2026, tarde** — con las decisiones tomadas y la fase 1 y
+**Versión 3 · 21 de agosto de 2026** — con las decisiones tomadas y la fase 1 y
 media de la fase 2 ya escritas en el repositorio.
 
 Este documento es **ejecutable**. Cada cambio trae qué archivos toca, qué tiene que ser
@@ -52,6 +52,43 @@ cierto para darlo por hecho, y qué no hay que hacer. El razonamiento está en
 
 Todo compila, todo valida contra el esquema, y los guiones largos que ya existían siguen
 pasando el validador sin errores nuevos.
+
+---
+
+## Hoja de ruta: en qué orden, en qué fechas, y si se aplican todos
+
+**¿Se aplican los catorce? No necesariamente, y es a propósito.** Esto no es una
+lista de tareas: es una **cola ordenada por la escalera de métricas de C14**. Cada
+cambio ataca un peldaño concreto, y un cambio que arregla el peldaño 3 no sirve de
+nada mientras el problema esté en el 2. Los tres últimos de la tabla están
+condicionados a que el canal llegue a tener el problema que resuelven.
+
+| # | Cambio | Peldaño que ataca | Estado | Cuándo |
+|---|---|---|---|---|
+| **C1** | Un canal + doblaje automático | 1 · distribución | ✅ hecho | 20 ago |
+| **C8** | Cinco Shorts + un largo | 1 | ✅ hecho | 20 ago |
+| **C2** | Shorts como puerta de entrada | 1 | ✅ código hecho | **en la calle el 24 ago** |
+| **C4** | El personaje | 2 · empaquetado | ✅ hecho | 20 ago |
+| **C5** | Miniaturas con contraste medido | 2 | ✅ hecho | 20 ago |
+| **C9** | Los primeros quince segundos | 3 · gancho | ✅ validador y prompt | 20 ago |
+| **C14** | La escalera de métricas | — | ✅ hecho | primera lectura **24 ago** |
+| **C12** | Series y listas automáticas | 5 · retorno | ✅ código hecho | primera lista **24 ago** |
+| **C11** | La pregunta como primer comentario | 5 | ✅ código hecho | actúa cuando haya público |
+| **C3** | Temas por demanda | 1 y 2 | ⚙️ **completado el 21 ago** con `demanda.yml` | primera medición real **27 ago** |
+| **C6** | Movimiento en pantalla | 4 · ritmo | ⏳ **el pendiente más importante** | del 25 ago al 5 sep, un cambio por vez |
+| **C7** | Dos voces | 4 | ⏳ pendiente | escalón 1 (`edge-tts`) la semana del 1 sep; escalón 2 (Gemini TTS) cuando el 1 esté probado |
+| **C13** | Fuera de YouTube | 1 | ⚙️ parcial | Bluesky **ya**; TikTok e Instagram **solo si se pasa el peldaño 1** |
+| **C10** | Una página web por episodio | 1 · tráfico externo | ⏸️ aplazado | **solo si se pasa el peldaño 2**. Antes es tráfico llevado a una puerta por la que nadie entra |
+
+**Cómo se lee esta tabla:** de arriba abajo hasta la línea de C6, todo lo que
+podía hacerse sin datos ya está hecho. De C6 en adelante manda la medición del
+lunes. Si el lunes 24 el CTR sigue por debajo del 4 %, se vuelve a C5 —más
+variantes de miniatura— antes de tocar C6, por muy tentador que sea el ritmo.
+
+**Lo que no está en la lista y podría entrar:** si a las cuatro semanas la señal
+dice que una serie de Shorts funciona muy por encima de las demás, entra un C15
+—reconstruir la parrilla entera alrededor de esa serie— y desplaza a lo que quede
+por debajo. La cola se reordena con los datos; no es un compromiso.
 
 ---
 
