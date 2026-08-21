@@ -88,7 +88,17 @@ def texto_pantalla(e):
 
 
 def normal(s):
-    return re.sub(r"[^a-záéíóúñ0-9 ]", " ", (s or "").lower())
+    # Cada carácter no alfanumérico (incluidos «*» y «_», que son justo los que
+    # marcan el resaltado ámbar/cian) se sustituye por un espacio suelto. Sin
+    # colapsar los espacios que quedan, «*espacio*» deja dos espacios seguidos
+    # alrededor de la palabra y el «pn.strip() in nn» de más abajo deja de
+    # encontrar la subcadena exacta aunque el texto sea idéntico al oído. Es
+    # decir: el detector de «pantalla = narración» quedaba ciego justo en el
+    # caso normal, el de una escena con resaltado. Encontrado el 21/08
+    # revisando MDS-001, donde «texto» y «narración» de las escenas 1 y 2 eran
+    # literalmente la misma frase y no saltó ni un aviso.
+    sin_marcas = re.sub(r"[^a-záéíóúñ0-9 ]", " ", (s or "").lower())
+    return re.sub(r"\s+", " ", sin_marcas).strip()
 
 
 def validar(path):

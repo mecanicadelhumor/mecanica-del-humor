@@ -79,7 +79,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "Estos dos se asocian a _más bienestar_ y a mejores relaciones.",
+      "texto": "Estos dos se asocian a *más bienestar* y a mejores relaciones.",
       "narracion": "Estos dos son los que aparecen asociados a más bienestar, menos ansiedad y relaciones más satisfactorias.",
       "fuente": "B01"
     },
@@ -97,7 +97,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "Y en la mesa quedan _dos mensajes_. Uno de ellos, incómodo.",
+      "texto": "Y en la mesa quedan *dos mensajes*. Uno de ellos, incómodo.",
       "narracion": "El problema es que deja dos mensajes en la mesa. Uno es el chiste. El otro es: esto también te lo puedo hacer a ti. La gente lo capta, aunque se esté riendo.",
       "fuente": "B01"
     },
@@ -125,7 +125,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "Este es el que más se asocia a _peor bienestar_. Y el que menos se ve venir.",
+      "texto": "Este es el que más se asocia a *peor bienestar*. Y el que menos se ve venir.",
       "narracion": "Y en los datos es el estilo que aparece asociado de forma más consistente a peor bienestar. Precisamente porque no se ve venir: por fuera parece humildad.",
       "fuente": "B01"
     },
@@ -181,7 +181,7 @@
     },
     {
       "tipo": "enunciado",
-      "texto": "Y todo esto es _correlación_. No dice quién causa a quién.",
+      "texto": "Y todo esto es *correlación*. No dice quién causa a quién.",
       "narracion": "Y hay algo más importante todavía: esto son correlaciones. Que el humor autodestructivo aparezca junto a peor bienestar no demuestra que lo cause. Podría ser al revés. Probablemente se alimenten mutuamente.",
       "fuente": "B02"
     },

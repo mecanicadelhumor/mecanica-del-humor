@@ -1,284 +1,198 @@
 {
   "id": "MDH-004",
-  "formato": "largo",
-  "serie": "Mecanismos",
   "idioma": "es",
-  "titulo_trabajo": "Por qué nadie se ríe de tus chistes",
-  "tesis": "La risa no es una reacción al humor: es una señal social que se usa para vincular. Por eso puedes caer bien sin contar un solo chiste.",
+  "titulo_trabajo": "Casi nadie se ríe de los chistes",
+  "tesis": "La risa no es una reacción al humor: es una señal social que se usa para vincular. Por eso puedes gustar sin contar un solo chiste.",
   "pilares": [
     "E",
     "D",
     "A"
   ],
-  "pregunta_de_demanda": "por qué mis chistes no dan risa",
-  "_adaptado": "20 de agosto de 2026. Reescrito al formato nuevo: gancho con la primera risa antes del segundo quince (antes abría con un rótulo de ocho segundos), personaje en cuatro escenas, dos intervenciones del escéptico, escenas más cortas y más numerosas (30 en vez de 28) y reparto visual repartido — «enunciado» baja del 60 % al 43 %. Los datos y las fuentes no se han tocado: son los mismos que ya estaban verificados.",
-  "_sin_figura": "No lleva escena «figura» a propósito. La única gráfica natural aquí sería quien habla frente a quien escucha, y las proporciones exactas no están en la ficha de E02. Por eso tampoco se afirma ninguna proporción en voz: la escena 13 dice solo la dirección que Provine describe, no cuánto. Dibujar la curva exigiría interpolar, y eso es fabricar un dato (REGLAS.md, regla 2).",
+  "duracion_objetivo_s": 370,
+  "bloqueos": [],
   "notas_humor": [
-    "Gancho: la anécdota de las ocho horas de silencio es a la vez el chiste y el dato del episodio. La risa llega sobre el segundo once.",
-    "Especificidad: las frases reales que recogió Provine son cómicas justo por lo banales que son.",
-    "Autoconciencia del formato: una sola vez, en la escena 21, cuando la voz sintética habla de detectar risas falsas.",
-    "Callback en la escena 29 al «nos vemos luego» del segundo cero.",
-    "Ningún momento de gracia en la escena anterior al cierre: el remate final necesita silencio delante.",
-    "Corregido tras el verificador: el título del cierre ya no promete la causa que el subtítulo retira dos líneas más abajo."
+    "Gancho: el dato es tan contraintuitivo que hace de chiste él solo.",
+    "Escena 8: especificidad — las frases reales recogidas por Provine son cómicas por lo banales.",
+    "Escena 17: autoconciencia del formato, segunda y última vez del vídeo.",
+    "Cierre: callback a la frase banal del principio."
   ],
   "escenas": [
-    {
-      "tipo": "enunciado",
-      "narracion": "El otro día me despedí de un compañero con un «nos vemos luego» y los dos nos echamos a reír. No había chiste. Llevábamos ocho horas sin hablarnos.",
-      "texto": "«Nos vemos *luego*».",
-      "personaje": "rie",
-      "pausa_despues_s": 1.2
-    },
-    {
-      "tipo": "comparacion",
-      "titulo": "Lo que crees y lo que pasa",
-      "et_a": "Lo que crees",
-      "a": "Te ríes porque algo *tiene gracia*",
-      "et_b": "Lo que pasa",
-      "b": "La mayoría de las veces te ríes _sin que la tenga_",
-      "narracion": "Y eso, que suena a anécdota tonta, es la mayoría de las risas. La excepción es reírse de un chiste.",
-      "pausa_despues_s": 0.5,
-      "fuente": "E01"
-    },
     {
       "tipo": "titulo",
       "etiqueta": "Episodio 04",
       "titulo": "Casi nadie se ríe de los *chistes*",
-      "subtitulo": "Y hay mil doscientas risas anotadas a mano, una a una",
-      "narracion": "Lo sabemos porque en los años noventa alguien se puso a contarlas. A mano.",
-      "fuente": "E02",
-      "pausa_despues_s": 0.5
+      "subtitulo": "Y hay mil doscientas grabaciones que lo demuestran",
+      "narracion": "En los años noventa, un neurocientífico llamado Robert Provine se cansó de estudiar la risa en el laboratorio."
     },
     {
       "tipo": "enunciado",
-      "narracion": "Robert Provine, neurocientífico, se cansó de estudiar la risa en el laboratorio, que es donde nadie se ríe de verdad. Así que se fue a la calle con una libreta.",
-      "texto": "Un laboratorio es el peor sitio para estudiar la *risa*.",
-      "pausa_despues_s": 0.45
+      "texto": "Método: contar risas ajenas.",
+      "narracion": "Así que hizo algo raro para un científico: se fue a la calle con una libreta y se puso a apuntar cada vez que oía reírse a alguien.",
+      "fuente": "E02"
     },
     {
       "tipo": "dato",
       "cifra": "1.200",
-      "pie": "episodios de risa anotados en aceras, pasillos y centros comerciales",
-      "narracion": "Recogió alrededor de mil doscientos episodios de risa espontánea en aceras, pasillos y centros comerciales, sin avisar a nadie.",
-      "fuente": "E02",
-      "pausa_despues_s": 0.45
+      "pie": "episodios de risa espontánea anotados en centros comerciales, aceras y pasillos. Con la frase que venía _justo antes_",
+      "narracion": "Recogió alrededor de mil doscientos episodios de risa espontánea, en centros comerciales, en aceras, en pasillos. Y de cada uno anotó una cosa que nadie había anotado antes: la frase exacta que venía justo antes de la risa.",
+      "fuente": "E02"
     },
     {
       "tipo": "enunciado",
-      "narracion": "Y de cada uno anotó una cosa que a nadie se le había ocurrido anotar: la frase exacta que venía justo antes de la risa.",
-      "texto": "Lo que nadie había apuntado: la frase *anterior*.",
-      "fuente": "E02",
-      "pausa_despues_s": 0.5
+      "texto": "El resultado no encaja con nada de lo que crees sobre la risa.",
+      "narracion": "El resultado es de las cosas que te reordenan la cabeza."
     },
     {
       "tipo": "dato",
-      "cifra": "10–20 %",
-      "pie": "de esas frases tenían _algo_ de chiste. El resto, ninguno",
-      "narracion": "Y solo entre un diez y un veinte por ciento de esas frases tenían algo remotamente parecido a un chiste. El resto, nada.",
-      "fuente": "E02",
-      "pausa_despues_s": 0.45
+      "cifra": "10–20%",
+      "pie": "De las frases anteriores a una risa tenían _algo_ de chiste. El resto, nada",
+      "narracion": "Solo en torno a un diez o un veinte por ciento de esas frases tenían algo remotamente parecido a un chiste. El resto, la inmensa mayoría, no eran graciosas en absoluto.",
+      "fuente": "E02"
     },
     {
       "tipo": "lista",
-      "titulo": "Frases del tipo que recogió Provine",
+      "titulo": "Frases reales que provocaron risa",
       "puntos": [
         "«¿Dónde has estado?»",
         "«Nos vemos luego»",
         "«¿Seguro que sabes lo que haces?»"
       ],
-      "narracion": "Frases del tipo «¿dónde has estado?», «nos vemos luego» o «¿seguro que sabes lo que haces?». Nadie se reiría leyendo eso. Y se reían.",
-      "fuente": "E02",
-      "pausa_despues_s": 0.6
+      "narracion": "Estamos hablando de frases como «¿dónde has estado?», «nos vemos luego» o «¿seguro que sabes lo que haces?». Nadie se estaría riendo de eso. Y sin embargo se reían.",
+      "fuente": "E02"
     },
     {
       "tipo": "enunciado",
-      "voz": "esceptico",
-      "narracion": "Un momento. ¿Eso no es reírse por compromiso, sin más?",
-      "texto": "¿No será *compromiso*?",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "enunciado",
-      "narracion": "Podría ser. Pero si fuera compromiso, la risa saldría donde toca quedar bien. Y lo interesante es que sale exactamente en otro sitio.",
-      "texto": "Sale en *otro sitio*. Y ese sitio es la pista.",
-      "personaje": "duda",
-      "pausa_despues_s": 0.5
+      "texto": "Entonces, si no se ríen del *contenido*… ¿de qué se ríen?",
+      "narracion": "Lo cual deja una pregunta bastante grande encima de la mesa. Si no se están riendo de lo que se dice, ¿de qué se están riendo?"
     },
     {
       "tipo": "titulo",
       "etiqueta": "Parte 1",
-      "titulo": "La risa no es una *reacción*",
-      "narracion": "Primera parte: la risa casi nunca es una reacción a nada.",
-      "pausa_despues_s": 0.45
+      "titulo": "La risa no es una reacción",
+      "narracion": "La respuesta es que la risa, casi siempre, no es una reacción a nada. Es un mensaje."
     },
     {
       "tipo": "enunciado",
-      "narracion": "Es un mensaje. Muy corto y muy antiguo, que viene a decir: esto que está pasando entre tú y yo no es una amenaza.",
-      "texto": "Un mensaje: *vamos bien*.",
-      "fuente": "A10",
-      "personaje": "entiende",
-      "pausa_despues_s": 0.5
-    },
-    {
-      "tipo": "comparacion",
-      "titulo": "Quién se ríe más",
-      "et_a": "Quien habla",
-      "a": "Se ríe *más*",
-      "et_b": "Quien escucha",
-      "b": "Se ríe _menos_",
-      "narracion": "Primera pista, y es de sus anotaciones: quien habla se ríe más veces que quien escucha. Si la risa fuera una nota al contenido, pasaría lo contrario.",
-      "fuente": "E02",
-      "pausa_despues_s": 0.5
-    },
-    {
-      "tipo": "cita",
-      "texto": "La risa *puntúa* el habla",
-      "autor": "Robert Provine",
-      "narracion": "Segunda pista, y es más limpia: la risa casi nunca aparece en mitad de una frase. Aparece al final, donde iría un punto o una coma.",
-      "fuente": "E02",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "diagrama",
-      "titulo": "Dónde cae la risa",
-      "pasos": [
-        {
-          "titulo": "La frase",
-          "pie": "entera, sin cortes"
-        },
-        {
-          "titulo": "El punto",
-          "pie": "donde iría la puntuación"
-        },
-        {
-          "titulo": "La risa",
-          "pie": "*ahí*, y casi nunca antes"
-        }
-      ],
-      "narracion": "Primero la frase entera, sin cortes. Después el punto. Y ahí, justo ahí, la risa.",
-      "fuente": "E02",
-      "pausa_despues_s": 0.5
+      "texto": "Es un mensaje que dice: *esto va bien entre nosotros*.",
+      "narracion": "Un mensaje muy corto y muy antiguo, que viene a decir: esto que está pasando entre tú y yo no es una amenaza. Vamos bien.",
+      "fuente": "A10"
     },
     {
       "tipo": "enunciado",
-      "narracion": "Y eso es lo raro. Si fuera incontrolable saldría donde le diera la gana. Que respete la gramática significa que hay un sistema gestionándola.",
-      "texto": "Respeta la gramática. Luego hay un *sistema*.",
-      "personaje": "piensa",
-      "pausa_despues_s": 0.5
+      "texto": "Y hay dos pistas que lo demuestran.",
+      "narracion": "Y hay dos observaciones que lo dejan bastante claro."
     },
     {
-      "tipo": "dato",
-      "cifra": "30 veces",
-      "pie": "más probable reírse _acompañado_ que estando solo",
-      "narracion": "Y encaja con otra cosa que midió: la risa es unas treinta veces más probable en compañía que a solas. Cuenta las veces que te ríes solo en casa.",
-      "fuente": "E01",
-      "pausa_despues_s": 0.5
+      "tipo": "enunciado",
+      "texto": "Primera: quien *habla* se ríe más que quien escucha.",
+      "narracion": "La primera es que en esas grabaciones quien habla se ríe bastante más que quien escucha. Si la risa fuera una reacción al contenido, tendría que pasar justo lo contrario: el que cuenta ya sabe el final.",
+      "fuente": "E02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Segunda: la risa nunca interrumpe una frase. La *puntúa*.",
+      "narracion": "La segunda es todavía más limpia. La risa casi nunca aparece en mitad de una frase. Aparece al final, en las pausas, exactamente donde iría un punto o una coma. Por eso Provine dijo que la risa puntúa el habla.",
+      "fuente": "E02"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Si fuera involuntaria, saldría *donde le diera la gana*.",
+      "narracion": "Piénsalo: si fuera una reacción incontrolable, saldría donde le diera la gana. Que respete la gramática significa que hay un sistema gestionándola."
     },
     {
       "tipo": "titulo",
       "etiqueta": "Parte 2",
       "titulo": "Hay *dos risas* distintas",
-      "narracion": "Aunque no todas las risas son iguales. Hay dos, y tu oído las separa.",
-      "pausa_despues_s": 0.45
+      "narracion": "Aunque no todas las risas son iguales. De hecho hay dos, y tu oído las distingue aunque tú no sepas explicar cómo."
     },
     {
       "tipo": "comparacion",
       "titulo": "Las dos risas",
       "et_a": "Espontánea",
-      "a": "Sale sola. Más aguda, más irregular. *Difícil de fingir*",
+      "a": "Sale sola. Más aguda, más irregular. Difícil de fingir.",
       "et_b": "Voluntaria",
-      "b": "La produces tú, a propósito. Suena a _habla_",
-      "narracion": "Una es espontánea: se dispara sola, suena más aguda e irregular y cuesta muchísimo imitarla. La otra es voluntaria: la produces a propósito y se parece más al habla.",
-      "fuente": "E04",
-      "pausa_despues_s": 0.5
-    },
-    {
-      "tipo": "dato",
-      "cifra": "24",
-      "pie": "sociedades distinguieron la risa real de la fingida _por encima del azar_",
-      "narracion": "Pusieron grabaciones de las dos a oyentes de veinticuatro sociedades repartidas por el mundo. Por encima del azar, acertaban cuál era cuál.",
-      "fuente": "D07",
-      "pausa_despues_s": 0.45
+      "b": "La produces tú, a propósito. Suena a *habla*.",
+      "narracion": "Una es espontánea: se dispara sola, suena más aguda e irregular y es muy difícil de imitar. La otra es voluntaria: la produces a propósito, como una palabra más, y acústicamente se parece más al habla que a la risa de verdad.",
+      "fuente": "E04"
     },
     {
       "tipo": "enunciado",
-      "narracion": "O sea que algo parecido a un detector llevas, y acierta algo más que el azar. Y sí: lo cuenta una voz que no sabe hacer ninguna de las dos.",
-      "texto": "Algo *más* que el azar. No un detector fiable.",
-      "fuente": "D07",
-      "personaje": "duda",
+      "texto": "En un estudio con oyentes de _24 sociedades_, se distinguían por encima del azar.",
+      "narracion": "Y en un estudio se pusieron grabaciones de las dos a oyentes de veinticuatro sociedades distintas, repartidas por todo el mundo. Por encima del azar, distinguían cuál era cuál.",
+      "fuente": "D07"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Un detector de *sinceridad* que funciona sin traducción.",
+      "narracion": "Es decir, llevas encima un detector de risas fingidas que funciona sin idioma común. Lo cual explica muy bien esa sensación incómoda cuando alguien se ríe de tu chiste demasiado deprisa.",
+      "fuente": "D07"
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Sí: lo dice una voz que no puede hacer *ninguna de las dos*.",
+      "narracion": "Sí, esto lo está contando una voz que no puede producir ninguna de las dos. Tomémoslo como una demostración por ausencia.",
       "pausa_despues_s": 0.9
-    },
-    {
-      "tipo": "enunciado",
-      "voz": "esceptico",
-      "narracion": "Vale, pero yo quiero que se rían de mis chistes.",
-      "texto": "¿Y mis *chistes*?",
-      "pausa_despues_s": 0.6
     },
     {
       "tipo": "titulo",
       "etiqueta": "Parte 3",
       "titulo": "Lo que esto cambia *para ti*",
-      "narracion": "Ahí está la consecuencia práctica, que es enorme y casi nadie la saca.",
-      "pausa_despues_s": 0.45
+      "narracion": "Y ahora la consecuencia práctica, que es enorme y casi nadie la saca."
     },
     {
       "tipo": "enunciado",
-      "narracion": "Si la risa es sobre todo una señal de vínculo y no una nota al chiste, intentar ser gracioso contando chistes es atacar el problema por el lado más difícil.",
-      "texto": "Estás atacando por el lado *difícil*.",
-      "pausa_despues_s": 0.5
+      "texto": "Si la risa es una *señal social*, el objetivo no es el chiste.",
+      "narracion": "Si la risa es principalmente una señal de vínculo y no una nota al contenido, entonces intentar ser gracioso contando chistes es atacar el problema por el sitio más difícil."
     },
     {
       "tipo": "lista",
-      "titulo": "Uno está medido; los otros dos son mi lectura",
+      "titulo": "Lo que sí hace reír",
       "puntos": [
-        "*Complicidad*: compartir humor mide más afiliación",
-        "Presencia: mirar, responder, estar — mi lectura",
-        "Permiso: reírte tú primero, y de ti — mi lectura"
+        "*Presencia*: mirar, responder, estar",
+        "Complicidad: lo que solo entendéis vosotros dos",
+        "Permiso: reírte tú primero, y de ti"
       ],
-      "narracion": "Medido está esto: compartir sentido del humor aumenta la afiliación y hasta la generosidad. Lo otro, presencia y permiso, es mi lectura, no un resultado.",
-      "fuente": "D05",
-      "pausa_despues_s": 0.5
+      "narracion": "Lo que de verdad genera risa en una conversación es otra cosa: estar presente y responder de verdad; construir complicidad, esas referencias que solo entendéis vosotros dos; y dar permiso, riéndote tú primero y a tu costa.",
+      "fuente": "E02"
     },
     {
       "tipo": "enunciado",
-      "narracion": "Nada de eso necesita un chiste. Y todo eso se entrena bastante mejor que escribir remates.",
-      "texto": "Y se entrena mucho más *barato*.",
-      "personaje": "entiende",
-      "pausa_despues_s": 0.5
+      "texto": "Nada de eso requiere un *chiste*. Todo eso se entrena.",
+      "narracion": "Nada de eso requiere un chiste. Y todo eso se entrena mucho más fácil que escribir remates."
     },
     {
-      "tipo": "comparacion",
-      "titulo": "El límite, y es un límite de verdad",
-      "et_a": "En el laboratorio",
-      "a": "Las dos risas se separan *algo mejor que el azar*",
-      "et_b": "En tu conversación",
-      "b": "_No lo sabemos_",
-      "narracion": "Con una advertencia. Aquello se midió con grabaciones y oyentes, en laboratorio. Si funciona igual cuando alguien te tiene delante, no lo sabemos.",
-      "fuente": "D07",
-      "pausa_despues_s": 0.5
+      "tipo": "titulo",
+      "etiqueta": "El límite",
+      "titulo": "Con una advertencia",
+      "narracion": "Con una advertencia importante, y va en la dirección contraria a lo que suele decirse."
     },
     {
       "tipo": "enunciado",
-      "narracion": "Mi impresión, y esto ya no es un dato: reírte de todo no te hace parecer cercano. La risa es información, y si la regalas deja de informar.",
-      "texto": "Opinión mía: si la das gratis, deja de *informar*.",
-      "pausa_despues_s": 0.5
+      "texto": "La risa *voluntaria* también sirve. Pero se nota.",
+      "narracion": "Reírse a propósito para suavizar una situación es legítimo y todos lo hacemos. El problema es que, como acabamos de ver, el otro lo detecta. Reírse de todo constantemente no te hace parecer cercano: te hace parecer nervioso.",
+      "fuente": "D07"
     },
     {
       "tipo": "enunciado",
-      "narracion": "Así que la próxima vez que alguien se ría contigo, fíjate en qué dijo justo antes. Lo más probable es que fuera «nos vemos luego».",
-      "texto": "Mira la frase *anterior*.",
+      "texto": "La risa es *información*. Si la das gratis, deja de informar.",
+      "narracion": "La risa es información sobre lo que te parece bien. Si la repartes sin criterio, deja de significar nada."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Fíjate en qué dijo *justo antes*. Probablemente, nada.",
+      "narracion": "Así que la próxima vez que alguien se ría contigo, fíjate en qué dijo justo antes. Lo más probable es que fuera «nos vemos luego»."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "¿De qué te ríes cuando *no hay chiste*?",
+      "narracion": "Hoy escúchate a ti mismo y apunta de qué te ríes cuando no hay ningún chiste delante. Déjalo en comentarios.",
       "pausa_despues_s": 0.7
     },
     {
       "tipo": "cierre",
-      "titulo": "Quizá no sean los *chistes*",
-      "subtitulo": "Provine observó, no experimentó. Van juntas; no sabemos cuál causa cuál",
-      "narracion": "Y falla, que es la parte que nadie cuenta: Provine observó, no experimentó. Nada de esto demuestra que la presencia cause la risa. Solo que van juntas.",
-      "personaje": "neutra",
-      "pausa_despues_s": 0.3
+      "titulo": "No necesitas *chistes*. Necesitas presencia.",
+      "subtitulo": "En el próximo episodio: los cuatro estilos de humor, y cuál de ellos te está costando amigos sin que lo sepas.",
+      "narracion": "Así que no necesitas chistes: necesitas estar de verdad delante de alguien. En el próximo episodio: los cuatro estilos de humor, y cuál de ellos te está costando amigos sin que te hayas dado cuenta."
     }
-  ],
-  "_verificado": "Pasado por el agente verificador el 20/08 con veto. Bloqueó la primera versión por ocho afirmaciones; las ocho están corregidas aquí. Las dos peores eran la escena 25, donde los tres consejos que se lleva el espectador iban firmados con E02 —un artículo sobre dónde cae la risa en la frase, que no dice nada de eso—, y la escena 27, que sacaba D07 del laboratorio hasta afirmar que tu interlocutor nota que finges.",
-  "_verificar_en_la_bibliografia": "Tres cifras de este guion vienen heredadas de episodios anteriores ya producidos y NO están recogidas en la ficha de E02: los 1.200 episodios, el 10-20 % de frases con algo de chiste y la proporción hablante/oyente. La ficha solo dice «la risa puntúa el habla». Hay que abrir el artículo de Provine (1993) y anotarlas con página, o sustituirlas. No se ha hecho esta noche porque la sesión no tiene acceso web."
+  ]
 }

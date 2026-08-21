@@ -1177,190 +1177,149 @@ narración arrancaba a hueso y el ataque de la primera palabra se perdía.
 
 ---
 
-## 20 de agosto, noche · Planificación de la semana del 24
+## 21 de agosto · revisión editorial (viernes, sin producción prevista)
 
-Primera planificación con el rumbo nuevo. Los temas ya no salen de la bibliografía: salen
-de la demanda, y la bibliografía solo decide si podemos responderla. Lo escrito: los Shorts
-`MDS-002` a `MDS-006`, la adaptación de `MDH-004` al formato nuevo, `demanda.json`,
-`pendientes_de_fuente.md` y los metadatos de publicación de los siete (incluido `MDS-001`,
-que no tenía).
+### 0. Regla cero
 
-### 1. La medición de demanda salió coja, y hay que arreglarlo antes del jueves que viene
+Clonado `origin/main` limpio. Las correcciones del 20/08 (numeración de Partes
+en el 004, «La palanca» del 005, el intercambio de escenas 25/26 del 007, el
+chiste del trastero del 008, ni un «violación» en los guiones) están todas
+aplicadas y subidas — comprobado leyendo el contenido, no de memoria.
+`registro_publicaciones.json` sigue en MDH-003.es (20/08); la parrilla nueva
+no prevé ninguna emisión hasta el lunes 24 (`MDS-001`), así que hoy no falta
+ninguna producción. Paso 2 sin hallazgos. Pasos 3 y 4 (vídeo y mejora visual)
+se saltan: hoy es viernes, no lunes ni jueves.
 
-Esto es lo más importante de la entrada, porque afecta a todas las semanas siguientes.
+### 1. El hallazgo del día: ningún guion largo pendiente hace reír antes del
+segundo 15
 
-La planificación corre como **tarea programada en la nube**, sin nadie delante. En ese modo
-`WebFetch` está bloqueado: toda URL devuelve `PROVENANCE_REQUIRED`, que es una petición de
-permiso al usuario. Sin usuario, no hay permiso. Probado contra cuatro dominios distintos
-—`suggestqueries.google.com`, `youtube.com`, `reddit.com`, `wikipedia.org`— y los cuatro
-igual, así que no es un dominio bloqueado: es el modo desatendido.
+Regla 12 de `REGLAS.md`: «Mínimo: dos risas por vídeo largo, una de ellas
+antes del segundo quince. No se negocia» — y es la única regla del documento
+que lleva ese verbo. Calculado el arranque real de cada escena con la propia
+`dur()` de `validar_guion.py` (no a ojo) sobre los cinco guiones largos que
+quedan por producir:
 
-**Lo que eso se lleva por delante:** las fuentes 1, 2, 3 y 4 del método enteras. Sin
-autocompletar de YouTube, sin visualizaciones del top 10, sin comentarios, sin Reddit.
-Queda `WebSearch`, que devuelve títulos y URLs pero **ninguna métrica**, y que además es de
-región Estados Unidos, con lo que sesga hacia inglés y hacia medios latinoamericanos justo
-cuando el canal apunta a España.
+| Episodio | Gancho (0–15 s) | Primer chiste real | Dónde |
+|---|---|---|---|
+| MDH-004 | Provine se va a la calle con una libreta — dato, no chiste | Escena 6, «¿dónde has estado?» hace reír | **55,2 s** |
+| MDH-005 | El amigo que hace mucha gracia y cansa — reconocible, tibio | El propio gancho, si cuenta | ~10–16 s (límite) |
+| MDH-006 | La reunión y el chiste a medio decir — situación, no remate | «eres el que dijo aquello en la reunión de marzo» | ~19–21 s (se le escapa por poco) |
+| MDH-007 | Nada — `notas_humor` lo declara a propósito: «el humor aquí es mínimo y deliberado» | «Es una profecía autocumplida […] si no fuera porque duele» | **133,4 s**, y es la única del guion entero |
+| MDH-008 | Autopresentación del tema («toca la parte de ingeniería») | El chiste del trastero, en la cita | **89,0 s** |
 
-**Lo que se ha hecho con eso:** `vistas_top10` va a `null` en los dieciséis candidatos. No
-se ha estimado, no se ha aproximado y no se ha puesto un número plausible. Un hueco es
-información; una cifra inventada es una mentira que además nadie detectaría después
-(REGLAS.md, regla 2). El campo `competencia` sí está relleno, pero `demanda.json` dice
-explícitamente que es una inferencia y no una medición.
+Ninguno de los cinco cumple con margen. El 004 y el 008 abren con una premisa
+interesante en vez de con un chiste — que es exactamente lo que C9 prohíbe
+para el *preámbulo hablado* («la promesa del contenido»), solo que aplicado al
+humor: prometen que el vídeo va a ser gracioso más adelante, en vez de serlo
+ya. El 007 es el caso más difícil: el guionista decidió a propósito que un
+episodio sobre el miedo a que se rían de ti lleve el mínimo humor posible, y
+es una decisión editorial defendible — pero la regla 1 de `REGLAS.md` ya
+resuelve esto («tratarlo como objeto de estudio» no es lo mismo que «sin
+chiste») y la regla 12 no trae excepción para temas delicados.
 
-**El arreglo:** la planificación semanal tiene que correr como **tarea programada local**,
-en el ordenador de Silvestre, no en la nube. Es una intervención puntual de setup, así que
-no choca con la regla 5. Mientras tanto, todo lo que dependa de volumen de búsqueda hay que
-leerlo como hipótesis.
+**No lo he reescrito.** Meterle un chiste a un guion ya fechado, sobre humor
+—el oficio exacto del canal— es la clase de cambio que se juzga oyéndolo, no
+leyéndolo, y los cinco tienen margen de sobra hasta su sábado (el más próximo,
+el 004, es el 29 de agosto). Lo que sí he hecho es dejar la tabla de arriba
+con los números exactos para que la próxima sesión —o Silvestre— no tenga que
+recalcularlo. Recomendación concreta para el 004, el más fácil de arreglar sin
+tocar la estructura: abrir directamente con una de las frases banales de la
+escena 6 («alguien te dice "nos vemos luego" y te ríes») en vez de con la
+biografía de Provine, y dejar la biografía para después — el dato sorprendente
+ya está escrito, solo está en el sitio equivocado.
 
-### 2. Trece candidatos aptos, tres fuera por falta de fuente
+### 2. Lo que sí he corregido, con el validador en verde
 
-La regla 3 funcionó y conviene dejar constancia de que **mordió**, porque una regla que
-nunca dice que no es decorativa.
+Leídos enteros los seis guiones españoles sin producir: `MDS-001`, `MDH-004`
+a `MDH-008`. `python3 04_agentes/validar_guion.py` sobre los seis, código 0.
 
-Fuera se quedaron «por qué sentimos vergüenza ajena» (el corpus cubre el miedo a que se
-rían de ti, no la vergüenza vicaria, que es otro constructo), «por qué no puedo hacerme
-cosquillas a mí mismo» (`E06` cubre cosquillas y evolución de la risa, pero no la
-autocosquilla; el mecanismo cerebelar que cuenta todo el mundo no tiene ficha) y «por qué
-los memes nos hacen gracia» (no hay ni una obra sobre memes en las 77).
+**`MDS-001` — el primer Short, el que se publica el lunes.** Tres fallos que
+el validador no ve y que estaban los tres en el mismo par de escenas, la
+apertura:
 
-Las tres tenían demanda buena. La de los memes es además la única con publicaciones
-crecientes en 2025 y 2026, o sea el hueco más rentable de los tres. Están en
-`pendientes_de_fuente.md` con qué literatura haría falta para desbloquearlas.
+1. **La pausa de la comedia estaba después del remate, no antes.** El chiste
+   es «Mi pareja me dijo que necesitaba espacio» → «Ahora duermo en el
+   trastero». `pausa_despues_s` de la escena 1 (el silencio entre el
+   planteamiento y el remate, que es donde vive la gracia) estaba en 0,5 s; el
+   de la escena 2 (después del remate, antes del despiece) estaba en 1,3 s —
+   los dos números al revés de donde tienen que estar según
+   `guionista_corto.md`: «entre planteamiento y remate, `pausa_despues_s`
+   entre 1,2 y 1,5». Intercambiados: escena 1 → 1,3 s, escena 2 → 0,5 s. La
+   duración total no cambia (41,6 s).
+2. **El personaje reaccionaba en las seis escenas de seis.** La regla dice
+   «en dos o tres escenas, no en todas: una reacción constante deja de ser una
+   reacción», y encima aparecía *antes* del remate (escena 1, `neutra`), que
+   es justo el «nunca antes» que la propia nota del guion cita. Quitado de las
+   escenas 1, 3 y 5; queda en la 2 (justo tras el remate), la 4 (cuando se
+   nombran las dos piezas del despiece) y la 6 (el cierre).
+3. **El texto en pantalla de las dos escenas del chiste era literal la
+   narración**, palabra por palabra. «Mi pareja me dijo que necesitaba
+   *espacio*.» en pantalla mientras se oye exactamente eso. Recortado a
+   «Necesitaba *espacio*.» y «El *trastero*.»: el ojo se queda con la palabra
+   que abre y cierra el chiste, el oído con la frase completa.
 
-Y una que es apta pero **congelada**: «a las mujeres les atraen los hombres graciosos».
-`D03` y `C01` afirman diferencias entre sexos y ninguna de las dos fichas trae muestra ni
-tamaño de efecto. El verificador tiene veto y este es exactamente el caso en que lo usaría.
-No se produce hasta haber leído los dos papeles enteros.
+También el resaltado cian de las escenas 3 y 4 («_dos cosas_», «_de verdad_»)
+no marcaba ningún dato — «cian solo para datos» — así que ha quedado en texto
+plano.
 
-### 3. La adaptación de MDH-004, y el patrón para las otras cuatro
+**El bug detrás del punto 3, y por qué no saltó ninguna alarma antes.** El
+`normal()` de `validar_guion.py` convierte cada carácter que no es letra ni
+número en un espacio, pero no colapsa los espacios resultantes. Un texto con
+resaltado — `*espacio*` — deja dos espacios seguidos donde estaban los
+asteriscos; la comparación de después (`pn.strip() in nn`) es una subcadena
+exacta, y una subcadena con doble espacio nunca encaja en un texto con espacio
+simple. Es decir: **el detector de «pantalla = narración» estaba ciego
+exactamente en el caso normal, el de una escena con `*ámbar*` o `_cian_`**, que
+es la inmensa mayoría. Arreglado colapsando los espacios en `normal()`.
+`validar_guion.py` no es fichero protegido, así que el cambio va aplicado, no
+propuesto — es una línea, y probado: `04_agentes/validar_guion.py` no está en
+la lista de `voz.py`/`montaje.py`/`producir.yml`.
 
-`MDH-004` pasa de 28 escenas a 30, de 5m17s a 5m02s y —lo que importa— de **60 % de
-escenas «enunciado» a 43 %**, por debajo del umbral del validador. Los datos y las fuentes
-no se han tocado ni una coma: son los mismos que ya estaban verificados. Lo que ha cambiado
-es la forma.
+Medido el efecto sobre los doce guiones del repositorio (producidos y
+pendientes): pasa de 4 avisos de este tipo a **11**. Los siete nuevos en
+guiones ya producidos (`MDH-001.es`: escenas 2, 6, 10, 11, 18, 35, 37;
+`MDH-002.es`: escena 31; `MDH-003.es`: escena 11) no se tocan — **nunca sobre
+un episodio ya producido** — quedan aquí anotados para que quien escriba el
+próximo guion sepa que el patrón viene de lejos y no es un caso aislado del
+Short. De los cuatro nuevos en guiones pendientes, dos eran del mismo tipo que
+el del `MDS-001` (`MDH-006` escena 24, `MDH-008` escena 21: el texto repetía
+la frase de cierre de la narración) y están corregidos; uno (`MDH-008` escena
+8) es una escena `cita` que enseña la frase citada mientre se lee en voz alta
+— ahí repetir es lo correcto, una cita se lee y se ve a la vez, así que se ha
+dejado tal cual.
 
-- **El gancho.** Antes abría con un rótulo de 8,1 s y la frase «en los años noventa, un
-  neurocientífico llamado Robert Provine…». Ahora abre con una escena concreta: dos
-  compañeros que se despiden con un «nos vemos luego» y se echan a reír después de ocho
-  horas sin hablarse. La risa cae sobre el **segundo once**, dentro del límite de quince, y
-  además es el propio dato del episodio ejecutado en vez de anunciado. El rótulo no
-  desaparece: baja a la escena 3, donde ya no cuesta nada.
-- **El escéptico**, dos veces y corto: «¿Eso no es reírse por compromiso?» después del dato
-  del 10-20 %, y «yo quiero que se rían de mis chistes» justo antes de la parte práctica.
-  Las dos son la objeción que el espectador está pensando, dicha antes de que la piense.
-- **El personaje**, en cuatro escenas y siempre reaccionando después.
-- **El reparto visual**: cuatro `comparacion`, cuatro `dato`, dos `lista`, una `cita`, un
-  `diagrama`. Escenas más cortas y más numerosas, que es lo único barato que mueve la
-  pantalla desde que se retiraron los subtítulos quemados.
+**El sistema de color, cuatro casos más, en `MDH-005`.** «Estos dos se asocian
+a `_más bienestar_`», «`_dos mensajes_`», «`_peor bienestar_`», «todo esto es
+`_correlación_`»: ninguna de las cuatro es un dato, son el punto de la frase.
+Pasadas a ámbar (ninguna de las cuatro escenas llevaba ya un resaltado ámbar,
+así que no se rompe el límite de uno por pantalla).
 
-**Sin escena `figura`, a propósito.** La única gráfica natural aquí es quien habla frente a
-quien escucha, y las proporciones exactas no están en la ficha de `E02`. Dibujarla exigiría
-interpolar y eso es fabricar un dato. Queda escrito dentro del propio guion, en `_sin_figura`,
-para que nadie lo lea como un olvido. Sigue siendo verdad lo del 20/08: el motor de figuras
-está y lo que falta son números reales de un artículo.
+### 3. Lo que he mirado y decido dejar como está
 
-El patrón entero está escrito en `CALENDARIO.md`. **`MDH-005` lo necesita antes del 5 de
-septiembre**, que es cuando está programado, y sigue en formato viejo: 27 escenas, 62 % de
-«enunciado», sin personaje ni escéptico. `MDH-006`, `007` y `008`, igual.
+- **Ninguno de los cinco guiones largos pendientes usa el campo `personaje`.**
+  C4 (el Engranaje) está escrito en el pipeline desde el 20/08, pero estos
+  guiones son de antes. Añadirlo es trabajo de Paso 4 (mejora visual, solo
+  lunes y jueves) y una decisión de dónde exactamente reacciona, no algo para
+  colar hoy en un vídeo que nadie ha visto con el personaje puesto.
+- **Ningún guion usa `voz: "esceptico"`.** Es C7, fase «escalón 1», y sigue en
+  «pendiente» según `PLAN_DE_CAMBIOS.md` — no es una regresión, es una
+  funcionalidad que aún no ha llegado a los guiones escritos.
+- Las rachas de «3-5 escenas `enunciado` seguidas» que marca el validador
+  (docenas, en los cinco guiones largos) no se tocan hoy: es un aviso de
+  ritmo visual que ya existía antes de esta sesión y reescribir la variedad de
+  tipos de escena de cinco episodios enteros no es una corrección puntual, es
+  un rediseño — y la regla de un cambio por sesión ya se ha gastado en el
+  sistema de color y la pausa cómica.
 
-### 4. Lo que aprendí escribiendo los Shorts: el presupuesto real son 110 palabras
+### 4. Paquete de hoy
 
-Los cinco primeros borradores salieron entre 58 y 70 segundos, todos por encima del techo
-de 55. No fue mala suerte: fue no haber hecho la cuenta.
+`.tar.gz` con los seis ficheros tocados: `04_agentes/validar_guion.py`,
+`05_calendario/guiones/MDS-001.es.json`, `MDH-004.es.json`, `MDH-005.es.json`,
+`MDH-006.es.json`, `MDH-008.es.json`. `MDH-007.es.json` se ha leído entero y
+no se ha tocado — su único hallazgo es la falta de humor de la sección 1, que
+es una decisión para Silvestre, no una corrección. No lleva `registro_publicaciones.json`.
 
-El validador estima a 150 palabras por minuto y suma medio segundo por escena más la pausa.
-Con seis escenas y unos 3,5 s de pausas —que en un Short **no son negociables**, porque la
-pausa de 1,2 a 1,5 s antes del remate es el chiste—, el presupuesto de narración es de unas
-**110 palabras para el Short entero**. Dieciocho por escena. Es muchísimo menos de lo que
-parece cuando escribes.
-
-La regla práctica, para la próxima vez: escribir directamente en frases de dieciocho
-palabras y validar antes de pulir. Los cinco quedaron entre 49,5 y 53,7 s, sin errores y
-**sin un solo aviso**.
-
-Un efecto secundario bueno: al recortar, el texto de pantalla dejó de repetir la narración
-casi solo. Cuando sobra sitio, uno rellena el panel con lo que acaba de decir la voz.
-
-### 5. La semana del 24 se queda en modo «revisión», y no es un descuido
-
-La instrucción de la planificación decía modo `automatico`. No se ha aplicado a la semana
-del 24, a propósito, porque `CALENDARIO.md` y la propia parrilla ya tenían decidido lo
-contrario y con motivo: es la primera semana con vertical, personaje, dos voces y
-miniaturas nuevas, y esos son cambios que conviene aprobar con los ojos y no con la
-confianza. Son dos minutos al día durante seis días, y si un día no se puede, el vídeo se
-queda en privado sin perderse.
-
-El automático entra el **31 de agosto**, como estaba previsto y sin tener que acordarse de
-nada. Si Silvestre prefiere lo contrario, es cambiar seis palabras en `parrilla.json`.
-
-### 6. El verificador vetó dos de los seis, y tenía razón en los dos
-
-Se pasaron los siete guiones por el agente verificador antes de cerrar la noche. Bloqueó
-`MDH-004` y `MDS-003`, y devolvió correcciones en los otros cuatro. **Las veinticuatro
-correcciones están aplicadas y los siete vuelven a validar sin un solo error.** Conviene
-dejar escrito qué encontró, porque el patrón se va a repetir.
-
-**El error grave: A03 citado al revés.** `MDS-003` decía «si el que se cae eres tú, no hay
-gracia ninguna», con `A03` de fuente. Pero el título del propio artículo es *«Too close for
-comfort, or too far to care? Finding humor in **distant tragedies** and **close
-mishaps**»*: el percance leve y cercano es justo donde ese trabajo **sí** encuentra humor.
-El guion aplicaba a un resbalón la regla de la tragedia e invertía la dirección del
-hallazgo, y lo repetía en el cierre, que es donde más gente lo oye. Corregido: ahora dice
-que la distancia funciona al revés según la gravedad, y el cierre falla por donde falla de
-verdad —cuando sube la gravedad, la cercanía deja de ayudar—.
-
-**El error de fondo, que aparecía en cinco de los seis: correlación convertida en factura.**
-Siempre el mismo movimiento, siempre pequeño, siempre con un `id` de fuente al lado que lo
-hacía parecer respaldado:
-
-- `MDS-004` decía «el agresivo lo pagas en gente que se aparta», con `B01`. `B01` es un
-  cuestionario autoinformado que correlaciona estilos con **bienestar declarado**. No midió
-  a nadie apartándose. Peor: el título de trabajo prometía «cuál te está costando amigos»,
-  o sea la causa, en el sitio que más gente lee. Ahora el guion dice en voz alta qué se
-  midió exactamente.
-- `MDH-004`, escena 25: los tres consejos que se lleva el espectador —presencia,
-  complicidad, permiso— iban firmados con `E02`, que es un artículo sobre **dónde cae la
-  risa dentro de la frase** y no dice absolutamente nada de eso. Era autoayuda con un
-  `id` de paper delante, que es exactamente lo que prohíbe la regla 1. Ahora hay una cosa
-  medida (`D05`: compartir sentido del humor aumenta la afiliación) y dos declaradas como
-  lectura mía, rotuladas así en pantalla.
-- `MDH-004`, escena 27: `D07` estirado desde «oyentes de 24 sociedades distinguen las dos
-  risas por encima del azar, en laboratorio» hasta «el otro lo nota cuando finges». Dos
-  escenas antes el guion lo decía bien. Ahora la comparación es «en el laboratorio» frente
-  a «en tu conversación: no lo sabemos».
-- `MDS-002`: un «porque» de más delante del dato de las treinta veces convertía una
-  frecuencia observada en un mecanismo.
-- `MDS-005`: la «bisagra» colgaba de `A01`, que propone **dos condiciones** y no dice ni
-  una palabra sobre conectores ni sobre el orden de las palabras. Eso es de `L01`.
-
-**Y una que no se me habría ocurrido:** `MDS-006` cerraba con «nadie ha medido esto», que
-suena a humildad y es lo contrario: una afirmación universal negativa sobre toda la
-literatura mundial, imposible de sostener. Lo que quería decir era «en nuestras fuentes no
-hay ninguno». El gesto de honestidad se mantiene entero y deja de ser insostenible.
-
-**La incoherencia interna más útil de todas.** `MDH-004` llevaba un campo `_sin_figura`
-explicando que no se dibuja la gráfica de hablante contra oyente porque las proporciones
-exactas no están en la ficha de `E02` y dibujarlas sería fabricar un dato. Y dos escenas
-después afirmaba ese mismo contenido en voz. El verificador lo pilló: no se puede prohibir
-la gráfica por falta de datos y afirmar lo mismo sin ellos. Resuelto diciendo solo la
-**dirección** —quien habla se ríe más veces— y nunca la proporción, con la razón escrita
-dentro del propio `_sin_figura`.
-
-### 7. Deuda con la bibliografía: cinco cifras se apoyan en fichas que no las contienen
-
-Esto viene de lejos y hoy se ha visto entero. La ficha de `E02` dice una sola cosa: «la
-risa puntúa el habla, no la interrumpe». **No recoge** los 1.200 episodios, ni el 10-20 %
-de frases con algo de chiste, ni la proporción hablante/oyente, ni los ejemplos de frases.
-Y esas cifras llevan saliendo en pantalla desde `MDH-001`.
-
-No están mal: son de Provine. Pero **el verificador no puede comprobarlas**, que es
-justamente para lo que existe la bibliografía, y eso convierte su veto en un trámite en
-todo lo que toque a `E02`. Anotado en `_verificar_en_la_bibliografia`, dentro del propio
-`MDH-004`, para que no se pierda.
-
-**Qué hay que hacer, y no se ha hecho esta noche porque la sesión no tiene acceso web:**
-abrir Provine (1993) y anotar en la ficha de `E02` las tres cifras con su página. Y de
-paso, asignar `id` a los clásicos de dominio público —Bergson, Kant, Hobbes, Freud—, que
-hoy se citan en pantalla, con año y todo, sin nada que citar: `MDS-003` tiene una cita de
-Bergson en la que el año sale en pantalla y no hay `id` que ponerle. Mientras tanto, la
-narración lo marca como lo que es: filosofía de 1900, no un experimento.
+**Para Silvestre:** decidir qué hacer con el episodio 007 (¿se le mete humor
+o se acepta el «humor mínimo» como excepción justificada de la regla 12?) y,
+si aprueba la sugerencia del punto 1, aplicar el reordenamiento del gancho del
+004 antes del sábado 29.
