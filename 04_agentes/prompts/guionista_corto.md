@@ -117,5 +117,6 @@ responderla honestamente. Si no hay respaldo, el Short no se hace: se anota en
 ## Un ejemplo completo
 
 `05_calendario/guiones/MDS-001.es.json`. Seis escenas, 41,6 s, serie «Desmonta el chiste»,
-chiste en el segundo cero, pausa de 1,3 s antes del remate, personaje en cinco escenas y
-cierre que dice dónde falla. Léelo antes de escribir el primero.
+chiste en el segundo cero, pausa de 1,3 s antes del remate, personaje en tres escenas (la
+2, la 4 y la 6 — nunca la del planteamiento) y cierre que dice dónde falla. Léelo antes de
+escribir el primero.

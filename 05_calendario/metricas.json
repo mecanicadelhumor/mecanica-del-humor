@@ -1,0 +1,5 @@
+{
+  "_nota": "Lecturas semanales de Studio Analytics, pedidas a Silvestre (los tokens de subida no tienen permiso de analítica). Se añade sin borrar. Dueño de este fichero: la tarea de Métricas (lunes 09:00). Esquema por lectura: fecha (AAAA-MM-DD, lunes de la lectura), id (MDS-### o MDH-###, con sufijo de idioma), formato (\"corto\"|\"largo\"), serie, dias_publicado, impresiones, ctr (%), visualizaciones, porcentaje_visto (%), retencion_3s (% — solo Shorts), retencion_30s (% — solo largos), duracion_media_s, suscriptores, comentarios, me_gusta.",
+  "lecturas": [],
+  "miniaturas": []
+}

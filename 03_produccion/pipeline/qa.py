@@ -223,20 +223,51 @@ def subtitulos(carpeta):
     devuelve marcas de palabra. El día que vuelva a mandar solo marcas de
     frase, `lineas_ass` caerá a 0 — y ese fallo, sin nada que lo delate en
     pantalla, sería otra vez invisible.
+
+    Corregido el 24/08 (revisión diaria): «quemados» venía calculándose como
+    `bool(n)` — número de líneas del .ass —, que solo dice si el .ass TIENE
+    contenido, no si montaje.py lo usó para quemar nada. Mientras quemar_subs
+    era true por defecto (hasta el 19/08) ambas cosas coincidían por
+    casualidad. Desde que quemar_subs=False es el default (20/08), el .ass
+    sigue teniendo líneas —hace falta para el canario y para el .srt— y el
+    campo se ponía en true igualmente: MDS-001.es salió con
+    «quemados»: true en su ficha aunque el vídeo no lleva ni una letra
+    quemada (comprobado a ojo en los seis fotogramas de qa/MDS-001.es/).
+    montaje.py no deja ningún rastro de qué valor de quemar_subs usó de
+    verdad —no escribe manifiesto, como sí hace con musica.json—, así que
+    qa.py no puede saberlo con certeza sin tocar montaje.py (protegido; ver
+    propuesta en la bitácora del 24/08). Mejor no afirmar un valor que no se
+    puede verificar: si aparece `carpeta/montaje.json` con la clave
+    `subtitulos_quemados` (lo que escribiría esa propuesta), se usa; si no,
+    se deja en null con la nota de por qué.
     """
     ass, srt = carpeta / "subtitulos.ass", carpeta / "subtitulos.srt"
     n = ass.read_text(encoding="utf-8", errors="ignore").count("Dialogue:") if ass.exists() else 0
+    manifiesto = carpeta / "montaje.json"
+    quemados, origen = None, "sin manifiesto de montaje.py: no se puede verificar"
+    if manifiesto.exists():
+        try:
+            datos = json.loads(manifiesto.read_text(encoding="utf-8"))
+            if "subtitulos_quemados" in datos:
+                quemados = bool(datos["subtitulos_quemados"])
+                origen = "leído de montaje.json"
+        except (json.JSONDecodeError, OSError):
+            pass
     return {
         "ass_existe": ass.exists(),
         "lineas_ass": n,
         "srt_existe": srt.exists(),
-        "quemados": bool(n),
+        "quemados": quemados,
+        "quemados_origen": origen,
         "_esperado": {"quemados": False, "lineas_ass": "> 0"},
         "_nota": ("Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un "
                   "fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay "
                   "que vigilar es «lineas_ass»: si cae a 0 con ass_existe en true, edge-tts "
                   "ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá "
-                  "inservible. Ahora que no se quema nada, ese es el único aviso que queda."),
+                  "inservible. Ahora que no se quema nada, ese es el único aviso que queda. "
+                  "«quemados» sale null si montaje.py no ha dejado manifiesto (ver "
+                  "«quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal "
+                  "en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."),
     }
 
 
