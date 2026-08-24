@@ -15,7 +15,7 @@
     "Demostrar en vez de contar: el mismo chiste se ejecuta bien dos escenas más tarde y ahí sí se ríe. La prueba es el propio vídeo.",
     "Autoconciencia una sola vez, en la escena 2, y de tres palabras.",
     "El personaje pone la cara del espectador un segundo antes de que el espectador la ponga.",
-    "Corregido tras el verificador: la «bisagra» no está en A01 (violación benigna: dos condiciones, no tres piezas). Se le atribuye a L01, que es de donde sale. Y el cierre ya dice dónde falla el mecanismo explicado, no solo un dato de otro tema."
+    "Corregido tras el verificador: la «bisagra» no está en A01 (ruptura benigna: dos condiciones, no tres piezas). Se le atribuye a L01, que es de donde sale. Y el cierre ya dice dónde falla el mecanismo explicado, no solo un dato de otro tema."
   ],
   "escenas": [
     {
@@ -48,7 +48,7 @@
           "pie": "un médico está para ayudarte"
         },
         {
-          "titulo": "La violación",
+          "titulo": "La ruptura",
           "pie": "te propone dejar de vivir"
         },
         {

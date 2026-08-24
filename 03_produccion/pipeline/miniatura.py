@@ -155,9 +155,19 @@ def tam_cifra(texto, ancho):
 
 
 def cifra_mas_fuerte(guion):
+    """Primera escena «dato» cuya cifra sea de verdad una cifra.
+
+    El campo se llama «cifra» pero el guionista lo usa a veces para una frase
+    corta —MDH-002 traía «El mismo circuito»—, y entonces la maquetación de
+    número gigante en monoespaciada no tiene ningún sentido: sale una frase
+    enorme en una tipografía de máquina de escribir y el titular queda debajo,
+    diminuto. Si no empieza por un número, se usa el diseño de texto.
+    """
     for e in guion.get("escenas", []):
         if e.get("tipo") == "dato" and e.get("cifra"):
-            return e["cifra"]
+            c = limpiar(e["cifra"])
+            if re.match(r"^[^\w]{0,2}\d", c):      # «50 años», «≈1 mes», «3 de cada 4»
+                return e["cifra"]
     return None
 
 

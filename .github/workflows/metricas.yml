@@ -1,0 +1,72 @@
+name: Leer métricas
+
+# ---------------------------------------------------------------------------
+# Lee la analítica del canal y la deja en 05_calendario/metricas.json.
+#
+# POR QUÉ AQUÍ: hasta el 24 de agosto los números se pedían a mano y Silvestre
+# los copiaba de Studio uno a uno. Con seis piezas por semana eso no escala y
+# además se cometen errores al copiar.
+#
+# LO QUE ESTE WORKFLOW NO PUEDE DAR: impresiones y CTR. No son una limitación
+# nuestra — la API de analítica de YouTube no las expone, son exclusivas de
+# Studio. Para esas dos hay una salida que no crece con el número de vídeos:
+# Studio → Analytics → Modo avanzado → Exportar → CSV, un único fichero con
+# todos los vídeos, que se deja en 05_calendario/exportes/ y el script lee.
+#
+# CUÁNDO: lunes a las 05:00 UTC (07:00 en España), dos horas antes de que la
+# tarea de métricas de Cowork se despierte y lea el fichero.
+# ---------------------------------------------------------------------------
+
+on:
+  schedule:
+    - cron: "0 5 * * 1"
+  workflow_dispatch:
+    inputs:
+      desde:
+        description: "Fecha inicial YYYY-MM-DD (por defecto, la de subida de cada vídeo)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: metricas
+  cancel-in-progress: false
+
+jobs:
+  leer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Dependencias
+        run: pip install --quiet google-api-python-client google-auth
+
+      - name: Leer analítica
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          python3 04_agentes/metricas.py \
+            ${{ inputs.desde && format('--desde {0}', inputs.desde) || '' }}
+
+      # Este workflow es el ÚNICO que escribe metricas.json.
+      # Ver 00_estrategia/PROPIEDAD_DE_FICHEROS.md.
+      - name: Commit
+        run: |
+          git config user.name  "Mecánica del Humor"
+          git config user.email "mecanicadelhumor@gmail.com"
+          git add 05_calendario/metricas.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios en las métricas."
+          else
+            git commit -m "métricas $(date -u +%Y-%m-%d)"
+            git pull --rebase --autostash origin main
+            git push
+          fi
