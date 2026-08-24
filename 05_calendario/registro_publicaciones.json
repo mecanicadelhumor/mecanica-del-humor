@@ -76,6 +76,21 @@
       "musica": "cama_03_haru_lofi_roa.mp3",
       "subido_utc": "2026-08-20T08:04:11Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-001.es",
+      "episodio": "MDS-001",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué te has reído de esto? El chiste, desmontado en cuarenta segundos",
+      "guion": "05_calendario/guiones/MDS-001.es.json",
+      "video_id": "GxnBQcR85KE",
+      "url": "https://youtu.be/GxnBQcR85KE",
+      "estado": "private",
+      "publicar_en": null,
+      "musica": "cama_01_crying_over_you_christophermorrow.mp3",
+      "subido_utc": "2026-08-24T04:05:42Z",
+      "revisado": false
     }
   ]
 }
