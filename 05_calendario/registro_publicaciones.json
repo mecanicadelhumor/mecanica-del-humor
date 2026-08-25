@@ -91,6 +91,21 @@
       "musica": "cama_01_crying_over_you_christophermorrow.mp3",
       "subido_utc": "2026-08-24T04:05:42Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-002.es",
+      "episodio": "MDS-002",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué me río solo? Un científico contó 1.200 risas en la calle para saberlo",
+      "guion": "05_calendario/guiones/MDS-002.es.json",
+      "video_id": "kS4sE1KTFPM",
+      "url": "https://youtu.be/kS4sE1KTFPM",
+      "estado": "private",
+      "publicar_en": null,
+      "musica": "cama_02_dusk_next_route.mp3",
+      "subido_utc": "2026-08-25T03:38:32Z",
+      "revisado": false
     }
   ]
 }
