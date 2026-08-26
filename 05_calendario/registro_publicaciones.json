@@ -106,6 +106,21 @@
       "musica": "cama_02_dusk_next_route.mp3",
       "subido_utc": "2026-08-25T03:38:32Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-003.es",
+      "episodio": "MDS-003",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué nos reímos cuando alguien se cae? La misma caída, dos finales",
+      "guion": "05_calendario/guiones/MDS-003.es.json",
+      "video_id": "cZqCpC0aoF4",
+      "url": "https://youtu.be/cZqCpC0aoF4",
+      "estado": "private",
+      "publicar_en": null,
+      "musica": "cama_03_haru_lofi_roa.mp3",
+      "subido_utc": "2026-08-26T04:03:31Z",
+      "revisado": false
     }
   ]
 }
