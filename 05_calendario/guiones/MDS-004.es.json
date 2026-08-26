@@ -13,7 +13,7 @@
     "El gancho es humor autodestructivo ejecutado en directo: el Short empieza siendo el ejemplo del estilo que va a diagnosticar.",
     "Regla de tres invertida en la lista: los dos primeros estilos suman, el tercero raspa y el cuarto es el del segundo cero.",
     "El cierre desmonta el propio cuestionario. Es lo que separa esto de un horóscopo.",
-    "El personaje entra después del remate del gancho y no aparece en las seis escenas: una reacción constante deja de ser una reacción.",
+    "El personaje aparece en tres escenas (la 2, la 4 y la 6), nunca en la del gancho: entra después del remate, no antes.",
     "Corregido tras el verificador: B01 es un cuestionario autoinformado que correlaciona estilos con bienestar. No midió si la gente se aparta de ti. La versión anterior convertía esa correlación en una factura concreta, y encima en el título."
   ],
   "escenas": [
@@ -21,7 +21,6 @@
       "tipo": "enunciado",
       "narracion": "Cuando me dicen que soy gracioso, contesto que es lo único que tengo. Se ríen. Y no era un chiste.",
       "texto": "«Es lo único que *tengo*».",
-      "personaje": "rie",
       "pausa_despues_s": 1.3
     },
     {
@@ -52,7 +51,7 @@
       "a": "Afiliativo y *automejorante*",
       "et_b": "Se asocian a estar peor",
       "b": "Agresivo y _autodestructivo_",
-      "narracion": "Los cuatro hacen reír. La diferencia está en con qué se asocia cada uno después.",
+      "narracion": "Los cuatro hacen reír. La diferencia: agresivo y autodestructivo se asocian con estar peor; los otros dos, con estar mejor.",
       "fuente": "B01",
       "personaje": "neutra",
       "pausa_despues_s": 0.5
@@ -62,7 +61,6 @@
       "narracion": "Y ojo con lo que se midió: bienestar declarado en un cuestionario. No amigos, no gente apartándose. Bienestar.",
       "texto": "Lo que se midió fue *bienestar*.",
       "fuente": "B01",
-      "personaje": "entiende",
       "pausa_despues_s": 0.6
     },
     {

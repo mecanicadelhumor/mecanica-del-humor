@@ -14,7 +14,7 @@
     "El Short se abre con un chiste que NO funciona, a propósito. El silencio de después es el gancho: es la experiencia que el espectador ha venido a entender.",
     "Demostrar en vez de contar: el mismo chiste se ejecuta bien dos escenas más tarde y ahí sí se ríe. La prueba es el propio vídeo.",
     "Autoconciencia una sola vez, en la escena 2, y de tres palabras.",
-    "El personaje pone la cara del espectador un segundo antes de que el espectador la ponga.",
+    "El personaje aparece en tres escenas (la 2, la 3 y la 6), nunca en la del primer chiste: pone la cara del espectador justo cuando el espectador la pondría, no antes.",
     "Corregido tras el verificador: la «bisagra» no está en A01 (ruptura benigna: dos condiciones, no tres piezas). Se le atribuye a L01, que es de donde sale. Y el cierre ya dice dónde falla el mecanismo explicado, no solo un dato de otro tema."
   ],
   "escenas": [
@@ -22,7 +22,6 @@
       "tipo": "enunciado",
       "narracion": "Un chiste: el médico me dijo que dejara de respirar cuando le conté que me dolía al respirar.",
       "texto": "Chiste número *uno*.",
-      "personaje": "neutra",
       "pausa_despues_s": 1.4
     },
     {
@@ -58,7 +57,6 @@
       ],
       "narracion": "Dos condiciones: que rompa una norma, y que aun así no le pase nada a nadie.",
       "fuente": "A01",
-      "personaje": "piensa",
       "pausa_despues_s": 0.5
     },
     {
@@ -66,7 +64,6 @@
       "narracion": "La tercera pieza la nombra el oficio: el conector. En la primera iba delante, y si va delante ya lo has resuelto tú.",
       "texto": "La bisagra tiene nombre: *conector*.",
       "fuente": "L01",
-      "personaje": "entiende",
       "pausa_despues_s": 0.6
     },
     {
