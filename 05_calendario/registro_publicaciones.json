@@ -121,6 +121,21 @@
       "musica": "cama_03_haru_lofi_roa.mp3",
       "subido_utc": "2026-08-26T04:03:31Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-004.es",
+      "episodio": "MDS-004",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Qué dice de ti tu sentido del humor? Los cuatro estilos que sí se han medido",
+      "guion": "05_calendario/guiones/MDS-004.es.json",
+      "video_id": "nv8QaZPYsdA",
+      "url": "https://youtu.be/nv8QaZPYsdA",
+      "estado": "private",
+      "publicar_en": null,
+      "musica": "cama_01_crying_over_you_christophermorrow.mp3",
+      "subido_utc": "2026-08-27T07:55:03Z",
+      "revisado": false
     }
   ]
 }
