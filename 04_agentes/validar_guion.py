@@ -20,7 +20,17 @@ from pathlib import Path
 PPM = 150            # palabras por minuto de la narración
 MIN_ESCENA = 2.6
 MAX_ESCENA = 20.0    # con la deriva lenta aguanta hasta aquí; más es narrativamente malo
-MAX_IDEAL = 14.0
+# Bajado de 14.0 a 10.0 el 27/08 (revisión diaria), tras C6.1: sin subtítulos
+# quemados, el tramo estático de una escena no anima nada — esto es C6.4 de
+# 00_estrategia/PLAN_DE_CAMBIOS.md («escenas más cortas y más numerosas», la
+# única vía de movimiento que no toca montaje.py). Medido con render.py sobre
+# un par de prueba: una escena de 18,6s captura 30 fotogramas; la misma
+# narración partida en dos de ~10s captura 60 — el doble de movimiento por el
+# mismo contenido, a cambio de más render (el coste sube con el número de
+# escenas, no con el metraje — ver 05_calendario/bitacora/2026-08-27-revision.md).
+# Sigue siendo AVISO, no error: no bloquea producción, solo adelanta al guion
+# lo que antes solo delataba el vídeo terminado.
+MAX_IDEAL = 10.0
 MAX_SEGUIDAS = 2     # escenas consecutivas del mismo tipo
 
 # ---------------------------------------------------------------------------

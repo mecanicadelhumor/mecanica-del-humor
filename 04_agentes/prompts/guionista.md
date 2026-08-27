@@ -141,6 +141,27 @@ enganchada a la tarea de 24 horas: se pide que hagan algo y que cuenten cómo le
   si detecta una narración cortada así, pero el portero solo reconoce la forma: que el audio se
   entienda con los ojos cerrados es cosa tuya.
 
+## Movimiento en pantalla: escenas cortas y numerosas
+
+`render.py` solo captura fotograma a fotograma la **entrada** y la **salida** de una
+escena; el centro es una sola imagen estirada por FFmpeg. Desde que se retiraron los
+subtítulos quemados (20/08), ese centro no anima nada — es tiempo de pantalla
+completamente quieto, y la referencia de retención en vídeo sin cara pide que algo
+cambie cada 3-5 segundos.
+
+**Por eso: apunta a escenas de 10 segundos o menos.** No es un límite duro —
+`validar_guion.py` solo avisa por encima de eso, y para en 20 s—, pero cada escena
+nueva es una entrada y una salida que ya se están pagando en el render, así que es la
+única palanca que mejora el ritmo visual sin tocar una línea de `montaje.py`.
+
+Si un bloque de narración se alarga por encima de eso, **pártelo en dos escenas en
+vez de una**, en el punto donde ya harías una pausa al hablarlo: la primera mitad
+cierra una idea, la segunda la continúa o la matiza. No repartas mecánicamente a la
+mitad de una frase — el corte tiene que caer donde el oído ya esperaría un respiro.
+Medido con `render.py`: una escena de 18,6 s captura 30 fotogramas; la misma
+narración partida en dos de ~10 s captura 60 — el doble de movimiento por el mismo
+contenido.
+
 ## Cómo se usan las fuentes
 
 - Toda cifra que aparezca en pantalla lleva su `id` de la bibliografía en el campo `fuente`.
