@@ -313,10 +313,10 @@ La risa es 30 veces mas probable en grupo que a solas y casi nunca sigue a un ch
 ### `E02` ★★★ Laughter punctuates speech: Linguistic, social and gender contexts of laughter
 
 **Provine, R. R.** (1993) · *Ethology*  
-DOI: [`10.1111/j.1439-0310.1993.tb00996.x`](https://doi.org/10.1111/j.1439-0310.1993.tb00996.x) ⚠️ por verificar  
+DOI: [`10.1111/j.1439-0310.1993.tb00478.x`](https://doi.org/10.1111/j.1439-0310.1993.tb00478.x) ✓ verificado 28/08 (el DOI anterior, tb00996.x, no correspondia a este articulo)  
 Tipo: articulo
 
-La risa puntua el habla, no la interrumpe. Fundamento de la risa como senal social, no como reaccion comica.
+La risa puntua el habla, no la interrumpe. Fundamento de la risa como senal social, no como reaccion comica. Tres cifras verificadas el 28/08 contra fuentes secundarias solventes (no se pudo acceder al articulo original, de pago): 1.200 episodios de risa registrados en observacion de campo; menos de una cuarta parte de los comentarios previos a la risa eran realmente comicos (el guion de MDH-004 dice «entre un diez y un veinte por ciento», que cae dentro de ese margen pero no es una cita exacta de una unica cifra del articulo); quien habla se rie mas que quien escucha, direccion confirmada, sin multiplicador exacto en las fuentes consultadas.
 
 ### `E03` ★★★ The evolution of laughter in great apes and humans
 

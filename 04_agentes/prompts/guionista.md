@@ -178,7 +178,7 @@ contenido.
 Un vídeo de 6 minutos tiene entre 28 y 40 escenas. Reparto sano:
 
 - `enunciado` 35 % — la columna vertebral
-- `dato` 15 % — cifras grandes en ámbar
+- `dato` 15 % — cifras grandes, con su `fuente` y su `cifra`
 - `lista` 10 % — las técnicas accionables
 - `comparacion` 10 % — lo que falla frente a lo que funciona
 - `diagrama` 10 % — el mecanismo
@@ -190,8 +190,11 @@ No repitas el mismo tipo más de dos escenas seguidas.
 
 ## Resaltado en pantalla
 
-En los campos de texto de las escenas: `*así*` pinta en ámbar (el mecanismo, lo importante) y `_así_`
-pinta en cian (datos, cifras, etiquetas). **Un solo resaltado ámbar por escena.**
+**Aclarado el 28/08** (misma regla que `guionista_corto.md`): `*así*` pinta en ámbar —
+**el acento de la frase**, uno por escena— y `_así_` pinta en cian — **el término del
+oficio**, el nombre que la investigación le da a la cosa («conector», «autodestructivo»,
+«ruptura benigna»). El cian ya no es «solo para datos»: las cifras tienen su propio tipo
+de escena, `dato`, con su campo `cifra`.
 
 ## Lo que nunca haces
 

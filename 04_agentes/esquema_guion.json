@@ -237,5 +237,5 @@
    "description": "12-45 escenas en formato largo, 3-8 en corto. Lo comprueba validar_guion.py, que es quien conoce los límites de cada formato."
   }
  },
- "$comment": "Resaltado en cualquier campo de texto: *ámbar* para el mecanismo, _cian_ para los datos. Un solo ámbar por escena. El audio tiene que ser autosuficiente: lo que está en pantalla y no se dice, quien escucha sin mirar no lo recibe."
+ "$comment": "Resaltado en cualquier campo de texto (aclarado el 28/08): *ámbar* = el acento de la frase, uno por escena; _cian_ = el término del oficio, el nombre que la investigación le da a la cosa («conector», «autodestructivo», «ruptura benigna») — ya NO es «solo para datos», las cifras tienen su propio tipo de escena, `dato`, con su campo `cifra`. El audio tiene que ser autosuficiente: lo que está en pantalla y no se dice, quien escucha sin mirar no lo recibe."
 }
