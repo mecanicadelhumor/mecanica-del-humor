@@ -136,6 +136,21 @@
       "musica": "cama_01_crying_over_you_christophermorrow.mp3",
       "subido_utc": "2026-08-27T07:55:03Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-005.es",
+      "episodio": "MDS-005",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué mis chistes no dan risa? El mismo chiste, contado mal y contado bien",
+      "guion": "05_calendario/guiones/MDS-005.es.json",
+      "video_id": "14KLEyZ26-0",
+      "url": "https://youtu.be/14KLEyZ26-0",
+      "estado": "private",
+      "publicar_en": null,
+      "musica": "cama_02_dusk_next_route.mp3",
+      "subido_utc": "2026-08-28T07:00:17Z",
+      "revisado": false
     }
   ]
 }
