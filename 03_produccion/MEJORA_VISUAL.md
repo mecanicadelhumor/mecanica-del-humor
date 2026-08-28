@@ -200,4 +200,6 @@ propias variantes A/B cuando haya datos.
 | V8–V9 | sin decidir — **V8 sube de prioridad**: sin subtítulos quemados, nada se mueve en el tramo central |
 
 La revisión diaria de las 07:00 avanza este backlog de uno en uno y deja lo que
-observa en `05_calendario/MEJORAS.md`.
+observa en `05_calendario/bitacora/AAAA-MM-DD-revision.md` (desde el 21/08;
+`05_calendario/MEJORAS.md` queda congelado como historia — ver
+`00_estrategia/PROPIEDAD_DE_FICHEROS.md`).
