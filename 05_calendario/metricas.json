@@ -1,5 +1,993 @@
 {
-  "_nota": "Lecturas semanales de Studio Analytics, pedidas a Silvestre (los tokens de subida no tienen permiso de analítica). Se añade sin borrar. Dueño de este fichero: la tarea de Métricas (lunes 09:00). Esquema por lectura: fecha (AAAA-MM-DD, lunes de la lectura), id (MDS-### o MDH-###, con sufijo de idioma), formato (\"corto\"|\"largo\"), serie, dias_publicado, impresiones, ctr (%), visualizaciones, porcentaje_visto (%), retencion_3s (% — solo Shorts), retencion_30s (% — solo largos), duracion_media_s, suscriptores, comentarios, me_gusta.",
-  "lecturas": [],
-  "miniaturas": []
+ "_nota": "Lo escribe 04_agentes/metricas.py desde GitHub Actions. Impresiones y CTR solo aparecen si hay un CSV de Studio en 05_calendario/exportes/: la API de YouTube no las expone.",
+ "lecturas": [
+  {
+   "leido": "2026-08-28",
+   "id": "MDH-001.es",
+   "video_id": "nmADYAksYoo",
+   "titulo": "Nadie nace gracioso — lo que 50 años de investigación han medido de verdad",
+   "formato": "largo",
+   "serie": "",
+   "publicado": "2026-08-18",
+   "privacidad": "public",
+   "dias_publicado": 10,
+   "duracion_s": 430.0,
+   "visualizaciones": 12,
+   "duracion_media_s": 107.0,
+   "porcentaje_visto": 24.9,
+   "minutos_vistos": 21.0,
+   "suscriptores": 0,
+   "me_gusta": 4,
+   "comentarios": 0,
+   "compartidos": 1,
+   "retencion": {
+    "puntos": 100,
+    "a_30s_pct": 45.5,
+    "caida_primer_10_pct": 72.7,
+    "curva": [
+     {
+      "t": 4.3,
+      "ratio": 1
+     },
+     {
+      "t": 8.6,
+      "ratio": 0.6364
+     },
+     {
+      "t": 12.9,
+      "ratio": 0.5455
+     },
+     {
+      "t": 17.2,
+      "ratio": 0.4545
+     },
+     {
+      "t": 21.5,
+      "ratio": 0.4545
+     },
+     {
+      "t": 25.8,
+      "ratio": 0.4545
+     },
+     {
+      "t": 30.1,
+      "ratio": 0.4545
+     },
+     {
+      "t": 34.4,
+      "ratio": 0.4545
+     },
+     {
+      "t": 38.7,
+      "ratio": 0.2727
+     },
+     {
+      "t": 43.0,
+      "ratio": 0.2727
+     },
+     {
+      "t": 47.3,
+      "ratio": 0.2727
+     },
+     {
+      "t": 51.6,
+      "ratio": 0.2727
+     },
+     {
+      "t": 55.9,
+      "ratio": 0.2727
+     },
+     {
+      "t": 60.2,
+      "ratio": 0.3636
+     },
+     {
+      "t": 64.5,
+      "ratio": 0.3636
+     },
+     {
+      "t": 68.8,
+      "ratio": 0.3636
+     },
+     {
+      "t": 73.1,
+      "ratio": 0.3636
+     },
+     {
+      "t": 77.4,
+      "ratio": 0.2727
+     },
+     {
+      "t": 81.7,
+      "ratio": 0.2727
+     },
+     {
+      "t": 86.0,
+      "ratio": 0.2727
+     },
+     {
+      "t": 90.3,
+      "ratio": 0.2727
+     },
+     {
+      "t": 94.6,
+      "ratio": 0.1818
+     },
+     {
+      "t": 98.9,
+      "ratio": 0.1818
+     },
+     {
+      "t": 103.2,
+      "ratio": 0.1818
+     },
+     {
+      "t": 107.5,
+      "ratio": 0.1818
+     },
+     {
+      "t": 111.8,
+      "ratio": 0.1818
+     },
+     {
+      "t": 116.1,
+      "ratio": 0.1818
+     },
+     {
+      "t": 120.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 124.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 129.0,
+      "ratio": 0.0909
+     },
+     {
+      "t": 133.3,
+      "ratio": 0.0909
+     },
+     {
+      "t": 137.6,
+      "ratio": 0.0909
+     },
+     {
+      "t": 141.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 146.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 150.5,
+      "ratio": 0.0909
+     },
+     {
+      "t": 154.8,
+      "ratio": 0.0909
+     },
+     {
+      "t": 159.1,
+      "ratio": 0.0909
+     },
+     {
+      "t": 163.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 167.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 172.0,
+      "ratio": 0.0909
+     },
+     {
+      "t": 176.3,
+      "ratio": 0.0909
+     },
+     {
+      "t": 180.6,
+      "ratio": 0.0909
+     },
+     {
+      "t": 184.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 189.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 193.5,
+      "ratio": 0.0909
+     },
+     {
+      "t": 197.8,
+      "ratio": 0.0909
+     },
+     {
+      "t": 202.1,
+      "ratio": 0.0909
+     },
+     {
+      "t": 206.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 210.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 215.0,
+      "ratio": 0.0909
+     },
+     {
+      "t": 219.3,
+      "ratio": 0.0909
+     },
+     {
+      "t": 223.6,
+      "ratio": 0.0909
+     },
+     {
+      "t": 227.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 232.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 236.5,
+      "ratio": 0.0909
+     },
+     {
+      "t": 240.8,
+      "ratio": 0.0909
+     },
+     {
+      "t": 245.1,
+      "ratio": 0.0909
+     },
+     {
+      "t": 249.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 253.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 258.0,
+      "ratio": 0.0909
+     },
+     {
+      "t": 262.3,
+      "ratio": 0.0909
+     },
+     {
+      "t": 266.6,
+      "ratio": 0.0909
+     },
+     {
+      "t": 270.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 275.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 279.5,
+      "ratio": 0.0909
+     },
+     {
+      "t": 283.8,
+      "ratio": 0.0909
+     },
+     {
+      "t": 288.1,
+      "ratio": 0.0909
+     },
+     {
+      "t": 292.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 296.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 301.0,
+      "ratio": 0.0909
+     },
+     {
+      "t": 305.3,
+      "ratio": 0.0909
+     },
+     {
+      "t": 309.6,
+      "ratio": 0.0909
+     },
+     {
+      "t": 313.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 318.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 322.5,
+      "ratio": 0.0909
+     },
+     {
+      "t": 326.8,
+      "ratio": 0.0909
+     },
+     {
+      "t": 331.1,
+      "ratio": 0.0909
+     },
+     {
+      "t": 335.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 339.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 344.0,
+      "ratio": 0.0909
+     },
+     {
+      "t": 348.3,
+      "ratio": 0.0909
+     },
+     {
+      "t": 352.6,
+      "ratio": 0.0909
+     },
+     {
+      "t": 356.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 361.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 365.5,
+      "ratio": 0.0909
+     },
+     {
+      "t": 369.8,
+      "ratio": 0.0909
+     },
+     {
+      "t": 374.1,
+      "ratio": 0.0909
+     },
+     {
+      "t": 378.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 382.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 387.0,
+      "ratio": 0.0909
+     },
+     {
+      "t": 391.3,
+      "ratio": 0.0909
+     },
+     {
+      "t": 395.6,
+      "ratio": 0.0909
+     },
+     {
+      "t": 399.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 404.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 408.5,
+      "ratio": 0.0909
+     },
+     {
+      "t": 412.8,
+      "ratio": 0.0909
+     },
+     {
+      "t": 417.1,
+      "ratio": 0.0909
+     },
+     {
+      "t": 421.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 425.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 430.0,
+      "ratio": 0.0909
+     }
+    ]
+   },
+   "trafico_pct": {
+    "YT_CHANNEL": 50.0,
+    "RELATED_VIDEO": 25.0,
+    "SUBSCRIBER": 16.7,
+    "NO_LINK_OTHER": 8.3
+   },
+   "impresiones": null,
+   "ctr": null
+  },
+  {
+   "leido": "2026-08-28",
+   "id": "MDH-002.es",
+   "video_id": "uthJg_Db0XE",
+   "titulo": "Por qué te ríes: las dos condiciones que cumple cualquier chiste",
+   "formato": "largo",
+   "serie": "",
+   "publicado": "2026-08-19",
+   "privacidad": "public",
+   "dias_publicado": 9,
+   "duracion_s": 346.0,
+   "visualizaciones": 27,
+   "duracion_media_s": 122.0,
+   "porcentaje_visto": 35.3,
+   "minutos_vistos": 52.0,
+   "suscriptores": 0,
+   "me_gusta": 4,
+   "comentarios": 0,
+   "compartidos": 0,
+   "retencion": {
+    "puntos": 100,
+    "a_30s_pct": 50.0,
+    "caida_primer_10_pct": 50.0,
+    "curva": [
+     {
+      "t": 3.5,
+      "ratio": 1
+     },
+     {
+      "t": 6.9,
+      "ratio": 0.8846
+     },
+     {
+      "t": 10.4,
+      "ratio": 0.8462
+     },
+     {
+      "t": 13.8,
+      "ratio": 0.6923
+     },
+     {
+      "t": 17.3,
+      "ratio": 0.5769
+     },
+     {
+      "t": 20.8,
+      "ratio": 0.5769
+     },
+     {
+      "t": 24.2,
+      "ratio": 0.5
+     },
+     {
+      "t": 27.7,
+      "ratio": 0.5
+     },
+     {
+      "t": 31.1,
+      "ratio": 0.5
+     },
+     {
+      "t": 34.6,
+      "ratio": 0.5
+     },
+     {
+      "t": 38.1,
+      "ratio": 0.5
+     },
+     {
+      "t": 41.5,
+      "ratio": 0.4615
+     },
+     {
+      "t": 45.0,
+      "ratio": 0.4615
+     },
+     {
+      "t": 48.4,
+      "ratio": 0.4615
+     },
+     {
+      "t": 51.9,
+      "ratio": 0.4615
+     },
+     {
+      "t": 55.4,
+      "ratio": 0.4231
+     },
+     {
+      "t": 58.8,
+      "ratio": 0.3846
+     },
+     {
+      "t": 62.3,
+      "ratio": 0.3846
+     },
+     {
+      "t": 65.7,
+      "ratio": 0.3846
+     },
+     {
+      "t": 69.2,
+      "ratio": 0.3846
+     },
+     {
+      "t": 72.7,
+      "ratio": 0.3846
+     },
+     {
+      "t": 76.1,
+      "ratio": 0.3846
+     },
+     {
+      "t": 79.6,
+      "ratio": 0.3846
+     },
+     {
+      "t": 83.0,
+      "ratio": 0.3846
+     },
+     {
+      "t": 86.5,
+      "ratio": 0.3846
+     },
+     {
+      "t": 90.0,
+      "ratio": 0.3846
+     },
+     {
+      "t": 93.4,
+      "ratio": 0.3846
+     },
+     {
+      "t": 96.9,
+      "ratio": 0.3846
+     },
+     {
+      "t": 100.3,
+      "ratio": 0.3846
+     },
+     {
+      "t": 103.8,
+      "ratio": 0.3846
+     },
+     {
+      "t": 107.3,
+      "ratio": 0.3846
+     },
+     {
+      "t": 110.7,
+      "ratio": 0.4231
+     },
+     {
+      "t": 114.2,
+      "ratio": 0.4231
+     },
+     {
+      "t": 117.6,
+      "ratio": 0.4231
+     },
+     {
+      "t": 121.1,
+      "ratio": 0.4231
+     },
+     {
+      "t": 124.6,
+      "ratio": 0.4231
+     },
+     {
+      "t": 128.0,
+      "ratio": 0.4231
+     },
+     {
+      "t": 131.5,
+      "ratio": 0.4231
+     },
+     {
+      "t": 134.9,
+      "ratio": 0.4231
+     },
+     {
+      "t": 138.4,
+      "ratio": 0.4231
+     },
+     {
+      "t": 141.9,
+      "ratio": 0.4231
+     },
+     {
+      "t": 145.3,
+      "ratio": 0.4231
+     },
+     {
+      "t": 148.8,
+      "ratio": 0.4231
+     },
+     {
+      "t": 152.2,
+      "ratio": 0.4231
+     },
+     {
+      "t": 155.7,
+      "ratio": 0.4231
+     },
+     {
+      "t": 159.2,
+      "ratio": 0.4231
+     },
+     {
+      "t": 162.6,
+      "ratio": 0.4231
+     },
+     {
+      "t": 166.1,
+      "ratio": 0.4231
+     },
+     {
+      "t": 169.5,
+      "ratio": 0.3846
+     },
+     {
+      "t": 173.0,
+      "ratio": 0.3846
+     },
+     {
+      "t": 176.5,
+      "ratio": 0.3846
+     },
+     {
+      "t": 179.9,
+      "ratio": 0.3462
+     },
+     {
+      "t": 183.4,
+      "ratio": 0.3462
+     },
+     {
+      "t": 186.8,
+      "ratio": 0.3462
+     },
+     {
+      "t": 190.3,
+      "ratio": 0.3077
+     },
+     {
+      "t": 193.8,
+      "ratio": 0.3077
+     },
+     {
+      "t": 197.2,
+      "ratio": 0.3077
+     },
+     {
+      "t": 200.7,
+      "ratio": 0.3077
+     },
+     {
+      "t": 204.1,
+      "ratio": 0.3077
+     },
+     {
+      "t": 207.6,
+      "ratio": 0.3077
+     },
+     {
+      "t": 211.1,
+      "ratio": 0.3077
+     },
+     {
+      "t": 214.5,
+      "ratio": 0.3077
+     },
+     {
+      "t": 218.0,
+      "ratio": 0.3077
+     },
+     {
+      "t": 221.4,
+      "ratio": 0.3077
+     },
+     {
+      "t": 224.9,
+      "ratio": 0.3077
+     },
+     {
+      "t": 228.4,
+      "ratio": 0.3077
+     },
+     {
+      "t": 231.8,
+      "ratio": 0.3077
+     },
+     {
+      "t": 235.3,
+      "ratio": 0.3077
+     },
+     {
+      "t": 238.7,
+      "ratio": 0.3077
+     },
+     {
+      "t": 242.2,
+      "ratio": 0.3077
+     },
+     {
+      "t": 245.7,
+      "ratio": 0.3077
+     },
+     {
+      "t": 249.1,
+      "ratio": 0.3077
+     },
+     {
+      "t": 252.6,
+      "ratio": 0.3077
+     },
+     {
+      "t": 256.0,
+      "ratio": 0.3077
+     },
+     {
+      "t": 259.5,
+      "ratio": 0.2692
+     },
+     {
+      "t": 263.0,
+      "ratio": 0.2692
+     },
+     {
+      "t": 266.4,
+      "ratio": 0.2692
+     },
+     {
+      "t": 269.9,
+      "ratio": 0.2692
+     },
+     {
+      "t": 273.3,
+      "ratio": 0.2692
+     },
+     {
+      "t": 276.8,
+      "ratio": 0.2692
+     },
+     {
+      "t": 280.3,
+      "ratio": 0.2692
+     },
+     {
+      "t": 283.7,
+      "ratio": 0.2692
+     },
+     {
+      "t": 287.2,
+      "ratio": 0.2692
+     },
+     {
+      "t": 290.6,
+      "ratio": 0.2692
+     },
+     {
+      "t": 294.1,
+      "ratio": 0.2692
+     },
+     {
+      "t": 297.6,
+      "ratio": 0.2692
+     },
+     {
+      "t": 301.0,
+      "ratio": 0.2692
+     },
+     {
+      "t": 304.5,
+      "ratio": 0.2692
+     },
+     {
+      "t": 307.9,
+      "ratio": 0.2692
+     },
+     {
+      "t": 311.4,
+      "ratio": 0.2692
+     },
+     {
+      "t": 314.9,
+      "ratio": 0.2692
+     },
+     {
+      "t": 318.3,
+      "ratio": 0.2692
+     },
+     {
+      "t": 321.8,
+      "ratio": 0.2692
+     },
+     {
+      "t": 325.2,
+      "ratio": 0.2692
+     },
+     {
+      "t": 328.7,
+      "ratio": 0.2692
+     },
+     {
+      "t": 332.2,
+      "ratio": 0.2308
+     },
+     {
+      "t": 335.6,
+      "ratio": 0.1923
+     },
+     {
+      "t": 339.1,
+      "ratio": 0.1923
+     },
+     {
+      "t": 342.5,
+      "ratio": 0.1923
+     },
+     {
+      "t": 346.0,
+      "ratio": 0.1923
+     }
+    ]
+   },
+   "trafico_pct": {
+    "SUBSCRIBER": 57.7,
+    "RELATED_VIDEO": 34.6,
+    "YT_CHANNEL": 7.7,
+    "NO_LINK_OTHER": 0.0
+   },
+   "impresiones": null,
+   "ctr": null
+  },
+  {
+   "leido": "2026-08-28",
+   "id": "MDH-003.es",
+   "video_id": "o_1LiLkrlso",
+   "titulo": "«Todavía es pronto»: alguien midió cuánto hay que esperar exactamente",
+   "formato": "largo",
+   "serie": "",
+   "publicado": "2026-08-20",
+   "privacidad": "public",
+   "dias_publicado": 8,
+   "duracion_s": 330.0,
+   "visualizaciones": 8,
+   "duracion_media_s": 73.0,
+   "porcentaje_visto": 22.4,
+   "minutos_vistos": 9.0,
+   "suscriptores": 0,
+   "me_gusta": 3,
+   "comentarios": 0,
+   "compartidos": 0,
+   "retencion": {
+    "puntos": 0
+   },
+   "trafico_pct": {
+    "RELATED_VIDEO": 37.5,
+    "SUBSCRIBER": 25.0,
+    "YT_CHANNEL": 25.0,
+    "NO_LINK_OTHER": 12.5
+   },
+   "impresiones": null,
+   "ctr": null
+  },
+  {
+   "leido": "2026-08-28",
+   "id": "MDS-001.es",
+   "video_id": "GxnBQcR85KE",
+   "titulo": "¿Por qué te has reído de esto? El chiste, desmontado en cuarenta segundos",
+   "formato": "corto",
+   "serie": "",
+   "publicado": "2026-08-24",
+   "privacidad": "public",
+   "dias_publicado": 4,
+   "duracion_s": 43.0,
+   "visualizaciones": 6,
+   "duracion_media_s": 0.0,
+   "porcentaje_visto": 0.0,
+   "minutos_vistos": 0.0,
+   "suscriptores": 0,
+   "me_gusta": 0,
+   "comentarios": 0,
+   "compartidos": 0,
+   "retencion": {
+    "puntos": 0
+   },
+   "trafico_pct": {
+    "SHORTS": 100.0,
+    "NO_LINK_OTHER": 0.0
+   },
+   "impresiones": null,
+   "ctr": null
+  },
+  {
+   "leido": "2026-08-28",
+   "id": "MDS-002.es",
+   "video_id": "kS4sE1KTFPM",
+   "titulo": "¿Por qué me río solo? Un científico contó 1.200 risas en la calle para saberlo",
+   "formato": "corto",
+   "serie": "",
+   "publicado": "2026-08-25",
+   "privacidad": "public",
+   "dias_publicado": 3,
+   "duracion_s": 53.0,
+   "visualizaciones": 6,
+   "duracion_media_s": 60.0,
+   "porcentaje_visto": 114.6,
+   "minutos_vistos": 3.0,
+   "suscriptores": 0,
+   "me_gusta": 0,
+   "comentarios": 0,
+   "compartidos": 0,
+   "retencion": {
+    "puntos": 0
+   },
+   "trafico_pct": {
+    "NO_LINK_OTHER": 50.0,
+    "YT_SEARCH": 33.3,
+    "SHORTS": 16.7
+   },
+   "impresiones": null,
+   "ctr": null
+  },
+  {
+   "leido": "2026-08-28",
+   "id": "MDS-003.es",
+   "video_id": "cZqCpC0aoF4",
+   "titulo": "¿Por qué nos reímos cuando alguien se cae? La misma caída, dos finales",
+   "formato": "corto",
+   "serie": "",
+   "publicado": "2026-08-26",
+   "privacidad": "public",
+   "dias_publicado": 2,
+   "duracion_s": 47.0,
+   "visualizaciones": 0,
+   "duracion_media_s": 0.0,
+   "porcentaje_visto": 0.0,
+   "minutos_vistos": 0.0,
+   "suscriptores": 0,
+   "me_gusta": 0,
+   "comentarios": 0,
+   "compartidos": 0,
+   "retencion": {
+    "puntos": 0
+   },
+   "trafico_pct": {},
+   "impresiones": null,
+   "ctr": null
+  }
+ ],
+ "miniaturas": [],
+ "actualizado_utc": "2026-08-28T08:41:30Z"
 }
