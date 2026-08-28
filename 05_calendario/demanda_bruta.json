@@ -1,0 +1,1402 @@
+{
+ "generado_utc": "2026-08-28T07:56:29Z",
+ "_nota": "Medición en bruto. NO decide nada: no sabe si la bibliografía respalda una pregunta ni si el enfoque es aceptable. Eso lo juzga la tarea de planificación de los jueves, que escribe 05_calendario/demanda.json a partir de este fichero.",
+ "autocompletar": {
+  "por qué no le hago gracia": [
+   "no le das gusto a nadie",
+   "no me calo whisky chimbo",
+   "no me iba a ir pobre",
+   "por eso lo deje",
+   "por eso no me canso",
+   "por eso no me caso",
+   "por eso no pienso organizarse de nuevo",
+   "por eso no tienes novio",
+   "por q no le calas",
+   "por q no le dices",
+   "por qué hago",
+   "por qué lo deje paola herrera",
+   "por qué me desprecia",
+   "por qu� gotea mi regadera",
+   "por qu� le hago da�o",
+   "por qu� me desprecia",
+   "por qu� no haces",
+   "por qu� no le dices",
+   "por qu� no le hago falta",
+   "por qu� no le jalas",
+   "por qu� no lo dijiste",
+   "por qu� se seca el pasto",
+   "por qu� te quejas",
+   "por qu� tengo que aceptar",
+   "porque me golpeas porque dices locuras",
+   "porque no me recupero aa",
+   "porqué no le calas",
+   "porqu� no le calas",
+   "que hacer cuando no se que hacer miguel nuñez"
+  ],
+  "por qué me río": [
+   "me rio del que llora por amor",
+   "me rio porque te amo",
+   "me rio tendria que llorar por ti",
+   "no me preguntes por qu� conjunto rio grande",
+   "por cada que me rio me quito una prenda",
+   "por cada vez que me rio me quito un boton",
+   "por cada vez que me rio me quito una prenda",
+   "porque me rio de la nada",
+   "porque me rio de todo",
+   "porque no me rio",
+   "tendria que llorar por ti y me rio como un loco cumbia",
+   "tendría que llorar por ti me río como un loco",
+   "tendría que llorar por ti y me río como un loco americo",
+   "tendría que llorar por ti y me río como un loco letra",
+   "tendrías que llorar por mí y me río como un loco",
+   "tenia que llorar por ti y me rio como un loco balada",
+   "tenia que llorar por ti y me rio como un loco grupo 5",
+   "tenia que llorar por ti y me rio como un loco letra",
+   "yo me rio porque te fuiste"
+  ],
+  "por qué nos reímos": [
+   "por qué da risa",
+   "por qu� da risa",
+   "por qu� dan risa",
+   "por qu� risa",
+   "por qu� te r�es",
+   "porque nos reimos"
+  ],
+  "sentido del humor": [
+   "con sentido del humor carlos trejo",
+   "el sentido del humor",
+   "el sentido del humor alison",
+   "el sentido del humor altoyoyo",
+   "el sentido del humor alvaro salas",
+   "el sentido del humor amarillos",
+   "el sentido del humor arayita",
+   "el sentido del humor asaltaron",
+   "el sentido del humor año nuevo",
+   "el sentido del humor bakania",
+   "el sentido del humor bananero",
+   "el sentido del humor baneados en pijama",
+   "el sentido del humor benny",
+   "el sentido del humor beno espinosa",
+   "el sentido del humor big",
+   "el sentido del humor big radio",
+   "el sentido del humor bogot�",
+   "el sentido del humor boliviano rhapsody",
+   "el sentido del humor carlos pinto",
+   "el sentido del humor cebolla y bodoque",
+   "el sentido del humor cinthia",
+   "el sentido del humor cristianghost",
+   "el sentido del humor cynthia",
+   "el sentido del humor daniel mu�oz",
+   "el sentido del humor divina comida",
+   "el sentido del humor don francisco",
+   "el sentido del humor dos tontos y yo",
+   "el sentido del humor do�a juanita",
+   "el sentido del humor eva gomez",
+   "el sentido del humor garbo",
+   "el sentido del humor geometria plana",
+   "el sentido del humor george harris",
+   "el sentido del humor guarden este capitulo",
+   "el sentido del humor jeannette jara",
+   "el sentido del humor la divina comida",
+   "el sentido del humor loco lithium",
+   "el sentido del humor los atletas de la risa",
+   "el sentido del humor los yellow man",
+   "el sentido del humor lucho jara",
+   "el sentido del humor lucho mellera",
+   "el sentido del humor lucho miranda",
+   "el sentido del humor luis slimming",
+   "el sentido del humor maria luisa",
+   "el sentido del humor marko zaror",
+   "el sentido del humor mauricio flores",
+   "el sentido del humor mauricio medina",
+   "el sentido del humor medina",
+   "el sentido del humor mejores momentos",
+   "el sentido del humor mi lucha",
+   "el sentido del humor millenium show",
+   "el sentido del humor motochorro",
+   "el sentido del humor oscar gangas",
+   "el sentido del humor pancho melo",
+   "el sentido del humor pastor rocha",
+   "el sentido del humor pedro ruminot y eduardo fuentes",
+   "el sentido del humor reaccion",
+   "el sentido del humor roberto delgado",
+   "el sentido del humor rossy",
+   "el sentido del humor ruminot",
+   "el sentido del humor ruminot eduardo fuentes",
+   "el sentido del humor sergio freire",
+   "el sentido del humor sketch",
+   "el sentido del humor socias caroe",
+   "el sentido del humor socias y edo",
+   "el sentido del humor stand up",
+   "el sentido del humor teleton",
+   "el sentido del humor titeres",
+   "el sentido del humor todo pagado",
+   "el sentido del humor tomas va a morir",
+   "el sentido del humor tvn",
+   "el sentido del humor valverde",
+   "el sentido del humor vardoc",
+   "el sentido del humor vi�a",
+   "el sentido del humor votaciones",
+   "el sentido del humor weona que creici",
+   "el sentido del humor yellow",
+   "el sentido del humor yoyo",
+   "mucho gusto el sentido del humor",
+   "que es el sentido del humor",
+   "sentido del humor",
+   "sentido del humor atletas de la risa",
+   "sentido del humor bogot�",
+   "sentido del humor bueno",
+   "sentido del humor cano",
+   "sentido del humor chaco",
+   "sentido del humor como desarrollarlo",
+   "sentido del humor comparini",
+   "sentido del humor con jara",
+   "sentido del humor cristianghost",
+   "sentido del humor darinka",
+   "sentido del humor de dios",
+   "sentido del humor dino gordillo",
+   "sentido del humor don carter",
+   "sentido del humor edo caroe",
+   "sentido del humor eduardo fuentes",
+   "sentido del humor elecciones",
+   "sentido del humor en la calle",
+   "sentido del humor en vivo",
+   "sentido del humor especial do�a juanita",
+   "sentido del humor felipe avello",
+   "sentido del humor freddy guerrero",
+   "sentido del humor isabelle valdez",
+   "sentido del humor isabelle valdez remix",
+   "sentido del humor jara",
+   "sentido del humor jorge rivas",
+   "sentido del humor larrain",
+   "sentido del humor leo caprile",
+   "sentido del humor paloma salas",
+   "sentido del humor palta melendez",
+   "sentido del humor pancho melo",
+   "sentido del humor pastor",
+   "sentido del humor pastor rocha",
+   "sentido del humor pedro ruminot",
+   "sentido del humor pesito a pesito",
+   "sentido del humor pollo",
+   "sentido del humor pollo castillo",
+   "sentido del humor pollo valdivia",
+   "sentido del humor psicologia",
+   "sentido del humor remix",
+   "sentido del humor roto",
+   "sentido del humor sexpirito",
+   "sentido del humor se�ora juanita",
+   "sentido del humor socias",
+   "sentido del humor subliminal",
+   "sentido del humor te falta calle",
+   "sentido del humor vi�uela",
+   "tengo mas sentido del humor que el vecino",
+   "tu sentido del humor salsa"
+  ],
+  "cómo ser gracioso": [
+   "como aprender a ser gracioso",
+   "como ser el gracioso de la clase",
+   "como ser el mas gracioso de tus amigos",
+   "como ser graciosa",
+   "como ser gracioso carisma al instante",
+   "como ser gracioso como franco escamilla",
+   "como ser gracioso con las mujeres",
+   "como ser gracioso con una mujer",
+   "como ser gracioso en la escuela",
+   "como ser gracioso en una conversacion",
+   "como ser gracioso naturalmente",
+   "como ser gracioso sin esforzarse",
+   "como ser gracioso sin ser estupido",
+   "como ser gracioso y divertido",
+   "como ser graciosos",
+   "como ser mas gracioso",
+   "como ser mas gracioso con una mujer",
+   "como ser mas gracioso y mas sociable",
+   "como ser ocurrente y gracioso",
+   "como ser un buen comediante",
+   "como ser una persona chistosa",
+   "como ser una persona graciosa",
+   "como tener humor inteligente",
+   "cómo ser gracioso",
+   "c�mo ser chistoso",
+   "c�mo ser gracioso",
+   "c�mo ser un buen comediante",
+   "deepvoid como ser gracioso"
+  ],
+  "humor negro": [
+   "humor negro big soto",
+   "humor negro colombiano",
+   "humor negro comediante",
+   "humor negro con un cura",
+   "humor negro magia blanca",
+   "humor negro mexicano",
+   "humor negro pe",
+   "humor negro shorts",
+   "humor negro si te r�es pierdes",
+   "humor negro stand up"
+  ],
+  "chistes que": [
+   "chistes que dan mucha risa",
+   "chistes que dan risa",
+   "chistes que den mucha risa",
+   "chistes que den risa",
+   "chistes que hacen re�r",
+   "chistes que hagan re�r",
+   "chistes que me hagan re�r",
+   "chistes que no dan risa pero si te ries pierdes",
+   "chistes que te hacen re�r",
+   "chistes que te hagan re�r"
+  ],
+  "hacer reír": [
+   "hacer re�r",
+   "hacer re�r a la gente",
+   "hacer re�r a las personas",
+   "hacer re�r a pachu",
+   "hacer re�r a tu beb�",
+   "hacer re�r a un beb�",
+   "hacer re�r a una mujer enamora",
+   "hacer re�r a yayo",
+   "hacer re�r mucho",
+   "hacer re�rme"
+  ],
+  "caer bien": [
+   "caer bien",
+   "caer bien a las personas",
+   "caer bien a los demas",
+   "caer bien audio subliminal",
+   "caer bien en el trabajo",
+   "caer bien o mal",
+   "caer bien o mal ahora da igual",
+   "caer bien o mal ahora da igual letra",
+   "caer bien subliminal"
+  ],
+  "me da vergüenza": [
+   "me da verg�enza",
+   "me da verg�enza con mis amigos",
+   "me da verg�enza cornelio reyna",
+   "me da verg�enza juli�n �lvarez",
+   "me da verg�enza karaoke",
+   "me da verg�enza leg�timo",
+   "me da verg�enza que me descubran mi segunda vida",
+   "me da verg�enza salir contigo",
+   "me da verg�enza sonora santanera",
+   "me da verg�enza ya pedirte perd�n"
+  ],
+  "miedo al ridículo": [
+   "miedo al ridiculo"
+  ],
+  "risa nerviosa": [
+   "esa risa nerviosa shakira",
+   "risa nerviosa",
+   "risa nerviosa de una mujer",
+   "risa nerviosa efecto de sonido",
+   "risa nerviosa meme",
+   "risa nerviosa psicologia"
+  ],
+  "vergüenza ajena": [
+   "verg�enza ajena",
+   "verg�enza ajena bloque depresivo",
+   "verg�enza ajena drama chino",
+   "verg�enza ajena guitarra",
+   "verg�enza ajena los jaivas",
+   "verg�enza ajena loulogio",
+   "verg�enza ajena luigi 21 plus",
+   "verg�enza ajena mtv",
+   "verg�enza ajena programa",
+   "verg�enza ajena riff"
+  ]
+ },
+ "youtube": {
+  "por qué nadie se ríe de mis chistes": {
+   "vistas_top10": 131046,
+   "mediana_vistas": 2900,
+   "resultados": 10,
+   "top5_publicados": [
+    "2025-09-25",
+    "2025-09-23",
+    "2026-06-01",
+    "2022-11-10",
+    "2024-06-03"
+   ],
+   "top5": [
+    {
+     "titulo": "Porqué nadie se ríe de mis chistes? u.u.",
+     "canal": "Phartem",
+     "publicado": "2025-09-25",
+     "vistas": 49108,
+     "duracion": "PT13S"
+    },
+    {
+     "titulo": "😹POR ESTA RAZON, NADIE SE RIE DE MIS CHISTES😹#reels #parati #memes #risas #chistes",
+     "canal": "OaxacoKunUwU",
+     "publicado": "2025-09-23",
+     "vistas": 31837,
+     "duracion": "PT14S"
+    },
+    {
+     "titulo": "Porque nadie se ríe de mis chistes? #humor #memes #hollowknight",
+     "canal": "Vicpro999",
+     "publicado": "2026-06-01",
+     "vistas": 31581,
+     "duracion": "PT27S"
+    },
+    {
+     "titulo": "¿Porqué nadie se ríe de mis chistes? 🤣🤣",
+     "canal": "Nonsense　",
+     "publicado": "2022-11-10",
+     "vistas": 11991,
+     "duracion": "PT6S"
+    },
+    {
+     "titulo": "porque nadie se rie dw mis chistes?",
+     "canal": "Mateo Romero",
+     "publicado": "2024-06-03",
+     "vistas": 2900,
+     "duracion": "PT8S"
+    }
+   ]
+  },
+  "por qué me río solo": {
+   "vistas_top10": 46894501,
+   "mediana_vistas": 2012729,
+   "resultados": 10,
+   "top5_publicados": [
+    "2025-04-24",
+    "2024-02-13",
+    "2025-06-16",
+    "2026-02-10",
+    "2026-06-08"
+   ],
+   "top5": [
+    {
+     "titulo": "SI ME RIO MUESTRO MI CARA",
+     "canal": "ChuuyMine",
+     "publicado": "2025-04-24",
+     "vistas": 19099372,
+     "duracion": "PT50S"
+    },
+    {
+     "titulo": "Si me río, pierdo dinero",
+     "canal": "IlloJuan",
+     "publicado": "2024-02-13",
+     "vistas": 11775678,
+     "duracion": "PT32M12S"
+    },
+    {
+     "titulo": "Me río sin control 😂 #humor #risa #amigos",
+     "canal": "Yodabeibi",
+     "publicado": "2025-06-16",
+     "vistas": 6370375,
+     "duracion": "PT9S"
+    },
+    {
+     "titulo": "SI ME RIO ME MAQUILLO!💄",
+     "canal": "ElAbrahaham",
+     "publicado": "2026-02-10",
+     "vistas": 4492588,
+     "duracion": "PT16M14S"
+    },
+    {
+     "titulo": "SI ME RIO PIERDO DINERO!😂",
+     "canal": "ElAbrahaham",
+     "publicado": "2026-06-08",
+     "vistas": 2012729,
+     "duracion": "PT19M40S"
+    }
+   ]
+  },
+  "por qué nos reímos cuando alguien se cae": {
+   "vistas_top10": 810190,
+   "mediana_vistas": 2345,
+   "resultados": 10,
+   "top5_publicados": [
+    "2017-12-17",
+    "2023-07-26",
+    "2023-09-04",
+    "2023-02-02",
+    "2017-02-21"
+   ],
+   "top5": [
+    {
+     "titulo": "¿Por qué reímos?",
+     "canal": "CuriosaMente",
+     "publicado": "2017-12-17",
+     "vistas": 424212,
+     "duracion": "PT5M5S"
+    },
+    {
+     "titulo": "¿Por qué nos REÍMOS ante situaciones INCÓMODAS?😂😅",
+     "canal": "La Hiperactina",
+     "publicado": "2023-07-26",
+     "vistas": 375737,
+     "duracion": "PT1M"
+    },
+    {
+     "titulo": "Por esta razón te ríes cuando alguien se cae...",
+     "canal": "Ahora Entiendo",
+     "publicado": "2023-09-04",
+     "vistas": 3550,
+     "duracion": "PT39S"
+    },
+    {
+     "titulo": "¿Por que nos reimos?",
+     "canal": "Bananaruiz.negocios",
+     "publicado": "2023-02-02",
+     "vistas": 3196,
+     "duracion": "PT55S"
+    },
+    {
+     "titulo": "¿Porque nos reímos cuando alguien se cae? | BDC",
+     "canal": "InformativosTvc",
+     "publicado": "2017-02-21",
+     "vistas": 2345,
+     "duracion": "PT3M9S"
+    }
+   ]
+  },
+  "qué dice de mí mi sentido del humor": {
+   "vistas_top10": 56578211,
+   "mediana_vistas": 2453711,
+   "resultados": 10,
+   "top5_publicados": [
+    "2025-09-02",
+    "2025-09-16",
+    "2022-12-23",
+    "2024-10-19",
+    "2025-08-24"
+   ],
+   "top5": [
+    {
+     "titulo": "La canción de las rimas 🥰 #humor #chiste #musica #trabalenguas #rap",
+     "canal": "Fran Romguer",
+     "publicado": "2025-09-02",
+     "vistas": 21480023,
+     "duracion": "PT23S"
+    },
+    {
+     "titulo": "Mi rico vocabulario 🥰 #humor #chiste #musica #trabalenguas #rap",
+     "canal": "Fran Romguer",
+     "publicado": "2025-09-16",
+     "vistas": 14699506,
+     "duracion": "PT23S"
+    },
+    {
+     "titulo": "¡Que buen chiste! 😂",
+     "canal": "Rubén Tuesta oficial",
+     "publicado": "2022-12-23",
+     "vistas": 7645509,
+     "duracion": "PT18S"
+    },
+    {
+     "titulo": "Tuku el Campeón#humor#memes#random",
+     "canal": "El Pana Sin Nombre",
+     "publicado": "2024-10-19",
+     "vistas": 7031249,
+     "duracion": "PT15S"
+    },
+    {
+     "titulo": "XDD #caricaturas #memes #mtv #latam #lacasadelosdibujos #comedia #humor #latinoamerica #español #tv",
+     "canal": "gipsua",
+     "publicado": "2025-08-24",
+     "vistas": 2453711,
+     "duracion": "PT41S"
+    }
+   ]
+  },
+  "por qué me río cuando no debo": {
+   "vistas_top10": 125925817,
+   "mediana_vistas": 6924249,
+   "resultados": 10,
+   "top5_publicados": [
+    "2023-06-15",
+    "2023-05-19",
+    "2022-03-04",
+    "2022-09-20",
+    "2025-04-19"
+   ],
+   "top5": [
+    {
+     "titulo": "MOLESTAMOS A MAMÁ! 🙈",
+     "canal": "Megadiverti2",
+     "publicado": "2023-06-15",
+     "vistas": 56541441,
+     "duracion": "PT6S"
+    },
+    {
+     "titulo": "El que se ría pierde #4plusone",
+     "canal": "4plusone",
+     "publicado": "2023-05-19",
+     "vistas": 24293966,
+     "duracion": "PT26S"
+    },
+    {
+     "titulo": "NO SE DICE , SE DICE | Si te Ries Pierdes Nivel Dios 🔥😂 Gracioso 99999%",
+     "canal": "TheKanGuroSama",
+     "publicado": "2022-03-04",
+     "vistas": 20599732,
+     "duracion": "PT17S"
+    },
+    {
+     "titulo": "Videos que no deberían dar risa, pero te dan risa.",
+     "canal": "Peri Hernandez",
+     "publicado": "2022-09-20",
+     "vistas": 13421191,
+     "duracion": "PT19S"
+    },
+    {
+     "titulo": "JAJAJAJA, LLEVO 1 HORA RIÉNDOME DE ESTO #barbie#humor#viralshorts#risas#barbiemovie#memes#series",
+     "canal": "𝑬𝒍𝒔𝒊𝒕𝒂𝒈𝒂𝒎𝒆𝒓𝒀𝑻",
+     "publicado": "2025-04-19",
+     "vistas": 6924249,
+     "duracion": "PT18S"
+    }
+   ]
+  },
+  "si te gusta el humor negro eres más inteligente": {
+   "vistas_top10": 15497563,
+   "mediana_vistas": 427390,
+   "resultados": 10,
+   "top5_publicados": [
+    "2023-03-20",
+    "2023-10-23",
+    "2022-07-26",
+    "2023-05-31",
+    "2023-12-11"
+   ],
+   "top5": [
+    {
+     "titulo": "Yo y Los de Humor Negro cuando ...",
+     "canal": "Papada Aburrida",
+     "publicado": "2023-03-20",
+     "vistas": 7736025,
+     "duracion": "PT15S"
+    },
+    {
+     "titulo": "El CHISTE MAS GRACIOSO DEL MUNDO😁 #comedia #humor #chistes",
+     "canal": "Sambucha En Español",
+     "publicado": "2023-10-23",
+     "vistas": 3470381,
+     "duracion": "PT45S"
+    },
+    {
+     "titulo": "5 chistes malos",
+     "canal": "pazzu",
+     "publicado": "2022-07-26",
+     "vistas": 3027626,
+     "duracion": "PT13S"
+    },
+    {
+     "titulo": "SI TE RIES TIENES EL HUMOR COMPLETAMENTE ROTO🌚 #comedia #youtube #shorts",
+     "canal": "Leonardo Negrillo",
+     "publicado": "2023-05-31",
+     "vistas": 828687,
+     "duracion": "PT48S"
+    },
+    {
+     "titulo": "20 Chistes de Humor Cruel y Negro 😈 [Si te Ries vas al Infierno]",
+     "canal": "ElJamesHD",
+     "publicado": "2023-12-11",
+     "vistas": 427390,
+     "duracion": "PT4M28S"
+    }
+   ]
+  },
+  "por qué unos chistes hacen gracia y otros no": {
+   "vistas_top10": 145890218,
+   "mediana_vistas": 3233804,
+   "resultados": 10,
+   "top5_publicados": [
+    "2016-12-01",
+    "2025-04-13",
+    "2018-04-17",
+    "2023-10-23",
+    "2021-05-24"
+   ],
+   "top5": [
+    {
+     "titulo": "85 Chistes Graciosos y Buenos - Compilación de Chistes Cortos",
+     "canal": "Beby",
+     "publicado": "2016-12-01",
+     "vistas": 80681768,
+     "duracion": "PT12M4S"
+    },
+    {
+     "titulo": "OTROS CHISTES MALOSSS!! #shorts",
+     "canal": "Meowrld",
+     "publicado": "2025-04-13",
+     "vistas": 45795307,
+     "duracion": "PT28S"
+    },
+    {
+     "titulo": "20 CHISTES que te harán llorar de la RISA",
+     "canal": "Palaciegos",
+     "publicado": "2018-04-17",
+     "vistas": 4236618,
+     "duracion": "PT3M47S"
+    },
+    {
+     "titulo": "El CHISTE MAS GRACIOSO DEL MUNDO😁 #comedia #humor #chistes",
+     "canal": "Sambucha En Español",
+     "publicado": "2023-10-23",
+     "vistas": 3470381,
+     "duracion": "PT45S"
+    },
+    {
+     "titulo": "Chistes CORTOS y GRACIOSOS para NIÑOS (te vas a REIR)🤣🤣 #4 Parte",
+     "canal": "Los Titis- Cuentos y Canciones de Motivación Infantil",
+     "publicado": "2021-05-24",
+     "vistas": 3233804,
+     "duracion": "PT1M54S"
+    }
+   ]
+  },
+  "por qué un chiste explicado pierde la gracia": {
+   "vistas_top10": 26788236,
+   "mediana_vistas": 644217,
+   "resultados": 10,
+   "top5_publicados": [
+    "2024-01-09",
+    "2022-06-13",
+    "2024-12-20",
+    "2025-07-04",
+    "2023-01-11"
+   ],
+   "top5": [
+    {
+     "titulo": "Suerte. #humor",
+     "canal": "Alan",
+     "publicado": "2024-01-09",
+     "vistas": 12841812,
+     "duracion": "PT7S"
+    },
+    {
+     "titulo": "Facilisimo verdad jajaja",
+     "canal": "Daniel Carreón",
+     "publicado": "2022-06-13",
+     "vistas": 5577446,
+     "duracion": "PT9S"
+    },
+    {
+     "titulo": "Perro Vs Gato cuando mueres 😂",
+     "canal": "El Gato de Alan",
+     "publicado": "2024-12-20",
+     "vistas": 4046485,
+     "duracion": "PT16S"
+    },
+    {
+     "titulo": "Hago un chiste, mis amigos:",
+     "canal": "DeepMeme",
+     "publicado": "2025-07-04",
+     "vistas": 2438860,
+     "duracion": "PT15S"
+    },
+    {
+     "titulo": "El mejor chiste de Comedy Night",
+     "canal": "ShitTok",
+     "publicado": "2023-01-11",
+     "vistas": 644217,
+     "duracion": "PT9S"
+    }
+   ]
+  },
+  "cómo caer bien a la gente": {
+   "vistas_top10": 5943000,
+   "mediana_vistas": 330709,
+   "resultados": 10,
+   "top5_publicados": [
+    "2021-02-05",
+    "2022-01-06",
+    "2018-01-05",
+    "2024-01-12",
+    "2020-07-29"
+   ],
+   "top5": [
+    {
+     "titulo": "La Clave para Caerle Bien a TODO EL MUNDO",
+     "canal": "La Píldora Mágica",
+     "publicado": "2021-02-05",
+     "vistas": 1755695,
+     "duracion": "PT5M2S"
+    },
+    {
+     "titulo": "Las 4 técnicas infalibles para caer bien a los demás y continuar la relación",
+     "canal": "Teresa Baró • Comunicación de éxito",
+     "publicado": "2022-01-06",
+     "vistas": 1544884,
+     "duracion": "PT8M13S"
+    },
+    {
+     "titulo": "21 Trucos Psicológicos Para Gustarle A Los Demás - Cómo Caer Bien A La Gente Al Instante",
+     "canal": "Secretos de la Vida",
+     "publicado": "2018-01-05",
+     "vistas": 1253866,
+     "duracion": "PT13M18S"
+    },
+    {
+     "titulo": "¿Cómo caer bien a los demás? (Trucos de comunicación poderosos)",
+     "canal": "Fernando Miralles",
+     "publicado": "2024-01-12",
+     "vistas": 589873,
+     "duracion": "PT8M4S"
+    },
+    {
+     "titulo": "6 Técnicas para CAERLE BIEN A TODO EL MUNDO - Hugh Jackman",
+     "canal": "Carisma al Instante",
+     "publicado": "2020-07-29",
+     "vistas": 330709,
+     "duracion": "PT12M21S"
+    }
+   ]
+  },
+  "cómo ser más gracioso": {
+   "vistas_top10": 3151032,
+   "mediana_vistas": 133489,
+   "resultados": 10,
+   "top5_publicados": [
+    "2018-05-17",
+    "2022-10-21",
+    "2023-08-10",
+    "2017-03-05",
+    "2020-05-25"
+   ],
+   "top5": [
+    {
+     "titulo": "Sarcasmo 101: Cómo hacer que a la gente le encante estar contigo - Deadpool vs Ryan Reynolds",
+     "canal": "Carisma al Instante",
+     "publicado": "2018-05-17",
+     "vistas": 1173456,
+     "duracion": "PT8M29S"
+    },
+    {
+     "titulo": "CÓMO SER GRACIOSO:",
+     "canal": "Deepvoid",
+     "publicado": "2022-10-21",
+     "vistas": 929538,
+     "duracion": "PT4M33S"
+    },
+    {
+     "titulo": "Cómo Ser Divertido Siempre En Una Conversación - Ryan Gosling",
+     "canal": "Carisma al Instante",
+     "publicado": "2023-08-10",
+     "vistas": 540616,
+     "duracion": "PT13M40S"
+    },
+    {
+     "titulo": "Consejos para ser más GRACIOSO por Robin Williams",
+     "canal": "Carisma al Instante",
+     "publicado": "2017-03-05",
+     "vistas": 178907,
+     "duracion": "PT4M26S"
+    },
+    {
+     "titulo": "Como Ser Gracioso | Franco Escamilla",
+     "canal": "Confianza Xponencial",
+     "publicado": "2020-05-25",
+     "vistas": 133489,
+     "duracion": "PT8M20S"
+    }
+   ]
+  },
+  "miedo a que se rían de ti": {
+   "vistas_top10": 99305532,
+   "mediana_vistas": 714563,
+   "resultados": 10,
+   "top5_publicados": [
+    "2023-01-22",
+    "2022-05-17",
+    "2023-06-01",
+    "2022-04-05",
+    "2022-11-30"
+   ],
+   "top5": [
+    {
+     "titulo": "Shakira reacciona a mi vídeo !! 😱😂 | Iker Unzu",
+     "canal": "Iker Unzu",
+     "publicado": "2023-01-22",
+     "vistas": 83593187,
+     "duracion": "PT16S"
+    },
+    {
+     "titulo": "Peores Torturas Que Tú Puedes Experimentar",
+     "canal": "Eric Tro",
+     "publicado": "2022-05-17",
+     "vistas": 12360751,
+     "duracion": "PT13S"
+    },
+    {
+     "titulo": "\"Por esta razón se te olvidan las cosas\" | Marian Rojas Estapé",
+     "canal": "Sanando tu psique",
+     "publicado": "2023-06-01",
+     "vistas": 1647109,
+     "duracion": "PT43S"
+    },
+    {
+     "titulo": "Háblame de ti | Preguntas de entrevistas de trabajo",
+     "canal": "Eva Porto RRHH",
+     "publicado": "2022-04-05",
+     "vistas": 734614,
+     "duracion": "PT20S"
+    },
+    {
+     "titulo": "Cómo lidiar con las críticas y personas difíciles de tratar 😳 #reflexion #crecimientopersonal",
+     "canal": "Mindset al 100%",
+     "publicado": "2022-11-30",
+     "vistas": 714563,
+     "duracion": "PT27S"
+    }
+   ]
+  },
+  "gelotofobia": {
+   "vistas_top10": 18019,
+   "mediana_vistas": 819,
+   "resultados": 10,
+   "top5_publicados": [
+    "2025-05-20",
+    "2022-03-07",
+    "2013-11-28",
+    "2010-06-09",
+    "2024-11-19"
+   ],
+   "top5": [
+    {
+     "titulo": "Las fobias más extrañas que existen en el mundo ⚠️🤯 #shorts #youtubeshorts #fobias",
+     "canal": "Jonathan Axell",
+     "publicado": "2025-05-20",
+     "vistas": 9871,
+     "duracion": "PT26S"
+    },
+    {
+     "titulo": "Gelotofobia: miedo a hacer el ridículo",
+     "canal": "Descubre Subconsciente",
+     "publicado": "2022-03-07",
+     "vistas": 2309,
+     "duracion": "PT50S"
+    },
+    {
+     "titulo": "Principios de Gelotofobia",
+     "canal": "1518Koc",
+     "publicado": "2013-11-28",
+     "vistas": 1875,
+     "duracion": "PT1M3S"
+    },
+    {
+     "titulo": "Gelotofobia (miedo a reír y al ridículo), Dr. Michael Titze. Parte 1..wmv",
+     "canal": "Adlerianos",
+     "publicado": "2010-06-09",
+     "vistas": 1763,
+     "duracion": "PT9M48S"
+    },
+    {
+     "titulo": "GELOTOFOBIA  #psicologia",
+     "canal": "Cassy XD",
+     "publicado": "2024-11-19",
+     "vistas": 819,
+     "duracion": "PT44S"
+    }
+   ]
+  },
+  "por qué sentimos vergüenza ajena": {
+   "vistas_top10": 316144,
+   "mediana_vistas": 19665,
+   "resultados": 10,
+   "top5_publicados": [
+    "2025-10-21",
+    "2022-08-03",
+    "2023-04-27",
+    "2022-07-13",
+    "2020-09-15"
+   ],
+   "top5": [
+    {
+     "titulo": "¿Por qué sentimos vergüenza?",
+     "canal": "Dangello",
+     "publicado": "2025-10-21",
+     "vistas": 105282,
+     "duracion": "PT9M19S"
+    },
+    {
+     "titulo": "𝗖𝗼𝗻𝘀𝗲𝗷𝗼𝘀 𝗽𝗮𝗿𝗮 𝘃𝗲𝗻𝗰𝗲𝗿 𝗹𝗮 𝘃𝗲𝗿𝗴𝘂̈𝗲𝗻𝘇𝗮",
+     "canal": "Patri Psicóloga",
+     "publicado": "2022-08-03",
+     "vistas": 82649,
+     "duracion": "PT2M56S"
+    },
+    {
+     "titulo": "Un sentimiento curioso la vergüenza ajena",
+     "canal": "farmaceuticofernandez",
+     "publicado": "2023-04-27",
+     "vistas": 50639,
+     "duracion": "PT31S"
+    },
+    {
+     "titulo": "Vergüenza: ¿Enemiga o maestra silenciosa? | Psicología al Desnudo - T1 E45",
+     "canal": "Psi Mammoliti",
+     "publicado": "2022-07-13",
+     "vistas": 36571,
+     "duracion": "PT29M46S"
+    },
+    {
+     "titulo": "¿POR QUÉ SIENTO VERGÜENZA?  y ¿Cuándo nos afecta? | Psicóloga Lizeth Acevedo",
+     "canal": "Psicóloga Lizeth Acevedo",
+     "publicado": "2020-09-15",
+     "vistas": 19665,
+     "duracion": "PT3M21S"
+    }
+   ]
+  },
+  "qué es el cringe": {
+   "vistas_top10": 9441063,
+   "mediana_vistas": 57515,
+   "resultados": 10,
+   "top5_publicados": [
+    "2024-08-04",
+    "2023-02-10",
+    "2025-10-26",
+    "2022-08-05",
+    "2021-02-09"
+   ],
+   "top5": [
+    {
+     "titulo": "Cringe nivel 1 vs nivel 100.",
+     "canal": "Gonzok MAX",
+     "publicado": "2024-08-04",
+     "vistas": 5487234,
+     "duracion": "PT20M13S"
+    },
+    {
+     "titulo": "videos que me dan cringe parte 1 #argentina #humor #crazy #divertido #cringe",
+     "canal": "Valentajo",
+     "publicado": "2023-02-10",
+     "vistas": 3000102,
+     "duracion": "PT14S"
+    },
+    {
+     "titulo": "La generación Z, el cringe y la ultra derecha conservadora",
+     "canal": "online mami",
+     "publicado": "2025-10-26",
+     "vistas": 751855,
+     "duracion": "PT33M46S"
+    },
+    {
+     "titulo": "¿QUÉ SIGNIFICA CRINGE?",
+     "canal": "Jesica Rivero Inglés",
+     "publicado": "2022-08-05",
+     "vistas": 66554,
+     "duracion": "PT27S"
+    },
+    {
+     "titulo": "¿Qué significa CRINGE? Origen de la palabra",
+     "canal": "alarconnelson",
+     "publicado": "2021-02-09",
+     "vistas": 57515,
+     "duracion": "PT3M1S"
+    }
+   ]
+  },
+  "por qué no puedo hacerme cosquillas a mí mismo": {
+   "vistas_top10": 1864070,
+   "mediana_vistas": 18582,
+   "resultados": 10,
+   "top5_publicados": [
+    "2025-02-04",
+    "2019-07-31",
+    "2024-12-26",
+    "2023-02-14",
+    "2025-09-11"
+   ],
+   "top5": [
+    {
+     "titulo": "¿Por qué no te puedes hacer cosquillas?",
+     "canal": "CdeCiencia",
+     "publicado": "2025-02-04",
+     "vistas": 1261584,
+     "duracion": "PT20S"
+    },
+    {
+     "titulo": "La ciencia demuestra que hacerles cosquillas a los niños no está bien",
+     "canal": "GENIAL",
+     "publicado": "2019-07-31",
+     "vistas": 272664,
+     "duracion": "PT8M37S"
+    },
+    {
+     "titulo": "¿Por qué NO podemos hacer COSQUILLAS a NOSOTROS MISMOS?",
+     "canal": "La Hiperactina",
+     "publicado": "2024-12-26",
+     "vistas": 169508,
+     "duracion": "PT46S"
+    },
+    {
+     "titulo": "¿Por qué sientes hormigueos o cosquillas? 🤔 #shorts | DR. RAWDY",
+     "canal": "Dr. Rawdy",
+     "publicado": "2023-02-14",
+     "vistas": 132636,
+     "duracion": "PT40S"
+    },
+    {
+     "titulo": "😂✋ ¿Por qué NO Puedes Hacerte COSQUILLAS a Ti Mismo?",
+     "canal": "randomshort",
+     "publicado": "2025-09-11",
+     "vistas": 18582,
+     "duracion": "PT19S"
+    }
+   ]
+  },
+  "por qué los memes nos hacen gracia": {
+   "vistas_top10": 52990815,
+   "mediana_vistas": 2233464,
+   "resultados": 10,
+   "top5_publicados": [
+    "2024-12-09",
+    "2024-04-13",
+    "2025-09-02",
+    "2024-11-01",
+    "2025-06-02"
+   ],
+   "top5": [
+    {
+     "titulo": "Las personas DETRÁS de los memes",
+     "canal": "augusto wtf",
+     "publicado": "2024-12-09",
+     "vistas": 14093874,
+     "duracion": "PT28S"
+    },
+    {
+     "titulo": "Porque le pegas con un palo - Countryballs 3D  #countyballs #funnymemes #humor #memes",
+     "canal": "Chipin18",
+     "publicado": "2024-04-13",
+     "vistas": 12326542,
+     "duracion": "PT10S"
+    },
+    {
+     "titulo": "LA VELOCIDAD DE LAS ECONOMÍA DE LATAM #memes #risas #chistes #comedia #divertido #gracioso",
+     "canal": "camelot historia ",
+     "publicado": "2025-09-02",
+     "vistas": 10355662,
+     "duracion": "PT14S"
+    },
+    {
+     "titulo": "ARRUINANDO VIDEOS de TERROR USANDO MEMES 😂",
+     "canal": "DeiK",
+     "publicado": "2024-11-01",
+     "vistas": 10023772,
+     "duracion": "PT13M26S"
+    },
+    {
+     "titulo": "No Hiciste Caso a tu Dentista... | void memes turbio #terror #voidmemes #historias #voids",
+     "canal": "OnlyVoids",
+     "publicado": "2025-06-02",
+     "vistas": 2233464,
+     "duracion": "PT6S"
+    }
+   ]
+  },
+  "cómo distinguir una risa falsa de una de verdad": {
+   "vistas_top10": 7910438,
+   "mediana_vistas": 107747,
+   "resultados": 10,
+   "top5_publicados": [
+    "2025-07-20",
+    "2022-05-02",
+    "2024-01-03",
+    "2023-02-10",
+    "2022-04-15"
+   ],
+   "top5": [
+    {
+     "titulo": "¿CÚAL ES LA VERDADERA SONRISA DE ALASTOR? #hazbinhotel #helluvaboss",
+     "canal": "Zona Tiza",
+     "publicado": "2025-07-20",
+     "vistas": 3426784,
+     "duracion": "PT51S"
+    },
+    {
+     "titulo": "6 señales de que alguien FINGE estar BIEN (pero sufre interiormente)",
+     "canal": "Sapiencia práctica",
+     "publicado": "2022-05-02",
+     "vistas": 3127099,
+     "duracion": "PT7M16S"
+    },
+    {
+     "titulo": "TIPS para sonreír BONITO ✨",
+     "canal": "Linda Félix",
+     "publicado": "2024-01-03",
+     "vistas": 948519,
+     "duracion": "PT32S"
+    },
+    {
+     "titulo": "Tutorial de Como Reírse",
+     "canal": "ElIsraGameShow",
+     "publicado": "2023-02-10",
+     "vistas": 147113,
+     "duracion": "PT11S"
+    },
+    {
+     "titulo": "Sonrisa Falsa Cómo detectarla 👀",
+     "canal": "Soy Criminólogo",
+     "publicado": "2022-04-15",
+     "vistas": 107747,
+     "duracion": "PT16S"
+    }
+   ]
+  },
+  "por qué se contagia la risa": {
+   "vistas_top10": 28045886,
+   "mediana_vistas": 193320,
+   "resultados": 10,
+   "top5_publicados": [
+    "2017-07-15",
+    "2023-05-12",
+    "2016-03-11",
+    "2015-10-02",
+    "2016-11-07"
+   ],
+   "top5": [
+    {
+     "titulo": "¿Ella tiene la risa más contagiosa del mundo?",
+     "canal": "eltrece",
+     "publicado": "2017-07-15",
+     "vistas": 25145657,
+     "duracion": "PT5M43S"
+    },
+    {
+     "titulo": "Presentadoras de Noticias Caracol tuvieron un ataque de risa al aire: \"¡No podemos!\"",
+     "canal": "Noticias Caracol",
+     "publicado": "2023-05-12",
+     "vistas": 1688783,
+     "duracion": "PT45S"
+    },
+    {
+     "titulo": "Experimento Social, La risa es contagiosa",
+     "canal": "Bionexo Latam",
+     "publicado": "2016-03-11",
+     "vistas": 589560,
+     "duracion": "PT1M47S"
+    },
+    {
+     "titulo": "Cómo lograr reír a carcajadas",
+     "canal": "La Vanguardia",
+     "publicado": "2015-10-02",
+     "vistas": 406886,
+     "duracion": "PT3M54S"
+    },
+    {
+     "titulo": "La risa se contagia",
+     "canal": "exitootixe tenissinet",
+     "publicado": "2016-11-07",
+     "vistas": 193320,
+     "duracion": "PT1M29S"
+    }
+   ]
+  },
+  "estilos de humor test": {
+   "vistas_top10": 135715751,
+   "mediana_vistas": 338629,
+   "resultados": 9,
+   "top5_publicados": [
+    "2023-05-06",
+    "2024-04-30",
+    "2023-08-18",
+    "2024-11-17",
+    "2025-02-04"
+   ],
+   "top5": [
+    {
+     "titulo": "Que pica mas ??? 😱😱😱 #viral #cocina #chile #recetas #picante #humor",
+     "canal": "Paula Gonzalez13 ",
+     "publicado": "2023-05-06",
+     "vistas": 102766240,
+     "duracion": "PT13S"
+    },
+    {
+     "titulo": "Examen para sabe si eres LGBT 🏳️‍🌈🤨 #humor",
+     "canal": "Alan",
+     "publicado": "2024-04-30",
+     "vistas": 13777564,
+     "duracion": "PT27S"
+    },
+    {
+     "titulo": "#ASMR test: adivina la palabra #shorts #humor #viral #asmrvideo",
+     "canal": "Mol ASMR.",
+     "publicado": "2023-08-18",
+     "vistas": 11616314,
+     "duracion": "PT28S"
+    },
+    {
+     "titulo": "Clases de inglés nivel avanzado! 🤣 #aprender #idioma #ingles #francais #comosedice",
+     "canal": "Jeremy Jey",
+     "publicado": "2024-11-17",
+     "vistas": 7074461,
+     "duracion": "PT32S"
+    },
+    {
+     "titulo": "Prueba de cultura general EXTREMA 🥵",
+     "canal": "Karin Herrero",
+     "publicado": "2025-02-04",
+     "vistas": 338629,
+     "duracion": "PT1M2S"
+    }
+   ]
+  },
+  "cómo contar un chiste bien": {
+   "vistas_top10": 51631579,
+   "mediana_vistas": 3196170,
+   "resultados": 10,
+   "top5_publicados": [
+    "2024-07-18",
+    "2024-09-10",
+    "2024-10-24",
+    "2023-10-23",
+    "2015-04-29"
+   ],
+   "top5": [
+    {
+     "titulo": "¡El Chiste De La Puerta Que Hizo Reír A Todos!",
+     "canal": "PANDA",
+     "publicado": "2024-07-18",
+     "vistas": 23006555,
+     "duracion": "PT16S"
+    },
+    {
+     "titulo": "EL CHISTE DE LA VIEJITA SORDA",
+     "canal": "Padre Walter Malca ",
+     "publicado": "2024-09-10",
+     "vistas": 12614175,
+     "duracion": "PT58S"
+    },
+    {
+     "titulo": "LOS MEJORES CHISTES DEL MUNDO!",
+     "canal": "Mangu Animaciones",
+     "publicado": "2024-10-24",
+     "vistas": 6072799,
+     "duracion": "PT17S"
+    },
+    {
+     "titulo": "El CHISTE MAS GRACIOSO DEL MUNDO😁 #comedia #humor #chistes",
+     "canal": "Sambucha En Español",
+     "publicado": "2023-10-23",
+     "vistas": 3470381,
+     "duracion": "PT45S"
+    },
+    {
+     "titulo": "LOS 7 CHISTES MÁS EFECTIVOS DE LA HISTORIA!!!",
+     "canal": "Marcos Arizmendi",
+     "publicado": "2015-04-29",
+     "vistas": 3196170,
+     "duracion": "PT4M4S"
+    }
+   ]
+  }
+ },
+ "wikipedia": {
+  "Humor": {
+   "media_diaria": 104.7,
+   "por_mes": {
+    "202508": 870,
+    "202509": 4802,
+    "202510": 3756,
+    "202511": 3441,
+    "202512": 4593,
+    "202601": 5938,
+    "202602": 2918,
+    "202603": 2648,
+    "202604": 2213,
+    "202605": 2453,
+    "202606": 1717,
+    "202607": 1463,
+    "202608": 1520
+   }
+  },
+  "Risa": {
+   "media_diaria": 62.9,
+   "por_mes": {
+    "202508": 256,
+    "202509": 1668,
+    "202510": 2001,
+    "202511": 1702,
+    "202512": 1734,
+    "202601": 1901,
+    "202602": 1730,
+    "202603": 1969,
+    "202604": 2307,
+    "202605": 2609,
+    "202606": 2183,
+    "202607": 1682,
+    "202608": 1269
+   }
+  },
+  "Comedia": {
+   "media_diaria": 147.1,
+   "por_mes": {
+    "202508": 648,
+    "202509": 4968,
+    "202510": 4647,
+    "202511": 3707,
+    "202512": 5821,
+    "202601": 9689,
+    "202602": 3242,
+    "202603": 3670,
+    "202604": 3493,
+    "202605": 4524,
+    "202606": 3274,
+    "202607": 2815,
+    "202608": 3354
+   }
+  },
+  "Chiste": {
+   "media_diaria": 106.6,
+   "por_mes": {
+    "202508": 237,
+    "202509": 1601,
+    "202510": 1722,
+    "202511": 3099,
+    "202512": 2290,
+    "202601": 2335,
+    "202602": 1609,
+    "202603": 1633,
+    "202604": 2208,
+    "202605": 5733,
+    "202606": 13511,
+    "202607": 2097,
+    "202608": 931
+   }
+  },
+  "Ironía": {
+   "media_diaria": 66.9,
+   "por_mes": {
+    "202508": 378,
+    "202509": 2557,
+    "202510": 2620,
+    "202511": 2212,
+    "202512": 1760,
+    "202601": 1773,
+    "202602": 2306,
+    "202603": 2026,
+    "202604": 1838,
+    "202605": 1924,
+    "202606": 1838,
+    "202607": 1769,
+    "202608": 1473
+   }
+  },
+  "Sátira": {
+   "media_diaria": 123.1,
+   "por_mes": {
+    "202508": 607,
+    "202509": 5354,
+    "202510": 5198,
+    "202511": 3941,
+    "202512": 2920,
+    "202601": 3231,
+    "202602": 3251,
+    "202603": 3653,
+    "202604": 3408,
+    "202605": 4010,
+    "202606": 3062,
+    "202607": 3755,
+    "202608": 2673
+   }
+  }
+ },
+ "avisos": [],
+ "cuota_gastada": 2020
+}
