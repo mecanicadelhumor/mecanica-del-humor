@@ -224,7 +224,26 @@ def main():
     ap.add_argument("--sin-youtube", action="store_true",
                     help="salta la API de YouTube (no gasta cuota)")
     ap.add_argument("--max-preguntas", type=int, default=25)
+    ap.add_argument("--tope-cuota", type=int, default=3500,
+                    help="unidades máximas de la Data API en una pasada")
+    ap.add_argument("--rehacer", action="store_true",
+                    help="mide otra vez aunque ya haya medición de hoy")
     a = ap.parse_args()
+
+    # Idempotencia: desde el 28/08 el workflow tiene DOS horas de cron, porque
+    # el schedule de Actions se pierde. Sin esto, la segunda pasada repetiría la
+    # medición entera y gastaría otras ~2.000 unidades de cuota para escribir lo
+    # mismo. Con esto, la segunda sale en un segundo y no toca la API.
+    salida = RAIZ / "05_calendario" / "demanda_bruta.json"
+    if salida.exists() and not a.rehacer:
+        try:
+            previo = json.loads(salida.read_text(encoding="utf-8"))
+            if previo.get("generado_utc", "")[:10] == time.strftime("%Y-%m-%d", time.gmtime()):
+                print(f"Ya hay medición de hoy en {salida.name} "
+                      f"({previo['generado_utc']}). No se repite. Usa --rehacer para forzarla.")
+                return
+        except Exception:
+            pass
 
     # El agente puede reescribir la lista de preguntas de una semana para otra.
     propias = RAIZ / "05_calendario" / "semillas_demanda.json"
@@ -267,7 +286,21 @@ def main():
             resultado["avisos"].append("Sin credenciales de YouTube: falta la señal principal.")
         else:
             gasto = {"unidades": 0}
+            # Tope de gasto. Cada pregunta cuesta 101 unidades (search.list 100
+            # + videos.list 1) y la lista la reescribe la planificación cada
+            # semana: sin un tope, una tanda de sesenta preguntas se comería la
+            # cuota diaria y dejaría al canal SIN PODER SUBIR el vídeo de esa
+            # noche, que cuesta 1.600. La medición es importante; publicar lo es
+            # más.
             for q in preguntas[:a.max_preguntas]:
+                if gasto["unidades"] + 101 > a.tope_cuota:
+                    aviso = (f"Tope de cuota ({a.tope_cuota}) alcanzado tras "
+                             f"{len(resultado['youtube'])} preguntas; quedaron "
+                             f"{len(preguntas[:a.max_preguntas]) - len(resultado['youtube'])} "
+                             "sin medir. Recorta semillas_demanda.json o sube --tope-cuota.")
+                    print(f"::warning::{aviso}")
+                    resultado["avisos"].append(aviso)
+                    break
                 m = medir_pregunta(yt, q, gasto)
                 resultado["youtube"][q] = m
                 if "error" in m:
@@ -278,7 +311,9 @@ def main():
                 else:
                     print(f"   {q[:40]:42} {m['vistas_top10']:>10,} vistas top10")
             resultado["cuota_gastada"] = gasto["unidades"]
-            print(f"   cuota gastada: {gasto['unidades']} unidades de 10.000")
+            print(f"   cuota gastada: {gasto['unidades']} unidades de 10.000 "
+                  f"(tope de esta pasada: {a.tope_cuota}). La cuota se renueva a "
+                  "medianoche del Pacífico, o sea a las 09:00 de España.")
 
     print("3. Wikipedia")
     for art in ARTICULOS_WIKI:

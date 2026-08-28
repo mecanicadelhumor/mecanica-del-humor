@@ -57,6 +57,67 @@ Es el formato que más comentarios genera: la gente discute cuál es cuál.
 **Siempre atado a la taxonomía real de estilos de humor del pilar B de la bibliografía.**
 Un test inventado está prohibido: es la línea entre divulgar y hacer horóscopos.
 
+## La regla que estaba implícita y por eso se incumplía
+
+**El chiste va primero. No en el guion: en tu cabeza.**
+
+Añadida el 28/08/2026, después de que Silvestre viera MDS-005 y dijera lo único que
+importa: «el chiste no tiene gracia».
+
+Lo que había pasado es que el guion se escribió al revés. El mecanismo se eligió antes
+—«el conector cambia de sitio y el chiste funciona o no»— y el chiste se escribió **para
+poder demostrarlo**. Al chiste se le pidió que fuera desmontable, no que hiciera gracia,
+y salió lo que se pidió:
+
+> *Un chiste: el médico me dijo que dejara de respirar cuando le conté que me dolía al
+> respirar.* → *Fui al médico y le dije que me dolía al respirar. Me dijo que dejara de
+> hacerlo.*
+
+El mecanismo es correcto. Las dos versiones son malas. Y un Short que empieza con un
+chiste malo ya no lo arregla nada de lo que venga después: el espectador ha decidido en
+el segundo tres.
+
+**El orden correcto es este, y no es negociable:**
+
+1. **Primero el chiste.** Uno que contarías en voz alta a un amigo, sin la explicación
+   detrás, y del que no te avergonzarías si no hubiera segunda parte.
+2. **Después miras qué mecanismo tiene dentro.** Un chiste que funciona SIEMPRE tiene un
+   mecanismo: por eso funciona. Nómbralo y busca la fuente.
+3. **Si el mecanismo que querías explicar no está en ningún chiste bueno, cambias de
+   mecanismo, no de chiste.** Hay ciento y pico en la bibliografía. Solo hay una
+   oportunidad de que el espectador se ría.
+
+**Descarta el chiste si se cumple cualquiera de estas:**
+
+- El remate es una definición, una aclaración o un dato.
+- El planteamiento no se entiende dicho en voz alta a la primera. Léelo en alto. En serio.
+- La gracia depende de una palabra que va a salir escrita en pantalla de todas formas.
+- Solo hace gracia **después** de la explicación. Eso no es un chiste, es un ejemplo.
+- Lo has escrito tú para que encajara. Los chistes que aguantan llevan años circulando o
+  vienen de una situación que le ha pasado a mucha gente.
+
+**Cómo se comprueba, y esto sí lo puedes hacer solo:** escribe el chiste sin nada más y
+pregúntate si lo mandarías por WhatsApp. Si la respuesta es «bueno, es que hay que
+explicar que…», no vale. Vuelve al paso 1.
+
+Esta regla es la 13 de `00_estrategia/REGLAS.md` —«el canal va de humor, tiene que hacer
+gracia»— dicha de una manera que se pueda cumplir. El validador no puede comprobarla:
+la comprueba quien escribe, y si no la comprueba nadie más lo va a hacer.
+
+## Y una segunda: el Short no puede ser todo texto centrado
+
+De las 58 escenas de los diez primeros Shorts, **32 son de tipo `enunciado`** —texto
+centrado sobre el fondo— y con los `cierre` suman el 72 %. Ninguno de los diez lleva un
+solo dibujo. Eso es exactamente lo que se ve como una presentación de diapositivas, por
+mucho que ahora se mueva.
+
+**Máximo tres escenas `enunciado` por Short.** Las demás salen de los tipos que ya
+existen y que casi no se usan: `comparacion` (dos cosas enfrentadas), `dato` (la cifra
+grande), `lista` (dos o tres puntos, no cuatro), `diagrama` (el mecanismo paso a paso,
+que en vertical se apila) y `cita`. Elegir el tipo de escena es parte de escribir el
+guion, no un detalle de maquetación: **una comparación se entiende sola y un enunciado
+hay que leerlo.**
+
 ## Reglas duras
 
 **Los tres primeros segundos.** No hay rótulo de título, no hay logo, no hay «hola», no hay
@@ -85,7 +146,10 @@ el ojo y el oído reciben cosas distintas.
 **El audio se basta solo.** Mucha gente ve Shorts con el móvil en la mano y la vista a
 medias. Lo que está en pantalla y no se dice, para esa persona no existe.
 
-**Un solo resaltado ámbar (`*así*`) por pantalla.** El cian (`_así_`) es solo para datos.
+**Resaltado** (aclarado el 28/08): **ámbar (`*así*`) = el acento de la frase**, uno por
+escena; **cian (`_así_`) = el término del oficio**, el nombre que la investigación le da a
+la cosa («conector», «autodestructivo», «ruptura benigna»). El cian ya no es «solo para
+datos»: las cifras tienen su propio tipo de escena (`dato`).
 
 ## Lo que también vale para los Shorts
 

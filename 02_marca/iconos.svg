@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<!-- ===================================================================
+     02_marca/iconos.svg — el vocabulario dibujado de Mecánica del Humor.
+
+     Por qué existe: el 55 % de las escenas de los diez primeros Shorts son
+     «enunciado» —texto centrado sobre fondo— y ninguno de los diez lleva un
+     solo dibujo. Eso es lo que se ve como «diapositiva de PowerPoint».
+
+     Por qué NO son fotos de banco de imágenes: la regla 11.6 prohíbe depender
+     de internet en tiempo de render, así que tendrían que vivir en el
+     repositorio; y una foto de archivo hace que el canal se parezca a todos
+     los demás canales automatizados, que es justo lo contrario de tener una
+     identidad. Esto se dibuja en el mismo lenguaje de plano técnico que el
+     Engranaje: cero peticiones, cero licencias, cero coste, y determinista.
+
+     Uso: <use href="#i-bisagra"/> dentro de escena.html o miniatura.py.
+     Colores por variable CSS, así que heredan el tema de la escena.
+     Todos en un lienzo de 200x200 con el mismo peso de trazo.
+     =================================================================== -->
+<defs>
+<style>
+  .ic{fill:none;stroke:var(--tinta,#F2F4F8);stroke-width:3.2;
+      stroke-linecap:round;stroke-linejoin:round}
+  .ic-am{stroke:var(--ambar,#FFB020)}
+  .ic-ci{stroke:var(--cian,#4CC9F0)}
+  .ic-co{stroke:var(--coral,#EF476F)}
+  .ic-te{stroke:var(--tenue,#8A97AE);stroke-width:1.8;opacity:.8}
+  .ic-f{fill:var(--ambar,#FFB020);stroke:none}
+  .ic-guia{stroke:var(--tenue,#8A97AE);stroke-width:1.4;opacity:.55;
+           stroke-dasharray:6 7}
+</style>
+</defs>
+
+<!-- LA BISAGRA · el conector del chiste, la pieza sobre la que gira -->
+<symbol id="i-bisagra" viewBox="0 0 200 200">
+  <path class="ic" d="M40 44 h52 a16 16 0 0 1 0 32 h-52 a16 16 0 0 1 0 -32"/>
+  <path class="ic ic-am" d="M108 124 h52 a16 16 0 0 0 0 -32 h-52 a16 16 0 0 0 0 32"/>
+  <circle class="ic ic-ci" cx="100" cy="100" r="15"/>
+  <circle class="ic-f" cx="100" cy="100" r="5"/>
+  <path class="ic-guia" d="M100 30 v40 M100 130 v40"/>
+  <path class="ic ic-te" d="M126 148 a40 40 0 0 1 -52 0"/>
+</symbol>
+
+<!-- EL MUELLE · la tensión que se acumula y se suelta -->
+<symbol id="i-muelle" viewBox="0 0 200 200">
+  <path class="ic ic-ci" d="M62 36 h76 M62 36 c-26 12 -26 26 0 38 s26 26 0 38
+                            s-26 26 0 38 s26 26 0 38"/>
+  <path class="ic" d="M62 188 h76"/>
+  <path class="ic ic-am" d="M156 60 v76"/>
+  <path class="ic-f" d="M156 148 l-8 -16 h16 z"/>
+  <path class="ic-guia" d="M40 36 h-16 M40 188 h-16"/>
+</symbol>
+
+<!-- LA EXPECTATIVA QUE SE ROTA · un camino que se bifurca donde no toca -->
+<symbol id="i-ruptura" viewBox="0 0 200 200">
+  <path class="ic" d="M22 100 h74"/>
+  <path class="ic-guia" d="M96 100 h84"/>
+  <path class="ic ic-am" d="M96 100 c30 0 34 -52 60 -52"/>
+  <circle class="ic ic-ci" cx="96" cy="100" r="11"/>
+  <path class="ic-f" d="M180 48 l-18 -9 v18 z"/>
+  <path class="ic ic-te" d="M170 108 h-14 M186 108 h-6"/>
+</symbol>
+
+<!-- LOS DOS BOCADILLOS · el chiste y quien lo recibe -->
+<symbol id="i-bocadillos" viewBox="0 0 200 200">
+  <path class="ic ic-ci" d="M18 42 h106 v56 h-70 l-22 22 v-22 h-14 z"/>
+  <path class="ic ic-am" d="M182 92 h-84 v56 h56 l22 22 v-22 h6 z"/>
+  <path class="ic ic-te" d="M40 62 h60 M40 78 h38"/>
+  <path class="ic-f" d="M124 116 h34 v5 h-34 z M124 132 h20 v5 h-20 z"/>
+</symbol>
+
+<!-- LA PAUSA · el silencio de segundo y medio que es el chiste -->
+<symbol id="i-pausa" viewBox="0 0 200 200">
+  <path class="ic ic-te" d="M18 100 h44"/>
+  <rect class="ic-f" x="72" y="44" width="20" height="112" rx="6"/>
+  <rect class="ic-f" x="110" y="44" width="20" height="112" rx="6"/>
+  <path class="ic ic-te" d="M138 100 h44"/>
+  <path class="ic ic-ci" d="M74 178 h52"/>
+  <path class="ic ic-ci" d="M74 170 v16 M126 170 v16"/>
+</symbol>
+
+<!-- LA GRIETA · dónde falla lo que se acaba de explicar (regla 12) -->
+<symbol id="i-grieta" viewBox="0 0 200 200">
+  <path class="ic" d="M34 40 h132 v120 h-132 z"/>
+  <path class="ic ic-co" d="M92 40 l16 34 l-22 20 l26 30 l-14 36"/>
+  <path class="ic-guia" d="M56 62 h24 M56 84 h30 M126 120 h22 M126 142 h16"/>
+</symbol>
+
+<!-- EL PÚBLICO · quién se ríe y quién lleva la cuenta -->
+<symbol id="i-publico" viewBox="0 0 200 200">
+  <circle class="ic ic-te" cx="46" cy="76" r="17"/>
+  <path class="ic ic-te" d="M20 150 a26 26 0 0 1 52 0"/>
+  <circle class="ic ic-te" cx="100" cy="68" r="19"/>
+  <path class="ic ic-te" d="M70 150 a30 30 0 0 1 60 0"/>
+  <circle class="ic ic-am" cx="156" cy="76" r="17"/>
+  <path class="ic ic-am" d="M130 150 a26 26 0 0 1 52 0"/>
+  <path class="ic ic-co" d="M148 78 l6 6 M164 78 l-6 6"/>
+  <path class="ic ic-co" d="M146 96 a12 8 0 0 1 20 0"/>
+</symbol>
+
+<!-- LA BALANZA · el hallazgo discutido, el efecto con su réplica fallida -->
+<symbol id="i-balanza" viewBox="0 0 200 200">
+  <path class="ic" d="M100 34 v134 M62 180 h76"/>
+  <path class="ic" d="M100 168 c-16 0 -26 5 -32 12 M100 168 c16 0 26 5 32 12"/>
+  <circle class="ic-f" cx="100" cy="34" r="5"/>
+  <path class="ic ic-te" d="M32 56 h136"/>
+  <path class="ic-guia" d="M100 34 L32 56 M100 34 L168 56"/>
+  <path class="ic ic-te" d="M32 56 v14 M168 56 v14"/>
+  <path class="ic ic-ci" d="M6 70 h52 l-14 30 h-24 z"/>
+  <path class="ic ic-am" d="M142 70 h52 l-14 30 h-24 z"/>
+</symbol>
+</svg>

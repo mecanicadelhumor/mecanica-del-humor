@@ -81,28 +81,53 @@ def credenciales():
                        scopes=AMBITOS)
 
 
-def duraciones(yt, ids):
-    """Duración real de cada vídeo, en segundos. Hace falta para convertir la
-    curva de retención (que viene en fracción del vídeo) en «retención a los
-    30 segundos», que es el umbral del peldaño 3."""
+def ficha_youtube(yt, ids):
+    """Duración y estado de privacidad REAL de cada vídeo, preguntándoselo a
+    YouTube en vez de creerse el registro.
+
+    Por qué (31/08): `registro_publicaciones.json` guarda el estado del
+    **momento de la subida**, y en modo «revision» eso es siempre `private`.
+    Nadie lo actualiza cuando Silvestre le da a publicar. Resultado: de los seis
+    vídeos del canal, este script solo consideraba candidato a MDH-001 —el único
+    con `public` escrito— y los cinco Shorts quedaban fuera para siempre. La
+    primera lectura de métricas del canal habría salido vacía aunque no se
+    hubiera caído.
+
+    La duración se pedía ya; añadir «status» a `part` cuesta las mismas
+    unidades de cuota (videos.list vale 1, la pida uno o los tres campos).
+    """
     fuera = {}
     for i in range(0, len(ids), 50):
-        lote = ids[i:i + 50]
-        r = yt.videos().list(part="contentDetails", id=",".join(lote)).execute()
+        lote = [x for x in ids[i:i + 50] if x]
+        if not lote:
+            continue
+        r = yt.videos().list(part="contentDetails,status", id=",".join(lote)).execute()
         for it in r.get("items", []):
             m = re.match(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:([\d.]+)S)?",
                          it["contentDetails"]["duration"])
             h, mi, s = (float(g or 0) for g in m.groups())
-            fuera[it["id"]] = h * 3600 + mi * 60 + s
+            fuera[it["id"]] = {
+                "duracion_s": h * 3600 + mi * 60 + s,
+                "privacidad": it.get("status", {}).get("privacyStatus", "desconocido"),
+            }
     return fuera
 
 
 def fila(ya, vid, desde, hasta):
+    """Una fila de métricas por vídeo. Devuelve ceros si aún no hay datos.
+
+    El 31/08 esto reventó con IndexError en la primera ejecución real, y el
+    fallo es de manual: cuando un vídeo todavía no tiene datos, la API NO omite
+    la clave «rows», la devuelve **vacía**. `r.get("rows", <por defecto>)` solo
+    usa el valor por defecto si la clave falta, así que devolvía [] y el [0] de
+    después se iba fuera de rango. Un lector de métricas que se cae cuando aún
+    no hay métricas es inútil justo el día que más falta hace.
+    """
     r = ya.reports().query(ids="channel==MINE", startDate=desde, endDate=hasta,
                            metrics=METRICAS, filters=f"video=={vid}").execute()
     cab = [c["name"] for c in r.get("columnHeaders", [])]
-    datos = r.get("rows", [[0] * len(cab)])[0]
-    return dict(zip(cab, datos))
+    filas = r.get("rows") or [[0] * len(cab)]
+    return dict(zip(cab, filas[0]))
 
 
 def retencion(ya, vid, desde, hasta, duracion_s):
@@ -195,9 +220,29 @@ def main():
     ya = build("youtubeAnalytics", "v2", credentials=cred, cache_discovery=False)
     yt = build("youtube", "v3", credentials=cred, cache_discovery=False)
 
-    reg = json.loads(REGISTRO.read_text(encoding="utf-8"))["publicaciones"]
+    registro = json.loads(REGISTRO.read_text(encoding="utf-8"))
+    reg = registro["publicaciones"]
     hoy = date.today()
     hasta = (hoy - timedelta(days=1)).isoformat()   # ayer: hoy aún no está cerrado
+
+    # Primero se le pregunta a YouTube el estado de TODOS los vídeos del
+    # registro, no solo de los que se van a medir: es una llamada por cada 50
+    # vídeos y arregla de paso el registro, que se queda con el estado de la
+    # subida y nunca se entera de que Silvestre le dio a publicar.
+    fichas = ficha_youtube(yt, [p.get("video_id") for p in reg])
+
+    corregidos = 0
+    for p in reg:
+        real = (fichas.get(p.get("video_id")) or {}).get("privacidad")
+        if real and real != p.get("estado"):
+            print(f"  registro corregido: {p['id']} {p.get('estado')} -> {real}")
+            p["estado"] = real
+            corregidos += 1
+    if corregidos:
+        registro["_estado_leido_utc"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        REGISTRO.write_text(json.dumps(registro, ensure_ascii=False, indent=1) + "\n",
+                            encoding="utf-8")
+        print(f"  {corregidos} estado(s) puestos al día en registro_publicaciones.json")
 
     candidatos = []
     for p in reg:
@@ -213,7 +258,7 @@ def main():
               f"{MINIMO_DIAS} días. Nada que medir.")
         return
 
-    dur = duraciones(yt, [p["video_id"] for p, _ in candidatos])
+    dur = {k: v["duracion_s"] for k, v in fichas.items()}
     studio, nombre_csv = leer_export_studio()
     if nombre_csv:
         print(f"Export de Studio: {nombre_csv} ({len(studio)} filas)")
@@ -221,11 +266,18 @@ def main():
         print("Sin export de Studio: no habrá impresiones ni CTR "
               "(la API no las da; ver la cabecera de este fichero).")
 
-    lecturas = []
+    lecturas, fallidos = [], []
     for p, subido in candidatos:
         vid = p["video_id"]
         desde = a.desde or subido.isoformat()
-        base = fila(ya, vid, desde, hasta)
+        # Un vídeo que falle no puede tumbar la lectura de los demás: el valor
+        # de este fichero está en la serie completa, no en una fila.
+        try:
+            base = fila(ya, vid, desde, hasta)
+        except Exception as e:
+            fallidos.append((p["id"], str(e)[:200]))
+            print(f"::warning::{p['id']}: no se pudo leer ({str(e)[:120]})")
+            continue
         d = dur.get(vid, 0)
         fila_out = {
             "leido": hoy.isoformat(),
@@ -235,6 +287,7 @@ def main():
             "formato": "corto" if p["id"].startswith("MDS") else "largo",
             "serie": p.get("serie", ""),
             "publicado": subido.isoformat(),
+            "privacidad": (fichas.get(vid) or {}).get("privacidad", "desconocido"),
             "dias_publicado": (hoy - subido).days,
             "duracion_s": round(d, 1),
             "visualizaciones": int(base.get("views", 0)),
@@ -276,6 +329,14 @@ def main():
                       encoding="utf-8")
     print(f"\nEscrito {SALIDA.relative_to(RAIZ)} — {len(lecturas)} lecturas nuevas, "
           f"{len(previo['lecturas'])} en total.")
+    if fallidos:
+        print(f"::warning::{len(fallidos)} vídeo(s) sin leer: "
+              + ", ".join(i for i, _ in fallidos))
+    if not lecturas:
+        # Sin lecturas no hay error, pero sí hay que enterarse: es la señal de
+        # que la escalera de métricas de C14 sigue sin poder decidir nada.
+        print("::warning::Ninguna lectura nueva. metricas.json sigue sin datos "
+              "con los que decidir.")
 
 
 if __name__ == "__main__":

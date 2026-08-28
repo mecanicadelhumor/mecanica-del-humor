@@ -68,7 +68,12 @@ jobs:
         run: |
           git config user.name  "Mecánica del Humor"
           git config user.email "mecanicadelhumor@gmail.com"
-          git add 05_calendario/metricas.json
+          # También el registro: metricas.py le pregunta a YouTube el estado
+          # real de cada vídeo y corrige el que quedó escrito en la subida
+          # (siempre «private» en modo revisión). Sin esto, ni este script ni
+          # la revisión diaria saben qué está publicado de verdad. Los dos
+          # ficheros son de Actions, así que no pisa a nadie.
+          git add 05_calendario/metricas.json 05_calendario/registro_publicaciones.json
           if git diff --cached --quiet; then
             echo "Sin cambios en las métricas."
           else
