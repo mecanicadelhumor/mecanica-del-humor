@@ -48,8 +48,7 @@
   #marco::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
   #marco::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
 
-  #escena{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:150px 180px;
-        transform-origin:50% 46%;will-change:transform}
+  #escena{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:150px 180px}
   .caja{width:100%;max-width:1500px}
 
   /* --- marca de agua / firma --- */
@@ -223,7 +222,8 @@
      de verdad la banda que queda, y el personaje se apoya en la esquina
      inferior izquierda —fuera de la columna de botones— con tamaño de
      personaje, no de marca de agua. */
-  html[data-fmt="v"] #escena{padding:270px 76px 430px;align-items:center}
+  html[data-fmt="v"] #escena{padding:270px 76px 430px;align-items:center;
+                             transform-origin:50% 46%;will-change:transform}
   /* Una frase de tres palabras a 100 px deja el 70 % del encuadre vacío. El
      cuerpo sube cuando hay poco texto y baja cuando hay mucho: lo decide el
      recuento de palabras en cargar(), no el ojo. */

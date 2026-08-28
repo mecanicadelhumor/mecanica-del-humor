@@ -180,3 +180,55 @@ Si C15 se ve bien, C16 entra la semana del 7 de septiembre con un tipo de escena
 esquema de guion ya admite `voz: "esceptico"` y el largo lo usa. Darle una silueta propia
 —otra cabeza del mismo taller, distinta— convierte la pantalla en una conversación en vez
 de en una sucesión de rótulos. Se decide cuando C16 esté verificado.
+
+---
+
+## 6. Cierre de la sesión
+
+**Silvestre autoriza tocar `voz.py`.** Sin acotar. Queda por escrito en
+`00_estrategia/PROMPT_DE_ARRANQUE.md`, en la tabla de autorizaciones vigentes,
+porque un permiso dado en una conversación se pierde con la conversación. Se
+usará para C7 escalón 1 (dos voces) la semana del 7 de septiembre, después de
+verificar C15 — no antes, o no sabremos cuál de los dos cambios movió el número.
+
+**El chiste del abuelo (MDS-007, martes 1) queda aprobado.**
+
+**El criterio que manda cuando haya duda**, con sus palabras: *«la audiencia va a
+mandar. Si seguimos con menos de 100 visualizaciones por vídeo el canal estará
+abocado a su desaparición»*. Es la corrección al riesgo de esta semana:
+diferenciarse de los demás canales automatizados es un **medio**, no el
+objetivo. Si dentro de tres semanas los números dicen que el vocabulario
+dibujado no mueve nada y otra cosa sí, se cambia. Añadido al bloque copiable del
+prompt de arranque para que ningún yo futuro lo pierda de vista.
+
+Sobre los iconos: *«un pequeño paso adelante en la buena dirección»*. Ni más ni
+menos: C16 no es la solución del problema de atractivo, es un ladrillo.
+
+## 7. Una comprobación antes de cerrar, y lo que enseñó
+
+Mañana se produce MDH-004, que es formato largo y **no** lleva C15. Antes de
+irme comprobé que el cambio de ayer no le afecta: rendericé catorce fotogramas
+de MDH-004 con la versión de antes y con la de ahora.
+
+Salían **368 píxeles distintos de 254.016** por fotograma. Un susto — hasta que
+rendericé **el fichero viejo contra sí mismo**: los mismos 368 píxeles.
+
+| Comparación | Píxeles distintos (14 fotogramas) |
+|---|---|
+| viejo vs viejo | 2.578 |
+| nuevo vs nuevo | 1.839 |
+| viejo vs nuevo | 2.206 |
+
+Mi cambio difiere **menos** que el ruido del propio navegador. El episodio largo
+no cambia. Pero el hallazgo de fondo importa más que la comprobación:
+**«mismo guion y mismo t, mismo píxel» (regla 11.5) nunca ha sido literalmente
+cierto.** Chromium rasteriza distinto una línea de 1 px del marco según cuándo
+promociona la capa; delta máximo 50 sobre 255, en fondo casi negro, invisible.
+El suelo de ruido es ~0,06 % de los píxeles, y quien compare dos versiones
+contra cero va a perseguir fantasmas. Anotado en `PROMPT_DE_ARRANQUE.md`.
+
+**Cambio aplicado de todas formas:** `transform-origin` y `will-change` de
+`#escena` pasan a estar dentro del bloque `html[data-fmt="v"]`. No era la causa,
+pero el episodio largo no usa el acercamiento y no tiene por qué cargar con las
+propiedades que lo hacen posible.
+
