@@ -47,6 +47,12 @@ DESCRIPCION_SERIE = {
                     "de estilos de humor que se usa en investigación.",
     "Mecanismos": "Cómo funciona una pieza del humor por dentro, con las fuentes "
                   "delante y el sitio donde falla al final.",
+    # Estrena el 31/08 con MDS-006. Sin esta entrada la lista de reproducción
+    # se habría creado con la descripción vacía y ya no se arregla sola: la
+    # lista se crea una vez. Aviso de la planificación del 27/08.
+    "Ríete primero, te explico después": "Primero el chiste. Después, por qué "
+                  "te ha hecho gracia — y en qué casos ese mecanismo deja de "
+                  "funcionar.",
 }
 
 # El andamiaje de la descripción (epígrafes y cierre) va en el idioma del

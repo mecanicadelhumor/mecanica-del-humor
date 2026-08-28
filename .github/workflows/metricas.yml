@@ -19,7 +19,13 @@ name: Leer métricas
 
 on:
   schedule:
-    - cron: "0 5 * * 1"
+    # Fuera del minuto 0, y con un segundo intento. Mismo motivo que en
+    # producir.yml: el cron de Actions se retrasa y a veces se pierde, y este
+    # workflow es el que alimenta la única decisión que el canal no puede
+    # tomar a ojo. Reescribir metricas.json dos veces el mismo lunes no hace
+    # daño: la segunda pasada vuelve a pedir los mismos datos.
+    - cron: "19 5 * * 1"
+    - cron: "37 8 * * 1"
   workflow_dispatch:
     inputs:
       desde:

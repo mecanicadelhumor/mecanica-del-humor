@@ -9,10 +9,30 @@ name: Producir vídeo
 
 on:
   schedule:
-    # 01:00 UTC = 03:00 en España en horario de verano (02:00 en invierno).
-    # De madrugada: el runner está libre y el vídeo espera montado a que te
-    # levantes. La hora de PUBLICACIÓN no es esta: la fija la parrilla.
-    - cron: "0 1 * * *"
+    # TRES intentos al día, y ninguno en punto. 28/08/2026.
+    #
+    # Por qué: el cron de Actions no es una promesa, es una cola. Medido sobre
+    # este canal, la producción de la madrugada NUNCA salió a su hora:
+    #   24/08  04:05 UTC   (+3h05)
+    #   25/08  03:38 UTC   (+2h38)
+    #   26/08  04:03 UTC   (+3h03)
+    #   27/08  no salió    (la lanzó Silvestre a mano a las 07:55)
+    #   28/08  07:00 UTC   (+6h00)
+    # GitHub avisa de ello: los disparos programados se retrasan cuando hay
+    # carga y pueden perderse sin aviso, y la hora de más carga es el minuto 0
+    # de cada hora, que es justo donde estaba puesto.
+    #
+    # La solución no es adivinar una hora buena: es intentarlo tres veces con
+    # minutos raros. Que esto sea seguro depende de cola.py, que desde el mismo
+    # día no produce un episodio que ya esté en registro_publicaciones.json con
+    # video_id: el segundo y el tercer intento salen con hay_trabajo=false y no
+    # arrancan el runner. Si el primero salió, los otros dos cuestan segundos.
+    #
+    # El último es a las 08:23 UTC, once horas antes de la publicación de las
+    # 19:00: aún queda margen para que Silvestre lo mire.
+    - cron: "13 1 * * *"
+    - cron: "47 4 * * *"
+    - cron: "23 8 * * *"
 
   workflow_dispatch:
     inputs:

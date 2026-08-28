@@ -67,6 +67,11 @@ COLA_S = 0.5
 # para los dos canales sin duplicar ficheros.
 MARCAS = {"es": "Mecánica del Humor", "en": "Humor Mechanics"}
 
+# La línea del remate de marca con la que termina cada Short. Un guion puede
+# poner la suya en la clave "remate"; si no, se usa esta.
+REMATES = {"es": "El mecanismo, cada día a las 19:00",
+           "en": "The mechanism, every day"}
+
 # Los dos formatos del canal. El vertical es para Shorts: 1080x1920, que es lo
 # que YouTube clasifica automáticamente como Short al subirlo por la API — no
 # hay casilla que marcar ni hace falta la etiqueta #shorts.
@@ -91,6 +96,20 @@ def preparar(guion):
         d["marca"] = MARCAS.get(idioma, MARCAS["es"])
         d["formato"] = formato
         escenas.append(d)
+    # C15 · la capa viva necesita saber dónde está cada escena dentro del vídeo
+    # ENTERO: la barra de avance, la deriva de la retícula y el giro del
+    # engranaje son función del tiempo global. Si se reiniciaran en cada corte,
+    # el corte se notaría más, no menos.
+    reloj = 0.0
+    for d in escenas:
+        d["t_inicio"] = round(reloj, 4)
+        reloj += d["duracion_s"]
+    for d in escenas:
+        d["total_s"] = round(reloj, 4)
+    # El remate de marca del cierre: la cita de mañana. Se pasa desde aquí para
+    # que el motor de escenas no tenga que saber nada de la parrilla.
+    if escenas:
+        escenas[-1]["remate"] = guion.get("remate") or REMATES.get(idioma, REMATES["es"])
     return escenas
 
 
@@ -100,6 +119,13 @@ def render(guion_path, salida, fps=30, escala=1.0, solo=None, verbose=True):
     ancho, alto = LIENZO.get(guion.get("formato", "largo"), LIENZO["largo"])
     if solo:
         escenas = [e for e in escenas if e["n"] == solo]
+
+    # «vivo»: captura continua. Se enciende en los Shorts, donde el movimiento
+    # es la diferencia entre un vídeo y un pase de diapositivas, y se deja
+    # apagado en el episodio largo — 5 minutos a 30 fps son 9.000 capturas y
+    # ahí el ritmo lo llevan los cortes, no la animación. Un cambio por vez
+    # (regla 11.1): el largo se decide con las métricas del Short delante.
+    vivo = guion.get("formato", "largo") == "corto"
 
     tmp = Path(tempfile.mkdtemp(prefix="mdh_"))
     lista = tmp / "lista.txt"
@@ -134,12 +160,33 @@ def render(guion_path, salida, fps=30, escala=1.0, solo=None, verbose=True):
                 capturados += 1
                 return ruta
 
+            if vivo:
+                # ---- C15 · captura continua (Shorts) --------------------
+                # El tramo central YA NO es un fotograma congelado. Se captura
+                # la escena entera a fps porque en escena.html hay movimiento
+                # todo el rato: revelado por palabra, acercamiento lento,
+                # deriva de la retícula, barra de avance y el personaje.
+                #
+                # Lo que costaba esto era la razón de no hacerlo, y esa razón
+                # ya no existe: el repositorio es PÚBLICO y los minutos de
+                # Actions en repositorios públicos son ilimitados (verificado
+                # el 28/08/26 contra la nota de precios de 2026 de GitHub).
+                # El único límite real es el timeout de 150 min del job, y un
+                # Short de 60 s a 30 fps son 1.800 capturas ≈ 4 min.
+                n_f = max(1, int(round(dur * fps)))
+                for f in range(n_f):
+                    entradas.append((capturar(f / fps), 1 / fps))
+                total_s += dur
+                if verbose:
+                    print(f"  {e['n']:>2} [{e['tipo']:<11}] {dur:>5.1f}s  "
+                          f"{n_f:>4} capturas  ({n_uds} uds) · vivo")
+                continue
+
             # tramo de entrada
             n_ent = max(1, int(round(t_fin_ent * fps)))
             for f in range(n_ent):
                 entradas.append((capturar(f / fps), 1 / fps))
             # tramo estático: un único fotograma que dura lo que haga falta.
-            # El movimiento durante ese tramo lo ponen los subtítulos quemados.
             if estatico > 1 / fps:
                 entradas.append((capturar(t_fin_ent), estatico))
             # tramo de salida

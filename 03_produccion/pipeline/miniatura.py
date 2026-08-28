@@ -279,12 +279,25 @@ def construir(texto, cifra, tema, formato, marca, numero, idioma, expresion, lay
 
 
 def generar(guion_path, salida, texto=None, cifra=None, sin_cifra=False,
-            variantes=False, expresion="duda"):
+            variantes=False, expresion=None):
     g = json.loads(Path(guion_path).read_text(encoding="utf-8"))
     formato = g.get("formato", "largo")
     idioma = g.get("idioma", "es")
     marca = MARCAS.get(idioma, MARCAS["es"])
     numero = re.sub(r"^MD[HS]-", NUMERO.get(idioma, NUMERO["es"]), g["id"])
+
+    # La expresión del personaje: la del guion, no un valor por defecto.
+    # Hasta el 28/08 esto era expresion="duda" a fuego en la firma de la
+    # función y nadie le pasaba nada, así que las TRES miniaturas del canal
+    # salieron con la cara de duda —la que el canal usaba como avatar antes—
+    # sin que nadie lo hubiera decidido. No era una prueba: era un valor por
+    # defecto que nunca se cableó. Ahora manda el guion:
+    #   1. "miniatura_expresion" del guion, si la trae;
+    #   2. si no, la del personaje de la PRIMERA escena que lo use;
+    #   3. si no, "neutra", que es la cara de marca en reposo.
+    if expresion is None:
+        expresion = g.get("miniatura_expresion") or next(
+            (e["personaje"] for e in g["escenas"] if e.get("personaje")), "neutra")
 
     texto = texto or g["escenas"][0].get("titulo") or g["escenas"][0].get("texto") \
         or g["titulo_trabajo"]
@@ -347,7 +360,7 @@ if __name__ == "__main__":
     ap.add_argument("--sin-cifra", action="store_true")
     ap.add_argument("--variantes", action="store_true",
                     help="genera _a, _b y _c para rotarlas y comparar CTR")
-    ap.add_argument("--expresion", default="duda",
+    ap.add_argument("--expresion", default=None,
                     choices=["neutra", "duda", "entiende", "no", "rie", "piensa"])
     a = ap.parse_args()
     generar(a.guion, a.salida, a.texto, a.cifra, a.sin_cifra, a.variantes, a.expresion)

@@ -228,6 +228,16 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=False, salida=None
             "sha256": hashlib.sha256(m.read_bytes()).hexdigest(),
         }, ensure_ascii=False, indent=2), encoding="utf-8")
 
+    # Deja constancia de si se quemaron subtítulos DE VERDAD, no solo de si se
+    # pidieron: qa.py no tiene otra forma de saberlo (propuesta de la revisión
+    # diaria del 24/08, aprobada por Silvestre el 28/08). Antes lo adivinaba a
+    # partir de si subtitulos.ass tenía líneas, y acertaba solo mientras
+    # quemar_subs era true por defecto; desde que es false (20/08) el .ass
+    # sigue teniendo líneas y la adivinanza salía mal.
+    (carpeta / "montaje.json").write_text(json.dumps({
+        "subtitulos_quemados": bool(quemar_subs and n_subs),
+    }, ensure_ascii=False, indent=2), encoding="utf-8")
+
     mb = salida.stat().st_size / 1e6
     print(f"Vídeo final: {salida}  ({mb:.1f} MB)")
     return salida

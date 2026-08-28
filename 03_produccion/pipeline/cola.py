@@ -39,6 +39,7 @@ RAIZ = Path(__file__).resolve().parents[2]
 PARRILLA = RAIZ / "05_calendario" / "parrilla.json"
 GUIONES = RAIZ / "05_calendario" / "guiones"
 MUSICA = RAIZ / "03_produccion" / "assets" / "musica"
+REGISTRO = RAIZ / "05_calendario" / "registro_publicaciones.json"
 
 # Margen mínimo entre «ahora» y la hora programada de publicación. YouTube
 # rechaza un publishAt en el pasado, y una ejecución que se retrase o se
@@ -125,6 +126,28 @@ def rel(p):
     return str(Path(p).resolve().relative_to(RAIZ)).replace("\\", "/")
 
 
+def ya_subidos():
+    """Los ids que ya tienen vídeo en YouTube, según el registro.
+
+    Existe por una razón concreta: desde el 28/08 el workflow de producción
+    tiene TRES horas de cron en vez de una. El cron de GitHub Actions no es
+    puntual —medido sobre este canal, entre 2h38 y 6h de retraso cada día, y
+    algún día se cae del todo— así que la única forma de que la emisión no
+    dependa de la suerte es intentarlo varias veces. Y la única forma de que
+    intentarlo varias veces no publique el mismo Short tres veces es esto:
+    si el episodio ya está en el registro con video_id, no hay trabajo.
+
+    Ojo: se lee el registro del árbol de trabajo, que en Actions es el que
+    acaba de hacer checkout de origin/main. El commit del registro lo hace el
+    propio workflow al terminar, así que el segundo intento del día lo ve.
+    """
+    try:
+        datos = json.loads(REGISTRO.read_text(encoding="utf-8"))
+    except Exception:
+        return set()
+    return {e.get("id") for e in datos.get("publicaciones", []) if e.get("video_id")}
+
+
 def trabajo(episodio, idioma, modo, fecha, horas, avisos, hora_fija=None):
     guion = GUIONES / f"{episodio}.{idioma}.json"
     if not guion.exists():
@@ -166,7 +189,7 @@ def trabajo(episodio, idioma, modo, fecha, horas, avisos, hora_fija=None):
     }
 
 
-def plan_del_dia(fecha=None, episodio=None, estado=None):
+def plan_del_dia(fecha=None, episodio=None, estado=None, rehacer=False):
     datos = json.loads(PARRILLA.read_text(encoding="utf-8"))
     horas = datos.get("horas_publicacion", {"es": "18:00", "en": "17:00"})
     fecha = fecha or hoy_madrid()
@@ -189,6 +212,17 @@ def plan_del_dia(fecha=None, episodio=None, estado=None):
     trabajos = [t for t in (trabajo(emision["episodio"], idi, modo, fecha, horas,
                                     avisos, hora_fija)
                             for idi in emision.get("idiomas", ["es"])) if t]
+    # Idempotencia: lo que ya está subido no se vuelve a producir. Es lo que
+    # hace seguro tener varios intentos de cron al día.
+    if not rehacer:
+        hechos = ya_subidos()
+        antes = len(trabajos)
+        trabajos = [t for t in trabajos if t["id"] not in hechos]
+        if len(trabajos) < antes:
+            avisos.append(f"{emision['episodio']}: {antes - len(trabajos)} trabajo(s) ya "
+                          "estaban en registro_publicaciones.json con video_id; no se repiten. "
+                          "Para forzarlo, --rehacer.")
+
     if estado:                                    # override manual del formulario
         for t in trabajos:
             t["estado"], t["publicar_en"] = estado, None
@@ -242,6 +276,8 @@ def main():
     ap.add_argument("--guion", nargs="*", default=None, help="guiones sueltos, ignora la parrilla")
     ap.add_argument("--estado", default=None, choices=["private", "unlisted", "public"],
                     help="fuerza el estado de subida y anula la publicación programada")
+    ap.add_argument("--rehacer", action="store_true",
+                    help="produce aunque el episodio ya esté en el registro (subiría otra vez)")
     ap.add_argument("--github-output", action="store_true",
                     help="además de stdout, escribe las claves en $GITHUB_OUTPUT")
     a = ap.parse_args()
@@ -250,7 +286,7 @@ def main():
         plan = plan_suelto(a.guion, a.estado)
     else:
         fecha = datetime.strptime(a.fecha, "%Y-%m-%d").date() if a.fecha else None
-        plan = plan_del_dia(fecha, a.episodio, a.estado)
+        plan = plan_del_dia(fecha, a.episodio, a.estado, a.rehacer)
 
     compacto = json.dumps(plan, ensure_ascii=False, separators=(",", ":"))
     print(compacto)

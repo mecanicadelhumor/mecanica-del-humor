@@ -20,7 +20,12 @@ name: Explorar demanda
 
 on:
   schedule:
-    - cron: "0 12 * * 4"
+    # Fuera del minuto 0, y con un segundo intento a las 15:52 UTC — todavía
+    # cuatro horas antes de que la planificación despierte a las 20:00. El
+    # 27/08 este workflow no llegó a correr y la tanda entera de la semana se
+    # eligió sin una sola vista medida.
+    - cron: "26 12 * * 4"
+    - cron: "52 15 * * 4"
   workflow_dispatch:
     inputs:
       sin_youtube:

@@ -75,8 +75,8 @@ condicionados a que el canal llegue a tener el problema que resuelven.
 | **C12** | Series y listas automáticas | 5 · retorno | ✅ código hecho | primera lista **24 ago** |
 | **C11** | La pregunta como primer comentario | 5 | ✅ código hecho | actúa cuando haya público |
 | **C3** | Temas por demanda | 1 y 2 | ⚙️ **completado el 21 ago** con `demanda.yml` | primera medición real **27 ago** |
-| **C6** | Movimiento en pantalla | 4 · ritmo | ⏳ **el pendiente más importante** | del 25 ago al 5 sep, un cambio por vez |
-| **C7** | Dos voces | 4 | ⏳ pendiente | escalón 1 (`edge-tts`) la semana del 1 sep; escalón 2 (Gemini TTS) cuando el 1 esté probado |
+| **C6** | Movimiento en pantalla | 4 · ritmo | ✅ **entregado por C15** el 28 ago | ver C15 al final |
+| **C7** | Dos voces | 4 | ⏳ pendiente | escalón 1 (`edge-tts`) la semana del 1 sep; escalón 2 (Gemini TTS) cuando el 1 esté probado. **Sin tarjeta: el nivel gratuito de `gemini-3.1-flash-tts-preview` incluye la salida de audio** (28 ago) |
 | **C13** | Fuera de YouTube | 1 | ⚙️ parcial | Bluesky **ya**; TikTok e Instagram **solo si se pasa el peldaño 1** |
 | **C10** | Una página web por episodio | 1 · tráfico externo | ⏸️ aplazado | **solo si se pasa el peldaño 2**. Antes es tráfico llevado a una puerta por la que nadie entra |
 
@@ -768,3 +768,64 @@ Eso se decide con la tabla delante, no por agotamiento.
 5. **En paralelo, sin prisa:** web (C10), comentarios (C11), series (C12), otras
    plataformas (C13).
 6. **Siempre:** la tabla de C14, los lunes.
+
+---
+
+# C15 · El Short se mueve
+
+**28 de agosto de 2026.** Sustituye a C6.2 y C6.3, que se cierran.
+
+## El problema, medido
+
+El tramo central de cada escena era **un fotograma estirado**, y ese tramo es el
+85 % del vídeo. Renderizando MDS-005 (53 s) con el motor anterior salían **185
+fotogramas en total**: para una escena de 9,1 s, 24 de entrada y **uno solo**
+sobre los ocho segundos restantes. Tres capturas de la misma escena al 15 %, 50 %
+y 85 % de su duración son idénticas píxel a píxel.
+
+No es un despiste: estaba escrito en `voz.py` («*un vídeo sin subtítulos quemados
+se percibe como un pase de diapositivas*»). Los subtítulos se retiraron el 20/08
+(C6.1) y la respiración de zoom se había descartado antes. **Las dos únicas
+fuentes de movimiento desaparecieron y no se puso nada en su lugar.**
+
+## Por qué se puede arreglar ahora y antes no
+
+Toda la arquitectura de captura se construyó sobre un presupuesto de render que
+**no existe**: el repositorio es público y los minutos de Actions en runners
+estándar sobre repositorios públicos son ilimitados. El único límite real es el
+`timeout-minutes: 150` del job.
+
+Medido: **259 ms por captura a 1080×1920**. Un Short de 60 s a 30 fps son 1.800
+capturas, **7,8 minutos** de los 150 disponibles. Un largo de 5 min serían 38,8.
+
+## Las cinco capas (solo formato vertical)
+
+| | Qué | Dónde |
+|---|---|---|
+| C15.1 | Revelado palabra a palabra, 0,11–0,30 s/palabra según densidad; rebote en la palabra resaltada | `escena.html` · `pintar()` |
+| C15.2 | Barra de avance del vídeo **entero** (no de la escena) | `escena.html` · `render.py` pasa `t_inicio`/`total_s` |
+| C15.3 | Acercamiento lento del bloque, 2,2 % por escena | `escena.html` |
+| C15.4 | Deriva de la retícula (2,2 px/s), personaje que respira y engranaje que gira; diagrama apilado; composición y cuerpo de letra por densidad | `escena.html` |
+| C15.5 | Remate de marca en el último 1,25 s del cierre | `escena.html` · `render.py` |
+|  | Captura continua en `formato: corto` | `render.py` · `vivo` |
+
+**C15.3 es C6.3 resuelto en la capa correcta.** La bitácora del 24/08 midió que
+`zoompan` de FFmpeg necesita preescalar a ×4 para no temblar, a un coste de 5,3×,
+porque trunca a píxel entero. El navegador lo hace con precisión subpíxel y
+gratis. La medición no se tira: es la que justifica no hacerlo en FFmpeg.
+
+## Criterio de aceptación
+
+- `05_calendario/qa/<ID>/ficha.json` de la primera producción nueva y los seis
+  fotogramas mirados **antes** de publicar (regla 11.2).
+- El episodio largo **no cambia**: `vivo` solo se enciende con `formato: corto`.
+  Se decide con las métricas del Short delante (regla 11.1).
+- Comprobado antes de entrar: 1.274 fotogramas frente a 185, y **cero de 59 pares
+  de fotogramas consecutivos idénticos**.
+
+## Lo que NO se hace
+
+- No se vuelven a encender los subtítulos quemados. El motivo de C6.1 sigue en pie.
+- No se toca la regla 12: el remate de marca va **después** de la crítica, no en
+  su lugar.
+- No se enciende `vivo` en el episodio largo todavía.
