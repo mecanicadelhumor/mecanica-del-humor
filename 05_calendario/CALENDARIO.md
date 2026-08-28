@@ -1,6 +1,6 @@
 # Calendario editorial
 
-**Vigente desde el 20 de agosto de 2026.** Sustituye por completo al calendario de la
+**Vigente desde el 20 de agosto de 2026. Última actualización: 27 de agosto.** Sustituye por completo al calendario de la
 tanda 1 (ocho episodios largos, dos idiomas, ritmo diario), que queda derogado. El porqué
 está en `00_estrategia/DIAGNOSTICO.md`.
 
@@ -75,16 +75,39 @@ El paso de un modo a otro ya está escrito en `parrilla.json`. No hay que acorda
 
 ---
 
-## Esta semana concreta (20 al 23 de agosto)
+## La semana del 31 de agosto al 5 de septiembre, pieza a pieza
 
-| Día | Qué |
-|---|---|
-| **jue 20** | MDH-003 programado como estreno a las 18:00. Es el último vídeo del formato antiguo |
-| **jue 20, 22:00** | ✅ **Hecho.** La planificación escribió MDS-002 a MDS-006 y adaptó MDH-004 al formato nuevo |
-| **vie 21 · sáb 22 · dom 23** | **Nada.** Tres días de pausa para cambiar de formato |
+**Es la primera semana en modo automático.** No tienes que hacer nada: cada vídeo se sube
+en privado a las 03:00 con la hora de publicación puesta y YouTube lo hace público solo.
 
-Tres días sin publicar no cuestan nada con la audiencia que hay ahora, y evitan sacar dos
-vídeos más en el formato que ya sabemos que no funciona.
+| Día | ID | Serie | La pregunta que responde | Fuentes |
+|---|---|---|---|---|
+| **lun 31** | MDS-006 | Ríete primero, te explico después | «por qué me río cuando no debo» | E02, A10 |
+| **mar 1** | MDS-007 | Diagnósticos | «si te hace gracia el humor negro eres más inteligente» | B04, C02 |
+| **mié 2** | MDS-008 | Esto no tiene gracia y esto sí | «por qué unos chistes hacen gracia y otros no» | I02, L01 |
+| **jue 3** | MDS-009 | El experimento | «cómo caer bien a la gente» | D05 |
+| **vie 4** | MDS-010 | Desmonta el chiste | «si tienes que explicar un chiste pierde la gracia» | A05, A07 |
+| **sáb 5** | MDH-005 | Diagnósticos (largo, 4m44s) | «qué dice de mí mi sentido del humor» | B01, B02 |
+
+**Cinco series distintas de lunes a viernes**, una por día. Sigue sin haber datos para
+monocultivar ninguna: `metricas.json` está vacío a día de hoy.
+
+Dos decisiones editoriales de esta tanda que conviene tener escritas:
+
+- **MDS-007 no nombra el estudio que todo el mundo cita.** La creencia «si te gusta el
+  humor negro eres más inteligente» viene de un estudio vienés de 2017 que **no está en las
+  77 obras**. Comentar por su nombre un artículo que no hemos leído es exactamente lo que
+  prohíbe la regla 2, así que el Short responde la pregunta con lo que sí tenemos: el 3WD
+  de Ruch para el gusto y el metaanálisis de Greengross para la producción. La distinción
+  entre *apreciar* humor y *producir* humor es el desmontaje entero.
+- **MDS-009 no lleva ninguna cifra en pantalla.** La escena de tipo `dato` pone «Más
+  generosos» en vez de un número porque la ficha de `D05` recoge la dirección del efecto y
+  no las magnitudes. Antes un hueco que un dato inventado.
+
+**Los seis terminan diciendo dónde falla** lo que acaban de explicar. `MDS-010` es el caso
+extremo de la semana: un canal que se dedica a desmontar chistes explicando por qué
+explicar un chiste lo mata, y admitiendo que por eso el chiste va siempre antes del
+despiece.
 
 ---
 
@@ -161,21 +184,32 @@ Eso se decide con la tabla delante, no por agotamiento.
 
 - **MDH-004** — ✅ adaptado al formato nuevo el 20/08 para el sábado 29. 30 escenas, 5m02s,
   personaje en cuatro escenas, dos intervenciones del escéptico, «enunciado» al 43 %.
-- **MDH-005** — «Tu estilo de humor». Escrito y validado, pero **todavía en formato viejo**
-  (27 escenas, 62 % «enunciado», sin personaje ni escéptico, rótulo por delante). Está
-  programado para el **sábado 5 de septiembre**, así que hay que pasarlo por la misma
-  adaptación que MDH-004 antes de esa fecha. Da además material para la serie
+- **MDH-005** — ✅ adaptado al formato nuevo el 27/08 para el sábado 5 de septiembre.
+  39 escenas (antes 27), 4m44s, personaje en cuatro escenas, dos intervenciones del
+  escéptico, «enunciado» del 62 % al 41 %, primera risa sobre el segundo nueve. Serie
   «Diagnósticos».
-- **MDH-006, 007 y 008** — escritos y validados, mismo caso: 65 % de «enunciado», rótulo de
-  ocho segundos por delante y ningún personaje. Entran como largos de sábados siguientes
-  después de la adaptación.
+- **MDH-006, 007 y 008** — escritos y validados, **sin adaptar**: 48-66 % de «enunciado»,
+  rótulo por delante y ningún personaje. Sus notas siguen en `05_calendario/revisiones/`.
 
-**Cómo se adapta un largo viejo** (el patrón está aplicado en MDH-004, cópialo de ahí):
-sacar el rótulo de la escena 1 y poner en su sitio una escena concreta con la primera risa
-antes del segundo quince; partir las escenas de más de catorce segundos; convertir
-«enunciado» en `comparacion`, `cita` y `diagrama` hasta bajar del 45 %; meter al personaje
-en tres o cuatro escenas, siempre reaccionando *después*; añadir una o dos intervenciones
-del escéptico de menos de doce palabras; y reescribir el título de publicación a la
-pregunta que la gente escribe.
+**Se adapta uno por semana, no los cuatro de golpe.** Adaptar por adelantado los que aún no
+tienen fecha es trabajo especulativo: dentro de dos o tres semanas las métricas dirán qué
+formato aguanta y habría que rehacerlo. Cada jueves se adapta el del sábado siguiente y
+nada más.
+
+**El largo del 12 de septiembre está sin decidir a propósito.** Se elige el jueves 3 con
+las métricas del lunes 7 delante, entre dos candidatos: **MDH-007** (gelotofobia, «por qué
+se ríen de mí»), que ya está escrito y solo necesita la adaptación, y un largo **nuevo**
+sobre «cómo ser más gracioso» (`H01`, `H03`), que es la pregunta con más demanda de todo el
+corpus y la que mejor respaldo tiene, reservada a propósito para formato largo porque en
+cuarenta segundos se convierte en la lista de trucos que el canal no quiere ser.
+
+**Cómo se adapta un largo viejo** (el patrón está aplicado en MDH-004 y MDH-005, cópialo de
+ahí): sacar el rótulo de la escena 1 y poner en su sitio una escena concreta con la primera
+risa antes del segundo quince; partir las escenas largas —el validador avisa por encima de
+10 s desde el 27/08— en escenas de una sola idea; convertir «enunciado» en `comparacion`,
+`lista`, `dato` y `diagrama` hasta bajar del 45 %; meter al personaje en tres o cuatro
+escenas, siempre reaccionando *después* y nunca sobre el chiste mientras se cuenta; añadir
+una o dos intervenciones del escéptico de menos de doce palabras; y reescribir el título de
+publicación a la pregunta que la gente escribe.
 - **Los guiones ingleses** (`.en.json`) quedan archivados sin borrar, por si se reabre
   `@humormechanics`.

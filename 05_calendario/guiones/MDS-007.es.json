@@ -1,0 +1,75 @@
+{
+  "id": "MDS-007",
+  "formato": "corto",
+  "serie": "Diagnósticos",
+  "idioma": "es",
+  "titulo_trabajo": "Si te gusta el humor negro, ¿eres más inteligente?",
+  "tesis": "Lo que la investigación relaciona con la inteligencia no es de qué te ríes, sino cuánto haces reír tú: producir humor, no apreciarlo.",
+  "pilares": [
+    "B",
+    "C"
+  ],
+  "pregunta_de_demanda": "si te hace gracia el humor negro eres más inteligente",
+  "notas_humor": [
+    "El chiste va en el segundo cero y es, él mismo, el objeto de estudio: un clásico del humor negro contado sin víctima real.",
+    "La reacción del personaje llega DESPUÉS del remate: escenas 2, 4 y 6, nunca la 1.",
+    "Rebaja en la escena 5: la promesa halagadora se cae con la frase más sosa posible.",
+    "El cierre desactiva el propio formato «Diagnósticos»: este es el único Short de la serie que termina diciendo que no te diagnostica nada.",
+    "No se nombra el estudio vienés que circula por la prensa: no está en el corpus, y comentar por su nombre un artículo que no hemos leído es lo que la regla 2 prohíbe."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "narracion": "Mi abuelo murió tranquilo, mientras dormía. No como los cuatro que iban en el coche con él.",
+      "texto": "Un clásico del *humor negro*.",
+      "pausa_despues_s": 1.3
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Si te has reído, internet lleva años diciéndote lo mismo: que eso significa que eres más listo.",
+      "texto": "Y lo dice *mal*.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Qué crees que mide y qué mide",
+      "et_a": "Lo que dice internet",
+      "et_b": "Lo que se mide",
+      "a": "Una escala: de *listo* a tonto",
+      "b": "Direcciones distintas del gusto",
+      "narracion": "Tu gusto por el humor no es una escala de listo a tonto. Se reparte en direcciones distintas.",
+      "fuente": "B04",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Cómo se mide el gusto de verdad",
+      "puntos": [
+        "Lo que *encaja* al final",
+        "Lo que no encaja nunca, y ahí está la gracia",
+        "Y el humor sexual, por su cuenta"
+      ],
+      "narracion": "Ruch separó tres: los chistes que encajan al final, los que no encajan nunca y por eso hacen gracia, y el humor sexual, que va aparte.",
+      "fuente": "B04",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Y lo que sí aparece junto a la inteligencia no es de qué te ríes. Es cuánto haces reír tú.",
+      "texto": "Predice *producir*. No apreciar.",
+      "fuente": "C02",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla porque sigue siendo una *correlación*",
+      "subtitulo": "Metaanálisis de producción de humor · Greengross, Silvia y Nusbaum",
+      "narracion": "Y falla aquí: van juntas, no sabemos en qué orden. Reírte de un chiste negro no te diagnostica nada.",
+      "fuente": "C02",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

@@ -94,3 +94,40 @@ hemos podido medir.
 
 **Cómo arreglarlo:** lanzar la planificación semanal como tarea programada local, en el
 ordenador de Silvestre, donde el autocompletar y YouTube sí son accesibles.
+
+---
+
+## 27 de agosto de 2026 · segunda tanda de demanda
+
+**Ninguna pregunta nueva entra en esta lista.** Se han vuelto a cruzar las tres de arriba
+contra `BIBLIOGRAFIA_CURADA.md` y ninguna obra nueva ha entrado en el corpus esta semana,
+así que las tres exclusiones siguen firmes y por el mismo motivo. Se anota aquí para dejar
+constancia de que se han revisado, no para repetirlas.
+
+### Una corrección de clasificación, que no es lo mismo que una exclusión
+
+«A las mujeres les atraen los hombres graciosos» figuraba en la tanda del 20/08 como
+**«apto pero congelado»**. Eso estaba mal etiquetado: si un tema no se puede producir, no
+es apto. En `demanda.json` del 27/08 pasa a `apto: false`, rechazado en la fase de demanda
+—que es donde `REGLAS.md` dice que se rechaza— y **no entra en esta lista**, porque esta
+lista es de preguntas que la bibliografía no puede responder, y el problema de esa no es la
+bibliografía: es el criterio editorial.
+
+La diferencia importa para quien lea esto dentro de tres meses. Una pregunta de esta lista
+sale de aquí en cuanto llegue la fuente. Aquella no sale con ninguna fuente.
+
+### Nota de método sobre esta segunda tanda
+
+Sigue sin haber medición de volumen. `demanda_bruta.json` **no existe** en el repositorio:
+el workflow `demanda.yml`, que debía dejarlo hoy jueves a las 12:00 UTC, no ha producido ni
+fichero ni commit. Segunda semana consecutiva con `vistas_top10: null`.
+
+Lo que sí ha cambiado respecto al 20/08: `WebSearch` **funcionó** en esta sesión desatendida,
+al contrario de lo que documentan `explorador_de_demanda.py` y la tanda anterior. Sigue sin
+dar métricas —solo títulos y URLs—, así que sirve para juzgar competencia y formulación,
+nunca volumen. Las cuatro consultas nuevas de esta noche están citadas candidato por
+candidato en `demanda.json`.
+
+**Lo que esto significa para esta lista:** las tres exclusiones son firmes, porque dependen
+de la bibliografía y la bibliografía sí se lee entera. Lo que sigue sin ser firme es el
+orden de prioridad entre ellas.

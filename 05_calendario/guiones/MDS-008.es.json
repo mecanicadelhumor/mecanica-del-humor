@@ -1,0 +1,61 @@
+{
+  "id": "MDS-008",
+  "formato": "corto",
+  "serie": "Esto no tiene gracia y esto sí",
+  "idioma": "es",
+  "titulo_trabajo": "Por qué el mismo chiste hace gracia a unos y a otros no",
+  "tesis": "Un chiste funciona cuando las mismas palabras admiten dos historias a la vez; si solo admiten una, no hay chiste que valga.",
+  "pilares": [
+    "I",
+    "L"
+  ],
+  "pregunta_de_demanda": "por qué el mismo chiste hace gracia a unos y a otros no",
+  "notas_humor": [
+    "Los dos chistes se cuentan enteros antes de explicar nada: la serie vive de que el espectador note la diferencia antes de que se la digan.",
+    "El que funciona va primero, para que la risa esté en los primeros ocho segundos.",
+    "La versión sosa es deliberadamente sosa: dice exactamente lo mismo y no deja nada que encontrar.",
+    "El personaje entra en la 3, la 4 y la 5, nunca sobre ninguno de los dos chistes."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "narracion": "Mi hijo dice que de mayor quiere ser como yo. Le he dicho que no. Que se esfuerce.",
+      "texto": "Versión *A*.",
+      "pausa_despues_s": 1.4
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Ahora la B. Mi hijo dice que quiere ser como yo, y le he dicho que estudie más que yo.",
+      "texto": "Mismo padre. Misma *queja*.",
+      "pausa_despues_s": 1.2
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Cuántas historias caben",
+      "et_a": "Versión A",
+      "et_b": "Versión B",
+      "a": "Dos: el padre modesto y el padre *desastre*",
+      "b": "Una: el padre que da un consejo",
+      "narracion": "Dicen lo mismo y solo una hace gracia. En la primera caben dos historias a la vez; en la segunda, una.",
+      "fuente": "I02",
+      "personaje": "duda",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Y la palabra que abre la segunda va la última. Si la adelantas, la abres tú y no la encuentra nadie.",
+      "texto": "La bisagra va al *final*.",
+      "fuente": "L01",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla si la segunda historia no es *tuya*",
+      "subtitulo": "Solapamiento de guiones · Raskin, Attardo",
+      "narracion": "Y falla cuando la segunda historia no está en tu cabeza. Por eso el mismo chiste no le hace gracia a todo el mundo.",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

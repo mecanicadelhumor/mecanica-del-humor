@@ -90,7 +90,8 @@
         "es"
       ],
       "modo": "automatico",
-      "hora": "19:00"
+      "hora": "19:00",
+      "nota": "Martes. Serie «Diagnósticos». Pregunta de demanda: «si te hace gracia el humor negro eres más inteligente» (competencia alta en cantidad, nula en fondo: ocho refritos de la misma nota de prensa y ninguno matiza). Fuentes B04 y C02. Desmonta la creencia sin nombrar el estudio que no está en el corpus."
     },
     {
       "fecha": "2026-09-02",
@@ -99,7 +100,8 @@
         "es"
       ],
       "modo": "automatico",
-      "hora": "19:00"
+      "hora": "19:00",
+      "nota": "Miércoles. Serie «Esto no tiene gracia y esto sí». Pregunta de demanda: «por qué unos chistes hacen gracia y otros no». Fuentes I02 y L01. Dos versiones del mismo chiste; la diferencia es cuántas historias caben."
     },
     {
       "fecha": "2026-09-03",
@@ -108,7 +110,8 @@
         "es"
       ],
       "modo": "automatico",
-      "hora": "19:00"
+      "hora": "19:00",
+      "nota": "Jueves. Serie «El experimento». Pregunta de demanda: «cómo caer bien a la gente», por el ángulo libre (compartir sentido del humor mueve afiliación y generosidad medidas). Fuente D05. La escena «dato» no lleva cifra a propósito: la ficha no las da."
     },
     {
       "fecha": "2026-09-04",
@@ -117,7 +120,8 @@
         "es"
       ],
       "modo": "automatico",
-      "hora": "19:00"
+      "hora": "19:00",
+      "nota": "Viernes. Serie «Desmonta el chiste». Pregunta de demanda: «si tienes que explicar un chiste pierde la gracia». Fuentes A05 y A07. El Short se destruye a sí mismo en directo; es el más de marca de la semana."
     },
     {
       "fecha": "2026-09-05",
@@ -127,7 +131,7 @@
       ],
       "modo": "automatico",
       "hora": "12:00",
-      "nota": "Sábado. Segundo episodio largo del ritmo nuevo."
+      "nota": "Sábado. Episodio largo semanal, 4m44s. Adaptado al formato nuevo el 27/08: 39 escenas cortas (antes 27), gancho con la primera risa sobre el segundo nueve, personaje en cuatro escenas, dos intervenciones del escéptico y «enunciado» del 62 % al 41 %. Serie «Diagnósticos». Pregunta: «qué dice de mí mi sentido del humor»."
     }
   ],
   "_archivadas": {
@@ -145,5 +149,6 @@
     ]
   },
   "_cambio_20_agosto_noche": "Planificación semanal. Escritos MDS-002 a MDS-006 y adaptado MDH-004 al formato nuevo. Los temas ya NO salen de la bibliografía: salen de 05_calendario/demanda.json, y la bibliografía solo decide si se pueden responder (REGLAS.md, regla 3). Tres preguntas con demanda se quedaron fuera por falta de fuente y están en pendientes_de_fuente.md. La semana del 24 se queda en modo «revision» a propósito: es la primera con el formato vertical, el personaje y las dos voces, y conviene que Silvestre lo apruebe con los ojos. El automático entra el 31, como estaba previsto.",
-  "_pendiente": "MDS-007 a MDS-010 (1 a 4 de septiembre) siguen sin guion: los escribe la planificación del jueves 27. MDH-005 está escrito pero AÚN NO adaptado al formato nuevo (27 escenas, 62 % «enunciado», sin personaje ni escéptico): hay que pasarlo por la misma adaptación que MDH-004 antes del 5 de septiembre. Igual con MDH-006, 007 y 008."
+  "_pendiente": "MDH-006, 007 y 008 siguen escritos y SIN adaptar al formato nuevo (sin «formato», sin personaje, sin escéptico, 48-66 % «enunciado» y escenas largas); sus notas siguen en 05_calendario/revisiones/. NO se adaptan por adelantado a propósito: adaptar los tres ahora es trabajo especulativo, porque en dos o tres semanas las métricas dirán qué formato aguanta y habría que rehacerlo. Se adapta uno por semana, el del sábado siguiente. El del 12 de septiembre se decide con las métricas del lunes 7 delante: los dos candidatos son MDH-007 (gelotofobia, «por qué se ríen de mí») y un largo nuevo sobre «cómo ser más gracioso» (H01, H03), que es la pregunta con más demanda de todo el corpus.",
+  "_cambio_27_agosto_noche": "Planificación semanal. Escritos MDS-007 a MDS-010, adaptado MDH-005 al formato nuevo y aplicadas las notas de revisiones/ de MDS-006 y MDH-004. La semana del 31 al 5 estrena el modo «automatico»: el vídeo se sube en privado con publishAt y YouTube lo hace público solo. Cinco series distintas de lunes a viernes, que es lo que pide la parrilla hasta que las métricas digan cuál funciona. AVISO: el workflow demanda.yml no ha dejado 05_calendario/demanda_bruta.json en el repositorio, así que esta tanda se ha juzgado otra vez sin vistas medidas — ver «_estado_de_la_medicion» en demanda.json."
 }

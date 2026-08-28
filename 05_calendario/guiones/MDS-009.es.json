@@ -1,0 +1,59 @@
+{
+  "id": "MDS-009",
+  "formato": "corto",
+  "serie": "El experimento",
+  "idioma": "es",
+  "titulo_trabajo": "Por qué caes mejor a quien se ríe de lo mismo que tú",
+  "tesis": "Coincidir en de qué te ríes no solo une: mueve conducta medible, y se puede ver con dinero encima de la mesa.",
+  "pilares": [
+    "D"
+  ],
+  "pregunta_de_demanda": "cómo caer bien a la gente",
+  "notas_humor": [
+    "La risa va primero: el gancho es la escena reconocible de hacerse amigo de alguien por una tontería simultánea.",
+    "El experimento se cuenta como historia con protagonista, no como ficha.",
+    "La escena «dato» no lleva ninguna cifra a propósito: la ficha de D05 recoge la dirección del efecto, no las magnitudes. Poner un número aquí sería inventarlo (REGLAS.md, regla 2).",
+    "El cierre tira del hilo correlacional de D06 sin convertirlo en causa.",
+    "Ángulo deliberadamente distinto del de MDH-004: allí la unidad es la risa como señal; aquí es coincidir en de qué te ríes."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "narracion": "Conoces a alguien, decís la misma tontería a la vez, y ya sois amigos. Doce años sin saber su apellido.",
+      "texto": "Y ya está. *Amigos*.",
+      "pausa_despues_s": 1.3
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Parece una cursilada, pero Curry y Dunbar preguntaron a la gente de qué se reía y les emparejaron con desconocidos.",
+      "texto": "Con dinero encima de la *mesa*.",
+      "fuente": "D05",
+      "personaje": "duda",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "dato",
+      "cifra": "Más generosos",
+      "pie": "con quien tenía un sentido del humor _parecido_ al suyo",
+      "narracion": "A quien tenía un sentido del humor parecido al suyo lo sintieron más cercano. Y le dieron más.",
+      "fuente": "D05",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.6
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Coincidir en de qué te ríes es una prueba rápida de que veis el mundo parecido. Y sale gratis.",
+      "texto": "Es un *atajo*, no una virtud.",
+      "fuente": "D05",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla porque mide un rato, no una *amistad*",
+      "subtitulo": "Curry y Dunbar · afiliación y generosidad medidas en un experimento",
+      "narracion": "Y falla aquí: mide lo que pasa en un experimento, no amistades a diez años. Nadie ha comprobado que aguante.",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

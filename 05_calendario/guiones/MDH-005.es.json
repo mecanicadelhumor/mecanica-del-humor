@@ -1,5 +1,7 @@
 {
   "id": "MDH-005",
+  "formato": "largo",
+  "serie": "Diagnósticos",
   "idioma": "es",
   "titulo_trabajo": "Tu estilo de humor (y el que te está costando amigos)",
   "tesis": "El humor no es una cantidad sino una dirección: hay cuatro maneras de usarlo y dos de ellas te desgastan aunque hagan reír.",
@@ -7,37 +9,93 @@
     "B",
     "D"
   ],
-  "duracion_objetivo_s": 370,
+  "duracion_objetivo_s": 340,
   "bloqueos": [],
+  "pregunta_de_demanda": "qué dice de mí mi sentido del humor",
+  "_adaptado": "27 de agosto de 2026. Reescrito al formato nuevo siguiendo el patrón de MDH-004 y la nota de revisiones/MDH-005.md (retirada al aplicarla). Antes: 27 escenas, 6m10s, rótulo de portada en la escena 1, 62 % «enunciado», ningún personaje, ninguna intervención del escéptico y siete escenas por encima de 14 s. Ahora: 39 escenas más cortas y más numerosas, 4m45s, «enunciado» al 44 %, gancho con la primera risa sobre el segundo nueve, personaje en las escenas [3, 19, 26, 39] y el escéptico en las [6, 25]. Los datos y las fuentes son los mismos: no se ha añadido ni una afirmación nueva, solo se han repartido, recortado y cambiado de tipo visual.",
+  "_sin_figura": "No lleva escena «figura» a propósito. La única gráfica natural sería la relación de cada estilo con el bienestar, y la ficha de B01 no da ni coeficientes ni tamaños de efecto. Dibujarla exigiría inventar la escala (REGLAS.md, regla 2).",
   "notas_humor": [
-    "Gancho: el espectador se autodiagnostica antes de que le den la teoría.",
-    "Escena 14: rebaja tras el estilo más incómodo del vídeo.",
-    "Escena 21: autoconciencia — el canal admite las limitaciones del propio test.",
-    "Cierre: callback a la persona graciosa del gancho."
+    "Gancho: el chiste del invitado en la cena es a la vez la risa de apertura y el caso clínico del episodio. Llega sobre el segundo nueve.",
+    "Segunda risa en la escena 19: el público de una sola persona que lleva la cuenta.",
+    "El escéptico entra dos veces, y las dos con la objeción que el espectador está pensando justo antes de que el narrador la resuelva.",
+    "Escenas 36 y 37: autoconciencia — el canal admite las limitaciones del propio instrumento que acaba de usar para diagnosticar al espectador.",
+    "Cierre: callback al invitado de la cena del segundo cero.",
+    "El personaje reacciona siempre DESPUÉS: escenas [3, 19, 26, 39]. Nunca mientras se cuenta el chiste, y nunca en más de cuatro."
   ],
   "escenas": [
     {
-      "tipo": "titulo",
-      "etiqueta": "Episodio 05",
-      "titulo": "Tu *estilo* de humor",
-      "subtitulo": "Y cuál de los cuatro te está costando amigos",
-      "narracion": "Todos conocemos a alguien muy gracioso al que, sin embargo, cansa estar mucho rato."
+      "tipo": "enunciado",
+      "narracion": "En una cena, alguien mira el plato y suelta: perdona, ¿esto lo has cocinado tú o ha sido un accidente?",
+      "texto": "Cena de seis. Plato en la *mesa*.",
+      "pausa_despues_s": 1.3
+    },
+    {
+      "tipo": "dato",
+      "cifra": "Menos uno",
+      "pie": "se ríe la mesa entera, _menos_ quien ha cocinado",
+      "narracion": "Se ríen todos. Menos uno.",
+      "pausa_despues_s": 0.8
     },
     {
       "tipo": "enunciado",
-      "texto": "Hace reír. Y aun así, *cansa*.",
-      "narracion": "Hace reír de verdad, no es que no tenga gracia. Y aun así, después de un par de horas, apetece irse."
+      "narracion": "El que ha cocinado. Que además se ríe, porque no reírse habría quedado peor.",
+      "texto": "Y él también se ríe. Por *obligación*.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.5
     },
     {
       "tipo": "enunciado",
-      "texto": "Eso pasa porque el humor no es una *cantidad*. Es una dirección.",
-      "narracion": "Eso ocurre porque el humor no funciona como una cantidad, que se tiene más o menos. Funciona como una dirección: importa hacia dónde apunta."
+      "narracion": "Ese chiste ha funcionado. Ha hecho reír de verdad. Y aun así ha costado algo.",
+      "texto": "Ha funcionado. Y ha *costado* algo.",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "El que hace reír y cansa",
+      "et_a": "Lo que ves",
+      "et_b": "Lo que queda",
+      "a": "Una mesa entera *riéndose*",
+      "b": "Una persona haciendo cálculos",
+      "narracion": "Todos conocemos a alguien muy gracioso al que, sin embargo, cansa tener cerca mucho rato.",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "enunciado",
-      "texto": "En 2003 alguien puso número a esas direcciones.",
-      "narracion": "Y en dos mil tres, un equipo dirigido por Rod Martin construyó el cuestionario que las mide. Es la herramienta más usada del campo, y reparte el humor en cuatro estilos.",
-      "fuente": "B01"
+      "narracion": "¿Y si simplemente soy una persona borde?",
+      "voz": "esceptico",
+      "texto": "Objeción *uno*.",
+      "pausa_despues_s": 0.6
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "No. Ser borde no hace reír a nadie. Esto sí hace reír, y ese es justo el problema.",
+      "texto": "Y encima *funciona*. Ese es el lío.",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Cómo funciona de verdad",
+      "et_a": "Como cantidad",
+      "et_b": "Como dirección",
+      "a": "Se tiene más o menos",
+      "b": "Importa hacia *dónde* apunta",
+      "narracion": "Porque el humor no funciona como una cantidad. Funciona como una dirección.",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "dato",
+      "cifra": "4 estilos",
+      "pie": "el cuestionario de Martin y su equipo, _2003_",
+      "narracion": "Y en dos mil tres, un equipo dirigido por Rod Martin construyó el cuestionario que mide esas direcciones.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Es la herramienta más usada del campo, y reparte el humor en cuatro casillas.",
+      "texto": "La herramienta *estándar* del campo.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "diagrama",
@@ -52,155 +110,265 @@
           "pie": "de nadie o de alguien"
         },
         {
-          "titulo": "4 combinaciones",
+          "titulo": "Cuatro casillas",
           "pie": "y ahí estás tú"
         }
       ],
-      "narracion": "Salen de cruzar dos preguntas. ¿Tu humor va dirigido a los demás o a ti mismo? Y ¿funciona sin víctima o a costa de alguien? Cuatro combinaciones.",
-      "fuente": "B01"
+      "narracion": "Salen de cruzar dos preguntas. ¿Va dirigido a los demás o a ti? ¿Y funciona sin víctima o a costa de alguien?",
+      "fuente": "B01",
+      "pausa_despues_s": 0.5
     },
     {
       "tipo": "titulo",
       "etiqueta": "Los dos que suman",
       "titulo": "Primero, los que *funcionan*",
-      "narracion": "Empecemos por los dos que se asocian a estar mejor."
+      "narracion": "Empecemos por los dos que aparecen asociados a estar mejor.",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Afiliativo",
+      "puntos": [
+        "Bromear *con* la gente, no sobre ella",
+        "Lo absurdo de lo que estáis viviendo los dos",
+        "Y nadie sale señalado"
+      ],
+      "narracion": "El afiliativo es bromear con la gente, no sobre la gente. Señalar lo absurdo de algo compartido.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "enunciado",
-      "texto": "*Afiliativo*: el humor que une. Bromear con la gente, no sobre la gente.",
-      "narracion": "El primero es el afiliativo. Es bromear con la gente y no sobre la gente: contar cosas divertidas, señalar lo absurdo de una situación compartida, aligerar el ambiente sin que nadie pague la factura.",
-      "fuente": "B01"
+      "narracion": "Aligera el ambiente y nadie paga la factura. Es el que hace que una espera larga se pase rápido.",
+      "texto": "Nadie paga la *factura*.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Automejorante",
+      "puntos": [
+        "Para *ti*, y a solas",
+        "El lado ridículo de tu propio día malo",
+        "Nadie tiene que enterarse"
+      ],
+      "narracion": "El automejorante se usa a solas: encontrarle el lado ridículo a tu propio día malo.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "enunciado",
-      "texto": "*Automejorante*: el humor que te sostiene a ti cuando nadie mira.",
-      "narracion": "El segundo es el automejorante, que es el que se usa a solas. Es la capacidad de encontrarle el lado ridículo a tu propio día malo. No busca público. Es una herramienta de regulación emocional.",
-      "fuente": "B01"
+      "narracion": "Y no busca público. Es, literalmente, una herramienta de regulación emocional.",
+      "texto": "No busca *público*.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.45
     },
     {
-      "tipo": "enunciado",
-      "texto": "Estos dos se asocian a *más bienestar* y a mejores relaciones.",
-      "narracion": "Estos dos son los que aparecen asociados a más bienestar, menos ansiedad y relaciones más satisfactorias.",
-      "fuente": "B01"
+      "tipo": "comparacion",
+      "titulo": "Los dos primeros, en una línea",
+      "et_a": "Afiliativo",
+      "et_b": "Automejorante",
+      "a": "Hacia fuera, y sin *víctima*",
+      "b": "Hacia dentro, y sin castigo",
+      "narracion": "Estos dos son los que aparecen junto a más bienestar, menos ansiedad y relaciones más satisfactorias.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.5
     },
     {
       "tipo": "titulo",
       "etiqueta": "Los dos que restan",
       "titulo": "Y ahora los *caros*",
-      "narracion": "Y ahora los dos que hacen reír igual y salen caros."
+      "narracion": "Y ahora los dos que hacen reír igual de bien y salen caros.",
+      "pausa_despues_s": 0.4
     },
     {
       "tipo": "enunciado",
-      "texto": "*Agresivo*: el que necesita una víctima para funcionar.",
-      "narracion": "El tercero es el agresivo. Es el sarcasmo dirigido, la burla, el ridiculizar. Funciona, y funciona muy bien: hace reír a todos menos a uno.",
-      "fuente": "B01"
+      "narracion": "El agresivo tiene un público que se ríe mucho. Y un público de una sola persona que lleva la cuenta.",
+      "texto": "Un público que lleva la *cuenta*.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.9
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Agresivo",
+      "puntos": [
+        "Sarcasmo *dirigido*",
+        "Burla y ridiculización",
+        "Funciona con todos menos con uno"
+      ],
+      "narracion": "Es el sarcasmo dirigido, la burla, el ridiculizar. Y funciona muy bien.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "enunciado",
-      "texto": "Y en la mesa quedan *dos mensajes*. Uno de ellos, incómodo.",
-      "narracion": "El problema es que deja dos mensajes en la mesa. Uno es el chiste. El otro es: esto también te lo puedo hacer a ti. La gente lo capta, aunque se esté riendo.",
-      "fuente": "B01"
+      "narracion": "El problema es que deja dos mensajes en la mesa. Uno es el chiste.",
+      "texto": "En la mesa quedan *dos* mensajes.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.6
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Los dos mensajes que deja",
+      "et_a": "El que se oye",
+      "et_b": "El que se queda",
+      "a": "El chiste",
+      "b": "Esto también te lo puedo hacer *a ti*",
+      "narracion": "El otro es: esto también te lo puedo hacer a ti. Y se capta aunque uno se esté riendo.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Autodestructivo",
+      "puntos": [
+        "La víctima eres *tú*",
+        "De tus defectos, tu vida, tu aspecto",
+        "Y los demás se ríen contigo"
+      ],
+      "narracion": "El cuarto es el autodestructivo, y es el más engañoso: te pones tú de víctima todo el rato.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "enunciado",
-      "texto": "*Autodestructivo*: hacerte tú la víctima para caer bien.",
-      "narracion": "El cuarto es el autodestructivo, y es el más engañoso de todos. Consiste en ponerte tú de víctima constantemente. Reírte de tus defectos, de tu vida, de tu aspecto, para que los demás se rían.",
-      "fuente": "B01"
+      "narracion": "Reírte de tus defectos, de tu vida, de tu aspecto, para que los demás se rían contigo.",
+      "texto": "Y funciona. Ese es el *lío*.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Reírme de mí mismo es humildad, ¿no?",
+      "voz": "esceptico",
+      "texto": "Objeción *dos*.",
+      "pausa_despues_s": 0.6
     },
     {
       "tipo": "comparacion",
       "titulo": "La diferencia que lo decide todo",
       "et_a": "Autodestructivo",
-      "a": "Te rebajas para que te acepten. La risa es un *peaje*.",
-      "et_b": "Autoirónico sano",
-      "b": "Bromeas desde una base que no se discute.",
-      "narracion": "Ojo, que esto no es lo mismo que la autoironía. Reírte de ti mismo desde una base sólida es sanísimo.",
-      "fuente": "B01"
+      "et_b": "Autoironía sana",
+      "a": "Te rebajas para que te *acepten*",
+      "b": "Bromeas desde una base que no se discute",
+      "narracion": "No es lo mismo. Reírte de ti desde una base sólida es sanísimo. Lo otro es rebajarte para que te acepten.",
+      "fuente": "B01",
+      "personaje": "duda",
+      "pausa_despues_s": 0.5
     },
     {
       "tipo": "enunciado",
-      "texto": "Lo otro es rebajarte porque crees que ese es el *precio* de que te acepten.",
-      "narracion": "Lo autodestructivo es otra cosa: es rebajarte porque crees que ese es el precio de que te acepten. La risa deja de ser un vínculo y pasa a ser un peaje.",
-      "fuente": "B01"
+      "narracion": "Ahí la risa deja de ser un vínculo y pasa a ser un peaje. Pagas tú y cobran los demás.",
+      "texto": "Un *peaje*, no un vínculo.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "dato",
+      "cifra": "El peor de los cuatro",
+      "pie": "el que aparece más consistentemente junto a _peor bienestar_",
+      "narracion": "Y en los datos es el estilo que aparece de forma más consistente junto a peor bienestar.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "enunciado",
-      "texto": "Este es el que más se asocia a *peor bienestar*. Y el que menos se ve venir.",
-      "narracion": "Y en los datos es el estilo que aparece asociado de forma más consistente a peor bienestar. Precisamente porque no se ve venir: por fuera parece humildad.",
-      "fuente": "B01"
+      "narracion": "Precisamente porque no se ve venir. Por fuera parece humildad, y nadie te avisa de nada.",
+      "texto": "Por fuera parece *humildad*.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "lista",
       "titulo": "El test de los tres segundos",
       "puntos": [
-        "Piensa en tus *tres últimas* bromas",
+        "Tus *tres últimas* bromas",
         "¿Hacia dónde apuntaban?",
-        "Si dos van a alguien o a ti, ya lo sabes"
+        "Si dos van contra alguien o contra ti, ya lo sabes"
       ],
-      "narracion": "Y aquí tienes el autodiagnóstico. Piensa en las tres últimas veces que hiciste reír a alguien. Solo tres. ¿Hacia dónde apuntaban? Si dos de las tres iban dirigidas a una persona concreta, o iban contra ti, ya tienes tu respuesta.",
-      "fuente": "B01"
+      "narracion": "Piensa en las tres últimas veces que hiciste reír a alguien. Solo tres. ¿Hacia dónde apuntaban?",
+      "fuente": "B01",
+      "pausa_despues_s": 0.6
     },
     {
       "tipo": "titulo",
       "etiqueta": "La palanca",
-      "titulo": "Cómo se *mueve* un estilo",
-      "narracion": "Lo bueno es que un estilo no es una condena. Es un hábito, y los hábitos tienen palanca."
+      "titulo": "Un estilo no es una *condena*",
+      "narracion": "Lo bueno es que un estilo no es una condena. Es un hábito, y los hábitos tienen palanca.",
+      "pausa_despues_s": 0.4
     },
     {
       "tipo": "lista",
       "titulo": "Dos sustituciones concretas",
       "puntos": [
-        "Del agresivo: apunta a la *situación*, no a la persona",
-        "Del autodestructivo: ríete de lo que hiciste, no de lo que eres"
+        "Del agresivo: apunta a la *situación*",
+        "Del autodestructivo: a lo que hiciste, no a lo que eres"
       ],
-      "narracion": "Dos sustituciones muy concretas. Si tiendes al agresivo, apunta a la situación en lugar de a la persona: casi siempre hay un chiste equivalente que no necesita víctima.",
-      "fuente": "B01"
+      "narracion": "Si tiendes al agresivo, apunta a la situación en lugar de a la persona. Casi siempre hay un chiste equivalente.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.5
     },
     {
       "tipo": "enunciado",
-      "texto": "«La he liado con el correo» funciona igual que «soy un desastre». Y no *cuesta* nada.",
-      "narracion": "Y si tiendes al autodestructivo, ríete de algo que hiciste en vez de algo que eres. «La he liado con el correo» funciona igual de bien que «soy un desastre», y no te cuesta nada.",
-      "fuente": "B01"
+      "narracion": "Y si tiendes al autodestructivo, ríete de algo que hiciste en vez de algo que eres.",
+      "texto": "De lo que *hiciste*. No de lo que eres.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.5
     },
     {
-      "tipo": "enunciado",
-      "texto": "La gracia se mantiene. El coste desaparece.",
-      "narracion": "En los dos casos la gracia se mantiene intacta. Lo que desaparece es la factura."
+      "tipo": "comparacion",
+      "titulo": "La misma gracia, sin factura",
+      "et_a": "Lo que eres",
+      "et_b": "Lo que hiciste",
+      "a": "«Soy un *desastre*»",
+      "b": "«He mandado el correo a toda la empresa»",
+      "narracion": "La segunda hace la misma gracia que la primera. Se mantiene intacta; lo que desaparece es la factura.",
+      "fuente": "B01",
+      "pausa_despues_s": 0.5
     },
     {
       "tipo": "titulo",
       "etiqueta": "El límite",
-      "titulo": "Y ahora, la letra pequeña",
-      "narracion": "Ahora, la parte que casi ningún vídeo sobre este tema te cuenta."
+      "titulo": "Y ahora, la *letra pequeña*",
+      "narracion": "Ahora la parte que casi ningún vídeo sobre este tema te cuenta.",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "lista",
+      "titulo": "La letra pequeña",
+      "puntos": [
+        "Críticas serias desde *dentro* del campo",
+        "Preguntas que ya llevan dentro si es bueno o malo",
+        "Y eso infla la relación con el bienestar"
+      ],
+      "narracion": "Este cuestionario tiene críticas serias hechas por gente del propio campo.",
+      "fuente": "B02",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Qué dicen y qué no dicen los datos",
+      "et_a": "Lo que se ve",
+      "et_b": "Lo que no",
+      "a": "Que van *juntos*",
+      "b": "Quién causa a quién",
+      "narracion": "Y además todo esto son correlaciones. No dicen quién causa a quién. Podría ir al revés.",
+      "fuente": "B02",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "enunciado",
-      "texto": "El cuestionario tiene *críticas serias* dentro del propio campo.",
-      "narracion": "Este cuestionario tiene críticas serias hechas por investigadores del propio campo. La principal es que algunas de sus preguntas no miden solo el estilo de humor: llevan ya dentro si eso es bueno o malo, lo cual infla la relación con el bienestar.",
-      "fuente": "B02"
-    },
-    {
-      "tipo": "enunciado",
-      "texto": "Y todo esto es *correlación*. No dice quién causa a quién.",
-      "narracion": "Y hay algo más importante todavía: esto son correlaciones. Que el humor autodestructivo aparezca junto a peor bienestar no demuestra que lo cause. Podría ser al revés. Probablemente se alimenten mutuamente.",
-      "fuente": "B02"
-    },
-    {
-      "tipo": "enunciado",
-      "texto": "Aun así, los *cuatro estilos* siguen siendo el mejor mapa disponible.",
-      "narracion": "Dicho lo cual, sigue siendo el mejor mapa que existe. Y como herramienta para mirarte a ti mismo un martes cualquiera, es utilísimo, aunque como instrumento de medida sea mejorable.",
-      "fuente": "B02"
-    },
-    {
-      "tipo": "enunciado",
-      "texto": "Y aquel amigo del principio, casi seguro, es *agresivo* con mucha técnica.",
-      "narracion": "Volviendo al del principio: ese que hace reír muchísimo pero cansa. Casi con toda seguridad tiene un estilo agresivo con mucha técnica. Por eso funciona a corto plazo y desgasta a largo."
+      "narracion": "Y aquel invitado de la cena, el del plato: casi seguro tiene un estilo agresivo con muchísima técnica.",
+      "texto": "Mucha *técnica*. Y una cuenta abierta.",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "cierre",
       "titulo": "No es *cuánta* gracia tienes. Es hacia dónde apunta.",
-      "subtitulo": "En el próximo episodio: cuándo el humor sube tu estatus en el trabajo y cuándo lo hunde, con el experimento que lo midió.",
-      "narracion": "Así que la pregunta no es cuánta gracia tienes, sino hacia dónde apunta. Dime en comentarios cuál de los cuatro eres tú. En el próximo episodio nos vamos al sitio donde equivocarse sale más caro: el trabajo."
+      "subtitulo": "Y el mapa es correlacional: sirve para mirarte, no para diagnosticarte",
+      "narracion": "Así que no es cuánta gracia tienes, sino hacia dónde apunta. El próximo episodio va del sitio donde equivocarse sale más caro: el trabajo.",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
     }
   ]
 }

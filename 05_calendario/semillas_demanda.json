@@ -1,0 +1,45 @@
+{
+  "_que_es": "Lo que la planificación de los jueves le pide a explorador_de_demanda.py que mida la semana siguiente. Lo lee .github/workflows/demanda.yml los jueves a las 12:00 UTC y deja los números en demanda_bruta.json. Dueño de este fichero: la planificación. Dueño de demanda_bruta.json: el workflow.",
+  "_generado_utc": "2026-08-27T21:05:00Z",
+  "_por_que_esta_lista": "Tres bloques. (1) Las preguntas que ya se han producido, para tener por fin una cifra con la que comparar cuando lleguen las métricas de Studio: sin vistas del top 10 no sabemos si un Short rindió poco porque el vídeo es flojo o porque la pregunta no la busca nadie. (2) Las tres pendientes de fuente, para saber cuánta demanda estamos dejando en la mesa y decidir si merece la pena ampliar la bibliografía. (3) Los dos candidatos a largo del 12 de septiembre, que compiten entre sí y necesitan un desempate que no sea mi intuición.",
+  "_no_incluidas_a_proposito": "Nada sobre humor y atracción, ligar o diferencias entre hombres y mujeres. REGLAS.md lo rechaza en la fase de demanda: no se mide lo que no se puede producir, porque una cifra alta al lado de un tema prohibido solo sirve para tentar a quien lea el fichero dentro de tres meses.",
+
+  "preguntas": [
+    "por qué nadie se ríe de mis chistes",
+    "por qué me río solo",
+    "por qué nos reímos cuando alguien se cae",
+    "qué dice de mí mi sentido del humor",
+    "por qué me río cuando no debo",
+    "si te gusta el humor negro eres más inteligente",
+    "por qué unos chistes hacen gracia y otros no",
+    "por qué un chiste explicado pierde la gracia",
+    "cómo caer bien a la gente",
+    "cómo ser más gracioso",
+    "miedo a que se rían de ti",
+    "gelotofobia",
+    "por qué sentimos vergüenza ajena",
+    "qué es el cringe",
+    "por qué no puedo hacerme cosquillas a mí mismo",
+    "por qué los memes nos hacen gracia",
+    "cómo distinguir una risa falsa de una de verdad",
+    "por qué se contagia la risa",
+    "estilos de humor test",
+    "cómo contar un chiste bien"
+  ],
+
+  "semillas": [
+    "por qué no le hago gracia",
+    "por qué me río",
+    "por qué nos reímos",
+    "sentido del humor",
+    "cómo ser gracioso",
+    "humor negro",
+    "chistes que",
+    "hacer reír",
+    "caer bien",
+    "me da vergüenza",
+    "miedo al ridículo",
+    "risa nerviosa",
+    "vergüenza ajena"
+  ]
+}

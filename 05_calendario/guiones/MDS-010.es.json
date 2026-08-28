@@ -1,0 +1,76 @@
+{
+  "id": "MDS-010",
+  "formato": "corto",
+  "serie": "Desmonta el chiste",
+  "idioma": "es",
+  "titulo_trabajo": "Por qué un chiste explicado deja de tener gracia",
+  "tesis": "La gracia no está en el remate: está en el instante en que lo resuelves tú. Si te lo resuelven, te quitan el premio.",
+  "pilares": [
+    "A"
+  ],
+  "pregunta_de_demanda": "si tienes que explicar un chiste pierde la gracia",
+  "notas_humor": [
+    "El chiste va en el segundo cero y luego se destruye en directo: el Short demuestra su propia tesis sobre sí mismo.",
+    "La escena 3 es el momento incómodo a propósito: la explicación correcta y sin gracia, dicha en el tono más plano posible.",
+    "El cierre es el más autoconsciente del canal: un canal que se dedica a desmontar chistes admitiendo lo que le hace a cada chiste que toca. Por eso el chiste siempre va antes del despiece, nunca después.",
+    "Personaje en 2, 4 y 6. En la 3 no aparece nadie: la escena tiene que quedarse sola y sosa."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "narracion": "Mi vecino toca el piano a las tres de la mañana. Yo le acompaño con la aspiradora a las siete.",
+      "texto": "Le *acompaño*.",
+      "pausa_despues_s": 1.4
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Vale. Ahora te lo explico y mira lo que le pasa.",
+      "texto": "Aviso: se va a *morir*.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.6
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "La palabra que hace el trabajo",
+      "et_a": "Lo que parece",
+      "et_b": "Lo que es",
+      "a": "Tocar juntos, como buenos vecinos",
+      "b": "Una *venganza* con aspiradora",
+      "narracion": "Acompañar suena a tocar juntos y en realidad es una venganza. La palabra sirve para las dos cosas.",
+      "pausa_despues_s": 0.9
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Ya no tiene gracia. Y no es culpa mía: te he quitado la mitad del trabajo.",
+      "texto": "La mitad era *tuya*.",
+      "personaje": "duda",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "diagrama",
+      "titulo": "Las dos fases de un chiste",
+      "pasos": [
+        {
+          "titulo": "Algo no encaja",
+          "pie": "y lo notas tú"
+        },
+        {
+          "titulo": "Lo resuelves",
+          "pie": "y ahí está el premio"
+        }
+      ],
+      "narracion": "Suls lo describió en dos fases: primero notas que algo no encaja y después lo resuelves. El placer está en la segunda.",
+      "fuente": "A05",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla con quien no llega a la *segunda* fase",
+      "subtitulo": "Modelo de dos fases · Suls · Hurley y Dennett",
+      "narracion": "Y falla aquí: es un modelo, no una cifra medida. Por eso en este canal el chiste va siempre antes del despiece.",
+      "fuente": "A07",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

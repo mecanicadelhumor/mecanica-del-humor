@@ -15,14 +15,14 @@
     "La explicación es el premio, no el peaje: nada de «hoy te explico».",
     "Rebaja en la escena 3: la cifra grande seguida de la frase más sosa posible.",
     "El cierre admite que no tenemos el estudio exacto. Es el momento más de marca del Short.",
-    "Corregido tras el verificador: «nadie lo ha medido» era una afirmación universal negativa sobre toda la literatura, que no podemos sostener. Acotado a nuestras fuentes. Y la hipótesis se marca como hipótesis en la escena 5, no solo en el cierre."
+    "Corregido tras el verificador: «nadie lo ha medido» era una afirmación universal negativa sobre toda la literatura, que no podemos sostener. Acotado a nuestras fuentes. Y la hipótesis se marca como hipótesis en la escena 5, no solo en el cierre.",
+    "Aplicada el 27/08 la nota de revisiones/MDS-006.md: el personaje estaba en cinco de las seis escenas, incluida la del chiste de apertura. Quitado de la 1 y la 5. Quedan tres reacciones (duda, piensa y el «no» del cierre), espaciadas y ninguna compitiendo con el chiste — mismo patrón que MDS-001."
   ],
   "escenas": [
     {
       "tipo": "enunciado",
       "narracion": "Me estaban echando la bronca en el trabajo y me entró la risa. No porque fuera gracioso.",
       "texto": "Y encima se *nota*.",
-      "personaje": "rie",
       "pausa_despues_s": 1.3
     },
     {
@@ -53,7 +53,6 @@
       "narracion": "La lectura más razonable, aunque nadie la haya medido, es que sea un mensaje: «no soy una amenaza».",
       "texto": "Una lectura, no un *resultado*.",
       "fuente": "A10",
-      "personaje": "entiende",
       "pausa_despues_s": 0.6
     },
     {
