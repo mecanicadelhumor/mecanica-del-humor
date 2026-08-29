@@ -1,0 +1,71 @@
+{
+  "id": "MDH-004.es",
+  "duracion_final_s": 286.6,
+  "tamano_mb": 17.2,
+  "audio": {
+    "lufs": -14.24,
+    "pico_dbtp": -1.35,
+    "rango_lu": 3.6
+  },
+  "silencio_inicial": {
+    "empieza_s": -0.17,
+    "acaba_s": 0.796,
+    "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
+  },
+  "arranque": {
+    "silencios_s": [
+      [
+        -0.085,
+        0.796
+      ]
+    ],
+    "fragmento_antes_de_la_narracion": false,
+    "duracion_fragmento_s": null,
+    "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente)."
+  },
+  "fragmentos": {
+    "instantes": [
+      {
+        "s": 136.064,
+        "mmss": "2:16.1",
+        "dura_s": 0.398
+      }
+    ],
+    "cuantos": 1,
+    "_nota": "Cada entrada es un trozo de audio de menos de 0.45 s rodeado de silencio: casi seguro una sílaba suelta que el sintetizador ha metido al empezar una escena. «mmss» es el minuto exacto para ir a escucharlo. Debe estar vacío."
+  },
+  "subtitulos": {
+    "ass_existe": true,
+    "lineas_ass": 664,
+    "srt_existe": true,
+    "quemados": false,
+    "quemados_origen": "leído de montaje.json",
+    "_esperado": {
+      "quemados": false,
+      "lineas_ass": "> 0"
+    },
+    "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass»: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Ahora que no se quema nada, ese es el único aviso que queda. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
+  },
+  "musica": {
+    "archivo": "cama_01_crying_over_you_christophermorrow.mp3",
+    "sha256": "4143a4c48067539963eeff663f43e8c1f880f4e4c1428972a69ed75d0aa28e44"
+  },
+  "guion": {
+    "titulo_trabajo": "Por qué nadie se ríe de tus chistes",
+    "idioma": "es",
+    "voz": "es-ES-AlvaroNeural",
+    "escenas": 30,
+    "duracion_narracion_s": 287.29,
+    "escenas_por_encima_de_14s": [],
+    "escena_mas_larga_s": 12.528
+  },
+  "fotogramas_s": [
+    8.12,
+    62.96,
+    116.35,
+    166.82,
+    219.02,
+    282.93
+  ],
+  "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
+}
