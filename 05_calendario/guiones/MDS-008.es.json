@@ -36,15 +36,15 @@
       "et_b": "Versión B",
       "a": "Dos: el padre modesto y el padre *desastre*",
       "b": "Una: el padre que da un consejo",
-      "narracion": "Dicen lo mismo y solo una hace gracia. En la primera caben dos historias a la vez; en la segunda, una.",
+      "narracion": "Solo una hace gracia. En la primera caben dos historias: padre modesto, padre desastre. En la segunda, una: el consejo.",
       "fuente": "I02",
       "personaje": "duda",
       "pausa_despues_s": 0.5
     },
     {
       "tipo": "enunciado",
-      "narracion": "Y la palabra que abre la segunda va la última. Si la adelantas, la abres tú y no la encuentra nadie.",
-      "texto": "La bisagra va al *final*.",
+      "narracion": "Hay un motivo técnico: la clave que hace saltar la segunda historia tiene que sonar la última, no antes.",
+      "texto": "Suena la *última*, o no sorprende.",
       "fuente": "L01",
       "personaje": "entiende",
       "pausa_despues_s": 0.5

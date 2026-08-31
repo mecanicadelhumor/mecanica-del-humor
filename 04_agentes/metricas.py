@@ -170,18 +170,47 @@ def trafico(ya, vid, desde, hasta):
     return {f[0]: round(f[1] * 100 / total, 1) for f in r.get("rows", [])}
 
 
+def _cabecera_sirve(ruta):
+    """True si la primera fila del CSV trae a la vez una columna de
+    contenido/vídeo y una de impresiones — las dos que necesitamos.
+
+    Por qué hace falta (31/08): Studio deja siempre TRES CSV en la carpeta que
+    crea al descomprimirse (`Datos de la tabla.csv`, `Datos del gráfico.csv`,
+    `Totales.csv`) y solo el primero trae ambas columnas. Elegir por orden
+    alfabético habría elegido `Totales.csv`, que no tiene ninguna de las dos.
+    """
+    try:
+        with open(ruta, encoding="utf-8-sig", newline="") as fh:
+            cabecera = next(csv.reader(fh), [])
+    except (OSError, StopIteration):
+        return False
+    bajas = [c.lower() for c in cabecera]
+    tiene_video = any(("content" in c) or ("vídeo" in c) or ("video" in c) for c in bajas)
+    tiene_impresiones = any("impres" in c for c in bajas)
+    return tiene_video and tiene_impresiones
+
+
 def leer_export_studio():
     """Impresiones y CTR del CSV de Studio, si lo hay.
 
     Studio exporta un único CSV con todos los vídeos, así que el trabajo manual
-    no crece con el número de vídeos. Se busca el más reciente de
-    05_calendario/exportes/. Los nombres de columna cambian con el idioma de la
-    interfaz, así que se buscan por palabra clave y no por posición.
+    no crece con el número de vídeos. Los nombres de columna cambian con el
+    idioma de la interfaz, así que se buscan por palabra clave y no por
+    posición.
+
+    Studio deja el export dentro de una subcarpeta al descomprimirse
+    («Contenido AAAA-MM-DD_AAAA-MM-DD <canal>/»), así que la búsqueda tiene que
+    ser recursiva — un `EXPORTES / "*.csv"` no ve nada ahí dentro. Y esa
+    carpeta trae tres CSV a la vez; nos quedamos con el que tenga a la vez
+    columna de contenido y de impresiones (`_cabecera_sirve`), nunca con el
+    último por orden alfabético. Si hay más de uno que sirva, el de fecha de
+    modificación más reciente.
     """
-    ficheros = sorted(glob.glob(str(EXPORTES / "*.csv")))
-    if not ficheros:
+    candidatos = [f for f in glob.glob(str(EXPORTES / "**" / "*.csv"), recursive=True)
+                  if _cabecera_sirve(f)]
+    if not candidatos:
         return {}, None
-    ruta = ficheros[-1]
+    ruta = max(candidatos, key=lambda f: os.path.getmtime(f))
     fuera = {}
     with open(ruta, encoding="utf-8-sig", newline="") as fh:
         lector = csv.DictReader(fh)
@@ -198,16 +227,33 @@ def leer_export_studio():
             impr = busca("impres")
             ctr = busca("clic") or busca("click")
             def num(x):
+                """Admite '1.43' (decimal con punto, como exporta este CSV
+                real) y '1,43' (decimal con coma) sin asumir cuál es: el
+                separador que aparece en último lugar es el decimal; el otro
+                -- si lo hay -- es de millares y se descarta.
+
+                31/08: el export real de Studio usa punto decimal
+                ('822', '1.58', '1821', '1.43'), no coma. La versión anterior
+                asumía formato español a ciegas (quitaba todos los puntos) y
+                convertía un CTR de 1,58 % en 158.
+                """
                 if not x:
                     return None
-                x = str(x).replace(" ", "").replace(".", "").replace(",", ".")
-                x = re.sub(r"[^\d.\-]", "", x)
+                x = str(x).strip()
+                x = re.sub(r"[^\d,.\-]", "", x)
+                if not x:
+                    return None
+                i_coma, i_punto = x.rfind(","), x.rfind(".")
+                if i_coma > i_punto:
+                    x = x.replace(".", "").replace(",", ".")
+                elif i_punto > i_coma:
+                    x = x.replace(",", "")
                 try:
                     return float(x)
                 except ValueError:
                     return None
             fuera[vid.strip()] = {"impresiones": num(impr), "ctr": num(ctr)}
-    return fuera, Path(ruta).name
+    return fuera, Path(ruta).relative_to(EXPORTES).as_posix()
 
 
 def main():
