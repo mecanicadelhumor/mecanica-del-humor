@@ -86,7 +86,7 @@
    "guion": "05_calendario/guiones/MDH-004.es.json",
    "video_id": "3CdrynMlHrc",
    "url": "https://youtu.be/3CdrynMlHrc",
-   "estado": "private",
+   "estado": "public",
    "publicar_en": null,
    "musica": "cama_01_crying_over_you_christophermorrow.mp3",
    "subido_utc": "2026-08-29T01:29:00Z",
@@ -183,5 +183,5 @@
    "revisado": false
   }
  ],
- "_estado_leido_utc": "2026-08-31T05:27:59Z"
+ "_estado_leido_utc": "2026-08-31T08:41:41Z"
 }

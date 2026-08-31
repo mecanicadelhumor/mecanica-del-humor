@@ -1433,7 +1433,7 @@
    "privacidad": "public",
    "dias_publicado": 12,
    "duracion_s": 346.0,
-   "visualizaciones": 28,
+   "visualizaciones": 27,
    "duracion_media_s": 122.0,
    "porcentaje_visto": 35.3,
    "minutos_vistos": 52.0,
@@ -1890,6 +1890,32 @@
   },
   {
    "leido": "2026-08-31",
+   "id": "MDH-004.es",
+   "video_id": "3CdrynMlHrc",
+   "titulo": "¿Por qué nadie se ríe de mis chistes? 1.200 risas anotadas en la calle",
+   "formato": "largo",
+   "serie": "",
+   "publicado": "2026-08-29",
+   "privacidad": "public",
+   "dias_publicado": 2,
+   "duracion_s": 287.0,
+   "visualizaciones": 0,
+   "duracion_media_s": 0.0,
+   "porcentaje_visto": 0.0,
+   "minutos_vistos": 0.0,
+   "suscriptores": 0,
+   "me_gusta": 0,
+   "comentarios": 0,
+   "compartidos": 0,
+   "retencion": {
+    "puntos": 0
+   },
+   "trafico_pct": {},
+   "impresiones": null,
+   "ctr": null
+  },
+  {
+   "leido": "2026-08-31",
    "id": "MDS-001.es",
    "video_id": "GxnBQcR85KE",
    "titulo": "¿Por qué te has reído de esto? El chiste, desmontado en cuarenta segundos",
@@ -2037,5 +2063,5 @@
   }
  ],
  "miniaturas": [],
- "actualizado_utc": "2026-08-31T05:28:05Z"
+ "actualizado_utc": "2026-08-31T08:41:48Z"
 }
