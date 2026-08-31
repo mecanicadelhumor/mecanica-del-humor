@@ -166,6 +166,21 @@
       "musica": "cama_02_dusk_next_route.mp3",
       "subido_utc": "2026-08-28T07:00:17Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-006.es",
+      "episodio": "MDS-006",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué me río cuando no debo? Te estás equivocando sobre qué es la risa",
+      "guion": "05_calendario/guiones/MDS-006.es.json",
+      "video_id": "taX2qkEyuBs",
+      "url": "https://youtu.be/taX2qkEyuBs",
+      "estado": "private",
+      "publicar_en": "2026-08-31T17:00:00Z",
+      "musica": "cama_03_haru_lofi_roa.mp3",
+      "subido_utc": "2026-08-31T01:27:35Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-08-28T08:41:26Z"
