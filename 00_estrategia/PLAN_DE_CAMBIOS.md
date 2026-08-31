@@ -3,6 +3,11 @@
 **Versión 3 · 21 de agosto de 2026** — con las decisiones tomadas y la fase 1 y
 media de la fase 2 ya escritas en el repositorio.
 
+> ⚠️ **Hay una versión 4, al final de este documento (31 de agosto).** Sustituye
+> la escalera de métricas de C14 por dos escaleras —una para Shorts y otra para el
+> episodio largo— y añade C17 a C20. Si vas a decidir algo con este plan, léela
+> antes: la primera lectura con datos cambió el orden de la cola.
+
 Este documento es **ejecutable**. Cada cambio trae qué archivos toca, qué tiene que ser
 cierto para darlo por hecho, y qué no hay que hacer. El razonamiento está en
 `DIAGNOSTICO.md`; las restricciones que nadie puede saltarse, en `REGLAS.md`.
@@ -829,3 +834,188 @@ gratis. La medición no se tira: es la que justifica no hacerlo en FFmpeg.
 - No se toca la regla 12: el remate de marca va **después** de la crítica, no en
   su lugar.
 - No se enciende `vivo` en el episodio largo todavía.
+
+---
+
+# Versión 4 · 31 de agosto de 2026 — la primera lectura con datos
+
+Todo lo de arriba sigue vigente salvo lo que esta sección corrige expresamente:
+**C14 se sustituye por dos escaleras** y entran **C17 a C20**. Lo escrito antes
+del 31 de agosto no se reescribe: se lee con esta sección al lado.
+
+## Lo que dijeron los números
+
+Tres semanas de canal, dos de Shorts, y por primera vez `metricas.json` con
+lecturas de verdad:
+
+| | Vistas de por vida | Suscriptores | Comentarios | Me gusta |
+|---|---|---|---|---|
+| MDH-001 · 002 · 003 (largos, 18–20 ago) | 13 · 28 · 8 | 0 | 0 | 4 en total |
+| MDS-001 a 005 (Shorts, 24–28 ago) | 6 · 11 · 13 · 3 · 11 | 0 | 0 | **0** |
+
+**El criterio de aceptación de C2 —«a las 48 h, al menos uno supera las 50
+visualizaciones»— falló por un factor de diez.** El plan decía qué hacer en ese
+caso («el problema está en los tres primeros segundos y se va a C9 antes de
+producir más») y no se hizo: se siguió produciendo. Queda dicho.
+
+**Y el único indicio bueno del corpus: la búsqueda.** MDS-002 sacó el **63,6 %**
+de sus visualizaciones de `YT_SEARCH` y MDS-003 el **46,2 %**. El feed de Shorts,
+que es la superficie sobre la que se construyó toda la fase 1, aporta entre el
+9 % y el 23 % en esos dos. Es decir: **la superficie que el diagnóstico daba por
+inalcanzable está respondiendo, y la que se daba por segura no.** Los números son
+minúsculos y no prueban nada por sí solos, pero es la única señal direccional que
+hay, y sale gratis seguirla.
+
+## C14 (bis) · Dos escaleras, porque son dos productos
+
+**Por qué se cambia:** la escalera original medía impresiones y CTR de miniatura,
+y **Studio no da ninguna de las dos para los Shorts** — ahí la decisión del
+espectador es deslizar, no hacer clic. Cinco de cada seis vídeos del canal son
+Shorts. La escalera que teníamos no podía medir el producto principal, y encima
+dependía de que Silvestre exportara un CSV a mano cada semana, que es trabajo
+recurrente y por tanto contrario a la regla 5.
+
+**Escalera de los Shorts — solo API, sin intervención de nadie:**
+
+| Peldaño | Métrica | Umbral | Si falla, el problema es |
+|---|---|---|---|
+| S1 · el feed nos prueba | vistas desde `SHORTS` en 48 h | ≥ 50 | **el primer segundo** → C19, C16 |
+| S2 · se quedan | `porcentaje_visto` | ≥ 70 % | **el ritmo y la voz** → C15, C7 |
+| S3 · reaccionan | me gusta por 100 vistas | ≥ 3 | **el remate** |
+| S4 · vuelven | suscriptores por mil vistas | ≥ 5 | **la promesa del canal** |
+
+**Escalera del episodio largo — con CSV si lo hay, y si no se salta a L3:**
+
+| Peldaño | Métrica | Umbral |
+|---|---|---|
+| L1 · impresiones/semana | ≥ 5.000 | solo con CSV |
+| L2 · CTR de miniatura | ≥ 4 % | solo con CSV |
+| L3 · retención a los 30 s | ≥ 60 % | API |
+| L4 · porcentaje visto medio | ≥ 45 % | API |
+
+**El canal está en S1**, a un factor diez del umbral. El CSV pasa a ser opcional:
+si aparece uno en `05_calendario/exportes/` se lee, y nadie vuelve a pedirlo.
+
+## El punto de control del 27 de septiembre
+
+Entre medias entra un cambio por semana: **C19 + C16** la semana del 7, **C7** la
+semana del 14. El 27, con la tabla delante, una sola pregunta:
+
+> **¿Algún Short ha pasado de 100 visualizaciones en sus primeras 48 horas?**
+
+- **Sí** → el formato funciona, toca escalarlo.
+- **No, pero la mediana ha subido de 11 a 30 o más** → el camino es bueno y va
+  lento. Se sigue.
+- **No, y la mediana sigue por debajo de 20** → el problema no es la ejecución,
+  es el tema. Se abre la conversación de ampliar el asunto al humor dentro de las
+  habilidades sociales y la conversación, sin renunciar al método ni a las
+  fuentes.
+
+El punto de parada de las doce semanas sigue siendo el límite exterior. Este es
+un control intermedio, no un indulto.
+
+---
+
+## C17 · No repetirse
+
+**El hallazgo, de Silvestre:** «en el vídeo hay cosas que se repiten, como que te
+ríes más junto a alguien que solo».
+
+**Medido el 31/08 sobre los códigos de `fuente` de todos los guiones:**
+
+- Se usan **30 fichas de las 77**. Cuarenta y siete no se han abierto nunca.
+- **Doce salen en más de un guion; cuatro en tres o más.** `E02` —las 1.200 risas
+  anotadas en la calle— sale en **MDS-002 (25 ago), MDH-004 (29 ago) y MDS-006
+  (31 ago)**: tres vídeos en siete días. `A01` sale en cinco guiones.
+
+No es escasez de bibliografía. Es la costumbre de coger la ficha que ya se conoce.
+
+**Las dos reglas:**
+
+1. **Una ficha que ha sido la fuente central de un vídeo no vuelve a serlo en seis
+   semanas.** Como apoyo de pasada sí, y entonces se cuenta desde otro ángulo y
+   con otras palabras, nunca con la misma frase.
+2. **Se elige empezando por las fichas no usadas.** Si se acaba usando una
+   repetida, se escribe en la bitácora por qué ninguna de las libres servía.
+
+**Dónde vive:** criterio en el prompt de la planificación (paso 2) y en el de la
+revisión diaria (paso 1); red de seguridad determinista como **aviso** de
+`04_agentes/validar_guion.py`, encargado a la revisión diaria.
+
+## C18 · La música cansa
+
+Tres pistas reales para seis vídeos por semana —`cama.mp3` es copia byte a byte de
+una de las otras— significa que cada pista suena una vez y media por semana. Lo
+notó primero Silvestre, que hoy por hoy es el espectador que más vídeos ve.
+
+**Qué se hace:** ampliar a diez o doce pistas de licencia limpia y atribución
+literal (Incompetech, CC BY 4.0, es la fuente más simple: una licencia, un formato
+de atribución por pista, descarga directa), instrumentales y sin melodía que
+compita con la voz. Cada una con su entrada en `creditos.json` indexada por
+sha256, como ya está montado — `publicar.py` bloquea la subida si falta, y eso se
+queda. Y en `musica_de()`: excluir duplicados por hash y no repetir una pista
+hasta que hayan sonado todas.
+
+Prioridad baja. Encargado a la revisión diaria, detrás de la verificación de C15.
+
+## C19 · El primer segundo no puede ser una tarjeta de texto
+
+**El razonamiento, y es el cambio más importante de esta versión.** Un Short nuevo
+recibe una prueba del feed casi siempre. Seis a trece visualizaciones significa
+que la prueba se hizo y se cortó enseguida: la gente desliza antes de leer. Y lo
+que ve en esa décima de segundo es texto blanco centrado sobre fondo oscuro con
+voz sintética — que en 2026 es la firma reconocible del vídeo automatizado, y el
+espectador de Shorts ha aprendido a deslizarla sin pensar.
+
+C15 hace que ese texto se mueva. **No hace que deje de ser texto.** De las 58
+escenas de los diez primeros Shorts, 32 son `enunciado` y `figura` no se usa
+ni una vez: el 72 % de lo que se ve es texto sobre fondo.
+
+**La regla:** la escena 1 de un Short no puede ser una tarjeta de texto. Entra con
+una ilustración del vocabulario dibujado (C16) en movimiento, con el Engranaje
+haciendo algo, o con una comparación — y con cuatro palabras o menos en pantalla.
+La voz sigue siendo la de siempre hasta C7; lo que cambia es lo que se ve mientras
+habla.
+
+**Cuándo:** semana del 7 de septiembre, junto con C16, y cuenta como **un solo
+cambio** a efectos de la regla 11.1. Antes no: la semana del 31 es de MDS-006 y de
+verificar C15 con los ojos.
+
+**C16 se reordena en consecuencia:** el vocabulario dibujado ya no entra «una
+ilustración por Short, donde encaje», sino **empezando por la escena 1**. Los
+iconos ya están en `02_marca/iconos.svg`.
+
+## C20 · El primer comentario ya no se publica (defecto conocido, aplazado a propósito)
+
+`publicar.py` publica la pregunta del episodio como primer comentario solo si
+`estado == "public"` en el momento de la subida. Desde el 31/08 el modo es
+`automatico` y todo se sube en privado con `publishAt`, así que **la condición no
+se cumple nunca y C11 ha dejado de funcionar de hecho**. El campo
+`pregunta_pendiente` se escribe en `publicado.json` y no lo lee nadie.
+
+**El arreglo, escrito para cuando toque:** un paso `--pendientes` en `publicar.py`
+que recorra el registro buscando entradas con `publicar_en` ya pasado y
+`pregunta_pendiente`, compruebe contra la API que el vídeo es público, publique el
+comentario y marque la entrada. Se llamaría al principio de la producción del día
+siguiente.
+
+**No se hace ahora, y el motivo es honesto:** el canal tiene cero comentarios y una
+decena de espectadores por vídeo. Un primer comentario no cambia nada hasta que
+haya alguien a quien contestar. Entra cuando S3 se mueva.
+
+## Lo que NO se cambia hoy, y por qué
+
+- **La cadencia sigue en cinco Shorts y un largo.** Con este volumen de audiencia,
+  más papeletas en el sorteo del feed vale más que menos vídeos mejores — pero es
+  una creencia, no un dato, y se revisa el 27 de septiembre.
+- **No se acelera C7 por delante de C19.** La voz importa para quien se queda; el
+  deslizamiento ocurre antes de que la voz llegue a nada. Primero lo que se ve.
+- **No entra C10 (una página por episodio)** aunque la búsqueda esté funcionando.
+  Sigue detrás del peldaño S1: primero que el vídeo aguante, luego traerle gente
+  de fuera.
+- **Sigue sin haber barrera automática antes de publicar.** `qa.py` corre
+  **después** de la subida en `producir.yml`: es un informe, no un control. Con la
+  publicación automática, el único par de ojos previo es la revisión diaria de las
+  11:30, que ve el vídeo dentro de la ventana de ~15 h entre subida y publicación.
+  Decisión de Silvestre del 31/08, tomada con la audiencia actual delante: un mal
+  vídeo hoy no cuesta nada, y él lo puede retirar. Se revisa cuando haya público.

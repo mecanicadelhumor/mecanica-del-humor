@@ -32,8 +32,9 @@ ANTES DE RESPONDER NADA, lee en este orden:
 3. 00_estrategia/PROPIEDAD_DE_FICHEROS.md — quién escribe qué
 4. 00_estrategia/PLAN_DE_CAMBIOS.md — la hoja de ruta y el estado de cada cambio
 5. 00_estrategia/PROMPT_DE_ARRANQUE.md — autorizaciones vigentes y trampas conocidas
-6. 05_calendario/bitacora/         — los ficheros de los últimos siete días
-7. 05_calendario/metricas.json     — dónde está el canal en la escalera
+6. 05_calendario/ESTADO.md         — ¿está el canal bien hoy? (cinco líneas)
+7. 05_calendario/bitacora/         — los ficheros de los últimos siete días
+8. 05_calendario/metricas.json     — dónde está el canal en la escalera
 
 Y si necesitas el porqué de algo: 00_estrategia/DIAGNOSTICO.md.
 
@@ -77,7 +78,7 @@ arrastraba defectos. Solo puede añadir lo que verifique contra la fuente.
 
 ---
 
-## Cuatro trampas en las que ya se ha caído
+## Seis trampas en las que ya se ha caído
 
 No son anécdotas: cada una costó tiempo o un vídeo, y las cuatro se repiten
 solas si nadie las tiene delante.
@@ -120,47 +121,97 @@ Arreglado el 28/08 — el estado se le pregunta a YouTube y se corrige el regist
 
 ---
 
-## Dónde está el proyecto a 28 de agosto de 2026
+**5. Un vídeo puede quedarse escondido para siempre por un campo que falta.**
+MDH-004 se produjo el sábado 29 sin incidencias, se subió a la hora y **no se
+publicó nunca**: su emisión en `parrilla.json` llevaba `modo: revision`, así que
+`cola.py` lo subió `private` **sin `publicar_en`**. Nadie lo detectó — la revisión
+diaria del domingo escribió, con toda lógica, «su hora de publicación ya pasó, así
+que está publicado», que es cierto en modo automático y falso en modo revisión.
+Silvestre lo encontró dos días después mirando Studio.
+→ El defecto de fondo era el defecto por defecto: `modo = emision.get("modo",
+"revision")`. Un olvido fallaba hacia el silencio en vez de hacia publicar.
+Cuando escribas un valor por defecto, pregúntate hacia dónde falla el olvido.
 
-**El cuello de botella sigue siendo el mismo: no hay números.** Tres semanas
-publicando y `metricas.json` vacío por dos fallos encadenados, los dos
-arreglados hoy. La primera lectura de verdad es la del lunes 31. Hasta que
-llegue, cualquier decisión sobre qué serie sobrevive o qué largo va el 12 de
-septiembre se toma a ciegas, y conviene decirlo en vez de disimularlo.
+**6. `qa.py` corre DESPUÉS de publicar.** En `producir.yml` el paso «Expediente de
+calidad» va detrás del de «Subir a YouTube», con `if: !cancelled()`. Es un informe,
+no una barrera. Se leyó durante semanas como si fuera un control de calidad previo.
+→ Con la publicación automática, el único par de ojos antes del público es la
+revisión diaria de las 11:30, dentro de la ventana de ~15 h entre subida y
+publicación. Y no puede cancelar nada: solo avisar en `ESTADO.md`.
+
+## Dónde está el proyecto a 31 de agosto de 2026
+
+**Ya hay números, y son duros.** Tres semanas de canal, dos de Shorts:
+
+| | Vistas de por vida | Suscriptores | Comentarios | Me gusta |
+|---|---|---|---|---|
+| MDH-001 · 002 · 003 (largos) | 13 · 28 · 8 | 0 | 0 | 4 |
+| MDS-001 a 005 (Shorts) | 6 · 11 · 13 · 3 · 11 | 0 | 0 | **0** |
+
+**El canal está en el peldaño S1 de la escalera nueva —que el feed de Shorts nos
+pruebe— a un factor diez del umbral.** El criterio de aceptación de C2 (al menos
+un Short por encima de 50 visualizaciones en 48 h) falló y se siguió produciendo
+igual; queda dicho en `PLAN_DE_CAMBIOS.md`, versión 4.
+
+**El único indicio bueno es la búsqueda:** MDS-002 sacó el 63,6 % de sus
+visualizaciones de `YT_SEARCH` y MDS-003 el 46,2 %, mientras el feed de Shorts
+—la superficie sobre la que se construyó toda la fase 1— aporta entre el 9 % y el
+23 %. Números minúsculos, pero es la única señal direccional que hay.
+
+**La publicación es automática desde hoy.** `parrilla.json` lleva `modo:
+automatico` de MDS-006 en adelante; `cola.py` sube en privado con `publishAt` y
+YouTube publica solo. MDH-004 (sábado 29) fue el último en modo `revision`: se
+quedó oculto dos días hasta que Silvestre lo vio. Nadie mira el vídeo antes de que
+salga y **`qa.py` corre después de la subida, así que es un informe y no una
+barrera**: decisión consciente de Silvestre, tomada con la audiencia actual
+delante.
 
 **Lo que está en verificación, y en qué orden. Un cambio por producción:**
 
 | Cuándo | Qué se mira |
 |---|---|
-| sáb 29 ago · MDH-004 | Primera prueba real del cron a tres horas. El largo **no** lleva C15 |
-| lun 31 ago · MDS-006 | **Primer Short con C15.** Hasta verlo no entra ningún cambio visual más |
-| lun 31 ago · métricas | Primera lectura con datos. Es la que desbloquea todo lo demás |
-| jue 3 sep · demanda | Prueba real del cron de `demanda.yml` con dos horas |
-| sem. 7 sep | **C7** (dos voces, `voz.py` autorizado) y **C16** (vocabulario dibujado) |
+| sem. 31 ago | **MDS-006, primer Short con C15.** La revisión diaria lo mira todos los días. Ningún cambio visual más entra hasta verlo |
+| jue 3 sep | Prueba real del cron de `demanda.yml` con dos horas |
+| sem. 7 sep | **C19 + C16** — el primer segundo deja de ser una tarjeta de texto, y entra el vocabulario dibujado empezando por la escena 1. Cuenta como un solo cambio |
+| sem. 14 sep | **C7 escalón 1** — dos voces (`voz.py` autorizado desde el 28/08) |
+| **dom 27 sep** | **Punto de control.** ¿Algún Short ha pasado de 100 visualizaciones en 48 h? Los tres desenlaces están escritos en `PLAN_DE_CAMBIOS.md`, versión 4 |
 
-**Lo que está escrito y sin hacer:** la ficha `E02` de la bibliografía (tres
-cifras y un DOI que no coincide); el estimador de duración de
+**Cambios de gobierno del 31/08:**
+
+- **Se acabaron las notificaciones.** Las `PushNotification` que mandaban los
+  agentes no le llegaban a Silvestre, y él no las quiere. Los tres prompts las
+  tienen prohibidas. En su lugar, la revisión diaria mantiene
+  **`05_calendario/ESTADO.md`**, un fichero de cinco líneas que sobrescribe cada
+  día: estado OK o incidencia, último vídeo, próxima emisión, y una línea
+  «Pendiente de Silvestre» que **casi siempre dice «nada»**.
+- **Nadie vuelve a pedir el CSV de Studio.** Era trabajo recurrente (regla 5) y
+  además nunca iba a medir los Shorts, porque Studio no da impresiones ni CTR para
+  ellos. La escalera de Shorts se mide entera con la API.
+- **Los prompts de las tres tareas programadas están espejados en
+  `00_estrategia/tareas/`.** Vivían solo en el almacén de tareas programadas y no
+  se podían leer sin arqueología. Ahora se leen en el repositorio — pero **la copia
+  que corre es la del almacén**: si editas el fichero, actualiza también la tarea.
+
+**Lo que está escrito y sin hacer:** el estimador de duración de
 `validar_guion.py`, que asume 150 palabras/minuto cuando la voz real hace 130 en
-Shorts —medido, esperando a tener ocho muestras—; MDH-006, 007 y 008 sin adaptar
-al formato nuevo, a propósito, uno por semana; y el largo del 12 de septiembre,
-que se decide con las métricas del 7 delante.
+Shorts; MDH-006, 007 y 008 sin adaptar al formato nuevo, a propósito, uno por
+semana; el arreglo de C20 (el primer comentario ya no se publica en modo
+automático), aplazado a propósito hasta que haya comentarios; y 46 fichas de la
+bibliografía con el DOI «por verificar».
 
 **Lo que se decidió y conviene no volver a discutir:** no se clona la voz de
-Silvestre por ahora (la condición que puso es incompatible con un repo público y
-runners sin GPU); no se encienden los subtítulos quemados; no se usan fotos de
-banco de imágenes (dependen de la red en tiempo de render y hacen que el canal
-se parezca a todos los demás canales automatizados); y no hace falta tarjeta,
-porque `gemini-3.1-flash-tts-preview` tiene nivel gratuito con la salida de
-audio incluida.
-
----
+Silvestre por ahora; no se encienden los subtítulos quemados; no se usan fotos de
+banco de imágenes; no hace falta tarjeta, porque `gemini-3.1-flash-tts-preview`
+tiene nivel gratuito con la salida de audio incluida; y no entra C10 (una página
+por episodio) aunque la búsqueda funcione — sigue detrás del peldaño S1.
 
 ## Qué NO hace falta meter en el prompt
 
 Estas cosas ya están en los documentos y repetirlas solo alarga el mensaje:
 
 - El diagnóstico del canal y por qué se cambió de rumbo → `DIAGNOSTICO.md`
-- Qué hace cada tarea programada → sus propios prompts, que puedo leer y editar
+- Qué hace cada tarea programada → `00_estrategia/tareas/` (copia legible) y el
+  almacén de tareas programadas (la copia que corre, que puedo leer y editar)
 - El criterio editorial → `REGLAS.md`
 - El estado de los cambios → la tabla de `PLAN_DE_CAMBIOS.md`, con C15 y C16 al final
 - Los números → `metricas.json`
