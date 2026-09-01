@@ -181,6 +181,21 @@
       "musica": "cama_03_haru_lofi_roa.mp3",
       "subido_utc": "2026-08-31T01:27:35Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-007.es",
+      "episodio": "MDS-007",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Si te gusta el humor negro eres más inteligente? Lo que sí está medido",
+      "guion": "05_calendario/guiones/MDS-007.es.json",
+      "video_id": "xi5Xs0dibMM",
+      "url": "https://youtu.be/xi5Xs0dibMM",
+      "estado": "private",
+      "publicar_en": "2026-09-01T17:00:00Z",
+      "musica": "cama_01_crying_over_you_christophermorrow.mp3",
+      "subido_utc": "2026-09-01T12:32:35Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-08-31T08:41:41Z"
