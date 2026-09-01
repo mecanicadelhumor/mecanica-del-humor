@@ -4,11 +4,11 @@
   "tamano_mb": 9.7,
   "audio": {
     "lufs": -14.58,
-    "pico_dbtp": -1.41,
+    "pico_dbtp": -1.43,
     "rango_lu": 4.1
   },
   "silencio_inicial": {
-    "empieza_s": -0.17,
+    "empieza_s": -0.171,
     "acaba_s": 0.796,
     "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
   },
