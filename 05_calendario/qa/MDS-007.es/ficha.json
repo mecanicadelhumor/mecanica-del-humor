@@ -1,14 +1,14 @@
 {
-  "id": "MDS-001.es",
-  "duracion_final_s": 42.7,
-  "tamano_mb": 2.7,
+  "id": "MDS-007.es",
+  "duracion_final_s": 49.7,
+  "tamano_mb": 9.7,
   "audio": {
-    "lufs": -14.68,
+    "lufs": -14.58,
     "pico_dbtp": -1.44,
-    "rango_lu": 4.7
+    "rango_lu": 4.1
   },
   "silencio_inicial": {
-    "empieza_s": -0.171,
+    "empieza_s": -0.17,
     "acaba_s": 0.796,
     "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
   },
@@ -30,35 +30,36 @@
   },
   "subtitulos": {
     "ass_existe": true,
-    "lineas_ass": 88,
+    "lineas_ass": 117,
     "srt_existe": true,
-    "quemados": true,
+    "quemados": false,
+    "quemados_origen": "leído de montaje.json",
     "_esperado": {
       "quemados": false,
       "lineas_ass": "> 0"
     },
-    "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass»: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Ahora que no se quema nada, ese es el único aviso que queda."
+    "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass»: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Ahora que no se quema nada, ese es el único aviso que queda. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "musica": {
     "archivo": "cama_01_crying_over_you_christophermorrow.mp3",
     "sha256": "4143a4c48067539963eeff663f43e8c1f880f4e4c1428972a69ed75d0aa28e44"
   },
   "guion": {
-    "titulo_trabajo": "Por qué te has reído de esto",
+    "titulo_trabajo": "Si te gusta el humor negro, ¿eres más inteligente?",
     "idioma": "es",
     "voz": "es-ES-AlvaroNeural",
     "escenas": 6,
-    "duracion_narracion_s": 41.63,
+    "duracion_narracion_s": 48.79,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 10.004
+    "escena_mas_larga_s": 9.764
   },
   "fotogramas_s": [
-    3.5,
-    7.31,
-    12.67,
-    20.78,
-    30.37,
-    39.09
+    5.58,
+    13.33,
+    20.8,
+    29.68,
+    38.02,
+    46.02
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
