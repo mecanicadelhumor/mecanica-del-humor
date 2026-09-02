@@ -1,14 +1,14 @@
 {
-  "id": "MDS-002.es",
-  "duracion_final_s": 52.4,
-  "tamano_mb": 3.6,
+  "id": "MDS-008.es",
+  "duracion_final_s": 43.9,
+  "tamano_mb": 8.2,
   "audio": {
-    "lufs": -14.59,
-    "pico_dbtp": -1.22,
-    "rango_lu": 3.6
+    "lufs": -14.41,
+    "pico_dbtp": -1.2,
+    "rango_lu": 4.8
   },
   "silencio_inicial": {
-    "empieza_s": -0.17,
+    "empieza_s": -0.171,
     "acaba_s": 0.629,
     "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
   },
@@ -30,10 +30,10 @@
   },
   "subtitulos": {
     "ass_existe": true,
-    "lineas_ass": 114,
+    "lineas_ass": 101,
     "srt_existe": true,
-    "quemados": null,
-    "quemados_origen": "sin manifiesto de montaje.py: no se puede verificar",
+    "quemados": false,
+    "quemados_origen": "leído de montaje.json",
     "_esperado": {
       "quemados": false,
       "lineas_ass": "> 0"
@@ -45,21 +45,20 @@
     "sha256": "3f93cfef7318ae5e93a365a3fe16282de13c279e2733dd7c18fcfbe38f530c74"
   },
   "guion": {
-    "titulo_trabajo": "Por qué te ríes solo",
+    "titulo_trabajo": "Por qué el mismo chiste hace gracia a unos y a otros no",
     "idioma": "es",
     "voz": "es-ES-AlvaroNeural",
-    "escenas": 6,
-    "duracion_narracion_s": 51.35,
+    "escenas": 5,
+    "duracion_narracion_s": 43.76,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 9.992
+    "escena_mas_larga_s": 11.228
   },
   "fotogramas_s": [
-    5.48,
-    13.73,
-    21.49,
-    30.42,
-    38.93,
-    47.95
+    5.98,
+    14.37,
+    24.31,
+    33.25,
+    41.1
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }

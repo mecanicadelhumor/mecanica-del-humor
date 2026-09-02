@@ -196,6 +196,21 @@
       "musica": "cama_01_crying_over_you_christophermorrow.mp3",
       "subido_utc": "2026-09-01T12:32:35Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-008.es",
+      "episodio": "MDS-008",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué unos chistes hacen gracia y otros no? Dos versiones del mismo",
+      "guion": "05_calendario/guiones/MDS-008.es.json",
+      "video_id": "fTAzamPY8kk",
+      "url": "https://youtu.be/fTAzamPY8kk",
+      "estado": "private",
+      "publicar_en": "2026-09-02T17:00:00Z",
+      "musica": "cama_02_dusk_next_route.mp3",
+      "subido_utc": "2026-09-02T01:29:46Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-08-31T08:41:41Z"
