@@ -15,7 +15,11 @@ import json
 import re
 import sys
 from collections import Counter
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+RAIZ = Path(__file__).resolve().parents[1]
+REGISTRO = RAIZ / "05_calendario" / "registro_publicaciones.json"
 
 PPM = 150            # palabras por minuto de la narración
 MIN_ESCENA = 2.6
@@ -109,6 +113,65 @@ def normal(s):
     # literalmente la misma frase y no saltó ni un aviso.
     sin_marcas = re.sub(r"[^a-záéíóúñ0-9 ]", " ", (s or "").lower())
     return re.sub(r"\s+", " ", sin_marcas).strip()
+
+
+VENTANA_C17_DIAS = 42  # seis semanas
+
+
+def _fecha_utc(iso):
+    """`subido_utc` ('2026-08-29T01:29:00Z') a datetime consciente de zona.
+    Nunca lanza: si falta o no se puede leer, devuelve None y esa entrada se
+    descarta en `fuentes_recientes` en vez de romper la validación."""
+    if not iso:
+        return None
+    try:
+        return datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def fuentes_recientes(id_actual, dias=VENTANA_C17_DIAS):
+    """Códigos de «fuente» que ya aparecen en los guiones españoles subidos
+    en las últimas seis semanas — la red de seguridad de C17 («no
+    repetirse», `00_estrategia/PLAN_DE_CAMBIOS.md`).
+
+    Determinista y sin red: lee `registro_publicaciones.json` (lo que YA se
+    ha subido, escrito por `registrar.py`) y, de cada entrada dentro de la
+    ventana, el guion al que apunta. Devuelve, por código de fuente, en qué
+    episodios ya salió y en cuántas escenas de cada uno.
+
+    Esto NO decide qué es «fuente central» — eso exige leer el guion entero
+    y lo sigue haciendo quien revisa (paso 1 de la revisión diaria, C17 en
+    `REGLAS.md`/`PLAN_DE_CAMBIOS.md`). Es solo el aviso de que hay que
+    mirar: mucho más barato que acordarse de memoria de una docena de
+    guiones. Por eso es AVISO, nunca error — no para la producción.
+
+    Si falta el registro o un guion referenciado no existe o no es JSON
+    válido, esa entrada (o todas) se salta en silencio.
+    """
+    try:
+        reg = json.loads(REGISTRO.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    limite = datetime.now(timezone.utc) - timedelta(days=dias)
+    por_fuente = {}
+    for p in reg.get("publicaciones", []):
+        if p.get("idioma") != "es" or p.get("episodio") == id_actual:
+            continue
+        fecha = _fecha_utc(p.get("subido_utc"))
+        if not fecha or fecha < limite:
+            continue
+        ruta_guion = p.get("guion")
+        if not ruta_guion:
+            continue
+        try:
+            gp = json.loads((RAIZ / ruta_guion).read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        cuenta = Counter(e["fuente"] for e in gp.get("escenas", []) if e.get("fuente"))
+        for f, n in cuenta.items():
+            por_fuente.setdefault(f, []).append((p["episodio"], n))
+    return por_fuente
 
 
 def validar(path):
@@ -287,9 +350,22 @@ def validar(path):
         avisos.append(f"El {n_dom*100//len(tipos)}% de las escenas son «{dominante}». "
                       f"Demasiada monotonía visual.")
 
+    # C17 — aviso de repetición de fuente contra el corpus producido en las
+    # últimas seis semanas (ver fuentes_recientes más arriba).
+    fuentes = sorted({e["fuente"] for e in escenas if e.get("fuente")})
+    if fuentes and g.get("id"):
+        recientes = fuentes_recientes(g["id"])
+        for f in fuentes:
+            usos = recientes.get(f)
+            if usos:
+                donde = ", ".join(f"{ep} ({n} esc.)" for ep, n in usos)
+                avisos.append(f"C17: la fuente «{f}» ya aparece en {donde} "
+                              f"(producido en las últimas seis semanas). Si allí también "
+                              f"sostenía la tesis y no era un apoyo de pasada, es una "
+                              f"repetición — revisar con el criterio del paso 1 antes de producir.")
+
     print(f"\n{path}")
     print(f"  [{formato}] {len(escenas)} escenas · {int(m)}m {s:04.1f}s · reparto {dict(reparto)}")
-    fuentes = sorted({e["fuente"] for e in escenas if e.get("fuente")})
     print(f"  fuentes citadas: {', '.join(fuentes) or 'ninguna'}")
     if avisos:
         print(f"\n  AVISOS ({len(avisos)})")
