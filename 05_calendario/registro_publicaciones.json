@@ -211,6 +211,21 @@
       "musica": "cama_02_dusk_next_route.mp3",
       "subido_utc": "2026-09-02T01:29:46Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-009.es",
+      "episodio": "MDS-009",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "Cómo caer bien: qué pasa cuando te ríes de lo mismo que el otro",
+      "guion": "05_calendario/guiones/MDS-009.es.json",
+      "video_id": "JODqu6yEPI8",
+      "url": "https://youtu.be/JODqu6yEPI8",
+      "estado": "private",
+      "publicar_en": "2026-09-03T17:00:00Z",
+      "musica": "cama_03_haru_lofi_roa.mp3",
+      "subido_utc": "2026-09-03T01:35:15Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-08-31T08:41:41Z"
