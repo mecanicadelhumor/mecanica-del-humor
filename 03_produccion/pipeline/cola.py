@@ -29,6 +29,7 @@ false y código 0. Fallar sería llenar el buzón de correos de Actions en rojo
 por algo que es normal.
 """
 import argparse
+import hashlib
 import json
 import os
 import sys
@@ -91,6 +92,14 @@ def a_utc(fecha, hora_local):
 # ---------------------------------------------------------------------------
 # Música
 # ---------------------------------------------------------------------------
+def _sha256_de(ruta):
+    h = hashlib.sha256()
+    with open(ruta, "rb") as f:
+        for bloque in iter(lambda: f.read(1 << 20), b""):
+            h.update(bloque)
+    return h.hexdigest()
+
+
 def pistas():
     """Las pistas disponibles, en orden estable y solo las que existen en disco.
 
@@ -98,13 +107,35 @@ def pistas():
     orden del JSON, que es un diccionario indexado por hash y no significa
     nada. Se excluye cama.mp3 porque es una copia byte a byte de otra pista:
     entrarla en la rotación haría sonar la misma dos veces de cada tres.
+
+    C18 (31/08): esa exclusión de cama.mp3 era manual, a mano, porque alguien
+    ya sabía que era un duplicado. En cuanto la carpeta tenga diez o doce
+    pistas nadie va a recordar cuál copia a cuál, así que aquí se calcula el
+    sha256 real de cada fichero en disco y se descarta cualquiera cuyo
+    contenido ya haya aparecido antes en la lista (se queda la primera, por
+    orden alfabético de nombre) — aunque el hash del nombre de fichero en
+    `creditos.json` no coincidiera, o alguien lo diera de alta con una clave
+    distinta por error. Es la comprobación que sí protege de un futuro
+    cama.mp3 sin que nadie tenga que acordarse de excluirlo a mano.
     """
     indice = MUSICA / "creditos.json"
     if not indice.exists():
         return []
     nombres = sorted(p["archivo"] for p in json.loads(
         indice.read_text(encoding="utf-8"))["pistas"].values())
-    return [MUSICA / n for n in nombres if (MUSICA / n).exists()]
+    rutas = [MUSICA / n for n in nombres if (MUSICA / n).exists()]
+    vistos = set()
+    unicas = []
+    for ruta in rutas:
+        try:
+            h = _sha256_de(ruta)
+        except OSError:
+            continue
+        if h in vistos:
+            continue
+        vistos.add(h)
+        unicas.append(ruta)
+    return unicas
 
 
 def musica_de(episodio):
