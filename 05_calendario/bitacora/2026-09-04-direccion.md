@@ -215,3 +215,86 @@ planificación antes del jueves 10.
    `YT_REFRESH_TOKEN`.
 2. **`voz_prueba.yml`**: crearlo a mano y darle a *Run workflow*.
 3. Escuchar tres audios y decir cuál. Eso decide C7.
+
+---
+
+# Segunda parte — tarde del 4 de septiembre
+
+## `prueba_voz.py` falló por cuota, y el fallo era mío
+
+Silvestre creó el workflow, lo ejecutó dos veces y las dos murieron con
+`RESOURCE_EXHAUSTED`. El panel de Gemini decía **62 de 10.000 tokens por minuto**
+y **4 de 10 peticiones al día** — todo verde salvo una línea: **3 de 3
+peticiones por minuto**.
+
+**El diagnóstico es de diseño, no de cuota.** El script pedía una llamada por
+escena: seis para la pista «plana» más una para la dirigida, siete seguidas. El
+RPM de 3 salta a la cuarta, y los dos intentos fallidos se comieron 4 de las 10
+peticiones del día. El coste no estaba en el **tamaño** de lo que pedíamos —un
+Short entero son ~300 tokens de entrada, el 3 % del límite por minuto— sino en
+**cuántas veces** lo pedíamos.
+
+## Y eso decide la arquitectura de C7, que es lo importante del día
+
+Con **diez peticiones al día**, un episodio largo de cuarenta escenas troceado
+por escena es imposible. **Una llamada por vídeo son seis peticiones a la
+semana.** Así que, si Gemini entra, entra con el guion entero en una sola
+llamada — que además es la forma en la que el modelo puede decidir el ritmo, que
+era el objetivo de todo esto. Deja de ser una preferencia y pasa a ser la única
+opción viable. No hay que volver a discutirlo.
+
+**Lo que eso abre, y hay que resolver antes del 14:** si el audio viene de una
+sola pieza, `render.py` no sabe cuánto dura cada escena y no puede sincronizar
+el vídeo. Hoy eso era una pregunta abierta; ahora la prueba la contesta **sin
+gastar ni una petición más**: la dirección pide una pausa clara entre líneas, y
+el script analiza la onda devuelta —RMS por ventanas de 20 ms, sin dependencias—
+cuenta los tramos de voz y los compara con el número de escenas del guion.
+
+- **Si cuadran**, C7 escalón 2 es viable tal cual.
+- **Si no cuadran**, el plan B es partir el guion en dos o tres llamadas (sigue
+  cabiendo de sobra en diez al día) y cerrar el corte donde nos convenga.
+
+Probado el detector contra una onda sintética de cinco tramos separados por
+silencios de 0,6 s: los encuentra los cinco, con los bordes en su sitio.
+
+## `prueba_voz.py`, reescrito
+
+- **Dos peticiones por ejecución**, no siete: el guion entero sin dirección y el
+  guion entero con dirección. Es además el A/B que de verdad importa.
+- **25 segundos de espera** entre las dos, por el RPM de 3.
+- **Reintento con espera** si salta el límite por minuto, y **salida limpia con
+  explicación** si el que salta es el diario — que esperando no se arregla.
+- **`--modelo`**: `gemini-2.5-flash-preview-tts` tiene **su propia cuota diaria**.
+  Si se agotan las diez de 3.1 probando, se relanza con ese en vez de esperar a
+  mañana. El workflow lo ofrece en un desplegable.
+- **`informe.txt`** con el análisis de silencios de las dos pistas.
+
+Sí, la pista «Gemini escena a escena» se cae de la prueba. Era el «cambio mínimo:
+mismo troceado, motor nuevo», y ya sabemos que ese camino no cabe en la cuota, o
+sea que medirlo era gastar seis peticiones en descartar algo ya descartado.
+
+## El token de YouTube: `00_estrategia/TOKEN_DE_YOUTUBE.md`
+
+Silvestre no recordaba dónde se tocaba esto, y no estaba escrito en ningún sitio
+— que es exactamente cómo el 1 de septiembre se perdió una mañana. Ahora sí:
+qué pasaba, la diferencia entre **publicar** y **verificar** (que es lo único que
+hay que entender), la ruta exacta de la consola, el script que ya existía desde
+hace semanas (`04_agentes/obtener_token_youtube.py`, que además pide los tres
+ámbitos correctos), el orden en que hay que hacerlo, y una tabla de qué mirar si
+el canal vuelve a dejar de publicar.
+
+Incluye también los dos errores fáciles de cometer: **elegir el proyecto
+equivocado** en la consola si hay varios, y **autorizar con la cuenta personal en
+vez de con la de marca** — que falla al subir con un error que no dice eso.
+
+## Ficheros tocados en la segunda parte
+
+- `04_agentes/prueba_voz.py` — reescrito.
+- `00_estrategia/TOKEN_DE_YOUTUBE.md` — **nuevo**.
+- `00_estrategia/PLAN_DE_CAMBIOS.md` — C7.1 dentro de la versión 5.
+- `00_estrategia/PROMPT_DE_ARRANQUE.md` — trampa 8 y el puntero al tutorial.
+- `00_estrategia/LEEME.md` — el fichero nuevo en la tabla de lectura.
+- `05_calendario/bitacora/2026-09-04-direccion.md` — esto.
+
+Y fuera del repositorio, otra vez: **`.github/workflows/voz_prueba.yml`**, con el
+desplegable de modelo. Sustituye al de esta mañana.

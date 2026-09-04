@@ -73,6 +73,12 @@ conversación» se pierde con la conversación, así que aquí queda por escrito
 | `.github/workflows/producir.yml` | **Sigue protegido** | Y además `.github/workflows/` no se puede escribir en remoto: se le manda el fichero a Silvestre |
 | `.github/workflows/voz_prueba.yml` | **Entregado el 04/09, lo crea Silvestre a mano** | Prueba de C7. `workflow_dispatch` solo, no escribe en el repositorio |
 
+**Y una cosa que ya no hace falta recordar de memoria:** cómo se saca el token de
+YouTube y por qué caducaba está en **`00_estrategia/TOKEN_DE_YOUTUBE.md`**, con
+la ruta exacta de la consola, el script que ya existía
+(`04_agentes/obtener_token_youtube.py`) y la tabla de qué mirar si el canal deja
+de publicar.
+
 Otra decisión de propiedad, del 28/08: `01_bibliografia/BIBLIOGRAFIA_CURADA.md`
 pasa a ser de la **revisión diaria**, que antes no tenía dueño y por eso
 arrastraba defectos. Solo puede añadir lo que verifique contra la fuente.
@@ -149,6 +155,17 @@ que no podía cancelar la publicación. Silvestre lo descubrió ya publicado.
 menos. Y sobre todo: no le pidas a un revisor que vea a ojo lo que una condición
 booleana puede comprobar. Un texto que no cabe en su caja es
 `scrollWidth > clientWidth`. Ver C21.
+
+**8. El límite que importaba no era el que mirábamos.**
+`prueba_voz.py` murió por cuota en su primer intento real. El panel de Gemini
+decía 62 de 10.000 tokens por minuto y 4 de 10 peticiones al día — todo verde
+menos una línea: **3 de 3 peticiones por minuto**. El script pedía una llamada
+por escena, siete seguidas. El coste no estaba en el tamaño de lo que pedíamos
+sino en **cuántas veces** lo pedíamos, y esa es la dimensión que no se estaba
+mirando.
+→ Cuando algo falla por cuota, mira **todas** las dimensiones del límite antes
+de concluir que no cabe. Y cuando el límite es de frecuencia y no de volumen,
+casi siempre se arregla pidiendo menos veces, no pidiendo menos cosa.
 
 ## Dónde está el proyecto a 4 de septiembre de 2026
 

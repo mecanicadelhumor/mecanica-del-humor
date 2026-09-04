@@ -1228,6 +1228,42 @@ cambio, porque no toca la producción); **C7 escalón 2 en producción la semana
 14**, que era la fecha que ya tenía. `edge-tts` se queda como respaldo, con la
 misma política de degradación que el resto del proyecto.
 
+### C7.1 · La cuota decide la arquitectura, y ya está decidida (misma tarde)
+
+La primera versión de `prueba_voz.py` pedía **una llamada por escena** y murió
+con `RESOURCE_EXHAUSTED` en el primer intento real. Los números del nivel
+gratuito, **por modelo**:
+
+| | Límite | Lo que gastábamos |
+|---|---|---|
+| Peticiones por minuto | **3** | 7 seguidas |
+| Peticiones por día | **10** | 7 por ejecución |
+| Tokens de entrada por minuto | 10.000 | 62 |
+
+**El cuello de botella no es el tamaño: es el número de peticiones.** Un Short
+entero son ~300 tokens de entrada, el 3 % del límite por minuto.
+
+Y eso no es un problema de la prueba, **es el que decide cómo se implementa C7**:
+con diez peticiones al día, un episodio largo de cuarenta escenas troceado por
+escena es imposible. Una llamada por vídeo son **seis peticiones a la semana**,
+y además es la única forma de que el ritmo lo decida el modelo en vez de nuestro
+empalme — que era el objetivo. **Así que si Gemini entra, entra con el guion
+entero en una sola llamada.** No hay que volver a discutirlo.
+
+**El problema que eso abre, y que la prueba ya contesta sin gastar una petición
+más:** si el audio viene de una sola pieza, `render.py` no sabe cuánto dura cada
+escena, y sin eso no puede sincronizar el vídeo. La salida es medir los
+silencios: la dirección pide una pausa clara entre líneas, y el script analiza la
+onda devuelta, cuenta los tramos de voz y los compara con el número de escenas
+del guion. **Si cuadran, C7 escalón 2 es viable tal cual. Si no cuadran**, el
+plan B es partir el guion en dos o tres llamadas —sigue cabiendo de sobra en diez
+al día— y cerrar el corte donde nos convenga.
+
+**Y hay un respaldo de cuota que no cuesta nada tener a mano:**
+`gemini-2.5-flash-preview-tts` es otro modelo con **su propia cuota diaria**. Si
+se agotan las diez de 3.1 probando, se relanza con ese en vez de esperar a
+mañana. El workflow lo ofrece en un desplegable.
+
 ---
 
 ## C24 · Que no todos los vídeos parezcan el mismo vídeo

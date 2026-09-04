@@ -8,12 +8,17 @@ name: Prueba de voces
 # ------------------------------------------------
 # Las tareas programadas salen a internet por un proxy con lista blanca: el
 # 03/09 la revisión diaria no pudo llegar ni a Incompetech ni a FreePD. Aquí
-# no hay esa restricción, y además es donde vive GEMINI_API_KEY. Mismo motivo
-# por el que `demanda.yml` mide en Actions y la planificación solo juzga.
+# no hay esa restricción, y además es donde vive GEMINI_API_KEY.
 #
-# QUÉ HACE: genera tres audios del mismo guion —edge-tts (lo de hoy),
-# Gemini escena a escena, y Gemini en una sola llamada con dirección de
-# actor— y los sube como artefacto. Silvestre los escucha y decide.
+# QUÉ HACE: genera tres audios del mismo guion —edge-tts (lo de hoy), Gemini
+# sin dirección y Gemini con dirección de actor— más un informe de silencios
+# que dice si el audio se puede repartir por escena. Silvestre los escucha y
+# decide.
+#
+# CUOTA: el nivel gratuito de los modelos TTS da 3 peticiones por minuto y
+# 10 por día, POR MODELO. Esta prueba gasta exactamente 2. Si se agotan las
+# 10 del día, relanzar con modelo = gemini-2.5-flash-preview-tts, que lleva
+# su propia cuota, en vez de esperar a mañana.
 #
 # NO ESCRIBE NADA EN EL REPOSITORIO. Solo deja un artefacto que caduca solo.
 # ---------------------------------------------------------------------------
@@ -25,6 +30,14 @@ on:
         description: "Guion a locutar (ruta desde la raíz del repositorio)"
         type: string
         default: "05_calendario/guiones/MDS-010.es.json"
+      modelo:
+        description: "Modelo TTS (cada uno tiene su propia cuota diaria)"
+        type: choice
+        default: "gemini-3.1-flash-tts-preview"
+        options:
+          - "gemini-3.1-flash-tts-preview"
+          - "gemini-2.5-flash-preview-tts"
+          - "gemini-2.5-pro-preview-tts"
 
 permissions:
   contents: read
@@ -50,7 +63,10 @@ jobs:
       - name: Locutar las tres versiones
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python3 04_agentes/prueba_voz.py "${{ inputs.guion }}" --salida prueba_voz
+        run: |
+          python3 04_agentes/prueba_voz.py "${{ inputs.guion }}" \
+            --modelo "${{ inputs.modelo }}" \
+            --salida prueba_voz
 
       - uses: actions/upload-artifact@v4
         with:
