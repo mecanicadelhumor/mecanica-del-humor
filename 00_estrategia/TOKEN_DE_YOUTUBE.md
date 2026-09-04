@@ -38,31 +38,80 @@ Nada de lo que hay que rellenar exige inventarse un dato.
 
 ---
 
-## Parte A · Publicar la aplicación (una vez, 5 minutos)
+## Parte A · Publicar la aplicación
 
-1. Entra en **https://console.cloud.google.com/auth/audience** con la cuenta
-   que creó el proyecto.
-   *Si el enlace directo no te lleva:* menú ☰ → **APIs y servicios** →
-   **Pantalla de consentimiento de OAuth**. Google la renombró a **Google Auth
-   Platform**, y dentro está el apartado **Audiencia**.
-2. Arriba a la izquierda, **comprueba que el proyecto seleccionado es el del
-   canal** — el mismo que tiene habilitada *YouTube Data API v3*. Si tienes
-   varios proyectos, este es el error fácil de cometer.
-3. En **Estado de publicación** verás **«Prueba»** y, debajo, la lista de
-   usuarios de prueba.
-4. Pulsa **PUBLICAR APLICACIÓN**.
-5. Sale un aviso diciendo que la aplicación estará disponible para cualquier
-   usuario y que los ámbitos sensibles necesitan verificación. **Confirma.**
-6. El estado pasa a **«En producción»**. Aparecerá algo como *«Verificación: no
-   iniciada»* o un botón *«Preparar para la verificación»*: **no lo toques.**
-   Ese es el formulario que pide la web y la política de privacidad, y no hace
-   falta.
+**Corregido el 4/9 por la tarde, después de intentarlo.** La consola no deja
+publicar solo con el botón: para pasar a producción externa exige **cuatro cosas
+válidas** — nombre de la app, correo de asistencia, **URL de página principal** y
+**URL de política de privacidad**. Las dos primeras las tenemos; las dos URL no
+existían.
 
-Con esto ya está resuelto lo que se rompió el día 1. **Pero el token que tienes
-ahora sigue siendo de la época de «Prueba» y sigue caducando**, así que hay que
-sacar uno nuevo.
+### A.0 · Primero, quita el logotipo
 
----
+Google lo dice en la propia página: *«Después de subir un logotipo, deberás
+enviar tu app para verificarla, a menos que esté configurada solo para uso
+interno o tenga el estado de publicación Prueba.»*
+
+**Un logotipo subido convierte la verificación en obligatoria.** No lo
+necesitamos para nada: la pantalla de consentimiento la ve una persona, una vez,
+cada varios meses. **Bórralo** en *Información de la marca* antes de seguir.
+
+### A.1 · Las dos URL que faltaban, y no hay que inventarse nada
+
+El repositorio es público, y **GitHub Pages es gratis en repositorios
+públicos**. Con eso el canal tiene una página de verdad y una política de
+privacidad de verdad, las dos escritas y ya en la carpeta `docs/`:
+
+| Campo | Qué poner |
+|---|---|
+| Nombre de la app | `Mecánica del Humor` |
+| Correo de asistencia | `mecanicadelhumor@gmail.com` |
+| Página principal | `https://mecanicadelhumor.github.io/mecanica-del-humor/` |
+| Política de privacidad | `https://mecanicadelhumor.github.io/mecanica-del-humor/privacidad.html` |
+| Condiciones del servicio | `https://mecanicadelhumor.github.io/mecanica-del-humor/terminos.html` |
+| Dominios autorizados | `mecanicadelhumor.github.io` |
+
+**La política de privacidad no es un trámite fingido: es verdad, y era fácil de
+escribir porque la verdad es simple.** La aplicación no tiene usuarios aparte del
+propio canal, no recoge datos de nadie, no comparte nada con terceros, guarda las
+credenciales como secretos cifrados del repositorio y las métricas que lee son
+las agregadas del propio canal. Todo eso está en la página, con los enlaces a los
+términos de YouTube y a la política de Google que exige el uso de su API. No hay
+un solo dato inventado en ninguna de las tres páginas — tampoco el nombre ni la
+cara de nadie (regla 6).
+
+**Activar la página, una vez:** en el repositorio, *Settings → Pages → Source:
+Deploy from a branch → Branch: `main`, carpeta `/docs` → Save*. En un par de
+minutos responde en esa URL. Compruébalo antes de volver a la consola: si la
+página da 404, Google rechaza la URL.
+
+### A.2 · Publicar
+
+1. **https://console.cloud.google.com/auth/branding** — rellena nombre y correo
+   de asistencia, pega las tres URL en *Dominio de la app*, y añade
+   `mecanicadelhumor.github.io` en *Dominios autorizados*. Guarda.
+2. **https://console.cloud.google.com/auth/audience** — el botón **Publicar app**
+   ya no debería estar gris. Púlsalo.
+3. Confirma el aviso de que la verificación queda pendiente. El estado pasa a
+   **«En producción»**.
+4. **No toques *«Preparar para la verificación»***. Ese es el formulario largo, y
+   sin él seguimos teniendo lo que necesitamos: token que no caduca, tope de 100
+   usuarios (necesitamos uno) y una pantalla de aviso que sale una vez.
+
+### A.3 · Si además pide verificar el dominio
+
+Puede pasar que al añadir `mecanicadelhumor.github.io` en *Dominios autorizados*
+la consola diga que hay que demostrar que es tuyo. Se hace gratis y en cinco
+minutos, y **`github.io` sí se puede verificar** porque cada subdominio de
+usuario cuenta como dominio propio:
+
+1. Entra en **https://search.google.com/search-console** con la misma cuenta.
+2. *Añadir propiedad → Prefijo de URL* →
+   `https://mecanicadelhumor.github.io/mecanica-del-humor/`.
+3. Elige **archivo HTML**: descarga el `googleXXXX.html` que te da y déjalo en la
+   carpeta `docs/` del repositorio. Commit y push.
+4. Espera a que GitHub Pages lo publique (un minuto) y pulsa *Verificar*.
+5. Vuelve a la consola de OAuth: el dominio ya se acepta.
 
 ## Parte B · Sacar un token nuevo (5 minutos)
 
@@ -148,6 +197,14 @@ que en los secretos del repositorio.** Rehacer las partes B y C nunca rompe
 nada, así que ante la duda, se rehace.
 
 ---
+
+## Un efecto secundario que conviene saber
+
+Las tres páginas de `docs/` **no son C10**. C10 —una página por episodio con el
+guion, las figuras y los DOI— sigue aplazado detrás del peldaño S1, y por el
+mismo motivo de siempre: traer tráfico a una puerta por la que nadie entra. Lo
+que hay en `docs/` es el mínimo administrativo que Google exige, más una portada
+honesta. Si algún día se hace C10, se construye encima de esto.
 
 ## Lo que no funciona, para no volver a intentarlo
 

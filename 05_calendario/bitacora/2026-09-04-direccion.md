@@ -298,3 +298,143 @@ vez de con la de marca** — que falla al subir con un error que no dice eso.
 
 Y fuera del repositorio, otra vez: **`.github/workflows/voz_prueba.yml`**, con el
 desplegable de modelo. Sustituye al de esta mañana.
+
+---
+
+# Tercera parte — la prueba de voces, la barrera y el desbloqueo de OAuth
+
+## 1 · Repaso de la barrera (C21): bien hecha, y con una consecuencia que no estaba prevista
+
+Revisado el trabajo de la revisión diaria de hoy. Es sólido, y conviene decir por
+qué para que se repita:
+
+- `comprobarDesbordes()` mide con las propiedades del propio navegador, no con
+  heurísticas; excluye lo que se sale a propósito (el `<svg>` del diagrama
+  horizontal, que sobresale 40 px por diseño) y lo que no tiene caja HTML (los
+  `<text>` de SVG, que se comprueban solo por rectángulo).
+- **Calibró la tolerancia midiendo, no adivinando**: con margen de 1 px de alto
+  habría bloqueado los 21 guiones, porque `line-height` fraccionario hace que
+  `scrollHeight` supere a `clientHeight` entre 3 y 39 px en casi todas las
+  escenas limpias. Puso 50 px de alto y dejó el ancho en 1, que es donde el
+  barrido daba 0.
+- Verificó las tres cosas que había que verificar: que el caso conocido
+  (MDS-009) para el render, que un Short limpio sigue produciendo **exactamente
+  el mismo número de fotogramas** (507), y un barrido de 351 escenas.
+
+**Comprobado por mí, porque era el riesgo de verdad:** la línea
+`pintar(0)` que repone el estado antes de capturar. `pintar(t)` es función pura
+de `t` —no acumula nada, reescribe `innerHTML` desde `dataset.cuenta`— y además
+`capturar(t)` llama a `pintar(t)` antes de cada captura, así que esa línea es
+redundante y no puede alterar ningún fotograma. **La regla 11.5 sigue intacta.**
+
+### La consecuencia: un agujero de calendario que la barrera acaba de abrir
+
+`MDS-013` (martes 9) y `MDS-015` (viernes 11) **no renderizan**. Las notas están
+en `revisiones/`, pero **quien aplica `revisiones/` es la planificación del jueves
+10 — después de que MDS-013 se produzca.** El circuito de propiedad de ficheros
+está pensado para defectos de contenido, que pueden esperar; con un defecto de
+render, esperar cuesta el vídeo.
+
+**No se arregla cambiando la propiedad de los ficheros** —eso volvería a abrir el
+problema del 21 de agosto— sino quitando el defecto de la capa donde está: C21.1
+sube a urgente y es el encargo del lunes.
+
+### Y C21.1 no es lo que decía esta mañana
+
+Los dos hallazgos nuevos lo demuestran: **`MDS-013` desborda con dos palabras**
+(«Ruta *panorámica*.»), porque con cinco palabras o menos la escalera sube
+`.enunciado` a 150 px. **La escalera mide número de palabras y lo que desborda es
+el ancho.** Añadir `.cifra` a esa escalera habría sido repetir el error con otro
+selector.
+
+Lo correcto es cambiar el criterio: **encoger hasta que quepa** —medir, bajar un
+4 %, volver a medir— con suelo de 64 px y la barrera detrás por si el suelo no
+basta. Determinista, sin umbrales que adivinar, y retira la familia entera.
+
+## 2 · La prueba de voces: lo que el oído no podía separar
+
+Silvestre aprobó el cambio: las dos de Gemini mejoran a `edge`, entre ellas no
+supo decidir, y notó que la plana suena más fuerte. Medidas las ondas, el empate
+no lo era — el detalle está en `07_pruebas/prueba-de-voces.md` y en
+`PLAN_DE_CAMBIOS.md` versión 5.1. Lo esencial:
+
+- **La dirigida no lee las instrucciones en voz alta** (la sospecha razonable
+  ante 83 s): su tiempo de voz, 41,3 s, coincide con el de `edge`, 41,4 s. Los 42
+  segundos de más son **silencio**, por una instrucción mía de dejar pausas
+  largas.
+- **La plana corre**: 4,74 palabras por segundo contra las 2,63 del habla
+  natural. Suena «más clara» porque es más densa y no respira.
+- **El volumen no importa**: 2,2 dB en la voz sola, y `montaje.py` normaliza a
+  −14 LUFS.
+- **Cortar por silencios se descarta**: 16 y 33 tramos para 6 escenas, y ningún
+  umbral da 6 (probado a 0,6 · 0,8 · 1,0 s → 8, 5 y 4).
+
+**Decisión: una llamada por escena, sin pedir pausas, y solo en los Shorts.** El
+largo son 40 escenas contra 10 peticiones al día. Seis salvaguardas escritas en
+el plan y en el prompt de la revisión, y la más importante es la primera:
+cualquier fallo de Gemini en una escena la sintetiza `edge-tts` y el vídeo sale
+igual.
+
+## 3 · OAuth: la consola pedía más de lo que decía, y la salida era una web
+
+El botón «Publicar app» no bastaba: para pasar a producción externa hacen falta
+**nombre, correo de asistencia, URL de página principal y URL de política de
+privacidad**. Las dos URL no existían.
+
+**Dos hallazgos, y el primero es una trampa:**
+
+1. **El logotipo fuerza la verificación.** Lo dice la propia consola: «después de
+   subir un logotipo, deberás enviar tu app para verificarla, a menos que…
+   tenga el estado de publicación Prueba». Silvestre había subido `avatar.png`
+   intentando desbloquear el botón, y eso empeoraba el problema. **Se quita.**
+2. **Las dos URL se resuelven con GitHub Pages, gratis y sin inventarse nada.**
+   El repositorio es público, así que Pages no cuesta. Escritas tres páginas en
+   `docs/`: portada, política de privacidad y condiciones.
+
+**La política de privacidad es verdad, y era fácil de escribir porque la verdad
+es simple:** la aplicación no tiene usuarios aparte del propio canal, no recoge
+datos de nadie, no comparte nada, guarda las credenciales como secretos cifrados
+y las métricas que lee son las agregadas del propio canal. Con los enlaces a los
+términos de YouTube y a la política de Google que exige el uso de su API. **No
+hay un dato inventado en ninguna de las tres páginas, ni el nombre ni la cara de
+nadie** (regla 6).
+
+**Esto no es C10.** C10 —una página por episodio con guion, figuras y DOI— sigue
+aplazado detrás del peldaño S1, por el mismo motivo de siempre. Lo de `docs/` es
+el mínimo administrativo más una portada honesta. Si algún día se hace C10, se
+construye encima.
+
+Instrucciones completas, con la ruta de la consola y el paso de Search Console
+por si pide verificar el dominio, en `00_estrategia/TOKEN_DE_YOUTUBE.md`.
+
+## 4 · `07_pruebas/` se adopta como canal formal
+
+La idea es de Silvestre y es buena: hay decisiones que no se pueden tomar
+leyendo. Escrito `07_pruebas/LEEME.md` con la forma que tiene que tener una
+prueba —qué mirar, **una** pregunta concreta, y qué pasa con cada respuesta— y
+la regla de que la respuesta se añade al final del mismo fichero, con fecha y
+firma. Una prueba respondida es la justificación escrita de una decisión.
+
+La revisión diaria tiene ahora instrucción de mirar esa carpeta y de dejar ahí lo
+que necesite que él vea u oiga.
+
+## Ficheros tocados en la tercera parte
+
+- `docs/index.html`, `docs/privacidad.html`, `docs/terminos.html` — **nuevos**.
+- `00_estrategia/TOKEN_DE_YOUTUBE.md` — Parte A reescrita.
+- `00_estrategia/PLAN_DE_CAMBIOS.md` — **versión 5.1**.
+- `00_estrategia/tareas/revision-diaria.md` — espejo, cola de encargos nueva.
+- `07_pruebas/LEEME.md` y `07_pruebas/prueba-de-voces.md` — **nuevos**.
+- `05_calendario/bitacora/2026-09-04-direccion.md` — esto.
+
+**La tarea de revisión diaria está actualizada en el almacén**, no solo en el
+espejo.
+
+## Lo que le toca a Silvestre
+
+1. **GitHub → Settings → Pages → `main` / carpeta `/docs`.** Comprobar que
+   responde antes de volver a la consola de Google.
+2. **Quitar el logotipo** de la pantalla de consentimiento.
+3. Rellenar los cuatro campos y **publicar**. Sin tocar «Preparar para la
+   verificación».
+4. Regenerar el token (partes B y C de `TOKEN_DE_YOUTUBE.md`).

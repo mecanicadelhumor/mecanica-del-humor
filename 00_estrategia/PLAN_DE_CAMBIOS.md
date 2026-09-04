@@ -1311,3 +1311,141 @@ en la revisión del lunes 7, con las miniaturas de los diez Shorts al lado.
   precisamente para llegar al 27 con cifras en vez de opiniones.
 - **C20 (el primer comentario) sigue aplazado.** Ahora hay un «me gusta», no una
   conversación. Entra cuando S3 se mueva.
+
+
+---
+
+# Versión 5.1 · 4 de septiembre, tarde — la prueba de voces, medida
+
+## Lo que se oyó y lo que dicen los números
+
+Silvestre escuchó las tres pistas: **las dos de Gemini mejoran a `edge-tts`**, y
+entre ellas no supo decidir — «parejas, quizá un poco mejor la dirigida», con una
+diferencia de volumen a favor de la plana. Aprobó el cambio.
+
+Medido después sobre las ondas (`07_pruebas/prueba-de-voces/`), el empate no lo
+era:
+
+| | Duración | Voz | Ritmo | RMS | RMS solo voz |
+|---|---|---|---|---|---|
+| Objetivo del guion (MDS-010) | **50,7 s** | — | — | — | — |
+| `edge` (lo de hoy) | 41,4 s | 41,4 s | 2,63 pal/s | — | — |
+| `gemini_plano` | 37,4 s | 23,0 s | **4,74 pal/s** | −18,4 dB | −16,3 dB |
+| `gemini_dirigido` | **83,2 s** | 41,3 s | **2,64 pal/s** | −21,5 dB | −18,5 dB |
+
+Tres conclusiones, y ninguna se podía oír:
+
+1. **La dirigida no está leyendo las instrucciones en voz alta**, que era la
+   sospecha razonable ante 83 segundos. Su tiempo de voz —41,3 s— coincide con el
+   de `edge` —41,4 s— hasta la décima, y su ritmo (2,64 palabras por segundo) es
+   el del español natural. **Los 42 segundos de más son silencio.** El modelo se
+   tomó al pie de la letra la instrucción «deja una pausa clara entre líneas, y
+   donde ponga [pausa] la pausa es larga».
+2. **La plana corre.** 4,74 palabras por segundo de voz es casi el doble del
+   habla natural: mete el guion entero en 23 segundos de voz. Suena «más clara y
+   más fuerte» porque es más densa y no respira, no porque esté mejor dicha.
+3. **La diferencia de volumen es irrelevante.** Con la voz sola son 2,2 dB, los
+   picos de las dos están a menos de 1 dB del máximo, y `montaje.py` normaliza
+   todo a −14 LUFS (`loudnorm=I=-14:TP=-1.5:LRA=11`). En producción esa
+   diferencia desaparece.
+
+**Y la instrucción que estropeó la dirigida la puse yo, para un experimento que
+ya sabemos que falló.** Las pausas largas estaban ahí para poder cortar el audio
+por los silencios y repartirlo entre escenas. El informe dice que no cuadra: 16
+tramos para 6 escenas en la plana, 33 en la dirigida, y ningún umbral de silencio
+da 6 —probado a 0,6 s, 0,8 s y 1,0 s: salen 8, 5 y 4—. **Cortar por silencios se
+descarta.**
+
+## C7.2 · Cómo entra Gemini: una llamada por escena, solo en los Shorts
+
+Descartado el corte por silencios, la única forma de saber cuánto dura cada
+escena es **pedir cada escena por separado**, que además es exactamente la
+arquitectura de hoy — el cambio se reduce a cambiar el motor dentro de
+`sintetizar()`.
+
+| | Llamadas/día | ¿Cabe en 10? |
+|---|---|---|
+| Short de 5–8 escenas | 5–8 | **sí**, con margen para el respaldo |
+| Episodio largo de 40 escenas | 40 | **no** |
+
+**Decisión: los Shorts pasan a Gemini; el episodio largo del sábado se queda en
+`edge-tts`.** Son cinco de cada seis vídeos y son el producto. El largo entra
+cuando sepamos agrupar escenas sin perder el reparto de tiempos, o nunca.
+
+Y la dirección se reescribe **sin la instrucción de las pausas**: las pausas
+entre escenas ya las ponemos nosotros, deterministas, desde `pausa_despues_s`.
+Lo que se le pide al modelo es lo único que `edge-tts` no sabe hacer — que
+cuente en vez de leer, dentro de la escena.
+
+### Las salvaguardas, que son la parte que no se puede improvisar
+
+`voz.py` está autorizado desde el 28/08, pero es el fichero del que cuelga la
+producción diaria. Encargado a la revisión diaria con estas condiciones:
+
+1. **Interruptor con respaldo automático.** Parámetro `--motor {edge,gemini}`.
+   **Cualquier** fallo de Gemini en una escena —cuota, red, respuesta vacía—
+   sintetiza esa escena con `edge-tts` y sigue. Un vídeo con una voz peor es
+   mejor que un día sin vídeo. Es la misma política de degradación que el resto
+   del proyecto.
+2. **Se escribe qué motor se usó**, escena a escena, en `ficha.json`. Si un día
+   la mitad del vídeo sale con voz de respaldo, tiene que verse en el expediente
+   y en `ESTADO.md`, no descubrirse escuchando.
+3. **25 segundos entre llamadas.** El límite es de 3 por minuto. Dos minutos y
+   medio de más en un job de veinte no es nada.
+4. **Control de ritmo por escena.** Palabras dividido entre segundos de audio
+   fuera de 1,6–3,2 es un aviso en `ficha.json`: es la firma de la pista plana,
+   que corría al doble. No bloquea —el vídeo se sincroniza con la duración real,
+   así que no se desincroniza nada— pero se ve.
+5. **El `.srt` no cambia.** Se escribe por bloques de escena (`voz.py` línea
+   302), no por palabra: sobrevive intacto. Lo que muere es el `.ass`, y con él
+   el canario `lineas_ass > 0` de `qa.py`. **Hay que sustituirlo antes de
+   encender Gemini**, no después: sirve que la suma de las duraciones de escena
+   cuadre con la duración del audio final, que es lo que de verdad importa
+   comprobar.
+6. **Se enciende con un episodio, no con la semana.** Primer Short con Gemini el
+   lunes 14. Si `ESTADO.md` de ese día no dice `OK`, se vuelve a `edge` cambiando
+   un valor por defecto.
+
+**Calendario:** el código se escribe la semana del 7 con `--motor edge` por
+defecto —así no toca la producción y no gasta la ranura de cambio de esa semana,
+que es de C19+C16—, y el valor por defecto cambia a `gemini` el lunes 14.
+
+## C21.1 sube a urgente: dos vídeos de la semana que viene no renderizan
+
+La barrera funcionó a la primera y encontró **dos defectos reales que nadie había
+visto**: `MDS-013` (martes 9) y `MDS-015` (viernes 11). Con la barrera puesta,
+esos dos días **no habría vídeo**.
+
+Y hay un agujero de calendario que la barrera acaba de crear y que hay que
+nombrar: **la nota va a `revisiones/`, que aplica la planificación del jueves 10
+— después de que MDS-013 se produzca el martes.** El circuito normal de
+propiedad de ficheros llega tarde cuando el defecto es de render y no de
+contenido.
+
+**Los dos son el mismo fallo de fondo, y no es «texto demasiado largo»:**
+
+- `MDS-015`: `.cifra` con texto («10–16 millones de años»), 233 px de
+  desbordamiento. Tercera vez que aparece este patrón.
+- `MDS-013`: `.enunciado` con **dos palabras** («Ruta *panorámica*.»), 41 px de
+  desbordamiento — porque con cinco palabras o menos la escalera sube la fuente a
+  150 px. **La escalera actual mide número de palabras, y el que desborda es el
+  ancho.** Una palabra larga a 150 px no cabe aunque sea la única.
+
+**Así que C21.1 no es «añadir `.cifra` a la escalera»: es cambiar el criterio.**
+En vez de elegir el tamaño por número de palabras, **se reduce el tamaño hasta
+que quepa**: tras `cargar()`, mientras el elemento desborde y la fuente esté por
+encima del suelo, se baja un 4 % y se vuelve a medir. Determinista, sin umbrales
+que adivinar, y retira la familia entera de estos fallos de una vez.
+
+- **Suelo: 64 px**, que es el mínimo legible de la regla de C2 para 1080×1920.
+- Si al llegar al suelo sigue sin caber, **la barrera salta** — y entonces sí es
+  un guion con demasiado texto, que es lo que la barrera debía cazar.
+- El tamaño se fija una vez en `cargar()`, no por fotograma: mismo guion, mismo
+  píxel.
+
+**Y un segundo hallazgo que no arregla esto:** en MDS-015 el `pie` y el personaje
+se solapan. Es de reparto vertical, no de tamaño de letra, y va aparte.
+
+**Prioridad: es el encargo del lunes 7, por delante de todo.** Si por lo que sea
+no está el lunes, la revisión diaria del lunes o del martes **aplica la excepción
+de 48 horas sobre `MDS-013`** y corrige el guion, que es la red de seguridad.

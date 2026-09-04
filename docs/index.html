@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mecánica del Humor</title>
+<meta name="description" content="Un canal sobre la ciencia del humor: qué se ha medido de verdad sobre por qué nos reímos, y dónde falla lo que se ha medido.">
+<style>
+  :root{
+    --fondo:#0B1220; --reticula:#16213A; --tinta:#F2F4F8;
+    --ambar:#FFB020; --cian:#4CC9F0; --coral:#EF476F; --tenue:#93A0B8;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--fondo); color:var(--tinta);
+    font:17px/1.65 ui-sans-serif,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background-image:linear-gradient(var(--reticula) 1px,transparent 1px),
+                     linear-gradient(90deg,var(--reticula) 1px,transparent 1px);
+    background-size:64px 64px; background-position:-1px -1px;
+  }
+  .env{max-width:44rem; margin:0 auto; padding:4rem 1.5rem 5rem}
+  header{border-bottom:1px solid var(--reticula); padding-bottom:2rem; margin-bottom:2.5rem}
+  h1{font-size:clamp(2rem,7vw,3rem); line-height:1.1; margin:0 0 .4rem; letter-spacing:-.02em}
+  h1 span{color:var(--ambar)}
+  .lema{color:var(--tenue); margin:0; font-size:1.05rem}
+  h2{font-size:1.15rem; margin:2.5rem 0 .6rem; color:var(--cian); letter-spacing:.01em}
+  p{margin:0 0 1rem}
+  a{color:var(--ambar)}
+  a:hover{color:var(--tinta)}
+  ul{padding-left:1.1rem; margin:0 0 1rem}
+  li{margin:.35rem 0}
+  .destacado{
+    border-left:3px solid var(--coral); padding:.2rem 0 .2rem 1rem;
+    color:var(--tenue); margin:1.5rem 0;
+  }
+  .botones{display:flex; flex-wrap:wrap; gap:.75rem; margin:1.75rem 0}
+  .boton{
+    display:inline-block; padding:.6rem 1.1rem; border-radius:.4rem;
+    text-decoration:none; font-weight:600; border:1px solid var(--ambar);
+    color:var(--fondo); background:var(--ambar);
+  }
+  .boton.hueco{background:transparent; color:var(--ambar)}
+  .boton:hover{filter:brightness(1.12); color:var(--fondo); background:var(--ambar)}
+  footer{
+    margin-top:3.5rem; padding-top:1.5rem; border-top:1px solid var(--reticula);
+    color:var(--tenue); font-size:.9rem;
+  }
+  footer a{color:var(--cian)}
+  code{background:var(--reticula); padding:.1rem .35rem; border-radius:.25rem; font-size:.9em}
+</style>
+</head>
+<body>
+<div class="env">
+
+  <header>
+    <h1>Mecánica del <span>Humor</span></h1>
+    <p class="lema">Qué se ha medido de verdad sobre por qué nos reímos — y dónde falla lo que se ha medido.</p>
+  </header>
+
+  <p>
+    <strong>Mecánica del Humor</strong> es un canal de divulgación en español sobre la
+    ciencia del humor. Cada pieza parte de una pregunta que la gente se hace de verdad,
+    la responde con investigación revisada por pares, y termina explicando dónde falla
+    esa respuesta: los estudios pequeños, las correlaciones que no son causas, las
+    técnicas que se vuelven en contra.
+  </p>
+
+  <div class="destacado">
+    Ese último punto no es un adorno. En un tema donde casi todo lo que circula es
+    autoayuda reciclada, decir «esto no está tan claro» es lo único que hace que se
+    pueda creer el resto.
+  </div>
+
+  <div class="botones">
+    <a class="boton" href="https://www.youtube.com/@mecanicadelhumor">Ver el canal en YouTube</a>
+    <a class="boton hueco" href="https://github.com/mecanicadelhumor/mecanica-del-humor">El código, abierto</a>
+  </div>
+
+  <h2>Cómo se hace</h2>
+  <p>
+    El canal está automatizado y su código es público. Los guiones se escriben contra una
+    bibliografía curada; un validador comprueba que ninguna cifra en pantalla salga sin
+    fuente; y la producción —voz, imagen, montaje y publicación— corre sola en GitHub
+    Actions. Todo con herramientas gratuitas.
+  </p>
+  <p>
+    <strong>Se usa inteligencia artificial y se declara en cada vídeo</strong>, aunque no
+    fuera obligatorio. Lo que no se hace: responder comentarios con IA, fingir que hay
+    una persona donde no la hay, ni publicar un dato que no esté en una fuente
+    verificable.
+  </p>
+
+  <h2>Lo que este canal no hace</h2>
+  <ul>
+    <li>Humor a costa de un grupo por serlo.</li>
+    <li>Contenido diseñado para indignar o alarmar.</li>
+    <li>Trucos para manejar a alguien que no sabe que lo están manejando.</li>
+    <li>Afirmaciones sin estudio detrás.</li>
+  </ul>
+
+  <h2>Sobre este sitio</h2>
+  <p>
+    Estas páginas son la información pública del proyecto. No usan cookies, no incluyen
+    analítica ni rastreadores, y no recogen ningún dato de quien las visita.
+    Los detalles, en la <a href="privacidad.html">política de privacidad</a> y en las
+    <a href="terminos.html">condiciones del servicio</a>.
+  </p>
+
+  <footer>
+    Contacto: <a href="mailto:mecanicadelhumor@gmail.com">mecanicadelhumor@gmail.com</a><br>
+    <a href="privacidad.html">Privacidad</a> ·
+    <a href="terminos.html">Condiciones</a> ·
+    <a href="https://github.com/mecanicadelhumor/mecanica-del-humor">Código fuente</a>
+  </footer>
+
+</div>
+</body>
+</html>

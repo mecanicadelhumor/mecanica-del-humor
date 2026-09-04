@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — Mecánica del Humor</title>
+<meta name="description" content="Qué datos trata la aplicación de Mecánica del Humor: ninguno de terceros. Solo la cuenta de YouTube del propio canal.">
+<style>
+  :root{--fondo:#0B1220;--reticula:#16213A;--tinta:#F2F4F8;--ambar:#FFB020;--cian:#4CC9F0;--tenue:#93A0B8}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--fondo);color:var(--tinta);
+    font:17px/1.65 ui-sans-serif,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .env{max-width:44rem;margin:0 auto;padding:3.5rem 1.5rem 5rem}
+  h1{font-size:clamp(1.7rem,5vw,2.3rem);line-height:1.15;margin:0 0 .35rem;letter-spacing:-.02em}
+  .fecha{color:var(--tenue);margin:0 0 2.5rem;font-size:.95rem}
+  h2{font-size:1.1rem;margin:2.2rem 0 .6rem;color:var(--cian)}
+  p{margin:0 0 1rem}
+  a{color:var(--ambar)}
+  ul{padding-left:1.1rem;margin:0 0 1rem}
+  li{margin:.4rem 0}
+  .clave{border-left:3px solid var(--ambar);padding:.2rem 0 .2rem 1rem;margin:1.5rem 0}
+  code{background:var(--reticula);padding:.1rem .35rem;border-radius:.25rem;font-size:.88em;word-break:break-all}
+  footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--reticula);color:var(--tenue);font-size:.9rem}
+  footer a{color:var(--cian)}
+</style>
+</head>
+<body>
+<div class="env">
+
+<h1>Política de privacidad</h1>
+<p class="fecha">Mecánica del Humor · última actualización: 4 de septiembre de 2026</p>
+
+<div class="clave">
+  <strong>El resumen honesto:</strong> esta aplicación no tiene usuarios aparte de quien
+  opera el canal. No recoge, almacena ni comparte datos de ninguna otra persona. Solo
+  publica vídeos en el canal de YouTube de su propio operador y lee las estadísticas de
+  ese mismo canal.
+</div>
+
+<h2>Quién es responsable</h2>
+<p>
+  «Mecánica del Humor» es un proyecto personal sin ánimo de lucro que publica el canal de
+  YouTube <a href="https://www.youtube.com/@mecanicadelhumor">@mecanicadelhumor</a>. Para
+  cualquier cuestión relacionada con esta política:
+  <a href="mailto:mecanicadelhumor@gmail.com">mecanicadelhumor@gmail.com</a>.
+</p>
+
+<h2>Qué es «la aplicación»</h2>
+<p>
+  El canal se produce y se publica de forma automatizada. El código es público y está en
+  <a href="https://github.com/mecanicadelhumor/mecanica-del-humor">github.com/mecanicadelhumor/mecanica-del-humor</a>.
+  Para subir los vídeos y leer las métricas del canal, ese código usa los
+  <strong>YouTube API Services</strong> mediante un cliente de OAuth 2.0 propio. Ese
+  cliente es lo que aquí se llama «la aplicación».
+</p>
+<p>
+  La aplicación <strong>no se ofrece a terceros</strong>. No hay registro, no hay
+  usuarios, no hay interfaz pública: es la automatización interna de un canal, autorizada
+  una sola vez por la cuenta de Google propietaria de ese canal.
+</p>
+
+<h2>A qué datos accede, y por qué</h2>
+<p>
+  La aplicación solicita autorización sobre <strong>una única cuenta de Google: la del
+  propio canal</strong>. Los permisos que pide y para qué sirve cada uno:
+</p>
+<ul>
+  <li><code>youtube.upload</code> — subir a ese canal los vídeos que el propio proyecto ha
+      generado.</li>
+  <li><code>youtube.force-ssl</code> — asociar a esos vídeos su miniatura, sus subtítulos y
+      su lista de reproducción.</li>
+  <li><code>yt-analytics.readonly</code> — leer las estadísticas de ese canal
+      (visualizaciones, retención, suscriptores) para decidir qué producir después.</li>
+</ul>
+<p>
+  No se accede a datos de espectadores, de suscriptores ni de ninguna otra cuenta. Las
+  métricas que se leen son las agregadas que YouTube ofrece al propietario de su propio
+  canal, y no identifican a nadie.
+</p>
+
+<h2>Qué se almacena, dónde y cuánto tiempo</h2>
+<ul>
+  <li><strong>Las credenciales</strong> (identificador de cliente, secreto y token de
+      actualización) se guardan como <em>secretos cifrados</em> del repositorio de GitHub
+      y solo son legibles por los procesos automáticos del propio proyecto. No aparecen en
+      el código, ni en los registros, ni en ningún fichero publicado.</li>
+  <li><strong>Las métricas agregadas del canal</strong> se guardan en el repositorio
+      público, en un fichero JSON, porque son estadísticas del propio canal y no contienen
+      ningún dato personal.</li>
+  <li><strong>Nada más.</strong> No hay base de datos, ni perfiles, ni histórico de
+      terceros.</li>
+</ul>
+<p>
+  La autorización se puede revocar en cualquier momento desde
+  <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+  Al revocarla, la aplicación deja de funcionar de inmediato y el token deja de ser válido.
+</p>
+
+<h2>Con quién se comparte</h2>
+<p>
+  <strong>Con nadie.</strong> No se venden, ceden ni transfieren datos a terceros. No hay
+  publicidad, ni patrocinadores, ni herramientas de rastreo, ni servicios de analítica
+  externos. Los únicos servicios implicados son los de Google/YouTube, que son el destino
+  natural de la operación, y GitHub, donde vive el código y se ejecuta la automatización.
+</p>
+
+<h2>Este sitio web</h2>
+<p>
+  Estas páginas son ficheros estáticos servidos por GitHub Pages. <strong>No usan
+  cookies</strong>, no incluyen analítica, no cargan recursos de terceros y no recogen
+  ningún dato de quien las visita. GitHub, como proveedor del alojamiento, puede registrar
+  las peticiones a su servidor según sus propias políticas.
+</p>
+
+<h2>YouTube API Services</h2>
+<p>
+  Al usar los YouTube API Services, esta aplicación está sujeta a los
+  <a href="https://www.youtube.com/t/terms">Términos del Servicio de YouTube</a> y trata los
+  datos conforme a la
+  <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a>.
+</p>
+
+<h2>Cambios en esta política</h2>
+<p>
+  Si cambia, se actualiza la fecha del encabezado y queda constancia del cambio en el
+  historial público del repositorio, que es donde vive este fichero.
+</p>
+
+<footer>
+  <a href="index.html">Mecánica del Humor</a> ·
+  <a href="terminos.html">Condiciones</a> ·
+  <a href="mailto:mecanicadelhumor@gmail.com">mecanicadelhumor@gmail.com</a>
+</footer>
+
+</div>
+</body>
+</html>

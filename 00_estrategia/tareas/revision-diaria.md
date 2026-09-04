@@ -1,16 +1,20 @@
 # Tarea programada · Revisión diaria — Mecánica del Humor
 
 **Copia legible del prompt que corre en el almacén de tareas programadas.**
-Espejo creado el 31/08/2026, **reescrito el 04/09/2026**. `id`: `trig_019QjtovuzeUocmx1P8NJH3F` · cron: `28 9 * * * (UTC) · todos los días 11:28 hora de España` ·
+Espejo creado el 31/08/2026, **reescrito el 04/09/2026 (mañana y tarde)**. `id`: `trig_019QjtovuzeUocmx1P8NJH3F` · cron: `28 9 * * * (UTC) · todos los días 11:28 hora de España` ·
 modelo: `claude-sonnet-5`.
 
 > ⚠️ **Esta copia no se ejecuta.** La que corre es la del almacén. Si cambias
 > algo aquí, cámbialo también allí con `update_trigger`, o quedarán distintas
 > y este fichero mentirá.
 
-**Qué cambió el 04/09:** el criterio de `INCIDENCIA` (estaba al revés), la
-revisión del vídeo pasa a ser diaria, entra la regla 14 de los dos canales, y
-la cola de encargos se reordena entera alrededor de la barrera de `render.py`.
+**Qué cambió el 04/09 por la mañana:** el criterio de `INCIDENCIA` (estaba al
+revés), la revisión del vídeo pasa a ser diaria, entra la regla 14 de los dos
+canales, y la cola de encargos se reordena alrededor de la barrera de `render.py`.
+
+**Y por la tarde, con la barrera ya aplicada:** la cola cambia otra vez —C21.1
+sube a urgente porque dos Shorts de la semana que viene no renderizan— y entra
+el encargo de C7 (Gemini TTS) con sus seis salvaguardas.
 
 ---
 
@@ -104,7 +108,8 @@ Si `registro_publicaciones.json` no tiene la entrada esperada y la parrilla sí 
 - El `estado` que ves es el del **momento de la subida**. En modo `automatico`, lo normal es `private` con `publicar_en` a la hora de la parrilla: eso es correcto. `private` **sin** `publicar_en` en una emisión de la parrilla sí es un fallo, y grave: ese vídeo no sale nunca (le pasó a MDH-004 el 29/08).
 - **El retraso es normal, la ausencia no.** El cron tiene tres intentos (01:13, 04:47 y 08:23 UTC) y `cola.py` no repite lo ya subido. Si a tu hora falta la entrada del día, ya han pasado los tres: eso sí es incidencia.
 - **Si la subida falló, la causa más probable es el token de YouTube.** El 01/09 el canal se quedó un día sin publicar por un `YT_REFRESH_TOKEN` caducado y no se supo hasta que Silvestre miró los logs a mano. El 04/09 se resolvió de raíz sacando la aplicación de OAuth del modo de prueba, así que **no debería volver a pasar**; si vuelve a pasar, dilo con esas palabras en `ESTADO.md` («posible token de YouTube caducado o revocado») para que él sepa dónde mirar sin investigar.
-- **`qa.py` corre DESPUÉS de la subida en `producir.yml`: es un informe, no una barrera.** La barrera de verdad es la de `render.py` (encargo 1).
+- **CAUSA NUEVA desde el 04/09: la barrera.** `render.py` falla el render si un texto no cabe en su caja, así que **un vídeo puede faltar porque la barrera hizo su trabajo**, no porque algo esté roto. Antes de escribir «posible token caducado», mira el log del paso de render en `producir.yml`: si dice `C21 · LA BARRERA`, la causa es el guion y viene con el número de escena y el texto. En ese caso `ESTADO.md` va como `INCIDENCIA` diciendo exactamente eso, y el arreglo es tuyo (excepción de 48 h sobre ese guion, o el ajuste de `escena.html`).
+- **`qa.py` corre DESPUÉS de la subida en `producir.yml`: es un informe, no una barrera.** La barrera de verdad es la de `render.py`.
 
 ## Paso 3 — revisión del vídeo (TODOS los días)
 
@@ -121,12 +126,39 @@ Deja de ser «lunes y jueves»: el 03/09 se publicó un Short con una palabra co
 
 **Encargos abiertos, en este orden:**
 
-1. **LA BARRERA. `render.py` + `escena.html`: fallar si algún texto se sale de su caja.** Es el encargo más importante que tienes y va antes que cualquier otra cosa. Después de pintar cada escena y antes de capturar, comprueba en el navegador, para todos los elementos de texto (`.cifra`, `.enunciado`, `h1`, `h2`, `.pie`, `li`, `.titulo`), si `scrollWidth > clientWidth + 1` o `scrollHeight > clientHeight + 1`, y también si el rectángulo del elemento se sale del lienzo. Si algo se sale, **`raise SystemExit` con el número de escena, el selector y el texto**, igual que ya se hace cuando falla FFmpeg (`render.py` línea 220). El render corre antes que `publicar.py`, así que un fallo aquí impide que se suba nada: es la primera barrera real del proyecto, y es determinista, no depende de que nadie mire. Un día sin vídeo es más barato que un vídeo con una palabra partida. Caso con el que verificarlo: MDS-009, escena 3, `cifra: "Más generosos"` a 300 px en un lienzo de 1080 — tiene que dar error.
-2. **`.cifra` no se ajusta a su contenido.** A diferencia de `.enunciado`, que encoge con `txt-xs`/`txt-s` según el número de palabras (`escena.html` líneas 557-561), `.cifra` es un tamaño fijo (280 px en horizontal, 300 px en vertical). Extiende esa escalera a `.cifra` — y también a `.pie` y a `ul.lista`, que ya dieron el problema en MDS-007 el 01/09. Con la barrera del encargo 1 ya puesta, este cambio se puede verificar sin adivinar: si el umbral está mal, el render falla y lo ves. Riesgo pendiente en `MDH-005` (`cifra: "El peor de los cuatro"`).
-3. **`validar_guion.py`: aviso de los dos canales.** Determinista, sin red. Para cada escena, saca las palabras de contenido (quitando artículos, preposiciones, pronombres, conjunciones y auxiliares) de `texto`, `cifra` y `pie`, y **avisa** (no error) de las que no aparecen en la `narracion` de esa escena, comparando por raíz (los primeros 5-6 caracteres en minúsculas sin tildes basta). Sobre MDS-009 tiene que avisar de «dinero» y «mesa» en la escena 2. Es tosco a propósito: no decide, señala dónde mirar, exactamente como el aviso de C17 — que el 03/09 hizo que la planificación tirara un guion entero a la basura antes de publicarlo.
-4. **`04_agentes/prueba_voz.py` — la prueba de las voces (C7).** Ya está escrito y en el repositorio desde el 04/09; corre por `workflow_dispatch` con el workflow `voz_prueba.yml`. **No lo toques salvo que falle**; si falla, arréglalo y dilo — es lo que desbloquea el cambio que más le importa a Silvestre.
-5. **La música (C18), parte de red.** Ampliar a diez o doce pistas está **bloqueado**: el proxy del contenedor no llega a Incompetech ni a FreePD (comprobado el 03/09). La rotación ya está blindada contra duplicados por sha256. No lo vuelvas a intentar cada día: si el 4 no está resuelto, sáltalo.
-6. **`04_agentes/metricas.py`: el CSV de Studio no se lee.** `glob.glob(EXPORTES / "*.csv")` no es recursivo y Studio deja los CSV en una subcarpeta. **Cuidado:** exporta **tres** (`Datos de la tabla.csv`, `Datos del gráfico.csv`, `Totales.csv`) y `sorted(...)[-1]` elegiría el que no sirve. Busca recursivamente y quédate con el primero cuya cabecera tenga a la vez columna de contenido/vídeo y de impresiones. Verifícalo contra el que ya existe: 1.821 impresiones y 1,43 % de CTR en «Total». Prioridad baja: el CSV es opcional desde el 31/08.
+1. **C21.1 · QUE EL TEXTO SE ENCOJA HASTA CABER. Urgente: dos vídeos dependen de esto.** Tu barrera del 04/09 encontró que `MDS-013` (martes 09/09) y `MDS-015` (viernes 11/09) **no renderizan**. Las notas están en `revisiones/`, pero **la planificación que las aplica corre el jueves 10, después de que MDS-013 se produzca**: el circuito normal llega tarde. Y los dos son el mismo fallo de fondo, que **no es «texto demasiado largo»**: MDS-013 desborda con **dos palabras** («Ruta *panorámica*.») porque con cinco o menos la escalera sube `.enunciado` a 150 px. **La escalera mide número de palabras y lo que desborda es el ancho.**
+   **Así que no añadas `.cifra` a la escalera: cambia el criterio.** Después de `cargar()`, para cada elemento de texto, mientras desborde su caja y la fuente esté por encima del suelo, **baja el tamaño un 4 % y vuelve a medir**. Determinista, sin umbrales que adivinar, y retira la familia entera de estos fallos.
+   - **Suelo: 64 px** (el mínimo legible de 1080×1920, regla de C2).
+   - Si al llegar al suelo sigue sin caber, **que salte la barrera**: entonces sí es un guion con demasiado texto.
+   - El tamaño se fija **una vez en `cargar()`**, no por fotograma: mismo guion, mismo píxel.
+   - Verifícalo con el mismo barrido de los 21 guiones: los tres problemas conocidos tienen que desaparecer y no puede aparecer ninguno nuevo.
+   **Red de seguridad:** si esto no está listo el lunes 7, aplica la **excepción de 48 horas sobre `MDS-013`** y corrige el guion. No dejes que llegue el martes sin una de las dos cosas.
+
+2. **El solape del `pie` con el personaje** (MDS-015, escena 3). Es reparto vertical, no tamaño de letra, así que C21.1 no lo arregla. Cuando hay `personaje`, el bloque de texto tiene que reservar su sitio.
+
+3. **C7 · `voz.py` pasa a Gemini TTS en los Shorts.** `voz.py` está autorizado desde el 28/08, pero de él cuelga la producción diaria, así que **el código se escribe la semana del 7 con `--motor edge` por defecto** —no toca la producción, no gasta la ranura de cambio de esa semana— y el valor por defecto cambia a `gemini` el **lunes 14**. Razonamiento completo en `PLAN_DE_CAMBIOS.md`, versión 5.1. Lo que hay que hacer:
+   - **Una llamada por escena**, igual que hoy: es la única forma de saber cuánto dura cada escena. Cortar el audio por silencios se probó el 04/09 y **no funciona** (16 y 33 tramos para 6 escenas; ningún umbral da 6). No lo reintentes.
+   - **Solo `formato: corto`.** Un largo de 40 escenas son 40 peticiones y el nivel gratuito da **10 al día**. El sábado se queda en `edge-tts`.
+   - **Modelo** `gemini-3.1-flash-tts-preview`, voz `Charon` para el narrador y `Puck` para el escéptico. **25 segundos entre llamadas** (el límite es 3 por minuto).
+   - **Dirección corta por escena, y SIN pedir pausas**: las pausas entre escenas las ponemos nosotros desde `pausa_despues_s`. Pedir pausas largas fue lo que infló la prueba a 83 s. Lo que se le pide al modelo es que **cuente en vez de leer**, dentro de la escena.
+   - **Respaldo automático:** cualquier fallo en una escena —cuota, red, respuesta vacía— la sintetiza con `edge-tts` y sigue. Un vídeo con voz peor es mejor que un día sin vídeo.
+   - **`ficha.json` dice qué motor se usó, escena a escena**, y si hubo respaldo se dice en `ESTADO.md`. No se descubre escuchando.
+   - **Aviso de ritmo:** palabras entre segundos de audio fuera de 1,6–3,2 va como aviso en `ficha.json`. Es la firma de la voz que corre al doble, que es lo que hizo la pista «plana» de la prueba.
+   - **Antes de encender Gemini, sustituye el canario.** El `.srt` se escribe por bloques de escena (`voz.py` línea 302) y sobrevive intacto, pero el `.ass` muere y con él `lineas_ass > 0` de `qa.py`. El canario nuevo: que la suma de las duraciones de escena cuadre con la duración del audio final.
+
+4. **El campo `icono` para C19**, encargado por la planificación el 03/09. `esquema_guion.json` no tiene forma de expresar un icono de `02_marca/iconos.svg`, y sin eso la escena 1 de un Short no puede dejar de ser una tarjeta de texto. Un campo `icono` admisible en cualquier escena, más su soporte en `escena.html`.
+
+5. **`validar_guion.py`: aviso de los dos canales (C22).** Determinista, sin red. Para cada escena, saca las palabras de contenido de `texto`, `cifra` y `pie` y **avisa** (no error) de las que no aparecen en la `narracion` de esa escena, comparando por raíz. Sobre MDS-009 tiene que avisar de «dinero» y «mesa»; el hallazgo de MDS-011 del 04/09 es exactamente el caso que habría señalado solo.
+
+6. **La música (C18).** **Bloqueado por red** y confirmado varias veces: el proxy no llega a Incompetech ni a FreePD. **No lo reintentes cada día.**
+
+7. **`04_agentes/metricas.py`: el CSV de Studio no se lee.** `glob.glob(EXPORTES / "*.csv")` no es recursivo y Studio deja los CSV en una subcarpeta con **tres** ficheros (`sorted(...)[-1]` elegiría el que no sirve). Busca recursivamente y quédate con el primero cuya cabecera tenga columna de contenido/vídeo y de impresiones. Verifícalo: 1.821 impresiones y 1,43 % de CTR en «Total». Prioridad baja: el CSV es opcional desde el 31/08.
+
+**`04_agentes/prueba_voz.py` ya cumplió su función el 04/09 y no hay que tocarlo.**
+
+## Y una carpeta nueva: `07_pruebas/`
+
+Silvestre la creó el 04/09 para dejar ahí material que hay que mirar y escucharlo o verlo por uno mismo — empezando por `07_pruebas/prueba-de-voces/`. **Es un buzón de ida y vuelta:** si necesitas que él pruebe algo (escuchar dos audios, mirar dos capturas, decidir entre dos opciones), déjalo ahí con un `.md` al lado que diga qué tiene que mirar y qué pregunta contesta. Y mira si hay algo nuevo dirigido a ti. Lee `07_pruebas/LEEME.md`.
 
 ## Paso 5 — cierra la bitácora
 

@@ -72,6 +72,7 @@ conversación» se pierde con la conversación, así que aquí queda por escrito
 | `03_produccion/pipeline/montaje.py` | **Autorizado el 28/08/2026, solo para una cosa** | El manifiesto de subtítulos (`montaje.json`), ya aplicado. Cualquier otro cambio necesita permiso nuevo |
 | `.github/workflows/producir.yml` | **Sigue protegido** | Y además `.github/workflows/` no se puede escribir en remoto: se le manda el fichero a Silvestre |
 | `.github/workflows/voz_prueba.yml` | **Entregado el 04/09, lo crea Silvestre a mano** | Prueba de C7. `workflow_dispatch` solo, no escribe en el repositorio |
+| `docs/` (la web del proyecto) | **De Silvestre y mío**, desde el 04/09 | Tres páginas estáticas que Google exige para publicar la aplicación de OAuth. **No es C10** |
 
 **Y una cosa que ya no hace falta recordar de memoria:** cómo se saca el token de
 YouTube y por qué caducaba está en **`00_estrategia/TOKEN_DE_YOUTUBE.md`**, con
@@ -167,6 +168,26 @@ mirando.
 de concluir que no cabe. Y cuando el límite es de frecuencia y no de volumen,
 casi siempre se arregla pidiendo menos veces, no pidiendo menos cosa.
 
+**9. Un arreglo puede abrir un agujero en otra regla.**
+La barrera de C21 hace lo que debía —el 04/09 encontró dos Shorts de la semana
+siguiente que no renderizan— pero convirtió un defecto que podía esperar al
+jueves en uno que deja sin vídeo el martes. Y quien aplica las notas de
+`revisiones/` es la planificación del jueves, o sea **después**. La propiedad de
+ficheros está pensada para defectos de contenido; con uno de render llega tarde.
+→ Cuando pongas una comprobación que puede **parar** algo, mira qué circuito
+resolvía antes ese problema y si sigue llegando a tiempo. La salida no fue
+cambiar la propiedad —eso reabre el desastre del 21 de agosto— sino quitar el
+defecto de la capa donde estaba (C21.1).
+
+**10. La escalera medía palabras y lo que desbordaba era el ancho.**
+`MDS-013` se sale del lienzo con **dos palabras**, porque con cinco o menos
+`escena.html` sube la fuente a 150 px. Durante semanas se habló de este fallo
+como «texto demasiado largo» y se iba a arreglar añadiendo `.cifra` a la misma
+escalera — es decir, repitiendo el error con otro selector.
+→ Si mides un sustituto de lo que te importa (número de palabras) en vez de lo
+que te importa (que quepa), el fallo vuelve con otra cara. Mide lo que importa:
+encoge hasta que quepa.
+
 ## Dónde está el proyecto a 4 de septiembre de 2026
 
 **El número se ha empezado a mover.** Tres Shorts seguidos por encima de 20
@@ -211,9 +232,10 @@ proyecto, y no toca `producir.yml`.
 |---|---|
 | sem. 31 ago | MDS-006 a 010, motor C15. **Veredicto: entra.** El número se movió |
 | vie 4 sep | **C23** — Silvestre publica la aplicación de OAuth y regenera el token |
-| sem. 7 sep | **C19 + C16** — el primer segundo deja de ser una tarjeta de texto. Cuenta como un solo cambio. En paralelo, **C21** (la barrera) y la **prueba de voces**, que no tocan el producto |
+| **04 sep** | **C21 aplicado y verificado** (351 escenas, cero falsos positivos). La **prueba de voces** contestada: Gemini gana, ver `07_pruebas/` |
+| sem. 7 sep | **C19 + C16** — el primer segundo deja de ser una tarjeta de texto. Cuenta como un solo cambio. **Y C21.1 el lunes, urgente**: `MDS-013` (martes 9) y `MDS-015` (viernes 11) no renderizan hoy |
 | lun 7 sep | Con el primer vídeo después de C23: comprobar que sigue subiendo `private` + `publicar_en` y no bloqueado como privado |
-| sem. 14 sep | **C7 escalón 2** — Gemini TTS con dirección. El escalón 1 (dos voces de `edge-tts`) se descartó el 4/09 |
+| sem. 14 sep | **C7 escalón 2** — Gemini TTS, **una llamada por escena y solo en los Shorts**. El código se escribe la semana del 7 con `edge` por defecto. El escalón 1 se descartó el 4/09 |
 | después | **C24** — variedad visual por serie |
 | **dom 27 sep** | **Punto de control.** ¿Algún Short ha pasado de 100 visualizaciones en 48 h? Tres desenlaces en `PLAN_DE_CAMBIOS.md` versión 4 |
 
