@@ -713,8 +713,111 @@ function pintar(t){
   }
 })();
 
+// ===================================================================
+// C21 · La barrera. Después de cargar() y de pintar() la escena en su
+// estado asentado, render.py llama a esto antes de capturar un solo
+// fotograma. Devuelve la lista de elementos de texto cuyo contenido no
+// cabe en su caja, o que se salen del lienzo — nunca decide nada aquí:
+// solo mide con las mismas propiedades que ya usa el navegador
+// (scrollWidth/clientWidth, scrollHeight/clientHeight) y compara cada
+// rectángulo con el tamaño real de la página. render.py es quien para
+// el render si la lista no está vacía.
+//
+// Caso con el que se verificó (MDS-009, escena 3, "Más generosos" a
+// 300px en un lienzo de 1080): antes de esto pasaba sin que nadie lo
+// viera hasta que ya estaba público. Con esto, `.cifra` desbordando el
+// ancho de su caja para el render con un SystemExit.
+// ===================================================================
+function comprobarDesbordes(){
+  // .titulo no es una clase en este CSS: el título de una escena vive en
+  // <h1> (tipo "titulo") o en <h2> (cabecera de "lista"/"comparacion"/
+  // "diagrama"/"figura"), y las dos ya están en esta lista.
+  //
+  // .caja queda FUERA de esta lista y se comprueba aparte (ver abajo):
+  // el diagrama horizontal («mecanismo del chiste») mete un <svg
+  // style="margin-left:-40px;width:calc(100% + 80px)"> a propósito, así
+  // que .caja.scrollWidth es sistemáticamente 40px mayor que su
+  // clientWidth en TODAS las escenas «diagrama» horizontales — no es un
+  // desbordamiento, es el diseño. Lo que importa de .caja es si eso la
+  // saca del lienzo, y eso ya lo cubre el rectángulo.
+  const SELECTORES = [
+    ".cifra", ".cifra-pie", ".enunciado", "h1", "h2", ".pie", "li",
+    "blockquote", ".tx", ".et", ".pt", ".pp", ".autor", ".sub",
+    "#remate .n", "#remate .q", "ul.lista", "svg text"
+  ];
+  // Solo para el rectángulo contra el lienzo, no para scrollWidth/Height.
+  const SELECTORES_SOLO_LIENZO = [".caja"];
+
+  // Calibrado el 04/09/2026 renderizando los 21 guiones ya escritos con
+  // este mismo motor: sin ningún desbordamiento real, scrollHeight supera
+  // a clientHeight entre 3 y 39 px en CASI TODAS las escenas —line-height
+  // fraccionario (p.ej. .cifra usa .9) y el redondeo de métricas de fuente
+  // lo hacen sistemático, no un fallo. Un margen de 1 px (como sí vale
+  // para el ancho, donde el mismo barrido dio 0 en cada escena limpia)
+  // habría bloqueado el render de los 21 guiones sin excepción. 50 px deja
+  // margen sobre el máximo observado (39) y sigue muy por debajo de lo que
+  // mediría una línea de texto entera sin pintar (ver constantes de tipo
+  // más arriba: nunca menos de 72 px de fuente). El ancho no tiene este
+  // problema — 0 px de margen de sobra en cada escena limpia del barrido,
+  // así que se deja en el +1 de siempre.
+  const TOL_ANCHO = 1;
+  const TOL_ALTO = 50;
+
+  const W = document.documentElement.clientWidth;
+  const H = document.documentElement.clientHeight;
+  const vistos = new Set();
+  const problemas = [];
+
+  function medir(el, sel, soloLienzo){
+    if (vistos.has(el)) return;
+    vistos.add(el);
+    // getClientRects vacío = no está en el árbol de render (p.ej. dentro
+    // de #remate cuando la escena no es el cierre en vertical, o un `li`
+    // de una lista que no se ha montado). Nada que medir.
+    if (el.getClientRects().length === 0) return;
+
+    const r = el.getBoundingClientRect();
+    const fueraLienzo = r.left < -1 || r.top < -1 || r.right > W + 1 || r.bottom > H + 1;
+
+    // scrollWidth/clientWidth solo existen (con sentido) en elementos
+    // HTML normales. Un <text> de SVG no los tiene: para ese caso basta
+    // con el rectángulo, que sí es real en las dos familias de elemento.
+    let desbordaAncho = false, desbordaAlto = false;
+    if (!soloLienzo && el instanceof HTMLElement){
+      desbordaAncho = el.scrollWidth > el.clientWidth + TOL_ANCHO;
+      desbordaAlto = el.scrollHeight > el.clientHeight + TOL_ALTO;
+    }
+
+    if (desbordaAncho || desbordaAlto || fueraLienzo){
+      problemas.push({
+        selector: sel,
+        texto: (el.textContent || "").trim().replace(/\s+/g, " ").slice(0, 140),
+        scrollWidth: el.scrollWidth || null, clientWidth: el.clientWidth || null,
+        scrollHeight: el.scrollHeight || null, clientHeight: el.clientHeight || null,
+        rect: { left: Math.round(r.left), top: Math.round(r.top),
+                 right: Math.round(r.right), bottom: Math.round(r.bottom) },
+        lienzo: { W, H },
+        desbordaAncho, desbordaAlto, fueraLienzo
+      });
+    }
+  }
+
+  for (const sel of SELECTORES){
+    let nodos;
+    try { nodos = document.querySelectorAll(sel); } catch (err) { continue; }
+    nodos.forEach(el => medir(el, sel, false));
+  }
+  for (const sel of SELECTORES_SOLO_LIENZO){
+    let nodos;
+    try { nodos = document.querySelectorAll(sel); } catch (err) { continue; }
+    nodos.forEach(el => medir(el, sel, true));
+  }
+  return problemas;
+}
+
 window.cargar = cargar;
 window.pintar = pintar;
+window.comprobarDesbordes = comprobarDesbordes;
 </script>
 </body>
 </html>

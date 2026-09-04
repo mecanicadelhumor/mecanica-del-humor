@@ -148,6 +148,46 @@ def render(guion_path, salida, fps=30, escala=1.0, solo=None, verbose=True):
         for e in escenas:
             n_uds = pag.evaluate("d => cargar(d)", e)
             dur = e["duracion_s"]
+
+            # C21 · LA BARRERA. Se pinta la escena en su estado asentado —
+            # con el revelado por palabra terminado y, si `cifra` empieza por
+            # un número, con el contador ya en su valor final, que es la
+            # forma más ancha que va a tener nunca ese texto — y se comprueba
+            # en el propio navegador si algo no cabe en su caja o se sale del
+            # lienzo. Esto corre ANTES de la primera captura de la escena:
+            # si algo se sale, no se genera ni un solo fotograma más y no se
+            # llega a `publicar.py`, que corre después en `producir.yml`.
+            #
+            # Se comprueba una vez por escena, no por fotograma: el texto ya
+            # está entero en el DOM desde `cargar()` (la animación solo mueve
+            # opacidad y `transform`, que no cambian scrollWidth/clientWidth),
+            # así que su tamaño de caja no cambia entre fotogramas — lo único
+            # que sí puede crecer con el tiempo es el "acercamiento lento"
+            # (2,2 % a lo largo de la escena) y el contador de `cifra`, y los
+            # dos están en su punto máximo en `t = dur`.
+            pag.evaluate("t => pintar(t)", dur)
+            problemas = pag.evaluate("() => comprobarDesbordes()")
+            if problemas:
+                detalle = "\n".join(
+                    f"    - selector {p['selector']!r}: {p['texto']!r}\n"
+                    f"      scrollWidth={p['scrollWidth']} clientWidth={p['clientWidth']} "
+                    f"scrollHeight={p['scrollHeight']} clientHeight={p['clientHeight']}\n"
+                    f"      rect={p['rect']} lienzo={p['lienzo']} "
+                    f"(ancho={p['desbordaAncho']}, alto={p['desbordaAlto']}, "
+                    f"fuera_de_lienzo={p['fueraLienzo']})"
+                    for p in problemas
+                )
+                nav.close()
+                shutil.rmtree(tmp, ignore_errors=True)
+                raise SystemExit(
+                    f"C21 · LA BARRERA: texto que no cabe en su caja.\n"
+                    f"  guion={guion.get('id', '?')}  escena={e['n']}  tipo={e.get('tipo')}\n"
+                    f"{detalle}\n"
+                    f"No se ha generado ni un solo fotograma de esta escena. "
+                    f"Corrige el guion o `escena.html` y vuelve a lanzar el render."
+                )
+            pag.evaluate("t => pintar(t)", 0)  # se repone el estado de entrada antes de capturar
+
             t_fin_ent = min((max(n_uds - 1, 0) * ESCALONADO) + ENTRADA, max(dur - SALIDA, 0.1))
             t_ini_sal = max(dur - SALIDA, t_fin_ent)
             estatico = max(0.0, t_ini_sal - t_fin_ent)
