@@ -226,6 +226,21 @@
       "musica": "cama_03_haru_lofi_roa.mp3",
       "subido_utc": "2026-09-03T01:35:15Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-010.es",
+      "episodio": "MDS-010",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué un chiste explicado pierde la gracia? Lo hago con el mío",
+      "guion": "05_calendario/guiones/MDS-010.es.json",
+      "video_id": "mKnPS9k26bY",
+      "url": "https://youtu.be/mKnPS9k26bY",
+      "estado": "private",
+      "publicar_en": "2026-09-04T17:00:00Z",
+      "musica": "cama_01_crying_over_you_christophermorrow.mp3",
+      "subido_utc": "2026-09-04T01:28:36Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-08-31T08:41:41Z"

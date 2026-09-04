@@ -1,11 +1,11 @@
 {
-  "id": "MDS-004.es",
-  "duracion_final_s": 60.2,
-  "tamano_mb": 4.0,
+  "id": "MDS-010.es",
+  "duracion_final_s": 47.4,
+  "tamano_mb": 8.8,
   "audio": {
-    "lufs": -14.68,
-    "pico_dbtp": -1.33,
-    "rango_lu": 3.6
+    "lufs": -14.59,
+    "pico_dbtp": -1.24,
+    "rango_lu": 6.6
   },
   "silencio_inicial": {
     "empieza_s": -0.17,
@@ -30,10 +30,10 @@
   },
   "subtitulos": {
     "ass_existe": true,
-    "lineas_ass": 120,
+    "lineas_ass": 109,
     "srt_existe": true,
-    "quemados": null,
-    "quemados_origen": "sin manifiesto de montaje.py: no se puede verificar",
+    "quemados": false,
+    "quemados_origen": "leído de montaje.json",
     "_esperado": {
       "quemados": false,
       "lineas_ass": "> 0"
@@ -45,21 +45,21 @@
     "sha256": "4143a4c48067539963eeff663f43e8c1f880f4e4c1428972a69ed75d0aa28e44"
   },
   "guion": {
-    "titulo_trabajo": "Los cuatro estilos de humor, y cuál te sale más caro",
+    "titulo_trabajo": "Por qué un chiste explicado deja de tener gracia",
     "idioma": "es",
     "voz": "es-ES-AlvaroNeural",
     "escenas": 6,
-    "duracion_narracion_s": 59.37,
+    "duracion_narracion_s": 47.13,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 13.556
+    "escena_mas_larga_s": 9.332
   },
   "fotogramas_s": [
-    6.61,
-    14.8,
-    25.72,
-    37.3,
-    47.6,
-    56.68
+    5.7,
+    12.29,
+    19.56,
+    27.06,
+    35.37,
+    44.28
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
