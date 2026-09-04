@@ -71,6 +71,7 @@ conversación» se pierde con la conversación, así que aquí queda por escrito
 | `03_produccion/pipeline/voz.py` | **Autorizado el 28/08/2026** | Abierto. Se pidió para C7 (dos voces), pero Silvestre no lo acotó |
 | `03_produccion/pipeline/montaje.py` | **Autorizado el 28/08/2026, solo para una cosa** | El manifiesto de subtítulos (`montaje.json`), ya aplicado. Cualquier otro cambio necesita permiso nuevo |
 | `.github/workflows/producir.yml` | **Sigue protegido** | Y además `.github/workflows/` no se puede escribir en remoto: se le manda el fichero a Silvestre |
+| `.github/workflows/voz_prueba.yml` | **Entregado el 04/09, lo crea Silvestre a mano** | Prueba de C7. `workflow_dispatch` solo, no escribe en el repositorio |
 
 Otra decisión de propiedad, del 28/08: `01_bibliografia/BIBLIOGRAFIA_CURADA.md`
 pasa a ser de la **revisión diaria**, que antes no tenía dueño y por eso
@@ -139,71 +140,88 @@ no una barrera. Se leyó durante semanas como si fuera un control de calidad pre
 revisión diaria de las 11:30, dentro de la ventana de ~15 h entre subida y
 publicación. Y no puede cancelar nada: solo avisar en `ESTADO.md`.
 
-## Dónde está el proyecto a 31 de agosto de 2026
+**7. «No puedo arreglarlo» se convirtió en «no lo digo».**
+El 3 de septiembre la revisión diaria encontró, siete horas y media antes de
+publicarse, que el Short del día tenía la palabra «generosos» cortada contra el
+borde. Lo describió con precisión — y **no lo marcó como incidencia**, razonando
+que no podía cancelar la publicación. Silvestre lo descubrió ya publicado.
+→ Un agente que no puede arreglar algo tiene **más** motivo para avisar, no
+menos. Y sobre todo: no le pidas a un revisor que vea a ojo lo que una condición
+booleana puede comprobar. Un texto que no cabe en su caja es
+`scrollWidth > clientWidth`. Ver C21.
 
-**Ya hay números, y son duros.** Tres semanas de canal, dos de Shorts:
+## Dónde está el proyecto a 4 de septiembre de 2026
 
-| | Vistas de por vida | Suscriptores | Comentarios | Me gusta |
+**El número se ha empezado a mover.** Tres Shorts seguidos por encima de 20
+visualizaciones —**31, 21 y 21**— contra una mediana de 11 en la primera tanda, y
+el primer «me gusta» del canal. Sigue lejos del umbral de S1 (50 desde el feed en
+48 h) pero es la primera señal buena, y llega justo después de C15.
+
+| | Vistas | Suscriptores | Comentarios | Me gusta |
 |---|---|---|---|---|
-| MDH-001 · 002 · 003 (largos) | 13 · 28 · 8 | 0 | 0 | 4 |
-| MDS-001 a 005 (Shorts) | 6 · 11 · 13 · 3 · 11 | 0 | 0 | **0** |
+| MDH-001 · 002 · 003 · 004 (largos) | 13 · 28 · 8 · — | 0 | 0 | 4 |
+| MDS-001 a 005 (primera tanda) | 6 · 11 · 13 · 3 · 11 | 0 | 0 | 0 |
+| MDS-006 a 009 (con C15) | hasta **31**, tres seguidos > 20 | 0 | 0 | **1** |
 
-**El canal está en el peldaño S1 de la escalera nueva —que el feed de Shorts nos
-pruebe— a un factor diez del umbral.** El criterio de aceptación de C2 (al menos
-un Short por encima de 50 visualizaciones en 48 h) falló y se siguió produciendo
-igual; queda dicho en `PLAN_DE_CAMBIOS.md`, versión 4.
+**El canal sigue en el peldaño S1** de la escalera de la versión 4, y la rama del
+punto de control del 27 en la que estamos hoy es la segunda: va lento, el camino
+es bueno, se sigue.
 
-**El único indicio bueno es la búsqueda:** MDS-002 sacó el 63,6 % de sus
-visualizaciones de `YT_SEARCH` y MDS-003 el 46,2 %, mientras el feed de Shorts
-—la superficie sobre la que se construyó toda la fase 1— aporta entre el 9 % y el
-23 %. Números minúsculos, pero es la única señal direccional que hay.
+**El único indicio direccional sigue siendo la búsqueda:** 63,6 % de las
+visualizaciones de MDS-002 y 46,2 % de MDS-003 salieron de `YT_SEARCH`. De ahí
+dos consecuencias que ya son operativas: el **título** y el **`.srt`** de un Short
+son distribución, no adorno; y la **miniatura de un Short sí se ve** —en los
+resultados de búsqueda, aunque no en el feed.
 
-**La publicación es automática desde hoy.** `parrilla.json` lleva `modo:
-automatico` de MDS-006 en adelante; `cola.py` sube en privado con `publishAt` y
-YouTube publica solo. MDH-004 (sábado 29) fue el último en modo `revision`: se
-quedó oculto dos días hasta que Silvestre lo vio. Nadie mira el vídeo antes de que
-salga y **`qa.py` corre después de la subida, así que es un informe y no una
-barrera**: decisión consciente de Silvestre, tomada con la audiencia actual
-delante.
+**Lo que se rompió esta semana, y lo que se ha hecho al respecto:**
+
+- El 1 de septiembre el canal no publicó: `YT_REFRESH_TOKEN` caducado por el modo
+  «Prueba» de OAuth. **Resuelto de raíz el 4/09 con C23**: la aplicación se
+  publica sin pedir verificación y el token deja de caducar.
+- El 3 de septiembre se publicó un Short con una palabra cortada y con una escena
+  que decía en pantalla algo que la voz no menciona. **De ahí salen C21 (la
+  barrera en `render.py`), la regla 14 de `REGLAS.md` y el criterio de incidencia
+  corregido.**
+
+**La publicación es automática** y `qa.py` sigue corriendo después de la subida.
+La diferencia desde hoy es que **`render.py` sí puede decir que no**: si un texto
+no cabe, el render falla y no se sube nada. Es el primer control previo real del
+proyecto, y no toca `producir.yml`.
 
 **Lo que está en verificación, y en qué orden. Un cambio por producción:**
 
 | Cuándo | Qué se mira |
 |---|---|
-| sem. 31 ago | **MDS-006, primer Short con C15.** La revisión diaria lo mira todos los días. Ningún cambio visual más entra hasta verlo |
-| jue 3 sep | Prueba real del cron de `demanda.yml` con dos horas |
-| sem. 7 sep | **C19 + C16** — el primer segundo deja de ser una tarjeta de texto, y entra el vocabulario dibujado empezando por la escena 1. Cuenta como un solo cambio |
-| sem. 14 sep | **C7 escalón 1** — dos voces (`voz.py` autorizado desde el 28/08) |
-| **dom 27 sep** | **Punto de control.** ¿Algún Short ha pasado de 100 visualizaciones en 48 h? Los tres desenlaces están escritos en `PLAN_DE_CAMBIOS.md`, versión 4 |
+| sem. 31 ago | MDS-006 a 010, motor C15. **Veredicto: entra.** El número se movió |
+| vie 4 sep | **C23** — Silvestre publica la aplicación de OAuth y regenera el token |
+| sem. 7 sep | **C19 + C16** — el primer segundo deja de ser una tarjeta de texto. Cuenta como un solo cambio. En paralelo, **C21** (la barrera) y la **prueba de voces**, que no tocan el producto |
+| lun 7 sep | Con el primer vídeo después de C23: comprobar que sigue subiendo `private` + `publicar_en` y no bloqueado como privado |
+| sem. 14 sep | **C7 escalón 2** — Gemini TTS con dirección. El escalón 1 (dos voces de `edge-tts`) se descartó el 4/09 |
+| después | **C24** — variedad visual por serie |
+| **dom 27 sep** | **Punto de control.** ¿Algún Short ha pasado de 100 visualizaciones en 48 h? Tres desenlaces en `PLAN_DE_CAMBIOS.md` versión 4 |
 
-**Cambios de gobierno del 31/08:**
+**Decisiones del 4/09 que conviene no volver a discutir:**
 
-- **Se acabaron las notificaciones.** Las `PushNotification` que mandaban los
-  agentes no le llegaban a Silvestre, y él no las quiere. Los tres prompts las
-  tienen prohibidas. En su lugar, la revisión diaria mantiene
-  **`05_calendario/ESTADO.md`**, un fichero de cinco líneas que sobrescribe cada
-  día: estado OK o incidencia, último vídeo, próxima emisión, y una línea
-  «Pendiente de Silvestre» que **casi siempre dice «nada»**.
-- **Nadie vuelve a pedir el CSV de Studio.** Era trabajo recurrente (regla 5) y
-  además nunca iba a medir los Shorts, porque Studio no da impresiones ni CTR para
-  ellos. La escalera de Shorts se mide entera con la API.
-- **Los prompts de las tres tareas programadas están espejados en
-  `00_estrategia/tareas/`.** Vivían solo en el almacén de tareas programadas y no
-  se podían leer sin arqueología. Ahora se leen en el repositorio — pero **la copia
-  que corre es la del almacén**: si editas el fichero, actualiza también la tarea.
+- **El canal puede entretener.** Un vídeo no tiene que ser educativo para valer,
+  mientras cumpla `REGLAS.md`. Está en la regla 3.
+- **`pertinencia_top5` descuenta cifras, no descarta temas.** Que una pregunta la
+  responda hoy el entretenimiento y no la divulgación es un **hueco**, no una
+  señal de que el tema no sea nuestro.
+- **No se amplía el tema todavía**, y el motivo no es la impaciencia: con C19,
+  C16 y C7 sin soltar no se sabe qué está fallando, y ampliar ahora destruye la
+  única medición limpia que vamos a tener el 27.
+- **El escalón 1 de C7 está descartado**, no aplazado.
 
-**Lo que está escrito y sin hacer:** el estimador de duración de
-`validar_guion.py`, que asume 150 palabras/minuto cuando la voz real hace 130 en
-Shorts; MDH-006, 007 y 008 sin adaptar al formato nuevo, a propósito, uno por
-semana; el arreglo de C20 (el primer comentario ya no se publica en modo
-automático), aplazado a propósito hasta que haya comentarios; y 46 fichas de la
-bibliografía con el DOI «por verificar».
+**Lo que sigue escrito y sin hacer:** el estimador de duración de
+`validar_guion.py` (asume 150 palabras/minuto y la voz real hace 130 en Shorts);
+MDH-007 y 008 sin adaptar, uno por semana; C20 (el primer comentario en modo
+automático), aplazado a propósito; la ampliación de música de C18, **bloqueada
+por red** desde los contenedores de las tareas —Incompetech y FreePD no están en
+la lista blanca—; y 46 fichas de bibliografía con el DOI «por verificar».
 
-**Lo que se decidió y conviene no volver a discutir:** no se clona la voz de
-Silvestre por ahora; no se encienden los subtítulos quemados; no se usan fotos de
-banco de imágenes; no hace falta tarjeta, porque `gemini-3.1-flash-tts-preview`
-tiene nivel gratuito con la salida de audio incluida; y no entra C10 (una página
-por episodio) aunque la búsqueda funcione — sigue detrás del peldaño S1.
+**Y lo de siempre:** no se clona la voz de Silvestre por ahora; no se encienden
+los subtítulos quemados; no se usan fotos de banco de imágenes; y no entra C10
+aunque la búsqueda funcione — sigue detrás del peldaño S1.
 
 ## Qué NO hace falta meter en el prompt
 

@@ -1,0 +1,59 @@
+name: Prueba de voces
+
+# ---------------------------------------------------------------------------
+# La prueba de C7, escalón 2. NO forma parte de la producción y NO tiene cron:
+# solo corre cuando alguien le da al botón.
+#
+# POR QUÉ ES UN WORKFLOW Y NO UNA TAREA PROGRAMADA
+# ------------------------------------------------
+# Las tareas programadas salen a internet por un proxy con lista blanca: el
+# 03/09 la revisión diaria no pudo llegar ni a Incompetech ni a FreePD. Aquí
+# no hay esa restricción, y además es donde vive GEMINI_API_KEY. Mismo motivo
+# por el que `demanda.yml` mide en Actions y la planificación solo juzga.
+#
+# QUÉ HACE: genera tres audios del mismo guion —edge-tts (lo de hoy),
+# Gemini escena a escena, y Gemini en una sola llamada con dirección de
+# actor— y los sube como artefacto. Silvestre los escucha y decide.
+#
+# NO ESCRIBE NADA EN EL REPOSITORIO. Solo deja un artefacto que caduca solo.
+# ---------------------------------------------------------------------------
+
+on:
+  workflow_dispatch:
+    inputs:
+      guion:
+        description: "Guion a locutar (ruta desde la raíz del repositorio)"
+        type: string
+        default: "05_calendario/guiones/MDS-010.es.json"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: voz-prueba
+  cancel-in-progress: true
+
+jobs:
+  locutar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Dependencias
+        run: pip install --quiet "edge-tts>=7,<8" google-genai
+
+      - name: Locutar las tres versiones
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 04_agentes/prueba_voz.py "${{ inputs.guion }}" --salida prueba_voz
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prueba-de-voces
+          path: prueba_voz/
+          retention-days: 14

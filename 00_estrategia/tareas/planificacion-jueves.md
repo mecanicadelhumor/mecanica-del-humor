@@ -1,7 +1,7 @@
 # Tarea programada · Planificación semanal — jueves noche
 
 **Copia legible del prompt que corre en el almacén de tareas programadas.**
-Espejo creado el 31/08/2026. `id`: `trig_015qkb2sqbbJwJE1qgoNMK95` · cron: `0 20 * * 4 (UTC) · jueves 22:00 hora de España` ·
+Espejo creado el 31/08/2026, sincronizado el 04/09/2026. `id`: `trig_015qkb2sqbbJwJE1qgoNMK95` · cron: `0 20 * * 4 (UTC) · jueves 22:00 hora de España` ·
 modelo: `claude-opus-5`.
 
 > ⚠️ **Esta copia no se ejecuta.** La que corre es la del almacén. Si cambias
@@ -40,13 +40,13 @@ Lee `00_estrategia/PROPIEDAD_DE_FICHEROS.md`. El 21 de agosto la revisión diari
 
 Repositorio público: https://github.com/mecanicadelhumor/mecanica-del-humor
 
-**Lee `00_estrategia/` entero antes de nada** (`LEEME.md`, `REGLAS.md`, `PLAN_DE_CAMBIOS.md`, `PROPIEDAD_DE_FICHEROS.md`).
+**Lee `00_estrategia/` entero antes de nada** (`LEEME.md`, `REGLAS.md`, `PLAN_DE_CAMBIOS.md`, `PROPIEDAD_DE_FICHEROS.md`). En `PLAN_DE_CAMBIOS.md` **manda la versión 5**, que está al final.
 
 Lo esencial: **un solo canal, en español** (el inglés lo sirve el doblaje automático de YouTube; no escribas guiones ingleses). **Cinco Shorts, lunes a viernes a las 19:00, y un episodio largo el sábado a las 12:00.**
 
 Lee también `04_agentes/prompts/guionista_corto.md` (el oficio del Short), `guionista.md`, `chistologo.md`, `verificador.md`, `04_agentes/esquema_guion.json`, `01_bibliografia/BIBLIOGRAFIA_CURADA.md`, y `05_calendario/guiones/MDS-001.es.json` como referencia.
 
-**Dónde está el canal (31 de agosto):** peldaño 1, distribución. Cinco Shorts en su primera semana sumaron 44 visualizaciones entre los cinco; el criterio de aceptación de C2 —al menos uno por encima de 50 en 48 horas— falló por un factor de diez. Cero suscriptores, cero comentarios. **El único indicio bueno del corpus es la búsqueda:** MDS-002 sacó el 63,6 % de sus visualizaciones de `YT_SEARCH` y MDS-003 el 46,2 %, mientras el feed de Shorts apenas empuja. Eso manda sobre el punto 2 de abajo.
+**Dónde está el canal (4 de septiembre):** peldaño S1, que el feed nos pruebe. La primera tanda de Shorts sumó 44 visualizaciones entre los cinco; con el motor C15 los tres últimos han hecho **31, 21 y 21**, y ha llegado el primer «me gusta» del canal. Sigue lejos del umbral —50 desde el feed en 48 horas— pero por primera vez el número se mueve en la dirección buena. **El único indicio direccional sigue siendo la búsqueda:** MDS-002 sacó el 63,6 % de sus visualizaciones de `YT_SEARCH` y MDS-003 el 46,2 %, mientras el feed de Shorts apenas empuja. Eso manda sobre el punto 2 y sobre el punto 4: a la búsqueda le importan la pregunta y el título, no la serie.
 
 ## Qué hacer, en este orden
 
@@ -72,6 +72,12 @@ Si `demanda_bruta.json` no existe o viene con avisos, **dilo en la bitácora y s
 
 **Un rechazo que ya está decidido:** el candidato «a las mujeres les atraen los hombres graciosos» **no se hace**, ni así ni reformulado en neutro. Humor y atracción está prohibido como tema de Short y en episodio largo solo cabe con las tres condiciones de `REGLAS.md`. Cualquier candidato que dé por supuesto lo que quiere una mujer o un hombre por el hecho de serlo se rechaza en la fase de demanda.
 
+**Dos aclaraciones del 04/09, de Silvestre, y las dos van en la misma dirección.**
+
+**El canal puede entretener.** Un vídeo no tiene que ser educativo para valer: si entretiene y cumple `REGLAS.md` —nada inventado, nadie como víctima, la fuente donde toca—, es un vídeo bueno. No descartes una pregunta por «poco divulgativa». Está en la regla 3.
+
+**Y `pertinencia_top5` descuenta cifras, no descarta temas.** El campo que te inventaste el 03/09 está bien pensado y se queda: cuando once de veinte consultas devuelven sketches y canciones, sus 63 millones de visualizaciones no miden demanda de respuesta y ordenar por esa cifra escribe la semana al revés. Pero eso es lo único para lo que sirve. **Que hoy responda esa pregunta el entretenimiento y no la divulgación es un hueco, no una señal de que el tema no sea nuestro** — de hecho es la definición de un sitio donde nadie ha llegado. Si tenemos con qué responderla honestamente, es candidata buena, no mala.
+
 ### 2. Escribe los cinco Shorts de la semana
 
 `MDS-0XX.es.json`, uno por día de lunes a viernes.
@@ -87,16 +93,30 @@ Las dos reglas concretas:
 
 Cada Short: `"formato": "corto"`, `"serie": "..."`, 3–8 escenas, 18–55 s, ninguna escena de más de 12 s, el gancho en el segundo cero, la pausa de 1,2–1,5 s antes del remate, el personaje reaccionando después y el cierre diciendo dónde falla.
 
+**Y la regla 14, nueva del 04/09, que se comprueba escena por escena: los dos canales.**
+
+Un Short se ve mudo en el metro y se escucha con el móvil en el bolsillo. Las dos mitades tienen que sostenerse solas. No tienen que decir lo mismo; ninguna puede dejar al espectador sin saber de qué se le habla.
+
+1. **Lo que escribas en `texto`, `cifra` o `pie` tiene que estar sostenido por la `narracion` de esa misma escena.** El texto puede decir menos que la voz. **No puede introducir un dato que la voz no dice.**
+2. **Lo esencial de la narración tiene que tener correlato en pantalla**, aunque sea con otras palabras.
+3. **La cara del personaje concuerda con lo que se está diciendo.** `duda` y `no_le_hace_gracia` se leen como cara triste a tamaño de móvil: no van en una escena que solo presenta el experimento.
+
+**El caso que la escribió, y es tuyo: MDS-009, escena 2.** La voz decía «Curry y Dunbar preguntaron a la gente de qué se reía y les emparejaron con desconocidos» y en pantalla ponía «Con dinero encima de la *mesa*» — con cara de duda. El dinero venía de tu `tesis` y no se menciona en ninguna escena del Short. Quien lo vio mudo leyó una frase suelta; quien lo escuchó no supo nunca que había dinero. Pasó las cuatro revisiones y se publicó. `validar_guion.py` va a avisar de esto, pero el aviso solo señala: el juicio es tuyo.
+
+**Y el texto tiene que caber.** Ocho palabras por escena en vertical es el tope, y una `cifra` de más de dos palabras se sale del lienzo (le pasó a MDS-009 con «Más generosos»). Desde el 04/09 el render **falla** si algo no cabe: un guion con una `cifra` larga ya no sale mal, sale como un día sin vídeo.
+
 **Y el chiste va primero.** Se escribe el chiste —uno que contarías en voz alta a un amigo sin la explicación detrás— y después se mira qué mecanismo tiene dentro. Si el mecanismo que querías explicar no está en ningún chiste bueno, **se cambia de mecanismo, no de chiste**. La prueba del algodón: si para que tenga gracia hay que explicar algo antes, no vale. Está desarrollado en `04_agentes/prompts/guionista_corto.md`, con MDS-005 como ejemplo negativo.
 
 ### 3. Adapta el episodio largo del sábado siguiente — solo ese
 
-Quedan MDH-006 a MDH-008 escritos pero **sin adaptar**. Adapta solo el que se emite el sábado siguiente:
+Quedan MDH-007 y MDH-008 escritos pero **sin adaptar**. Adapta solo el que se emite el sábado siguiente:
 
 - recortar a **4–6 minutos** (el validador da error por encima de 400 s),
 - rehacer el gancho: **la primera risa antes del segundo quince**, y dos por episodio;
 - añadir `personaje` en tres o cuatro escenas y una o dos intervenciones del escéptico (`"voz": "esceptico"`, menos de doce palabras);
 - **escenas más cortas y más numerosas**: obliga a que cada escena tenga una sola idea.
+
+**MDH-007 (el del 19 de septiembre) necesita además un título nuevo**, como tú misma dejaste anotado el 03/09: «gelotofobia» suma 9.025 visualizaciones entre diez resultados y no lo busca nadie; «por qué se ríen de mí» y «miedo a que se rían de ti» sí se buscan.
 
 ### 4. Metadatos de publicación
 

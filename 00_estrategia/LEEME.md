@@ -37,26 +37,40 @@ los días) y **`05_calendario/metricas.json`** (los números).
    (C19 + C16, y luego C7) mueve el número. Si el 27 ningún Short ha pasado de
    100 visualizaciones y la mediana sigue por debajo de 20, el problema no es la
    ejecución sino el tema, y toca ampliarlo.
+5. **Y desde el 4 de septiembre hay una quinta línea:** dos vídeos salieron rotos
+   en una semana (texto cortado, y una escena que decía en pantalla algo que la
+   voz no menciona). El proyecto no tenía **ninguna** comprobación capaz de
+   impedir una publicación. Ahora sí — ver C21 y la regla 14.
 
-## Estado a 31 de agosto
+## Estado a 4 de septiembre
 
-Las fases 1 y 2 están hechas. La publicación es **automática** desde hoy: nadie
-tiene que darle a publicar. Lo que queda por delante está en la versión 4 de
-`PLAN_DE_CAMBIOS.md`, con fechas.
+Las fases 1 y 2 están hechas y la publicación es automática. **Y por primera vez
+el número se mueve:** 31, 21 y 21 visualizaciones en los tres últimos Shorts,
+contra una mediana de 11 en la primera tanda, y el primer «me gusta» del canal.
+Llega justo después de C15, que es lo que ese cambio prometía. Seguimos en el
+peldaño S1 y por debajo del umbral, pero en la rama buena de las tres que están
+escritas para el 27 de septiembre.
+
+Lo que queda por delante está en la **versión 5** de `PLAN_DE_CAMBIOS.md`, al
+final, que es la que manda.
 
 **Decisiones tomadas** (el razonamiento, en `PLAN_DE_CAMBIOS.md`):
 
 - **Un solo canal, en español.** El inglés se sirve con el doblaje automático de
   YouTube. Se reabre `@humormechanics` solo si las pistas dobladas superan el
   25 % del tiempo de visionado a las ocho semanas.
-- **No se clona la voz de Silvestre por ahora.** Su condición —que no salga de un
-  entorno local o muy seguro— es incompatible con un repositorio público y
-  runners sin GPU. En su lugar, dos voces por `edge-tts` y, después, Gemini TTS.
+- **No se clona la voz de Silvestre por ahora.** En su lugar, Gemini TTS con
+  dirección de actor. **El escalón intermedio de dos voces de `edge-tts` se
+  descartó el 4 de septiembre:** no arregla el ritmo, que es lo que está roto.
 - **Los subtítulos quemados se retiraron** por decisión editorial. No los vuelvas
   a encender: el motivo está en `MEJORAS.md` del 20/08 y en C6.1.
 - **Ni notificaciones ni CSV a mano.** Los agentes no avisan a Silvestre: dejan
-  `05_calendario/ESTADO.md` escrito. Y las métricas de los Shorts se leen enteras
-  con la API, sin que nadie exporte nada.
+  `05_calendario/ESTADO.md` escrito.
+- **La aplicación de OAuth sale del modo de prueba** (C23), para que el token de
+  YouTube deje de caducar cada siete días. Publicar no es verificar: no hace
+  falta inventarse ni una web ni una política de privacidad.
+- **Hay una barrera antes de publicar** (C21): `render.py` falla si un texto no
+  cabe en su caja, y como corre antes que `publicar.py`, nada se sube roto.
 
 ## Relación con los documentos que ya existían
 

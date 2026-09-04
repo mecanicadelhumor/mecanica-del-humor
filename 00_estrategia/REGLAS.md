@@ -67,6 +67,20 @@ Es la regla que separa «responder a lo que la gente se pregunta» de «clickbai
 Si una pregunta con mucha demanda no tiene respaldo en las 77 obras, **no se hace el
 vídeo**: se anota en `05_calendario/pendientes_de_fuente.md`.
 
+### Entretener también vale
+
+*Añadida el 4 de septiembre, por decisión de Silvestre.*
+
+**Un vídeo no tiene que ser educativo para valer.** Si entretiene y cumple las reglas de
+arriba —nada inventado, nadie como víctima, la fuente donde toca—, es un vídeo bueno. El
+canal explica la ciencia del humor; no está obligado a que cada pieza sea una lección.
+
+Y su corolario, que es donde estaba el riesgo: cuando la medición de demanda dice que
+una pregunta la responde hoy el entretenimiento y no la divulgación, **eso es un hueco,
+no una señal de que el tema no es nuestro.** Sirve para descontar la cifra de
+visualizaciones del top 10 —que en ese caso mide otra cosa— y no para descartar la
+pregunta.
+
 ## 4. Cero coste
 
 Todo el sistema funciona en el plan gratuito. Si una propuesta requiere pagar algo —una
@@ -158,3 +172,33 @@ le está pidiendo al espectador que se fíe de una promesa que el propio vídeo 
 
 Mínimo: **dos risas por vídeo largo, una de ellas antes del segundo quince.** En un Short,
 una, y va primero.
+
+## 14. Los dos canales: se ve mudo y se escucha a ciegas
+
+*Añadida el 4 de septiembre, después de MDS-009.*
+
+Un Short se ve sin sonido en el metro y se escucha con el móvil en el bolsillo. **Las dos
+mitades del vídeo tienen que sostenerse solas.** No tienen que decir lo mismo —para eso
+sobraría una— pero ninguna de las dos puede dejar al espectador sin saber de qué se le
+está hablando.
+
+1. **Lo que se ve tiene que estar sostenido por lo que se oye en esa misma escena.** El
+   texto de pantalla puede decir menos que la voz. **No puede introducir un dato que la
+   voz no dice.**
+2. **Lo esencial de la narración tiene que tener correlato en pantalla**, aunque sea con
+   otras palabras.
+3. **La cara del personaje concuerda con lo que se está diciendo.** `duda` y
+   `no_le_hace_gracia` se leen como cara triste a tamaño de móvil: no van en una escena
+   que solo presenta el experimento.
+
+**El caso que la escribió.** MDS-009, escena 2: la voz decía «Curry y Dunbar preguntaron a
+la gente de qué se reía y les emparejaron con desconocidos», y en pantalla ponía «Con
+dinero encima de la *mesa*». El dinero no se menciona en ningún momento del Short —venía
+de la tesis del guion, que sí lo explicaba—, y la cara era de duda sobre una frase que no
+tenía nada de dudoso. Quien lo vio mudo leyó una frase suelta; quien lo escuchó no supo
+nunca que había dinero. Pasó las cuatro revisiones y se publicó.
+
+**Y una consecuencia que no es de accesibilidad sino de distribución:** el `.srt` y el
+título son lo que hace encontrable un vídeo, y la búsqueda es hoy la única superficie que
+responde en este canal —el 63,6 % y el 46,2 % de las visualizaciones de MDS-002 y MDS-003.
+Un vídeo que solo se entiende viéndolo es además un vídeo que YouTube no sabe indexar.

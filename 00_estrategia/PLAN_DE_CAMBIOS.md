@@ -3,10 +3,12 @@
 **Versión 3 · 21 de agosto de 2026** — con las decisiones tomadas y la fase 1 y
 media de la fase 2 ya escritas en el repositorio.
 
-> ⚠️ **Hay una versión 4, al final de este documento (31 de agosto).** Sustituye
-> la escalera de métricas de C14 por dos escaleras —una para Shorts y otra para el
-> episodio largo— y añade C17 a C20. Si vas a decidir algo con este plan, léela
-> antes: la primera lectura con datos cambió el orden de la cola.
+> ⚠️ **La versión que manda es la 5, al final de este documento (4 de
+> septiembre).** La 4 (31 de agosto) sustituyó la escalera de métricas de C14 por
+> dos escaleras —una para Shorts y otra para el episodio largo— y añadió C17 a
+> C20. La 5 resuelve la caducidad del token de YouTube, pone la primera barrera
+> real antes de publicar, cambia el rumbo de C7 y añade C21 a C23. **Si vas a
+> decidir algo con este plan, lee las dos secciones finales antes.**
 
 Este documento es **ejecutable**. Cada cambio trae qué archivos toca, qué tiene que ser
 cierto para darlo por hecho, y qué no hay que hacer. El razonamiento está en
@@ -1019,3 +1021,257 @@ haya alguien a quien contestar. Entra cuando S3 se mueva.
   11:30, que ve el vídeo dentro de la ventana de ~15 h entre subida y publicación.
   Decisión de Silvestre del 31/08, tomada con la audiencia actual delante: un mal
   vídeo hoy no cuesta nada, y él lo puede retirar. Se revisa cuando haya público.
+
+
+---
+
+# Versión 5 · 4 de septiembre de 2026 — dejar de publicar vídeos rotos
+
+Todo lo anterior sigue vigente salvo lo que esta sección corrige expresamente.
+Cinco decisiones, una de ellas de infraestructura y cuatro de producto.
+
+## Dónde está el canal esta mañana
+
+Tres Shorts seguidos por encima de 20 visualizaciones —**31, 21 y 21**— contra
+una mediana de 11 en la primera tanda. Un «me gusta», el primero del canal. El
+umbral de S1 sigue siendo 50 desde el feed en 48 horas y seguimos por debajo,
+pero por primera vez el número se mueve en la dirección buena y **se mueve desde
+que entró C15**, que es exactamente lo que el cambio prometía. La rama del punto
+de control del 27 en la que estamos hoy es la segunda: «va lento, el camino es
+bueno, se sigue».
+
+Y en la misma semana, dos vídeos rotos: MDS-007 con la lista tapada (01/09) y
+MDS-009 con «generosos» cortado y una escena que decía en pantalla algo que la
+voz no menciona (03/09). Los dos se publicaron. **Ese es el problema de esta
+versión.**
+
+---
+
+## C21 · La barrera: el render falla si el texto no cabe
+
+**Lo que pasó.** El 3 de septiembre se publicó un Short en el que la escena 3
+ponía «Más gener» — la palabra estaba cortada contra el borde del lienzo porque
+`.cifra` tiene un tamaño fijo (300 px en vertical) sin ningún ajuste por
+longitud. La revisión diaria lo encontró a las 11:30, siete horas y media antes
+de publicarse, lo describió con precisión, y **decidió no marcarlo como
+incidencia** razonando que no podía cancelar la publicación. Nadie lo vio hasta
+que lo vio Silvestre, ya publicado.
+
+**El diagnóstico, que no es «hay que revisar mejor».** Un texto que no cabe en su
+caja es una condición booleana. Pedirle a un agente que la vea mirando cinco
+fotogramas es pedirle que haga a ojo lo que el navegador ya sabe con exactitud.
+Llevamos dos semanas construyendo revisiones cada vez más finas sobre un pipeline
+que no tiene **ni una sola comprobación que pueda decir que no**: `qa.py` corre
+después de subir (trampa 6), y la revisión diaria no toca YouTube.
+
+**La decisión.** `render.py` gana una barrera. Después de pintar cada escena y
+antes de capturarla, comprueba en el navegador, para cada elemento de texto, si
+`scrollWidth > clientWidth + 1`, si `scrollHeight > clientHeight + 1` o si su
+rectángulo se sale del lienzo. Si algo se sale, **`SystemExit` con el número de
+escena, el selector y el texto** — igual que ya se hace cuando falla FFmpeg.
+
+**Por qué esto sí es una barrera y `qa.py` no lo era:** el render corre *antes*
+que `publicar.py` en `producir.yml`. Un fallo aquí impide que se suba nada. Es la
+primera vez que el proyecto tiene un control previo a la publicación, y se
+consigue **sin tocar `producir.yml`**, que está protegido.
+
+**El precio, aceptado a sabiendas:** un día sin vídeo si la barrera salta y nadie
+lo arregla en el día. Con veinte espectadores, un hueco cuesta menos que una
+palabra partida. Se revisa cuando haya público.
+
+**Después, y solo después, el arreglo de fondo (C21.1):** extender a `.cifra`, a
+`.pie` y a `ul.lista` la escalera `txt-xs`/`txt-s` que ya encoge `.enunciado`
+según el número de palabras. Va segundo a propósito: **con la barrera puesta, el
+umbral se puede elegir midiendo en vez de adivinando** — si te quedas corto, el
+render falla y lo ves. Riesgo pendiente ya localizado: `MDH-005`, `cifra: "El
+peor de los cuatro"`.
+
+**Encargado a la revisión diaria**, prioridad 1, por delante de todo lo demás.
+
+### C21.2 · Y el criterio de incidencia estaba al revés
+
+«No puedo cancelarlo, luego no es una incidencia» es exactamente el razonamiento
+que hay que prohibir. La revisión no puede retirar un vídeo; **Silvestre sí**, y
+`ESTADO.md` es el único sitio por el que se entera. Que el agente no pueda
+arreglarlo es el motivo para avisar, no para callar.
+
+Regla nueva, ya escrita en el prompt: **si el vídeo que se publica hoy tiene un
+defecto que un espectador notaría, la primera línea de `ESTADO.md` dice
+`INCIDENCIA`**, con el ID, la hora de publicación y qué puede hacer Silvestre.
+Lo que nadie ve todavía —un guion sin producir, un encargo sin hacer— sigue
+siendo `OK` y va en la bitácora.
+
+Y la revisión del vídeo pasa de «lunes y jueves» a **todos los días**. Con un
+vídeo diario, mirarlo cuesta minutos.
+
+---
+
+## C22 · Los dos canales — es regla, no criterio
+
+Sube a `REGLAS.md` como **regla 14**, con su caso. El resumen: lo que está en
+pantalla tiene que estar sostenido por la narración de esa misma escena; lo
+esencial de la narración tiene que tener correlato en pantalla; y la cara del
+personaje concuerda con lo que se dice.
+
+**Red de seguridad determinista**, encargo 3 de la revisión diaria: un **aviso**
+en `validar_guion.py` que saque las palabras de contenido de `texto`, `cifra` y
+`pie` y señale las que no aparecen en la `narracion` de su escena, comparando por
+raíz. Sobre MDS-009 tiene que avisar de «dinero» y «mesa». Es tosco a propósito:
+no decide, señala dónde mirar — como el aviso de C17, que el 3 de septiembre hizo
+que la planificación tirara un guion entero antes de publicarlo. **Ese es el
+patrón que funciona en este proyecto: comprobaciones tontas y deterministas que
+le dicen a un agente listo dónde poner los ojos.**
+
+---
+
+## C23 · El token de YouTube deja de caducar
+
+**El problema.** El 1 de septiembre el canal no publicó porque `YT_REFRESH_TOKEN`
+había caducado. La causa es que la aplicación de OAuth está en modo **«Prueba»**,
+y Google documenta que en ese modo el token de actualización caduca a los **siete
+días**. Renovarlo a mano cada semana es trabajo recurrente y por tanto contrario a
+la **regla 5**: no es una molestia, es un cambio mal diseñado.
+
+**La salida, y no exige inventarse nada.** Publicar la aplicación —«Público» /
+«En producción»— **sin pedir la verificación**. Son cosas distintas y se
+confunden siempre:
+
+- **Publicar** es un botón. Cambia el estado a producción y con eso **el token
+  deja de caducar a los siete días**.
+- **Verificar** es un formulario, y es lo que pide página web, política de
+  privacidad, términos de servicio y un vídeo de demostración. **No hace falta
+  para publicar.** Solo hace falta para pasar de 100 usuarios o para quitar la
+  pantalla de aviso.
+
+Lo que se paga por no verificar, con la lista delante:
+
+| | |
+|---|---|
+| Pantalla de «Google no ha verificado esta aplicación» al dar el consentimiento | Una vez, y se pasa con *Configuración avanzada → Ir a…* |
+| Tope de **100 usuarios** durante toda la vida de la aplicación | Necesitamos **uno**. Irrelevante |
+| Los ámbitos siguen siendo restringidos y sin verificar | Ya lo son hoy, y funcionan |
+
+**El riesgo que sí hay que mirar, y se dice sin adornar.** La documentación de la
+API de YouTube afirma que «*todos los vídeos subidos por el endpoint
+`videos.insert` desde proyectos de API sin verificar creados después del 28 de
+julio de 2020 quedarán restringidos a modo privado*». Empíricamente **eso no nos
+está pasando**: los nueve vídeos del canal se han subido en privado con
+`publishAt` y YouTube los ha hecho públicos solos. La auditoría de YouTube es un
+eje **distinto** del estado de publicación de la pantalla de consentimiento, así
+que publicar no debería cambiar nada ahí — pero eso es un razonamiento, no una
+medición, y conviene comprobarlo con el primer vídeo que salga después del
+cambio, no dentro de una semana.
+
+**Cómo se comprueba, sin gastar un vídeo:** el Short del lunes 7 se sube de
+madrugada y se publica a las 19:00. La revisión diaria de las 11:30 ya mira
+`registro_publicaciones.json`; si el vídeo aparece `private` con `publicar_en`
+como siempre, no ha cambiado nada. Si apareciera bloqueado como privado, se
+revierte el estado a «Prueba» y volvemos al token de siete días mientras se
+piensa otra cosa. Reversible en un clic.
+
+**Lo que NO se hace, y por qué:**
+
+- **Cuenta de servicio**: no sirve. YouTube no acepta cuentas de servicio para
+  subir a un canal.
+- **Renovar el token con un workflow**: no se puede. Google no emite un token de
+  actualización nuevo al usar el existente, así que no hay nada que rotar sin
+  volver a pasar por el navegador.
+- **Tipo «Interno»**: exige Google Workspace. La cuenta es de Gmail.
+- **Dejarlo como está con un aviso**: es la regla 5 otra vez. Un canal que se
+  para cada siete días si nadie se acuerda no vuela solo.
+
+**Lo que hace Silvestre, una vez, ~10 minutos:** en la consola de Google Cloud,
+*APIs y servicios → Pantalla de consentimiento de OAuth → Audiencia →* botón
+**Publicar aplicación**, aceptar el aviso de que la verificación queda pendiente,
+volver a generar el `YT_REFRESH_TOKEN` con el flujo de siempre y actualizar el
+secreto del repositorio. Y ya no se vuelve a tocar.
+
+---
+
+## C7 · Cambia el rumbo: se salta el escalón 1
+
+**El escalón 1 —dos voces distintas de `edge-tts` asignadas por
+`escena.voz`— se descarta.** No se aplaza: se descarta.
+
+**El motivo.** Lo que está roto no es que haya una sola voz: es que la voz que
+hay no tiene ritmo, ni pausa, ni entonación. Lee palabras. Dos voces de
+`edge-tts` entregan **dos lectores planos en vez de uno**, y consumen la semana
+del 14 sin tocar el problema. El plan encadenó los escalones cuando el escalón 2
+parecía caro y arriesgado; hoy sabemos que el nivel gratuito de
+`gemini-3.1-flash-tts-preview` incluye la salida de audio, que admite **dos
+hablantes en una sola llamada** y que **el estilo, el acento, el ritmo y el tono
+se dirigen en lenguaje natural**, con etiquetas dentro del propio texto. Eso es
+literalmente lo que falta.
+
+**Lo que entra en su lugar, esta semana y a coste cero:**
+`04_agentes/prueba_voz.py` (escrito hoy) genera tres audios del mismo guion —
+`edge-tts` como referencia, Gemini escena a escena con las pausas de hoy, y
+Gemini en **una sola llamada con dirección de actor** para que el ritmo lo decida
+el modelo y no nuestro empalme. Corre por `workflow_dispatch` con
+`voz_prueba.yml`. Silvestre escucha tres ficheros y decide. **Si el modelo o el
+nivel gratuito han cambiado, el script falla con el error a la vista — y ese
+fallo también es un resultado.**
+
+**Una dependencia que hay que decir antes y no descubrir a mitad de semana**
+(trampa 1: cuando quites algo, mira qué dependía de ello). `voz.py` construye los
+subtítulos con las marcas de tiempo por palabra que devuelve `edge-tts`, y Gemini
+no las da. Comprobado hoy en el código: **el `.srt` que se sube a YouTube se
+escribe por bloques de escena** (`bloques`, `voz.py` línea 302), no por palabra,
+así que **sobrevive intacto al cambio de motor**. Lo que muere es el `.ass`
+—que no se quema desde el 20/08— y con él el canario `lineas_ass > 0` de `qa.py`,
+que habrá que sustituir por otra comprobación (que la duración del audio cuadre
+con la suma de las escenas sirve). No es un bloqueante; es una tarea que ya está
+identificada.
+
+**Calendario nuevo:** prueba y decisión la semana del 7 (no ocupa la ranura de
+cambio, porque no toca la producción); **C7 escalón 2 en producción la semana del
+14**, que era la fecha que ya tenía. `edge-tts` se queda como respaldo, con la
+misma política de degradación que el resto del proyecto.
+
+---
+
+## C24 · Que no todos los vídeos parezcan el mismo vídeo
+
+Hallazgo de Silvestre, del 2 y el 4 de septiembre: los contenidos están bien y
+los guiones cierran mejor unas veces que otras, pero la presentación es idéntica
+en todos — mismos fondos, mismo dinamismo, misma miniatura, misma voz. Cinco
+Shorts a la semana con la misma cara son cinco veces el mismo vídeo para quien
+pasa por el feed.
+
+**Las cinco series ya existen y no se distinguen en pantalla.** «Desmonta el
+chiste», «El experimento», «Esto no tiene gracia y esto sí», «Diagnósticos» y
+«Ríete primero, te explico después» tienen forma narrativa propia y aspecto
+común. Que cada una tenga su acento —un color de apoyo dentro de la paleta de
+marca, una composición de partida, un tratamiento de fondo— es barato, es
+determinista, no sube el coste de render y además construye lo que C12 buscaba:
+que se reconozca la serie.
+
+**Prioridad: detrás de C7.** No porque no importe, sino porque el orden de la
+versión 4 sigue en pie —primero lo que se ve en el primer segundo (C19+C16, la
+semana del 7), luego lo que se oye (C7, la semana del 14)— y meter variedad
+visual encima de C19 rompería la regla de un cambio por producción justo en la
+semana en que hay que medir si C19 funciona.
+
+**La miniatura de un Short sí importa, y hasta hoy dábamos por hecho que no.**
+En el feed no se ve; **en los resultados de búsqueda sí**, y la búsqueda es la
+superficie que nos está dando el 46-64 % de las visualizaciones. C5 ya genera
+tres variantes verticales con contraste medido. Queda pendiente comprobar que la
+que se sube es la buena y que se lee a tamaño de resultado de búsqueda: se mira
+en la revisión del lunes 7, con las miniaturas de los diez Shorts al lado.
+
+---
+
+## Lo que NO cambia hoy
+
+- **La cadencia.** Cinco Shorts y un largo. Se revisa el 27 de septiembre, no antes.
+- **El punto de control del 27 de septiembre**, con sus tres desenlaces escritos
+  en la versión 4. Los datos de esta semana empujan hacia el segundo.
+- **No se amplía el tema todavía.** La pregunta de Silvestre del 31/08 tiene
+  respuesta: no es que el tema esté descartado, es que **con C19, C16 y C7 sin
+  soltar todavía no se sabe qué está fallando**, y ampliar el tema ahora
+  destruiría la única medición limpia que vamos a tener. Las dos sondas que la
+  planificación metió en las semillas del 10 —«cómo mantener una conversación sin
+  quedarse en blanco» y «cómo caer bien en una primera conversación»— están ahí
+  precisamente para llegar al 27 con cifras en vez de opiniones.
+- **C20 (el primer comentario) sigue aplazado.** Ahora hay un «me gusta», no una
+  conversación. Entra cuando S3 se mueva.
