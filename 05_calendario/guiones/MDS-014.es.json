@@ -1,0 +1,72 @@
+{
+  "id": "MDS-014",
+  "formato": "corto",
+  "serie": "Diagnósticos",
+  "idioma": "es",
+  "titulo_trabajo": "Tests de estilos de humor: qué miden de ti y qué miden de tu martes",
+  "tesis": "Los estilos cómicos existen y tienen nombre en investigación, pero un test corto mezcla cómo eres con cómo estabas el día que lo contestaste.",
+  "pilares": [
+    "B"
+  ],
+  "pregunta_de_demanda": "estilos de humor test",
+  "notas_humor": [
+    "El chiste va primero y es autoburla sin víctima: dos resultados distintos separados por nueve horas de sueño.",
+    "Autoconciencia del formato: un canal que ya ha hecho dos vídeos con un cuestionario de humor cuenta aquí lo que ninguno de los dos dijo.",
+    "C17: B05 y B06 no se habían abierto nunca. B01 y B02 —los cuatro estilos de MDS-004 y MDH-005— no se tocan aquí: la taxonomía de este Short es otra y la tesis también.",
+    "«Diagnósticos» exige taxonomía real del pilar B: son los ocho estilos cómicos de Ruch y su equipo, no un test inventado."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "narracion": "Hice uno de esos tests de qué tipo de humor tienes.",
+      "texto": "Test de *humor*.",
+      "pausa_despues_s": 1.3
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Me salió «sarcástico». Lo repetí el domingo y me salió «ingenioso». La diferencia eran nueve horas de sueño.",
+      "texto": "Domingo: *ingenioso*.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.7
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Ocho estilos con nombre",
+      "puntos": [
+        "Ironía",
+        "Nonsense",
+        "*Sarcasmo*"
+      ],
+      "narracion": "Y no es que el test sea un horóscopo: Ruch y su equipo describieron ocho estilos cómicos con nombre. Ironía, nonsense, sarcasmo.",
+      "fuente": "B06",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Lo que mide de ti",
+      "et_a": "El _rasgo_",
+      "a": "Lo jovial que *eres*",
+      "et_b": "El _estado_",
+      "b": "Lo jovial que estabas el martes",
+      "narracion": "El problema es otro: ese grupo ya separó dos cosas que un test corto mezcla. Lo jovial que eres y lo jovial que estás hoy.",
+      "fuente": "B05",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Así que parte de lo que te sale no es cómo eres: es el día que tenías.",
+      "texto": "Parte de eso es el *día*.",
+      "fuente": "B05",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla si te lo quedas como *etiqueta*",
+      "subtitulo": "Ruch, Köhler y van Thriel · rasgo y estado se miden por separado",
+      "narracion": "Y falla si te lo quedas como etiqueta. Repítelo en un mes y con suerte eres otra persona.",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

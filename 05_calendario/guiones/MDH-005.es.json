@@ -32,7 +32,7 @@
     {
       "tipo": "dato",
       "cifra": "Menos uno",
-      "pie": "se ríe la mesa entera, _menos_ quien ha cocinado",
+      "pie": "se ríe la mesa entera, menos quien ha cocinado",
       "narracion": "Se ríen todos. Menos uno.",
       "pausa_despues_s": 0.8
     },
@@ -85,8 +85,8 @@
     {
       "tipo": "dato",
       "cifra": "4 estilos",
-      "pie": "el cuestionario de Martin y su equipo, _2003_",
-      "narracion": "Y en dos mil tres, un equipo dirigido por Rod Martin construyó el cuestionario que mide esas direcciones.",
+      "pie": "el cuestionario de Martin y su equipo, 2003",
+      "narracion": "Y en dos mil tres, un equipo dirigido por Rod Martin construyó el cuestionario que mide esas cuatro direcciones.",
       "fuente": "B01",
       "pausa_despues_s": 0.45
     },
@@ -266,7 +266,7 @@
     {
       "tipo": "dato",
       "cifra": "El peor de los cuatro",
-      "pie": "el que aparece más consistentemente junto a _peor bienestar_",
+      "pie": "el que aparece más consistentemente junto a peor bienestar",
       "narracion": "Y en los datos es el estilo que aparece de forma más consistente junto a peor bienestar.",
       "fuente": "B01",
       "pausa_despues_s": 0.45
@@ -338,11 +338,18 @@
       "titulo": "La letra pequeña",
       "puntos": [
         "Críticas serias desde *dentro* del campo",
-        "Preguntas que ya llevan dentro si es bueno o malo",
-        "Y eso infla la relación con el bienestar"
+        "Preguntas que ya llevan dentro si es bueno o malo"
       ],
-      "narracion": "Este cuestionario tiene críticas serias hechas por gente del propio campo.",
+      "narracion": "Este cuestionario tiene críticas serias hechas desde dentro del campo: algunas preguntas ya llevan dentro si el estilo es bueno o malo.",
       "fuente": "B02",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y eso *infla* lo que encuentras después.",
+      "narracion": "Y una pregunta que ya trae el juicio metido dentro infla la relación que luego encuentras con el bienestar.",
+      "fuente": "B02",
+      "personaje": "duda",
       "pausa_despues_s": 0.45
     },
     {
@@ -370,5 +377,6 @@
       "personaje": "no",
       "pausa_despues_s": 0.2
     }
-  ]
+  ],
+  "_revisiones_aplicadas_03_09": "Aplicadas las notas de 05_calendario/revisiones/MDH-005.md (retirada al aplicarla). (1) Escena 9: la narración dice ahora «esas cuatro direcciones», que es el número que ya estaba en pantalla — quien escucha sin mirar lo recibe. (2) Cian retirado de «menos» (esc. 2), «2003» (esc. 9) y «peor bienestar» (esc. 28): ninguna de las tres es un término del oficio. (3) Hallazgo propio de la planificación, mismo defecto que el de la escena 9: la lista de la «letra pequeña» tenía tres puntos en pantalla y la narración solo decía el primero. Ahora dice dos y el tercero pasa a escena propia (37). Con eso la crítica de B02 se cuenta aquí con el argumento entero —la circularidad de los ítems—, distinta de como se contó en MDS-004 («mide más cosas que estilos de humor»), que es lo que pedía decidir el hallazgo C17 de la nota. (4) Decisión sobre ese hallazgo C17: el episodio NO se rehace. B01 es central en MDS-004 y en MDH-005, pero un largo puede profundizar en la misma taxonomía que un Short de la semana anterior; lo que no puede es repetir el mismo cierre, y ya no lo hace. Razonamiento completo en 05_calendario/bitacora/2026-09-03-planificacion.md."
 }

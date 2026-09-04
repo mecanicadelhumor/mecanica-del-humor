@@ -1,0 +1,55 @@
+{
+  "id": "MDS-015",
+  "formato": "corto",
+  "serie": "Ríete primero, te explico después",
+  "idioma": "es",
+  "titulo_trabajo": "Por qué se contagia la risa",
+  "tesis": "La risa se contagia porque no es una respuesta al chiste: es una conducta de grupo mucho más vieja que los chistes, y en grupo va acompañada de algo que se mide en el cuerpo.",
+  "pilares": ["E", "D"],
+  "pregunta_de_demanda": "por qué se contagia la risa",
+  "notas_humor": [
+    "El chiste va en el segundo cero, sin preámbulo, y es el propio fenómeno: ocho personas riéndose sin saber de qué.",
+    "Especificidad: la alarma de coche, el domingo, ocho personas. Lo concreto tiene gracia.",
+    "El cierre no tiene chiste a propósito: admite que el contagio en sí no está medido en el corpus. Es el «dónde falla» más honesto de la semana.",
+    "C17: D06 y E03 no se habían abierto nunca. E01 y E02 —Provine, la risa treinta veces más probable en grupo— no se tocan aquí: son la fuente central de MDS-002 y de MDH-004 y estarían repitiéndose por tercera y cuarta vez."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "narracion": "Mi hermana tiene una risa que parece la alarma de un coche.",
+      "texto": "Como una *alarma*.",
+      "pausa_despues_s": 1.3
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "El domingo se rió en la mesa y detrás nos reímos ocho. Ninguno sabía de qué.",
+      "texto": "Ocho. Sin saber de *qué*.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.7
+    },
+    {
+      "tipo": "dato",
+      "cifra": "10–16 millones de años",
+      "pie": "la risa ya estaba mucho antes que el primer chiste",
+      "narracion": "Porque la risa no responde al chiste: es bastante más vieja. Rastreada en los grandes simios, se sitúa entre diez y dieciséis millones de años.",
+      "fuente": "E03",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Y va acompañada de algo que se mide: la risa en grupo aparece junto a un umbral del dolor más alto. A solas, no.",
+      "texto": "En grupo, más _umbral del dolor_.",
+      "fuente": "D06",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla porque el contagio *no está medido*",
+      "subtitulo": "Davila-Ross y col. · Dunbar y col. · dos hallazgos alrededor, ninguno encima",
+      "narracion": "Y falla aquí: nadie ha medido el contagio en sí. Que salte de uno a otro sigue siendo la mejor suposición que tenemos, no un dato.",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

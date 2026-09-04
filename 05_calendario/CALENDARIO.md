@@ -1,6 +1,6 @@
 # Calendario editorial
 
-**Vigente desde el 20 de agosto de 2026. Última actualización: 27 de agosto.** Sustituye por completo al calendario de la
+**Vigente desde el 20 de agosto de 2026. Última actualización: 3 de septiembre.** Sustituye por completo al calendario de la
 tanda 1 (ocho episodios largos, dos idiomas, ritmo diario), que queda derogado. El porqué
 está en `00_estrategia/DIAGNOSTICO.md`.
 
@@ -72,6 +72,57 @@ horas en las que puedes entrar a cancelarlo si algo no te cuadra, pero no tienes
 nada para que salga. Si te olvidas del canal una semana, el canal publica igual.
 
 El paso de un modo a otro ya está escrito en `parrilla.json`. No hay que acordarse.
+
+---
+
+## La semana del 7 al 12 de septiembre, pieza a pieza
+
+**La primera semana elegida con demanda medida.** El workflow `demanda.yml` dejó
+`demanda_bruta.json` el jueves 3 a las 12:42 UTC, sin avisos y con las veinte consultas
+medidas. Hasta ahora la serie repartía y la pregunta salía después; desde el 31/08 manda
+la pregunta y la serie solo pone la forma, y esta es la primera semana en que eso se ha
+podido hacer con cifras.
+
+| Día | ID | Serie | La pregunta que responde | Fuentes |
+|---|---|---|---|---|
+| **lun 7** | MDS-011 | El experimento | «cómo ser más gracioso» | C04, C03 |
+| **mar 8** | MDS-012 | Esto no tiene gracia y esto sí | «cómo contar un chiste bien» | L02, L03 |
+| **mié 9** | MDS-013 | Desmonta el chiste | «miedo a que se rían de ti» | J04, J05 |
+| **jue 10** | MDS-014 | Diagnósticos | «estilos de humor test» | B05, B06 |
+| **vie 11** | MDS-015 | Ríete primero, te explico después | «por qué se contagia la risa» | E03, D06 |
+| **sáb 12** | MDH-006 | Mecanismos (largo, 4m47s) | «bromas en el trabajo» | D01, D02, G01, G02, D07 |
+
+**Dos series se repiten y ninguna se fuerza.** No hay «El experimento» el jueves porque
+tocara: hay lo que cada pregunta pedía. Y falta una de las cinco series —ninguna pregunta
+apta pedía su forma esta semana—, que es exactamente lo que la regla del 31/08 autoriza.
+
+**Nueve fichas nuevas de once.** De las once fuentes de la semana, **nueve no se habían
+abierto nunca**: C03, C04, L02, L03, J04, J05, B05, B06 y E03, más D06. Quedan 36 fichas
+sin estrenar de las 77. Es la aplicación directa de C17, paso 2: se empieza a elegir por
+las libres.
+
+Tres decisiones editoriales de esta tanda que conviene tener escritas:
+
+- **Se ha tirado un Short entero, ya redactado.** «Cómo distinguir una risa falsa de una
+  de verdad» tenía demanda, tenía tres fuentes (`D07`, `E04`, `F03`) y pasaba el validador.
+  Y no se hace: **MDH-004, producido el 29 de agosto, ya lo cuenta con casi las mismas
+  escenas** —la comparación «Las dos risas» con E04, el dato «24 sociedades» con D07 y el
+  matiz de «algo más que el azar»—. Cuatro escenas calcadas ocho días después es
+  precisamente lo que C17 existe para impedir. Vuelve a estar disponible a partir del 10 de
+  octubre, y mejor con `F03` de columna.
+- **MDS-011 no es una lista de trucos.** «Cómo ser más gracioso» es la pregunta con más
+  demanda limpia de todo el corpus, y en cuarenta segundos se convierte justo en el manual
+  de sobremesa que este canal no quiere ser. El Short entra por el único ángulo que no lo
+  es: cómo se puntúa la gracia en un laboratorio, y qué aparece al lado de las
+  puntuaciones altas.
+- **MDS-014 corrige a los dos vídeos anteriores del canal.** MDS-004 y MDH-005 usan los
+  cuatro estilos de `B01`. Este Short no los toca: cuenta que un test de estilos mezcla el
+  rasgo con el estado, o sea, que parte del resultado es el día que tenías. Es la letra
+  pequeña de nuestro propio material.
+
+**Los seis terminan diciendo dónde falla** lo que acaban de explicar. `MDS-015` es el caso
+extremo de esta semana: admite en el cierre que **nadie ha medido el contagio de la risa**
+y que lo anterior son dos hallazgos alrededor y ninguno encima.
 
 ---
 
@@ -158,6 +209,11 @@ números dirán cuál aguanta mejor, y la parrilla se reconstruye alrededor de e
 
 ## Con qué se decide seguir o cambiar
 
+> ⚠️ **Esta tabla quedó sustituida el 31/08** por las dos escaleras de la versión 4 de
+> `00_estrategia/PLAN_DE_CAMBIOS.md` —una para Shorts, sin impresiones ni CTR, porque
+> Studio no los da para el formato vertical; otra para el episodio largo—. Se deja aquí
+> porque el resto del apartado sigue valiendo. El canal está en el peldaño **S1**.
+
 La tabla completa está en `00_estrategia/PLAN_DE_CAMBIOS.md`, apartado C14. Lo esencial:
 **cada peldaño solo se mira si se pasó el anterior.** Con veinte visualizaciones totales,
 medir CTR y retención es medir ruido.
@@ -188,7 +244,11 @@ Eso se decide con la tabla delante, no por agotamiento.
   39 escenas (antes 27), 4m44s, personaje en cuatro escenas, dos intervenciones del
   escéptico, «enunciado» del 62 % al 41 %, primera risa sobre el segundo nueve. Serie
   «Diagnósticos».
-- **MDH-006, 007 y 008** — escritos y validados, **sin adaptar**: 48-66 % de «enunciado»,
+- **MDH-006** — ✅ adaptado al formato nuevo el 03/09 para el sábado 12 de septiembre.
+  40 escenas (antes 26), 4m47s, personaje en cinco escenas, dos intervenciones del
+  escéptico, «enunciado» del 65 % al 42 %, primera risa sobre el segundo ocho. Serie
+  «Mecanismos».
+- **MDH-007 y MDH-008** — escritos y validados, **sin adaptar**: 48-66 % de «enunciado»,
   rótulo por delante y ningún personaje. Sus notas siguen en `05_calendario/revisiones/`.
 
 **Se adapta uno por semana, no los cuatro de golpe.** Adaptar por adelantado los que aún no
@@ -196,12 +256,23 @@ tienen fecha es trabajo especulativo: dentro de dos o tres semanas las métricas
 formato aguanta y habría que rehacerlo. Cada jueves se adapta el del sábado siguiente y
 nada más.
 
-**El largo del 12 de septiembre está sin decidir a propósito.** Se elige el jueves 3 con
-las métricas del lunes 7 delante, entre dos candidatos: **MDH-007** (gelotofobia, «por qué
-se ríen de mí»), que ya está escrito y solo necesita la adaptación, y un largo **nuevo**
-sobre «cómo ser más gracioso» (`H01`, `H03`), que es la pregunta con más demanda de todo el
-corpus y la que mejor respaldo tiene, reservada a propósito para formato largo porque en
-cuarenta segundos se convierte en la lista de trucos que el canal no quiere ser.
+**El largo del 12 de septiembre, decidido el 3 con la demanda medida delante: MDH-006.**
+El calendario reservaba la decisión entre dos candidatos y los dos han caído por el mismo
+sitio, que no era el que se esperaba:
+
+- El candidato «largo nuevo sobre *cómo ser más gracioso* (`H01`, `H03`)» **ya existe**:
+  es `MDH-001`, «Nadie nace gracioso», publicado el 18 de agosto, con H01 en cinco
+  escenas, H03 en cuatro y C02 en tres. Escribirlo otra vez tres semanas después sería un
+  remake, no un episodio. Descartado por C17.
+- **MDH-007** (gelotofobia) sigue siendo bueno, y va el 19. Pero el cierre de `MDH-005`,
+  que se produce el sábado 5, promete literalmente «el sitio donde equivocarse sale más
+  caro: el trabajo», y el cierre de `MDH-006` promete a su vez la gelotofobia. Respetar
+  ese orden mantiene las dos promesas y no obliga a tocar un guion que entra en
+  producción en menos de treinta horas.
+
+La demanda no desempata entre los dos: «humor en el trabajo» no se midió, y «miedo a que
+se rían de ti» devolvió 74 millones de visualizaciones sin un solo resultado en tema. Con
+la demanda callada, decide la coherencia de la serie.
 
 **Cómo se adapta un largo viejo** (el patrón está aplicado en MDH-004 y MDH-005, cópialo de
 ahí): sacar el rótulo de la escena 1 y poner en su sitio una escena concreta con la primera

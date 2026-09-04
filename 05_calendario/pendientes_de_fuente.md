@@ -131,3 +131,49 @@ candidato en `demanda.json`.
 **Lo que esto significa para esta lista:** las tres exclusiones son firmes, porque dependen
 de la bibliografía y la bibliografía sí se lee entera. Lo que sigue sin ser firme es el
 orden de prioridad entre ellas.
+
+---
+
+## 3 de septiembre de 2026 · tercera tanda, la primera con visualizaciones medidas
+
+**Ninguna pregunta nueva entra en esta lista, y las tres de siempre siguen dentro.**
+Se han vuelto a cruzar contra `BIBLIOGRAFIA_CURADA.md` y el corpus no ha cambiado:
+`git log -- 01_bibliografia/` no tiene ningún commit posterior al inicial salvo el
+cambio de horario de la revisión diaria. Setenta y siete obras, las mismas.
+
+Lo que sí cambia hoy es que por fin sabemos **cuánta demanda estamos dejando en la
+mesa**, que era justo el motivo de meterlas en `semillas_demanda.json`. El workflow
+`demanda.yml` ha corrido y ha dejado `demanda_bruta.json`.
+
+| Pregunta excluida | Vistas del top 10 | De los cinco primeros, cuántos responden |
+|---|---|---|
+| Por qué no puedo hacerme cosquillas a mí mismo | 3.858.288 | **5 de 5** |
+| Por qué sentimos vergüenza ajena | 276.869 | **5 de 5** |
+| Qué es el cringe | 9.508.802 | 2 de 5 |
+| Por qué los memes nos hacen gracia | 128.623.642 | **0 de 5** |
+
+Y con los números delante, el orden de prioridad —que las dos tandas anteriores
+dejaron expresamente sin fijar porque no se podía medir— **sí se puede fijar ahora**:
+
+1. **Vergüenza ajena / cringe.** Es la que más merece la pena. Demanda modesta pero
+   entera en tema (de 17.705 a 106.128 visualizaciones, todos explicando), competencia
+   de psicólogos generalistas y **ninguno lo cuenta desde el humor**, que es
+   exactamente nuestro ángulo. Sigue haciendo falta literatura de *empathic
+   embarrassment*; Krach y Paulus, acceso abierto, sigue siendo el punto de partida.
+2. **Memes.** La tanda del 20/08 la llamaba «el hueco más rentable de los tres».
+   **La medición lo desmiente:** 128 millones de visualizaciones y cero resultados que
+   expliquen nada. La consulta devuelve memes, no explicaciones de memes. Si algún día
+   entra la fuente, el vídeo competiría contra el entretenimiento puro, que es la pelea
+   que este canal pierde. Baja de prioridad.
+3. **Autocosquillas.** El aviso del 20/08 se confirma y se agrava: los cinco primeros
+   responden la pregunta y dos son canales de ciencia grandes —CdeCiencia con 1.263.221
+   y un vídeo de abril de 2026 con 2.365.233—. Aunque llegue Blakemore, entraríamos por
+   detrás de gente que ya lo hace bien. Es la única pregunta de las veinte medidas donde
+   eso pasa.
+
+**Lo que no ha hecho falta escribir aquí, y conviene que se note:** esta semana se ha
+descartado un Short entero (*cómo distinguir una risa falsa de una de verdad*) y no está
+en esta lista, porque su problema no era la fuente. Tenía tres —`D07`, `E04` y `F03`— y
+aun así no se hace: **MDH-004 ya lo contó el 29 de agosto con casi las mismas escenas**.
+Eso es C17, no falta de bibliografía, y va anotado en `demanda.json` y en la bitácora.
+Una lista no debe engordar con cosas que no le tocan.

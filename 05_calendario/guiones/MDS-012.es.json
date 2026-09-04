@@ -1,0 +1,71 @@
+{
+  "id": "MDS-012",
+  "formato": "corto",
+  "serie": "Esto no tiene gracia y esto sí",
+  "idioma": "es",
+  "titulo_trabajo": "Cómo contar un chiste bien: el mismo chiste, dos veces",
+  "tesis": "Un chiste no se hunde por el chiste: se hunde por pedir permiso antes de contarlo. Eliges una tontería, la das por cierta, y lo demás sale por lógica.",
+  "pilares": [
+    "L"
+  ],
+  "pregunta_de_demanda": "cómo contar un chiste bien",
+  "notas_humor": [
+    "Los dos chistes son el mismo y se cuentan los dos antes de explicar nada: el espectador nota la diferencia antes de que se la digan.",
+    "La primera versión es mala a propósito y es un chiste en sí misma: el titubeo imitado hace más gracia que el remate que estropea.",
+    "El ángulo es el de contar, no el de construir: MDS-008 (02/09) ya hizo la estructura del chiste con I02 y L01. Aquí no se toca ni una ni otra.",
+    "C17: L02 y L03 no se habían abierto nunca. Del pilar L solo se había usado L01."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "narracion": "«No sé si esto es gracioso, ¿eh? Pero mi padre… bueno, hay que conocerle… arregló el grifo.»",
+      "texto": "Versión *uno*.",
+      "pausa_despues_s": 1.2
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Versión dos. Mi padre ha arreglado el grifo. Ahora sale agua caliente por el telefonillo.",
+      "texto": "Versión *dos*.",
+      "pausa_despues_s": 1.3
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Mismo padre, mismo grifo",
+      "et_a": "Versión uno",
+      "a": "Pide *permiso* antes de empezar",
+      "et_b": "Versión dos",
+      "b": "Se lo cree y tira",
+      "narracion": "Mismo padre, mismo grifo. La primera pide permiso; la segunda se lo cree y tira.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "lista",
+      "titulo": "La regla del _si… entonces_",
+      "puntos": [
+        "Eliges una *tontería*",
+        "La das por cierta",
+        "Lo demás sale por lógica"
+      ],
+      "narracion": "En los manuales tiene nombre: la regla del si… entonces. Eliges una tontería y lo demás sale solo.",
+      "fuente": "L02",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "En improvisación lo llaman aceptar la oferta: dudar en alto es bloquearte. Y esto son manuales de oficio, no estudios.",
+      "texto": "Dudar es *bloquearte*.",
+      "fuente": "L03",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla si nadie te compra el *si*",
+      "subtitulo": "Vorhaus y Johnstone · oficio comprobado en escenario, no en laboratorio",
+      "narracion": "Y falla donde falla siempre: si tu público no te compra el si, el entonces no va a ninguna parte.",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

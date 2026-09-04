@@ -1,0 +1,65 @@
+{
+  "id": "MDS-011",
+  "formato": "corto",
+  "serie": "El experimento",
+  "idioma": "es",
+  "titulo_trabajo": "Cómo ser más gracioso: la prueba que lo puntúa",
+  "tesis": "Tener gracia no es un cargo que te toca: es una habilidad que se puntúa con una tarea concreta, y lo que aparece al lado de las puntuaciones altas no es saber chistes.",
+  "pilares": ["C"],
+  "pregunta_de_demanda": "cómo ser más gracioso",
+  "notas_humor": [
+    "El chiste va primero y es de familia: el cargo vitalicio de gracioso oficial. Regla de tres en el remate — elecciones, votos, nadie se presentó.",
+    "No es una lista de trucos a propósito: la pregunta con más demanda del corpus se responde por el lado que no convierte el Short en un manual de ligue de sobremesa.",
+    "El personaje entra en la 2 (después del remate), la 4 y la 6. Nunca en la 1.",
+    "C17: C04 nunca ha sido fuente central de ningún vídeo — solo apoyo de pasada en MDH-001 (18/08). C03 no se había abierto nunca."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "narracion": "En mi familia el gracioso oficial es mi cuñado.",
+      "texto": "El gracioso *oficial*.",
+      "pausa_despues_s": 1.3
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Cargo vitalicio. No hubo elecciones, no hubo votos, y nadie recuerda haberse presentado.",
+      "texto": "Nadie se *presentó*.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.6
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "Tener gracia",
+      "et_a": "Lo que parece",
+      "a": "Algo que se tiene o *no se tiene*",
+      "et_b": "Lo que se hace",
+      "b": "Una tarea, y unos jueces puntuando",
+      "narracion": "Suena a algo que se tiene o no se tiene. Pero se mide, y se mide de una manera bastante tonta.",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "dato",
+      "cifra": "Un pie de foto",
+      "pie": "puntuado por jueces, no por tus amigos",
+      "narracion": "Te dan una viñeta sin texto, escribes el pie, y unos jueces puntúan lo que has escrito. Esa es la prueba entera.",
+      "fuente": "C04",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Y junto a las puntuaciones altas no aparece saber chistes: aparece el _pensamiento divergente_. Buscar veinte respuestas malas antes que una buena.",
+      "texto": "Veinte respuestas *malas* primero.",
+      "fuente": "C03",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla porque en una cena no tienes *papel*",
+      "subtitulo": "Nusbaum, Silvia y Beaty · pies de foto puntuados por jueces",
+      "narracion": "Y falla aquí: la prueba te da tiempo, silencio y un papel. En una cena no tienes ninguna de las tres.",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

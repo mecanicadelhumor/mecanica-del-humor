@@ -1,0 +1,71 @@
+{
+  "id": "MDS-013",
+  "formato": "corto",
+  "serie": "Desmonta el chiste",
+  "idioma": "es",
+  "titulo_trabajo": "Cuando se ríen de ti: broma o burla",
+  "tesis": "Una broma sobre alguien le toca la imagen de verdad; lo que la separa de la burla no es lo que dice, sino si el otro puede devolverla.",
+  "pilares": [
+    "J"
+  ],
+  "pregunta_de_demanda": "miedo a que se rían de ti",
+  "notas_humor": [
+    "El chiste va primero y es de grupo de amigos: el apodo «el navegador». El remate lo dice la víctima del apodo, que es exactamente el mecanismo que el Short explica.",
+    "Callback en el cierre: la ruta panorámica.",
+    "No es el Short de la gelotofobia. La pregunta medida entera —el miedo a que se rían de ti— se responde con J01 y J02 en el episodio largo MDH-007, que sigue en el banquillo. Aquí solo se responde la pieza que J04 sostiene: dónde está la línea.",
+    "C17: J04 y J05 no se habían abierto nunca. Ninguna ficha de este Short se repite con nada producido."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "narracion": "A un amigo le llamamos «el navegador» desde que nos llevó a Segovia por Guadalajara.",
+      "texto": "«El *navegador*».",
+      "pausa_despues_s": 1.3
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Y lo cuenta él mejor que nosotros: dice que fue una ruta panorámica.",
+      "texto": "Ruta *panorámica*.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.6
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Las dos piezas",
+      "puntos": [
+        "Le señala un fallo *real*",
+        "Y va envuelta en «no va en serio»"
+      ],
+      "narracion": "Esa broma le toca la imagen: le señala un fallo real. Y no duele porque va envuelta en «no va en serio».",
+      "fuente": "J04",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "comparacion",
+      "titulo": "La bisagra",
+      "et_a": "Broma",
+      "a": "Le toca la imagen y se la *devuelve*",
+      "et_b": "Burla",
+      "b": "Se la toca y lo deja ahí",
+      "narracion": "La bisagra no está en lo que dices: está en si el otro puede devolvértela. Si no puede, no era broma.",
+      "fuente": "J04",
+      "personaje": "duda",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "narracion": "Y hay un caso donde el envoltorio no protege: cuando el blanco no es alguien, sino un grupo entero.",
+      "texto": "Un grupo no puede *devolverla*.",
+      "fuente": "J05",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla cuando el blanco no puede *contestar*",
+      "subtitulo": "Keltner y col. · teoría de la norma prejuiciosa, Ford y Ferguson",
+      "narracion": "Ahí falla: la teoría dice que un chiste así no crea el prejuicio, lo vuelve decible. Y el navegador sigue con su ruta panorámica.",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

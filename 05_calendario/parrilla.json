@@ -132,12 +132,71 @@
       "modo": "automatico",
       "hora": "12:00",
       "nota": "Sábado. Episodio largo semanal, 4m44s. Adaptado al formato nuevo el 27/08: 39 escenas cortas (antes 27), gancho con la primera risa sobre el segundo nueve, personaje en cuatro escenas, dos intervenciones del escéptico y «enunciado» del 62 % al 41 %. Serie «Diagnósticos». Pregunta: «qué dice de mí mi sentido del humor»."
+    },
+    {
+      "fecha": "2026-09-07",
+      "episodio": "MDS-011",
+      "idiomas": [
+        "es"
+      ],
+      "modo": "automatico",
+      "hora": "19:00",
+      "nota": "Lunes. Serie «El experimento». Pregunta de demanda: «cómo ser más gracioso» — la única consulta de las veinte medidas cuyos cinco primeros resultados responden la pregunta (2.025.194 vistas en el top 10) y ninguno cita un estudio. Fuentes C04 y C03. Ángulo: cómo se puntúa la gracia, que es el que MDH-001 no ocupó."
+    },
+    {
+      "fecha": "2026-09-08",
+      "episodio": "MDS-012",
+      "idiomas": [
+        "es"
+      ],
+      "modo": "automatico",
+      "hora": "19:00",
+      "nota": "Martes. Serie «Esto no tiene gracia y esto sí». Pregunta de demanda: «cómo contar un chiste bien» (53 M en el top 10, cero resultados que enseñen: los diez primeros son recopilaciones de chistes). Fuentes L02 y L03, ninguna de las dos abierta hasta hoy. Va de contarlo, no de construirlo: MDS-008 ya hizo la estructura."
+    },
+    {
+      "fecha": "2026-09-09",
+      "episodio": "MDS-013",
+      "idiomas": [
+        "es"
+      ],
+      "modo": "automatico",
+      "hora": "19:00",
+      "nota": "Miércoles. Serie «Desmonta el chiste». Pregunta de demanda: «miedo a que se rían de ti». Fuente J04, y J05 en el cierre. NO toca J01 ni J02: son la columna de MDH-007 y la pregunta entera se reserva para el largo."
+    },
+    {
+      "fecha": "2026-09-10",
+      "episodio": "MDS-014",
+      "idiomas": [
+        "es"
+      ],
+      "modo": "automatico",
+      "hora": "19:00",
+      "nota": "Jueves. Serie «Diagnósticos». Pregunta de demanda: «estilos de humor test». Fuentes B05 y B06, las dos sin abrir. Deliberadamente NO usa B01 ni B02, que sostienen MDS-004 y MDH-005: la tesis aquí es el rasgo frente al estado, no los cuatro estilos."
+    },
+    {
+      "fecha": "2026-09-11",
+      "episodio": "MDS-015",
+      "idiomas": [
+        "es"
+      ],
+      "modo": "automatico",
+      "hora": "19:00",
+      "nota": "Viernes. Serie «Ríete primero, te explico después». Pregunta de demanda: «por qué se contagia la risa» (competencia baja: las explicaciones reales rondan las 9.000 visualizaciones y la más nueva tiene cuatro años). Fuentes E03 y D06. El cierre admite que el contagio en sí no está medido en el corpus."
+    },
+    {
+      "fecha": "2026-09-12",
+      "episodio": "MDH-006",
+      "idiomas": [
+        "es"
+      ],
+      "modo": "automatico",
+      "hora": "12:00",
+      "nota": "Sábado. Episodio largo semanal, 4m47s. Adaptado al formato nuevo esta noche: 40 escenas cortas (antes 26), gancho con la primera risa sobre el segundo ocho, personaje en cinco escenas, dos intervenciones del escéptico y «enunciado» del 65 % al 42 %. Serie «Mecanismos». Se elige este y no MDH-007 porque el cierre de MDH-005 (05/09) ya promete «el sitio donde equivocarse sale más caro: el trabajo», y porque el otro candidato del calendario —un largo nuevo sobre «cómo ser más gracioso»— resultó ser un remake de MDH-001. El cierre de MDH-006 promete a su vez MDH-007 para el 19."
     }
   ],
   "_archivadas": {
-    "_nota": "Emisiones de la parrilla anterior que ya no se ejecutan. MDH-006, 007 y 008 están escritos y validados; entran como episodios largos de los sábados siguientes, uno por semana, en cuanto se decida el orden con los datos de los Shorts.",
+    "_nota": "Emisiones de la parrilla anterior que ya no se ejecutan. MDH-007 y MDH-008 están escritos y validados pero SIN adaptar al formato nuevo; entran como episodios largos de los sábados siguientes, uno por semana. MDH-006 salió de esta lista el 03/09 al adaptarse y programarse para el 12.",
     "pendientes": [
-      "MDH-006",
       "MDH-007",
       "MDH-008"
     ],
@@ -149,6 +208,7 @@
     ]
   },
   "_cambio_20_agosto_noche": "Planificación semanal. Escritos MDS-002 a MDS-006 y adaptado MDH-004 al formato nuevo. Los temas ya NO salen de la bibliografía: salen de 05_calendario/demanda.json, y la bibliografía solo decide si se pueden responder (REGLAS.md, regla 3). Tres preguntas con demanda se quedaron fuera por falta de fuente y están en pendientes_de_fuente.md. La semana del 24 se queda en modo «revision» a propósito: es la primera con el formato vertical, el personaje y las dos voces, y conviene que Silvestre lo apruebe con los ojos. El automático entra el 31, como estaba previsto.",
-  "_pendiente": "MDH-006, 007 y 008 siguen escritos y SIN adaptar al formato nuevo (sin «formato», sin personaje, sin escéptico, 48-66 % «enunciado» y escenas largas); sus notas siguen en 05_calendario/revisiones/. NO se adaptan por adelantado a propósito: adaptar los tres ahora es trabajo especulativo, porque en dos o tres semanas las métricas dirán qué formato aguanta y habría que rehacerlo. Se adapta uno por semana, el del sábado siguiente. El del 12 de septiembre se decide con las métricas del lunes 7 delante: los dos candidatos son MDH-007 (gelotofobia, «por qué se ríen de mí») y un largo nuevo sobre «cómo ser más gracioso» (H01, H03), que es la pregunta con más demanda de todo el corpus.",
-  "_cambio_27_agosto_noche": "Planificación semanal. Escritos MDS-007 a MDS-010, adaptado MDH-005 al formato nuevo y aplicadas las notas de revisiones/ de MDS-006 y MDH-004. La semana del 31 al 5 estrena el modo «automatico»: el vídeo se sube en privado con publishAt y YouTube lo hace público solo. Cinco series distintas de lunes a viernes, que es lo que pide la parrilla hasta que las métricas digan cuál funciona. AVISO: el workflow demanda.yml no ha dejado 05_calendario/demanda_bruta.json en el repositorio, así que esta tanda se ha juzgado otra vez sin vistas medidas — ver «_estado_de_la_medicion» en demanda.json."
+  "_pendiente": "MDH-007 y MDH-008 siguen escritos y SIN adaptar al formato nuevo (sin «formato», sin personaje, sin escéptico, 48-66 % «enunciado» y escenas largas); sus notas siguen en 05_calendario/revisiones/. NO se adaptan por adelantado a propósito: se adapta uno por semana, el del sábado siguiente. El del 19 de septiembre es MDH-007 (gelotofobia), que es lo que promete el cierre de MDH-006; sus cuatro fichas —J02, J01, H05, H06— están libres de C17. Al adaptarlo hay que reescribir el título de publicación a lenguaje natural: «gelotofobia» solo suma 9.025 visualizaciones entre diez resultados, mientras que la pregunta en cristiano —«por qué se ríen de mí», «miedo a que se rían de ti»— sí se busca.",
+  "_cambio_27_agosto_noche": "Planificación semanal. Escritos MDS-007 a MDS-010, adaptado MDH-005 al formato nuevo y aplicadas las notas de revisiones/ de MDS-006 y MDH-004. La semana del 31 al 5 estrena el modo «automatico»: el vídeo se sube en privado con publishAt y YouTube lo hace público solo. Cinco series distintas de lunes a viernes, que es lo que pide la parrilla hasta que las métricas digan cuál funciona. AVISO: el workflow demanda.yml no ha dejado 05_calendario/demanda_bruta.json en el repositorio, así que esta tanda se ha juzgado otra vez sin vistas medidas — ver «_estado_de_la_medicion» en demanda.json.",
+  "_cambio_03_septiembre_noche": "Planificación semanal. Escritos MDS-011 a MDS-015 y adaptado MDH-006. PRIMERA TANDA CON DEMANDA MEDIDA: demanda_bruta.json existe, es de hoy y no trae avisos, así que por primera vez los temas se han elegido con visualizaciones delante y no con intuición. Cambio de método que conviene tener escrito: el volumen del top 10 NO se ha usado tal cual, porque once de las veinte consultas devuelven entretenimiento en vez de explicaciones; cada candidato lleva ahora «pertinencia_top5» en demanda.json. Un Short escrito entero se ha tirado esta noche por C17 —«cómo distinguir una risa falsa de una de verdad» repetía cuatro escenas de MDH-004, del 29/08— y en su sitio ha entrado MDS-013. Aplicadas también las notas de revisiones/ de MDH-005 y MDH-006."
 }
