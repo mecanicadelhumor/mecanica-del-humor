@@ -93,6 +93,21 @@
       "revisado": false
     },
     {
+      "id": "MDH-005.es",
+      "episodio": "MDH-005",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Qué dice de ti tu sentido del humor? Los cuatro estilos, y cuál sale caro",
+      "guion": "05_calendario/guiones/MDH-005.es.json",
+      "video_id": "5mFwVWLIOzo",
+      "url": "https://youtu.be/5mFwVWLIOzo",
+      "estado": "private",
+      "publicar_en": "2026-09-05T10:00:00Z",
+      "musica": "cama_02_dusk_next_route.mp3",
+      "subido_utc": "2026-09-05T01:31:01Z",
+      "revisado": false
+    },
+    {
       "id": "MDS-001.es",
       "episodio": "MDS-001",
       "idioma": "es",
