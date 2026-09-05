@@ -523,6 +523,68 @@ const PLANTILLAS = {
   }
 };
 
+// ===================================================================
+// C21.1 · Encoger hasta que quepa. La escalera txt-xs/txt-s (más abajo,
+// dentro de cargar()) elige un tamaño de partida por NÚMERO DE PALABRAS,
+// pensada para que una frase corta no deje media pantalla vacía. Pero no
+// mira nunca el ancho real del texto, y tres casos reales lo demostraron:
+// MDS-009 ("Más generosos"), MDS-013 ("Ruta panorámica.", dos palabras a
+// 150px que no caben igual) y MDS-015 ("10–16 millones de años" en
+// `.cifra`, que ni siquiera tiene escalera — 300px fijos siempre). El
+// fallo de fondo es el mismo en los tres: el criterio mide palabras, y lo
+// que desborda es el ancho.
+//
+// Así que en vez de intentar adivinar un umbral nuevo (por longitud de la
+// palabra más larga, por caracteres totales...), se mide de verdad: tras
+// cargar() y con la escena ya montada, para cada elemento de texto, mientras
+// desborde su caja Y la fuente siga por encima del suelo, se baja un 4% y se
+// vuelve a medir. Se usan las mismas tolerancias que la barrera
+// (comprobarDesbordes, más abajo) para que el encogido pare exactamente en
+// el punto en que la barrera dejaría de quejarse — nunca más, nunca menos.
+//
+// El suelo son 64px (mínimo legible en 1080x1920, regla de C2). Si al
+// llegar ahí el texto sigue sin caber, no se sigue encogiendo: se deja tal
+// cual y es la barrera (render.py) quien para el render, porque entonces sí
+// es un guion con demasiado texto, no un problema de escalado.
+//
+// Se ejecuta UNA vez dentro de cargar(), nunca dentro de pintar(t): mismo
+// guion, mismo píxel en cualquier fotograma de esa escena.
+// ===================================================================
+function ajustarTamano(){
+  const SELECTORES = [
+    ".cifra", ".cifra-pie", ".enunciado", "h1", "h2", ".pie", "li",
+    "blockquote", ".tx", ".et", ".pt", ".pp", ".autor", ".sub",
+    "#remate .n", "#remate .q"
+  ];
+  const SUELO = 64;      // px — mínimo legible, regla de C2
+  const PASO = 0.96;     // -4% por iteración
+  const TOL_ANCHO = 1;   // igual que comprobarDesbordes
+  const TOL_ALTO = 50;   // igual que comprobarDesbordes
+  const GUARDA = 200;    // cota de iteraciones; 150px->64px son ~21 pasos
+
+  const vistos = new Set();
+  for (const sel of SELECTORES){
+    let nodos;
+    try { nodos = document.querySelectorAll(sel); } catch (err) { continue; }
+    nodos.forEach(el => {
+      if (vistos.has(el)) return;
+      vistos.add(el);
+      if (!(el instanceof HTMLElement)) return;
+      if (el.getClientRects().length === 0) return;
+      let tam = parseFloat(getComputedStyle(el).fontSize);
+      if (!tam || !isFinite(tam)) return;
+      let vueltas = 0;
+      while (tam > SUELO && vueltas < GUARDA &&
+             (el.scrollWidth > el.clientWidth + TOL_ANCHO ||
+              el.scrollHeight > el.clientHeight + TOL_ALTO)){
+        tam = Math.max(SUELO, tam * PASO);
+        el.style.fontSize = tam.toFixed(2) + "px";
+        vueltas++;
+      }
+    });
+  }
+}
+
 function cargar(d){
   DUR = d.duracion_s || 5;
   // Formato: "corto" pinta 1080x1920. Lo fija render.py con el mismo dato que
@@ -574,6 +636,11 @@ function cargar(d){
     document.querySelector("#remate .n").textContent = d.marca || "Mecánica del Humor";
     document.querySelector("#remate .q").textContent = d.remate || "El mecanismo, cada día a las 19:00";
   }
+
+  // C21.1 · encoger hasta que quepa (ver la función arriba). Se aplica en
+  // los dos formatos, no solo en vertical: `.cifra` con texto largo puede
+  // desbordar también en horizontal si el ancho es ajustado.
+  ajustarTamano();
 
   pintar(0);
   return UNIDADES.length;
@@ -818,6 +885,7 @@ function comprobarDesbordes(){
 window.cargar = cargar;
 window.pintar = pintar;
 window.comprobarDesbordes = comprobarDesbordes;
+window.ajustarTamano = ajustarTamano;
 </script>
 </body>
 </html>
