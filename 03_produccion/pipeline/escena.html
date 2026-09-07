@@ -237,6 +237,22 @@
                                 width:250px;height:250px;transform:none}
   html[data-fmt="v"] #engranaje{right:56px;bottom:452px}
 
+  /* Encargo "el solape del pie con el personaje" (MDS-015 escena 3, ver
+     05_calendario/revisiones/MDS-015.md). NO es un problema de tamaño de
+     letra —eso ya lo corrige ajustarTamano()/C21.1— sino de reparto
+     vertical: #escena centra su contenido en una caja que llega hasta
+     abajo (padding-bottom:430px) sin saber que el personaje, cuando
+     aparece, ocupa 250px más por encima de esa línea (bottom:430px,
+     height:250px → su borde superior cae en 1920-430-250=1240px desde
+     arriba). Un `.cifra-pie` o `.pie` que crece hacia abajo puede acabar
+     exactamente donde ya está la cara.
+     La corrección es geometría, no un umbral adivinado: cuando hay
+     personaje, el bloque de texto reserva esos mismos 250px (más un
+     margen de 40px de aire) para que, centrado, nunca pueda llegar más
+     abajo que el borde superior del personaje. Determinista (regla
+     11.5): mismo guion, mismo reparto siempre. */
+  html[data-fmt="v"] body.con-personaje #escena{padding-bottom:720px}
+
   /* Remate de marca: los ultimos ~1,4 s de la escena «cierre». El video ya
      no acaba en seco sobre una negacion. Ver C15.5. */
   #remate{position:absolute;left:0;right:0;top:0;bottom:0;display:flex;
