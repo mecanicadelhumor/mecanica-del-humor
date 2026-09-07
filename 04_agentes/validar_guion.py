@@ -81,6 +81,10 @@ CAMPOS = {
 TEXTUALES = ["titulo", "subtitulo", "texto", "cifra", "pie", "a", "b", "et_a", "et_b", "etiqueta"]
 # «Episodio 01» o «Parte 3» no son afirmaciones: no exigen fuente.
 CON_DATOS = ["subtitulo", "texto", "cifra", "pie", "a", "b"]
+# C19+C16 (07/09): los ocho dibujos de 02_marca/iconos.svg, embebidos también
+# en escena.html (ICONOS). Mantener las tres listas sincronizadas a mano.
+ICONOS_VALIDOS = ["i-bisagra", "i-muelle", "i-ruptura", "i-bocadillos",
+                  "i-pausa", "i-grieta", "i-publico", "i-balanza"]
 
 # Firma de una narración que se quedó a medias: acaba en dos puntos y una sola
 # palabra («…los aviones son incómodos: cero.»), o directamente en dos puntos,
@@ -202,6 +206,15 @@ def validar(path):
         for campo in CAMPOS.get(t, []):
             if not e.get(campo):
                 errores.append(f"Escena {i} ({t}): falta el campo obligatorio «{campo}».")
+
+        # C19+C16 (07/09): «icono» solo admite los ocho dibujos de
+        # 02_marca/iconos.svg — un id que no esté en la lista no se dibuja
+        # (iconoHTML() de escena.html lo ignora en silencio), así que aquí
+        # se avisa en vez de fallar en render.py, que nunca lo vería.
+        if e.get("icono") and e["icono"] not in ICONOS_VALIDOS:
+            avisos.append(f"Escena {i}: «icono: {e['icono']}» no es uno de los ocho "
+                           f"iconos de 02_marca/iconos.svg ({', '.join(ICONOS_VALIDOS)}). "
+                           f"No se dibuja nada.")
 
         # En un Short ninguna escena puede pasar de 12 s: con seis escenas y
         # 55 s de techo, una de 20 s se come el vídeo entero.
@@ -325,6 +338,19 @@ def validar(path):
         if corto and escenas[0].get("tipo") == "titulo":
             errores.append("Escena 1: un Short no empieza con un rótulo de título. "
                            "Los tres primeros segundos deciden si te deslizan.")
+        # C19 (07/09): la escena 1 de un Short deja de poder ser una tarjeta
+        # de texto sobre fondo. Tres salidas válidas: «icono» (el vocabulario
+        # dibujado de 02_marca/iconos.svg), «personaje» (el Engranaje
+        # haciendo algo) o tipo «comparacion». Aviso, no error: el campo
+        # «icono» es de hoy mismo y los guiones escritos antes de hoy no
+        # pueden tenerlo. A partir de la planificación del jueves 10 sí debe
+        # cumplirse siempre.
+        e1 = escenas[0]
+        if corto and not e1.get("icono") and not e1.get("personaje") and e1.get("tipo") != "comparacion":
+            avisos.append("Escena 1 (C19, 07/09): sin «icono», sin «personaje» y sin ser "
+                          "«comparacion», es una tarjeta de texto sobre fondo. El 72% de "
+                          "las escenas de once Shorts ya son así — usa uno de los ocho "
+                          "iconos de 02_marca/iconos.svg, con cuatro palabras o menos.")
         if not corto and escenas[0].get("tipo") == "titulo" and dur(escenas[0]) > 8:
             avisos.append(f"Escena 1: {dur(escenas[0]):.1f}s de rótulo antes de empezar. "
                           f"Por encima de 8s es una portada, no un gancho.")

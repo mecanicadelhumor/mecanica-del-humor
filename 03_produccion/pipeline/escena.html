@@ -77,6 +77,33 @@
 
   .enunciado{font-size:72px;line-height:1.22;font-family:"Inter","DejaVu Sans",sans-serif;font-weight:800;letter-spacing:-.015em}
 
+  /* --- C19+C16 · el icono, 07/09 -------------------------------------
+     El campo «icono» (esquema_guion.json) admite cualquiera de los ocho
+     dibujos de 02_marca/iconos.svg (definidos más abajo, embebidos igual
+     que el personaje: sin red, sin dependencia externa). Se dibuja SOLO
+     con stroke-dasharray/dashoffset — ver dibujarIcono() — reusando la
+     misma «p» de entrada que ya calcula pintar() para cada unidad, así
+     que el trazo termina de dibujarse a los ~0,55-0,6s de entrar la
+     escena, determinista y sin capturas de más (misma unidad, mismo
+     escalonado que el resto). Pensado sobre todo para que la escena 1 de
+     un Short deje de ser una tarjeta de texto: icono + poca letra + el
+     personaje entrando después. */
+  .icono{display:block;width:230px;height:230px;margin:0 auto 44px}
+  html[data-fmt="v"] body.txt-xs .icono,
+  html[data-fmt="v"] body.txt-s  .icono{width:260px;height:260px;margin:0 auto 52px}
+
+  /* Los mismos estilos de trazo que 02_marca/iconos.svg — copiados, no
+     enlazados (ver la nota en iconoHTML() sobre por qué es una copia y no
+     un <use>). */
+  .icono .ic{fill:none;stroke:var(--tinta);stroke-width:3.2;
+      stroke-linecap:round;stroke-linejoin:round}
+  .icono .ic-am{stroke:var(--ambar)}
+  .icono .ic-ci{stroke:var(--cian)}
+  .icono .ic-co{stroke:var(--coral)}
+  .icono .ic-te{stroke:var(--tenue);stroke-width:1.8}
+  .icono .ic-f{fill:var(--ambar);stroke:none;opacity:0}
+  .icono .ic-guia{stroke:var(--tenue);stroke-width:1.4}
+
   /* V2 — variantes de composición para «enunciado».
      Es la mitad de las escenas de cada episodio y siempre se veía igual: un
      bloque de texto centrado. Lo que rota no es el texto: es dónde se apoya.
@@ -473,9 +500,114 @@ function rico(s){
     .replace(/_([^_]+)_/g,'<span class="cia">$1</span>');
 }
 
+// C19+C16 · el icono (07/09). d.icono es admisible en cualquier escena
+// (esquema_guion.json); si no viene, no se pinta nada.
+//
+// Es una COPIA del contenido de 02_marca/iconos.svg, no un <use
+// href="02_marca/iconos.svg#...">: Chromium clona el contenido de un
+// <use> en un árbol de sombra que querySelectorAll no ve, así que
+// dibujarIcono() no podría llegar a los <path> uno a uno para animar su
+// trazo. Si se toca 02_marca/iconos.svg hay que traer el cambio aquí a
+// mano — igual que el personaje, que por la misma razón también vive
+// duplicado en este documento.
+const ICONOS = {
+  "i-bisagra": `
+    <path class="ic" d="M40 44 h52 a16 16 0 0 1 0 32 h-52 a16 16 0 0 1 0 -32"/>
+    <path class="ic ic-am" d="M108 124 h52 a16 16 0 0 0 0 -32 h-52 a16 16 0 0 0 0 32"/>
+    <circle class="ic ic-ci" cx="100" cy="100" r="15"/>
+    <circle class="ic-f" cx="100" cy="100" r="5"/>
+    <path class="ic-guia" d="M100 30 v40 M100 130 v40"/>
+    <path class="ic ic-te" d="M126 148 a40 40 0 0 1 -52 0"/>`,
+  "i-muelle": `
+    <path class="ic ic-ci" d="M62 36 h76 M62 36 c-26 12 -26 26 0 38 s26 26 0 38
+                              s-26 26 0 38 s26 26 0 38"/>
+    <path class="ic" d="M62 188 h76"/>
+    <path class="ic ic-am" d="M156 60 v76"/>
+    <path class="ic-f" d="M156 148 l-8 -16 h16 z"/>
+    <path class="ic-guia" d="M40 36 h-16 M40 188 h-16"/>`,
+  "i-ruptura": `
+    <path class="ic" d="M22 100 h74"/>
+    <path class="ic-guia" d="M96 100 h84"/>
+    <path class="ic ic-am" d="M96 100 c30 0 34 -52 60 -52"/>
+    <circle class="ic ic-ci" cx="96" cy="100" r="11"/>
+    <path class="ic-f" d="M180 48 l-18 -9 v18 z"/>
+    <path class="ic ic-te" d="M170 108 h-14 M186 108 h-6"/>`,
+  "i-bocadillos": `
+    <path class="ic ic-ci" d="M18 42 h106 v56 h-70 l-22 22 v-22 h-14 z"/>
+    <path class="ic ic-am" d="M182 92 h-84 v56 h56 l22 22 v-22 h6 z"/>
+    <path class="ic ic-te" d="M40 62 h60 M40 78 h38"/>
+    <path class="ic-f" d="M124 116 h34 v5 h-34 z M124 132 h20 v5 h-20 z"/>`,
+  "i-pausa": `
+    <path class="ic ic-te" d="M18 100 h44"/>
+    <rect class="ic-f" x="72" y="44" width="20" height="112" rx="6"/>
+    <rect class="ic-f" x="110" y="44" width="20" height="112" rx="6"/>
+    <path class="ic ic-te" d="M138 100 h44"/>
+    <path class="ic ic-ci" d="M74 178 h52"/>
+    <path class="ic ic-ci" d="M74 170 v16 M126 170 v16"/>`,
+  "i-grieta": `
+    <path class="ic" d="M34 40 h132 v120 h-132 z"/>
+    <path class="ic ic-co" d="M92 40 l16 34 l-22 20 l26 30 l-14 36"/>
+    <path class="ic-guia" d="M56 62 h24 M56 84 h30 M126 120 h22 M126 142 h16"/>`,
+  "i-publico": `
+    <circle class="ic ic-te" cx="46" cy="76" r="17"/>
+    <path class="ic ic-te" d="M20 150 a26 26 0 0 1 52 0"/>
+    <circle class="ic ic-te" cx="100" cy="68" r="19"/>
+    <path class="ic ic-te" d="M70 150 a30 30 0 0 1 60 0"/>
+    <circle class="ic ic-am" cx="156" cy="76" r="17"/>
+    <path class="ic ic-am" d="M130 150 a26 26 0 0 1 52 0"/>
+    <path class="ic ic-co" d="M148 78 l6 6 M164 78 l-6 6"/>
+    <path class="ic ic-co" d="M146 96 a12 8 0 0 1 20 0"/>`,
+  "i-balanza": `
+    <path class="ic" d="M100 34 v134 M62 180 h76"/>
+    <path class="ic" d="M100 168 c-16 0 -26 5 -32 12 M100 168 c16 0 26 5 32 12"/>
+    <circle class="ic-f" cx="100" cy="34" r="5"/>
+    <path class="ic ic-te" d="M32 56 h136"/>
+    <path class="ic-guia" d="M100 34 L32 56 M100 34 L168 56"/>
+    <path class="ic ic-te" d="M32 56 v14 M168 56 v14"/>
+    <path class="ic ic-ci" d="M6 70 h52 l-14 30 h-24 z"/>
+    <path class="ic ic-am" d="M142 70 h52 l-14 30 h-24 z"/>`
+};
+
+function iconoHTML(id){
+  if (!id || !ICONOS[id]) return "";
+  return `<svg class="u icono" viewBox="0 0 200 200">${ICONOS[id]}</svg>`;
+}
+
+// Dibuja un icono a partir de «p» (0-1, la misma curva de entrada que ya
+// usa pintar() para esta unidad) y «fuera» (0-1, la salida de la escena).
+// Los trazos (.ic, .ic-am, .ic-ci, .ic-co, .ic-te) se revelan con
+// stroke-dasharray/dashoffset — la longitud de cada trazo se mide una vez
+// con getTotalLength() y se cachea en el propio nodo. Los rellenos (.ic-f:
+// los remaches, la flecha) no se «dibujan», aparecen con un fundido corto
+// al final. Las guías discontinuas (.ic-guia) se quedan con su propio
+// stroke-dasharray decorativo y solo cambian de opacidad. Todo función de
+// t a través de p/fuera — nada de setTimeout ni de CSS transition.
+function dibujarIcono(svgEl, p, fuera){
+  const vivo = Math.max(0, Math.min(1, p)) * (1 - fuera);
+  svgEl.querySelectorAll("path.ic, path.ic-am, path.ic-ci, path.ic-co, path.ic-te, circle.ic, circle.ic-am, circle.ic-ci, circle.ic-co, circle.ic-te")
+    .forEach(tr => {
+      let len = tr.dataset.len;
+      if (!len){
+        len = tr.getTotalLength ? tr.getTotalLength() : 0;
+        tr.dataset.len = len;
+        tr.style.strokeDasharray = len;
+      }
+      tr.style.strokeDashoffset = (parseFloat(len) * (1 - vivo)).toFixed(2);
+    });
+  svgEl.querySelectorAll(".ic-guia").forEach(tr => {
+    tr.style.opacity = (0.55 * vivo).toFixed(3);
+  });
+  svgEl.querySelectorAll(".ic-f").forEach(tr => {
+    // el relleno entra en el último 25% del trazo, no desde t=0
+    const q = Math.max(0, Math.min(1, (vivo - 0.75) / 0.25));
+    tr.style.opacity = q.toFixed(3);
+  });
+}
+
 const PLANTILLAS = {
   titulo(d){
     return `<div class="caja">
+      ${iconoHTML(d.icono)}
       ${d.etiqueta?`<div class="u etiqueta">${esc(d.etiqueta)}</div>`:""}
       <h1 class="u">${rico(d.titulo)}</h1>
       ${d.subtitulo?`<div class="u sub">${rico(d.subtitulo)}</div>`:""}
@@ -483,6 +615,7 @@ const PLANTILLAS = {
   },
   dato(d){
     return `<div class="caja" style="text-align:center">
+      ${iconoHTML(d.icono)}
       <div class="u cifra" data-cuenta="${esc(d.cifra)}">${rico(d.cifra)}</div>
       <div class="u cifra-pie">${rico(d.pie)}</div>
     </div>`;
@@ -492,6 +625,7 @@ const PLANTILLAS = {
     // desde una consola) cae en la variante centrada de siempre.
     const v = ((Number(d.n) || 0) % 3 + 3) % 3;
     return `<div class="caja enun-${v}">
+      ${iconoHTML(d.icono)}
       ${d.etiqueta?`<div class="u etiqueta">${esc(d.etiqueta)}</div>`:""}
       <div class="u enunciado">${rico(d.texto)}</div></div>`;
   },
@@ -499,16 +633,19 @@ const PLANTILLAS = {
     const li = d.puntos.map((p,i)=>
       `<li class="u"><span class="n">${String(i+1).padStart(2,"0")}</span>${rico(p)}</li>`).join("");
     return `<div class="caja">
+      ${iconoHTML(d.icono)}
       ${d.titulo?`<h2 class="u" style="margin-bottom:64px">${rico(d.titulo)}</h2>`:""}
       <ul class="lista">${li}</ul></div>`;
   },
   cita(d){
     return `<div class="caja">
+      ${iconoHTML(d.icono)}
       <blockquote class="u">${rico(d.texto)}</blockquote>
       <div class="u autor">— ${esc(d.autor)}</div></div>`;
   },
   comparacion(d){
     return `<div class="caja">
+      ${iconoHTML(d.icono)}
       ${d.titulo?`<h2 class="u" style="margin-bottom:60px;text-align:center">${rico(d.titulo)}</h2>`:""}
       <div class="dos">
         <div class="u panel ko"><div class="et">${rico(d.et_a||"Sin esto")}</div><div class="tx">${rico(d.a)}</div></div>
@@ -520,6 +657,7 @@ const PLANTILLAS = {
     // El titular va como en «lista» y «comparacion»: una gráfica sin enunciado
     // obliga al espectador a deducir qué está mirando.
     return `<div class="caja" style="text-align:center">
+      ${iconoHTML(d.icono)}
       ${d.titulo?`<h2 class="u" style="margin-bottom:36px">${rico(d.titulo)}</h2>`:""}
       <img class="u fig" src="${esc(d.imagen)}">
       ${d.pie?`<div class="u pie">${rico(d.pie)}</div>`:""}</div>`;
@@ -536,10 +674,13 @@ const PLANTILLAS = {
           ${p.pie?`<div class="pp">${rico(p.pie)}</div>`:""}
         </div>${i<d.pasos.length-1?'<div class="u flecha">&#8595;</div>':""}`).join("");
       return `<div class="caja">
+        ${iconoHTML(d.icono)}
         ${d.titulo?`<h2 class="u" style="margin-bottom:44px">${rico(d.titulo)}</h2>`:""}
         <div class="pila">${pasos}</div></div>`;
     }
-    // mecanismo del chiste: cajas encadenadas por flechas
+    // mecanismo del chiste: cajas encadenadas por flechas. Sin icono aquí —
+    // es un lienzo <svg> propio, no una «.caja» HTML, y esta rama es solo
+    // del episodio largo (horizontal), donde C19 no exige nada.
     const cajas = d.pasos.map((p,i)=>{
       const x = 40 + i*(1840/d.pasos.length);
       const w = (1840/d.pasos.length) - 80;
@@ -560,6 +701,7 @@ const PLANTILLAS = {
   },
   cierre(d){
     return `<div class="caja" style="text-align:center">
+      ${iconoHTML(d.icono)}
       <h2 class="u">${rico(d.titulo)}</h2>
       ${d.subtitulo?`<div class="u sub">${rico(d.subtitulo)}</div>`:""}
     </div>`;
@@ -731,6 +873,10 @@ function pintar(t){
     el.style.opacity = Math.max(0, op).toFixed(4);
     el.style.transform = `translateY(${dy.toFixed(2)}px)`;
     if (el.dataset.cuenta) el.innerHTML = contar(el.dataset.cuenta, p);
+    // C19+C16 · el icono se dibuja a trazo (dasharray/dashoffset) en vez de
+    // aparecer entero: el propio <svg> se queda a opacidad plena en cuanto
+    // arranca (el "aparecer" lo hace el trazo, no el contenedor).
+    if (el.classList && el.classList.contains("icono")) dibujarIcono(el, p, fuera);
   });
 
   // ---------- C15.1 · revelado palabra a palabra (solo vertical) ----------

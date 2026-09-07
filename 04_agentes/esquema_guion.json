@@ -231,6 +231,19 @@
       ],
       "default": "narrador",
       "description": "Quién dice esta escena. «esceptico» es la voz que interrumpe con la objeción que el espectador está pensando: corta, menos de 12 palabras, y siempre antes de que el narrador la resuelva."
+     },
+     "icono": {
+      "enum": [
+       "i-bisagra",
+       "i-muelle",
+       "i-ruptura",
+       "i-bocadillos",
+       "i-pausa",
+       "i-grieta",
+       "i-publico",
+       "i-balanza"
+      ],
+      "description": "Añadido el 07/09 (C19+C16). Uno de los ocho dibujos de 02_marca/iconos.svg. Admisible en cualquier escena; escena.html lo dibuja solo (stroke-dasharray/dashoffset, ~0,55-0,6s) al entrar la escena, determinista y sin coste de render añadido. Pensado sobre todo para que la escena 1 de un Short deje de ser una tarjeta de texto: icono + cuatro palabras o menos + el personaje entrando (C19). Si falta, no aparece."
      }
     }
    },

@@ -118,6 +118,18 @@ que en vertical se apila) y `cita`. Elegir el tipo de escena es parte de escribi
 guion, no un detalle de maquetación: **una comparación se entiende sola y un enunciado
 hay que leerlo.**
 
+**Añadido el 07/09 (C19+C16): el campo `icono`.** Los ocho dibujos de
+`02_marca/iconos.svg` —`i-bisagra`, `i-muelle`, `i-ruptura`, `i-bocadillos`, `i-pausa`,
+`i-grieta`, `i-publico`, `i-balanza`— llevaban desde agosto en el repositorio sin
+usarse ni una vez porque no había forma de ponerlos en un guion. Ahora sí: `icono`
+(ver `esquema_guion.json`) es admisible en cualquier escena y `escena.html` lo dibuja
+solo (el trazo se traza con `stroke-dasharray`/`stroke-dashoffset`, no aparece de
+golpe) en los primeros ~0,55-0,6s de la escena, coste de render cero. Esto es lo que
+cierra el hueco que abre este apartado: la escena 1 de un Short ya no tiene que ser
+texto sobre fondo — puede ser icono + poca letra, el Engranaje haciendo algo, o una
+comparación (ver C19 en `validar_guion.py`, que avisa si la escena 1 no es ninguna
+de las tres).
+
 ## Reglas duras
 
 **Los tres primeros segundos.** No hay rótulo de título, no hay logo, no hay «hola», no hay
