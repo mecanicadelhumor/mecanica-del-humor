@@ -375,7 +375,7 @@ previa tampoco se ha ejecutado pese a haber recibido *push* en sus rutas de disp
 workflows callados a la vez apunta a Actions parado —cuota, workflows deshabilitados o
 repositorio en pausa—, no a un fallo de código.
 
-**Comprobación de treinta segundos que solo puede hacer Silvestre:** abrir la pestaña
+**Comprobación de treinta segundos que solo puede hacer el codirector:** abrir la pestaña
 *Actions* del repositorio. Si no hay ejecución de hoy, el problema es de habilitación o
 cuota. Si la hay y falla, el paso «Recuperar el plan» dice si el plan traía uno o dos
 trabajos.
@@ -703,7 +703,7 @@ tocar nada.
 
 ---
 
-## 6. Qué tiene que hacer Silvestre, y cuándo
+## 6. Qué tiene que hacer el codirector, y cuándo
 
 Todo lo demás lo hace el sistema. Esto no puede.
 

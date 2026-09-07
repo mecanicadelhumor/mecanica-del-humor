@@ -1,6 +1,6 @@
 # Dirección — lunes 7 de septiembre de 2026
 
-Conversación de dirección del lunes. Silvestre trae tres defectos de MDS-011, la
+Conversación de dirección del lunes. El codirector trae tres defectos de MDS-011, la
 pregunta de `producir.yml` del sábado, el encargo de la presentación y la
 pregunta de hasta cuándo apostar por el canal.
 
@@ -52,7 +52,7 @@ resolvió con `html[data-fmt="v"] body.con-personaje #escena{padding-bottom:720p
 y su barrido incluía `MDS-011` entre las escenas que quedaban limpias.
 
 **No llegó por el reloj, y esto hay que dejarlo escrito porque va a repetirse.**
-MDS-011 se renderizó y se subió a las **01:32 UTC**; Silvestre commiteó el
+MDS-011 se renderizó y se subió a las **01:32 UTC**; el codirector commiteó el
 arreglo a las **08:03**. Seis horas y media tarde. → **Trampa 11** del
 `PROMPT_DE_ARRANQUE.md`: un arreglo tiene que estar en `origin/main` **antes de
 las 03:13 de la madrugada** del día en que quieras verlo. Commiteado por la
@@ -110,7 +110,7 @@ de publicar; sigue siendo un informe y la barrera sigue siendo la de `render.py`
 
 ## 3. C25 · La presentación (versión 6 del plan)
 
-El encargo de Silvestre —«nuestro talón de Aquiles es la presentación»— se
+El encargo del codirector —«nuestro talón de Aquiles es la presentación»— se
 convierte en un plan con siete diferencias nombradas y diez propuestas
 (P1–P10), todas deterministas, todas a coste cero salvo P9.
 
@@ -135,7 +135,7 @@ Siguen en pie la 11.2, la 11.5 y la barrera de C21.
 
 ## 4. C26 · El 15 de noviembre se decide
 
-La pregunta de Silvestre estaba medio contestada: había un control intermedio
+La pregunta del codirector estaba medio contestada: había un control intermedio
 (27 de septiembre) y una frase, «doce semanas», sin fecha ni criterio.
 
 **Fecha: domingo 15 de noviembre de 2026.** Doce semanas desde el primer Short,
@@ -187,7 +187,7 @@ diaria.
 
 ## 6. Y a media conversación: «Métricas semanales» dice que no hay datos desde el 31/08
 
-Silvestre lo trae mientras escribo esto. Es cierto y la causa es un choque de
+El codirector lo trae mientras escribo esto. Es cierto y la causa es un choque de
 horarios que llevaba ahí desde que se montaron las dos piezas.
 
 **Los hechos:**
@@ -230,7 +230,7 @@ funcionó, y la decisión del 15 de noviembre se construye con esa serie.
 
 **Lo que NO se ha hecho, y por qué.** También se podría haber adelantado el cron
 de `metricas.yml` con tres intentos, como hizo `producir.yml`. Se descarta hoy:
-está en `.github/workflows/`, obliga a Silvestre a editar un segundo fichero a
+está en `.github/workflows/`, obliga al codirector a editar un segundo fichero a
 mano en la misma mañana, y **mover la tarea que lee resuelve el mismo problema
 sin tocar nada**. Si vuelve a fallar con el margen nuevo, entonces sí.
 
@@ -258,7 +258,7 @@ desde el **último**, no desde el primero.
 **No se ha tocado** ningún guion, ni `parrilla.json`, ni `ESTADO.md`, ni
 `registro_publicaciones.json`, ni `05_calendario/qa/`, ni `.github/workflows/`.
 
-## Pendiente de Silvestre
+## Pendiente del codirector
 
 1. **Commit y push de todo lo de arriba**, y cuanto antes mejor: `voz.py` tiene
    que estar en `origin/main` **antes de las 03:13 de esta madrugada** para
@@ -269,3 +269,150 @@ desde el **último**, no desde el primero.
 4. **Tres sonidos CC0** en `03_produccion/sonidos/`, sin prisa: hacen falta para
    la semana del 21.
 5. **C23**: reintentar la verificación del dominio en la consola de Google.
+
+---
+
+# Segunda tanda — lunes 7, mediodía
+
+El codirector aplica lo de la mañana, rehace MDS-011 a mano y trae cinco cosas
+más. Todo lo que sigue está en `PLAN_DE_CAMBIOS.md` **versión 6.1**.
+
+## 1. El solape seguía ahí, y la medición del domingo era la culpable
+
+MDS-011 rehecho: el audio arreglado, el icono movido, pero **sigue chocando con
+el subtexto y sigue con cara triste**. Reproducido con el motor real en el
+contenedor (Chromium + `render.py`), midiendo rectángulos:
+
+| Cuándo se mide | Hueco entre `.cifra-pie` y el personaje |
+|---|---|
+| En reposo, justo tras `cargar()` — **como se midió el domingo** | **48 px** |
+| Con `pintar(t)` a lo largo de la escena, 21 instantes | **7 px** (mínimo, al 80 %) |
+
+Los 41 px se los comen tres cosas invisibles en un fotograma quieto: la entrada
+del personaje (`translateY` de 26 px), su respiración (±5 px) y el zoom del 2,2 %
+de `#escena` (C15), que empuja el borde inferior de `.caja` ~20 px.
+
+**`padding-bottom` pasa de 720 a 790 px**, derivado y no adivinado: 430 + 250 + 5
++ 40 + 65. Barrido sobre **las 49 escenas verticales con personaje** del
+repositorio, 21 instantes cada una:
+
+| | peor hueco | `caja.top` mínimo | barrera C21 |
+|---|---|---|---|
+| 720 px (antes) | **−34 px** | 194 px | 0 avisos |
+| 790 px (ahora) | **+2 px** | 158 px | 0 avisos |
+
+MDS-011 esc.4 pasa de 7 a **43 px**. Los cinco guiones pendientes quedan por
+encima de **108 px**. El peor caso que queda, `MDS-007` esc.4 (`lista` de tres
+puntos, ya publicada), no se arregla subiendo más el padding: a 790 el borde
+superior de `.caja` ya está en 158 px y por encima de 150 px empieza la banda que
+tapa la interfaz de YouTube. Encargado como C21.1 aplicado al alto.
+
+## 2. `piensa` era, literalmente, una boca hacia abajo
+
+`.ex-piensa` usaba `.b-torcida`, la misma boca que `duda`
+(`M78 136 Q100 128 122 133`, comisuras caídas). Comparadas las dos caras en
+captura al tamaño real, el codirector tenía toda la razón: se lee triste.
+
+Redibujada: **`.b-recta` y las dos cejas levantadas** (`ceja-i` −6 px/−4°,
+`ceja-d` −2 px/+9°), y el pensar lo cuentan las cejas y el eje del engranaje
+girando 24°, que ya estaba y es lo de marca.
+
+**Y con eso la regla 14.3 vuelve de tres caras a dos.** Esta mañana la amplié
+para prohibir `duda`, `piensa` y `no`; era tratar el síntoma. Queda escrito en
+`REGLAS.md`: *cuando una regla tenga que prohibir la mitad de una paleta,
+sospecha de la paleta antes que de quien la usa.*
+
+## 3. Las métricas no eran el horario: eran los ámbitos
+
+El error que trajo el codirector no es un token caducado, es
+**`invalid_scope: Bad Request`** al refrescar. Comparados los tres scripts:
+
+| Script | Ámbitos que pide | ¿Funciona? |
+|---|---|---|
+| `publicar.py` | `youtube.upload` + `force-ssl` | **sí** |
+| `metricas.py` | `yt-analytics.readonly` + `force-ssl` | **no** |
+| `obtener_token_youtube.py` | los tres | — |
+
+Google rechaza un refresco cuyos ámbitos no sean subconjunto de los concedidos.
+Conclusión: **el token del 1 de septiembre se generó sin `yt-analytics.readonly`**
+—una casilla sin marcar en el consentimiento—, y por eso subir vídeos funciona y
+las métricas mueren. Encaja con la cronología: el 31/08 la lectura salió bien; el
+01/09 se regeneró el token; el 07/09 es el primer lunes desde entonces.
+
+Arreglado en las dos direcciones, y las dos importan:
+- `obtener_token_youtube.py` **rechaza** un token al que le falte un ámbito, en
+  vez de imprimirlo y quedarse tan ancho.
+- `metricas.py` **no manda `scopes` al refrescar** (que es lo que provoca el
+  `invalid_scope`) y comprueba por su cuenta; si falta el de analítica hace la
+  parte de Data API —la que corrige el registro— y lo dice en castellano.
+
+El cambio de horario de la mañana (07:00 → 10:00 UTC) sigue siendo correcto y
+necesario, pero **no era esta la causa de hoy**. Las dos cosas estaban rotas.
+
+## 4. La verificación de Google: se estaba persiguiendo el trámite equivocado
+
+Tres señales que el codirector trae y que no dicen lo que parecen:
+- **«Propietario verificado» con marca verde** → la propiedad del dominio **está
+  hecha**. Era lo único que necesitaba `docs/`.
+- **«No hay páginas AMP»** → es de **Search Console**, no de OAuth. No tener
+  ninguna es lo normal y no bloquea nada.
+- **«Estado de verificación» con problemas** → es la verificación **de marca**,
+  un trámite con revisión humana que **no necesitamos**, y el botón «Corregí los
+  problemas» **manda la aplicación a revisión**: por eso vuelve a fallar cada vez.
+
+Lo que hay que pulsar es *Audiencia* → **«Publicar aplicación»**. Es lo que dice
+la versión 5 desde el 4 de septiembre: publicar no es verificar.
+
+## 5. El nombre fuera del repositorio
+
+**271 menciones en 58 ficheros**, sustituidas por «el codirector» / «la
+dirección», con repaso de concordancia (`de` + `el` → `del`, mayúsculas de
+principio de frase, y los cortes de línea que partían la construcción).
+Sincronizados también los tres prompts del almacén. Regla escrita en los tres.
+
+**No cubre el historial de git**, y eso se dice claro: los commits anteriores a
+hoy siguen llevándolo. Limpiarlo exige `filter-repo` y `push --force`; es
+decisión del codirector.
+
+Tres ficheros **no** se han reescrito a propósito —`revision-19-08.patch`,
+`Claude outputs/voz_prueba.yml`, `Claude outputs/portada-web.png`—: son restos de
+sesiones antiguas y lo suyo es borrarlos del repositorio, no maquillarlos.
+
+## 6. C27 · el episodio largo también deja `edge-tts`
+
+La propuesta del codirector es correcta y se acepta. La conclusión del 4 de
+septiembre («cuarenta escenas no caben en diez peticiones al día») daba por hecho
+que la cuota se gasta el día del render, y no tiene por qué: entre el jueves que
+se escribe el guion y el sábado que se produce hay días de sobra.
+
+La pieza de la que depende todo es una **caché de voz indexada por
+`sha256(narración + motor + voz)`**, que entra esta semana con C7 y que además
+arregla algo que ha costado hoy: rehacer MDS-011 a mano gastó la cuota dos veces.
+Encima, un workflow `voz_adelantada.yml` de martes a viernes que sintetiza lo que
+falte usando **`gemini-2.5-flash-preview-tts`** —cuota propia, no compite con los
+Shorts—, y el sábado `voz.py` encuentra el trabajo hecho y completa con
+`edge-tts` lo que falte. Un mal día no deja sin vídeo: deja alguna escena con voz
+peor, anotada en `ficha.json`.
+
+**Y la frase del codirector que no se esquiva —«si no, dejamos de hacer largos»—
+queda viva para el 27 de septiembre.** Cuarenta escenas de guion y de render para
+una visualización es una pregunta legítima.
+
+## Ficheros de esta segunda tanda
+
+- `00_estrategia/PLAN_DE_CAMBIOS.md` — **versión 6.1** (C27, C23 aclarado, P8 a medias, el nombre)
+- `00_estrategia/REGLAS.md` — regla 14.3, de tres caras a dos
+- `00_estrategia/PROMPT_DE_ARRANQUE.md` — trampas 15, 16 y 17; la regla del nombre; `montaje.py` para P9 marcado como **pendiente de autorización**
+- `00_estrategia/tareas/*.md` — los tres espejos sincronizados con el almacén
+- `03_produccion/pipeline/escena.html` — `padding-bottom` 790 px y `piensa` redibujada
+- `04_agentes/metricas.py` · `04_agentes/obtener_token_youtube.py` — los ámbitos
+- **58 ficheros más** con el nombre retirado
+
+## Pendiente del codirector, actualizado
+
+1. **Commit y push**, antes de las 03:13 de esta madrugada para que entre en MDS-012.
+2. **`Audiencia → Publicar aplicación`** en la consola de Google. Nada de «Corregí los problemas».
+3. **Regenerar el token con LAS TRES CASILLAS** marcadas. El script ahora lo rechaza si falta alguna.
+4. **¿Autorizo `montaje.py` para P9?** Sin eso los tres sonidos se quedan en la carpeta.
+5. **Borrar del repositorio** `revision-19-08.patch` y la carpeta `Claude outputs/`.
+6. **¿Se limpia el nombre del historial de git?** Decisión suya.

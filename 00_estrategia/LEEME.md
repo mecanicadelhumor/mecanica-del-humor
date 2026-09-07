@@ -50,7 +50,7 @@ los días) y **`05_calendario/metricas.json`** (los números).
 
 Las fases 1 y 2 están hechas y la publicación es automática. **El número se movió
 con C15** —31, 21 y 21 contra una mediana de 11— y ahí se quedó: el episodio
-largo del sábado 5 tiene **una visualización, la de Silvestre**. Seguimos en el
+largo del sábado 5 tiene **una visualización, la del codirector**. Seguimos en el
 peldaño S1 y por debajo del umbral.
 
 **Y hay una cifra que ordena todo lo demás:** un canal desconocido de menos de
@@ -76,12 +76,12 @@ final, que es la que manda. Sus dos decisiones nuevas:
 - **Un solo canal, en español.** El inglés se sirve con el doblaje automático de
   YouTube. Se reabre `@humormechanics` solo si las pistas dobladas superan el
   25 % del tiempo de visionado a las ocho semanas.
-- **No se clona la voz de Silvestre por ahora.** En su lugar, Gemini TTS con
+- **No se clona la voz del codirector por ahora.** En su lugar, Gemini TTS con
   dirección de actor, **una llamada por escena y solo en los Shorts, desde el
   lunes 14**. El escalón intermedio de dos voces de `edge-tts` se descartó.
 - **Los subtítulos quemados se retiraron** por decisión editorial. No los vuelvas
   a encender: el motivo está en `MEJORAS.md` del 20/08 y en C6.1.
-- **Ni notificaciones ni CSV a mano.** Los agentes no avisan a Silvestre: dejan
+- **Ni notificaciones ni CSV a mano.** Los agentes no avisan al codirector: dejan
   `05_calendario/ESTADO.md` escrito.
 - **Hay una barrera antes de publicar** (C21): `render.py` falla si un texto no
   cabe en su caja, y como corre antes que `publicar.py`, nada se sube roto.

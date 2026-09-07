@@ -8,7 +8,7 @@ sobre `origin/main` trae `cb591f6 medición de demanda 2026-09-03`, `bfed822 rev
 3/9` y el expediente de MDS-009. La bitácora de la planificación del 27/08 está en el
 repositorio, o sea que **no hay ninguna entrega pendiente sin aplicar**. Se puede trabajar.
 
-Sin acceso al ordenador de Silvestre: la tarea corre programada en la nube y el puente de
+Sin acceso al ordenador del codirector: la tarea corre programada en la nube y el puente de
 dispositivos no existe en este modo. Se ha clonado el repositorio público y se entrega
 `.tar.gz`, como estaba previsto.
 
@@ -148,7 +148,7 @@ Y el aviso de C17 del validador me hizo abrir MDH-004, producido el 29 de agosto
 todo allí: la comparación «Las dos risas» con `E04` (escena 19), el dato «24 sociedades»
 con `D07` (escena 20), «algo más que el azar» (escena 21) y el límite del laboratorio
 (escena 27). **Cuatro escenas casi calcadas, ocho días después.** Es exactamente el
-hallazgo de Silvestre del 31/08 —las 1.200 risas en tres vídeos en siete días— repitiéndose
+hallazgo del codirector del 31/08 —las 1.200 risas en tres vídeos en siete días— repitiéndose
 con otras fichas.
 
 Se retira. En su sitio entra MDS-013 con `J04` y `J05`, dos fichas vírgenes. La pregunta
@@ -293,7 +293,7 @@ tipo visual, que es lo que dice el patrón de MDH-004.
 MDS-006 a MDS-010. O sea que esta semana se ha elegido **solo con demanda de búsqueda, sin
 ninguna señal de rendimiento**. La primera lectura útil llegará con la tarea del lunes 7.
 
-### Pendiente de Silvestre
+### Pendiente del codirector
 
 **Nada**, más allá de aplicar el paquete y hacer el commit. No hay nada roto que solo él
 pueda arreglar. (Esta línea la escribe la revisión diaria en `ESTADO.md`; se deja aquí

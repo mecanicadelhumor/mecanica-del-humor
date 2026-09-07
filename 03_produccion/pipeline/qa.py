@@ -131,7 +131,7 @@ MAX_FRAGMENTO_S = 0.45
 def fragmentos(mp4):
     """Sílabas sueltas en cualquier punto del vídeo, no solo al principio.
 
-    De dónde sale: Silvestre oyó «una sílaba que no pertenece a ninguna frase»
+    De dónde sale: el codirector oyó «una sílaba que no pertenece a ninguna frase»
     en MDH-001.en y MDH-002.en, las dos veces al empezar, y se dio por hecho
     que era un falso arranque de la voz. El 19/08 apareció otra **en el minuto
     5:35** de MDH-002.es. O sea que no es un problema del arranque: es que el

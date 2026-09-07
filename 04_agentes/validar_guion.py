@@ -261,9 +261,9 @@ def validar(path):
         # incómodos": cero.» y ahí se acababa. El chiste —el remate entero de
         # la escena— estaba escrito en el panel de pantalla pero no en la
         # narración, así que la voz dijo «cero» y se calló. El guion inglés
-        # traía el mismo corte. Nadie lo detectó hasta que Silvestre lo oyó.
+        # traía el mismo corte. Nadie lo detectó hasta que el codirector lo oyó.
         #
-        # La regla que hay detrás es de Silvestre y vale para todo el canal:
+        # La regla que hay detrás es del codirector y vale para todo el canal:
         # **el audio tiene que ser autosuficiente**, porque mucha gente ve
         # YouTube sin mirar la pantalla. Lo que está en pantalla y no se dice,
         # para esa gente no existe.

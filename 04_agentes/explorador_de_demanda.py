@@ -10,7 +10,7 @@ las herramientas web están bloqueadas: no puede consultar nada por su cuenta. L
 primera ejecución, el 20 de agosto, lo dijo con todas las letras y entregó una
 medición coja — `vistas_top10: null` en todos los candidatos.
 
-La salida no es pedirle permiso a Silvestre cada jueves (eso devuelve el proyecto
+La salida no es pedirle permiso al codirector cada jueves (eso devuelve el proyecto
 a depender de que él esté delante), sino separar las dos mitades del trabajo:
 
     ESTE SCRIPT (GitHub Actions, con internet)  ->  MIDE

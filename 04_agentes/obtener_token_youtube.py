@@ -88,6 +88,32 @@ def main():
     print("Ámbitos concedidos:")
     for s in (cred.scopes or []):
         print(f"  · {s}")
+
+    # BARRERA, no informe. 07/09/2026.
+    #
+    # Hasta hoy esto imprimía los ámbitos concedidos y se quedaba tan ancho,
+    # aunque faltara uno. El 1 de septiembre se regeneró el token sin
+    # `yt-analytics.readonly` —en la pantalla de consentimiento cada permiso
+    # es una casilla y es fácil dejarse una— y el token pareció bueno: subía
+    # vídeos sin problema. La avería no se vio hasta el lunes siguiente,
+    # cuando la lectura semanal de métricas murió con `invalid_scope` y un
+    # rastro de pila que no nombra el ámbito que falta.
+    #
+    # Un token al que le falta un permiso no es medio bueno: es un token que
+    # va a fallar dentro de una semana, en otro sitio y con otro error. Así
+    # que aquí NO se imprime: se rechaza, y se dice exactamente qué faltó.
+    concedidos = set(cred.scopes or [])
+    faltan = [x for x in AMBITOS if x not in concedidos]
+    if faltan:
+        print("\n" + "!" * 68)
+        for x in faltan:
+            print(f"  FALTA: {x}")
+        sys.exit("\nEste token NO sirve: le faltan los ámbitos de arriba, y sin "
+                 "ellos\nsubir vídeos funcionará pero las métricas fallarán dentro "
+                 "de una semana\ncon «invalid_scope».\n\nVuelve a ejecutar esto y "
+                 "marca LAS TRES casillas de la pantalla de\nconsentimiento. Si "
+                 "Google ya no las ofrece, revoca primero el acceso en\n"
+                 "https://myaccount.google.com/permissions y empieza de nuevo.")
     print("\nSettings -> Secrets and variables -> Actions:")
     print("  canal español  -> YT_REFRESH_TOKEN")
     print("  canal inglés   -> YT_REFRESH_TOKEN_EN")

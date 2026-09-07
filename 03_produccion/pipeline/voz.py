@@ -166,7 +166,7 @@ def fragmento_inicial(mp3):
     """Segundos a recortar por delante, o 0 si la escena arranca limpia.
 
     El sintetizador cuela de vez en cuando un trozo de palabra al principio de
-    una escena: se oye una sílaba que no pertenece a ninguna frase. Silvestre
+    una escena: se oye una sílaba que no pertenece a ninguna frase. El codirector
     lo detectó en MDH-001.en, en MDH-002.en y —esta es la que rompió el
     diagnóstico anterior— en el minuto 5:35 de MDH-002.es. No es un «falso
     arranque» del vídeo: como aquí se sintetiza una escena por petición, puede

@@ -251,7 +251,26 @@
      margen de 40px de aire) para que, centrado, nunca pueda llegar más
      abajo que el borde superior del personaje. Determinista (regla
      11.5): mismo guion, mismo reparto siempre. */
-  html[data-fmt="v"] body.con-personaje #escena{padding-bottom:720px}
+  /* 07/09/2026 · de 720 a 790. Los 720 salían de una medición ESTÁTICA
+     —el punto de reposo de la escena— y ahí el hueco entre el texto y la
+     cara medía 48px, que parecía suficiente. Con la escena EN MOVIMIENTO el
+     hueco real de MDS-011 escena 4 baja a 7px y el vídeo salió publicado con
+     la cara pegada al pie. Dos cosas se comen esos 41px y ninguna se ve en un
+     fotograma quieto:
+       · el personaje entra desde 26px más abajo y sube (translateY del
+         escalonado de entrada) y además respira ±5px, así que su borde
+         superior llega hasta 1235 en vez de quedarse en 1240;
+       · `#escena` crece un 2,2 % durante la escena (el zoom lento de C15) y
+         eso empuja el borde inferior de `.caja` unos 20px hacia abajo.
+     790 = 430 (bottom del personaje) + 250 (su alto) + 5 (respiración)
+         + 40 (el aire que ya se quería) + 65 (lo que empuja el zoom, medido).
+     Comprobado sobre las 49 escenas verticales con personaje del repositorio,
+     21 instantes por escena: el peor hueco pasa de -34px a +2px (MDS-007
+     esc.4, `lista` de tres puntos, ya publicada) y todos los guiones
+     pendientes quedan por encima de 108px. MDS-011 esc.4 pasa de 7 a 43px.
+     Y la lección, que vale para todo lo demás: medir una escena quieta miente
+     cuando la escena se mueve. */
+  html[data-fmt="v"] body.con-personaje #escena{padding-bottom:790px}
 
   /* Remate de marca: los ultimos ~1,4 s de la escena «cierre». El video ya
      no acaba en seco sobre una negacion. Ver C15.5. */
@@ -345,9 +364,17 @@
     .ex-rie      .ceja-i    {transform:rotate(-6deg) translateY(-6px)}
     .ex-rie      .ceja-d    {transform:rotate(6deg) translateY(-6px)}
 
-    .ex-piensa   .b-torcida {display:block}
-    .ex-piensa   .ceja-i    {transform:translateY(-4px) rotate(-5deg)}
-    .ex-piensa   .ceja-d    {transform:translateY(2px) rotate(12deg)}
+    /* 07/09/2026 · «piensa» compartía la boca de «duda» (`b-torcida`, que a
+       tamaño de móvil se lee como una mueca hacia abajo) y por eso salió en
+       MDS-011 una cara triste sobre una escena que solo presentaba un
+       experimento. Ahora lleva la boca recta y las dos cejas LEVANTADAS: el
+       «estoy pensando» lo cuentan las cejas y el eje del engranaje girando
+       24°, que además es lo de marca. Cejas altas = atención; boca curvada
+       hacia abajo = tristeza. Solo `duda` y `no` siguen leyéndose tristes, y
+       la regla 14.3 de REGLAS.md ya solo habla de esas dos. */
+    .ex-piensa   .b-recta   {display:block}
+    .ex-piensa   .ceja-i    {transform:translateY(-6px) rotate(-4deg)}
+    .ex-piensa   .ceja-d    {transform:translateY(-2px) rotate(9deg)}
     .ex-piensa   .eje       {transform:rotate(24deg)}
   </style>
 

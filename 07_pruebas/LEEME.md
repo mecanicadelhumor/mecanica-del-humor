@@ -1,6 +1,6 @@
 # 07_pruebas — el buzón de ida y vuelta
 
-**Creada por Silvestre el 4 de septiembre de 2026.** Es para lo que no se puede
+**Creada por el codirector el 4 de septiembre de 2026.** Es para lo que no se puede
 decidir leyendo: audios que hay que escuchar, capturas que hay que mirar,
 opciones entre las que hay que elegir con los sentidos y no con un argumento.
 
@@ -24,10 +24,10 @@ explique por qué se hizo lo que se hizo.
 Cualquiera de los tres, y por eso hay que firmar:
 
 - **La dirección** (yo) deja pruebas cuando una decisión depende de algo que
-  Silvestre tiene que oír o ver.
+  el codirector tiene que oír o ver.
 - **La revisión diaria** deja pruebas cuando encuentra dos opciones y no puede
   elegir sola. Su prompt le dice que mire esta carpeta.
-- **Silvestre** deja aquí lo que quiere que se mire, como hizo con las voces.
+- **El codirector** deja aquí lo que quiere que se mire, como hizo con las voces.
 
 Esta carpeta **no la produce nadie automáticamente** y no entra en ningún
 paquete de tarea programada. Es material, no código: nada de aquí se ejecuta.

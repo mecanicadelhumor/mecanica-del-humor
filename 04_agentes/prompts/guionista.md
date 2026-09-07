@@ -115,7 +115,7 @@ enganchada a la tarea de 24 horas: se pide que hagan algo y que cuenten cómo le
   pierde en las mesetas.
 - **Nada de construcciones que solo funcionan escritas.** Se escribe para el oído. «Los aviones son
   incómodos: cero» se lee bien en una diapositiva y en voz alta no significa nada — pasó en MDH-002 y
-  Silvestre lo señaló dos veces. Si al leerlo en alto en tu cabeza hace falta ver la pantalla para
+  el codirector lo señaló dos veces. Si al leerlo en alto en tu cabeza hace falta ver la pantalla para
   entenderlo, está mal escrito. Dilo como lo dirías hablando: «ahí no se ha reído nadie».
 - **Cada bloque entra desde el anterior.** Al pasar de una idea a otra hace falta **una frase de
   transición** que diga de dónde vienes y adónde vas. Sin ella el vídeo da un salto: en MDH-002 se

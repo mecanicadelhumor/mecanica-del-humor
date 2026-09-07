@@ -3,7 +3,7 @@ name: Leer métricas
 # ---------------------------------------------------------------------------
 # Lee la analítica del canal y la deja en 05_calendario/metricas.json.
 #
-# POR QUÉ AQUÍ: hasta el 24 de agosto los números se pedían a mano y Silvestre
+# POR QUÉ AQUÍ: hasta el 24 de agosto los números se pedían a mano y el codirector
 # los copiaba de Studio uno a uno. Con seis piezas por semana eso no escala y
 # además se cometen errores al copiar.
 #

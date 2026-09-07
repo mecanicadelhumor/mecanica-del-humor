@@ -31,7 +31,7 @@ entrada, que ya se captura. Las del nivel 2 hay que medirlas antes de adoptarlas
 ~~Lo que sí da vida al tramo central sin coste: los **subtítulos quemados palabra a
 palabra**, que se aplican en `montaje.py` sobre el vídeo ya renderizado.~~
 
-**Ya no.** El 20/08, viendo MDH-003.es terminado, Silvestre decidió quitarlos:
+**Ya no.** El 20/08, viendo MDH-003.es terminado, el codirector decidió quitarlos:
 palabra a palabra y sobre un diseño que ya es tipográfico, distraen más de lo que
 aportan. Los subtítulos de verdad los sube `publicar.py` a YouTube como pista
 aparte, así que la accesibilidad no se pierde —se gana: se pueden traducir,
@@ -77,7 +77,7 @@ porque **hacen falta los números reales**. La curva de Sandy del 003 y el repar
 de estilos del 005 son las dos candidatas obvias, pero inventarse los puntos de
 la curva y ponerle `fuente: A04` sería fabricar un dato, que es exactamente lo
 que el criterio editorial del canal prohíbe. Los números tienen que salir del
-artículo, y eso es trabajo del verificador o de Silvestre.
+artículo, y eso es trabajo del verificador o del codirector.
 
 Es la mejora de mayor impacto y la más segura, porque añade un tipo de escena en
 vez de modificar los ocho existentes. Hay episodios que la piden a gritos: la

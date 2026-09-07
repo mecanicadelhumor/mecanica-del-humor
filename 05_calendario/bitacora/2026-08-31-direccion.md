@@ -1,6 +1,6 @@
 # Dirección — lunes 31 de agosto de 2026
 
-Primera conversación con métricas de verdad delante. Silvestre trae cinco cosas y
+Primera conversación con métricas de verdad delante. El codirector trae cinco cosas y
 una pregunta de fondo: si el canal tiene arreglo o no.
 
 ---
@@ -10,7 +10,7 @@ una pregunta de fondo: si el canal tiene arreglo o no.
 **Qué pasó.** MDH-004 se produjo el 29 sin incidencias, se subió a la 01:29 UTC y
 **se quedó en privado para siempre**. Su emisión en `parrilla.json` llevaba
 `"modo": "revision"`, y en ese modo `cola.py` sube `private` **sin `publicar_en`**:
-no hay nada que lo publique. Silvestre lo descubrió dos días después en Studio y lo
+no hay nada que lo publique. El codirector lo descubrió dos días después en Studio y lo
 publicó a mano esta mañana.
 
 **Lo que agrava el fallo:** la revisión diaria del 29 y la del 30 lo dieron por
@@ -34,7 +34,7 @@ Y en el prompt de la revisión diaria, la distinción que faltaba: `private` **c
 `publicar_en` es correcto; `private` **sin** `publicar_en` en una emisión de la
 parrilla es un fallo grave, porque ese vídeo no sale nunca.
 
-**Lo que Silvestre acepta a cambio, y hay que dejarlo escrito:** nadie mira el
+**Lo que el codirector acepta a cambio, y hay que dejarlo escrito:** nadie mira el
 vídeo antes de que salga. `qa.py` corre **después** de la subida en `producir.yml`
 —es un informe, no una barrera— y la revisión diaria de las 11:30, que sí cae
 dentro de la ventana, no toca YouTube. Con una decena de espectadores por vídeo,
@@ -71,7 +71,7 @@ forma**, en vez de repartir series y buscar la pregunta después.
 
 ## 3. Repetirse: medido, y no es escasez
 
-Silvestre: «hay cosas que se repiten, como que te ríes más junto a alguien que
+El codirector: «hay cosas que se repiten, como que te ríes más junto a alguien que
 solo». Cruzados los códigos de `fuente` de todos los guiones:
 
 - Se usan **30 fichas de las 77**. **Cuarenta y siete no se han abierto nunca.**
@@ -107,11 +107,11 @@ peldaño S1.** Nadie vuelve a pedir el CSV; si aparece uno, se lee.
 
 ## 5. Los avisos que no llegan
 
-Silvestre: los agentes dicen que le mandan avisos, él no recibe ninguno, y tampoco
+El codirector: los agentes dicen que le mandan avisos, él no recibe ninguno, y tampoco
 quiere. Confirmado: los tres prompts usaban `PushNotification`. **Prohibida en los
 tres.** En su lugar, la revisión diaria mantiene **`05_calendario/ESTADO.md`**, un
 fichero de cinco líneas que sobrescribe cada día: estado OK o incidencia, último
-vídeo, próxima emisión, una línea «Pendiente de Silvestre» —que casi siempre dirá
+vídeo, próxima emisión, una línea «Pendiente del codirector» —que casi siempre dirá
 «nada»— y el enlace a la bitácora del día.
 
 La regla que lo sostiene: si un agente necesita algo que se puede automatizar, lo
@@ -126,7 +126,7 @@ por hash y no repita hasta agotar la lista. Prioridad baja, encargado a la revis
 diaria detrás de la verificación de C15.
 
 Vale la pena decir por qué es prioridad baja aunque moleste: **hoy el espectador
-que más vídeos ve del canal es Silvestre.** Que la música le canse es un síntoma
+que más vídeos ve del canal es el codirector.** Que la música le canse es un síntoma
 del problema de audiencia, no un problema aparte.
 
 ## 7. El orden de aquí al 27 de septiembre

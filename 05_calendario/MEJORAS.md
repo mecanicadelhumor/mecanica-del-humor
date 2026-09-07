@@ -29,7 +29,7 @@ Primera revisión con fotogramas reales, a partir de `05_calendario/qa/MDH-002.e
    accesibilidad y, sobre todo, los subtítulos palabra a palabra son *lo único
    que se mueve* durante el tramo central de cada escena, que es estático por
    diseño. Sin ellos el vídeo se percibe como un pase de diapositivas — que es
-   exactamente el diagnóstico que dio Silvestre sobre los dos primeros vídeos.
+   exactamente el diagnóstico que dio el codirector sobre los dos primeros vídeos.
 
    Causa probable: `voz.py` construye los subtítulos con las marcas de tiempo por
    palabra que devuelve el sintetizador (`WordBoundary`), y si esa lista viene
@@ -70,7 +70,7 @@ Primera revisión con fotogramas reales, a partir de `05_calendario/qa/MDH-002.e
    al 60 % de cada escena, cuando la entrada ya terminó y la salida no ha
    empezado.
 
-### Error editorial, detectado por Silvestre y no por el sistema
+### Error editorial, detectado por el codirector y no por el sistema
 
 El arranque de MDH-002.es era **un calco del chiste inglés**: «un hombre entra en
 un bar… y se agacha, porque el bar es de hierro». En inglés *bar* significa a la
@@ -93,7 +93,7 @@ español, o al revés, es motivo de bloqueo.
 
 ## 19 de agosto · revisión de las 07:00
 
-Equipo de Silvestre apagado: trabajo hecho sobre un clon del repositorio público
+Equipo del codirector apagado: trabajo hecho sobre un clon del repositorio público
 y entregado como paquete. Mirado: `parrilla.json`, `registro_publicaciones.json`,
 los seis fotogramas y la `ficha.json` de `qa/MDH-002.es/`, la vista previa del
 18/08, y los guiones `MDH-003.es` y `MDH-003.en` de principio a fin.
@@ -141,7 +141,7 @@ la versión de `edge-tts`** (`edge-tts` a secas). Cada producción instala la
 solo, de un día para otro, sin que nadie toque el repositorio. Es la explicación
 más simple de que esto funcionara y dejara de funcionar.
 
-No se toca `voz.py` sin permiso, como manda el encargo. Propuesta para Silvestre
+No se toca `voz.py` sin permiso, como manda el encargo. Propuesta para el codirector
 en el resumen.
 
 ### 3. Lo que sí está bien en MDH-002.es
@@ -213,8 +213,8 @@ tipografía funcionó. El muestrario de `enunciado` se lee bien y no desborda. S
 da por bueno.
 
 Elegido V2 y **no V1**, que va antes en el backlog: V1 exige invocar un
-`figura.py` nuevo desde `producir.yml`, y ese fichero no se toca sin permiso de
-Silvestre. Queda anotado como bloqueado en `MEJORA_VISUAL.md`, no como pendiente.
+`figura.py` nuevo desde `producir.yml`, y ese fichero no se toca sin permiso del
+codirector. Queda anotado como bloqueado en `MEJORA_VISUAL.md`, no como pendiente.
 
 V2 ataca justo lo que el validador viene señalando: el 48 % (es) y el 50 % (en)
 de las escenas de MDH-003 son `enunciado`, y todas se veían igual. Ahora la
@@ -242,7 +242,7 @@ y `_10_enunciado.png` con las tipografías reales y revertir si alguna variante
 desborda o queda peor. La variante de la izquierda es la que menos se nota con
 textos cortos: lo suyo es juzgarla con el enunciado largo del muestrario.
 
-### Para Silvestre, que no decido yo
+### Para el codirector, que no decido yo
 
 1. **`edge-tts` sin versión fijada en `requirements.txt`.** Fijarla a la última
    que se sepa que devolvía `WordBoundary` es de una línea y es reversible, pero
@@ -260,14 +260,14 @@ textos cortos: lo suyo es juzgarla con el enunciado largo del muestrario.
 
 ---
 
-## 19 de agosto · segunda vuelta, con feedback de Silvestre
+## 19 de agosto · segunda vuelta, con feedback del codirector
 
-Silvestre revisó MDH-002.es, lo borró de YouTube para reproducirlo, y pidió
+El codirector revisó MDH-002.es, lo borró de YouTube para reproducirlo, y pidió
 sacar el inglés hoy mismo. Tres cosas encontradas, dos de ellas graves.
 
 ### 1. La escena 24 estaba truncada en el guion, en los dos idiomas
 
-Silvestre lo describió como un fallo de audio: «en el ejemplo del avión la
+El codirector lo describió como un fallo de audio: «en el ejemplo del avión la
 segunda parte, el chiste en sí, no se lee, la voz dice "cero" y nada más».
 
 No es audio. Es el guion. La narración decía, literalmente y completa:
@@ -293,7 +293,7 @@ propuesto.
 
 ### 2. «Violación» fuera del canal español
 
-Decisión de Silvestre: la palabra tiene en español una segunda acepción que no
+Decisión del codirector: la palabra tiene en español una segunda acepción que no
 tiene en inglés, y basta para que un clasificador entierre el vídeo. Sustituida
 por **«ruptura»**, que es la misma idea, funciona igual como sustantivo y encaja
 en todas las construcciones donde estaba.
@@ -315,7 +315,7 @@ no arrastra la segunda acepción. Los metadatos ingleses se dejan como estaban.
 
 ### 3. Comillas: angulares en español, inglesas en inglés
 
-Ayer lo dejé como pregunta y Silvestre lo ha resuelto. Convertidas « » → “ ” en
+Ayer lo dejé como pregunta y el codirector lo ha resuelto. Convertidas « » → “ ” en
 `MDH-002.en`, `MDH-003.en`, `MDH-004.en` y en los metadatos de publicación
 correspondientes. **MDH-001.en no se toca: ya está publicado.**
 
@@ -349,7 +349,7 @@ dos en la misma. Aísla el fallo y quita de en medio el `timeout-minutes: 150`.
 
 ## 19 de agosto · tercera vuelta: el fallo estaba en las instrucciones
 
-Silvestre, sobre lo de «cero»: *«no tiene ningún sentido. Queda mal y no se
+El codirector, sobre lo de «cero»: *«no tiene ningún sentido. Queda mal y no se
 entiende si no tienes la pantalla delante. Yo mismo consumo vídeos de YouTube
 sin tener la pantalla delante, por lo que el audio debe ser autosuficiente.»*
 
@@ -401,7 +401,7 @@ lectura diaria. El portero solo reconoce la forma del corte.
 
 ## 19 de agosto · feedback del vídeo inglés ya publicado
 
-MDH-002.en quedó en estado aceptable y Silvestre lo programó para las 17:00. Seis
+MDH-002.en quedó en estado aceptable y el codirector lo programó para las 17:00. Seis
 observaciones suyas. Van por orden, con lo que se ha hecho en cada una.
 
 ### 1. Sigue habiendo una sílaba suelta al empezar el audio inglés
@@ -466,7 +466,7 @@ el cierre ya pedía, con ejemplos de lo que vale y lo que no.
 
 ### 4. «violation» en inglés se queda
 
-De acuerdo con el criterio de Silvestre: en inglés el delito es *rape*, palabra
+De acuerdo con el criterio del codirector: en inglés el delito es *rape*, palabra
 distinta, así que *violation* no arrastra la segunda acepción. Los metadatos y
 el guion ingleses se quedan como están. En español sigue siendo «ruptura».
 
@@ -504,13 +504,13 @@ Sigue siendo V1 del backlog y sigue bloqueado por lo mismo: `figura.py` hay que
 invocarlo desde `producir.yml`, que no se toca sin permiso. Es la mejora de más
 impacto que queda pendiente y ya hay episodios que la piden a gritos —la curva
 del huracán Sandy en el 003, el reparto de estilos de humor en el 005—. Propuesta
-concreta en el resumen a Silvestre.
+concreta en el resumen al codirector.
 
 ---
 
 ## 19 de agosto · fundido de música aplicado y V1 (figuras) construido
 
-Silvestre da el visto bueno a los dos cambios que estaban esperándolo.
+El codirector da el visto bueno a los dos cambios que estaban esperándolo.
 
 **`montaje.py`:** aplicado el `afade` de 1,5 s sobre `[musduck]`. Vuelto a medir
 con el fichero ya en su sitio: la cola pasa de −33 dB a −58 dB en el último
@@ -548,7 +548,7 @@ verificado, que es justo lo que el criterio editorial del canal prohíbe y lo
 contrario de lo que el nombre del canal promete.
 
 Así que queda pendiente de que alguien saque las cifras del artículo. Es trabajo
-del verificador o de Silvestre, no mío desde aquí. Mientras tanto el paso del
+del verificador o del codirector, no mío desde aquí. Mientras tanto el paso del
 workflow es inocuo: sin escenas `figura`, no hace nada.
 
 ---
@@ -562,7 +562,7 @@ Programado para las 17:00.
 
 ### 1. La sílaba suelta NO es un falso arranque
 
-Es el hallazgo del día. Silvestre: *«en el minuto 5:35 se ha colado una sílaba
+Es el hallazgo del día. El codirector: *«en el minuto 5:35 se ha colado una sílaba
 suelta en el audio como las que tenía el vídeo en inglés al principio»*.
 
 Las dos veces anteriores apareció al empezar el vídeo, y de ahí salió el
@@ -604,7 +604,7 @@ sigue sin poder reproducirse desde el contenedor. La sospecha de siempre:
 
 ### 3. «Cero» seguía sin entenderse, y el arreglo de esta mañana era a medias
 
-Silvestre: *«lo de "cero" sigo sin entenderlo y creo que no se entiende»*. Tenía
+El codirector: *«lo de "cero" sigo sin entenderlo y creo que no se entiende»*. Tenía
 razón y el diagnóstico de la mañana se quedó corto. El problema no era solo que
 faltara la segunda mitad —eso ya se arregló—, sino que **«X: cero» es una
 construcción de texto escrito**. En una diapositiva se entiende; dicha en voz
@@ -619,7 +619,7 @@ escrito.
 
 ### 4. Transiciones entre bloques: el salto de ritmo
 
-Silvestre: *«hay un cambio abrupto cuando se pasa de la parte de ruptura/benigno
+El codirector: *«hay un cambio abrupto cuando se pasa de la parte de ruptura/benigno
 a cuando habla de reconocimiento y familiaridad»*.
 
 Es un defecto de guion que ningún validador va a detectar. La causa de fondo es
@@ -633,14 +633,14 @@ una frase de transición que diga de dónde vienes y adónde vas. No vale el ró
 
 ### 5. La voz suena robótica, sobre todo en español
 
-Anotado como objetivo abierto, con las palabras de Silvestre: *«los chistes no
+Anotado como objetivo abierto, con las palabras del codirector: *«los chistes no
 tienen mucha gracia porque están contados sin gracia»*. Es un límite real del
 formato, no un fallo puntual: `es-ES-AlvaroNeural` es correcta y plana.
 
 No hay decisión hoy porque no puedo escuchar candidatas desde aquí. Lo que se
 puede hacer cuando toque, y sin coste: `voz.py` ya acepta `--voz`, así que
 sintetizar el mismo párrafo con dos o tres voces y compararlas es una ejecución
-manual del workflow, no un cambio de código. Cuando Silvestre quiera, se prepara
+manual del workflow, no un cambio de código. Cuando el codirector quiera, se prepara
 esa comparativa.
 
 ### 6. Lo que ya estaba bien
@@ -770,7 +770,7 @@ código 0. La producción de las 03:00 no se bloquea.
 
 ## 20 de agosto · revisión de las 07:00
 
-Equipo de Silvestre apagado; trabajo sobre un clon del repositorio público y
+Equipo del codirector apagado; trabajo sobre un clon del repositorio público y
 entregado como paquete. Mirado: `origin/main` para comprobar que lo del 19 llegó,
 `parrilla.json` contra `registro_publicaciones.json`, los ocho guiones sin
 producir de principio a fin (003 y 004 en los dos idiomas, 005 a 008 en español),
@@ -784,7 +784,7 @@ La parrilla pedía **MDH-003 en los dos idiomas** para hoy. En `origin/main` a l
 - entrada de MDH-003 en `registro_publicaciones.json` (el registro sigue
   terminando en MDH-002.en, subido ayer a las 10:08),
 - carpetas `qa/MDH-003.es` ni `qa/MDH-003.en`,
-- **ningún commit posterior al de Silvestre del 19/08 a las 15:34.**
+- **ningún commit posterior al del codirector del 19/08 a las 15:34.**
 
 No es el caso del 19 (allí salió el español y faltó el inglés). Aquí no salió
 nada, y el job ni siquiera dejó el commit del registro, que es lo primero que
@@ -808,7 +808,7 @@ distintos callados a la vez apunta a que Actions no está ejecutando nada**:
 cuota agotada, workflows deshabilitados, o el repositorio en pausa.
 
 **No se toca nada.** La comprobación es de treinta segundos y solo la puede hacer
-Silvestre: abrir la pestaña Actions. Si no hay run de hoy, el problema es de
+el codirector: abrir la pestaña Actions. Si no hay run de hoy, el problema es de
 cuota o de habilitación, no del código. Si lo hay y falla, el paso «Recuperar el
 plan» dice si el plan traía uno o dos trabajos. Desde el contenedor la API de
 GitHub responde 403: el proxy deja clonar y no deja consultar.
@@ -1060,7 +1060,7 @@ desde fuera.
 
 ### Y el chiste del 008: regla nueva de canal
 
-Silvestre: los chistes de «mi mujer…» tienen un tono machista que no va en el
+El codirector: los chistes de «mi mujer…» tienen un tono machista que no va en el
 canal. Recogido en `guionista.md`, dentro de «Lo que nunca haces», junto con la
 suegra y la rubia, y con la salida práctica: si el chiste necesita una pareja,
 **«mi pareja»** funciona igual y en español arrastra la concordancia sin delatar
@@ -1079,7 +1079,7 @@ correcta. Rastreados los doce guiones: no quedaba ningún otro caso.
 
 ---
 
-## 20 de agosto, tarde · MDH-003.es visto por Silvestre
+## 20 de agosto, tarde · MDH-003.es visto por el codirector
 
 Primer vídeo que sale con los subtítulos quemados funcionando (`lineas_ass: 793`)
 y con el recorte de sílabas activo. Cuatro observaciones suyas; dos son cambios.
@@ -1144,7 +1144,7 @@ Reproducido con cuatro casos sintéticos contra la función real:
     sílaba + hueco + habla                      0.600    0.600     0.600
     colchón + SÍLABA + hueco + habla            0.200    0.700     0.700
 
-La última fila es exactamente lo que oyó Silvestre: con un colchón delante, la
+La última fila es exactamente lo que oyó el codirector: con un colchón delante, la
 función recortaba **el colchón y dejaba la sílaba**. Y la primera fila es la otra
 mitad: en las escenas limpias se llevaba el colchón de entrada, así que la
 narración arrancaba a hueso y el ataque de la primera palabra se perdía.
@@ -1213,7 +1213,7 @@ información; una cifra inventada es una mentira que además nadie detectaría d
 explícitamente que es una inferencia y no una medición.
 
 **El arreglo:** la planificación semanal tiene que correr como **tarea programada local**,
-en el ordenador de Silvestre, no en la nube. Es una intervención puntual de setup, así que
+en el ordenador del codirector, no en la nube. Es una intervención puntual de setup, así que
 no choca con la regla 5. Mientras tanto, todo lo que dependa de volumen de búsqueda hay que
 leerlo como hipótesis.
 
@@ -1296,7 +1296,7 @@ confianza. Son dos minutos al día durante seis días, y si un día no se puede,
 queda en privado sin perderse.
 
 El automático entra el **31 de agosto**, como estaba previsto y sin tener que acordarse de
-nada. Si Silvestre prefiere lo contrario, es cambiar seis palabras en `parrilla.json`.
+nada. Si el codirector prefiere lo contrario, es cambiar seis palabras en `parrilla.json`.
 
 ### 6. El verificador vetó dos de los seis, y tenía razón en los dos
 
@@ -1416,7 +1416,7 @@ chiste») y la regla 12 no trae excepción para temas delicados.
 —el oficio exacto del canal— es la clase de cambio que se juzga oyéndolo, no
 leyéndolo, y los cinco tienen margen de sobra hasta su sábado (el más próximo,
 el 004, es el 29 de agosto). Lo que sí he hecho es dejar la tabla de arriba
-con los números exactos para que la próxima sesión —o Silvestre— no tenga que
+con los números exactos para que la próxima sesión —o el codirector— no tenga que
 recalcularlo. Recomendación concreta para el 004, el más fácil de arreglar sin
 tocar la estructura: abrir directamente con una de las frases banales de la
 escena 6 («alguien te dice "nos vemos luego" y te ríes») en vez de con la
@@ -1512,9 +1512,9 @@ así que no se rompe el límite de uno por pantalla).
 `05_calendario/guiones/MDS-001.es.json`, `MDH-004.es.json`, `MDH-005.es.json`,
 `MDH-006.es.json`, `MDH-008.es.json`. `MDH-007.es.json` se ha leído entero y
 no se ha tocado — su único hallazgo es la falta de humor de la sección 1, que
-es una decisión para Silvestre, no una corrección. No lleva `registro_publicaciones.json`.
+es una decisión para el codirector, no una corrección. No lleva `registro_publicaciones.json`.
 
-**Para Silvestre:** decidir qué hacer con el episodio 007 (¿se le mete humor
+**Para el codirector:** decidir qué hacer con el episodio 007 (¿se le mete humor
 o se acepta el «humor mínimo» como excepción justificada de la regla 12?) y,
 si aprueba la sugerencia del punto 1, aplicar el reordenamiento del gancho del
 004 antes del sábado 29.

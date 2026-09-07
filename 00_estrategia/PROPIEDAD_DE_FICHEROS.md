@@ -10,7 +10,7 @@ Es corta y es de obligado cumplimiento para cualquier tarea programada.
 La noche del 20 de agosto la tarea de planificación escribió los seis Shorts de
 la semana, adaptó MDH-004 al formato nuevo, generó `demanda.json` y dejó 190
 líneas de bitácora en `MEJORAS.md`. A las 07:00 del 21, la revisión diaria
-entregó su paquete. Silvestre los aplicó en orden.
+entregó su paquete. El codirector los aplicó en orden.
 
 **Resultado: la revisión diaria borró la entrada entera de la planificación en
 `MEJORAS.md` (188 líneas, siete secciones) y revirtió MDH-004 a la versión
@@ -20,7 +20,7 @@ sin escéptico, con el gancho de ensayo otra vez en su sitio.
 No fue un error de la revisión diaria. Fue el diseño:
 
 1. La planificación corre a las 22:00 y **entrega un `.tar.gz`**, no un commit.
-2. Ese paquete no llega a GitHub hasta que Silvestre lo aplica, a la mañana
+2. Ese paquete no llega a GitHub hasta que el codirector lo aplica, a la mañana
    siguiente.
 3. La revisión diaria arranca a las 07:00 y clona `origin/main` — donde el
    trabajo de la noche **todavía no está**.
@@ -44,7 +44,7 @@ puede es hacer que dos agentes no escriban nunca el mismo fichero.**
 | `05_calendario/metricas.json` | **Métricas** (lunes 09:00) | nadie más lo toca |
 | `03_produccion/` · `04_agentes/` (código, prompts, `MEJORA_VISUAL.md`) | **Revisión diaria** | proponen en el resumen |
 | `05_calendario/registro_publicaciones.json` · `qa/` | **GitHub Actions** | nadie los mete en un paquete, nunca |
-| `00_estrategia/` | **Silvestre y yo** | nadie más |
+| `00_estrategia/` | **el codirector y yo** | nadie más |
 
 ### Las dos carpetas nuevas que lo hacen posible
 
@@ -89,7 +89,7 @@ han encontrado hasta ahora justificaba arriesgar una semana de trabajo ajeno.
    encontrar —por ejemplo, la revisión del viernes no ve el commit de la
    planificación del jueves—, **hay una entrega pendiente sin aplicar**: en ese
    caso no se toca nada del calendario y se dice en el resumen.
-4. **Al empaquetar, listar los ficheros por nombre en el resumen.** Silvestre
+4. **Al empaquetar, listar los ficheros por nombre en el resumen.** El codirector
    aplica lo que ve; si no lo ve, no puede detectar que algo sobra.
 
 ---

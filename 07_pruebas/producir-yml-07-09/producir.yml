@@ -16,7 +16,7 @@ on:
     #   24/08  04:05 UTC   (+3h05)
     #   25/08  03:38 UTC   (+2h38)
     #   26/08  04:03 UTC   (+3h03)
-    #   27/08  no salió    (la lanzó Silvestre a mano a las 07:55)
+    #   27/08  no salió    (la lanzó el codirector a mano a las 07:55)
     #   28/08  07:00 UTC   (+6h00)
     # GitHub avisa de ello: los disparos programados se retrasan cuando hay
     # carga y pueden perderse sin aviso, y la hora de más carga es el minuto 0
@@ -29,7 +29,7 @@ on:
     # arrancan el runner. Si el primero salió, los otros dos cuestan segundos.
     #
     # El último es a las 08:23 UTC, once horas antes de la publicación de las
-    # 19:00: aún queda margen para que Silvestre lo mire.
+    # 19:00: aún queda margen para que el codirector lo mire.
     - cron: "13 1 * * *"
     - cron: "47 4 * * *"
     - cron: "23 8 * * *"

@@ -1,6 +1,6 @@
 # Dirección — viernes 4 de septiembre de 2026
 
-Conversación de dirección con Silvestre repasando de lunes a viernes. Cinco
+Conversación de dirección con el codirector repasando de lunes a viernes. Cinco
 decisiones, todas escritas en `00_estrategia/PLAN_DE_CAMBIOS.md`, **versión 5**.
 
 ## Lo primero: el número se ha movido
@@ -15,7 +15,7 @@ segunda: va lento, el camino es bueno, se sigue.
 
 ## La pregunta del lunes: ¿por qué no se amplía el tema ya?
 
-Sí, la lectura de Silvestre era correcta, y conviene dejar el motivo escrito
+Sí, la lectura del codirector era correcta, y conviene dejar el motivo escrito
 porque va a volver a doler antes del 27.
 
 Ampliar el tema ahora no es «hacerlo antes»: es **destruir la única medición
@@ -46,7 +46,7 @@ cosas.** Publicar la aplicación y verificarla son pasos distintos:
 - **Publicar** es un botón. Estado «En producción», y **el token deja de
   caducar**.
 - **Verificar** es el formulario que pide web, política de privacidad, términos
-  y vídeo de demostración — lo que Silvestre no tiene y no quiere inventarse.
+  y vídeo de demostración — lo que el codirector no tiene y no quiere inventarse.
   **No hace falta para publicar.** Solo para pasar de 100 usuarios o para quitar
   la pantalla de aviso.
 
@@ -154,7 +154,7 @@ bloqueante; queda identificado.
 
 ## C24 · Que no todos los vídeos parezcan el mismo vídeo
 
-Hallazgo de Silvestre del 2 y el 4: los contenidos están bien, los guiones
+Hallazgo del codirector del 2 y el 4: los contenidos están bien, los guiones
 cierran mejor unas veces que otras, pero la presentación es idéntica en todos.
 Cinco Shorts a la semana con la misma cara son cinco veces el mismo vídeo para
 quien pasa por el feed.
@@ -175,7 +175,7 @@ que se lee a tamaño de resultado. Se mira el lunes 7.
 
 ## La sentencia sobre entretener
 
-De Silvestre, y va a `REGLAS.md` (regla 3): **un vídeo no tiene que ser educativo
+Del codirector, y va a `REGLAS.md` (regla 3): **un vídeo no tiene que ser educativo
 para valer.** Si entretiene y cumple las reglas —nada inventado, nadie como
 víctima, la fuente donde toca—, es un vídeo bueno.
 
@@ -206,10 +206,10 @@ ha llegado.
 espejo: la revisión diaria antes de su ejecución de las 11:28 de hoy, y la
 planificación antes del jueves 10.
 
-**Fuera del repositorio, para que Silvestre lo cree a mano:**
+**Fuera del repositorio, para que el codirector lo cree a mano:**
 `.github/workflows/voz_prueba.yml`.
 
-## Lo que le toca a Silvestre, y no es recurrente
+## Lo que le toca al codirector, y no es recurrente
 
 1. **C23, ~10 minutos, una vez:** publicar la aplicación de OAuth y regenerar el
    `YT_REFRESH_TOKEN`.
@@ -222,7 +222,7 @@ planificación antes del jueves 10.
 
 ## `prueba_voz.py` falló por cuota, y el fallo era mío
 
-Silvestre creó el workflow, lo ejecutó dos veces y las dos murieron con
+El codirector creó el workflow, lo ejecutó dos veces y las dos murieron con
 `RESOURCE_EXHAUSTED`. El panel de Gemini decía **62 de 10.000 tokens por minuto**
 y **4 de 10 peticiones al día** — todo verde salvo una línea: **3 de 3
 peticiones por minuto**.
@@ -275,7 +275,7 @@ sea que medirlo era gastar seis peticiones en descartar algo ya descartado.
 
 ## El token de YouTube: `00_estrategia/TOKEN_DE_YOUTUBE.md`
 
-Silvestre no recordaba dónde se tocaba esto, y no estaba escrito en ningún sitio
+El codirector no recordaba dónde se tocaba esto, y no estaba escrito en ningún sitio
 — que es exactamente cómo el 1 de septiembre se perdió una mañana. Ahora sí:
 qué pasaba, la diferencia entre **publicar** y **verificar** (que es lo único que
 hay que entender), la ruta exacta de la consola, el script que ya existía desde
@@ -353,7 +353,7 @@ basta. Determinista, sin umbrales que adivinar, y retira la familia entera.
 
 ## 2 · La prueba de voces: lo que el oído no podía separar
 
-Silvestre aprobó el cambio: las dos de Gemini mejoran a `edge`, entre ellas no
+El codirector aprobó el cambio: las dos de Gemini mejoran a `edge`, entre ellas no
 supo decidir, y notó que la plana suena más fuerte. Medidas las ondas, el empate
 no lo era — el detalle está en `07_pruebas/prueba-de-voces.md` y en
 `PLAN_DE_CAMBIOS.md` versión 5.1. Lo esencial:
@@ -385,7 +385,7 @@ privacidad**. Las dos URL no existían.
 
 1. **El logotipo fuerza la verificación.** Lo dice la propia consola: «después de
    subir un logotipo, deberás enviar tu app para verificarla, a menos que…
-   tenga el estado de publicación Prueba». Silvestre había subido `avatar.png`
+   tenga el estado de publicación Prueba». El codirector había subido `avatar.png`
    intentando desbloquear el botón, y eso empeoraba el problema. **Se quita.**
 2. **Las dos URL se resuelven con GitHub Pages, gratis y sin inventarse nada.**
    El repositorio es público, así que Pages no cuesta. Escritas tres páginas en
@@ -409,7 +409,7 @@ por si pide verificar el dominio, en `00_estrategia/TOKEN_DE_YOUTUBE.md`.
 
 ## 4 · `07_pruebas/` se adopta como canal formal
 
-La idea es de Silvestre y es buena: hay decisiones que no se pueden tomar
+La idea es del codirector y es buena: hay decisiones que no se pueden tomar
 leyendo. Escrito `07_pruebas/LEEME.md` con la forma que tiene que tener una
 prueba —qué mirar, **una** pregunta concreta, y qué pasa con cada respuesta— y
 la regla de que la respuesta se añade al final del mismo fichero, con fecha y
@@ -430,7 +430,7 @@ que necesite que él vea u oiga.
 **La tarea de revisión diaria está actualizada en el almacén**, no solo en el
 espejo.
 
-## Lo que le toca a Silvestre
+## Lo que le toca al codirector
 
 1. **GitHub → Settings → Pages → `main` / carpeta `/docs`.** Comprobar que
    responde antes de volver a la consola de Google.

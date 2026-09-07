@@ -12,7 +12,7 @@ name: Prueba de voces
 #
 # QUÉ HACE: genera tres audios del mismo guion —edge-tts (lo de hoy), Gemini
 # sin dirección y Gemini con dirección de actor— más un informe de silencios
-# que dice si el audio se puede repartir por escena. Silvestre los escucha y
+# que dice si el audio se puede repartir por escena. El codirector los escucha y
 # decide.
 #
 # CUOTA: el nivel gratuito de los modelos TTS da 3 peticiones por minuto y

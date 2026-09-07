@@ -1,13 +1,13 @@
 # Dirección — 28 de agosto de 2026 (viernes)
 
-Conversación con Silvestre. Lo que se decidió, con el porqué y las mediciones,
+Conversación con el codirector. Lo que se decidió, con el porqué y las mediciones,
 para que no haya que volver a razonarlo.
 
 ---
 
 ## 1. El cron nunca ha funcionado. No es que fallara dos días
 
-Silvestre lo vivió como «el cron falló el 27 y el 28». Los datos dicen otra cosa,
+El codirector lo vivió como «el cron falló el 27 y el 28». Los datos dicen otra cosa,
 y es peor y más fácil de arreglar. Horas UTC del commit del bot al terminar la
 producción, sobre un cron programado a las **01:00 UTC**:
 
@@ -16,12 +16,12 @@ producción, sobre un cron programado a las **01:00 UTC**:
 | 24/08 | 04:05 | **+3 h 05** |
 | 25/08 | 03:38 | **+2 h 38** |
 | 26/08 | 04:03 | **+3 h 03** |
-| 27/08 | 07:55 | no salió; la lanzó Silvestre a mano |
+| 27/08 | 07:55 | no salió; la lanzó el codirector a mano |
 | 28/08 | 07:00 | **+6 h 00** |
 
 **Ni una sola vez a su hora.** El retraso venía creciendo y nadie lo vio porque el
 vídeo siempre llegaba antes de las 19:00. El 27 se pasó de largo y el 28 llegó a
-las 09:00 de la mañana en España — diecisiete minutos después de que Silvestre
+las 09:00 de la mañana en España — diecisiete minutos después de que el codirector
 mirara y lo diera por perdido. **MDS-005 existe**: `14KLEyZ26-0`, privado, sin
 programar.
 
@@ -55,7 +55,7 @@ el sistema.
 
 ## 2. Por qué los Shorts parecen un pase de diapositivas — y no es una opinión
 
-Silvestre: «los shorts siguen estando bien de contenido, pero la calidad de la
+El codirector: «los shorts siguen estando bien de contenido, pero la calidad de la
 presentación es muy baja». Tiene razón, y la causa estaba escrita en el propio
 código desde hace diez días. En `voz.py`, línea 333:
 
@@ -162,7 +162,7 @@ que `qa.py` no puede saber si se quemaron subtítulos de verdad, porque
 `montaje.json` con `subtitulos_quemados`. No cambia ni un fotograma del vídeo:
 solo escribe un fichero al terminar, para que el expediente de calidad diga
 `true`/`false` en vez de `null`. `montaje.py` está protegido (regla 11.7) y
-Silvestre delegó la decisión en esta conversación: **aplicado**.
+el codirector delegó la decisión en esta conversación: **aplicado**.
 
 **C6.3 (zoom preescalado en FFmpeg): rechazado y cerrado.** Lo resuelve la capa 3
 de C15 en el navegador, sin preescalar y sin coste. La medición del 24/08 no se
@@ -240,7 +240,7 @@ los dos medidos esta semana:
    de anteayer. Con la producción terminando entre las 03:38 y las 09:00, a las
    11:30 ya está.
 2. **Los viernes, la entrega de la planificación del jueves aún no está en
-   GitHub.** Silvestre no va a hacer un commit de madrugada y no tiene por qué:
+   GitHub.** El codirector no va a hacer un commit de madrugada y no tiene por qué:
    commitea sobre las 08:40. La revisión del viernes 28 se encontró la base caduca
    y **se saltó los pasos 1 y 2 enteros**. A las 11:30 ya está aplicada.
 
@@ -252,7 +252,7 @@ desde el 31 el modo es `automatico` y esa ambigüedad desaparece sola; y la fich
 
 ---
 
-## 8. Infraestructura: las dos preguntas de Silvestre
+## 8. Infraestructura: las dos preguntas del codirector
 
 **La tarjeta. No hace falta, y por eso no se hace.**
 La tarjeta era para Gemini TTS (C7 escalón 2). Resulta que
@@ -271,9 +271,9 @@ eran el otro consumidor de esas marcas, ya no se usan, y C15 no las necesita: el
 revelado va por tiempo.
 
 **El conector de GitHub: sí, pero sabiendo qué resuelve y qué no.**
-Resuelve el trabajo manual de Silvestre en las conversaciones con él delante.
+Resuelve el trabajo manual del codirector en las conversaciones con él delante.
 **No resuelve el problema de las entregas pendientes**, que era la esperanza: las
-tareas programadas corren en la nube, sin el ordenador de Silvestre conectado, y
+tareas programadas corren en la nube, sin el ordenador del codirector conectado, y
 los conectores del escritorio pasan por ese puente. La planificación del jueves va
 a seguir entregando un `.tar.gz`. Por eso la revisión diaria se mueve a las 11:30
 en vez de esperar a que el conector lo arregle.

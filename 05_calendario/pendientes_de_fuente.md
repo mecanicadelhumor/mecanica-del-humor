@@ -93,7 +93,7 @@ firme es el orden de prioridad entre ellas, que depende de un volumen de búsque
 hemos podido medir.
 
 **Cómo arreglarlo:** lanzar la planificación semanal como tarea programada local, en el
-ordenador de Silvestre, donde el autocompletar y YouTube sí son accesibles.
+ordenador del codirector, donde el autocompletar y YouTube sí son accesibles.
 
 ---
 

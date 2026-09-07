@@ -27,7 +27,7 @@ cierto para darlo por hecho, y qué no hay que hacer. El razonamiento está en
 - Cada cambio se anota al terminar en `05_calendario/MEJORAS.md`, con lo medido antes y
   después. Ese archivo **se añade al final, nunca se reescribe**.
 - Los archivos marcados como **protegidos** (`voz.py`, `montaje.py`, `producir.yml`) no se
-  tocan sin permiso explícito de Silvestre en la conversación.
+  tocan sin permiso explícito del codirector en la conversación.
 
 ### Estado a 20 de agosto, tarde
 
@@ -103,7 +103,7 @@ por debajo. La cola se reordena con los datos; no es un compromiso.
 
 ### Alcance: mano libre
 
-Silvestre autoriza cambiarlo todo salvo las reglas fijas de `REGLAS.md`.
+El codirector autoriza cambiarlo todo salvo las reglas fijas de `REGLAS.md`.
 
 ### El canal inglés: consolidar ahora, reabrir con datos
 
@@ -120,7 +120,7 @@ por lo del «hombre entra en un bar» del 19 de agosto.
 
 ### La voz: Gemini TTS con dos hablantes. La clonación queda en reserva
 
-Silvestre acepta grabar su voz para clonarla **con la condición de que el modelo y la
+El codirector acepta grabar su voz para clonarla **con la condición de que el modelo y la
 muestra no salgan de un entorno local o muy seguro**. Esa condición y la infraestructura
 del canal son incompatibles hoy, y conviene decirlo claro en vez de estirarla:
 
@@ -133,7 +133,7 @@ del canal son incompatibles hoy, y conviene decirlo claro en vez de estirarla:
   sostiene el coste cero de todo el sistema.
 
 Así que **no se clona la voz por ahora**, y no porque no merezca la pena: porque hacerlo
-hoy exigiría relajar la condición que Silvestre puso.
+hoy exigiría relajar la condición que el codirector puso.
 
 **Lo que sí se hace, y resuelve el mismo problema:** el escalón 2 de C7, Gemini TTS con
 dos hablantes y control de expresión por prompt, con la `GEMINI_API_KEY` que ya está en
@@ -141,7 +141,7 @@ los secretos. Rompe la cadencia fija, da al canal una voz reconocible y mete al 
 que es donde vive el humor. Sin datos personales de nadie y sin GPU.
 
 **Cuándo se reabre la clonación:** si a las ocho semanas la voz sigue siendo lo que peor
-funciona, hay dos caminos limpios — renderizar el audio en el ordenador de Silvestre y
+funciona, hay dos caminos limpios — renderizar el audio en el ordenador del codirector y
 subir solo el resultado, o pagar minutos privados de Actions — y entonces sí se le pide la
 grabación. No antes.
 
@@ -153,7 +153,7 @@ Nada de lo demás sirve si la producción no corre.
 
 ## P0.1 · Averiguar por qué Actions lleva dos días callado
 
-**Solo lo puede hacer Silvestre.** Abrir la pestaña *Actions* del repositorio
+**Solo lo puede hacer el codirector.** Abrir la pestaña *Actions* del repositorio
 `mecanica-del-humor`.
 
 | Lo que ve | Lo que significa | Qué hacer |
@@ -196,7 +196,7 @@ Esta fase es la que más visualizaciones mueve y la que menos código toca.
 era nula. Desde febrero de 2026 YouTube da doblaje automático gratis a todos los creadores,
 en 27 idiomas, con voz expresiva en español.
 
-### Lo que hace Silvestre (una vez, 15 minutos)
+### Lo que hace el codirector (una vez, 15 minutos)
 
 1. En `@mecanicadelhumor`: *Studio → Configuración → Valores predeterminados de subida →
    Configuración avanzada* → activar **doblaje automático**. Dejar marcado «revisar antes
@@ -529,7 +529,7 @@ está congelada, y la regla de retención pide cambio cada 3–5 segundos.
 ### C6.1 · Los subtítulos quemados: llegaron a funcionar y se retiraron
 
 **Actualización del 20 de agosto, y cambia el plan.** El arreglo funcionó — MDH-003 salió
-con `lineas_ass: 793` — y Silvestre decidió **retirarlos**: palabra a palabra, en la banda
+con `lineas_ass: 793` — y el codirector decidió **retirarlos**: palabra a palabra, en la banda
 baja y sobre un diseño que ya es tipográfico, competían con el texto de la escena en vez
 de acompañarlo. `montaje.py` los deja en `quemar_subs=False`, con el interruptor
 `--con-subs` por si acaso.
@@ -720,14 +720,14 @@ nombre sí crean hábito.
 
 ## C13 · Salir de YouTube, sin ensuciar nada
 
-| Canal | Qué se publica | Automatizable | Setup de Silvestre |
+| Canal | Qué se publica | Automatizable | Setup del codirector |
 |---|---|---|---|
 | **TikTok** | el mismo archivo vertical | sí, API de contenido | crear cuenta de marca |
 | **Instagram Reels** | el mismo archivo vertical | sí, Graph API | crear cuenta de marca + vincular |
 | **Bluesky / Mastodon** | un hallazgo al día + enlace al estudio | sí, API abierta | crear cuenta de marca |
 | **Pódcast (Spotify)** | el audio que ya existe | sí, RSS generado por el workflow | dar de alta el RSS una vez |
 
-**Todas las cuentas a nombre de Mecánica del Humor, ninguna a nombre de Silvestre.**
+**Todas las cuentas a nombre de Mecánica del Humor, ninguna a nombre del codirector.**
 
 **Explícitamente NO:** publicación automática en Reddit o en foros. Es spam, va contra las
 normas de esas comunidades y funciona en contra.
@@ -874,7 +874,7 @@ hay, y sale gratis seguirla.
 y **Studio no da ninguna de las dos para los Shorts** — ahí la decisión del
 espectador es deslizar, no hacer clic. Cinco de cada seis vídeos del canal son
 Shorts. La escalera que teníamos no podía medir el producto principal, y encima
-dependía de que Silvestre exportara un CSV a mano cada semana, que es trabajo
+dependía de que el codirector exportara un CSV a mano cada semana, que es trabajo
 recurrente y por tanto contrario a la regla 5.
 
 **Escalera de los Shorts — solo API, sin intervención de nadie:**
@@ -920,7 +920,7 @@ un control intermedio, no un indulto.
 
 ## C17 · No repetirse
 
-**El hallazgo, de Silvestre:** «en el vídeo hay cosas que se repiten, como que te
+**El hallazgo, del codirector:** «en el vídeo hay cosas que se repiten, como que te
 ríes más junto a alguien que solo».
 
 **Medido el 31/08 sobre los códigos de `fuente` de todos los guiones:**
@@ -948,7 +948,7 @@ revisión diaria (paso 1); red de seguridad determinista como **aviso** de
 
 Tres pistas reales para seis vídeos por semana —`cama.mp3` es copia byte a byte de
 una de las otras— significa que cada pista suena una vez y media por semana. Lo
-notó primero Silvestre, que hoy por hoy es el espectador que más vídeos ve.
+notó primero el codirector, que hoy por hoy es el espectador que más vídeos ve.
 
 **Qué se hace:** ampliar a diez o doce pistas de licencia limpia y atribución
 literal (Incompetech, CC BY 4.0, es la fuente más simple: una licencia, un formato
@@ -1019,7 +1019,7 @@ haya alguien a quien contestar. Entra cuando S3 se mueva.
   **después** de la subida en `producir.yml`: es un informe, no un control. Con la
   publicación automática, el único par de ojos previo es la revisión diaria de las
   11:30, que ve el vídeo dentro de la ventana de ~15 h entre subida y publicación.
-  Decisión de Silvestre del 31/08, tomada con la audiencia actual delante: un mal
+  Decisión del codirector del 31/08, tomada con la audiencia actual delante: un mal
   vídeo hoy no cuesta nada, y él lo puede retirar. Se revisa cuando haya público.
 
 
@@ -1055,7 +1055,7 @@ ponía «Más gener» — la palabra estaba cortada contra el borde del lienzo p
 longitud. La revisión diaria lo encontró a las 11:30, siete horas y media antes
 de publicarse, lo describió con precisión, y **decidió no marcarlo como
 incidencia** razonando que no podía cancelar la publicación. Nadie lo vio hasta
-que lo vio Silvestre, ya publicado.
+que lo vio el codirector, ya publicado.
 
 **El diagnóstico, que no es «hay que revisar mejor».** Un texto que no cabe en su
 caja es una condición booleana. Pedirle a un agente que la vea mirando cinco
@@ -1091,13 +1091,13 @@ peor de los cuatro"`.
 ### C21.2 · Y el criterio de incidencia estaba al revés
 
 «No puedo cancelarlo, luego no es una incidencia» es exactamente el razonamiento
-que hay que prohibir. La revisión no puede retirar un vídeo; **Silvestre sí**, y
+que hay que prohibir. La revisión no puede retirar un vídeo; **el codirector sí**, y
 `ESTADO.md` es el único sitio por el que se entera. Que el agente no pueda
 arreglarlo es el motivo para avisar, no para callar.
 
 Regla nueva, ya escrita en el prompt: **si el vídeo que se publica hoy tiene un
 defecto que un espectador notaría, la primera línea de `ESTADO.md` dice
-`INCIDENCIA`**, con el ID, la hora de publicación y qué puede hacer Silvestre.
+`INCIDENCIA`**, con el ID, la hora de publicación y qué puede hacer el codirector.
 Lo que nadie ve todavía —un guion sin producir, un encargo sin hacer— sigue
 siendo `OK` y va en la bitácora.
 
@@ -1180,7 +1180,7 @@ piensa otra cosa. Reversible en un clic.
 - **Dejarlo como está con un aviso**: es la regla 5 otra vez. Un canal que se
   para cada siete días si nadie se acuerda no vuela solo.
 
-**Lo que hace Silvestre, una vez, ~10 minutos:** en la consola de Google Cloud,
+**Lo que hace el codirector, una vez, ~10 minutos:** en la consola de Google Cloud,
 *APIs y servicios → Pantalla de consentimiento de OAuth → Audiencia →* botón
 **Publicar aplicación**, aceptar el aviso de que la verificación queda pendiente,
 volver a generar el `YT_REFRESH_TOKEN` con el flujo de siempre y actualizar el
@@ -1208,7 +1208,7 @@ literalmente lo que falta.
 `edge-tts` como referencia, Gemini escena a escena con las pausas de hoy, y
 Gemini en **una sola llamada con dirección de actor** para que el ritmo lo decida
 el modelo y no nuestro empalme. Corre por `workflow_dispatch` con
-`voz_prueba.yml`. Silvestre escucha tres ficheros y decide. **Si el modelo o el
+`voz_prueba.yml`. El codirector escucha tres ficheros y decide. **Si el modelo o el
 nivel gratuito han cambiado, el script falla con el error a la vista — y ese
 fallo también es un resultado.**
 
@@ -1268,7 +1268,7 @@ mañana. El workflow lo ofrece en un desplegable.
 
 ## C24 · Que no todos los vídeos parezcan el mismo vídeo
 
-Hallazgo de Silvestre, del 2 y el 4 de septiembre: los contenidos están bien y
+Hallazgo del codirector, del 2 y el 4 de septiembre: los contenidos están bien y
 los guiones cierran mejor unas veces que otras, pero la presentación es idéntica
 en todos — mismos fondos, mismo dinamismo, misma miniatura, misma voz. Cinco
 Shorts a la semana con la misma cara son cinco veces el mismo vídeo para quien
@@ -1302,7 +1302,7 @@ en la revisión del lunes 7, con las miniaturas de los diez Shorts al lado.
 - **La cadencia.** Cinco Shorts y un largo. Se revisa el 27 de septiembre, no antes.
 - **El punto de control del 27 de septiembre**, con sus tres desenlaces escritos
   en la versión 4. Los datos de esta semana empujan hacia el segundo.
-- **No se amplía el tema todavía.** La pregunta de Silvestre del 31/08 tiene
+- **No se amplía el tema todavía.** La pregunta del codirector del 31/08 tiene
   respuesta: no es que el tema esté descartado, es que **con C19, C16 y C7 sin
   soltar todavía no se sabe qué está fallando**, y ampliar el tema ahora
   destruiría la única medición limpia que vamos a tener. Las dos sondas que la
@@ -1319,7 +1319,7 @@ en la revisión del lunes 7, con las miniaturas de los diez Shorts al lado.
 
 ## Lo que se oyó y lo que dicen los números
 
-Silvestre escuchó las tres pistas: **las dos de Gemini mejoran a `edge-tts`**, y
+El codirector escuchó las tres pistas: **las dos de Gemini mejoran a `edge-tts`**, y
 entre ellas no supo decidir — «parejas, quizá un poco mejor la dirigida», con una
 diferencia de volumen a favor de la plana. Aprobó el cambio.
 
@@ -1456,13 +1456,13 @@ de 48 horas sobre `MDS-013`** y corrige el guion, que es la red de seguridad.
 # Versión 6 · 7 de septiembre de 2026 — la presentación, y la fecha en la que se decide
 
 Todo lo anterior sigue vigente salvo lo que esta sección corrige expresamente.
-Es la versión más larga porque contesta a las dos preguntas grandes que Silvestre
+Es la versión más larga porque contesta a las dos preguntas grandes que el codirector
 puso hoy sobre la mesa: **qué hacemos con la presentación**, que es lo que él
 señala como talón de Aquiles, y **hasta cuándo apostamos por el canal**.
 
 ## Los números con los que se escribe esto
 
-MDH-005 (sábado 5) tiene **una visualización, la de Silvestre**. MDS-011 sale hoy
+MDH-005 (sábado 5) tiene **una visualización, la del codirector**. MDS-011 sale hoy
 a las 19:00. Los tres Shorts con el motor C15 hicieron 31, 21 y 21 — la mejor
 racha del canal— y siguen a menos de la mitad del umbral de S1.
 
@@ -1530,7 +1530,7 @@ para una comprobación determinista, y decirlo también es una decisión.**
 
 ### 3 · La voz sigue siendo la de siempre, y eso es culpa mía
 
-Silvestre esperaba oír Gemini hoy. **No tocaba hoy: C7.2 dice el lunes 14**, y el
+El codirector esperaba oír Gemini hoy. **No tocaba hoy: C7.2 dice el lunes 14**, y el
 código ni siquiera está escrito — se escribe esta semana con `--motor edge` por
 defecto. Está en la versión 5.1 y en la tabla del prompt de arranque, pero
 escrito para quien lee el plan entero, no para quien escucha el vídeo del lunes.
@@ -1551,7 +1551,7 @@ en un documento.
 
 ## C25 · La presentación
 
-**El encargo de Silvestre, con sus palabras:** «hay mucha diferencia aún entre la
+**El encargo del codirector, con sus palabras:** «hay mucha diferencia aún entre la
 presentación de nuestros vídeos y la presentación de los vídeos de los canales
 más exitosos; creo firmemente que nuestro talón de Aquiles es la presentación
 ahora mismo, muy por debajo del contenido».
@@ -1567,7 +1567,7 @@ Estoy de acuerdo, y se puede decir con más precisión que «se ve peor».
 2. **La pantalla no tiene profundidad.** Un plano. Todo lo que se ve está a la
    misma distancia. Los canales de referencia tienen siempre dos o tres capas.
 3. **Cada escena empieza de cero.** Se monta y se desmonta entera. No sobrevive
-   nada al corte — y eso es exactamente lo que Silvestre describió como «un corte
+   nada al corte — y eso es exactamente lo que el codirector describió como «un corte
    despiezado del vídeo largo». Seis tarjetas seguidas no son una historia
    aunque el guion lo sea.
 4. **La composición no cambia nunca.** Todo centrado, siempre. Cinco Shorts a la
@@ -1627,14 +1627,14 @@ escrito, porque hoy se ha discutido.
 |---|---|---|---|
 | **7 sep** | **P3 + P4 + P6** (los iconos, la escena 1, la jerarquía) y **P10** | código de C7 con `--motor edge` | Los tres arreglos de hoy |
 | **14 sep** | **P1 + P8** (profundidad, el personaje actúa y `piensa` redibujado) | **C7 se enciende**: Gemini en los Shorts | |
-| **21 sep** | **P2 + P7 + P5** (continuidad, serie, la cifra que se construye) | | **P9** si Silvestre ha dejado los sonidos |
+| **21 sep** | **P2 + P7 + P5** (continuidad, serie, la cifra que se construye) | | **P9** si el codirector ha dejado los sonidos |
 | **27 sep** | **Punto de control.** Se mide un canal con la presentación entera puesta | | |
 
 **Si algo se cae, se cae por este orden, empezando por el final:** P5, P2, P7,
 P1. **P3, P4, P6 y P8 no se caen**: son los cuatro que atacan el primer segundo y
 la sensación de plantilla, que es lo que estamos midiendo.
 
-### Lo único que necesito de Silvestre, y es una vez
+### Lo único que necesito del codirector, y es una vez
 
 **Tres ficheros de sonido CC0** (`.wav` o `.mp3` cortos, menos de 1 s): un clic
 seco de corte, un golpe grave, y un tic ascendente. En
@@ -1648,7 +1648,7 @@ semana del 21.
 
 ## C26 · Hasta cuándo apostamos por el canal
 
-**La pregunta de Silvestre:** «no quiero abandonar antes de tiempo; tampoco
+**La pregunta del codirector:** «no quiero abandonar antes de tiempo; tampoco
 mantener más tiempo del debido un proyecto fallido. Por eso busco un momento
 clave en el que poder revisar y decidir juntos».
 
@@ -1725,3 +1725,195 @@ control se discute de memoria.
 - **El episodio largo se queda en `edge-tts`.** Cuarenta escenas no caben en diez
   peticiones diarias. Sin novedad.
 - **C10, C20 y C13 siguen detrás de S1.**
+
+
+---
+
+# Versión 6.1 · 7 de septiembre, mediodía — lo que salió al aplicar la versión 6
+
+Cinco cosas, cuatro de ellas descubiertas al arreglar los defectos de MDS-011.
+La versión 6 sigue vigente entera; esto la corrige donde hizo falta.
+
+## Lo que se aprendió arreglando el solape: medir una escena quieta miente
+
+El arreglo del domingo (`padding-bottom:720px`) se verificó **en el punto de
+reposo** de la escena, donde el hueco entre el pie y la cara medía 48 px, y se
+dio por cerrado. Con la escena **en movimiento** ese hueco baja a **7 px**, y
+así se publicó.
+
+Medido punto por punto, 21 instantes por escena, sobre las 49 escenas verticales
+con personaje del repositorio. Los 41 px se los comen tres cosas que **no
+existen en un fotograma quieto**:
+
+| | Cuánto |
+|---|---|
+| El personaje entra 26 px por debajo de su sitio y sube | 26 px |
+| Y respira, ±5 px, todo el rato | 5 px |
+| `#escena` crece un 2,2 % durante la escena (el zoom de C15) y empuja el borde inferior de `.caja` | ~20 px |
+
+**El número nuevo es 790 px** y no está elegido a ojo: 430 (`bottom` del
+personaje) + 250 (su alto) + 5 (respiración) + 40 (el aire que ya se quería) +
+65 (lo que empuja el zoom, medido). El peor caso del repositorio pasa de **−34 px
+a +2 px**, y MDS-011 escena 4 de 7 px a **43 px**. Todos los guiones pendientes
+quedan por encima de 108 px.
+
+**Lo que queda abierto, dicho para que no se olvide:** ese peor caso de +2 px es
+`MDS-007` escena 4 —una `lista` de tres puntos con personaje, ya publicada—.
+**Subir más el `padding` no vale:** ahí el borde superior de `.caja` ya baja a
+158 px y por encima de 150 px empieza la banda que tapa la interfaz de YouTube.
+El arreglo bueno es el principio de C21.1 aplicado al alto —*encoge hasta que
+quepa*, pero midiendo la banda reservada y no solo la caja— y está encargado.
+
+→ **Trampa 15:** *cuando compruebes geometría en `escena.html`, llama a
+`pintar(t)` en al menos veinte instantes de la escena y quédate con el peor caso.
+Comprobar solo después de `cargar()` es comprobar un vídeo que no existe.*
+
+## P8 se adelanta a medias: `piensa` ya no es una mueca
+
+La cara `piensa` compartía la boca de `duda` —`b-torcida`, que a tamaño de móvil
+se lee como una comisura caída—, y por eso MDS-011 presentó un experimento con
+cara triste. Se ha redibujado hoy: **boca recta y las dos cejas levantadas**. El
+«estoy pensando» lo cuentan ahora las cejas y el eje del engranaje girando 24°,
+que además es lo de marca.
+
+**Y con eso la regla 14.3 se encoge de tres caras a dos.** Esta mañana se amplió
+para prohibir `duda`, `piensa` y `no` en escenas que solo presentan. Al mirar el
+dibujo se vio la corrección de verdad, y queda escrita en `REGLAS.md`:
+
+> **Cuando una regla tenga que prohibir la mitad de una paleta, sospecha de la
+> paleta antes que de quien la usa.**
+
+Lo que sigue pendiente de P8 es lo otro: que el personaje **haga** algo —entrar
+por el borde, inclinarse hacia la cifra, apartarse en el «dónde falla»—. Baja
+detrás de la caché de voz.
+
+## C27 · El episodio largo también deja `edge-tts`
+
+**La propuesta es del codirector, y es la buena.** Textualmente: «¿y si se
+renderizan varias escenas al día y luego el último día se juntan en el vídeo
+largo? El resultado de edge-tts no es bueno y no debe haber esa diferencia entre
+los shorts y los largos (si no, dejamos de hacer largos)».
+
+**De acuerdo con el diagnóstico y con la amenaza.** Un canal que publica cinco
+piezas con una voz y una sexta con otra peor no tiene dos productos: tiene un
+producto y un recordatorio semanal de que se puede hacer mejor. Y la conclusión
+del 4 de septiembre —«el largo se queda en `edge-tts`, o nunca»— se tomó dando
+por hecho que la cuota se gastaba el mismo día del render. **No tiene por qué.**
+
+**La aritmética, que es lo que decide:**
+
+| | |
+|---|---|
+| Escenas de un episodio largo | ~40 |
+| Peticiones por día del nivel gratuito, **por modelo** | 10 |
+| Modelos con cuota propia | `gemini-3.1-flash-tts-preview` y `gemini-2.5-flash-preview-tts` |
+| Días entre que la planificación escribe el guion (jueves) y se produce (sábado) | 8 (de martes a sábado, dos semanas de margen real) |
+
+Cuarenta escenas no caben en un día. **Sí caben en cuatro**, y sobra.
+
+**Cómo se hace, y la pieza de la que depende todo es la caché:**
+
+1. **`voz.py` gana una caché indexada por contenido**, en
+   `03_produccion/cache_voz/<sha256 de narración + motor + voz>.mp3`. Antes de
+   pedirle nada a Gemini, mira si ya está. Es la pieza central y entra **esta
+   semana**, con C7. Beneficio inmediato y aparte: **repetir una producción deja
+   de gastar cuota** — hoy hubo que rehacer MDS-011 a mano y se pagó dos veces.
+   Y como la clave incluye el texto, un guion corregido se resintetiza solo en
+   las escenas que cambiaron.
+2. **Un workflow nuevo, `voz_adelantada.yml`**, de martes a viernes: coge el
+   guion del sábado siguiente, mira qué escenas no están en caché y sintetiza
+   **hasta agotar el margen del día**, con 25 s entre llamadas.
+3. **Usa el modelo 2.5 y no el 3.1**, para no competir con la cuota que gastan
+   los Shorts del día. Si el 2.5 se agota, para y lo retoma mañana; no hay prisa.
+4. **El sábado no cambia nada.** `voz.py` encuentra el 90 % hecho y lo que falte
+   lo sintetiza con `edge-tts`, como siempre. **Un mal día no deja al canal sin
+   vídeo: deja alguna escena con voz peor**, y `ficha.json` dice cuáles. Es la
+   misma política de degradación que el resto del proyecto.
+
+**Cuándo:** la caché, esta semana con C7. El workflow, la semana del 14 — el
+diseño lo prepara la revisión diaria y lo deja en `07_pruebas/`, porque
+`.github/workflows/` no se escribe en remoto y lo crea el codirector a mano.
+
+**Y la parte incómoda de su frase, que no se esquiva:** «si no, dejamos de hacer
+largos». Queda como opción viva para el 27 de septiembre. El episodio largo
+cuesta cuarenta escenas de guion y de render para **una visualización**; si
+C27 no lo iguala en calidad al Short, la pregunta no es cómo mejorarlo sino si
+merece la semana. No se decide hoy: se decide con la tabla delante.
+
+## C23 · La verificación de Google: hay que dejar de perseguirla
+
+**El diagnóstico, con lo que se ve en la consola:**
+
+- **«Verificación de la propiedad» → «Propietario verificado» con su marca
+  verde. Eso está HECHO** y era lo único que necesitaba la web de `docs/`.
+- **«No hemos encontrado ninguna página de Accelerated Mobile Pages en tu sitio
+  web» es de Search Console, no de OAuth.** AMP es un formato de página móvil,
+  no tener ninguna es lo normal y no bloquea nada. **No tiene nada que ver.**
+- **«Estado de verificación» es la verificación de MARCA, y es un trámite
+  distinto que no necesitamos** — y el botón «Corregí los problemas» **manda la
+  aplicación a revisión**, que es exactamente lo que no queremos y lo que va a
+  seguir fallando cada vez que se pulse.
+
+**Lo que dice la versión 5 sigue siendo cierto palabra por palabra:** *publicar
+no es verificar*. Publicar es **un botón** en *Audiencia* → **«Publicar
+aplicación»**, y con eso el token deja de caducar a los siete días. Verificar es
+un formulario con revisión humana, y solo hace falta para pasar de 100 usuarios
+o para quitar la pantalla de aviso. Necesitamos un usuario.
+
+**La acción, y es corta:** *Audiencia* → **Publicar aplicación** → aceptar que la
+verificación queda pendiente. Nada más. Si el botón sale desactivado, lo que hay
+que completar son **campos de la pantalla de consentimiento** (nombre de la
+aplicación, correo de asistencia, datos de contacto del desarrollador), no pasar
+ninguna revisión.
+
+## Y el token, que resultó ser otro problema distinto del que creíamos
+
+La lectura de métricas del lunes falló con **`invalid_scope: Bad Request`**, no
+con un token caducado. Causa: **el token vigente se generó sin
+`yt-analytics.readonly`**. En la pantalla de consentimiento cada permiso es una
+casilla y es fácil dejarse una; el token resultante **sube vídeos perfectamente**
+—`publicar.py` solo pide `youtube.upload` y `force-ssl`— y mata las métricas una
+semana después, en otro sitio y con un error que no nombra el ámbito que falta.
+
+Arreglado en las dos direcciones:
+
+- **`obtener_token_youtube.py` ya no imprime un token incompleto: lo rechaza**,
+  diciendo qué casilla faltó. Antes lo listaba y se quedaba tan ancho.
+- **`metricas.py` ya no manda `scopes` al refrescar** —que es lo que provoca el
+  `invalid_scope`— y comprueba los ámbitos por su cuenta. Si falta el de
+  analítica, **hace igualmente la parte de Data API** (que es la que corrige
+  `registro_publicaciones.json`) y lo dice en castellano.
+
+→ **Trampa 16:** *un permiso que falta no rompe donde se concede: rompe donde se
+usa, y eso puede ser una semana después. Cuando emitas una credencial, compara
+lo concedido con lo pedido y falla ahí mismo.*
+
+## El nombre del codirector sale del repositorio
+
+Decisión suya, del 7 de septiembre. **Retirado de los 58 ficheros donde
+aparecía** (271 menciones): documentos, comentarios de código, prompts de los
+tres agentes y sus tres copias del almacén. En adelante se le llama **«el
+codirector»** o **«la dirección»**, y es regla escrita en los tres prompts.
+
+**Lo que esto NO hace, y conviene saberlo:** el nombre sigue en el **historial de
+git**, en los commits anteriores a hoy. Quitarlo de ahí exige reescribir la
+historia (`git filter-repo` y un `push --force`), que es una operación aparte y
+con sus riesgos. **Queda a decisión del codirector**; mientras tanto, lo que ve
+quien entra hoy al repositorio ya no lo lleva.
+
+**Tres ficheros no se han tocado a propósito** —`revision-19-08.patch`,
+`Claude outputs/voz_prueba.yml` y `Claude outputs/portada-web.png`—: son restos
+de sesiones antiguas que no pinta nada que estén en el repositorio. **Lo suyo es
+borrarlos, no reescribirlos.**
+
+## P9 · Los sonidos ya están, y hacen falta dos cosas
+
+Los tres acentos CC0 están en `03_produccion/sonidos/` con su
+`attribution_texts.md`. Dos avisos:
+
+1. **`montaje.py` sigue protegido.** La autorización del 28/08 cubría **solo** el
+   manifiesto de subtítulos, y montar los sonidos es otra cosa. **Hace falta una
+   autorización nueva y escrita** para que la revisión diaria pueda tocarlo. Sin
+   ella, P9 no entra: la regla 11.7 no se salta «solo por esta vez».
+2. **`attribution_texts.md` trae cuatro créditos y en la carpeta hay tres
+   ficheros** (falta el de `alec_mackay`). Se acredita lo que exista.

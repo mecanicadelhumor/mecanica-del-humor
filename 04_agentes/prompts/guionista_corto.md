@@ -61,7 +61,7 @@ Un test inventado está prohibido: es la línea entre divulgar y hacer horóscop
 
 **El chiste va primero. No en el guion: en tu cabeza.**
 
-Añadida el 28/08/2026, después de que Silvestre viera MDS-005 y dijera lo único que
+Añadida el 28/08/2026, después de que el codirector viera MDS-005 y dijera lo único que
 importa: «el chiste no tiene gracia».
 
 Lo que había pasado es que el guion se escribió al revés. El mecanismo se eligió antes

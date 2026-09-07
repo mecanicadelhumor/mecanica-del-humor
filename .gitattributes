@@ -1,7 +1,7 @@
 # Fin de línea: LF siempre, en todo lo que escriben los dos lados.
 #
 # El problema que resuelve: los ficheros que escribe el bot de Actions (Linux,
-# LF) aparecían como modificados enteros en el Windows de Silvestre en cuanto
+# LF) aparecían como modificados enteros en el Windows del codirector en cuanto
 # algo los reescribía con CRLF. El 28/08 «git status» daba 587 líneas cambiadas
 # en 8 ficheros que nadie había tocado — y esos mismos ficheros son los que el
 # workflow hace «git pull --rebase» y «git push» al terminar cada producción.

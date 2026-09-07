@@ -2,8 +2,8 @@
 
 **Este archivo se lee antes de tocar nada.** Es corto a propósito.
 
-Si algo de lo que vas a hacer choca con una regla de aquí, no lo hagas: pregunta a
-Silvestre en la conversación. Ninguna de estas reglas se salta «solo por esta vez».
+Si algo de lo que vas a hacer choca con una regla de aquí, no lo hagas: pregunta al
+codirector en la conversación. Ninguna de estas reglas se salta «solo por esta vez».
 
 ---
 
@@ -69,7 +69,7 @@ vídeo**: se anota en `05_calendario/pendientes_de_fuente.md`.
 
 ### Entretener también vale
 
-*Añadida el 4 de septiembre, por decisión de Silvestre.*
+*Añadida el 4 de septiembre, por decisión del codirector.*
 
 **Un vídeo no tiene que ser educativo para valer.** Si entretiene y cumple las reglas de
 arriba —nada inventado, nadie como víctima, la fuente donde toca—, es un vídeo bueno. El
@@ -87,14 +87,14 @@ Todo el sistema funciona en el plan gratuito. Si una propuesta requiere pagar al
 API, un modelo, una fuente tipográfica, un banco de imágenes—, se descarta o se pregunta
 antes. No hay excepciones «por unos céntimos».
 
-## 5. Cero trabajo recurrente para Silvestre
+## 5. Cero trabajo recurrente para el codirector
 
 Los cambios pueden pedir **una intervención puntual de setup** (crear una cuenta, activar
 un ajuste, aprobar una muestra). No pueden pedir nada que haya que repetir cada semana.
 
 Si un cambio solo funciona con alguien revisando a diario, ese cambio está mal diseñado.
 
-## 6. Nada a nombre de Silvestre, nada con su cara
+## 6. Nada a nombre del codirector, nada con su cara
 
 Las cuentas en otras plataformas son **de la marca**: Mecánica del Humor. Nunca con su
 nombre, nunca con su cara, nunca con su imagen personal.
@@ -147,7 +147,7 @@ es dueño de un guion no lo edita: escribe una nota en `05_calendario/revisiones
 5. **Determinista.** Mismo guion y mismo `t`, mismo píxel. Nada de `Math.random()`.
 6. **Nada que dependa de internet en tiempo de render.**
 7. **Archivos protegidos** — `voz.py`, `montaje.py`, `.github/workflows/producir.yml`: no se
-   tocan sin permiso explícito de Silvestre en la conversación.
+   tocan sin permiso explícito del codirector en la conversación.
 8. **`MEJORAS.md` se añade al final, nunca se reescribe.**
 
 ## 12. El criterio editorial que no se negocia
@@ -188,20 +188,26 @@ está hablando.
 2. **Lo esencial de la narración tiene que tener correlato en pantalla**, aunque sea con
    otras palabras.
 3. **La cara del personaje concuerda con lo que se está diciendo.** A tamaño de móvil
-   la boca es casi lo único que se lee, y **tres de las seis expresiones comparten boca
-   torcida o plana: `duda`, `piensa` y `no`.** Las tres se leen como cara triste. **No
-   van en una escena que solo presenta, expone o enuncia** —un experimento, una cifra,
-   una comparación—: ahí van `neutra`, `entiende` o `rie`. Las tres tristes solo entran
-   donde la narración dice que algo falla, se rompe o no cuadra, que en un Short es casi
-   siempre el `cierre`.
+   la boca es casi lo único que se lee. **`duda` y `no` se leen como cara triste** —una
+   lleva boca torcida hacia abajo y la otra boca plana— y **no van en una escena que
+   solo presenta, expone o enuncia** un experimento, una cifra o una comparación: ahí
+   van `neutra`, `entiende`, `rie` o `piensa`. Las dos tristes entran solo donde la
+   narración dice que algo falla, se rompe o no cuadra, que en un Short es casi siempre
+   el `cierre`.
 
-   *Corregido el 07/09/2026.* La redacción anterior nombraba `duda` y
-   `no_le_hace_gracia` — y `no_le_hace_gracia` **no existe**: las seis expresiones de
-   `escena.html` son `neutra`, `duda`, `entiende`, `no`, `rie` y `piensa`. Nombrar una
-   cara inventada y dejar fuera una real es lo que dejó pasar MDS-011 escena 4, que
-   presenta el experimento de los pies de foto con la cara `piensa` — boca torcida, la
-   misma que `duda`. Silvestre lo vio publicado y lo dijo con esas palabras: «está
-   usando la cara triste, cuando tenemos otros iconos menos tristes».
+   *Historia de esta regla, en dos correcciones del 07/09/2026.* La redacción original
+   nombraba `duda` y `no_le_hace_gracia` — y **`no_le_hace_gracia` no existe**: las seis
+   expresiones son `neutra`, `duda`, `entiende`, `no`, `rie` y `piensa`. Nombrar una cara
+   inventada y dejar fuera una real es lo que dejó pasar MDS-011 escena 4. Al mirarlo se
+   vio que **`piensa` compartía la boca de `duda`**, así que primero la regla pasó a
+   prohibir tres caras. Ese mismo día se llegó a la corrección de verdad: **si la mitad
+   del vocabulario del personaje se lee triste, el arreglo es el dibujo, no la
+   prohibición.** `piensa` se redibujó con boca recta y las dos cejas levantadas —el
+   pensar lo cuentan las cejas y el eje del engranaje girando— y volvió a ser usable.
+   La regla se quedó donde debía: dos caras, no tres.
+
+   **Y la lección general, que es la que hay que recordar:** cuando una regla tenga que
+   prohibir la mitad de una paleta, sospecha de la paleta antes que de quien la usa.
 
 **El caso que la escribió.** MDS-009, escena 2: la voz decía «Curry y Dunbar preguntaron a
 la gente de qué se reía y les emparejaron con desconocidos», y en pantalla ponía «Con

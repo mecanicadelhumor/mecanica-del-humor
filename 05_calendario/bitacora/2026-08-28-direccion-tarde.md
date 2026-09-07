@@ -22,7 +22,7 @@ if p.get("estado") != "public" or not p.get("video_id"):
 ```
 
 Y `registro_publicaciones.json` guarda el estado del **momento de la subida**, que en
-modo `revision` es siempre `private`. Nadie lo actualiza cuando Silvestre le da a
+modo `revision` es siempre `private`. Nadie lo actualiza cuando el codirector le da a
 publicar. De los seis vídeos del canal, el único con `public` escrito es `MDH-001`, del
 uno de agosto. **Los cinco Shorts estaban excluidos y lo iban a seguir estando para
 siempre.** Aunque no se hubiera caído, la primera lectura habría salido vacía y
@@ -58,7 +58,7 @@ Lo que cuesta cada cosa:
 | Medir la demanda | **101 × pregunta** (hoy 20 → 2.020) | los jueves |
 
 Día normal: ~1.750 de 10.000. Jueves: ~3.800. **Sobra sitio para unas sesenta preguntas
-más** antes de acercarse al techo. No hay problema, y Silvestre no tiene que volver a
+más** antes de acercarse al techo. No hay problema, y el codirector no tiene que volver a
 lanzarlo a mano.
 
 **Pero había un derroche que yo mismo acababa de introducir.** Al poner dos horas de
@@ -97,7 +97,7 @@ está.
 
 ## 4. El chiste de MDS-005 no tiene gracia, y es un fallo de método
 
-Silvestre, sobre el Short de hoy: «el chiste no tiene gracia; a nivel de contenido van a
+El codirector, sobre el Short de hoy: «el chiste no tiene gracia; a nivel de contenido van a
 peor». Tiene razón en el diagnóstico y conviene ser preciso en la causa, porque no es
 falta de talento del generador: **el guion se escribió al revés.**
 
@@ -125,9 +125,9 @@ peor» viene de que MDS-005 es el peor de la primera tanda y es el que se ve hoy
 **Aviso sobre MDS-007 (martes 1):** el chiste del abuelo es humor negro sobre un
 accidente. Está dentro de la regla 1 —es ficticio, no hay víctima real y es literalmente
 el objeto de estudio del episodio, que va sobre si el humor negro dice algo de la
-inteligencia— pero conviene que Silvestre lo sepa antes de que salga, no después.
+inteligencia— pero conviene que el codirector lo sepa antes de que salga, no después.
 
-**Lo que NO se ha tocado: la voz.** Silvestre dice «sobre todo por la narración», y ahí
+**Lo que NO se ha tocado: la voz.** El codirector dice «sobre todo por la narración», y ahí
 hay un segundo problema que el prompt no arregla: `edge-tts` lee el chiste y la
 explicación con **la misma voz, el mismo ritmo y la misma entonación**. Un chiste contado
 con la cadencia de una nota a pie de página no es un chiste, es una cita. Eso es C7
@@ -185,7 +185,7 @@ de en una sucesión de rótulos. Se decide cuando C16 esté verificado.
 
 ## 6. Cierre de la sesión
 
-**Silvestre autoriza tocar `voz.py`.** Sin acotar. Queda por escrito en
+**El codirector autoriza tocar `voz.py`.** Sin acotar. Queda por escrito en
 `00_estrategia/PROMPT_DE_ARRANQUE.md`, en la tabla de autorizaciones vigentes,
 porque un permiso dado en una conversación se pierde con la conversación. Se
 usará para C7 escalón 1 (dos voces) la semana del 7 de septiembre, después de

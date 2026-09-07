@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-metricas.py — lee la analítica del canal sola, sin que Silvestre copie nada.
+metricas.py — lee la analítica del canal sola, sin que el codirector copie nada.
 
 POR QUÉ EXISTE
 --------------
-Hasta hoy las métricas se pedían a mano: la tarea del lunes le mandaba a
-Silvestre una lista de vídeos y él copiaba los números de YouTube Studio uno a
+Hasta hoy las métricas se pedían a mano: la tarea del lunes le mandaba al
+codirector una lista de vídeos y él copiaba los números de YouTube Studio uno a
 uno. Con tres vídeos era llevadero; con seis piezas por semana deja de serlo, y
 además se cometen errores al copiar.
 
@@ -73,12 +73,57 @@ def credenciales():
     if faltan:
         sys.exit(f"Faltan variables de entorno: {', '.join(faltan)}")
     from google.oauth2.credentials import Credentials
+    # NO se pasa `scopes=`. 07/09/2026.
+    #
+    # Con `scopes=` puesto, google-auth mete esa lista en el cuerpo de la
+    # petición de refresco, y Google rechaza con **`invalid_scope: Bad
+    # Request`** cualquier refresco cuyos ámbitos no sean un subconjunto de los
+    # que se concedieron al crear el token. Es lo que rompió la lectura del
+    # 7 de septiembre: el token vigente se generó sin
+    # `yt-analytics.readonly`, así que subir vídeos seguía funcionando
+    # (`publicar.py` solo pide `youtube.upload` + `force-ssl`) y las métricas
+    # morían en la PRIMERA llamada, antes incluso de tocar la analítica, con un
+    # error que no nombra el ámbito que falta y parece un token caducado.
+    #
+    # Sin `scopes=`, el refresco no manda `scope`, Google devuelve lo que el
+    # token tenga de verdad, y el fallo se traslada al sitio donde se entiende:
+    # la llamada de analítica, con un 403 que sí dice qué falta. Lo comprueba
+    # `ambitos_concedidos()` justo después, para decirlo en castellano.
     return Credentials(None,
                        refresh_token=os.environ["YT_REFRESH_TOKEN"],
                        client_id=os.environ["YT_CLIENT_ID"],
                        client_secret=os.environ["YT_CLIENT_SECRET"],
-                       token_uri="https://oauth2.googleapis.com/token",
-                       scopes=AMBITOS)
+                       token_uri="https://oauth2.googleapis.com/token")
+
+
+def comprobar_ambitos(cred):
+    """Refresca una vez y dice, en castellano, qué ámbitos trae el token.
+
+    Devuelve True si están los dos que este script necesita. Si falta el de
+    analítica no aborta: la mitad de Data API —duración y privacidad real de
+    cada vídeo, que es lo que corrige `registro_publicaciones.json`— sí
+    funciona, y media lectura vale más que ninguna.
+    """
+    import google.auth.transport.requests as gat
+    try:
+        cred.refresh(gat.Request())
+    except Exception as e:
+        print(f"::error::No se ha podido refrescar el token de YouTube: {e}\n"
+              "  Si dice «invalid_scope», el token se generó con menos permisos "
+              "de los que se piden. Si dice «invalid_grant», está caducado o "
+              "revocado. En los dos casos: 04_agentes/obtener_token_youtube.py, "
+              "marcando LAS TRES casillas. Ver 00_estrategia/TOKEN_DE_YOUTUBE.md.")
+        raise
+    concedidos = set(cred.scopes or [])
+    faltan = [a for a in AMBITOS if concedidos and a not in concedidos]
+    if faltan:
+        print("::warning::Al token de YouTube le faltan ámbitos: "
+              + ", ".join(faltan)
+              + " — se hará solo la parte que no los necesita. Para arreglarlo, "
+                "vuelve a generar el token marcando LAS TRES casillas del "
+                "consentimiento (04_agentes/obtener_token_youtube.py).")
+        return False
+    return True
 
 
 def ficha_youtube(yt, ids):
@@ -87,7 +132,7 @@ def ficha_youtube(yt, ids):
 
     Por qué (31/08): `registro_publicaciones.json` guarda el estado del
     **momento de la subida**, y en modo «revision» eso es siempre `private`.
-    Nadie lo actualiza cuando Silvestre le da a publicar. Resultado: de los seis
+    Nadie lo actualiza cuando el codirector le da a publicar. Resultado: de los seis
     vídeos del canal, este script solo consideraba candidato a MDH-001 —el único
     con `public` escrito— y los cinco Shorts quedaban fuera para siempre. La
     primera lectura de métricas del canal habría salido vacía aunque no se
@@ -263,6 +308,13 @@ def main():
 
     from googleapiclient.discovery import build
     cred = credenciales()
+    # Se refresca aquí, a propósito, antes de construir nada: así un token con
+    # los permisos mal puestos se detecta en una línea legible y no veinte
+    # llamadas después, en mitad de un rastro de pila. Devuelve False —no
+    # aborta— si falta el ámbito de analítica: la parte de Data API (duración y
+    # privacidad real de cada vídeo, que es la que corrige el registro) no lo
+    # necesita, y media lectura vale más que ninguna.
+    hay_analitica = comprobar_ambitos(cred)
     ya = build("youtubeAnalytics", "v2", credentials=cred, cache_discovery=False)
     yt = build("youtube", "v3", credentials=cred, cache_discovery=False)
 
@@ -274,7 +326,7 @@ def main():
     # Primero se le pregunta a YouTube el estado de TODOS los vídeos del
     # registro, no solo de los que se van a medir: es una llamada por cada 50
     # vídeos y arregla de paso el registro, que se queda con el estado de la
-    # subida y nunca se entera de que Silvestre le dio a publicar.
+    # subida y nunca se entera de que el codirector le dio a publicar.
     fichas = ficha_youtube(yt, [p.get("video_id") for p in reg])
 
     corregidos = 0
@@ -289,6 +341,18 @@ def main():
         REGISTRO.write_text(json.dumps(registro, ensure_ascii=False, indent=1) + "\n",
                             encoding="utf-8")
         print(f"  {corregidos} estado(s) puestos al día en registro_publicaciones.json")
+
+    if not hay_analitica:
+        print("::error::Sin el ámbito «yt-analytics.readonly» no hay métricas que "
+              "leer. El registro de publicaciones SÍ se ha puesto al día con lo "
+              "que dice YouTube, que es lo que este script podía hacer sin ese "
+              "permiso. Para recuperar las métricas: genera otra vez el token "
+              "con 04_agentes/obtener_token_youtube.py marcando las tres "
+              "casillas, actualiza el secreto YT_REFRESH_TOKEN y relanza este "
+              "workflow. metricas.json se queda como estaba, con su "
+              "«actualizado_utc» viejo, que es lo correcto: es una lectura que "
+              "no se ha hecho, no una lectura vacía.")
+        return
 
     candidatos = []
     for p in reg:

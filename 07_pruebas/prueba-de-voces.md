@@ -22,7 +22,7 @@ justificar cambiar el motor de voz de la producción diaria?**
 
 ## La respuesta
 
-**4 de septiembre, Silvestre:** «Gemini_dirigido mejora a edge. Gemini_plano está
+**4 de septiembre, el codirector:** «Gemini_dirigido mejora a edge. Gemini_plano está
 parejo con gemini_dirigido, aunque creo que mejor ligeramente este último, pero
 no estoy seguro. Lo que hay es una diferencia de volumen: gemini_plano se escucha
 más fuerte y claro que gemini_dirigido.» **Cambio aprobado.**

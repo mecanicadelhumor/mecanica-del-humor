@@ -2,7 +2,7 @@
   "_nota": "La parrilla es la única fuente de verdad sobre qué se produce y cuándo. La lee cola.py, que decide el trabajo de cada día; el cron de GitHub Actions solo la ejecuta. Cambiar el ritmo del canal es cambiar este fichero, no el workflow.",
   "_cambio_20_agosto": "Reforma completa tras el análisis de 00_estrategia/. Tres cosas cambian: (1) un solo canal, en español — el inglés se sirve con el doblaje automático de YouTube, que es gratis y no paga un segundo arranque en frío; (2) cinco Shorts por semana y UN episodio largo, en vez de un largo diario en dos idiomas: los canales de referencia con millones de suscriptores publican entre tres y once veces al mes, no treinta; (3) el Short es la puerta de entrada, porque es la única superficie de YouTube que no exige tener público previo.",
   "_modos": {
-    "revision": "Sube en privado y sin fecha de publicación. Silvestre lo revisa y le da a publicar a mano.",
+    "revision": "Sube en privado y sin fecha de publicación. El codirector lo revisa y le da a publicar a mano.",
     "automatico": "Sube en privado con publishAt: YouTube lo hace público solo a la hora indicada. Entre la subida y la publicación hay margen de sobra para cancelarlo."
   },
   "zona_horaria": "Europe/Madrid",
@@ -21,7 +21,7 @@
       ],
       "modo": "revision",
       "hora": "19:00",
-      "nota": "Lunes. Serie «Desmonta el chiste». Pregunta: por qué nos reímos de un chiste. Silvestre lo mira antes de publicarlo."
+      "nota": "Lunes. Serie «Desmonta el chiste». Pregunta: por qué nos reímos de un chiste. El codirector lo mira antes de publicarlo."
     },
     {
       "fecha": "2026-08-25",
@@ -207,7 +207,7 @@
       "MDH-004.en"
     ]
   },
-  "_cambio_20_agosto_noche": "Planificación semanal. Escritos MDS-002 a MDS-006 y adaptado MDH-004 al formato nuevo. Los temas ya NO salen de la bibliografía: salen de 05_calendario/demanda.json, y la bibliografía solo decide si se pueden responder (REGLAS.md, regla 3). Tres preguntas con demanda se quedaron fuera por falta de fuente y están en pendientes_de_fuente.md. La semana del 24 se queda en modo «revision» a propósito: es la primera con el formato vertical, el personaje y las dos voces, y conviene que Silvestre lo apruebe con los ojos. El automático entra el 31, como estaba previsto.",
+  "_cambio_20_agosto_noche": "Planificación semanal. Escritos MDS-002 a MDS-006 y adaptado MDH-004 al formato nuevo. Los temas ya NO salen de la bibliografía: salen de 05_calendario/demanda.json, y la bibliografía solo decide si se pueden responder (REGLAS.md, regla 3). Tres preguntas con demanda se quedaron fuera por falta de fuente y están en pendientes_de_fuente.md. La semana del 24 se queda en modo «revision» a propósito: es la primera con el formato vertical, el personaje y las dos voces, y conviene que el codirector lo apruebe con los ojos. El automático entra el 31, como estaba previsto.",
   "_pendiente": "MDH-007 y MDH-008 siguen escritos y SIN adaptar al formato nuevo (sin «formato», sin personaje, sin escéptico, 48-66 % «enunciado» y escenas largas); sus notas siguen en 05_calendario/revisiones/. NO se adaptan por adelantado a propósito: se adapta uno por semana, el del sábado siguiente. El del 19 de septiembre es MDH-007 (gelotofobia), que es lo que promete el cierre de MDH-006; sus cuatro fichas —J02, J01, H05, H06— están libres de C17. Al adaptarlo hay que reescribir el título de publicación a lenguaje natural: «gelotofobia» solo suma 9.025 visualizaciones entre diez resultados, mientras que la pregunta en cristiano —«por qué se ríen de mí», «miedo a que se rían de ti»— sí se busca.",
   "_cambio_27_agosto_noche": "Planificación semanal. Escritos MDS-007 a MDS-010, adaptado MDH-005 al formato nuevo y aplicadas las notas de revisiones/ de MDS-006 y MDH-004. La semana del 31 al 5 estrena el modo «automatico»: el vídeo se sube en privado con publishAt y YouTube lo hace público solo. Cinco series distintas de lunes a viernes, que es lo que pide la parrilla hasta que las métricas digan cuál funciona. AVISO: el workflow demanda.yml no ha dejado 05_calendario/demanda_bruta.json en el repositorio, así que esta tanda se ha juzgado otra vez sin vistas medidas — ver «_estado_de_la_medicion» en demanda.json.",
   "_cambio_03_septiembre_noche": "Planificación semanal. Escritos MDS-011 a MDS-015 y adaptado MDH-006. PRIMERA TANDA CON DEMANDA MEDIDA: demanda_bruta.json existe, es de hoy y no trae avisos, así que por primera vez los temas se han elegido con visualizaciones delante y no con intuición. Cambio de método que conviene tener escrito: el volumen del top 10 NO se ha usado tal cual, porque once de las veinte consultas devuelven entretenimiento en vez de explicaciones; cada candidato lleva ahora «pertinencia_top5» en demanda.json. Un Short escrito entero se ha tirado esta noche por C17 —«cómo distinguir una risa falsa de una de verdad» repetía cuatro escenas de MDH-004, del 29/08— y en su sitio ha entrado MDS-013. Aplicadas también las notas de revisiones/ de MDH-005 y MDH-006."

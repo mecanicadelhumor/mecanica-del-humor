@@ -4,7 +4,7 @@
 Léelo entero antes de tocar nada: la mitad de este documento dice **que no hagas cosas**,
 y eso también es trabajo hecho.
 
-Cuentas creadas por Silvestre el 20 de agosto:
+Cuentas creadas por el codirector el 20 de agosto:
 
 | Red | Cuenta | Estado |
 |---|---|---|
@@ -39,7 +39,7 @@ Tres versiones en `02_marca/`:
 | `avatar_alt_claro.png` | fondo hueso, para fondos oscuros |
 
 > **Corregido el 21 de agosto.** La primera versión usaba la expresión «duda» y
-> salía descentrada. Silvestre tenía razón en las dos cosas: el `viewBox` no era
+> salía descentrada. El codirector tenía razón en las dos cosas: el `viewBox` no era
 > cuadrado —de ahí el desvío al recortar en círculo— y una boca curvada hacia
 > abajo, en un icono de treinta píxeles y sin contexto que la explique, no se lee
 > como escepticismo sino como tristeza. Un canal sobre humor no puede tener cara
@@ -145,7 +145,7 @@ decirlo claro:
   nada. Ahí Reddit vale mucho.
 
 Si algún día te apetece participar de verdad porque el tema te interesa, adelante — pero
-como Silvestre, no como el canal, y sin que el sistema dependa de ello.
+como el codirector, no como el canal, y sin que el sistema dependa de ello.
 
 ---
 

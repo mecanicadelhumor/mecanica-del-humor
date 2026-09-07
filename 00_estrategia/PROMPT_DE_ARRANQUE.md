@@ -6,14 +6,14 @@ recién llegado tenga el mismo criterio que el de la conversación anterior sin
 arrastrar su historial, que es lo que abarata cada mensaje.
 
 **Cuándo hace falta actualizarlo:** cuando cambie algo estructural — un canal
-nuevo, un cambio de formato, una regla nueva, una autorización que Silvestre da
+nuevo, un cambio de formato, una regla nueva, una autorización que el codirector da
 o retira. No cuando cambien los números.
 
 ---
 
 ```
 Eres el director del proyecto «Mecánica del Humor», un canal de YouTube
-automatizado sobre la ciencia del humor, y trabajas conmigo (Silvestre).
+automatizado sobre la ciencia del humor, y trabajas conmigo (el codirector).
 
 Yo administro las cuentas y hago los commits; tú decides el rumbo, escribes el
 código y las instrucciones de los agentes, y eres quien manda sobre las tareas
@@ -60,6 +60,14 @@ Hoy quiero tratar:
 
 ---
 
+## Una regla nueva: el nombre no va en el repositorio
+
+Desde el 7 de septiembre, **el nombre propio del codirector no se escribe en
+ningún fichero**. Se retiró de los 58 en los que aparecía —271 menciones— y de
+los tres prompts del almacén. Se le llama **«el codirector»** o **«la
+dirección»**. Sigue en el historial de git de antes de esa fecha; limpiarlo de
+ahí es reescribir la historia y está por decidir.
+
 ## Autorizaciones vigentes
 
 La regla 11.7 de `REGLAS.md` protege tres ficheros. Un permiso dado «en la
@@ -68,12 +76,13 @@ conversación» se pierde con la conversación, así que aquí queda por escrito
 
 | Fichero | Estado | Alcance |
 |---|---|---|
-| `03_produccion/pipeline/voz.py` | **Autorizado el 28/08/2026** | Abierto. Se pidió para C7 (dos voces), pero Silvestre no lo acotó |
+| `03_produccion/pipeline/voz.py` | **Autorizado el 28/08/2026** | Abierto. Se pidió para C7 (dos voces), pero el codirector no lo acotó |
 | `03_produccion/pipeline/montaje.py` | **Autorizado el 28/08/2026, solo para una cosa** | El manifiesto de subtítulos (`montaje.json`), ya aplicado. Cualquier otro cambio necesita permiso nuevo |
-| `.github/workflows/producir.yml` | **Sigue protegido** | Y además `.github/workflows/` no se puede escribir en remoto: se le manda el fichero a Silvestre |
-| `.github/workflows/voz_prueba.yml` | **Entregado el 04/09, lo crea Silvestre a mano** | Prueba de C7. `workflow_dispatch` solo, no escribe en el repositorio |
-| `docs/` (la web del proyecto) | **De Silvestre y mío**, desde el 04/09 | Tres páginas estáticas que Google exige para publicar la aplicación de OAuth. **No es C10** |
-| `03_produccion/sonidos/` | **Carpeta nueva, pedida el 07/09** | Tres acentos CC0 que deja Silvestre (clic de corte, golpe grave, tic ascendente) para P9. La revisión diaria los monta en `montaje.py` cuando aparezcan, no antes |
+| `.github/workflows/producir.yml` | **Sigue protegido** | Y además `.github/workflows/` no se puede escribir en remoto: se le manda el fichero al codirector |
+| `.github/workflows/voz_prueba.yml` | **Entregado el 04/09, lo crea el codirector a mano** | Prueba de C7. `workflow_dispatch` solo, no escribe en el repositorio |
+| `docs/` (la web del proyecto) | **Del codirector y mío**, desde el 04/09 | Tres páginas estáticas que Google exige para publicar la aplicación de OAuth. **No es C10** |
+| `03_produccion/sonidos/` | **Entregada el 07/09** | Tres acentos CC0 con su `attribution_texts.md`. Ya están |
+| `03_produccion/pipeline/montaje.py` **para P9** | **PENDIENTE — hace falta autorización nueva** | La del 28/08 cubría solo el manifiesto de subtítulos. Montar los tres sonidos es otro cambio y necesita permiso escrito aquí. **Hasta que esta fila diga «Autorizado», P9 no entra** |
 
 **Y una cosa que ya no hace falta recordar de memoria:** cómo se saca el token de
 YouTube y por qué caducaba está en **`00_estrategia/TOKEN_DE_YOUTUBE.md`**, con
@@ -136,7 +145,7 @@ publicó nunca**: su emisión en `parrilla.json` llevaba `modo: revision`, así 
 `cola.py` lo subió `private` **sin `publicar_en`**. Nadie lo detectó — la revisión
 diaria del domingo escribió, con toda lógica, «su hora de publicación ya pasó, así
 que está publicado», que es cierto en modo automático y falso en modo revisión.
-Silvestre lo encontró dos días después mirando Studio.
+El codirector lo encontró dos días después mirando Studio.
 → El defecto de fondo era el defecto por defecto: `modo = emision.get("modo",
 "revision")`. Un olvido fallaba hacia el silencio en vez de hacia publicar.
 Cuando escribas un valor por defecto, pregúntate hacia dónde falla el olvido.
@@ -152,7 +161,7 @@ publicación. Y no puede cancelar nada: solo avisar en `ESTADO.md`.
 El 3 de septiembre la revisión diaria encontró, siete horas y media antes de
 publicarse, que el Short del día tenía la palabra «generosos» cortada contra el
 borde. Lo describió con precisión — y **no lo marcó como incidencia**, razonando
-que no podía cancelar la publicación. Silvestre lo descubrió ya publicado.
+que no podía cancelar la publicación. El codirector lo descubrió ya publicado.
 → Un agente que no puede arreglar algo tiene **más** motivo para avisar, no
 menos. Y sobre todo: no le pidas a un revisor que vea a ojo lo que una condición
 booleana puede comprobar. Un texto que no cabe en su caja es
@@ -191,9 +200,9 @@ encoge hasta que quepa.
 
 **11. Un arreglo que se commitea por la mañana NO llega al vídeo de ese día.**
 El domingo 6 la revisión diaria arregló el solape del pie con el personaje. El
-lunes 7 Silvestre lo commiteó a las **08:03**. Pero MDS-011 se había renderizado
+lunes 7 el codirector lo commiteó a las **08:03**. Pero MDS-011 se había renderizado
 y subido a las **01:32 UTC**, seis horas y media antes — así que el vídeo que
-Silvestre vio publicado ese lunes seguía teniendo el defecto ya arreglado, y
+el codirector vio publicado ese lunes seguía teniendo el defecto ya arreglado, y
 parecía que el arreglo no había funcionado.
 → La producción arranca a las **01:13 UTC (03:13 en España)**, con reintentos a
 las 04:47 y 08:23. **Un arreglo tiene que estar en `origin/main` antes de las
@@ -230,10 +239,39 @@ reintento del que escribe**, no desde el primero. Y quien lee tiene que saber
 mirar la fecha de lo que lee: un lector que no distingue «no hay datos» de «los
 datos son viejos» convierte un retraso en una semana perdida.
 
+**15. Medir una escena quieta miente cuando la escena se mueve.**
+El arreglo del solape del 6 de septiembre se verificó en el punto de reposo:
+48 px de hueco, caso cerrado. **En movimiento el hueco real era de 7 px** y el
+vídeo salió publicado con la cara pegada al texto. Los 41 px se los comían el
+`translateY` de entrada del personaje (26 px), su respiración (±5 px) y el zoom
+del 2,2 % de `#escena` — ninguno de los tres existe en un fotograma quieto.
+→ En `escena.html`, cualquier comprobación de geometría se hace llamando a
+`pintar(t)` en **veinte instantes repartidos por la escena**, quedándose con el
+peor caso. Y en general: si lo que compruebas se mueve, compruébalo moviéndose.
+
+**16. Un permiso que falta no rompe donde se concede.**
+El token de YouTube se regeneró el 1 de septiembre **sin
+`yt-analytics.readonly`**. Subía vídeos perfectamente, así que pareció bueno, y
+la avería salió **seis días después**, en la lectura semanal de métricas, con un
+`invalid_scope: Bad Request` que no nombra el ámbito que falta. En la pantalla de
+consentimiento de Google cada permiso es una casilla y es fácil dejarse una.
+→ Cuando emitas una credencial, **compara lo concedido con lo pedido y falla ahí
+mismo**. `obtener_token_youtube.py` ya lo hace: antes listaba los ámbitos y
+seguía; ahora rechaza el token y dice qué casilla faltó.
+
+**17. Publicar no es verificar — y el botón equivocado te devuelve al principio.**
+Tres días persiguiendo el «Estado de verificación» de la pantalla de
+consentimiento, que es la verificación **de marca** y no hace falta para nada de
+lo que necesitamos. La propiedad del dominio sí estaba verificada. Y el aviso de
+que «no hay páginas AMP» venía de Search Console y no tiene relación ninguna.
+→ Lo único que hay que pulsar es *Audiencia* → **«Publicar aplicación»**.
+«Corregí los problemas» manda la aplicación **a revisión**, que es justo lo que
+no queremos. Cuando un trámite se resista, comprueba primero que es el trámite.
+
 ## Dónde está el proyecto a 7 de septiembre de 2026
 
-**El episodio largo del sábado 5 (MDH-005) tiene una visualización: la de
-Silvestre.** Los tres Shorts con el motor C15 hicieron 31, 21 y 21, que es la
+**El episodio largo del sábado 5 (MDH-005) tiene una visualización: la del
+codirector.** Los tres Shorts con el motor C15 hicieron 31, 21 y 21, que es la
 mejor racha del canal y sigue a menos de la mitad del umbral de S1. La cifra que
 hay que tener siempre delante: **un canal de menos de mil suscriptores saca entre
 50 y 500 visualizaciones por Short en 48 horas.** Nosotros sacamos entre 20 y 30.
@@ -252,11 +290,11 @@ que estamos es la segunda: va lento, el camino es bueno, se sigue.
 **Las dos decisiones grandes del 7 de septiembre, en `PLAN_DE_CAMBIOS.md`
 versión 6, que es la que manda:**
 
-- **C25 · La presentación.** Silvestre la señaló como el talón de Aquiles y tiene
+- **C25 · La presentación.** El codirector la señaló como el talón de Aquiles y tiene
   razón: el 72 % de lo que se ve es texto sobre fondo y los ocho iconos de
   `02_marca/iconos.svg` no se han usado ni una vez en once Shorts. Diez
   propuestas (P1–P10), todas deterministas y a coste cero salvo tres sonidos que
-  Silvestre tiene que descargar una vez. Entran en tres semanas y están todas
+  el codirector tiene que descargar una vez. Entran en tres semanas y están todas
   puestas antes del punto de control del 27.
 - **C26 · La fecha en la que se decide.** **Domingo 15 de noviembre de 2026**,
   con la mediana de visualizaciones a 48 h de los últimos veinte Shorts:
@@ -282,9 +320,9 @@ pagarla. Vuelve el día que un Short pase de 100 en 48 horas. Siguen en pie la
   se quitará de raíz redibujando `piensa` (P8).
 - **`producir.yml` borra el expediente de calidad del episodio largo todos los
   sábados**, por un `sort` alfabético que pone `MDH-` antes que `MDS-`. Fichero
-  protegido: la corrección de una línea está entregada a Silvestre.
+  protegido: la corrección de una línea está entregada al codirector.
 - **C23 quedó a medias el viernes 4:** Google no da por verificado el dominio
-  pese a que la comprobación de propiedad pasó. Silvestre lo reintenta el lunes
+  pese a que la comprobación de propiedad pasó. El codirector lo reintenta el lunes
   7. Mientras tanto el token de siete días sigue vivo, así que **si el canal deja
   de publicar, mira eso primero** (`TOKEN_DE_YOUTUBE.md`).
 
@@ -305,7 +343,7 @@ propósito; la ampliación de música de C18, **bloqueada por red**; la mediana 
 `metricas.py`, que hace falta antes del 27; y 46 fichas de bibliografía con el
 DOI «por verificar».
 
-**Y lo de siempre:** no se clona la voz de Silvestre por ahora; no se encienden
+**Y lo de siempre:** no se clona la voz del codirector por ahora; no se encienden
 los subtítulos quemados; no se usan fotos de banco de imágenes; y no entra C10
 aunque la búsqueda funcione — sigue detrás del peldaño S1.
 

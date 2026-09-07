@@ -173,7 +173,7 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=False, salida=None
     # Subtítulos quemados: APAGADOS por decisión de canal (20/08).
     #
     # Costó tres vídeos hacerlos funcionar, así que conviene dejar escrito por
-    # qué se apagan y que no es un fallo: con ellos en pantalla, Silvestre vio
+    # qué se apagan y que no es un fallo: con ellos en pantalla, el codirector vio
     # el vídeo terminado y distraen. Palabra a palabra, en la banda baja y
     # sobre un diseño que ya es tipográfico, compiten con el propio texto de
     # la escena en vez de acompañarlo.
@@ -230,7 +230,7 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=False, salida=None
 
     # Deja constancia de si se quemaron subtítulos DE VERDAD, no solo de si se
     # pidieron: qa.py no tiene otra forma de saberlo (propuesta de la revisión
-    # diaria del 24/08, aprobada por Silvestre el 28/08). Antes lo adivinaba a
+    # diaria del 24/08, aprobada por el codirector el 28/08). Antes lo adivinaba a
     # partir de si subtitulos.ass tenía líneas, y acertaba solo mientras
     # quemar_subs era true por defecto; desde que es false (20/08) el .ass
     # sigue teniendo líneas y la adivinanza salía mal.

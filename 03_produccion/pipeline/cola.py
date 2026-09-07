@@ -241,7 +241,7 @@ def plan_del_dia(fecha=None, episodio=None, estado=None, rehacer=False):
     # El defecto por defecto (31/08): una emisión sin "modo" caía en "revision",
     # que sube en privado y SIN publicar_en, así que nada la publica jamás. Es
     # justo lo que le pasó a MDH-004 el 29/08: se produjo, se quedó privada dos
-    # días y Silvestre tuvo que publicarla a mano. Que un olvido falle hacia
+    # días y el codirector tuvo que publicarla a mano. Que un olvido falle hacia
     # publicar, no hacia el silencio: el defecto pasa a "automatico".
     modo = emision.get("modo", "automatico")
     hora_fija = emision.get("hora")

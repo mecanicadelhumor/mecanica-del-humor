@@ -27,7 +27,7 @@ desactualizado, no al revés.
 
 ## Quién los escribe
 
-Solo Silvestre y yo (la dirección). `00_estrategia/` no lo toca ningún agente,
+Solo el codirector y yo (la dirección). `00_estrategia/` no lo toca ningún agente,
 y estos prompts menos que nada: un agente que puede reescribir sus propias
 instrucciones no tiene instrucciones.
 

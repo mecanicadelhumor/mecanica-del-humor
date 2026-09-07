@@ -21,7 +21,7 @@ Primera acción de cualquier tarea (`PROPIEDAD_DE_FICHEROS.md`, punto 3).
 (`ffdd581` y `4c0ee2b`, «guiones para la semana del 24 de agosto») está en `main`, y la
 revisión diaria de esta mañana también. La base es la buena.
 
-**Entorno:** sin acceso al ordenador de Silvestre —tarea programada, ejecución en la nube—,
+**Entorno:** sin acceso al ordenador del codirector —tarea programada, ejecución en la nube—,
 así que se trabaja sobre un clon del repositorio público y se entrega un `.tar.gz`. La
 lista de ficheros va en el resumen, como pide el punto 4.
 
@@ -38,7 +38,7 @@ repositorio con `15b94e2`, después de la planificación anterior.
 
 Comprobado también que la API de GitHub no es accesible desde esta sesión (403 del proxy
 con «GitHub access to this repository is not enabled for this session»), así que **no se ha
-podido mirar el estado del job**. Eso lo tiene que hacer Silvestre desde la pestaña Actions.
+podido mirar el estado del job**. Eso lo tiene que hacer el codirector desde la pestaña Actions.
 
 Hipótesis, por orden de probabilidad, anotadas en `demanda.json`:
 
@@ -266,7 +266,7 @@ Los seis guiones de la semana, **sin errores graves**. Avisos que quedan y por q
 
 ## 7. Lo que queda fuera, para que conste
 
-- **`demanda_bruta.json`**: no existe y no lo escribe esta tarea. Silvestre tiene que mirar
+- **`demanda_bruta.json`**: no existe y no lo escribe esta tarea. El codirector tiene que mirar
   Actions.
 - **Ficha de `E02` en `01_bibliografia/BIBLIOGRAFIA_CURADA.md`**: le faltan las tres cifras
   de MDH-004 y tiene un DOI que no coincide. No es de esta tarea.
