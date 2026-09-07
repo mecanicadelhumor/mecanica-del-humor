@@ -256,6 +256,21 @@
       "musica": "cama_01_crying_over_you_christophermorrow.mp3",
       "subido_utc": "2026-09-04T01:28:36Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-011.es",
+      "episodio": "MDS-011",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "Cómo ser más gracioso: la prueba que puntúa cuánta gracia tienes",
+      "guion": "05_calendario/guiones/MDS-011.es.json",
+      "video_id": "I5IsDkxjaDI",
+      "url": "https://youtu.be/I5IsDkxjaDI",
+      "estado": "private",
+      "publicar_en": "2026-09-07T17:00:00Z",
+      "musica": "cama_02_dusk_next_route.mp3",
+      "subido_utc": "2026-09-07T01:32:10Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-08-31T08:41:41Z"

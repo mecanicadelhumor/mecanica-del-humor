@@ -1,14 +1,14 @@
 {
-  "id": "MDS-005.es",
-  "duracion_final_s": 49.8,
-  "tamano_mb": 2.9,
+  "id": "MDS-011.es",
+  "duracion_final_s": 50.7,
+  "tamano_mb": 9.7,
   "audio": {
-    "lufs": -14.48,
+    "lufs": -14.46,
     "pico_dbtp": -1.39,
-    "rango_lu": 5.6
+    "rango_lu": 4.4
   },
   "silencio_inicial": {
-    "empieza_s": -0.17,
+    "empieza_s": -0.171,
     "acaba_s": 0.629,
     "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
   },
@@ -30,10 +30,10 @@
   },
   "subtitulos": {
     "ass_existe": true,
-    "lineas_ass": 114,
+    "lineas_ass": 108,
     "srt_existe": true,
-    "quemados": null,
-    "quemados_origen": "sin manifiesto de montaje.py: no se puede verificar",
+    "quemados": false,
+    "quemados_origen": "leído de montaje.json",
     "_esperado": {
       "quemados": false,
       "lineas_ass": "> 0"
@@ -45,21 +45,21 @@
     "sha256": "3f93cfef7318ae5e93a365a3fe16282de13c279e2733dd7c18fcfbe38f530c74"
   },
   "guion": {
-    "titulo_trabajo": "Por qué tus chistes no dan risa",
+    "titulo_trabajo": "Cómo ser más gracioso: la prueba que lo puntúa",
     "idioma": "es",
     "voz": "es-ES-AlvaroNeural",
     "escenas": 6,
-    "duracion_narracion_s": 49.96,
+    "duracion_narracion_s": 49.84,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 10.304
+    "escena_mas_larga_s": 11.754
   },
   "fotogramas_s": [
-    5.07,
-    13.66,
-    21.94,
-    28.64,
-    36.58,
-    46.43
+    3.55,
+    10.28,
+    18.19,
+    26.89,
+    37.62,
+    47.2
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
