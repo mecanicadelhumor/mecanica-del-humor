@@ -327,7 +327,13 @@ jobs:
             python3 03_produccion/pipeline/qa.py "build/$ID" -o "05_calendario/qa/$ID"
           done < <(jq -r '.trabajos[].id' plan.json)
           # No dejamos crecer esto sin límite: solo los seis últimos vídeos.
-          { ls -1d 05_calendario/qa/*/ 2>/dev/null || true; } | sort | head -n -6 | xargs -r rm -rf
+          # `-t` ordena por fecha de modificación (lo más reciente primero) y
+          # `tail -n +7` se queda con todo lo que NO está entre los seis primeros.
+          # Antes era `| sort | head -n -6`, que ordena ALFABÉTICAMENTE: como «H» va
+          # antes que «S», el expediente del episodio largo del sábado (MDH-###) caía
+          # siempre el primero de la lista y se borraba recién creado, cada semana,
+          # en cuanto había cinco o más qa/MDS-* guardados. Detectado el 05/09/2026.
+          { ls -1dt 05_calendario/qa/*/ 2>/dev/null || true; } | tail -n +7 | xargs -r rm -rf
 
       # ---------------------------------------------------------------
       # El registro. Sin esto, saber qué vídeo salió ayer obliga a entrar
