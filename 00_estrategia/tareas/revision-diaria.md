@@ -1,7 +1,7 @@
 # Tarea programada · Revisión diaria — Mecánica del Humor
 
 **Copia legible del prompt que corre en el almacén de tareas programadas.**
-Espejo creado el 31/08/2026, **reescrito el 04/09/2026 (mañana y tarde)**. `id`: `trig_019QjtovuzeUocmx1P8NJH3F` · cron: `28 9 * * * (UTC) · todos los días 11:28 hora de España` ·
+Espejo creado el 31/08/2026, reescrito el 04/09/2026 y **sincronizado con el almacén el 07/09/2026 a las 09:18 hora de España**. `id`: `trig_019QjtovuzeUocmx1P8NJH3F` · cron: `28 9 * * * (UTC) · todos los días 11:28 hora de España` ·
 modelo: `claude-sonnet-5`.
 
 > ⚠️ **Esta copia no se ejecuta.** La que corre es la del almacén. Si cambias
@@ -15,6 +15,14 @@ canales, y la cola de encargos se reordena alrededor de la barrera de `render.py
 **Y por la tarde, con la barrera ya aplicada:** la cola cambia otra vez —C21.1
 sube a urgente porque dos Shorts de la semana que viene no renderizan— y entra
 el encargo de C7 (Gemini TTS) con sus seis salvaguardas.
+
+**Qué cambió el 07/09 (dirección del lunes):** la cola se reescribe entera
+alrededor de **C25, la presentación** —P3, P4, P6 y P10 esta semana, con fecha
+tope el jueves 10 a las 22:00—, `metricas.py` sube de prioridad porque la
+decisión de continuidad del 15 de noviembre necesita una mediana que hoy no se
+calcula, y la regla 11.1 queda **suspendida para los cambios de presentación**
+hasta el punto de control del 27. Todo el razonamiento está en la **versión 6**
+de `PLAN_DE_CAMBIOS.md`, que es la que manda.
 
 ---
 
@@ -43,16 +51,16 @@ Las tres reglas que salen de ahí y que te afectan directamente:
 
 ---
 
-## El canal, en su estado actual (4 de septiembre de 2026)
+## El canal, en su estado actual (7 de septiembre de 2026)
 
-Lee `00_estrategia/LEEME.md`, `REGLAS.md` y `PLAN_DE_CAMBIOS.md` (la **versión 5**, al final, manda sobre lo anterior).
+Lee `00_estrategia/LEEME.md`, `REGLAS.md` y `PLAN_DE_CAMBIOS.md` (la **versión 6**, al final, manda sobre lo anterior). La versión 6 trae dos cosas que te afectan: **C25**, el plan de presentación de donde salen tus encargos, y **C26**, la fecha en la que se decide si el canal sigue — 15 de noviembre, con la mediana de los últimos veinte Shorts.
 
 - **Un solo canal, en español.** `@humormechanics` en pausa, doblaje automático de YouTube activado. **No escribas ni revises guiones ingleses.**
 - **Cinco Shorts (L–V, 19:00) y un episodio largo (sábado, 12:00).**
 - **La publicación es automática.** `cola.py` sube en privado con `publishAt` y YouTube lo hace público a la hora de la parrilla. **Tu revisión de las 11:30 cae dentro de la ventana entre la subida (~01:30 UTC) y la publicación (19:00).** No puedes cancelar la publicación —no tocas YouTube— pero Silvestre sí puede retirar un vídeo, y `ESTADO.md` es el único canal por el que se entera.
 - **La superficie que funciona es la búsqueda, no el feed.** MDS-002 sacó el 63,6 % de sus visualizaciones de `YT_SEARCH` y MDS-003 el 46,2 %. Consecuencia práctica para ti: el **título** y el **`.srt`** de un Short no son adorno, son lo que lo hace encontrable. Un título que nadie escribiría en el buscador es un hallazgo editorial.
 - **Formatos:** `"formato": "largo"` (MDH-###, 4–6 min, 1920×1080) o `"formato": "corto"` (MDS-###, 30–50 s, 1080×1920).
-- **El personaje:** el Engranaje (`02_marca/personaje.svg`), siete expresiones, campo `personaje` por escena.
+- **El personaje:** el Engranaje (`02_marca/personaje.svg`), **seis** expresiones —`neutra`, `duda`, `entiende`, `no`, `rie`, `piensa`—, campo `personaje` por escena.
 - **Los subtítulos quemados se retiraron a propósito.** `montaje.py` los deja en `quemar_subs=False` y la pista `.srt` sí se sube. **No los vuelvas a encender.**
 - **Humor y atracción:** prohibido como tema de Short, sin excepciones; en episodio largo solo con las tres condiciones de `REGLAS.md`.
 - **El canal puede entretener.** Decisión de Silvestre del 04/09: un vídeo no tiene que ser educativo para valer, mientras cumpla `REGLAS.md`. No rechaces ni marques nada por «poco divulgativo».
@@ -75,7 +83,7 @@ Un Short se ve mudo en el metro y se escucha con el móvil en el bolsillo. Los d
 
 1. **Lo que está en pantalla tiene que estar sostenido por la narración de ESA MISMA escena.** El texto puede decir menos que la voz. **No puede introducir un dato que la voz no dice.** Caso real, MDS-009 escena 2: la voz decía «Curry y Dunbar preguntaron a la gente de qué se reía y les emparejaron con desconocidos» y en pantalla ponía «Con dinero encima de la *mesa*». El dinero no se menciona en ninguna escena del Short. Quien mira sin oír lee una frase que no viene a cuento; quien oye sin mirar nunca se entera del dinero. **Se publicó.** Concretamente: coge los sustantivos y verbos con carga de `texto`, `cifra` y `pie`, y comprueba que están en la `narracion` de su escena o son una reformulación evidente de algo que sí se dice. Si no, es un hallazgo.
 2. **Lo esencial de la narración tiene que tener correlato en pantalla**, aunque sea distinto.
-3. **La expresión del personaje tiene que concordar con lo que se está diciendo.** `duda` y `no_le_hace_gracia` leen como cara triste a tamaño de móvil: no van en una escena que sólo presenta el experimento. El personaje reacciona, y reacciona a algo concreto.
+3. **La expresión del personaje tiene que concordar con lo que se está diciendo.** Corregido el 07/09: a tamaño de móvil la boca es casi lo único que se lee, y **tres de las seis expresiones comparten boca torcida o plana — `duda`, `piensa` y `no`—, así que las tres se leen como cara triste.** No van en una escena que solo presenta, expone o enuncia: ahí van `neutra`, `entiende` o `rie`. Las tristes solo entran donde la narración dice que algo falla o no cuadra, que en un Short suele ser el `cierre`. (La redacción anterior nombraba `no_le_hace_gracia`, que **no existe**, y dejaba fuera `piensa`, que es la que se coló en MDS-011 escena 4 y Silvestre vio publicada.)
 
 **En los Shorts** (`formato: corto`) — criterio en `04_agentes/prompts/guionista_corto.md`:
 - **Los tres primeros segundos.** Nada de rótulo, logo, saludo ni nombre de serie por delante. El validador da error si la escena 1 es `titulo`, pero un arranque tibio que pase el validador lo tienes que ver tú.
@@ -96,6 +104,7 @@ Un Short se ve mudo en el metro y se escucha con el móvil en el bolsillo. Los d
 - **No repetirse entre vídeos (C17).** Para cada guion pendiente, cruza sus códigos de `fuente` con los de los guiones ya producidos de las últimas seis semanas. Si un código se repite como **fuente central** (la que sostiene la tesis, no un apoyo de pasada), es un hallazgo y va a `revisiones/<ID>.md`. Si además se cuenta con las mismas palabras, dilo con las dos frases al lado. `validar_guion.py` ya avisa; el juicio es tuyo.
 - **Cifras sin fuente**: aquí tienes veto.
 - **Resaltado:** **ámbar (`*así*`) = el acento de la frase**, uno por escena; **cian (`_así_`) = el término del oficio** («conector», «autodestructivo», «ruptura benigna»); **coral = lo que falla**, reservado al cierre. En una escena `dato`, el `pie` **no** lleva cian salvo que la palabra marcada sea el nombre que la investigación le da a la cosa.
+- **Y dónde va el resaltado, que es nuevo del 07/09: solo en los campos que se ven** —`texto`, `titulo`, `subtitulo`, `cifra`, `pie`, `a`, `b`, `et_a`, `et_b`, `puntos`—, **nunca en `narracion`**. MDS-011 se publicó diciendo en voz alta «guion bajo pensamiento divergente guion bajo» porque el guion traía `_pensamiento divergente_` en la narración, que va entera al sintetizador. `voz.py` lo quita y `validar_guion.py` avisa, pero si lo ves en un guion pendiente es un hallazgo: la narración se lee en voz alta carácter a carácter, y lo que no dirías no va ahí.
 - Comillas angulares « ». Nada de «violación»: es «ruptura benigna».
 - Chistes que no rematan, callbacks que no cierran, texto en pantalla idéntico a la narración.
 
@@ -124,35 +133,37 @@ Deja de ser «lunes y jueves»: el 03/09 se publicó un Short con una palabra co
 
 **Un solo cambio de código por sesión.** Nada aleatorio. Si sube el número de capturas, anótalo.
 
-**Encargos abiertos, en este orden:**
+**Encargos abiertos, en este orden. Reescritos el 07/09/2026 con la versión 6 de `PLAN_DE_CAMBIOS.md`.**
 
-1. **C21.1 · QUE EL TEXTO SE ENCOJA HASTA CABER. Urgente: dos vídeos dependen de esto.** Tu barrera del 04/09 encontró que `MDS-013` (martes 09/09) y `MDS-015` (viernes 11/09) **no renderizan**. Las notas están en `revisiones/`, pero **la planificación que las aplica corre el jueves 10, después de que MDS-013 se produzca**: el circuito normal llega tarde. Y los dos son el mismo fallo de fondo, que **no es «texto demasiado largo»**: MDS-013 desborda con **dos palabras** («Ruta *panorámica*.») porque con cinco o menos la escalera sube `.enunciado` a 150 px. **La escalera mide número de palabras y lo que desborda es el ancho.**
-   **Así que no añadas `.cifra` a la escalera: cambia el criterio.** Después de `cargar()`, para cada elemento de texto, mientras desborde su caja y la fuente esté por encima del suelo, **baja el tamaño un 4 % y vuelve a medir**. Determinista, sin umbrales que adivinar, y retira la familia entera de estos fallos.
-   - **Suelo: 64 px** (el mínimo legible de 1080×1920, regla de C2).
-   - Si al llegar al suelo sigue sin caber, **que salte la barrera**: entonces sí es un guion con demasiado texto.
-   - El tamaño se fija **una vez en `cargar()`**, no por fotograma: mismo guion, mismo píxel.
-   - Verifícalo con el mismo barrido de los 21 guiones: los tres problemas conocidos tienen que desaparecer y no puede aparecer ninguno nuevo.
-   **Red de seguridad:** si esto no está listo el lunes 7, aplica la **excepción de 48 horas sobre `MDS-013`** y corrige el guion. No dejes que llegue el martes sin una de las dos cosas.
+**Antes de nada, lee esto: la dirección tocó código el lunes 7 por la mañana.** Están cambiados `03_produccion/pipeline/voz.py` (función `hablable()`), `04_agentes/validar_guion.py` (aviso de marcado en la narración), `04_agentes/prompts/guionista.md`, `04_agentes/prompts/guionista_corto.md` y `00_estrategia/REGLAS.md` (regla 14.3). **No los incluyas en tu paquete salvo que los cambies tú encima de esa base**, y si los cambias, parte de lo que haya en `origin/main`, no de lo que recuerdes.
 
-2. **El solape del `pie` con el personaje** (MDS-015, escena 3). Es reparto vertical, no tamaño de letra, así que C21.1 no lo arregla. Cuando hay `personaje`, el bloque de texto tiene que reservar su sitio.
+**Los encargos 1 a 3 son de esta semana y tienen fecha tope: el jueves 10 a las 22:00**, que es cuando la planificación escribe los guiones de la semana siguiente. Lo que no esté para entonces no lo puede usar.
 
-3. **C7 · `voz.py` pasa a Gemini TTS en los Shorts.** `voz.py` está autorizado desde el 28/08, pero de él cuelga la producción diaria, así que **el código se escribe la semana del 7 con `--motor edge` por defecto** —no toca la producción, no gasta la ranura de cambio de esa semana— y el valor por defecto cambia a `gemini` el **lunes 14**. Razonamiento completo en `PLAN_DE_CAMBIOS.md`, versión 5.1. Lo que hay que hacer:
-   - **Una llamada por escena**, igual que hoy: es la única forma de saber cuánto dura cada escena. Cortar el audio por silencios se probó el 04/09 y **no funciona** (16 y 33 tramos para 6 escenas; ningún umbral da 6). No lo reintentes.
-   - **Solo `formato: corto`.** Un largo de 40 escenas son 40 peticiones y el nivel gratuito da **10 al día**. El sábado se queda en `edge-tts`.
-   - **Modelo** `gemini-3.1-flash-tts-preview`, voz `Charon` para el narrador y `Puck` para el escéptico. **25 segundos entre llamadas** (el límite es 3 por minuto).
-   - **Dirección corta por escena, y SIN pedir pausas**: las pausas entre escenas las ponemos nosotros desde `pausa_despues_s`. Pedir pausas largas fue lo que infló la prueba a 83 s. Lo que se le pide al modelo es que **cuente en vez de leer**, dentro de la escena.
-   - **Respaldo automático:** cualquier fallo en una escena —cuota, red, respuesta vacía— la sintetiza con `edge-tts` y sigue. Un vídeo con voz peor es mejor que un día sin vídeo.
-   - **`ficha.json` dice qué motor se usó, escena a escena**, y si hubo respaldo se dice en `ESTADO.md`. No se descubre escuchando.
-   - **Aviso de ritmo:** palabras entre segundos de audio fuera de 1,6–3,2 va como aviso en `ficha.json`. Es la firma de la voz que corre al doble, que es lo que hizo la pista «plana» de la prueba.
-   - **Antes de encender Gemini, sustituye el canario.** El `.srt` se escribe por bloques de escena (`voz.py` línea 302) y sobrevive intacto, pero el `.ass` muere y con él `lineas_ass > 0` de `qa.py`. El canario nuevo: que la suma de las duraciones de escena cuadre con la duración del audio final.
+1. **P3 + P4 · EL CAMPO `icono` Y LA ESCENA 1 (C19 + C16). Es el encargo de la semana.** Los ocho iconos de `02_marca/iconos.svg` —`i-bisagra`, `i-muelle`, `i-ruptura`, `i-bocadillos`, `i-pausa`, `i-grieta`, `i-publico`, `i-balanza`— **no se han usado ni una vez en once Shorts**, y el 72 % de lo que se ve es texto sobre fondo. Eso es lo que hace que un Short se lea como vídeo automatizado en la primera décima de segundo, que es donde se pierde el peldaño S1.
+   - Un campo **`icono`** admisible en cualquier escena, declarado en `esquema_guion.json`, con su soporte en `escena.html`.
+   - **El icono se dibuja solo** con `stroke-dasharray`/`stroke-dashoffset` en unos 0,6 s al entrar la escena. Determinista, función de `t`, sin `Math.random()`. Una línea que se dibuja sola es la señal más barata de que detrás hay alguien.
+   - Con eso, **la escena 1 de un Short deja de poder ser una tarjeta de texto**: icono + cuatro palabras o menos + el personaje entrando.
+   - Verifícalo con capturas del muestrario, no de memoria (regla 11.2).
 
-4. **El campo `icono` para C19**, encargado por la planificación el 03/09. `esquema_guion.json` no tiene forma de expresar un icono de `02_marca/iconos.svg`, y sin eso la escena 1 de un Short no puede dejar de ser una tarjeta de texto. Un campo `icono` admisible en cualquier escena, más su soporte en `escena.html`.
+2. **P6 · Tres tamaños, no uno.** Hoy cada escena es un bloque grande centrado. Jerarquía real: antetítulo pequeño · palabra enorme · pie pequeño. Es solo CSS sobre campos que ya existen (`etiqueta` ya está en la plantilla `titulo`), coste de render cero, y es lo que separa «maquetado» de «diseñado».
 
-5. **`validar_guion.py`: aviso de los dos canales (C22).** Determinista, sin red. Para cada escena, saca las palabras de contenido de `texto`, `cifra` y `pie` y **avisa** (no error) de las que no aparecen en la `narracion` de esa escena, comparando por raíz. Sobre MDS-009 tiene que avisar de «dinero» y «mesa»; el hallazgo de MDS-011 del 04/09 es exactamente el caso que habría señalado solo.
+3. **P10 · `validar_guion.py`: que el Short tenga forma de historia.** Silvestre sobre MDS-011: «parece un corte despiezado del vídeo largo, sin ninguna estructura de introducción, desarrollo y desenlace». Y tiene razón: MDS-011 declara la serie «El experimento», cuya estructura en `guionista_corto.md` es *un estudio contado como una historia con protagonista que termina con la cifra grande*, y el guion va chiste → comparación → dato → enunciado → cierre. **Comprueba que la secuencia de tipos de escena encaja con la estructura declarada de la serie**, que está escrita en `guionista_corto.md`. Empieza por lo que se pueda comprobar sin ambigüedad (que «El experimento» tenga una escena `dato` con `fuente`; que «Esto no tiene gracia y esto sí» tenga una `comparacion`; que ninguna serie termine sin `cierre`). **Aviso, no error**, y solo lo que sea inequívoco: un comprobador que se equivoca a menudo se acaba ignorando.
 
-6. **La música (C18).** **Bloqueado por red** y confirmado varias veces: el proxy no llega a Incompetech ni a FreePD. **No lo reintentes cada día.**
+4. **C7 · `voz.py` pasa a Gemini TTS en los Shorts.** Igual que estaba escrito, con las mismas seis salvaguardas de la versión 5.1 del plan: una llamada por escena, solo `formato: corto`, `gemini-3.1-flash-tts-preview` con `Charon` y `Puck`, 25 s entre llamadas, dirección corta **sin pedir pausas**, respaldo automático a `edge-tts` ante cualquier fallo, el motor usado escrito escena a escena en `ficha.json`, aviso de ritmo fuera de 1,6–3,2 palabras/segundo, y **el canario del `.ass` sustituido antes de encender nada** (que la suma de duraciones de escena cuadre con la duración del audio final). **Se escribe esta semana con `--motor edge` por defecto; el valor por defecto pasa a `gemini` el lunes 14.** Silvestre esperaba oírlo hoy: dilo en `ESTADO.md` el día que cambie, con esas palabras.
 
-7. **`04_agentes/metricas.py`: el CSV de Studio no se lee.** `glob.glob(EXPORTES / "*.csv")` no es recursivo y Studio deja los CSV en una subcarpeta con **tres** ficheros (`sorted(...)[-1]` elegiría el que no sirve). Busca recursivamente y quédate con el primero cuya cabecera tenga columna de contenido/vídeo y de impresiones. Verifícalo: 1.821 impresiones y 1,43 % de CTR en «Total». Prioridad baja: el CSV es opcional desde el 31/08.
+5. **`04_agentes/metricas.py`: la mediana. Sube de prioridad — hace falta antes del 27 de septiembre.** La decisión de continuidad del canal (C26, versión 6) se toma con **la mediana de visualizaciones a las 48 horas de los últimos veinte Shorts**, y hoy `metricas.py` no calcula ninguna mediana. Cada lunes tiene que dejar en `metricas.json` tres cifras: esa mediana, cuántos de los veinte han pasado de 100 y cuántos de 50. Sin ese número, el punto de control se discute de memoria.
+
+6. **Semana del 14 · P1 y P8.** No los empieces antes de terminar 1–4.
+   - **P1 · Profundidad.** Tres capas: plano de fondo con una rejilla de taller al 4 % de opacidad, plano de contenido, viñeta delante. El fondo deriva un 1,5 % **en contra** del sentido de entrada del texto. Todo CSS, coste de render cero, y la rejilla de taller es la marca: el canal se llama Mecánica.
+   - **P8 · El personaje actúa, y `piensa` se redibuja.** Hoy `duda`, `piensa` y `no` comparten boca torcida o plana y las tres se leen como cara triste a tamaño de móvil — es lo que Silvestre vio en MDS-011. **Redibuja `piensa`** para que sea pensativo y no cabizbajo (ceja, eje del engranaje, boca que no baje). Y que el personaje haga algo: entra por el borde la primera vez, se inclina hacia la cifra en las escenas `dato`, se aparta en el «dónde falla».
+
+7. **Semana del 21 · P2, P7 y P5.** Continuidad (el término en cian encoge y se acopla a una pila que crece con el vídeo), composición por serie (C24) y la cifra que se construye contando desde cero. Detalle en la versión 6 del plan.
+
+8. **La música (C18).** **Bloqueado por red**, confirmado varias veces. **No lo reintentes.** Silvestre va a dejar además tres acentos de sonido CC0 en `03_produccion/sonidos/` para P9; si los ves ahí con su atribución, ese es el momento de montarlos en `montaje.py`, no antes.
+
+9. **`metricas.py`: el CSV de Studio.** `glob.glob(EXPORTES / "*.csv")` no es recursivo y Studio deja tres ficheros en una subcarpeta. Busca recursivamente y quédate con el primero cuya cabecera tenga columna de contenido y de impresiones. Verifícalo: 1.821 impresiones y 1,43 % de CTR en «Total». Prioridad baja.
+
+**Y una cosa que ya no te limita:** la regla 11.1 —un cambio de código por producción— **está suspendida para los cambios de presentación hasta el 27 de septiembre** (versión 6 del plan). Con veinte visualizaciones por vídeo no hay nada que atribuir midiendo, así que la regla cuesta y no compra. Sigue en pie **un cambio por sesión** para que tú puedas verificarlo, y siguen en pie la regla 11.2 (se mira el muestrario, no se imagina) y la 11.5 (determinista). Los arreglos de defecto nunca han consumido ranura.
 
 **`04_agentes/prueba_voz.py` ya cumplió su función el 04/09 y no hay que tocarlo.**
 

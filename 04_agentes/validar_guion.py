@@ -225,6 +225,29 @@ def validar(path):
         if pantalla.count("*") % 2 or pantalla.count("_") % 2:
             avisos.append(f"Escena {i}: marca de resaltado sin cerrar.")
 
+        # El resaltado es de PANTALLA. En «narracion» se oye.
+        #
+        # MDS-011 (07/09/2026) se publicó diciendo en voz alta «guion bajo
+        # pensamiento divergente guion bajo»: el guion traía
+        # «_pensamiento divergente_» dentro de la narración, y el sintetizador
+        # lee lo que le llega. `*ámbar*` y `_cian_` los interpreta `rico()` en
+        # escena.html sobre «texto», «cifra», «titulo», «pie»...; sobre la
+        # narración no los interpreta nadie.
+        #
+        # Es AVISO y no error a propósito: `voz.py` ya quita el marcado antes
+        # de sintetizar, así que el defecto no puede volver a llegar al
+        # público. Pararle la producción a un guion por algo que el pipeline
+        # arregla solo sería cambiar un vídeo publicado con un fallo por un
+        # día sin vídeo, que es peor. Esto está aquí para que el guionista
+        # deje de escribirlo, no para bloquear.
+        marcas_en_voz = sorted(set(re.findall(r"[*_`#\[\]|~]", e.get("narracion", ""))))
+        if marcas_en_voz:
+            avisos.append(f"Escena {i}: la narración lleva marcado de pantalla "
+                          f"({' '.join(marcas_en_voz)}). El resaltado va en «texto», "
+                          f"«cifra», «titulo» o «pie», nunca en «narracion»: ahí el "
+                          f"sintetizador lo lee en voz alta. voz.py lo quita antes de "
+                          f"sintetizar, pero el guion está mal escrito.")
+
         # la pantalla no repite la narración
         pn, nn = normal(pantalla), normal(e.get("narracion", ""))
         if len(pn.split()) >= 5 and pn.strip() and pn.strip() in nn:

@@ -73,6 +73,7 @@ conversación» se pierde con la conversación, así que aquí queda por escrito
 | `.github/workflows/producir.yml` | **Sigue protegido** | Y además `.github/workflows/` no se puede escribir en remoto: se le manda el fichero a Silvestre |
 | `.github/workflows/voz_prueba.yml` | **Entregado el 04/09, lo crea Silvestre a mano** | Prueba de C7. `workflow_dispatch` solo, no escribe en el repositorio |
 | `docs/` (la web del proyecto) | **De Silvestre y mío**, desde el 04/09 | Tres páginas estáticas que Google exige para publicar la aplicación de OAuth. **No es C10** |
+| `03_produccion/sonidos/` | **Carpeta nueva, pedida el 07/09** | Tres acentos CC0 que deja Silvestre (clic de corte, golpe grave, tic ascendente) para P9. La revisión diaria los monta en `montaje.py` cuando aparezcan, no antes |
 
 **Y una cosa que ya no hace falta recordar de memoria:** cómo se saca el token de
 YouTube y por qué caducaba está en **`00_estrategia/TOKEN_DE_YOUTUBE.md`**, con
@@ -188,75 +189,121 @@ escalera — es decir, repitiendo el error con otro selector.
 que te importa (que quepa), el fallo vuelve con otra cara. Mide lo que importa:
 encoge hasta que quepa.
 
-## Dónde está el proyecto a 4 de septiembre de 2026
+**11. Un arreglo que se commitea por la mañana NO llega al vídeo de ese día.**
+El domingo 6 la revisión diaria arregló el solape del pie con el personaje. El
+lunes 7 Silvestre lo commiteó a las **08:03**. Pero MDS-011 se había renderizado
+y subido a las **01:32 UTC**, seis horas y media antes — así que el vídeo que
+Silvestre vio publicado ese lunes seguía teniendo el defecto ya arreglado, y
+parecía que el arreglo no había funcionado.
+→ La producción arranca a las **01:13 UTC (03:13 en España)**, con reintentos a
+las 04:47 y 08:23. **Un arreglo tiene que estar en `origin/main` antes de las
+03:13 de la madrugada del día en que quieres verlo.** Commiteado por la mañana,
+entra en el vídeo del día siguiente. No es un fallo: es el reloj, y hay que
+tenerlo delante antes de concluir que algo no funcionó.
 
-**El número se ha empezado a mover.** Tres Shorts seguidos por encima de 20
-visualizaciones —**31, 21 y 21**— contra una mediana de 11 en la primera tanda, y
-el primer «me gusta» del canal. Sigue lejos del umbral de S1 (50 desde el feed en
-48 h) pero es la primera señal buena, y llega justo después de C15.
+**12. Un prompt puede documentar una marca sin decir dónde va.**
+Los dos prompts de guionista explicaban desde el 28/08 que `*así*` pinta ámbar y
+`_así_` pinta cian, y **ninguno decía nunca en qué campos**. El guionista lo
+aplicó a `narracion`, que es el único campo que no se pinta y el único que se
+oye: MDS-011 se publicó diciendo «guion bajo pensamiento divergente guion bajo».
+→ Cuando documentes una sintaxis, documenta **su ámbito** en la misma frase. Una
+regla sin ámbito se aplica donde no toca, y la culpa no es de quien la aplica.
+
+**13. Una regla que nombra algo que no existe deja fuera algo que sí.**
+La regla 14.3 decía que `duda` y `no_le_hace_gracia` se leen como cara triste.
+`no_le_hace_gracia` **no existe** —las expresiones son `neutra`, `duda`,
+`entiende`, `no`, `rie`, `piensa`— y la que faltaba, `piensa`, comparte la boca
+torcida con `duda`. La regla protegía contra una cara imaginaria y dejaba pasar
+una real.
+→ Cuando escribas una regla que enumera valores, **enuméralos contra el código**,
+no contra lo que recuerdas que había.
+
+**14. Dos piezas que se pasan un fichero necesitan margen, y el margen se cuenta
+desde el ÚLTIMO reintento.** `metricas.yml` escribe `metricas.json` a las 05:19 y
+reintenta a las 08:37 UTC; la tarea que lo lee corría a las 07:00 — **entre los
+dos**. El 31 de agosto funcionó porque el primer intento fue puntual; el 7 de
+septiembre se retrasó y el analista leyó la foto de la semana anterior. El propio
+`producir.yml` documenta que los retrasos de Actions van de 2 h 38 a 6 h: un
+margen de 1 h 41 era menor que el retraso típico.
+→ Cuando una pieza escriba y otra lea, cuenta el margen **desde el último
+reintento del que escribe**, no desde el primero. Y quien lee tiene que saber
+mirar la fecha de lo que lee: un lector que no distingue «no hay datos» de «los
+datos son viejos» convierte un retraso en una semana perdida.
+
+## Dónde está el proyecto a 7 de septiembre de 2026
+
+**El episodio largo del sábado 5 (MDH-005) tiene una visualización: la de
+Silvestre.** Los tres Shorts con el motor C15 hicieron 31, 21 y 21, que es la
+mejor racha del canal y sigue a menos de la mitad del umbral de S1. La cifra que
+hay que tener siempre delante: **un canal de menos de mil suscriptores saca entre
+50 y 500 visualizaciones por Short en 48 horas.** Nosotros sacamos entre 20 y 30.
+No estamos por debajo de la excelencia: estamos por debajo del suelo de lo
+normal.
 
 | | Vistas | Suscriptores | Comentarios | Me gusta |
 |---|---|---|---|---|
-| MDH-001 · 002 · 003 · 004 (largos) | 13 · 28 · 8 · — | 0 | 0 | 4 |
+| MDH-001 · 002 · 003 · 004 · 005 (largos) | 13 · 28 · 8 · — · **1** | 0 | 0 | 4 |
 | MDS-001 a 005 (primera tanda) | 6 · 11 · 13 · 3 · 11 | 0 | 0 | 0 |
 | MDS-006 a 009 (con C15) | hasta **31**, tres seguidos > 20 | 0 | 0 | **1** |
 
-**El canal sigue en el peldaño S1** de la escalera de la versión 4, y la rama del
-punto de control del 27 en la que estamos hoy es la segunda: va lento, el camino
-es bueno, se sigue.
+**El canal sigue en el peldaño S1.** La rama del punto de control del 27 en la
+que estamos es la segunda: va lento, el camino es bueno, se sigue.
 
-**El único indicio direccional sigue siendo la búsqueda:** 63,6 % de las
-visualizaciones de MDS-002 y 46,2 % de MDS-003 salieron de `YT_SEARCH`. De ahí
-dos consecuencias que ya son operativas: el **título** y el **`.srt`** de un Short
-son distribución, no adorno; y la **miniatura de un Short sí se ve** —en los
-resultados de búsqueda, aunque no en el feed.
+**Las dos decisiones grandes del 7 de septiembre, en `PLAN_DE_CAMBIOS.md`
+versión 6, que es la que manda:**
 
-**Lo que se rompió esta semana, y lo que se ha hecho al respecto:**
+- **C25 · La presentación.** Silvestre la señaló como el talón de Aquiles y tiene
+  razón: el 72 % de lo que se ve es texto sobre fondo y los ocho iconos de
+  `02_marca/iconos.svg` no se han usado ni una vez en once Shorts. Diez
+  propuestas (P1–P10), todas deterministas y a coste cero salvo tres sonidos que
+  Silvestre tiene que descargar una vez. Entran en tres semanas y están todas
+  puestas antes del punto de control del 27.
+- **C26 · La fecha en la que se decide.** **Domingo 15 de noviembre de 2026**,
+  con la mediana de visualizaciones a 48 h de los últimos veinte Shorts:
+  **≥ 150 → se sigue; entre 50 y 150 → se amplía el tema, con una única prórroga
+  de ocho semanas hasta el 10 de enero; < 50 → se para.** Los umbrales se pueden
+  discutir, pero **solo antes del 8 de noviembre**: después de ver los datos ya
+  no es una decisión, es una excusa.
 
-- El 1 de septiembre el canal no publicó: `YT_REFRESH_TOKEN` caducado por el modo
-  «Prueba» de OAuth. **Resuelto de raíz el 4/09 con C23**: la aplicación se
-  publica sin pedir verificación y el token deja de caducar.
-- El 3 de septiembre se publicó un Short con una palabra cortada y con una escena
-  que decía en pantalla algo que la voz no menciona. **De ahí salen C21 (la
-  barrera en `render.py`), la regla 14 de `REGLAS.md` y el criterio de incidencia
-  corregido.**
+**Y una regla que se relaja, a propósito:** la 11.1 (un cambio por producción)
+queda **suspendida para los cambios de presentación** hasta el 27 de septiembre.
+Con veinte visualizaciones por vídeo no hay nada que atribuir midiendo, así que
+la regla cuesta una semana por mejora y no compra lo único que justificaba
+pagarla. Vuelve el día que un Short pase de 100 en 48 horas. Siguen en pie la
+11.2 (se mira el muestrario), la 11.5 (determinista) y la barrera de C21.
 
-**La publicación es automática** y `qa.py` sigue corriendo después de la subida.
-La diferencia desde hoy es que **`render.py` sí puede decir que no**: si un texto
-no cabe, el render falla y no se sube nada. Es el primer control previo real del
-proyecto, y no toca `producir.yml`.
+**Lo que se rompió y lo que se hizo:**
 
-**Lo que está en verificación, y en qué orden. Un cambio por producción:**
+- **MDS-011 (7/09) salió con tres defectos** —el marcado leído en voz alta, la
+  cara triste sobre el texto y el solape— y **pasó por seis filtros**. El
+  marcado está arreglado en tres capas (`voz.py` lo sanea, `validar_guion.py`
+  avisa, los dos prompts lo prohíben); el solape estaba arreglado desde el
+  domingo y no llegó por la trampa 11; la cara está arreglada en la regla 14.3 y
+  se quitará de raíz redibujando `piensa` (P8).
+- **`producir.yml` borra el expediente de calidad del episodio largo todos los
+  sábados**, por un `sort` alfabético que pone `MDH-` antes que `MDS-`. Fichero
+  protegido: la corrección de una línea está entregada a Silvestre.
+- **C23 quedó a medias el viernes 4:** Google no da por verificado el dominio
+  pese a que la comprobación de propiedad pasó. Silvestre lo reintenta el lunes
+  7. Mientras tanto el token de siete días sigue vivo, así que **si el canal deja
+  de publicar, mira eso primero** (`TOKEN_DE_YOUTUBE.md`).
+
+**Lo que está en verificación, y en qué orden:**
 
 | Cuándo | Qué se mira |
 |---|---|
-| sem. 31 ago | MDS-006 a 010, motor C15. **Veredicto: entra.** El número se movió |
-| vie 4 sep | **C23** — Silvestre publica la aplicación de OAuth y regenera el token |
-| **04 sep** | **C21 aplicado y verificado** (351 escenas, cero falsos positivos). La **prueba de voces** contestada: Gemini gana, ver `07_pruebas/` |
-| sem. 7 sep | **C19 + C16** — el primer segundo deja de ser una tarjeta de texto. Cuenta como un solo cambio. **Y C21.1 el lunes, urgente**: `MDS-013` (martes 9) y `MDS-015` (viernes 11) no renderizan hoy |
-| lun 7 sep | Con el primer vídeo después de C23: comprobar que sigue subiendo `private` + `publicar_en` y no bloqueado como privado |
-| sem. 14 sep | **C7 escalón 2** — Gemini TTS, **una llamada por escena y solo en los Shorts**. El código se escribe la semana del 7 con `edge` por defecto. El escalón 1 se descartó el 4/09 |
-| después | **C24** — variedad visual por serie |
-| **dom 27 sep** | **Punto de control.** ¿Algún Short ha pasado de 100 visualizaciones en 48 h? Tres desenlaces en `PLAN_DE_CAMBIOS.md` versión 4 |
-
-**Decisiones del 4/09 que conviene no volver a discutir:**
-
-- **El canal puede entretener.** Un vídeo no tiene que ser educativo para valer,
-  mientras cumpla `REGLAS.md`. Está en la regla 3.
-- **`pertinencia_top5` descuenta cifras, no descarta temas.** Que una pregunta la
-  responda hoy el entretenimiento y no la divulgación es un **hueco**, no una
-  señal de que el tema no sea nuestro.
-- **No se amplía el tema todavía**, y el motivo no es la impaciencia: con C19,
-  C16 y C7 sin soltar no se sabe qué está fallando, y ampliar ahora destruye la
-  única medición limpia que vamos a tener el 27.
-- **El escalón 1 de C7 está descartado**, no aplazado.
+| sem. 7 sep | **P3 + P4 + P6 + P10** — el campo `icono`, la escena 1 sin párrafo, la jerarquía de tres tamaños y el validador de estructura de serie. Y el código de C7 con `--motor edge` |
+| **lun 14 sep** | **C7 se enciende**: Gemini TTS en los Shorts. Y **P1 + P8** (profundidad; el personaje actúa y `piensa` redibujado) |
+| sem. 21 sep | **P2 + P7 + P5** (continuidad, serie, la cifra que se construye). **P9** si están los sonidos |
+| **dom 27 sep** | **Punto de control intermedio**, con la presentación entera puesta. Tres desenlaces, versión 4 |
+| **dom 15 nov** | **La decisión.** C26, versión 6 |
 
 **Lo que sigue escrito y sin hacer:** el estimador de duración de
 `validar_guion.py` (asume 150 palabras/minuto y la voz real hace 130 en Shorts);
-MDH-007 y 008 sin adaptar, uno por semana; C20 (el primer comentario en modo
-automático), aplazado a propósito; la ampliación de música de C18, **bloqueada
-por red** desde los contenedores de las tareas —Incompetech y FreePD no están en
-la lista blanca—; y 46 fichas de bibliografía con el DOI «por verificar».
+MDH-007 y 008 sin adaptar, uno por semana; C20 (el primer comentario), aplazado a
+propósito; la ampliación de música de C18, **bloqueada por red**; la mediana en
+`metricas.py`, que hace falta antes del 27; y 46 fichas de bibliografía con el
+DOI «por verificar».
 
 **Y lo de siempre:** no se clona la voz de Silvestre por ahora; no se encienden
 los subtítulos quemados; no se usan fotos de banco de imágenes; y no entra C10

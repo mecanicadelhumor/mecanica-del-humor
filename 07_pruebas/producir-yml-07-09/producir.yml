@@ -1,0 +1,354 @@
+name: Producir vídeo
+
+# Las manos del sistema. La parrilla (05_calendario/parrilla.json) dice qué
+# toca hoy; esto lo convierte en dos mp4 —español e inglés— subidos a sus
+# canales. Todo lo que necesita internet (síntesis de voz, subida a YouTube)
+# ocurre aquí.
+#
+# El cron es lo que hace que el canal no dependa de que nadie se acuerde.
+
+on:
+  schedule:
+    # TRES intentos al día, y ninguno en punto. 28/08/2026.
+    #
+    # Por qué: el cron de Actions no es una promesa, es una cola. Medido sobre
+    # este canal, la producción de la madrugada NUNCA salió a su hora:
+    #   24/08  04:05 UTC   (+3h05)
+    #   25/08  03:38 UTC   (+2h38)
+    #   26/08  04:03 UTC   (+3h03)
+    #   27/08  no salió    (la lanzó Silvestre a mano a las 07:55)
+    #   28/08  07:00 UTC   (+6h00)
+    # GitHub avisa de ello: los disparos programados se retrasan cuando hay
+    # carga y pueden perderse sin aviso, y la hora de más carga es el minuto 0
+    # de cada hora, que es justo donde estaba puesto.
+    #
+    # La solución no es adivinar una hora buena: es intentarlo tres veces con
+    # minutos raros. Que esto sea seguro depende de cola.py, que desde el mismo
+    # día no produce un episodio que ya esté en registro_publicaciones.json con
+    # video_id: el segundo y el tercer intento salen con hay_trabajo=false y no
+    # arrancan el runner. Si el primero salió, los otros dos cuestan segundos.
+    #
+    # El último es a las 08:23 UTC, once horas antes de la publicación de las
+    # 19:00: aún queda margen para que Silvestre lo mire.
+    - cron: "13 1 * * *"
+    - cron: "47 4 * * *"
+    - cron: "23 8 * * *"
+
+  workflow_dispatch:
+    inputs:
+      guion:
+        description: "Guion suelto, p. ej. 05_calendario/guiones/MDH-002.es.json (vacío = lo que toque hoy)"
+        required: false
+      fecha:
+        description: "Simular otro día de la parrilla (YYYY-MM-DD)"
+        required: false
+      estado:
+        description: "Estado de subida"
+        type: choice
+        options: [segun-parrilla, private, unlisted, public]
+        default: segun-parrilla
+      subir:
+        description: "Subir a YouTube al terminar"
+        type: boolean
+        default: true
+
+  push:
+    paths:
+      - "05_calendario/guiones/**.json"
+
+# Nunca dos producciones a la vez: comparten cuota de la API de YouTube y el
+# registro de publicaciones se escribe en el repositorio.
+concurrency:
+  group: produccion
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # -------------------------------------------------------------------------
+  # 1. Qué toca hoy. Es barato (segundos) y evita arrancar un runner con
+  #    ffmpeg y Chromium los días que no hay emisión.
+  # -------------------------------------------------------------------------
+  plan:
+    # Un push de guiones NO produce por defecto: escribir ocho guiones de
+    # golpe lanzaría ocho producciones. Para producir desde un commit, pon
+    # [producir] en el mensaje.
+    if: >-
+      github.event_name != 'push' ||
+      contains(github.event.head_commit.message, '[producir]')
+    runs-on: ubuntu-latest
+    outputs:
+      hay_trabajo: ${{ steps.cola.outputs.hay_trabajo }}
+      episodio: ${{ steps.cola.outputs.episodio }}
+      modo: ${{ steps.cola.outputs.modo }}
+      guiones: ${{ steps.cola.outputs.guiones }}
+      plan: ${{ steps.cola.outputs.plan }}
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0          # para poder ver qué guiones cambió un push
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Resolver la cola
+        id: cola
+        env:
+          GUION: ${{ inputs.guion }}
+          FECHA: ${{ inputs.fecha }}
+          ESTADO: ${{ inputs.estado }}
+          ANTES: ${{ github.event.before }}
+        run: |
+          if [ -z "$GUION" ] && [ "$GITHUB_EVENT_NAME" = "push" ]; then
+            GUION=$(git diff --name-only "$ANTES" "$GITHUB_SHA" \
+                    -- '05_calendario/guiones/*.json' | tr '\n' ' ')
+          fi
+          ARGS=()
+          [ -n "$GUION" ] && ARGS+=(--guion $GUION)
+          [ -n "$FECHA" ] && ARGS+=(--fecha "$FECHA")
+          [ -n "$ESTADO" ] && [ "$ESTADO" != "segun-parrilla" ] && ARGS+=(--estado "$ESTADO")
+          python3 03_produccion/pipeline/cola.py "${ARGS[@]}" --github-output
+
+  # -------------------------------------------------------------------------
+  # 2. La producción propiamente dicha.
+  # -------------------------------------------------------------------------
+  producir:
+    needs: plan
+    if: needs.plan.outputs.hay_trabajo == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    permissions:
+      contents: write           # para dejar el registro de publicaciones en el repo
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Recuperar el plan
+        env:
+          PLAN: ${{ needs.plan.outputs.plan }}
+        run: |
+          printf '%s' "$PLAN" > plan.json
+          {
+            echo "### ${{ needs.plan.outputs.episodio }} · modo ${{ needs.plan.outputs.modo }}"
+            jq -r '.trabajos[] | "- `\(.id)` → \(.estado)\(if .publicar_en then " · público el \(.publicar_en)" else "" end) · música: \(.musica | split("/") | last)"' plan.json
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependencias
+        # Tope de paso, no solo de job. El 19/08 una produccion se quedo mas de
+        # una hora clavada aqui: apt esperaba un lock que no se soltaba y, sin
+        # tope, habria seguido hasta agotar los 150 minutos del job entero.
+        # Con esto falla en 20 y se puede relanzar enseguida.
+        timeout-minutes: 20
+        env:
+          # Sin esto, cualquier paquete que quiera preguntar algo deja apt
+          # esperando una respuesta que nadie va a teclear.
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          # Los runners de Ubuntu arrancan a veces con unattended-upgrades
+          # sujetando /var/lib/dpkg/lock-frontend. apt no dice nada: se queda
+          # esperando en silencio. Se para el servicio y se espera al lock con
+          # un limite, en vez de bloquearse para siempre.
+          sudo systemctl stop unattended-upgrades 2>/dev/null || true
+          for i in $(seq 1 30); do
+            sudo fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1 || break
+            echo "dpkg ocupado; esperando ($i/30)"
+            sleep 10
+          done
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-inter fonts-jetbrains-mono
+          mkdir -p "$HOME/.local/share/fonts"
+          # Archivo Black es la tipografía de titulares y NO está en los
+          # repositorios de Ubuntu. Sin esto los titulares caen a Inter y
+          # quedan MÁS LIGEROS que los enunciados, que piden peso 800: la
+          # jerarquía visual del vídeo sale invertida. Si la descarga falla no
+          # se para la producción, pero queda avisado en el log.
+          curl -sSL --retry 3 --max-time 60 \
+            -o "$HOME/.local/share/fonts/ArchivoBlack-Regular.ttf" \
+            https://raw.githubusercontent.com/google/fonts/main/ofl/archivoblack/ArchivoBlack-Regular.ttf \
+            || echo "::warning::No se pudo descargar Archivo Black; los titulares saldrán en Inter."
+          fc-cache -f > /dev/null
+          fc-list : family | grep -qi "archivo" \
+            || echo "::warning::Archivo Black NO está disponible: titulares en Inter."
+          pip install --quiet -r requirements.txt
+          # --with-deps lanza su propio apt-get por dentro, asi que hereda el
+          # mismo riesgo de cuelgue que el de arriba.
+          playwright install --with-deps chromium
+
+      # ---------------------------------------------------------------
+      # El portero. Si un guion incumple el contrato, aquí se para.
+      # ---------------------------------------------------------------
+      - name: Validar guiones
+        run: python3 04_agentes/validar_guion.py ${{ needs.plan.outputs.guiones }}
+
+      # ---------------------------------------------------------------
+      # Voz + subtítulos. Devuelve las duraciones reales de cada escena.
+      # ---------------------------------------------------------------
+      - name: Sintetizar narración
+        run: |
+          while IFS=$'\t' read -r ID G; do
+            echo "::group::voz $ID"
+            python3 03_produccion/pipeline/voz.py "$G" -o "build/$ID"
+            echo "::endgroup::"
+          done < <(jq -r '.trabajos[] | [.id, .guion] | @tsv' plan.json)
+
+      # ---------------------------------------------------------------
+      # Figuras. Las escenas de tipo «figura» llevan los datos dentro del
+      # guion; figura.py los convierte en PNG con la paleta de marca (fondo
+      # transparente, para que no tape la retícula) y escribe la ruta de
+      # cada imagen en guion.timed.json, que es justo lo que lee render.py
+      # en el paso siguiente. Por eso va aquí y no antes: guion.timed.json
+      # lo crea voz.py.
+      #
+      # Un guion sin escenas de tipo «figura» no hace nada y sale con
+      # código 0, así que el paso es incondicional y no estorba.
+      # matplotlib ya estaba en requirements.txt.
+      # ---------------------------------------------------------------
+      - name: Dibujar las figuras
+        run: |
+          while read -r ID; do
+            echo "::group::figuras $ID"
+            python3 03_produccion/pipeline/figura.py "build/$ID/guion.timed.json"
+            echo "::endgroup::"
+          done < <(jq -r '.trabajos[].id' plan.json)
+
+      # ---------------------------------------------------------------
+      # Render visual, ya sincronizado con la voz real.
+      # ---------------------------------------------------------------
+      - name: Renderizar vídeo mudo
+        run: |
+          while read -r ID; do
+            echo "::group::render $ID"
+            python3 03_produccion/pipeline/render.py "build/$ID/guion.timed.json" \
+              -o "build/$ID/mudo.mp4" --fps 30
+            echo "::endgroup::"
+          done < <(jq -r '.trabajos[].id' plan.json)
+
+      # ---------------------------------------------------------------
+      # Montaje final: voz + música + subtítulos + normalización.
+      # La pista de música la elige cola.py rotando entre las tres, así
+      # que dos episodios seguidos no suenan igual.
+      # ---------------------------------------------------------------
+      - name: Montar
+        run: |
+          while IFS=$'\t' read -r ID MUS; do
+            echo "::group::montaje $ID"
+            if [ -n "$MUS" ] && [ -f "$MUS" ]; then
+              python3 03_produccion/pipeline/montaje.py "build/$ID" --musica "$MUS"
+            else
+              echo "::warning::$ID se monta sin música (no encuentro «$MUS»)"
+              python3 03_produccion/pipeline/montaje.py "build/$ID"
+            fi
+            echo "::endgroup::"
+          done < <(jq -r '.trabajos[] | [.id, .musica] | @tsv' plan.json)
+
+      - name: Generar miniaturas
+        run: |
+          while IFS=$'\t' read -r ID G; do
+            python3 03_produccion/pipeline/miniatura.py "$G" -o "build/$ID/miniatura.png"
+          done < <(jq -r '.trabajos[] | [.id, .guion] | @tsv' plan.json)
+
+      # ---------------------------------------------------------------
+      # Todo queda descargable aunque no se suba.
+      # ---------------------------------------------------------------
+      - name: Publicar artefactos
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ needs.plan.outputs.episodio }}
+          path: |
+            plan.json
+            build/**/final.mp4
+            build/**/miniatura.png
+            build/**/subtitulos.srt
+            build/**/subtitulos.ass
+            build/**/guion.timed.json
+            build/**/figuras/*.png
+            build/**/voz.mp3
+            build/**/voz/escena_*.mp3
+          retention-days: 30
+
+      # ---------------------------------------------------------------
+      # Subida. Cada canal es una cuenta de marca distinta y tiene su
+      # propio refresh token; se elige por el idioma del trabajo.
+      #
+      # En modo «revisión» sube en privado y sin fecha: publicas tú.
+      # En modo «automático» sube en privado con publishAt, y es YouTube
+      # quien lo hace público a la hora de la parrilla — con ~15 h de
+      # margen entre la subida y la publicación para cancelarlo.
+      # ---------------------------------------------------------------
+      - name: Subir a YouTube
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.subir }}
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          TOKEN_ES: ${{ secrets.YT_REFRESH_TOKEN }}
+          TOKEN_EN: ${{ secrets.YT_REFRESH_TOKEN_EN }}
+        run: |
+          while IFS=$'\t' read -r ID IDIOMA ESTADO CUANDO; do
+            case "$IDIOMA" in
+              en) export YT_REFRESH_TOKEN="$TOKEN_EN"; CANAL="Humor Mechanics" ;;
+              *)  export YT_REFRESH_TOKEN="$TOKEN_ES"; CANAL="Mecánica del Humor" ;;
+            esac
+            if [ -z "$YT_REFRESH_TOKEN" ]; then
+              echo "::error::Falta el refresh token del canal $CANAL para $ID"
+              exit 1
+            fi
+            echo "::group::subida $ID → $CANAL"
+            if [ -n "$CUANDO" ]; then
+              python3 03_produccion/pipeline/publicar.py "build/$ID" \
+                --estado "$ESTADO" --publicar-en "$CUANDO"
+            else
+              python3 03_produccion/pipeline/publicar.py "build/$ID" --estado "$ESTADO"
+            fi
+            echo "::endgroup::"
+          done < <(jq -r '.trabajos[] | [.id, .idioma, .estado, (.publicar_en // "")] | @tsv' plan.json)
+
+      # ---------------------------------------------------------------
+      # El expediente de calidad: seis fotogramas y las medidas de audio
+      # y ritmo de cada vídeo, en el repositorio. Los artefactos de
+      # Actions exigen credenciales; el repositorio es público. Esto es
+      # lo que permite que la revisión nocturna vea de verdad el vídeo
+      # en vez de suponer.
+      # ---------------------------------------------------------------
+      - name: Expediente de calidad
+        if: ${{ !cancelled() }}
+        run: |
+          mkdir -p 05_calendario/qa
+          while read -r ID; do
+            [ -f "build/$ID/final.mp4" ] || continue
+            python3 03_produccion/pipeline/qa.py "build/$ID" -o "05_calendario/qa/$ID"
+          done < <(jq -r '.trabajos[].id' plan.json)
+          # No dejamos crecer esto sin límite: solo los seis últimos vídeos.
+          # `-t` ordena por fecha de modificación (lo más reciente primero) y
+          # `tail -n +7` se queda con todo lo que NO está entre los seis primeros.
+          # Antes era `| sort | head -n -6`, que ordena ALFABÉTICAMENTE: como «H» va
+          # antes que «S», el expediente del episodio largo del sábado (MDH-###) caía
+          # siempre el primero de la lista y se borraba recién creado, cada semana,
+          # en cuanto había cinco o más qa/MDS-* guardados. Detectado el 05/09/2026.
+          { ls -1dt 05_calendario/qa/*/ 2>/dev/null || true; } | tail -n +7 | xargs -r rm -rf
+
+      # ---------------------------------------------------------------
+      # El registro. Sin esto, saber qué vídeo salió ayer obliga a entrar
+      # en YouTube a mano; con esto, el agente que revisa la calidad lo
+      # lee del repositorio. Es la memoria del canal.
+      # ---------------------------------------------------------------
+      - name: Registrar lo publicado
+        if: ${{ !cancelled() }}
+        run: |
+          python3 03_produccion/pipeline/registrar.py plan.json build
+          git add -A 05_calendario/registro_publicaciones.json 05_calendario/qa
+          if ! git diff --cached --quiet; then
+            git config user.name  "Mecánica del Humor (bot)"
+            git config user.email "mecanicadelhumor@users.noreply.github.com"
+            git commit -m "Registro y expediente de calidad: ${{ needs.plan.outputs.episodio }}"
+            git pull --rebase --autostash origin "$GITHUB_REF_NAME"
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          fi

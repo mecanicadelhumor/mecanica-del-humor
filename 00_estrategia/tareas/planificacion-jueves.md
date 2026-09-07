@@ -1,7 +1,7 @@
 # Tarea programada · Planificación semanal — jueves noche
 
 **Copia legible del prompt que corre en el almacén de tareas programadas.**
-Espejo creado el 31/08/2026, sincronizado el 04/09/2026. `id`: `trig_015qkb2sqbbJwJE1qgoNMK95` · cron: `0 20 * * 4 (UTC) · jueves 22:00 hora de España` ·
+Espejo creado el 31/08/2026, sincronizado el 04/09/2026 y **el 07/09/2026 a las 09:25 hora de España**. `id`: `trig_015qkb2sqbbJwJE1qgoNMK95` · cron: `0 20 * * 4 (UTC) · jueves 22:00 hora de España` ·
 modelo: `claude-opus-5`.
 
 > ⚠️ **Esta copia no se ejecuta.** La que corre es la del almacén. Si cambias
@@ -40,13 +40,15 @@ Lee `00_estrategia/PROPIEDAD_DE_FICHEROS.md`. El 21 de agosto la revisión diari
 
 Repositorio público: https://github.com/mecanicadelhumor/mecanica-del-humor
 
-**Lee `00_estrategia/` entero antes de nada** (`LEEME.md`, `REGLAS.md`, `PLAN_DE_CAMBIOS.md`, `PROPIEDAD_DE_FICHEROS.md`). En `PLAN_DE_CAMBIOS.md` **manda la versión 5**, que está al final.
+**Lee `00_estrategia/` entero antes de nada** (`LEEME.md`, `REGLAS.md`, `PLAN_DE_CAMBIOS.md`, `PROPIEDAD_DE_FICHEROS.md`). En `PLAN_DE_CAMBIOS.md` **manda la versión 6**, que está al final, del 07/09/2026. Léela entera: trae **C25** (el plan de presentación, del que sale casi todo lo que cambia para ti esta semana) y **C26** (el 15 de noviembre se decide si el canal sigue, con la mediana de los últimos veinte Shorts a las 48 horas).
 
 Lo esencial: **un solo canal, en español** (el inglés lo sirve el doblaje automático de YouTube; no escribas guiones ingleses). **Cinco Shorts, lunes a viernes a las 19:00, y un episodio largo el sábado a las 12:00.**
 
 Lee también `04_agentes/prompts/guionista_corto.md` (el oficio del Short), `guionista.md`, `chistologo.md`, `verificador.md`, `04_agentes/esquema_guion.json`, `01_bibliografia/BIBLIOGRAFIA_CURADA.md`, y `05_calendario/guiones/MDS-001.es.json` como referencia.
 
-**Dónde está el canal (4 de septiembre):** peldaño S1, que el feed nos pruebe. La primera tanda de Shorts sumó 44 visualizaciones entre los cinco; con el motor C15 los tres últimos han hecho **31, 21 y 21**, y ha llegado el primer «me gusta» del canal. Sigue lejos del umbral —50 desde el feed en 48 horas— pero por primera vez el número se mueve en la dirección buena. **El único indicio direccional sigue siendo la búsqueda:** MDS-002 sacó el 63,6 % de sus visualizaciones de `YT_SEARCH` y MDS-003 el 46,2 %, mientras el feed de Shorts apenas empuja. Eso manda sobre el punto 2 y sobre el punto 4: a la búsqueda le importan la pregunta y el título, no la serie.
+**Dónde está el canal (7 de septiembre):** MDH-005, el episodio largo del sábado 5, tiene **una visualización, la de Silvestre**. Y la cifra de referencia que conviene tener siempre delante: un canal de menos de mil suscriptores saca **entre 50 y 500 visualizaciones por Short en 48 horas**; nosotros sacamos entre 20 y 30. No estamos por debajo de la excelencia, estamos por debajo del suelo de lo normal.
+
+**Y lo que sigue siendo cierto del 4 de septiembre:** peldaño S1, que el feed nos pruebe. La primera tanda de Shorts sumó 44 visualizaciones entre los cinco; con el motor C15 los tres últimos han hecho **31, 21 y 21**, y ha llegado el primer «me gusta» del canal. Sigue lejos del umbral —50 desde el feed en 48 horas— pero por primera vez el número se mueve en la dirección buena. **El único indicio direccional sigue siendo la búsqueda:** MDS-002 sacó el 63,6 % de sus visualizaciones de `YT_SEARCH` y MDS-003 el 46,2 %, mientras el feed de Shorts apenas empuja. Eso manda sobre el punto 2 y sobre el punto 4: a la búsqueda le importan la pregunta y el título, no la serie.
 
 ## Qué hacer, en este orden
 
@@ -99,11 +101,17 @@ Un Short se ve mudo en el metro y se escucha con el móvil en el bolsillo. Las d
 
 1. **Lo que escribas en `texto`, `cifra` o `pie` tiene que estar sostenido por la `narracion` de esa misma escena.** El texto puede decir menos que la voz. **No puede introducir un dato que la voz no dice.**
 2. **Lo esencial de la narración tiene que tener correlato en pantalla**, aunque sea con otras palabras.
-3. **La cara del personaje concuerda con lo que se está diciendo.** `duda` y `no_le_hace_gracia` se leen como cara triste a tamaño de móvil: no van en una escena que solo presenta el experimento.
+3. **La cara del personaje concuerda con lo que se está diciendo.** Corregido el 07/09: **tres de las seis expresiones comparten boca torcida o plana —`duda`, `piensa` y `no`— y las tres se leen como cara triste** a tamaño de móvil. No van en escenas que solo presentan, exponen o enuncian: ahí van `neutra`, `entiende` o `rie`. Las tristes solo donde la narración dice que algo falla o no cuadra, que suele ser el `cierre`. (La redacción anterior nombraba `no_le_hace_gracia`, que no existe, y dejaba fuera `piensa` — que es la que se coló en MDS-011 escena 4 y Silvestre vio publicada.)
 
 **El caso que la escribió, y es tuyo: MDS-009, escena 2.** La voz decía «Curry y Dunbar preguntaron a la gente de qué se reía y les emparejaron con desconocidos» y en pantalla ponía «Con dinero encima de la *mesa*» — con cara de duda. El dinero venía de tu `tesis` y no se menciona en ninguna escena del Short. Quien lo vio mudo leyó una frase suelta; quien lo escuchó no supo nunca que había dinero. Pasó las cuatro revisiones y se publicó. `validar_guion.py` va a avisar de esto, pero el aviso solo señala: el juicio es tuyo.
 
 **Y el texto tiene que caber.** Ocho palabras por escena en vertical es el tope, y una `cifra` de más de dos palabras se sale del lienzo (le pasó a MDS-009 con «Más generosos»). Desde el 04/09 el render **falla** si algo no cabe: un guion con una `cifra` larga ya no sale mal, sale como un día sin vídeo.
+
+**Nunca metas marcado de resaltado en `narracion`. Defecto real, del 07/09.** `*ámbar*` y `_cian_` los pinta el motor **solo en los campos que se ven** —`texto`, `titulo`, `subtitulo`, `cifra`, `pie`, `a`, `b`, `et_a`, `et_b`, `puntos`—. `narracion` no se pinta: **se dice**, entera y tal cual, a un sintetizador de voz. MDS-011 se publicó diciendo en voz alta *«guion bajo pensamiento divergente guion bajo»* porque su escena 5 traía `_pensamiento divergente_` en la narración. La prueba, antes de escribir cualquier narración: **léela en voz alta carácter a carácter**; si hay algo que no dirías, no va ahí. `voz.py` lo quita y `validar_guion.py` avisa, pero las dos son redes: el guion tiene que salir bien escrito de aquí.
+
+**La escena 1 lleva icono, no párrafo (C19 + C16, y esta semana ya se puede).** La revisión diaria entrega esta semana el campo **`icono`**, que admite los ocho dibujos de `02_marca/iconos.svg` —`i-bisagra`, `i-muelle`, `i-ruptura`, `i-bocadillos`, `i-pausa`, `i-grieta`, `i-publico`, `i-balanza`— y los hace dibujarse solos al entrar la escena. **Compruébalo en `04_agentes/esquema_guion.json` antes de usarlo**: si el campo está, la escena 1 de cada Short entra con icono + **cuatro palabras o menos**, nunca con una frase; y reparte iconos por el resto del guion donde el mecanismo tenga uno. Si el campo no está todavía, escribe los Shorts como hasta ahora y **dilo en tu bitácora**. El motivo es el más importante del plan: el 72 % de lo que se ve en once Shorts es texto sobre fondo, y los ocho iconos no se han usado ni una vez.
+
+**Y la serie tiene que notarse en la forma, no solo en la etiqueta.** Silvestre, sobre MDS-011: «parece un corte despiezado del vídeo largo, sin ninguna estructura de introducción, desarrollo y desenlace». MDS-011 declara «El experimento» —que en `guionista_corto.md` es *un estudio contado como una historia con protagonista, que termina con la cifra grande en pantalla*— y va chiste → comparación → dato → enunciado → cierre. Cada serie tiene su estructura escrita en `guionista_corto.md`: **elige la serie por la forma que quieres darle a la respuesta, y luego cumple esa forma.** Un Short no es una lista de hechos ordenados: es una pieza pequeña con principio, medio y final.
 
 **Y el chiste va primero.** Se escribe el chiste —uno que contarías en voz alta a un amigo sin la explicación detrás— y después se mira qué mecanismo tiene dentro. Si el mecanismo que querías explicar no está en ningún chiste bueno, **se cambia de mecanismo, no de chiste**. La prueba del algodón: si para que tenga gracia hay que explicar algo antes, no vale. Está desarrollado en `04_agentes/prompts/guionista_corto.md`, con MDS-005 como ejemplo negativo.
 

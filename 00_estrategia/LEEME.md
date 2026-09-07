@@ -42,18 +42,34 @@ los días) y **`05_calendario/metricas.json`** (los números).
    en una semana (texto cortado, y una escena que decía en pantalla algo que la
    voz no menciona). El proyecto no tenía **ninguna** comprobación capaz de
    impedir una publicación. Ahora sí — ver C21 y la regla 14.
+6. **Y desde el 7 de septiembre, una sexta:** el problema ya no es solo que un
+   vídeo salga roto, es que **todos salen iguales**. La presentación es lo que
+   más lejos está de los canales de referencia, y por eso existe C25.
 
-## Estado a 4 de septiembre
+## Estado a 7 de septiembre
 
-Las fases 1 y 2 están hechas y la publicación es automática. **Y por primera vez
-el número se mueve:** 31, 21 y 21 visualizaciones en los tres últimos Shorts,
-contra una mediana de 11 en la primera tanda, y el primer «me gusta» del canal.
-Llega justo después de C15, que es lo que ese cambio prometía. Seguimos en el
-peldaño S1 y por debajo del umbral, pero en la rama buena de las tres que están
-escritas para el 27 de septiembre.
+Las fases 1 y 2 están hechas y la publicación es automática. **El número se movió
+con C15** —31, 21 y 21 contra una mediana de 11— y ahí se quedó: el episodio
+largo del sábado 5 tiene **una visualización, la de Silvestre**. Seguimos en el
+peldaño S1 y por debajo del umbral.
 
-Lo que queda por delante está en la **versión 5** de `PLAN_DE_CAMBIOS.md`, al
-final, que es la que manda.
+**Y hay una cifra que ordena todo lo demás:** un canal desconocido de menos de
+mil suscriptores saca **entre 50 y 500 visualizaciones por Short en 48 horas**.
+Nosotros sacamos entre 20 y 30. No estamos por debajo de la excelencia; estamos
+por debajo del suelo de lo normal.
+
+Lo que queda por delante está en la **versión 6** de `PLAN_DE_CAMBIOS.md`, al
+final, que es la que manda. Sus dos decisiones nuevas:
+
+- **C25 · La presentación es el talón de Aquiles**, y ahora tiene plan: diez
+  propuestas (P1–P10) repartidas en tres semanas, todas deterministas y a coste
+  cero. La primera y la más importante: **los ocho iconos de `02_marca/iconos.svg`
+  no se han usado ni una vez en once Shorts**, y el 72 % de lo que se ve es texto
+  sobre fondo.
+- **C26 · El 15 de noviembre se decide si el canal sigue**, con la mediana de los
+  últimos veinte Shorts a las 48 horas: ≥ 150 se sigue, entre 50 y 150 se amplía
+  el tema con una única prórroga, por debajo de 50 se para. **Los umbrales se
+  discuten antes del 8 de noviembre, no después de ver los datos.**
 
 **Decisiones tomadas** (el razonamiento, en `PLAN_DE_CAMBIOS.md`):
 
@@ -61,17 +77,20 @@ final, que es la que manda.
   YouTube. Se reabre `@humormechanics` solo si las pistas dobladas superan el
   25 % del tiempo de visionado a las ocho semanas.
 - **No se clona la voz de Silvestre por ahora.** En su lugar, Gemini TTS con
-  dirección de actor. **El escalón intermedio de dos voces de `edge-tts` se
-  descartó el 4 de septiembre:** no arregla el ritmo, que es lo que está roto.
+  dirección de actor, **una llamada por escena y solo en los Shorts, desde el
+  lunes 14**. El escalón intermedio de dos voces de `edge-tts` se descartó.
 - **Los subtítulos quemados se retiraron** por decisión editorial. No los vuelvas
   a encender: el motivo está en `MEJORAS.md` del 20/08 y en C6.1.
 - **Ni notificaciones ni CSV a mano.** Los agentes no avisan a Silvestre: dejan
   `05_calendario/ESTADO.md` escrito.
-- **La aplicación de OAuth sale del modo de prueba** (C23), para que el token de
-  YouTube deje de caducar cada siete días. Publicar no es verificar: no hace
-  falta inventarse ni una web ni una política de privacidad.
 - **Hay una barrera antes de publicar** (C21): `render.py` falla si un texto no
   cabe en su caja, y como corre antes que `publicar.py`, nada se sube roto.
+- **La regla 11.1 —un cambio por producción— está suspendida** para los cambios
+  de presentación hasta el 27 de septiembre. Con veinte visualizaciones no hay
+  nada que atribuir midiendo.
+- **El marcado de resaltado (`*ámbar*`, `_cian_`) va solo en los campos que se
+  ven, nunca en `narracion`**: ahí el sintetizador lo lee en voz alta, y eso es
+  lo que se publicó el 7 de septiembre.
 
 ## Relación con los documentos que ya existían
 

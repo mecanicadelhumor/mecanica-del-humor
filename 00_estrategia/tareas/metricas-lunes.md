@@ -1,8 +1,10 @@
 # Tarea programada · Métricas semanales — lunes
 
 **Copia legible del prompt que corre en el almacén de tareas programadas.**
-Espejo creado el 31/08/2026. `id`: `trig_01GhNrF8nA2w2nXSfetcrHkQ` · cron: `0 7 * * 1 (UTC) · lunes 09:00 hora de España` ·
+Espejo creado el 31/08/2026, **corregido el 07/09/2026: la hora cambia de 07:00 a 10:00 UTC**. `id`: `trig_01GhNrF8nA2w2nXSfetcrHkQ` · cron: `0 10 * * 1 (UTC) · lunes 12:00 hora de España` ·
 modelo: `claude-sonnet-5`.
+
+**Por qué se movió.** `metricas.yml` tiene dos intentos, a las 05:19 y a las 08:37 UTC, porque el cron de Actions se retrasa. Esta tarea corría a las **07:00 UTC, justo entre los dos**: si el primer intento se retrasaba —el 7 de septiembre se retrasó más de dos horas— leía un `metricas.json` de la semana anterior y la lectura de esa semana se perdía entera. A las 10:00 UTC el segundo intento ya ha pasado con hora y media de margen.
 
 > ⚠️ **Esta copia no se ejecuta.** La que corre es la del almacén. Si cambias
 > algo aquí, cámbialo también allí con `update_trigger`, o quedarán distintas
@@ -57,6 +59,12 @@ Consigue el estado del proyecto: prueba `mcp__remote-devices__device_list_dir` s
 
 ## Qué hacer
 
+0. **Lo primero: comprueba que `metricas.json` es de hoy.** Mira su campo `actualizado_utc`. Si **no es de hoy**, el workflow `metricas.yml` no ha escrito todavía (o ha fallado) y **estás leyendo la foto de la semana pasada**. Pasó el 7 de septiembre de 2026: la tarea corría a las 07:00 UTC, entre los dos intentos del workflow, y leyó un fichero de siete días antes.
+
+   En ese caso, y por este orden: **(a)** dilo en la PRIMERA línea de tu bitácora, con la fecha real del fichero y con estas palabras — «`metricas.json` es del <fecha>: el workflow `metricas.yml` no ha escrito esta semana»; **(b)** mira si hay un commit reciente de «métricas» en `git log` para saber si es retraso o fallo, y dilo; **(c)** **haz igualmente la lectura que puedas** con los datos que hay, comparando contra las lecturas anteriores y marcando claramente qué vídeos aún no tienen números; **(d)** deja escrito que Silvestre puede relanzar el workflow a mano (Actions → «Leer métricas» → *Run workflow*) y que después la lectura se puede repetir.
+
+   **Lo que NO se hace es quedarse en «no hay datos disponibles» y parar.** Una semana sin lectura es una semana sin saber si el cambio de esa semana funcionó, y ahora mismo el canal se juega su continuidad en una tabla de números (C26): la del 15 de noviembre se construye con estas lecturas semanales.
+
 1. **Lee `metricas.json`** y compara con las lecturas anteriores del mismo fichero. La serie histórica es lo que dice si un cambio funcionó.
 
 2. **Mira `trafico_pct` vídeo a vídeo, y hazlo antes que ninguna otra cosa.** Es la métrica que hoy más información tiene: dice si el que nos ve viene del feed (`SHORTS`), de la búsqueda (`YT_SEARCH`) o de ningún sitio identificable. Si la búsqueda sigue subiendo y el feed no, dilo con esas palabras: cambia lo que la planificación escribe el jueves.
@@ -70,6 +78,23 @@ Consigue el estado del proyecto: prueba `mcp__remote-devices__device_list_dir` s
 6. **Cierra.** Escribe tu bitácora con: el peldaño en el que está el canal, la métrica que lo bloquea, qué dicen las fuentes de tráfico, qué dice la curva de retención y qué cambio del plan corresponde esta semana. Nunca pongas `[producir]` en un commit.
 
 **No mandes `PushNotification`.** Silvestre no las recibe y no las quiere. Si algo se ha roto y solo él puede arreglarlo, lo dejas escrito en tu bitácora, que lee la revisión diaria, y ella lo pone en la línea `Pendiente de Silvestre` de `05_calendario/ESTADO.md`.
+
+## La mediana, que es la cifra con la que se decide todo (C26, del 07/09)
+
+A partir de que la revisión diaria toque `metricas.py` —encargo abierto, tope el
+27 de septiembre— `metricas.json` traerá tres cifras nuevas: **la mediana de
+visualizaciones a las 48 horas de los últimos veinte Shorts**, cuántos de esos
+veinte han pasado de 100 y cuántos de 50. **Cuando existan, esas tres van en la
+primera línea de tu bitácora, siempre.** Mientras no existan, calcula la mediana
+tú a mano con lo que haya y dilo.
+
+Es la cifra con la que **el 15 de noviembre se decide si el canal sigue**
+(`PLAN_DE_CAMBIOS.md`, versión 6, C26): ≥ 150 se sigue; entre 50 y 150 se amplía
+el tema con una única prórroga de ocho semanas; **por debajo de 50 se para.** El
+suelo de 50 no es un número elegido a ojo: es el mínimo del rango que
+`DIAGNOSTICO.md` documenta para un canal desconocido de menos de mil
+suscriptores (50–500 por Short en 48 h). Tu lectura semanal es lo que construye
+esa serie, así que **una semana perdida cuesta de verdad.**
 
 ## El punto de control del 27 de septiembre
 

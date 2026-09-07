@@ -23,6 +23,7 @@ Produce:
 import argparse
 import asyncio
 import json
+import re
 import subprocess
 from pathlib import Path
 
@@ -75,6 +76,38 @@ VOCES = {
 # aire a la animación. -4% es el punto en el que deja de sonar a robot con prisa.
 RITMO = "-4%"
 TONO = "+0Hz"
+
+
+# ---------------------------------------------------------------------------
+# La narración es lo ÚNICO que recibe el sintetizador, y el sintetizador lee lo
+# que le llega, literalmente. El 7 de septiembre de 2026 MDS-011 salió
+# publicado diciendo «guion bajo pensamiento divergente guion bajo» porque el
+# guionista escribió «_pensamiento divergente_» dentro de `narracion`.
+#
+# El resaltado existe y es correcto —*ámbar* para el acento de la frase, _cian_
+# para el término del oficio— pero es de PANTALLA: lo interpreta `rico()` en
+# escena.html sobre `texto`, `cifra`, `titulo`, `pie`... En `narracion` no
+# significa nada y sí se oye.
+#
+# Esto se hace aquí, en el punto exacto en el que la narración deja de ser un
+# dato del guion y pasa a ser voz, porque así arregla de una vez las DOS
+# salidas que se derivan de ese mismo texto: el audio y el `.srt` (que se
+# escribe con esta misma variable, más abajo en `bloques`). Y arregla también
+# los guiones que ya están escritos, sin tocarlos.
+#
+# El validador avisa del defecto para que el guionista deje de cometerlo; esto
+# impide que llegue al público mientras tanto. Son las dos capas, no una.
+MARCAS_DE_PANTALLA = re.compile(r"[*_`#\[\]|~]")
+
+
+def hablable(s):
+    """La narración tal y como hay que decirla en voz alta.
+
+    Quita el marcado de resaltado —que es de pantalla— sin tocar ni una
+    palabra. Determinista y sin red: mismo guion, mismo audio.
+    """
+    return re.sub(r"\s{2,}", " ", MARCAS_DE_PANTALLA.sub("", str(s or ""))).strip()
+
 
 
 def hms(seg, coma=","):
@@ -268,7 +301,12 @@ async def principal(guion_path, salida, voz=None):
     reloj, bloques, palabras_todas, partes = 0.0, [], [], []
     frases_totales, recortadas = 0, []
     for i, e in enumerate(guion["escenas"], 1):
-        texto = (e.get("narracion") or "").strip()
+        crudo = (e.get("narracion") or "").strip()
+        texto = hablable(crudo)
+        if texto != crudo:
+            print(f"::warning::escena {i}: la narración traía marcado de resaltado "
+                  f"(* o _) y se ha quitado antes de sintetizar. El resaltado es de "
+                  f"pantalla; en «narracion» el sintetizador lo lee en voz alta.")
         mp3 = salida / "voz" / f"escena_{i:03d}.mp3"
         if not texto:
             e["duracion_s"] = e.get("duracion_s", 3.0)

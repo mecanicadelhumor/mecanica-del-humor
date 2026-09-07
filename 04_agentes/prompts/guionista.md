@@ -196,6 +196,22 @@ oficio**, el nombre que la investigación le da a la cosa («conector», «autod
 «ruptura benigna»). El cian ya no es «solo para datos»: las cifras tienen su propio tipo
 de escena, `dato`, con su campo `cifra`.
 
+**Y dónde va, que es lo que faltaba por escribir — 07/09/2026.** El marcado va
+**solo en los campos que se ven**: `texto`, `titulo`, `subtitulo`, `cifra`,
+`pie`, `a`, `b`, `et_a`, `et_b`, `puntos`. **Nunca en `narracion`.**
+
+`narracion` no se lee: se dice. Va entera y tal cual a un sintetizador de voz,
+que **pronuncia lo que le llegue**. El 7 de septiembre de 2026 MDS-011 se
+publicó diciendo en voz alta *«guion bajo pensamiento divergente guion bajo»*,
+porque el guion traía `_pensamiento divergente_` dentro de la narración. Nadie
+lo pintó de cian: no hay nada que pintar en el audio.
+
+La prueba, antes de escribir cualquier cosa en `narracion`: **léela en voz alta
+carácter a carácter.** Si hay algo que no dirías —un asterisco, un guion bajo,
+una almohadilla, un corchete—, no va ahí. `voz.py` lo quita antes de sintetizar
+y `validar_guion.py` te avisa, pero las dos cosas son redes: el guion tiene que
+salir bien escrito de aquí.
+
 ## Lo que nunca haces
 
 - Prometer en el título algo que el vídeo no entrega.

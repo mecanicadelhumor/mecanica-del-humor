@@ -187,9 +187,21 @@ está hablando.
    voz no dice.**
 2. **Lo esencial de la narración tiene que tener correlato en pantalla**, aunque sea con
    otras palabras.
-3. **La cara del personaje concuerda con lo que se está diciendo.** `duda` y
-   `no_le_hace_gracia` se leen como cara triste a tamaño de móvil: no van en una escena
-   que solo presenta el experimento.
+3. **La cara del personaje concuerda con lo que se está diciendo.** A tamaño de móvil
+   la boca es casi lo único que se lee, y **tres de las seis expresiones comparten boca
+   torcida o plana: `duda`, `piensa` y `no`.** Las tres se leen como cara triste. **No
+   van en una escena que solo presenta, expone o enuncia** —un experimento, una cifra,
+   una comparación—: ahí van `neutra`, `entiende` o `rie`. Las tres tristes solo entran
+   donde la narración dice que algo falla, se rompe o no cuadra, que en un Short es casi
+   siempre el `cierre`.
+
+   *Corregido el 07/09/2026.* La redacción anterior nombraba `duda` y
+   `no_le_hace_gracia` — y `no_le_hace_gracia` **no existe**: las seis expresiones de
+   `escena.html` son `neutra`, `duda`, `entiende`, `no`, `rie` y `piensa`. Nombrar una
+   cara inventada y dejar fuera una real es lo que dejó pasar MDS-011 escena 4, que
+   presenta el experimento de los pies de foto con la cara `piensa` — boca torcida, la
+   misma que `duda`. Silvestre lo vio publicado y lo dijo con esas palabras: «está
+   usando la cara triste, cuando tenemos otros iconos menos tristes».
 
 **El caso que la escribió.** MDS-009, escena 2: la voz decía «Curry y Dunbar preguntaron a
 la gente de qué se reía y les emparejaron con desconocidos», y en pantalla ponía «Con

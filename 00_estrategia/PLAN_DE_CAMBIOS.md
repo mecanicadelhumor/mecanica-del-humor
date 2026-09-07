@@ -1449,3 +1449,279 @@ se solapan. Es de reparto vertical, no de tamaño de letra, y va aparte.
 **Prioridad: es el encargo del lunes 7, por delante de todo.** Si por lo que sea
 no está el lunes, la revisión diaria del lunes o del martes **aplica la excepción
 de 48 horas sobre `MDS-013`** y corrige el guion, que es la red de seguridad.
+
+
+---
+
+# Versión 6 · 7 de septiembre de 2026 — la presentación, y la fecha en la que se decide
+
+Todo lo anterior sigue vigente salvo lo que esta sección corrige expresamente.
+Es la versión más larga porque contesta a las dos preguntas grandes que Silvestre
+puso hoy sobre la mesa: **qué hacemos con la presentación**, que es lo que él
+señala como talón de Aquiles, y **hasta cuándo apostamos por el canal**.
+
+## Los números con los que se escribe esto
+
+MDH-005 (sábado 5) tiene **una visualización, la de Silvestre**. MDS-011 sale hoy
+a las 19:00. Los tres Shorts con el motor C15 hicieron 31, 21 y 21 — la mejor
+racha del canal— y siguen a menos de la mitad del umbral de S1.
+
+La cifra de referencia del diagnóstico, y conviene tenerla delante todo el rato:
+**un canal de menos de mil suscriptores saca entre 50 y 500 visualizaciones por
+Short en las primeras 48 horas.** Nosotros sacamos entre 20 y 30. No estamos por
+debajo de la excelencia: **estamos por debajo del suelo de lo normal.**
+
+---
+
+## Lo que se rompió hoy, y de dónde salía cada cosa
+
+Tres defectos en MDS-011. Los tres son de arquitectura, ninguno es mala suerte.
+
+### 1 · El guion bajo que se oye
+
+La escena 5 traía `_pensamiento divergente_` dentro de **`narracion`**, y el
+sintetizador dijo en voz alta «guion bajo pensamiento divergente guion bajo».
+
+El marcado es real y es correcto: `*ámbar*` y `_cian_` los pinta `rico()` en
+`escena.html`. **Lo que faltaba escrito en ninguna parte es dónde va.** Los dos
+prompts de guionista explicaban qué pinta cada marca y no decían nunca que solo
+valen en los campos que se ven; el guionista la aplicó al campo que no se ve, que
+es el único que se oye.
+
+**Y no es un problema de modelo.** La planificación ya corre con `claude-opus-5`,
+que es el más caro del sistema: no hay ningún modelo mejor al que cambiar. Lo que
+había era una instrucción incompleta y **ninguna comprobación**, que es el patrón
+de siempre en este proyecto (trampa 7: no le pidas a un revisor que vea a ojo lo
+que una condición booleana puede comprobar). Arreglado hoy en tres capas:
+
+| Capa | Qué hace | Puede costar un vídeo |
+|---|---|---|
+| `voz.py` → `hablable()` | Quita el marcado justo antes de sintetizar. Arregla de paso el `.srt`, que sale del mismo texto | No |
+| `validar_guion.py` | **Aviso**, con el nombre del campo y por qué | No |
+| `guionista.md` y `guionista_corto.md` | La regla, con el caso y con la prueba: *léela en voz alta carácter a carácter* | — |
+
+El aviso es aviso y no error **a propósito**: con `voz.py` saneando, el defecto ya
+no puede llegar al público, y parar una producción por algo que el pipeline
+arregla solo cambia un vídeo con un fallo por un día sin vídeo, que es peor.
+Barrido sobre los 27 guiones del repositorio: **un solo positivo, MDS-011, y
+ningún falso positivo.**
+
+### 2 · La cara triste encima del texto — dos defectos, no uno
+
+El **solape** ya estaba arreglado: es el encargo nº 2 que la revisión del domingo
+resolvió con `padding-bottom:720px`. No llegó a este vídeo por una razón de reloj
+que hay que dejar escrita, porque va a repetirse (ver la trampa 11, abajo).
+
+Lo que **no** estaba arreglado es la cara. La regla 14.3 decía que `duda` y
+`no_le_hace_gracia` se leen como cara triste. **`no_le_hace_gracia` no existe** —
+las seis expresiones son `neutra`, `duda`, `entiende`, `no`, `rie`, `piensa`— y
+la que se usó, `piensa`, **comparte la boca torcida con `duda`** (`.b-torcida` en
+`escena.html`). La regla nombraba una cara inventada y dejaba fuera una real.
+
+Corregido hoy en `REGLAS.md`: **tres de las seis expresiones se leen como cara
+triste a tamaño de móvil**, y no van en escenas que solo presentan.
+
+**Y la conclusión que importa no es normativa, es de dibujo.** Que la mitad del
+vocabulario del personaje lea igual no se arregla vigilando qué guion usa cuál:
+se arregla **redibujando `piensa`** para que sea pensativo y no cabizbajo. Va
+como P8, abajo. Comprobado sobre los cinco guiones pendientes, un comprobador
+automático de esto daría cuatro falsos positivos de cinco: **este no es un caso
+para una comprobación determinista, y decirlo también es una decisión.**
+
+### 3 · La voz sigue siendo la de siempre, y eso es culpa mía
+
+Silvestre esperaba oír Gemini hoy. **No tocaba hoy: C7.2 dice el lunes 14**, y el
+código ni siquiera está escrito — se escribe esta semana con `--motor edge` por
+defecto. Está en la versión 5.1 y en la tabla del prompt de arranque, pero
+escrito para quien lee el plan entero, no para quien escucha el vídeo del lunes.
+
+**Lo que se cambia:** cuando una decisión signifique *«esto que te molesta lo vas
+a seguir viendo N días»*, se dice con esas palabras y con la fecha, en la línea de
+`ESTADO.md` o en el resumen del lunes. No basta con que esté en el plan.
+
+### Y el defecto de fondo que los tres comparten
+
+MDS-011 pasó por el guionista, el chistólogo, el verificador, `validar_guion.py`,
+la barrera de C21 y la revisión diaria del domingo. **Seis filtros y salió con
+tres defectos.** Ninguno de los seis miraba lo que falló: el marcado en un campo
+que no se pinta, una cara que la regla no nombraba, y una fecha que solo estaba
+en un documento.
+
+---
+
+## C25 · La presentación
+
+**El encargo de Silvestre, con sus palabras:** «hay mucha diferencia aún entre la
+presentación de nuestros vídeos y la presentación de los vídeos de los canales
+más exitosos; creo firmemente que nuestro talón de Aquiles es la presentación
+ahora mismo, muy por debajo del contenido».
+
+Estoy de acuerdo, y se puede decir con más precisión que «se ve peor».
+
+### Las siete diferencias, nombradas
+
+1. **Todo es texto.** 72 % de las escenas de los diez primeros Shorts es texto
+   centrado sobre fondo, y **los ocho iconos de `02_marca/iconos.svg` no se han
+   usado ni una sola vez en once Shorts.** Texto blanco sobre fondo oscuro con
+   voz sintética es, en 2026, la firma reconocible del vídeo automatizado.
+2. **La pantalla no tiene profundidad.** Un plano. Todo lo que se ve está a la
+   misma distancia. Los canales de referencia tienen siempre dos o tres capas.
+3. **Cada escena empieza de cero.** Se monta y se desmonta entera. No sobrevive
+   nada al corte — y eso es exactamente lo que Silvestre describió como «un corte
+   despiezado del vídeo largo». Seis tarjetas seguidas no son una historia
+   aunque el guion lo sea.
+4. **La composición no cambia nunca.** Todo centrado, siempre. Cinco Shorts a la
+   semana con el mismo encuadre son, para quien pasa por el feed, el mismo vídeo
+   cinco veces.
+5. **Nada se construye.** El texto aparece; no se dibuja, ni se cuenta, ni crece.
+   La regla F3 del diagnóstico pide que algo cambie cada 3–5 s; nosotros solo
+   cambiamos en los cortes de escena.
+6. **El personaje no actúa.** Respira y cambia de cara. No entra, no señala, no
+   se aparta. F4 dice que un personaje recurrente es lo que separa «canal sin
+   cara» de «basura generada» — pero un personaje que no hace nada no lo es.
+7. **No hay diseño de sonido.** Una cama de música y una voz. En formato corto,
+   el acento sonoro en el corte es la mitad de la calidad percibida, y no
+   tenemos ninguno.
+
+### Las diez propuestas, y lo que cuesta cada una
+
+Todas son deterministas, todas caben en el plan gratuito y ninguna necesita
+material de terceros salvo P9, que necesita una descarga puntual.
+
+| | Qué | Dónde | Coste de render | Qué compra |
+|---|---|---|---|---|
+| **P1** | **Profundidad.** Tres capas: plano de fondo con rejilla de taller al 4 %, plano de contenido, viñeta delante. El fondo deriva un 1,5 % **en contra** de la entrada del texto: paralaje | `escena.html` (CSS) | **Cero** | Que un fotograma deje de leerse como una diapositiva. Y la rejilla de taller *es* la marca: el canal se llama Mecánica |
+| **P2** | **Continuidad.** El término en cian de cada escena no desaparece: encoge y se acopla a una pila en el borde superior, que crece con el vídeo. Al final, la pila **es** el resumen | `escena.html` + `render.py` | Cero | Convierte seis tarjetas en una pieza. Es el antídoto directo del «parece un recorte» |
+| **P3** | **Los iconos existen (C16).** Los ocho de `iconos.svg`, y **dibujándose solos** con `stroke-dasharray` en ~0,6 s | campo `icono` + `escena.html` | Bajo | Una línea que se dibuja sola es la señal más barata de «esto lo ha hecho alguien» |
+| **P4** | **La escena 1 no es una frase (C19).** Icono dibujándose + **cuatro palabras o menos** + el personaje entrando | guionista + `escena.html` | Bajo | El peldaño S1 entero depende del primer segundo |
+| **P5** | **La cifra se construye.** El número cuenta desde cero en 0,5 s; el arco o la barra crecen hasta su valor | `escena.html` | Cero | F3 justo en la escena donde hoy hay una tarjeta quieta |
+| **P6** | **Tres tamaños, no uno.** Antetítulo pequeño · palabra enorme · pie pequeño. Hoy hay un solo bloque centrado | `escena.html` (CSS) | Cero | Es lo que separa «maquetado» de «diseñado», y es gratis |
+| **P7** | **Cada serie con su cara (C24).** Cinco composiciones de partida y un color de apoyo dentro de la paleta | `escena.html` | Cero | Que cinco Shorts a la semana no sean el mismo vídeo cinco veces |
+| **P8** | **El personaje actúa,** y **se redibuja `piensa`.** Entra por el borde la primera vez, se inclina hacia la cifra, se aparta en el «dónde falla» | `personaje.svg` + `escena.html` | Cero | F4. Y quita de raíz el problema de las tres caras tristes |
+| **P9** | **El corte suena.** Tres acentos CC0: clic en el corte, golpe grave en el remate, tic ascendente en la cifra | `montaje.py` | Cero | Lo que más sube la calidad percibida por byte en formato corto |
+| **P10** | **El Short cuenta una historia.** `validar_guion.py` comprueba que la secuencia de tipos de escena **encaja con la estructura declarada de su serie** | `validar_guion.py` | — | MDS-011 es «El experimento» y no sigue la forma de «El experimento». Esto sí es determinista y fiable |
+
+**Lo que se descarta, y por qué:** imágenes de banco (regla 9 y no son de marca),
+imágenes generadas por IA (coste, y el canal declara IA en la voz, no en el
+dibujo), vídeo de archivo (regla 9), y subir el número de capturas por segundo
+(no es el problema: el problema es que no hay nada que capturar).
+
+### El orden, y la regla que se relaja para poder hacerlo
+
+**La regla 11.1 —un cambio por producción— se suspende hasta el punto de control
+del 27 de septiembre, y solo para los cambios de presentación.**
+
+El motivo no es la prisa, es aritmético: con veinte visualizaciones por vídeo,
+**ningún cambio se puede atribuir midiendo.** La diferencia entre 21 y 31 son
+diez personas. La regla se escribió para un canal con señal y la estamos pagando
+—una mejora por semana— sin recibir a cambio lo único que compra, que es saber
+cuál fue. Lo que **no** se relaja es lo que sí protege de verdad: la regla 11.2
+(se mira el muestrario, no se imagina), la 11.5 (determinista) y la barrera de
+C21. Y **los arreglos de defecto nunca han consumido la ranura**: eso queda
+escrito, porque hoy se ha discutido.
+
+**Vuelve a estar en vigor** el día que un Short pase de 100 visualizaciones en
+48 horas. Ese día hay señal que atribuir y la disciplina empieza a pagar.
+
+| Semana | Presentación | Voz | Lo demás |
+|---|---|---|---|
+| **7 sep** | **P3 + P4 + P6** (los iconos, la escena 1, la jerarquía) y **P10** | código de C7 con `--motor edge` | Los tres arreglos de hoy |
+| **14 sep** | **P1 + P8** (profundidad, el personaje actúa y `piensa` redibujado) | **C7 se enciende**: Gemini en los Shorts | |
+| **21 sep** | **P2 + P7 + P5** (continuidad, serie, la cifra que se construye) | | **P9** si Silvestre ha dejado los sonidos |
+| **27 sep** | **Punto de control.** Se mide un canal con la presentación entera puesta | | |
+
+**Si algo se cae, se cae por este orden, empezando por el final:** P5, P2, P7,
+P1. **P3, P4, P6 y P8 no se caen**: son los cuatro que atacan el primer segundo y
+la sensación de plantilla, que es lo que estamos midiendo.
+
+### Lo único que necesito de Silvestre, y es una vez
+
+**Tres ficheros de sonido CC0** (`.wav` o `.mp3` cortos, menos de 1 s): un clic
+seco de corte, un golpe grave, y un tic ascendente. En
+`03_produccion/sonidos/`, con su atribución en `creditos.json` como la música.
+Freesound con filtro CC0, o el paquete de interfaz de Kenney, valen. **Lo pido
+porque los contenedores no llegan a esos sitios** — es el mismo bloqueo de red
+que tiene parada la ampliación de música de C18. Sin prisa: hace falta para la
+semana del 21.
+
+---
+
+## C26 · Hasta cuándo apostamos por el canal
+
+**La pregunta de Silvestre:** «no quiero abandonar antes de tiempo; tampoco
+mantener más tiempo del debido un proyecto fallido. Por eso busco un momento
+clave en el que poder revisar y decidir juntos».
+
+Es la pregunta correcta y hasta hoy solo estaba medio contestada: había un punto
+de control intermedio (27 de septiembre) y una frase, «doce semanas», sin fecha
+ni criterio. Esto lo cierra.
+
+### La fecha: domingo 15 de noviembre de 2026
+
+Doce semanas desde el primer Short (24 de agosto), trece desde el cambio de rumbo
+(20 de agosto). Diez semanas desde hoy. Para entonces el canal habrá publicado
+**unos noventa vídeos**, y **todo lo que está escrito en este plan estará puesto**:
+C19, C16, C7, C21, C24 y las diez propuestas de C25. Es decir: se juzgará el
+canal que queríamos hacer, no el que teníamos.
+
+Antes está el **27 de septiembre**, que sigue siendo lo que era: un control
+intermedio con tres desenlaces, no un indulto ni una sentencia.
+
+### El criterio, escrito hoy y no aquel día
+
+Se mira **la mediana de visualizaciones a las 48 horas de los últimos veinte
+Shorts**. Veinte porque son cuatro semanas y aguanta un vídeo con suerte sin
+mentir; la mediana y no la media por lo mismo.
+
+| Si el 15 de noviembre… | Entonces |
+|---|---|
+| mediana **≥ 150**, o **≥ 100 suscriptores**, o algún Short por encima de **1.000** | **Se sigue.** El canal ha arrancado y la conversación pasa a ser de escala |
+| mediana entre **50 y 150** | **La máquina funciona y el nicho es pequeño.** Se amplía el tema al humor dentro de las habilidades sociales y la conversación —donde Charisma on Command demuestra que hay siete millones de personas— sin renunciar al método ni a las fuentes. **Una prórroga de ocho semanas, hasta el 10 de enero, y solo una** |
+| mediana **< 50** | **Se para.** |
+
+**Por qué 50 es la línea de abajo, y no un número elegido para poder aprobar.**
+50 es el **suelo** del rango que el diagnóstico documenta para un canal
+desconocido de menos de mil suscriptores: entre 50 y 500 por Short en 48 horas.
+Estar por debajo de 50 después de doce semanas, noventa vídeos y todos los
+cambios aplicados no significa «vamos despacio»: significa que **YouTube no nos
+está repartiendo ni lo que reparte por defecto**, y contra eso no queda ninguna
+palanca de ejecución que no hayamos usado ya.
+
+### Qué significa «se para», dicho sin eufemismos
+
+No es borrar nada ni fingir que no ha pasado. Es: **se deja de publicar**, los
+vídeos se quedan donde están, y **el pipeline se apunta a otra cosa**. Porque lo
+que se ha construido aquí —cola, render determinista, barrera de calidad,
+publicación automática, tres agentes con propiedad de ficheros, un token que ya
+no caduca— **no es del tema del humor. Es de cualquier tema.** Parar el canal no
+tira ese trabajo; lo libera.
+
+### Las dos cláusulas que hacen que esto sea honesto
+
+1. **Los umbrales se pueden cambiar, pero solo antes de que lleguen los datos.**
+   Si el 15 de noviembre nos parece que la línea estaba mal puesta, eso no es una
+   decisión: es una excusa. Cualquier cambio de esta tabla se discute y se
+   escribe **antes** del 8 de noviembre.
+2. **La prórroga es una y no se encadena.** Si el 10 de enero, con el tema ya
+   ampliado, la mediana sigue por debajo de 150, se para. Sin tercera lectura.
+
+### Lo que hace falta para poder decidir así
+
+`04_agentes/metricas.py` **no calcula ninguna mediana hoy**. A partir del lunes
+que viene tiene que escribir en `metricas.json`, cada lunes, tres cifras: la
+mediana de los últimos veinte Shorts a las 48 horas, cuántos han pasado de 100 y
+cuántos de 50. Encargo para la revisión diaria; sube de «prioridad baja» a
+**«hace falta antes del 27 de septiembre»**, porque sin ese número el punto de
+control se discute de memoria.
+
+---
+
+## Lo que NO cambia hoy
+
+- **La cadencia.** Cinco Shorts y un largo. Se revisa el 27, como estaba escrito.
+- **No se amplía el tema todavía.** Sigue valiendo el motivo del 4 de septiembre,
+  y ahora con fecha: se amplía el 15 de noviembre si la mediana cae en la banda
+  de en medio, no antes.
+- **El episodio largo se queda en `edge-tts`.** Cuarenta escenas no caben en diez
+  peticiones diarias. Sin novedad.
+- **C10, C20 y C13 siguen detrás de S1.**
