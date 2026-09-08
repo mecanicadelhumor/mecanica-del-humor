@@ -1,22 +1,26 @@
 {
-  "id": "MDS-006.es",
-  "duracion_final_s": 48.2,
-  "tamano_mb": 8.9,
+  "id": "MDS-012.es",
+  "duracion_final_s": 51.0,
+  "tamano_mb": 9.2,
   "audio": {
-    "lufs": -14.51,
-    "pico_dbtp": -1.39,
-    "rango_lu": 4.0
+    "lufs": -14.2,
+    "pico_dbtp": -1.3,
+    "rango_lu": 3.7
   },
   "silencio_inicial": {
-    "empieza_s": -0.171,
-    "acaba_s": 0.846,
+    "empieza_s": -0.17,
+    "acaba_s": 0.875,
     "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
   },
   "arranque": {
     "silencios_s": [
       [
         -0.085,
-        0.846
+        0.875
+      ],
+      [
+        2.752,
+        2.873
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -30,7 +34,7 @@
   },
   "subtitulos": {
     "ass_existe": true,
-    "lineas_ass": 113,
+    "lineas_ass": 105,
     "srt_existe": true,
     "quemados": false,
     "quemados_origen": "leído de montaje.json",
@@ -45,21 +49,21 @@
     "sha256": "68fe871bcd427b465aa11f71d2f2fc889de234166af65fac305170c0f5bddd6b"
   },
   "guion": {
-    "titulo_trabajo": "Por qué te ríes cuando no toca",
+    "titulo_trabajo": "Cómo contar un chiste bien: el mismo chiste, dos veces",
     "idioma": "es",
     "voz": "es-ES-AlvaroNeural",
     "escenas": 6,
-    "duracion_narracion_s": 47.32,
+    "duracion_narracion_s": 50.66,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 9.056
+    "escena_mas_larga_s": 9.424
   },
   "fotogramas_s": [
-    5.47,
-    13.02,
-    20.96,
-    28.53,
-    35.84,
-    44.3
+    6.06,
+    15.31,
+    23.58,
+    31.7,
+    40.76,
+    48.57
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
