@@ -399,6 +399,46 @@ def validar(path):
         avisos.append(f"El {n_dom*100//len(tipos)}% de las escenas son «{dominante}». "
                       f"Demasiada monotonía visual.")
 
+    # ---------------------------------------------------------------------
+    # P10 (08/09/2026) — que el Short tenga forma de historia.
+    #
+    # El codirector sobre MDS-011: «parece un corte despiezado del vídeo
+    # largo, sin ninguna estructura de introducción, desarrollo y
+    # desenlace». Comprobar la estructura entera (ritmo, si el chiste hace
+    # gracia) exige leer el guion, y eso lo sigue haciendo quien revisa
+    # (paso 1 de la revisión diaria). Lo que sí se puede comprobar sin
+    # ambigüedad, contra lo que guionista_corto.md declara para cada serie:
+    #
+    #   · «El experimento» es un estudio contado como historia y «termina
+    #     con la cifra grande en pantalla (tipo: dato) y su fuente»: exige
+    #     una escena «dato» con «fuente».
+    #   · «Esto no tiene gracia y esto sí» son «dos chistes casi idénticos»
+    #     contados con «tipo: comparacion»: exige una escena «comparacion».
+    #
+    # (Que ninguna serie termine sin «cierre» ya es un error, más arriba:
+    # «La última escena debe ser de tipo «cierre»».)
+    #
+    # Aviso, no error: MDS-011 y los guiones ya escritos no van a cumplir
+    # esto en retrospectiva, y un comprobador que se equivoca a menudo se
+    # acaba ignorando (REGLAS.md, historia de la regla 14.3). Probado
+    # contra los quince Shorts del repositorio: cero falsos positivos —
+    # las tres «El experimento» (MDS-002, MDS-009, MDS-011) ya traen su
+    # «dato»/«fuente» y las tres «Esto no tiene gracia y esto sí»
+    # (MDS-003, MDS-008, MDS-012) ya traen su «comparacion».
+    # ---------------------------------------------------------------------
+    serie = g.get("serie")
+    if corto and serie == "El experimento":
+        if not any(e.get("tipo") == "dato" and e.get("fuente") for e in escenas):
+            avisos.append("P10: la serie «El experimento» exige una escena «dato» con "
+                          "«fuente» — termina con la cifra grande, no solo con un "
+                          "enunciado (guionista_corto.md). Este guion no la tiene.")
+    if corto and serie == "Esto no tiene gracia y esto sí":
+        if not any(e.get("tipo") == "comparacion" for e in escenas):
+            avisos.append("P10: la serie «Esto no tiene gracia y esto sí» exige una "
+                          "escena «comparacion» — son dos chistes casi idénticos que se "
+                          "cuentan los dos antes de explicar nada (guionista_corto.md). "
+                          "Este guion no la tiene.")
+
     # C17 — aviso de repetición de fuente contra el corpus producido en las
     # últimas seis semanas (ver fuentes_recientes más arriba).
     fuentes = sorted({e["fuente"] for e in escenas if e.get("fuente")})
