@@ -152,6 +152,17 @@
   .fig{width:100%;display:block;margin:0 auto;max-height:660px;object-fit:contain}
   .pie{font-size:30px;color:var(--tenue);text-align:center;margin-top:34px;font-family:"Inter","DejaVu Sans",sans-serif}
 
+  /* P6 · «tres tamaños, no uno» (09/09). «etiqueta» y «pie» ya eran campos
+     admisibles en CUALQUIER escena desde esquema_guion.json (no son nuevos),
+     pero hasta hoy solo se dibujaban en algunas plantillas: «etiqueta»
+     únicamente en «titulo»/«enunciado», «pie» únicamente en «dato» (como
+     .cifra-pie) y «figura» (como .pie). Sin ellos, la mayoría de escenas —
+     sobre todo «enunciado», el 72% de un Short— eran un solo bloque de un
+     tamaño, no la jerarquía antetítulo-pequeño/palabra-enorme/pie-pequeño
+     que pide el encargo. Hoy se cablea el mismo par de clases (ya
+     existentes, sin tocar su CSS salvo el tamaño en vertical de abajo) en
+     «dato», «enunciado», «cita» y «cierre»: si el guion no rellena el
+     campo, no se añade nada al DOM y el coste de render sigue siendo cero. */
   .etiqueta{
     display:inline-block;font-size:24px;letter-spacing:.24em;text-transform:uppercase;
     color:var(--ambar);border:1px solid rgba(255,176,32,.5);padding:10px 20px;margin-bottom:40px;
@@ -196,6 +207,12 @@
   html[data-fmt="v"] .autor{font-size:38px}
   html[data-fmt="v"] .etiqueta{font-size:28px;margin-bottom:44px}
   html[data-fmt="v"] .fig{max-height:900px}
+  /* P6 · «.pie» solo tenía tamaño pensado para el episodio largo (usada
+     hasta hoy solo en «figura», tipo casi exclusivo de MDH-###): 30px se lee
+     bien a 1920px de ancho pero queda enano junto al resto de pies de
+     Short (.cifra-pie 52px, .autor 38px, .sub 44px). Mismo criterio de
+     bulto que esos tres. */
+  html[data-fmt="v"] .pie{font-size:40px;margin-top:30px}
   /* diagrama apilado (solo vertical) */
   .pila{display:flex;flex-direction:column;align-items:stretch}
   .pila .paso{border:2px solid rgba(76,201,240,.55);padding:30px 34px}
@@ -616,6 +633,7 @@ const PLANTILLAS = {
   dato(d){
     return `<div class="caja" style="text-align:center">
       ${iconoHTML(d.icono)}
+      ${d.etiqueta?`<div class="u etiqueta">${esc(d.etiqueta)}</div>`:""}
       <div class="u cifra" data-cuenta="${esc(d.cifra)}">${rico(d.cifra)}</div>
       <div class="u cifra-pie">${rico(d.pie)}</div>
     </div>`;
@@ -624,10 +642,17 @@ const PLANTILLAS = {
     // La composición rota con el número de escena. Sin d.n (llamadas sueltas
     // desde una consola) cae en la variante centrada de siempre.
     const v = ((Number(d.n) || 0) % 3 + 3) % 3;
+    // P6 (07/09→09/09): «pie» ya era admisible en cualquier escena
+    // (esquema_guion.json) pero «enunciado» —el 72% de las escenas de un
+    // Short— era el único tipo con hueco para antetítulo (etiqueta) y sin
+    // hueco para un pie. Sin él, la jerarquía se quedaba en dos tamaños
+    // como mucho. Misma clase .pie que ya usa «figura», campo que ya
+    // existía: cero coste de render si el guion no lo rellena.
     return `<div class="caja enun-${v}">
       ${iconoHTML(d.icono)}
       ${d.etiqueta?`<div class="u etiqueta">${esc(d.etiqueta)}</div>`:""}
-      <div class="u enunciado">${rico(d.texto)}</div></div>`;
+      <div class="u enunciado">${rico(d.texto)}</div>
+      ${d.pie?`<div class="u pie">${rico(d.pie)}</div>`:""}</div>`;
   },
   lista(d){
     const li = d.puntos.map((p,i)=>
@@ -640,6 +665,7 @@ const PLANTILLAS = {
   cita(d){
     return `<div class="caja">
       ${iconoHTML(d.icono)}
+      ${d.etiqueta?`<div class="u etiqueta">${esc(d.etiqueta)}</div>`:""}
       <blockquote class="u">${rico(d.texto)}</blockquote>
       <div class="u autor">— ${esc(d.autor)}</div></div>`;
   },
@@ -702,6 +728,7 @@ const PLANTILLAS = {
   cierre(d){
     return `<div class="caja" style="text-align:center">
       ${iconoHTML(d.icono)}
+      ${d.etiqueta?`<div class="u etiqueta">${esc(d.etiqueta)}</div>`:""}
       <h2 class="u">${rico(d.titulo)}</h2>
       ${d.subtitulo?`<div class="u sub">${rico(d.subtitulo)}</div>`:""}
     </div>`;
