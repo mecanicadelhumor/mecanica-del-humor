@@ -286,6 +286,21 @@
       "musica": "cama_03_haru_lofi_roa.mp3",
       "subido_utc": "2026-09-08T01:33:23Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-013.es",
+      "episodio": "MDS-013",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "Miedo a que se rían de ti: cuándo es broma y cuándo es burla",
+      "guion": "05_calendario/guiones/MDS-013.es.json",
+      "video_id": "VsfYvMU4UTU",
+      "url": "https://youtu.be/VsfYvMU4UTU",
+      "estado": "private",
+      "publicar_en": "2026-09-09T17:00:00Z",
+      "musica": "cama_01_crying_over_you_christophermorrow.mp3",
+      "subido_utc": "2026-09-09T01:33:10Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-09-07T12:54:20Z"
