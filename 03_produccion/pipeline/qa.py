@@ -259,15 +259,53 @@ def subtitulos(carpeta):
         "srt_existe": srt.exists(),
         "quemados": quemados,
         "quemados_origen": origen,
-        "_esperado": {"quemados": False, "lineas_ass": "> 0"},
+        "_esperado": {"quemados": False, "lineas_ass": "> 0 con motor edge; puede ser 0 con motor gemini"},
         "_nota": ("Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un "
                   "fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay "
-                  "que vigilar es «lineas_ass»: si cae a 0 con ass_existe en true, edge-tts "
-                  "ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá "
-                  "inservible. Ahora que no se quema nada, ese es el único aviso que queda. "
-                  "«quemados» sale null si montaje.py no ha dejado manifiesto (ver "
-                  "«quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal "
-                  "en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."),
+                  "que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con "
+                  "ass_existe en true, edge-tts ha dejado de devolver marcas de palabra "
+                  "(WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) "
+                  "esto ya no vale para escenas con motor gemini: la API no da "
+                  "WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver "
+                  "voz.py). Para esas producciones el canario es «sincronia_voz», más "
+                  "abajo en esta ficha — compara duración calculada y duración real, que "
+                  "es lo que de verdad importa. «quemados» sale null si montaje.py no ha "
+                  "dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir "
+                  "de lineas_ass y salía mal en cuanto quemar_subs pasó a False por "
+                  "defecto (corregido 24/08)."),
+    }
+
+
+def sincronia_voz(carpeta, dur_esperada):
+    """El canario que sustituye a «lineas_ass» cuando el motor es Gemini (C7).
+
+    Sin marcas de palabra no se puede comprobar el .ass, pero lo que de
+    verdad hay que vigilar —que la duración que usó render.py para montar el
+    vídeo (la suma de duracion_s de guion.timed.json, en `dur_esperada`)
+    coincida con la duración real del audio final (voz.mp3)— no depende de
+    tener marcas de palabra. Se calcula siempre que exista voz.mp3, no solo
+    con Gemini: es una comprobación más barata y más directa que nunca está
+    de más.
+    """
+    voz_mp3 = carpeta / "voz.mp3"
+    if not voz_mp3.exists() or dur_esperada is None:
+        return None
+    real = ffprobe(voz_mp3, "format=duration").get("format", {})
+    try:
+        real_s = float(real.get("duration", 0))
+    except (TypeError, ValueError):
+        real_s = 0.0
+    desfase = round(abs(real_s - float(dur_esperada)), 2)
+    return {
+        "duracion_calculada_s": round(float(dur_esperada), 2),
+        "duracion_real_voz_mp3_s": round(real_s, 2),
+        "desfase_s": desfase,
+        "_esperado": "desfase_s < 0.5",
+        "_nota": ("Sustituye a «lineas_ass» como canario de sincronía cuando el motor es "
+                  "Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a "
+                  "propósito). Un desfase alto significa que voz.py y render.py no están "
+                  "de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz "
+                  "sin que nada más lo detecte."),
     }
 
 
@@ -301,6 +339,10 @@ def main():
         escenas = g.get("escenas", [])
         largas = [(i, round(e.get("duracion_s", 0), 1))
                   for i, e in enumerate(escenas, 1) if e.get("duracion_s", 0) > 14]
+        motores = [e.get("motor_voz") for e in escenas if e.get("motor_voz")]
+        ritmos_fuera = [(i, e.get("ritmo_pal_s")) for i, e in enumerate(escenas, 1)
+                        if e.get("ritmo_pal_s") is not None
+                        and not (1.6 <= e["ritmo_pal_s"] <= 3.2)]
         guion = {
             "titulo_trabajo": g.get("titulo_trabajo"),
             "idioma": g.get("idioma"),
@@ -309,6 +351,14 @@ def main():
             "duracion_narracion_s": g.get("duracion_total_s"),
             "escenas_por_encima_de_14s": largas,
             "escena_mas_larga_s": max((e.get("duracion_s", 0) for e in escenas), default=0),
+            # C7 (07-09/09/2026): qué motor de voz se pidió y cuál se usó de
+            # verdad escena a escena (puede diferir por el respaldo
+            # automático a edge-tts), y qué escenas salieron con un ritmo
+            # fuera de 1,6-3,2 palabras/segundo (aviso, no bloquea).
+            "motor_voz_pedido": g.get("motor_voz"),
+            "motores_por_escena": {m: motores.count(m) for m in sorted(set(motores))}
+                                   if motores else None,
+            "escenas_ritmo_fuera_de_rango": ritmos_fuera,
         }
 
     ini, fin = silencio_inicial(mp4)
@@ -323,6 +373,7 @@ def main():
         "arranque": arranque(mp4),
         "fragmentos": fragmentos(mp4),
         "subtitulos": subtitulos(carpeta),
+        "sincronia_voz": sincronia_voz(carpeta, guion.get("duracion_narracion_s")) if guion else None,
         "musica": json.loads((carpeta / "musica.json").read_text(encoding="utf-8"))
                   if (carpeta / "musica.json").exists() else None,
         "guion": guion,

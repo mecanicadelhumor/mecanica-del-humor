@@ -11,3 +11,10 @@ matplotlib
 requests
 google-api-python-client
 google-auth-oauthlib
+
+# C7 (voz.py --motor gemini, versión 5.1/6 del plan). Solo se importa cuando
+# se pide ese motor (import perezoso en voz.py), así que no afecta a las
+# producciones que siguen en edge-tts. Falta además, y eso NO se arregla
+# aquí, que producir.yml exponga el secreto GEMINI_API_KEY al paso de voz.py
+# (fichero de workflows, protegido: lo añade el codirector antes del 14/09).
+google-genai

@@ -22,9 +22,14 @@ Produce:
 """
 import argparse
 import asyncio
+import base64
+import hashlib
 import json
+import os
 import re
 import subprocess
+import time
+import wave
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
@@ -76,6 +81,174 @@ VOCES = {
 # aire a la animación. -4% es el punto en el que deja de sonar a robot con prisa.
 RITMO = "-4%"
 TONO = "+0Hz"
+
+
+# ---------------------------------------------------------------------------
+# C7 · Gemini TTS en los Shorts (07-09/09/2026, versión 5.1 y 6 del plan).
+#
+# Se escribe esta semana con --motor edge por defecto: no toca la producción
+# de hoy ni gasta la ranura de cambio de la semana (que es de C19+C16). El
+# valor por defecto pasa a "gemini" el lunes 14 — una línea, aquí abajo, en
+# el propio argparse. Antes de esa fecha, dos cosas que este fichero NO puede
+# arreglar porque viven en .github/workflows/producir.yml (protegido, ver
+# REGLAS.md regla 11.7): el paso de voz.py necesita el secreto
+# GEMINI_API_KEY en su entorno, y ese mismo paso necesita `google-genai`
+# instalado — esto último ya queda resuelto añadiéndolo a requirements.txt,
+# que sí es mío.
+#
+# Solo se usa en Shorts (formato "corto"): un episodio largo son ~40 escenas
+# y el nivel gratuito da 10 peticiones al día POR MODELO — no cabe en un día
+# (ver C27 en la versión 6.1 del plan, que sí lo resuelve con una caché por
+# adelantado y un workflow nuevo, todavía sin escribir).
+#
+# Las salvaguardas son las de la versión 5.1, sin las cuales esto no se toca:
+#   1. --motor {edge,gemini}, con respaldo automático e inmediato a edge-tts
+#      ante CUALQUIER fallo de Gemini en una escena (cuota, red, respuesta
+#      vacía). Un vídeo con una voz peor es mejor que un día sin vídeo.
+#   2. El motor real usado se escribe escena a escena (e["motor_voz"]) para
+#      que se vea en el expediente, no que se descubra escuchando.
+#   3. 25 segundos entre llamadas REALES a Gemini (el límite es 3/min); una
+#      escena servida desde caché o ya resuelta por respaldo no cuenta.
+#   4. Control de ritmo por escena (e["ritmo_pal_s"]): aviso si cae fuera de
+#      1,6-3,2 palabras/segundo. No bloquea — el vídeo se sincroniza con la
+#      duración real— pero se ve.
+#   5. El .srt no cambia: se sigue escribiendo por bloques de escena, no por
+#      palabra. Lo que sí muere es el .ass por escena Gemini (la API no da
+#      WordBoundary), y con él el canario «lineas_ass» de qa.py — sustituido
+#      ahí por uno nuevo que compara la duración calculada con la real de
+#      voz.mp3, que es lo que de verdad hay que vigilar.
+#   6. Se enciende con un episodio (el lunes 14), no con la semana: si ese
+#      día ESTADO.md no dice OK, se vuelve a "edge" cambiando el valor por
+#      defecto de este mismo argparse.
+#
+# Y la caché, que es la pieza de la que depende además que el episodio largo
+# pueda dejar edge-tts más adelante (C27): cada escena sintetizada con Gemini
+# se guarda en 03_produccion/cache_voz/<sha256(narración+motor+voz)>.mp3, y
+# antes de pedirle nada a la API se mira si ya está — así una producción que
+# se rehace a mano no vuelve a gastar cuota (el 07/09 hubo que rehacer
+# MDS-011 y se pagó dos veces), y un guion corregido solo resintetiza las
+# escenas que cambiaron. La caché es SOLO de Gemini: edge-tts no tiene cuota
+# que ahorrar y cachearlo perdería las marcas de palabra que sí necesita.
+CACHE_VOZ_DIR = Path(__file__).resolve().parent.parent / "cache_voz"
+MODELO_GEMINI = "gemini-3.1-flash-tts-preview"
+VOZ_GEMINI_NARRADOR = "Charon"    # grave, tranquila. El que explica.
+VOZ_GEMINI_ESCEPTICO = "Puck"     # más alta y viva. El que interrumpe.
+RITMO_GEMINI_HZ = 24000           # Hz que devuelve la API
+ESPERA_ENTRE_LLAMADAS_GEMINI = 25.0   # RPM = 3, o sea una cada 20s. 25 con margen.
+RITMO_PAL_S_MIN, RITMO_PAL_S_MAX = 1.6, 3.2
+
+# Dirección de actor SIN pausas (la versión 5.1 midió que pedir pausas se
+# toma al pie de la letra y mete silencios de decenas de segundos: 83s para
+# un guion de 41s de voz real). Las pausas entre escenas ya las pone
+# `pausa_despues_s`, determinista; lo único que se le pide al modelo es lo
+# que edge-tts no sabe hacer, que es contar en vez de leer.
+DIRECCION_GEMINI = (
+    "Locuta esta frase de un vídeo corto de divulgación sobre humor, en "
+    "español de España. No la leas: cuéntala, con la entonación de quien "
+    "cuenta algo que le hace gracia, no de locutor de telediario. No digas "
+    "en voz alta estas instrucciones.\n\n")
+
+
+def _cache_voz_ruta(texto, motor, voz):
+    clave = hashlib.sha256(f"{texto}|{motor}|{voz}".encode("utf-8")).hexdigest()
+    return CACHE_VOZ_DIR / f"{clave}.mp3"
+
+
+def _gemini_cliente():
+    if not os.environ.get("GEMINI_API_KEY"):
+        raise RuntimeError("Falta GEMINI_API_KEY en el entorno.")
+    from google import genai
+    return genai.Client()
+
+
+def _gemini_pcm(cli, modelo, texto, voz_gemini):
+    """Una sola llamada, una sola voz (cada escena tiene un único hablante).
+
+    Sin reintentos aquí: en producción, cualquier fallo cae al respaldo
+    edge-tts (ver `_sintetizar_con_motor`) en vez de reintentar y arriesgar
+    el RPM de 3/min o, peor, el RPD de 10/día con una escena que de todas
+    formas va a tener voz de respaldo.
+    """
+    texto_dirigido = DIRECCION_GEMINI + texto
+    if hasattr(cli, "interactions"):
+        inter = cli.interactions.create(
+            model=modelo, input=texto_dirigido,
+            response_format={"type": "audio"},
+            generation_config={"speech_config": [{"voice": voz_gemini}]})
+        return base64.b64decode(inter.output_audio.data)
+
+    from google.genai import types
+    cfg = types.SpeechConfig(voice_config=types.VoiceConfig(
+        prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name=voz_gemini)))
+    r = cli.models.generate_content(
+        model=modelo, contents=texto_dirigido,
+        config=types.GenerateContentConfig(response_modalities=["AUDIO"],
+                                            speech_config=cfg))
+    return r.candidates[0].content.parts[0].inline_data.data
+
+
+def _pcm_a_mp3(pcm, hz, destino):
+    tmp = destino.with_suffix(".pcm.wav")
+    with wave.open(str(tmp), "wb") as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(hz)
+        w.writeframes(pcm)
+    subprocess.run(["ffmpeg", "-y", "-i", str(tmp), "-c:a", "libmp3lame", "-q:a", "2",
+                    str(destino)], check=True, capture_output=True, stdin=subprocess.DEVNULL)
+    tmp.unlink(missing_ok=True)
+
+
+async def _sintetizar_con_motor(texto, papel, voz_edge, mp3, indice, motor, estado):
+    """Sintetiza una escena con el motor pedido. Siempre escribe `mp3`.
+
+    Devuelve (palabras, n_frases, motor_usado). `palabras` viene vacío para
+    cualquier resultado de Gemini (caché o llamada real): la API no da
+    WordBoundary, así que esas escenas no aportan marcas al .ass — es lo
+    esperado, no un fallo (ver el canario nuevo en qa.py).
+
+    `estado` es un dict compartido entre las escenas de una misma
+    producción: {"agotado": bool, "ultima": monotonic|0.0, "cliente": None}.
+    Si una escena anterior ya agotó la cuota DIARIA de Gemini, el resto de
+    la producción va directa a edge-tts sin más intentos ni esperas.
+    """
+    if motor != "gemini":
+        _, pal, n_fr = await sintetizar(texto, voz_edge, mp3)
+        return pal, n_fr, "edge"
+
+    voz_gemini = VOZ_GEMINI_ESCEPTICO if papel == "esceptico" else VOZ_GEMINI_NARRADOR
+    cache = _cache_voz_ruta(texto, "gemini", voz_gemini)
+    if cache.exists():
+        mp3.write_bytes(cache.read_bytes())
+        return [], 0, "gemini (caché)"
+
+    if not estado["agotado"]:
+        espera = ESPERA_ENTRE_LLAMADAS_GEMINI - (time.monotonic() - estado["ultima"])
+        if estado["ultima"] and espera > 0:
+            await asyncio.sleep(espera)
+        try:
+            cli = estado["cliente"] or _gemini_cliente()
+            estado["cliente"] = cli
+            pcm = _gemini_pcm(cli, MODELO_GEMINI, texto, voz_gemini)
+            estado["ultima"] = time.monotonic()
+            _pcm_a_mp3(pcm, RITMO_GEMINI_HZ, mp3)
+            CACHE_VOZ_DIR.mkdir(parents=True, exist_ok=True)
+            cache.write_bytes(mp3.read_bytes())
+            return [], 0, "gemini"
+        except Exception as exc:
+            estado["ultima"] = time.monotonic()
+            msg = str(exc)
+            agotado_por_dia = ("RESOURCE_EXHAUSTED" in msg or "429" in msg) and (
+                "per day" in msg.lower() or "perday" in msg.lower().replace(" ", ""))
+            if agotado_por_dia:
+                estado["agotado"] = True
+                print(f"::warning::escena {indice}: cuota DIARIA de Gemini agotada; "
+                      f"el resto de esta producción va directa a edge-tts.")
+            print(f"::warning::escena {indice}: Gemini ha fallado, respaldo automático "
+                  f"a edge-tts. Error: {msg[:200]!r}")
+
+    _, pal, n_fr = await sintetizar(texto, voz_edge, mp3)
+    return pal, n_fr, "edge (respaldo)"
 
 
 # ---------------------------------------------------------------------------
@@ -292,11 +465,21 @@ Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
     destino.write_text(cab + "\n".join(lineas), encoding="utf-8")
 
 
-async def principal(guion_path, salida, voz=None):
+async def principal(guion_path, salida, voz=None, motor="edge"):
     guion = json.loads(Path(guion_path).read_text(encoding="utf-8"))
     idioma = guion.get("idioma", "es")
     voz = voz or VOCES.get(idioma, VOCES["es"])
     salida = Path(salida); (salida / "voz").mkdir(parents=True, exist_ok=True)
+
+    # C7: Gemini solo en Shorts (formato "corto"). Un episodio largo (~40
+    # escenas) no cabe en las 10 peticiones/día del nivel gratuito y se queda
+    # en edge-tts sin que haga falta pedirlo con --motor cada vez.
+    usar_gemini = motor == "gemini" and guion.get("formato") == "corto"
+    motor_pedido = "gemini" if usar_gemini else "edge"
+    estado_gemini = {"agotado": False, "ultima": 0.0, "cliente": None}
+    if motor == "gemini" and not usar_gemini:
+        print(f"::notice::--motor gemini pedido pero formato=«{guion.get('formato')}»; "
+              f"C7 es solo para Shorts. Esta producción va con edge-tts.")
 
     reloj, bloques, palabras_todas, partes = 0.0, [], [], []
     frases_totales, recortadas = 0, []
@@ -312,36 +495,51 @@ async def principal(guion_path, salida, voz=None):
             e["duracion_s"] = e.get("duracion_s", 3.0)
             reloj += e["duracion_s"]
             continue
-        _, pal, n_fr = await sintetizar(texto, voz, mp3)
+        papel = "esceptico" if e.get("voz") == "esceptico" else "narrador"
+        pal, n_fr, motor_usado = await _sintetizar_con_motor(
+            texto, papel, voz, mp3, i, motor_pedido, estado_gemini)
         frases_totales += n_fr
-        # Sílaba suelta al principio de la escena: se recorta si el patrón
-        # encaja exactamente. Las marcas de palabra vienen referidas al audio
-        # SIN recortar, así que hay que restarles lo mismo o los subtítulos
-        # quedarían adelantados esa cantidad durante toda la escena.
-        recorte = fragmento_inicial(mp3)
-        # Red de seguridad: edge-tts nos dice en qué milisegundo empieza la
-        # primera palabra. Si el recorte llega hasta ahí, lo que íbamos a tirar
-        # no era una sílaba de más: era el principio de la narración. Se avisa
-        # y no se toca. Esto es lo que impide que un fallo de detección se
-        # convierta otra vez en un vídeo al que le falta la primera palabra.
-        if recorte and pal and recorte > pal[0][0]:
-            print(f"::warning::escena {i}: recorte de {recorte:.2f}s descartado — "
-                  f"se metía en la primera palabra, que empieza en {pal[0][0]:.2f}s")
-            recorte = 0.0
-        if recorte:
-            _recortar(mp3, recorte)
-            pal = [(max(0.0, a - recorte), max(0.0, b - recorte), w) for a, b, w in pal]
-            recortadas.append((i, recorte))
-            print(f"  escena {i:>2}  recortada sílaba suelta de {recorte:.2f}s al principio")
+        # Sílaba suelta al principio de la escena: el patrón se midió sobre
+        # edge-tts (ver fragmento_inicial) y la red de seguridad de abajo
+        # depende de las marcas de palabra, que Gemini no da. Así que este
+        # recorte solo se intenta cuando la escena de verdad vino de
+        # edge-tts, sea como motor principal o como respaldo.
+        recorte = 0.0
+        if motor_usado.startswith("edge"):
+            recorte = fragmento_inicial(mp3)
+            # Red de seguridad: edge-tts nos dice en qué milisegundo empieza
+            # la primera palabra. Si el recorte llega hasta ahí, lo que
+            # íbamos a tirar no era una sílaba de más: era el principio de la
+            # narración. Se avisa y no se toca.
+            if recorte and pal and recorte > pal[0][0]:
+                print(f"::warning::escena {i}: recorte de {recorte:.2f}s descartado — "
+                      f"se metía en la primera palabra, que empieza en {pal[0][0]:.2f}s")
+                recorte = 0.0
+            if recorte:
+                _recortar(mp3, recorte)
+                pal = [(max(0.0, a - recorte), max(0.0, b - recorte), w) for a, b, w in pal]
+                recortadas.append((i, recorte))
+                print(f"  escena {i:>2}  recortada sílaba suelta de {recorte:.2f}s al principio")
         dur = duracion_real(mp3) or (pal[-1][1] if pal else 3.0)
         cola = e.get("pausa_despues_s", 0.45)      # respiración entre escenas
         e["duracion_s"] = round(dur + cola, 3)
         e["audio"] = str(mp3.relative_to(salida))
+        e["motor_voz"] = motor_usado
+        # Control de ritmo (salvaguarda 4 de C7): fuera de 1,6-3,2 pal/s es la
+        # firma de la pista plana de Gemini (corría al doble, 4,74 pal/s en
+        # la prueba del 04/09). No bloquea —el vídeo se sincroniza con `dur`
+        # real, así que nada se desincroniza— pero queda escrito para verlo
+        # en el expediente sin tener que escuchar.
+        ritmo = round(len(texto.split()) / dur, 2) if dur else 0.0
+        e["ritmo_pal_s"] = ritmo
+        if not (RITMO_PAL_S_MIN <= ritmo <= RITMO_PAL_S_MAX):
+            print(f"::warning::escena {i}: ritmo {ritmo} palabras/s fuera de "
+                  f"{RITMO_PAL_S_MIN}-{RITMO_PAL_S_MAX} (motor {motor_usado}).")
         bloques.append((reloj, reloj + dur, texto))
         palabras_todas += [(reloj + a, reloj + b, w) for a, b, w in pal]
         partes.append((mp3, cola))
         reloj += e["duracion_s"]
-        print(f"  escena {i:>2}  {e['duracion_s']:>5.1f}s  {texto[:56]}")
+        print(f"  escena {i:>2}  {e['duracion_s']:>5.1f}s  [{motor_usado}]  {texto[:48]}")
 
     # concatenar con silencios entre escenas
     lista = salida / "concat.txt"
@@ -371,7 +569,13 @@ async def principal(guion_path, salida, voz=None):
     # cada escena, que es estático por diseño. Un vídeo sin ellos se percibe
     # como un pase de diapositivas. Hasta el 18/08 esto fallaba en silencio.
     if not palabras_todas:
-        if frases_totales:
+        if usar_gemini:
+            print("Sin marcas de palabra: es lo esperado con --motor gemini (la API no "
+                  "las da). El .ass sale vacío a propósito —no se quema nada, "
+                  "quemar_subs=False— y el .srt no lo necesita: se escribe por bloques "
+                  "de escena. qa.py comprueba la sincronía por duración, no por "
+                  "«lineas_ass», cuando el motor es Gemini.")
+        elif frases_totales:
             print(f"::error::El servicio ha devuelto {frases_totales} marcas de FRASE y "
                   "ninguna de PALABRA. Ese es el síntoma exacto de que «boundary» no está "
                   "pidiendo WordBoundary: mira _comunicar() y la versión de edge-tts "
@@ -386,11 +590,12 @@ async def principal(guion_path, salida, voz=None):
         print(f"::warning::Sílabas sueltas recortadas en {len(recortadas)} escena(s): {detalle}")
     guion["duracion_total_s"] = round(reloj, 2)
     guion["voz_usada"] = voz
+    guion["motor_voz"] = motor_pedido
     (salida / "guion.timed.json").write_text(
         json.dumps(guion, ensure_ascii=False, indent=2), encoding="utf-8")
 
     m, s = divmod(reloj, 60)
-    print(f"\nNarración: {int(m)}m {s:04.1f}s con la voz {voz}")
+    print(f"\nNarración: {int(m)}m {s:04.1f}s con la voz {voz} (motor: {motor_pedido})")
     print(f"Salida en {salida}")
 
 
@@ -399,5 +604,14 @@ if __name__ == "__main__":
     ap.add_argument("guion")
     ap.add_argument("-o", "--salida", required=True)
     ap.add_argument("--voz", default=None, help=f"por defecto según idioma: {VOCES}")
+    # C7 (versión 5.1 y 6 del plan): se escribe esta semana con "edge" por
+    # defecto para no tocar la producción de hoy. El valor por defecto pasa a
+    # "gemini" el lunes 14 de septiembre -- ese día, cambiar SOLO esta línea
+    # (default="edge" -> default="gemini") y confirmar antes que
+    # producir.yml ya expone GEMINI_API_KEY al paso de voz.py (fichero de
+    # workflows: lo edita el codirector, no esta tarea).
+    ap.add_argument("--motor", choices=["edge", "gemini"], default="edge",
+                     help="edge (por defecto hasta el 14/09) o gemini -- solo Shorts, "
+                          "con caché y respaldo automático a edge ante cualquier fallo")
     a = ap.parse_args()
-    asyncio.run(principal(a.guion, a.salida, a.voz))
+    asyncio.run(principal(a.guion, a.salida, a.voz, a.motor))

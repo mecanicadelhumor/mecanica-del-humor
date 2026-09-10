@@ -1,5 +1,5 @@
-ESTADO: INCIDENCIA — MDS-011 (https://youtu.be/B7AaS2dXIOw) lleva YA TRES DÍAS "private" sin "publicar_en" (desde el 07/09, ahora con más de 60h sobre su hora de emisión). No es un fallo de código: se rehízo a mano el 07/09 por la mañana (para arreglar el audio/cara triste) con plan_suelto, que deja publicar_en=null por diseño para que tú lo revises antes de publicar — pero nadie lo ha publicado desde entonces. Puede: si ya lo publicaste en Studio, no hace falta nada más (el registro solo está desactualizado); si sigue en privado, publicarlo a mano o ponerle publicar_en — o darlo por perdido para esta semana si ya no compensa.
-Fecha: 2026-09-09 11:30
-Último vídeo publicado: MDS-012 (08/09, automático) · Próxima emisión: MDS-013 (09/09, 19:00 — en cola, correcto, sin defectos)
-Pendiente del codirector: nada
-Detalle: 05_calendario/bitacora/2026-09-09-revision.md
+ESTADO: INCIDENCIA — MDS-011 (https://youtu.be/B7AaS2dXIOw) sigue "private" sin "publicar_en", ya CUATRO días de calendario (desde el 07/09, ~64h30 sobre su hora de emisión); y MDS-014 (hoy, 19:00) trae un matiz menor en la escena 4 — pantalla dice "el martes", la voz dice "hoy" — que no confunde el mecanismo pero no lo dice esa narración (detalle abajo). Sobre MDS-011: si ya lo publicaste en Studio, no hace falta nada más; si sigue en privado, publicarlo a mano, ponerle publicar_en, o darlo por perdido. Sobre MDS-014: a mi juicio es defendible dejarlo pasar, pero decides tú.
+Fecha: 2026-09-10 11:30
+Último vídeo publicado: MDS-013 (09/09, automático) · Próxima emisión: MDS-014 (10/09, 19:00 — en cola, un matiz menor en escena 4, ver arriba)
+Pendiente del codirector: antes del lunes 14, añadir el secreto GEMINI_API_KEY al paso de voz.py en producir.yml (para que C7/Gemini sirva de algo ese día; no bloquea el canal mientras tanto — detalle en la bitácora)
+Detalle: 05_calendario/bitacora/2026-09-10-revision.md
