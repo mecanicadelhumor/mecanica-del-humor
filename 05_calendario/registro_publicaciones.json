@@ -301,6 +301,21 @@
       "musica": "cama_01_crying_over_you_christophermorrow.mp3",
       "subido_utc": "2026-09-09T01:33:10Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-014.es",
+      "episodio": "MDS-014",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "Test de estilos de humor: qué mide de ti y qué mide de tu martes",
+      "guion": "05_calendario/guiones/MDS-014.es.json",
+      "video_id": "bXlDhVo0puI",
+      "url": "https://youtu.be/bXlDhVo0puI",
+      "estado": "private",
+      "publicar_en": "2026-09-10T17:00:00Z",
+      "musica": "cama_02_dusk_next_route.mp3",
+      "subido_utc": "2026-09-10T01:32:17Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-09-07T12:54:20Z"
