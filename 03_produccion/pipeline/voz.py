@@ -541,24 +541,49 @@ async def principal(guion_path, salida, voz=None, motor="edge"):
         reloj += e["duracion_s"]
         print(f"  escena {i:>2}  {e['duracion_s']:>5.1f}s  [{motor_usado}]  {texto[:48]}")
 
-    # concatenar con silencios entre escenas
-    lista = salida / "concat.txt"
-    silencio = salida / "voz" / "_silencio.mp3"
-    subprocess.run(["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono",
-                    "-t", "0.45", "-q:a", "9", str(silencio)],
-                   check=True, capture_output=True, stdin=subprocess.DEVNULL)
-    with lista.open("w", encoding="utf-8") as fh:
-        for mp3, _ in partes:
-            fh.write(f"file '{mp3.resolve()}'\nfile '{silencio.resolve()}'\n")
-    # Re-codificar, NO "-c copy". Cada MP3 lleva su propio retardo de codificador
-    # (~40 ms), y al pegarlos en crudo ese retardo se acumula en cada junta: la
-    # narración sale más larga que la suma de sus trozos, mientras que los
-    # subtítulos y las duraciones de escena se calcularon sobre los trozos
-    # sueltos. El resultado es una deriva creciente entre imagen, voz y
-    # subtítulos. Medido con la estructura de MDH-001 (38 escenas + 38
-    # silencios): "-c copy" se va +3,82 s al final; re-codificando el resultado
-    # es exacto a la muestra.
-    subprocess.run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lista),
+    # Concatenar con silencios entre escenas — cada uno con la pausa REAL de
+    # esa escena («cola», ya guardada en `partes` desde el bucle de arriba),
+    # no un valor fijo.
+    #
+    # Bug encontrado el 11/09/2026 revisando `sincronia_voz()` (el canario que
+    # se añadió ayer): este bloque generaba un único `_silencio.mp3` de 0,45s
+    # fijos y lo insertaba después de CADA escena, mientras que
+    # `e["duracion_s"]` (la que usa `render.py` para medir cuánto dura cada
+    # escena en el vídeo) se calculaba con `dur + cola`, y `cola` casi nunca
+    # es 0,45 — va de 0,2 a 1,35 según la escena. Resultado: el vídeo mudo y
+    # `voz.mp3` llevaban duraciones de escena distintas desde la primera
+    # escena, y el error se acumulaba durante todo el vídeo. Medido en
+    # MDS-015 (cinco escenas, pausas de 0,2 a 1,3s): 0,85s de desfase real
+    # (`sincronia_voz` en `qa.py`), que cuadra con `sum(cola_i) - 0,45*N =
+    # 0,9s` calculado a mano sobre ese mismo guion.
+    #
+    # Primer intento, descartado: generar un `_silencio_<dur>.mp3` por cada
+    # pausa distinta e insertarlos con el demuxer `concat` de siempre (una
+    # lista de ficheros). Funciona en un Short, pero cada mp3 de silencio muy
+    # corto sale con su propio redondeo de fotograma al codificarlo suelto
+    # (medido: pedir 0,45s da un fichero de 0,504s; pedir 0,9s da 0,96s), y
+    # ese redondeo SÍ se acumula una vez por escena. En un Short de 5 escenas
+    # no se nota (0,08s), pero en un episodio de 40 se va a 1,6s — peor que
+    # el bug que se quería arreglar.
+    #
+    # Arreglo de verdad: nada de ficheros de silencio de por medio. Cada
+    # escena entra como su propio `-i` y se le añade su pausa exacta con el
+    # filtro `apad` (silencio generado dentro del propio grafo de filtros,
+    # a nivel de muestra, sin pasar por ningún códec suelto); `concat` las
+    # une todas y SOLO ENTONCES se codifica una vez, al final. Verificado con
+    # guiones sintéticos de 3, 5 (la estructura real de MDS-015) y 40
+    # escenas (la de MDH-006): el desfase queda en 0,05-0,08s en los tres
+    # casos, plano, no crece con el número de escenas — y muy por debajo del
+    # umbral de 0,5s de `sincronia_voz`.
+    entradas_audio, filtro_partes = [], []
+    for i, (mp3, cola) in enumerate(partes):
+        entradas_audio += ["-i", str(mp3)]
+        filtro_partes.append(f"[{i}:a]apad=pad_dur={max(0.0, cola):.3f}[a{i}]")
+    etiquetas = "".join(f"[a{i}]" for i in range(len(partes)))
+    filtro_partes.append(f"{etiquetas}concat=n={len(partes)}:v=0:a=1[aout]")
+    subprocess.run(["ffmpeg", "-y", *entradas_audio,
+                    "-filter_complex", ";".join(filtro_partes),
+                    "-map", "[aout]",
                     "-c:a", "libmp3lame", "-q:a", "2", "-ar", "24000", "-ac", "1",
                     str(salida / "voz.mp3")], check=True, capture_output=True,
                    stdin=subprocess.DEVNULL)
