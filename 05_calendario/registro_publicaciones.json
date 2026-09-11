@@ -316,6 +316,21 @@
       "musica": "cama_02_dusk_next_route.mp3",
       "subido_utc": "2026-09-10T01:32:17Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-015.es",
+      "episodio": "MDS-015",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "Por qué se contagia la risa (y por qué nadie lo ha medido del todo)",
+      "guion": "05_calendario/guiones/MDS-015.es.json",
+      "video_id": "ayye9VnMFvo",
+      "url": "https://youtu.be/ayye9VnMFvo",
+      "estado": "private",
+      "publicar_en": "2026-09-11T17:00:00Z",
+      "musica": "cama_03_haru_lofi_roa.mp3",
+      "subido_utc": "2026-09-11T01:31:41Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-09-07T12:54:20Z"
