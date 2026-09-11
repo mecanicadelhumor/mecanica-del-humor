@@ -177,3 +177,47 @@ en esta lista, porque su problema no era la fuente. Tenía tres —`D07`, `E04` 
 aun así no se hace: **MDH-004 ya lo contó el 29 de agosto con casi las mismas escenas**.
 Eso es C17, no falta de bibliografía, y va anotado en `demanda.json` y en la bitácora.
 Una lista no debe engordar con cosas que no le tocan.
+
+---
+
+## 10 de septiembre de 2026 · cuarta tanda
+
+**Ninguna pregunta nueva entra en esta lista, y las tres de siempre siguen dentro.**
+Cruzadas otra vez contra `BIBLIOGRAFIA_CURADA.md`: el corpus no ha cambiado desde el
+commit inicial. Setenta y siete obras, las mismas, y ninguna sobre vergüenza vicaria,
+memes ni autocosquilla.
+
+Lo que sí aporta la medición de hoy es que **vergüenza ajena confirma su primer puesto**
+y por un motivo nuevo. El 03/09 se la puso primera por ser la única excluida con
+pertinencia entera; hoy, con las veinticuatro consultas medidas, resulta que es **una de
+las cuatro únicas preguntas de toda la tanda cuyos cinco primeros resultados responden de
+verdad** (213.144 visualizaciones en el top 10, cifras de 83.636 a 17.813) y la única de
+esas cuatro que **nadie cuenta desde el humor**. Las otras tres —caer bien en una primera
+conversación, quedarse en blanco y hablar en público— están ocupadas por canales
+establecidos y con vídeos largos. Sigue haciendo falta literatura de *empathic
+embarrassment*: Krach y Paulus, en abierto.
+
+### Y una precisión sobre las cosquillas, porque esta semana se roza el tema
+
+El Short del martes 15 (`MDS-017`) responde **«por qué nos hacen gracia las cosquillas»**
+con `E06`, que es la ficha de cosquillas y evolución de la risa. **No responde, ni la
+menciona, «por qué no puedo hacerme cosquillas a mí mismo»**, que es la que está en esta
+lista desde el 20/08 y sigue sin fuente: el mecanismo de atenuación sensorial (Blakemore,
+Wolpert y Frith) no está en el corpus. Son dos preguntas distintas y el guion no cruza esa
+línea en ninguna escena. Se deja escrito aquí para que dentro de tres meses nadie lea
+`MDS-017` y dé por levantada la exclusión.
+
+### Lo que esta semana NO ha entrado en esta lista, y por qué
+
+De las veinticuatro consultas medidas, **siete se han rechazado por C17** —repetición de
+ficha o de pregunta— y ninguna de las siete viene aquí: su problema no es la
+bibliografía, es el calendario, y se remiden cuando venza la ventana de seis semanas.
+Está anotado candidato a candidato en `demanda.json`. La lista de pendientes solo engorda
+con lo que el corpus no puede responder.
+
+Mención aparte para **«cómo es la personalidad de los cómicos»**, que es **apta y no está
+aquí**: `C05` la responde. No se produce esta semana porque el titular que la haría
+funcionar sale de `C06` —el mito del payaso triste—, y la propia ficha pide «matización
+responsable». Cuarenta segundos no dan para esa matización; es el mismo razonamiento por
+el que `REGLAS.md` prohíbe humor y atracción en formato corto. Con `C05` a solas sí cabe,
+y queda de cabeza de serie para la semana del 21.

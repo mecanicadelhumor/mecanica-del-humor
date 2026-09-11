@@ -1,51 +1,94 @@
 {
   "id": "MDH-007",
+  "formato": "largo",
+  "serie": "Diagnósticos",
   "idioma": "es",
-  "titulo_trabajo": "El miedo a que se rían de ti tiene nombre",
-  "tesis": "El miedo a hacer el ridículo es un rasgo medible llamado gelotofobia, distorsiona cómo interpretas la risa ajena, y hay entrenamientos que actúan justo sobre eso.",
+  "titulo_trabajo": "Por qué se ríen de mí",
+  "tesis": "El miedo a que se rían de ti es un rasgo medible que te hace leer como hostil la risa ambigua; el punto por donde se rompe no es el miedo, es la interpretación.",
   "pilares": [
     "J",
     "H"
   ],
-  "duracion_objetivo_s": 370,
+  "duracion_objetivo_s": 300,
   "bloqueos": [],
+  "_adaptado": "10/09/2026, planificación. Reescritura completa al formato nuevo desde la versión de 27 escenas anterior a la reforma del 20 de agosto: 41 escenas cortas, «formato» y «serie», gancho con la primera risa sobre el segundo doce, segunda risa en el bloque de improvisación, personaje en cuatro escenas —siempre reaccionando después—, dos intervenciones del escéptico, «enunciado» del 66 % al 39 %, y un cierre que dice dónde falla, que la versión anterior no tenía. Título reescrito a la pregunta que la gente busca: «gelotofobia» reúne 9.025 visualizaciones en diez resultados y nadie la escribe; «por qué se ríen de mí» sí se escribe. Nota de revisiones/MDH-007.md aplicada y retirada.",
   "notas_humor": [
-    "Gancho: el humor aquí es mínimo y deliberado. Es el episodio más delicado del calendario.",
-    "Escena 12: única broma clara del bloque teórico, para aliviar tensión.",
-    "Escena 19: humor situacional sobre lo absurdo del ejercicio de improvisación.",
-    "Cierre: sin chiste. El remate necesita silencio."
+    "El humor de este episodio es mínimo y deliberado: es el más delicado del calendario y el chiste no va nunca a costa de quien tiene el miedo. Las dos risas son de reconocimiento propio.",
+    "Risa 1 (escenas 2-3, remate sobre el segundo doce): la investigación forense de medio segundo que abrimos todos.",
+    "Risa 2 (escenas 29-30): en improvisación, quedarte en blanco cuenta como participación.",
+    "Las dos intervenciones del escéptico son las dos objeciones reales del espectador: «esto es timidez» y «¿y si sí se ríen de mí?».",
+    "El cierre no lleva chiste. El remate necesita silencio."
   ],
   "escenas": [
     {
-      "tipo": "titulo",
-      "etiqueta": "Episodio 07",
-      "titulo": "El miedo a que se rían de ti *tiene nombre*",
-      "subtitulo": "Y escala de medida, y tratamiento",
-      "narracion": "Vas andando por la calle. Un grupo de gente se ríe cerca de ti."
+      "tipo": "enunciado",
+      "icono": "i-publico",
+      "texto": "Una risa *cerca*.",
+      "narracion": "Vas por la calle. Un grupo se ríe cerca de ti.",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Y abres una investigación",
+      "puntos": [
+        "La *ropa*",
+        "Cómo andas"
+      ],
+      "narracion": "Y en medio segundo abres una investigación. Te miras la ropa. Repasas cómo andas.",
+      "pausa_despues_s": 1.3
     },
     {
       "tipo": "enunciado",
-      "texto": "¿Tu primer pensamiento es que se ríen *de algo*… o de ti?",
-      "narracion": "Y quiero que respondas con sinceridad a una sola pregunta: ¿tu primer pensamiento ha sido que se ríen de algo, o que se ríen de ti?",
+      "texto": "Y lo de *aquella vez*.",
+      "narracion": "Y compruebas si dijiste algo raro en dos mil once.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.6
+    },
+    {
+      "tipo": "comparacion",
+      "a": "Se ríen *de algo*",
+      "b": "Se ríen de ti",
+      "et_a": "una lectura",
+      "et_b": "la otra",
+      "narracion": "Ahora contesta con sinceridad. Tu primer pensamiento: ¿se reían de algo, o se reían de ti?",
       "pausa_despues_s": 1.0
     },
     {
       "tipo": "enunciado",
-      "texto": "Esa diferencia está estudiada. Y tiene nombre.",
-      "narracion": "Esa diferencia, que parece una tontería, está estudiada desde hace más de quince años y tiene nombre propio."
+      "texto": "Esa diferencia está *estudiada*.",
+      "narracion": "Esa diferencia, que parece una tontería, está estudiada desde hace quince años.",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "titulo",
       "etiqueta": "Parte 1",
       "titulo": "*Gelotofobia*",
-      "subtitulo": "Del griego «gelos», risa. El miedo a ser objeto de risa.",
-      "narracion": "Se llama gelotofobia. Del griego gelos, risa. Es el miedo a que se rían de uno, y en el grupo de Willibald Ruch, en Zúrich, se ha convertido en un rasgo que se puede medir con un cuestionario.",
+      "subtitulo": "Del griego «gelos», risa",
+      "narracion": "Y tiene nombre. Se llama gelotofobia. Del griego gelos, que es risa.",
+      "fuente": "J02"
+    },
+    {
+      "tipo": "dato",
+      "icono": "i-balanza",
+      "cifra": "Con escala",
+      "pie": "un cuestionario, no una impresión",
+      "narracion": "En el grupo de Willibald Ruch, en Zúrich, la convirtieron en un rasgo que se mide con un cuestionario.",
       "fuente": "J02"
     },
     {
       "tipo": "enunciado",
-      "texto": "No es timidez. No es ansiedad social sin más.",
-      "narracion": "Y no es lo mismo que ser tímido, ni que tener ansiedad social genérica. Es algo más específico: la risa ajena, en concreto, se interpreta por defecto como una agresión dirigida.",
+      "voz": "esceptico",
+      "texto": "¿Timidez con nombre *caro*?",
+      "narracion": "¿Y eso no es ser tímido y ya está?",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "comparacion",
+      "a": "Timidez",
+      "b": "*Gelotofobia*",
+      "et_a": "con la gente entera",
+      "et_b": "con la risa",
+      "narracion": "No. La timidez es con la gente entera. Aquí lo que dispara es la risa, en concreto.",
       "fuente": "J02"
     },
     {
@@ -53,145 +96,255 @@
       "titulo": "Tres posiciones ante la risa",
       "pasos": [
         {
-          "titulo": "Gelotofobia",
-          "pie": "temo que se rían de mí"
+          "titulo": "Temerla",
+          "pie": "que el objeto seas tú"
         },
         {
-          "titulo": "Gelotofilia",
-          "pie": "disfruto siendo el motivo"
+          "titulo": "Disfrutarla",
+          "pie": "siendo tú el objeto"
         },
         {
-          "titulo": "Katagelasticismo",
-          "pie": "disfruto riéndome de otros"
+          "titulo": "*Usarla*",
+          "pie": "riéndote de otros"
         }
       ],
-      "narracion": "De hecho el mismo grupo describió tres posiciones distintas ante esto. La gelotofobia, que es temer ser objeto de risa. La gelotofilia, que es disfrutar siéndolo. Y el katagelasticismo, que es disfrutar riéndose de los demás.",
+      "narracion": "El mismo grupo describió tres posiciones distintas. Temer ser objeto de risa. Disfrutar siéndolo. Y disfrutar riéndose de los demás.",
       "fuente": "J01"
     },
     {
-      "tipo": "enunciado",
-      "texto": "Y son *independientes*. Se puede temer la risa y a la vez usarla contra otros.",
-      "narracion": "Y lo interesante es que son bastante independientes entre sí. Se puede temer profundamente que se rían de ti y, al mismo tiempo, reírte de otros con crueldad. De hecho es una combinación más frecuente de lo que parece.",
-      "fuente": "J01"
+      "tipo": "dato",
+      "cifra": "Independientes",
+      "pie": "se pueden tener dos a la vez",
+      "narracion": "Y lo raro es que son bastante independientes. Se puede temer que se rían de ti y reírte de otros con crueldad.",
+      "fuente": "J01",
+      "personaje": "piensa"
     },
     {
       "tipo": "titulo",
       "etiqueta": "Parte 2",
-      "titulo": "Lo que le hace a tu *percepción*",
-      "narracion": "Lo que más me interesa de todo esto no es la etiqueta. Es lo que le hace a tu manera de leer a la gente."
+      "titulo": "Lo que le hace a tu *lectura* de la gente",
+      "narracion": "Pero lo que de verdad importa aquí no es la etiqueta. Es esto."
     },
     {
       "tipo": "enunciado",
-      "texto": "Quien puntúa alto tiende a leer la risa *ambigua* como hostil.",
-      "narracion": "Quien puntúa alto en gelotofobia tiende a interpretar la risa ambigua —esa que no sabes de qué va— como dirigida contra él. Y la mayoría de la risa que oyes al cabo del día es exactamente ambigua.",
+      "texto": "La risa *ambigua*.",
+      "narracion": "Quien puntúa alto en gelotofobia lee la risa ambigua, esa que no sabes de qué va, como dirigida contra él.",
       "fuente": "J02"
     },
     {
-      "tipo": "enunciado",
-      "texto": "Y ahí empieza un bucle bastante cruel.",
-      "narracion": "Con lo cual empieza un bucle que se retroalimenta solo."
+      "tipo": "lista",
+      "titulo": "Y casi toda la risa es esa",
+      "puntos": [
+        "La de la mesa de al *lado*",
+        "La del fondo del pasillo"
+      ],
+      "narracion": "Y la mayoría de la risa que oyes es esa. La de la mesa de al lado. La del fondo del pasillo."
     },
     {
       "tipo": "lista",
       "titulo": "El bucle",
       "puntos": [
-        "Interpretas la risa como *amenaza*",
-        "Te retiras, te pones serio, te tensas",
-        "Los demás te leen distante. Y hay menos risa compartida"
+        "La lees como *amenaza*",
+        "Te retiras y te tensas",
+        "Te leen distante"
       ],
-      "narracion": "Interpretas la risa como amenaza. Te retiras un poco, te pones serio, te tensas. Los demás te leen como distante. Y acabas teniendo menos risa compartida, que era justo lo que querías.",
+      "narracion": "La lees como amenaza. Te retiras, te tensas. Te leen distante. Y acabas con menos risa compartida, que era lo que querías.",
       "fuente": "J02"
     },
     {
       "tipo": "enunciado",
-      "texto": "La profecía se cumple sola, con una eficacia *casi admirable*.",
-      "narracion": "Es una profecía autocumplida de una eficiencia casi admirable, si no fuera porque duele."
+      "texto": "La profecía se cumple *sola*.",
+      "narracion": "Es una profecía autocumplida de una eficiencia casi admirable, si no fuera porque duele.",
+      "personaje": "duda"
+    },
+    {
+      "tipo": "comparacion",
+      "icono": "i-grieta",
+      "a": "Lo que *pasó*",
+      "b": "Lo que guardaste",
+      "et_a": "una risa",
+      "et_b": "una sentencia",
+      "narracion": "Y fíjate en lo que ha pasado ahí. Lo que había era una risa. Lo que te guardas es una sentencia."
     },
     {
       "tipo": "titulo",
       "etiqueta": "Parte 3",
       "titulo": "Dónde se *rompe* el bucle",
-      "narracion": "Y aquí es donde el vídeo se pone útil, porque el bucle tiene un punto débil."
+      "narracion": "La buena noticia es que el bucle tiene un punto débil."
     },
     {
-      "tipo": "enunciado",
-      "texto": "No en el miedo. En la *interpretación*.",
-      "narracion": "El punto débil no está en el miedo, que es difícil de atacar de frente. Está en el paso de la interpretación: en ese instante en que decides qué significaba esa risa."
+      "tipo": "dato",
+      "icono": "i-bisagra",
+      "cifra": "La interpretación",
+      "pie": "no el miedo: el paso de después",
+      "narracion": "Y no está en el miedo, que es dificilísimo de atacar. Está en el paso siguiente: qué decides que significaba esa risa.",
+      "personaje": "entiende"
     },
     {
-      "tipo": "enunciado",
-      "texto": "Ejercicio: cuando oigas una risa, busca *tres explicaciones* que no seas tú.",
-      "narracion": "El ejercicio es este. Cada vez que oigas una risa que no sabes de qué va, oblígate a generar tres explicaciones alternativas que no tengan nada que ver contigo. Un mensaje en el móvil. Una broma privada. Algo que pasó hace diez minutos.",
+      "tipo": "diagrama",
+      "titulo": "El ejercicio",
+      "pasos": [
+        {
+          "titulo": "Oyes una risa",
+          "pie": "y no sabes de qué va"
+        },
+        {
+          "titulo": "Paras",
+          "pie": "antes de la primera lectura"
+        },
+        {
+          "titulo": "Buscas *tres*",
+          "pie": "que no seas tú"
+        }
+      ],
+      "narracion": "Cuando oigas una risa que no sabes de qué va, párate y búscale tres explicaciones que no seas tú.",
       "fuente": "J02"
     },
     {
+      "tipo": "lista",
+      "titulo": "Por ejemplo",
+      "puntos": [
+        "Un mensaje en el *móvil*",
+        "Una broma privada",
+        "Algo de hace diez minutos"
+      ],
+      "narracion": "Un mensaje en el móvil. Una broma privada. Algo que pasó hace diez minutos y tú no estabas."
+    },
+    {
       "tipo": "enunciado",
-      "texto": "No es pensar en positivo. Es *no aceptar la primera lectura* como un hecho.",
-      "narracion": "No se trata de convencerte de que nadie se ríe nunca de nadie, porque a veces sí. Se trata de dejar de tratar tu primera interpretación como si fuera un dato."
+      "texto": "No es pensar en *positivo*.",
+      "narracion": "No es convencerte de que nadie se ríe nunca de nadie. Es dejar de tratar tu primera lectura como un dato."
+    },
+    {
+      "tipo": "enunciado",
+      "voz": "esceptico",
+      "texto": "¿Y si sí se ríen de *mí*?",
+      "narracion": "¿Y si esta vez sí se ríen de mí?",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "comparacion",
+      "a": "Comprobado",
+      "b": "Dado por *hecho*",
+      "et_a": "entonces lo sabes",
+      "et_b": "en medio segundo",
+      "narracion": "A veces sí, claro. Pero entonces lo sabrás porque lo has comprobado, no porque lo dieras por hecho en medio segundo."
     },
     {
       "tipo": "titulo",
       "etiqueta": "Parte 4",
       "titulo": "Y la vía más rara: la *improvisación*",
-      "narracion": "Y hay una segunda vía, mucho menos obvia, que a mí me parece la más interesante de todo el episodio."
+      "narracion": "Y hay una segunda vía, mucho menos obvia, que es la que más me interesa."
     },
     {
       "tipo": "enunciado",
-      "texto": "Se han estudiado talleres de *improvisación teatral* como intervención.",
-      "narracion": "Se han estudiado programas de improvisación teatral aplicada como intervención psicológica. Gente normal, sin experiencia, haciendo ejercicios de improvisación durante unas semanas.",
+      "texto": "Improvisación teatral, como *intervención*.",
+      "narracion": "Se han estudiado programas de improvisación teatral aplicada como intervención. Gente normal, sin experiencia, unas semanas de ejercicios.",
+      "fuente": "H05"
+    },
+    {
+      "tipo": "comparacion",
+      "a": "Ansiedad *social*",
+      "b": "Tolerancia a no saber",
+      "et_a": "lo que baja",
+      "et_b": "lo que sube",
+      "narracion": "Y los resultados apuntan en la dirección esperada: baja la ansiedad social y sube la tolerancia a la incertidumbre.",
+      "fuente": "H05"
+    },
+    {
+      "tipo": "dato",
+      "cifra": "Sin saber",
+      "pie": "estar en una situación sin saber cómo acaba",
+      "narracion": "Que es poder estar en una situación sin saber cómo acaba, y no bloquearte.",
       "fuente": "H05"
     },
     {
       "tipo": "enunciado",
-      "texto": "Los resultados apuntan a _menos ansiedad social_ y más tolerancia a la incertidumbre.",
-      "narracion": "Y los resultados apuntan en la dirección esperada: menos ansiedad social y más tolerancia a la incertidumbre, que es la capacidad de estar en una situación sin saber cómo va a acabar sin que eso te bloquee.",
-      "fuente": "H05"
+      "texto": "Te subes *sin guion*.",
+      "narracion": "Y tiene todo el sentido si piensas en qué se hace ahí. Te subes sin guion.",
+      "pausa_despues_s": 1.3
     },
     {
       "tipo": "enunciado",
-      "texto": "Tiene sentido: en improvisación *fallar es el ejercicio*.",
-      "narracion": "Y tiene todo el sentido del mundo si piensas en qué se hace ahí. En improvisación te subes sin guion, dices una tontería, se ríen, y el ejercicio continúa. Fallar en público deja de ser el desastre y pasa a ser, literalmente, el temario.",
+      "texto": "Y el ejercicio *sigue*.",
+      "narracion": "Dices una tontería, se ríen, y el ejercicio sigue. Es el único sitio donde quedarte en blanco cuenta como participación.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.6
+    },
+    {
+      "tipo": "dato",
+      "cifra": "El temario",
+      "pie": "fallar en público deja de ser el desastre",
+      "narracion": "Fallar en público deja de ser el desastre y pasa a ser, literalmente, el temario del curso.",
       "fuente": "H06"
     },
     {
       "tipo": "enunciado",
-      "texto": "Es exposición gradual disfrazada de *actividad divertida*.",
-      "narracion": "Es exposición gradual, que es el tratamiento estándar para los miedos, solo que disfrazada de plan de los martes por la tarde.",
+      "texto": "Exposición gradual *disfrazada*.",
+      "narracion": "Es exposición gradual, el tratamiento estándar para los miedos, disfrazada de plan de los martes por la tarde.",
       "fuente": "H05"
     },
     {
       "tipo": "titulo",
       "etiqueta": "El límite",
-      "titulo": "Con cuidado aquí",
+      "titulo": "Y ahora, con *cuidado*",
       "narracion": "Y ahora la parte que hay que decir con mucho cuidado."
     },
     {
-      "tipo": "enunciado",
-      "texto": "Esto no es un diagnóstico y este vídeo no es terapia.",
-      "narracion": "La gelotofobia se describe como un rasgo con distintos grados, no como una enfermedad con una línea clara. Un cuestionario no diagnostica a nadie, y desde luego un vídeo tampoco.",
+      "tipo": "comparacion",
+      "a": "Un *rasgo* con grados",
+      "b": "No una enfermedad",
+      "et_a": "así se describe",
+      "et_b": "no hay línea clara",
+      "narracion": "La gelotofobia se describe como un rasgo con grados, no como una enfermedad con una línea clara.",
+      "fuente": "J02"
+    },
+    {
+      "tipo": "dato",
+      "cifra": "No *diagnostica*",
+      "pie": "ni el cuestionario, ni un vídeo",
+      "narracion": "Un cuestionario no diagnostica a nadie. Y desde luego un vídeo de YouTube tampoco.",
       "fuente": "J02"
     },
     {
       "tipo": "enunciado",
-      "texto": "Si te está limitando la vida, eso ya no es un ejercicio: es *ayuda profesional*.",
-      "narracion": "Si esto que estás oyendo te resulta demasiado familiar, y te está condicionando el trabajo o las relaciones, entonces lo que corresponde no es un ejercicio de un vídeo de YouTube: es hablarlo con un profesional. Se trabaja bien y se trabaja rápido."
+      "texto": "Si te condiciona la vida: *profesional*.",
+      "narracion": "Si esto te suena demasiado y te está condicionando la vida, lo que toca no es un ejercicio: es un profesional."
+    },
+    {
+      "tipo": "enunciado",
+      "icono": "i-grieta",
+      "texto": "El cuestionario lo rellenas *tú*.",
+      "narracion": "Y aquí es donde falla todo lo anterior. Esto se mide con algo que rellenas tú sobre ti mismo.",
+      "fuente": "J02",
+      "personaje": "duda"
+    },
+    {
+      "tipo": "comparacion",
+      "a": "Juez",
+      "b": "Y *parte*",
+      "et_a": "quien teme la risa",
+      "et_b": "y quien la mide",
+      "narracion": "Y quien teme la risa no es el mejor juez de cuándo se ríen de él."
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Al taller se apunta quien ya se *atrevía*.",
+      "narracion": "Y a un taller de improvisación se apunta quien ya se atrevía. Apuntan en la buena dirección; no demuestran que curen nada."
     },
     {
       "tipo": "enunciado",
       "texto": "¿Te giraste alguna vez *convencido*?",
-      "narracion": "¿Te has girado alguna vez convencido de que se reían de ti? Cuenta en comentarios si acertaste o no.",
+      "narracion": "¿Te has girado alguna vez convencido de que se reían de ti? Cuéntalo en comentarios, y di si acertaste.",
       "pausa_despues_s": 0.7
     },
     {
-      "tipo": "enunciado",
-      "texto": "Y hay una asimetría que conviene recordar.",
-      "narracion": "Termino con una asimetría que se me quedó dando vueltas mientras preparaba esto."
-    },
-    {
       "tipo": "cierre",
-      "titulo": "La risa que temes casi nunca *sabe que existes*.",
-      "subtitulo": "En el próximo episodio: cómo se construye un chiste pieza a pieza, y por qué casi todos tienen exactamente la misma arquitectura.",
-      "narracion": "La risa que más temes, esa del grupo de la calle, casi nunca sabe que existes. En el próximo episodio cerramos la temporada por donde empezó todo: cómo se construye un chiste, pieza a pieza."
+      "titulo": "La risa que temes casi nunca *sabe que existes*",
+      "subtitulo": "En el próximo episodio: cómo se construye un chiste, pieza a pieza",
+      "narracion": "La risa que más temes, la del grupo de la calle, casi nunca sabe que existes.",
+      "personaje": "neutra",
+      "pausa_despues_s": 0.3
     }
   ]
 }

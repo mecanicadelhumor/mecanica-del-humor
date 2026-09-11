@@ -1,0 +1,70 @@
+{
+  "id": "MDS-017",
+  "formato": "corto",
+  "serie": "Ríete primero, te explico después",
+  "idioma": "es",
+  "titulo_trabajo": "Por qué nos hacen gracia las cosquillas",
+  "tesis": "La risa de las cosquillas no lleva ningún chiste dentro: es más vieja que el chiste, y el chiste se montó encima mucho después.",
+  "pilares": [
+    "E"
+  ],
+  "duracion_objetivo_s": 40,
+  "bloqueos": [],
+  "notas_humor": [
+    "El chiste va en el segundo cero, sin preámbulo: el sobrino que amenaza con cosquillas y gana.",
+    "La explicación es el premio, no el peaje: el vídeo entero es la demostración de que se puede reír sin chiste.",
+    "La reacción del personaje llega DESPUÉS del remate.",
+    "NO se toca «por qué no puedo hacerme cosquillas a mí mismo»: el corpus no tiene ficha para eso (pendientes_de_fuente.md, 20/08). E06 cubre cosquillas y evolución de la risa, no la autocosquilla."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "icono": "i-muelle",
+      "texto": "Dije que *no*.",
+      "narracion": "Mi sobrino de cinco años me pidió el mando. Le dije que no.",
+      "pausa_despues_s": 1.35
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y se lo *di*.",
+      "narracion": "Levantó las dos manos, movió los dedos, y se lo di.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "comparacion",
+      "icono": "i-ruptura",
+      "a": "Un chiste",
+      "b": "Unos *dedos*",
+      "et_a": "hace reír",
+      "et_b": "también",
+      "narracion": "Ahí no ha habido ningún chiste. Ni incongruencia ni remate. Unos dedos en el aire, y la risa igual.",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "dato",
+      "cifra": "50 kHz",
+      "pie": "el chillido de una rata a la que le hacen cosquillas",
+      "narracion": "Panksepp y Burgdorf les hicieron cosquillas a un montón de ratas y grabaron un chillido a cincuenta kilohercios que llamaron risa.",
+      "fuente": "E06",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "La risa es más *vieja* que el chiste.",
+      "narracion": "Su conclusión descoloca: las cosquillas no son un chiste primitivo. Es al revés: la risa llegó antes y el chiste vino después.",
+      "fuente": "E06",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla en lo importante: explica la risa, no el *chiste*",
+      "subtitulo": "Cosquillas y evolución de la risa · Panksepp y Burgdorf",
+      "narracion": "Y ahí falla: explica de dónde sale la risa, no de dónde sale el chiste. A la rata no le hizo gracia. Solo le tocaban.",
+      "fuente": "E06",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

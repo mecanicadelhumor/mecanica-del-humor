@@ -117,7 +117,7 @@
       "pie": "quien lo intentaba puntuaba más alto en _confianza percibida_",
       "narracion": "Incluso quienes contaban la broma inapropiada parecían más seguros de sí mismos que quienes no contaban ninguna.",
       "fuente": "D01",
-      "personaje": "duda",
+      "personaje": "piensa",
       "pausa_despues_s": 0.5
     },
     {
@@ -217,7 +217,7 @@
           "pie": "no se hereda al resto"
         }
       ],
-      "narracion": "De ahí una regla práctica: no seas el primero en meter sarcasmo. Espera a que lo haga el otro.",
+      "narracion": "De ahí una regla práctica: no seas el primero en meter sarcasmo. Espera a que lo haga el otro. Y el permiso es solo con esa persona: no se hereda al resto.",
       "pausa_despues_s": 0.5
     },
     {
@@ -300,7 +300,7 @@
       "tipo": "comparacion",
       "titulo": "Lo que el humor no hace",
       "et_a": "Puede acompañar",
-      "a": "Cohesión, desempeño, *desgaste*",
+      "a": "Cohesión y *desempeño*",
       "et_b": "No puede",
       "b": "Arreglar un equipo roto ni un mal salario",
       "narracion": "Pero el humor no arregla un equipo roto ni compensa un mal salario.",
@@ -327,8 +327,8 @@
     {
       "tipo": "dato",
       "cifra": "Puntería, no frecuencia",
-      "pie": "una bien colocada, y no quince a lo largo de la mañana",
-      "narracion": "Una intervención bien colocada en una reunión vale más que quince intentos a lo largo de la mañana. Es puntería, no frecuencia.",
+      "pie": "una bien colocada pesa más que muchas sueltas",
+      "narracion": "Una intervención bien colocada en una reunión vale más que muchas sueltas a lo largo de la mañana. Es puntería, no frecuencia.",
       "pausa_despues_s": 0.5
     },
     {
@@ -370,5 +370,6 @@
       "personaje": "neutra",
       "pausa_despues_s": 0.3
     }
-  ]
+  ],
+  "_revisiones_aplicadas_10_09": "Aplicadas las cuatro correcciones de revisiones/MDH-006.md (nota del 08-10/09): escena 12 «duda»→«piensa» (regla 14.3); escena 32 fuera «desgaste», que no se dice en ninguna de las 40 narraciones (regla 14.1); escena 22 añadida a la narración la tercera condición del diagrama (regla 14.1); escena 35 retirado el «quince» sin fuente verificable — se toma la segunda salida que ofrecía la nota, la de no cuantificar, porque no he podido comprobar que D02 mida esa proporción y buscarle fuente a un número ya escrito es justo lo que prohíbe la regla 2. Nota retirada."
 }

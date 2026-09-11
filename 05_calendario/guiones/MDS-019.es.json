@@ -1,0 +1,72 @@
+{
+  "id": "MDS-019",
+  "formato": "corto",
+  "serie": "Ríete primero, te explico después",
+  "idioma": "es",
+  "titulo_trabajo": "¿Los anuncios graciosos venden más?",
+  "tesis": "El humor en un anuncio gana atención y cae bien, y a veces se lleva por delante el mensaje: hace tres cosas distintas, no una.",
+  "pilares": [
+    "G"
+  ],
+  "duracion_objetivo_s": 42,
+  "bloqueos": [],
+  "notas_humor": [
+    "El chiste va en el segundo cero: la sintonía que llevas veinte años cantando.",
+    "No se nombra ninguna marca ni se reconstruye ningún anuncio real (REGLAS.md, regla 9).",
+    "El cierre vuelve al chiste del principio, que es lo que convierte el Short en pieza y no en lista.",
+    "La reacción del personaje llega DESPUÉS del remate."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "icono": "i-publico",
+      "texto": "Veinte años *cantándola*.",
+      "narracion": "Llevo veinte años cantando la sintonía de un anuncio.",
+      "pausa_despues_s": 1.35
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "De un banco donde nunca *entré*.",
+      "narracion": "De un banco en el que no he entrado en mi vida.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "dato",
+      "icono": "i-balanza",
+      "cifra": "Atención sí",
+      "pie": "el mensaje, no siempre",
+      "narracion": "Eisend juntó todos los estudios que habían medido anuncios con humor. La atención la gana casi siempre. El mensaje, no siempre.",
+      "fuente": "G05",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "comparacion",
+      "a": "Recuerdas el *chiste*",
+      "b": "No lo que vendía",
+      "et_a": "el humor engancha",
+      "et_b": "y a veces tapa",
+      "narracion": "Por eso te acuerdas del chiste del anuncio y no de lo que vendía: lo mismo que engancha es lo que tapa.",
+      "fuente": "G05",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Tres efectos, no *uno*.",
+      "narracion": "Y el humor no hace una sola cosa: gana atención, mejora cómo te cae quien lo usa, y a veces se come el mensaje.",
+      "fuente": "G05",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "cierre",
+      "icono": "i-grieta",
+      "titulo": "Y falla cuando el chiste es lo *único* que recuerdas",
+      "subtitulo": "Humor en publicidad · Eisend",
+      "narracion": "Ahí falla: si el chiste es lo único que te queda, el anuncio funcionó como vídeo y fracasó como anuncio.",
+      "fuente": "G05",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

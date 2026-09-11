@@ -192,6 +192,66 @@
       "modo": "automatico",
       "hora": "12:00",
       "nota": "Sábado. Episodio largo semanal, 4m47s. Adaptado al formato nuevo esta noche: 40 escenas cortas (antes 26), gancho con la primera risa sobre el segundo ocho, personaje en cinco escenas, dos intervenciones del escéptico y «enunciado» del 65 % al 42 %. Serie «Mecanismos». Se elige este y no MDH-007 porque el cierre de MDH-005 (05/09) ya promete «el sitio donde equivocarse sale más caro: el trabajo», y porque el otro candidato del calendario —un largo nuevo sobre «cómo ser más gracioso»— resultó ser un remake de MDH-001. El cierre de MDH-006 promete a su vez MDH-007 para el 19."
+    },
+    {
+      "fecha": "2026-09-14",
+      "episodio": "MDS-016",
+      "idiomas": [
+        "es"
+      ],
+      "modo": "automatico",
+      "hora": "19:00",
+      "nota": "Lunes. Serie «Esto no tiene gracia y esto sí». Pregunta de demanda: «por qué la ironía no se entiende por whatsapp» (9.056.150 en el top 10 y solo 1 de 5 resultados responde algo, y va de la ironía como figura literaria). Fuente I05, sin abrir hasta hoy. La serie se elige por la forma: la misma frase dicha y escrita, las dos antes de explicar nada."
+    },
+    {
+      "fecha": "2026-09-15",
+      "episodio": "MDS-017",
+      "idiomas": [
+        "es"
+      ],
+      "modo": "automatico",
+      "hora": "19:00",
+      "nota": "Martes. Serie «Ríete primero, te explico después». Pregunta: «por qué nos hacen gracia las cosquillas» — la única de la tanda con demanda DEMOSTRADA (la gente ve las respuestas) y con el ángulo libre: los grandes contestan la autocosquilla, que es otra pregunta. Fuente E06, sin abrir. NO toca la autocosquilla, que sigue sin fuente en el corpus."
+    },
+    {
+      "fecha": "2026-09-16",
+      "episodio": "MDS-018",
+      "idiomas": [
+        "es"
+      ],
+      "modo": "automatico",
+      "hora": "19:00",
+      "nota": "Miércoles. Serie «El experimento». Pregunta: «un profesor gracioso enseña mejor» (323.584.560 en el top 10, la cifra más alta que ha medido este canal, y 0 de 5 responden: son sketches de profesores). Fuente G06, sin abrir. El cierre se vuelve contra el propio canal."
+    },
+    {
+      "fecha": "2026-09-17",
+      "episodio": "MDS-019",
+      "idiomas": [
+        "es"
+      ],
+      "modo": "automatico",
+      "hora": "19:00",
+      "nota": "Jueves. Serie «Ríete primero, te explico después». Pregunta: «los anuncios graciosos venden más» (0 de 5 responden: los diez primeros son recopilaciones de anuncios). Fuente G05, sin abrir. Sin nombrar ninguna marca (regla 9)."
+    },
+    {
+      "fecha": "2026-09-18",
+      "episodio": "MDS-020",
+      "idiomas": [
+        "es"
+      ],
+      "modo": "automatico",
+      "hora": "19:00",
+      "nota": "Viernes. Serie «El experimento». Pregunta: «puede la inteligencia artificial hacer chistes» — 0 de 5 responden, pero es la única consulta secuestrada cuyo AUTOCOMPLETAR viene limpio: las cuatro sugerencias son la pregunta. Fuentes K02 y K03. Pilar K entero sin abrir en veintisiete guiones, y el cierre declara en voz alta que el guion lo ha escrito una máquina."
+    },
+    {
+      "fecha": "2026-09-19",
+      "episodio": "MDH-007",
+      "idiomas": [
+        "es"
+      ],
+      "modo": "automatico",
+      "hora": "12:00",
+      "nota": "Sábado. Episodio largo semanal, 5m16s. Adaptado al formato nuevo esta noche: 41 escenas cortas (antes 27), primera risa sobre el segundo doce y segunda en el bloque de improvisación, personaje en cuatro escenas, dos intervenciones del escéptico, «enunciado» del 66 % al 39 % y un cierre que dice dónde falla, que la versión anterior no tenía. Serie «Diagnósticos». Título reescrito a la pregunta que se busca: «por qué se ríen de mí», no «gelotofobia». MDH-008 sigue escrito y SIN adaptar: le toca el 26."
     }
   ],
   "_archivadas": {
@@ -208,7 +268,8 @@
     ]
   },
   "_cambio_20_agosto_noche": "Planificación semanal. Escritos MDS-002 a MDS-006 y adaptado MDH-004 al formato nuevo. Los temas ya NO salen de la bibliografía: salen de 05_calendario/demanda.json, y la bibliografía solo decide si se pueden responder (REGLAS.md, regla 3). Tres preguntas con demanda se quedaron fuera por falta de fuente y están en pendientes_de_fuente.md. La semana del 24 se queda en modo «revision» a propósito: es la primera con el formato vertical, el personaje y las dos voces, y conviene que el codirector lo apruebe con los ojos. El automático entra el 31, como estaba previsto.",
-  "_pendiente": "MDH-007 y MDH-008 siguen escritos y SIN adaptar al formato nuevo (sin «formato», sin personaje, sin escéptico, 48-66 % «enunciado» y escenas largas); sus notas siguen en 05_calendario/revisiones/. NO se adaptan por adelantado a propósito: se adapta uno por semana, el del sábado siguiente. El del 19 de septiembre es MDH-007 (gelotofobia), que es lo que promete el cierre de MDH-006; sus cuatro fichas —J02, J01, H05, H06— están libres de C17. Al adaptarlo hay que reescribir el título de publicación a lenguaje natural: «gelotofobia» solo suma 9.025 visualizaciones entre diez resultados, mientras que la pregunta en cristiano —«por qué se ríen de mí», «miedo a que se rían de ti»— sí se busca.",
+  "_pendiente": "MDH-008 sigue escrito y SIN adaptar al formato nuevo (sin «formato», sin personaje, sin escéptico, 48 % «enunciado» y doce escenas por encima de 14 s); su nota sigue en 05_calendario/revisiones/. NO se adapta por adelantado a propósito: se adapta uno por semana, el del sábado siguiente. Le toca en la planificación del 17, para emitirse el 26. MDH-007 ya está adaptado y con fecha (19/09).",
   "_cambio_27_agosto_noche": "Planificación semanal. Escritos MDS-007 a MDS-010, adaptado MDH-005 al formato nuevo y aplicadas las notas de revisiones/ de MDS-006 y MDH-004. La semana del 31 al 5 estrena el modo «automatico»: el vídeo se sube en privado con publishAt y YouTube lo hace público solo. Cinco series distintas de lunes a viernes, que es lo que pide la parrilla hasta que las métricas digan cuál funciona. AVISO: el workflow demanda.yml no ha dejado 05_calendario/demanda_bruta.json en el repositorio, así que esta tanda se ha juzgado otra vez sin vistas medidas — ver «_estado_de_la_medicion» en demanda.json.",
-  "_cambio_03_septiembre_noche": "Planificación semanal. Escritos MDS-011 a MDS-015 y adaptado MDH-006. PRIMERA TANDA CON DEMANDA MEDIDA: demanda_bruta.json existe, es de hoy y no trae avisos, así que por primera vez los temas se han elegido con visualizaciones delante y no con intuición. Cambio de método que conviene tener escrito: el volumen del top 10 NO se ha usado tal cual, porque once de las veinte consultas devuelven entretenimiento en vez de explicaciones; cada candidato lleva ahora «pertinencia_top5» en demanda.json. Un Short escrito entero se ha tirado esta noche por C17 —«cómo distinguir una risa falsa de una de verdad» repetía cuatro escenas de MDH-004, del 29/08— y en su sitio ha entrado MDS-013. Aplicadas también las notas de revisiones/ de MDH-005 y MDH-006."
+  "_cambio_03_septiembre_noche": "Planificación semanal. Escritos MDS-011 a MDS-015 y adaptado MDH-006. PRIMERA TANDA CON DEMANDA MEDIDA: demanda_bruta.json existe, es de hoy y no trae avisos, así que por primera vez los temas se han elegido con visualizaciones delante y no con intuición. Cambio de método que conviene tener escrito: el volumen del top 10 NO se ha usado tal cual, porque once de las veinte consultas devuelven entretenimiento en vez de explicaciones; cada candidato lleva ahora «pertinencia_top5» en demanda.json. Un Short escrito entero se ha tirado esta noche por C17 —«cómo distinguir una risa falsa de una de verdad» repetía cuatro escenas de MDH-004, del 29/08— y en su sitio ha entrado MDS-013. Aplicadas también las notas de revisiones/ de MDH-005 y MDH-006.",
+  "_cambio_10_septiembre_noche": "Planificación semanal. Escritos MDS-016 a MDS-020 y adaptado MDH-007; aplicadas las cuatro correcciones pendientes de revisiones/MDH-006.md y retiradas las notas de MDH-006 y MDH-007. SEGUNDA TANDA CON DEMANDA MEDIDA, y la primera en la que manda C17 por encima de la demanda: de las veinticuatro consultas, siete se rechazan por repetición de ficha o de pregunta y solo tres por falta de fuente. Los cinco Shorts salen de fichas que NO se habían usado nunca —I05, E06, G06, G05, K02 y K03—, y cuatro de los cinco salen de consultas «secuestradas», aplicando la aclaración del codirector del 04/09: la pertinencia descuenta la cifra, no descarta el tema; que hoy responda una pregunta el entretenimiento y no la divulgación es la definición de un hueco. También estrena el campo «icono» (C19+C16): la escena 1 de los cinco Shorts entra con uno de los ocho dibujos de 02_marca/iconos.svg y cuatro palabras o menos, y ninguna es ya una tarjeta de texto sobre fondo. Las series no se rotan por turno: se eligen por la forma que pide cada pregunta, y por eso «El experimento» y «Ríete primero» salen dos veces cada una, alternadas."
 }

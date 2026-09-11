@@ -1,0 +1,75 @@
+{
+  "id": "MDS-018",
+  "formato": "corto",
+  "serie": "El experimento",
+  "idioma": "es",
+  "titulo_trabajo": "¿Un profesor gracioso enseña mejor?",
+  "tesis": "El humor en clase no ayuda por ser humor: ayuda el que va del temario, y el de relleno no hace nada.",
+  "pilares": [
+    "G"
+  ],
+  "duracion_objetivo_s": 45,
+  "bloqueos": [],
+  "notas_humor": [
+    "El chiste va en el segundo cero: el profesor de latín y el examen. Es un chiste de clase, no a costa de ningún profesor real.",
+    "La pausa de 1,35 s separa planteamiento y remate.",
+    "El cierre se vuelve contra el propio canal, que es donde este canal tiene su único foso.",
+    "Serie elegida por la forma: un metaanálisis contado como una historia con protagonista, que termina en la cifra grande."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "icono": "i-publico",
+      "texto": "Un chiste cada *viernes*.",
+      "narracion": "Mi profesor de latín contaba un chiste cada viernes.",
+      "pausa_despues_s": 1.35
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Siempre el *mismo*.",
+      "narracion": "Siempre el mismo. Y nos reíamos todos, porque el examen lo ponía él.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "dato",
+      "icono": "i-bisagra",
+      "cifra": "Del temario",
+      "pie": "el único humor que ayudó a aprender",
+      "narracion": "Banas y su equipo juntaron los estudios sobre profesores que hacen humor en clase. Lo que ayuda a aprender no es el humor: es el del temario.",
+      "fuente": "G06",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "comparacion",
+      "a": "Un chiste de *Napoleón*",
+      "b": "El chiste sobre su error",
+      "et_a": "mientras explicas otra cosa",
+      "et_b": "mientras explicas ese error",
+      "narracion": "Un chiste de Napoleón mientras explicas geometría no sube tu nota. El mismo chiste explicando el error de Napoleón, sí.",
+      "fuente": "G06",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Lo que separa a los dos",
+      "puntos": [
+        "Humor del *tema*: engancha",
+        "Humor de relleno: nada"
+      ],
+      "narracion": "Y lo que los separa no es lo gracioso que sea: es si viene a cuento. El del tema engancha; el relleno, nada.",
+      "fuente": "G06",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla aquí: el chiste que no viene a cuento no enseña *nada*",
+      "subtitulo": "Humor en el aula · Banas y otros",
+      "narracion": "Y dónde falla, y nos toca: el chiste que no viene a cuento no enseña nada. Este canal incluido.",
+      "fuente": "G06",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

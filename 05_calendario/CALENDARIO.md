@@ -248,8 +248,16 @@ Eso se decide con la tabla delante, no por agotamiento.
   40 escenas (antes 26), 4m47s, personaje en cinco escenas, dos intervenciones del
   escéptico, «enunciado» del 65 % al 42 %, primera risa sobre el segundo ocho. Serie
   «Mecanismos».
-- **MDH-007 y MDH-008** — escritos y validados, **sin adaptar**: 48-66 % de «enunciado»,
-  rótulo por delante y ningún personaje. Sus notas siguen en `05_calendario/revisiones/`.
+- **MDH-007** — ✅ adaptado al formato nuevo el 10/09 para el sábado 19 de septiembre.
+  41 escenas (antes 27), 5m16s, personaje en cuatro escenas, dos intervenciones del
+  escéptico, «enunciado» del 66 % al 39 %, primera risa sobre el segundo doce y segunda en
+  el bloque de improvisación. Serie «Diagnósticos». Y **título nuevo**: de «El miedo a que
+  se rían de ti tiene nombre» a **«Por qué se ríen de mí»**, que es lo que la gente
+  escribe — «gelotofobia» reúne 9.025 visualizaciones entre diez resultados. Su nota de
+  `revisiones/` está aplicada y retirada.
+- **MDH-008** — escrito y validado, **sin adaptar**: 48 % de «enunciado», rótulo por
+  delante, ningún personaje y doce escenas por encima de 14 s. Su nota sigue en
+  `05_calendario/revisiones/`. Le toca en la planificación del 17, para el sábado 26.
 
 **Se adapta uno por semana, no los cuatro de golpe.** Adaptar por adelantado los que aún no
 tienen fecha es trabajo especulativo: dentro de dos o tres semanas las métricas dirán qué
@@ -274,6 +282,15 @@ La demanda no desempata entre los dos: «humor en el trabajo» no se midió, y �
 se rían de ti» devolvió 74 millones de visualizaciones sin un solo resultado en tema. Con
 la demanda callada, decide la coherencia de la serie.
 
+**El largo del 19 de septiembre: MDH-007, y ahora la demanda sí habla.** La medición del
+10/09 incluyó por primera vez «por qué se ríen de mí» y el resultado cambia el juicio del
+3 de septiembre: de los 66.269.561 del top 10, 65,8 millones son **un solo** vídeo viral
+de treinta segundos que no responde nada. Quitado ese, quedan cuatro respuestas reales
+—140.816, 126.198, 88.449 y 28.403 visualizaciones— y ninguna nombra el rasgo ni cita un
+estudio. Demanda real y competencia de consejo genérico: el mejor perfil de toda la tanda
+para un episodio largo. El cierre de MDH-006 ya lo promete, así que la coherencia de serie
+y la demanda apuntan al mismo sitio.
+
 **Cómo se adapta un largo viejo** (el patrón está aplicado en MDH-004 y MDH-005, cópialo de
 ahí): sacar el rótulo de la escena 1 y poner en su sitio una escena concreta con la primera
 risa antes del segundo quince; partir las escenas largas —el validador avisa por encima de
@@ -284,3 +301,36 @@ una o dos intervenciones del escéptico de menos de doce palabras; y reescribir 
 publicación a la pregunta que la gente escribe.
 - **Los guiones ingleses** (`.en.json`) quedan archivados sin borrar, por si se reabre
   `@humormechanics`.
+
+
+---
+
+## Semana del 14 al 19 de septiembre de 2026
+
+Escrita la noche del jueves 10. Todo en `parrilla.json` con `"modo": "automatico"` y
+`"idiomas": ["es"]`.
+
+| Día | Emisión | Hora | Serie | Pregunta de demanda | Ficha |
+|---|---|---|---|---|---|
+| Lunes 14 | `MDS-016` | 19:00 | Esto no tiene gracia y esto sí | por qué la ironía no se entiende por whatsapp | `I05` |
+| Martes 15 | `MDS-017` | 19:00 | Ríete primero, te explico después | por qué nos hacen gracia las cosquillas | `E06` |
+| Miércoles 16 | `MDS-018` | 19:00 | El experimento | un profesor gracioso enseña mejor | `G06` |
+| Jueves 17 | `MDS-019` | 19:00 | Ríete primero, te explico después | los anuncios graciosos venden más | `G05` |
+| Viernes 18 | `MDS-020` | 19:00 | El experimento | puede la inteligencia artificial hacer chistes | `K02` · `K03` |
+| Sábado 19 | `MDH-007` | 12:00 | Diagnósticos | por qué se ríen de mí | `J02` · `J01` · `H05` · `H06` |
+
+**Las seis fichas de los Shorts estaban sin abrir.** Es la primera semana del canal en la
+que ningún Short repite una fuente ya usada: C17, paso 2, aplicado empezando por las
+libres y no por las conocidas. Quedan treinta fichas sin usar de setenta y siete.
+
+**Las series no se reparten por turno.** Desde el 31/08 la demanda elige el tema y la
+serie solo da la forma, así que «El experimento» y «Ríete primero» salen dos veces cada
+una — alternadas, nunca en días seguidos. El motivo está en los números: el feed de Shorts
+no nos empuja y la búsqueda sí, y a la búsqueda le importa la pregunta, no la serie.
+
+**Estrena el campo `icono` (C19 + C16).** Comprobado en `04_agentes/esquema_guion.json`:
+el campo existe y admite los ocho dibujos de `02_marca/iconos.svg`. La escena 1 de los
+cinco Shorts entra con icono y cuatro palabras o menos, y ninguna es ya una tarjeta de
+texto sobre fondo. Se reparten además por dentro de los guiones, donde el mecanismo tiene
+uno: `i-grieta` en los cierres que dicen dónde falla, `i-balanza` donde algo se pesa,
+`i-bisagra` donde está el punto que lo decide todo.

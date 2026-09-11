@@ -1,0 +1,74 @@
+{
+  "id": "MDS-016",
+  "formato": "corto",
+  "serie": "Esto no tiene gracia y esto sí",
+  "idioma": "es",
+  "titulo_trabajo": "Por qué la ironía no se entiende por WhatsApp",
+  "tesis": "La ironía no va en las palabras: va en cómo se dicen. Al escribirla se pierde la señal y llega lo contrario de lo que querías decir.",
+  "pilares": [
+    "I"
+  ],
+  "duracion_objetivo_s": 48,
+  "bloqueos": [],
+  "notas_humor": [
+    "El chiste va en el segundo cero y es de casa: la ironía tomada al pie de la letra, que escala sola.",
+    "La pausa de 1,35 s va antes del remate («ahora somos doce»), no después del planteamiento entero.",
+    "La reacción del personaje llega DESPUÉS del remate: en las dos escenas de planteamiento no aparece.",
+    "Serie elegida por la forma, no por turno: dos versiones casi idénticas de la misma frase, las dos contadas antes de explicar nada."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "icono": "i-bocadillos",
+      "texto": "«Qué *ilusión*.»",
+      "narracion": "Le dije a mi madre, con retintín: qué ilusión, cena familiar el domingo.",
+      "pausa_despues_s": 0.6
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "La misma frase. *Escrita*.",
+      "narracion": "Se rió. Al día siguiente le escribí esa misma frase por WhatsApp.",
+      "pausa_despues_s": 1.35
+    },
+    {
+      "tipo": "comparacion",
+      "a": "Se rió",
+      "b": "Somos *doce*",
+      "et_a": "dicho",
+      "et_b": "escrito",
+      "narracion": "Dicho, se rió. Escrito, ahora somos doce y ha invitado a los vecinos.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "La voz lleva la *señal*.",
+      "narracion": "La ironía no está en las palabras: está en cómo se dicen. Attardo midió qué hace la voz al hablar irónicamente.",
+      "fuente": "I05",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Lo que no cabe en el móvil",
+      "puntos": [
+        "El *tono*",
+        "El alargamiento",
+        "Los _marcadores_ de aviso"
+      ],
+      "narracion": "Al escribir se pierden el tono, el alargamiento y los marcadores con los que avisas de que no vas en serio.",
+      "fuente": "I05",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "cierre",
+      "icono": "i-grieta",
+      "titulo": "Y aquí falla: solo sabemos cómo *suena*",
+      "subtitulo": "Prosodia de la ironía · Attardo y otros",
+      "narracion": "Y falla en lo de siempre: se midió cómo suena, no cómo se escribe. Si hace falta el emoji, ya no era ironía: era un aviso.",
+      "fuente": "I05",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "MDS-020",
+  "formato": "corto",
+  "serie": "El experimento",
+  "idioma": "es",
+  "titulo_trabajo": "¿Puede la inteligencia artificial hacer chistes?",
+  "tesis": "A las máquinas se les puede examinar si entienden un chiste; que se les ocurra uno es otra cosa, y es justo la que no se sabe medir.",
+  "pilares": [
+    "K"
+  ],
+  "duracion_objetivo_s": 46,
+  "bloqueos": [],
+  "notas_humor": [
+    "El chiste va en el segundo cero: veinte chistes que son el mismo. Es de casa y es verdad.",
+    "El cierre declara que el guion lo ha escrito una máquina. Es la regla 7 de REGLAS.md dicha dentro del vídeo, no solo en la descripción, y además es el mejor «dónde falla» que ha tenido el canal.",
+    "Pilar K: cuatro fichas en el corpus y ninguna abierta hasta hoy.",
+    "Se cuenta lo que los estudios HICIERON —el diseño—, no resultados que las fichas no recogen."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "icono": "i-bocadillos",
+      "texto": "Veinte chistes de *gatos*.",
+      "narracion": "Le pedí a un modelo de lenguaje veinte chistes sobre gatos.",
+      "pausa_despues_s": 1.35
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Me dio *veinte*.",
+      "narracion": "Me dio veinte. Y el mismo.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "dato",
+      "icono": "i-publico",
+      "cifra": "20 cómicos",
+      "pie": "profesionales, escribiendo con la máquina delante",
+      "narracion": "Mirowski y su equipo sentaron a veinte cómicos profesionales delante de estos modelos y les pidieron escribir comedia con ellos, en serio.",
+      "fuente": "K02",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "comparacion",
+      "icono": "i-balanza",
+      "a": "Explicar el chiste",
+      "b": "Que se te *ocurra*",
+      "et_a": "esto se examina",
+      "et_b": "esto no",
+      "narracion": "Hay hasta un examen para máquinas, montado con los pies de foto del New Yorker. Mide si entiende el chiste, no si se le ocurre.",
+      "fuente": "K03",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Entenderlo no es *tenerla*.",
+      "narracion": "Que es la diferencia que llevas notando cuarenta segundos. Entender por qué algo hace gracia no es hacer gracia.",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla en lo más obvio: este guion lo ha escrito una *máquina*",
+      "subtitulo": "Comedia y modelos de lenguaje · Mirowski y otros",
+      "narracion": "Y dónde falla todo esto: el guion que acabas de oír lo ha escrito una máquina. Con lo cual el chiste del principio tampoco demuestra nada.",
+      "fuente": "K02",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}
