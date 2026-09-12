@@ -32,9 +32,14 @@ ANTES DE RESPONDER NADA, lee en este orden:
 3. 00_estrategia/PROPIEDAD_DE_FICHEROS.md — quién escribe qué
 4. 00_estrategia/PLAN_DE_CAMBIOS.md — la hoja de ruta y el estado de cada cambio
 5. 00_estrategia/PROMPT_DE_ARRANQUE.md — autorizaciones vigentes y trampas conocidas
-6. 05_calendario/ESTADO.md         — ¿está el canal bien hoy? (cinco líneas)
-7. 05_calendario/bitacora/         — los ficheros de los últimos siete días
-8. 05_calendario/metricas.json     — dónde está el canal en la escalera
+6. 00_estrategia/PROMPT_DIRECCIÓN.md — lo que el codirector me ha ido anotando
+7. 05_calendario/ESTADO.md         — ¿está el canal bien hoy? (cinco líneas)
+8. 05_calendario/bitacora/         — los ficheros de los últimos siete días
+9. 05_calendario/metricas.json     — dónde está el canal en la escalera
+
+`PROMPT_DIRECCIÓN.md` es del codirector y solo suyo: lo escribe él entre sesión y
+sesión para que no se le olvide nada. **Se lee siempre y no se edita ni se borra
+nunca.**
 
 Y si necesitas el porqué de algo: 00_estrategia/DIAGNOSTICO.md.
 
@@ -47,6 +52,9 @@ Cómo trabajamos:
 - Escribes en los ficheros de mi carpeta con device_commit_files y yo hago el
   commit. Los ficheros de .github/workflows/ están protegidos contra escritura
   remota: si hay que crear uno, me lo mandas y lo creo yo a mano.
+- Todo lo que necesites de mí va en 00_estrategia/tareas/tareas_codirector_FECHA.md,
+  explicado de principio a fin y sin resumir, aunque sea algo que ya hayamos hecho
+  antes. Nada de peticiones sueltas dentro de un resumen.
 - Todo lo que merezca recordarse acaba en un documento antes de cerrar la
   conversación. Lo que no esté escrito, se pierde.
 - Coste cero. Sin trabajo recurrente para mí. Nada a mi nombre ni con mi cara.
@@ -74,15 +82,42 @@ La regla 11.7 de `REGLAS.md` protege tres ficheros. Un permiso dado «en la
 conversación» se pierde con la conversación, así que aquí queda por escrito
 **qué está autorizado, desde cuándo y hasta dónde llega.**
 
+### La autorización general, del 7 de septiembre de 2026
+
+**Textual, del codirector:** *«Puedes autorizar la edición de montaje.py. También puedes
+quitar todas las restricciones de edición en todos los ficheros siempre que seas tú, el
+codirector, quien haga la edición (de los demás agentes no me fío).»*
+
+Queda escrita aquí el 12/09, que es cuando se aplicó. Dice tres cosas y conviene no
+confundirlas:
+
+1. **Para la dirección —yo—, la regla 11.7 deja de aplicar.** Puedo editar cualquier
+   fichero del repositorio sin pedir permiso fichero a fichero.
+2. **Para los demás agentes no cambia absolutamente nada.** La revisión diaria, la
+   planificación y las métricas siguen con la tabla de `PROPIEDAD_DE_FICHEROS.md` y con la
+   regla 11.7 tal cual. La frase del codirector es explícita en el porqué, y el 21 de agosto
+   le dio la razón.
+3. **`.github/workflows/` queda protegido pase lo que pase**, también para mí. Esos ficheros
+   se le mandan al codirector y los crea él a mano. No es una cuestión de confianza: es que
+   ni siquiera se pueden escribir en remoto.
+
 | Fichero | Estado | Alcance |
 |---|---|---|
+| **Todo el repositorio** | **Autorizado el 07/09/2026 · escrito el 12/09** | **Solo si quien edita es la dirección.** Para los demás agentes no cambia nada: siguen la regla 11.7 y `PROPIEDAD_DE_FICHEROS.md` |
+| `03_produccion/pipeline/montaje.py` | **Autorizado el 07/09/2026, sin acotar** | Sustituye a la autorización estrecha del 28/08 (que cubría solo el manifiesto de subtítulos). **Con esto P9 —los tres sonidos— queda desbloqueado**, y entra en la semana del 21 según C25 |
 | `03_produccion/pipeline/voz.py` | **Autorizado el 28/08/2026** | Abierto. Se pidió para C7 (dos voces), pero el codirector no lo acotó |
-| `03_produccion/pipeline/montaje.py` | **Autorizado el 28/08/2026, solo para una cosa** | El manifiesto de subtítulos (`montaje.json`), ya aplicado. Cualquier otro cambio necesita permiso nuevo |
-| `.github/workflows/producir.yml` | **Sigue protegido** | Y además `.github/workflows/` no se puede escribir en remoto: se le manda el fichero al codirector |
+| `.github/workflows/` (entera) | **PROTEGIDA SIEMPRE, también para la dirección** | No se puede escribir en remoto. Se le manda el fichero al codirector y lo crea él. **Sin excepciones y sin fecha de caducidad** |
+| `.github/workflows/producir.yml` | **Del codirector** | Pendiente: `GEMINI_API_KEY` está en el paso «Subir a YouTube» y tiene que estar en «Sintetizar narración». Ver `tareas/tareas_codirector_2026-09-12.md` |
 | `.github/workflows/voz_prueba.yml` | **Entregado el 04/09, lo crea el codirector a mano** | Prueba de C7. `workflow_dispatch` solo, no escribe en el repositorio |
+| `.github/workflows/voz_adelantada.yml` | **Por entregar** | C27. Lo diseña la revisión diaria en `07_pruebas/` y lo crea el codirector |
 | `docs/` (la web del proyecto) | **Del codirector y mío**, desde el 04/09 | Tres páginas estáticas que Google exige para publicar la aplicación de OAuth. **No es C10** |
 | `03_produccion/sonidos/` | **Entregada el 07/09** | Tres acentos CC0 con su `attribution_texts.md`. Ya están |
-| `03_produccion/pipeline/montaje.py` **para P9** | **PENDIENTE — hace falta autorización nueva** | La del 28/08 cubría solo el manifiesto de subtítulos. Montar los tres sonidos es otro cambio y necesita permiso escrito aquí. **Hasta que esta fila diga «Autorizado», P9 no entra** |
+| `00_estrategia/PROMPT_DIRECCIÓN.md` | **SOLO DEL CODIRECTOR** | Es su cuaderno entre sesiones. **Se lee siempre, no se edita ni se borra nunca**, ni por mí |
+
+**Y la consecuencia práctica de la autorización general, que es la que importa:** desde el
+12/09 escribo directamente en la carpeta del codirector con `device_commit_files` los
+ficheros que antes le entregaba en un paquete. Él sigue haciendo el `commit` y el `push`,
+que es lo único que no puedo hacer yo.
 
 **Y una cosa que ya no hace falta recordar de memoria:** cómo se saca el token de
 YouTube y por qué caducaba está en **`00_estrategia/TOKEN_DE_YOUTUBE.md`**, con
@@ -268,7 +303,80 @@ que «no hay páginas AMP» venía de Search Console y no tiene relación ningun
 «Corregí los problemas» manda la aplicación **a revisión**, que es justo lo que
 no queremos. Cuando un trámite se resista, comprueba primero que es el trámite.
 
-## Dónde está el proyecto a 7 de septiembre de 2026
+**18. Documenté una sintaxis y no documenté en qué paso iba — otra vez.**
+La trampa 12 decía, en noviembre de la semana pasada: *cuando documentes una
+sintaxis, documenta su ámbito en la misma frase*. El 12 de septiembre le escribí
+al codirector una tarea de diez minutos para exponer `GEMINI_API_KEY` en
+`producir.yml`: *«busca `secrets.`, copia una de esas líneas entera, pégala justo
+debajo y cambia los dos nombres»*. Todo correcto y nada dice **en qué paso**. La
+primera aparición de `secrets.` en ese fichero está en «Subir a YouTube», así que
+ahí la pegó — y el que necesita la clave es «Sintetizar narración», que es el que
+llama a `voz.py`. Instrucción impecable, resultado inservible, y la culpa no es de
+quien la siguió.
+→ **Una instrucción de «copia esta línea» sin decir dónde es media instrucción.** Y
+la prueba de que está completa no es releerla: es preguntarse qué haría alguien que
+solo tiene el fichero delante y no sabe para qué sirve.
+
+**19. Una comprobación puede estar mirando el sitio equivocado y parecer que funciona.**
+La barrera de C21 llevaba `"svg text"` en su lista de selectores desde el 4 de
+septiembre. Parecía cubierto. No lo estaba: `medir()` solo calcula desbordamiento
+cuando el elemento es `HTMLElement`, y un `<text>` de SVG no lo es, así que de esos
+elementos solo se comprobaba el rectángulo **contra el lienzo** — es decir, se
+detectaba que un texto se saliera de la *pantalla*, nunca que se saliera de *su
+caja*. Y las cajas del diagrama están en el centro de la pantalla. La única
+situación que la barrera podía cazar ahí era la imposible. Resultado: 0 problemas
+sobre las 40 escenas de MDH-006 y un vídeo publicado con el texto fuera del
+rectángulo en el segundo 2:34.
+→ **Que un selector esté en la lista no significa que se esté midiendo.** Una
+comprobación que nunca ha dado positivo sobre una familia entera de casos no es una
+comprobación probada: es una comprobación sin probar. La forma de saberlo es
+buscarle un caso que **tenga** que fallar y ver si falla.
+
+**20. Un mínimo escrito como suelo se usa como techo.**
+`guionista.md` pedía «mínimo dos risas por episodio largo, una antes del segundo
+quince». MDH-006 trae exactamente dos, las dos en los primeros veinte segundos, y
+después cuatro minutos y medio sin un solo intento. Cumple la regla al pie de la
+letra y no tiene gracia, que es justo lo que la regla existía para evitar.
+→ **Cuando una regla cuente cosas, pregúntate qué pasa si alguien pone el mínimo
+exacto en el peor sitio posible.** Si la respuesta es «entonces la regla no sirve
+de nada», lo que hay que medir no es la cantidad: es la distancia.
+
+## Dónde está el proyecto a 12 de septiembre de 2026
+
+**La sesión de dirección del sábado 12 cerró seis cosas.** El detalle está en la
+**versión 7** de `PLAN_DE_CAMBIOS.md`, que es la que manda. En corto:
+
+- **El guionista, reescrito los dos prompts.** Tres avisos del codirector en cuatro días
+  (MDS-013 «parece un recorte de un recorte», MDS-014 «martes» huérfano, MDH-006 «el chiste
+  no entra»). Los tres guiones **cumplían el prompt entero**: el fallo era del documento,
+  que decía qué tenía que *contener* un guion y nunca qué tenía que *sostenerlo*. Entran tres
+  pruebas de cosido en el corto y una cadencia de risa en el largo.
+- **C28 · el detalle concreto.** Un día o un mes en pantalla que la voz de esa escena no
+  diga es **error** en `validar_guion.py`. Medido sobre 302 escenas: señala tres, las tres
+  reales, cero falsos positivos.
+- **C29 · la barrera ya mira dentro del SVG.** Era el agujero por el que salió el texto
+  desbordado del segundo 2:34 de MDH-006. Y de paso el resaltado se pinta en el diagrama
+  horizontal en vez de salir con los asteriscos a la vista — `*Usarla*` iba a publicarse así
+  el 19/09 en MDH-007.
+- **C30 · las tareas programadas no pueden pedir autorización.** Se retira de los tres
+  prompts la sonda `device_list_dir` que bloqueó la planificación del 10/09, y el prompt del
+  almacén pasa a ser un arranque que lee el fichero del repositorio: **se acabaron las dos
+  copias.**
+- **C31 · el registro no sabe lo que sabe YouTube.** Es lo que hizo que MDS-011 se reportara
+  como incidencia seis días seguidos estando publicado a mano.
+- **C27 corregido:** el episodio largo sale con **una sola voz**, nunca mezclada, y la
+  ventana de síntesis adelantada pasa a ser de viernes a viernes.
+
+**Los números no se han movido** y siguen mandando: seguimos por debajo de 100
+visualizaciones por vídeo, que es el umbral que el codirector puso como condición de
+supervivencia. El punto de control sigue siendo el **27 de septiembre** y la decisión, el
+**15 de noviembre** (C26).
+
+**Lo que espera al codirector:** `producir.yml` con `GEMINI_API_KEY` en el paso equivocado,
+y `voz_adelantada.yml` por crear. Los dos explicados enteros en
+`00_estrategia/tareas/tareas_codirector_2026-09-12.md`.
+
+## Dónde estaba el proyecto a 7 de septiembre de 2026
 
 **El episodio largo del sábado 5 (MDH-005) tiene una visualización: la del
 codirector.** Los tres Shorts con el motor C15 hicieron 31, 21 y 21, que es la

@@ -3,175 +3,266 @@
 Formato acordado el 7/9: todo explicado de principio a fin, sin resumir, aunque
 sean cosas que ya hayamos hecho antes.
 
+**Este fichero se reescribió por la tarde**, después de la sesión de dirección en modo
+Cowork. Lo que había antes (las tareas 1 y 2 de la mañana) está corregido: la tarea 2
+—reabrir la conversación en Cowork— **ya está hecha**, y la tarea 1 estaba **mal
+explicada por mi parte**. Ver abajo.
+
+**Orden de urgencia:**
+
+| | Qué | Tiempo | Cuándo |
+|---|---|---|---|
+| **1** | `git add / commit / push` de lo de hoy | 5 min | **HOY, antes de las 11:28 de mañana** |
+| **2** | Mover `GEMINI_API_KEY` de paso en `producir.yml` | 10 min | Antes del lunes 14 |
+| **3** | Crear `voz_adelantada.yml` | 15 min | Cuando esté el diseño, no antes del viernes |
+| **4** | Escuchar MDH-006 y decidir sobre `pico_dbtp` | 5 min | Opcional, ya está publicado |
+
 ---
 
-## TAREA 1 — Exponer GEMINI_API_KEY en `.github/workflows/producir.yml`
+## TAREA 1 — Commit y push de lo de hoy. Y por qué hoy y no mañana
+
+**Estado:** pendiente. **Tiempo:** 5 minutos. **Es la más urgente de las cuatro.**
+
+### 1.1 Por qué corre prisa
+
+He cambiado cómo funcionan las tareas programadas, y el cambio tiene dos mitades:
+
+- **La mitad que ya está hecha** (la hice yo esta tarde): el prompt que corre en el almacén
+  de tareas programadas ya no contiene el texto entero. Ahora es un arranque corto que dice
+  «clona el repositorio y lee `00_estrategia/tareas/<tu fichero>.md`».
+- **La mitad que depende de ti**: ese fichero tiene que estar **en GitHub**. Lo he escrito en
+  tu carpeta, pero hasta que no hagas `push` no existe para ellas.
+
+**La revisión diaria corre mañana domingo a las 11:28.** Si a esa hora el commit no está,
+va a clonar `origin/main`, leer la versión vieja del fichero, y comportarse como antes. No
+rompe nada —el arranque lleva las reglas importantes repetidas dentro— pero se pierde el
+arreglo de un día.
+
+**Y la planificación corre el jueves 17 a las 22:00.** Esa sí es la que se bloqueó el 10, así
+que esa es la que de verdad no puede leer la versión vieja.
+
+### 1.2 Qué hay que hacer
+
+En la carpeta `C:\MisProyectos\Humor`, desde Git Bash o desde donde sueles hacerlo:
+
+```
+git status
+git add -A
+git commit -m "dirección 12/09: guionista reescrito, C28, C29, C30, C31, C27 corregido"
+git push
+```
+
+`git status` antes, sin más motivo que ver la lista de ficheros que salen y compararla con
+la de abajo. Si aparece algo que no está en esa lista, dímelo antes de hacer push.
+
+### 1.3 Los ficheros que he escrito en tu carpeta esta tarde
+
+**Código y prompts de agentes:**
+
+- `04_agentes/prompts/guionista_corto.md` — reescrito entero
+- `04_agentes/prompts/guionista.md` — reescrito entero
+- `04_agentes/validar_guion.py` — dos comprobaciones nuevas (C28 error, C29 aviso)
+- `03_produccion/pipeline/escena.html` — tres funciones nuevas para el texto dentro de SVG
+
+**Prompts de las tareas programadas** (son los que tienen prisa):
+
+- `00_estrategia/tareas/revision-diaria.md`
+- `00_estrategia/tareas/planificacion-jueves.md`
+- `00_estrategia/tareas/LEEME.md`
+
+**Documentos:**
+
+- `00_estrategia/PLAN_DE_CAMBIOS.md` — versión 7 al final
+- `00_estrategia/PROMPT_DE_ARRANQUE.md` — tus dos autorizaciones, tres trampas nuevas
+- `00_estrategia/REGLAS.md` — regla 13 (cadencia de risa) y regla 14.4 (el detalle concreto)
+- `00_estrategia/LEEME.md`
+- `00_estrategia/tareas/tareas_codirector_2026-09-12.md` — este fichero
+- `05_calendario/bitacora/2026-09-12-direccion.md` — la bitácora de la sesión
+
+**Lo que NO he tocado, a propósito:**
+
+- `00_estrategia/PROMPT_DIRECCIÓN.md` — es tuyo. Ni una letra.
+- `.github/workflows/` — protegida siempre. Ver tarea 2.
+- Ningún guion de `05_calendario/guiones/`, ni `parrilla.json`, ni `ESTADO.md`, ni nada
+  que sea de la planificación o de la revisión diaria.
+
+---
+
+## TAREA 2 — `GEMINI_API_KEY` está en el paso equivocado de `producir.yml`
 
 **Estado:** pendiente. Bloquea la voz nueva del lunes 14.
 **Tiempo estimado:** 10 minutos.
-**Lo hace el codirector** porque `.github/workflows/` está protegido contra
-escritura remota.
+**Lo haces tú** porque `.github/workflows/` está protegida contra escritura remota, siempre,
+también para mí.
 
-### 1.1 Por qué hay que hacerlo si el secreto ya está subido
+### 2.1 Lo que hiciste está bien hecho, y en el sitio equivocado. Y es culpa mía
 
-Tu duda del 10/09 era razonable, pero son dos cosas distintas:
-
-- **Subir el secreto a GitHub** (hecho hace tres semanas) guarda el valor en el
-  repositorio, cifrado. Eso es todo lo que hace.
-- **Referenciarlo en el workflow** es lo que hace que ese valor llegue al
-  proceso que se ejecuta.
-
-GitHub Actions **no** inyecta los secretos automáticamente en los scripts. Si el
-YAML no los nombra, el script arranca sin esa variable de entorno. Es una
-decisión de seguridad deliberada de GitHub: así un workflow solo ve los secretos
-que se le han dado expresamente.
-
-Resultado actual: el script pide `GEMINI_API_KEY`, no la encuentra, y la voz
-nueva no arranca aunque el secreto lleve tres semanas puesto.
-
-O sea: la revisión diaria tiene razón, pero lo explicó fatal. No te está
-pidiendo volver a crear el secreto; te está pidiendo nombrarlo en el YAML.
-
-### 1.2 Antes de tocar nada
-
-Abre `.github/workflows/producir.yml` con un editor de texto plano (Notepad++,
-VS Code, el Bloc de notas). **No lo abras con Word ni con nada que reformatee**,
-porque YAML es sensible a los espacios.
-
-### 1.3 Cómo encontrar el sitio exacto
-
-Busca dentro del fichero la cadena `secrets.` (con el punto final). Van a pasar
-dos cosas:
-
-**CASO A — Aparece al menos una vez.**
-
-Verás una o varias líneas con esta forma:
-
-```
-          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-```
-
-Haz esto:
-
-1. Copia una de esas líneas entera.
-2. Pégala justo debajo, en una línea nueva.
-3. En la copia, sustituye los dos nombres por `GEMINI_API_KEY`, de modo que
-   quede:
+Lo añadiste, y la línea es **correcta letra por letra**:
 
 ```
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 ```
 
-4. **Respeta exactamente la misma indentación** que la línea de al lado: el
-   mismo número de espacios al principio. Si copias y pegas la línea entera y
-   solo cambias los nombres, la indentación ya te queda bien sola.
+El problema es dónde está. Ahora mismo, en la **línea 294**, dentro del bloque `env:` del paso
+**«Subir a YouTube»** — el que ejecuta `publicar.py`.
 
-Este es el caso más probable y el más seguro. No inventes un bloque nuevo si ya
-hay uno.
+Y quien necesita esa clave es el paso **«Sintetizar narración»** (línea 194), que es el que
+llama a `voz.py`, que es el que habla con Gemini. Ese paso **no tiene ningún bloque `env:`**.
 
-**CASO B — No aparece `secrets.` por ningún sitio.**
+**En GitHub Actions las variables de entorno de un paso solo existen en ese paso.** Así que
+tal y como está, `publicar.py` recibe una clave de Gemini que no usa para nada, y `voz.py`
+arranca sin ella y se cae al respaldo `edge-tts` sin decir nada.
 
-Entonces hay que crear el bloque. Busca la línea que pone `runs-on:` (será algo
-como `runs-on: ubuntu-latest`) y añade justo debajo estas dos líneas:
+**Y la culpa de esto es mía, no tuya.** Mis instrucciones de esta mañana decían: *«busca
+`secrets.`, copia una de esas líneas entera, pégala justo debajo y cambia los dos nombres»*.
+Todo correcto, y en ningún sitio decía **en qué paso**. La primera aparición de `secrets.`
+en ese fichero está justamente en «Subir a YouTube», así que hiciste exactamente lo que
+ponía. Es la misma clase de error que ya me había costado un vídeo en septiembre —documentar
+una sintaxis sin documentar su ámbito— y está anotado como trampa 18 en
+`PROMPT_DE_ARRANQUE.md` para que no vuelva a pasar.
 
+### 2.2 El cambio, exacto
+
+Abre `.github/workflows/producir.yml` con un editor de texto plano (VS Code, Notepad++, el
+Bloc de notas). **No con Word ni con nada que reformatee**: YAML es sensible a los espacios.
+
+**PASO A · Quitar la línea de donde está.**
+
+Busca este bloque (está alrededor de la línea 289):
+
+```yaml
+      - name: Subir a YouTube
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.subir }}
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          TOKEN_ES: ${{ secrets.YT_REFRESH_TOKEN }}
+          TOKEN_EN: ${{ secrets.YT_REFRESH_TOKEN_EN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 ```
-    env:
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+**Borra la última línea**, la de `GEMINI_API_KEY`. Las otras cuatro se quedan como están.
+
+**PASO B · Ponerla donde va.**
+
+Busca ahora este otro bloque (está alrededor de la línea 194, bastante más arriba):
+
+```yaml
+      - name: Sintetizar narración
+        run: |
+          while IFS=$'\t' read -r ID G; do
 ```
 
-Reglas de colocación:
+Y déjalo así — es decir, **añade las dos líneas `env:` y `GEMINI_API_KEY` entre `- name:` y
+`run:`**:
 
-- `env:` tiene que quedar **alineado con `runs-on:` y con `steps:`**, es decir,
-  empezando en la misma columna que esas dos palabras.
-- La línea de `GEMINI_API_KEY` va **dos espacios más a la derecha** que `env:`.
-- `env:` va **fuera** de `steps:`, nunca dentro de la lista de pasos. Al ponerlo
-  a nivel de job, todos los pasos de ese job ven la variable, que es lo que
-  queremos y evita tener que acertar con el paso concreto.
+```yaml
+      - name: Sintetizar narración
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          while IFS=$'\t' read -r ID G; do
+```
 
-**Si el fichero tiene más de un job** (más de un bloque con su `runs-on:`),
-ponlo en el que ejecuta la producción del vídeo, que es el que llama al script
-de la voz. Si tienes dudas de cuál es, ponlo en todos: no rompe nada.
+**La indentación, que es lo único delicado:**
 
-### 1.4 Comprobaciones antes del push
+- `env:` va **con los mismos espacios que `run:`** (ocho espacios). Lo más seguro es
+  copiar la línea `run: |`, pegarla encima, y sustituir `run: |` por `env:`.
+- La línea de `GEMINI_API_KEY` va **dos espacios más a la derecha** que `env:` (diez
+  espacios en total).
+- **Espacios, nunca tabuladores.** YAML no admite tabuladores. Si tu editor los mete al
+  pulsar Tab, escríbelos a mano.
 
-- El nombre está escrito **exactamente** `GEMINI_API_KEY` en los dos sitios de
-  la línea: en mayúsculas, con guiones bajos, sin espacios. GitHub distingue
-  mayúsculas y minúsculas.
-- Las llaves son dobles: `${{` al abrir y `}}` al cerrar.
-- **No hay tabuladores.** YAML solo admite espacios. Si tu editor mete tabs al
-  pulsar Tab, escribe los espacios a mano.
-- El secreto en GitHub se llama igual. Compruébalo en:
-  `Settings > Secrets and variables > Actions > Repository secrets`.
-  Si allí figura con otro nombre, manda el de GitHub y hay que usar ese en la
-  parte de `secrets.LO_QUE_SEA`.
+### 2.3 Comprobaciones antes del push
 
-### 1.5 Cómo saber si ha funcionado
+- El nombre está escrito **exactamente** `GEMINI_API_KEY` en los dos sitios de la línea:
+  mayúsculas, guiones bajos, sin espacios. GitHub distingue mayúsculas.
+- Las llaves son dobles: `${{` al abrir, `}}` al cerrar.
+- El paso «Subir a YouTube» ha quedado con **cuatro** líneas dentro de su `env:`, no cinco.
+- El paso «Sintetizar narración» ha quedado con `env:` **antes** de `run:`, nunca después.
 
-Después del push:
+### 2.4 Cómo saber si ha funcionado
 
-1. Ve a la pestaña **Actions** del repositorio.
-2. Abre el workflow de producción. Si tiene `workflow_dispatch`, verás el botón
-   **Run workflow** y puedes lanzarlo a mano sin esperar al lunes. Si no lo
-   tiene, no pasa nada: el lunes lo veremos.
-3. Si el job falla por esto, el error típico en el log es
-   `KeyError: 'GEMINI_API_KEY'`, o un mensaje del tipo *API key not found* /
-   *missing credentials* al inicializar el cliente de Gemini.
+No hace falta esperar al lunes:
 
-Aviso para que no te confunda: en los logs GitHub enmascara el valor y muestra
-`***`. Si ves `***`, es buena señal, significa que la variable llegó. Si no ves
-nada, no prueba nada por sí solo.
+1. Pestaña **Actions** del repositorio → workflow **«Producir vídeo»**.
+2. Si tiene `workflow_dispatch` (lo tiene), sale el botón **Run workflow**. Lánzalo.
+3. Abre el paso «Sintetizar narración» y despliega el log.
 
-### 1.6 Lo que NO hay que hacer
+Qué vas a ver, y qué significa cada cosa:
 
-- **No vuelvas a subir el secreto.** Ya está y no hace falta tocarlo.
-- **No escribas la clave en claro en el YAML**, ni siquiera un momento para
-  probar. El fichero va a un repositorio público. Si en algún momento la clave
-  llega a estar escrita literalmente en un commit, hay que rotarla en Google AI
-  Studio, porque el historial de git la conserva aunque borres la línea después.
+- **`***`** en lugar de un valor: buena señal. GitHub enmascara los secretos; que aparezca
+  la máscara significa que la variable llegó.
+- **`KeyError: 'GEMINI_API_KEY'`**, o un mensaje tipo *API key not found* / *missing
+  credentials* al inicializar el cliente de Gemini: la variable **no** llegó. Repasa 2.3.
+- **Nada de lo anterior, y el vídeo sale con voz**: también es normal por ahora. Hasta el
+  lunes 14 `voz.py` corre con `--motor edge` por defecto, así que no pide la clave todavía.
+  Lo que estás comprobando hoy es que la variable esté disponible, no que se use.
 
----
+### 2.5 Lo que NO hay que hacer
 
-## TAREA 2 — Reabrir la conversación de dirección en modo Cowork
-
-**Estado:** pendiente. Es lo que desbloquea todo lo demás.
-**Tiempo estimado:** 2 minutos.
-
-Esta conversación se abrió en modo **Chat**, y en modo Chat no tengo acceso a
-`C:\MisProyectos\Humor`: no puedo leer los ficheros de estrategia ni escribir
-nada para que tú lo commitees. Por eso la sesión de hoy no sirve para trabajar
-sobre el repositorio.
-
-No se puede convertir una conversación de Chat en una de Cowork: el selector
-está en el cuadro de mensaje **al empezar**. Hay que abrir una nueva.
-
-Pasos:
-
-1. Abre **Claude Desktop** (la aplicación de escritorio, no claude.ai en el
-   navegador). Es obligatorio: los proyectos vinculados a una carpeta local solo
-   admiten Cowork desde escritorio.
-2. Entra en el proyecto «Mecánica del Humor».
-3. En el cuadro de mensaje, selecciona **Cowork** (abajo a la izquierda) antes
-   de escribir nada.
-4. Pega el prompt de arranque que te he dado en la conversación.
+- **No vuelvas a subir el secreto.** Está bien puesto desde hace tres semanas y no hay
+  que tocarlo. Tu duda del 10/09 era razonable y la respuesta es la que ya te di: subir el
+  secreto lo guarda cifrado en el repositorio; nombrarlo en el YAML es lo que hace que llegue
+  al proceso. Son dos cosas distintas y hacen falta las dos.
+- **No escribas la clave en claro en el YAML**, ni un momento para probar. El repositorio es
+  público y el historial de git la conservaría aunque borres la línea después; habría que
+  rotarla en Google AI Studio.
+- **No muevas las otras cuatro líneas** del paso de subir a YouTube. Están bien.
 
 ---
 
-## TAREAS TUYAS QUE SEGUÍAN PENDIENTES EN LA BITÁCORA
+## TAREA 3 — Crear `voz_adelantada.yml` (todavía no, pero para que sepas que viene)
 
-Repasadas del 7/9 en adelante, por si alguna se ha quedado atrás:
+**Estado:** el diseño no está escrito aún. **Tiempo cuando llegue:** unos 15 minutos.
 
-- **Los sonidos** — pendiente. Cuando lleguemos a ello te lo explico en un
-  fichero de estos, no en un mensaje suelto.
-- **La música** — pendiente (7/9).
-- **El token de YouTube** — HECHO el 7/9. `YT_REFRESH_TOKEN` actualizado y
-  probado con éxito lanzando el workflow «Leer métricas».
-- **Verificación de marca del canal** — pendiente y sin prisa, acordado.
+Es la pieza que hace que el episodio largo del sábado deje de sonar peor que los Shorts. La
+idea, en tres líneas: de viernes a viernes, un workflow coge el guion del sábado siguiente,
+mira qué escenas de narración no están todavía en la caché de voz y sintetiza unas cuantas
+cada día hasta agotar el margen diario de la API. El sábado, cuando se produce el vídeo, ya
+está casi todo hecho.
+
+**Lo que decidimos hoy y cambia lo que estaba escrito:** un episodio largo sale con **una
+sola voz**, nunca mezclada. Si el viernes por la noche la caché no tiene las cuarenta
+escenas, el episodio entero se hace con la voz de siempre. Nada de unas escenas con una voz y
+otras con otra — que es la chapuza que descartaste el 7 y que el plan seguía dando por buena.
+
+**Te lo pediré con un fichero como este cuando el diseño esté en `07_pruebas/`.** Lo escribe
+la revisión diaria en la semana del 14. No hay nada que hagas tú ahora.
 
 ---
 
-## LO QUE NO TE TOCA HACER A TI
+## TAREA 4 — MDH-006 y el `pico_dbtp` (opcional, y ya no corre prisa)
 
-Para que no lo cargues tú: lo del guionista, lo del desbordamiento de texto del
-segundo 2:34, lo del falso positivo de MDS-011 y lo del bloqueo de la revisión
-semanal son cosas mías. Las decido y las escribo yo en la sesión de Cowork; a ti
-solo te llegará el commit.
+El episodio de hoy salió con `pico_dbtp` en −0,59 cuando el objetivo es ≤ −1,0. Ya está
+publicado, así que esto es solo por si quieres escucharlo y decidir.
+
+**Qué significa:** no es saturación —sigue por debajo de 0— así que es poco probable que se
+oiga como distorsión. Lo que pasa es que el margen de seguridad es más estrecho de lo que
+pide la especificación del canal, y ese margen está para absorber el pico que a veces
+introduce la recodificación de YouTube. Es el primer episodio largo medido con este canario y
+se aparta de los Shorts recientes con la misma música (−1,4).
+
+**Qué puedes hacer:** escucharlo. Si no se nota nada raro, no hay nada que hacer y lo dejamos
+pasar. Si se nota, dímelo y bajamos el nivel de la cama de música para los largos.
+
+---
+
+## LO QUE NO TE TOCA A TI, PARA QUE NO LO CARGUES
+
+Todo lo de esta semana está hecho o encargado, y nada de ello necesita nada tuyo:
+
+- **El guionista** — los dos prompts reescritos y ya en tu carpeta.
+- **El texto del 2:34** — arreglado en `escena.html` y comprobado con el motor. De paso
+  encontré que el resaltado del diagrama salía con los asteriscos a la vista: `*Usarla*` iba
+  a publicarse así en MDH-007 el día 19. También arreglado.
+- **El «martes» de MDS-014** — ahora es un error del validador, no algo que haya que ver a
+  ojo.
+- **El falso positivo de MDS-011** — arreglado en el prompt de la revisión diaria, y
+  encargado el arreglo de fondo.
+- **El bloqueo de la revisión semanal** — quitada la causa de los dos prompts, y ya
+  aplicado en el almacén de tareas programadas.
+
+Y una cosa que sí desbloquea tu autorización del 7: **`montaje.py` ya está autorizado sin
+acotar**, así que P9 —los tres sonidos que descargaste— entra en la semana del 21 sin esperar
+nada más.

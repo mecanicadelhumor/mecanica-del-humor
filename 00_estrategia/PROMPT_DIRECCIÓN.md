@@ -26,3 +26,8 @@
 11/09/26
 - Commit & push tanto de la revisión semanal como de la diaria. Nada muy especial al respecto.
 - La revisión semanal no se ejecutó ayer por completo porque pidió autorización manual. Esto no puede ocurrir, porque entonces se va al viernes y ya se desaprovecha la cuota (lo que quedaba). Por este motivo esa tarea se debe ejecutar de forma automática y si algo no debe realizarse, se debe dejar constancia y que lo hagamos manualmente nosotros o un agente en otro momento, pero no bloquear la planificación semanal por eso.
+
+12/09/26
+- Ayer no pude ejecutar la conversación de dirección por problemas primero de cuota de Claude y después de tiempo personal.
+- Hoy se ha publicado correctamente el vídeo largo de la semana. El contenido está bien, incluso diría que mejor que otras veces y que aprendes algo, lo cual está muy bien y es el camino a seguir. No me voy a quejar más de la voz, aunque mantengo lo dicho y esperemos que se resuelva pronto. No entra muy bien el chiste, porque desde que empieza el vídeo hasta que termina cuesta luego acordarse del remate. También comentar un detalle menor: en el segundo 2:34 la frase "Espera a que lo abra el otro" no entra en el rectángulo y sobresale de este. No sé cuál es la solución, pero el fallo se ha colado a pesar de las revisiones y hasta la publicación. Insisto en que no es grave, pero significa que no estamos siendo completamente pulcros con las revisiones.
+- Revisión diaria aplicada: commit & push.

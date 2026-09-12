@@ -10,8 +10,9 @@ análisis.
 |---|---|---|
 | **`REGLAS.md`** | Las restricciones que nadie puede saltarse: ética, rigor, coste cero, cómo se cambian las cosas | **Siempre, antes de tocar nada.** Es corto |
 | **`PROPIEDAD_DE_FICHEROS.md`** | Quién escribe qué. De obligado cumplimiento para toda tarea programada | Antes de escribir en cualquier sitio |
-| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 4, al final, manda sobre lo anterior** | Al ir a hacer algo, y al decidir qué se hace antes |
+| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 7, al final, manda sobre lo anterior** | Al ir a hacer algo, y al decidir qué se hace antes |
 | **`PROMPT_DE_ARRANQUE.md`** | Cómo empezar una conversación nueva, autorizaciones vigentes, trampas conocidas y dónde está el proyecto hoy | Al abrir una conversación, y al cerrarla |
+| **`PROMPT_DIRECCIÓN.md`** | El cuaderno del codirector entre sesiones: lo que quiere comentar de un día para otro. **Suyo y solo suyo: se lee, no se edita ni se borra** | Al abrir una conversación de dirección |
 | **`TOKEN_DE_YOUTUBE.md`** | Cómo se saca el token de YouTube y por qué caducaba. Quince minutos, una vez | Si el canal deja de publicar, o al tocar los secretos |
 | **`DIAGNOSTICO.md`** | El análisis completo: canales de referencia, por qué triunfan, y las 8 causas del problema | Cuando haga falta entender **por qué** |
 | **`tareas/`** | Los prompts de las tres tareas programadas, espejados. La copia que corre es la del almacén | Al cambiar lo que hace un agente |
@@ -46,6 +47,21 @@ los días) y **`05_calendario/metricas.json`** (los números).
    vídeo salga roto, es que **todos salen iguales**. La presentación es lo que
    más lejos está de los canales de referencia, y por eso existe C25.
 
+7. **Y desde el 12 de septiembre, una séptima:** los guiones que fallan **cumplen el prompt
+   entero**. Tres avisos en cuatro días sobre guiones sin un solo incumplimiento: el problema
+   no es que los agentes se salten las reglas, es que las reglas dicen qué tiene que
+   *contener* un guion y no qué tiene que *sostenerlo*. Ver la versión 7 y los dos prompts de
+   guionista, reescritos.
+
+## Estado a 12 de septiembre
+
+Nada se ha movido en los números, y esa sigue siendo la única frase que importa: **por debajo
+de 100 visualizaciones por vídeo, el canal está abocado a desaparecer.** Lo que sí ha
+cambiado es el proceso. La sesión de dirección del sábado 12 cerró seis cosas —el guionista
+reescrito, C28, C29, C30, C31 y la corrección de C27— y todas salen del mismo diagnóstico:
+**cinco fallos distintos esta semana, y en los cinco había una regla, la regla se cumplió y
+el resultado falló igual.**
+
 ## Estado a 7 de septiembre
 
 Las fases 1 y 2 están hechas y la publicación es automática. **El número se movió
@@ -58,7 +74,7 @@ mil suscriptores saca **entre 50 y 500 visualizaciones por Short en 48 horas**.
 Nosotros sacamos entre 20 y 30. No estamos por debajo de la excelencia; estamos
 por debajo del suelo de lo normal.
 
-Lo que queda por delante está en la **versión 6** de `PLAN_DE_CAMBIOS.md`, al
+Lo que queda por delante está en la **versión 7** de `PLAN_DE_CAMBIOS.md`, al
 final, que es la que manda. Sus dos decisiones nuevas:
 
 - **C25 · La presentación es el talón de Aquiles**, y ahora tiene plan: diez

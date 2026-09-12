@@ -13,6 +13,7 @@ Devuelve código 1 si hay algún error grave: así GitHub Actions se para sola.
 import argparse
 import json
 import re
+import unicodedata
 import sys
 from collections import Counter
 from datetime import datetime, timedelta, timezone
@@ -117,6 +118,59 @@ def normal(s):
     # literalmente la misma frase y no saltó ni un aviso.
     sin_marcas = re.sub(r"[^a-záéíóúñ0-9 ]", " ", (s or "").lower())
     return re.sub(r"\s+", " ", sin_marcas).strip()
+
+
+# ---------------------------------------------------------------------------
+# C28 · el detalle concreto se dice con la misma palabra (12/09/2026)
+#
+# De dónde sale: MDS-014 (10/09) puso «lo jovial que estabas el MARTES» en
+# pantalla mientras la voz de esa escena decía «lo jovial que estás HOY», y
+# dos escenas antes había dicho «lo repetí el DOMINGO». Tres días para una
+# sola idea y ninguno explicado. La dirección lo leyó como lo que es: «hace
+# mención a martes pero luego no se explica en ningún caso nada acerca del
+# martes».
+#
+# La regla 14.1 ya prohibía que la pantalla introdujera un dato que la voz no
+# dice. Lo que no cubría es este caso, que es peor de detectar a ojo: el dato
+# SÍ está en las dos partes, pero con dos palabras distintas, y el espectador
+# se queda buscando la escena donde se explique la que ha leído.
+#
+# Por qué solo días y meses, y no «toda palabra de contenido» como decía el
+# encargo original de C22: se midieron las dos variantes contra los 302
+# guiones del repositorio el 12/09. La versión amplia (toda palabra de cuatro
+# letras o más, comparada por raíz) señala el 73,5 % de las escenas — es
+# ruido, no una comprobación, y por eso el encargo llevaba tres semanas sin
+# poder escribirse. La versión estrecha señala el 1,0 %: tres escenas, las
+# tres reales (MDS-014 «martes», MDH-006 escena 3 «marzo» en pantalla una
+# escena antes de que lo diga la voz, y MDH-003 escena 19 «el lunes» como
+# idiotismo que nadie pronuncia). Cero falsos positivos.
+#
+# La rama de números se probó y se descartó en la misma medición: «50 años»
+# en pantalla contra «cincuenta años» en la voz, o «2003» contra «dos mil
+# tres», son el mismo dato bien escrito, y separarlos del defecto de verdad
+# exigiría un analizador de numerales castellanos. Cinco falsos positivos y
+# ningún acierto: fuera.
+#
+# Es ERROR y no aviso: a diferencia del marcado en la narración —que voz.py
+# sanea solo—, aquí no hay nada aguas abajo que lo arregle. Si llega al
+# render, llega al público.
+# ---------------------------------------------------------------------------
+DIAS_SEMANA = {"lunes", "martes", "miercoles", "jueves", "viernes", "sabado",
+               "domingo"}
+MESES = {"enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
+         "agosto", "septiembre", "octubre", "noviembre", "diciembre"}
+# «Parte 2», «Episodio 06» y «Capítulo 3» son rótulos de sección: nunca se
+# dicen en voz alta y no son un dato del que el espectador espere explicación.
+ROTULO_SECCION = re.compile(r"\b(parte|episodio|cap[ií]tulo)\s*\d+", re.IGNORECASE)
+
+
+def sin_acentos(s):
+    return "".join(c for c in unicodedata.normalize("NFD", (s or "").lower())
+                   if unicodedata.category(c) != "Mn")
+
+
+def palabras(s):
+    return re.findall(r"[a-z0-9]+", sin_acentos(s))
 
 
 VENTANA_C17_DIAS = 42  # seis semanas
@@ -309,6 +363,42 @@ def validar(path):
             errores.append(f"Escena {i}: una lista de más de 5 puntos no se lee en pantalla.")
         if t == "diagrama" and len(e.get("pasos", [])) > 5:
             errores.append(f"Escena {i}: un diagrama de más de 5 pasos no se lee.")
+
+        # C28 · un día o un mes en pantalla se dice en la voz de ESA escena.
+        # Ver el bloque de comentario de DIAS_SEMANA, arriba, para el caso
+        # que lo escribió (MDS-014, 10/09/2026) y para por qué la versión
+        # amplia de esta comprobación no se puede escribir.
+        dichas = set(palabras(e.get("narracion", "")))
+        vistas = palabras(ROTULO_SECCION.sub(" ", pantalla))
+        huerfanas = sorted({w for w in vistas
+                            if (w in DIAS_SEMANA or w in MESES) and w not in dichas})
+        if huerfanas:
+            errores.append(
+                f"Escena {i} (C28): en pantalla pone "
+                f"{', '.join('«' + w + '»' for w in huerfanas)} y la narración de esta "
+                f"escena no lo dice. Un día o un mes en pantalla es un dato: quien mira "
+                f"sin sonido lo lee y busca dónde se explica. Dilo con esa misma palabra "
+                f"en la narración de esta escena, o quítalo de la pantalla.")
+
+        # C29 · en formato largo, un paso de «diagrama» es una etiqueta, no
+        # una frase. La rama horizontal de escena.html reparte 1840px entre
+        # los pasos y descuenta 80px: con tres pasos la caja mide 533px y el
+        # título va a 46px, donde caben cinco o seis palabras cortas.
+        # ajustarTextoSVG() encoge hasta que quepa (12/09), pero encoger es
+        # el remedio, no el sitio donde se arregla: MDH-006 escena 22 salió
+        # publicada con «Espera a que lo abra el otro», 604px en 533.
+        # Aviso y no error: el motor ya garantiza que quepa.
+        if t == "diagrama" and not corto:
+            n_pasos = max(1, len(e.get("pasos", [])))
+            tope_pal = 6 if n_pasos <= 3 else (4 if n_pasos == 4 else 3)
+            for j, p in enumerate(e.get("pasos", []), 1):
+                n_pal = len((p.get("titulo") or "").split())
+                if n_pal > tope_pal:
+                    avisos.append(
+                        f"Escena {i}, paso {j} (C29): «{p.get('titulo')}» son {n_pal} "
+                        f"palabras y con {n_pasos} pasos caben {tope_pal}. El motor lo "
+                        f"encogerá para que quepa, pero un paso de diagrama es una "
+                        f"etiqueta: el matiz va en su «pie», que aguanta más.")
 
     # tipos repetidos seguidos
     racha, anterior = 1, None

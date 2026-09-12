@@ -517,6 +517,23 @@ function rico(s){
     .replace(/_([^_]+)_/g,'<span class="cia">$1</span>');
 }
 
+// C29 · el mismo resaltado, pero dentro de un <svg> (12/09/2026).
+//
+// La rama horizontal de «diagrama» pinta los pasos como <text> de SVG, y
+// hasta hoy lo hacía con esc(): un <span> no existe dentro de un <svg>, así
+// que quien escribió la rama usó el escape a secas y el marcado se quedó a
+// la vista. MDH-007 escena 10 tiene «*Usarla*» EN PANTALLA, con los dos
+// asteriscos, y publica el 19/09; MDH-004 escena 15 y MDH-007 escena 20
+// igual. Es el mismo defecto que MDS-011 —una marca de pantalla en un sitio
+// donde nadie la interpreta— con la diferencia de que aquí sí se ve.
+//
+// El equivalente de <span> en SVG es <tspan>, que sí hereda y acepta fill.
+function ricoSVG(s){
+  return esc(s)
+    .replace(/\*([^*]+)\*/g, '<tspan fill="#FFB020">$1</tspan>')
+    .replace(/_([^_]+)_/g,    '<tspan fill="#4CC9F0">$1</tspan>');
+}
+
 // C19+C16 · el icono (07/09). d.icono es admisible en cualquier escena
 // (esquema_guion.json); si no viene, no se pinta nada.
 //
@@ -714,9 +731,9 @@ const PLANTILLAS = {
         <rect x="${x}" y="140" width="${w}" height="260" fill="none"
               stroke="${i===d.pasos.length-1?'#FFB020':'#4CC9F0'}" stroke-width="3"/>
         <text x="${x+w/2}" y="252" text-anchor="middle" fill="#F2F4F8"
-              font-size="46" font-family="Inter,sans-serif" font-weight="700">${esc(p.titulo)}</text>
+              font-size="46" font-family="Inter,sans-serif" font-weight="700">${ricoSVG(p.titulo)}</text>
         <text x="${x+w/2}" y="312" text-anchor="middle" fill="#8A97AE"
-              font-size="32" font-family="Inter,sans-serif">${esc(p.pie||"")}</text>
+              font-size="32" font-family="Inter,sans-serif">${ricoSVG(p.pie||"")}</text>
       </g>` + (i<d.pasos.length-1 ? `<g class="u">
         <line x1="${x+w+10}" y1="270" x2="${x+w+66}" y2="270" stroke="#8A97AE" stroke-width="4"/>
         <polygon points="${x+w+72},270 ${x+w+56},260 ${x+w+56},280" fill="#8A97AE"/></g>`:"");
@@ -797,6 +814,66 @@ function ajustarTamano(){
   }
 }
 
+// ===================================================================
+// C29 · encoger hasta que quepa, también dentro del <svg> (12/09/2026)
+//
+// ajustarTamano() (arriba) sabe encoger texto HTML porque mira
+// scrollWidth/clientWidth. Un <text> de SVG no tiene ninguno de los dos:
+// no desborda su caja, la pinta encima y se queda tan ancho. Por eso el
+// diagrama horizontal del episodio largo era el único tipo de escena del
+// motor sin ninguna protección de anchura, en las dos capas —ni encogía ni
+// saltaba la barrera—, y por ahí salió publicado MDH-006 escena 22:
+// «Espera a que lo abra el otro» mide 604px en una caja de 533.
+//
+// Se mide con getComputedTextLength(), que sí existe en SVG y da el avance
+// real del texto incluidos sus <tspan>.
+//
+// Y se encoge EN BLOQUE, no caja por caja: si el paso 2 necesita bajar a
+// 40px y los otros dos se quedan en 46, las tres cajas salen con tres
+// tamaños de letra distintos y eso se lee como un fallo de maquetación, no
+// como un ajuste. Se aplica a todos el factor del peor, que es lo que haría
+// cualquiera a mano. Los títulos entre sí y los pies entre sí.
+//
+// Suelo: 32px para el título del paso y 22px para su pie, sobre un lienzo de
+// 1920px. Por debajo de eso no se lee en un móvil, y entonces el problema es
+// que el guion ha escrito una frase donde iba una etiqueta: ahí salta la
+// barrera (comprobarDesbordes) y para el render, que es lo que debe pasar.
+//
+// Se ejecuta UNA vez dentro de cargar(), nunca en pintar(t): mismo guion,
+// mismo píxel en cualquier fotograma de esa escena (regla 11.5).
+// ===================================================================
+function ajustarTextoSVG(){
+  const AIRE = 18;            // px de respiro a cada lado, dentro de la caja
+  const SUELO = [32, 22];     // [título del paso, pie del paso]
+  const filas = [[], []];
+
+  document.querySelectorAll("#escena svg g").forEach(g => {
+    const r = g.querySelector("rect");
+    if (!r) return;                       // los <g> de las flechas no tienen caja
+    let hueco;
+    try { hueco = r.getBBox().width - 2 * AIRE; } catch (err) { return; }
+    if (!(hueco > 0)) return;
+    Array.from(g.querySelectorAll("text")).forEach((t, i) => {
+      const j = Math.min(i, 1);
+      let ancho;
+      try { ancho = t.getComputedTextLength(); } catch (err) { return; }
+      if (!ancho || !isFinite(ancho)) return;
+      const tam = parseFloat(getComputedStyle(t).fontSize);
+      if (!tam || !isFinite(tam)) return;
+      filas[j].push({ el: t, tam: tam, k: hueco / ancho });
+    });
+  });
+
+  filas.forEach((lista, j) => {
+    if (!lista.length) return;
+    const k = Math.min.apply(null, [1].concat(lista.map(x => x.k)));
+    if (k >= 1) return;                   // todo cabe: no se toca nada
+    lista.forEach(x => {
+      x.el.style.fontSize = Math.max(SUELO[j], x.tam * k).toFixed(2) + "px";
+    });
+  });
+}
+
 function cargar(d){
   DUR = d.duracion_s || 5;
   // Formato: "corto" pinta 1080x1920. Lo fija render.py con el mismo dato que
@@ -853,6 +930,8 @@ function cargar(d){
   // los dos formatos, no solo en vertical: `.cifra` con texto largo puede
   // desbordar también en horizontal si el ancho es ajustado.
   ajustarTamano();
+  // C29 · y lo mismo dentro del <svg>, que ajustarTamano() no sabe medir.
+  ajustarTextoSVG();
 
   pintar(0);
   return UNIDADES.length;
@@ -1095,6 +1174,54 @@ function comprobarDesbordes(){
     try { nodos = document.querySelectorAll(sel); } catch (err) { continue; }
     nodos.forEach(el => medir(el, sel, true));
   }
+
+  // C29 · el texto SVG contra su PROPIA caja (12/09/2026).
+  //
+  // «svg text» ya estaba en SELECTORES, y no servía de nada: medir() solo
+  // calcula desbordaAncho/desbordaAlto cuando el elemento es HTMLElement, y
+  // un <text> de SVG no lo es. Del <text> solo se comprobaba el rectángulo
+  // contra el lienzo — es decir, se detectaba que un texto se saliera de la
+  // PANTALLA, nunca que se saliera de su caja. Y las cajas del diagrama
+  // horizontal están en el centro del lienzo, así que el único caso que la
+  // barrera podía cazar era el imposible.
+  //
+  // Resultado: la barrera de C21 dio 0 problemas sobre las 40 escenas de
+  // MDH-006 y el vídeo se publicó el 12/09 con «Espera a que lo abra el
+  // otro» (604px) sobresaliendo de una caja de 533px, 35px por cada lado.
+  // Lo vio la dirección, en el segundo 2:34, después de publicar. Es
+  // exactamente la trampa 7 otra vez: no le pidas a un revisor que vea a
+  // ojo lo que una condición booleana puede comprobar — pero la condición
+  // tiene que estar mirando el sitio correcto.
+  //
+  // Con ajustarTextoSVG() puesto, esto solo salta si el texto ha llegado al
+  // suelo de tamaño y sigue sin caber, que es cuando de verdad sobra guion.
+  // Tolerancia de 2px: getComputedTextLength y getBBox redondean distinto.
+  const TOL_SVG = 2;
+  document.querySelectorAll("#escena svg g").forEach(g => {
+    const r = g.querySelector("rect");
+    if (!r) return;
+    let caja;
+    try { caja = r.getBBox().width; } catch (err) { return; }
+    g.querySelectorAll("text").forEach(t => {
+      if (t.getClientRects().length === 0) return;
+      let ancho;
+      try { ancho = t.getComputedTextLength(); } catch (err) { return; }
+      if (!ancho || !isFinite(ancho)) return;
+      if (ancho <= caja - TOL_SVG) return;
+      const rr = t.getBoundingClientRect();
+      problemas.push({
+        selector: "svg text (dentro de su <rect>)",
+        texto: (t.textContent || "").trim().replace(/\s+/g, " ").slice(0, 140),
+        scrollWidth: Math.round(ancho), clientWidth: Math.round(caja),
+        scrollHeight: null, clientHeight: null,
+        rect: { left: Math.round(rr.left), top: Math.round(rr.top),
+                right: Math.round(rr.right), bottom: Math.round(rr.bottom) },
+        lienzo: { W, H },
+        desbordaAncho: true, desbordaAlto: false, fueraLienzo: false
+      });
+    });
+  });
+
   return problemas;
 }
 
@@ -1102,6 +1229,7 @@ window.cargar = cargar;
 window.pintar = pintar;
 window.comprobarDesbordes = comprobarDesbordes;
 window.ajustarTamano = ajustarTamano;
+window.ajustarTextoSVG = ajustarTextoSVG;
 </script>
 </body>
 </html>

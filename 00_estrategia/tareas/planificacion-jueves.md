@@ -1,7 +1,7 @@
 # Tarea programada · Planificación semanal — jueves noche
 
 **Copia legible del prompt que corre en el almacén de tareas programadas.**
-Espejo creado el 31/08/2026, sincronizado el 04/09/2026 y **el 07/09/2026, mañana y mediodía**. `id`: `trig_015qkb2sqbbJwJE1qgoNMK95` · cron: `0 20 * * 4 (UTC) · jueves 22:00 hora de España` ·
+Espejo creado el 31/08/2026, sincronizado el 04/09/2026, **el 07/09/2026** y **el 12/09/2026 (dirección del sábado)**. `id`: `trig_015qkb2sqbbJwJE1qgoNMK95` · cron: `0 20 * * 4 (UTC) · jueves 22:00 hora de España` ·
 modelo: `claude-opus-5`.
 
 > ⚠️ **Esta copia no se ejecuta.** La que corre es la del almacén. Si cambias
@@ -18,12 +18,33 @@ Va el jueves por la noche porque los límites de cómputo se reinician el vierne
 
 ## 1. No pierdas el trabajo
 
-Tu contenedor es efímero y el ordenador del codirector suele estar apagado por la noche.
+Tu contenedor es efímero y **no tienes puente con el ordenador del codirector: nunca lo has tenido.** Clona el repositorio público, trabaja en el contenedor y **antes de terminar** empaqueta lo nuevo o modificado en un `.tar.gz` y entrégalo con `SendUserFile`, **listando los ficheros por nombre** y diciendo que se descomprime sobre `C:\MisProyectos\Humor`.
 
-- Si `mcp__remote-devices__device_list_dir` sobre `C:\MisProyectos\Humor` responde: trabaja ahí.
-- Si **no** responde: clona el repositorio público, trabaja en el contenedor y **antes de terminar** empaqueta lo nuevo o modificado en un `.tar.gz` y entrégalo con `SendUserFile`, **listando los ficheros por nombre** y diciendo que se descomprime sobre `C:\MisProyectos\Humor`.
+**No llames NUNCA a `mcp__remote-devices__device_list_dir` ni a ninguna otra herramienta `mcp__remote-devices__*`, y no pidas acceso a ninguna carpeta.** Hasta el 12/09 este prompt te decía que lo intentaras primero. Nunca respondió —una tarea programada corre en la nube y ahí el puente de dispositivos no existe— y el 10 de septiembre costó caro: la llamada abrió una **petición de autorización manual** en el ordenador del codirector, que a las diez de la noche estaba durmiendo, y la sesión se quedó esperando. La planificación entera se fue al viernes y se perdió la cuota del jueves, que es justo la que este prompt existe para gastar antes de que caduque.
 
 **No intentes `git push`**: desde el contenedor no tienes credenciales y desde el ordenador del codirector el SSH está bloqueado por la política de salida de red (comprobado el 31/08). El codirector hace el commit.
+
+## 1 bis. No te bloquees NUNCA esperando a una persona
+
+Esto lo escribió la dirección el 12/09, y va antes que cualquier criterio de
+calidad: **esta tarea tiene que ejecutarse entera y sola, de principio a fin.**
+
+- **No pidas ninguna autorización, ni permiso, ni confirmación, a nadie.** No
+  hay nadie delante. Una pregunta no se queda sin contestar: se queda colgada,
+  y con ella la semana entera.
+- **No llames a ninguna herramienta que pueda abrir una petición de permiso**
+  (las de `mcp__remote-devices__*`, acceso a carpetas, a aplicaciones o al
+  navegador de otra persona). Si crees que necesitas una, es que el camino es
+  otro.
+- **Lo que no puedas hacer tú solo, no lo intentas: lo escribes.** Va en tu
+  bitácora, en la sección «Para el codirector», con qué hay que hacer y por
+  qué no lo has hecho tú. Lo haremos nosotros o un agente en otro momento.
+- **Y sigues.** Que algo se quede pendiente nunca es motivo para no dejar la
+  semana escrita: los cinco Shorts, el largo, la parrilla y las publicaciones
+  salen igual.
+
+La regla, en una línea: **entregar algo incompleto y dicho es siempre mejor que
+entregar nada esperando permiso.**
 
 ## 2. Un fichero, un dueño
 
@@ -41,7 +62,15 @@ Lee `00_estrategia/PROPIEDAD_DE_FICHEROS.md`. El 21 de agosto la revisión diari
 
 Repositorio público: https://github.com/mecanicadelhumor/mecanica-del-humor
 
-**Lee `00_estrategia/` entero antes de nada** (`LEEME.md`, `REGLAS.md`, `PLAN_DE_CAMBIOS.md`, `PROPIEDAD_DE_FICHEROS.md`). En `PLAN_DE_CAMBIOS.md` **manda la versión 6.1**, que está al final, del 07/09/2026. Léela entera, y también la 6: traen **C25** (el plan de presentación, del que sale casi todo lo que cambia para ti esta semana), **C26** (el 15 de noviembre se decide si el canal sigue, con la mediana de los últimos veinte Shorts a las 48 horas) y **C27** (el episodio largo también deja `edge-tts`).
+**Los dos prompts de guionista se reescribieron el 12/09/2026 y son lo primero que lees esta semana**
+(`04_agentes/prompts/guionista_corto.md` y `guionista.md`). No es un retoque: traen tres pruebas
+de cosido que van **antes** de escribir la primera escena —un solo sujeto que vuelve, nada nuevo
+después de la mitad, y el detalle concreto dicho con la misma palabra en voz y pantalla— y, en el
+largo, la risa deja de contarse y pasa a espaciarse (nunca más de noventa segundos sin una). Salen
+de tres avisos de la dirección en cuatro días sobre guiones que **cumplían el prompt anterior
+entero**. El razonamiento está en la versión 7 de `PLAN_DE_CAMBIOS.md`.
+
+**Lee `00_estrategia/` entero antes de nada** (`LEEME.md`, `REGLAS.md`, `PLAN_DE_CAMBIOS.md`, `PROPIEDAD_DE_FICHEROS.md`). En `PLAN_DE_CAMBIOS.md` **manda la versión 7**, que está al final, del 12/09/2026. Léela entera, y también la 6: traen **C25** (el plan de presentación, del que sale casi todo lo que cambia para ti esta semana), **C26** (el 15 de noviembre se decide si el canal sigue, con la mediana de los últimos veinte Shorts a las 48 horas) y **C27** (el episodio largo también deja `edge-tts`).
 
 Lo esencial: **un solo canal, en español** (el inglés lo sirve el doblaje automático de YouTube; no escribas guiones ingleses). **Cinco Shorts, lunes a viernes a las 19:00, y un episodio largo el sábado a las 12:00.**
 

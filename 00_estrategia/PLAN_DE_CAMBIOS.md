@@ -1917,3 +1917,494 @@ Los tres acentos CC0 están en `03_produccion/sonidos/` con su
    ella, P9 no entra: la regla 11.7 no se salta «solo por esta vez».
 2. **`attribution_texts.md` trae cuatro créditos y en la carpeta hay tres
    ficheros** (falta el de `alec_mackay`). Se acredita lo que exista.
+
+
+---
+
+# Versión 7 · 12 de septiembre de 2026 — el guion se cose, y las comprobaciones miran donde toca
+
+Todo lo anterior sigue vigente salvo lo que esta sección corrige expresamente. Es la
+sesión de dirección del sábado, desplazada desde el viernes 11 por cuota y por tiempo.
+
+**Los números no se han movido y son el marco de todo lo que sigue.** Seguimos por debajo
+de 100 visualizaciones por vídeo, que es el umbral que el codirector puso como condición de
+supervivencia del canal. Nada de lo que hay aquí cambia eso por sí solo: son arreglos de
+proceso, y el proceso es lo único sobre lo que podemos actuar de una semana para otra.
+
+---
+
+## Lo que une los cuatro fallos de esta semana
+
+Cuatro cosas distintas llegaron al público entre el 9 y el 12 de septiembre: un Short sin
+hilo, una referencia huérfana, un episodio largo sin gracia y un texto fuera de su caja. Y
+una quinta se quedó a medias: la planificación del jueves.
+
+**Los cinco tienen la misma forma.** En los cinco casos había una regla escrita, la regla se
+cumplió, y el resultado falló igualmente:
+
+| Lo que pasó | La regla que había | Por qué no sirvió |
+|---|---|---|
+| MDS-013 «parece un recorte de un recorte» | tener chiste, mecanismo y «dónde falla» | los tres estaban, y eran de cuatro asuntos distintos |
+| MDS-014, el «martes» huérfano | la pantalla no introduce un dato que la voz no diga | el dato estaba en las dos, con dos palabras distintas |
+| MDH-006, «el chiste no entra» | mínimo dos risas, una antes del segundo 15 | dos exactas, las dos en los primeros veinte segundos |
+| MDH-006 2:34, texto fuera de su caja | la barrera de C21, con `svg text` en su lista | de un `<text>` de SVG solo medía el lienzo, nunca su caja |
+| La planificación del 10/09, a medias | «trabaja sin nadie delante» | y el prompt le mandaba llamar a una herramienta que pide permiso |
+
+**Una lista de ingredientes se puede cumplir entera y que el plato no ligue.** Eso es lo
+que hay que corregir, y por eso esta versión no añade comprobaciones nuevas encima de las
+que hay: **cambia qué miden las que ya existían.**
+
+---
+
+## El guionista · los dos prompts, reescritos
+
+Es lo que el codirector puso como más urgente, con tres avisos en cuatro días. Aquí está lo
+que cambia y por qué, que es lo que pidió entender.
+
+### El diagnóstico, guion a guion
+
+**MDS-013 (9/09) — «inconexo, cortado, difícil de seguir. Parece un recorte de un recorte,
+sin hilo conductor, sin una historia narrada, sin un principio y un final.»**
+
+Seis escenas y **cuatro asuntos**: «el navegador» (escenas 1-2), «las dos piezas» (3), «la
+bisagra» (4), «el blanco es un grupo entero» (5) y la teoría de la norma prejuiciosa (6). El
+ejemplo concreto entra en el segundo cero, desaparece durante cuatro escenas y reaparece en
+las últimas seis palabras del vídeo. Y las dos ideas nuevas —el grupo, la teoría— entran en
+los segundos 32 y 36 de un vídeo de 52.
+
+No es que no tenga principio y final: es que **tiene cuatro principios**. El ejemplo no era
+el hilo, era el marco, y desde dentro eso se ve como dos vídeos pegados.
+
+**MDS-014 (10/09) — el «martes» que no se explica.**
+
+Escena 2, voz: «lo repetí **el domingo**». Escena 4, pantalla: «lo jovial que estabas **el
+martes**», voz: «lo jovial que estás **hoy**». Título de trabajo: «qué miden de tu
+**martes**». Tres días para una idea, y ninguno explicado.
+
+La regla 14.1 no lo cazaba porque el dato sí estaba en las dos mitades: lo que cambiaba era
+**la palabra**. Y `validar_guion.py` no lo cazaba por un motivo peor, que conviene decir:
+**la red determinista de C22 —el encargo 3, «señala las palabras de pantalla que no estén en
+la narración de su escena»— nunca llegó a escribirse.** Está dada por entregada en la cola
+desde el 10/09 y en el código no hay nada. Ver C28, abajo, donde se cierra con el motivo.
+
+**MDH-006 (12/09) — «el contenido está bien, incluso mejor que otras veces, y se aprende
+algo. Ese es el camino. Pero el chiste no entra.»**
+
+Este es el más interesante porque la mitad del comentario es un elogio, y el elogio va sobre
+lo que más cuesta. El problema es de reparto:
+
+- Risa 1: «se rieron dos. Uno era yo» — segundo ~8.
+- Risa 2: «la reunión de marzo. Que todavía se comenta» — segundo ~18.
+- Y después, **hasta el minuto cinco, nada**.
+- Callback final: «y los diez de mi reunión, por cierto, siguen calculando» — que remite a
+  una premisa de hace cuatro minutos y medio **y además pide una resta**: doce menos dos.
+
+`notas_humor` lo enseña a simple vista: cuatro entradas, tres de ellas en los primeros
+veinte segundos. **El vídeo cumple la regla y deja de tener gracia en el segundo veinte.**
+
+### Lo que cambia en `guionista_corto.md`
+
+Tres pruebas nuevas, y van **delante de todo lo demás** en el documento porque son lo que
+falló y porque se pasan **antes** de escribir la primera escena.
+
+**Prueba 1 · El hilo: un solo sujeto, y vuelve.** Antes de nada, tres frases en
+`notas_humor` —qué pasa, qué gira, cómo acaba— **nombrando el mismo sujeto concreto**. Si no
+se pueden escribir sin cambiar de sujeto, el Short no está escrito todavía. Y en el guion: el
+ejemplo de la escena 1 **vuelve por su nombre en una escena del medio**, no solo en el
+cierre; y un Short nombra **dos cosas como mucho**, el ejemplo y el mecanismo.
+*Cómo se comprueba:* poner las `narracion` en una columna y leer de una a la siguiente. Si
+para entender la escena N hace falta una palabra que no está en la N-1, ahí no hay hilo.
+
+**Prueba 2 · Nada nuevo después de la mitad.** Las dos últimas escenas **solo resuelven**.
+Una idea que aparece por primera vez en la escena 5 o 6 no es un final: es otro Short. Si al
+llegar al cierre hace falta introducir algo, el Short que se estaba escribiendo era otro.
+
+**Prueba 3 · El detalle concreto se dice con la misma palabra.** Es C28, abajo, y sube
+también a `REGLAS.md` como regla 14.4.
+
+Y una lista de comprobación de seis líneas al final, para releer contra el guion terminado.
+
+### Lo que cambia en `guionista.md`
+
+**La regla de la risa deja de contar y pasa a medir distancias.** Es el cambio de fondo:
+
+- **Nunca más de noventa segundos sin algo construido para hacer reír.** En un episodio de
+  cinco minutos son cuatro o cinco, no dos. Y no hace falta que sean chistes con remate.
+- **La primera sigue antes del segundo quince.**
+- **Un callback a más de noventa segundos vuelve a decir su premisa en la misma frase.**
+  Cuesta seis palabras y es la diferencia entre un remate y una referencia perdida. Es la
+  regla de «el audio se basta solo» aplicada al eje del tiempo en vez de al eje
+  pantalla/voz.
+- **Un chiste no le pide aritmética al espectador.**
+- Y el gancho **es también el sujeto del episodio**: si abre con una reunión de doce
+  personas, esa reunión vuelve en el cuerpo, no solo al final.
+
+**Por qué noventa segundos y no otro número.** La estructura ya reparte el cuerpo en dos o
+tres bloques de *fenómeno → evidencia → técnica*; noventa segundos pone una risa en cada
+bloque, que son las costuras que ya existen. Con el gancho y el cierre salen cinco. Y no se
+confunde con el «giro cada 40 segundos» que ya estaba escrito: **un giro no es una risa**, y
+tenerlos separados evita que el guionista cuente los giros y se quede tranquilo.
+
+**Y un apartado nuevo sobre el `diagrama` horizontal**, que sale del fallo del 2:34: con tres
+pasos cada caja mide 533 px y la letra va a 46 px, donde caben cinco o seis palabras cortas.
+**Un paso de diagrama es una etiqueta, no una frase**; el matiz va en su `pie`, que va a 32 px
+y aguanta más. Con cuatro pasos caben tres o cuatro palabras; con cinco, dos. *Si el paso no
+cabe en cuatro palabras, el diagrama tiene un paso de más.*
+
+### Lo que NO cambia, y es deliberado
+
+Las cinco series, el chiste primero y la prueba del WhatsApp, el máximo de tres `enunciado`,
+C19 y el campo `icono`, el ámbito del resaltado, el cierre que dice dónde falla, y la
+prohibición de humor y atracción en Short. **Nada de eso ha fallado esta semana.** Lo que
+falló fue que se podían cumplir todos y entregar un guion que no se sostiene.
+
+---
+
+## C28 · El detalle concreto, y el cierre honesto de C22
+
+**Regla:** un día de la semana, un mes, un lugar o un nombre propio que aparezca en pantalla
+se dice **con esa misma palabra** en la narración de esa misma escena, y no se adelanta en la
+anterior. Sube a `REGLAS.md` como **regla 14.4**.
+
+**Red determinista, en `validar_guion.py`, y es ERROR.** No aviso: a diferencia del marcado
+en la narración —que `voz.py` sanea solo— aquí no hay nada aguas abajo que lo arregle. Si
+llega al render, llega al público.
+
+**Medido antes de escribirlo, contra los 302 guiones del repositorio:**
+
+| Variante | Escenas señaladas | Veredicto |
+|---|---|---|
+| **C22 tal y como se especificó** — toda palabra de contenido de cuatro letras o más, comparada por raíz de 5 | **222 de 302 · 73,5 %** | Ruido. No es una comprobación |
+| Días, meses **y cifras** | 44 de 302 · 14,6 % | Cinco falsos positivos de números («50 años» / «cincuenta años», «2003» / «dos mil tres») y ningún acierto en esa rama |
+| **Días y meses solos** — lo que entra | **3 de 302 · 1,0 %** | Las tres reales. Cero falsos positivos |
+
+Las tres que señala: **MDS-014 escena 4** («martes», el caso del codirector), **MDH-006
+escena 3** («marzo» en pantalla una escena antes de que la voz lo diga) y **MDH-003 escena
+19** («el lunes» como idiotismo que nadie pronuncia). Las tres están ya publicadas, así que
+la regla no bloquea nada pendiente: **los seis guiones de la semana del 14 pasan limpios.**
+
+**Y con esto se cierra C22, el encargo 3, que llevaba desde el 4 de septiembre sin escribirse
+y dado por entregado en la cola desde el 10.** No se escribió porque **no se puede escribir
+como estaba especificada**: señala tres de cada cuatro escenas. Decirlo es mejor que dejarlo
+abierto para siempre. La versión estrecha hace el trabajo que importa.
+
+→ **Y la lección, que es la de siempre aquí:** una comprobación tonta y estrecha que acierta
+siempre vale más que una lista que señala tres de cada cuatro escenas. La segunda se acaba
+ignorando, y entonces no protege de nada.
+
+---
+
+## C29 · La barrera no sabía mirar dentro del SVG
+
+**El aviso del codirector:** *«en el vídeo largo publicado hoy, en el segundo 2:34, la frase
+"Espera a que lo abra el otro" no cabe en su rectángulo y sobresale. Pasó todas las
+revisiones y llegó hasta la publicación. No es grave, pero significa que no estamos siendo
+pulcros.»*
+
+Tiene razón en las dos mitades, y la segunda importa más que la primera.
+
+### Por qué pasó, medido
+
+`MDH-006` escena 22, `tipo: diagrama`, formato largo. La rama horizontal de `escena.html`
+dibuja las cajas encadenadas dentro de un `<svg>` de 1920 px: con tres pasos, cada `<rect>`
+mide **533 px** y el `<text>` del título va a **46 px**.
+
+Medido con el motor real y la fuente real (Inter):
+
+| Texto | Ancho | Caja | |
+|---|---|---|---|
+| «No lo abras tú» | 308 px | 533 px | holgura 225 px |
+| **«Espera a que lo abra el otro»** | **604 px** | **533 px** | **se sale 70 px — 35 por cada lado** |
+| «Y solo con esa persona» | 520 px | 533 px | holgura **13 px** |
+
+El tercero es casi tan preocupante como el segundo: **13 px de margen es una palabra de
+distancia del mismo fallo.**
+
+### Y por qué la barrera de C21 dio el visto bueno
+
+`comprobarDesbordes()` **llevaba `"svg text"` en su lista de selectores desde el 4 de
+septiembre.** Parecía cubierto. No lo estaba:
+
+```js
+if (!soloLienzo && el instanceof HTMLElement){
+    desbordaAncho = el.scrollWidth > el.clientWidth + TOL_ANCHO;
+    ...
+}
+```
+
+Un `<text>` de SVG **no es un `HTMLElement`** y no tiene `scrollWidth`: no desborda su caja,
+la pinta encima. Así que de esos elementos solo se evaluaba el rectángulo **contra el
+lienzo** — es decir, se detectaba que un texto se saliera de la *pantalla*, nunca que se
+saliera de *su caja*. Y las cajas del diagrama están en el centro de la pantalla. **La única
+situación que la barrera podía cazar ahí era la imposible.**
+
+Comprobado: `comprobarDesbordes()` devuelve **0 problemas sobre las 40 escenas de MDH-006**.
+La barrera no falló — nunca estuvo mirando.
+
+Lo mismo pasaba con `ajustarTamano()` (C21.1, «encoge hasta que quepa»): su lista de
+selectores no incluye `svg text` en absoluto, y aunque lo incluyera, `scrollWidth` no
+existe ahí. **El diagrama horizontal del episodio largo era el único tipo de escena del
+motor sin ninguna protección de anchura, en las dos capas.**
+
+### Lo que entra, y está medido
+
+**1 · `ajustarTextoSVG()`**, dentro de `cargar()`, una vez por escena (regla 11.5). Mide con
+`getComputedTextLength()`, que sí existe en SVG, contra el ancho del `<rect>` de su mismo
+`<g>` menos 18 px de aire a cada lado.
+
+**Y encoge en bloque, no caja por caja.** Si el paso 2 baja a 40 px y los otros se quedan en
+46, salen tres tamaños de letra distintos y eso se lee como un fallo de maquetación, no como
+un ajuste: se aplica a todos el factor del peor. Los títulos entre sí y los pies entre sí.
+Es lo que haría cualquiera a mano.
+
+Suelo: **32 px** para el título del paso y **22 px** para su pie sobre un lienzo de 1920. Por
+debajo no se lee en un móvil, y entonces el problema no es el tamaño: es que el guion ha
+escrito una frase donde iba una etiqueta. Ahí salta la barrera y para el render, que es lo
+que debe pasar.
+
+**2 · `comprobarDesbordes()` gana una rama para el texto SVG**, midiendo cada `<text>` contra
+su propio `<rect>` con 2 px de tolerancia.
+
+**3 · `ricoSVG()` — y este es un defecto que nadie había visto.** La rama horizontal pintaba
+los pasos con `esc()`, no con `rico()`, porque un `<span>` no existe dentro de un `<svg>`. **El
+resaltado se quedaba a la vista, con los asteriscos.** Está publicado en MDH-004 escena 15
+(«*ahí*, y casi nunca antes») y **estaba a punto de publicarse el 19/09 en MDH-007**, escena
+10 («*Usarla*») y escena 20 («Buscas *tres*»). El equivalente de `<span>` en SVG es `<tspan>`,
+que sí acepta `fill`. Es el mismo defecto que MDS-011 —una marca de pantalla en un sitio
+donde nadie la interpreta— con la diferencia de que aquí sí se ve.
+
+**4 · Aviso en `validar_guion.py`**: un paso de `diagrama` en formato largo con más palabras
+de las que caben. Con tres pasos, seis; con cuatro, cuatro; con cinco, tres. Aviso y no error
+porque el motor ya garantiza que quepa — pero encoger es el remedio, no el sitio donde se
+arregla.
+
+### Verificado contra el motor, no imaginado (regla 11.2)
+
+- **Las 302 escenas de los 28 guiones, con el motor nuevo: 0 paran el render.** El encogido
+  resuelve el único caso sin llegar al suelo.
+- **MDH-006 escena 22 después:** los tres títulos a 37,89 px, el que se salía en **497 px
+  dentro de 533**. Mirado en captura, no deducido.
+- **Diferencia de píxeles contra el motor viejo, sobre las nueve escenas `diagrama` más dos
+  escenas de control por guion:** cambian **cuatro**, y son exactamente las cuatro que tenían
+  un defecto real (MDH-006 esc 22, 0,98 %; MDH-007 esc 10 y 20 y MDH-004 esc 15, entre 0,11 %
+  y 0,20 %, que es el resaltado). **Todas las demás, idénticas al píxel.**
+- **Determinista:** dos pasadas del motor nuevo sobre la misma muestra, diferencia 0,0000 %.
+
+---
+
+## C30 · Una tarea programada no puede pedir permiso, y no puede tener dos prompts
+
+**El encargo del codirector:** *«La revisión semanal no se ejecutó por completo porque pidió
+autorización manual. Esto no puede ocurrir, porque entonces se va al viernes y ya se
+desaprovecha la cuota. Tiene que ejecutarse de forma automática y si algo no debe realizarse,
+que quede constancia y lo hagamos manualmente en otro momento, pero que no bloquee.»*
+
+### La causa, y estaba escrita en el prompt
+
+`planificacion-jueves.md`, regla 1: *«Si `mcp__remote-devices__device_list_dir` sobre
+`C:\MisProyectos\Humor` responde: trabaja ahí.»* Y lo mismo en `revision-diaria.md`: *«A las
+11:30 el ordenador del codirector suele estar encendido. Prueba primero…»*
+
+Una tarea programada corre en la nube. **El puente de dispositivos no existe en ese modo y no
+ha existido nunca** — lo dicen todas las bitácoras que lo mencionan, incluida la del 3 de
+septiembre con esas palabras exactas. Lo único que consigue esa llamada es **abrir una
+petición de autorización** en el ordenador del codirector. A las diez de la noche de un
+jueves, nadie la contesta. La sesión espera, la planificación se va al viernes y se pierde la
+cuota del jueves, que es lo único para lo que esa tarea corre el jueves.
+
+**La optimización compraba no tener que descomprimir un `.tar.gz`. Costó una semana de
+planificación.**
+
+### Lo que entra
+
+**1 · Fuera la sonda, en los tres prompts.** No se llama a `mcp__remote-devices__*` nunca.
+Se clona, se trabaja en el contenedor y se entrega `.tar.gz`. Siempre.
+
+**2 · La regla general, que es la que pidió el codirector y va delante de todo:**
+
+> **No pidas nunca una autorización, un permiso ni una confirmación a nadie.** No hay nadie
+> delante: una pregunta no se queda sin contestar, se queda colgada. **Lo que no puedas hacer
+> tú solo, no lo intentas: lo escribes** —en la bitácora, en la sección «Para el codirector»,
+> con qué hay que hacer y por qué no lo has hecho tú— **y sigues.**
+>
+> **Entregar algo incompleto y dicho es siempre mejor que entregar nada esperando permiso.**
+
+**3 · Y de paso, lo que hacía que esto fuera difícil de arreglar: se acaban las dos copias.**
+
+Hasta hoy el prompt que corría vivía en el almacén de tareas programadas y
+`00_estrategia/tareas/` era **un espejo**. El propio `LEEME.md` de esa carpeta avisaba: *«Si
+un día no coinciden, la del almacén es la buena — y este fichero está desactualizado.»* Es
+decir: el proyecto sabía que iban a divergir y lo había aceptado.
+
+**Ahora el fichero del repositorio ES el prompt.** El del almacén se ha reducido a un arranque
+de una página que dice: clona el repositorio, lee `00_estrategia/tareas/<tu fichero>.md` desde
+el primer `---` hasta el final, y síguelo como si fuera este mensaje.
+
+- Cambiar lo que hace un agente es **editar un fichero y commitearlo**.
+- El prompt **se versiona con git** y se revisa en un diff, como el código. Es la instrucción
+  más cara del proyecto y era lo único que no se podía revisar así.
+- **Se acabó la divergencia.**
+
+**El precio, dicho para que no sorprenda:** un cambio en esos ficheros **no surte efecto hasta
+que está en `origin/main`**. Es la trampa 11 (el reloj) aplicada a los prompts.
+Y por si el clon falla, el arranque lleva repetidas inline las seis o siete reglas cuyo
+incumplimiento hace daño irreversible: no pedir permiso, no llamar al puente, no hacer `push`,
+un fichero un dueño, y no escribir el nombre del codirector. Si no puede clonar, dice el error
+y para; no improvisa.
+
+**Aplicado hoy** a `trig_015qkb2sqbbJwJE1qgoNMK95` (planificación) y
+`trig_019QjtovuzeUocmx1P8NJH3F` (revisión diaria), y verificado leyendo lo que quedó guardado.
+**`trig_01GhNrF8nA2w2nXSfetcrHkQ` (métricas) sigue con el prompt entero en el almacén**: su
+espejo `metricas-lunes.md` no se ha tocado hoy y pasarlo al mismo esquema queda pendiente.
+
+---
+
+## C31 · El registro no sabe lo que sabe YouTube
+
+**El aviso del codirector:** *«la revisión diaria del 9/9 insistió en que MDS-011 no se había
+publicado, hasta el punto de ponerlo como incidencia, cuando lo publiqué yo a mano. Tiene
+permiso de YouTube concedido manualmente, así que no entiendo por qué no lo comprueba.»*
+
+**Por qué no lo comprueba: porque no puede.** La revisión diaria corre en un contenedor en la
+nube **sin red** —sus propias bitácoras lo dicen cada día— y su prompt le prohíbe expresamente
+tocar YouTube. El permiso que el codirector concedió a mano es el del token de OAuth, y lo usan
+`publicar.py` y `metricas.py` **desde GitHub Actions**, que sí tiene red. La revisión diaria no
+lo ha tenido nunca.
+
+Lo que ella lee es `registro_publicaciones.json`, y ahí está el defecto de fondo, que ya era la
+**trampa 4**: *un campo que se escribe una vez y describe algo que cambia después, miente.* El
+registro guarda el estado **del momento de la subida**, y lo único que lo corrige es
+`metricas.py`… **los lunes**. Entre lunes y lunes el fichero puede llevar seis días desfasado.
+
+MDS-011 se subió el 07/09 en `private` sin `publicar_en`, el codirector lo publicó a mano, y
+nada escribió eso de vuelta. La revisión lo ha reportado como incidencia **seis días
+seguidos**. No estaba leyendo mal el fichero: **estaba leyendo un fichero caduco como si fuera
+el mundo.**
+
+### Lo que entra
+
+**1 · Ahora mismo, en el prompt: «no lo sé» no es «no publicado».** Sobre un vídeo cuyo
+estado no cuadre, la primera vez es INCIDENCIA con todas las letras —puede ser el fallo de
+MDH-004, y ese sí deja un vídeo escondido para siempre—. **A partir de la segunda**, y
+mientras no cambie nada, baja a la bitácora redactado como *«sigue sin confirmar en el
+registro desde el <fecha>; si lo publicaste a mano, está bien y se corregirá solo el lunes»*.
+Y **si el codirector ha dicho en cualquier sitio que lo publicó él** —`ESTADO.md`,
+`PROMPT_DIRECCIÓN.md`, una bitácora—, el asunto está cerrado.
+
+**Por qué esto importa más de lo que parece:** una incidencia que se repite idéntica seis días
+deja de ser un aviso y pasa a ser ruido. Y el ruido es lo que hace que el séptimo no se lea.
+Un canal que publica una alarma falsa al día se queda sin alarmas.
+
+**2 · El arreglo de raíz, encargado:** sacar a una función suelta de `metricas.py` la parte
+que **ya sabe hacerlo** —preguntarle a YouTube el estado de los vídeos recientes y corregir el
+registro, arreglada el 28/08— para poder llamarla sin tocar las métricas; y dejar en
+`07_pruebas/` el diseño de un workflow que la llame **todos los días antes de las 11:28**.
+Actions tiene red y tiene el token. Lo crea el codirector a mano, como todos los de
+`.github/workflows/`.
+
+---
+
+## C27 · Corregido: el episodio largo sale con UNA voz
+
+**El codirector, el 7 de septiembre:** *«he deducido que planteabas la opción de que algunas
+escenas salieran con la voz de Flash y las otras con edge-tts para el vídeo largo si nos
+quedábamos sin cuota. Eso es una chapuza. En ese caso prefiero que el vídeo se construya con
+más tiempo.»* Y planteó tres opciones.
+
+### La respuesta: ninguna de las tres, y el motivo es que la (a) ya está hecha
+
+**Opción (a) — que la planificación vaya una semana por delante, para tener nueve días en vez
+de dos.** Ya es así. La planificación del jueves 10 escribió `MDH-007`, que se produce el
+**sábado 19**: nueve días. La del 3 escribió `MDH-006` para el 12. **El calendario ya da los
+días que pedía.**
+
+Lo que falta no son días: es **la máquina que los gasta**. Y está diseñada desde el 7 de
+septiembre —la caché de `voz.py` más `voz_adelantada.yml`— y no ha entrado porque el workflow
+tiene que crearlo el codirector a mano.
+
+**Opción (b) — mover el día de la planificación.** El jueves es el día correcto por cuotas
+(los límites se reinician el viernes por la mañana; se gasta lo que iba a caducar). Y no
+compra nada que la caché no compre ya.
+
+**Opción (c) — un agente nuevo que construya el largo día a día.** La **forma** es la
+correcta: construir poco a poco a lo largo de la semana es exactamente lo que hace falta. El
+**quién** no. Y esto merece quedar escrito como criterio general:
+
+> **Construir el vídeo día a día no es un trabajo que necesite juicio, así que no debe ser un
+> agente.** No hay nada que decidir: se mira qué escenas faltan en caché y se sintetizan
+> hasta agotar el margen del día. Un agente es la forma más cara de ejecutar un bucle
+> determinista, es la única que puede equivocarse de forma creativa, y añade un cuarto prompt
+> que mantener, un cuarto dueño en la tabla de propiedad y una cuarta cuota que gastar.
+> **Un workflow de Actions lo hace mejor: es gratis, tiene red, tiene los secretos, ya corre
+> todos los días y no consume una sola llamada de modelo.**
+
+### Las dos correcciones a C27
+
+**1 · Un episodio largo sale con UNA sola voz, nunca mezclada.** La versión 6.1 decía: *«un
+mal día no deja al canal sin vídeo: deja alguna escena con voz peor, y `ficha.json` dice
+cuáles»*. **Eso es exactamente la chapuza que el codirector descartó.** Se cambia:
+
+> La decisión se toma **una vez, el viernes por la noche**. Si la caché tiene las ~40
+> escenas, el episodio entero va en Gemini. Si falta **una sola**, el episodio entero va en
+> `edge-tts`, como siempre. Nada de «lo que falte cae al respaldo». Lo elegido se escribe en
+> `ficha.json` y se dice en `ESTADO.md`.
+
+Se pierde una semana de cuota cuando falla, y la cuota es gratuita y si no se usaba caducaba
+igual. A cambio, nunca hay un vídeo con dos voces.
+
+**2 · La ventana se abre el viernes, no el martes.** La versión 6.1 decía «de martes a
+viernes»: cuatro días × 10 peticiones = **40 llamadas para ~40 escenas**, es decir, **cero
+margen**. Pero el guion del sábado siguiente queda cerrado la noche del jueves anterior —la
+planificación del 10 dejó `MDH-007` cerrado y dicho: *«no se va a tocar, que es lo que
+`voz_adelantada.yml` necesita»—, así que la ventana real es **de viernes a viernes: ocho días
+× 10 = 80 llamadas para 41 escenas.** El doble de lo que hace falta.
+
+**Y lo que queda igual:** modelo 2.5 y no 3.1, para no competir con la cuota de los Shorts; 25 s
+entre llamadas; y la caché indexada por sha256 del texto, que hace que corregir una escena
+resintetice solo esa escena.
+
+**La parte incómoda de su frase de entonces —«si no, dejamos de hacer largos»— sigue viva y
+sin decidir**, para el 27 de septiembre. MDH-005 tuvo una visualización. Si C27 no iguala el
+largo al Short en calidad, la pregunta no es cómo mejorarlo sino si merece la semana.
+
+---
+
+## C32 · El formato de las peticiones al codirector
+
+**Textual, del 7 de septiembre y repetido el 12:** *«todo lo que necesites de mí va en un
+fichero tareas_codirector_FECHA.md, explicado de principio a fin y sin resumir, aunque sea
+algo que ya hayamos hecho antes (se me olvidan cosas, como me pasó con el token). Prefiero
+leer rápido algo que ya me sé a acabar en una conversación paralela con Haiku intentando
+entender qué me pides.»*
+
+Queda como regla, en `PROMPT_DE_ARRANQUE.md` y aquí:
+
+- **Todo lo que la dirección necesite del codirector va en
+  `00_estrategia/tareas/tareas_codirector_AAAA-MM-DD.md`.** Nunca en un párrafo suelto dentro
+  de un resumen, nunca solo en `ESTADO.md`, nunca solo en la conversación.
+- **Explicado de principio a fin**: por qué hace falta, qué abre o desbloquea, los pasos
+  exactos, cómo saber si ha funcionado, y qué NO hay que hacer. **Sin resumir aunque ya se
+  haya hecho antes.**
+- **Cada tarea lleva su tiempo estimado**, para que se pueda decidir qué entra en un rato
+  suelto.
+- **Y lleva su sitio exacto.** Esto es del 12/09 y sale de un fallo propio: la tarea del token
+  estaba bien explicada y la de `GEMINI_API_KEY` decía «copia una de esas líneas y pégala
+  justo debajo» **sin decir en qué paso del workflow**. El codirector la pegó en la primera
+  aparición de `secrets.` que encontró, que es el paso de subir a YouTube, y la clave no llega
+  a `voz.py`. Instrucción impecable, resultado inservible. → **Trampa 18.**
+
+---
+
+## Lo que NO cambia hoy
+
+- **El calendario.** Cinco Shorts y un largo; la planificación sigue el jueves a las 22:00.
+- **C25 y su orden.** P1 y P8 en la semana del 14, P2/P7/P5 en la del 21, P9 ahora sí en la
+  del 21 porque la autorización de `montaje.py` está escrita. El punto de control sigue siendo
+  el **27 de septiembre**.
+- **C26 entera.** La decisión sigue siendo el **15 de noviembre**, con la mediana de los
+  últimos veinte Shorts a 48 h, y los umbrales solo se pueden discutir **antes del 8 de
+  noviembre**.
+- **No se amplía el tema**, no se clona la voz, no vuelven los subtítulos quemados, y C10,
+  C20 y C13 siguen detrás del peldaño S1.
+- **La regla 11.1 sigue suspendida** para los cambios de presentación hasta el 27. Los cuatro
+  arreglos de hoy son de defecto, y los arreglos de defecto nunca han consumido ranura.

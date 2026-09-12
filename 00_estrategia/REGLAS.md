@@ -146,8 +146,13 @@ es dueño de un guion no lo edita: escribe una nota en `05_calendario/revisiones
 4. **Nunca sobre un episodio ya producido.** Los cambios entran en la siguiente producción.
 5. **Determinista.** Mismo guion y mismo `t`, mismo píxel. Nada de `Math.random()`.
 6. **Nada que dependa de internet en tiempo de render.**
-7. **Archivos protegidos** — `voz.py`, `montaje.py`, `.github/workflows/producir.yml`: no se
-   tocan sin permiso explícito del codirector en la conversación.
+7. **Archivos protegidos.** Desde el 07/09/2026 (escrito el 12/09 en
+   `PROMPT_DE_ARRANQUE.md`) esta regla **ya no aplica a la dirección**, que puede editar
+   cualquier fichero del repositorio. **Para los demás agentes no cambia nada**: la tabla de
+   `PROPIEDAD_DE_FICHEROS.md` y esta regla siguen en pie tal cual, y `voz.py` y `montaje.py`
+   —los dos ya autorizados— son la excepción, no el precedente.
+   **`.github/workflows/` queda protegida siempre, también para la dirección**: no se puede
+   escribir en remoto y esos ficheros los crea el codirector a mano.
 8. **`MEJORAS.md` se añade al final, nunca se reescribe.**
 
 ## 12. El criterio editorial que no se negocia
@@ -172,6 +177,35 @@ le está pidiendo al espectador que se fíe de una promesa que el propio vídeo 
 
 Mínimo: **dos risas por vídeo largo, una de ellas antes del segundo quince.** En un Short,
 una, y va primero.
+
+### Y cómo se reparten, que es lo que faltaba
+
+*Corregida el 12 de septiembre de 2026, después de MDH-006.*
+
+El mínimo de arriba se cumplió **exactamente**: dos risas, una antes del segundo quince. Las
+dos cayeron en los primeros veinte segundos y después vinieron **cuatro minutos y medio sin
+un solo intento**. El codirector lo describió así: *«el contenido está bien, incluso mejor
+que otras veces, y se aprende algo. Pero el chiste no entra: desde que empieza el vídeo
+hasta que termina, cuesta acordarse del remate.»*
+
+Un suelo se convirtió en techo. Así que la regla deja de contar y pasa a medir distancias:
+
+- **Nunca más de noventa segundos de vídeo largo sin algo construido para hacer reír.** En
+  cinco minutos eso son cuatro o cinco, no dos. No hace falta que sean chistes con remate:
+  un giro de tono, una exageración, un ejemplo absurdo pero real.
+- **La primera, antes del segundo quince.** Eso no cambia.
+- **Un callback que vuelve a más de noventa segundos vuelve a decir su premisa en la misma
+  frase.** «Y los diez de mi reunión siguen calculando» no funciona a los cuatro minutos y
+  medio; «y en mi reunión, de los doce, se rieron dos: los otros diez siguen calculando»,
+  sí. Es la regla 14 aplicada al eje del tiempo: lo que se dijo hace cuatro minutos, para
+  quien se despistó treinta segundos, no se ha dicho.
+- **Un chiste no le pide aritmética al espectador.** Si el remate necesita que calcule,
+  recuerde una cifra o relacione dos escenas lejanas, no es un remate: es un ejercicio.
+
+**Y la lección general, que vale más que la regla:** cuando una regla cuente cosas,
+pregúntate qué pasa si alguien pone el mínimo exacto en el peor sitio posible. Si la
+respuesta es «entonces la regla no sirve de nada», lo que hay que medir no es la cantidad,
+es la distancia.
 
 ## 14. Los dos canales: se ve mudo y se escucha a ciegas
 
@@ -215,6 +249,38 @@ dinero encima de la *mesa*». El dinero no se menciona en ningún momento del Sh
 de la tesis del guion, que sí lo explicaba—, y la cara era de duda sobre una frase que no
 tenía nada de dudoso. Quien lo vio mudo leyó una frase suelta; quien lo escuchó no supo
 nunca que había dinero. Pasó las cuatro revisiones y se publicó.
+
+### 14.4 · El detalle concreto se dice con la misma palabra
+
+*Añadida el 12 de septiembre de 2026, después de MDS-014.*
+
+La 14.1 prohíbe que la pantalla introduzca **un dato que la voz no dice**. Faltaba el caso
+de al lado, que es más difícil de ver a ojo y se cuela igual: **el mismo dato con dos
+palabras distintas.**
+
+> **MDS-014, publicado el 10/09.** La escena 2 dice en voz «lo repetí **el domingo**». La
+> escena 4 pone en pantalla «lo jovial que estabas **el martes**» mientras la voz dice «lo
+> jovial que estás **hoy**». Tres días para una sola idea y ninguno explicado. El codirector:
+> *«hace mención a "martes" pero luego no se explica en ningún caso nada acerca del martes».*
+
+**La regla.** Un día de la semana, un mes, un lugar o un nombre propio que aparezca en
+pantalla **se dice con esa misma palabra en la narración de esa misma escena**. Y no se
+adelanta en la escena anterior.
+
+El motivo no es de estilo. Un día concreto, en este canal, **no es decorado: es un dato**.
+El espectador lo lee como un dato y busca la escena donde se explique. Si no la hay, se
+queda con la sensación de haberse perdido algo — y eso es peor que no haberlo puesto.
+
+**Red determinista:** `validar_guion.py` da **error** si un día o un mes está en un campo de
+pantalla y no en la narración de su escena (C28). Medido contra los 302 guiones del
+repositorio: señala tres escenas, las tres reales, ningún falso positivo. La versión amplia
+de esta comprobación —toda palabra de contenido, comparada por raíz, que era el encargo
+original de C22— se midió el mismo día y señala el **73,5 %** de las escenas: es ruido, no
+una comprobación, y por eso llevaba tres semanas sin poder escribirse. Queda cerrada así, y
+dicho, en vez de seguir abierta para siempre.
+
+**Y la lección, que es la misma de siempre en este proyecto:** una comprobación tonta y
+estrecha que acierta siempre vale más que una lista que señala tres de cada cuatro escenas.
 
 **Y una consecuencia que no es de accesibilidad sino de distribución:** el `.srt` y el
 título son lo que hace encontrable un vídeo, y la búsqueda es hoy la única superficie que
