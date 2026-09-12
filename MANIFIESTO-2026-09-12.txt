@@ -1,0 +1,15 @@
+Paquete de la revisión diaria — 12 de septiembre de 2026
+
+AÑADIDOS / MODIFICADOS (incluidos en el .tar.gz):
+- 04_agentes/metricas.py (editado)
+- 05_calendario/ESTADO.md (reescrito)
+- 05_calendario/bitacora/2026-09-12-revision.md (nuevo)
+
+BORRADOS (aplicar con `git rm`, no van dentro del .tar.gz):
+- 05_calendario/revisiones/MDH-006.md
+- 05_calendario/revisiones/MDS-011.md
+(duplicados obsoletos ya archivados en _aplicadas/; ver la bitácora de hoy
+para el porqué)
+
+NO incluye: parrilla.json, CALENDARIO.md, demanda.json, registro_publicaciones.json,
+05_calendario/qa/, ningún guion, ningún fichero de .github/workflows/, montaje.py.

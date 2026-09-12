@@ -40,6 +40,21 @@ ejecutarlo una vez y actualizar el secreto `YT_REFRESH_TOKEN`.
 
     python3 04_agentes/metricas.py
     python3 04_agentes/metricas.py --desde 2026-08-18
+
+C26 — LA MEDIANA (12/09/2026)
+-----------------------------
+Desde hoy este script también deja en `metricas.json`, bajo la clave
+`control_c26`, la mediana de visualizaciones A LAS 48 HORAS de los últimos
+veinte Shorts, y cuántos de esos veinte pasan de 100 y de 50 vistas — el
+número con el que se decide, el 15 de noviembre, si el canal sigue.
+
+El truco es que «a las 48 horas» no puede ser «lo que lleve acumulado
+cuando corra el script», porque `metricas.yml` solo corre los lunes: un
+Short del martes se leería por primera vez seis días tarde. En vez de eso,
+`vistas_primeras_48h()` pide el desglose DIARIO de la API para los dos
+primeros días de cada vídeo, que YouTube conserva siempre — así que da el
+mismo número la primera semana que la vigésima, sin importar qué día caiga
+el lunes de turno.
 """
 import argparse
 import csv
@@ -202,6 +217,80 @@ def retencion(ya, vid, desde, hasta, duracion_s):
                                           curva[min(len(curva) - 1, len(curva) // 10)]["ratio"]) * 100, 1)
             if len(curva) > 2 else None,
             "curva": curva}
+
+
+def vistas_primeras_48h(ya, vid, subido):
+    """Visualizaciones de los dos primeros días de un vídeo (día 0 y día 1:
+    aprox. 48 horas), pidiendo el desglose DIARIO a la API en vez de la suma
+    acumulada que da `fila()`.
+
+    Por qué hace falta aparte de `fila()` (C26, 12/09): `metricas.yml` solo
+    corre los lunes, así que un Short publicado, por ejemplo, un martes no se
+    lee por primera vez a las 48h sino seis días después — y para entonces
+    `fila()` ya habría sumado una semana entera de vistas, no las dos
+    primeras 48h. La API sí conserva el histórico día a día
+    (`dimensions="day"`), así que este número sale igual la primera vez que
+    se calcula que veinte lunes después: no depende de cuándo corra el
+    script, solo de cuándo se publicó el vídeo.
+
+    Devuelve `None` si la llamada falla (vídeo sin datos todavía, error de
+    cuota, etc.) — nunca 0 a ciegas, para no confundir «no se pudo medir» con
+    «cero visualizaciones»."""
+    hasta_48h = (subido + timedelta(days=1)).isoformat()
+    try:
+        r = ya.reports().query(ids="channel==MINE", startDate=subido.isoformat(),
+                               endDate=hasta_48h, metrics="views",
+                               dimensions="day", filters=f"video=={vid}").execute()
+    except Exception:
+        return None
+    filas = r.get("rows")
+    if filas is None:
+        return None
+    return sum(f[1] for f in filas)
+
+
+def mediana_48h_ultimos_shorts(lecturas, n=20):
+    """C26 (versión 6 del plan): la mediana de vistas a 48h de los últimos
+    veinte Shorts, más cuántos de esos veinte pasan de 100 y de 50 vistas.
+    Es el número con el que se discute el punto de control del 15 de
+    noviembre — sin él se discute de memoria.
+
+    Con `lecturas` puede haber varias filas del mismo vídeo (una por lunes
+    que ha corrido el script): se usa la más reciente de cada uno — todas
+    deberían traer el mismo `vistas_48h` ya que ese cálculo no cambia con el
+    tiempo, pero la más reciente es la que ha tenido más oportunidades de
+    reintentar si una lectura anterior falló (`None`).
+
+    Se ordena por fecha de PUBLICACIÓN (no de lectura) y se cogen los
+    últimos `n`. Solo cuentan los Shorts (`formato == "corto"`) con
+    `vistas_48h` ya calculado; si no hay ninguno, devuelve `None` en vez de
+    fingir una mediana de una lista vacía."""
+    por_id = {}
+    for l in lecturas:
+        if l.get("formato") != "corto":
+            continue
+        if l.get("vistas_48h") is None:
+            continue
+        actual = por_id.get(l["id"])
+        if actual is None or l["leido"] > actual["leido"]:
+            por_id[l["id"]] = l
+    ordenados = sorted(por_id.values(), key=lambda l: l["publicado"])[-n:]
+    valores = [l["vistas_48h"] for l in ordenados]
+    if not valores:
+        return None
+    v = sorted(valores)
+    m = len(v)
+    mediana = v[m // 2] if m % 2 else (v[m // 2 - 1] + v[m // 2]) / 2
+    return {
+        "mediana_vistas_48h": mediana,
+        "n_videos": m,
+        "sobre_100_vistas": sum(1 for x in valores if x > 100),
+        "sobre_50_vistas": sum(1 for x in valores if x > 50),
+        "_nota": "C26: punto de control del 15/11/2026 con la mediana de "
+                 "vistas a 48h de los últimos veinte Shorts (n_videos puede "
+                 "ser menor de 20 si el canal todavía no tiene veinte, o si "
+                 "a alguno le falló la lectura de vistas_48h).",
+    }
 
 
 def trafico(ya, vid, desde, hasta):
@@ -410,6 +499,7 @@ def main():
             "compartidos": int(base.get("shares", 0)),
             "retencion": retencion(ya, vid, desde, hasta, d),
             "trafico_pct": trafico(ya, vid, desde, hasta),
+            "vistas_48h": vistas_primeras_48h(ya, vid, subido),
         }
         fila_out.update(studio.get(vid) or studio.get(p.get("titulo", ""), {})
                         or {"impresiones": None, "ctr": None})
@@ -434,6 +524,7 @@ def main():
     previo["_nota"] = ("Lo escribe 04_agentes/metricas.py desde GitHub Actions. "
                        "Impresiones y CTR solo aparecen si hay un CSV de Studio en "
                        "05_calendario/exportes/: la API de YouTube no las expone.")
+    previo["control_c26"] = mediana_48h_ultimos_shorts(previo["lecturas"])
     previo["actualizado_utc"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     SALIDA.write_text(json.dumps(previo, ensure_ascii=False, indent=1) + "\n",
                       encoding="utf-8")

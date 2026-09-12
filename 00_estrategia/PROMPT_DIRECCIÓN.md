@@ -1,5 +1,5 @@
 7/9/26:
-- Respecto a la publicación, a app está publicada desde el viernes, así que entiendo que no hay nada más que hacer en este ámbito (la verificación de marca queda pendiente y no pasa nada).
+- Respecto a la publicación, la app está publicada desde el viernes, así que entiendo que no hay nada más que hacer en este ámbito (la verificación de marca queda pendiente y no pasa nada).
 - Ok al nuevo cambio en quitar mi nombre. No es importante, por lo que no vamos a meternos con el historial de git.
 - Puedes autorizar la edición de montaje.py. También puedes quitar todas las restricciones de edición en todos los ficheros siempre que seas tú, el codirector, quien haga la edición (de los demás agentes no me fío).
 - Commit & push hechos con tus cambios.
@@ -18,7 +18,11 @@
 - El short programado de hoy va a salir sin problemas, pero el problema es que el guion se siente inconexo, cortado, difícil de seguir. Si yo fuera el espectador, saltaría al siguiente seguro. Parece un recorte de un recorte, sin hilo conductor, sin una historia narrada, sin un principio y un final. Tenemos que mejorar mucho el guionista de los vídeos (además de la voz, que estamos en camino).
 - La revisión diaria sigue pensando que MDS-011 no se publicó, hasta el punto de ponerlo como incidencia, cuando lo cierto es que lo publiqué yo a mano. Si se supone que puede comprobar en Youtube (me pidió permiso y se lo di manualmente), no entiendo por qué no lo revisa y ve que ya está subido. No es importante, pero es un poco molesto. He hecho pull, commit & push con sus cambios.
 
-10/10/26
+10/09/26
 - pull, commit y push hechos de la revisión diaria. La revisión pide que el codirector "añada GEMINI_API_KEY" a producir.yml antes del lunes 14. ¿Seguro que esto es correcto? Yo subí "GEMINI_API_KEY" como secreto a GitHub hace 3 semanas, por lo que no veo por qué tendría que hacer ahora algo distinto. Es para la implementación de las nuevas voces que tanto estamos esperando.
 - El short de hoy hace mención a "martes" pero luego no se explica en ningún caso nada acerca del martes. Entiendo que se refiere a un día en el que duermes poco, pero no se explica y queda raro.
-- He añadido un fichero "PROMPT_DIRECCIÓN.md" en la carpeta "00_estrategia" para escribir lo que te quiero comentar después de varios días. No lo borres y no lo edites tampoco (es solo para poder comunicarme contigo sin que se me olvide nada de un día al siguiente)
+- He añadido un fichero "PROMPT_DIRECCIÓN.md" en la carpeta "00_estrategia" para escribir lo que te quiero comentar después de varios días. No lo borres y no lo edites tampoco (es solo para poder comunicarme contigo sin que se me olvide nada de un día al siguiente).
+
+11/09/26
+- Commit & push tanto de la revisión semanal como de la diaria. Nada muy especial al respecto.
+- La revisión semanal no se ejecutó ayer por completo porque pidió autorización manual. Esto no puede ocurrir, porque entonces se va al viernes y ya se desaprovecha la cuota (lo que quedaba). Por este motivo esa tarea se debe ejecutar de forma automática y si algo no debe realizarse, se debe dejar constancia y que lo hagamos manualmente nosotros o un agente en otro momento, pero no bloquear la planificación semanal por eso.
