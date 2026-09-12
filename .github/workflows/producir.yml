@@ -193,6 +193,8 @@ jobs:
       # Voz + subtítulos. Devuelve las duraciones reales de cada escena.
       # ---------------------------------------------------------------
       - name: Sintetizar narración
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           while IFS=$'\t' read -r ID G; do
             echo "::group::voz $ID"
@@ -291,7 +293,6 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           TOKEN_ES: ${{ secrets.YT_REFRESH_TOKEN }}
           TOKEN_EN: ${{ secrets.YT_REFRESH_TOKEN_EN }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           while IFS=$'\t' read -r ID IDIOMA ESTADO CUANDO; do
             case "$IDIOMA" in
