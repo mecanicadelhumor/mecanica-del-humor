@@ -108,6 +108,21 @@
       "revisado": false
     },
     {
+      "id": "MDH-006.es",
+      "episodio": "MDH-006",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "Bromas en el trabajo: cuándo te suben el estatus y cuándo lo hunden",
+      "guion": "05_calendario/guiones/MDH-006.es.json",
+      "video_id": "WbXnVovbvqw",
+      "url": "https://youtu.be/WbXnVovbvqw",
+      "estado": "private",
+      "publicar_en": "2026-09-12T10:00:00Z",
+      "musica": "cama_03_haru_lofi_roa.mp3",
+      "subido_utc": "2026-09-12T01:33:42Z",
+      "revisado": false
+    },
+    {
       "id": "MDS-001.es",
       "episodio": "MDS-001",
       "idioma": "es",

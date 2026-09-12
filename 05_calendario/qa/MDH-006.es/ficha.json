@@ -1,0 +1,82 @@
+{
+  "id": "MDH-006.es",
+  "duracion_final_s": 282.2,
+  "tamano_mb": 18.5,
+  "audio": {
+    "lufs": -14.17,
+    "pico_dbtp": -0.59,
+    "rango_lu": 3.5
+  },
+  "silencio_inicial": {
+    "empieza_s": -0.17,
+    "acaba_s": 0.852,
+    "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
+  },
+  "arranque": {
+    "silencios_s": [
+      [
+        -0.085,
+        0.852
+      ]
+    ],
+    "fragmento_antes_de_la_narracion": false,
+    "duracion_fragmento_s": null,
+    "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente)."
+  },
+  "fragmentos": {
+    "instantes": [],
+    "cuantos": 0,
+    "_nota": "Cada entrada es un trozo de audio de menos de 0.45 s rodeado de silencio: casi seguro una sílaba suelta que el sintetizador ha metido al empezar una escena. «mmss» es el minuto exacto para ir a escucharlo. Debe estar vacío."
+  },
+  "subtitulos": {
+    "ass_existe": true,
+    "lineas_ass": 626,
+    "srt_existe": true,
+    "quemados": false,
+    "quemados_origen": "leído de montaje.json",
+    "_esperado": {
+      "quemados": false,
+      "lineas_ass": "> 0 con motor edge; puede ser 0 con motor gemini"
+    },
+    "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
+  },
+  "sincronia_voz": {
+    "duracion_calculada_s": 280.53,
+    "duracion_real_voz_mp3_s": 280.58,
+    "desfase_s": 0.05,
+    "_esperado": "desfase_s < 0.5",
+    "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
+  },
+  "musica": {
+    "archivo": "cama_03_haru_lofi_roa.mp3",
+    "sha256": "68fe871bcd427b465aa11f71d2f2fc889de234166af65fac305170c0f5bddd6b"
+  },
+  "guion": {
+    "titulo_trabajo": "Humor en el trabajo sin arruinarte la carrera",
+    "idioma": "es",
+    "voz": "es-ES-AlvaroNeural",
+    "escenas": 40,
+    "duracion_narracion_s": 280.53,
+    "escenas_por_encima_de_14s": [],
+    "escena_mas_larga_s": 12.38,
+    "motor_voz_pedido": "edge",
+    "motores_por_escena": {
+      "edge": 40
+    },
+    "escenas_ritmo_fuera_de_rango": [
+      [
+        2,
+        1.53
+      ]
+    ]
+  },
+  "fotogramas_s": [
+    4.98,
+    61.74,
+    112.39,
+    165.71,
+    219.92,
+    276.72
+  ],
+  "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
+}
