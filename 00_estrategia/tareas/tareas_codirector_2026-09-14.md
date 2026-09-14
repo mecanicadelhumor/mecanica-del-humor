@@ -207,6 +207,215 @@ Con una captura de pantalla o copiando los números en un mensaje me vale.
   de prueba y el banco de fotos con licencia— siguen exactamente igual, y son las que
   arrancan esta semana con la tarea 4.
 
+### Codirector responde:
+La cuota de uso a día 14/09 (creo que malas noticias para la imagen):
+Modelo
+Categoría
+RPM
+TPM
+RPD
+Gráficos
+Gemini 3.1 Flash TTS
+Modelos generativos multimodales	
+4 / 3
+305 / 10K
+10 / 10
+Antigravity
+Agentes	
+0 / 60
+0 / 100K
+0 / 100
+Deep Research Pro Preview
+Agentes	
+0 / 0
+0 / 0
+0 / 0
+Gemini 2 Flash
+Modelos de texto de salida	
+0 / 0
+0 / 0
+0 / 0
+Gemini 2 Flash Lite
+Modelos de texto de salida	
+0 / 0
+0 / 0
+0 / 0
+Computer Use Preview
+Otros modelos	
+0 / 0
+0 / 0
+0 / 0
+Gemini 2.5 Flash
+Modelos de texto de salida	
+0 / 5
+0 / 250K
+0 / 20
+Nano Banana (Gemini 2.5 Flash Preview Image)
+Modelos generativos multimodales	
+0 / 0
+0 / 0
+0 / 0
+Gemini 2.5 Flash Lite
+Modelos de texto de salida	
+0 / 10
+0 / 250K
+0 / 20
+Gemini 2.5 Flash TTS
+Modelos generativos multimodales	
+0 / 3
+0 / 10K
+0 / 10
+Gemini 2.5 Pro
+Modelos de texto de salida	
+0 / 0
+0 / 0
+0 / 0
+Gemini 2.5 Pro TTS
+Modelos generativos multimodales	
+0 / 0
+0 / 0
+0 / 0
+Gemini 3 Flash
+Modelos de texto de salida	
+0 / 5
+0 / 250K
+0 / 20
+Nano Banana Pro (Gemini 3 Pro Image)
+Modelos generativos multimodales	
+0 / 0
+0 / 0
+0 / 0
+Gemini 3.1 Pro
+Modelos de texto de salida	
+0 / 0
+0 / 0
+0 / 0
+Nano Banana 2 (Gemini 3.1 Flash Image)
+Modelos generativos multimodales	
+0 / 0
+0 / 0
+0 / 0
+Gemini 3.1 Flash Lite
+Modelos de texto de salida	
+0 / 15
+0 / 250K
+0 / 500
+Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)
+Modelos generativos multimodales	
+0 / 0
+0 / 0
+0 / 0
+Gemini 3.5 Flash
+Modelos de texto de salida	
+0 / 5
+0 / 250K
+0 / 20
+Gemini 3.5 Flash Lite
+Modelos de texto de salida	
+0 / 15
+0 / 250K
+0 / 500
+Gemini 3.5 Transcribe
+API en vivo	
+0 / 3
+0 / 10K
+0 / 25
+Gemini 3.6 Flash
+Modelos de texto de salida	
+0 / 5
+0 / 250K
+0 / 20
+Gemini 3.7 Flash
+Modelos de texto de salida	
+0 / 5
+0 / 250K
+0 / 20
+Gemini 3.8 Flash
+Modelos de texto de salida	
+0 / 5
+0 / 250K
+0 / 20
+Gemini Embedding 1
+Otros modelos	
+0 / 100
+0 / 30K
+0 / 1K
+Gemini Embedding 2
+Otros modelos	
+0 / 100
+0 / 30K
+0 / 1K
+Gemini Omni 1.1 Flash
+Modelos generativos multimodales	
+0 / 0
+0 / 0
+0 / 0
+Gemini Omni Flash
+Modelos generativos multimodales	
+0 / 0
+0 / 0
+0 / 0
+Gemini Robotics ER 2 Preview
+Otros modelos	
+0 / 5
+0 / 250K
+0 / 20
+Gemma 4 26B
+Otros modelos	
+0 / 30
+0 / 16K
+0 / 14.4K
+Gemma 4 31B
+Otros modelos	
+0 / 30
+0 / 16K
+0 / 14.4K
+Lyria 3 Clip
+Modelos generativos multimodales	
+0 / 0
+0 / 0
+0 / 0
+Lyria 3 Pro
+Modelos generativos multimodales	
+0 / 0
+0 / 0
+0 / 0
+Veo 3 Fast Generate
+Modelos generativos multimodales	
+0 / 0
+-	
+0 / 0
+Veo 3 Generate
+Modelos generativos multimodales	
+0 / 0
+-	
+0 / 0
+Veo 3 Lite Generate
+Modelos generativos multimodales	
+0 / 0
+-	
+0 / 0
+Gemini 2.5 Flash Native Audio Dialog
+API en vivo	
+0 / Ilimitado
+0 / 1M
+0 / Ilimitado
+Gemini 3 Flash Live
+API en vivo	
+0 / Ilimitado
+0 / 65K
+0 / Ilimitado
+Gemini 3.5 Live Translate
+API en vivo	
+0 / Ilimitado
+0 / 20K
+0 / Ilimitado
+Gemini 3.5 Transcribe Live
+API en vivo	
+0 / Ilimitado
+0 / 20K
+0 / Ilimitado
+
 ---
 
 ## TAREA 4 — Doce fotos, y abrir el muestrario de imagen
@@ -269,7 +478,11 @@ gastado nada.
 
 Dime **qué número prefieres** (o que ninguno) y con eso escribo el cambio en `escena.html`.
 
-### 4.4 Las doce fotos, si el muestrario te convence
+### 4# Codirector responde:
+
+He hecho la prueba y creo que la "Duotono ámbar - gris + ámbar de marca" (t1) es la que mejor queda de momento, por acercarse a los colores del canal. De todas formas, vamos probando así y vemos más adelante si encaja o no.
+
+#.4 Las doce fotos, si el muestrario te convence
 
 No hacen falta muchas: **doce llegan** para vestir la primera escena de los Shorts de una
 semana y para arrancar el banco.
@@ -321,7 +534,9 @@ las atribuciones donde toquen.
   está mal diseñado y lo tiro yo mismo (regla 5).
 
 ---
+## Codirector responde:
 
+No he puesto la licencia porque las imágenes que he encontrado específicamente ponían que eran con licencia Pixabay en la que no hace falta atribución. Si aun así quieres que citemos dímelo y las busco de nuevo y pego la licencia. 
 ## Y una cosa que NO es una tarea, pero conviene que sepas
 
 **El guion de los Shorts que te sonó inconexo ya está arreglado, y todavía no lo has visto.**
