@@ -4,7 +4,7 @@
   "tamano_mb": 8.4,
   "audio": {
     "lufs": -14.42,
-    "pico_dbtp": -1.38,
+    "pico_dbtp": -1.31,
     "rango_lu": 4.9
   },
   "silencio_inicial": {
