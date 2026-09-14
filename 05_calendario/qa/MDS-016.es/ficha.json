@@ -1,11 +1,11 @@
 {
   "id": "MDS-016.es",
-  "duracion_final_s": 47.3,
-  "tamano_mb": 8.4,
+  "duracion_final_s": 58.0,
+  "tamano_mb": 10.0,
   "audio": {
-    "lufs": -14.42,
-    "pico_dbtp": -1.31,
-    "rango_lu": 4.9
+    "lufs": -14.09,
+    "pico_dbtp": -1.32,
+    "rango_lu": 3.6
   },
   "silencio_inicial": {
     "empieza_s": -0.17,
@@ -30,7 +30,7 @@
   },
   "subtitulos": {
     "ass_existe": true,
-    "lineas_ass": 106,
+    "lineas_ass": 0,
     "srt_existe": true,
     "quemados": false,
     "quemados_origen": "leído de montaje.json",
@@ -41,9 +41,9 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 45.69,
-    "duracion_real_voz_mp3_s": 45.74,
-    "desfase_s": 0.05,
+    "duracion_calculada_s": 56.66,
+    "duracion_real_voz_mp3_s": 56.4,
+    "desfase_s": 0.26,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
@@ -56,22 +56,22 @@
     "idioma": "es",
     "voz": "es-ES-AlvaroNeural",
     "escenas": 6,
-    "duracion_narracion_s": 45.69,
+    "duracion_narracion_s": 56.66,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 9.752,
-    "motor_voz_pedido": "edge",
+    "escena_mas_larga_s": 11.264,
+    "motor_voz_pedido": "gemini",
     "motores_por_escena": {
-      "edge": 6
+      "gemini": 6
     },
     "escenas_ritmo_fuera_de_rango": []
   },
   "fotogramas_s": [
-    4.39,
-    11.12,
-    18.27,
-    26.19,
-    33.74,
-    42.39
+    5.34,
+    13.47,
+    21.36,
+    30.68,
+    41.54,
+    52.75
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
