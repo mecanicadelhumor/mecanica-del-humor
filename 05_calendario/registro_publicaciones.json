@@ -346,6 +346,21 @@
       "musica": "cama_03_haru_lofi_roa.mp3",
       "subido_utc": "2026-09-11T01:31:41Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-016.es",
+      "episodio": "MDS-016",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "Por qué la ironía no se entiende por WhatsApp",
+      "guion": "05_calendario/guiones/MDS-016.es.json",
+      "video_id": "S7Ll-nus8eo",
+      "url": "https://youtu.be/S7Ll-nus8eo",
+      "estado": "private",
+      "publicar_en": "2026-09-14T17:00:00Z",
+      "musica": "cama_01_crying_over_you_christophermorrow.mp3",
+      "subido_utc": "2026-09-14T01:32:59Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-09-07T12:54:20Z"
