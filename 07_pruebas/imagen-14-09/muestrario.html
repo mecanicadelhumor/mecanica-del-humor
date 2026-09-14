@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<title>Mecánica del Humor · muestrario de tratamiento de imagen (C34)</title>
+<style>
+  :root{
+    /* La paleta real de escena.html, copiada tal cual. Si allí cambia, aquí también. */
+    --fondo:#0B1220; --reticula:#16213A; --tinta:#F2F4F8; --tenue:#8A97AE;
+    --ambar:#FFB020; --cian:#4CC9F0; --coral:#EF476F;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#05080F;color:var(--tinta);
+       font-family:"Inter","Segoe UI","DejaVu Sans",sans-serif;padding:28px 32px 80px}
+  h1{font-size:26px;font-weight:700;margin-bottom:6px}
+  h2{font-size:17px;font-weight:600;margin:34px 0 12px;color:var(--ambar)}
+  p{color:var(--tenue);font-size:15px;line-height:1.55;max-width:78ch;margin-bottom:10px}
+  code{background:#12203A;padding:1px 6px;border-radius:4px;font-size:13px;color:var(--cian)}
+
+  #zona{border:2px dashed #2A3B5E;border-radius:14px;padding:34px;text-align:center;
+        margin:18px 0 8px;cursor:pointer;transition:border-color .15s,background .15s}
+  #zona.sobre{border-color:var(--ambar);background:#101C33}
+  #zona b{color:var(--tinta);font-size:16px}
+
+  .rejilla{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+  .tarjeta{background:#0A1426;border:1px solid #1B2A47;border-radius:12px;overflow:hidden}
+  .tarjeta .et{padding:9px 12px;font-size:12.5px;color:var(--tenue);
+               border-top:1px solid #1B2A47;display:flex;justify-content:space-between;gap:8px}
+  .tarjeta .et b{color:var(--tinta);font-weight:600}
+
+  /* --- El lienzo: una escena real del canal, a escala --- */
+  .lienzo{position:relative;aspect-ratio:9/16;background:var(--fondo);overflow:hidden}
+  .lienzo .malla{position:absolute;inset:0;
+    background-image:linear-gradient(var(--reticula) 1px,transparent 1px),
+                     linear-gradient(90deg,var(--reticula) 1px,transparent 1px);
+    background-size:38px 38px;opacity:.28}
+  .marco{position:absolute;left:6%;right:6%;top:9%;height:46%;overflow:hidden;
+         border:2px solid #24365A;border-radius:10px}
+  .marco img{width:100%;height:100%;object-fit:cover;display:block;
+             animation:deriva 8s linear infinite alternate}
+  @keyframes deriva{from{transform:scale(1.06) translate(-1.2%,-1%)}
+                    to{transform:scale(1.11) translate(1.2%,1%)}}
+  .tinte{position:absolute;inset:0;pointer-events:none}
+  .texto{position:absolute;left:6%;right:6%;top:59%}
+  .ante{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+  .gordo{font-size:29px;font-weight:800;line-height:1.1;margin:7px 0 9px}
+  .gordo em{font-style:normal;color:var(--ambar)}
+  .pie{font-size:12px;color:var(--tenue);line-height:1.45}
+  .vineta{position:absolute;inset:0;pointer-events:none;
+          background:radial-gradient(ellipse at 50% 42%,transparent 42%,rgba(5,8,15,.62) 100%)}
+
+  /* --- Los cuatro tratamientos que se comparan --- */
+  /* 0 · cruda: la foto tal cual sale del banco */
+  .t0 img{filter:none}
+  /* 1 · duotono ámbar: gris + multiply ámbar sobre el azul del canal */
+  .t1 img{filter:grayscale(1) contrast(1.18) brightness(.92)}
+  .t1 .tinte{background:var(--ambar);mix-blend-mode:multiply}
+  .t1 .marco::after{content:"";position:absolute;inset:0;
+                    background:var(--fondo);mix-blend-mode:lighten;opacity:.34}
+  /* 2 · duotono cian */
+  .t2 img{filter:grayscale(1) contrast(1.18) brightness(.92)}
+  .t2 .tinte{background:var(--cian);mix-blend-mode:multiply}
+  .t2 .marco::after{content:"";position:absolute;inset:0;
+                    background:var(--fondo);mix-blend-mode:lighten;opacity:.34}
+  /* 3 · gris frío: sin color de marca, solo desaturada y metida en el azul */
+  .t3 img{filter:grayscale(1) contrast(1.1) brightness(.8)}
+  .t3 .tinte{background:linear-gradient(180deg,rgba(11,18,32,.15),rgba(11,18,32,.75))}
+  /* 4 · trama: duotono ámbar + semitono, lo más «de taller» */
+  .t4 img{filter:grayscale(1) contrast(1.35) brightness(.88)}
+  .t4 .tinte{background:var(--ambar);mix-blend-mode:multiply}
+  .t4 .marco::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+    background-image:repeating-linear-gradient(0deg,rgba(11,18,32,.55) 0 1px,transparent 1px 3px);
+    mix-blend-mode:multiply}
+  .t4 .marco::after{content:"";position:absolute;inset:0;
+                    background:var(--fondo);mix-blend-mode:lighten;opacity:.30}
+  .marco{position:relative}
+
+  .aviso{background:#16213A;border-left:3px solid var(--ambar);padding:12px 16px;
+         border-radius:0 8px 8px 0;margin:16px 0;font-size:14px;color:#D6DEEC;max-width:78ch}
+  .aviso b{color:var(--ambar)}
+</style></head>
+<body>
+
+<h1>Muestrario de tratamiento de imagen · C34</h1>
+<p>Suelta aquí dos o tres fotos y mira cómo quedan dentro de una escena real del canal.
+No sube nada a ningún sitio: todo pasa dentro de esta página, en tu ordenador.
+Puedes cerrarla y volver a abrirla cuando quieras.</p>
+
+<div class="aviso">
+  <b>Lo que hay que mirar no es si la foto es bonita.</b> Es si las tres o cuatro fotos
+  que sueltes, distintas entre sí y de fuentes distintas, <b>parecen de la misma
+  colección</b> después del tratamiento. Si lo parecen, el banco de imágenes es viable
+  y la objeción de «no son de marca» queda resuelta. Si no lo parecen, C34 se para aquí
+  y no hemos gastado nada.
+</div>
+
+<div id="zona">
+  <b>Suelta imágenes aquí</b> — o haz clic para elegirlas
+  <div style="color:#8A97AE;font-size:13.5px;margin-top:7px">
+    JPG o PNG. Cuantas más distintas entre sí, mejor sirve la prueba.
+  </div>
+</div>
+<input id="entrada" type="file" accept="image/*" multiple hidden>
+
+<div id="salida"></div>
+
+<script>
+const TRATAMIENTOS = [
+  ["t0","Cruda",           "la foto tal cual, sin tratar"],
+  ["t1","Duotono ámbar",   "gris + ámbar de marca"],
+  ["t2","Duotono cian",    "gris + cian de marca"],
+  ["t3","Gris frío",       "desaturada dentro del azul, sin color de marca"],
+  ["t4","Ámbar + trama",   "duotono con semitono de taller"],
+];
+
+function escena(url, clase, titulo){
+  return `<div class="tarjeta">
+    <div class="lienzo ${clase}">
+      <div class="malla"></div>
+      <div class="marco"><img src="${url}" alt=""><div class="tinte"></div></div>
+      <div class="texto">
+        <div class="ante">Esto no tiene gracia y esto sí</div>
+        <div class="gordo">La misma frase. <em>Escrita</em>.</div>
+        <div class="pie">Prosodia de la ironía · Attardo y otros</div>
+      </div>
+      <div class="vineta"></div>
+    </div>
+    <div class="et"><b>${titulo}</b><span>${clase}</span></div>
+  </div>`;
+}
+
+function pintar(ficheros){
+  const salida = document.getElementById("salida");
+  [...ficheros].forEach((f,n)=>{
+    const url = URL.createObjectURL(f);
+    const bloque = document.createElement("section");
+    bloque.innerHTML = `<h2>Imagen ${n+1} — ${f.name}</h2>
+      <div class="rejilla">${TRATAMIENTOS.map(([c,t,d])=>escena(url,c,t+" · "+d)).join("")}</div>`;
+    salida.appendChild(bloque);
+  });
+}
+
+const zona = document.getElementById("zona");
+const entrada = document.getElementById("entrada");
+zona.addEventListener("click", ()=>entrada.click());
+entrada.addEventListener("change", e=>pintar(e.target.files));
+["dragenter","dragover"].forEach(ev=>zona.addEventListener(ev,e=>{
+  e.preventDefault(); zona.classList.add("sobre");}));
+["dragleave","drop"].forEach(ev=>zona.addEventListener(ev,e=>{
+  e.preventDefault(); zona.classList.remove("sobre");}));
+zona.addEventListener("drop", e=>{
+  e.preventDefault();
+  pintar([...e.dataTransfer.files].filter(f=>f.type.startsWith("image/")));
+});
+</script>
+</body></html>

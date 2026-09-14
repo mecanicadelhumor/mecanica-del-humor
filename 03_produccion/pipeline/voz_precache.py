@@ -28,6 +28,15 @@ Dos cosas que este script decide y que NO hay que tocar sin pensarlo:
    de los Shorts, un episodio de 40 escenas se comería la cuota que
    necesitan los cinco Shorts de la semana.
 
+2b. **Y desde C33 (14/09/2026) incluye además la DIRECCIÓN DE ACTOR.** La voz
+   de una escena ya no depende solo de su texto: depende del papel que hace esa
+   escena dentro del guion (apertura, remate, cifra, cierre...), que `voz.py`
+   deriva del propio guion con `direccion_escena()`. Este script llama a esa
+   misma función y cachea con esa misma dirección, de modo que lo precacheado el
+   martes sea exactamente lo que `voz.py` busca el sábado. Si alguien vuelve a
+   sintetizar aquí el texto pelado, pasan las dos cosas a la vez: el audio sale
+   sin dirigir y además nunca se encuentra en la caché.
+
 2. **La clave de caché incluye el MODELO exacto, no la palabra «gemini» a
    secas.** `voz.py` hoy cachea los Shorts con
    `_cache_voz_ruta(texto, "gemini", voz)` — una cadena fija, porque hasta
@@ -59,6 +68,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from voz import (  # noqa: E402  (el sys.path.insert de arriba tiene que ir antes)
     CACHE_VOZ_DIR,
     ESPERA_ENTRE_LLAMADAS_GEMINI,
+    MODELO_GEMINI_LARGO,
     RITMO_GEMINI_HZ,
     VOZ_GEMINI_ESCEPTICO,
     VOZ_GEMINI_NARRADOR,
@@ -66,11 +76,15 @@ from voz import (  # noqa: E402  (el sys.path.insert de arriba tiene que ir ante
     _gemini_cliente,
     _gemini_pcm,
     _pcm_a_mp3,
+    direccion_escena,
     hablable,
 )
 
 # Ver el punto 1 de arriba: cuota propia, nunca la de los Shorts (C7).
-MODELO_GEMINI_LARGO = "gemini-2.5-flash-preview-tts"
+# El literal vive en voz.py y se importa desde allí (arriba): dos copias del
+# nombre de un modelo que forma parte de una clave de caché es una divergencia
+# esperando a pasar, y cuando pase no dará ningún error — solo sintetizará todo
+# dos veces. Ver la trampa 24 de PROMPT_DE_ARRANQUE.md.
 
 # 10 peticiones/día es el límite real. Se pide con margen para no gastar la
 # décima justo en el momento en que la API empieza a devolver 429 y perder
@@ -84,18 +98,25 @@ def _voz_de(escena):
 
 
 def escenas_pendientes(guion):
-    """[(indice, texto_hablable, voz_gemini, ruta_cache), ...] sin cachear
-    todavía con MODELO_GEMINI_LARGO. `indice` es 1-based, solo para el log."""
+    """[(indice, texto_dirigido, voz_gemini, ruta_cache), ...] sin cachear
+    todavía con MODELO_GEMINI_LARGO. `indice` es 1-based, solo para el log.
+
+    `texto_dirigido` es el prompt completo (dirección de actor + narración), que
+    es lo que se le manda a la API y lo que entra en la clave de caché."""
     pendientes = []
-    for i, e in enumerate(guion.get("escenas", []), 1):
+    escenas = guion.get("escenas", [])
+    for i, e in enumerate(escenas, 1):
         crudo = (e.get("narracion") or "").strip()
         if not crudo:
             continue
         texto = hablable(crudo)
         voz_gemini = _voz_de(e)
-        cache = _cache_voz_ruta(texto, MODELO_GEMINI_LARGO, voz_gemini)
+        # C33: la misma dirección que usará voz.py el sábado, o el precacheo no
+        # se encuentra (y además sale sin dirigir). Ver el punto 2b de arriba.
+        dirigido, _papel = direccion_escena(escenas, i, texto)
+        cache = _cache_voz_ruta(texto, MODELO_GEMINI_LARGO, voz_gemini, dirigido)
         if not cache.exists():
-            pendientes.append((i, texto, voz_gemini, cache))
+            pendientes.append((i, dirigido, voz_gemini, cache))
     return pendientes
 
 
@@ -126,7 +147,7 @@ def principal(guion_path, presupuesto):
     cliente = None
     hechas = 0
     ultima = 0.0
-    for i, texto, voz_gemini, cache in pendientes:
+    for i, dirigido, voz_gemini, cache in pendientes:
         if hechas >= presupuesto:
             print(f"Presupuesto de {presupuesto} llamada(s) agotado por hoy. "
                   f"Quedan {total - hechas} escena(s) para el próximo día.")
@@ -138,7 +159,7 @@ def principal(guion_path, presupuesto):
 
         try:
             cliente = cliente or _gemini_cliente()
-            pcm = _gemini_pcm(cliente, MODELO_GEMINI_LARGO, texto, voz_gemini)
+            pcm = _gemini_pcm(cliente, MODELO_GEMINI_LARGO, dirigido, voz_gemini)
             ultima = time.monotonic()
             CACHE_VOZ_DIR.mkdir(parents=True, exist_ok=True)
             # Escritura atómica: si el proceso muere a mitad de _pcm_a_mp3

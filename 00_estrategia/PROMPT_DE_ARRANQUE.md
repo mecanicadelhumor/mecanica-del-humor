@@ -109,7 +109,7 @@ confundirlas:
 | `.github/workflows/` (entera) | **PROTEGIDA SIEMPRE, también para la dirección** | No se puede escribir en remoto. Se le manda el fichero al codirector y lo crea él. **Sin excepciones y sin fecha de caducidad** |
 | `.github/workflows/producir.yml` | **Del codirector** | Pendiente: `GEMINI_API_KEY` está en el paso «Subir a YouTube» y tiene que estar en «Sintetizar narración». Ver `tareas/tareas_codirector_2026-09-12.md` |
 | `.github/workflows/voz_prueba.yml` | **Entregado el 04/09, lo crea el codirector a mano** | Prueba de C7. `workflow_dispatch` solo, no escribe en el repositorio |
-| `.github/workflows/voz_adelantada.yml` | **Por entregar** | C27. Lo diseña la revisión diaria en `07_pruebas/` y lo crea el codirector |
+| `.github/workflows/voz_adelantada.yml` | **Diseñado, por crear — CON FECHA** | C27. El diseño está en `07_pruebas/voz-adelantada-14-09/`. Desde el 14/09 tiene fecha: sin él, `MDH-007` sale el 19/09 con `edge-tts` y el punto de control del 27 compara un largo con voz mala contra Shorts con voz buena |
 | `docs/` (la web del proyecto) | **Del codirector y mío**, desde el 04/09 | Tres páginas estáticas que Google exige para publicar la aplicación de OAuth. **No es C10** |
 | `03_produccion/sonidos/` | **Entregada el 07/09** | Tres acentos CC0 con su `attribution_texts.md`. Ya están |
 | `00_estrategia/PROMPT_DIRECCIÓN.md` | **SOLO DEL CODIRECTOR** | Es su cuaderno entre sesiones. **Se lee siempre, no se edita ni se borra nunca**, ni por mí |
@@ -340,6 +340,74 @@ letra y no tiene gracia, que es justo lo que la regla existía para evitar.
 → **Cuando una regla cuente cosas, pregúntate qué pasa si alguien pone el mínimo
 exacto en el peor sitio posible.** Si la respuesta es «entonces la regla no sirve
 de nada», lo que hay que medir no es la cantidad: es la distancia.
+
+**21. Una instrucción de tono aplicada a todas las escenas por igual es un tic, no un
+tono.** La dirección de actor de Gemini era **una constante de doce líneas** pegada delante
+de las seis escenas de cada Short, y decía «cuéntala con la entonación de quien cuenta algo
+que le hace gracia». Iba delante del planteamiento, del dato, de la lista y del «y aquí
+falla: solo sabemos cómo suena». Resultado: el primer Short con voz nueva se ríe de
+principio a fin, y ningún guion llevaba una sola risa escrita — comprobado sobre las 47
+escenas de los ocho Shorts del repositorio.
+→ **Lo que se le pide a un modelo generativo hay que pedírselo por unidad de trabajo, no por
+lote.** Y si una instrucción vale igual para todas las escenas, sospecha: casi siempre es
+que no dice nada útil sobre ninguna.
+
+**22. Una tubería de seis llamadas independientes produce seis piezas independientes.**
+Cada escena es una llamada distinta a la API, así que el modelo le pone a cada fragmento su
+entonación de arranque y su punto final, sin saber que hay cinco escenas más. Encima le
+metemos nosotros hasta 1,35 s de silencio detrás. Un punto final, un silencio y otro
+principio **no es una pausa dramática: es un corte** — y eso es lo que se oyó como «resumido
+sin puntos en común» en un guion que en papel tiene hilo de sobra.
+→ **Cuando trocees un trabajo en llamadas, el contexto que pierdes en el troceo hay que
+devolvérselo a mano.** Ahora cada escena sabe de dónde viene y si tiene que cerrar o quedar
+suspendida (C33).
+
+**23. Descarté una vía citando una regla que no decía eso, y la regla era mía.** C25
+descartó los bancos de imágenes con un «(regla 9 y no son de marca)». La regla 9 prohíbe
+material **sin licencia** y habla de clips de cómicos y películas por el riesgo de strike;
+una foto CC0 tiene licencia. Estiré una regla propia hasta que dijera lo que me convenía, y
+eso cerró durante una semana la vía que la dirección señala como cuestión de supervivencia.
+→ Es la trampa 2 —comprobar que la restricción dice lo que crees— cometida **sobre un
+documento propio**, que es donde menos se comprueba. **Antes de descartar algo citando una
+regla, vuelve a leer la regla.**
+
+**24. Un cambio en la clave de una caché rompe en silencio a quien comparte esa caché.**
+C33 metió la dirección de actor en la clave de `_cache_voz_ruta()`, que es lo correcto. Pero
+`voz_precache.py` —escrito ayer, para el episodio largo— llamaba a `_gemini_pcm()` con el
+texto pelado: después de C33 habría precacheado toda la semana **sin dirigir y con una clave
+que `voz.py` nunca habría buscado.** Una semana de cuota gastada para nada, sin un solo
+error en el log.
+→ Es la trampa 1 otra vez. Cuando cambies **lo que entra en una clave de caché**, busca a
+todos los que escriben en ese directorio, no solo a los que leen.
+
+## Dónde está el proyecto a 14 de septiembre de 2026
+
+**La sesión del lunes 14 cerró tres cosas y adelantó una pregunta.** El detalle está en la
+**versión 8** de `PLAN_DE_CAMBIOS.md`, que es la que manda.
+
+- **C33 · la dirección de actor, por escena.** Ocho papeles (apertura, planteamiento,
+  remate, contraste, cifra, enumeración, cita, objeción) derivados del propio guion: el
+  tipo de escena, la posición, y la pausa de la escena anterior, que es lo que marca el
+  remate — 8 detectados en 47 escenas, los 8 correctos. Prohibición explícita de reírse en
+  todas las escenas. Y la frase que precede a un silencio se deja **suspendida**, que es lo
+  que convierte ese silencio en pausa en vez de en corte. **No toca al guionista.**
+- **C34 · se revierte el descarte de las imágenes.** El banco propio entra, con tratamiento
+  de marca (duotono sobre la paleta del canal, enmarcado, nunca solo, con deriva lenta). Se
+  decide mirándolo: `07_pruebas/imagen-14-09/muestrario.html`. Primera posición, **la escena
+  1 del Short** — no la miniatura, porque en el feed de Shorts no hay miniatura que pulsar.
+- **C35 · la densidad se construye dentro de la escena**, no partiéndola en más: partirla
+  choca con la cuota de Gemini (diez llamadas al día) y no hace falta. P3, P5, P6 y P8
+  juntos dan un cambio cada 1,6 s sin un corte añadido.
+
+**Los números, que son el marco:** mediana de 10 vistas a 48 h sobre quince Shorts, **cero**
+por encima de 50, **cero** suscriptores, y `MDH-006` con **cero visualizaciones** a los dos
+días. La retención enseña fuga continua —la mitad se va en el segundo 13—, no desplome
+inicial.
+
+**Lo que espera al codirector:** `voz_adelantada.yml` por crear (ahora con fecha: `MDH-007`
+sale el 19/09 y tiene que salir con voz de Gemini), el lote de imágenes de prueba, y mirar
+la cuota de imagen en el panel de Gemini. Todo en
+`00_estrategia/tareas/tareas_codirector_2026-09-14.md`.
 
 ## Dónde está el proyecto a 12 de septiembre de 2026
 

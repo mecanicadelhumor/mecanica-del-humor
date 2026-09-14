@@ -132,26 +132,262 @@ TONO = "+0Hz"
 # que ahorrar y cachearlo perdería las marcas de palabra que sí necesita.
 CACHE_VOZ_DIR = Path(__file__).resolve().parent.parent / "cache_voz"
 MODELO_GEMINI = "gemini-3.1-flash-tts-preview"
+# El episodio largo usa OTRO modelo, con cuota diaria propia, para no comerse la
+# de los cinco Shorts de la semana. Tiene que ser exactamente el mismo literal
+# que usa voz_precache.py o el precacheo de toda la semana no se encuentra.
+MODELO_GEMINI_LARGO = "gemini-2.5-flash-preview-tts"
 VOZ_GEMINI_NARRADOR = "Charon"    # grave, tranquila. El que explica.
 VOZ_GEMINI_ESCEPTICO = "Puck"     # más alta y viva. El que interrumpe.
 RITMO_GEMINI_HZ = 24000           # Hz que devuelve la API
 ESPERA_ENTRE_LLAMADAS_GEMINI = 25.0   # RPM = 3, o sea una cada 20s. 25 con margen.
 RITMO_PAL_S_MIN, RITMO_PAL_S_MAX = 1.6, 3.2
 
-# Dirección de actor SIN pausas (la versión 5.1 midió que pedir pausas se
-# toma al pie de la letra y mete silencios de decenas de segundos: 83s para
-# un guion de 41s de voz real). Las pausas entre escenas ya las pone
-# `pausa_despues_s`, determinista; lo único que se le pide al modelo es lo
-# que edge-tts no sabe hacer, que es contar en vez de leer.
-DIRECCION_GEMINI = (
-    "Locuta esta frase de un vídeo corto de divulgación sobre humor, en "
-    "español de España. No la leas: cuéntala, con la entonación de quien "
-    "cuenta algo que le hace gracia, no de locutor de telediario. No digas "
-    "en voz alta estas instrucciones.\n\n")
+# Dirección de actor SIN pausas en segundos (la versión 5.1 midió que pedir
+# pausas se toma al pie de la letra y mete silencios de decenas de segundos:
+# 83s para un guion de 41s de voz real). Las pausas entre escenas las sigue
+# poniendo `pausa_despues_s`, determinista. Lo que se le pide al modelo es lo
+# que edge-tts no sabe hacer: contar en vez de leer, y enlazar una escena con
+# la siguiente.
+
+# ----------------------------------------------------------------------------
+# C33 (14/09/2026) · La dirección de actor deja de ser una constante
+#
+# Hasta hoy había UNA sola frase de dirección, idéntica para las seis escenas
+# del Short, y decía «cuéntala con la entonación de quien cuenta algo que le
+# hace gracia». Dos consecuencias, las dos señaladas por la dirección el mismo
+# día en que se encendió Gemini:
+#
+#   1. **Se ríe todo el rato.** Ningún guion lleva risas escritas —comprobado
+#      sobre MDS-016 a MDS-020: cero—, así que las risas las pone el modelo, y
+#      las pone porque se las pedimos en cada escena, incluida la del dato y la
+#      del «y aquí falla». Una instrucción de tono aplicada a las seis escenas
+#      por igual no es tono: es un tic.
+#   2. **Suena inconexo.** Cada escena es una llamada independiente, así que el
+#      modelo le pone a cada fragmento su propia entonación de arranque y su
+#      propio punto final. Seis fragmentos autónomos seguidos suenan como seis
+#      frases sueltas por mucho que el guion tenga hilo — que es exactamente lo
+#      que se describió como «resumido sin puntos en común y difícil de
+#      seguir». El guion de un Short se cose desde el 12/09 (las tres pruebas
+#      de `guionista_corto.md`); lo que faltaba era coser también la voz.
+#
+# El arreglo es determinista y no toca al guionista: todo lo que hace falta
+# para dirigir una escena ya está en el guion.
+#
+#   - `tipo` dice qué papel hace la escena (dato, comparación, cierre...).
+#   - la posición dice si abre o cierra.
+#   - `pausa_despues_s` de la escena ANTERIOR dice si esta es el remate:
+#     `guionista_corto.md` manda 1,2-1,5 s entre planteamiento y remate y
+#     0,2-0,6 s en el resto, así que el umbral separa las dos poblaciones sin
+#     ambigüedad (medido sobre los cinco guiones sin producir: 4 remates
+#     detectados, los 4 reales, ningún falso positivo).
+#   - las comillas dicen dónde va el retintín, que es el único sitio donde la
+#     ironía está escrita de verdad.
+#
+# Y la parte que arregla el corte, que es la menos obvia: **cuando después de
+# una frase viene un silencio nuestro, hay que pedir que la frase quede
+# suspendida.** Hoy el modelo cierra la entonación y encima le metemos 1,35 s
+# de silencio: eso no es una pausa dramática, es un final seguido de otro
+# principio. La pausa la seguimos poniendo nosotros —la versión 5.1 midió que
+# pedírsela al modelo da silencios de decenas de segundos— pero le decimos qué
+# hacer con la frase que la precede.
+# ----------------------------------------------------------------------------
+
+# Por encima de este umbral, la pausa de una escena es «la pausa es el chiste»
+# de `guionista_corto.md` y la escena siguiente es el remate. Por debajo es
+# respiración entre escenas.
+PAUSA_DE_REMATE_S = 1.2
+
+# Qué papel hace cada tipo de escena. Los tipos son los de `esquema_guion.json`;
+# uno que no esté aquí cae en «explicacion», que es la dirección más neutra.
+PAPEL_POR_TIPO = {
+    "titulo": "apertura",
+    "enunciado": "planteamiento",
+    "comparacion": "contraste",
+    "dato": "cifra",
+    "lista": "enumeracion",
+    "cita": "cita",
+    "diagrama": "explicacion",
+    "figura": "explicacion",
+    "cierre": "objecion",
+}
+
+# Una frase por papel. Concretas a propósito: «tono irónico» no es una
+# instrucción, «lo que va entre comillas se dice con retintín» sí.
+DIRECCION_POR_PAPEL = {
+    "apertura":
+        "Es la primera frase del vídeo y no hay presentación ni preámbulo: "
+        "entras en frío, en mitad de una historia que ya ha empezado. Tono de "
+        "conversación, como quien se lo cuenta a un amigo. Ni locutor ni anuncio.",
+    "planteamiento":
+        "Es el planteamiento. Cuéntalo llano y sin subrayar nada: lo que viene "
+        "después es la gracia, y anunciarla la estropea.",
+    "remate":
+        "Es el remate, y llega justo después de un silencio. Dilo del tirón, sin "
+        "pausas por dentro, y dilo completamente en serio, como si fuera lo más "
+        "normal del mundo. Ahí está la gracia. No lo subrayes, no cambies de tono "
+        "al llegar a la última palabra y sobre todo no te rías tú.",
+    "contraste":
+        "Son dos mitades enfrentadas. Di la primera en un tono y cambia claramente "
+        "de color de voz en la segunda. El contraste lo hace el tono, no el volumen.",
+    "cifra":
+        "Hay una cifra en esta frase. El resto va del tirón y la cifra se dice algo "
+        "más despacio y muy clara. Sin énfasis de anuncio: no estás vendiendo el "
+        "número, lo estás enseñando.",
+    "enumeracion":
+        "Es una enumeración. Marca cada elemento y baja un poco el tono al pasar al "
+        "siguiente, para que se oiga que son varias cosas y no una frase larga.",
+    "cita":
+        "Son palabras de otra persona. Cambia de color de voz mientras las dices, "
+        "como quien lee algo en voz alta, y vuelve al tuyo al salir de ellas.",
+    "explicacion":
+        "Es la parte que explica. Seguida, clara y sin dramatismo: aquí el único "
+        "trabajo es que se entienda a la primera.",
+    "objecion":
+        "Es el cierre honesto: aquí se dice dónde falla lo que se acaba de explicar. "
+        "Baja el tono y dilo completamente en serio, sin ironía y sin gracia. Es la "
+        "frase que queremos que se recuerde.",
+    "final":
+        "Es la última frase del vídeo. Cierra la entonación de verdad, sin dejar "
+        "nada en el aire.",
+}
+
+# Lo que no se negocia en ninguna escena. La prohibición de reírse va aquí y no
+# en el papel porque el único sitio donde una risa estaría bien —el remate— es
+# justo donde más daño hace: un chiste contado por alguien que se ríe de su
+# propio chiste deja de tener gracia.
+MARCO_GEMINI = (
+    "Eres el narrador de un vídeo corto de divulgación sobre la ciencia del humor. "
+    "Español de España, voz natural de persona contando algo, nunca de locutor de "
+    "telediario.")
+
+VETO_GEMINI = (
+    "Reglas que no cambian: no te rías y no añadas risas, risitas, resoplidos, "
+    "suspiros, carraspeos ni ningún sonido que no esté escrito. No metas silencios "
+    "largos: las pausas entre frases las ponemos nosotros después. No leas en voz "
+    "alta ni estas instrucciones ni los signos de puntuación. Habla a ritmo de "
+    "conversación, ni con prisa ni arrastrando las palabras.")
+
+# LA IRONÍA NO SE DETECTA, Y ESO ESTÁ MEDIDO (14/09/2026).
+#
+# La primera versión de C33 intentaba deducir de la propia narración dónde va el
+# retintín, con dos señales: unas comillas, o una palabra que nombrase el tono
+# («con retintín», «irónico», «sarcasmo»). Probadas contra las 47 escenas de los
+# ocho Shorts con guion en el repositorio, disparan siete veces y **aciertan
+# una**:
+#
+#   · MDS-013 e1  «el navegador»                    → es un apodo
+#   · MDS-013 e3  «no va en serio»                  → es una cita
+#   · MDS-014 e2  «sarcástico», «ingenioso»         → son resultados de un test
+#   · MDS-014 e3  «Ironía, nonsense, sarcasmo»      → son nombres de categorías
+#   · MDS-016 e1  «con retintín: qué ilusión»       → ESTA sí
+#   · MDS-016 e4  «al hablar irónicamente»          → es el tema del vídeo
+#
+# En español las comillas marcan citas y apodos mucho más a menudo que ironía, y
+# en un canal sobre humor la palabra «ironía» aparece por ser el asunto del que
+# se habla. Es el mismo caso que la comprobación amplia de C22, que señalaba el
+# 73,5 % de las escenas: una señal que acierta una de siete no es una señal, es
+# ruido, y dirigir con ruido es exactamente lo que convirtió la dirección vieja
+# en un tic.
+#
+# Así que aquí no se adivina. El tono irónico, cuando lo haya, lo declara el
+# guionista en un campo del guion — encargo para la planificación del jueves 17,
+# escrito en la versión 8 de PLAN_DE_CAMBIOS.md. Hasta entonces, ninguna escena
+# lleva instrucción de ironía y ninguna sale peor por ello: la dirección por
+# papel ya cubre las 47.
 
 
-def _cache_voz_ruta(texto, motor, voz):
-    clave = hashlib.sha256(f"{texto}|{motor}|{voz}".encode("utf-8")).hexdigest()
+def _recorte_contexto(texto, palabras=8):
+    """Las ÚLTIMAS palabras de la escena anterior.
+
+    Las últimas y no las primeras: lo que hay que enlazar es el final de la
+    frase de la que se viene, que es donde quedó la entonación.
+    """
+    trozos = (texto or "").split()
+    return ("…" if len(trozos) > palabras else "") + " ".join(trozos[-palabras:])
+
+
+def _papel_escena(escenas, i):
+    """Qué papel hace la escena `i` (1-based). Determinista, sin heurística.
+
+    El orden de las reglas importa: «remate» gana sobre el tipo (una escena de
+    comparación que llega tras un silencio de 1,35 s es un remate antes que una
+    comparación), y «apertura» gana sobre todo porque la escena 1 de un Short
+    tiene un trabajo que no tiene ninguna otra.
+    """
+    if i == 1:
+        return "apertura"
+    previa = escenas[i - 2]
+    if float(previa.get("pausa_despues_s") or 0.0) >= PAUSA_DE_REMATE_S:
+        return "remate"
+    tipo = (escenas[i - 1].get("tipo") or "").strip().lower()
+    papel = PAPEL_POR_TIPO.get(tipo, "explicacion")
+    if i == len(escenas) and papel not in ("objecion",):
+        return "final"
+    return papel
+
+
+def direccion_escena(escenas, i, texto):
+    """Construye la dirección de actor de la escena `i` (1-based).
+
+    Devuelve `(prompt_completo, papel)`. `papel` se guarda en `ficha.json` para
+    poder revisar en el expediente qué se le pidió a cada escena sin tener que
+    escuchar el vídeo entero — es la misma idea que `motor_voz`.
+    """
+    papel = _papel_escena(escenas, i)
+    partes = [MARCO_GEMINI, DIRECCION_POR_PAPEL[papel]]
+
+    # Continuidad hacia atrás: de dónde viene esta frase.
+    if i > 1:
+        # `hablable()` también aquí: el resaltado está prohibido en «narracion»
+        # (C29), pero si alguna vez se cuela no tiene por qué llegar al prompt.
+        antes = _recorte_contexto(hablable(escenas[i - 2].get("narracion") or ""), 8)
+        if antes:
+            # Sin comillas y con el aviso pegado: unas comillas alrededor del
+            # contexto lo hacen indistinguible del texto que sí hay que locutar.
+            partes.append(
+                f"Contexto, que NO se locuta: la frase anterior terminaba hablando de "
+                f"esto — {antes} — así que enlaza con ello y no arranques como si "
+                "abrieras el vídeo.")
+
+    # Continuidad hacia delante: qué pasa después de esta frase. Es la parte que
+    # convierte un silencio nuestro en una pausa dramática en vez de en un corte.
+    propia = float((escenas[i - 1]).get("pausa_despues_s") or 0.0)
+    if i < len(escenas):
+        if propia >= PAUSA_DE_REMATE_S:
+            partes.append(
+                "Después de esta frase hay un silencio y luego llega el remate. Deja la "
+                "frase suspendida, en el aire, sin cerrar la entonación: el silencio lo "
+                "ponemos nosotros y tiene que sonar a espera, no a punto final.")
+        else:
+            partes.append(
+                "La frase sigue teniendo continuación después, así que no cierres la "
+                "entonación del todo.")
+    else:
+        partes.append(
+            "Con esta frase acaba el vídeo: cierra la entonación de verdad, sin dejar "
+            "nada en el aire.")
+
+    partes.append(VETO_GEMINI)
+    cuerpo = " ".join(partes)
+    return (
+        f"[Instrucciones para el actor. No se leen en voz alta.]\n{cuerpo}\n"
+        f"[Fin de las instrucciones. Locuta únicamente el texto que va debajo.]\n\n"
+        f"{texto}"
+    ), papel
+
+
+def _cache_voz_ruta(texto, motor, voz, direccion=""):
+    """Clave de caché por contenido.
+
+    Desde C33 la dirección de actor entra en la clave: dos escenas con el mismo
+    texto pero distinto papel —o la misma escena antes y después de que cambie
+    la dirección— tienen que sonar distinto, y una caché que solo mire el texto
+    devolvería la toma vieja sin decir nada. El efecto secundario de meterla es
+    justamente el que se quiere: cambiar la dirección invalida la caché entera y
+    la siguiente producción se sintetiza de cero.
+    """
+    clave = hashlib.sha256(
+        f"{texto}|{motor}|{voz}|{direccion}".encode("utf-8")).hexdigest()
     return CACHE_VOZ_DIR / f"{clave}.mp3"
 
 
@@ -162,7 +398,7 @@ def _gemini_cliente():
     return genai.Client()
 
 
-def _gemini_pcm(cli, modelo, texto, voz_gemini):
+def _gemini_pcm(cli, modelo, texto_dirigido, voz_gemini):
     """Una sola llamada, una sola voz (cada escena tiene un único hablante).
 
     Sin reintentos aquí: en producción, cualquier fallo cae al respaldo
@@ -170,7 +406,6 @@ def _gemini_pcm(cli, modelo, texto, voz_gemini):
     el RPM de 3/min o, peor, el RPD de 10/día con una escena que de todas
     formas va a tener voz de respaldo.
     """
-    texto_dirigido = DIRECCION_GEMINI + texto
     if hasattr(cli, "interactions"):
         inter = cli.interactions.create(
             model=modelo, input=texto_dirigido,
@@ -200,7 +435,8 @@ def _pcm_a_mp3(pcm, hz, destino):
     tmp.unlink(missing_ok=True)
 
 
-async def _sintetizar_con_motor(texto, papel, voz_edge, mp3, indice, motor, estado):
+async def _sintetizar_con_motor(texto, papel, voz_edge, mp3, indice, motor, estado,
+                                direccion=None, modelo=None, solo_cache=False):
     """Sintetiza una escena con el motor pedido. Siempre escribe `mp3`.
 
     Devuelve (palabras, n_frases, motor_usado). `palabras` viene vacío para
@@ -218,10 +454,29 @@ async def _sintetizar_con_motor(texto, papel, voz_edge, mp3, indice, motor, esta
         return pal, n_fr, "edge"
 
     voz_gemini = VOZ_GEMINI_ESCEPTICO if papel == "esceptico" else VOZ_GEMINI_NARRADOR
-    cache = _cache_voz_ruta(texto, "gemini", voz_gemini)
+    # Sin dirección (una llamada suelta, p. ej. desde una prueba) se manda el
+    # texto pelado: es peor, pero nunca peor que no tener voz.
+    dirigido = direccion or texto
+    # La clave de caché lleva el NOMBRE EXACTO del modelo, no la palabra
+    # "gemini": son dos modelos con cuota independiente y su audio no es
+    # intercambiable. (Hasta el 14/09 los Shorts se cacheaban con el literal
+    # "gemini"; esa caché la invalida C33 de todas formas al meter la dirección
+    # de actor en la clave, así que este es el momento de dejar de arrastrarlo.)
+    clave_modelo = modelo or MODELO_GEMINI
+    cache = _cache_voz_ruta(texto, clave_modelo, voz_gemini, dirigido)
     if cache.exists():
         mp3.write_bytes(cache.read_bytes())
         return [], 0, "gemini (caché)"
+
+    # Pieza C de C27: el episodio largo NO llama a la API el día de producción.
+    # Sus cuarenta escenas no caben en las diez peticiones diarias, así que las
+    # sintetiza `voz_precache.py` de martes a viernes y aquí solo se recogen de
+    # la caché. Lo que no esté cacheado el sábado sale con edge-tts, que es la
+    # misma política de degradación de siempre: un vídeo con alguna escena de
+    # voz peor es mejor que un sábado sin vídeo.
+    if solo_cache:
+        _, pal, n_fr = await sintetizar(texto, voz_edge, mp3)
+        return pal, n_fr, "edge (sin precacheo)"
 
     if not estado["agotado"]:
         espera = ESPERA_ENTRE_LLAMADAS_GEMINI - (time.monotonic() - estado["ultima"])
@@ -230,7 +485,7 @@ async def _sintetizar_con_motor(texto, papel, voz_edge, mp3, indice, motor, esta
         try:
             cli = estado["cliente"] or _gemini_cliente()
             estado["cliente"] = cli
-            pcm = _gemini_pcm(cli, MODELO_GEMINI, texto, voz_gemini)
+            pcm = _gemini_pcm(cli, MODELO_GEMINI, dirigido, voz_gemini)
             estado["ultima"] = time.monotonic()
             _pcm_a_mp3(pcm, RITMO_GEMINI_HZ, mp3)
             CACHE_VOZ_DIR.mkdir(parents=True, exist_ok=True)
@@ -472,15 +727,27 @@ async def principal(guion_path, salida, voz=None, motor="edge"):
     voz = voz or VOCES.get(idioma, VOCES["es"])
     salida = Path(salida); (salida / "voz").mkdir(parents=True, exist_ok=True)
 
-    # C7: Gemini solo en Shorts (formato "corto"). Un episodio largo (~40
-    # escenas) no cabe en las 10 peticiones/día del nivel gratuito y se queda
-    # en edge-tts sin que haga falta pedirlo con --motor cada vez.
-    usar_gemini = motor == "gemini" and guion.get("formato") == "corto"
-    motor_pedido = "gemini" if usar_gemini else "edge"
+    # C7 + C27: Gemini en los dos formatos, pero por caminos distintos.
+    #
+    #   · Short  → llamada en vivo. Seis escenas caben en las diez peticiones
+    #              diarias del nivel gratuito, con margen para el respaldo.
+    #   · Largo  → SOLO caché, nunca llamada. Cuarenta escenas no caben en un
+    #              día; las sintetiza `voz_precache.py` de martes a viernes con
+    #              su propio modelo, y aquí solo se recogen. Lo que falte sale
+    #              con edge-tts y queda dicho escena a escena en `ficha.json`.
+    es_corto = guion.get("formato") == "corto"
+    usar_gemini = motor == "gemini" and es_corto
+    largo_desde_cache = motor == "gemini" and guion.get("formato") == "largo"
+    modelo_gemini = MODELO_GEMINI if es_corto else MODELO_GEMINI_LARGO
+    motor_pedido = "gemini" if (usar_gemini or largo_desde_cache) else "edge"
     estado_gemini = {"agotado": False, "ultima": 0.0, "cliente": None}
-    if motor == "gemini" and not usar_gemini:
-        print(f"::notice::--motor gemini pedido pero formato=«{guion.get('formato')}»; "
-              f"C7 es solo para Shorts. Esta producción va con edge-tts.")
+    if largo_desde_cache:
+        print(f"::notice::episodio largo con --motor gemini: se usa SOLO la caché de "
+              f"{MODELO_GEMINI_LARGO} (C27). Las escenas sin precachear salen con "
+              f"edge-tts; mira `motor_voz` escena a escena en el expediente.")
+    elif motor == "gemini" and not usar_gemini:
+        print(f"::notice::--motor gemini pedido pero formato=«{guion.get('formato')}», "
+              f"que no es ni «corto» ni «largo». Esta producción va con edge-tts.")
 
     reloj, bloques, palabras_todas, partes = 0.0, [], [], []
     frases_totales, recortadas = 0, []
@@ -497,8 +764,15 @@ async def principal(guion_path, salida, voz=None, motor="edge"):
             reloj += e["duracion_s"]
             continue
         papel = "esceptico" if e.get("voz") == "esceptico" else "narrador"
+        # C33: la dirección de actor se construye por escena a partir del
+        # propio guion (tipo, posición, pausa de la escena anterior, comillas).
+        # Solo sirve para Gemini; edge-tts no la lee.
+        dirigido, papel_escena = direccion_escena(guion["escenas"], i, texto)
+        e["direccion_voz"] = papel_escena
         pal, n_fr, motor_usado = await _sintetizar_con_motor(
-            texto, papel, voz, mp3, i, motor_pedido, estado_gemini)
+            texto, papel, voz, mp3, i, motor_pedido, estado_gemini,
+            direccion=dirigido if (usar_gemini or largo_desde_cache) else None,
+            modelo=modelo_gemini, solo_cache=largo_desde_cache)
         frases_totales += n_fr
         # Sílaba suelta al principio de la escena: el patrón se midió sobre
         # edge-tts (ver fragmento_inicial) y la red de seguridad de abajo
@@ -540,7 +814,8 @@ async def principal(guion_path, salida, voz=None, motor="edge"):
         palabras_todas += [(reloj + a, reloj + b, w) for a, b, w in pal]
         partes.append((mp3, cola))
         reloj += e["duracion_s"]
-        print(f"  escena {i:>2}  {e['duracion_s']:>5.1f}s  [{motor_usado}]  {texto[:48]}")
+        print(f"  escena {i:>2}  {e['duracion_s']:>5.1f}s  [{motor_usado}] "
+              f"[{papel_escena}]  {texto[:44]}")
 
     # Concatenar con silencios entre escenas — cada uno con la pausa REAL de
     # esa escena («cola», ya guardada en `partes` desde el bucle de arriba),

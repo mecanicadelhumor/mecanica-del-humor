@@ -3,12 +3,15 @@
 **Versión 3 · 21 de agosto de 2026** — con las decisiones tomadas y la fase 1 y
 media de la fase 2 ya escritas en el repositorio.
 
-> ⚠️ **La versión que manda es la 5, al final de este documento (4 de
-> septiembre).** La 4 (31 de agosto) sustituyó la escalera de métricas de C14 por
-> dos escaleras —una para Shorts y otra para el episodio largo— y añadió C17 a
-> C20. La 5 resuelve la caducidad del token de YouTube, pone la primera barrera
-> real antes de publicar, cambia el rumbo de C7 y añade C21 a C23. **Si vas a
-> decidir algo con este plan, lee las dos secciones finales antes.**
+> ⚠️ **La versión que manda es la 8, al final de este documento (14 de
+> septiembre).** Las anteriores siguen vigentes en todo lo que la 8 no corrija.
+> En corto: la **4** partió la escalera de métricas en dos (Shorts y largo); la
+> **5** puso la primera barrera antes de publicar y cambió el rumbo de C7; la
+> **6** abrió C25 (la presentación) y fijó en C26 la fecha en la que se decide si
+> el canal sigue; la **7** reescribió los dos guionistas y arregló las
+> comprobaciones que miraban donde no tocaba; y la **8** dirige la voz escena a
+> escena (C33) y **revierte el descarte de las imágenes** que había hecho C25
+> (C34). **Si vas a decidir algo con este plan, lee la versión 8 antes.**
 
 Este documento es **ejecutable**. Cada cambio trae qué archivos toca, qué tiene que ser
 cierto para darlo por hecho, y qué no hay que hacer. El razonamiento está en
@@ -26,8 +29,11 @@ cierto para darlo por hecho, y qué no hay que hacer. El razonamiento está en
   cuál fue. (Regla 1 de `MEJORA_VISUAL.md`, que sigue vigente.)
 - Cada cambio se anota al terminar en `05_calendario/MEJORAS.md`, con lo medido antes y
   después. Ese archivo **se añade al final, nunca se reescribe**.
-- Los archivos marcados como **protegidos** (`voz.py`, `montaje.py`, `producir.yml`) no se
-  tocan sin permiso explícito del codirector en la conversación.
+- Los archivos marcados como **protegidos** no se tocan sin permiso explícito. **Desde el
+  07/09/2026 esto ya no aplica a la dirección**, que puede editar cualquier fichero del
+  repositorio; para los demás agentes no cambia nada. `.github/workflows/` sigue protegida
+  para todos, sin excepción. Las autorizaciones vigentes, una por una, están en
+  `PROMPT_DE_ARRANQUE.md`.
 
 ### Estado a 20 de agosto, tarde
 
@@ -2408,3 +2414,420 @@ Queda como regla, en `PROMPT_DE_ARRANQUE.md` y aquí:
   C20 y C13 siguen detrás del peldaño S1.
 - **La regla 11.1 sigue suspendida** para los cambios de presentación hasta el 27. Los cuatro
   arreglos de hoy son de defecto, y los arreglos de defecto nunca han consumido ranura.
+
+---
+
+# Versión 8 · 14 de septiembre de 2026 — la voz se dirige, y la imagen deja de ser texto
+
+Todo lo anterior sigue vigente salvo lo que esta sección corrige expresamente. Es la
+sesión de dirección del lunes, con la primera lectura de métricas que trae medianas
+limpias a 48 horas y con el primer Short producido con Gemini ya escuchado.
+
+**Lo primero, porque ordena todo lo demás: los números no están parados, están peor.**
+La versión 7 decía «los números no se han movido». Con `vistas_48h` ya calculado por
+`metricas.py`, la foto real es esta:
+
+| | |
+|---|---|
+| Mediana de vistas a 48 h de los últimos 15 Shorts | **10** |
+| Shorts por encima de 50 vistas a 48 h | **0 de 15** |
+| Shorts por encima de 100 | **0 de 15** |
+| Suscriptores ganados en 51 lecturas acumuladas | **0** |
+| Me gusta en los cinco Shorts de la última semana | **0** |
+| `MDH-006`, el episodio largo del sábado, a 2 días | **0 visualizaciones** |
+| `MDS-014`, a 4 días | **1 visualización** |
+
+La semana pasada la racha era 31 · 21 · 21. Esta semana es 26 · 13 · 8 · 1 · 31. Con
+muestras de este tamaño nada de eso es estadística —la diferencia entre 8 y 31 son
+veintitrés personas— pero **la dirección de la línea no es la que queríamos ver a trece
+días del punto de control**, y decir «no se ha movido» sería más cómodo que exacto.
+
+Y una cifra más, de la curva de retención, que es nueva y cambia dónde hay que apretar:
+**`MDS-015` pierde la mitad de la audiencia en el segundo 13 y llega al segundo 26 con el
+20 %.** No hay un desplome en el primer segundo: hay una fuga constante. No es un problema
+de gancho. Es un problema de que, una vez dentro, no damos motivos para quedarse.
+
+---
+
+## Lo que se ha escuchado hoy, y de dónde salía cada cosa
+
+La dirección escuchó el primer Short con voz de Gemini y lo resumió así: *«Está mejor, sin
+duda, es un paso adelante»*, con tres reparos. Los tres tienen la misma raíz y la raíz
+estaba en una sola constante de doce líneas.
+
+### 1 · «Empezar con una risa y estar riéndose casi todo el short es excesivo»
+
+**Los guiones no llevan risas escritas.** Comprobado sobre las 47 escenas de los ocho
+Shorts con guion en el repositorio: cero. Las risas las pone el modelo, y las pone porque
+**se las pedíamos en todas las escenas**. La dirección de actor era una constante:
+
+> «Locuta esta frase de un vídeo corto de divulgación sobre humor […] cuéntala con la
+> entonación de quien cuenta algo que le hace gracia.»
+
+Esa frase iba pegada delante de las seis escenas por igual. Delante del planteamiento, del
+dato, de la lista y del «y aquí falla: solo sabemos cómo suena». **Una instrucción de tono
+aplicada a todas las escenas no es tono: es un tic**, y un modelo de voz que oye «algo que
+le hace gracia» cuarenta segundos seguidos se ríe cuarenta segundos seguidos.
+
+### 2 · «El guion se siente inconexo, resumido sin puntos en común»
+
+Aquí hay dos cosas distintas y conviene no mezclarlas, porque una ya está arreglada y la
+otra no lo estaba.
+
+**La parte del guion ya se arregló el 12 de septiembre** con las tres pruebas de cosido de
+`guionista_corto.md` (el hilo, nada nuevo después de la mitad, el detalle con la misma
+palabra). Lo que pasa es que **todavía no se ha visto ni un solo Short escrito con ellas**:
+`MDS-016` a `MDS-020` y `MDH-007` los escribió la planificación del **jueves 10**, dos días
+antes de la reescritura. El primer Short con el guionista nuevo lo escribe la planificación
+del **jueves 17** y se publica el **lunes 21**. Hasta entonces, todo lo que se publique es
+material anterior al arreglo. Esto no es una excusa: es la fecha a partir de la cual el
+arreglo se puede juzgar.
+
+**Y la parte que no estaba arreglada, que es de la voz y no del guion.** Con Gemini, cada
+escena es **una llamada independiente a la API**. El modelo no sabe que hay cinco escenas
+más: le damos una frase suelta, y le pone a esa frase su propia entonación de arranque y su
+propio punto final. Seis fragmentos autónomos seguidos suenan a seis frases sueltas **por
+bien cosido que esté el guion en papel**. Y encima, entre una y otra, metemos nosotros un
+silencio de hasta 1,35 s: un punto final, un silencio y otro principio no es una pausa
+dramática, es un corte.
+
+`MDS-016` es la demostración. Su guion tiene hilo de sobra —la madre, la cena del domingo,
+los doce que ahora son vecinos— y aun así se oye despiezado. **El guion estaba cosido y la
+voz lo descosía.**
+
+### 3 · «Instrucciones mucho más claras y delimitadas para el actor»
+
+Es la petición correcta y es la que resuelve las otras dos.
+
+---
+
+## C33 · La dirección de actor deja de ser una constante
+
+**Hecho hoy, en `voz.py`. Entra en producción con `MDS-017` (martes 15).**
+
+La dirección se construye **por escena**, y se construye sola: todo lo que hace falta para
+dirigir una escena ya está en el guion, así que **no se toca el guionista y no hay nada que
+el guionista pueda escribir mal.**
+
+| De dónde sale | Qué decide |
+|---|---|
+| `tipo` de la escena | el papel: dato, comparación, lista, cita, cierre… |
+| la posición | si abre el vídeo o lo cierra |
+| `pausa_despues_s` **de la escena anterior** | **si esta escena es el remate** |
+| `pausa_despues_s` **de esta escena** | si la frase se deja suspendida o se cierra |
+| la narración de la escena anterior | el enlace, para que no arranque en frío |
+
+**Los ocho papeles y qué se le pide a cada uno.** Esto es lo que la dirección pedía por
+escrito —qué se lee del tirón, qué lleva pausa, qué va en serio:
+
+- **apertura** — entra en frío, en mitad de una historia ya empezada. Tono de conversación.
+- **planteamiento** — llano y sin subrayar: anunciar la gracia la estropea.
+- **remate** — del tirón, sin pausas por dentro, **y completamente en serio**. Y una frase
+  explícita: *no te rías tú*.
+- **contraste** — dos mitades, con cambio claro de color de voz entre ellas.
+- **cifra** — el resto del tirón, la cifra más despacio y clara, sin énfasis de anuncio.
+- **enumeración** — marcar cada elemento, bajando el tono al pasar al siguiente.
+- **cita** — otro color de voz mientras duran las palabras de otro.
+- **objeción** (el cierre) — **baja el tono, en serio, sin ironía y sin gracia.**
+
+**Cómo se detecta el remate, que es la pieza que parecía imposible.** No hace falta ningún
+campo nuevo: `guionista_corto.md` ya manda 1,2–1,5 s de pausa entre planteamiento y remate
+y 0,2–0,7 s en todo lo demás. Las dos poblaciones no se solapan. Medido sobre los ocho
+Shorts del repositorio: **8 remates detectados en 47 escenas, uno por Short, los ocho
+correctos, ningún falso positivo.**
+
+**Y el arreglo del descosido, que es el menos obvio de los tres.** Cuando después de una
+frase viene un silencio nuestro, ahora se le pide al modelo que **deje la frase suspendida,
+sin cerrar la entonación**. Las pausas las seguimos poniendo nosotros —la versión 5.1 midió
+que pedírselas al modelo da silencios de decenas de segundos— pero por fin le decimos qué
+hacer con la frase que las precede. Un silencio después de una frase suspendida es una
+pausa dramática; después de un punto final es un corte. Era literalmente lo mismo que la
+regla del callback de la 13, aplicada al eje de la voz.
+
+Y en todas las escenas, sin excepción: **no te rías, no añadas risas, risitas, resoplidos,
+suspiros ni carraspeos.** Incluido el remate — sobre todo el remate: un chiste contado por
+alguien que se ríe de su propio chiste deja de tener gracia.
+
+### Lo que se probó y se retiró el mismo día
+
+La primera versión intentaba además **deducir dónde va el retintín**, con dos señales: unas
+comillas, o una palabra que nombrase el tono. Probada contra las 47 escenas reales, dispara
+siete veces y **acierta una**:
+
+| Escena | Lo que dispara | Lo que es de verdad |
+|---|---|---|
+| MDS-013 e1 | «el navegador» | un apodo |
+| MDS-013 e3 | «no va en serio» | una cita |
+| MDS-014 e2 | «sarcástico», «ingenioso» | resultados de un test |
+| MDS-014 e3 | «Ironía, nonsense, sarcasmo» | nombres de categorías |
+| **MDS-016 e1** | **«con retintín: qué ilusión»** | **ironía de verdad** |
+| MDS-016 e4 | «al hablar irónicamente» | el tema del vídeo |
+
+En español las comillas marcan citas y apodos mucho más que ironía, y en un canal **sobre
+humor** la palabra «ironía» aparece por ser el asunto. Una señal que acierta una de siete
+no es una señal: es ruido, y dirigir con ruido es exactamente lo que convirtió la dirección
+vieja en un tic. **Retirada, y el motivo queda escrito en el código** para que a nadie le
+parezca una buena idea dentro de tres semanas.
+
+Es el mismo desenlace que la comprobación amplia de C22, que señalaba el 73,5 % de las
+escenas, y la misma lección: **una comprobación estrecha que acierta siempre vale más que
+una lista que señala tres de cada cuatro.**
+
+**Entonces, ¿cómo se dirige la ironía?** Se declara, no se adivina. Encargo para la
+planificación del jueves 17, abajo.
+
+### Dos efectos secundarios que había que atender, y se han atendido
+
+1. **La caché de voz ahora incluye la dirección en su clave.** Dos escenas con el mismo
+   texto y distinto papel tienen que sonar distinto, y una caché que solo mirase el texto
+   devolvería la toma vieja sin decir nada. Efecto buscado: **cambiar la dirección invalida
+   la caché entera**, y la siguiente producción se sintetiza de cero.
+2. **`voz_precache.py` se ha alineado con lo mismo.** Llamaba a `_gemini_pcm()` con el
+   texto pelado, así que después de C33 habría precacheado el episodio largo **sin dirigir
+   y con una clave que `voz.py` nunca habría encontrado**: una semana de cuota gastada para
+   nada, en silencio. Es la trampa 1 del `PROMPT_DE_ARRANQUE.md` —cuando cambies algo, busca
+   qué dependía de ello— y esta vez se buscó antes de entregar.
+
+### Cómo se verá si ha funcionado
+
+- `ficha.json` lleva ahora **`direccion_voz` por escena** con el papel que se le pidió. Se
+  puede revisar el expediente sin escuchar el vídeo, igual que con `motor_voz`.
+- **La prueba de verdad es escucharlo:** `MDS-017`, martes 15 a las 19:00.
+- Si algo suena peor que hoy, se vuelve a `edge` con una línea —el respaldo automático
+  sigue intacto— y esta sección se corrige.
+
+---
+
+## C34 · La imagen: se revierte el descarte del 7 de septiembre
+
+**La petición de la dirección, textual:** *«hay que dar un cambio importante a la
+presentación en imagen sí o sí o nos hundimos […] las miniaturas y los vídeos con fondo
+azul y letras amarillas no pueden competir de ninguna manera con el atractivo de imágenes
+reales».*
+
+### Por qué lo descarté, y por qué estaba mal
+
+C25 lo despachó en una línea: *«Lo que se descarta, y por qué: imágenes de banco (regla 9 y
+no son de marca), imágenes generadas por IA (coste…)».* Los tres argumentos, uno a uno:
+
+- **«Regla 9».** La regla 9 es *«nada de material ajeno **sin licencia**»* y su texto habla
+  de clips de cómicos, programas y películas, por el riesgo de strike. **Una foto CC0 tiene
+  licencia.** Estiré la regla hasta que dijera lo que me convenía. Es el error que la
+  trampa 2 describe: diseñar alrededor de una restricción sin comprobar que dice eso.
+- **«No son de marca».** Este sí era un argumento de verdad, y **tiene arreglo** — es todo
+  el contenido del apartado siguiente.
+- **«IA: coste».** No estaba medido. La trampa 8 del proyecto es exactamente esa: dar una
+  cuota por conocida sin mirarla. Se mide antes de decidir.
+
+**Se revierte el descarte.** Y no por deferencia: por el dato. CTR de miniatura **1,43 %**
+contra un umbral de 4 %, **72 %** de las escenas es texto centrado sobre fondo, y una
+retención que se desangra a lo largo del vídeo en vez de romperse al principio. Tres
+señales distintas apuntando a lo mismo: **una vez que alguien entra, no hay nada que
+mirar.**
+
+### El diseño: la foto no entra cruda, entra vestida
+
+**El riesgo real no es el que decía C25.** Meter fotos de stock crudas no nos deja «sin
+marca»: nos cambia una firma reconocible por otra. Hoy parecemos un vídeo automatizado; con
+fotos de stock crudas pareceríamos un carrusel de LinkedIn. Eso no es avanzar.
+
+Así que la foto entra con **cuatro reglas de tratamiento**, todas en CSS, todas
+deterministas y todas de coste cero de render:
+
+1. **Duotono sobre la paleta del canal.** `grayscale(1)` más una capa del ámbar o el cian
+   de marca en `mix-blend-mode: multiply`, sobre el azul `#0B1220`. Es lo que hace que
+   **cuarenta fotos de cuarenta orígenes distintos parezcan una colección**, y es la
+   respuesta técnica a «no son de marca».
+2. **Enmarcada, nunca a sangre.** La foto vive dentro de una ventana de la rejilla de
+   taller de P1, con su marco. El canal está *mirando* algo, no usando un fondo de
+   escritorio.
+3. **Nunca sola.** La foto acompaña; la jerarquía de tres tamaños de P6 sigue mandando. La
+   dirección lo pidió así: *«me gusta el esquema de colores actual y las diapositivas que
+   aparecen, pero deben ser intercaladas»*. De acuerdo, y por una razón de fondo: la
+   diapositiva es lo que hace el vídeo **indexable**, y la búsqueda es hoy la única fuente
+   de tráfico que crece.
+4. **La foto se mueve.** Deriva lenta del 5 % durante la escena. Determinista, sin
+   `Math.random()`, coste cero: es una `transform` de CSS.
+
+### Cómo se decide esto, y se decide mirando
+
+**`07_pruebas/imagen-14-09/muestrario.html`** — una página local donde se sueltan dos o tres
+fotos y se ven dentro de una escena real del canal con los cinco tratamientos candidatos
+(cruda, duotono ámbar, duotono cian, gris frío, ámbar con trama). No usa red, no sube nada
+a ninguna parte y no necesita que exista todavía ningún banco.
+
+**Lo que hay que mirar no es si la foto es bonita: es si tres fotos distintas, de fuentes
+distintas, parecen de la misma colección después del tratamiento.** Si lo parecen, «no son
+de marca» queda resuelto y C34 sigue. Si no lo parecen, **C34 se para ahí** y no se ha
+gastado nada. Es la regla 11.2 —se mira el muestrario, no se imagina— aplicada antes de
+escribir una línea de `escena.html`.
+
+### De dónde salen las fotos: tres vías, por orden de lo que cuestan
+
+**Vía 1 · el lote de prueba (esta semana).** Doce a veinte imágenes, nada más. Suficiente
+para juzgar el tratamiento y para vestir la escena 1 de los cinco Shorts de una semana. Si
+el muestrario convence, este lote es la primera tanda del banco; si no, no se ha perdido
+nada.
+
+**Vía 2 · el banco propio (es la idea de la dirección y es la buena).**
+`02_marca/banco/` con un `banco.json` que lleva, por imagen: fichero, licencia, autor,
+enlace de origen y **etiquetas**. Crece por tandas y **no se rehace nunca**: una imagen que
+entra se queda para siempre y se reutiliza. Eso es lo que convierte esto en coste cero de
+verdad y, sobre todo, en **cero trabajo recurrente** (regla 5): el esfuerzo es de arranque,
+no de cada semana. A partir de unas cuarenta imágenes bien etiquetadas, ningún Short
+necesita imagen nueva.
+
+**Vía 3 · generarlas nosotros (la que más me convence a medio plazo, y la que hay que
+medir antes).** Resuelve de golpe licencia, coherencia de estilo y la objeción de marca,
+porque el estilo lo elegimos nosotros. Y es exactamente la analogía que trajo la dirección:
+*«el ejemplo lo tenemos en casa, en cómo estamos trocear los vídeos largos para que se
+produzcan en pequeñas dosis diarias manteniendo la cuota diaria»*. Es `voz_adelantada.yml`
+aplicado a imágenes: N al día dentro de la cuota gratuita, acumulando un banco que después
+se usa mil veces.
+
+**Pero no se diseña alrededor de una cuota que no se ha mirado.** Va como sonda, no como
+plan: la petición está en la tarea de hoy y son dos minutos en el mismo panel donde ya se
+miró la de TTS. **Si la cuota de imagen no existe o no es gratuita, la vía 3 se cae y las
+vías 1 y 2 siguen en pie sin cambios.**
+
+Y si entra: **se declara en la descripción, como la voz.** La regla 7 dice que el uso de IA
+se declara aunque no sea obligatorio. C25 argumentaba que «el canal declara IA en la voz,
+no en el dibujo», lo cual es una razón para ampliar la declaración, no para no usarla.
+
+### Dónde se pone la primera imagen, que es lo único que importa esta semana
+
+**En la escena 1 del Short.** No en la miniatura, aunque el CTR de 1,43 % pida a gritos lo
+contrario, y el motivo es que en el feed de Shorts **no hay miniatura que pulsar**: el
+vídeo arranca solo. La miniatura decide en los episodios largos y en la página del canal, y
+el largo es hoy el producto que menos tráfico mueve. El peldaño S1 se juega en el primer
+segundo del Short, y ahí es donde una cara humana real, en duotono, detrás de cuatro
+palabras, compra más que en ningún otro sitio del proyecto.
+
+Segunda posición: **la miniatura del episodio largo**, si el largo sigue vivo después del
+27 (ver abajo). Cinco imágenes, una por serie, y no hacen falta más.
+
+---
+
+## C35 · La densidad de estímulo — y por qué no hace falta trocear más
+
+**La observación de la dirección:** *«en la publicidad el número de imágenes/estímulos que
+aparecen es bastante alto […] es difícil dejar de mirar y deberíamos optar por algo así»*.
+
+**La aritmética, que es lo que decide dónde apretar.** Un anuncio bueno cambia de plano cada
+1–1,5 segundos. Un Short nuestro tiene seis escenas en cuarenta y ocho segundos: **un
+cambio cada ocho**. Esa es la distancia real, y explica la fuga continua de la curva de
+retención mejor que ninguna otra cosa que tengamos medida.
+
+**La reacción natural sería partir el Short en más escenas. Es la vía cara y además no hace
+falta.** Cara, porque cada escena es una llamada a Gemini y el nivel gratuito da diez al
+día: un Short de doce escenas no cabe en su día de producción, y arreglarlo obliga a
+precachear los cinco Shorts de la semana además del episodio largo. La cuenta semanal, para
+tenerla escrita de una vez:
+
+| | Llamadas/semana | De un presupuesto de |
+|---|---|---|
+| Hoy: 5 Shorts × 6 escenas (modelo 3.1) | 30 | 70 |
+| Hoy: 1 episodio largo × ~40 escenas (modelo 2.5) | 40 | 70 |
+| Si los Shorts pasaran a 12 escenas | 60 | 70 — **sin margen, y solo con precaché** |
+
+**Y no hace falta, porque la densidad se construye dentro de la escena, no partiéndola.**
+Una sola escena de ocho segundos con el icono dibujándose (P3), el texto apareciendo por
+partes (P6), la cifra contando desde cero (P5), el personaje entrando (P8) y la foto
+derivando (C34) son **cinco cambios en ocho segundos: uno cada 1,6 s.** Eso es densidad de
+anuncio, sin un corte añadido, sin una llamada más de cuota y sin tocar el guion.
+
+**Así que C35 no es un cambio nuevo: es la razón por la que P3, P5, P6 y P8 dejan de ser
+mejoras de acabado y pasan a ser el asunto principal.** Estaban repartidas entre la semana
+del 7 y la del 21 como si fueran acabado. No lo son: son el ritmo.
+
+**Lo que sí queda anotado como límite conocido,** para que nadie lo redescubra a golpes:
+mientras la voz de los Shorts vaya por Gemini, **un Short no puede pasar de nueve escenas
+sin precaché.** No es un bloqueo hoy; es la pared con la que se choca el día que se intente.
+
+---
+
+## Lo que le toca a la planificación del jueves 17
+
+Dos encargos, los dos escritos para que no haya que interpretarlos:
+
+**1 · El campo `voz_tono`, opcional y con vocabulario cerrado.** Ya que la ironía no se
+puede detectar, se declara. Un campo opcional por escena con **dos valores y ningún otro**:
+`retintin` (la frase se dice significando lo contrario) y `serio` (esta escena no admite
+guasa aunque su papel la permitiera). Sin valor, manda el papel que deduce C33, que cubre
+las 47 escenas medidas. `validar_guion.py` da **error** si aparece un valor fuera de esos
+dos — un campo de texto libre aquí acabaría en prosa que el modelo de voz leería en alto,
+que es exactamente el fallo de MDS-011 con el resaltado.
+
+**2 · Los Shorts del 21 al 25 son los primeros con el guionista nuevo.** Son la prueba de
+las tres pruebas de cosido, y de ellos depende que se pueda decir algo del arreglo del 12
+en el punto de control del 27. Que la escena 1 de los cinco esté escrita **contando con que
+va a llevar imagen** (cuatro palabras o menos, C19/P4).
+
+---
+
+## El episodio largo: la pregunta se adelanta, la decisión no
+
+`MDH-006` es, con palabras de la dirección, el mejor contenido del canal hasta ahora —*«el
+contenido está bien, incluso mejor que otras veces, y se aprende algo. Ese es el camino»*—
+y tiene **cero visualizaciones a las 48 horas**. `MDH-005` lleva cinco en nueve días.
+
+Cuesta cuarenta escenas de guion, cuarenta de render, la revisión entera de la semana y
+toda la maquinaria de C27 (la caché, el precaché, un workflow que la dirección tiene que
+crear a mano). Y si se libera, esa capacidad no se pierde: se convierte en escenas de Short
+con voz dirigida y en imágenes de banco.
+
+**No se decide hoy y no se decide solo.** La fecha sigue siendo el **27 de septiembre**,
+como estaba escrito, y esta entrada existe para que ese día la pregunta ya esté formulada y
+no haya que improvisarla. Lo que sí decido hoy es **cómo llegamos a esa fecha**: `MDH-007`
+(19/09) sale **con voz de Gemini**, lo que obliga a crear `voz_adelantada.yml` esta semana.
+No por el vídeo en sí, sino porque **comparar un largo con voz mala contra Shorts con voz
+buena no es comparar**: el 27 tienen que estar los dos productos en igualdad de condiciones
+o la decisión no vale nada.
+
+---
+
+## Lo que NO cambia hoy
+
+- **El punto de control sigue siendo el 27 de septiembre** y la decisión, el **15 de
+  noviembre** (C26). Nada de lo de hoy mueve esas fechas, y los umbrales de C26 siguen sin
+  poder tocarse después del 8 de noviembre.
+- **La regla 11.1 sigue suspendida** para presentación hasta el 27, que es lo que permite
+  meter C33 y C34 en la misma ventana. Siguen en pie la 11.2, la 11.5 y la barrera de C21.
+- **No se clona la voz de la dirección**, no se encienden los subtítulos quemados, no entra
+  C10, y `.github/workflows/` sigue sin escribirse en remoto.
+- **Los guiones de esta semana no se tocan.** `MDS-017` a `MDS-020` y `MDH-007` están
+  validados y sin hallazgos; reescribirlos ahora para «aprovechar» C33 sería meter mano a
+  una semana entera de trabajo ajeno por una mejora que la voz ya aplica sola.
+
+---
+
+## Dos avisos de procedimiento sobre lo de hoy
+
+**1 · `voz.py` lleva hoy dos cambios, y eso hay que justificarlo.** La regla 11.1 —un cambio
+por producción— sigue en pie fuera de presentación. Los dos entran por motivos distintos y
+ninguno se apoya en el otro:
+
+- **C33 es un arreglo de defecto**, del defecto que la dirección reportó esta mañana. Los
+  arreglos de defecto nunca han consumido ranura, y eso quedó escrito el 7 de septiembre.
+- **La pieza C de C27 no toca el camino de los Shorts.** Es un `elif` para formato «largo»,
+  y el único vídeo que se produce antes de que volvamos a hablar es un Short. Sobre el
+  largo solo puede mejorar: coge de caché lo que haya y, si no hay nada, hace exactamente lo
+  que hacía ayer. **No existe un resultado peor que el de hoy.**
+
+Verificado antes de entregar, con dobles en lugar de la API y sin gastar cuota: un Short
+hace seis llamadas en vivo con el modelo 3.1 y todas dirigidas; un largo sin precacheo hace
+**cero** llamadas y cae entero a `edge`; y un largo precacheado por `voz_precache.py` hace
+cero llamadas **y encuentra las seis escenas en la caché** — que era la pieza que faltaba
+por comprobar, porque si la clave no casa el fallo es silencioso.
+
+**2 · Cuidado mañana con `voz.py`, que es de la revisión diaria.** `03_produccion/` es suya
+según `PROPIEDAD_DE_FICHEROS.md`, y hoy he escrito yo en su fichero — cosa que la
+autorización general del 07/09 me permite, pero que abre exactamente la ventana del 21 de
+agosto: si el codirector no ha hecho `push` antes de que la revisión diaria clone
+`origin/main`, ella trabajará sobre un `voz.py` sin C33 y lo pisará entero al entregar.
+
+**La red que lo impide ya existe y es la primera acción de su prompt:** `git log --oneline
+-5` sobre `origin/main`, y si el último commit no incluye el trabajo que esperaba encontrar,
+no se toca nada del calendario y se dice en el resumen. Aquí lo que tiene que encontrar es
+un commit del 14/09 con `voz.py` dentro. **Si no lo encuentra, no toca `voz.py` ese día.**
+Su ranura de mañana es C31, que no está en ese fichero, así que no pierde nada esperando.

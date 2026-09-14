@@ -53,6 +53,36 @@ los días) y **`05_calendario/metricas.json`** (los números).
    *contener* un guion y no qué tiene que *sostenerlo*. Ver la versión 7 y los dos prompts de
    guionista, reescritos.
 
+8. **Y desde el 14 de septiembre, una octava, que es la que manda hoy:** por primera vez
+   hay medianas limpias a 48 horas, y dicen que **la mediana de los quince Shorts es 10
+   visualizaciones, con cero por encima de 50 y cero suscriptores en todo el canal.** No es
+   que los números no se muevan: esta semana han bajado. Y la curva de retención, que
+   también es nueva, enseña **fuga continua** —la mitad de la audiencia se va en el segundo
+   13— en vez de un desplome inicial: el problema ya no es solo que no entren, es que una
+   vez dentro no hay nada que mirar. De ahí salen C33 (la voz se dirige escena a escena) y
+   C34 (**se revierte el descarte de las imágenes**: el banco propio entra).
+
+## Estado a 14 de septiembre
+
+**La voz nueva es un paso adelante y el canal sigue donde estaba.** La sesión del lunes 14
+cerró tres cosas:
+
+- **C33 · la dirección de actor se construye por escena** y no como una constante. Era una
+  sola frase pegada delante de las seis escenas —«cuéntala con la entonación de quien cuenta
+  algo que le hace gracia»— y explicaba a la vez las risas de más y la sensación de
+  despiece: seis llamadas independientes a la API, cada una con su entonación de arranque y
+  su punto final. El guion estaba cosido desde el 12 y **la voz lo descosía**. Entra con
+  `MDS-017` (martes 15).
+- **C34 · se revierte el descarte de las imágenes de C25.** Lo descarté citando la regla 9,
+  y la regla 9 no dice eso: prohíbe material **sin licencia**, no material con licencia. El
+  banco propio entra, con un tratamiento de marca (duotono sobre la paleta) que se decide
+  **mirándolo**, en `07_pruebas/imagen-14-09/muestrario.html`, antes de escribir una línea.
+- **C35 · la densidad de estímulo se construye dentro de la escena**, no partiéndola en
+  más. Con eso, P3, P5, P6 y P8 dejan de ser acabado y pasan a ser el asunto principal.
+
+**Y una pregunta que ya está formulada para el 27:** `MDH-006`, el mejor contenido del canal
+según la propia dirección, tiene **cero visualizaciones a las 48 horas**.
+
 ## Estado a 12 de septiembre
 
 Nada se ha movido en los números, y esa sigue siendo la única frase que importa: **por debajo

@@ -120,6 +120,23 @@ nombre, nunca con su cara, nunca con su imagen personal.
 
 - **No** se usan clips de cómicos, programas ni películas. Aunque haya argumento de cita,
   un canal automatizado no debe exponerse a un strike.
+
+### Lo que esta regla NO dice, precisado el 14 de septiembre de 2026
+
+Esta regla prohíbe material **sin licencia**, y el 7 de septiembre la estiré yo mismo para
+descartar de un plumazo los bancos de imágenes en C25. **Una foto CC0 o con licencia
+Creative Commons compatible no viola esta regla**: tiene licencia, y si la atribución que
+esa licencia pida está en `creditos.json`, entra igual que entra la música.
+
+Lo que sigue prohibido, sin cambios: clips de obras ajenas, fotogramas de programas o
+películas, y cualquier imagen cuya licencia no se pueda nombrar. **Toda imagen del banco
+lleva su licencia, su autor y su enlace de origen escritos en `02_marca/banco/banco.json`
+antes de usarse una sola vez.** Una imagen sin esos tres campos no se usa, aunque parezca
+libre.
+
+Y la lección, que es la de siempre y esta vez me la aplico a mí: **antes de descartar algo
+citando una regla, lee la regla.** Es la trampa 2 del proyecto —comprobar que la
+restricción dice lo que crees que dice— cometida sobre un documento propio.
 - La alternativa es mejor y más de marca: **reconstruir** el chiste en el lenguaje visual
   del canal —despiece, diagrama, línea de tiempo— y nombrar la fuente.
 - La música lleva su atribución literal. `publicar.py` ya bloquea la publicación si una
@@ -206,6 +223,29 @@ Un suelo se convirtió en techo. Así que la regla deja de contar y pasa a medir
 pregúntate qué pasa si alguien pone el mínimo exacto en el peor sitio posible. Si la
 respuesta es «entonces la regla no sirve de nada», lo que hay que medir no es la cantidad,
 es la distancia.
+
+### 13.1 · La risa la pone el espectador, no el narrador
+
+*Añadida el 14 de septiembre de 2026, el mismo día en que se encendió Gemini en los
+Shorts.*
+
+La regla 13 pide que el vídeo haga gracia. **No pide que el narrador se ría**, y el primer
+Short con voz nueva salió riéndose de principio a fin. Ningún guion llevaba una sola risa
+escrita: las ponía el sintetizador, porque la dirección de actor le pedía en las seis
+escenas «la entonación de quien cuenta algo que le hace gracia».
+
+- **El narrador no se ríe.** Ni al abrir, ni en el remate, ni al cerrar. La dirección de
+  actor de `voz.py` se lo prohíbe expresamente en todas las escenas (C33).
+- **El remate se dice completamente en serio.** Es lo que lo hace gracioso: un chiste
+  contado por alguien que se ríe de su propio chiste deja de tener gracia.
+- **El cierre honesto —el «y aquí falla»— no admite guasa.** Es la frase que sostiene la
+  credibilidad del canal; decirla de broma la anula.
+- **Una risa escrita en el guion es otra cosa y sigue permitida**: si alguna vez hace falta
+  una risa real, se escribe en la narración y se sabe dónde está. Lo que no se admite es
+  una risa que aparece sola en un sitio que nadie eligió.
+
+**Y la lección general:** una instrucción de tono que se aplica a todas las escenas por
+igual no es tono, es un tic. El tono se dirige escena a escena o no se dirige.
 
 ## 14. Los dos canales: se ve mudo y se escucha a ciegas
 
