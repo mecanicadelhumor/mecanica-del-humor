@@ -37,3 +37,4 @@ paquete de tarea programada. Es material, no código: nada de aquí se ejecuta.
 | Carpeta | Qué es | Estado |
 |---|---|---|
 | `prueba-de-voces/` | Las tres locuciones de MDS-010: `edge` (lo de hoy), Gemini sin dirección y Gemini con dirección | **Respondida el 04/09.** Ver `prueba-de-voces.md` |
+| `voz-adelantada-14-09/` | No es una prueba de oído: es el diseño de `voz_adelantada.yml` (C27-B), listo para copiar a `.github/workflows/` — esa carpeta está protegida en remoto, igual que `producir-yml-07-09/`. Ver su `LEEME.md`. | **Entregado el 13/09.** Falta que el codirector lo suba y, si quiere, lo lance a mano una vez con presupuesto bajo antes de dejarlo en cron. |

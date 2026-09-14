@@ -1,0 +1,183 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+voz_precache.py — precachea contra Gemini la narración de un guion «largo»,
+SIN producir vídeo. Pieza B de C27 (versión 6/7 de PLAN_DE_CAMBIOS.md).
+
+Por qué existe: un episodio largo tiene ~40 escenas y el nivel gratuito de
+Gemini da 10 peticiones al día POR MODELO. No cabe en un solo día — el
+sábado de producción — pero sí de viernes a viernes: la planificación ya
+escribe el guion del sábado con nueve días de margen (ver
+05_calendario/bitacora/2026-09-12-direccion.md, punto 1). Este script es lo
+que gasta esos días: se llama una vez al día, mira qué escenas del guion del
+sábado que viene todavía no están en la caché de voz.py y sintetiza tantas
+como el presupuesto de llamadas de hoy permita. El sábado, `voz.py` (cuando
+soporte «largo» con Gemini, que es un paso posterior a este) se encuentra
+casi todo hecho.
+
+Lo llama un workflow nuevo, `voz_adelantada.yml`, propuesto en
+`07_pruebas/voz-adelantada-14-09/` con su `.md` explicativo al lado —
+`.github/workflows/` no se escribe en remoto, así que el codirector lo crea
+a mano cuando quiera encenderlo.
+
+Dos cosas que este script decide y que NO hay que tocar sin pensarlo:
+
+1. **Modelo `gemini-2.5-flash-preview-tts` (MODELO_GEMINI_LARGO), nunca
+   `gemini-3.1-flash-tts-preview` (MODELO_GEMINI, el de los Shorts, C7).**
+   Son cuotas diarias independientes. Si el largo compitiera por el modelo
+   de los Shorts, un episodio de 40 escenas se comería la cuota que
+   necesitan los cinco Shorts de la semana.
+
+2. **La clave de caché incluye el MODELO exacto, no la palabra «gemini» a
+   secas.** `voz.py` hoy cachea los Shorts con
+   `_cache_voz_ruta(texto, "gemini", voz)` — una cadena fija, porque hasta
+   ahora solo existía un modelo de Gemini en juego. Aquí se cachea con
+   `_cache_voz_ruta(texto, MODELO_GEMINI_LARGO, voz)`, que es una cadena
+   distinta («gemini-2.5-flash-preview-tts»), así que las dos cachés nunca
+   chocan aunque compartan directorio y aunque compartan voz (`Charon`,
+   `Puck`). **El día en que `voz.py` aprenda a sintetizar episodios largos
+   con Gemini de verdad, tiene que pedir la caché con este mismo modelo
+   exacto** — si ese día alguien vuelve a escribir el literal `"gemini"`
+   para el largo (copiando el patrón de los Shorts sin fijarse), este
+   precacheo de toda la semana se sintetiza dos veces y no sirve de nada.
+
+Uso:
+
+    python3 voz_precache.py 05_calendario/guiones/MDH-008.es.json
+    python3 voz_precache.py MDH-008.es.json --presupuesto 9
+
+No escribe voz.mp3, subtítulos ni build/: solo rellena
+03_produccion/cache_voz/. No toca voz.py ni ningún fichero de producción.
+"""
+import argparse
+import json
+import sys
+import time
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from voz import (  # noqa: E402  (el sys.path.insert de arriba tiene que ir antes)
+    CACHE_VOZ_DIR,
+    ESPERA_ENTRE_LLAMADAS_GEMINI,
+    RITMO_GEMINI_HZ,
+    VOZ_GEMINI_ESCEPTICO,
+    VOZ_GEMINI_NARRADOR,
+    _cache_voz_ruta,
+    _gemini_cliente,
+    _gemini_pcm,
+    _pcm_a_mp3,
+    hablable,
+)
+
+# Ver el punto 1 de arriba: cuota propia, nunca la de los Shorts (C7).
+MODELO_GEMINI_LARGO = "gemini-2.5-flash-preview-tts"
+
+# 10 peticiones/día es el límite real. Se pide con margen para no gastar la
+# décima justo en el momento en que la API empieza a devolver 429 y perder
+# tiempo reintentando algo que ya sabemos que va a fallar.
+PRESUPUESTO_POR_DEFECTO = 9
+
+
+def _voz_de(escena):
+    papel = "esceptico" if escena.get("voz") == "esceptico" else "narrador"
+    return VOZ_GEMINI_ESCEPTICO if papel == "esceptico" else VOZ_GEMINI_NARRADOR
+
+
+def escenas_pendientes(guion):
+    """[(indice, texto_hablable, voz_gemini, ruta_cache), ...] sin cachear
+    todavía con MODELO_GEMINI_LARGO. `indice` es 1-based, solo para el log."""
+    pendientes = []
+    for i, e in enumerate(guion.get("escenas", []), 1):
+        crudo = (e.get("narracion") or "").strip()
+        if not crudo:
+            continue
+        texto = hablable(crudo)
+        voz_gemini = _voz_de(e)
+        cache = _cache_voz_ruta(texto, MODELO_GEMINI_LARGO, voz_gemini)
+        if not cache.exists():
+            pendientes.append((i, texto, voz_gemini, cache))
+    return pendientes
+
+
+def _agotado_por_dia(exc):
+    msg = str(exc)
+    return ("RESOURCE_EXHAUSTED" in msg or "429" in msg) and (
+        "per day" in msg.lower() or "perday" in msg.lower().replace(" ", ""))
+
+
+def principal(guion_path, presupuesto):
+    """Devuelve (hechas, restantes). No lanza para un fallo transitorio de
+    una escena suelta: eso se reintenta el día siguiente."""
+    guion = json.loads(Path(guion_path).read_text(encoding="utf-8"))
+    ident = guion.get("id", Path(guion_path).stem)
+
+    if guion.get("formato") != "largo":
+        print(f"::warning::{guion_path}: formato «{guion.get('formato')}», no «largo». "
+              f"C27-B es solo para el episodio del sábado; no se toca nada.")
+        return 0, 0
+
+    pendientes = escenas_pendientes(guion)
+    total = len(pendientes)
+    print(f"{ident}: {total} escena(s) sin cachear con {MODELO_GEMINI_LARGO}.")
+    if not total:
+        print("Nada que hacer — la caché ya cubre todo el guion.")
+        return 0, 0
+
+    cliente = None
+    hechas = 0
+    ultima = 0.0
+    for i, texto, voz_gemini, cache in pendientes:
+        if hechas >= presupuesto:
+            print(f"Presupuesto de {presupuesto} llamada(s) agotado por hoy. "
+                  f"Quedan {total - hechas} escena(s) para el próximo día.")
+            break
+
+        espera = ESPERA_ENTRE_LLAMADAS_GEMINI - (time.monotonic() - ultima)
+        if ultima and espera > 0:
+            time.sleep(espera)
+
+        try:
+            cliente = cliente or _gemini_cliente()
+            pcm = _gemini_pcm(cliente, MODELO_GEMINI_LARGO, texto, voz_gemini)
+            ultima = time.monotonic()
+            CACHE_VOZ_DIR.mkdir(parents=True, exist_ok=True)
+            # Escritura atómica: si el proceso muere a mitad de _pcm_a_mp3
+            # (que llama a ffmpeg), no queda un .mp3 a medio escribir con el
+            # nombre final haciéndose pasar por caché válida.
+            tmp = cache.with_suffix(".tmp.mp3")
+            _pcm_a_mp3(pcm, RITMO_GEMINI_HZ, tmp)
+            tmp.replace(cache)
+            hechas += 1
+            print(f"  escena {i:>2}  cacheada  ({hechas}/{min(presupuesto, total)} hoy)")
+        except Exception as exc:
+            ultima = time.monotonic()
+            if _agotado_por_dia(exc):
+                print(f"::warning::cuota DIARIA de {MODELO_GEMINI_LARGO} agotada en la "
+                      f"escena {i}. Quedan {total - hechas} escena(s) para el próximo día.")
+                break
+            print(f"::warning::escena {i}: fallo al sintetizar con Gemini, se deja para "
+                  f"el próximo intento. Error: {str(exc)[:200]!r}")
+            # Fallo transitorio (red, respuesta vacía...): no cuenta contra el
+            # presupuesto de hoy más que la espera ya consumida, y no se marca
+            # nada como agotado — mañana se reintenta esta misma escena.
+
+    restantes = total - hechas
+    print(f"\n{hechas} escena(s) cacheada(s) hoy. {restantes} pendiente(s) de {ident}.")
+    return hechas, restantes
+
+
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser(description=__doc__,
+                                  formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("guion")
+    ap.add_argument("--presupuesto", type=int, default=PRESUPUESTO_POR_DEFECTO,
+                     help=f"llamadas reales a Gemini como máximo hoy "
+                          f"(por defecto {PRESUPUESTO_POR_DEFECTO}, por debajo del "
+                          f"límite de 10/día para dejar margen)")
+    a = ap.parse_args()
+    # Quedar escenas pendientes es el estado normal de martes a jueves: no es
+    # un fallo del workflow, así que esto no devuelve nunca un código de
+    # salida distinto de 0 por esa causa. Solo una excepción no controlada
+    # (guion inexistente, JSON roto, GEMINI_API_KEY ausente) debe parar el
+    # job con error, y para eso ya basta con dejarla subir sin capturarla.
+    principal(a.guion, a.presupuesto)

@@ -1,5 +1,5 @@
-ESTADO: INCIDENCIA — dos cosas. (a) MDS-011 (https://youtu.be/B7AaS2dXIOw) sigue "private" sin "publicar_en", ya SEIS días de calendario (desde el 07/09, ~112h30 sobre su hora de emisión), sin cambios desde ayer. (b) MDH-006 (hoy, https://youtu.be/WbXnVovbvqw, publica 12:00) sale con "pico_dbtp" en -0,59 en ficha.json (objetivo ≤ -1,0) — no es saturación (sigue por debajo de 0 dBTP) y es poco probable que se oiga como distorsión clara, pero es el primer episodio largo que se mide con este canario y se aparta de los Shorts recientes con la misma música (-1,4). No puedo escucharlo desde aquí para confirmar. Sobre MDS-011: publicarlo a mano, ponerle publicar_en, o darlo por perdido. Sobre MDH-006: a mi juicio es razonable dejarlo pasar, pero puedes escucharlo tú antes de que sea del todo público y decidir — el resto del vídeo (capturas, sincronía de voz, sin texto cortado) sale limpio. Detalle completo de las dos en la bitácora.
-Fecha: 2026-09-12 11:30
-Último vídeo publicado: MDS-015 (11/09, automático) · Próxima emisión: MDH-006 (12/09, 12:00 — en cola, ver incidencia (b) arriba)
+ESTADO: OK
+Fecha: 2026-09-13 11:30
+Último vídeo publicado: MDH-006 (12/09, automático) · Próxima emisión: MDS-016 (14/09, 19:00)
 Pendiente del codirector: nada
-Detalle: 05_calendario/bitacora/2026-09-12-revision.md
+Detalle: 05_calendario/bitacora/2026-09-13-revision.md

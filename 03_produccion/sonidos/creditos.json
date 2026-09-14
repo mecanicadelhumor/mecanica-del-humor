@@ -1,0 +1,38 @@
+{
+  "_nota": "Créditos de los acentos de sonido de P9, indexados por sha256 del fichero de audio — mismo esquema que 03_produccion/assets/musica/creditos.json (por hash, no por nombre, para que sobreviva a un cambio de fichero por defecto). Fichero NUEVO, separado del de música a propósito: vive junto a los sonidos y a attribution_texts.md, y evita mezclar acentos cortos de montaje.py con las pistas de cama de cola.py en un mismo índice. Preparado el 13/09/2026, ADELANTADO a que montaje.py y publicar.py aprendan a comprobar los sonidos igual que ya comprueban la música (P9 entra en la semana del 21 según C25) — el día que esa comprobación se escriba, este es el fichero donde tiene que buscar. attribution_texts.md trae CUATRO créditos y en la carpeta hay TRES ficheros (falta el de alec_mackay, 'wood board hit.wav', freesound.org/s/463651/): se acredita solo lo que existe, tal y como pide la cola de encargos.",
+  "sonidos": {
+    "231f54b310a4ab7eef4684b4f9a47d78b4f1c616f3d18c050d5e40b16d7f2142": {
+      "archivo": "347174__davidsraba__coin-pickup-sound-v-0.wav",
+      "titulo": "Coin Pickup Sound V 0.2",
+      "autor": "Davidsraba",
+      "licencia": "Creative Commons 0 (CC0)",
+      "atribucion": [
+        "Coin Pickup Sound V 0.2 by Davidsraba",
+        "https://freesound.org/s/347174/",
+        "License: Creative Commons 0"
+      ]
+    },
+    "daa822ed47aabe09387236c4e1473266d06b8d018905175e2cbec0d686c82e7d": {
+      "archivo": "506718__jackyyang09__wooden-hit.wav",
+      "titulo": "Wooden Hit",
+      "autor": "jackyyang09",
+      "licencia": "Creative Commons 0 (CC0)",
+      "atribucion": [
+        "Wooden Hit by jackyyang09",
+        "https://freesound.org/s/506718/",
+        "License: Creative Commons 0"
+      ]
+    },
+    "f12f51510f713ef53b8843aad3e9c638b69e072705cd4145c333b5ed8ee111bf": {
+      "archivo": "835523__sadiquecat__20251126_click-case-close.wav",
+      "titulo": "20251126_Click - Case close",
+      "autor": "Sadiquecat",
+      "licencia": "Creative Commons 0 (CC0)",
+      "atribucion": [
+        "20251126_Click - Case close by Sadiquecat",
+        "https://freesound.org/s/835523/",
+        "License: Creative Commons 0"
+      ]
+    }
+  }
+}

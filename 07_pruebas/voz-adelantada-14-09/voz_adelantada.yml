@@ -1,0 +1,141 @@
+name: Voz adelantada (episodio largo)
+
+# C27-B (versión 6.1/7 de PLAN_DE_CAMBIOS.md). El episodio largo del sábado
+# tiene ~40 escenas y el nivel gratuito de Gemini da 10 peticiones al día
+# POR MODELO -- no cabe en un solo día. Pero la planificación del jueves ya
+# escribe el guion del sábado SIGUIENTE (nueve días de margen, no dos: ver
+# 05_calendario/bitacora/2026-09-12-direccion.md, punto 1), así que sí cabe
+# repartido entre varios días.
+#
+# Este workflow es lo que gasta esos días: de martes a viernes, coge el
+# guion del próximo sábado y llama a
+# 03_produccion/pipeline/voz_precache.py, que mira qué escenas todavía no
+# están en la caché de voz (03_produccion/cache_voz/) y sintetiza tantas
+# como el presupuesto diario deje. El sábado, cuando `voz.py` aprenda a
+# sintetizar el episodio largo con Gemini (paso posterior a este, todavía
+# sin escribir), se encuentra casi todo cacheado y no vuelve a gastar cuota.
+#
+# NO usa el modelo de los Shorts (gemini-3.1-flash-tts-preview, C7):
+# usa gemini-2.5-flash-preview-tts, con su propia cuota diaria, para no
+# competir con los cinco Shorts de la semana por las mismas 10 peticiones al
+# día. voz_precache.py además cachea con el nombre del MODELO exacto en la
+# clave (no con el literal "gemini"), así que las dos cachés -- Shorts y
+# largo -- nunca chocan aunque compartan carpeta y voces (Charon/Puck).
+# Detalle completo en la cabecera de voz_precache.py.
+#
+# Y una cosa que este workflow NO decide: qué motor usa el episodio final
+# el sábado. Esa decisión --Gemini si la caché llegó completa, edge-tts si
+# falta una sola escena, nunca mezclado-- se toma aparte, el viernes por la
+# noche, y vive en el paso de producción (todavía sin escribir). Este
+# workflow solo rellena la caché; no decide nada sobre la voz que se oye.
+
+on:
+  schedule:
+    # Martes a viernes (no de viernes a viernes, corregido el 12/09/2026):
+    # el guion del sábado que viene no existe en el repositorio hasta que la
+    # planificación del jueves lo escribe Y el codirector le hace push --
+    # normalmente el viernes por la mañana (ver revision-diaria.md, sección
+    # de por qué la revisión diaria corre a las 11:30 y no de madrugada). Un
+    # disparo en lunes o martes de ESTA semana cachearía el guion que ya
+    # escribió la planificación la semana pasada para el sábado que viene
+    # --el que ya existe en el repo--, y el de viernes es el último cartucho
+    # antes de que el sábado llegue.
+    #
+    # 09:00 UTC: después de que hayan terminado los tres intentos de
+    # producir.yml (el último es a las 08:23 UTC) y sin pisar la revisión
+    # diaria de las 11:28 UTC.
+    - cron: "0 9 * * 2-5"
+
+  workflow_dispatch:
+    inputs:
+      fecha_sabado:
+        description: "Forzar el sábado a mirar (YYYY-MM-DD). Vacío = el próximo sábado."
+        required: false
+      presupuesto:
+        description: "Llamadas reales a Gemini como máximo en esta ejecución"
+        required: false
+        default: "9"
+
+# Nunca dos precacheos a la vez: compartirían cuota de Gemini y podrían
+# comitear al mismo tiempo. Grupo propio, distinto del de producir.yml
+# ("produccion"): un precacheo de voz no tiene por qué esperar a que
+# termine una producción de vídeo, y viceversa.
+concurrency:
+  group: voz-adelantada
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  precachear:
+    runs-on: ubuntu-latest
+    # Nada de Chromium, Playwright ni fuentes: este workflow no renderiza
+    # vídeo, solo llama a la API de voz y convierte el audio con ffmpeg. Por
+    # eso el tope es tan corto comparado con producir.yml (150 min).
+    timeout-minutes: 30
+    permissions:
+      contents: write   # para comitear lo nuevo de cache_voz/
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Calcular el próximo sábado
+        id: fecha
+        run: |
+          if [ -n "${{ inputs.fecha_sabado }}" ]; then
+            echo "sabado=${{ inputs.fecha_sabado }}" >> "$GITHUB_OUTPUT"
+          else
+            # "next Saturday" en GNU date: si hoy ES sábado, salta al
+            # siguiente -- correcto, el guion de HOY se produce hoy mismo en
+            # producir.yml, no hace falta precachearlo.
+            echo "sabado=$(date -u -d 'next Saturday' +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Averiguar el guion de ese sábado
+        id: plan
+        # Reutiliza cola.py en vez de repetir la lectura de parrilla.json:
+        # una sola fuente de verdad sobre qué toca cada día. Si ese sábado no
+        # tiene emisión en la parrilla (no debería pasar, pero por si acaso),
+        # hay_trabajo sale "false" y los pasos de abajo no hacen nada.
+        run: |
+          python3 03_produccion/pipeline/cola.py \
+            --fecha "${{ steps.fecha.outputs.sabado }}" --github-output
+
+      - name: Instalar dependencias
+        if: steps.plan.outputs.hay_trabajo == 'true'
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install --quiet -r requirements.txt
+
+      - name: Precachear voz de Gemini (episodio largo)
+        if: steps.plan.outputs.hay_trabajo == 'true'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          PRESUPUESTO="${{ inputs.presupuesto }}"
+          for G in ${{ steps.plan.outputs.guiones }}; do
+            echo "::group::precacheo $G"
+            python3 03_produccion/pipeline/voz_precache.py "$G" \
+              --presupuesto "${PRESUPUESTO:-9}"
+            echo "::endgroup::"
+          done
+
+      - name: Comitear la caché nueva
+        if: steps.plan.outputs.hay_trabajo == 'true'
+        run: |
+          git add -A 03_produccion/cache_voz
+          if git diff --cached --quiet; then
+            echo "Sin escenas nuevas hoy (cuota agotada de entrada, o ya estaba todo)."
+          else
+            git config user.name  "Mecánica del Humor (bot)"
+            git config user.email "mecanicadelhumor@users.noreply.github.com"
+            git commit -m "Precacheo de voz (C27): ${{ steps.plan.outputs.episodio }}"
+            git pull --rebase --autostash origin "$GITHUB_REF_NAME"
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          fi
