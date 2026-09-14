@@ -86,15 +86,15 @@ TONO = "+0Hz"
 # ---------------------------------------------------------------------------
 # C7 · Gemini TTS en los Shorts (07-09/09/2026, versión 5.1 y 6 del plan).
 #
-# Se escribe esta semana con --motor edge por defecto: no toca la producción
-# de hoy ni gasta la ranura de cambio de la semana (que es de C19+C16). El
-# valor por defecto pasa a "gemini" el lunes 14 — una línea, aquí abajo, en
-# el propio argparse. Antes de esa fecha, dos cosas que este fichero NO puede
-# arreglar porque viven en .github/workflows/producir.yml (protegido, ver
-# REGLAS.md regla 11.7): el paso de voz.py necesita el secreto
-# GEMINI_API_KEY en su entorno, y ese mismo paso necesita `google-genai`
-# instalado — esto último ya queda resuelto añadiéndolo a requirements.txt,
-# que sí es mío.
+# Se escribió la semana del 7 con --motor edge por defecto para no tocar la
+# producción de esa semana ni gastar la ranura de cambio (que era de C19+C16).
+# El valor por defecto ha pasado a "gemini" el lunes 14/09 (revisión diaria:
+# MDS-016 salió bien el sábado/domingo/hoy y ESTADO.md decía OK), confirmando
+# antes las dos cosas que este fichero no podía arreglar por sí solo porque
+# viven en .github/workflows/producir.yml (protegido, ver REGLAS.md regla
+# 11.7): el paso de voz.py ya expone el secreto GEMINI_API_KEY en su entorno
+# (verificado, línea «Sintetizar narración») y `google-genai` ya está en
+# requirements.txt, que sí es mío.
 #
 # Solo se usa en Shorts (formato "corto"): un episodio largo son ~40 escenas
 # y el nivel gratuito da 10 peticiones al día POR MODELO — no cabe en un día
@@ -117,9 +117,10 @@ TONO = "+0Hz"
 #      WordBoundary), y con él el canario «lineas_ass» de qa.py — sustituido
 #      ahí por uno nuevo que compara la duración calculada con la real de
 #      voz.mp3, que es lo que de verdad hay que vigilar.
-#   6. Se enciende con un episodio (el lunes 14), no con la semana: si ese
-#      día ESTADO.md no dice OK, se vuelve a "edge" cambiando el valor por
-#      defecto de este mismo argparse.
+#   6. Se enciende con un episodio (el lunes 14, hecho), no con la semana:
+#      si algún día siguiente ESTADO.md no dice OK por causa de la voz de un
+#      Short, se vuelve a "edge" cambiando el valor por defecto de este mismo
+#      argparse — es una línea, no hace falta más.
 #
 # Y la caché, que es la pieza de la que depende además que el episodio largo
 # pueda dejar edge-tts más adelante (C27): cada escena sintetizada con Gemini
@@ -629,14 +630,15 @@ if __name__ == "__main__":
     ap.add_argument("guion")
     ap.add_argument("-o", "--salida", required=True)
     ap.add_argument("--voz", default=None, help=f"por defecto según idioma: {VOCES}")
-    # C7 (versión 5.1 y 6 del plan): se escribe esta semana con "edge" por
-    # defecto para no tocar la producción de hoy. El valor por defecto pasa a
-    # "gemini" el lunes 14 de septiembre -- ese día, cambiar SOLO esta línea
-    # (default="edge" -> default="gemini") y confirmar antes que
-    # producir.yml ya expone GEMINI_API_KEY al paso de voz.py (fichero de
-    # workflows: lo edita el codirector, no esta tarea).
-    ap.add_argument("--motor", choices=["edge", "gemini"], default="edge",
-                     help="edge (por defecto hasta el 14/09) o gemini -- solo Shorts, "
-                          "con caché y respaldo automático a edge ante cualquier fallo")
+    # C7 (versión 5.1 y 6 del plan): se escribió con "edge" por defecto la
+    # semana del 7, y ha pasado a "gemini" el lunes 14/09 (revisión diaria,
+    # con producir.yml ya exponiendo GEMINI_API_KEY al paso de voz.py
+    # confirmado antes del cambio). Si algún día ESTADO.md deja de decir OK
+    # por causa de la voz de un Short, se vuelve a "edge" cambiando SOLO
+    # esta línea.
+    ap.add_argument("--motor", choices=["edge", "gemini"], default="gemini",
+                     help="gemini por defecto desde el 14/09 (revisión diaria: ESTADO.md "
+                          "en OK ese día) -- solo Shorts, con caché y respaldo automático "
+                          "a edge ante cualquier fallo")
     a = ap.parse_args()
     asyncio.run(principal(a.guion, a.salida, a.voz, a.motor))
