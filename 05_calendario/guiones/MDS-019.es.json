@@ -4,66 +4,68 @@
   "serie": "Ríete primero, te explico después",
   "idioma": "es",
   "titulo_trabajo": "¿Los anuncios graciosos venden más?",
-  "tesis": "El humor en un anuncio gana atención y cae bien, y a veces se lleva por delante el mensaje: hace tres cosas distintas, no una.",
+  "tesis": "El humor ayuda a vender, pero casi todo lo que gana se lo queda el anuncio: el efecto sobre lo que te gusta el anuncio es el doble que sobre lo que te gusta la marca.",
   "pilares": [
     "G"
   ],
   "duracion_objetivo_s": 42,
   "bloqueos": [],
   "notas_humor": [
-    "El chiste va en el segundo cero: la sintonía que llevas veinte años cantando.",
+    "REESCRITO POR LA DIRECCIÓN el 15/09/2026, antes de su producción. Motivo: el aviso del codirector sobre MDS-017 («es un desastre a nivel de guion»). Este guion lo escribió la planificación del jueves 10, antes de las tres pruebas de cosido del 12, y fallaba en lo mismo: abría con la sintonía de un banco (una sintonía no es humor, así que el ejemplo no era del tema), el banco no volvía, la escena 5 estrenaba idea, y sobre todo **decía algo que la fuente contradice**: «el humor mejora cómo te cae quien lo usa». El resumen de Eisend (2009) dice textualmente que no hay evidencia de que el humor mejore la simpatía hacia el anunciante, y que sí reduce su credibilidad. Era un error de la regla 2 que había pasado la verificación.",
+    "Prueba 1 · qué pasa: me sé de memoria un anuncio que me hacía llorar de risa y no sé qué vendía.",
+    "Prueba 1 · qué gira: el humor le da al anuncio el doble de efecto que a la marca: por eso me sé el anuncio y no la marca.",
+    "Prueba 1 · cómo acaba: la investigación está algo sesgada, y yo sigo sin saber qué vendía ese anuncio.",
     "No se nombra ninguna marca ni se reconstruye ningún anuncio real (REGLAS.md, regla 9).",
-    "El cierre vuelve al chiste del principio, que es lo que convierte el Short en pieza y no en lista.",
-    "La reacción del personaje llega DESPUÉS del remate."
+    "Afirmaciones comprobadas el 15/09 contra el resumen de Eisend, M. (2009), «A meta-analysis of humor in advertising», Journal of the Academy of Marketing Science 37(2), 191-203, doi 10.1007/s11747-008-0096-y: 369 correlaciones; el humor mejora la actitud hacia el anuncio, la atención, el afecto positivo, la actitud hacia la marca y la intención de compra; el efecto sobre la actitud hacia el anuncio es el doble que sobre la actitud hacia la marca; y el análisis de moderadores indica que la investigación académica sobre humor está algo sesgada. La ficha G05 de la bibliografía tenía otro título, otra revista y otro DOI: corregida el mismo día."
   ],
   "escenas": [
     {
       "tipo": "enunciado",
       "icono": "i-publico",
-      "texto": "Veinte años *cantándola*.",
-      "narracion": "Llevo veinte años cantando la sintonía de un anuncio.",
+      "texto": "Me lo sé *entero*.",
+      "narracion": "Me sé de memoria un anuncio que me hacía llorar de risa.",
       "pausa_despues_s": 1.35
     },
     {
       "tipo": "enunciado",
-      "texto": "De un banco donde nunca *entré*.",
-      "narracion": "De un banco en el que no he entrado en mi vida.",
+      "texto": "¿Y qué *vendía*?",
+      "narracion": "No tengo ni idea de qué vendía.",
       "personaje": "rie",
       "pausa_despues_s": 0.5
     },
     {
       "tipo": "dato",
-      "icono": "i-balanza",
-      "cifra": "Atención sí",
-      "pie": "el mensaje, no siempre",
-      "narracion": "Eisend juntó todos los estudios que habían medido anuncios con humor. La atención la gana casi siempre. El mensaje, no siempre.",
+      "cifra": "369",
+      "pie": "mediciones de anuncios con humor, juntas",
+      "narracion": "Eisend juntó trescientas sesenta y nueve mediciones de anuncios con humor. Y sí: el humor gana atención.",
       "fuente": "G05",
       "personaje": "piensa",
       "pausa_despues_s": 0.45
     },
     {
       "tipo": "comparacion",
-      "a": "Recuerdas el *chiste*",
-      "b": "No lo que vendía",
-      "et_a": "el humor engancha",
-      "et_b": "y a veces tapa",
-      "narracion": "Por eso te acuerdas del chiste del anuncio y no de lo que vendía: lo mismo que engancha es lo que tapa.",
+      "a": "Al anuncio: el *doble*",
+      "b": "A la marca: menos",
+      "et_a": "lo que gana con el humor",
+      "et_b": "lo que gana con el humor",
+      "narracion": "Pero al anuncio le llega el doble de efecto que a la marca. Como el mío: el anuncio, entero; la marca, ni idea.",
       "fuente": "G05",
       "pausa_despues_s": 0.45
     },
     {
       "tipo": "enunciado",
-      "texto": "Tres efectos, no *uno*.",
-      "narracion": "Y el humor no hace una sola cosa: gana atención, mejora cómo te cae quien lo usa, y a veces se come el mensaje.",
+      "texto": "Ayuda a vender. *Menos* de lo que parece.",
+      "narracion": "Así que sí, el humor ayuda a vender. Pero menos de lo que parece, porque la mayor parte se la queda el anuncio.",
       "fuente": "G05",
+      "personaje": "entiende",
       "pausa_despues_s": 0.4
     },
     {
       "tipo": "cierre",
       "icono": "i-grieta",
-      "titulo": "Y falla cuando el chiste es lo *único* que recuerdas",
+      "titulo": "Y falla aquí: la investigación viene algo *sesgada*",
       "subtitulo": "Humor en publicidad · Eisend",
-      "narracion": "Ahí falla: si el chiste es lo único que te queda, el anuncio funcionó como vídeo y fracasó como anuncio.",
+      "narracion": "Y aquí falla: el propio Eisend avisa de que la investigación académica sobre esto está algo sesgada. Y yo sigo sin saber qué vendía.",
       "fuente": "G05",
       "personaje": "no",
       "pausa_despues_s": 0.2

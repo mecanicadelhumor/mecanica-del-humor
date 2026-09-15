@@ -75,8 +75,11 @@ from voz import (  # noqa: E402  (el sys.path.insert de arriba tiene que ir ante
     _cache_voz_ruta,
     _gemini_cliente,
     _gemini_pcm,
+    _audio_plausible,
     _pcm_a_mp3,
+    clase_de_error,
     direccion_escena,
+    duracion_real,
     hablable,
 )
 
@@ -91,6 +94,12 @@ from voz import (  # noqa: E402  (el sys.path.insert de arriba tiene que ir ante
 # tiempo reintentando algo que ya sabemos que va a fallar.
 PRESUPUESTO_POR_DEFECTO = 9
 
+# C33.1 (15/09/2026): tope de fallos por ejecución. Hasta hoy un fallo no
+# contaba contra el presupuesto, así que con la API caída se intentaban las
+# cuarenta escenas, una cada 25 s, y cada intento podía contar contra la cuota
+# del día. Tres fallos seguidos bastan para saber que hoy no es el día.
+FALLOS_MAXIMOS = 3
+
 
 def _voz_de(escena):
     papel = "esceptico" if escena.get("voz") == "esceptico" else "narrador"
@@ -98,7 +107,7 @@ def _voz_de(escena):
 
 
 def escenas_pendientes(guion):
-    """[(indice, texto_dirigido, voz_gemini, ruta_cache), ...] sin cachear
+    """[(indice, texto, texto_dirigido, voz_gemini, ruta_cache), ...] sin cachear
     todavía con MODELO_GEMINI_LARGO. `indice` es 1-based, solo para el log.
 
     `texto_dirigido` es el prompt completo (dirección de actor + narración), que
@@ -116,14 +125,14 @@ def escenas_pendientes(guion):
         dirigido, _papel = direccion_escena(escenas, i, texto)
         cache = _cache_voz_ruta(texto, MODELO_GEMINI_LARGO, voz_gemini, dirigido)
         if not cache.exists():
-            pendientes.append((i, dirigido, voz_gemini, cache))
+            pendientes.append((i, texto, dirigido, voz_gemini, cache))
     return pendientes
 
 
 def _agotado_por_dia(exc):
-    msg = str(exc)
-    return ("RESOURCE_EXHAUSTED" in msg or "429" in msg) and (
-        "per day" in msg.lower() or "perday" in msg.lower().replace(" ", ""))
+    # C33.1: la clasificación vive en voz.py. La de aquí buscaba «per day» o
+    # «perday» y Google escribe «per_day»: nunca reconocía la cuota agotada.
+    return clase_de_error(exc) == "dia"
 
 
 def principal(guion_path, presupuesto):
@@ -146,8 +155,13 @@ def principal(guion_path, presupuesto):
 
     cliente = None
     hechas = 0
+    fallos = 0
     ultima = 0.0
-    for i, dirigido, voz_gemini, cache in pendientes:
+    for i, texto, dirigido, voz_gemini, cache in pendientes:
+        if fallos >= FALLOS_MAXIMOS:
+            print(f"::warning::{fallos} fallos en esta ejecución: se para aquí para no "
+                  f"gastar cuota. Quedan {total - hechas} escena(s) para el próximo día.")
+            break
         if hechas >= presupuesto:
             print(f"Presupuesto de {presupuesto} llamada(s) agotado por hoy. "
                   f"Quedan {total - hechas} escena(s) para el próximo día.")
@@ -167,11 +181,17 @@ def principal(guion_path, presupuesto):
             # nombre final haciéndose pasar por caché válida.
             tmp = cache.with_suffix(".tmp.mp3")
             _pcm_a_mp3(pcm, RITMO_GEMINI_HZ, tmp)
+            dur = duracion_real(tmp)
+            if not _audio_plausible(texto, dur):
+                tmp.unlink(missing_ok=True)
+                raise RuntimeError(f"toma descartada: {dur:.1f} s para "
+                                   f"{len(texto.split())} palabras")
             tmp.replace(cache)
             hechas += 1
             print(f"  escena {i:>2}  cacheada  ({hechas}/{min(presupuesto, total)} hoy)")
         except Exception as exc:
             ultima = time.monotonic()
+            fallos += 1
             if _agotado_por_dia(exc):
                 print(f"::warning::cuota DIARIA de {MODELO_GEMINI_LARGO} agotada en la "
                       f"escena {i}. Quedan {total - hechas} escena(s) para el próximo día.")

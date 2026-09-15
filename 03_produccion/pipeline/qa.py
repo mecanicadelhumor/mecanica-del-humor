@@ -358,6 +358,15 @@ def main():
             "motor_voz_pedido": g.get("motor_voz"),
             "motores_por_escena": {m: motores.count(m) for m in sorted(set(motores))}
                                    if motores else None,
+            # C33.1 (15/09/2026): una sola voz por vídeo. «voz_mezclada» tiene
+            # que ser SIEMPRE false; «modelo_voz» dice cuál fue, y
+            # «origen_voz» si cada toma vino de la caché, de una llamada o
+            # del último intento con dirección mínima.
+            "modelo_voz": g.get("modelo_voz"),
+            "voz_mezclada": len(set(motores)) > 1,
+            "origen_voz": [e.get("origen_voz") for e in escenas if e.get("motor_voz")],
+            # C33: el papel que se le pidió al actor en cada escena.
+            "direccion_voz": [e.get("direccion_voz") for e in escenas if e.get("motor_voz")],
             "escenas_ritmo_fuera_de_rango": ritmos_fuera,
         }
 

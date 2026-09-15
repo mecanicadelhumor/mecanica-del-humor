@@ -1,8 +1,8 @@
 {
   "_nota": "Metadatos de publicación del canal español. Capítulos, fuentes y créditos de música los añade publicar.py debajo de esta descripción.",
   "serie": "Ríete primero, te explico después",
-  "titulo": "Por qué nos hacen gracia las cosquillas (y por qué no es un chiste)",
-  "descripcion": "Mi sobrino de cinco años me pidió el mando. Le dije que no. Levantó las dos manos, movió los dedos, y se lo di.\n\nAhí no ha habido ningún chiste. Ni incongruencia, ni remate, ni nada que entender. Y la risa sale igual.\n\nPanksepp y Burgdorf les hicieron cosquillas a un montón de ratas y grabaron lo que soltaban: un chillido a cincuenta kilohercios que ellos llamaron risa. Su conclusión es la que descoloca: las cosquillas no son un chiste primitivo. Es al revés. La risa llegó antes, por el juego físico, y el chiste vino a montarse encima mucho después.\n\nY donde falla: esto explica de dónde sale la risa, no de dónde sale el chiste. A la rata no le hizo gracia nada. Solo le estaban tocando.",
+  "titulo": "Por qué nos hacen gracia las cosquillas (hasta las ratas piden más)",
+  "descripcion": "Un neurocientífico, Jaak Panksepp, se pasó años haciéndoles cosquillas a ratas. Y las ratas aprendieron a apretar una palanca para que les hiciera más.\n\nMientras tanto chillaban a unos cincuenta kilohercios, demasiado agudo para nuestro oído, y Panksepp lo llamó risa. Un chiste, para hacer gracia, hay que entenderlo. A la rata no le explicas nada: cosquillas, y ya está. Por eso Panksepp sospechaba que la risa es más vieja que el chiste: primero, las cosquillas; el humor, mucho después.\n\nY donde falla: la rata no puede decirnos qué siente. Que ese chillido sea risa lo ponemos nosotros, y el propio Panksepp lo advertía.",
   "etiquetas": [
     "por qué nos hacen gracia las cosquillas",
     "cosquillas",
@@ -10,6 +10,7 @@
     "origen de la risa",
     "risa",
     "ratas cosquillas",
+    "ratas que se ríen",
     "panksepp",
     "evolución de la risa",
     "psicología del humor",
@@ -20,5 +21,5 @@
     "mecánica del humor",
     "humor"
   ],
-  "primer_comentario": "¿A ti te hacen cosquillas o ya te basta con que alguien levante la mano? Cuenta hasta dónde llegas antes de reírte."
+  "primer_comentario": "Si pudieras apretar una palanca para que te hicieran cosquillas, ¿la apretarías o saldrías corriendo?"
 }

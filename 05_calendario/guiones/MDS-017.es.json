@@ -4,64 +4,70 @@
   "serie": "Ríete primero, te explico después",
   "idioma": "es",
   "titulo_trabajo": "Por qué nos hacen gracia las cosquillas",
-  "tesis": "La risa de las cosquillas no lleva ningún chiste dentro: es más vieja que el chiste, y el chiste se montó encima mucho después.",
+  "tesis": "Las cosquillas hacen reír sin ningún chiste: a las ratas también, y por eso la risa parece mucho más vieja que el humor.",
   "pilares": [
     "E"
   ],
   "duracion_objetivo_s": 40,
   "bloqueos": [],
   "notas_humor": [
-    "El chiste va en el segundo cero, sin preámbulo: el sobrino que amenaza con cosquillas y gana.",
-    "La explicación es el premio, no el peaje: el vídeo entero es la demostración de que se puede reír sin chiste.",
-    "La reacción del personaje llega DESPUÉS del remate.",
-    "NO se toca «por qué no puedo hacerme cosquillas a mí mismo»: el corpus no tiene ficha para eso (pendientes_de_fuente.md, 20/08). E06 cubre cosquillas y evolución de la risa, no la autocosquilla."
+    "REESCRITO POR LA DIRECCIÓN el 15/09/2026, el mismo día de su emisión. La versión del jueves 10 abría con un sobrino, un mando y unos dedos en el aire, saltaba a las ratas y cerraba diciendo que a la rata «no le hizo gracia» después de haber dicho que se reía: tres sujetos y un cierre que contradecía el medio. El codirector: «mezcla lo de los dedos en el aire, lo de las cosquillas y lo del mando a distancia del principio».",
+    "Prueba 1 · qué pasa: un neurocientífico, Panksepp, les hace cosquillas a unas ratas y las ratas chillan a 50 kHz.",
+    "Prueba 1 · qué gira: las ratas aprenden a apretar una palanca para que les hagan más cosquillas, y a la rata no hay ningún chiste que explicarle.",
+    "Prueba 1 · cómo acaba: la rata no puede decirnos qué siente; que su chillido sea risa lo ponemos nosotros.",
+    "El chiste va en el segundo cero y es real: un científico que se pasa años haciéndoles cosquillas a ratas, y las ratas que piden más. La pausa de 1,35 s va antes de la palanca.",
+    "Todo lo que se afirma está comprobado el 15/09 contra el texto de E06 (Panksepp y Burgdorf, 2003): chirridos de ~50 kHz con las cosquillas, las ratas buscan la mano y «recorren laberintos y aprietan palancas para que les hagan cosquillas», la risa humana rudimentaria aparece a los 2-3 meses y sugiere una herencia antigua, y los propios autores dicen que no están atados a la interpretación de «risa» porque lo subjetivo no se puede medir, solo inferir. Eso último es el cierre.",
+    "NO se toca «por qué no puedo hacerme cosquillas a mí mismo»: el corpus no tiene ficha para eso (pendientes_de_fuente.md, 20/08)."
   ],
   "escenas": [
     {
       "tipo": "enunciado",
       "icono": "i-muelle",
-      "texto": "Dije que *no*.",
-      "narracion": "Mi sobrino de cinco años me pidió el mando. Le dije que no.",
+      "texto": "Cosquillas a *ratas*.",
+      "narracion": "Un neurocientífico, Jaak Panksepp, se pasó años haciéndoles cosquillas a ratas.",
       "pausa_despues_s": 1.35
     },
     {
       "tipo": "enunciado",
-      "texto": "Y se lo *di*.",
-      "narracion": "Levantó las dos manos, movió los dedos, y se lo di.",
+      "texto": "Y las ratas pedían *más*.",
+      "narracion": "Y las ratas aprendieron a apretar una palanca para que les hiciera más cosquillas.",
+      "fuente": "E06",
       "personaje": "rie",
       "pausa_despues_s": 0.5
     },
     {
-      "tipo": "comparacion",
-      "icono": "i-ruptura",
-      "a": "Un chiste",
-      "b": "Unos *dedos*",
-      "et_a": "hace reír",
-      "et_b": "también",
-      "narracion": "Ahí no ha habido ningún chiste. Ni incongruencia ni remate. Unos dedos en el aire, y la risa igual.",
-      "pausa_despues_s": 0.45
-    },
-    {
       "tipo": "dato",
       "cifra": "50 kHz",
-      "pie": "el chillido de una rata a la que le hacen cosquillas",
-      "narracion": "Panksepp y Burgdorf les hicieron cosquillas a un montón de ratas y grabaron un chillido a cincuenta kilohercios que llamaron risa.",
+      "pie": "lo que chilla una rata con cosquillas",
+      "narracion": "Y chillaban a unos cincuenta kilohercios, demasiado agudo para nuestro oído. Panksepp lo llamó risa.",
       "fuente": "E06",
       "personaje": "piensa",
       "pausa_despues_s": 0.45
     },
     {
+      "tipo": "comparacion",
+      "icono": "i-balanza",
+      "a": "Un chiste",
+      "b": "Unas *cosquillas*",
+      "et_a": "hay que entenderlo",
+      "et_b": "no hay nada que entender",
+      "narracion": "Un chiste, para hacer gracia, hay que entenderlo. A la rata no le explicas nada: cosquillas, y ya está.",
+      "pausa_despues_s": 0.45
+    },
+    {
       "tipo": "enunciado",
-      "texto": "La risa es más *vieja* que el chiste.",
-      "narracion": "Su conclusión descoloca: las cosquillas no son un chiste primitivo. Es al revés: la risa llegó antes y el chiste vino después.",
+      "texto": "Primero la *risa*. El chiste, después.",
+      "narracion": "Por eso Panksepp sospechaba que la risa es más vieja que el chiste: primero, las cosquillas; el humor, mucho después.",
       "fuente": "E06",
+      "personaje": "entiende",
       "pausa_despues_s": 0.4
     },
     {
       "tipo": "cierre",
-      "titulo": "Y falla en lo importante: explica la risa, no el *chiste*",
-      "subtitulo": "Cosquillas y evolución de la risa · Panksepp y Burgdorf",
-      "narracion": "Y ahí falla: explica de dónde sale la risa, no de dónde sale el chiste. A la rata no le hizo gracia. Solo le tocaban.",
+      "icono": "i-grieta",
+      "titulo": "Y falla aquí: la rata no puede *decirlo*",
+      "subtitulo": "Cosquillas y risa en ratas · Panksepp",
+      "narracion": "Y aquí falla: la rata no puede decirnos qué siente. Que ese chillido sea risa lo ponemos nosotros, y Panksepp lo advertía.",
       "fuente": "E06",
       "personaje": "no",
       "pausa_despues_s": 0.2

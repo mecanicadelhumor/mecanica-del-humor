@@ -1,8 +1,8 @@
 {
   "_nota": "Metadatos de publicación del canal español. Capítulos, fuentes y créditos de música los añade publicar.py debajo de esta descripción.",
   "serie": "El experimento",
-  "titulo": "¿Puede la inteligencia artificial hacer chistes? Hay hasta un examen",
-  "descripcion": "Le pedí a un modelo de lenguaje veinte chistes sobre gatos. Me dio veinte. Y el mismo.\n\nMirowski y su equipo sentaron a veinte cómicos profesionales delante de estos modelos y les pidieron escribir comedia con ellos, en serio, como herramienta de trabajo. Y hay hasta un examen para máquinas, montado con los pies de foto del New Yorker: pero lo que mide es si entiende el chiste, no si se le ocurre.\n\nQue es justo la diferencia. Entender por qué algo hace gracia no es hacer gracia, y eso vale para las máquinas y para tu cuñado.\n\nY donde falla todo esto: el guion que acabas de oír lo ha escrito una máquina. Con lo cual el chiste del principio tampoco demuestra nada.",
+  "titulo": "¿Puede la inteligencia artificial hacer chistes? Veinte cómicos lo probaron",
+  "descripcion": "Le pedí a una inteligencia artificial veinte chistes de gatos. Me dio el mismo. Veinte veces.\n\nMirowski y su equipo pusieron a veinte cómicos profesionales a escribir con una de estas máquinas en el festival de Edimburgo. La mayoría dijo que no les servía, y uno lo resumió así: material de crucero de los años cincuenta, pero algo menos racista. Es lo mismo que mis veinte gatos: le sale lo de siempre, y un chiste que ya sabes cómo acaba no sorprende.\n\nY donde falla: veinte opiniones no son una medida. Y este guion lo ha escrito una máquina, así que lo de los gatos tampoco demuestra nada.",
   "etiquetas": [
     "puede la inteligencia artificial hacer chistes",
     "por qué chatgpt no tiene gracia",
@@ -11,7 +11,7 @@
     "chatgpt chistes",
     "humor computacional",
     "modelos de lenguaje",
-    "new yorker caption contest",
+    "cómicos e inteligencia artificial",
     "psicología del humor",
     "ciencia del humor",
     "divulgación",

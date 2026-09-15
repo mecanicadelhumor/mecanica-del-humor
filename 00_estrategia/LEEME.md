@@ -10,12 +10,12 @@ análisis.
 |---|---|---|
 | **`REGLAS.md`** | Las restricciones que nadie puede saltarse: ética, rigor, coste cero, cómo se cambian las cosas | **Siempre, antes de tocar nada.** Es corto |
 | **`PROPIEDAD_DE_FICHEROS.md`** | Quién escribe qué. De obligado cumplimiento para toda tarea programada | Antes de escribir en cualquier sitio |
-| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 7, al final, manda sobre lo anterior** | Al ir a hacer algo, y al decidir qué se hace antes |
+| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 9, al final, manda sobre lo anterior** | Al ir a hacer algo, y al decidir qué se hace antes |
 | **`PROMPT_DE_ARRANQUE.md`** | Cómo empezar una conversación nueva, autorizaciones vigentes, trampas conocidas y dónde está el proyecto hoy | Al abrir una conversación, y al cerrarla |
 | **`PROMPT_DIRECCIÓN.md`** | El cuaderno del codirector entre sesiones: lo que quiere comentar de un día para otro. **Suyo y solo suyo: se lee, no se edita ni se borra** | Al abrir una conversación de dirección |
 | **`TOKEN_DE_YOUTUBE.md`** | Cómo se saca el token de YouTube y por qué caducaba. Quince minutos, una vez | Si el canal deja de publicar, o al tocar los secretos |
 | **`DIAGNOSTICO.md`** | El análisis completo: canales de referencia, por qué triunfan, y las 8 causas del problema | Cuando haga falta entender **por qué** |
-| **`tareas/`** | Los prompts de las tres tareas programadas, espejados. La copia que corre es la del almacén | Al cambiar lo que hace un agente |
+| **`tareas/`** | Los prompts de las tres tareas programadas. Desde el 12/09 **el fichero es el prompt**: el almacén solo lleva un arranque que lo lee. Y los `tareas_codirector_FECHA.md`, que son lo que la dirección le pide al codirector (fuera de git) | Al cambiar lo que hace un agente |
 | **`REDES.md`** | Las cuentas fuera de YouTube | Cuando toque C13 |
 | **`panel.html`** | El resumen visual de una página | Cuando quieras la foto entera sin leer |
 
@@ -61,6 +61,25 @@ los días) y **`05_calendario/metricas.json`** (los números).
    13— en vez de un desplome inicial: el problema ya no es solo que no entren, es que una
    vez dentro no hay nada que mirar. De ahí salen C33 (la voz se dirige escena a escena) y
    C34 (**se revierte el descarte de las imágenes**: el banco propio entra).
+
+9. **Y desde el 15 de septiembre, una novena:** **un vídeo, una voz.** `MDS-017` salió con dos
+   voces alternándose porque el respaldo a `edge-tts` era escena a escena; ahora es por vídeo
+   entero y en escalera (C33.1). Y el mismo día, **el primer Short por encima de 1.000
+   visualizaciones**, `MDS-016`, todavía sin explicación.
+
+## Estado a 15 de septiembre
+
+**Una buena y una mala.** La buena: `MDS-016` pasa de 1.000 visualizaciones, cuando ninguno de
+los quince anteriores había llegado a 50. La mala: `MDS-017` se publicó con dos voces y un guion
+que mezclaba tres historias. La sesión del martes 15 (versión 9 del plan) cerró:
+
+- **C33.1 · un vídeo, una voz.** Reintentos, la cuota diaria bien reconocida, y una escalera
+  por vídeo: Gemini 3.1 → Gemini 2.5 → esperar al cron de las 08:23 UTC → `edge-tts` entero solo
+  como último recurso programado. Vale para Shorts y para largos.
+- **Los cuatro Shorts que quedaban de la semana, reescritos** contra las tres pruebas de cosido y
+  con las afirmaciones comprobadas en los artículos. Tres fichas de la bibliografía corregidas.
+- **C36 y C37, propuestos:** una llamada por vídeo con corte por palabras (se prueba el viernes)
+  y un motor de voz sin cuota (sin fecha).
 
 ## Estado a 14 de septiembre
 

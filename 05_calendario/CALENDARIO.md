@@ -314,9 +314,9 @@ Escrita la noche del jueves 10. Todo en `parrilla.json` con `"modo": "automatico
 |---|---|---|---|---|---|
 | Lunes 14 | `MDS-016` | 19:00 | Esto no tiene gracia y esto sí | por qué la ironía no se entiende por whatsapp | `I05` |
 | Martes 15 | `MDS-017` | 19:00 | Ríete primero, te explico después | por qué nos hacen gracia las cosquillas | `E06` |
-| Miércoles 16 | `MDS-018` | 19:00 | El experimento | un profesor gracioso enseña mejor | `G06` |
+| Miércoles 16 | `MDS-018` | 19:00 | Ríete primero, te explico después *(cambiada por la dirección el 15/09)* | un profesor gracioso enseña mejor | `G06` |
 | Jueves 17 | `MDS-019` | 19:00 | Ríete primero, te explico después | los anuncios graciosos venden más | `G05` |
-| Viernes 18 | `MDS-020` | 19:00 | El experimento | puede la inteligencia artificial hacer chistes | `K02` · `K03` |
+| Viernes 18 | `MDS-020` | 19:00 | El experimento | puede la inteligencia artificial hacer chistes | `K02` *(K03 retirado por la dirección el 15/09)* |
 | Sábado 19 | `MDH-007` | 12:00 | Diagnósticos | por qué se ríen de mí | `J02` · `J01` · `H05` · `H06` |
 
 **Las seis fichas de los Shorts estaban sin abrir.** Es la primera semana del canal en la

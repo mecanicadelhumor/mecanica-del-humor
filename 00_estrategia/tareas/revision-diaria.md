@@ -152,7 +152,33 @@ Deja de ser «lunes y jueves»: el 03/09 se publicó un Short con una palabra co
 
 **Encargos abiertos, en este orden. Reescritos el 07/09/2026 con la versión 6 de `PLAN_DE_CAMBIOS.md`.**
 
-**Antes de nada, lee esto: la dirección tocó código el SÁBADO 12 de septiembre.** Están cambiados
+**Antes de nada, lo más reciente: la dirección tocó código y guiones el MARTES 15 de septiembre (C33.1, versión 9 de `PLAN_DE_CAMBIOS.md`).**
+Están cambiados `03_produccion/pipeline/voz.py` (una sola voz por vídeo, reintentos, escalera de
+modelos), `03_produccion/pipeline/voz_precache.py`, `03_produccion/pipeline/qa.py` (campos
+`modelo_voz`, `voz_mezclada`, `origen_voz` y `direccion_voz` en `ficha.json`), **los cuatro guiones
+`MDS-017` a `MDS-020` y sus cuatro ficheros de `05_calendario/publicaciones/`**, reescritos, y las
+fichas `E06`, `G05` y `G06` de `01_bibliografia/BIBLIOGRAFIA_CURADA.md`, corregidas contra los
+artículos. **No metas ninguno de esos ficheros en tu paquete salvo que los cambies tú encima de
+`origin/main`**, y si el último commit de `origin/main` no los trae, el codirector todavía no ha
+hecho `push`: ese día **no toques ninguno** (tampoco con la excepción de las 48 horas) y dilo en la
+primera línea de tu resumen.
+
+**Tres cosas de C33.1 que cambian lo que miras cada día:**
+
+1. **`voz_mezclada` en `ficha.json` tiene que ser `false` siempre.** Si alguna vez es `true`, es
+   `INCIDENCIA`, aunque el vídeo suene bien. `modelo_voz` dice qué motor puso la voz del vídeo
+   entero: `gemini-3.1-flash-tts-preview` es lo normal; `gemini-2.5-flash-preview-tts` es el
+   segundo escalón y no es incidencia; `edge-tts` en un Short es el último recurso y se dice en
+   `ESTADO.md` como `OK`, pero con esa palabra en el detalle.
+2. **Que la producción de las 01:13 UTC falle en el paso «Sintetizar narración» con código 3 no es
+   una avería: es el diseño.** Significa que no había cuota de Gemini para el vídeo entero y que se
+   espera al cron de las 08:23 UTC, cuando Google ya ha reiniciado la cuota. Solo es `INCIDENCIA` si
+   a las 11:30 el vídeo del día **sigue sin estar** en `registro_publicaciones.json`.
+3. **No reintroduzcas nunca el respaldo a `edge-tts` por escena**, ni en `voz.py` ni en ningún otro
+   sitio. El encargo 4 de abajo decía «respaldo automático a `edge-tts` ante cualquier fallo»: eso
+   es exactamente lo que publicó `MDS-017` con dos voces alternándose. Está sustituido.
+
+**La dirección tocó código también el SÁBADO 12 de septiembre.** Están cambiados
 `03_produccion/pipeline/escena.html` (C29: `ricoSVG()`, `ajustarTextoSVG()` y la rama de texto SVG
 dentro de `comprobarDesbordes()`), `04_agentes/validar_guion.py` (C28 y el aviso C29) y **los dos
 prompts de guionista**, `04_agentes/prompts/guionista.md` y `guionista_corto.md`, reescritos enteros.
@@ -198,14 +224,14 @@ sola, el episodio entero va en `edge-tts`, como siempre. Nada de «lo que falte 
 eso es exactamente la chapuza que el codirector descartó el 7 de septiembre. Lo elegido se escribe
 en `ficha.json` y en `ESTADO.md`.
 
-4. **C7 · `voz.py` pasa a Gemini TTS en los Shorts.** Igual que estaba escrito, con las mismas seis salvaguardas de la versión 5.1 del plan: una llamada por escena, solo `formato: corto`, `gemini-3.1-flash-tts-preview` con `Charon` y `Puck`, 25 s entre llamadas, dirección corta **sin pedir pausas**, respaldo automático a `edge-tts` ante cualquier fallo, el motor usado escrito escena a escena en `ficha.json`, aviso de ritmo fuera de 1,6–3,2 palabras/segundo, y **el canario del `.ass` sustituido antes de encender nada** (que la suma de duraciones de escena cuadre con la duración del audio final). **Se escribe esta semana con `--motor edge` por defecto; el valor por defecto pasa a `gemini` el lunes 14.** El codirector esperaba oírlo el día 7: dilo en `ESTADO.md` el día que cambie, con esas palabras.
+4. **C7 · `voz.py` pasa a Gemini TTS en los Shorts.** Igual que estaba escrito, con las mismas seis salvaguardas de la versión 5.1 del plan: una llamada por escena, solo `formato: corto`, `gemini-3.1-flash-tts-preview` con `Charon` y `Puck`, 25 s entre llamadas, dirección corta **sin pedir pausas**, ~~respaldo automático a `edge-tts` ante cualquier fallo~~ **[sustituido el 15/09 por C33.1: una sola voz por vídeo, ver arriba]**, el motor usado escrito escena a escena en `ficha.json`, aviso de ritmo fuera de 1,6–3,2 palabras/segundo, y **el canario del `.ass` sustituido antes de encender nada** (que la suma de duraciones de escena cuadre con la duración del audio final). **Se escribe esta semana con `--motor edge` por defecto; el valor por defecto pasa a `gemini` el lunes 14.** El codirector esperaba oírlo el día 7: dilo en `ESTADO.md` el día que cambie, con esas palabras.
    **Y escríbelo con una caché desde el principio**, porque de ella depende que el episodio largo pueda dejar `edge-tts` (ver el encargo 6): cada escena sintetizada se guarda en `03_produccion/cache_voz/<sha256 de narración+motor+voz>.mp3`, y antes de pedirle nada a Gemini se mira si ya está. Con eso, repetir una producción no gasta cuota —el 07/09 hubo que rehacer MDS-011 a mano y se pagó dos veces— y se puede sintetizar por adelantado.
 
 5. **`04_agentes/metricas.py`: la mediana. Sube de prioridad — hace falta antes del 27 de septiembre.** La decisión de continuidad del canal (C26, versión 6) se toma con **la mediana de visualizaciones a las 48 horas de los últimos veinte Shorts**, y hoy `metricas.py` no calcula ninguna mediana. Cada lunes tiene que dejar en `metricas.json` tres cifras: esa mediana, cuántos de los veinte han pasado de 100 y cuántos de 50. Sin ese número, el punto de control se discute de memoria.
 
 6. **Semana del 14 · P1, y la caché de voz del episodio largo.** No los empieces antes de terminar 1–5.
    - **P1 · Profundidad.** Tres capas: plano de fondo con una rejilla de taller al 4 % de opacidad, plano de contenido, viñeta delante. El fondo deriva un 1,5 % **en contra** del sentido de entrada del texto. Todo CSS, coste de render cero, y la rejilla de taller es la marca: el canal se llama Mecánica.
-   - **El episodio largo también pasa a Gemini, por adelantado.** Un largo son ~40 escenas y la cuota gratuita da 10 peticiones al día por modelo, así que no cabe en un día — pero sí en cuatro. Con la caché del encargo 4 puesta, un workflow nuevo (`voz_adelantada.yml`, que **escribe el codirector a mano** porque `.github/workflows/` no se toca en remoto) corre de martes a viernes, coge el guion del sábado, y sintetiza **las escenas que aún no estén en caché hasta agotar el margen del día**, usando `gemini-2.5-flash-preview-tts` —que tiene su propia cuota diaria— para no competir con los Shorts, que van en 3.1. El sábado `voz.py` encuentra casi todo hecho y lo que falte lo hace con `edge-tts`, así que **un mal día no deja al canal sin vídeo, solo con alguna escena de peor voz**, y `ficha.json` dice cuáles. Cuando tengas el diseño claro, deja el `.yml` propuesto en `07_pruebas/` con un `.md` al lado.
+   - **El episodio largo también pasa a Gemini, por adelantado.** Un largo son ~40 escenas y la cuota gratuita da 10 peticiones al día por modelo, así que no cabe en un día — pero sí en cuatro. Con la caché del encargo 4 puesta, un workflow nuevo (`voz_adelantada.yml`, que **escribe el codirector a mano** porque `.github/workflows/` no se toca en remoto) corre de martes a viernes, coge el guion del sábado, y sintetiza **las escenas que aún no estén en caché hasta agotar el margen del día**, usando `gemini-2.5-flash-preview-tts` —que tiene su propia cuota diaria— para no competir con los Shorts, que van en 3.1. El sábado `voz.py` encuentra casi todo hecho y **lo que falte lo pide en vivo con el mismo modelo 2.5** [corregido el 15/09 por C33.1: antes decía «lo hace con `edge-tts`», que mezclaba voces]. Si no cabe en la cuota del día, el episodio espera al cron de las 08:23 UTC; y si tampoco, sale **entero** con `edge-tts`, nunca mezclado. Cuando tengas el diseño claro, deja el `.yml` propuesto en `07_pruebas/` con un `.md` al lado.
    - **P8 (el personaje actúa) se pospone**: la mitad —redibujar `piensa`— ya la hizo la dirección el 07/09. Lo que queda (que entre por el borde, que se incline hacia la cifra, que se aparte en el «dónde falla») va detrás de la caché de voz.
 
 7. **Semana del 21 · P2, P7 y P5.** Continuidad (el término en cian encoge y se acopla a una pila que crece con el vídeo), composición por serie (C24) y la cifra que se construye contando desde cero. Detalle en la versión 6 del plan.

@@ -46,7 +46,17 @@ REGISTRO = RAIZ / "05_calendario" / "registro_publicaciones.json"
 # rechaza un publishAt en el pasado, y una ejecución que se retrase o se
 # relance a mano no debe tumbar la subida por eso: si ya no hay margen, se
 # sube directamente en público.
-MARGEN_MIN = 15
+#
+# 15/09/2026 (C33.1): de 15 a 45 minutos. El margen se mide cuando empieza el
+# plan, pero la subida llega unos 20 minutos después (lo que tardan la voz, el
+# render y el montaje; MDH-006 tardó 20). Con 15, un cron que arrancase entre
+# 15 y 20 minutos antes de la hora programaba un publishAt que ya había pasado
+# al subir, y YouTube lo rechaza. Desde C33.1 el cron de las 08:23 UTC es el
+# camino normal del episodio largo cuando la cuota de Gemini no llega de
+# madrugada, y el largo se publica a las 12:00 (10:00 UTC): un retraso de
+# Actions de hora y cuarto ya caería en esa ventana. Con 45, lo peor que pasa
+# es que un vídeo sale hasta 45 minutos antes de su hora.
+MARGEN_MIN = 45
 
 
 # ---------------------------------------------------------------------------

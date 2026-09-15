@@ -342,13 +342,23 @@ Tipo: articulo
 
 Duplicado deliberado de D07 para probar la deduplicacion por DOI en el pipeline.
 
-### `E06` ★★ Tickling and the evolution of laughter
+### `E06` ★★ "Laughing" rats and the evolutionary antecedents of human joy?
 
-**Panksepp, J.; Burgdorf, J.** (2003) · *Physiology & Behavior*  
-DOI: [`10.1016/S0031-9384(03)00159-8`](https://doi.org/10.1016/S0031-9384(03)00159-8) ⚠️ por verificar  
+**Panksepp, J.; Burgdorf, J.** (2003) · *Physiology & Behavior*, 79(3), 533-547  
+DOI: [`10.1016/S0031-9384(03)00159-8`](https://doi.org/10.1016/S0031-9384(03)00159-8) · verificado el 15/09/2026 contra el texto del artículo (dirección)  
 Tipo: articulo
 
 Ratas que 'rien' a 50 kHz. Video con enorme potencial viral y ciencia solida.
+
+*Comprobado el 15/09/2026 (dirección, al reescribir MDS-017), con lo que el artículo dice y lo
+que no:* las cosquillas provocan en ratas jóvenes chirridos ultrasónicos de ~50 kHz, que los
+autores comparan con una risa primitiva; las ratas buscan la mano que les hizo cosquillas y
+«recorren laberintos y aprietan palancas» para que se las hagan (la cosquilla es
+recompensa); la risa humana rudimentaria aparece a los 2-3 meses y los autores la leen como
+una herencia antigua, distinta del humor «cognitivo». **Y la cautela, que es la de los
+propios autores:** no se atan a la interpretación de «risa», porque lo subjetivo no se mide
+en animales ni en personas, se infiere. El título que figuraba aquí hasta hoy («Tickling and
+the evolution of laughter») no es el del artículo.
 
 
 ---
@@ -408,13 +418,23 @@ Tipo: articulo
 
 Humor del lider y desempeno del equipo. Serie 'humor en el trabajo'.
 
-### `G05` ★★★ Do funny ads work? Humor in advertising: A meta-analysis
+### `G05` ★★★ A meta-analysis of humor in advertising
 
-**Eisend, M.** (2009) · *Marketing Letters*  
-DOI: [`10.1007/s11002-008-9051-4`](https://doi.org/10.1007/s11002-008-9051-4) ⚠️ por verificar  
+**Eisend, M.** (2009) · *Journal of the Academy of Marketing Science*, 37(2), 191-203  
+DOI: [`10.1007/s11747-008-0096-y`](https://doi.org/10.1007/s11747-008-0096-y) · verificado el 15/09/2026 contra la página del editor (dirección)  
 Tipo: articulo
 
 Metaanalisis del humor persuasivo: cuando ayuda y cuando distrae del mensaje.
+
+*Corregida el 15/09/2026 (dirección, al reescribir MDS-019).* Hasta hoy esta ficha decía
+«Do funny ads work? Humor in advertising: A meta-analysis», *Marketing Letters*, DOI
+10.1007/s11002-008-9051-4. Ese no es el artículo de Eisend de 2009. **Lo que dice el resumen,
+para no volver a equivocarse:** 369 correlaciones; el humor mejora la actitud hacia el
+anuncio, la atención y el afecto positivo, y también la actitud hacia la marca y la intención
+de compra; **no hay evidencia de que mejore la simpatía hacia el anunciante** (MDS-019 decía
+lo contrario hasta hoy) y **reduce la credibilidad de la fuente**; el efecto sobre la actitud
+hacia el anuncio es el doble que sobre la actitud hacia la marca; y el análisis de
+moderadores indica que la investigación académica sobre humor está algo sesgada.
 
 ### `G02` ★★ A meta-analysis of positive humor in the workplace
 
@@ -438,13 +458,24 @@ Tipo: articulo
 
 Efecto del humor sobre cortisol y memoria. Verificar tamano muestral antes de citarlo.
 
-### `G06` ★★ Humor in the classroom: A meta-analysis of the effects of instructor humor on student learning
+### `G06` ★★ A review of humor in educational settings: Four decades of research
 
-**Banas, J. A.; Dunbar, N.; Rodriguez, D.; Liu, S.-J.** (2011) · *Communication Education*  
-DOI: [`10.1080/03634523.2010.496867`](https://doi.org/10.1080/03634523.2010.496867) ⚠️ por verificar  
+**Banas, J. A.; Dunbar, N.; Rodriguez, D.; Liu, S.-J.** (2011) · *Communication Education*, 60(1), 115-144  
+DOI: [`10.1080/03634523.2010.496867`](https://doi.org/10.1080/03634523.2010.496867) · verificado el 15/09/2026 contra ERIC (EJ908233) y la página del editor (dirección)  
 Tipo: articulo
 
 El humor y el aprendizaje: solo funciona si es relevante al contenido. Meta del propio canal.
+
+*Corregida el 15/09/2026 (dirección, al reescribir MDS-018).* **Es una revisión, no un
+metaanálisis**: el título que figuraba aquí no es el del artículo. Recoge cuatro décadas de
+estudios sobre humor en clase, con énfasis en explicar por qué los resultados no coinciden.
+La literatura de ese campo apunta a que el humor relacionado con el contenido mejora el
+recuerdo de ese contenido (Kaplan y Pascoe, 1977) y a que el humor no relacionado no guarda
+relación con el aprendizaje (Wanzer, Frymier e Irwin, 2010, que miden aprendizaje
+**autodeclarado**). **Ojo:** esas dos citas se comprobaron el 15/09 en una fuente secundaria
+(la guía de recursos de Segrist para la Society for the Teaching of Psychology), no en el
+texto completo de Banas, que no se pudo abrir. Si alguien lo abre, que confirme que las
+recoge. No citar como «metaanálisis» ni atribuirle cifras que no se hayan leído en el texto.
 
 
 ---

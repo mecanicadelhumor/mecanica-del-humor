@@ -4,65 +4,65 @@
   "serie": "El experimento",
   "idioma": "es",
   "titulo_trabajo": "¿Puede la inteligencia artificial hacer chistes?",
-  "tesis": "A las máquinas se les puede examinar si entienden un chiste; que se les ocurra uno es otra cosa, y es justo la que no se sabe medir.",
+  "tesis": "Veinte cómicos profesionales escribieron con una IA y la mayoría dijo que no les servía: le salían tópicos sosos. Lo que sale es lo de siempre, y un chiste que ya sabes cómo acaba no es un chiste.",
   "pilares": [
     "K"
   ],
   "duracion_objetivo_s": 46,
   "bloqueos": [],
   "notas_humor": [
-    "El chiste va en el segundo cero: veinte chistes que son el mismo. Es de casa y es verdad.",
-    "El cierre declara que el guion lo ha escrito una máquina. Es la regla 7 de REGLAS.md dicha dentro del vídeo, no solo en la descripción, y además es el mejor «dónde falla» que ha tenido el canal.",
-    "Pilar K: cuatro fichas en el corpus y ninguna abierta hasta hoy.",
-    "Se cuenta lo que los estudios HICIERON —el diseño—, no resultados que las fichas no recogen."
+    "REESCRITO POR LA DIRECCIÓN el 15/09/2026, antes de su producción. Motivo: el aviso del codirector sobre MDS-017 («es un desastre a nivel de guion»). Este guion lo escribió la planificación del jueves 10, antes de las tres pruebas de cosido del 12, y fallaba en lo mismo: nombraba tres cosas (los gatos, los veinte cómicos y un examen hecho con los pies de foto del New Yorker), los gatos no volvían, y los veinte cómicos se quedaban sin veredicto: se contaba el diseño del estudio y no lo que salió. El examen del New Yorker (K03) se queda para otro Short.",
+    "Prueba 1 · qué pasa: le pido a una IA veinte chistes de gatos y me da el mismo veinte veces.",
+    "Prueba 1 · qué gira: veinte cómicos escriben con una IA y dicen que le salen tópicos sosos, como el chiste de gatos repetido.",
+    "Prueba 1 · cómo acaba: veinte opiniones no son una medida, y este guion lo ha escrito una máquina, así que el chiste de gatos tampoco demuestra nada.",
+    "El cierre declara que el guion lo ha escrito una máquina (regla 7 dicha dentro del vídeo). Se mantiene de la versión del jueves: era lo mejor que tenía.",
+    "Afirmaciones comprobadas el 15/09 contra el resumen de K02 (Mirowski, Love, Mathewson y Mohamed, 2024, arXiv 2405.20956): veinte cómicos profesionales, talleres de tres horas en el Festival Fringe de Edimburgo en agosto de 2023 y en línea, escritura con modelos de lenguaje, y «la mayoría sintió que los modelos no servían como herramienta creativa: producían tópicos de comedia sosos y sesgados, “material de crucero de los años cincuenta, pero un poco menos racista”». La cita es literal del resumen."
   ],
   "escenas": [
     {
       "tipo": "enunciado",
       "icono": "i-bocadillos",
       "texto": "Veinte chistes de *gatos*.",
-      "narracion": "Le pedí a un modelo de lenguaje veinte chistes sobre gatos.",
+      "narracion": "Le pedí a una inteligencia artificial veinte chistes de gatos.",
       "pausa_despues_s": 1.35
     },
     {
       "tipo": "enunciado",
-      "texto": "Me dio *veinte*.",
-      "narracion": "Me dio veinte. Y el mismo.",
+      "texto": "El *mismo*, una y otra vez.",
+      "narracion": "Me dio el mismo. Veinte veces.",
       "personaje": "rie",
       "pausa_despues_s": 0.5
     },
     {
       "tipo": "dato",
-      "icono": "i-publico",
       "cifra": "20 cómicos",
-      "pie": "profesionales, escribiendo con la máquina delante",
-      "narracion": "Mirowski y su equipo sentaron a veinte cómicos profesionales delante de estos modelos y les pidieron escribir comedia con ellos, en serio.",
+      "pie": "escribiendo con una IA en Edimburgo",
+      "narracion": "Mirowski y su equipo pusieron a veinte cómicos profesionales a escribir con una de estas máquinas en el festival de Edimburgo.",
       "fuente": "K02",
       "personaje": "piensa",
       "pausa_despues_s": 0.45
     },
     {
-      "tipo": "comparacion",
-      "icono": "i-balanza",
-      "a": "Explicar el chiste",
-      "b": "Que se te *ocurra*",
-      "et_a": "esto se examina",
-      "et_b": "esto no",
-      "narracion": "Hay hasta un examen para máquinas, montado con los pies de foto del New Yorker. Mide si entiende el chiste, no si se le ocurre.",
-      "fuente": "K03",
-      "pausa_despues_s": 0.45
+      "tipo": "cita",
+      "texto": "Material de crucero de los años *50*, pero algo menos racista.",
+      "narracion": "La mayoría dijo que no les servía. Uno lo resumió así: material de crucero de los años cincuenta, pero algo menos racista.",
+      "fuente": "K02",
+      "pausa_despues_s": 0.45,
+      "autor": "Uno de los cómicos"
     },
     {
       "tipo": "enunciado",
-      "texto": "Entenderlo no es *tenerla*.",
-      "narracion": "Que es la diferencia que llevas notando cuarenta segundos. Entender por qué algo hace gracia no es hacer gracia.",
+      "texto": "Lo de *siempre* no sorprende.",
+      "narracion": "Es lo mismo que mis veinte gatos: le sale lo de siempre. Y un chiste que ya sabes cómo acaba no sorprende.",
+      "personaje": "entiende",
       "pausa_despues_s": 0.4
     },
     {
       "tipo": "cierre",
-      "titulo": "Y falla en lo más obvio: este guion lo ha escrito una *máquina*",
-      "subtitulo": "Comedia y modelos de lenguaje · Mirowski y otros",
-      "narracion": "Y dónde falla todo esto: el guion que acabas de oír lo ha escrito una máquina. Con lo cual el chiste del principio tampoco demuestra nada.",
+      "icono": "i-grieta",
+      "titulo": "Y falla aquí: este guion lo ha escrito una *máquina*",
+      "subtitulo": "Comedia y modelos de lenguaje",
+      "narracion": "Y aquí falla: veinte opiniones no son una medida. Y este guion lo ha escrito una máquina, así que lo de los gatos tampoco demuestra nada.",
       "fuente": "K02",
       "personaje": "no",
       "pausa_despues_s": 0.2

@@ -2831,3 +2831,269 @@ agosto: si el codirector no ha hecho `push` antes de que la revisión diaria clo
 no se toca nada del calendario y se dice en el resumen. Aquí lo que tiene que encontrar es
 un commit del 14/09 con `voz.py` dentro. **Si no lo encuentra, no toca `voz.py` ese día.**
 Su ranura de mañana es C31, que no está en ese fichero, así que no pierde nada esperando.
+
+---
+
+# Versión 9 · 15 de septiembre de 2026 — un vídeo, una voz; y los guiones de la semana, cosidos
+
+Todo lo anterior sigue vigente salvo lo que esta sección corrige expresamente. No es una
+sesión de lunes ni de viernes: es la de «algo se ha roto», convocada por el codirector el
+martes por la mañana con dos noticias.
+
+**La buena: `MDS-016` es el primer Short del canal que pasa de 1.000 visualizaciones.** Lo
+dice el codirector desde YouTube Studio; `metricas.json` no lo recoge todavía (la foto es del
+lunes a las 08:48 UTC y el vídeo se publicó a las 19:00). La mediana de los quince anteriores
+es 10 y ninguno había llegado a 50, así que esto es un cambio de escala. **No se sabe todavía
+por qué**, y hay al menos cuatro candidatos que no se pueden separar con un solo vídeo: el
+primer Short con voz de Gemini, una situación de casa con un remate que escala («ahora somos
+doce»), una pregunta con mucha demanda medida (9 millones en el top 10) y el azar del feed.
+**La lectura del lunes 21 tiene que abrir por aquí**: fuentes de tráfico de `MDS-016` y su
+curva de retención comparada con la de `MDS-015`. Hasta entonces, lo único que se hace con
+este dato es **no romper lo que tenía ese vídeo**, que es lo que motiva el resto de esta
+versión.
+
+**La mala: `MDS-017` se publicó con dos voces alternándose y con un guion que no se podía
+seguir.** Palabras del codirector: *«mezcla las dos voces y resulta inconexo […] carente de
+ritmo y sincronía, hasta el punto de que cuesta trabajo seguir el hilo»*, y *«no entiendo el
+guion, mezcla lo de los dedos en el aire, lo de las cosquillas y lo del mando a distancia del
+principio»*.
+
+## Qué se anula, qué se mantiene y qué se amplía
+
+| Documento o decisión | Estado desde hoy |
+|---|---|
+| C7 · salvaguarda 1: «respaldo automático e inmediato a `edge-tts` ante cualquier fallo de Gemini **en una escena**» | **ANULADA.** Sustituida por C33.1 |
+| C27 · pieza C: «el largo coge de la caché lo que haya y lo que falte sale con `edge-tts`, escena a escena» | **ANULADA.** Sustituida por C33.1 (el largo tampoco se mezcla nunca) |
+| Versión 8, «Los guiones de esta semana no se tocan» | **ANULADA** para `MDS-017` a `MDS-020`, reescritos hoy. Se mantiene para `MDH-007` |
+| C33 · la dirección de actor por escena | **SE MANTIENE**, con una corrección: un `titulo` que no es la escena 1 ya no se dirige como «apertura» |
+| C27 · `voz_adelantada.yml` y `voz_precache.py` | **SE MANTIENEN**, con tope de tres fallos por ejecución y la clasificación de errores de C33.1 |
+| C34 y C35 (imagen y densidad) | **SE MANTIENEN** sin cambios; ver abajo lo que ha contestado el codirector |
+| C7 · una llamada por escena | **SE MANTIENE por ahora.** C36 propone sustituirla, con prueba antes |
+| `guionista_corto.md` (las tres pruebas de cosido) | **SE MANTIENE**. Se amplía el prompt de la planificación con dos reglas (abajo) |
+
+---
+
+## C33.1 · Un vídeo, una voz. Nunca mezclada
+
+**Hecho hoy en `03_produccion/pipeline/voz.py`. Probado con dobles de la API, sin gastar cuota.**
+
+### Lo que pasó, medido
+
+`05_calendario/qa/MDS-017.es/ficha.json`: `"motores_por_escena": {"edge (respaldo)": 3,
+"gemini": 3}`. Nadie lo decidió. El código de C7 mandaba **cada escena por separado** a
+`edge-tts` en cuanto su llamada a Gemini fallaba, por el motivo que fuera, y seguía con la
+siguiente. Es exactamente lo que el codirector había descartado para el largo el 7 de
+septiembre («una chapuza»), y la regla se había escrito solo para el largo. **Tenía que haber
+valido para los dos formatos desde el principio: fue un error mío.**
+
+No hay forma de saber desde aquí cuál fue el fallo de cada escena: los registros de Actions
+piden credenciales. Lo que sí se sabe es que el código tenía **tres defectos**, y los tres
+explican el resultado solos o juntos:
+
+1. **Ni un reintento.** La documentación de Google lo dice sin rodeos: los modelos TTS
+   devuelven a veces texto en lugar de audio y el servidor responde con un 500, «de forma
+   aleatoria en un pequeño porcentaje de peticiones», y hay que reintentar. Aquí un 500 era
+   respaldo inmediato.
+2. **La cuota diaria no se reconocía nunca.** Google la escribe «`per_model_per_day`» o
+   «`PerDay`», y el código buscaba «per day» o «perday» quitando solo los espacios. Con la
+   cuota agotada se seguía llamando escena tras escena, con 25 s de espera cada vez.
+3. **El respaldo era por escena.** Con eso, cualquier fallo suelto producía un vídeo mezclado.
+
+Y un cuarto, que no pasó pero habría pasado el sábado: **`MDH-007` tiene 41 escenas** y el
+precacheo de martes a viernes da como mucho 36. Con el código de ayer, el episodio habría
+salido con cinco escenas en `edge-tts` y treinta y seis en Gemini.
+
+### El arreglo
+
+**Una escalera por vídeo, no por escena:**
+
+| Escalón | Qué hace |
+|---|---|
+| a | El vídeo **entero** con `gemini-3.1-flash-tts-preview`. Primero mira la caché. Cada escena tiene **tres intentos**: un 429 por minuto espera 65 s, un 500 o una respuesta sin audio espera lo normal, y el tercer intento va con una dirección mínima, por si lo que falla es el clasificador de Google que decide si el texto es una petición de voz |
+| b | Si una sola escena no sale, el vídeo **entero** otra vez con `gemini-2.5-flash-preview-tts`, que tiene su propia cuota de 10 al día (el panel del codirector del 14/09 lo confirma: `Gemini 2.5 Flash TTS · 0/3 · 0/10`). Lo hecho con 3.1 queda en la caché para otro día |
+| c | Si tampoco sale y **todavía no se ha reiniciado la cuota** (un cron de antes de las 08:00 UTC), el paso **falla sin subir nada**. La cuota de Google se reinicia a medianoche de California (07:00 UTC en verano, 08:00 en invierno), así que el cron de las 08:23 UTC vuelve a intentarlo con la cuota llena y solo pide lo que falta |
+| d | Solo en ese último intento, el vídeo **entero** con `edge-tts`. En una ejecución manual este escalón no existe: el paso falla y decide el codirector |
+
+**El largo sigue la misma escalera con un único modelo**, el 2.5 de su caché: lo precacheado
+se recoge y lo que falte se pide en vivo. Para `MDH-007` eso significa que el sábado a las
+01:13 UTC faltarán unas cinco escenas y la cuota del viernes estará casi gastada; el paso
+fallará, y a las 08:23 UTC pedirá las cinco con la cuota nueva. El episodio se publica a las
+12:00: hay margen, pero poco, y por eso la tarea 2 de hoy le pide al codirector una línea en
+`producir.yml`.
+
+**Una comprobación nueva que cubre la otra limitación documentada.** Google avisa de que, con
+un prompt ambiguo, el modelo puede **leer en voz alta las instrucciones de dirección**. Nada
+lo detectaba. `_audio_plausible()` rechaza una toma cuya duración no puede corresponder al
+texto (más de 5 palabras por segundo, o menos de 1,1 con 1,5 s de margen): las instrucciones
+son diez veces más largas que la narración, así que no pasa.
+
+**Y lo que ve el expediente.** `ficha.json` lleva ahora `modelo_voz` (quién puso la voz del
+vídeo), **`voz_mezclada` (tiene que ser `false` siempre)**, `origen_voz` por escena (caché,
+llamada o dirección mínima) y `direccion_voz` por escena (el papel de C33). Lo último estaba
+prometido el 14/09 y no estaba: `qa.py` no lo copiaba.
+
+### Las pruebas, con dobles de la API
+
+Doce casos en `/tmp` (no quedan en el repositorio), los doce en verde:
+
+1. Todo bien: seis llamadas, un modelo.
+2. Un 500, una respuesta vacía y un 429 por minuto: nueve llamadas, un modelo, ninguna escena
+   en `edge-tts`.
+3. La cuota de 3.1 se acaba en la escena 4: el vídeo entero sale con 2.5.
+4. Las dos cuotas agotadas en el cron de las 01:13: código 3, nada subido.
+5. Las dos agotadas en el último intento: el vídeo entero en `edge-tts`.
+6. Las dos agotadas en una ejecución manual: código 3, nunca `edge-tts`.
+7. El modelo lee las instrucciones dos veces: el tercer intento sale con la dirección mínima.
+8. Una escena imposible con 3.1: el vídeo entero con 2.5.
+9. **El reintento del cron con caché**: la primera pasada deja cuatro escenas y falla; la
+   segunda solo hace **dos** llamadas.
+10. **El largo con 36 escenas precacheadas**: a las 01:13 falla; a las 08:23 hace **cuatro**
+    llamadas y sale entero en 2.5.
+11. El precacheo con la API caída se para al tercer fallo (antes intentaba las 41).
+12. La clasificación de los cinco mensajes de error reales.
+
+**Lo que no se ha podido probar desde aquí**: una llamada real. La interfaz con la API
+(`_gemini_pcm`) no se ha tocado, y es la misma con la que salió `MDS-016` con seis de seis.
+
+### La corrección de C33 que ha salido al probar el largo
+
+`_papel_escena()` convertía en «apertura» cualquier escena de tipo `titulo`, y la apertura le
+dice al actor «es la primera frase del vídeo, entras en frío». `MDH-007` tiene **seis** escenas
+así en mitad del episodio. Ahora son «sección»: *pasa página, con algo más de energía que la
+frase anterior, sin anunciarlo como un locutor.* El precacheo de hoy (09:00 UTC) todavía usa la
+dirección vieja, así que esas escenas se volverán a pedir; es una, como mucho dos, de las nueve
+de hoy.
+
+---
+
+## Los guiones de esta semana: se reescriben los cuatro Shorts que quedan
+
+**La versión 8 decía que no se tocaban.** Era una decisión razonable con lo que se sabía el
+lunes —«están validados y sin hallazgos»— y hoy se sabe que **validados y sin hallazgos no
+significa bien escritos**: son de la planificación del jueves 10, dos días antes de las tres
+pruebas de cosido. El codirector ha tenido que ver uno publicado para decirlo. No tiene que ver
+los otros tres.
+
+Leídos los cuatro contra las tres pruebas, fallaban los cuatro, y uno tenía además **un error
+de la regla 2**:
+
+| Guion | Qué fallaba | Qué se ha hecho |
+|---|---|---|
+| `MDS-017` (hoy) | Tres sujetos: el sobrino y el mando, los dedos en el aire, las ratas. Y un cierre que decía que a la rata «no le hizo gracia» después de haber dicho que se reía | **Un solo sujeto: las ratas de Panksepp.** El científico que se pasa años haciéndoles cosquillas, las ratas que aprenden a apretar una palanca para que siga, el chillido de 50 kHz, y el cierre honesto de los propios autores: lo subjetivo no se mide, se infiere |
+| `MDS-018` (mié) | El profesor de latín desaparecía en la escena 3; entraba «el error de Napoleón» y no se explicaba nunca | El profesor de latín de principio a fin. El chiste suyo no iba de latín: «me sé el chiste entero y ni una declinación». Serie cambiada a «Ríete primero»: `G06` es una revisión, no un experimento |
+| `MDS-019` (jue) | Abría con la sintonía de un banco (una sintonía no es humor). Y **afirmaba que el humor «mejora cómo te cae quien lo usa»**, cuando el resumen de Eisend dice literalmente que no hay evidencia de eso y que **reduce** la credibilidad | Un anuncio que te hacía llorar de risa y no sabes qué vendía. El dato bueno: el humor le da **al anuncio el doble de efecto que a la marca**. El cierre: el propio Eisend avisa de que la investigación está algo sesgada |
+| `MDS-020` (vie) | Tres cosas (los gatos, los veinte cómicos, el examen del New Yorker) y los cómicos sin veredicto | Los gatos y los veinte cómicos, con su veredicto literal: *«material de crucero de los años cincuenta, pero algo menos racista»*. El cierre de la versión del jueves se queda: este guion lo ha escrito una máquina |
+
+**Todas las afirmaciones se han comprobado hoy contra el texto o el resumen de cada artículo**,
+y la frase de origen está copiada en `notas_humor` de cada guion. Tres fichas de la
+bibliografía estaban mal y se han corregido: `E06` (el título no era el del artículo), `G05`
+(otro título, otra revista y otro DOI) y `G06` (es una revisión, no un metaanálisis).
+
+Los cuatro pasan `validar_guion.py` sin errores ni avisos y la barrera de C21 con las fuentes
+reales; `MDS-017` además se ha renderizado entero. Sus cuatro ficheros de
+`05_calendario/publicaciones/` (título, descripción, etiquetas, primer comentario) se han
+reescrito con ellos: la descripción de `MDS-017` seguía hablando del sobrino y del mando.
+
+### Y la causa, para que el jueves 17 no se repita
+
+Dos reglas nuevas en `00_estrategia/tareas/planificacion-jueves.md`, en «Criterio editorial»:
+
+1. **Lo que un estudio encontró se copia, no se deduce.** Muchas fichas de la bibliografía son
+   de una línea y no dicen el resultado. Un resultado en un guion tiene que estar en la ficha
+   o en el resumen leído en esa ejecución, con la frase copiada en `notas_humor`.
+2. **Una referencia que se nombra se explica en el mismo Short, o no se nombra.**
+
+---
+
+## Lo que ha contestado el codirector a las tareas del 14
+
+- **Cuota de imagen: no hay.** Todos los modelos de imagen del panel (Nano Banana, Nano Banana
+  Pro, Nano Banana 2 y 2 Lite, Veo) están a `0/0`. **La vía 3 de C34 (generar las imágenes
+  nosotros) se cae**, como estaba previsto que pasara si la cuota no existía. Las vías 1 y 2
+  (el lote y el banco con licencia) siguen igual.
+- **Tratamiento elegido en el muestrario: el 1, duotono ámbar.** *«Por acercarse a los colores
+  del canal. De todas formas, vamos probando así y vemos más adelante si encaja o no.»* Con eso
+  C34 tiene lo que necesitaba para escribirse en `escena.html`. **No entra hoy**: hoy solo se
+  arregla lo roto, y la imagen merece su propia sesión y su propio muestrario (regla 11.2). Va
+  el viernes 18.
+- **Las fotos del banco son de Pixabay, cuya licencia no exige atribución.** Está bien, y no hay
+  que buscarlas otra vez. Lo que la regla 9 pide no es atribuir en el vídeo: es **poder
+  demostrar de dónde salió cada imagen** si un día alguien reclama. Pixabay ha tenido casos de
+  fotos subidas por quien no era su autor, y lo único que nos cubre ahí es el enlace. Por eso se
+  le pide al codirector solo el enlace de cada foto (tarea 4 de hoy), sin buscar ninguna otra.
+- **El panel, además, dice algo que no se había preguntado**: los modelos de la Live API
+  (`Gemini 2.5 Flash Native Audio Dialog`, `Gemini 3 Flash Live`) tienen peticiones diarias
+  **ilimitadas**. Es la base de la opción C de C37.
+
+---
+
+## C36 · Una llamada por vídeo, con el corte por palabras (propuesta; se prueba antes)
+
+**El problema de fondo, que C33.1 no resuelve:** con una llamada por escena, un Short gasta
+seis de las diez peticiones diarias, cualquier repetición se come la cuota de la noche
+siguiente, un largo de 41 escenas no cabe ni en cuatro días, y cada escena es una toma
+independiente — C33 le devuelve a mano el contexto, pero sigue siendo un montaje de seis
+tomas.
+
+**La idea:** el Short entero en **una sola llamada** (y el largo en tandas de cinco o seis
+escenas), y cortar el audio por escenas después.
+
+**Por qué no se hizo así el 4 de septiembre, y qué cambia ahora.** Se probó y se descartó
+**el corte por silencios**: 16 y 33 tramos para 6 escenas, y ningún umbral daba 6. Esa
+conclusión se mantiene. **C36 no corta por silencios: corta por palabras.** Un reconocedor de
+voz local (`faster-whisper`, gratuito, en CPU, dentro de Actions) devuelve cada palabra con su
+instante; como el texto de cada escena se conoce, la frontera entre la escena *k* y la *k+1*
+es el hueco entre la última palabra de una y la primera de la otra, y se corta en el silencio
+más profundo de ese hueco. De paso, se gana algo que hoy no existe: **una comprobación de que
+la voz dice lo que pone el guion**, palabra por palabra.
+
+**Lo que cambiaría:** un Short pasa de 6 peticiones a 1 o 2; un largo, de 41 a unas 8, **en un
+solo día y sin precacheo**; y la voz sale de una sola toma, que es lo que de verdad cose.
+
+**Lo que hay que probar antes de encender nada**, con `voz_prueba.yml` y sin tocar la
+producción: que el corte por palabras acierta las seis fronteras en tres Shorts reales; que el
+desfase de sincronía se queda por debajo de 0,5 s (el umbral de `qa.py`); que una tanda de seis
+escenas no deriva (Google avisa de que la calidad cae en salidas de varios minutos); y cuánto
+tarda el reconocedor en CPU. **Si falla cualquiera de las cuatro, C36 se descarta y se queda
+C33.1**, que ya funciona.
+
+**Cuándo:** se escribe en la sesión del viernes 18 y se prueba ese mismo día. No entra en
+producción antes del lunes 21, y solo con las cuatro pruebas en verde.
+
+---
+
+## C37 · Un motor de voz sin cuota, por si Gemini falla (investigación, sin fecha)
+
+El codirector preguntó hoy si otros modelos, de otras compañías, harían un trabajo decente
+gratis. Lo mirado hoy:
+
+| Opción | Veredicto |
+|---|---|
+| **Gemini 2.5 Flash TTS** | **Entra hoy**, como escalón b de C33.1. Cuota propia, mismas voces |
+| Google Cloud Text-to-Speech, Azure Speech | **Descartadas**: exigen una cuenta de facturación con tarjeta. Aunque tengan tramo gratuito, la regla 4 no admite un servicio que puede cobrar |
+| ElevenLabs (plan gratuito) | **Descartada**: uso no comercial, atribución obligatoria y unos diez minutos al mes; un mes de Shorts son veinticinco |
+| XTTS-v2, Fish Audio S2, Higgs Audio | **Descartadas**: licencias no comerciales |
+| **Qwen3-TTS** (Alibaba, Apache 2.0, español incluido) | **Candidata.** Pesos abiertos, se ejecuta en el runner de Actions sin cuota. Sus voces de serie no son hispanohablantes; la variante *VoiceDesign* crea una voz a partir de una descripción, sin clonar a nadie (regla 6). En CPU va lenta |
+| **Chatterbox Multilingual** (MIT, 23 idiomas con español) | **Candidata**, mismo planteamiento |
+| **VoxCPM2** (Apache 2.0, 30 idiomas, pesos GGUF para CPU) | **Candidata**, la más ligera de las tres |
+| Kokoro (Apache 2.0) | Muy ligera, pero el español no es su fuerte |
+| **Opción C · la Live API de Gemini** (peticiones diarias ilimitadas en el panel del codirector) | **Candidata, con reservas.** Es un modelo de conversación, no de lectura: hay que comprobar que dice el texto tal cual. La comprobación palabra por palabra de C36 es justo lo que haría falta para fiarse |
+
+**La prueba, cuando toque:** un workflow manual que locute el mismo guion con las tres
+candidatas locales y con la Live API, y deje los audios para que el codirector los escuche.
+**No tiene fecha**: solo sube de prioridad si Gemini empieza a fallar más de lo que la escalera
+de C33.1 aguanta, o si C36 se descarta.
+
+---
+
+## Lo que NO cambia hoy
+
+- El punto de control sigue siendo el **27 de septiembre** y la decisión, el **15 de
+  noviembre** (C26).
+- **La regla 11.1 sigue suspendida** para presentación hasta el 27. C33.1 es un arreglo de
+  defecto y no consume ranura; la reescritura de guiones no es un cambio de código.
+- **`MDH-007` no se toca.** Tiene dos notas pendientes en `revisiones/` (escenas 19 y 31, las
+  dos de la regla 2) que aplica la planificación del jueves 17, antes de su emisión.
+- **C34 no entra hasta el viernes 18.**
+- No se clona la voz de nadie, no se encienden los subtítulos quemados y
+  `.github/workflows/` sigue sin escribirse en remoto.

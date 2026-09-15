@@ -1,2 +1,0 @@
-# 14/09/26
-- He respondido en el fichero de tareas mismo en el que me escribiste las tareas. Lo he colocado junto al prompt de dirección en .gitignore porque no nos interesa nada más que a ti y a mí y no influye en nada en los agentes.

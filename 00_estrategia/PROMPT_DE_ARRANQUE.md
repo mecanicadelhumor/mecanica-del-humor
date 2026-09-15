@@ -107,9 +107,9 @@ confundirlas:
 | `03_produccion/pipeline/montaje.py` | **Autorizado el 07/09/2026, sin acotar** | Sustituye a la autorización estrecha del 28/08 (que cubría solo el manifiesto de subtítulos). **Con esto P9 —los tres sonidos— queda desbloqueado**, y entra en la semana del 21 según C25 |
 | `03_produccion/pipeline/voz.py` | **Autorizado el 28/08/2026** | Abierto. Se pidió para C7 (dos voces), pero el codirector no lo acotó |
 | `.github/workflows/` (entera) | **PROTEGIDA SIEMPRE, también para la dirección** | No se puede escribir en remoto. Se le manda el fichero al codirector y lo crea él. **Sin excepciones y sin fecha de caducidad** |
-| `.github/workflows/producir.yml` | **Del codirector** | Pendiente: `GEMINI_API_KEY` está en el paso «Subir a YouTube» y tiene que estar en «Sintetizar narración». Ver `tareas/tareas_codirector_2026-09-12.md` |
+| `.github/workflows/producir.yml` | **Del codirector** | `GEMINI_API_KEY` ya está en «Sintetizar narración» (12/09). **Pendiente desde el 15/09:** una línea en el paso «Registrar lo publicado» para que suba también `03_produccion/cache_voz/` (C33.1). Ver `tareas/tareas_codirector_2026-09-15.md`, tarea 2 |
 | `.github/workflows/voz_prueba.yml` | **Entregado el 04/09, lo crea el codirector a mano** | Prueba de C7. `workflow_dispatch` solo, no escribe en el repositorio |
-| `.github/workflows/voz_adelantada.yml` | **Diseñado, por crear — CON FECHA** | C27. El diseño está en `07_pruebas/voz-adelantada-14-09/`. Desde el 14/09 tiene fecha: sin él, `MDH-007` sale el 19/09 con `edge-tts` y el punto de control del 27 compara un largo con voz mala contra Shorts con voz buena |
+| `.github/workflows/voz_adelantada.yml` | **Creado por el codirector el 14/09** (commit `8f9f778`) | C27. Corre de martes a viernes a las 09:00 UTC con `gemini-2.5-flash-preview-tts`. La copia documentada sigue en `07_pruebas/voz-adelantada-14-09/` |
 | `docs/` (la web del proyecto) | **Del codirector y mío**, desde el 04/09 | Tres páginas estáticas que Google exige para publicar la aplicación de OAuth. **No es C10** |
 | `03_produccion/sonidos/` | **Entregada el 07/09** | Tres acentos CC0 con su `attribution_texts.md`. Ya están |
 | `00_estrategia/PROMPT_DIRECCIÓN.md` | **SOLO DEL CODIRECTOR** | Es su cuaderno entre sesiones. **Se lee siempre, no se edita ni se borra nunca**, ni por mí |
@@ -379,6 +379,61 @@ que `voz.py` nunca habría buscado.** Una semana de cuota gastada para nada, sin
 error en el log.
 → Es la trampa 1 otra vez. Cuando cambies **lo que entra en una clave de caché**, busca a
 todos los que escriben en ese directorio, no solo a los que leen.
+
+**25. Una regla escrita para un formato no protege al otro.** El 7 de septiembre el codirector
+dijo que un vídeo con dos voces era una chapuza, y la regla se escribió **para el episodio
+largo**. El respaldo de los Shorts seguía siendo escena a escena, y `MDS-017` salió el 15 con
+tres escenas en Gemini y tres en `edge-tts`. Nadie lo decidió: lo decidió la granularidad del
+respaldo.
+→ **El respaldo tiene que ser del mismo tamaño que la cosa que no se puede mezclar.** Si lo que
+tiene que ser homogéneo es el vídeo, el respaldo es por vídeo. Y cuando escribas una regla
+pensando en un caso, pregúntate a qué otros casos les pasa lo mismo.
+
+**26. Un mensaje de error se busca por lo que dice, no por lo que crees que dice.** `voz.py`
+reconocía la cuota diaria de Gemini buscando «per day» o «perday». Google escribe
+«`per_model_per_day`». La condición no se cumplió nunca, y con la cuota agotada se siguió
+llamando a la API escena tras escena. Era la trampa 8 —mirar todas las dimensiones del límite—
+en el lado del código.
+→ Compara siempre **normalizado** (sin espacios, guiones ni guiones bajos, en minúsculas) y, si
+puedes, contra un mensaje real copiado del log, no contra uno imaginado.
+
+**27. «Validado y sin hallazgos» no significa «bien escrito».** El lunes 14 escribí que los
+guiones de la semana no se tocaban porque estaban validados. El martes el codirector vio uno y
+no se podía seguir, y al leer los otros tres fallaban igual, uno con un dato al revés. El
+validador mide lo que se puede medir; las tres pruebas de cosido las tiene que pasar alguien
+leyendo.
+→ Cuando un guion anterior a un arreglo de guionista va a publicarse, **se lee contra el
+arreglo**, no contra el validador.
+
+**28. Una ficha de una línea invita a inventarse el resultado.** La ficha `G05` decía «cuándo
+ayuda y cuándo distrae del mensaje», y el guion de `MDS-019` completó eso con «mejora cómo te
+cae quien lo usa». El resumen del artículo dice lo contrario. La verificación lo dio por bueno
+porque comparaba contra la ficha, y la ficha no decía nada. De paso, tres fichas tenían el
+título, la revista o el DOI mal.
+→ **Un resultado se copia del resumen, no se deduce de la ficha.** Regla nueva en el prompt de
+la planificación desde el 15/09.
+
+## Dónde está el proyecto a 15 de septiembre de 2026
+
+**Una buena y una mala, y la sesión fue de «algo se ha roto».** Detalle en la **versión 9** de
+`PLAN_DE_CAMBIOS.md`.
+
+- **`MDS-016` es el primer Short que pasa de 1.000 visualizaciones** (dato del codirector desde
+  Studio). No se sabe por qué: la lectura del lunes 21 empieza por ahí.
+- **`MDS-017` salió con dos voces y un guion sin hilo.** Arreglado con **C33.1**: una sola voz
+  por vídeo, con reintentos y una escalera 3.1 → 2.5 → esperar al cron de las 08:23 UTC →
+  `edge-tts` entero solo en el último intento programado. Y los **cuatro guiones que quedaban de
+  la semana** (`MDS-017` a `MDS-020`) reescritos contra las tres pruebas de cosido, con todas sus
+  afirmaciones comprobadas contra los artículos. `MDS-019` afirmaba lo contrario de lo que dice su
+  fuente.
+- **La cuota de imagen de Gemini no existe** (todo a `0/0`): la vía 3 de C34 se cae. **El
+  tratamiento elegido es el duotono ámbar.** C34 entra el viernes 18.
+- **Propuestas nuevas:** **C36** (una llamada por vídeo y corte por palabras con un reconocedor
+  local; se prueba el viernes 18 antes de encender nada) y **C37** (un motor de voz sin cuota;
+  investigación sin fecha).
+
+**Lo que espera al codirector:** `tareas/tareas_codirector_2026-09-15.md` — el `push`, una línea
+en `producir.yml`, volver a producir `MDS-017` esta tarde, y el enlace de cada foto del banco.
 
 ## Dónde está el proyecto a 14 de septiembre de 2026
 
