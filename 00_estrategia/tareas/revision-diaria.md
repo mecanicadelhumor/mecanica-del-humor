@@ -152,7 +152,7 @@ Deja de ser «lunes y jueves»: el 03/09 se publicó un Short con una palabra co
 
 **Encargos abiertos, en este orden. Reescritos el 07/09/2026 con la versión 6 de `PLAN_DE_CAMBIOS.md`.**
 
-**Antes de nada, lo más reciente: la dirección tocó código y guiones el MARTES 15 de septiembre (C33.1, versión 9 de `PLAN_DE_CAMBIOS.md`).**
+**Antes de nada, lo más reciente: la dirección tocó código y guiones el MARTES 15 de septiembre (C33.1 y C33.2, versiones 9 y 9.1 de `PLAN_DE_CAMBIOS.md`).** Por la tarde, además: `03_produccion/pipeline/cola.py` (campo `rehacer_video_id`), `voz.py` y `voz_precache.py` otra vez, y `05_calendario/parrilla.json` (**`MDS-017` pasa al sábado 19 y `MDH-007` al domingo 20**; no es un error del calendario).
 Están cambiados `03_produccion/pipeline/voz.py` (una sola voz por vídeo, reintentos, escalera de
 modelos), `03_produccion/pipeline/voz_precache.py`, `03_produccion/pipeline/qa.py` (campos
 `modelo_voz`, `voz_mezclada`, `origen_voz` y `direccion_voz` en `ficha.json`), **los cuatro guiones
@@ -167,13 +167,20 @@ primera línea de tu resumen.
 
 1. **`voz_mezclada` en `ficha.json` tiene que ser `false` siempre.** Si alguna vez es `true`, es
    `INCIDENCIA`, aunque el vídeo suene bien. `modelo_voz` dice qué motor puso la voz del vídeo
-   entero: `gemini-3.1-flash-tts-preview` es lo normal; `gemini-2.5-flash-preview-tts` es el
-   segundo escalón y no es incidencia; `edge-tts` en un Short es el último recurso y se dice en
-   `ESTADO.md` como `OK`, pero con esa palabra en el detalle.
-2. **Que la producción de las 01:13 UTC falle en el paso «Sintetizar narración» con código 3 no es
-   una avería: es el diseño.** Significa que no había cuota de Gemini para el vídeo entero y que se
-   espera al cron de las 08:23 UTC, cuando Google ya ha reiniciado la cuota. Solo es `INCIDENCIA` si
-   a las 11:30 el vídeo del día **sigue sin estar** en `registro_publicaciones.json`.
+   entero: `gemini-3.1-flash-tts-preview` es lo normal y `gemini-2.5-flash-preview-tts` es el
+   segundo escalón; ninguno de los dos es incidencia. **`edge-tts` no debería aparecer nunca**
+   (C33.2, tarde del 15/09: sin voz de Gemini no se publica). Si aparece, es `INCIDENCIA`.
+   `origen_voz` dice si cada toma salió con la dirección completa («llamada»), con la mínima
+   («llamada (dirección mínima)») o de la caché. **Anota en la bitácora cuántas de cada**: la
+   dirección decide el viernes 18 si la dirección completa se queda.
+2. **Que una producción falle en el paso «Sintetizar narración» con código 3 no es una avería
+   cuando pasa de madrugada: es el diseño.** No había cuota de Gemini para el vídeo entero y se
+   espera al cron de las 08:23 UTC (10:23 en España). Estos días va a pasar a menudo, y no es
+   incidencia. **Solo es `INCIDENCIA` si a las 11:30 el vídeo del día sigue sin estar** en
+   `registro_publicaciones.json`: después de las 08:23 ya no hay más intentos, y el vídeo de ese
+   día no sale. Dilo así en la primera línea de `ESTADO.md`, con el ID, y en `Pendiente del
+   codirector` escribe «la dirección tiene que mover <ID> de día en `parrilla.json`». **No lo
+   muevas tú**: `parrilla.json` no es tuyo.
 3. **No reintroduzcas nunca el respaldo a `edge-tts` por escena**, ni en `voz.py` ni en ningún otro
    sitio. El encargo 4 de abajo decía «respaldo automático a `edge-tts` ante cualquier fallo»: eso
    es exactamente lo que publicó `MDS-017` con dos voces alternándose. Está sustituido.

@@ -142,7 +142,8 @@ MODELO_GEMINI_LARGO = "gemini-2.5-flash-preview-tts"
 VOZ_GEMINI_NARRADOR = "Charon"    # grave, tranquila. El que explica.
 VOZ_GEMINI_ESCEPTICO = "Puck"     # más alta y viva. El que interrumpe.
 RITMO_GEMINI_HZ = 24000           # Hz que devuelve la API
-ESPERA_ENTRE_LLAMADAS_GEMINI = 25.0   # RPM = 3, o sea una cada 20s. 25 con margen.
+ESPERA_ENTRE_LLAMADAS_GEMINI = 31.0   # RPM = 3. Era 25; subido el 15/09 (C33.2): con 25 s
+                                      # y los reintentos ocultos de la librería se rozaba el límite.
 RITMO_PAL_S_MIN, RITMO_PAL_S_MAX = 1.6, 3.2
 
 # Dirección de actor SIN pausas en segundos (la versión 5.1 midió que pedir
@@ -338,8 +339,15 @@ def _papel_escena(escenas, i):
     return papel
 
 
-def direccion_escena(escenas, i, texto):
-    """Construye la dirección de actor de la escena `i` (1-based).
+def _direccion_v1(escenas, i, texto):
+    """[CONGELADA el 15/09/2026, C33.2] La dirección de actor tal como era del 14 al 15/09.
+
+    Ya no se le manda a la API: la sustituye `direccion_escena()`. Se conserva SOLO
+    para buscar en la caché las tomas que se sintetizaron con ella (su texto
+    completo era parte de la clave). No la toques: cambiar una coma aquí deja
+    esas tomas huérfanas y hay que volver a pagarlas.
+
+    Construye la dirección de actor de la escena `i` (1-based).
 
     Devuelve `(prompt_completo, papel)`. `papel` se guarda en `ficha.json` para
     poder revisar en el expediente qué se le pidió a cada escena sin tener que
@@ -388,6 +396,90 @@ def direccion_escena(escenas, i, texto):
     ), papel
 
 
+# ----------------------------------------------------------------------------
+# C33.2 (15/09/2026, tarde) · La dirección de actor, en el formato que pide Google
+#
+# La primera producción con C33.1 (MDS-017, a mano, 15/09) dio esto en Gemini
+# 3.1: las escenas 1 y 2 salieron con la dirección completa; las 3, 4 y 5 fueron
+# RECHAZADAS dos veces cada una con un 400 («Request contains an invalid
+# argument»), y las dos que llegaron al tercer intento —con la dirección
+# mínima— salieron a la primera. Seis rechazos de seis con la dirección larga,
+# dos aceptaciones de dos con la corta, sobre los mismos textos.
+#
+# Encaja con lo que documenta Google: un prompt que no deja claro que es una
+# petición de voz lo puede rechazar el clasificador que decide si lo es, y la
+# receta es «un preámbulo que diga claramente que hay que sintetizar voz y una
+# etiqueta que marque dónde empieza el texto». La dirección v1 empezaba con
+# «[Instrucciones para el actor. No se leen en voz alta.]» y no pedía nunca,
+# con esas palabras, que se leyera nada. La mínima empieza con «Lee en voz
+# alta…» y marca el texto con «TEXTO:».
+#
+# Así que la v2 es la mínima —la que ha funcionado— con las notas de
+# dirección metidas en medio. Y como no hay forma de probarla sin gastar cuota,
+# lleva red: si el clasificador la rechaza, el siguiente intento va con la
+# mínima, y después de dos rechazos en un mismo vídeo, el resto del vídeo va
+# directamente con la mínima (ver `_gemini_escena`).
+#
+# Y UN CAMBIO EN LA CLAVE DE CACHÉ. La v1 metía en la clave el texto entero del
+# prompt, así que cualquier cambio de redacción invalidaba toda la caché. Con
+# diez peticiones al día eso es caro. La v2 mete en la clave la FIRMA de la
+# dirección —versión, papel, qué pasa después y de dónde viene—, no su
+# redacción. Para invalidar a propósito, se sube VERSION_DIRECCION.
+# ----------------------------------------------------------------------------
+VERSION_DIRECCION = 2
+
+PREAMBULO_VOZ = (
+    "Lee en voz alta, en español de España y con voz natural de persona que cuenta "
+    "algo, el texto que va después de la palabra TEXTO. Las notas de dirección no se "
+    "leen en voz alta.")
+
+NOTA_VOZ = ("narrador de un vídeo corto de divulgación sobre la ciencia del humor; voz "
+            "de persona contando algo, nunca de locutor de telediario.")
+
+NOTA_SIEMPRE = ("no te rías ni añadas risas, suspiros, carraspeos ni ningún sonido que no "
+                "esté escrito; no metas silencios largos; ritmo de conversación, ni con "
+                "prisa ni arrastrando las palabras.")
+
+NOTA_DESPUES = {
+    "espera": ("llega un silencio y después el remate: deja la frase en el aire, sin "
+               "cerrar la entonación."),
+    "sigue": "la historia continúa: no cierres la entonación del todo.",
+    "cierre": "se acaba el vídeo: cierra la entonación de verdad.",
+}
+
+
+def _despues(escenas, i):
+    if i >= len(escenas):
+        return "cierre"
+    propia = float(escenas[i - 1].get("pausa_despues_s") or 0.0)
+    return "espera" if propia >= PAUSA_DE_REMATE_S else "sigue"
+
+
+def direccion_escena(escenas, i, texto):
+    """Dirección de actor v2 de la escena `i` (1-based).
+
+    Devuelve `(prompt, papel, firma)`. `prompt` es lo que se manda a la API;
+    `papel` va a `ficha.json`; `firma` es lo que entra en la clave de caché.
+    """
+    papel = _papel_escena(escenas, i)
+    despues = _despues(escenas, i)
+    antes = ""
+    if i > 1:
+        antes = _recorte_contexto(hablable(escenas[i - 2].get("narracion") or ""), 8)
+    notas = [f"- Voz: {NOTA_VOZ}", f"- Esta frase: {DIRECCION_POR_PAPEL[papel]}"]
+    if antes:
+        # Sin comillas: unas comillas alrededor del contexto lo hacen parecer
+        # texto que hay que locutar.
+        notas.append(f"- Viene de una frase que terminaba así: {antes} Enlaza con ella y "
+                     "no arranques como si empezara el vídeo.")
+    notas.append(f"- Al terminar la frase: {NOTA_DESPUES[despues]}")
+    notas.append(f"- Siempre: {NOTA_SIEMPRE}")
+    prompt = (f"{PREAMBULO_VOZ}\n\nNOTAS DE DIRECCIÓN:\n" + "\n".join(notas)
+              + f"\n\nTEXTO:\n{texto}")
+    firma = f"v{VERSION_DIRECCION}|{papel}|{despues}|{antes}"
+    return prompt, papel, firma
+
+
 def _cache_voz_ruta(texto, motor, voz, direccion=""):
     """Clave de caché por contenido.
 
@@ -403,11 +495,32 @@ def _cache_voz_ruta(texto, motor, voz, direccion=""):
     return CACHE_VOZ_DIR / f"{clave}.mp3"
 
 
-def _gemini_cliente():
+def _gemini_cliente(httpx_client=None):
+    """Cliente de Gemini SIN reintentos propios.
+
+    C33.2 (15/09/2026): la librería `google-genai` (2.x) reintenta por su cuenta,
+    en silencio, los 408, 409, 429, los 5xx y los cortes de conexión: hasta
+    CUATRO peticiones en unos 3 segundos por cada llamada nuestra (medido con un
+    transporte simulado: un 429 son 4 peticiones en 3,3 s). Con un límite de 3
+    por minuto y 10 al día, eso es lo que agotaba la cuota y provocaba los 429
+    «por minuto» del 14 y del 15. Los reintentos los decide `_gemini_escena`,
+    que sabe esperar y sabe cuándo parar; aquí, una llamada es una petición.
+
+    `attempts=0` es la única forma de conseguirlo en el cliente nuevo
+    (`attempts=1` significa ahí «un reintento»). `http_status_codes=[599]` es un
+    segundo cerrojo: la propia librería convierte el 0 en 1 al crear el cliente
+    (comprobado), y con ese cerrojo ni aun así reintenta un 429 ni un 5xx.
+    Medido con un transporte simulado: un 429, un 503 y un corte de conexión son
+    UNA petición cada uno. `httpx_client` solo sirve para esa prueba.
+    """
     if not os.environ.get("GEMINI_API_KEY"):
         raise RuntimeError("Falta GEMINI_API_KEY en el entorno.")
     from google import genai
-    return genai.Client()
+    from google.genai import types
+    opciones = {"retry_options": types.HttpRetryOptions(attempts=0, http_status_codes=[599])}
+    if httpx_client is not None:
+        opciones["httpx_client"] = httpx_client
+    return genai.Client(http_options=types.HttpOptions(**opciones))
 
 
 def _gemini_pcm(cli, modelo, texto_dirigido, voz_gemini):
@@ -484,22 +597,28 @@ def _pcm_a_mp3(pcm, hz, destino):
 #           de California (07:00 UTC en verano y 08:00 en invierno), así que el
 #           cron de las 08:23 lo vuelve a intentar con la cuota llena. Lo que
 #           ya se sintetizó queda en la caché;
-#        d) solo en ese último intento, el vídeo ENTERO con edge-tts. Entero,
-#           nunca mezclado. En una ejecución manual no se llega a este paso:
-#           el paso falla y decide el codirector.
+#        d) [RETIRADO el mismo 15/09 por la tarde, C33.2] «solo en ese último
+#           intento, el vídeo ENTERO con edge-tts». El codirector: mejor no
+#           publicar que publicar con edge-tts. Ahora, sin voz de Gemini, el
+#           paso falla y no se sube nada, sea la hora que sea (ver
+#           `_edge_permitido`).
 #   El largo sigue la misma escalera, pero con un solo modelo: el de su caché.
 # ----------------------------------------------------------------------------
 
 MODELOS_CORTO = (MODELO_GEMINI, MODELO_GEMINI_LARGO)
 MODELOS_LARGO = (MODELO_GEMINI_LARGO,)
 INTENTOS_POR_ESCENA = 3
-ESPERA_LIMITE_MINUTO_S = 65.0      # un 429 por minuto: se deja pasar el minuto entero
+ESPERA_LIMITE_MINUTO_S = 65.0      # tras un 429: se deja pasar el minuto entero
+LIMITE_DIARIO_POR_MODELO = 10      # panel del codirector, 14/09: 10 peticiones/día por modelo
+RECHAZOS_PARA_MINIMA = 2           # C33.2: tras dos rechazos, el resto del vídeo va con la mínima
 HORA_UTC_ULTIMO_INTENTO = 8        # producir.yml: crons a las 01:13, 04:47 y 08:23 UTC
 SALIDA_SIN_VOZ_COMPLETA = 3        # código de salida: «no hay voz entera, no subas nada»
 
-# Para el último intento de una escena. Sigue la recomendación de Google:
-# un preámbulo que diga claramente que es una petición de voz y una etiqueta
-# que marque dónde empieza el texto que hay que decir.
+# La dirección mínima. Es la que sale cuando la dirigida se rechaza. Sigue la
+# recomendación de Google: un preámbulo que diga claramente que es una petición
+# de voz y una etiqueta que marque dónde empieza el texto que hay que decir. El
+# 15/09 fue aceptada dos veces de dos sobre textos cuya dirección v1 se había
+# rechazado seis de seis.
 DIRECCION_MINIMA = (
     "Lee en voz alta, en español de España y con voz natural de persona que "
     "cuenta algo, el texto que va después de la palabra TEXTO. No te rías, no "
@@ -515,16 +634,26 @@ def _normalizado(msg):
 
 
 def clase_de_error(exc):
-    """Clasifica un fallo de Gemini: 'dia', 'minuto', 'rechazo' o 'transitorio'.
+    """Clasifica un fallo de Gemini: 'dia', 'minuto', 'cuota', 'rechazo' o 'transitorio'.
 
     Se compara sin espacios ni guiones bajos porque Google escribe lo mismo
     de tres maneras («per day», «per_day», «PerDay»), y durante una semana
-    aquí solo se reconocía la primera (ver C33.1, punto 2).
+    aquí solo se reconocía la primera (C33.1, punto 2).
+
+    'cuota' es un 429 que NO dice de qué límite es. Es lo que devuelve la API
+    de interacciones que usa hoy la librería («You exceeded your current
+    quota…», sin nombre de métrica): así llegaron todos los 429 del 15/09.
+    Quien lo recibe no sabe si es el minuto o el día, y lo resuelve
+    `_gemini_escena` esperando un minuto: si vuelve a pasar, es el día.
     """
     msg = str(exc)
     n = _normalizado(msg)
-    if "resourceexhausted" in n or re.search(r"\b429\b", msg):
-        return "dia" if "perday" in n else "minuto"
+    if "resourceexhausted" in n or "exceededyourcurrentquota" in n or re.search(r"\b429\b", msg):
+        if "perday" in n:
+            return "dia"
+        if "perminute" in n:
+            return "minuto"
+        return "cuota"
     if ("prohibitedcontent" in n or "invalidargument" in n
             or re.search(r"\b400\b", msg)):
         return "rechazo"
@@ -550,21 +679,27 @@ def _audio_plausible(texto, dur):
 def _edge_permitido(ahora=None):
     """(permitido, motivo). ¿Puede este vídeo salir entero con edge-tts?
 
-    Solo en un cron que ya corre con la cuota de Google reiniciada. Con
-    VOZ_ULTIMO_INTENTO=1 o =0 se fuerza la respuesta; sirve para las pruebas.
+    C33.2 (15/09/2026, decisión del codirector): **no, nunca de forma automática.**
+    Sus palabras, con MDS-017 sin voz de Gemini a media tarde: «Mejor eso [que
+    no se publique] que colocar el vídeo con la voz edge-tts». Si Gemini no da
+    voz al vídeo entero, el paso falla, no se sube nada y lo decide la dirección
+    (moverlo de día en `parrilla.json`, con `rehacer_video_id` si ya había una
+    subida anterior).
+
+    La única puerta es explícita y a mano: VOZ_PERMITIR_EDGE=1 en el entorno.
+    Ningún workflow la pone. `ahora` se conserva por compatibilidad.
     """
-    forzado = os.environ.get("VOZ_ULTIMO_INTENTO")
-    if forzado in ("0", "1"):
-        return forzado == "1", f"VOZ_ULTIMO_INTENTO={forzado}"
-    evento = os.environ.get("GITHUB_EVENT_NAME", "")
-    if evento != "schedule":
-        return False, (f"ejecución «{evento or 'local'}»: en una ejecución manual edge-tts "
-                       "nunca entra solo; decide el codirector")
+    if os.environ.get("VOZ_PERMITIR_EDGE") == "1":
+        return True, "VOZ_PERMITIR_EDGE=1 puesto a mano"
+    evento = os.environ.get("GITHUB_EVENT_NAME", "") or "local"
     ahora = ahora or datetime.now(timezone.utc)
-    if ahora.hour < HORA_UTC_ULTIMO_INTENTO:
-        return False, (f"son las {ahora:%H:%M} UTC y la cuota de Gemini aún no se ha "
-                       f"reiniciado: el cron de las 08:23 UTC lo vuelve a intentar")
-    return True, f"último intento del día ({ahora:%H:%M} UTC)"
+    if evento == "schedule" and ahora.hour < HORA_UTC_ULTIMO_INTENTO:
+        motivo = (f"son las {ahora:%H:%M} UTC y la cuota de Gemini aún no se ha "
+                  f"reiniciado: el cron de las 08:23 UTC lo vuelve a intentar")
+    else:
+        motivo = ("sin voz de Gemini no se publica: edge-tts nunca entra solo "
+                  "(decisión del codirector, 15/09)")
+    return False, motivo
 
 
 async def _gemini_escena(it, modelo, estado):
@@ -573,17 +708,37 @@ async def _gemini_escena(it, modelo, estado):
     El origen es 'caché', 'llamada' o 'llamada (dirección mínima)'. Devuelve
     None si la escena no ha salido tras INTENTOS_POR_ESCENA intentos, y lanza
     CuotaDiariaAgotada si el modelo ya no da más hoy.
+
+    Cómo se reintenta, desde C33.2:
+      · 'transitorio' (500, corte de conexión, respuesta sin audio, toma
+        implausible): se repite la misma petición.
+      · 'rechazo' (400): NO se repite la misma petición —el 15/09 los rechazos
+        se repitieron seis de seis—; el siguiente intento va con la dirección
+        mínima, y tras RECHAZOS_PARA_MINIMA rechazos en el vídeo, el resto del
+        vídeo empieza ya con la mínima. Cada rechazo cuesta una petición del día.
+      · 'cuota' / 'minuto': se espera un minuto y se repite. Si el siguiente
+        intento vuelve a dar 429, es el límite diario y el modelo se abandona.
+      · 'dia': el modelo se abandona en el acto.
+    Y un tope: nunca más de LIMITE_DIARIO_POR_MODELO peticiones por modelo en
+    una producción, porque la número once no puede salir.
     """
-    cache = _cache_voz_ruta(it["texto"], modelo, it["voz_gemini"], it["dirigido"])
-    if cache.exists():
-        it["mp3"].write_bytes(cache.read_bytes())
-        return "caché"
+    nueva = _cache_voz_ruta(it["texto"], modelo, it["voz_gemini"], it["firma"])
+    vieja = _cache_voz_ruta(it["texto"], modelo, it["voz_gemini"], it["dirigido_v1"])
+    for cache in (nueva, vieja):
+        if cache.exists():
+            it["mp3"].write_bytes(cache.read_bytes())
+            return "caché"
     if estado["agotados"].get(modelo):
         raise CuotaDiariaAgotada(modelo)
 
     for intento in range(1, INTENTOS_POR_ESCENA + 1):
         ultimo = intento == INTENTOS_POR_ESCENA
-        prompt = (DIRECCION_MINIMA + it["texto"]) if ultimo else it["dirigido"]
+        minima = (ultimo or it.get("rechazada")
+                  or estado["rechazos"].get(modelo, 0) >= RECHAZOS_PARA_MINIMA)
+        prompt = (DIRECCION_MINIMA + it["texto"]) if minima else it["dirigido"]
+        if estado["llamadas"].get(modelo, 0) >= LIMITE_DIARIO_POR_MODELO:
+            estado["agotados"][modelo] = True
+            raise CuotaDiariaAgotada(modelo)
         espera = ESPERA_ENTRE_LLAMADAS_GEMINI - (time.monotonic() - estado["ultima"])
         if estado["ultima"] and espera > 0:
             await asyncio.sleep(espera)
@@ -594,6 +749,7 @@ async def _gemini_escena(it, modelo, estado):
             estado["cliente"] = cli
             pcm = _gemini_pcm(cli, modelo, prompt, it["voz_gemini"])
             estado["ultima"] = time.monotonic()
+            estado["seguidos_429"][modelo] = 0
             if not pcm:
                 raise RuntimeError("la respuesta no trae audio")
             _pcm_a_mp3(pcm, RITMO_GEMINI_HZ, tmp)
@@ -604,21 +760,31 @@ async def _gemini_escena(it, modelo, estado):
                     "(¿ha leído las instrucciones en voz alta?)")
             tmp.replace(it["mp3"])
             CACHE_VOZ_DIR.mkdir(parents=True, exist_ok=True)
-            tmp_cache = cache.with_suffix(".tmp.mp3")
+            tmp_cache = nueva.with_suffix(".tmp.mp3")
             tmp_cache.write_bytes(it["mp3"].read_bytes())
-            tmp_cache.replace(cache)
-            return "llamada (dirección mínima)" if ultimo else "llamada"
+            tmp_cache.replace(nueva)
+            return "llamada (dirección mínima)" if minima else "llamada"
         except Exception as exc:
             tmp.unlink(missing_ok=True)
             estado["ultima"] = time.monotonic()
             clase = clase_de_error(exc)
             print(f"::warning::escena {it['i']} · {modelo} · intento {intento}/"
-                  f"{INTENTOS_POR_ESCENA} · fallo «{clase}»: {str(exc)[:220]!r}")
+                  f"{INTENTOS_POR_ESCENA}{' (mínima)' if minima else ''} · fallo "
+                  f"«{clase}»: {str(exc)[:220]!r}")
             if clase == "dia":
                 estado["agotados"][modelo] = True
                 raise CuotaDiariaAgotada(modelo) from exc
-            if not ultimo and clase == "minuto":
-                await asyncio.sleep(ESPERA_LIMITE_MINUTO_S)
+            if clase in ("cuota", "minuto"):
+                seguidos = estado["seguidos_429"].get(modelo, 0) + 1
+                estado["seguidos_429"][modelo] = seguidos
+                if seguidos >= (2 if clase == "cuota" else 3):
+                    estado["agotados"][modelo] = True
+                    raise CuotaDiariaAgotada(modelo) from exc
+                if not ultimo:
+                    await asyncio.sleep(ESPERA_LIMITE_MINUTO_S)
+            elif clase == "rechazo":
+                estado["rechazos"][modelo] = estado["rechazos"].get(modelo, 0) + 1
+                it["rechazada"] = True
     return None
 
 
@@ -898,10 +1064,12 @@ async def principal(guion_path, salida, voz=None, motor="edge"):
         papel = "esceptico" if e.get("voz") == "esceptico" else "narrador"
         # C33: la dirección de actor se construye por escena a partir del
         # propio guion (tipo, posición, pausa de la escena anterior).
-        dirigido, papel_escena = direccion_escena(escenas, i, texto)
+        dirigido, papel_escena, firma = direccion_escena(escenas, i, texto)
+        dirigido_v1, _ = _direccion_v1(escenas, i, texto)
         e["direccion_voz"] = papel_escena
         items.append({
             "i": i, "e": e, "texto": texto, "dirigido": dirigido,
+            "firma": firma, "dirigido_v1": dirigido_v1,
             "voz_gemini": VOZ_GEMINI_ESCEPTICO if papel == "esceptico" else VOZ_GEMINI_NARRADOR,
             "mp3": salida / "voz" / f"escena_{i:03d}.mp3",
         })
@@ -910,7 +1078,8 @@ async def principal(guion_path, salida, voz=None, motor="edge"):
     resultado = {}          # indice -> (palabras, n_frases, motor, origen)
     modelo_final = "edge-tts"
     if motor_pedido == "gemini":
-        estado = {"agotados": {}, "llamadas": {}, "ultima": 0.0, "cliente": None}
+        estado = {"agotados": {}, "llamadas": {}, "rechazos": {}, "seguidos_429": {},
+                  "ultima": 0.0, "cliente": None}
         for modelo in (MODELOS_CORTO if es_corto else MODELOS_LARGO):
             print(f"Voz: intentando el vídeo entero con {modelo}…")
             origenes = await _voz_gemini_completa(items, modelo, estado)
@@ -927,8 +1096,8 @@ async def principal(guion_path, salida, voz=None, motor="edge"):
                       f"({motivo}). Nunca se mezclan dos voces en un vídeo (C33.1). Lo ya "
                       f"sintetizado queda en 03_produccion/cache_voz/.")
                 raise SystemExit(SALIDA_SIN_VOZ_COMPLETA)
-            print(f"::warning::Ningún modelo de Gemini ha dado voz a todas las escenas y es "
-                  f"el {motivo}: el vídeo ENTERO sale con edge-tts, nunca mezclado.")
+            print(f"::warning::Ningún modelo de Gemini ha dado voz a todas las escenas y "
+                  f"{motivo}: el vídeo ENTERO sale con edge-tts, nunca mezclado.")
     if not resultado:
         origen = "respaldo, vídeo entero" if motor_pedido == "gemini" else "pedido"
         for it in items:
@@ -1096,8 +1265,8 @@ if __name__ == "__main__":
     # por causa de la voz de un Short, se vuelve a "edge" cambiando SOLO
     # esta línea.
     ap.add_argument("--motor", choices=["edge", "gemini"], default="gemini",
-                     help="gemini por defecto desde el 14/09. Desde el 15/09 (C33.1), una "
-                          "sola voz por vídeo: 3.1 → 2.5 → esperar al cron siguiente → "
-                          "edge-tts entero solo en el último intento del día")
+                     help="gemini por defecto desde el 14/09. Desde el 15/09 (C33.1 y "
+                          "C33.2), una sola voz por vídeo: 3.1 → 2.5 → si no, no se sube "
+                          "nada. edge-tts solo si se pide con --motor edge")
     a = ap.parse_args()
     asyncio.run(principal(a.guion, a.salida, a.voz, a.motor))

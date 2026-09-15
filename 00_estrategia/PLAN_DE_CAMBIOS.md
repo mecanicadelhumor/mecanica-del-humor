@@ -3097,3 +3097,120 @@ de C33.1 aguanta, o si C36 se descarta.
 - **C34 no entra hasta el viernes 18.**
 - No se clona la voz de nadie, no se encienden los subtítulos quemados y
   `.github/workflows/` sigue sin escribirse en remoto.
+
+---
+
+# Versión 9.1 · 15 de septiembre, tarde — el primer intento, leído (C33.2)
+
+La versión 9 se escribió por la mañana. A media mañana el codirector volvió a producir
+`MDS-017` a mano con C33.1 ya subido, y el paso de voz falló. **Sin subir nada, que es lo que
+tenía que pasar.** Pero el registro que copió en `PROMPT_DIRECCIÓN.md` enseña tres cosas que la
+versión 9 no sabía, y las tres cambian el diseño.
+
+## Qué dice el registro
+
+| Modelo | Peticiones | Qué pasó |
+|---|---|---|
+| 3.1 | 11 | Escenas 1 y 2 bien. **Escenas 3, 4 y 5 rechazadas dos veces cada una con un 400** («Request contains an invalid argument»), siempre con la dirección completa. La 3 y la 4 salen al tercer intento, con la dirección mínima. La petición 11 da 429 |
+| 2.5 | 10 | Escenas 1 a 4 bien, con **dos cortes de conexión** y un 429 por medio. La escena 5 da 429 tres veces, con un minuto de espera entre ellas |
+
+**1 · La dirección de actor v1 se rechaza, y los rechazos gastan cuota.** Seis rechazos de
+seis con la dirección larga y dos aceptaciones de dos con la mínima, sobre los mismos
+textos. Y la petición 11 de 3.1 dio 429 justo cuando 4 aciertos y 6 rechazos sumaban las 10
+del día: **un 400 cuenta como petición.**
+
+**2 · La librería reintentaba por su cuenta, en silencio.** `google-genai` 2.x reintenta los
+408, 409, 429, los 5xx y los cortes de conexión **hasta cuatro veces en unos tres segundos**
+por cada llamada nuestra. Medido hoy con un transporte simulado: un 429 son 4 peticiones en
+3,3 s. Con un límite de 3 por minuto y 10 al día, **eso explica los 429 «por minuto» del 14 y
+del 15, el «4/3 RPM» del panel del codirector, y que 2.5 se agotara con solo cuatro escenas
+hechas**: cada corte de conexión fueron probablemente cuatro peticiones.
+
+**3 · El 429 de esta API no dice de qué límite es.** «You exceeded your current quota» y
+nada más: ni «per day» ni «per minute». C33.1 lo tomaba siempre por el del minuto.
+
+**Y la hipótesis del codirector** —que 2.5 falló por compartir cuota con 3.1— **no se
+sostiene**: son cuotas separadas (su propio panel del 14 lo enseña). Lo que 2.5 sí compartía
+era el daño de los reintentos ocultos.
+
+## C33.2 · Lo que cambia
+
+1. **Cliente sin reintentos propios** (`_gemini_cliente`): `attempts=0` más un cerrojo de
+   códigos. Comprobado: un 429, un 500, un 503 y un corte de conexión son ahora **una**
+   petición cada uno. Los reintentos los decide `_gemini_escena`.
+2. **Dirección de actor v2**, con la estructura que recomienda Google y que ya había
+   funcionado hoy: empieza pidiendo en claro que se lea en voz alta, luego las notas y luego
+   `TEXTO:`. Es la mínima con las notas dentro.
+3. **Un rechazo no se repite.** El siguiente intento va con la mínima. **Tras dos rechazos en
+   un vídeo, el resto del vídeo va con la mínima desde el principio.** Con el caso de hoy eso
+   son 8 peticiones para las seis escenas, no 11 para cuatro (probado con un doble que
+   rechaza exactamente las escenas 3, 4 y 5).
+4. **Un 429 sin apellido** espera un minuto y se reintenta. **Si vuelve a salir, es el límite
+   diario** y el modelo se abandona.
+5. **Tope de 10 peticiones por modelo en una producción.** La once no puede salir.
+6. **31 s entre llamadas** en vez de 25.
+7. **La clave de caché ya no depende de la redacción de la dirección**, sino de su firma:
+   versión, papel, qué pasa al terminar y de dónde viene. Para invalidar a propósito, se sube
+   `VERSION_DIRECCION`. **Las ocho tomas de hoy se siguen encontrando** con la clave vieja: la
+   función v1 queda congelada solo para buscarlas.
+8. **`edge-tts` no entra nunca solo.** Palabras del codirector, con `MDS-017` sin voz: *«Mejor
+   eso que colocar el vídeo con la voz edge-tts»*. Se retira el escalón d de C33.1. Sin voz de
+   Gemini para el vídeo entero no se sube nada, a ninguna hora. La única puerta es
+   `VOZ_PERMITIR_EDGE=1`, a mano, y ningún workflow la pone.
+9. **`voz_precache.py`** usa la misma lógica que `voz.py`, **cuenta peticiones y no escenas**,
+   y precachea siempre **el largo pendiente más cercano de la parrilla**, sea el que le pasen
+   o no (ver abajo por qué).
+
+Veintiún casos con dobles de la API, todos en verde: los de la versión 9 adaptados (el de
+«`edge-tts` en el último intento» ahora comprueba que NO entra) y ocho nuevos. Entre ellas el caso real de hoy, el 429 sin apellido suelto y repetido, la
+caché con claves v1, el cliente sin reintentos y el precacheo con rechazos.
+
+## El calendario de esta semana: se cambian el sábado y el domingo
+
+**`MDS-017` no se publica hoy.** Lo decidió el codirector, y es lo correcto. Propuso publicarlo
+el domingo; **va el sábado 19 a las 19:00**, y el episodio largo pasa al **domingo 20 a las
+12:00**. El motivo es aritmético:
+
+- `MDH-007` tiene 41 escenas. El precacheo de miércoles a viernes da como mucho 27 peticiones,
+  y el sábado de madrugada queda 1 de la cuota del viernes. Con las 10 del sábado a las 08:23
+  UTC se llega a 38. **Sin mezclar voces no llega al sábado.**
+- El domingo, en cambio, tiene la cuota entera del sábado a las 01:13 UTC y la del domingo a
+  las 08:23 UTC: 27 + 10 + 10 = 47 peticiones para 41 escenas, más las dos que cambiará la
+  planificación el jueves al aplicar sus notas. El margen es corto: si la dirección v2 se
+  rechaza a menudo, puede no llegar. En ese caso el largo no sale y se vuelve a mover.
+- `MDS-017` necesita 2 peticiones (las escenas 1 a 4 ya están en la caché), y el sábado a las
+  01:13 UTC tiene la cuota de 3.1 del viernes casi libre.
+
+**Dos piezas nuevas para que el cambio funcione solo:**
+
+- **`parrilla.json` · `rehacer_video_id`.** El registro sigue diciendo que `MDS-017` está
+  subido (`9H2xEZnFeHA`, el vídeo de las dos voces, que el codirector ya ha borrado). Sin esto,
+  los tres crons del sábado lo darían por hecho. `cola.py` ignora esa subida concreta. En cuanto
+  llega la nueva, el registro cambia de identificador y la idempotencia vuelve a funcionar.
+- **`voz_precache.py` · el largo más cercano.** `voz_adelantada.yml` le pasa el guion del
+  próximo sábado, y el sábado 19 lleva un Short. Ahora precachea el largo pendiente más
+  cercano de la parrilla (`MDH-007`) y, si le sobra presupuesto, el siguiente.
+
+**Y un cambio de workflow recomendado, sin prisa (tarea del codirector):** que
+`voz_adelantada.yml` corra **todos los días** y no solo de martes a viernes. Esta semana no
+cambia nada: lo que precachea el sábado se lo quita a la producción del domingo de madrugada,
+que usa la misma cuota. Pero desde la semana que viene el largo tendrá siete días en vez de
+cuatro para llenarse, y dejará de ir justo.
+
+## La cascada de madrugada, que va a pasar y no es una avería
+
+Hoy se han gastado las dos cuotas del día de California. Esta noche, `MDS-018` fallará a las
+03:13 y a las 06:47 sin subir nada, y **saldrá a las 10:23** con la cuota nueva. Esa
+producción gasta parte de la cuota que usa la madrugada siguiente, así que durante unos días
+es probable que alguna producción vuelva a salir a las 10:23 en vez de a las 03:13. Se corrige
+sola en cuanto una producción de la mañana gasta poco. **La publicación de las 19:00 no está
+en riesgo.**
+
+## Lo que queda para el viernes 18, además de lo que ya estaba
+
+- Leer las fichas de `MDS-018` a `MDS-020`: cuántas escenas salieron con la dirección v2 y
+  cuántas con la mínima (`origen_voz`). **Si la v2 se rechaza tanto como la v1, se pasa a la
+  mínima para todo** y la dirección por papel se replantea.
+- Contar en `cache_voz/` cuántas escenas de `MDH-007` hay de verdad antes del domingo.
+- C36 (una llamada por vídeo) gana urgencia: con rechazos que cuestan cuota, una llamada por
+  vídeo es también un solo rechazo posible por vídeo.

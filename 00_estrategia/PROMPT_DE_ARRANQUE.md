@@ -109,7 +109,7 @@ confundirlas:
 | `.github/workflows/` (entera) | **PROTEGIDA SIEMPRE, también para la dirección** | No se puede escribir en remoto. Se le manda el fichero al codirector y lo crea él. **Sin excepciones y sin fecha de caducidad** |
 | `.github/workflows/producir.yml` | **Del codirector** | `GEMINI_API_KEY` ya está en «Sintetizar narración» (12/09). **Pendiente desde el 15/09:** una línea en el paso «Registrar lo publicado» para que suba también `03_produccion/cache_voz/` (C33.1). Ver `tareas/tareas_codirector_2026-09-15.md`, tarea 2 |
 | `.github/workflows/voz_prueba.yml` | **Entregado el 04/09, lo crea el codirector a mano** | Prueba de C7. `workflow_dispatch` solo, no escribe en el repositorio |
-| `.github/workflows/voz_adelantada.yml` | **Creado por el codirector el 14/09** (commit `8f9f778`) | C27. Corre de martes a viernes a las 09:00 UTC con `gemini-2.5-flash-preview-tts`. La copia documentada sigue en `07_pruebas/voz-adelantada-14-09/` |
+| `.github/workflows/voz_adelantada.yml` | **Creado por el codirector el 14/09** (commit `8f9f778`) | C27. Corre de martes a viernes a las 09:00 UTC con `gemini-2.5-flash-preview-tts`. **Pendiente desde el 15/09 (tarde): que corra todos los días** (tarea 5 de `tareas_codirector_2026-09-15.md`). La copia documentada sigue en `07_pruebas/voz-adelantada-14-09/` |
 | `docs/` (la web del proyecto) | **Del codirector y mío**, desde el 04/09 | Tres páginas estáticas que Google exige para publicar la aplicación de OAuth. **No es C10** |
 | `03_produccion/sonidos/` | **Entregada el 07/09** | Tres acentos CC0 con su `attribution_texts.md`. Ya están |
 | `00_estrategia/PROMPT_DIRECCIÓN.md` | **SOLO DEL CODIRECTOR** | Es su cuaderno entre sesiones. **Se lee siempre, no se edita ni se borra nunca**, ni por mí |
@@ -413,7 +413,31 @@ título, la revista o el DOI mal.
 → **Un resultado se copia del resumen, no se deduce de la ficha.** Regla nueva en el prompt de
 la planificación desde el 15/09.
 
+**29. Una librería puede reintentar por ti, y no avisa.** `google-genai` 2.x reintenta hasta
+cuatro veces en tres segundos cada 429, cada 5xx y cada corte de conexión. Con un límite de
+tres peticiones por minuto y diez al día, cada fallo nuestro eran hasta cuatro peticiones:
+eso agotaba la cuota y fabricaba los 429 «por minuto» que no cuadraban con nuestras esperas.
+Se vio por la cuenta, no por el error: 2.5 se agotó con cuatro escenas hechas.
+→ **Cuando una cuota no cuadra, cuenta las peticiones en el cable, no las llamadas en tu
+código.** Y cuando la cuota es pequeña, quita los reintentos de la librería y decídelos tú.
+
+**30. Un rechazo también es una petición.** Seis 400 de la dirección de actor v1 se comieron
+seis de las diez peticiones diarias de 3.1. Reintentar lo mismo que se acaba de rechazar no es
+insistir: es pagar dos veces por el mismo no.
+→ Ante un rechazo, **cambia la petición** (la dirección mínima), no la repitas.
+
 ## Dónde está el proyecto a 15 de septiembre de 2026
+
+**Por la tarde (versión 9.1, C33.2):** la reproducción manual de `MDS-017` falló sin subir nada.
+El registro enseñó tres cosas: la dirección v1 se rechazaba con un 400, los rechazos gastan
+cuota, y la librería reintentaba en silencio hasta cuatro veces. Arreglado: cliente sin
+reintentos, dirección v2 con el formato que pide Google, los rechazos pasan a la mínima, el 429
+sin apellido se resuelve esperando un minuto, y **`edge-tts` no entra nunca solo** (decisión del
+codirector). **`MDS-017` se publica el sábado 19 a las 19:00 y `MDH-007` el domingo 20 a las
+12:00**: el largo no llegaba al sábado con diez peticiones al día. Durante unos días es normal
+que alguna producción salga a las 10:23 en vez de a las 03:13.
+
+**Por la mañana:**
 
 **Una buena y una mala, y la sesión fue de «algo se ha roto».** Detalle en la **versión 9** de
 `PLAN_DE_CAMBIOS.md`.

@@ -182,11 +182,34 @@ def ya_subidos():
     acaba de hacer checkout de origin/main. El commit del registro lo hace el
     propio workflow al terminar, así que el segundo intento del día lo ve.
     """
+    return set(videos_subidos())
+
+
+def videos_subidos():
+    """{id: video_id} de lo que el registro da por subido."""
     try:
         datos = json.loads(REGISTRO.read_text(encoding="utf-8"))
     except Exception:
-        return set()
-    return {e.get("id") for e in datos.get("publicaciones", []) if e.get("video_id")}
+        return {}
+    return {e.get("id"): e.get("video_id")
+            for e in datos.get("publicaciones", []) if e.get("video_id")}
+
+
+def subido_de_verdad(ident, emision, subidos):
+    """¿Está `ident` subido, a efectos de no volver a producirlo?
+
+    C33.2 (15/09/2026): una emisión puede llevar `rehacer_video_id`, el
+    identificador de una subida anterior que NO cuenta — un vídeo que se retiró y
+    hay que volver a producir en otra fecha. MDS-017 se subió el 15/09 con dos
+    voces, se retiró, y se vuelve a producir el 19/09: sin esto, el registro lo
+    daría por subido y los tres crons de ese día no harían nada. En cuanto la
+    subida nueva llega, el registro tiene otro `video_id`, deja de coincidir y la
+    idempotencia de los tres crons vuelve a funcionar como siempre.
+    """
+    vid = subidos.get(ident)
+    if not vid:
+        return False
+    return vid != emision.get("rehacer_video_id")
 
 
 def trabajo(episodio, idioma, modo, fecha, horas, avisos, hora_fija=None):
@@ -261,9 +284,9 @@ def plan_del_dia(fecha=None, episodio=None, estado=None, rehacer=False):
     # Idempotencia: lo que ya está subido no se vuelve a producir. Es lo que
     # hace seguro tener varios intentos de cron al día.
     if not rehacer:
-        hechos = ya_subidos()
+        subidos = videos_subidos()
         antes = len(trabajos)
-        trabajos = [t for t in trabajos if t["id"] not in hechos]
+        trabajos = [t for t in trabajos if not subido_de_verdad(t["id"], emision, subidos)]
         if len(trabajos) < antes:
             avisos.append(f"{emision['episodio']}: {antes - len(trabajos)} trabajo(s) ya "
                           "estaban en registro_publicaciones.json con video_id; no se repiten. "

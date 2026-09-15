@@ -1,5 +1,10 @@
 # `voz_adelantada.yml` — diseño de C27-B, 13/09/2026
 
+> **Actualizado el 15/09/2026 (C33.2):** el workflow ya está creado (14/09). La copia de esta
+> carpeta pasa a correr **todos los días** (el codirector cambia la misma línea en la de
+> `.github/`), y `voz_precache.py` precachea siempre el largo pendiente más cercano de la
+> parrilla, no «el del próximo sábado». Lo de abajo es el diseño original.
+
 **Qué hay aquí:** el `.yml` completo de un workflow nuevo. Cópialo a
 `.github/workflows/voz_adelantada.yml` y súbelo cuando quieras encenderlo — esa
 carpeta está protegida contra escritura remota (regla 11.7), por eso se deja

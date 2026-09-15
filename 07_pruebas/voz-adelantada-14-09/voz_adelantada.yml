@@ -31,7 +31,14 @@ name: Voz adelantada (episodio largo)
 
 on:
   schedule:
-    # Martes a viernes (no de viernes a viernes, corregido el 12/09/2026):
+    # TODOS LOS DÍAS desde el 15/09/2026 (C33.2, versión 9.1 del plan): con
+    # diez peticiones al día, cuatro días no llenan un largo de 40 escenas. Y
+    # desde ese mismo día voz_precache.py no precachea «el guion del próximo
+    # sábado» sino el largo pendiente más cercano de la parrilla, así que el
+    # problema que explicaba el párrafo de abajo ya no existe: el guion que se
+    # le pasa es solo una pista. Lo de abajo se deja como historia.
+    #
+    # [HISTORIA] Martes a viernes (no de viernes a viernes, corregido el 12/09/2026):
     # el guion del sábado que viene no existe en el repositorio hasta que la
     # planificación del jueves lo escribe Y el codirector le hace push --
     # normalmente el viernes por la mañana (ver revision-diaria.md, sección
@@ -44,7 +51,7 @@ on:
     # 09:00 UTC: después de que hayan terminado los tres intentos de
     # producir.yml (el último es a las 08:23 UTC) y sin pisar la revisión
     # diaria de las 11:28 UTC.
-    - cron: "0 9 * * 2-5"
+    - cron: "0 9 * * *"
 
   workflow_dispatch:
     inputs:

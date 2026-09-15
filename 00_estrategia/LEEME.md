@@ -80,6 +80,10 @@ que mezclaba tres historias. La sesión del martes 15 (versión 9 del plan) cerr
   con las afirmaciones comprobadas en los artículos. Tres fichas de la bibliografía corregidas.
 - **C36 y C37, propuestos:** una llamada por vídeo con corte por palabras (se prueba el viernes)
   y un motor de voz sin cuota (sin fecha).
+- **Y por la tarde (versión 9.1, C33.2):** `MDS-017` no consiguió voz de Gemini al volver a
+  producirlo, y no se subió nada. La causa: la dirección de actor se rechazaba, los rechazos
+  gastan cuota y la librería reintentaba por su cuenta. Arreglado, y **`edge-tts` ya no entra
+  nunca solo**. `MDS-017` pasa al **sábado 19** y `MDH-007` al **domingo 20**.
 
 ## Estado a 14 de septiembre
 

@@ -79,3 +79,37 @@ fotos.
   el jueves 17.
 - **Lunes 21:** abrir la lectura de métricas por `MDS-016` (fuentes de tráfico y retención contra
   `MDS-015`) y comprobar en las fichas de la semana que `voz_mezclada` fue `false` las cinco veces.
+
+---
+
+## 6 · Tarde: la reproducción de `MDS-017` falla, y lo que enseña (versión 9.1, C33.2)
+
+El codirector volvió a producir `MDS-017` a mano con C33.1 ya en `origin/main` (commits
+`77c6922` y `7a00e7d`, 07:38 y 07:43 UTC). El paso de voz terminó con código 3 y no subió
+nada. El registro, que copió en `PROMPT_DIRECCIÓN.md`:
+
+- 3.1: 11 peticiones. Escenas 3, 4 y 5 rechazadas dos veces cada una con un 400 usando la
+  dirección v1; la 3 y la 4 salen con la mínima; la petición 11 da 429.
+- 2.5: 10 peticiones. Dos cortes de conexión; la escena 5 da 429 tres veces con un minuto de
+  espera entre ellas.
+- El bot guardó las ocho tomas en `cache_voz/` (commit `b405078`): **la línea de
+  `producir.yml` funciona**.
+
+El codirector borró en Studio el vídeo de las dos voces (`9H2xEZnFeHA`) y decidió que hoy no se
+publica nada: *«Mejor eso que colocar el vídeo con la voz edge-tts»*.
+
+**Lo comprobado aquí:** `google-genai` 2.23 reintenta por su cuenta 408, 409, 429, 5xx y cortes
+de conexión, hasta 4 peticiones en ~3 s (medido con un transporte simulado). Con
+`HttpRetryOptions(attempts=0, http_status_codes=[599])` es una sola. La librería convierte el 0
+en 1 al crear el cliente, pero con el cerrojo de códigos sigue sin reintentar nada.
+
+**Lo hecho:** C33.2 en `voz.py` y `voz_precache.py` (detalle en la versión 9.1); `cola.py` con
+`rehacer_video_id`; `parrilla.json` con `MDS-017` el sábado 19 y `MDH-007` el domingo 20;
+`CALENDARIO.md`; los dos prompts de las tareas; `PLAN_DE_CAMBIOS.md` 9.1,
+`PROMPT_DE_ARRANQUE.md` (trampas 29 y 30) y `LEEME.md`. Veintiún casos de prueba en verde.
+
+**No se ha podido comprobar** que la dirección v2 no se rechace: probarla cuesta cuota, y hoy
+no queda. Lo dirá `origen_voz` en las fichas de `MDS-018` a `MDS-020`.
+
+**Para el codirector:** segunda parte de `tareas_codirector_2026-09-15.md` (el `push` antes de
+mañana a las 10:00, mejor esta noche, y el cron diario de `voz_adelantada.yml`, sin prisa).
