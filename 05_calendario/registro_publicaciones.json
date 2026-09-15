@@ -361,6 +361,21 @@
       "musica": "cama_01_crying_over_you_christophermorrow.mp3",
       "subido_utc": "2026-09-14T01:32:59Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-017.es",
+      "episodio": "MDS-017",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "Por qué nos hacen gracia las cosquillas (y por qué no es un chiste)",
+      "guion": "05_calendario/guiones/MDS-017.es.json",
+      "video_id": "9H2xEZnFeHA",
+      "url": "https://youtu.be/9H2xEZnFeHA",
+      "estado": "private",
+      "publicar_en": "2026-09-15T17:00:00Z",
+      "musica": "cama_02_dusk_next_route.mp3",
+      "subido_utc": "2026-09-15T01:38:46Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-09-14T05:32:27Z"
