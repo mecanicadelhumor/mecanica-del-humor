@@ -22,7 +22,7 @@
     {
       "tipo": "enunciado",
       "icono": "i-bocadillos",
-      "texto": "El mismo chiste. Cada *viernes*.",
+      "texto": "Mismo chiste. Cada *viernes*.",
       "narracion": "Mi profesor de latín contaba un chiste cada viernes.",
       "pausa_despues_s": 1.35
     },

@@ -1,0 +1,80 @@
+name: Sincroniza el registro con YouTube
+
+# ---------------------------------------------------------------------------
+# C31 (00_estrategia/PLAN_DE_CAMBIOS.md, versión 7, 12/09/2026): que el estado
+# real de YouTube entre en el repositorio TODOS los días, no solo el lunes.
+#
+# POR QUÉ EXISTE: registro_publicaciones.json guarda el estado del MOMENTO DE
+# LA SUBIDA. En modo «automatico» eso es siempre «private» con `publicar_en`,
+# y nadie corrige el fichero cuando YouTube lo hace público a su hora — hoy
+# solo lo corrige metricas.py, y metricas.yml solo corre el lunes. Entre lunes
+# y lunes el registro puede llevar hasta seis días diciendo «private» de un
+# vídeo que ya es público, o al revés (un vídeo que el codirector publicó o
+# retiró a mano en Studio). La revisión diaria de las 11:30 lee ese fichero
+# como si fuera el mundo, y el caso MDS-011 (versión 7 del plan) es lo que
+# pasa cuando no lo es: seis días seguidos de una incidencia que no era tal.
+#
+# QUÉ HACE: llama a «python3 04_agentes/metricas.py --solo-registro», que
+# SOLO corrige registro_publicaciones.json contra la Data API de YouTube
+# (duración + estado de privacidad real de cada vídeo) y sale. No toca
+# metricas.json, no pide el ámbito yt-analytics.readonly y no compite con la
+# cuota ni con el horario de metricas.yml — los dos workflows pueden convivir
+# sin pisarse: si el lunes corren los dos, el segundo no encuentra nada que
+# corregir y no hace commit.
+#
+# CUÁNDO: dos pasadas de madrugada, después de que los tres crons de
+# producir.yml hayan podido subir el vídeo del día (el último es a las 08:23
+# UTC), y una tercera justo antes de que despierte la revisión diaria
+# (09:28 UTC = 11:28 en España, con margen). Así la revisión siempre lee un
+# registro corregido esa misma mañana, nunca uno de hace varios días.
+# ---------------------------------------------------------------------------
+
+on:
+  schedule:
+    - cron: "50 8 * * *"   # 08:50 UTC — después del último cron de producción (08:23)
+    - cron: "10 9 * * *"   # 09:10 UTC — segundo intento, por si el primero se retrasa
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sincroniza-registro
+  cancel-in-progress: false
+
+jobs:
+  sincroniza:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Dependencias
+        run: pip install --quiet google-api-python-client google-auth
+
+      - name: Corregir registro_publicaciones.json contra YouTube
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 04_agentes/metricas.py --solo-registro
+
+      # Un solo fichero, y es el mismo que corrige metricas.yml los lunes.
+      # Ver 00_estrategia/PROPIEDAD_DE_FICHEROS.md: lo escribe Actions, no la
+      # revisión diaria ni la planificación.
+      - name: Commit si hubo cambios
+        run: |
+          git config user.name  "Mecánica del Humor"
+          git config user.email "mecanicadelhumor@gmail.com"
+          git add 05_calendario/registro_publicaciones.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios: el registro ya coincidía con YouTube."
+          else
+            git commit -m "registro: sincronizado con YouTube $(date -u +%Y-%m-%d)"
+            git pull --rebase --autostash origin main
+            git push
+          fi

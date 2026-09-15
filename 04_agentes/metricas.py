@@ -173,6 +173,56 @@ def ficha_youtube(yt, ids):
     return fuera
 
 
+def corregir_registro(reg, fichas):
+    """Corrige `estado` en cada entrada de `reg` con lo que diga `fichas`
+    (video_id -> {privacidad, duracion_s}), si no coincide. Muta `reg` in
+    situ y devuelve cuántas entradas ha corregido.
+
+    Función pura y sin red aparte de lo ya pedido: separada de
+    `sincronizar_registro()` para poder probarla con un `fichas` de mentira.
+    """
+    corregidos = 0
+    for p in reg:
+        real = (fichas.get(p.get("video_id")) or {}).get("privacidad")
+        if real and real != p.get("estado"):
+            print(f"  registro corregido: {p['id']} {p.get('estado')} -> {real}")
+            p["estado"] = real
+            corregidos += 1
+    return corregidos
+
+
+def sincronizar_registro(yt, registro):
+    """C31 (12/09/2026): la parte de este script que corrige
+    `registro_publicaciones.json` con el estado real de YouTube, separada de
+    `main()` para que se pueda llamar sola.
+
+    Por qué existe aparte: hasta hoy solo se ejecutaba dentro de `main()`,
+    que necesita el ámbito `yt-analytics.readonly` y solo corre en el cron
+    del lunes (`metricas.yml`). Entre lunes y lunes el registro puede llevar
+    varios días diciendo `private` de un vídeo que el codirector ya publicó
+    a mano — el caso de `MDS-011`, que la revisión diaria marcó como
+    incidencia seis días seguidos por leer el registro como si fuera el
+    mundo. Esta función solo necesita `youtube.force-ssl` (la Data API, no
+    la de analítica) y no toca `metricas.json`, así que un workflow nuevo y
+    ligero puede llamarla todos los días sin esperar al lunes ni competir
+    por la cuota de analítica. La llama `main()`, y la puede llamar aparte
+    `--solo-registro` o un script propio.
+
+    Escribe el fichero solo si algo cambió. Devuelve `(corregidos, fichas)`:
+    cuántas entradas ha corregido y el `{video_id: {privacidad, duracion_s}}`
+    que ya ha pedido, para que `main()` no tenga que volver a pedirlo.
+    """
+    reg = registro["publicaciones"]
+    fichas = ficha_youtube(yt, [p.get("video_id") for p in reg])
+    corregidos = corregir_registro(reg, fichas)
+    if corregidos:
+        registro["_estado_leido_utc"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        REGISTRO.write_text(json.dumps(registro, ensure_ascii=False, indent=1) + "\n",
+                            encoding="utf-8")
+        print(f"  {corregidos} estado(s) puestos al día en registro_publicaciones.json")
+    return corregidos, fichas
+
+
 def fila(ya, vid, desde, hasta):
     """Una fila de métricas por vídeo. Devuelve ceros si aún no hay datos.
 
@@ -393,10 +443,28 @@ def leer_export_studio():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--desde", default=None, help="YYYY-MM-DD; por defecto, la fecha de subida")
+    ap.add_argument("--solo-registro", action="store_true",
+                     help="C31: solo corrige registro_publicaciones.json contra el estado "
+                          "real de YouTube (Data API) y sale. No toca metricas.json ni pide "
+                          "el ámbito de analítica — pensado para un workflow diario, no solo "
+                          "el del lunes.")
     a = ap.parse_args()
 
     from googleapiclient.discovery import build
     cred = credenciales()
+
+    if a.solo_registro:
+        # No se llama a comprobar_ambitos(): esta vía no necesita
+        # yt-analytics.readonly, y exigirlo aquí volvería a acoplar la
+        # corrección diaria del registro a un ámbito que es solo de la
+        # lectura de métricas del lunes.
+        yt = build("youtube", "v3", credentials=cred, cache_discovery=False)
+        registro = json.loads(REGISTRO.read_text(encoding="utf-8"))
+        corregidos, _fichas = sincronizar_registro(yt, registro)
+        if not corregidos:
+            print("Sin cambios: el registro ya coincidía con YouTube.")
+        return
+
     # Se refresca aquí, a propósito, antes de construir nada: así un token con
     # los permisos mal puestos se detecta en una línea legible y no veinte
     # llamadas después, en mitad de un rastro de pila. Devuelve False —no
@@ -416,20 +484,8 @@ def main():
     # registro, no solo de los que se van a medir: es una llamada por cada 50
     # vídeos y arregla de paso el registro, que se queda con el estado de la
     # subida y nunca se entera de que el codirector le dio a publicar.
-    fichas = ficha_youtube(yt, [p.get("video_id") for p in reg])
-
-    corregidos = 0
-    for p in reg:
-        real = (fichas.get(p.get("video_id")) or {}).get("privacidad")
-        if real and real != p.get("estado"):
-            print(f"  registro corregido: {p['id']} {p.get('estado')} -> {real}")
-            p["estado"] = real
-            corregidos += 1
-    if corregidos:
-        registro["_estado_leido_utc"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-        REGISTRO.write_text(json.dumps(registro, ensure_ascii=False, indent=1) + "\n",
-                            encoding="utf-8")
-        print(f"  {corregidos} estado(s) puestos al día en registro_publicaciones.json")
+    # (C31, 15/09: extraído a sincronizar_registro() para poder llamarlo solo.)
+    _corregidos, fichas = sincronizar_registro(yt, registro)
 
     if not hay_analitica:
         print("::error::Sin el ámbito «yt-analytics.readonly» no hay métricas que "
