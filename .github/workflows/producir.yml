@@ -347,6 +347,7 @@ jobs:
         run: |
           python3 03_produccion/pipeline/registrar.py plan.json build
           git add -A 05_calendario/registro_publicaciones.json 05_calendario/qa
+          if [ -d 03_produccion/cache_voz ]; then git add -A 03_produccion/cache_voz; fi
           if ! git diff --cached --quiet; then
             git config user.name  "Mecánica del Humor (bot)"
             git config user.email "mecanicadelhumor@users.noreply.github.com"
