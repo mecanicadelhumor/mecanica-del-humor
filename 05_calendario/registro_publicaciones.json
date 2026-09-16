@@ -376,6 +376,21 @@
       "musica": "cama_02_dusk_next_route.mp3",
       "subido_utc": "2026-09-15T01:38:46Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-018.es",
+      "episodio": "MDS-018",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Un profesor gracioso enseña mejor? Depende de qué vaya el chiste",
+      "guion": "05_calendario/guiones/MDS-018.es.json",
+      "video_id": "6ahST7d-LEs",
+      "url": "https://youtu.be/6ahST7d-LEs",
+      "estado": "private",
+      "publicar_en": "2026-09-16T17:00:00Z",
+      "musica": "cama_03_haru_lofi_roa.mp3",
+      "subido_utc": "2026-09-16T05:08:25Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-09-14T05:32:27Z"
