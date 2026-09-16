@@ -69,3 +69,6 @@ cuánto puede durar la mentira, no si puede existir.
 
 *(Respuesta del codirector, cuando la haya, se añade aquí debajo con fecha y
 firma — regla de `07_pruebas/LEEME.md`.)*
+
+# Respuesta del codirector:
+Hecho hoy 15/09 (subido el workflow también a su carpeta adecuada).

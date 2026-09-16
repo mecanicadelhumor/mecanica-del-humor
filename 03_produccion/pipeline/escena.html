@@ -29,7 +29,7 @@
     opacity:.55;
   }
   #vineta{
-    position:absolute;inset:0;
+    position:absolute;inset:0;pointer-events:none;
     background:radial-gradient(ellipse at 50% 45%,transparent 35%,rgba(0,0,0,.55) 100%);
   }
   /* En vertical la elipse de la viñeta se estira sobre 1920 px de alto y deja
@@ -347,8 +347,8 @@
 <body>
 <div id="avance"><i></i></div>
 <div id="reticula"></div>
-<div id="vineta"></div>
 <div id="escena"></div>
+<div id="vineta"></div>
 <div id="marco"></div>
 <svg id="engranaje" viewBox="0 0 120 120" width="104" height="104">
   <g fill="none" stroke="#FFB020" stroke-width="4">
@@ -1010,6 +1010,23 @@ function pintar(t){
   // (T0 + t), no del de la escena: así no se reinician en cada corte, que es
   // lo que delataba el pase de diapositivas.
   const T = T0 + t;
+  // P1 · profundidad (16/09/2026): el plano de fondo (la retícula) deriva un
+  // 1,5 % de la altura en el sentido CONTRARIO al de entrada del texto. Las
+  // unidades entran subiendo —translateY de +26px a 0, ver el bucle de
+  // arriba, dy = (1-p)*26—, así que el fondo baja despacio mientras la
+  // escena se asienta: la lectura es "el texto sube hacia la cámara, el
+  // fondo se queda atrás". Va con «t» (el tiempo de ESTA escena, la misma
+  // curva `suave()` que ya usa la entrada), no con T, porque es el gesto de
+  // entrada de CADA escena, no una deriva continua del vídeo entero. Es un
+  // transform en un elemento que ya no pinta letra ninguna (compuesto en su
+  // propia capa por el navegador): coste de render nulo, igual que pedía el
+  // encargo. Independiente de la deriva diagonal de más abajo (2), que es
+  // background-position sobre la trama y solo existe en vertical.
+  const reticula = document.getElementById("reticula");
+  if (reticula){
+    const HPX = VERTICAL ? 1920 : 1080;
+    reticula.style.transform = `translateY(${(0.015*HPX*suave(Math.min(1, t/entrada))).toFixed(2)}px)`;
+  }
   if (VERTICAL){
     // 1. Barra de avance. Es lo único que se mueve el 100 % del tiempo.
     if (TOTAL > 0){
@@ -1018,9 +1035,10 @@ function pintar(t){
     }
     // 2. Deriva de la retícula: 2,2 px/s en diagonal sobre una trama de 64 px.
     //    Da vuelta completa cada 29 s, así que nunca se ve "saltar". Es
-    //    background-position, no transform: no repinta el elemento entero.
+    //    background-position, no transform: no repinta el elemento entero,
+    //    y no choca con el transform de arriba (propiedades distintas).
     //    El barrido rápido del 18/08 mareaba; esto es un octavo de aquello.
-    const r = document.getElementById("reticula");
+    const r = reticula;
     if (r){ const d = (T*2.2) % 64; r.style.backgroundPosition = `${d.toFixed(2)}px ${(d*0.6).toFixed(2)}px`; }
     // 3. Acercamiento lento del bloque de contenido: 2,2 % a lo largo de la
     //    escena. Es la «respiración» que C6.3 quería hacer con zoompan de

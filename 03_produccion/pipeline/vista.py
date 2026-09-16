@@ -85,12 +85,18 @@ def instante_pleno(n_uds, dur):
 def escenas_de(guion_path, cuales):
     g = json.loads(Path(guion_path).read_text(encoding="utf-8"))
     idioma = g.get("idioma", "es")
+    formato = g.get("formato", "largo")
     fuera = []
     for i, e in enumerate(g["escenas"], 1):
         if cuales and i not in cuales:
             continue
         d = dict(e)
         d["n"], d["idioma"] = i, idioma
+        # 16/09/2026 · sin esto, cargar() nunca veía «corto» y pintaba
+        # cualquier Short como si fuera el episodio largo (data-fmt se
+        # quedaba en "h", ver escena.html línea ~882): el «espejo» llevaba
+        # desde su creación (04/09) sin poder enseñar un Short de verdad.
+        d["formato"] = formato
         d["marca"] = "Humor Mechanics" if idioma == "en" else "Mecánica del Humor"
         d["ref"] = e.get("fuente", "") or ""
         d.setdefault("duracion_s", 8.0)
@@ -107,14 +113,21 @@ def main():
                     help="0.5 = 960x540, suficiente para juzgar y ligero para el repositorio")
     a = ap.parse_args()
 
+    # Mismo mapeo que LIENZO en render.py: el muestrario de los nueve tipos
+    # siempre fue pensado en horizontal (no todos los tipos tienen variante
+    # vertical), así que solo cambia de lienzo cuando se pide un guion real.
+    LIENZO = {"largo": (1920, 1080), "corto": (1080, 1920)}
     if a.guion:
         cuales = {int(x) for x in a.escenas.split(",")} if a.escenas else None
         escenas = escenas_de(a.guion, cuales)
         prefijo = Path(a.guion).name.split(".")[0]
+        formato_guion = json.loads(Path(a.guion).read_text(encoding="utf-8")).get("formato", "largo")
+        ancho, alto = LIENZO.get(formato_guion, LIENZO["largo"])
     else:
         escenas = [dict(e, n=i, idioma="es", marca="Mecánica del Humor", ref="A01",
                         duracion_s=8.0) for i, e in enumerate(MUESTRARIO, 1)]
         prefijo = "muestrario"
+        ancho, alto = LIENZO["largo"]
 
     salida = Path(a.salida)
     salida.mkdir(parents=True, exist_ok=True)
@@ -123,7 +136,7 @@ def main():
         nav = p.chromium.launch(args=["--force-color-profile=srgb",
                                       "--font-render-hinting=none",
                                       "--disable-lcd-text", "--hide-scrollbars"])
-        pag = nav.new_page(viewport={"width": 1920, "height": 1080},
+        pag = nav.new_page(viewport={"width": ancho, "height": alto},
                            device_scale_factor=a.escala)
         pag.goto(ESCENA_HTML.as_uri())
         for e in escenas:
