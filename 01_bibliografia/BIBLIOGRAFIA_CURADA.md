@@ -384,23 +384,23 @@ Revision de referencia: deteccion de incongruencia (temporo-parietal) + resoluci
 ### `F03` ★★ Two neural networks for laughter: A tractography study
 
 **Gerbella, M. et al.** (2021) · *Cerebral Cortex*  
-DOI: [`10.1093/cercor/bhaa264`](https://doi.org/10.1093/cercor/bhaa264) ⚠️ por verificar  
+DOI: [`10.1093/cercor/bhaa264`](https://doi.org/10.1093/cercor/bhaa264)
 Tipo: articulo
 
 Dos vias distintas para la risa espontanea y la voluntaria.
 
-### `F04` ★★ The role of the temporo-parietal junction and the medial prefrontal cortex in humor comprehension
+### `F04` ★★ Functional Brain Connectivity at Rest Changes After Working Memory Training
 
-**Chan, Y.-C. et al.** (2012) · *NeuroImage / Human Brain Mapping*  
-DOI: [`10.1002/hbm.21444`](https://doi.org/10.1002/hbm.21444) ⚠️ por verificar  
+**Jolles et al.** (2013) · *NeuroImage / Human Brain Mapping*  
+DOI: [`10.1002/hbm.21444`](https://doi.org/10.1002/hbm.21444)
 Tipo: articulo
 
 Base neural de las dos fases del chiste.
 
-### `F05` ★ Development of the humor styles and the neural correlates of humor appreciation in children
+### `F05` ★ Neural correlates of humor detection and appreciation in children
 
 **Neely, M. N. et al.** (2012) · *Cerebral Cortex*  
-DOI: [`10.1093/cercor/bhr223`](https://doi.org/10.1093/cercor/bhr223) ⚠️ por verificar  
+DOI: [`10.1523/jneurosci.4172-11.2012`](https://doi.org/10.1523/jneurosci.4172-11.2012)
 Tipo: articulo
 
 Como madura el humor en la infancia: util para 'el humor se aprende'.
