@@ -1,0 +1,2 @@
+- Estrenamos banco de imágenes con créditos ya aptas para ser usadas.
+- Hemos modificado y ampliado el catálogo de música disponible en el canal a algunas canciones más para mejorar la rotación. También con sus créditos.
