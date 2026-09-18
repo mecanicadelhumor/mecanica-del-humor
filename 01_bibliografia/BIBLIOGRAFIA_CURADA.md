@@ -206,10 +206,10 @@ Tipo: articulo
 
 Como se mide objetivamente 'ser gracioso' (tarea de pies de foto puntuada por jueces). Da al canal un test replicable en pantalla.
 
-### `C05` ★★ Personality traits of professional comedians compared to amateurs and non-comedians
+### `C05` ★★ Personality traits, intelligence, humor styles, and humor production ability of professional stand-up comedians compared to college students
 
-**Greengross, G.; Martin, R. A.; Miller, G.** (2012) · *Psychology of Aesthetics, Creativity, and the Arts*  
-DOI: [`10.1037/a0026994`](https://doi.org/10.1037/a0026994) ⚠️ por verificar  
+**Greengross, G.; Martin, R. A.; Miller, G.** (2012) · *Psychology of Aesthetics, Creativity, and the Arts*, 6(1), 74-82  
+DOI: [`10.1037/a0025774`](https://doi.org/10.1037/a0025774) · corregido el 18/09/2026 (el título y el DOI de la ficha eran de otro artículo) y verificado contra la página de la Aberystwyth University y el resumen de Ovid  
 Tipo: articulo
 
 Perfil psicologico del comico profesional. Video de gran atractivo.
@@ -446,8 +446,8 @@ Tamanos de efecto reales del humor en el trabajo. Antidoto contra la exageracion
 
 ### `G03` ★★ Does humor benefit health in retirement? Exploring humor as a moderator
 
-**varios** (2015) · *Europe's Journal of Psychology*  
-Tipo: articulo
+**Freeman, G. P.; Ventis, W. L.** (2010) · *Europe's Journal of Psychology*  
+Tipo: articulo · fecha y autores corregidos el 18/09/2026 (la ficha decía 2015 y «varios»), verificado contra la página del artículo en ejop.psychopen.eu
 
 Acceso abierto. Humor y salud sin sobreventa.
 
