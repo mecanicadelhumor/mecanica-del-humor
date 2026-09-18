@@ -68,6 +68,21 @@ Hoy quiero tratar:
 
 ---
 
+## Cuándo me escribe el codirector (decidido el 18/09/2026)
+
+Lo preguntó él el 17/09: si conviene escribirme **antes** de la revisión diaria, para que me dé
+tiempo a cambiarle el prompt, o **después**, para tener sus resultados.
+
+**Después, siempre, y con un solo mensaje.** La revisión diaria escribe `ESTADO.md` y su
+bitácora a las 11:30 de España, y eso es la mitad de lo que leo al arrancar. Escribiéndome
+antes, arranco con la foto de ayer.
+
+**Y el miedo que había detrás no se sostiene: cambiar el prompt de una tarea programada no tiene
+prisa**, porque la tarea corre todos los días — un cambio escrito el viernes entra en la del
+sábado. **Lo único con reloj es la producción**, que arranca a las 01:13 UTC (03:13 en España):
+un arreglo que tenga que salir en el vídeo de mañana está en `origin/main` antes de esa hora.
+Ese es el reloj, no el de la revisión.
+
 ## Una regla nueva: el nombre no va en el repositorio
 
 Desde el 7 de septiembre, **el nombre propio del codirector no se escribe en
@@ -112,6 +127,8 @@ confundirlas:
 | `.github/workflows/voz_adelantada.yml` | **Creado por el codirector el 14/09** (commit `8f9f778`) | C27. Corre de martes a viernes a las 09:00 UTC con `gemini-2.5-flash-preview-tts`. **Pendiente desde el 15/09 (tarde): que corra todos los días** (tarea 5 de `tareas_codirector_2026-09-15.md`). La copia documentada sigue en `07_pruebas/voz-adelantada-14-09/` |
 | `docs/` (la web del proyecto) | **Del codirector y mío**, desde el 04/09 | Tres páginas estáticas que Google exige para publicar la aplicación de OAuth. **No es C10** |
 | `03_produccion/sonidos/` | **Entregada el 07/09** | Tres acentos CC0 con su `attribution_texts.md`. Ya están |
+| `01_bibliografia/data/semillas.json` | **Fuente de verdad de la bibliografía**, desde el 18/09 | `BIBLIOGRAFIA_CURADA.md` **se genera desde aquí** (`scripts/generar_md.py`). Una corrección que solo viva en el `.md` la borra la próxima regeneración. Lo comprueba `04_agentes/validar_bibliografia.py` |
+| Cuentas de TikTok e Instagram de la marca | **Trámite abierto el 18/09** (C41) | Las dos APIs exigen auditoría/revisión de la app para publicar en abierto: días o semanas. Se empieza ya y **no se publica hasta que C38 haya dado su primera medida**. Ver `tareas/tareas_codirector_2026-09-18.md`, tarea 2 |
 | `00_estrategia/PROMPT_DIRECCIÓN.md` | **SOLO DEL CODIRECTOR** | Es su cuaderno entre sesiones. **Se lee siempre, no se edita ni se borra nunca**, ni por mí |
 
 **Y la consecuencia práctica de la autorización general, que es la que importa:** desde el
@@ -131,10 +148,10 @@ arrastraba defectos. Solo puede añadir lo que verifique contra la fuente.
 
 ---
 
-## Seis trampas en las que ya se ha caído
+## Las trampas en las que ya se ha caído
 
-No son anécdotas: cada una costó tiempo o un vídeo, y las cuatro se repiten
-solas si nadie las tiene delante.
+No son anécdotas: cada una costó tiempo o un vídeo, y todas se repiten solas si nadie las
+tiene delante. Son treinta y cuatro a 18/09/2026, y la lista crece porque se lee.
 
 **1. Cada documento daba por supuesto que el movimiento lo ponía otro.**
 Los subtítulos quemados se retiraron el 20/08; la respiración de zoom ya estaba
@@ -425,6 +442,79 @@ código.** Y cuando la cuota es pequeña, quita los reintentos de la librería y
 seis de las diez peticiones diarias de 3.1. Reintentar lo mismo que se acaba de rechazar no es
 insistir: es pagar dos veces por el mismo no.
 → Ante un rechazo, **cambia la petición** (la dirección mínima), no la repitas.
+
+**31. Un máximo escrito como techo se usa como objetivo.** Es la trampa 20 por el otro lado. La
+regla 20 decía que un mínimo escrito como suelo se usa como techo; esto es lo simétrico y salió
+igual de caro. `validar_guion.py` ponía el techo del Short en 55 s y cada serie declaraba su
+propia duración —30, 35, 40 o 45— desde agosto. **Los veinticinco Shorts del canal tienen entre
+88 y 120 palabras, media 108**, dijera lo que dijera su serie: nadie escribía a la serie, todos
+escribían al techo. Lo que rellenaba la diferencia era explicación entre el remate y el cierre,
+que es lo que el codirector describió dos días seguidos como «forzado entre el nudo y el
+desenlace».
+→ **Cuando pongas un máximo, pregúntate qué pasa si todo el mundo escribe justo por debajo.** Si
+la respuesta es «entonces el número de al lado no sirve de nada», el que hay que hacer cumplir
+es el de al lado.
+
+**32. Una regla se corrigió a medias y la otra mitad estuvo rota seis días.** El 12/09 la regla
+13 dejó de contar risas y pasó a medir distancias — **solo para el episodio largo**. El Short se
+quedó con «una, y va primero», que es el mismo suelo-usado-como-techo que se acababa de
+arreglar. Es la trampa 25 (una regla escrita para un formato no protege al otro) cometida sobre
+la corrección de otra trampa.
+→ Cuando corrijas una regla que cuenta cosas, **haz la lista de los formatos a los que se
+aplica y recórrela entera** antes de dar la corrección por hecha.
+
+**33. Un fichero generado que se edita a mano miente hasta el día en que se vuelve a generar.**
+`BIBLIOGRAFIA_CURADA.md` lo produce `scripts/generar_md.py` desde `data/semillas.json`, y su
+cabecera lo dice en la línea cuatro. Nadie lo había respetado nunca: el 18/09 había **cinco
+fichas corregidas solo en el `.md`** —`C05`, `E02`, `F04`, `F05` y `G03`—, dos de ellas
+arregladas esa misma mañana. Una regeneración las borraba las cinco sin un error y sin un aviso.
+→ Es la trampa 4 con otra cara. **Antes de corregir un fichero, mira si lo escribe alguien.** Y
+si un fichero dice en su cabecera cómo hay que editarlo, esa frase es una comprobación que falta,
+no una nota de estilo: escríbela (`04_agentes/validar_bibliografia.py`).
+
+**34. Una comprobación que no se puede ejecutar es una intención.** El arreglo natural de la
+trampa 33 era resolver cada DOI contra Crossref y comparar el título. **El proxy de egreso de
+estos contenedores rechaza `api.crossref.org`** (comprobado el 18/09), así que ese script
+habría quedado escrito y muerto. Lo que sí corre sin red es comparar el `.md` contra el JSON, y
+eso es lo que se ha escrito; la parte que necesita internet vive en el prompt de la revisión
+diaria, que tiene `WebFetch` y ya la hizo a mano ese mismo día.
+→ **Antes de escribir una comprobación, comprueba que su entorno puede ejecutarla.** Es la
+trampa 2 aplicada a la red en vez de al coste.
+
+## Dónde está el proyecto a 18 de septiembre de 2026
+
+**Los números se mueven por primera vez.** `MDS-016` **1.280 visualizaciones**, `MDS-019` **182**
+y `MDS-018` por encima de 100, contra una mediana de 10 en los quince anteriores. Cero
+suscriptores todavía.
+
+La sesión del viernes 18 (**versión 10** del plan, la que manda) salió del mismo aviso repetido
+dos días —«me cuesta seguir el hilo», «forzado entre el nudo y el desenlace»— sobre dos guiones
+que ya se habían reescrito contra las tres pruebas de cosido. Lo que apareció al medirlo:
+
+- **C38 · el Short se escribe a la duración de su serie y el remate no cae antes del segundo
+  10.** Las dos, error en `validar_guion.py`. `PPM` pasa de 150 a 130 (medido). Dos duraciones
+  de serie suben (30→35 y 35→40) porque las de agosto son anteriores a que el cierre honesto
+  fuera obligatorio en Shorts y no caben. **Los cinco Shorts de la semana del 21, reescritos sin
+  añadir ni una afirmación nueva.** `MDS-017` va exento, y la exención vive en el código.
+- **C38.1 · la risa escrita.** `voz.py` la vetaba en todas las escenas, así que la mitad de la
+  regla 13.1 no se podía ejercer. Se pide con `"risa": true`, una por Short, nunca en la escena
+  1, el remate ni el cierre.
+- **C39 · la bibliografía tiene dos ficheros** y el bueno no era el que se miraba. Ver trampa 33.
+- **C40 · el marketing externo es el 5,4 % del tráfico.** Feed 54,6 %, búsqueda 27,7 %. La frase
+  de `LEEME.md` «la única superficie que responde es la búsqueda» **está corregida**: dejó de ser
+  cierta en `MDS-007`.
+- **C41 · TikTok y Reels reabiertos.** Las dos APIs exigen auditoría (días a semanas). Se empieza
+  el trámite ya; se publica cuando C38 haya dado su primera medida. El premio no es la
+  exposición: es poder separar «el contenido no funciona» de «no nos están enseñando» antes del
+  15 de noviembre.
+
+**Lo que espera al codirector:** `tareas/tareas_codirector_2026-09-18.md` — el `push` antes del
+lunes de madrugada, el trámite de TikTok, el DOI de `E02`, y los enlaces del banco de fotos, que
+siguen pendientes del 15/09.
+
+**Lo que queda mirado y sin resolver:** la caché de voz de `MDH-007` lleva dos días clavada en 18
+de 41 escenas y no hay commit de precacheo hoy. El domingo sale, pero sin margen para rechazos.
+Hay que volver a contarlo mañana.
 
 ## Dónde está el proyecto a 15 de septiembre de 2026
 

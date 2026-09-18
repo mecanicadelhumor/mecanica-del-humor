@@ -3,15 +3,18 @@
 **Versión 3 · 21 de agosto de 2026** — con las decisiones tomadas y la fase 1 y
 media de la fase 2 ya escritas en el repositorio.
 
-> ⚠️ **La versión que manda es la 8, al final de este documento (14 de
-> septiembre).** Las anteriores siguen vigentes en todo lo que la 8 no corrija.
+> ⚠️ **La versión que manda es la 10, al final de este documento (18 de
+> septiembre).** Las anteriores siguen vigentes en todo lo que la 10 no corrija.
 > En corto: la **4** partió la escalera de métricas en dos (Shorts y largo); la
 > **5** puso la primera barrera antes de publicar y cambió el rumbo de C7; la
 > **6** abrió C25 (la presentación) y fijó en C26 la fecha en la que se decide si
 > el canal sigue; la **7** reescribió los dos guionistas y arregló las
-> comprobaciones que miraban donde no tocaba; y la **8** dirige la voz escena a
+> comprobaciones que miraban donde no tocaba; la **8** dirige la voz escena a
 > escena (C33) y **revierte el descarte de las imágenes** que había hecho C25
-> (C34). **Si vas a decidir algo con este plan, lee la versión 8 antes.**
+> (C34); la **9** puso una sola voz por vídeo (C33.1 y C33.2); y la **10** le pone
+> reloj al Short —la duración de su serie y el remate en el segundo doce (C38)— y
+> contesta a TikTok, Reels y marketing (C40 y C41).
+> **Si vas a decidir algo con este plan, lee la versión 10 antes.**
 
 Este documento es **ejecutable**. Cada cambio trae qué archivos toca, qué tiene que ser
 cierto para darlo por hecho, y qué no hay que hacer. El razonamiento está en
@@ -3214,3 +3217,414 @@ en riesgo.**
 - Contar en `cache_voz/` cuántas escenas de `MDH-007` hay de verdad antes del domingo.
 - C36 (una llamada por vídeo) gana urgencia: con rechazos que cuestan cuota, una llamada por
   vídeo es también un solo rechazo posible por vídeo.
+
+---
+
+# Versión 10 · 18 de septiembre de 2026 — el reloj del Short
+
+Sesión de viernes: revisar lo que la planificación escribió el jueves. Se ha convertido en
+otra cosa porque la dirección trajo el mismo aviso dos días seguidos, y al ir a mirarlo
+aparece medido.
+
+**Lo que dijo el codirector.** El 16/09: *«me sigue costando entender el hilo del short. No me
+convence mucho la narrativa de cada short y tenemos que trabajar en ella para mejorarla, y que
+el inicio, nudo y desenlace estén mucho mejor hilvanados.»* El 17/09: *«me sigue pareciendo un
+poco forzado el guion entre el nudo y el desenlace.»* Los dos vídeos —`MDS-018` y `MDS-019`—
+son de los cuatro que se reescribieron el 15/09 contra las tres pruebas de cosido. **Las
+pruebas funcionaron y el problema sigue**, que es la señal de que estaban midiendo otra cosa.
+
+**Y los números, que esta semana por fin se mueven:** `MDS-016` **1.280 visualizaciones**,
+`MDS-019` **182** y `MDS-018` por encima de 100. Contra una mediana de 10 en los quince
+anteriores y cero por encima de 50. Sigue sin haber suscriptores y sigue sin ser rentable,
+pero por primera vez hay dos vídeos consecutivos por encima del umbral que el propio codirector
+puso como condición de supervivencia.
+
+---
+
+## Lo que se anula, lo que se mantiene y lo que se amplía
+
+| Documento o decisión | Estado desde hoy |
+|---|---|
+| Regla 13 · «En un Short, una [risa], y va primero» | **AMPLIADA** por la regla 13.2: el remate no cae antes del segundo 10, y el Short se escribe a la duración de su serie |
+| `guionista_corto.md` · «entre 18 y 55 segundos» | **ANULADO como objetivo.** 55 s sigue siendo el techo del formato; el objetivo pasa a ser la duración de la serie ±12 % (prueba 4) |
+| Duración de «Ríete primero, te explico después» (30 s) y de «Esto no tiene gracia y esto sí» (35 s) | **CORREGIDAS** a 35 s y 40 s. Razón abajo |
+| `validar_guion.py` · `PPM = 150` | **ANULADO.** Pasa a 130, medido sobre los seis Shorts con expediente de calidad |
+| Regla 13.1 · «una risa escrita en el guion sigue permitida» | **SE MANTIENE**, y desde hoy **se puede ejercer**: `voz.py` la vetaba en todas las escenas sin excepción (C38.1) |
+| Versión 9 · los cuatro Shorts reescritos el 15/09 | **SE MANTIENEN** tal cual. `MDS-017` va exento de C38 (se publica mañana, ya renderizado) |
+| C34 (imagen, duotono ámbar), señalado para hoy | **APLAZADO al lunes 21.** Sigue bloqueado por el enlace de origen de cada foto del banco, pedido el 15/09 y sin contestar. Y hoy la cola es otra |
+| C36 (una llamada por vídeo), a probar hoy | **APLAZADO al lunes 21.** Sin diseño escrito, y la dirección v2 no se está rechazando (0 de 18 escenas con dirección mínima), así que la urgencia bajó |
+| C13 · TikTok e Instagram, «solo si se pasa el peldaño 1» | **REABIERTO.** Se empieza el trámite hoy; ver C41 |
+| C26 · la decisión del 15 de noviembre | **SE MANTIENE** sin cambios. Y el punto de control del **27 de septiembre**, también |
+
+---
+
+## C38 · El Short se escribe a un reloj, y el remate cae en el segundo doce
+
+**Hecho hoy.** `04_agentes/validar_guion.py`, `04_agentes/prompts/guionista_corto.md`,
+`04_agentes/esquema_guion.json`, `00_estrategia/REGLAS.md` (regla 13.2) y los cinco guiones de
+la semana del 21.
+
+### Lo medido, que es todo el argumento
+
+Cada serie declara una duración desde agosto: 30, 35, 40 o 45 segundos. **Los veinticinco
+Shorts del repositorio tienen entre 88 y 120 palabras, con una media de 108.** Las seis de
+«Ríete primero, te explico después» —serie de 30 segundos— tienen 101, 103, 106, 111, 111 y
+113 palabras. El exceso sobre lo declarado va del 8 % al 98 %, y el patrón es exacto: cuanto
+más corta dice ser la serie, más se pasa.
+
+**Lo constante no es la serie: son las 108 palabras**, que es lo que cabe justo por debajo del
+techo del formato. Es decir, **el máximo se ha usado como objetivo**, y lo que rellena la
+diferencia es explicación entre el remate y el cierre honesto. Eso es exactamente lo que se ve
+desde fuera como «forzado entre el nudo y el desenlace»: entre los dos no hay historia, hay
+metraje.
+
+Es la **trampa 20** del proyecto —un mínimo escrito como suelo se usa como techo— vista por el
+otro lado. Y es la **trampa 25** —una regla escrita para un formato no protege al otro—
+cometida sobre la propia regla 13: el 12 de septiembre se corrigió su mitad del episodio largo,
+que pasó de contar risas a medir distancias, y **la mitad del Short se quedó en «una, y va
+primero»** seis días más.
+
+### El segundo hallazgo, y es el que manda
+
+La única curva de retención que tiene el canal dice que **la mitad de la audiencia se ha ido en
+el segundo 13**, y goteando, no de golpe. Con eso delante, mira dónde cae el remate —la escena
+que va detrás de la pausa de 1,2-1,5 s, que se detecta sola:
+
+| | Remate en el segundo | Visualizaciones |
+|---|---|---|
+| **`MDS-016`** | **13** | **1.280** |
+| `MDS-019` | 7 | 182 |
+| `MDS-018` | 6 | >100 |
+| `MDS-020` | 6 | — |
+
+**`MDS-016` es el único vídeo del canal por encima de mil, y es el único que pone su mejor
+momento donde la gente está decidiendo si se queda.** Los otros lo gastan en el segundo seis,
+con todo el mundo todavía dentro, y a partir del trece no ofrecen nada. Es un cuarto candidato
+para la pregunta abierta de la versión 9 —*por qué `MDS-016`*— y, a diferencia de los otros
+tres, es el único sobre el que se puede actuar.
+
+**Honestamente: esto es n = 1 para el éxito.** Lo que lo sostiene no es ese vídeo solo, sino
+que apunta en la misma dirección que la curva de retención (fuga continua, no desplome
+inicial) y que lo que se sabe del reparto de Shorts en 2026, donde la señal dominante es la
+proporción vista y **un Short de 20 segundos visto entero vale más que uno de 60 visto a la
+mitad**. Tres cosas distintas señalando al mismo sitio no son una prueba, pero son suficiente
+para gastar una semana.
+
+### Las dos reglas, las dos ERROR en `validar_guion.py`
+
+1. **La duración de la serie, ±12 %.** Margen estrecho a propósito: con margen ancho se
+   escribe al borde del margen, que es lo que ha pasado con el techo de 55 s durante
+   veinticinco Shorts. Y el mensaje de error dice qué hacer, porque importa: *no recortes
+   palabras aquí y allá; busca la escena que no hace avanzar nada entre el remate y el cierre
+   y quítala entera.* Casi siempre la hay y casi siempre es la penúltima — la que repite con
+   otras palabras lo que acaba de decir la anterior.
+2. **El remate no cae antes del segundo 10.** Para eso el planteamiento ocupa **dos escenas y
+   no una**, con la pausa detrás de la segunda. Que es, literalmente, la forma de `MDS-016`.
+
+### Dos duraciones suben, y conviene decir por qué antes de que parezca que se mueve la portería
+
+«Ríete primero» pasa de 30 a 35 s y «Esto no tiene gracia y esto sí» de 35 a 40. **Los números
+de agosto se escribieron antes de que la regla 12 —cada vídeo termina diciendo dónde falla— se
+extendiera a los Shorts.** Con el cierre honesto dentro, un Short de este canal tiene que meter
+planteamiento (que ahora además llega al segundo 10), remate, el hallazgo con su fuente y el
+«y aquí falla»: medido al escribir los cinco de la semana, eso no baja de unas 66 palabras ≈
+35 s. **Un 30 aritméticamente imposible no es exigente: es un número que se ignora**, que es
+justo lo que llevaba pasando. Un 35 que se cumple es más estricto.
+
+### El estimador de duración, arreglado de paso
+
+`PPM = 150` llevaba un mes escrito como pendiente. Medido hoy sobre los seis Shorts con
+`duracion_final_s` en su expediente, descontando las pausas deterministas: 117, 126, 127, 141 y
+141 ppm con Gemini (157 el de `edge-tts`). **Media 130.** Con 150, el validador daba 49 s para
+un vídeo que salió de 58 (`MDS-016`): dejaba pasar por debajo del techo guiones que se
+publicaban por encima. No acierta al segundo —la dispersión real es de ±10 %— pero deja de
+mentir siempre en la misma dirección, que es lo único que le pide un techo.
+
+### Una exención, escrita en el código y no en el guion
+
+Las dos comprobaciones son ERROR y `producir.yml` para la producción con un error. De los
+veinticuatro Shorts que las incumplen, **solo uno está pendiente de producirse: `MDS-017`,
+mañana**. Reescribirlo la víspera cuesta sus peticiones de voz (perdería las cuatro escenas que
+tiene en caché desde el 15/09), vuelve a meter mano a un guion ya revisado dos veces, y lo que
+se gana dura un día. Va exento, y **la exención vive en `validar_guion.py`, no en el guion**:
+conceder otra obliga a tocar el código, que es la fricción que le corresponde. Es la trampa 9
+—una comprobación que puede parar algo tiene que mirar qué se lleva por delante— atendida antes
+de que pasara y no después.
+
+### Los cinco Shorts de la semana del 21, reescritos
+
+Con una restricción autoimpuesta: **no entra ni una afirmación nueva.** Todo lo que dicen
+estaba en la versión de la planificación del jueves 17, ya verificada contra el resumen de cada
+artículo. Esta reescritura solo quita y recoloca.
+
+| | Antes | Ahora | Remate |
+|---|---|---|---|
+| `MDS-021` · El experimento | 57 s · 109 pal. | **46 s · 85 pal.** | s. 9 → **s. 12** |
+| `MDS-022` · Esto no tiene gracia y esto sí | 58 s · 112 pal. | **43 s · 79 pal.** | s. 6 → **s. 11** |
+| `MDS-023` · Ríete primero | 58 s · 111 pal. | **39 s · 68 pal.** | s. 9 → **s. 11** |
+| `MDS-024` · Esto no tiene gracia y esto sí | 55 s · 106 pal. | **45 s · 81 pal.** | s. 9 → **s. 12** |
+| `MDS-025` · El experimento | 58 s · 111 pal. | **47 s · 89 pal.** | s. 10 → **s. 19** |
+
+Los cinco pasan `validar_guion.py` sin errores ni avisos. Se ha corrido además **la barrera de
+C21 escena por escena** (`comprobarDesbordes()` sobre las 29 escenas, con `pintar(t)` en el
+estado asentado): cero problemas. Y el muestreo de geometría personaje/texto del 18/09: peor
+hueco del lote 215 px, contra un umbral de 50. **Las dos comprobaciones llevan el mismo aviso
+que puso la revisión diaria esta mañana: sin las tipografías de marca instaladas los píxeles no
+son definitivos.** La revisión diaria de mañana y la del domingo las vuelven a pasar, y el
+primero de los cinco no se produce hasta el lunes a las 01:13 UTC — el circuito llega a tiempo.
+
+**`revisiones/MDS-025.md` queda aplicada** (la pantalla llamaba «grupo de control» al grupo que
+veía los vídeos): la reescritura quita esa escena entera, así que el defecto desaparece por
+construcción. **Hay que borrar la nota**, o la planificación del jueves 24 intentará aplicarla a
+un guion que ya no la necesita. `revisiones/MDH-008.md` **no** se toca: es de un guion que no he
+tocado y la aplica la planificación.
+
+**Las descripciones de `publicaciones/` no se reescriben**, y esto es distinto del 15/09. Aquel
+día describían otro vídeo; hoy describen el mismo, con algo más de detalle del que cabe en
+cuarenta segundos, y todo lo que dicen está verificado. Una descripción más larga que el vídeo
+no es un defecto: el `.srt` y la descripción son lo que hace encontrable la pieza.
+
+---
+
+## C38.1 · «Manda el guion»: la risa escrita deja de cercenarse
+
+El codirector, el 16/09: *«me quiero asegurar de que si hay una risa en el guion no se cercene
+de forma artificial. Lo que era artificial eran 3 o 4 risas en 40 segundos, pero si por guion
+hay una o dos se pueden dejar (manda el guion).»*
+
+Tenía razón y el código estaba mal. La regla 13.1 dice dos cosas —el narrador no se ríe, y
+*una risa escrita en el guion es otra cosa y sigue permitida*— y `voz.py` solo obedecía la
+primera: `NOTA_SIEMPRE` prohibía reírse en las seis escenas **sin excepción**. La segunda mitad
+de la regla no tenía forma de ejercerse.
+
+**Hoy no se estaba cercenando nada** —ningún guion del repositorio ha pedido una risa jamás,
+comprobado sobre los veinticinco— pero un veto que no se puede levantar deja de ser dirección
+de actor y pasa a ser una amputación. Y en cuanto el guionista empiece a escribir risas (que es
+lo que C38 le pide para el centro del vídeo), se las habría comido en silencio.
+
+- Se pide con `"risa": true` en la escena, y va **al final de esa narración**.
+- **Una por Short como mucho**, y `validar_guion.py` da error si se pide en la escena 1, en el
+  remate o en el cierre — los tres sitios que la propia regla 13.1 prohíbe. Es decir, solo cabe
+  en el centro del vídeo: justo el tramo que C38 existe para llenar.
+
+**Y una trampa cometida y corregida en la misma hora, que va al registro porque es útil.** La
+primera versión metía `risa=0` en la firma de la caché de voz de todas las escenas. Eso cambia
+la clave de las 49 tomas de `cache_voz/` — **entre ellas las 18 escenas de `MDH-007` que tienen
+que llegar al domingo**. Es la trampa 24, literal. La firma solo cambia cuando `risa` está
+encendida, y está comprobado corriendo la función real contra la caché real: **18 de 41, las
+mismas que esta mañana.**
+
+---
+
+## C39 · La bibliografía: el fichero bueno es el que nadie estaba mirando
+
+El codirector, hoy: *«Corregido F03, F04 y F05 en bibliografía»* y *«encárgate de que C05 y G03
+solucionen sus erratas»*. C05 y G03 los había corregido ya la revisión diaria esta mañana. Al ir
+a comprobarlo apareció algo peor.
+
+**`BIBLIOGRAFIA_CURADA.md` es un fichero generado.** Su propia cabecera lo dice: *«No edites
+este archivo a mano: edita el JSON y vuelve a ejecutar `scripts/generar_md.py`.»* Nadie lo ha
+hecho nunca. Medido hoy, cinco fichas estaban corregidas en el `.md` y sin corregir en
+`data/semillas.json`: `C05`, `E02`, `F04`, `F05` y `G03`.
+
+**La próxima vez que alguien regenerara el `.md`, se perdían las cinco.** Sin un error, sin un
+aviso, en un commit con pinta de rutina — y la única señal habría sido una ficha que vuelve a
+estar mal semanas después. Es la trampa 4 con otra cara: **un fichero derivado que se edita a
+mano miente sobre su origen hasta el día en que se vuelve a derivar.**
+
+- **`04_agentes/validar_bibliografia.py`** (nuevo): compara ficha a ficha el `.md` contra el
+  JSON —título, autores, año, DOI— y falla si difieren. Sin red, determinista. Sabe de la
+  entrada de control (`A09`, que está en el JSON y no en el `.md` **a propósito**) y normaliza
+  comillas y guiones tipográficos, porque una comprobación que señala ruido se deja de leer.
+- **Sincronizadas al JSON las cuatro verificadas hoy contra la fuente**: `C05` y `G03` (la
+  revisión diaria, con `WebFetch`), `F04` y `F05` (el codirector). **`E02` no se toca**: nadie
+  ha comprobado cuál de sus dos DOI es el bueno, y elegir uno a ojo es inventarse un dato.
+  Va a las tareas del codirector.
+- **Lo que este script NO hace, y hay que decirlo:** no comprueba que el DOI exista ni que
+  apunte al artículo que la ficha nombra. Eso hace falta —es lo que estaba roto en las
+  cuatro— pero necesita salir a internet, y el proxy de egreso de estos contenedores rechaza
+  `api.crossref.org` (comprobado hoy). Quien sí puede es la revisión diaria con `WebFetch`,
+  que es como verificó C05, así que esa comprobación vive en su prompt y no en un script. **Una
+  comprobación que no se puede ejecutar no es una comprobación: es una intención.**
+
+### Y `F04`, corregida, ya no es una fuente de este canal
+
+El título nuevo de `F04` es *Functional Brain Connectivity at Rest Changes After Working Memory
+Training* (Jolles et al., 2013). Es un artículo real y es el que corresponde a ese DOI — y **es
+un trabajo sobre entrenamiento de memoria de trabajo, que no tiene nada que ver con el humor.**
+La ficha ya no está rota: está bien identificada y fuera del tema. El pilar F sigue igual de
+bloqueado que ayer, solo que ahora se sabe por qué.
+
+Eso convierte la petición del codirector —*«el corpus tiene que crecer»*— en un encargo
+concreto en vez de un deseo: hacen falta dos fuentes de neurociencia del humor que sustituyan a
+`F04` y `F05`, y con ellas se desbloquea **«qué le pasa a tu cerebro cuando te ríes»**: 91
+millones de visualizaciones en el top 10 y cero de cinco respondiendo. Es la mejor pregunta
+libre que le queda al canal.
+
+### Cómo crece el corpus, y por qué no hay una tarea programada nueva
+
+Quedan **unas doce fichas** que puedan ser fuente central de un Short. A cinco por semana, eso
+son dos semanas y media: la planificación del **8 de octubre** es la primera que se queda sin
+material. No es urgente esta semana y sí lo es este mes.
+
+**No se crea un agente bibliotecario.** La planificación del jueves ya lee la bibliografía, ya
+lee resúmenes de artículos, ya mide la demanda y ya sabe qué preguntas están sin respuesta: es
+la única pieza del sistema que tiene delante las dos cosas que el codirector dice que deben
+mandar —las métricas de nuestros vídeos y las búsquedas de YouTube— en el mismo momento. Un
+agente nuevo necesitaría un workflow nuevo, que solo puede crear el codirector a mano, y
+duplicaría ese contexto. **Se le añade el encargo a la planificación**, en
+`00_estrategia/tareas/planificacion-jueves.md`, con la regla que evita repetir F04:
+
+> **Una ficha se escribe desde el registro del artículo, nunca de memoria.** Se localiza el
+> artículo, se copia de ahí el título, los autores, el año, la revista y el DOI, y se pega en
+> `notas_humor` la frase del resumen que sostiene lo que la ficha promete. Una ficha cuyo DOI y
+> cuyo título no se hayan visto juntos en la misma página no se escribe.
+
+Y el disparador es un número, no un criterio: **cuando queden menos de quince fichas sin usar,
+la planificación añade tres**, elegidas por hueco de demanda medido y no por volumen —que es lo
+que el codirector señala que está funcionando— y priorizando los pilares bloqueados, hoy el F.
+
+---
+
+## C40 · El marketing gratuito: lo que dicen nuestros propios números
+
+El codirector preguntó por opciones de marketing gratuitas que no le expongan y que no sean
+spam, y dijo que le interesa el aprendizaje. El aprendizaje está en `metricas.json` y es
+incómodo, así que va primero.
+
+**De dónde vienen las visualizaciones de los Shorts, ponderado por visualizaciones, sobre los
+quince con datos de tráfico:**
+
+| Superficie | Cuota |
+|---|---|
+| Feed de Shorts | **54,6 %** |
+| Búsqueda de YouTube | 27,7 % |
+| Suscriptores | 6,9 % |
+| **Todo lo externo junto** (`NO_LINK_OTHER`) | **5,4 %** |
+| Página de canal · notificaciones · otras | 5,4 % |
+
+**Todo lo que no es YouTube son catorce visualizaciones en dos meses.** Una campaña de marketing
+externa que doblara esa cifra añadiría catorce visualizaciones. `MDS-016` hizo 1.280 él solo, y
+`MDS-015` sacó el 96,8 % de las suyas del feed.
+
+**El aprendizaje, dicho sin adornos: para un canal de Shorts sin audiencia, el marketing externo
+no es una palanca pequeña, es ruido.** La palanca es el feed, y al feed no se le convence
+publicando en ningún sitio: se le convence con la proporción de vídeo vista, que es la señal que
+más pesa en 2026. Es decir, **C38 es la campaña de marketing**, y no hay una segunda.
+
+Hay una corrección importante que esto obliga a hacer en `LEEME.md`: *«la única superficie que
+responde es la búsqueda»* fue cierto en agosto —`MDS-002` y `MDS-006` sacaban de ahí el 63 % y
+el 81 %— **y ha dejado de serlo**. Desde `MDS-007` manda el feed. La frase lleva tres semanas
+escrita como si siguiera valiendo, y tiene consecuencias: es la que sostiene «la búsqueda es
+difícil pero es lo que tenemos» y la que justificaba C10 (una página por episodio).
+
+**Lo que sí vale la pena, y es una consecuencia de lo anterior, no una lista de tácticas:**
+
+1. **Más superficies de feed, que es C41.** No es marketing: es el mismo vídeo en otro sitio
+   donde manda el mismo mecanismo.
+2. **La búsqueda sigue valiendo el 27,7 %, y es gratis.** El `.srt`, el título y la descripción
+   ya se escriben bien. No hace falta nada nuevo.
+3. **Lo que se descarta y por qué.** Reddit, foros y comentarios de otros canales: la regla 8
+   los prohíbe automatizados, y a mano son trabajo recurrente para el codirector, que prohíbe
+   la regla 5. Las dos reglas dicen lo mismo desde lados distintos y no hay hueco entre ellas.
+4. **C10 (una página por episodio) sigue aplazado, y ahora con un motivo mejor**: llevaría
+   tráfico externo a un canal cuyo tráfico externo es el 5,4 %.
+
+---
+
+## C41 · TikTok y Reels: no es marketing, es un segundo feed
+
+El codirector, el 16/09: *«si ya estamos haciendo el trabajo de producir los vídeos, ¿no
+podríamos automatizar también la subida de estos shorts a Tiktok y como reels de Instagram
+[…] manteniendo Youtube como el canal principal?»*
+
+**La pregunta está mejor planteada de lo que parece**, y los números de arriba son el porqué: el
+feed es la única superficie que reparte sin audiencia previa, y TikTok e Instagram son dos feeds
+más con exactamente el mismo mecanismo. El coste marginal de producción es **cero**: el fichero
+ya existe, es vertical, no lleva marca de agua y es nuestro. La regla 8 lo autoriza
+expresamente —*«las publicaciones automáticas en TikTok, Instagram, Bluesky y el pódcast son
+contenido propio en canales propios; eso no es spam»*— y la 6 se cumple porque las cuentas son
+de la marca.
+
+### Lo que cuesta de verdad, comprobado hoy y no recordado
+
+Ni TikTok ni Instagram dejan publicar en abierto desde una aplicación sin revisar:
+
+| | Qué hace falta | Plazo | Coste |
+|---|---|---|---|
+| **TikTok** · Content Posting API | Cuenta de desarrollador, la app con el producto «Content Posting», los permisos `video.upload` y `video.publish`, verificación de dominio y **auditoría de la app**. Sin auditoría, lo que sube la API queda en **privado / solo para ti**: no lo ve nadie | días a semanas, con rechazos por incumplir las guías de interfaz | 0 € |
+| **Instagram** · publicación de Reels | Cuenta **de empresa** (las de creador no valen), `instagram_business_basic` e `instagram_business_content_publish`, **cada permiso con su revisión y su vídeo de demostración**. El vídeo tiene que estar en una URL pública para que Meta lo descargue | 2 a 4 semanas de revisión | 0 € |
+
+Es decir: **coste cero y una intervención puntual de setup**, que es exactamente lo que la
+regla 5 permite y lo que la regla 4 exige. Pero no es una tarde: es un trámite con cola.
+
+### La decisión, que es de orden y no de sí o no
+
+**Se empieza el trámite hoy y no se publica nada hasta que C38 haya dado su primera medida.**
+
+El motivo es el de siempre en este proyecto: la cola de revisión son de dos a cuatro semanas de
+**espera**, y la espera corre en paralelo a lo que estamos arreglando. Poner el trámite en
+marcha hoy no cuesta nada más que el rato del codirector; publicar hoy sí costaría algo,
+porque multiplicaría por tres la exposición de un vídeo con el medio flojo, que es lo que
+estamos arreglando esta misma semana. **Cuando la aprobación llegue, los Shorts nuevos ya
+llevarán el reloj de C38 puesto.** Si llega antes de lo previsto, se espera igual.
+
+**Y hay un premio que no es la exposición.** Hoy no sabemos si nuestros Shorts son flojos o si
+es el feed de YouTube el que no nos reparte. **El mismo vídeo en dos feeds distintos contesta
+esa pregunta**, y la contesta antes del 15 de noviembre. Es la primera medida del proyecto que
+puede separar «el contenido no funciona» de «no nos están enseñando», y las dos cosas piden
+decisiones opuestas. Por eso C41 entra ahora y no en enero.
+
+**Lo que hace falta de la dirección, cuando el trámite esté:** el paso de subida en
+`producir.yml` (fichero del codirector), un `publicar_redes.py` que hable con las dos APIs, y
+los dos identificadores en `REDES.md`. Nada de eso se escribe hoy: escribir el cliente de una
+API antes de saber si la app está aprobada es trabajo que se tira si la aprobación no llega.
+
+---
+
+## Y la pregunta del codirector sobre cuándo escribirme
+
+*«¿Es más interesante que te escriba antes de la revisión diaria para que si hay que cambiar el
+prompt de la tarea puedas hacerlo, o después para que tengas los resultados?»*
+
+**Después, siempre.** Y con un solo mensaje, que es lo que él prefiere por cuota.
+
+El motivo es que la revisión diaria escribe `ESTADO.md` y su bitácora, y eso es la mitad de lo
+que yo leo al arrancar. Si me escribe antes, arranco con la foto de ayer y le contesto con
+información vieja. Hoy mismo es el ejemplo: la tabla de `origen_voz` de los tres últimos Shorts
+—0 de 18 escenas con dirección mínima— la puso la revisión de esta mañana, y es lo que ha
+decidido que la dirección de actor v2 se queda.
+
+Y el miedo que hay detrás de la pregunta no se sostiene: **cambiar el prompt de la revisión
+diaria no tiene prisa**, porque la tarea corre todos los días. Un cambio que escribo el viernes
+entra en la del sábado. Lo único que sí tiene reloj es la **producción**, que arranca a las
+01:13 UTC: un arreglo que tiene que salir en el vídeo de mañana está en `origin/main` antes de
+esa hora, y esa es la hora que hay que tener delante, no la de la revisión.
+
+**Queda escrito en `PROMPT_DE_ARRANQUE.md`** para que no haya que volver a preguntarlo.
+
+---
+
+## Lo que NO cambia hoy
+
+- El punto de control sigue siendo el **27 de septiembre** y la decisión, el **15 de noviembre**
+  (C26). Los umbrales se discuten antes del 8 de noviembre, no después de ver los datos.
+- **La regla 11.1 sigue suspendida** para presentación hasta el 27. C38 no es presentación: es
+  guion, y entra en cinco vídeos a la vez a propósito. Con n = 5 en una semana y la historia de
+  quince Shorts como línea de base, la atribución sale de comparar contra el pasado, no dentro
+  de la semana.
+- No se clona la voz de nadie, no se encienden los subtítulos quemados, y `.github/workflows/`
+  sigue sin escribirse en remoto.
+- **`MDH-007` no se toca.** Se publica el domingo 20 a las 12:00.
+
+## Lo que queda mirado y no resuelto
+
+- **La caché de voz de `MDH-007` lleva dos días clavada en 18 de 41** y no hay commit de
+  precacheo con fecha de hoy, aunque `voz_adelantada.yml` tiene cron a las 09:00 UTC. Con 23
+  escenas por sintetizar y el tope de 10 peticiones por modelo y producción, el domingo sale
+  —20 escenas en la pasada de las 01:13 y las 3 restantes en la de las 08:23— pero **sin margen
+  para rechazos**. Hay que volver a contarlo mañana; si sigue en 18, el episodio se mueve otra
+  vez antes de que falle solo.
+- **`MDH-002` pasa del máximo del formato largo con el estimador nuevo** (6m44 contra 400 s).
+  Está publicado desde agosto y no bloquea nada; se anota para que nadie se asuste al verlo.
+- **E02** tiene dos DOI distintos en el `.md` y en el JSON y ninguno verificado.

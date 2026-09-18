@@ -440,6 +440,38 @@ NOTA_SIEMPRE = ("no te rías ni añadas risas, suspiros, carraspeos ni ningún s
                 "esté escrito; no metas silencios largos; ritmo de conversación, ni con "
                 "prisa ni arrastrando las palabras.")
 
+# ----------------------------------------------------------------------------
+# C38 (18/09/2026) · «manda el guion»: una risa ESCRITA no se cercena
+#
+# La regla 13.1 de REGLAS.md dice dos cosas y hasta hoy el código solo obedecía
+# una. Dice que el narrador no se ríe —ni al abrir, ni en el remate, ni al
+# cerrar— y dice, en su última viñeta, que **una risa escrita en el guion es
+# otra cosa y sigue permitida**. `NOTA_SIEMPRE` prohibía reírse en las seis
+# escenas sin excepción, así que la segunda mitad de la regla no tenía forma de
+# ejercerse: un guion podía pedir una risa y la voz nunca la haría.
+#
+# Hoy no se cercenaba nada —ningún guion del repositorio ha pedido una risa
+# jamás, comprobado sobre los 25 Shorts— pero el codirector lo dijo con todas
+# las letras el 16/09: «si por guion hay una o dos se pueden dejar (manda el
+# guion)». Un veto que no se puede levantar deja de ser una dirección de actor
+# y pasa a ser una amputación, y cuando el guionista empiece a escribir risas
+# (C38) el veto se las comería en silencio.
+#
+# Cómo se pide: `"risa": true` en la escena, y la risa va **al final de esa
+# narración**. Dónde NO se puede pedir lo comprueba `validar_guion.py` contra
+# la propia regla 13.1 —ni en la escena 1, ni en el remate, ni en el cierre— y
+# el tope es una por Short. Es decir: solo cabe en el centro del vídeo, que es
+# exactamente el tramo que C38 existe para llenar.
+#
+# La firma de la caché la lleva dentro: encender `risa` en una escena ya
+# sintetizada obliga a pedirla otra vez, que es lo que se quiere.
+# ----------------------------------------------------------------------------
+NOTA_RISA = ("al final de esta frase, y SOLO ahí, se te escapa una risa corta y real, de "
+             "una sílaba o dos, como quien no puede evitarlo; ninguna otra risa en toda "
+             "la frase, ni suspiros, ni carraspeos, ni ningún otro sonido que no esté "
+             "escrito; no metas silencios largos; ritmo de conversación, ni con prisa ni "
+             "arrastrando las palabras.")
+
 NOTA_DESPUES = {
     "espera": ("llega un silencio y después el remate: deja la frase en el aire, sin "
                "cerrar la entonación."),
@@ -473,10 +505,19 @@ def direccion_escena(escenas, i, texto):
         notas.append(f"- Viene de una frase que terminaba así: {antes} Enlaza con ella y "
                      "no arranques como si empezara el vídeo.")
     notas.append(f"- Al terminar la frase: {NOTA_DESPUES[despues]}")
-    notas.append(f"- Siempre: {NOTA_SIEMPRE}")
+    # C38: la risa escrita. `risa` la pone el guionista y la comprueba
+    # validar_guion.py; aquí solo se obedece.
+    risa = bool(escenas[i - 1].get("risa"))
+    notas.append(f"- Siempre: {NOTA_RISA if risa else NOTA_SIEMPRE}")
     prompt = (f"{PREAMBULO_VOZ}\n\nNOTAS DE DIRECCIÓN:\n" + "\n".join(notas)
               + f"\n\nTEXTO:\n{texto}")
-    firma = f"v{VERSION_DIRECCION}|{papel}|{despues}|{antes}"
+    # La firma SOLO cambia cuando `risa` está encendida. Añadirla siempre
+    # —aunque fuera como «risa=0»— cambiaría la clave de las 49 tomas que ya
+    # hay en `cache_voz/`, entre ellas las 18 escenas de MDH-007 que tienen
+    # que llegar al domingo 20. Es la trampa 24 del proyecto, cometida y
+    # corregida en la misma sesión: cuando cambies lo que entra en una clave
+    # de caché, mira a quién más le cambia.
+    firma = f"v{VERSION_DIRECCION}|{papel}|{despues}|{antes}" + ("|risa" if risa else "")
     return prompt, papel, firma
 
 

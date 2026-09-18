@@ -1,82 +1,79 @@
 {
-  "id": "MDS-022",
-  "formato": "corto",
-  "serie": "Esto no tiene gracia y esto sí",
-  "idioma": "es",
-  "titulo_trabajo": "¿Por qué un chiste hace menos gracia la segunda vez?",
-  "tesis": "Un chiste se entiende en dos pasos, y la segunda vez el primero ya no existe: no queda nada que no encaje.",
-  "pilares": [
-    "A"
-  ],
-  "duracion_objetivo_s": 45,
-  "bloqueos": [],
-  "notas_humor": [
-    "Prueba 1 · qué pasa: mi jefe me dice que me vista para el puesto que quiero y me presento en pijama.",
-    "Prueba 1 · qué gira: contado por segunda vez, el pijama ya no sorprende porque el espectador llega con el remate puesto.",
-    "Prueba 1 · cómo acaba: nadie ha medido cuántas veces aguanta el pijama; lo de las dos fases es un modelo, no un experimento.",
-    "Serie «Esto no tiene gracia y esto sí» elegida por la forma: son dos versiones casi idénticas del mismo chiste —la primera vez y la segunda— y se cuentan las dos antes de explicar nada. La escena «comparacion» que pide P10 es justo esa.",
-    "LÍMITE DE LO QUE SE AFIRMA, y va aquí para que nadie lo suba de rango: de A06 solo se usa lo que dice su ficha de BIBLIOGRAFIA_CURADA.md —la formulación original del modelo de dos fases— y de A05, en la misma bibliografía, que ese modelo es de incongruencia y resolución. NO se ha podido leer el texto del capítulo de Suls (1972, libro), así que el guion no le atribuye ningún resultado medido: dice que es lo que el modelo predice y el cierre lo dice en voz alta. Regla del 15/09: lo que un estudio encontró se copia, no se deduce; aquí no se copia ningún hallazgo porque no lo hay.",
-    "El chiste del pijama pasa la prueba del WhatsApp: se cuenta solo, no necesita la explicación de detrás y no tiene víctima."
-  ],
-  "escenas": [
+ "id": "MDS-022",
+ "formato": "corto",
+ "serie": "Esto no tiene gracia y esto sí",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué un chiste hace menos gracia la segunda vez?",
+ "tesis": "Un chiste se entiende en dos pasos, y la segunda vez el primero ya no existe: no queda nada que no encaje.",
+ "pilares": [
+  "A"
+ ],
+ "duracion_objetivo_s": 40,
+ "bloqueos": [],
+ "notas_humor": [
+  "REESCRITO POR LA DIRECCIÓN el 18/09/2026 (C38). No se ha añadido ni una afirmación: todo lo que dice este guion estaba en la versión de la planificación del jueves 17, ya verificada contra la fuente. Lo que cambia es la duración —se escribe a la de su serie, que nunca se había cumplido en 25 Shorts— y la posición del remate, que pasa del segundo ~6 al ~11, donde la curva de retención dice que se va la mitad de la audiencia.",
+  "Serie «Esto no tiene gracia y esto sí» elegida por la forma: son dos versiones casi idénticas del mismo chiste —la primera vez y la segunda— y se cuentan las dos antes de explicar nada. La escena «comparacion» que pide P10 es justo esa.",
+  "LÍMITE DE LO QUE SE AFIRMA, y va aquí para que nadie lo suba de rango: de A06 solo se usa lo que dice su ficha de BIBLIOGRAFIA_CURADA.md —la formulación original del modelo de dos fases— y de A05, en la misma bibliografía, que ese modelo es de incongruencia y resolución. NO se ha podido leer el texto del capítulo de Suls (1972, libro), así que el guion no le atribuye ningún resultado medido: dice que es lo que el modelo predice y el cierre lo dice en voz alta. Regla del 15/09: lo que un estudio encontró se copia, no se deduce; aquí no se copia ningún hallazgo porque no lo hay.",
+  "El chiste del pijama pasa la prueba del WhatsApp: se cuenta solo, no necesita la explicación de detrás y no tiene víctima."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-bocadillos",
+   "texto": "«Vístete para el *puesto*»",
+   "narracion": "Mi jefe me dijo: vístete para el puesto que quieres.",
+   "pausa_despues_s": 0.6
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Fui en *pijama*",
+   "narracion": "Al día siguiente me presenté en pijama.",
+   "pausa_despues_s": 1.35
+  },
+  {
+   "tipo": "comparacion",
+   "a": "Primera vez",
+   "b": "Segunda vez",
+   "et_a": "mismo jefe, mismo *pijama*",
+   "et_b": "y ya no pasa nada",
+   "narracion": "Y ahora vuelve a leerlo. Mismo jefe, mismo pijama, y ya no pasa nada.",
+   "personaje": "rie",
+   "pausa_despues_s": 0.5
+  },
+  {
+   "tipo": "diagrama",
+   "pasos": [
     {
-      "tipo": "enunciado",
-      "icono": "i-bocadillos",
-      "texto": "«Vístete para el *puesto*»",
-      "narracion": "Mi jefe me dijo: vístete para el puesto que quieres.",
-      "pausa_despues_s": 1.35
+     "titulo": "Algo *no encaja*",
+     "pie": "el pijama no es ropa de oficina"
     },
     {
-      "tipo": "enunciado",
-      "texto": "Fui en *pijama*",
-      "narracion": "Al día siguiente me presenté en pijama.",
-      "personaje": "rie",
-      "pausa_despues_s": 0.6
-    },
-    {
-      "tipo": "comparacion",
-      "a": "Primera vez",
-      "b": "Segunda vez",
-      "et_a": "no lo ves *venir*",
-      "et_b": "llegas con el pijama puesto",
-      "narracion": "Y ahora vuelve a leerlo. Mismo jefe, mismo pijama, y ya no pasa nada.",
-      "personaje": "entiende",
-      "pausa_despues_s": 0.5
-    },
-    {
-      "tipo": "diagrama",
-      "pasos": [
-        {
-          "titulo": "Algo *no encaja*",
-          "pie": "el pijama no es ropa de oficina"
-        },
-        {
-          "titulo": "Y de pronto encaja",
-          "pie": "sí lo es, si el puesto es quedarse en casa"
-        }
-      ],
-      "narracion": "El modelo de Suls dice que un chiste se entiende en dos pasos: primero notas que algo no encaja y después encuentras el sentido que lo arregla.",
-      "fuente": "A06",
-      "personaje": "piensa",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "enunciado",
-      "icono": "i-muelle",
-      "texto": "La segunda vez falta el paso *uno*",
-      "narracion": "La segunda vez no hay nada que no encaje. Te queda el paso dos sin el paso uno, y el paso dos solo no da risa.",
-      "fuente": "A06",
-      "personaje": "entiende",
-      "pausa_despues_s": 0.4
-    },
-    {
-      "tipo": "cierre",
-      "titulo": "Y falla aquí: es un *modelo*",
-      "subtitulo": "El chiste en dos fases · incongruencia y resolución",
-      "narracion": "Y aquí falla: esto es lo que predice un modelo de los años setenta, no un experimento con chistes repetidos. Nadie ha medido cuántas veces aguanta el pijama.",
-      "fuente": "A06",
-      "personaje": "no",
-      "pausa_despues_s": 0.2
+     "titulo": "Y de pronto encaja",
+     "pie": "sí lo es, si el puesto es quedarse en casa"
     }
-  ]
+   ],
+   "fuente": "A06",
+   "narracion": "Suls lo explicó en dos pasos: notas que algo no encaja, y luego encuentras el sentido.",
+   "personaje": "piensa",
+   "pausa_despues_s": 0.45
+  },
+  {
+   "tipo": "enunciado",
+   "icono": "i-muelle",
+   "texto": "Falta el paso *uno*",
+   "fuente": "A06",
+   "narracion": "La segunda vez falta el paso uno, y el dos solo no da risa.",
+   "personaje": "entiende",
+   "pausa_despues_s": 0.4
+  },
+  {
+   "tipo": "cierre",
+   "titulo": "Y falla aquí: es un *modelo*",
+   "subtitulo": "El chiste en dos fases · incongruencia y resolución",
+   "fuente": "A06",
+   "narracion": "Y aquí falla: lo predice un modelo de los setenta, no un experimento. Nadie ha medido el pijama.",
+   "personaje": "no",
+   "pausa_despues_s": 0.2
+  }
+ ]
 }

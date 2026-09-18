@@ -22,7 +22,23 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parents[1]
 REGISTRO = RAIZ / "05_calendario" / "registro_publicaciones.json"
 
-PPM = 150            # palabras por minuto de la narración
+# PPM · palabras por minuto de la narración.
+#
+# Fue 150 desde agosto, cuando la voz la ponía `edge-tts`. Gemini lee más
+# despacio, y eso llevaba un mes escrito como pendiente sin arreglar. Medido el
+# 18/09/2026 sobre los seis Shorts con `duracion_final_s` en su expediente de
+# calidad, descontando las pausas deterministas de `pausa_despues_s`:
+#
+#   MDS-015 (edge-tts)  157 ppm      MDS-018  141 ppm
+#   MDS-016             117 ppm      MDS-019  141 ppm
+#   MDS-017             126 ppm      MDS-020  127 ppm
+#
+# Media de los cinco de Gemini: 130. Con 150 el validador daba 49 s para un
+# vídeo que salió de 58 s (MDS-016), es decir, dejaba pasar por debajo del
+# techo de 55 s guiones que se publican por encima. 130 no acierta al segundo
+# —la dispersión real es de ±10 %— pero deja de mentir en la misma dirección
+# siempre, que es lo que importa para un techo.
+PPM = 130
 MIN_ESCENA = 2.6
 MAX_ESCENA = 20.0    # con la deriva lenta aguanta hasta aquí; más es narrativamente malo
 # Bajado de 14.0 a 10.0 el 27/08 (revisión diaria), tras C6.1: sin subtítulos
@@ -37,6 +53,86 @@ MAX_ESCENA = 20.0    # con la deriva lenta aguanta hasta aquí; más es narrativ
 # lo que antes solo delataba el vídeo terminado.
 MAX_IDEAL = 10.0
 MAX_SEGUIDAS = 2     # escenas consecutivas del mismo tipo
+
+# ---------------------------------------------------------------------------
+# C38 (18/09/2026) · La duración de la serie deja de ser decorativa
+#
+# `guionista_corto.md` le da a cada serie una duración desde agosto. Nunca se ha
+# cumplido ni una vez. Medido sobre los veinticinco Shorts del repositorio:
+#
+#   · la duración declarada de la serie va de 30 a 45 s,
+#   · y los veinticinco guiones tienen entre 88 y 120 palabras, media 108,
+#   · con excesos que van del 8 % (cuando la serie dice 45) al 98 % (cuando
+#     dice 30). Las seis de «Ríete primero, te explico después» —serie de
+#     30 s— tienen 101, 103, 106, 111, 111 y 113 palabras.
+#
+# Lo constante no es la serie: son las 108 palabras. Es decir, **el máximo del
+# formato (55 s) se ha usado como objetivo**, y todo lo que sobra entre el
+# remate y el cierre honesto es relleno para llegar ahí. Es la trampa 20 del
+# proyecto —un mínimo escrito como suelo se usa como techo— vista por el otro
+# lado: un máximo escrito como techo se usa como objetivo.
+#
+# Y es lo que el codirector describió dos días seguidos (16 y 17/09) como «me
+# cuesta seguir el hilo» y «forzado entre el nudo y el desenlace»: entre los dos
+# no hay nada que seguir, hay metraje.
+#
+# ERROR, no aviso, y con una tolerancia estrecha a propósito: con margen ancho
+# el guionista escribe al borde del margen, que es exactamente lo que ha pasado
+# con el techo de 55 s durante veinticinco Shorts.
+# ---------------------------------------------------------------------------
+# Los números de agosto eran 40 / 30 / 45 / 35 / 40. Dos suben hoy, y conviene
+# decir por qué antes de que parezca que se mueve la portería:
+#
+#   · «Ríete primero, te explico después» pasa de 30 a 35 s, y «Esto no tiene
+#     gracia y esto sí» de 35 a 40. Los dos números de agosto se escribieron
+#     ANTES de que la regla 12 —cada vídeo termina diciendo dónde falla— se
+#     extendiera a los Shorts. Un Short de este canal tiene que meter, como
+#     mínimo: planteamiento (que ahora además tiene que llegar al segundo 10),
+#     remate, el hallazgo con su fuente y el cierre honesto. Medido al escribir
+#     los cinco de la semana del 21, eso no baja de 66 palabras ≈ 35 s. Un 30
+#     que es aritméticamente imposible no es exigente: es un número que se
+#     ignora, que es exactamente lo que llevaba pasando.
+#   · Los otros tres no se tocan.
+#
+# Un 35 que se cumple es más estricto que un 30 que nadie ha cumplido nunca.
+DURACION_SERIE_S = {
+    "Desmonta el chiste": 40,
+    "Ríete primero, te explico después": 35,
+    "El experimento": 45,
+    "Esto no tiene gracia y esto sí": 40,
+    "Diagnósticos": 40,
+}
+TOLERANCIA_SERIE = 0.12
+
+# La pausa por encima de la cual `guionista_corto.md` dice que «la pausa es el
+# chiste» y la escena siguiente es el remate. Mismo umbral que usa voz.py para
+# dirigir al actor (PAUSA_DE_REMATE_S): un solo número para las dos piezas.
+PAUSA_DE_REMATE_S = 1.2
+
+# El segundo en el que la mitad de la audiencia se ha ido, medido en la curva de
+# retención de MDS-011 y MDS-015 (las dos únicas con curva). El remate no puede
+# caer antes: si cae antes, quien se queda a partir de ahí ya no tiene nada por
+# lo que quedarse. MDS-016 —1.280 visualizaciones, el único del canal por encima
+# de 1.000— lo pone en el segundo 13. Los tres siguientes lo ponen en el 6, el 7
+# y el 6, y ninguno pasó de 200.
+SEGUNDO_DEL_ACANTILADO = 10.0
+
+# Las dos comprobaciones de arriba son ERROR, y `producir.yml` (paso «Validar
+# guiones», línea 190) para la producción con un error. Los veinticuatro Shorts
+# escritos antes de hoy las incumplen —ese es justamente el hallazgo— y de ellos
+# solo uno está pendiente de producirse: MDS-017, mañana sábado.
+#
+# Reescribirlo la víspera cuesta sus seis peticiones de voz (las cuatro que ya
+# tiene en `cache_voz/` desde el 15/09 se perderían al cambiar la narración),
+# vuelve a meter mano a un guion ya revisado dos veces, y lo que se gana dura un
+# día. Así que va exento, y la exención vive AQUÍ y no en el guion: conceder otra
+# obliga a tocar el código, que es la fricción que le corresponde. Es la trampa 9
+# —una comprobación que puede parar algo tiene que mirar qué se lleva por
+# delante— atendida antes de que pase, no después.
+EXENTOS_C38 = {
+    "MDS-017": "se publica el 19/09/2026, ya renderizado y con la voz en caché "
+               "desde el 15/09. Exención única concedida el 18/09/2026.",
+}
 
 # ---------------------------------------------------------------------------
 # Los dos formatos del canal.
@@ -400,11 +496,19 @@ def validar(path):
                         f"encogerá para que quepa, pero un paso de diagrama es una "
                         f"etiqueta: el matiz va en su «pie», que aguanta más.")
 
-    # tipos repetidos seguidos
+    # tipos repetidos seguidos.
+    #
+    # C38 (18/09/2026): en un Short la apertura son planteamiento, planteamiento
+    # y remate, y las tres son «enunciado» por naturaleza — es la forma que
+    # tiene MDS-016, el único vídeo del canal por encima de 1.000
+    # visualizaciones. Con el tope en 2 este aviso saltaría en todos los Shorts
+    # bien escritos, y un aviso que salta siempre se deja de leer. En el
+    # episodio largo, donde la variedad visual sí es el problema, sigue en 2.
+    seguidas_max = 3 if corto else MAX_SEGUIDAS
     racha, anterior = 1, None
     for i, t in enumerate(tipos, 1):
         racha = racha + 1 if t == anterior else 1
-        if racha > MAX_SEGUIDAS:
+        if racha > seguidas_max:
             avisos.append(f"Escena {i}: {racha} escenas «{t}» seguidas. Rompe el ritmo visual.")
         anterior = t
 
@@ -464,6 +568,81 @@ def validar(path):
         if len((ultima.get("narracion") or "").split()) < 6:
             errores.append("El Short no remata: la última escena apenas tiene narración. "
                            "Un Short sin remate es un recorte.")
+
+        # -----------------------------------------------------------------
+        # C38.1 · la duración de la serie
+        # -----------------------------------------------------------------
+        exento = EXENTOS_C38.get(str(g.get("id") or "").split(".")[0])
+        if exento:
+            avisos.append(f"C38: este guion está EXENTO de las comprobaciones de duración "
+                          f"y de posición del remate — {exento}")
+        objetivo = DURACION_SERIE_S.get(g.get("serie") or "")
+        if objetivo:
+            margen = objetivo * TOLERANCIA_SERIE
+            if total > objetivo + margen and not exento:
+                errores.append(
+                    f"Dura {total:.0f}s y la serie «{g['serie']}» son {objetivo}s "
+                    f"(tolerancia ±{TOLERANCIA_SERIE*100:.0f}%). Sobran {total-objetivo:.0f}s. "
+                    f"No recortes palabras aquí y allá: mira qué escena no hace avanzar "
+                    f"nada entre el remate y el cierre, y quítala entera.")
+            elif total < objetivo - margen:
+                avisos.append(
+                    f"Dura {total:.0f}s y la serie «{g['serie']}» son {objetivo}s. "
+                    f"Corto no es malo, pero comprueba que el cierre honesto sigue "
+                    f"entero: es lo que no se recorta.")
+            if g.get("duracion_objetivo_s") and g["duracion_objetivo_s"] != objetivo:
+                avisos.append(
+                    f"«duracion_objetivo_s: {g['duracion_objetivo_s']}» no coincide con "
+                    f"los {objetivo}s de la serie «{g['serie']}». La serie manda.")
+
+        # -----------------------------------------------------------------
+        # C38.2 · dónde cae el remate
+        #
+        # El remate se detecta igual que en voz.py: es la escena que viene
+        # después de una pausa de «la pausa es el chiste». Medido sobre los
+        # 25 Shorts del repositorio, la detección no falla ninguna.
+        # -----------------------------------------------------------------
+        t_acum = 0.0
+        remate_en = None
+        for j, e in enumerate(escenas, 1):
+            if j > 1 and float(escenas[j-2].get("pausa_despues_s") or 0.0) >= PAUSA_DE_REMATE_S:
+                remate_en = t_acum
+                break
+            t_acum += dur(e)
+        if remate_en is None:
+            avisos.append(
+                "Ninguna escena va precedida de una pausa de remate (≥"
+                f"{PAUSA_DE_REMATE_S}s). Sin esa pausa el sintetizador no sabe que "
+                "viene un remate y lo lee de corrido (voz.py, C33).")
+        elif remate_en < SEGUNDO_DEL_ACANTILADO and not exento:
+            errores.append(
+                f"El remate cae en el segundo {remate_en:.0f}. La mitad de la audiencia "
+                f"se va sobre el segundo {SEGUNDO_DEL_ACANTILADO:.0f}, así que un remate "
+                f"antes de ahí se gasta en gente que se iba a quedar igual, y a partir "
+                f"del {SEGUNDO_DEL_ACANTILADO:.0f} no queda nada. Alarga el planteamiento "
+                f"o mueve la pausa una escena más adelante.")
+
+        # -----------------------------------------------------------------
+        # C38.3 · la risa escrita (regla 13.1)
+        # -----------------------------------------------------------------
+        con_risa = [j for j, e in enumerate(escenas, 1) if e.get("risa")]
+        if len(con_risa) > 1:
+            errores.append(
+                f"{len(con_risa)} escenas piden risa (escenas {con_risa}). En un Short, "
+                f"una como mucho: tres o cuatro risas en cuarenta segundos es lo que el "
+                f"codirector describió como artificial el 14/09.")
+        for j in con_risa:
+            if j == 1:
+                errores.append("Escena 1 con «risa»: la regla 13.1 dice que el narrador no "
+                               "se ríe al abrir.")
+            if j == len(escenas):
+                errores.append("El cierre con «risa»: la regla 13.1 dice que el cierre "
+                               "honesto no admite guasa. Es la frase que sostiene la "
+                               "credibilidad del canal.")
+            if j > 1 and float(escenas[j-2].get("pausa_despues_s") or 0.0) >= PAUSA_DE_REMATE_S:
+                errores.append("El remate con «risa»: la regla 13.1 dice que el remate se "
+                               "dice completamente en serio. Un chiste contado por quien "
+                               "se ríe de su propio chiste deja de tener gracia.")
 
     # duración total y número de escenas
     m, s = divmod(total, 60)

@@ -98,6 +98,80 @@ medido contra los 302 guiones del repositorio señala tres escenas y ninguna es 
 positivo. No es una red para que escribas peor: es para que esto no vuelva a llegar a
 publicación.
 
+
+## Prueba 4 · El reloj: la duración de tu serie, y el remate en el segundo doce
+
+*Añadida el 18 de septiembre de 2026, después de dos avisos de la dirección en dos días
+seguidos: «me sigue costando entender el hilo del short» (16/09) y «me sigue pareciendo un
+poco forzado el guion entre el nudo y el desenlace» (17/09).*
+
+Las tres pruebas de arriba comprueban que el Short **tiene** hilo. Esta comprueba que el hilo
+**llega a alguna parte**, que es lo que fallaba. Y el hallazgo que la escribió no es una
+opinión sobre un guion: son los veinticinco Shorts del canal, medidos.
+
+**Lo medido.** La serie de cada Short declara una duración —30, 35, 40 o 45 segundos— desde
+agosto. Los veinticinco guiones del repositorio tienen entre **88 y 120 palabras, media 108**.
+Las seis de «Ríete primero, te explico después», que son 30 segundos, tienen 101, 103, 106,
+111, 111 y 113. Lo constante no es la serie: son las 108 palabras, que es lo que cabe justo
+por debajo del máximo del formato.
+
+**O sea: el techo se ha usado como objetivo, y lo que rellena la diferencia es la explicación
+entre el remate y el cierre.** Eso es lo que se ve desde fuera como «forzado entre el nudo y
+el desenlace»: entre los dos no hay historia, hay metraje.
+
+**Lo segundo medido, y es lo que más importa.** La única curva de retención que tenemos dice
+que **la mitad de la audiencia se ha ido en el segundo 13** — y no de golpe al principio, sino
+goteando. Mira dónde cae el remate en cada caso:
+
+| | Remate en el segundo | Visualizaciones |
+|---|---|---|
+| **MDS-016** | **13** | **1.280** |
+| MDS-018 | 6 | 182 |
+| MDS-019 | 7 | ~100 |
+| MDS-020 | 6 | — |
+
+MDS-016 es el único vídeo del canal que ha pasado de mil, y es el único que pone su mejor
+momento donde la gente estaba decidiendo si irse. Los otros lo gastan en el segundo seis, con
+todo el mundo todavía dentro, y a partir del trece no ofrecen nada.
+
+**Un vídeo no tiene un solo ojal. Tiene dos: el segundo tres y el segundo trece.**
+
+### Las dos reglas, y las dos son ERROR en `validar_guion.py`
+
+1. **Escribe a la duración de tu serie**, con un margen del 12 %. Está abajo, en la lista de
+   las cinco. Si no cabe, **no recortes palabras aquí y allá: busca la escena que no hace
+   avanzar nada entre el remate y el cierre y quítala entera.** Casi siempre la hay, y casi
+   siempre es la penúltima, la que vuelve a decir con otras palabras lo que acaba de decir la
+   anterior.
+2. **El remate no cae antes del segundo 10.** El remate es la escena que va detrás de la
+   pausa de 1,2-1,5 s. Para que caiga ahí, el planteamiento ocupa **dos escenas, no una**:
+   una monta la situación y la otra la completa, y la pausa va después de la segunda. Es
+   exactamente la forma de MDS-016 — «le dije a mi madre, con retintín, qué ilusión, cena
+   familiar el domingo» / «se rió; al día siguiente le escribí esa misma frase por WhatsApp»
+   / **pausa** / «dicho, se rió; escrito, ahora somos doce y ha invitado a los vecinos».
+
+### Y una que no es error pero es el motivo de todo
+
+**Ochenta palabras no son sesenta segundos mal aprovechados: son una pieza distinta.** Con el
+presupuesto nuevo no caben cuatro frases de explicación, y no hacen falta. Caben: la
+situación, el remate, el hallazgo con su fuente, y el «y aquí falla». Eso es un Short. Lo
+demás era el relleno que había entre ellos.
+
+## La risa escrita
+
+La regla 13.1 de `REGLAS.md` dice que el narrador no se ríe: ni al abrir, ni en el remate, ni
+al cerrar. Y dice también que **una risa escrita en el guion es otra cosa y sigue permitida**.
+Hasta el 18/09/2026 la segunda mitad no se podía ejercer —`voz.py` prohibía reírse en todas
+las escenas sin excepción— y ahora sí.
+
+Cómo se pide: `"risa": true` en la escena, y la risa se va al final de esa narración. Dónde
+**no** cabe, y `validar_guion.py` da error: en la escena 1, en el remate y en el cierre. Es
+decir, solo en el centro del vídeo.
+
+**Y no la pidas por costumbre.** Una por Short como mucho, y solo cuando la frase la pida de
+verdad. Tres o cuatro risas en cuarenta segundos es lo que la dirección describió como
+artificial el 14 de septiembre, y por eso existe la prohibición que esto levanta.
+
 ---
 
 ## Salida
@@ -108,8 +182,14 @@ Un archivo `05_calendario/guiones/MDS-0XX.es.json` válido contra `esquema_guion
 { "id": "MDS-0XX", "formato": "corto", "serie": "<una de las cinco>", "idioma": "es", ... }
 ```
 
-Entre **3 y 8 escenas** y entre **18 y 55 segundos**. Lo comprueba `validar_guion.py`, que
-para la producción si te pasas. Ninguna escena puede durar más de 12 s.
+Entre **3 y 8 escenas**, y **la duración de tu serie ±12 %** (prueba 4). Los 55 segundos
+siguen siendo el techo del formato, pero ya no son el objetivo de nadie: el objetivo es el
+número de tu serie. Lo comprueba `validar_guion.py`, que para la producción si te pasas.
+Ninguna escena puede durar más de 12 s.
+
+`validar_guion.py` estima la duración a **130 palabras por minuto**, que es lo que mide la
+voz de Gemini en los Shorts publicados (117, 126, 127, 141 y 141 ppm; media 130). Hasta el
+18/09 asumía 150 y por eso dejaba pasar por debajo del techo guiones que salían por encima.
 
 ## Las cinco series
 
@@ -120,6 +200,20 @@ guion tenga la forma de un experimento; eso lo comprueban las tres pruebas de ar
 `validar_guion.py` comprueba aparte que la secuencia de tipos de escena encaje con la
 estructura declarada (P10). MDS-011 se declaró «El experimento» y salió despiezado.
 
+**Y la serie es también una duración, que desde el 18/09/2026 se cumple** (prueba 4). Dos de
+los cinco números han subido ese mismo día —«Ríete primero» de 30 a 35 y «Esto no tiene
+gracia y esto sí» de 35 a 40— porque los de agosto se escribieron antes de que el cierre
+honesto fuera obligatorio también en los Shorts, y con él un Short de este canal no baja de
+unas 66 palabras. Un 35 que se cumple es más estricto que un 30 que nadie ha cumplido nunca.
+
+| Serie | Duración | Palabras, más o menos |
+|---|---|---|
+| Desmonta el chiste | 40 s | 75 |
+| Ríete primero, te explico después | 35 s | 64 |
+| El experimento | 45 s | 85 |
+| Esto no tiene gracia y esto sí | 40 s | 75 |
+| Diagnósticos | 40 s | 75 |
+
 ### 1 · «Desmonta el chiste» — 40 s
 ```
 chiste (0-8 s) → silencio de 1,2 s → despiece (10-32 s) → dónde falla (32-40 s)
@@ -129,7 +223,7 @@ dónde estaba la bisagra. Es la marca del canal en cuarenta segundos.
 **El chiste de la escena 1 es el sujeto de las tres piezas**, no un ejemplo que se sustituye
 por lenguaje abstracto en cuanto empieza la explicación (prueba 1).
 
-### 2 · «Ríete primero, te explico después» — 30 s
+### 2 · «Ríete primero, te explico después» — 35 s
 El chiste va en el **segundo cero**. Sin preámbulo de ninguna clase. La explicación es el
 premio, no el peaje. El vídeo *es* la demostración de que la teoría funciona.
 
@@ -140,7 +234,7 @@ Obligatorio: el identificador de `BIBLIOGRAFIA_CURADA.md`.
 **Con protagonista quiere decir con protagonista:** alguien hizo algo, le pasó algo, y por
 eso sabemos esto. Si el guion se puede leer sin que nadie haga nada, es un resumen.
 
-### 4 · «Esto no tiene gracia y esto sí» — 35 s
+### 4 · «Esto no tiene gracia y esto sí» — 40 s
 Dos chistes casi idénticos. Se cuentan **los dos** antes de explicar nada. El espectador
 nota la diferencia antes de que se la digan, y eso es lo que le hace quedarse. Usa
 `tipo: comparacion`, que en vertical se apila.
@@ -311,7 +405,7 @@ chiste en el segundo cero, pausa de 1,3 s antes del remate, personaje en tres es
 2, la 4 y la 6 — nunca la del planteamiento) y cierre que dice dónde falla. Léelo antes de
 escribir el primero.
 
-## Y la lista de comprobación final, que cabe en seis líneas
+## Y la lista de comprobación final, que cabe en ocho líneas
 
 Antes de entregar, contra el guion terminado:
 
@@ -321,6 +415,8 @@ Antes de entregar, contra el guion terminado:
 4. Ningún día, mes, número o nombre propio en pantalla que no diga la voz de esa escena.
 5. Como máximo tres `enunciado`, y la escena 1 no es una tarjeta de texto.
 6. El chiste pasa la prueba del WhatsApp.
+7. **Dura lo que dice su serie**, y el remate cae del segundo 10 en adelante.
+8. Si hay `risa`, es una sola y no está ni en la escena 1, ni en el remate, ni en el cierre.
 
-Si una falla, no entregues: arregla. Las seis se comprueban en cinco minutos y las seis
-han costado ya un vídeo cada una.
+Si una falla, no entregues: arregla. Las ocho se comprueban en cinco minutos y cada una ha
+costado ya un vídeo.

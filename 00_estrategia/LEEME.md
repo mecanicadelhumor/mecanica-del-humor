@@ -31,9 +31,14 @@ los días) y **`05_calendario/metricas.json`** (los números).
 2. **No ha funcionado todavía.** A 31 de agosto, cinco Shorts en su primera
    semana suman 44 visualizaciones entre los cinco, cero suscriptores y cero
    comentarios. El criterio de aceptación de C2 falló por un factor de diez.
-3. **La única superficie que responde es la búsqueda**, que el diagnóstico daba
-   por la más difícil: dos Shorts sacan de `YT_SEARCH` el 63,6 % y el 46,2 % de
-   sus visualizaciones. El feed de Shorts apenas empuja.
+3. **~~La única superficie que responde es la búsqueda~~ — CORREGIDO el 18/09/2026.**
+   Fue cierto en agosto (`MDS-002` y `MDS-006` sacaban de `YT_SEARCH` el 63,6 % y el
+   81,2 %) y dejó de serlo a partir de `MDS-007`. Ponderado por visualizaciones sobre
+   los quince Shorts con datos de tráfico: **feed de Shorts 54,6 %, búsqueda 27,7 %,
+   suscriptores 6,9 % y todo lo externo junto 5,4 %.** `MDS-015` sacó del feed el
+   96,8 % de las suyas. **Manda el feed**, y al feed se le convence con la proporción
+   de vídeo vista, no con distribución — que es lo que hace de C38 la decisión de la
+   semana y lo que deja el marketing externo en ruido (C40).
 4. **La apuesta hasta el 27 de septiembre** es que lo que mata al vídeo es el
    primer segundo —una tarjeta de texto con voz sintética— y que arreglarlo
    (C19 + C16, y luego C7) mueve el número. Si el 27 ningún Short ha pasado de
@@ -66,6 +71,33 @@ los días) y **`05_calendario/metricas.json`** (los números).
    voces alternándose porque el respaldo a `edge-tts` era escena a escena; ahora es por vídeo
    entero y en escalera (C33.1). Y el mismo día, **el primer Short por encima de 1.000
    visualizaciones**, `MDS-016`, todavía sin explicación.
+
+## Estado a 18 de septiembre
+
+**Por primera vez los números se mueven, y por primera vez se sabe por dónde.** `MDS-016` hizo
+**1.280 visualizaciones**, `MDS-019` va por **182** y `MDS-018` pasa de 100 — contra una mediana
+de 10 en los quince anteriores y cero por encima de 50. Sigue habiendo cero suscriptores.
+
+La sesión del viernes 18 (**versión 10** del plan, que es la que manda) salió de que el
+codirector trajo el mismo aviso dos días seguidos —«me cuesta seguir el hilo», «forzado entre el
+nudo y el desenlace»— sobre dos guiones que **ya** se habían reescrito contra las tres pruebas
+de cosido. Al medirlo apareció esto:
+
+- **Los veinticinco Shorts del canal tienen entre 88 y 120 palabras**, dijera lo que dijera la
+  duración de su serie (30, 35, 40 o 45 s). El techo del formato se usaba como objetivo, y lo
+  que rellenaba la diferencia era explicación entre el remate y el cierre.
+- **El remate cae en el segundo 6 o 7, y la mitad de la audiencia se va en el segundo 13.**
+  `MDS-016` —el único por encima de mil— es el único que lo pone en el 13.
+- De ahí **C38**: el Short se escribe a la duración de su serie y el remate no cae antes del
+  segundo 10, las dos como error en `validar_guion.py`. Los cinco Shorts de la semana del 21
+  reescritos, sin añadir ni una afirmación nueva.
+- **C38.1**: `voz.py` prohibía reírse en las seis escenas sin excepción, así que la mitad de la
+  regla 13.1 —«una risa escrita en el guion sigue permitida»— no se podía ejercer. Arreglado.
+- **C39**: `BIBLIOGRAFIA_CURADA.md` es un fichero generado y llevaba cinco fichas corregidas
+  solo ahí. La próxima regeneración las borraba todas.
+- **C40 y C41**: el marketing externo es el 5,4 % del tráfico y no es una palanca; TikTok y
+  Reels sí, porque son otro feed y el feed es lo que reparte. Se empieza el trámite ya y se
+  publica cuando C38 haya dado su primera medida.
 
 ## Estado a 15 de septiembre
 

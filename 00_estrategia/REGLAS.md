@@ -244,8 +244,44 @@ escenas «la entonación de quien cuenta algo que le hace gracia».
   una risa real, se escribe en la narración y se sabe dónde está. Lo que no se admite es
   una risa que aparece sola en un sitio que nadie eligió.
 
+  *Y desde el 18/09/2026 esto se puede ejercer de verdad.* Hasta ese día `voz.py` prohibía
+  reírse en las seis escenas **sin excepción**, así que esta viñeta no tenía forma de
+  cumplirse: un guion podía pedir una risa y la voz nunca la haría. La dirección lo dijo con
+  todas las letras el 16/09 — *«si por guion hay una o dos se pueden dejar (manda el
+  guion)»*. Se pide con `"risa": true` en la escena, va al final de esa narración, una por
+  Short como mucho, y `validar_guion.py` da error si se pide en la escena 1, en el remate o
+  en el cierre, que son los tres sitios que esta misma regla prohíbe. Es decir: solo cabe en
+  el centro del vídeo, que es justo el tramo que la regla 13.2 existe para llenar.
+
 **Y la lección general:** una instrucción de tono que se aplica a todas las escenas por
 igual no es tono, es un tic. El tono se dirige escena a escena o no se dirige.
+
+### 13.2 · Y en el Short, la distancia también se mide — pero desde el segundo diez
+
+*Añadida el 18 de septiembre de 2026, después de dos avisos de la dirección en dos días.*
+
+La regla 13 se corrigió el 12/09 para el episodio largo: dejó de contar risas y pasó a medir
+distancias. **El Short se quedó con «una, y va primero»** — y eso es un suelo que se ha usado
+como techo, exactamente igual que el «mínimo dos» del largo. Es la trampa 25 del proyecto —una
+regla escrita para un formato no protege al otro— cometida sobre la regla 13.
+
+Los veinticinco Shorts del canal, medidos el 18/09: el remate cae en el segundo 6, 7 o 9, y
+después **no hay un solo intento más hasta el cierre**, que llega treinta segundos más tarde.
+
+- **El remate no cae antes del segundo 10.** La única curva de retención que tenemos dice que
+  la mitad de la audiencia se ha ido en el segundo 13, y goteando, no de golpe. Un remate en el
+  segundo 6 se gasta en gente que se iba a quedar de todas formas. **MDS-016 lo pone en el 13 y
+  es el único vídeo del canal por encima de mil visualizaciones.**
+- **Un Short se escribe a la duración de su serie**, no al techo del formato. El techo son 55 s
+  y los veinticinco guiones tienen entre 88 y 120 palabras: el techo era el objetivo, y lo que
+  llenaba la diferencia era explicación entre el remate y el cierre. Eso es lo que la dirección
+  leyó como «forzado entre el nudo y el desenlace».
+- **Lo que se recorta es la escena que no hace avanzar nada**, casi siempre la penúltima, no
+  palabras sueltas de todas.
+
+**Y la lección general, que ya estaba escrita y no se aplicó:** cuando corrijas una regla que
+cuenta cosas, mira a qué otros formatos les pasa lo mismo. El 12 de septiembre se arregló la
+mitad de la regla 13 y la otra mitad se quedó rota seis días más.
 
 ## 14. Los dos canales: se ve mudo y se escucha a ciegas
 

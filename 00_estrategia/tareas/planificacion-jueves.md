@@ -175,13 +175,53 @@ Lunes a viernes los Shorts (`"hora": "19:00"`), sábado el largo (`"hora": "12:0
 Está en `00_estrategia/REGLAS.md` y manda sobre todo lo anterior:
 
 - Cada vídeo termina explicando **dónde falla** lo que acaba de explicar. También los Shorts.
-- **El canal va de humor: tiene que hacer gracia.** Dos risas por episodio largo, una antes del segundo quince. En un Short, una, y va primero.
+- **El canal va de humor: tiene que hacer gracia.** En el episodio largo, nunca más de noventa segundos sin algo construido para hacer reír, y la primera antes del segundo quince. **En un Short, el remate NO cae antes del segundo 10** (regla 13.2, del 18/09/2026): la mitad de la audiencia se va sobre el segundo 13, y `MDS-016` —el único vídeo del canal por encima de mil visualizaciones— pone el suyo justo ahí. Para conseguirlo, el planteamiento ocupa dos escenas y la pausa de 1,2-1,5 s va detrás de la segunda.
 - El verificador tiene veto: dato sin fuente de la bibliografía, no entra. Antes que citar de memoria, cambia el ejemplo.
 - **Lo que un estudio encontró se copia, no se deduce** (añadido por la dirección el 15/09/2026). Muchas fichas de `BIBLIOGRAFIA_CURADA.md` son una sola línea, y esa línea no dice qué salió en el estudio. Toda frase de un guion que cuente un **resultado** («mejora», «reduce», «el doble», «no sirve») tiene que estar en la ficha o en el **resumen del artículo leído en esta misma ejecución**, y esa frase del resumen, copiada literal, va en `notas_humor`. Si no puedes leer el resumen, cuenta solo lo que dice la ficha, o cambia de ficha. El caso que lo escribió: `MDS-019` decía que el humor en un anuncio «mejora cómo te cae quien lo usa», con la fuente `G05`, y el resumen de ese metaanálisis dice literalmente lo contrario (no hay evidencia de que mejore la simpatía hacia el anunciante, y reduce su credibilidad). Pasó la verificación porque la ficha no decía nada y nadie abrió el resumen.
 - **Las emisiones del sábado 19 y el domingo 20 de septiembre no se tocan** (dirección, 15/09). `MDS-017` va el sábado 19 a las 19:00 con `rehacer_video_id`, y `MDH-007` el domingo 20 a las 12:00: con diez peticiones de voz al día, el largo no llegaba al sábado. Las dos notas pendientes de `revisiones/MDH-007.md` se aplican igual, a ese guion, y **cambia solo las dos escenas que dicen las notas**: cada escena que cambia hay que volver a sintetizarla, y la voz de `MDH-007` va muy justa. El largo de la semana que viene (`MDH-008`) va el sábado 26 como siempre.
 - **Una referencia concreta que se nombra se explica en el mismo Short, o no se nombra** (el codirector, 9/09 y 15/09). `MDS-018` hablaba de «el error de Napoleón» sin decir nunca cuál era, y `MDS-017` metía un sobrino, un mando y unos dedos en el aire antes de llegar a las ratas. Un Short, un ejemplo y un mecanismo: las tres pruebas de cosido de `guionista_corto.md` no son opcionales.
+- **Cada Short dura lo que dice su serie, ±12 %** (C38, 18/09/2026, y `validar_guion.py` da ERROR). Los 55 s son el techo del formato y **dejaron de ser el objetivo de nadie**: medido sobre los veinticinco Shorts del canal, los veinticinco tenían entre 88 y 120 palabras dijera lo que dijera su serie, y lo que rellenaba la diferencia era explicación entre el remate y el cierre. Eso es lo que el codirector leyó dos días seguidos como «forzado entre el nudo y el desenlace». **Si no cabe, no recortes palabras de todas las escenas: busca la que no hace avanzar nada —casi siempre la penúltima, la que repite con otras palabras lo que dijo la anterior— y quítala entera.**
 - Ningún chiste que necesite una víctima colectiva. Nada de machismo, xenofobia ni humor a costa de un grupo por serlo.
 - Nunca se enseña el humor como táctica para usarlo con alguien que no sabe que lo están usando.
+
+## 7. El corpus: cuando quede poco, lo amplías tú
+
+*Encargo de la dirección, 18 de septiembre de 2026 (C39). Lo pidió el codirector: «el corpus
+tiene que crecer, siempre en el sentido de lo que van marcando las métricas de nuestros vídeos
+por una parte y las búsquedas en YouTube por otro».*
+
+**Por qué tú y no un agente nuevo.** Eres la única pieza del sistema que tiene delante, en el
+mismo momento, las dos cosas que tienen que decidir: la demanda medida de esta semana y la
+bibliografía entera. Un agente bibliotecario aparte necesitaría un workflow que solo puede
+crear el codirector a mano, y duplicaría ese contexto para hacer peor lo mismo.
+
+**Cuándo.** Cuenta las fichas de `BIBLIOGRAFIA_CURADA.md` que no haya usado nunca ningún guion
+del repositorio y que puedan ser **fuente central** de un Short. **Si quedan menos de quince,
+añade tres fichas** esa misma noche. Si quedan quince o más, no hagas nada y dilo en la
+bitácora.
+
+**Cuáles.** Por hueco de demanda, no por volumen — ordenar por hueco está funcionando y es lo
+que el codirector pide que se apriete. Primero los pilares bloqueados: a 18/09/2026 el **F
+(neurociencia y cognición del humor)** está entero fuera de juego salvo `F03`, y con él está
+bloqueada «qué le pasa a tu cerebro cuando te ríes» —91 millones en el top 10, cero de cinco
+respondiendo—, que es la mejor pregunta libre que le queda al canal.
+
+**Cómo, y esta parte no es negociable:**
+
+> **Una ficha se escribe desde el registro del artículo, nunca de memoria.** Localizas el
+> artículo, copias de esa página el título, los autores, el año, la revista y el DOI, y pegas
+> en `notas_humor` la frase del resumen que sostiene lo que la ficha promete. **Una ficha cuyo
+> DOI y cuyo título no hayas visto juntos en la misma página no se escribe.**
+
+El caso que lo escribió: `F04` decía ser un trabajo sobre la unión temporoparietal y el humor, y
+su DOI corresponde a un artículo sobre entrenamiento de memoria de trabajo que no tiene nada que
+ver con el humor. Estuvo así semanas, bloqueó una pregunta de 91 millones, y no lo detectó
+nadie porque nadie había abierto nunca ese DOI.
+
+**Dónde se escribe.** En **`01_bibliografia/data/semillas.json`**, que es la fuente de verdad, y
+después `python3 01_bibliografia/scripts/generar_md.py` para regenerar el `.md`. **El `.md` es
+un fichero generado**: una ficha escrita solo ahí se borra sola la próxima vez que alguien
+regenere. Antes de entregar, `python3 04_agentes/validar_bibliografia.py` tiene que pasar.
 
 ## Cómo cierras
 

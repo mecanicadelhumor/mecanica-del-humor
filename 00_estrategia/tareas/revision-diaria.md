@@ -122,6 +122,29 @@ Un Short se ve mudo en el metro y se escucha con el móvil en el bolsillo. Los d
 
 Termina con `python3 04_agentes/validar_guion.py <rutas>` sin errores.
 
+### La bibliografía es tuya, y tiene dos ficheros (18/09/2026, C39)
+
+`01_bibliografia/BIBLIOGRAFIA_CURADA.md` pasó a ser tuyo el 28/08. Lo que no estaba dicho es que
+**ese fichero se genera** desde `01_bibliografia/data/semillas.json` — lo dice su propia
+cabecera— y que nadie lo había respetado nunca. El 18/09/2026 había **cinco fichas corregidas
+solo en el `.md`**, incluidas dos que tú misma habías arreglado esa mañana: la próxima
+regeneración las habría borrado todas sin un solo aviso.
+
+Desde hoy, cada vez que corrijas una ficha:
+
+1. La corriges en **`data/semillas.json`**, que es la fuente de verdad.
+2. Regeneras con `python3 01_bibliografia/scripts/generar_md.py`.
+3. **`python3 04_agentes/validar_bibliografia.py` tiene que pasar antes de entregar.** Compara
+   ficha a ficha los dos ficheros —título, autores, año y DOI— y no necesita red.
+
+**Y lo que ese script NO puede hacer, y sí puedes tú:** comprobar que el DOI existe y que apunta
+al artículo que la ficha nombra. Los contenedores de las tareas programadas no llegan a
+`api.crossref.org` (el proxy de egreso lo rechaza, comprobado el 18/09), pero tú tienes
+`WebFetch`, que es con lo que verificaste `C05` ese mismo día. **Cuando toques una ficha,
+ábrele el DOI y comprueba que el título que devuelve es el que la ficha dice.** Es un minuto y
+es lo único que habría cazado `F04`, `F05`, `C05` y `G03` antes de que bloquearan una pregunta
+de 91 millones de visualizaciones durante semanas.
+
 ## Paso 2 — comprobar que la producción salió (todos los días, barato)
 
 Si `registro_publicaciones.json` no tiene la entrada esperada y la parrilla sí preveía emisión, ese es el hallazgo principal: averigua por qué y dilo. No arregles a ciegas.

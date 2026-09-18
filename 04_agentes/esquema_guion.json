@@ -224,6 +224,10 @@
       ],
       "description": "Expresión del Engranaje, el personaje del canal (02_marca/personaje.svg). Si falta, no aparece. Entra el ÚLTIMO del escalonado: primero se lee la escena y después él reacciona. Coste de render cero — no se anima en el tramo central."
      },
+     "risa": {
+      "type": "boolean",
+      "description": "Añadido el 18/09 (C38). Pide que al narrador se le escape una risa corta y real AL FINAL de esta narración, y solo ahí. Existe porque la regla 13.1 de REGLAS.md permite una risa escrita en el guion y voz.py la prohibía en las seis escenas sin excepción: «manda el guion» (la dirección, 16/09/2026). Una por Short como mucho, y nunca en la escena 1, ni en el remate, ni en el cierre — la regla 13.1 dice que el narrador no se ríe ni al abrir, ni al rematar, ni al cerrar, así que solo cabe en el centro del vídeo. Lo comprueba validar_guion.py con error. Si falta, se prohíbe reírse, que es el comportamiento de siempre."
+     },
      "voz": {
       "enum": [
        "narrador",
