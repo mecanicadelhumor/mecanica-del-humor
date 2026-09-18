@@ -1,0 +1,77 @@
+{
+  "id": "MDS-023",
+  "formato": "corto",
+  "serie": "Ríete primero, te explico después",
+  "idioma": "es",
+  "titulo_trabajo": "¿Reírse es bueno para la salud?",
+  "tesis": "El estudio que fue a buscar el humor que protege la salud encontró otra cosa: que un estilo de humor te venga bien o mal depende del agobio que lleves encima.",
+  "pilares": [
+    "G"
+  ],
+  "duracion_objetivo_s": 47,
+  "bloqueos": [],
+  "notas_humor": [
+    "Prueba 1 · qué pasa: en mi antiguo trabajo pusieron risoterapia obligatoria a las ocho de la mañana.",
+    "Prueba 1 · qué gira: el estudio que buscaba el humor que protege la salud encontró que depende del agobio que lleves, no del humor a secas.",
+    "Prueba 1 · cómo acaba: es una encuesta que rellena cada uno sobre sí mismo; a nadie lo mandaron a una clase de risoterapia a las ocho.",
+    "Serie «Ríete primero, te explico después»: el chiste va en el segundo cero y la explicación es el premio. No es «El experimento» porque G03 es una encuesta con regresiones, no un estudio con protagonista, y declarar una forma que el guion no tiene es lo que produjo el MDS-011 «despiezado».",
+    "Afirmaciones comprobadas el 17/09/2026 contra el resumen del artículo, leído en esta ejecución en la página del artículo en Europe's Journal of Psychology (acceso abierto). Frases literales del resumen: «Two hundred sixty-five retirees over the age of 55 years responded to an on-line survey, completing the RAND 36-Item Health Survey and the Humor Styles Questionnaire.»; «Contrary to expectation, and the assumed nature of humor styles, results suggest that the adaptiveness of humor styles depends on the level of stress or hassles one perceives, as well as gender.»",
+    "De esa frase literal se cuenta la parte del agobio y NO la del sexo: en cuarenta segundos una diferencia entre hombres y mujeres se lee como una afirmación sobre lo que le pasa a cada uno por serlo, que es justo lo que REGLAS.md manda rechazar. No es un dato que se esconda: es un dato que no cabe bien, y está dicho aquí.",
+    "AVISO PARA LA BIBLIOGRAFÍA (no es fichero mío): la ficha G03 fecha el artículo en 2015 y no da autores; la página del artículo lo fecha en 2010 y lo firman Gillian P. Freeman y W. Larry Ventis. Conviene comprobarlo antes de volver a citarlo.",
+    "El guion no da ningún consejo de salud, no nombra ninguna enfermedad y no promete ningún beneficio: dice qué midió el estudio y qué le salió."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "icono": "i-publico",
+      "texto": "Risoterapia. A las *ocho*.",
+      "narracion": "En mi antiguo trabajo pusieron una clase de risoterapia a las ocho de la mañana.",
+      "pausa_despues_s": 1.35
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y *obligatoria*",
+      "narracion": "Obligatoria. Salí riéndome, sí, pero de tener que estar allí.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.55
+    },
+    {
+      "tipo": "dato",
+      "cifra": "265 jubilados",
+      "pie": "una encuesta de *salud* y otra de humor",
+      "narracion": "Freeman y Ventis le pasaron a doscientos sesenta y cinco jubilados una encuesta de salud y otra de estilos de humor.",
+      "fuente": "G03",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "enunciado",
+      "icono": "i-balanza",
+      "texto": "Les salió lo *contrario*",
+      "narracion": "Y les salió lo contrario de lo que esperaban: que un humor te venga bien o mal depende del agobio que lleves.",
+      "fuente": "G03",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "comparacion",
+      "a": "«Reírse es *sano*»",
+      "b": "El mismo humor, otro día",
+      "et_a": "la frase de la taza",
+      "et_b": "puede no servirte igual",
+      "narracion": "O sea que la frase no es reírse es sano. Es que el mismo humor, en una semana mala, no sirve igual.",
+      "fuente": "G03",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla aquí: es una *encuesta*",
+      "subtitulo": "Humor y salud en la jubilación",
+      "narracion": "Y aquí falla: es una encuesta por internet que rellena cada uno. A nadie lo mandaron a risoterapia a las ocho.",
+      "fuente": "G03",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

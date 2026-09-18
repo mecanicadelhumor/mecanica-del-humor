@@ -1,0 +1,75 @@
+{
+  "id": "MDS-021",
+  "formato": "corto",
+  "serie": "El experimento",
+  "idioma": "es",
+  "titulo_trabajo": "¿Cómo es la personalidad de los cómicos?",
+  "tesis": "Los cómicos profesionales puntúan más alto en los cuatro estilos de humor, pero entre ellos al que le va mejor no es al que se ríe de sí mismo.",
+  "pilares": [
+    "C"
+  ],
+  "duracion_objetivo_s": 48,
+  "bloqueos": [],
+  "notas_humor": [
+    "Prueba 1 · qué pasa: el gracioso de mi familia soy yo, y todo mi material sale de cosas que se me dan fatal.",
+    "Prueba 1 · qué gira: los cómicos profesionales puntúan alto también en ese humor, el de reírse de uno mismo, pero es justo el que va con menos éxito.",
+    "Prueba 1 · cómo acaba: el test lo rellena cada uno sobre sí mismo, así que yo, en ese test, saldría graciosísimo.",
+    "Serie «El experimento» elegida por la forma: hay protagonistas (treinta y un cómicos y cuatrocientos estudiantes haciendo los mismos test) y la escena «dato» lleva la cifra grande con su fuente.",
+    "Afirmaciones comprobadas el 17/09/2026 contra el resumen del artículo, leído en esta ejecución en el portal de investigación de Aberystwyth University. Frases literales del resumen: «It analyzes data from 31 comedians and 400 college students with regard to the Big Five personality traits (NEO-FFI-R), the Humor Styles Questionnaire (HSQ), a humor production task, verbal intelligence, and, for the comedians, a measure of professional success.»; «Comedians scored higher than students on verbal intelligence, humor production ability, and each of the four styles of humor.»; «Professional success was predicted positively by affiliative humor and negatively by self-defeating humor.»",
+    "AVISO PARA LA BIBLIOGRAFÍA (no es fichero mío): la ficha C05 trae el título de otro artículo y un DOI que no es el suyo. El artículo de Greengross, Martin y Miller (2012, Psychology of Aesthetics, Creativity, and the Arts) se titula «Personality Traits, Intelligence, Humor Styles, and Humor Production Ability of Professional Stand-up Comedians Compared to College Students» y su DOI es 10.1037/a0025774. El que figura en la ficha, 10.1037/a0026994, corresponde a un artículo de otro campo.",
+    "No se dice ni se insinúa nada sobre salud mental de los cómicos: el mito del payaso triste vive en C06, que pide matización responsable y no cabe en cuarenta segundos (mismo razonamiento por el que REGLAS.md deja humor y atracción fuera del formato corto)."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "icono": "i-publico",
+      "texto": "El *gracioso* de casa",
+      "narracion": "En mi familia el gracioso soy yo, y mi material sale de cosas que se me dan fatal.",
+      "pausa_despues_s": 1.35
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Y no se me *acaba*",
+      "narracion": "Veinte años después no se me ha acabado el material.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "dato",
+      "cifra": "31 cómicos",
+      "pie": "contra 400 *estudiantes*",
+      "narracion": "Greengross y su equipo les pasaron los mismos test a treinta y un cómicos profesionales y a cuatrocientos estudiantes.",
+      "fuente": "C05",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "comparacion",
+      "a": "Los *cómicos*",
+      "b": "Los estudiantes",
+      "et_a": "más alto en los cuatro estilos",
+      "et_b": "más bajo en los cuatro",
+      "narracion": "Los cómicos puntuaron más alto en los cuatro estilos de humor. También en el de reírse de uno mismo.",
+      "fuente": "C05",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "enunciado",
+      "icono": "i-balanza",
+      "texto": "Pero el éxito iba con el *otro*",
+      "narracion": "Y entre ellos, el éxito iba con el humor que une al grupo, y en contra del de reírse de uno mismo.",
+      "fuente": "C05",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla aquí: lo rellenan *ellos*",
+      "subtitulo": "Cómicos profesionales · cuestionarios de humor",
+      "narracion": "Y aquí falla: son treinta y un cómicos, y el test lo rellena cada uno sobre sí mismo. Yo saldría graciosísimo.",
+      "fuente": "C05",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

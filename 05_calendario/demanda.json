@@ -1,409 +1,330 @@
 {
-  "generado_utc": "2026-09-10T22:40:00Z",
+  "generado_utc": "2026-09-17T21:40:00Z",
   "_que_es": "Las preguntas que la gente escribe de verdad, con la evidencia de que las escribe y con el veredicto de si la bibliografía nos deja responderlas. La demanda elige la pregunta; la bibliografía decide si podemos responderla honestamente (REGLAS.md, regla 3). Si «respaldo_bibliografico» sale vacío, «apto» es false y el vídeo no se hace: se anota en pendientes_de_fuente.md.",
   "_estado_de_la_medicion": {
     "gravedad": "ninguna",
-    "que_ha_pasado": "demanda_bruta.json es de hoy (2026-09-10T12:43:14Z), trae las VEINTICUATRO consultas que pidió semillas_demanda.json del 03/09, con visualizaciones del top 10, los cinco primeros con título, canal, fecha y duración, el autocompletar y la Wikipedia. El campo «avisos» está vacío. Cuota gastada: 2424. Segunda semana consecutiva con medición buena.",
-    "lo_que_ha_mejorado": "El autocompletar sirve por primera vez, aunque solo en parte. De las doce semillas, ocho siguen devolviendo letras de canciones con la codificación rota («tendría que llorar por ti y me río como un loco»), pero cuatro vienen limpias y son útiles: «inteligencia artificial humor» devuelve cuatro sugerencias y las cuatro son la pregunta; «cómo ser gracioso» devuelve veintiocho y casi todas son intención real. El defecto de codificación sigue ahí y sigue siendo de explorador_de_demanda.py, que no es de la planificación."
+    "que_ha_pasado": "demanda_bruta.json es de hoy (2026-09-17T12:42:19Z), trae las veinticuatro consultas que pidió semillas_demanda.json del 10/09, con visualizaciones del top 10, los cinco primeros con título, canal, fecha y vistas, el autocompletar y la Wikipedia. El campo «avisos» está vacío. Cuota gastada: 2424. Tercera semana consecutiva con medición buena.",
+    "el_autocompletar_sigue_roto_en_parte": "De las doce semillas, siete vuelven legibles y cinco siguen con la codificación rota («por qu� da risa», «chistes para hacer re�r»). El patrón se confirma por tercera semana: las semillas sin tildes vuelven bien y las que las llevan, no. Es explorador_de_demanda.py, que no es fichero de la planificación; queda anotado en la bitácora de esta noche. «personalidad comicos» devuelve una sola sugerencia y no es la pregunta («personajes comicos»): esa consulta se ha juzgado solo con YouTube."
   },
-  "_metodo": "Lo que mide el workflow es volumen; lo que decide un vídeo es volumen EN TEMA. Por eso cada candidato lleva «pertinencia_top5»: cuántos de los cinco primeros responden realmente la pregunta, leído título a título. Trece de las veinticuatro consultas devuelven entretenimiento y no explicaciones — a esas se les pone «consulta_secuestrada» y su «vistas_top10» NO se usa para ordenar nada. Aclaración del codirector del 04/09, aplicada aquí sin excepción: pertinencia descuenta cifras, NO descarta temas. Que hoy responda una pregunta el entretenimiento y no la divulgación es un hueco, y cuatro de los cinco Shorts de esta semana salen precisamente de consultas secuestradas. Después, cada pregunta se cruza a mano contra las 77 obras y las supervivientes se filtran por C17 contra los códigos de «fuente» de los veintisiete guiones españoles del repositorio.",
-  "_como_leer_vistas_top10": "Un número grande con «pertinencia_top5: 0 de 5» significa lo contrario de lo que parece. El caso extremo de esta tanda es «un profesor gracioso enseña mejor»: 323.584.560 visualizaciones, la cifra más alta que ha medido este canal nunca, y cero resultados que respondan. Son sketches de profesores. Ordenar la semana por esa columna la escribiría al revés.",
-  "_lo_que_ha_mandado_esta_semana": "C17 más que la demanda. De las veinticuatro consultas, siete se han rechazado por repetición de ficha o de pregunta y solo tres por falta de fuente. La elección de los cinco Shorts ha empezado por las 36 fichas que no se han usado nunca y ha terminado en los pilares que estaban enteros sin abrir: K (los cuatro, ninguna abierta), G (solo G01 y G02), I (solo I01 e I02) y E06. Ningún Short de esta semana repite una ficha ya usada en el repositorio.",
+  "_metodo": "Lo que mide el workflow es volumen; lo que decide un vídeo es volumen EN TEMA. Por eso cada candidato lleva «pertinencia_top5»: cuántos de los cinco primeros responden realmente la pregunta, leído título a título. Aclaración del codirector del 04/09, aplicada sin excepción: la pertinencia descuenta cifras, NO descarta temas — que hoy conteste el entretenimiento y no la divulgación es un hueco. Después, cada pregunta se cruza a mano contra las 77 obras y las supervivientes se filtran por C17 contra los códigos de «fuente» de los guiones españoles del repositorio.",
+  "_lo_que_ha_mandado_esta_semana": "C17, otra vez, y esta vez con el inventario en la mano. De las veinticuatro consultas, NUEVE son temas que la bibliografía sí responde y que aun así no se hacen, porque su ficha central se usó hace menos de seis semanas o porque la pregunta ya se respondió. El aviso que la planificación del 10/09 dio para «mediados de octubre» ha llegado tres semanas antes.",
+  "_lo_segundo_que_ha_mandado": "La regla del 15/09 —lo que un estudio encontró se copia, no se deduce— ha cambiado el orden de la semana más que la demanda. Dos fichas libres con demanda medida detrás (F04 y F05) han quedado fuera porque su referencia en BIBLIOGRAFIA_CURADA.md no permite identificar el artículo: el DOI que la ficha da para F04 corresponde a un trabajo de otro campo. Sin poder leer el resumen no se puede escribir un resultado, y sin resultado no hay Short. Detallado en la bitácora del 17/09.",
   "candidatos": [
     {
-      "pregunta": "por qué la ironía no se entiende por whatsapp",
-      "variantes": [
-        "ironía por whatsapp",
-        "por qué no se pilla el sarcasmo por escrito"
-      ],
-      "vistas_top10": 9056150,
-      "mediana_top5": 57438,
-      "pertinencia_top5": "1 de 5",
-      "competencia": "hueco_casi_completo",
-      "por_que_esa_competencia": "Nueve millones en el top 10 y ni un resultado sobre el problema real. Los cuatro primeros son vídeos de frases («#frases», «Frases Sabias de la Vida»): la consulta la secuestra la palabra «ironía» como sentimiento. El único que explica algo es «LA IRONÍA (FIGURA LITERARIA)» de 2018, con 70.796 visualizaciones, y va de literatura, no de mensajes. Nadie ocupa la pregunta tal y como la gente la vive.",
-      "respaldo_bibliografico": [
-        "I05",
-        "I04"
-      ],
-      "que_dice_el_respaldo": "I05 (Attardo y otros, 2003) es exactamente esto: cómo se señala la ironía, prosodia y marcadores. Es la ficha que responde la pregunta sin estirarse ni un milímetro. I04 queda como respaldo de contexto y no se cita en pantalla.",
-      "apto": true,
-      "asignado_a": "MDS-016",
-      "aviso": "Ficha I05 sin abrir hasta hoy. El Short NO afirma nada sobre emojis: la prosodia está medida y el emoji no, y eso se dice en el cierre como límite, que es donde va."
-    },
-    {
-      "pregunta": "por qué nos hacen gracia las cosquillas",
-      "variantes": [
-        "cosquillas por qué nos reímos",
-        "de dónde viene la risa"
-      ],
-      "vistas_top10": 3522512,
-      "mediana_top5": 83036,
-      "pertinencia_top5": "2 de 5",
-      "competencia": "media_con_hueco_de_angulo",
-      "por_que_esa_competencia": "Es la única pregunta de la tanda donde hay demanda DEMOSTRADA —la gente busca y ve las respuestas: 1.391.712, 1.264.735, 498.215—, pero dos de esos tres responden otra pregunta, la de por qué no puedes hacerte cosquillas tú (CdeCiencia, TikTak Draw). El primero es una canción infantil. De dónde viene la risa de las cosquillas no lo cuenta ninguno.",
-      "respaldo_bibliografico": [
-        "E06"
-      ],
-      "que_dice_el_respaldo": "E06 (Panksepp y Burgdorf, 2003) cubre cosquillas y evolución de la risa, con las ratas que «ríen» a 50 kHz. Da el ángulo libre: la risa es anterior al chiste.",
-      "apto": true,
-      "asignado_a": "MDS-017",
-      "aviso": "NO se toca la autocosquilla, que sigue en pendientes_de_fuente.md desde el 20/08 por falta de ficha y con el peor perfil de competencia de todo el corpus. La pregunta que se responde es otra y el Short no la roza."
-    },
-    {
-      "pregunta": "un profesor gracioso enseña mejor",
-      "variantes": [
-        "humor en clase",
-        "el humor ayuda a aprender"
-      ],
-      "vistas_top10": 323584560,
-      "mediana_top5": 17443083,
-      "pertinencia_top5": "0 de 5",
-      "competencia": "consulta_secuestrada",
-      "por_que_esa_competencia": "Trescientos veintitrés millones, el número más alto de las veinticuatro consultas, y NO mide nada: los cinco primeros son sketches de profesores («NO te vayas a caer!!», «Profesores antes vs ahora»), de 13 a 35 segundos. YouTube lee «profesor» + «gracioso» y sirve comedia. La cifra no se ha usado para ordenar. Lo que sí queda es un hueco entero: nadie contesta si funciona.",
-      "respaldo_bibliografico": [
-        "G06"
-      ],
-      "que_dice_el_respaldo": "G06 (Banas y otros, 2011) es el metaanálisis de humor del profesor y aprendizaje, y trae el «dónde falla» incorporado: solo funciona si es relevante al contenido.",
-      "apto": true,
-      "asignado_a": "MDS-018",
-      "aviso": "Pilar G entero sin abrir salvo G01 y G02 (MDH-006). Esta semana se abren G05 y G06."
-    },
-    {
-      "pregunta": "los anuncios graciosos venden más",
-      "variantes": [
-        "humor en publicidad",
-        "funciona el humor en los anuncios"
-      ],
-      "vistas_top10": 4644787,
-      "mediana_top5": 688668,
-      "pertinencia_top5": "0 de 5",
-      "competencia": "consulta_secuestrada",
-      "por_que_esa_competencia": "Los cinco primeros son recopilaciones de anuncios graciosos, no respuestas: «10 Anuncios Graciosos y Estupidos», «LOS MEJORES COMERCIALES DEL MUNDO 451», el más nuevo de 2022. Quien escribe esto queriendo saber si funciona no encuentra a nadie que se lo diga.",
-      "respaldo_bibliografico": [
-        "G05"
-      ],
-      "que_dice_el_respaldo": "G05 (Eisend, 2009) es el metaanálisis del humor persuasivo: cuándo ayuda y cuándo distrae del mensaje. Las tres cosas que hace el humor en un anuncio salen de la misma tabla.",
-      "apto": true,
-      "asignado_a": "MDS-019",
-      "aviso": "No se nombra ninguna marca ni se reconstruye ningún anuncio real: regla 9."
-    },
-    {
-      "pregunta": "puede la inteligencia artificial hacer chistes",
-      "variantes": [
-        "por qué chatgpt no tiene gracia",
-        "ia y humor"
-      ],
-      "vistas_top10": 80642925,
-      "mediana_top5": 1401420,
-      "pertinencia_top5": "0 de 5",
-      "competencia": "consulta_secuestrada_con_intencion_limpia",
-      "por_que_esa_competencia": "Ochenta millones y cero respuestas: el primero es JuegaGerman con 67 millones haciendo hablar a dos IA. Pero esta consulta tiene algo que las demás secuestradas no tienen — su autocompletar está LIMPIO. «inteligencia artificial humor» devuelve cuatro sugerencias y las cuatro son la pregunta: chiste, comedia, graciosa, humor. Sin letras de canciones. Es intención de búsqueda real sin nadie sirviéndola. La consulta hermana, «por qué chatgpt no tiene gracia», da lo mismo: 7.983.804 y 0 de 5.",
-      "respaldo_bibliografico": [
-        "K02",
-        "K03",
-        "K04",
-        "K01"
-      ],
-      "que_dice_el_respaldo": "K02 (Mirowski y otros, 2024) sentó a veinte cómicos profesionales a escribir comedia con modelos de lenguaje. K03 (Hessel y otros, 2023) es el banco de pruebas de comprensión del humor montado sobre los pies de foto del New Yorker. Se cuenta lo que los estudios HICIERON —su diseño—, no conclusiones que las fichas no recogen.",
-      "apto": true,
-      "asignado_a": "MDS-020",
-      "aviso": "Pilar K: cuatro fichas, ninguna abierta en veintisiete guiones. Y es el tema más de marca que tiene el canal, porque el cierre lo dice: el guion lo ha escrito una máquina."
-    },
-    {
-      "pregunta": "por qué se ríen de mí",
-      "variantes": [
-        "se burlan de mí",
-        "miedo al ridículo"
-      ],
-      "vistas_top10": 66269561,
-      "mediana_top5": 28403,
-      "pertinencia_top5": "4 de 5",
-      "competencia": "baja_en_fondo",
-      "por_que_esa_competencia": "De los 66 millones, 65,8 son UN vídeo viral de 30 segundos que no responde nada («SE RÍEN DE MI TAMAÑO»). Quitado ese, quedan cuatro respuestas de verdad —Bernardo Stamateas 140.816, CMR 126.198, javighoma 88.449, Enrique Delgadillo 28.403— y ninguna nombra la gelotofobia ni cita un estudio. Demanda real, competencia de consejo genérico: el mejor perfil posible para el largo.",
-      "respaldo_bibliografico": [
-        "J02",
-        "J01",
-        "H05",
-        "H06"
-      ],
-      "que_dice_el_respaldo": "J02 y J01 son la columna: el rasgo, su medida y las tres posiciones ante la risa. H05 y H06 aportan la vía de la improvisación aplicada.",
-      "apto": true,
-      "asignado_a": "MDH-007",
-      "aviso": "El título del largo pasa a ser esta pregunta. «Gelotofobia» reúne 9.025 visualizaciones en diez resultados y no la escribe nadie; era el título anterior. MDS-013 (09/09) ocupó «miedo a que se rían de ti» con J04/J05 y a propósito no tocó J01 ni J02."
-    },
-    {
       "pregunta": "cómo es la personalidad de los cómicos",
-      "variantes": [
-        "cómo son los cómicos",
-        "payaso triste"
-      ],
-      "vistas_top10": 17243052,
-      "mediana_top5": 653295,
+      "variantes": ["cómo son los cómicos", "personalidad de un humorista"],
+      "vistas_top10": 84013775,
+      "mediana_top5": 972116,
       "pertinencia_top5": "0 de 5",
-      "competencia": "consulta_secuestrada",
-      "por_que_esa_competencia": "Los cinco primeros son comedia y televisión, ninguno sobre el perfil de nadie. Hueco entero.",
-      "respaldo_bibliografico": [
-        "C05"
-      ],
-      "que_dice_el_respaldo": "C05 (Greengross, Martin y Miller, 2012) compara cómicos profesionales, aficionados y no cómicos.",
+      "competencia": "hueco_completo",
+      "por_que_esa_competencia": "Ochenta y cuatro millones y ni un resultado que responda: los cinco primeros son sketches y vídeos de humor («También hacen esos retos?», «¿Quién más ama su personalidad?», un corte de La que se avecina). Setenta y cinco de esos ochenta y cuatro millones son un solo vídeo. La cifra no mide demanda de respuesta y no se usa para ordenar; el hueco, sí: nadie contesta la pregunta con datos.",
+      "respaldo_bibliografico": ["C05"],
+      "que_dice_el_respaldo": "C05 (Greengross, Martin y Miller, 2012) compara treinta y un cómicos profesionales con cuatrocientos estudiantes en estilos de humor, inteligencia verbal y producción de humor. Resumen leído hoy: los cómicos puntúan más alto en los cuatro estilos, y entre ellos el éxito profesional lo predice el humor afiliativo en positivo y el autodestructivo en negativo.",
       "apto": true,
-      "asignado_a": null,
-      "aviso": "APTO PERO NO SE PRODUCE ESTA SEMANA, y conviene que quede escrito por qué. C06 («los rasgos psicóticos de los cómicos») es la ficha que daría el titular, y la propia bibliografía la marca como «requiere matización responsable». Cuarenta segundos no dan para esa matización, que es el mismo razonamiento por el que REGLAS.md prohíbe humor y atracción en Short: sin el matiz, lo que queda es «los cómicos están mal de la cabeza». Con C05 a solas sí cabe y sí se hará — queda de cabeza de serie para la semana del 21."
-    },
-    {
-      "pregunta": "qué le pasa a tu cerebro cuando te ríes",
-      "variantes": [
-        "la risa y el cerebro"
-      ],
-      "vistas_top10": 558756,
-      "mediana_top5": 11843,
-      "pertinencia_top5": "3 de 5",
-      "competencia": "baja",
-      "por_que_esa_competencia": "La segunda consulta con respuestas reales de la tanda, y todas pequeñas: La Hiperactina 376.185, Supercurioso 111.615 (2015), Curiosomax 11.843. Nadie grande lo ocupa.",
-      "respaldo_bibliografico": [
-        "F01",
-        "F02",
-        "F04"
-      ],
-      "que_dice_el_respaldo": "F04 (Chan y otros) está sin abrir; F01 y F02 fueron apoyo de pasada en MDH-002 (19/08) y nunca fuente central, así que C17 no los bloquea.",
-      "apto": true,
-      "asignado_a": null,
-      "aviso": "Se queda fuera por reparto, no por criterio: era el sexto de cinco. Cabeza de serie para la semana del 21 junto con la personalidad de los cómicos."
-    },
-    {
-      "pregunta": "reírse es bueno para la salud",
-      "vistas_top10": 470146,
-      "mediana_top5": 772,
-      "pertinencia_top5": "2 de 5",
-      "competencia": "baja_en_fondo",
-      "por_que_esa_competencia": "Cifras minúsculas y contenido de risoterapia sin datos. El hueco existe y nuestro ángulo sería desmontar la sobreventa.",
-      "respaldo_bibliografico": [
-        "G03",
-        "G04"
-      ],
-      "que_dice_el_respaldo": "G03 («humor y salud sin sobreventa») y G04, las dos sin abrir. G04 la propia ficha pide verificar el tamaño muestral antes de citarla.",
-      "apto": true,
-      "asignado_a": null,
-      "aviso": "Apto y en la cola. No entra esta semana porque G05 y G06 ya ocupan el pilar G en dos de los cinco Shorts."
+      "asignado_a": "MDS-021",
+      "aviso": "Era la cabeza de serie que dejó anotada la planificación del 10/09 y se cumple: entra con C05 a solas. C06 (el mito del payaso triste) sigue fuera del formato corto — pide matización responsable y cuarenta segundos no dan para ella, exactamente el razonamiento por el que REGLAS.md prohíbe humor y atracción en Short. La ficha C05 trae además un título y un DOI que no son los suyos; está anotado en la bitácora."
     },
     {
       "pregunta": "por qué un chiste hace menos gracia la segunda vez",
-      "vistas_top10": 108093549,
-      "mediana_top5": 5530283,
+      "variantes": ["por qué un chiste repetido no hace gracia", "chiste contado dos veces"],
+      "vistas_top10": 95365692,
+      "mediana_top5": 5607250,
       "pertinencia_top5": "0 de 5",
-      "competencia": "consulta_secuestrada",
-      "por_que_esa_competencia": "Los diez primeros son recopilaciones de chistes malos. Cero respuestas.",
-      "respaldo_bibliografico": [
-        "A06"
-      ],
-      "que_dice_el_respaldo": "A06 (Suls, 1972) es la formulación original del modelo de dos fases y está sin abrir.",
-      "apto": false,
-      "motivo_del_rechazo": "C17, no falta de fuente. MDS-010 (04/09) respondió «si tienes que explicar un chiste pierde la gracia» con A05 y A07, y el hallazgo es el mismo mecanismo contado con otras palabras: una vez resuelta la incongruencia, no queda nada que resolver. Usar A06 —que es A05 con otro título— para volver a contarlo diez días después es exactamente la costumbre que C17 existe para cortar. Se remide dentro de seis semanas."
+      "competencia": "hueco_completo",
+      "por_que_esa_competencia": "Noventa y cinco millones y cinco recopilaciones de chistes malos. La consulta la secuestra la palabra «chiste»: quien la escribe quiere una explicación y lo que recibe es más chistes. Es el perfil de hueco más limpio de la tanda después del de los cómicos.",
+      "respaldo_bibliografico": ["A06"],
+      "que_dice_el_respaldo": "A06 (Suls, 1972) es la formulación original del modelo de dos fases —incongruencia y resolución—, que es justo lo que se rompe al repetir un chiste: la segunda vez no queda nada por resolver.",
+      "apto": true,
+      "asignado_a": "MDS-022",
+      "aviso": "El guion NO le atribuye a A06 ningún resultado medido: el capítulo de Suls no se ha podido leer y la ficha solo describe el modelo. El Short dice que es lo que el modelo predice y el cierre lo repite en voz alta. Si alguna vez entra en el corpus un estudio de habituación al humor, esta pregunta merece una segunda versión con datos."
     },
     {
-      "pregunta": "por qué me hace gracia el humor absurdo",
-      "vistas_top10": 81392221,
-      "mediana_top5": 4024128,
-      "pertinencia_top5": "0 de 5",
-      "competencia": "consulta_secuestrada",
-      "por_que_esa_competencia": "Los cinco primeros son recopilaciones de vídeos de risa. Hueco real.",
-      "respaldo_bibliografico": [
-        "B04",
-        "B06"
-      ],
-      "que_dice_el_respaldo": "B04 (el test 3WD: incongruencia-resolución, sin sentido, sexual) es la ficha que contesta esto de verdad.",
-      "apto": false,
-      "motivo_del_rechazo": "C17. B04 fue fuente central de MDS-007 (01/09) y B06 de MDS-014 (10/09), las dos dentro de las seis semanas. No hay ninguna ficha libre que responda el nonsense sin estirarse. Se remide."
-    },
-    {
-      "pregunta": "cómo distinguir una risa falsa de una de verdad",
-      "vistas_top10": 4840489,
-      "mediana_top5": 102079,
-      "pertinencia_top5": "1 de 5",
-      "competencia": "baja",
-      "por_que_esa_competencia": "Hueco claro: Hazbin Hotel, tutoriales de sonreír y un criminólogo con 108.185.",
-      "respaldo_bibliografico": [
-        "F03",
-        "E04",
-        "D07"
-      ],
-      "que_dice_el_respaldo": "F03 (dos vías neurales para la risa espontánea y la voluntaria) sigue sin abrir.",
-      "apto": false,
-      "motivo_del_rechazo": "C17, y es la SEGUNDA semana consecutiva que se rechaza por lo mismo: MDH-004 (29/08) ya lo contó con casi las mismas escenas. La ventana de seis semanas se cierra el 10 de octubre; hasta entonces no entra, por buena que sea la ficha libre."
-    },
-    {
-      "pregunta": "funcionan las risas enlatadas",
-      "vistas_top10": 3170424,
-      "mediana_top5": 82963,
-      "pertinencia_top5": "2 de 5",
-      "competencia": "media",
-      "por_que_esa_competencia": "Dos explicaciones reales pequeñas (122.133 y 106.485) y el resto efectos de sonido.",
-      "respaldo_bibliografico": [
-        "E01",
-        "E02"
-      ],
-      "que_dice_el_respaldo": "E01 (la risa es treinta veces más probable en grupo) es la ficha que lo responde.",
-      "apto": false,
-      "motivo_del_rechazo": "C17. E01 aparece en tres guiones y E02 en otros tres, y en MDS-002 y MDS-006 fueron centrales. Ninguna ficha libre responde el contagio por la vía de la risa grabada. Se remide."
-    },
-    {
-      "pregunta": "por qué me río cuando estoy nervioso",
-      "vistas_top10": 5861048,
-      "mediana_top5": 258478,
-      "pertinencia_top5": "1 de 5",
-      "competencia": "media",
-      "respaldo_bibliografico": [
-        "E02",
-        "A10"
-      ],
-      "por_que_esa_competencia": "La Hiperactina lo ocupa con 376.185 y es la respuesta buena del top 5.",
-      "que_dice_el_respaldo": "E02 y A10 son las fichas del ángulo, y las dos sostuvieron MDS-006.",
-      "apto": false,
-      "motivo_del_rechazo": "C17 y repetición de pregunta: MDS-006 (31/08) es «por qué me río cuando no debo», con E02 y A10 centrales. Es la misma pregunta con otra ropa."
-    },
-    {
-      "pregunta": "por qué sentimos vergüenza ajena",
-      "vistas_top10": 213144,
-      "mediana_top5": 17813,
-      "pertinencia_top5": "4 de 5",
-      "competencia": "baja",
-      "por_que_esa_competencia": "Psicólogos generalistas con cifras modestas (83.636 a 17.813) y ninguno lo cuenta desde el humor. Sigue siendo, con los números delante, el mejor hueco de la lista de excluidas.",
-      "respaldo_bibliografico": [],
-      "que_dice_el_respaldo": "Ninguno. El corpus cubre el miedo a que se rían de TI (J01, J02) y la burla como amenaza a la imagen (J04). La vergüenza ajena es vergüenza vicaria y no hay ni una ficha.",
-      "apto": false,
-      "motivo_del_rechazo": "Sin respaldo bibliográfico. Cuarta semana en pendientes_de_fuente.md. Hace falta literatura de empathic embarrassment; Krach y Paulus, en abierto, sigue siendo el punto de partida."
-    },
-    {
-      "pregunta": "por qué los memes nos hacen gracia",
-      "vistas_top10": 84030229,
-      "mediana_top5": 10045617,
-      "pertinencia_top5": "0 de 5",
-      "competencia": "consulta_secuestrada",
-      "por_que_esa_competencia": "Los cinco primeros son recopilaciones de memes. La consulta devuelve memes, no explicaciones de memes.",
-      "respaldo_bibliografico": [],
-      "que_dice_el_respaldo": "Ninguno. No hay una sola obra sobre memes en las 77.",
-      "apto": false,
-      "motivo_del_rechazo": "Sin respaldo bibliográfico. Sigue en pendientes_de_fuente.md desde el 20/08."
-    },
-    {
-      "pregunta": "cómo caer bien en una primera conversación",
-      "vistas_top10": 5831959,
-      "mediana_top5": 693531,
+      "pregunta": "reírse es bueno para la salud",
+      "variantes": ["beneficios de la risa", "risoterapia funciona"],
+      "vistas_top10": 472476,
+      "mediana_top5": 1630,
       "pertinencia_top5": "5 de 5",
-      "competencia": "alta_y_real",
-      "por_que_esa_competencia": "La única consulta de la tanda cuyos cinco primeros responden EXACTAMENTE la pregunta, con canales establecidos y vídeos largos: Teresa Baró 1.545.835, De Verdad Simple 1.406.213, Adrià Solà 749.244. Aquí no hay hueco: hay gente haciéndolo bien.",
-      "respaldo_bibliografico": [
-        "D05"
-      ],
-      "que_dice_el_respaldo": "D05 es la ficha, y fue central en MDS-009 (03/09).",
-      "apto": false,
-      "motivo_del_rechazo": "C17 sobre D05, y además competencia alta y real, que es la pelea que este canal pierde hoy."
+      "competencia": "baja_real",
+      "por_que_esa_competencia": "Es la única consulta de la tanda donde los cinco primeros responden de verdad la pregunta y aun así las cifras son pequeñas: 407.877 el primero, de 2015 y de un periódico, y después 33.286, 23.218, 4.926 y 1.630. Nadie ha ocupado el sitio con algo reciente y nadie dice dónde falla: son listas de beneficios. Competencia real, pero floja y vieja.",
+      "respaldo_bibliografico": ["G03"],
+      "que_dice_el_respaldo": "G03 (Freeman y Ventis) encuesta a doscientos sesenta y cinco jubilados con un cuestionario de salud y otro de estilos de humor. Resumen leído hoy, literal: «Contrary to expectation […] the adaptiveness of humor styles depends on the level of stress or hassles one perceives». O sea: no es que reírse sea sano, es que depende.",
+      "apto": true,
+      "asignado_a": "MDS-023",
+      "aviso": "El resumen incluye también el sexo como moderador. NO entra en el Short: en cuarenta segundos una diferencia entre hombres y mujeres se lee como una afirmación sobre lo que le pasa a cada uno por serlo, y eso REGLAS.md lo rechaza en fase de demanda. Ninguna de las dos piezas de esta semana da consejo de salud."
     },
     {
       "pregunta": "cómo mantener una conversación sin quedarse en blanco",
-      "vistas_top10": 594501,
-      "mediana_top5": 12308,
+      "variantes": ["no sé qué decir en una conversación", "quedarse sin tema"],
+      "vistas_top10": 5991672,
+      "mediana_top5": 130382,
       "pertinencia_top5": "5 de 5",
-      "competencia": "media_y_real",
-      "por_que_esa_competencia": "Cinco de cinco responden, con cifras pequeñas (354.004 el mayor). Hay hueco de calidad pero no de ocupación.",
-      "respaldo_bibliografico": [
-        "L04",
-        "L03"
-      ],
-      "que_dice_el_respaldo": "L04 (Truth in Comedy, el «sí, y además») está sin abrir. L03 sostuvo MDS-012.",
+      "competencia": "alta_real",
+      "por_que_esa_competencia": "Los cinco responden y responden bien: 3.502.810, 1.480.597, 382.337, 354.872 y 130.382, con canales de comunicación consolidados. Es la competencia más fuerte de la tanda y por eso se rechazó el 10/09. Entra hoy por una razón distinta: lo que ninguno de los cinco hace es dar UNA regla con nombre y decir de dónde sale. Todos dan listas de trucos.",
+      "respaldo_bibliografico": ["L04"],
+      "que_dice_el_respaldo": "L04 (Halpern, Close y Johnson, «Truth in Comedy») es el manual del «sí, y además» y del juego de patrones, con ejercicios directos. Es una técnica, no un hallazgo.",
       "apto": true,
-      "asignado_a": null,
-      "aviso": "Sonda del ensanchamiento del 27/09: es humor dentro de habilidades sociales, que es la banda a la que PLAN_DE_CAMBIOS.md v6 ampliaría el tema si la mediana del 15 de noviembre cae entre 50 y 150. Apto, sin asignar, y medido a propósito para llegar a esa conversación con datos."
+      "asignado_a": "MDS-024",
+      "aviso": "Es la sonda del ensanchamiento del 27/09 y entra CON la etiqueta puesta: el cierre dice que sale de un manual y no de un experimento. No se toca H05 (improvisación y ansiedad social), que sostiene MDH-007 y se emite el domingo 20: sería la misma fuente central dos días después."
     },
     {
-      "pregunta": "por qué me da miedo hablar en público",
-      "vistas_top10": 1894511,
-      "mediana_top5": 125851,
-      "pertinencia_top5": "5 de 5",
-      "competencia": "alta_y_real",
-      "por_que_esa_competencia": "Cinco de cinco, con un TEDx y varios formadores de oratoria. Ocupado y bien ocupado.",
-      "respaldo_bibliografico": [
-        "H05"
-      ],
-      "que_dice_el_respaldo": "H05 es el puente, y es una de las fuentes de MDH-007 esta misma semana.",
-      "apto": false,
-      "motivo_del_rechazo": "Competencia alta y real, y C17 sobre H05, que sostiene el largo del sábado 19. Además no es nuestra pregunta: el miedo escénico no es el miedo a la risa."
-    },
-    {
-      "pregunta": "cómo ser más gracioso",
-      "vistas_top10": 1995812,
-      "mediana_top5": 104613,
-      "pertinencia_top5": "5 de 5",
-      "competencia": "alta_en_tema_nula_en_fuentes",
-      "por_que_esa_competencia": "Sin cambios respecto al 03/09.",
-      "respaldo_bibliografico": [
-        "C04",
-        "C03"
-      ],
-      "que_dice_el_respaldo": "Ya usadas.",
-      "apto": false,
-      "motivo_del_rechazo": "Ya producida: MDS-011 (07/09)."
-    },
-    {
-      "pregunta": "cómo contar un chiste bien",
-      "vistas_top10": 31684694,
-      "mediana_top5": 2407432,
+      "pregunta": "por qué el humor ayuda a memorizar",
+      "variantes": ["humor y memoria", "se aprende mejor riéndose"],
+      "vistas_top10": 4736709,
+      "mediana_top5": 434048,
       "pertinencia_top5": "0 de 5",
-      "competencia": "consulta_secuestrada",
-      "por_que_esa_competencia": "Sin cambios: recopilaciones de chistes.",
-      "respaldo_bibliografico": [
-        "L02",
-        "L03"
-      ],
-      "que_dice_el_respaldo": "Ya usadas.",
-      "apto": false,
-      "motivo_del_rechazo": "Ya producida: MDS-012 (08/09)."
+      "competencia": "hueco_completo",
+      "por_que_esa_competencia": "Ninguno de los cinco habla de humor: son vídeos de memoria y de salud («Por esta razón se te olvidan las cosas», «La HIERBA que MEJORA la MEMORIA»). La consulta se va entera hacia «memoria» y deja la mitad de humor sin contestar.",
+      "respaldo_bibliografico": ["G04"],
+      "que_dice_el_respaldo": "G04 (Bains y otros, 2014) es el ensayo del que sale la cifra que circula. Resumen leído hoy: veinte adultos mayores, diez viendo comedia veinte minutos y diez sentados sin móvil, sin leer y sin dormir; el recuerdo diferido mejora un 43,6 % en el grupo de humor y un 20,3 % en el de control.",
+      "apto": true,
+      "asignado_a": "MDS-025",
+      "aviso": "C17 mirado dos veces: la ficha G04 está sin abrir, pero MDS-018 (16/09) usó G06 y también hablaba de aprendizaje. Se hace igual porque el ángulo es el contrario —allí qué humor ayuda a aprender, aquí lo pequeño que es el estudio que lo mide— y porque la ficha pedía explícitamente verificar el tamaño muestral antes de citarla. Verificado: veinte personas. Razonado en la bitácora."
     },
     {
-      "pregunta": "estilos de humor test",
-      "vistas_top10": 150934463,
-      "mediana_top5": 531472,
+      "pregunta": "qué le pasa a tu cerebro cuando te ríes",
+      "variantes": ["qué pasa en el cerebro al reír", "neurociencia de la risa"],
+      "vistas_top10": 91095946,
+      "mediana_top5": 11154955,
       "pertinencia_top5": "0 de 5",
-      "competencia": "consulta_secuestrada",
-      "por_que_esa_competencia": "Ciento cincuenta millones de los que 145 son UN vídeo de pintura. No mide nada.",
-      "respaldo_bibliografico": [
-        "B05",
-        "B06"
-      ],
-      "que_dice_el_respaldo": "Ya usadas.",
+      "competencia": "hueco_completo",
+      "por_que_esa_competencia": "Noventa y un millones en cinco vídeos de aguantar la risa. Cero respuestas. Con la cifra descontada es de los mejores huecos medidos nunca por este canal.",
+      "respaldo_bibliografico": [],
+      "que_dice_el_respaldo": "Ninguna ficha utilizable hoy. F01 y F02 son las buenas y las dos sostienen MDH-002; F03 responde otra pregunta (risa espontánea contra voluntaria) que está cerrada por C17 hasta el 10 de octubre; y F04 y F05 no se pueden usar porque su referencia no identifica ningún artículo localizable: el DOI que la ficha da para F04 corresponde a un trabajo de otro campo.",
       "apto": false,
-      "motivo_del_rechazo": "Ya producida: MDS-014 (10/09)."
+      "motivo_no_apto": "bibliografia_no_verificable",
+      "aviso": "Es la mejor pregunta sin asignar del corpus y no se pierde: va a pendientes_de_fuente.md y sigue en las semillas. Se desbloquea sola en cuanto alguien arregle las fichas de F04 y F05, o a partir del 30 de septiembre, cuando F01 salga de la ventana de C17."
     },
     {
-      "pregunta": "por qué se contagia la risa",
-      "vistas_top10": 4024258,
-      "mediana_top5": 194072,
-      "pertinencia_top5": "3 de 5",
-      "competencia": "baja",
-      "por_que_esa_competencia": "Sin cambios respecto al 03/09.",
-      "respaldo_bibliografico": [
-        "E03",
-        "D06"
-      ],
-      "que_dice_el_respaldo": "Ya usadas.",
+      "pregunta": "por qué hay gente que no pilla los chistes",
+      "variantes": ["no entiende los chistes", "gente sin sentido del humor"],
+      "vistas_top10": 104715646,
+      "mediana_top5": 11040603,
+      "pertinencia_top5": "0 de 5",
+      "competencia": "hueco_completo",
+      "por_que_esa_competencia": "La cifra más alta de la tanda —ciento cuatro millones— y cinco vídeos de bromas. La formulación nueva funciona como consulta, pero YouTube la entiende como «chistes» y no como pregunta.",
+      "respaldo_bibliografico": [],
+      "que_dice_el_respaldo": "Las candidatas eran F05 (desarrollo del humor en la infancia) e I03/I04, y ninguna sirve: F05 no se puede identificar a partir de su ficha, e I03 e I04 son panoramas de lingüística que describen el campo y no traen un hallazgo que se pueda contar en cuarenta segundos.",
       "apto": false,
-      "motivo_del_rechazo": "Ya producida: MDS-015 (11/09)."
+      "motivo_no_apto": "sin_respaldo_utilizable",
+      "aviso": "A pendientes_de_fuente.md. Es la pregunta con más demanda de la tanda: merece que el corpus crezca por aquí."
+    },
+    {
+      "pregunta": "por qué me hace gracia el humor absurdo",
+      "variantes": ["humor absurdo por qué gusta", "humor sin sentido"],
+      "vistas_top10": 217202814,
+      "mediana_top5": 8476350,
+      "pertinencia_top5": "0 de 5",
+      "competencia": "hueco_completo",
+      "por_que_esa_competencia": "Doscientos diecisiete millones de recopilaciones de humor. Cero respuestas.",
+      "respaldo_bibliografico": ["B04", "B06"],
+      "que_dice_el_respaldo": "B04 (el 3WD de Ruch) separa el gusto por la incongruencia resuelta del gusto por el sin sentido: es literalmente la respuesta. B06 (los ocho estilos cómicos) incluye el nonsense.",
+      "apto": false,
+      "motivo_no_apto": "c17",
+      "aviso": "Las dos fichas están dentro de la ventana de seis semanas: B04 sostiene MDS-007 (01/09) y B06 sostiene MDS-014 (10/09). B04 se libera el 13 de octubre y B06 el 22. Tema bueno, semana equivocada."
     },
     {
       "pregunta": "por qué chatgpt no tiene gracia",
-      "vistas_top10": 7983804,
-      "mediana_top5": 406213,
+      "variantes": ["la ia no sabe hacer chistes", "chistes de inteligencia artificial"],
+      "vistas_top10": 9686319,
+      "mediana_top5": 438214,
       "pertinencia_top5": "0 de 5",
-      "competencia": "consulta_secuestrada",
-      "por_que_esa_competencia": "Los cinco primeros son vídeos sobre ChatGPT, ninguno sobre su humor.",
-      "respaldo_bibliografico": [
-        "K04",
-        "K01"
-      ],
-      "que_dice_el_respaldo": "Misma familia que la consulta principal.",
-      "apto": true,
-      "asignado_a": null,
-      "aviso": "Es la consulta hermana de «puede la inteligencia artificial hacer chistes», que sí se produce (MDS-020). No se hacen las dos la misma semana: se queda como variante del mismo Short y como candidata propia con K04 si MDS-020 mueve el número."
+      "competencia": "hueco_completo",
+      "por_que_esa_competencia": "Cinco vídeos de reacciones y trucos con la IA, ninguno sobre por qué escribe chistes malos. Y el autocompletar de «inteligencia artificial humor» vuelve limpio y con las cuatro sugerencias en tema: es la consulta con mejor señal de intención de la tanda.",
+      "respaldo_bibliografico": ["K01", "K04"],
+      "que_dice_el_respaldo": "K01 (Amin y Burghardt, 2020) es el panorama del humor computacional y K04 (Gorenz y Schwarz, 2024) compara humanos y modelos produciendo humor. Las dos libres.",
+      "apto": false,
+      "motivo_no_apto": "c17_pregunta",
+      "aviso": "MDS-020 responde «puede la inteligencia artificial hacer chistes» el viernes 18, tres días antes del lunes 21. Es la misma pregunta con otras palabras y se vería como el mismo vídeo dos veces. Se libera el 30 de octubre, y entonces entra con K04, que tiene el ángulo que a MDS-020 le faltaba: la comparación directa."
+    },
+    {
+      "pregunta": "se puede aprender a ser gracioso",
+      "variantes": ["el humor se entrena", "cómo ser más gracioso"],
+      "vistas_top10": 1937442,
+      "mediana_top5": 105677,
+      "pertinencia_top5": "5 de 5",
+      "competencia": "alta_real",
+      "por_que_esa_competencia": "Los cinco responden, con 932.998 el primero. Es la tesis del canal dicha como la escribe la gente, y el sitio lo ocupan canales de carisma y oratoria.",
+      "respaldo_bibliografico": ["H02", "H04"],
+      "que_dice_el_respaldo": "H02 es un ensayo controlado aleatorizado de entrenamiento del humor y H04 explica por qué funcionan los ejercicios. Las dos libres.",
+      "apto": false,
+      "motivo_no_apto": "c17_pregunta",
+      "aviso": "Doble choque: MDH-001 («Nadie nace gracioso», 18/08, con H01 y H03) responde esta pregunta entera y sale de la ventana el 29 de septiembre, y MDS-011 («cómo ser más gracioso», 07/09) la responde en corto hasta el 19 de octubre. Candidata fuerte para finales de octubre, y entonces con H02, que es un ensayo aleatorizado y da mejor Short que los dos anteriores."
+    },
+    {
+      "pregunta": "funcionan las risas enlatadas",
+      "variantes": ["risas grabadas series", "por qué ponen risas de fondo"],
+      "vistas_top10": 4203859,
+      "mediana_top5": 106567,
+      "pertinencia_top5": "2 de 5",
+      "competencia": "media_con_hueco",
+      "por_que_esa_competencia": "Los tres primeros son efectos de sonido y tipos de risa. Responden dos, con 122.134 y 106.567 visualizaciones, los dos de hace cinco o seis años. Hay sitio.",
+      "respaldo_bibliografico": ["E01", "E03", "E04", "D06"],
+      "que_dice_el_respaldo": "El contagio de la risa está bien cubierto en el pilar E, y E01 (la risa es treinta veces más probable en grupo que a solas) es exactamente el mecanismo de una risa enlatada.",
+      "apto": false,
+      "motivo_no_apto": "c17",
+      "aviso": "Las cuatro fichas están usadas y dentro de ventana: E01 y E04 por MDH-004 (29/08), E03 y D06 por MDS-015 (11/09). E01 y E04 se liberan el 10 de octubre y entonces esta es de las mejores preguntas que quedan sin hacer. Anotada como cabeza de serie de octubre."
+    },
+    {
+      "pregunta": "cómo distinguir una risa falsa de una de verdad",
+      "variantes": ["risa fingida", "sonrisa falsa"],
+      "vistas_top10": 3907719,
+      "mediana_top5": 28424,
+      "pertinencia_top5": "2 de 5",
+      "competencia": "media",
+      "por_que_esa_competencia": "Sin cambios respecto a las dos mediciones anteriores: el primero es un vídeo de dibujos animados con 3.469.217 y los que responden andan por las cien mil.",
+      "respaldo_bibliografico": ["F03", "D07", "E04"],
+      "que_dice_el_respaldo": "F03 (dos vías neurales para la risa espontánea y la voluntaria) sigue libre y sigue siendo la mejor columna posible para este tema.",
+      "apto": false,
+      "motivo_no_apto": "c17",
+      "aviso": "Tercera semana consecutiva rechazada por lo mismo: MDH-004 (29/08) ya lo cuenta con casi las mismas escenas. La ventana se cierra el 10 de octubre, y F03 y E04 quedan libres esa misma semana."
+    },
+    {
+      "pregunta": "por qué me río cuando estoy nervioso",
+      "variantes": ["risa nerviosa", "me río en momentos inoportunos"],
+      "vistas_top10": 5924215,
+      "mediana_top5": 260901,
+      "pertinencia_top5": "1 de 5",
+      "competencia": "media_con_hueco",
+      "por_que_esa_competencia": "Cuatro de los cinco son vídeos de ansiedad y de mareos; responde uno, La Hiperactina, con 376.410. El autocompletar de «risa nerviosa» vuelve con canciones y efectos de sonido.",
+      "respaldo_bibliografico": ["E02", "A10"],
+      "que_dice_el_respaldo": "Las mismas fichas de MDS-006.",
+      "apto": false,
+      "motivo_no_apto": "c17_pregunta",
+      "aviso": "MDS-006 (31/08) respondió «por qué me río cuando no debo» con estas dos fichas. Se libera el 12 de octubre."
+    },
+    {
+      "pregunta": "cómo caer bien en una primera conversación",
+      "variantes": ["caer bien a la gente", "primera impresión"],
+      "vistas_top10": 9397773,
+      "mediana_top5": 745085,
+      "pertinencia_top5": "5 de 5",
+      "competencia": "alta_real",
+      "por_que_esa_competencia": "Cinco respuestas reales y fuertes, la primera con 3.502.810.",
+      "respaldo_bibliografico": ["D05"],
+      "que_dice_el_respaldo": "D05 (Curry y Dunbar) es la ficha, y es la de MDS-009.",
+      "apto": false,
+      "motivo_no_apto": "c17",
+      "aviso": "MDS-009 (03/09). Se libera el 15 de octubre."
+    },
+    {
+      "pregunta": "por qué me da miedo hablar en público",
+      "variantes": ["pánico escénico", "miedo al ridículo"],
+      "vistas_top10": 1903332,
+      "mediana_top5": 126329,
+      "pertinencia_top5": "5 de 5",
+      "competencia": "alta_real",
+      "por_que_esa_competencia": "Cinco respuestas en tema, con un TEDx entre ellas. El sitio lo ocupan las técnicas para los nervios.",
+      "respaldo_bibliografico": ["J02", "J01", "H05"],
+      "que_dice_el_respaldo": "Las tres sostienen MDH-007.",
+      "apto": false,
+      "motivo_no_apto": "c17",
+      "aviso": "MDH-007 se emite el domingo 20 y responde la pregunta de al lado («por qué se ríen de mí») con estas fichas. Rechazada hasta el 1 de noviembre."
+    },
+    {
+      "pregunta": "qué hace que un guion de comedia funcione",
+      "variantes": ["escribir comedia", "estructura de un chiste escrito"],
+      "vistas_top10": 863355,
+      "mediana_top5": 85668,
+      "pertinencia_top5": "5 de 5",
+      "competencia": "media_real",
+      "por_que_esa_competencia": "Cinco tutoriales reales, el mayor con 278.989. Nicho pequeño y bien atendido, y el autocompletar («como escribir un guion de comedia») confirma que quien lo busca quiere un curso, no una explicación de cuarenta segundos.",
+      "respaldo_bibliografico": ["L05", "L06", "L08"],
+      "que_dice_el_respaldo": "Tres libros libres, pero los tres son divulgación o entrevistas: L05 cuenta la teoría de la violación benigna, que es A01 y está muy usada, y L08 recoge conversaciones con guionistas. Ninguno da un resultado que copiar.",
+      "apto": false,
+      "motivo_no_apto": "respaldo_debil_para_el_formato",
+      "aviso": "No es falta de fuente sino falta de hallazgo, y con la regla del 15/09 delante eso es lo mismo para un Short. Encaja mejor como bloque de un episodio largo sobre el oficio."
+    },
+    {
+      "pregunta": "por qué sentimos vergüenza ajena",
+      "variantes": ["vergüenza ajena", "cringe"],
+      "vistas_top10": 214246,
+      "mediana_top5": 17873,
+      "pertinencia_top5": "4 de 5",
+      "competencia": "baja_real",
+      "por_que_esa_competencia": "Cuatro psicólogas respondiendo, con cifras pequeñas (84.132 la mayor). El hueco existe, la demanda es la más pequeña de la tanda y el autocompletar devuelve solo nombres de programas.",
+      "respaldo_bibliografico": [],
+      "que_dice_el_respaldo": "Sigue sin ficha propia. J04 (la burla y la amenaza a la imagen) es lo más cercano, y además está usada en MDS-013.",
+      "apto": false,
+      "motivo_no_apto": "sin_respaldo",
+      "aviso": "Segunda semana en pendientes_de_fuente.md. Con esta demanda tampoco urge."
+    },
+    {
+      "pregunta": "por qué los memes nos hacen gracia",
+      "variantes": ["humor de internet", "por qué compartimos memes"],
+      "vistas_top10": 86181530,
+      "mediana_top5": 10056472,
+      "pertinencia_top5": "0 de 5",
+      "competencia": "hueco_completo",
+      "por_que_esa_competencia": "Ochenta y seis millones de recopilaciones de memes. Cero respuestas.",
+      "respaldo_bibliografico": [],
+      "que_dice_el_respaldo": "Nada del corpus estudia el humor de internet. I01 sería el marco, y está en MDH-008, que se emite el sábado 26.",
+      "apto": false,
+      "motivo_no_apto": "sin_respaldo",
+      "aviso": "Segunda semana en pendientes_de_fuente.md. Es de los huecos más grandes que este canal ha medido y no tenemos con qué llenarlo honestamente."
+    },
+    {
+      "pregunta": "por qué me río yo solo",
+      "variantes": ["reírse solo", "risa en soledad"],
+      "vistas_top10": 2654296692,
+      "mediana_top5": 36887154,
+      "pertinencia_top5": "0 de 5",
+      "competencia": "consulta_inservible",
+      "por_que_esa_competencia": "Dos mil seiscientos millones, y son videoclips musicales: la consulta la secuestran «río» como río de agua y como letra de canción. Es la cifra más alta que ha medido este canal y no significa absolutamente nada.",
+      "respaldo_bibliografico": ["A08", "B03"],
+      "que_dice_el_respaldo": "Las dos libres, pero la pregunta ya está respondida.",
+      "apto": false,
+      "motivo_no_apto": "c17_pregunta",
+      "aviso": "MDS-002 (25/08) es «por qué me río solo». Se libera el 6 de octubre. Propuesta para las semillas: dejar de medir esta formulación, que lleva tres semanas devolviendo canciones, y medir «reírse solo es malo», que es lo que la gente teme de verdad al escribirla."
+    },
+    {
+      "pregunta": "por qué nos hacen gracia las cosquillas",
+      "vistas_top10": 55656591,
+      "pertinencia_top5": "2 de 5",
+      "competencia": "media_con_hueco_de_angulo",
+      "respaldo_bibliografico": ["E06"],
+      "apto": false,
+      "motivo_no_apto": "ya_producida",
+      "aviso": "MDS-017, reescrito por la dirección el 15/09 y movido al sábado 19. Se remide para tener la serie temporal."
+    },
+    {
+      "pregunta": "un profesor gracioso enseña mejor",
+      "vistas_top10": 321332115,
+      "pertinencia_top5": "0 de 5",
+      "competencia": "hueco_completo",
+      "respaldo_bibliografico": ["G06"],
+      "apto": false,
+      "motivo_no_apto": "ya_producida",
+      "aviso": "MDS-018, emitido el 16/09. La cifra ha bajado de 323,5 a 321,3 millones en una semana, lo que confirma que se mueve con los vídeos virales del top y no con la pregunta."
+    },
+    {
+      "pregunta": "los anuncios graciosos venden más",
+      "vistas_top10": 12189157,
+      "pertinencia_top5": "0 de 5",
+      "competencia": "hueco_completo",
+      "respaldo_bibliografico": ["G05"],
+      "apto": false,
+      "motivo_no_apto": "ya_producida",
+      "aviso": "MDS-019, emitido hoy 17/09."
+    },
+    {
+      "pregunta": "puede la inteligencia artificial hacer chistes",
+      "vistas_top10": 74895906,
+      "pertinencia_top5": "0 de 5",
+      "competencia": "hueco_completo",
+      "respaldo_bibliografico": ["K02"],
+      "apto": false,
+      "motivo_no_apto": "ya_producida",
+      "aviso": "MDS-020, mañana viernes 18."
+    },
+    {
+      "pregunta": "por qué la ironía no se entiende por whatsapp",
+      "vistas_top10": 2754258,
+      "pertinencia_top5": "1 de 5",
+      "competencia": "hueco_casi_completo",
+      "respaldo_bibliografico": ["I05"],
+      "apto": false,
+      "motivo_no_apto": "ya_producida",
+      "aviso": "MDS-016, emitido el 14/09 y primer Short del canal por encima de mil visualizaciones. Se remide todas las semanas a propósito: es el único vídeo con una señal que merezca seguirse."
     }
   ]
 }

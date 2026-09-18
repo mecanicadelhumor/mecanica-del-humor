@@ -1,0 +1,79 @@
+{
+  "id": "MDS-025",
+  "formato": "corto",
+  "serie": "El experimento",
+  "idioma": "es",
+  "titulo_trabajo": "¿Por qué el humor ayuda a memorizar?",
+  "tesis": "El estudio del que sale «el humor mejora la memoria un cuarenta por ciento» tiene veinte personas, diez por grupo, y el grupo que no vio nada también mejoró.",
+  "pilares": [
+    "G"
+  ],
+  "duracion_objetivo_s": 48,
+  "bloqueos": [],
+  "notas_humor": [
+    "Prueba 1 · qué pasa: a diez voluntarios los sientan veinte minutos en una sala sin móvil, sin leer y sin dormir.",
+    "Prueba 1 · qué gira: a los otros diez les ponen vídeos graciosos, y recuerdan bastante mejor; ese es el titular que circula.",
+    "Prueba 1 · cómo acaba: son veinte personas, y los que estuvieron sentados sin hacer nada también mejoraron.",
+    "Serie «El experimento» elegida por la forma: hay protagonistas y algo que les pasa, y la escena «dato» lleva la cifra grande con su fuente, como pide P10.",
+    "Afirmaciones comprobadas el 17/09/2026 contra el resumen del artículo, leído en esta ejecución en el PDF alojado por Loma Linda University Health. Frases literales: «The humor group (n = 10, mean = 69.3 ± 3.7 y) self-selected 1 of 2 humorous videos—a Red Skelton comedy or a montage of America's Funniest Home Videos—and watched it for 20 min. A control group (n = 10, mean = 68.7 ± 5.5 y) sat calmly for 20 min and were not allowed to read, sleep, or talk on a cell phone.»; «Learning ability improved by 38.5% and 24.0% in the humor and control groups, respectively (P = .014). Delayed recall improved by 43.6% and 20.3% in the humor and control groups, respectively (P = .029).»",
+    "La ficha G04 pedía «verificar tamaño muestral antes de citarlo». Verificado: veinte personas en total, diez por grupo. Por eso el tamaño de la muestra no es una nota al pie del guion, es su cierre.",
+    "NO se dice que el humor baje el cortisol. El resumen lo menciona en el «Context», como lo que se sabía antes, no como resultado de este estudio, y la regla del 15/09 manda copiar lo que el estudio encontró y no lo que su introducción da por sabido.",
+    "C17: la ficha es G04, sin abrir hasta hoy, y no G06, que sostuvo MDS-018 el 16/09. La pregunta tampoco es la misma —allí era si un profesor gracioso enseña mejor, aquí es de dónde sale la cifra de memoria— y el ángulo es el contrario: MDS-018 contaba qué humor ayuda a aprender y este cuenta lo pequeño que es el estudio que lo mide. Razonado en la bitácora del 17/09."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "icono": "i-publico",
+      "texto": "Veinte minutos *sentados*",
+      "narracion": "A diez voluntarios de casi setenta años los sentaron veinte minutos sin móvil, sin leer y sin dormir.",
+      "fuente": "G04",
+      "pausa_despues_s": 1.35
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Ese era el *grupo de control*",
+      "narracion": "A los otros diez les pusieron vídeos graciosos. Ese era el experimento entero: unos viendo comedia y otros sin nada.",
+      "fuente": "G04",
+      "personaje": "rie",
+      "pausa_despues_s": 0.55
+    },
+    {
+      "tipo": "dato",
+      "cifra": "43,6 %",
+      "pie": "de mejora al *recordar* la lista",
+      "narracion": "Los que vieron los vídeos mejoraron un cuarenta y tres coma seis por ciento al recordar más tarde.",
+      "fuente": "G04",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "comparacion",
+      "a": "Con *comedia*",
+      "b": "Sin nada",
+      "et_a": "cuarenta y tres coma seis",
+      "et_b": "veinte coma tres",
+      "narracion": "Y los que estuvieron sentados sin hacer nada mejoraron un veinte coma tres. También mejoraron.",
+      "fuente": "G04",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "icono": "i-balanza",
+      "texto": "Diez y *diez*",
+      "narracion": "Ese cuarenta y tres por ciento es el número que circula. Y sale de veinte personas: diez y diez.",
+      "fuente": "G04",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla aquí: son *veinte* personas",
+      "subtitulo": "Humor y memoria en mayores",
+      "narracion": "Y aquí falla: son veinte personas, todas de casi setenta años. De tu memoria en un examen, esto no dice nada.",
+      "fuente": "G04",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

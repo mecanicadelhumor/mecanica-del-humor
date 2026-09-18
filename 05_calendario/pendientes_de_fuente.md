@@ -221,3 +221,58 @@ funcionar sale de `C06` —el mito del payaso triste—, y la propia ficha pide 
 responsable». Cuarenta segundos no dan para esa matización; es el mismo razonamiento por
 el que `REGLAS.md` prohíbe humor y atracción en formato corto. Con `C05` a solas sí cabe,
 y queda de cabeza de serie para la semana del 21.
+
+
+---
+
+## Quinta tanda — medición del 17 de septiembre de 2026
+
+Dos preguntas nuevas sin respaldo, y una que entra por un motivo que no se había dado nunca
+en esta lista: la ficha existe y no se puede usar.
+
+### 1 · «Por qué hay gente que no pilla los chistes» — sin respaldo utilizable
+
+**104.715.646 visualizaciones en el top 10, la cifra más alta de la tanda, y 0 de 5
+responden**: son vídeos de bromas. La consulta la secuestra la palabra «chistes».
+
+Las candidatas eran `F05` (desarrollo del humor en la infancia) e `I03`/`I04`. `F05` no se
+puede identificar a partir de su ficha (ver abajo), e `I03` e `I04` son panoramas de
+lingüística: describen el campo y no traen un hallazgo que se pueda contar en cuarenta
+segundos. Es la pregunta con más demanda de la tanda y merece que el corpus crezca por ahí.
+
+### 2 · «Por qué los memes nos hacen gracia» — sin respaldo, segunda semana
+
+86.181.530 y 0 de 5 responden. Nada del corpus estudia el humor de internet. `I01` sería el
+marco y está en `MDH-008`, que se emite el sábado 26.
+
+### 3 · «Qué le pasa a tu cerebro cuando te ríes» — la ficha existe y no se puede usar
+
+**Este caso es nuevo y es el más accionable de los tres.** 91.095.946 en el top 10 y 0 de 5
+responden: hueco completo, y la mejor pregunta sin asignar que le queda al canal.
+
+- `F01` y `F02` son las fichas buenas y las dos sostienen `MDH-002`: C17 hasta el 30 de
+  septiembre.
+- `F03` responde otra pregunta (risa espontánea contra voluntaria), cerrada por C17 hasta el
+  10 de octubre.
+- **`F04` y `F05` no se pueden usar**: su referencia en `BIBLIOGRAFIA_CURADA.md` no permite
+  identificar ningún artículo localizable. El DOI que la ficha da para `F04`
+  (`10.1002/hbm.21444`) corresponde a un trabajo de otro campo, y el título que figura no es
+  el de ningún artículo que se haya podido encontrar. Con `F05` pasa lo mismo.
+
+Desde la regla del 15/09 —lo que un estudio encontró se copia, no se deduce— una ficha que no
+identifica su artículo es una ficha que no se puede citar, porque no hay resumen que leer. **El
+pilar F entero está bloqueado salvo `F03`.** No hace falta ampliar el corpus para desbloquear
+esta pregunta: hace falta corregir dos fichas.
+
+### Lo que NO ha entrado aquí, y por qué
+
+De las veinticuatro consultas medidas, **nueve se han rechazado por C17** —ficha o pregunta
+repetida— y ninguna viene a esta lista: su problema no es la bibliografía, es el calendario, y
+se remiden cuando venza la ventana. Está anotado candidato a candidato en `demanda.json`, con
+la fecha exacta en la que se libera cada una.
+
+Y una que se rechaza por un motivo intermedio, dicho aquí porque se va a repetir: **«qué hace
+que un guion de comedia funcione»** tiene tres fichas libres (`L05`, `L06`, `L08`) y aun así no
+se hace en Short. No es falta de fuente: es falta de hallazgo. Son divulgación y entrevistas, y
+con la regla del 15/09 delante eso es lo mismo para un Short. Encaja en un episodio largo sobre
+el oficio, no en cuarenta segundos.

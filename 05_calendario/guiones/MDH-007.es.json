@@ -17,7 +17,8 @@
     "Risa 1 (escenas 2-3, remate sobre el segundo doce): la investigación forense de medio segundo que abrimos todos.",
     "Risa 2 (escenas 29-30): en improvisación, quedarte en blanco cuenta como participación.",
     "Las dos intervenciones del escéptico son las dos objeciones reales del espectador: «esto es timidez» y «¿y si sí se ríen de mí?».",
-    "El cierre no lleva chiste. El remate necesita silencio."
+    "El cierre no lleva chiste. El remate necesita silencio.",
+    "17/09/2026 · aplicadas las dos notas de revisiones/MDH-007.md, sin tocar una sola narración —la caché de voz está indexada por el texto de cada narración (C27/C33.2), así que este guion NO pierde ni una escena sintetizada—. Escena 19: era una escena «dato» sin «fuente», la única de las seis; se ha tomado la segunda salida que ofrecía la nota y pasa a «enunciado», como la 20 y la 21. Escena 31: citaba H06 para una afirmación que no es la suya. El resumen de Felsman, Gunawardena y Seifert (2020) se ha leído hoy y habla de dos experimentos de veinte minutos de ejercicios de improvisación con medidas de pensamiento divergente, tolerancia a la incertidumbre y afecto positivo: no dice nada del diseño del curso ni de convertir el fallo en contenido. H05 tampoco lo dice. Así que se retira la fuente y la escena deja de ser un «dato» con cifra-titular: pasa a «comparacion» con las dos caras que la propia narración enfrenta —el desastre y el temario—, que es una lectura editorial del programa recién descrito y no un hallazgo medido. Se elige «comparacion» y no «enunciado» porque las escenas 29, 30 y 32 ya son enunciados y cuatro seguidas dejan la pantalla quieta."
   ],
   "escenas": [
     {
@@ -173,12 +174,11 @@
       "narracion": "La buena noticia es que el bucle tiene un punto débil."
     },
     {
-      "tipo": "dato",
+      "tipo": "enunciado",
       "icono": "i-bisagra",
-      "cifra": "La interpretación",
-      "pie": "no el miedo: el paso de después",
       "narracion": "Y no está en el miedo, que es dificilísimo de atacar. Está en el paso siguiente: qué decides que significaba esa risa.",
-      "personaje": "entiende"
+      "personaje": "entiende",
+      "texto": "No el miedo: el paso *siguiente*"
     },
     {
       "tipo": "diagrama",
@@ -272,11 +272,12 @@
       "pausa_despues_s": 0.6
     },
     {
-      "tipo": "dato",
-      "cifra": "El temario",
-      "pie": "fallar en público deja de ser el desastre",
+      "tipo": "comparacion",
       "narracion": "Fallar en público deja de ser el desastre y pasa a ser, literalmente, el temario del curso.",
-      "fuente": "H06"
+      "a": "El *desastre*",
+      "b": "El temario",
+      "et_a": "fallar en público",
+      "et_b": "el contenido del curso"
     },
     {
       "tipo": "enunciado",

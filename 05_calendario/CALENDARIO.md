@@ -255,9 +255,13 @@ Eso se decide con la tabla delante, no por agotamiento.
   se rían de ti tiene nombre» a **«Por qué se ríen de mí»**, que es lo que la gente
   escribe — «gelotofobia» reúne 9.025 visualizaciones entre diez resultados. Su nota de
   `revisiones/` está aplicada y retirada.
-- **MDH-008** — escrito y validado, **sin adaptar**: 48 % de «enunciado», rótulo por
-  delante, ningún personaje y doce escenas por encima de 14 s. Su nota sigue en
-  `05_calendario/revisiones/`. Le toca en la planificación del 17, para el sábado 26.
+- **MDH-008** — ✅ adaptado al formato nuevo el 17/09 para el sábado 26. 34 escenas (antes
+  27), 4m39s, ninguna escena por encima de once segundos, personaje en seis escenas, dos
+  intervenciones del escéptico, «enunciado» del 48 % al 38 % y la primera risa sobre el
+  segundo ocho. Serie «Mecanismos». Su nota de `revisiones/` está aplicada y hay que
+  retirarla. **Y una decisión que no es editorial sino de cuota:** 34 escenas y no las
+  cuarenta y tantas que pedía el patrón, porque con una petición de voz por escena y diez al
+  día MDH-007 no llegó a su sábado. Cuando entre C36 esto deja de ser una restricción.
 
 **Se adapta uno por semana, no los cuatro de golpe.** Adaptar por adelantado los que aún no
 tienen fecha es trabajo especulativo: dentro de dos o tres semanas las métricas dirán qué
@@ -335,3 +339,44 @@ cinco Shorts entra con icono y cuatro palabras o menos, y ninguna es ya una tarj
 texto sobre fondo. Se reparten además por dentro de los guiones, donde el mecanismo tiene
 uno: `i-grieta` en los cierres que dicen dónde falla, `i-balanza` donde algo se pesa,
 `i-bisagra` donde está el punto que lo decide todo.
+
+
+---
+
+## Semana del 21 al 26 de septiembre de 2026
+
+Escrita la noche del jueves 17. Todo en `parrilla.json` con `"modo": "automatico"` y
+`"idiomas": ["es"]`.
+
+| Día | Emisión | Hora | Serie | Pregunta de demanda | Ficha |
+|---|---|---|---|---|---|
+| Lunes 21 | `MDS-021` | 19:00 | El experimento | cómo es la personalidad de los cómicos | `C05` |
+| Martes 22 | `MDS-022` | 19:00 | Esto no tiene gracia y esto sí | por qué un chiste hace menos gracia la segunda vez | `A06` |
+| Miércoles 23 | `MDS-023` | 19:00 | Ríete primero, te explico después | reírse es bueno para la salud | `G03` |
+| Jueves 24 | `MDS-024` | 19:00 | Esto no tiene gracia y esto sí | cómo mantener una conversación sin quedarse en blanco | `L04` |
+| Viernes 25 | `MDS-025` | 19:00 | El experimento | por qué el humor ayuda a memorizar | `G04` |
+| Sábado 26 | `MDH-008` | 12:00 | Mecanismos (largo, 4m39s) | cómo se hace un chiste, pieza a pieza | `I01` · `L01` · `A05` · `A01` |
+
+**Las cinco fichas de los Shorts estaban sin abrir.** Segunda semana consecutiva en la que
+ningún Short repite fuente. Quedan **veintiuna** fichas sin usar de setenta y siete, y solo
+unas doce pueden ser fuente central de un Short: el resto son duplicados deliberados, temas
+excluidos por criterio editorial o manuales sin hallazgo que contar.
+
+**Tres de las cinco preguntas se responden con el resumen del artículo leído esta misma
+noche** (C05, G03 y G04), con la frase de origen copiada en `notas_humor`. Es la regla que la
+dirección escribió el 15/09 después de `MDS-019`, aplicada por primera vez desde el principio
+y no como corrección.
+
+**Y una consecuencia de esa regla que conviene tener escrita:** dos fichas libres con demanda
+medida detrás (`F04` y `F05`) se han quedado fuera porque su referencia no identifica ningún
+artículo localizable — el DOI que figura para `F04` es el de un trabajo de otro campo. Con
+ellas se cae «qué le pasa a tu cerebro cuando te ríes», que era la mejor pregunta sin asignar
+del corpus. No es un problema de demanda ni de calendario: es la bibliografía.
+
+**El cuello de botella de esta semana vuelve a ser C17.** De las veinticuatro consultas
+medidas, nueve son temas que la bibliografía responde y que aun así no se hacen porque su
+ficha o su pregunta se usaron hace menos de seis semanas. Están todas en `demanda.json` con
+la fecha exacta en la que se liberan: «funcionan las risas enlatadas» y «cómo distinguir una
+risa falsa de una de verdad» el 10 de octubre, «por qué me hace gracia el humor absurdo» el
+13, «por qué me río cuando estoy nervioso» el 12, «por qué chatgpt no tiene gracia» el 30 y
+«se puede aprender a ser gracioso» a finales de mes.

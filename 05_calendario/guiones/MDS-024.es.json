@@ -1,0 +1,76 @@
+{
+  "id": "MDS-024",
+  "formato": "corto",
+  "serie": "Esto no tiene gracia y esto sí",
+  "idioma": "es",
+  "titulo_trabajo": "¿Cómo mantener una conversación sin quedarte en blanco?",
+  "tesis": "No te quedas en blanco por falta de temas: te quedas en blanco porque buscas uno nuevo en vez de coger el que te acaban de dar.",
+  "pilares": [
+    "L"
+  ],
+  "duracion_objetivo_s": 48,
+  "bloqueos": [],
+  "notas_humor": [
+    "Prueba 1 · qué pasa: en una boda me tocó al lado un señor que contestaba a todo que ya.",
+    "Prueba 1 · qué gira: contestar «ya» cierra la frase; contestar «ya, y además» devuelve algo con lo que seguir, que es la regla de los manuales de improvisación.",
+    "Prueba 1 · cómo acaba: el señor tenía un tema cada minuto y los cerró todos; y esto sale de un manual, no de un experimento.",
+    "Serie «Esto no tiene gracia y esto sí» elegida por la forma: dos respuestas casi idénticas a la misma frase, las dos puestas delante antes de explicar nada, y el espectador nota la diferencia antes de que se la digan. La escena «comparacion» que pide P10 es esa.",
+    "LÍMITE DE LO QUE SE AFIRMA: L04 («Truth in Comedy», Halpern, Close y Johnson) es un manual de improvisación, no un estudio, y su ficha de BIBLIOGRAFIA_CURADA.md recoge exactamente la técnica que aquí se cuenta: «El 'sí, y además' y el juego de patrones. Ejercicios directos para el espectador.» El guion enseña la técnica y NO afirma que esté medida: el cierre lo dice en voz alta. Regla del 15/09 respetada por la vía de no contar ningún resultado.",
+    "Se ha evitado a propósito H05 (la improvisación y la ansiedad social), que sostiene MDH-007 y se emite el domingo 20: sería la misma fuente central dos días después. C17.",
+    "El chiste no tiene víctima: el señor de la boda no queda como tonto, queda como alguien que no sabía que tenía material."
+  ],
+  "escenas": [
+    {
+      "tipo": "enunciado",
+      "icono": "i-bocadillos",
+      "texto": "Contestaba a todo: *«ya»*",
+      "narracion": "En una boda me tocó al lado un señor que contestaba a todo que ya.",
+      "pausa_despues_s": 1.35
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Cuarenta minutos *así*",
+      "narracion": "Cuarenta minutos. Al levantarnos me dijo que había sido un placer.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.6
+    },
+    {
+      "tipo": "comparacion",
+      "a": "«Ya.»",
+      "b": "«Ya, ¿y *además*?»",
+      "et_a": "cierra la frase",
+      "et_b": "te devuelve algo que seguir",
+      "narracion": "Ya cierra la frase. Ya, y además, te devuelve algo con lo que seguir.",
+      "fuente": "L04",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "icono": "i-muelle",
+      "texto": "Los manuales lo llaman *sí, y además*",
+      "narracion": "Los manuales de improvisación lo llaman el sí, y además: coges lo que te dan y le añades algo tuyo.",
+      "fuente": "L04",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "enunciado",
+      "icono": "i-bisagra",
+      "texto": "No te falta *tema*",
+      "narracion": "Por eso te quedas en blanco: buscas un tema nuevo, y ya te lo han dado. El señor tenía uno cada minuto.",
+      "fuente": "L04",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.4
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Y falla aquí: es un *manual*",
+      "subtitulo": "Improvisación · el «sí, y además»",
+      "narracion": "Y aquí falla: esto sale de un manual de improvisación, no de un experimento. Con el señor de la boda no lo probó nadie.",
+      "fuente": "L04",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
+    }
+  ]
+}

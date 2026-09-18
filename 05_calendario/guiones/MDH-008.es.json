@@ -1,5 +1,7 @@
 {
   "id": "MDH-008",
+  "formato": "largo",
+  "serie": "Mecanismos",
   "idioma": "es",
   "titulo_trabajo": "Cómo se construye un chiste, pieza a pieza",
   "tesis": "Casi todos los chistes tienen la misma arquitectura: una historia que crees estar oyendo, un punto de contacto ambiguo, y una segunda historia que encajaba desde el principio.",
@@ -8,36 +10,51 @@
     "L",
     "A"
   ],
-  "duracion_objetivo_s": 400,
+  "duracion_objetivo_s": 310,
   "bloqueos": [],
   "notas_humor": [
-    "El vídeo entero es una demostración: cada pieza explicada se ejecuta en la frase siguiente.",
-    "Escena 9: el chiste de ejemplo se desmonta en directo, y desmontarlo es el chiste.",
-    "Escena 17: regla de tres en los tipos de conector.",
-    "Cierre: callback estructural — el último párrafo tiene la misma forma que un chiste."
+    "ADAPTADO AL FORMATO NUEVO el 17/09/2026 para el sábado 26, aplicando la nota de revisiones/MDH-008.md, que pedía la misma reescritura completa que MDH-004. Antes: 27 escenas, sin «formato», sin personaje, sin escéptico, 48 % de «enunciado», rótulo de portada por delante y doce escenas por encima de 14 s.",
+    "El gancho ya no es un rótulo: el episodio abre con el chiste del trastero y la primera risa cae sobre el segundo ocho.",
+    "UN SOLO CHISTE SOSTIENE EL EPISODIO. El del trastero entra en la escena 1, se desmonta en la 12 y vuelve en la 26 a demostrar la regla de la última palabra, con su premisa dicha otra vez en la misma frase —«el de la pareja que pedía espacio»—, que es lo que pide la regla 13 para un callback a más de noventa segundos. En la versión anterior el chiste aparecía en la escena 8 y no volvía nunca.",
+    "Risas repartidas por distancia y no por cuenta (REGLAS.md, regla 13, corregida el 12/09): segundo 8 (el trastero), ~95 s (el aviso de que el chiste se va a morir, y mi pareja tampoco se ríe), ~170 s (versionar es girar mandos: menos bonito y mejor), ~205 s (el remate huérfano buscando una historia que lo adopte) y ~285 s (ocho episodios sin reírme). Ningún tramo de noventa segundos se queda sin un intento.",
+    "SE HA QUITADO UNA CIFRA SIN FUENTE: la escena 18 de la versión anterior decía que «el noventa por ciento del trabajo» está en el tercer paso. Ese número no está en L01 ni en ninguna ficha, y asignarle una fuente a un número ya escrito es justo lo que prohíbe la regla 2. Queda «ahí está casi todo el trabajo», sin número. Misma decisión que con los «quince intentos» de MDH-006 el 10/09.",
+    "La escena «cita» que señalaba la revisión —el chiste dicho Y escrito entero— se resuelve partiéndola en dos: el planteamiento con su pausa de 1,4 s y el remate en la escena siguiente. En pantalla van tres palabras y no la frase entera, así que el ojo y el oído dejan de recibir lo mismo y la pausa vuelve a ser el chiste.",
+    "El escéptico interviene dos veces, las dos por debajo de doce palabras y las dos antes de que el narrador resuelva la objeción: «¿todos los chistes son el mismo?» (escena 14) y «¿y si está perfecto y sigue sin hacer gracia?» (escena 28), que es la que abre el bloque del límite.",
+    "CUENTA DE ESCENAS, y es una decisión de esta noche, no un descuido: 34, no las cuarenta y tantas de MDH-007. Con una petición de voz por escena y diez al día (C33.2), MDH-007 se quedó sin voz con 41 escenas y hubo que moverlo al domingo. Treinta y cuatro caben en el precacheo de martes a viernes (cuarenta peticiones) con margen para los rechazos, y dejan la cuota del sábado de reserva. Cuando entre C36 —una llamada por vídeo— esta restricción desaparece y el episodio siguiente puede partirse más fino. Ninguna escena pasa de once segundos y ninguna lleva dos ideas.",
+    "C17, dicho aquí porque el validador va a avisar tres veces: las cuatro fuentes (I01, L01, A05, A01) son las que este guion ya tenía desde que se escribió, no una elección de esta semana. L01 sostuvo MDS-005 (28/08) y MDS-008 (02/09), A05 sostuvo MDS-010 (04/09) y A01 está en cuatro piezas del corpus. No se cambian: reescribir las fuentes de un episodio ya escrito para esquivar un aviso sería elegir la bibliografía por el calendario. Lo que sí se ha cuidado es que ninguna sostenga aquí lo mismo que allí: en los Shorts L01 daba el método para construir un chiste concreto, y aquí da la dirección de escritura y la regla de la última palabra."
   ],
   "escenas": [
     {
-      "tipo": "titulo",
-      "etiqueta": "Episodio 08",
-      "titulo": "Cómo se construye un *chiste*",
-      "subtitulo": "Pieza a pieza, con plano de montaje",
-      "narracion": "Llevamos siete episodios explicando por qué te ríes. Hoy toca la parte de ingeniería: cómo se fabrica."
+      "tipo": "cita",
+      "icono": "i-bocadillos",
+      "texto": "Necesitaba *espacio*.",
+      "autor": "Un chiste, a punto de ser desarmado",
+      "narracion": "Empezamos por un chiste. Mi pareja me dijo que necesitaba espacio.",
+      "pausa_despues_s": 1.4
     },
     {
       "tipo": "enunciado",
-      "texto": "Y sí: se fabrica. Hay *planos*.",
-      "narracion": "Porque un chiste se fabrica. Tiene piezas, tienen nombre, y llevan encajando de la misma manera desde hace bastante más tiempo del que existe la palabra comedia."
+      "texto": "En el *trastero*.",
+      "narracion": "Ahora duermo en el trastero.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.8
+    },
+    {
+      "tipo": "enunciado",
+      "icono": "i-bisagra",
+      "texto": "Y eso tiene *plano de montaje*",
+      "narracion": "Ese chiste tiene un plano de montaje: piezas con nombre que encajan siempre igual. Hoy lo desarmamos entero.",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "titulo",
       "etiqueta": "Parte 1",
-      "titulo": "La arquitectura *mínima*",
-      "narracion": "Empecemos por la estructura mínima, que se la debemos sobre todo a la lingüística del humor y al oficio del stand-up, que llegaron a lo mismo por caminos distintos."
+      "titulo": "Las tres *piezas*",
+      "narracion": "Primero, la estructura mínima. La lingüística del humor y el oficio del stand-up llegaron a ella por caminos distintos.",
+      "pausa_despues_s": 0.4
     },
     {
       "tipo": "diagrama",
-      "titulo": "Las tres piezas",
       "pasos": [
         {
           "titulo": "Historia 1",
@@ -52,32 +69,66 @@
           "pie": "estaba ahí desde el principio"
         }
       ],
-      "narracion": "Un chiste es una historia que crees estar oyendo, un elemento ambiguo que encaja en dos historias distintas, y una segunda historia que estaba ahí desde el principio y que no habías visto.",
-      "fuente": "I01"
+      "narracion": "Un chiste es una historia que crees oír, un elemento ambiguo que encaja en dos, y una segunda que ya estaba.",
+      "fuente": "I01",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "comparacion",
+      "a": "Lo que crees que hace el *remate*",
+      "b": "Lo que hace de verdad",
+      "et_a": "añadir información nueva",
+      "et_b": "obligarte a releer lo anterior",
+      "narracion": "Y fíjate en un detalle importante: el remate no añade información nueva. Solo te obliga a releer lo que acabas de oír.",
+      "fuente": "I01",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "dato",
+      "cifra": "Ya estaba",
+      "pie": "la respuesta *no aparece*: se enseña",
+      "narracion": "Por eso un buen chiste da la sensación de que la respuesta estaba ahí todo el rato. Es que estaba.",
+      "fuente": "I01",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "diagrama",
+      "pasos": [
+        {
+          "titulo": "Algo *no encaja*",
+          "pie": "lo detectas"
+        },
+        {
+          "titulo": "Y de pronto encaja",
+          "pie": "lo resuelves"
+        }
+      ],
+      "narracion": "Es el modelo de dos fases del episodio dos: primero detectas que algo no encaja y luego lo encajas.",
+      "fuente": "A05",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "enunciado",
-      "texto": "El remate no *añade* nada. Solo te enseña lo que ya estaba.",
-      "narracion": "Fíjate en un detalle importantísimo: el remate no añade información nueva. Solo te obliga a releer lo anterior. Por eso un buen chiste da la sensación de que la respuesta estaba ahí todo el rato: es que estaba.",
-      "fuente": "I01"
-    },
-    {
-      "tipo": "enunciado",
-      "texto": "Y por eso funciona: tu cerebro *detecta* y resuelve.",
-      "narracion": "Que es exactamente el modelo de dos fases del que hablamos en el episodio dos: primero detectas que algo no encaja, y luego lo encajas. Un chiste es una máquina para provocar esas dos cosas en ese orden.",
-      "fuente": "A05"
+      "icono": "i-muelle",
+      "texto": "Una *máquina* de dos tiempos",
+      "narracion": "Un chiste es una máquina para provocar esas dos cosas, en ese orden.",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "titulo",
       "etiqueta": "Parte 2",
-      "titulo": "El desmontaje",
-      "narracion": "Vamos a desmontar uno. Y aviso: al desmontarlo dejará de tener gracia, porque como vimos, si te doy la solución te quito el premio."
+      "titulo": "El *desmontaje*",
+      "narracion": "Volvamos al trastero.",
+      "pausa_despues_s": 0.4
     },
     {
-      "tipo": "cita",
-      "texto": "Mi pareja me dijo que necesitaba espacio. Ahora duermo en el trastero.",
-      "autor": "Un chiste cualquiera, a punto de ser desarmado",
-      "narracion": "El chiste es este: mi pareja me dijo que necesitaba espacio. Ahora duermo en el trastero."
+      "tipo": "enunciado",
+      "icono": "i-ruptura",
+      "texto": "Aviso: deja de tener *gracia*",
+      "narracion": "Aviso: a partir de aquí el chiste del trastero ya no hace gracia. Mi pareja, que nunca dijo eso, tampoco se ríe.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.5
     },
     {
       "tipo": "lista",
@@ -85,21 +136,40 @@
       "puntos": [
         "*Historia 1*: quiere un poco de distancia",
         "Conector: «espacio», que vale para las dos",
-        "Historia 2: la distancia acabó midiéndose en metros"
+        "Historia 2: la distancia se midió en metros"
       ],
-      "narracion": "La historia que crees estar oyendo es que alguien pide un poco de distancia. El conector es «espacio», que sirve para el ánimo y también para los metros cuadrados. Y la segunda historia es que esa distancia acabó midiéndose en metros.",
-      "fuente": "I01"
+      "narracion": "La historia que crees oír es que alguien pide distancia. El conector es espacio. Y la segunda se mide en metros.",
+      "fuente": "I01",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "dato",
+      "cifra": "El esqueleto",
+      "pie": "y lo tienen *casi todos*",
+      "narracion": "Ese es el esqueleto. Y la mala noticia para el romanticismo: casi todos los chistes que has oído tienen esa forma.",
+      "fuente": "I01",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "enunciado",
-      "texto": "Ese es el esqueleto. Aburrido, ¿verdad? Pues *todos* lo tienen.",
-      "narracion": "Ese es el esqueleto. Y ahora, la mala noticia para el romanticismo: prácticamente todos los chistes que has oído tienen esa misma forma por debajo."
+      "voz": "esceptico",
+      "texto": "«¿Todos el *mismo*?»",
+      "narracion": "¿Me estás diciendo que todos los chistes son el mismo?",
+      "pausa_despues_s": 0.35
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Cuatro patas, todas las *sillas*",
+      "narracion": "No. El mismo plano, no el mismo chiste. Con cuatro patas caben todas las sillas que se te ocurran.",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "titulo",
       "etiqueta": "Parte 3",
       "titulo": "Los *seis mandos*",
-      "narracion": "La lingüística del humor va un paso más allá y desglosa un chiste en seis recursos que se pueden variar por separado."
+      "narracion": "La lingüística va un paso más allá: desglosa un chiste en seis recursos que se pueden mover por separado.",
+      "pausa_despues_s": 0.4
     },
     {
       "tipo": "lista",
@@ -109,35 +179,53 @@
         "Mecanismo lógico: cómo saltas de una a otra",
         "Objetivo: sobre quién o qué va"
       ],
-      "narracion": "Son seis, pero para escribir te sirven sobre todo tres: qué dos historias se oponen, qué mecanismo lógico te hace saltar de una a la otra, y sobre quién o qué va la cosa.",
-      "fuente": "I01"
+      "narracion": "Son seis, pero para escribir sirven tres: qué historias se oponen, cómo saltas de una a otra, y sobre qué va.",
+      "fuente": "I01",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "comparacion",
+      "a": "El chiste *original*",
+      "b": "Con un mando movido",
+      "et_a": "el mismo esqueleto",
+      "et_b": "otro chiste distinto",
+      "narracion": "Y eso es una herramienta enorme: coges un chiste que funciona, mueves un mando y sale otro. Mueves dos y cambia.",
+      "fuente": "I01",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "enunciado",
-      "texto": "Toca uno y tienes un chiste *distinto*. Toca dos y tienes uno nuevo.",
-      "narracion": "Y esto es una herramienta de escritura brutal, porque significa que puedes coger un chiste que funciona, cambiar un solo mando y sale otro chiste. Cambia dos y ya no se parece al original.",
-      "fuente": "I01"
-    },
-    {
-      "tipo": "enunciado",
-      "texto": "Es lo que hacen los guionistas cuando dicen que están *versionando*.",
-      "narracion": "Es literalmente lo que hacen los equipos de guion de un late night cuando dicen que están versionando un chiste. No están inspirándose: están girando mandos."
+      "texto": "Eso es *versionar*",
+      "narracion": "Es lo que hacen los equipos de guion cuando dicen que están versionando. No se inspiran: giran mandos. Menos bonito y mejor.",
+      "personaje": "rie",
+      "pausa_despues_s": 0.5
     },
     {
       "tipo": "titulo",
       "etiqueta": "Parte 4",
       "titulo": "Cómo se escribe uno *desde cero*",
-      "narracion": "Y ahora el método, que es lo que te llevas a casa. Va del revés de como todo el mundo lo intenta."
+      "narracion": "Y ahora el método, que es lo que te llevas a casa. Va justo del revés de como se intenta.",
+      "pausa_despues_s": 0.4
     },
     {
       "tipo": "comparacion",
       "titulo": "El error de dirección",
-      "et_a": "Lo que casi todos hacen",
-      "a": "Buscar un remate gracioso y ponerle delante una historia.",
-      "et_b": "Lo que funciona",
+      "a": "Pensar un remate y ponerle una historia delante.",
       "b": "Buscar una *ambigüedad* real y construir hacia atrás.",
-      "narracion": "Casi todo el mundo intenta pensar un remate gracioso y luego montarle delante una historia. Y así no sale. Lo que funciona es lo contrario: buscas primero una ambigüedad real, algo que pueda significar dos cosas, y construyes hacia atrás.",
-      "fuente": "L01"
+      "et_a": "Lo que casi todos hacen",
+      "et_b": "Lo que funciona",
+      "narracion": "Casi todos intentan pensar un remate gracioso y montarle una historia delante. Sale un remate huérfano buscando una historia que lo adopte.",
+      "fuente": "L01",
+      "personaje": "rie",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "icono": "i-bisagra",
+      "texto": "Se construye hacia *atrás*",
+      "narracion": "Lo que funciona es lo contrario: buscas primero una ambigüedad real, algo que pueda significar dos cosas, y construyes hacia atrás.",
+      "fuente": "L01",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "lista",
@@ -147,32 +235,66 @@
         "Busca la segunda lectura que también encaja",
         "Reescribe el principio para que no se vea venir"
       ],
-      "narracion": "Tres pasos. Uno: escribe una observación tuya y verdadera, no una idea graciosa. Dos: busca la segunda lectura que también encajaría con esa observación. Y tres, que es el que casi nadie hace: reescribe el principio para que nadie vea venir la segunda lectura.",
-      "fuente": "L01"
+      "narracion": "Tres pasos. Uno: una observación tuya y verdadera, no una idea graciosa. Dos: la segunda lectura que también encajaría con ella.",
+      "fuente": "L01",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "enunciado",
-      "texto": "El trabajo real está en el *paso tres*. Siempre.",
-      "narracion": "El noventa por ciento del trabajo está en ese tercer paso. Escribir el remate es fácil. Esconder la pista sin hacer trampa es el oficio.",
-      "fuente": "L01"
+      "icono": "i-pausa",
+      "texto": "El trabajo está en el paso *tres*",
+      "narracion": "Y tres, el que casi nadie hace: esconder la pista sin hacer trampa. Escribir el remate es lo fácil.",
+      "fuente": "L01",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "enunciado",
-      "texto": "Y hay una regla de oro: *la última palabra*.",
-      "narracion": "Y una regla técnica que vale más que muchos consejos: la palabra que activa la segunda historia debe ir al final de la frase. Si va antes, el espectador resuelve el chiste mientras tú sigues hablando, y cuando terminas ya no queda premio.",
-      "fuente": "L01"
+      "texto": "El giro, lo *último*",
+      "narracion": "Y una regla técnica que vale más que muchos consejos: la palabra que gira va al final de la frase.",
+      "fuente": "L01",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "comparacion",
+      "a": "«Duermo en el *trastero* ahora»",
+      "b": "«Ahora duermo en el trastero»",
+      "et_a": "lo resuelves antes de acabar",
+      "et_b": "lo resuelves al terminar",
+      "narracion": "Míralo con el nuestro, el de la pareja que pedía espacio. Duermo en el trastero ahora se resuelve demasiado pronto.",
+      "fuente": "L01",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "enunciado",
+      "texto": "Misma información, otro *orden*",
+      "narracion": "Ahora duermo en el trastero se resuelve al final. Es la misma información y solo cambia el orden.",
+      "fuente": "L01",
+      "personaje": "entiende",
+      "pausa_despues_s": 0.5
+    },
+    {
+      "tipo": "enunciado",
+      "voz": "esceptico",
+      "texto": "«¿Y si sigue sin hacer *gracia*?»",
+      "narracion": "¿Y si está perfecto y sigue sin hacer gracia?",
+      "pausa_despues_s": 0.35
     },
     {
       "tipo": "titulo",
       "etiqueta": "El límite",
-      "titulo": "Y ahora lo que la estructura *no* te da",
-      "narracion": "Última parte, y es importante porque cierra la temporada entera."
+      "titulo": "Lo que la estructura *no* te da",
+      "narracion": "Esa es la última parte, y es la que cierra la temporada entera.",
+      "pausa_despues_s": 0.4
     },
     {
-      "tipo": "enunciado",
-      "texto": "*Necesaria*, pero no basta.",
+      "tipo": "comparacion",
+      "a": "*Necesaria*",
+      "b": "Suficiente",
+      "et_a": "la estructura lo es",
+      "et_b": "no lo es, ni de lejos",
       "narracion": "Puedes construir un chiste estructuralmente perfecto que no haga ninguna gracia. La estructura es condición necesaria, no suficiente.",
-      "fuente": "I01"
+      "fuente": "I01",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "lista",
@@ -182,36 +304,35 @@
         "Que la distancia esté bien calculada",
         "Que apunte donde no haga daño"
       ],
-      "narracion": "Lo que falta es todo lo demás que hemos visto: que resulte benigno para quien escucha, que la distancia esté bien calculada y que apunte a un sitio que no deje factura.",
-      "fuente": "A01"
+      "narracion": "Falta todo lo demás que hemos visto: que resulte benigno para quien escucha, que la distancia esté calculada, que no deje factura.",
+      "fuente": "A01",
+      "pausa_despues_s": 0.45
+    },
+    {
+      "tipo": "comparacion",
+      "a": "La *técnica*",
+      "b": "Lo demás",
+      "et_a": "la escribes tú en tu casa",
+      "et_b": "se decide en la cabeza del otro",
+      "narracion": "La estructura la escribes tú en tu casa. Lo demás se decide en la cabeza de quien te escucha.",
+      "personaje": "piensa",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "enunciado",
-      "texto": "La estructura la escribes tú. Lo otro se decide en *la otra persona*.",
-      "narracion": "La estructura la escribes tú en tu casa. Lo demás se decide en la cabeza de la persona que te escucha. Y por eso ser gracioso nunca ha sido solo una habilidad técnica: es una habilidad social que usa una técnica."
-    },
-    {
-      "tipo": "enunciado",
-      "texto": "Fin de temporada.",
-      "narracion": "Que es, más o menos, todo lo que este canal quería decir en sus primeros ocho episodios."
-    },
-    {
-      "tipo": "enunciado",
-      "texto": "Escribe un chiste esta semana. Uno *malo* también cuenta.",
-      "narracion": "Ya tienes el plano completo: sabes qué es un chiste, por qué funciona, cuándo falla, hacia dónde apuntarlo y cómo montarlo. Escribe uno esta semana. Uno malo también cuenta.",
-      "fuente": "L01"
-    },
-    {
-      "tipo": "enunciado",
-      "texto": "¿En qué palabra está *el giro*?",
-      "narracion": "Coge un chiste que te sepas de memoria y dime en comentarios en qué palabra exacta está el giro. Esa palabra es toda la máquina.",
-      "pausa_despues_s": 0.7
+      "icono": "i-publico",
+      "texto": "Dímelo en *comentarios*",
+      "narracion": "Coge un chiste que te sepas y dime en comentarios en qué palabra está el giro. Esa palabra es la máquina.",
+      "pausa_despues_s": 0.45
     },
     {
       "tipo": "cierre",
-      "titulo": "Ya tienes el *plano completo*.",
-      "subtitulo": "Escribe un chiste esta semana. Uno malo cuenta.",
-      "narracion": "Porque en esto la única forma de escribir uno bueno es haber escrito antes unos cuantos malos. Yo he escrito ocho episodios sobre el humor sin haberme reído ni una vez, así que, de los dos, tú llevas ventaja."
+      "icono": "i-grieta",
+      "titulo": "Y falla aquí: el plano no *garantiza* nada",
+      "subtitulo": "Escribe uno esta semana. Uno malo también cuenta.",
+      "narracion": "Aquí falla todo: se puede montar un chiste perfecto y silencioso. Y yo llevo ocho episodios de humor sin reírme: tú llevas ventaja.",
+      "personaje": "no",
+      "pausa_despues_s": 0.2
     }
   ]
 }
