@@ -123,6 +123,21 @@
       "revisado": false
     },
     {
+      "id": "MDH-007.es",
+      "episodio": "MDH-007",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "Por qué se ríen de mí — y por qué casi nunca es de ti",
+      "guion": "05_calendario/guiones/MDH-007.es.json",
+      "video_id": "6sAuU_OHxwI",
+      "url": "https://youtu.be/6sAuU_OHxwI",
+      "estado": "public",
+      "publicar_en": null,
+      "musica": "cama_07_cylinder_one_chris_zabriskie.mp3",
+      "subido_utc": "2026-09-20T09:37:31Z",
+      "revisado": false
+    },
+    {
       "id": "MDS-001.es",
       "episodio": "MDS-001",
       "idioma": "es",
