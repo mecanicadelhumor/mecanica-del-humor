@@ -1,22 +1,22 @@
 {
-  "id": "MDH-007.es",
-  "duracion_final_s": 297.1,
-  "tamano_mb": 17.9,
+  "id": "MDS-021.es",
+  "duracion_final_s": 41.2,
+  "tamano_mb": 7.5,
   "audio": {
-    "lufs": -14.23,
-    "pico_dbtp": -1.33,
-    "rango_lu": 3.3
+    "lufs": -14.87,
+    "pico_dbtp": -1.38,
+    "rango_lu": 5.0
   },
   "silencio_inicial": {
     "empieza_s": -0.17,
-    "acaba_s": 0.657,
+    "acaba_s": 0.894,
     "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
   },
   "arranque": {
     "silencios_s": [
       [
         -0.085,
-        0.657
+        0.894
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -26,9 +26,9 @@
   "fragmentos": {
     "instantes": [
       {
-        "s": 198.022,
-        "mmss": "3:18.0",
-        "dura_s": 0.01
+        "s": 32.257,
+        "mmss": "0:32.3",
+        "dura_s": 0.411
       }
     ],
     "cuantos": 1,
@@ -47,9 +47,9 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 297.92,
-    "duracion_real_voz_mp3_s": 295.49,
-    "desfase_s": 2.43,
+    "duracion_calculada_s": 39.84,
+    "duracion_real_voz_mp3_s": 39.58,
+    "desfase_s": 0.26,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
@@ -58,159 +58,44 @@
     "sha256": "ea941f18640ca2829b748a0017662ecb299ea2bf742cf2ea166640b7a32e4edb"
   },
   "guion": {
-    "titulo_trabajo": "Por qué se ríen de mí",
+    "titulo_trabajo": "¿Cómo es la personalidad de los cómicos?",
     "idioma": "es",
     "voz": "Charon",
-    "escenas": 41,
-    "duracion_narracion_s": 297.92,
+    "escenas": 6,
+    "duracion_narracion_s": 39.84,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 13.122,
+    "escena_mas_larga_s": 9.728,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
-      "gemini-2.5-flash-preview-tts": 41
+      "gemini-3.1-flash-tts-preview": 6
     },
-    "modelo_voz": "gemini-2.5-flash-preview-tts",
+    "modelo_voz": "gemini-3.1-flash-tts-preview",
     "voz_mezclada": false,
     "origen_voz": [
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
-      "caché",
+      "llamada",
+      "llamada",
+      "llamada",
       "llamada",
       "llamada",
       "llamada"
     ],
     "direccion_voz": [
       "apertura",
-      "enumeracion",
-      "remate",
-      "contraste",
-      "planteamiento",
-      "seccion",
-      "cifra",
-      "planteamiento",
-      "contraste",
-      "explicacion",
-      "cifra",
-      "seccion",
-      "planteamiento",
-      "enumeracion",
-      "enumeracion",
-      "planteamiento",
-      "contraste",
-      "seccion",
-      "planteamiento",
-      "explicacion",
-      "enumeracion",
-      "planteamiento",
-      "planteamiento",
-      "contraste",
-      "seccion",
-      "planteamiento",
-      "contraste",
-      "cifra",
       "planteamiento",
       "remate",
-      "contraste",
-      "planteamiento",
-      "seccion",
-      "contraste",
       "cifra",
-      "planteamiento",
-      "planteamiento",
       "contraste",
-      "planteamiento",
-      "planteamiento",
       "objecion"
     ],
-    "escenas_ritmo_fuera_de_rango": [
-      [
-        1,
-        3.25
-      ],
-      [
-        4,
-        1.5
-      ],
-      [
-        8,
-        3.54
-      ],
-      [
-        14,
-        3.53
-      ],
-      [
-        22,
-        3.29
-      ],
-      [
-        23,
-        3.38
-      ],
-      [
-        25,
-        3.29
-      ],
-      [
-        29,
-        3.68
-      ],
-      [
-        31,
-        1.52
-      ],
-      [
-        37,
-        3.26
-      ],
-      [
-        38,
-        3.79
-      ]
-    ]
+    "escenas_ritmo_fuera_de_rango": []
   },
   "fotogramas_s": [
-    2.87,
-    56.73,
-    122.7,
-    178.37,
-    241.09,
-    296.09
+    2.53,
+    7.03,
+    11.69,
+    18.41,
+    27.13,
+    36.55
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
