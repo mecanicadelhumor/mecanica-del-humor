@@ -21,3 +21,8 @@
 ## Nota técnica para quien retome esto
 
 `03_produccion/pipeline/vista.py` llevaba desde su creación (04/09) sin poder previsualizar un Short de verdad: `escenas_de()` nunca copiaba el campo `formato` del guion a cada escena, así que `cargar()` nunca veía `"corto"` y toda vista con `--guion` salía en el lienzo horizontal (1920×1080) aunque el guion fuera vertical. Lo he corregido hoy (arreglo de defecto, no consume ranura de la regla 11.1): ahora `--guion <ruta-a-un-corto>` pinta en 1080×1920 de verdad. Las cuatro capturas de esta carpeta están hechas con la herramienta ya corregida — antes de hoy esto no se podía haber comprobado así.
+
+
+---
+
+CODIRECTOR: Déjala como está y márcalo como resuelto -> No soy capaz de ver diferencia entre A y B.
