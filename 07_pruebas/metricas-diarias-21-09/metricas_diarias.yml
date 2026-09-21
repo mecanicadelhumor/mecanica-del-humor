@@ -1,0 +1,81 @@
+name: Métricas diarias (ligero)
+
+# ---------------------------------------------------------------------------
+# C47 (00_estrategia/PLAN_DE_CAMBIOS.md, versión 11, 21/09/2026): que se pueda
+# ver todos los días si un vídeo se ha quedado a 0, sin esperar al lunes.
+#
+# POR QUÉ EXISTE: metricas.yml (la lectura completa, con retención y tráfico)
+# solo corre el lunes. Entre lunes y lunes un Short puede hacer 0
+# visualizaciones seis días sin que nadie se entere — es exactamente lo que
+# le ha pasado a MDS-017. La revisión diaria de las 11:30 hoy comprueba que
+# el vídeo se publicó, pero no cuánta gente lo ha visto.
+#
+# QUÉ HACE Y QUÉ NO: llama a «python3 04_agentes/metricas.py --diario», que
+# SOLO pide «views» y el desglose de los dos primeros días (vistas_48h) de
+# los vídeos publicados en los últimos 10 días, y escribe
+# 05_calendario/metricas_diarias.json — id, publicado, visualizaciones,
+# vistas_48h, y nada más. Sin curvas de retención, sin tráfico, sin el CSV de
+# Studio: ese fichero pesa 174 KB con solo cinco lecturas semanales porque
+# guarda 100 puntos de curva por vídeo, y una versión diaria de eso serían
+# varios megas de churn en git para una pregunta que no lo necesita. El
+# fichero se SOBRESCRIBE entero cada vez (ventana rodante), así que su churn
+# en git es de tamaño constante, no creciente.
+#
+# CUÁNDO: 09:15 UTC, quince minutos antes de que despierte la revisión diaria
+# (09:28 UTC / 11:28 España) — para que, cuando exista la regla de marcar
+# INCIDENCIA a las 24 horas con 0 visualizaciones, la revisión siempre tenga
+# una lectura de esa misma madrugada y no de ayer.
+#
+# CONVIVE con metricas.yml (lunes) y con sincroniza_registro.yml (diario,
+# corrige registro_publicaciones.json): los tres llaman al mismo script con
+# banderas distintas y no se pisan — este no toca metricas.json ni el
+# registro, y los otros dos no tocan metricas_diarias.json.
+# ---------------------------------------------------------------------------
+
+on:
+  schedule:
+    - cron: "15 9 * * *"   # 09:15 UTC — antes de la revisión diaria (09:28 UTC)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: metricas-diarias
+  cancel-in-progress: false
+
+jobs:
+  leer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Dependencias
+        run: pip install --quiet google-api-python-client google-auth
+
+      - name: Leer visualizaciones y vistas a 48h (ligero)
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 04_agentes/metricas.py --diario
+
+      # Un solo fichero, distinto del que escribe metricas.yml los lunes.
+      # Ver 00_estrategia/PROPIEDAD_DE_FICHEROS.md.
+      - name: Commit si hubo cambios
+        run: |
+          git config user.name  "Mecánica del Humor"
+          git config user.email "mecanicadelhumor@gmail.com"
+          git add 05_calendario/metricas_diarias.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios en la lectura diaria."
+          else
+            git commit -m "métricas diarias $(date -u +%Y-%m-%d)"
+            git pull --rebase --autostash origin main
+            git push
+          fi

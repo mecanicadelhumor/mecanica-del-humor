@@ -69,7 +69,11 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parents[1]
 REGISTRO = RAIZ / "05_calendario" / "registro_publicaciones.json"
 SALIDA = RAIZ / "05_calendario" / "metricas.json"
+SALIDA_DIARIA = RAIZ / "05_calendario" / "metricas_diarias.json"
 EXPORTES = RAIZ / "05_calendario" / "exportes"
+
+# C47 (21/09/2026): cuántos días hacia atrás mira la lectura ligera diaria.
+DIAS_VENTANA_DIARIA = 10
 
 AMBITOS = ["https://www.googleapis.com/auth/yt-analytics.readonly",
            "https://www.googleapis.com/auth/youtube.force-ssl"]
@@ -343,6 +347,77 @@ def mediana_48h_ultimos_shorts(lecturas, n=20):
     }
 
 
+def escribir_metricas_diarias(ya, registro, dias=DIAS_VENTANA_DIARIA):
+    """C47 (21/09/2026, versión 11 del plan): lectura ligera DIARIA, para que
+    la revisión de las 11:30 pueda ver si un vídeo se ha quedado a 0 sin
+    esperar al lunes.
+
+    Por qué hace falta aparte de `main()`: `metricas.yml` solo corre el
+    lunes, y entre lunes y lunes un Short puede hacer 0 visualizaciones seis
+    días sin que nadie se entere — es lo que le pasó a `MDS-017`. La lectura
+    completa (con retención, tráfico y el CSV de Studio) sigue siendo semanal
+    y este script no la toca.
+
+    Qué NO trae, a propósito: nada de `retencion()` ni `trafico()` ni el
+    export de Studio. `metricas.json` pesa 174 KB con solo cinco lecturas
+    porque guarda 100 puntos de curva por vídeo; repetir eso todos los días
+    serían varios megas de churn en git para un fichero que solo hace falta
+    para una pregunta («¿algún vídeo sigue a 0?»). Por el mismo motivo el
+    fichero se SOBRESCRIBE entero cada vez, no se acumula como
+    `metricas.json`: es una ventana rodante de los últimos `dias` días, no
+    una serie histórica.
+
+    Solo pide el ámbito `yt-analytics.readonly` (para `views` y para
+    `vistas_primeras_48h()`); no toca `registro_publicaciones.json` — eso ya
+    lo hace, todos los días, `sincroniza_registro.yml` (C31) por su cuenta.
+    """
+    hoy = date.today()
+    reg = registro.get("publicaciones", [])
+    candidatos = []
+    for p in reg:
+        vid = p.get("video_id")
+        if not vid or not p.get("subido_utc"):
+            continue
+        subido = datetime.fromisoformat(p["subido_utc"].replace("Z", "+00:00")).date()
+        if (hoy - subido).days > dias:
+            continue
+        candidatos.append((p, subido))
+
+    videos = []
+    for p, subido in candidatos:
+        vid = p["video_id"]
+        try:
+            base = fila(ya, vid, subido.isoformat(), hoy.isoformat())
+            vis = int(base.get("views", 0))
+        except Exception as e:
+            print(f"::warning::{p['id']}: no se pudo leer visualizaciones "
+                  f"({str(e)[:120]})")
+            vis = None
+        videos.append({
+            "id": p["id"],
+            "publicado": subido.isoformat(),
+            "visualizaciones": vis,
+            "vistas_48h": vistas_primeras_48h(ya, vid, subido),
+        })
+
+    salida = {
+        "_nota": "C47: lectura ligera diaria, solo id/publicado/visualizaciones/"
+                 f"vistas_48h de los vídeos publicados en los últimos {dias} días. "
+                 "Sin curvas de retención a propósito (ver la cabecera de "
+                 "escribir_metricas_diarias() en 04_agentes/metricas.py). Se "
+                 "SOBRESCRIBE entero cada vez: es una ventana rodante, no una "
+                 "serie histórica. La lectura completa semanal (metricas.json, "
+                 "control_c26) es la que manda y no cambia con este fichero.",
+        "actualizado_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "videos": videos,
+    }
+    SALIDA_DIARIA.write_text(json.dumps(salida, ensure_ascii=False, indent=1) + "\n",
+                             encoding="utf-8")
+    print(f"Escrito {SALIDA_DIARIA.relative_to(RAIZ)} — {len(videos)} vídeo(s) de "
+          f"los últimos {dias} días.")
+    return salida
+
+
 def trafico(ya, vid, desde, hasta):
     try:
         r = ya.reports().query(ids="channel==MINE", startDate=desde, endDate=hasta,
@@ -448,6 +523,13 @@ def main():
                           "real de YouTube (Data API) y sale. No toca metricas.json ni pide "
                           "el ámbito de analítica — pensado para un workflow diario, no solo "
                           "el del lunes.")
+    ap.add_argument("--diario", action="store_true",
+                     help="C47: lectura ligera de visualizaciones/vistas_48h de los "
+                          "vídeos de los últimos días (ver DIAS_VENTANA_DIARIA), sin "
+                          "retención ni tráfico ni Studio. Escribe "
+                          "05_calendario/metricas_diarias.json (se sobrescribe entero) "
+                          "y sale. Pensado para un workflow diario nuevo, no el de los "
+                          "lunes.")
     a = ap.parse_args()
 
     from googleapiclient.discovery import build
@@ -463,6 +545,22 @@ def main():
         corregidos, _fichas = sincronizar_registro(yt, registro)
         if not corregidos:
             print("Sin cambios: el registro ya coincidía con YouTube.")
+        return
+
+    if a.diario:
+        # A diferencia de --solo-registro, esta vía SÍ necesita
+        # yt-analytics.readonly (pide «views» y el desglose diario de
+        # vistas_primeras_48h()), así que sí hace falta comprobar el ámbito.
+        if not comprobar_ambitos(cred):
+            print("::error::Sin el ámbito «yt-analytics.readonly» no hay "
+                  "visualizaciones que leer para metricas_diarias.json. Ver "
+                  "00_estrategia/TOKEN_DE_YOUTUBE.md. metricas_diarias.json se "
+                  "queda como estaba, que es una lectura sin hacer, no una "
+                  "lectura vacía.")
+            return
+        ya = build("youtubeAnalytics", "v2", credentials=cred, cache_discovery=False)
+        registro = json.loads(REGISTRO.read_text(encoding="utf-8"))
+        escribir_metricas_diarias(ya, registro)
         return
 
     # Se refresca aquí, a propósito, antes de construir nada: así un token con
