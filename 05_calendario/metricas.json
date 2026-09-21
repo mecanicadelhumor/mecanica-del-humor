@@ -8313,7 +8313,7 @@
     "NOTIFICATION": 12.5,
     "YT_CHANNEL": 6.2
    },
-   "vistas_48h": 10,
+   "vistas_48h": null,
    "impresiones": null,
    "ctr": null
   },
@@ -11276,7 +11276,7 @@
   }
  ],
  "miniaturas": [],
- "actualizado_utc": "2026-09-21T05:33:19Z",
+ "actualizado_utc": "2026-09-21T08:46:29Z",
  "control_c26": {
   "mediana_vistas_48h": 11.0,
   "n_videos": 20,
