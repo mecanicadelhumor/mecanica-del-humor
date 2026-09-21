@@ -10,7 +10,7 @@ análisis.
 |---|---|---|
 | **`REGLAS.md`** | Las restricciones que nadie puede saltarse: ética, rigor, coste cero, cómo se cambian las cosas | **Siempre, antes de tocar nada.** Es corto |
 | **`PROPIEDAD_DE_FICHEROS.md`** | Quién escribe qué. De obligado cumplimiento para toda tarea programada | Antes de escribir en cualquier sitio |
-| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 9, al final, manda sobre lo anterior** | Al ir a hacer algo, y al decidir qué se hace antes |
+| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 11, al final, manda sobre lo anterior** | Al ir a hacer algo, y al decidir qué se hace antes |
 | **`PROMPT_DE_ARRANQUE.md`** | Cómo empezar una conversación nueva, autorizaciones vigentes, trampas conocidas y dónde está el proyecto hoy | Al abrir una conversación, y al cerrarla |
 | **`PROMPT_DIRECCIÓN.md`** | El cuaderno del codirector entre sesiones: lo que quiere comentar de un día para otro. **Suyo y solo suyo: se lee, no se edita ni se borra** | Al abrir una conversación de dirección |
 | **`TOKEN_DE_YOUTUBE.md`** | Cómo se saca el token de YouTube y por qué caducaba. Quince minutos, una vez | Si el canal deja de publicar, o al tocar los secretos |
@@ -19,9 +19,15 @@ análisis.
 | **`REDES.md`** | Las cuentas fuera de YouTube | Cuando toque C13 |
 | **`panel.html`** | El resumen visual de una página | Cuando quieras la foto entera sin leer |
 
-Y fuera de esta carpeta, dos ficheros que dicen dónde está el canal hoy:
-**`05_calendario/ESTADO.md`** (cinco líneas, lo escribe la revisión diaria todos
-los días) y **`05_calendario/metricas.json`** (los números).
+Y fuera de esta carpeta, tres sitios que dicen dónde está el canal hoy:
+
+- **`05_calendario/estado/`** — cinco líneas al día, lo escribe la revisión diaria. **Un
+  fichero nuevo por día: el de hoy es el de nombre más alto.** Desde el 21/09/2026; antes era
+  `ESTADO.md`, que está **congelado** (C45, y `estado/LEEME.md` cuenta por qué).
+- **`05_calendario/metricas.json`** — los números, cada lunes.
+- **`08_comunicacion/`** — `novedades.md` es del codirector, para hablarles a las tareas
+  programadas; se lee y no se toca. Lo demás es el buzón entre agentes, un fichero nuevo por
+  mensaje. La dirección deja ahí lo decidido después de cada sesión (C43, desde el 21/09).
 
 ## El resumen en cuatro líneas
 
@@ -71,6 +77,36 @@ los días) y **`05_calendario/metricas.json`** (los números).
    voces alternándose porque el respaldo a `edge-tts` era escena a escena; ahora es por vídeo
    entero y en escalera (C33.1). Y el mismo día, **el primer Short por encima de 1.000
    visualizaciones**, `MDS-016`, todavía sin explicación.
+
+## Estado a 21 de septiembre
+
+**El punto de control del 27 ya está contestado, y con un sí.** Su pregunta —*¿algún Short ha
+pasado de 100 visualizaciones en 48 horas?*— tiene tres respuestas: `MDS-016` **1.210**,
+`MDS-019` **161**, `MDS-018` **135**. Cero suscriptores todavía.
+
+Y la previsión del 15 de noviembre, que es lo que preguntó el codirector: **la mediana de hoy
+(11,0) no predice nada**, porque quedan 55 días y unos 39 Shorts más, así que ese día **ninguno
+de los veinte Shorts publicados hoy estará ya en la ventana de veinte**. Lo que pronostica es el
+régimen de la última semana —1.210 · 161 · 135 · 27 · **0**—, que cae en la banda de «se amplía
+el tema». **No estamos fracasando: estamos en la frontera. Y la frontera la deciden los ceros,
+no los vídeos buenos.**
+
+La sesión del lunes 21 (**versión 11**, la que manda) cerró seis cosas:
+
+- **C42 · se suspende el episodio largo.** Siete episodios largos en treinta y cuatro días
+  suman **114 visualizaciones** entre todos —los cinco Shorts de la última semana, 1.533— y
+  además su precacheo de voz se comía **9 de las 10 peticiones diarias** del modelo que **desde
+  el 15/09 es el respaldo de voz de los Shorts**. Vuelve cuando la mediana llegue a 50.
+- **C43 · la dirección no se convierte en tarea programada.** Lo que se automatiza es su
+  salida: una nota en `08_comunicacion/` después de cada sesión.
+- **C44 · la voz deja de sonar a montaje.** El codirector tenía razón, y además se lo
+  pedíamos: la dirección de actor pide cambios de timbre escena a escena, y el volumen de cada
+  toma no se iguala nunca. Entra el **lunes 28**, no antes: la semana del 21 es la primera
+  medida limpia de C38.
+- **C45 · `ESTADO.md` se congela** y nace `05_calendario/estado/`.
+- **C46 · el canal se lee a sí mismo.** La planificación del jueves no leía `metricas.json`, y
+  por eso `MDS-016` hizo 1.210 y nadie escribió nada que lo continuara.
+- **C47 · las métricas se leen todos los días**, no solo los lunes.
 
 ## Estado a 18 de septiembre
 

@@ -4,9 +4,28 @@
 Espejo creado el 31/08/2026, sincronizado el 04/09/2026, **el 07/09/2026** y **el 12/09/2026 (dirección del sábado)**. `id`: `trig_015qkb2sqbbJwJE1qgoNMK95` · cron: `0 20 * * 4 (UTC) · jueves 22:00 hora de España` ·
 modelo: `claude-opus-5`.
 
-> ⚠️ **Esta copia no se ejecuta.** La que corre es la del almacén. Si cambias
-> algo aquí, cámbialo también allí con `update_trigger`, o quedarán distintas
-> y este fichero mentirá.
+> ⚠️ **CORREGIDO EL 21/09/2026: este fichero YA NO es una copia. ES el prompt.**
+> Desde C30 (12/09/2026) el almacén solo lleva un arranque que lee este fichero de
+> `origin/main`. **Cambiar este fichero cambia lo que corre**, en cuanto el codirector
+> haga `push`. No hace falta ningún `update_trigger`. El aviso anterior decía lo
+> contrario y llevaba nueve días mintiendo.
+
+---
+
+## Lo que cambia el 21/09/2026 (dirección del lunes) · versión 11 del plan
+
+1. **La semana son CINCO Shorts. Ya no hay episodio largo.** El formato largo está
+   **suspendido** (C42). El paso 3 de abajo queda **anulado** mientras dure la suspensión;
+   el paso 5 cambia (no extiendes el sábado). Motivo y condición de vuelta, más abajo.
+2. **Antes de elegir tema, lee lo que ha hecho el canal.** `05_calendario/metricas.json`
+   entra en tu lectura obligatoria y manda sobre `demanda.json` cuando los dos hablen del
+   mismo sitio (C46). Ver el paso 1 bis, nuevo.
+3. **Lee `08_comunicacion/` antes de trabajar.** `novedades.md` es del codirector: se lee y
+   no se toca. Los demás ficheros con fecha de los últimos siete días son el buzón entre
+   agentes; si tienes algo que decirles, deja
+   `08_comunicacion/AAAA-MM-DD-planificacion.md`, un fichero nuevo por vez.
+4. **El estado del canal ya no está en `ESTADO.md`**, que está congelado, sino en
+   `05_calendario/estado/`, un fichero por día (C45).
 
 ---
 
@@ -52,7 +71,7 @@ Lee `00_estrategia/PROPIEDAD_DE_FICHEROS.md`. El 21 de agosto la revisión diari
 
 - **Eres dueño de** `05_calendario/guiones/`, `parrilla.json`, `publicaciones/`, `CALENDARIO.md`, `demanda.json` y `semillas_demanda.json`.
 - **No escribas el nombre propio del codirector en ningún fichero.** El repositorio es público y el 07/09 se retiró de los 58 ficheros donde aparecía. Se le llama «el codirector» o «la dirección».
-- **NO eres dueño de** `03_produccion/` ni `04_agentes/` (son de la revisión diaria), ni de `metricas.json`, `demanda_bruta.json`, `registro_publicaciones.json`, `qa/` ni `ESTADO.md`. Si hay que cambiar algo de ahí, lo dices en tu bitácora.
+- **NO eres dueño de** `03_produccion/` ni `04_agentes/` (son de la revisión diaria), ni de `demanda_bruta.json`, `registro_publicaciones.json`, `qa/` ni `05_calendario/estado/`. Si hay que cambiar algo de ahí, lo dices en tu bitácora. **`metricas.json` tampoco lo escribes tú — pero desde el 21/09 SÍ lo lees, y es obligatorio: ver el paso 1 bis.**
 - **Tu bitácora es un fichero nuevo:** `05_calendario/bitacora/AAAA-MM-DD-planificacion.md`. **`MEJORAS.md` está congelado**: se lee, no se escribe.
 - **Antes de escribir un guion, lee `05_calendario/revisiones/`.** Ahí deja la revisión diaria los defectos que ha encontrado y no ha podido corregir porque el guion es tuyo. Aplícalos y borra la nota al aplicarla.
 
@@ -72,13 +91,16 @@ entero**. El razonamiento está en la versión 7 de `PLAN_DE_CAMBIOS.md`.
 
 **Lee `00_estrategia/` entero antes de nada** (`LEEME.md`, `REGLAS.md`, `PLAN_DE_CAMBIOS.md`, `PROPIEDAD_DE_FICHEROS.md`). En `PLAN_DE_CAMBIOS.md` **manda la versión 7**, que está al final, del 12/09/2026. Léela entera, y también la 6: traen **C25** (el plan de presentación, del que sale casi todo lo que cambia para ti esta semana), **C26** (el 15 de noviembre se decide si el canal sigue, con la mediana de los últimos veinte Shorts a las 48 horas) y **C27** (el episodio largo también deja `edge-tts`).
 
-Lo esencial: **un solo canal, en español** (el inglés lo sirve el doblaje automático de YouTube; no escribas guiones ingleses). **Cinco Shorts, lunes a viernes a las 19:00, y un episodio largo el sábado a las 12:00.**
+Lo esencial: **un solo canal, en español** (el inglés lo sirve el doblaje automático de YouTube; no escribas guiones ingleses). **Cinco Shorts, lunes a viernes a las 19:00. Nada el sábado ni el domingo** — el episodio largo está suspendido desde el 21/09/2026 (C42).
 
 Lee también `04_agentes/prompts/guionista_corto.md` (el oficio del Short), `guionista.md`, `chistologo.md`, `verificador.md`, `04_agentes/esquema_guion.json`, `01_bibliografia/BIBLIOGRAFIA_CURADA.md`, y `05_calendario/guiones/MDS-001.es.json` como referencia.
 
-**Dónde está el canal (7 de septiembre):** MDH-005, el episodio largo del sábado 5, tiene **una visualización, la del codirector**. Y la cifra de referencia que conviene tener siempre delante: un canal de menos de mil suscriptores saca **entre 50 y 500 visualizaciones por Short en 48 horas**; nosotros sacamos entre 20 y 30. No estamos por debajo de la excelencia, estamos por debajo del suelo de lo normal.
+**Dónde está el canal (21 de septiembre de 2026).** Este párrafo estaba congelado en el 7 de septiembre y decía dos cosas que ya eran falsas. Así están las cosas de verdad:
 
-**Y lo que sigue siendo cierto del 4 de septiembre:** peldaño S1, que el feed nos pruebe. La primera tanda de Shorts sumó 44 visualizaciones entre los cinco; con el motor C15 los tres últimos han hecho **31, 21 y 21**, y ha llegado el primer «me gusta» del canal. Sigue lejos del umbral —50 desde el feed en 48 horas— pero por primera vez el número se mueve en la dirección buena. **El único indicio direccional sigue siendo la búsqueda:** MDS-002 sacó el 63,6 % de sus visualizaciones de `YT_SEARCH` y MDS-003 el 46,2 %, mientras el feed de Shorts apenas empuja. Eso manda sobre el punto 2 y sobre el punto 4: a la búsqueda le importan la pregunta y el título, no la serie.
+- **La cifra de referencia no ha cambiado y sigue mandando:** un canal desconocido de menos de mil suscriptores saca **entre 50 y 500 visualizaciones por Short en 48 horas**. Ese es el suelo de lo normal.
+- **Los números se han movido, por primera vez.** A 21/09, visualizaciones a 48 h: `MDS-016` **1.210**, `MDS-019` **161**, `MDS-018` **135**, `MDS-020` **27**, `MDS-017` **0**. Antes de esos, quince Shorts con mediana 10 y ninguno por encima de 50. Tres vídeos han pasado de 100, que es la pregunta del punto de control del 27 de septiembre. Sigue habiendo **cero suscriptores**.
+- **CORREGIDO: la búsqueda ya NO es la superficie que manda.** Fue cierto en agosto y dejó de serlo en `MDS-007`. Ponderado por visualizaciones sobre los quince Shorts con datos de tráfico: **feed de Shorts 54,6 %, búsqueda 27,7 %**, suscriptores 6,9 %, todo lo externo junto 5,4 %. `MDS-015` sacó del feed el 96,8 %. **Manda el feed**, y al feed se le convence con la proporción de vídeo vista, no con el título. El título sigue importando —es la puerta del 27,7 %— pero ya no ordena la semana él solo. Ver C40 en la versión 10.
+- **La retención dice fuga continua, no desplome inicial:** la mitad de la audiencia se va sobre el segundo 13. De ahí la regla 13.2: **el remate no cae antes del segundo 10**, y el Short se escribe a la duración de su serie, no al techo del formato.
 
 ## Qué hacer, en este orden
 
@@ -109,6 +131,45 @@ Si `demanda_bruta.json` no existe o viene con avisos, **dilo en la bitácora y s
 **El canal puede entretener.** Un vídeo no tiene que ser educativo para valer: si entretiene y cumple `REGLAS.md` —nada inventado, nadie como víctima, la fuente donde toca—, es un vídeo bueno. No descartes una pregunta por «poco divulgativa». Está en la regla 3.
 
 **Y `pertinencia_top5` descuenta cifras, no descarta temas.** El campo que te inventaste el 03/09 está bien pensado y se queda: cuando once de veinte consultas devuelven sketches y canciones, sus 63 millones de visualizaciones no miden demanda de respuesta y ordenar por esa cifra escribe la semana al revés. Pero eso es lo único para lo que sirve. **Que hoy responda esa pregunta el entretenimiento y no la divulgación es un hueco, no una señal de que el tema no sea nuestro** — de hecho es la definición de un sitio donde nadie ha llegado. Si tenemos con qué responderla honestamente, es candidata buena, no mala.
+
+### 1 bis. Lee lo que ha hecho el canal — NUEVO el 21/09/2026 (C46)
+
+**Antes de elegir un solo tema, abre `05_calendario/metricas.json`.** Hasta hoy no estaba en
+tu lista de lectura: elegías la semana con la demanda de fuera —`demanda.json`, lo que la
+gente busca en YouTube— y **nunca con lo que le había pasado a nuestros propios vídeos**. Es
+el dato mejor que tiene este canal y era el único que no llegaba a quien elige los temas.
+
+Lo que hay que sacar de ahí, y va en la primera sección de tu bitácora:
+
+1. **La tabla de los últimos veinte Shorts**: `id`, tema en cuatro palabras, `vistas_48h`.
+   Está en `lecturas`, con la fecha de lectura más alta.
+2. **Los dos mejores de las últimas cuatro semanas, y los dos peores.**
+3. **`control_c26`**: `mediana_vistas_48h`, `sobre_100_vistas`, `sobre_50_vistas`.
+
+Y la regla, que es lo que cambia de verdad:
+
+- **Los dos temas mejores de las últimas cuatro semanas tienen derecho de tanteo.** Al menos
+  **uno de los cinco Shorts de la semana** sale de continuar, profundizar o mirar desde otro
+  ángulo uno de esos dos. No es copiar el vídeo: es que el asunto que funcionó tenga una
+  segunda oportunidad antes que un asunto que nadie ha probado.
+- **Si decides que ninguno de los dos se puede continuar, lo escribes en la bitácora con el
+  motivo** (la ficha central está en cuarentena por C17, la pregunta ya está agotada, no hay
+  fuente). Lo que no vale es no mirarlo.
+- **Un tema que se hundió no se repite en seis semanas**, salvo que el hundimiento tenga una
+  causa conocida que no era el tema (`MDS-017` hizo 0 y su problema fue de voz, no de
+  asunto: ese no cuenta como tema hundido).
+- **`metricas.json` manda sobre `demanda.json` cuando los dos hablen del mismo sitio.** La
+  demanda dice qué se busca ahí fuera; las métricas dicen qué nos ha funcionado a nosotros,
+  con nuestra voz, nuestro formato y nuestro tamaño de canal. Lo segundo es más pequeño y
+  más caro de conseguir, y por eso vale más.
+
+**Por qué esto existe.** `MDS-016` —«por qué la ironía no se entiende por WhatsApp»— hizo
+**1.210 visualizaciones a 48 horas** el 14 de septiembre, cuando los quince anteriores tenían
+mediana 10 y ninguno pasaba de 50. Una semana después no había en el repositorio **ni un solo
+vídeo que lo continuara**, y nadie lo había decidido: es que el número no llegaba a esta
+tarea. Cuando por fin tienes una señal, lo caro no es conseguirla, es tirarla.
+
+**Tú sigues sin escribir `metricas.json`.** Lo escribe `metricas.yml`. Tú lo lees.
 
 ### 2. Escribe los cinco Shorts de la semana
 
@@ -145,9 +206,26 @@ Un Short se ve mudo en el metro y se escucha con el móvil en el bolsillo. Las d
 
 **Y el chiste va primero.** Se escribe el chiste —uno que contarías en voz alta a un amigo sin la explicación detrás— y después se mira qué mecanismo tiene dentro. Si el mecanismo que querías explicar no está en ningún chiste bueno, **se cambia de mecanismo, no de chiste**. La prueba del algodón: si para que tenga gracia hay que explicar algo antes, no vale. Está desarrollado en `04_agentes/prompts/guionista_corto.md`, con MDS-005 como ejemplo negativo.
 
-### 3. Adapta el episodio largo del sábado siguiente — solo ese
+### 3. ~~Adapta el episodio largo del sábado siguiente~~ — **ANULADO el 21/09/2026 (C42)**
 
-Quedan MDH-007 y MDH-008 escritos pero **sin adaptar**. Adapta solo el que se emite el sábado siguiente:
+**No escribas, no adaptes y no programes ningún episodio largo.** El formato está suspendido:
+siete episodios largos en treinta y cuatro días suman **114 visualizaciones** entre todos (el
+mejor, `MDH-002`, 34 en treinta y tres días; `MDH-007`, publicado el 20/09, tiene 0), y su
+precacheo de voz gastaba cada día **9 de las 10 peticiones diarias de
+`gemini-2.5-flash-preview-tts`**, que desde C33.1 es el **peldaño (b) del respaldo de voz de
+los Shorts**: mientras hubiera un largo pendiente, ese peldaño no podía existir.
+
+`MDH-008` está retirado de `parrilla.json` (queda en `_emisiones_suspendidas`, con su motivo) y
+**su guion sigue escrito y sin tocar** en `05_calendario/guiones/MDH-008.es.json`. No lo borres
+ni lo edites.
+
+**Cuándo vuelve:** cuando la mediana de los últimos veinte Shorts a 48 horas llegue a 50, que
+es el suelo de lo normal. Lo mide `metricas.py` cada lunes (`control_c26.mediana_vistas_48h`).
+Mientras esa cifra esté por debajo, este paso no existe.
+
+Lo que decía antes, para cuando vuelva:
+
+
 
 - recortar a **4–6 minutos** (el validador da error por encima de 400 s),
 - rehacer el gancho: **la primera risa antes del segundo quince**, y dos por episodio;
@@ -164,7 +242,7 @@ Quedan MDH-007 y MDH-008 escritos pero **sin adaptar**. Adapta solo el que se em
 
 ### 5. Extiende `parrilla.json`
 
-Lunes a viernes los Shorts (`"hora": "19:00"`), sábado el largo (`"hora": "12:00"`), todos `"idiomas": ["es"]`, **`"modo": "automatico"` sin excepción**. Una emisión sin `modo` se sube en privado y no se publica nunca: es lo que le pasó a MDH-004 el 29/08, que se quedó oculto hasta que el codirector lo vio dos días después. Actualiza `CALENDARIO.md` para que coincida.
+Lunes a viernes los Shorts (`"hora": "19:00"`), **y nada el sábado ni el domingo** mientras el largo esté suspendido (C42, 21/09/2026). Todos `"idiomas": ["es"]`, **`"modo": "automatico"` sin excepción**. Una emisión sin `modo` se sube en privado y no se publica nunca: es lo que le pasó a MDH-004 el 29/08, que se quedó oculto hasta que el codirector lo vio dos días después. Actualiza `CALENDARIO.md` para que coincida.
 
 ### 6. Valida y entrega
 
@@ -227,4 +305,4 @@ regenere. Antes de entregar, `python3 04_agentes/validar_bibliografia.py` tiene 
 
 Escribe tu bitácora con: qué has escrito, qué dice la demanda medida y qué has decidido con ella, **qué fichas has usado y cuáles has evitado por repetición**, qué revisiones has aplicado, qué decisiones editoriales has tomado y qué falta.
 
-**No mandes `PushNotification`.** El codirector no las recibe y no las quiere; el canal tiene que ser autónomo. Si algo se ha roto de verdad y solo él puede arreglarlo, va en la línea `Pendiente del codirector` de `05_calendario/ESTADO.md` — que escribe la revisión diaria, así que se lo dices dejándolo escrito en tu bitácora, que ella lee. Nada de recordatorios ni de peticiones de comodidad.
+**No mandes `PushNotification`.** El codirector no las recibe y no las quiere; el canal tiene que ser autónomo. Si algo se ha roto de verdad y solo él puede arreglarlo, va en la línea `Pendiente del codirector` del fichero del día de `05_calendario/estado/` — que escribe la revisión diaria, así que se lo dices dejándolo escrito en tu bitácora, que ella lee. Nada de recordatorios ni de peticiones de comodidad.

@@ -33,9 +33,12 @@ ANTES DE RESPONDER NADA, lee en este orden:
 4. 00_estrategia/PLAN_DE_CAMBIOS.md — la hoja de ruta y el estado de cada cambio
 5. 00_estrategia/PROMPT_DE_ARRANQUE.md — autorizaciones vigentes y trampas conocidas
 6. 00_estrategia/PROMPT_DIRECCIÓN.md — lo que el codirector me ha ido anotando
-7. 05_calendario/ESTADO.md         — ¿está el canal bien hoy? (cinco líneas)
-8. 05_calendario/bitacora/         — los ficheros de los últimos siete días
-9. 05_calendario/metricas.json     — dónde está el canal en la escalera
+7. 05_calendario/estado/          — ¿está el canal bien hoy? El fichero de nombre
+                                     MÁS ALTO de esa carpeta, que es el de hoy. (Hasta el
+                                     20/09 esto era ESTADO.md, que ya está congelado)
+8. 08_comunicacion/               — novedades.md, que es tuyo, y el buzón entre agentes
+9. 05_calendario/bitacora/         — los ficheros de los últimos siete días
+10. 05_calendario/metricas.json     — dónde está el canal en la escalera
 
 `PROMPT_DIRECCIÓN.md` es del codirector y solo suyo: lo escribe él entre sesión y
 sesión para que no se le olvide nada. **Se lee siempre y no se edita ni se borra
@@ -130,6 +133,11 @@ confundirlas:
 | `01_bibliografia/data/semillas.json` | **Fuente de verdad de la bibliografía**, desde el 18/09 | `BIBLIOGRAFIA_CURADA.md` **se genera desde aquí** (`scripts/generar_md.py`). Una corrección que solo viva en el `.md` la borra la próxima regeneración. Lo comprueba `04_agentes/validar_bibliografia.py` |
 | Cuentas de TikTok e Instagram de la marca | **Trámite abierto el 18/09** (C41) | Las dos APIs exigen auditoría/revisión de la app para publicar en abierto: días o semanas. Se empieza ya y **no se publica hasta que C38 haya dado su primera medida**. Ver `tareas/tareas_codirector_2026-09-18.md`, tarea 2 |
 | `00_estrategia/PROMPT_DIRECCIÓN.md` | **SOLO DEL CODIRECTOR** | Es su cuaderno entre sesiones. **Se lee siempre, no se edita ni se borra nunca**, ni por mí |
+| `08_comunicacion/novedades.md` | **SOLO DEL CODIRECTOR**, desde el 18/09 | Lo que quiera contarles a las tareas programadas. **Se lee, no se toca.** El resto de la carpeta es el buzón entre agentes: un fichero nuevo por mensaje, `AAAA-MM-DD-<quien>.md`. La dirección escribe ahí después de cada sesión desde el 21/09 (C43) |
+| `05_calendario/ESTADO.md` | **CONGELADO el 21/09/2026** (C45) | El estado del canal vive en `05_calendario/estado/`, un fichero por día. El de hoy es el de nombre más alto. `ESTADO.md` se lee y no se escribe, igual que `MEJORAS.md` |
+| `.github/workflows/voz_adelantada.yml` | **DESACTIVADO el 21/09** | C42: el formato largo está suspendido y este workflow se comía 9 de las 10 peticiones diarias del modelo que es el respaldo de voz de los Shorts. El fichero no se borra: se reactiva con un clic el día que el largo vuelva |
+| `05_calendario/guiones/MDH-008.es.json` | **Escrito y congelado** | Su emisión está en `parrilla.json` → `_emisiones_suspendidas`. No se borra ni se edita |
+| `02_marca/banco/banco.json` | **Generado el 21/09** desde `creditos_pixabay.csv` | Los tres campos que exige la regla 9 —licencia, autor, enlace— de las quince fotos. **C34 desbloqueado** |
 
 **Y la consecuencia práctica de la autorización general, que es la que importa:** desde el
 12/09 escribo directamente en la carpeta del codirector con `device_commit_files` los
@@ -151,7 +159,7 @@ arrastraba defectos. Solo puede añadir lo que verifique contra la fuente.
 ## Las trampas en las que ya se ha caído
 
 No son anécdotas: cada una costó tiempo o un vídeo, y todas se repiten solas si nadie las
-tiene delante. Son treinta y cuatro a 18/09/2026, y la lista crece porque se lee.
+tiene delante. Son treinta y seis a 21/09/2026, y la lista crece porque se lee.
 
 **1. Cada documento daba por supuesto que el movimiento lo ponía otro.**
 Los subtítulos quemados se retiraron el 20/08; la respiración de zoom ya estaba
@@ -480,6 +488,77 @@ eso es lo que se ha escrito; la parte que necesita internet vive en el prompt de
 diaria, que tiene `WebFetch` y ya la hizo a mano ese mismo día.
 → **Antes de escribir una comprobación, comprueba que su entorno puede ejecutarla.** Es la
 trampa 2 aplicada a la red en vez de al coste.
+
+**35. Una cuota «propia» deja de serlo el día en que otro la usa, y nadie vuelve a leer la
+cabecera.** `voz_precache.py` dice desde el 14/09, en su cabecera: *«cuota propia, nunca la de
+los Shorts (C7)»*. Era verdad ese día. **El 15 de septiembre C33.1 escribió
+`MODELOS_CORTO = (MODELO_GEMINI, MODELO_GEMINI_LARGO)`** y con esa línea
+`gemini-2.5-flash-preview-tts` pasó a ser el **peldaño (b) del respaldo de voz de los Shorts**.
+Desde entonces, `voz_adelantada.yml` gastaba **cada día 9 de las 10 peticiones** de ese modelo
+precacheando el episodio largo. Un Short necesita seis. **Durante seis días el respaldo de voz
+de los Shorts existió en el código y no existió en la práctica**, y no dio ni un error: solo
+Shorts que no conseguían voz. `MDS-017` hizo 0 visualizaciones.
+→ Es la trampa 1 y la 24 en el mismo sitio. **Un recurso compartido —una cuota, una caché, un
+fichero— tiene dueños, y la frase que dice quién lo usa caduca sin avisar.** Cuando añadas un
+consumidor a un recurso, ve a leer lo que el recurso dice de sí mismo y corrígelo ahí mismo. Si
+la cabecera de un fichero afirma un reparto, esa afirmación es una comprobación que falta.
+
+**36. La regla que arregló el desastre no se aplicó al fichero de al lado, y lo creó el mismo
+agente diez días después.** El 21 de agosto, después de que la revisión diaria borrara 188
+líneas de bitácora de la planificación, nació la regla que sostiene todo el reparto de ficheros
+de este proyecto: **un fichero nuevo no puede pisar nada**, y `MEJORAS.md` se congeló. **El 31 de
+agosto se le dio a esa misma revisión diaria un fichero más, `ESTADO.md`, que se reescribe entero
+todos los días** — exactamente la figura que la regla existía para eliminar. La factura llegó el
+fin de semana del 19 y 20 de septiembre: dos entregas sin aplicar, dos `ESTADO.md` distintos del
+mismo fichero, y el codirector guardando uno con sufijo `_old` para no perderlo.
+→ Trampa 25 cometida sobre la regla madre de todas. **Cuando arregles algo con una regla
+estructural, haz la lista de todo lo que tiene esa misma forma y recórrela entera** — y vuelve a
+recorrerla cada vez que crees un fichero nuevo para un agente que ya tiene uno.
+
+## Dónde está el proyecto a 21 de septiembre de 2026
+
+**El punto de control del 27 ya está contestado, y con un sí.** Su pregunta es *¿algún Short ha
+pasado de 100 visualizaciones en 48 horas?* y son **tres**: `MDS-016` **1.210**, `MDS-019`
+**161**, `MDS-018` **135**. El desenlace escrito para ese sí es «el formato funciona, toca
+escalarlo». Sigue habiendo **cero suscriptores** y la mediana de los últimos veinte sigue en
+**11,0**, que es historia de agosto: el 15 de noviembre **ninguno de los veinte Shorts
+publicados hasta hoy estará ya en la ventana de veinte**. Lo que pronostica algo es el régimen
+de la última semana —1.210 · 161 · 135 · 27 · 0—, cuya mediana cae en la banda de «se amplía el
+tema». **No estamos fracasando: estamos en la frontera, y la frontera la deciden los ceros, no
+los vídeos buenos.**
+
+La sesión del lunes 21 (**versión 11** del plan, la que manda) salió de cinco cosas del
+codirector y cerró seis:
+
+- **C42 · el episodio largo se suspende.** Siete episodios, treinta y cuatro días, **114
+  visualizaciones entre todos**; y su precacheo se comía 9 de las 10 peticiones diarias del
+  modelo que **desde el 15/09 es el respaldo de voz de los Shorts** (trampa 35). `MDH-008` fuera
+  de la parrilla con su guion intacto. Vuelve cuando la mediana llegue a **50**.
+- **C43 · la dirección no se automatiza; su salida sí.** Respuesta a su pregunta. Desde hoy hay
+  una nota en `08_comunicacion/` después de cada sesión.
+- **C44 · la voz deja de sonar a montaje.** Tiene razón y además se lo pedíamos: la dirección de
+  actor pide cambios de **timbre**, y el volumen por escena **no se iguala nunca** (`loudnorm`
+  va una sola vez, sobre la mezcla). Tres capas; **A y B entran el lunes 28**, no antes, porque
+  la semana del 21 es la primera medida limpia de C38.
+- **C45 · `ESTADO.md` congelado**, nace `05_calendario/estado/`. Y la incidencia del domingo era
+  **falsa por dieciséis minutos**.
+- **C46 · el canal se lee a sí mismo.** La planificación no leía `metricas.json`: `MDS-016` hizo
+  1.210 y una semana después no había un solo vídeo que lo continuara.
+- **C47 · las métricas se leen todos los días**, no solo los lunes. Un Short puede hacer 0
+  durante seis días sin que nadie se entere; es lo que pasó con `MDS-017`.
+
+**Y una decisión abierta con fecha tope:** la tercera puerta de C26 —«algún Short por encima de
+1.000»— **ya está cumplida** desde el 14/09. Propuesta de la dirección: cambiarla por «dos
+Shorts por encima de 1.000 en semanas distintas». Decide el codirector, **antes del 8 de
+noviembre**.
+
+**Lo que espera al codirector:** `tareas/tareas_codirector_2026-09-21.md` — el `push`, **las
+impresiones de `MDS-017` y `MDH-007` en Studio** (es la tarea que decide si lo siguiente que
+tocamos es el guion o la publicación), desactivar `voz_adelantada.yml`, y la puerta de los 1.000.
+
+**Lo que queda mirado y sin resolver:** por qué `MDS-016` hizo 1.210 sigue sin explicación desde
+el 15/09; `E02` sigue con dos DOI; `F04` sin sustituir; `P1` sin respuesta desde el 14/09; y
+TikTok parado a propósito hasta el 27.
 
 ## Dónde está el proyecto a 18 de septiembre de 2026
 

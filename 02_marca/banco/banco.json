@@ -1,0 +1,158 @@
+{
+  "_nota": "Banco de imágenes del canal (C34). La regla 9 de 00_estrategia/REGLAS.md exige que TODA imagen lleve escritos su licencia, su autor y su enlace de origen ANTES de usarse una sola vez: una imagen sin esos tres campos no se usa, aunque parezca libre. Este fichero es esa comprobación. Se generó el 21/09/2026 desde creditos_pixabay.csv, que el codirector rellenó el 18/09.",
+  "_licencia": "Pixabay Content License: uso comercial permitido y SIN atribución obligatoria. Se guarda el autor y el enlace igual, porque la regla 9 pide poder nombrar la licencia y rastrear el origen, no solo cumplir el mínimo legal.",
+  "_como_se_anade_una_imagen": "1) se descarga a esta carpeta; 2) se añade su fila a creditos_pixabay.csv con archivo, enlace, autor; 3) se regenera este fichero. Una imagen que esté en la carpeta y no aquí NO se usa.",
+  "actualizado": "2026-09-21",
+  "imagenes": [
+    {
+      "archivo": "acuerdo_negocio_mujeres.jpg",
+      "sha256": "8440fcc812108ab20067b2f99479eaab59d809b60b33417bbf8cac6f43856c6e",
+      "autor": "styles66",
+      "licencia": "Pixabay Content License",
+      "licencia_url": "https://pixabay.com/service/license-summary/",
+      "atribucion_obligatoria": false,
+      "enlace": "https://pixabay.com/es/photos/apret%C3%B3n-de-manos-mujeres-liderazgo-8047503/",
+      "notas": ""
+    },
+    {
+      "archivo": "apreton_manos_hombres_reunion.jpg",
+      "sha256": "6c0f2313690f2a557da4f5480781a9379a86fa026da8828c7248fc6b17ed9a13",
+      "autor": "geralt",
+      "licencia": "Pixabay Content License",
+      "licencia_url": "https://pixabay.com/service/license-summary/",
+      "atribucion_obligatoria": false,
+      "enlace": "https://pixabay.com/es/photos/apret%C3%B3n-de-manos-traje-de-hombres-4229701/",
+      "notas": ""
+    },
+    {
+      "archivo": "chica_no_entiende.jpg",
+      "sha256": "3705562fa719f1415de0630209a42584baa69df7ba8ed677ee75125012ea0fdc",
+      "autor": "RobinHiggins",
+      "licencia": "Pixabay Content License",
+      "licencia_url": "https://pixabay.com/service/license-summary/",
+      "atribucion_obligatoria": false,
+      "enlace": "https://pixabay.com/es/photos/confundido-mujer-duda-ni%C3%B1a-2385799/",
+      "notas": ""
+    },
+    {
+      "archivo": "grupo_mirando_movil.jpg",
+      "sha256": "a3f78731c54b4ffe8bc0f11e82451dea45d9357ece5e215666a170f2feb4f65d",
+      "autor": "natureaddict",
+      "licencia": "Pixabay Content License",
+      "licencia_url": "https://pixabay.com/service/license-summary/",
+      "atribucion_obligatoria": false,
+      "enlace": "https://pixabay.com/photos/pokemon-pokemongo-friends-school-1548194/",
+      "notas": ""
+    },
+    {
+      "archivo": "hombre_señala_pantalla_mujer_reunion.jpg",
+      "sha256": "6f4ea521811f99d89013dd5ea9ccfc07e685f9d6a078551fb8d6f8f310fe49a9",
+      "autor": "erwinbosman",
+      "licencia": "Pixabay Content License",
+      "licencia_url": "https://pixabay.com/service/license-summary/",
+      "atribucion_obligatoria": false,
+      "enlace": "https://pixabay.com/photos/office-discussion-teamwork-10386437/",
+      "notas": ""
+    },
+    {
+      "archivo": "hombre_sonriente.jpg",
+      "sha256": "b10d6473aaeda57932216833ed8f8536e485097525a08d1ff042765063d50ef7",
+      "autor": "ShaneRoybal",
+      "licencia": "Pixabay Content License",
+      "licencia_url": "https://pixabay.com/service/license-summary/",
+      "atribucion_obligatoria": false,
+      "enlace": "https://pixabay.com/es/photos/empresario-sonrisa-retrato-hombre-5791566/",
+      "notas": ""
+    },
+    {
+      "archivo": "mujer_en_reunion.jpg",
+      "sha256": "0861d5848094359a68fa92907d81334ad85d890ebf68f11c28ffe5d15743bae0",
+      "autor": "erwinbosman",
+      "licencia": "Pixabay Content License",
+      "licencia_url": "https://pixabay.com/service/license-summary/",
+      "atribucion_obligatoria": false,
+      "enlace": "https://pixabay.com/es/photos/trabajo-en-equipo-reuni%C3%B3n-oficina-10425775/",
+      "notas": ""
+    },
+    {
+      "archivo": "mujer_mirando_movil.jpg",
+      "sha256": "8a2fa1c6672ba2f2b7a8348ce22828cfd9f0b611b78aa407569b4377b9510529",
+      "autor": "Surprising_Media",
+      "licencia": "Pixabay Content License",
+      "licencia_url": "https://pixabay.com/service/license-summary/",
+      "atribucion_obligatoria": false,
+      "enlace": "https://pixabay.com/photos/staff-woman-young-looking-7317837/",
+      "notas": ""
+    },
+    {
+      "archivo": "mujer_negocios_hablando.jpg",
+      "sha256": "1aa011c11143b215f9a1c15e16554bfda818adbfec8a2f3d9675a2d043d65d9d",
+      "autor": "pplbuilder",
+      "licencia": "Pixabay Content License",
+      "licencia_url": "https://pixabay.com/service/license-summary/",
+      "atribucion_obligatoria": false,
+      "enlace": "https://pixabay.com/es/photos/altavoz-ense%C3%B1ando-formaci%C3%B3n-negocio-1596210/",
+      "notas": ""
+    },
+    {
+      "archivo": "mujer_partiendose_risa.jpg",
+      "sha256": "c88fc4fc6ebe7e8030bcdf816afaa54f3f1f8e628577db7f33f76d01aeee67bf",
+      "autor": "RobinHiggins",
+      "licencia": "Pixabay Content License",
+      "licencia_url": "https://pixabay.com/service/license-summary/",
+      "atribucion_obligatoria": false,
+      "enlace": "https://pixabay.com/es/photos/hilarante-mujer-risa-sonrisa-2362142/",
+      "notas": ""
+    },
+    {
+      "archivo": "mujer_sonriente.jpg",
+      "sha256": "0a7f2c122fe647b4eb9ed2c985f87e6b6f942810164d83f0f91ccf0c8cdcbff5",
+      "autor": "RobinHiggins",
+      "licencia": "Pixabay Content License",
+      "licencia_url": "https://pixabay.com/service/license-summary/",
+      "atribucion_obligatoria": false,
+      "enlace": "https://pixabay.com/es/photos/sonriente-corporativo-dama-2362136/",
+      "notas": ""
+    },
+    {
+      "archivo": "mujeres_discusión.jpg",
+      "sha256": "d8226f05cb9ad103c00573ba16afb5426304341c8a0263fd1d5b9ace1a2540a6",
+      "autor": "user1505195587",
+      "licencia": "Pixabay Content License",
+      "licencia_url": "https://pixabay.com/service/license-summary/",
+      "atribucion_obligatoria": false,
+      "enlace": "https://pixabay.com/photos/women-chatting-business-discussion-5802098/",
+      "notas": "Sustituida por conversación de negocios; no encontré una discusión/enfado libre de derechos que encajara"
+    },
+    {
+      "archivo": "pareja_riendose_complice.jpg",
+      "sha256": "aae094fcdd0be1ac48de2540097d881afed3d0883bed6b00837b6c5d27f1c0fc",
+      "autor": "SnapwireSnaps",
+      "licencia": "Pixabay Content License",
+      "licencia_url": "https://pixabay.com/service/license-summary/",
+      "atribucion_obligatoria": false,
+      "enlace": "https://pixabay.com/photos/couple-laughing-happy-people-598315/",
+      "notas": ""
+    },
+    {
+      "archivo": "pareja_sonriente_mirando_tablet.jpg",
+      "sha256": "bd22461dcbce678ad9e951e04b0f8d5178140c5bd76c0f8f78ede2df92e40df4",
+      "autor": "erwinbosman",
+      "licencia": "Pixabay Content License",
+      "licencia_url": "https://pixabay.com/service/license-summary/",
+      "atribucion_obligatoria": false,
+      "enlace": "https://pixabay.com/photos/man-woman-office-computer-team-10349672/",
+      "notas": "Sustituida por pareja mirando pantalla/portátil; no encontré pareja+tablet libre de derechos"
+    },
+    {
+      "archivo": "perro_no_entiende.jpg",
+      "sha256": "9adf8c1ada659348e2699aceb39668c5e03c3e3dbb4cb8914d581a649ea1b322",
+      "autor": "olinwanan",
+      "licencia": "Pixabay Content License",
+      "licencia_url": "https://pixabay.com/service/license-summary/",
+      "atribucion_obligatoria": false,
+      "enlace": "https://pixabay.com/es/photos/perro-confundido-preguntarse-7389703/",
+      "notas": ""
+    }
+  ]
+}

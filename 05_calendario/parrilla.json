@@ -313,16 +313,6 @@
       "modo": "automatico",
       "hora": "19:00",
       "nota": "Viernes. Serie «El experimento». Pregunta: «por qué el humor ayuda a memorizar» (4.736.709 y 0 de 5 responden: la consulta se va entera hacia «memoria»). Fuente G04, sin abrir, cuya ficha pedía verificar el tamaño muestral antes de citarla: verificado el 17/09 contra el resumen, veinte personas, diez por grupo. Eso no es una nota al pie, es el cierre del Short."
-    },
-    {
-      "fecha": "2026-09-26",
-      "episodio": "MDH-008",
-      "idiomas": [
-        "es"
-      ],
-      "modo": "automatico",
-      "hora": "12:00",
-      "nota": "Sábado. Episodio largo semanal, 4m39s. Adaptado al formato nuevo esta noche: 34 escenas cortas (antes 27), ninguna por encima de once segundos, gancho con la primera risa sobre el segundo ocho y risa cada noventa segundos como máximo, personaje en seis escenas, dos intervenciones del escéptico y «enunciado» del 48 % al 38 %. Serie «Mecanismos». Aplicada la nota de revisiones/MDH-008.md, que pedía la reescritura completa. TREINTA Y CUATRO ESCENAS Y NO CUARENTA Y UNA A PROPÓSITO: con una petición de voz por escena y diez al día (C33.2), MDH-007 no llegó al sábado y hubo que moverlo al domingo; 34 caben en el precacheo de martes a viernes con margen para los rechazos. Se ha quitado además una cifra sin fuente («el noventa por ciento del trabajo»), igual que con los «quince intentos» de MDH-006."
     }
   ],
   "_archivadas": {
@@ -344,5 +334,20 @@
   "_cambio_03_septiembre_noche": "Planificación semanal. Escritos MDS-011 a MDS-015 y adaptado MDH-006. PRIMERA TANDA CON DEMANDA MEDIDA: demanda_bruta.json existe, es de hoy y no trae avisos, así que por primera vez los temas se han elegido con visualizaciones delante y no con intuición. Cambio de método que conviene tener escrito: el volumen del top 10 NO se ha usado tal cual, porque once de las veinte consultas devuelven entretenimiento en vez de explicaciones; cada candidato lleva ahora «pertinencia_top5» en demanda.json. Un Short escrito entero se ha tirado esta noche por C17 —«cómo distinguir una risa falsa de una de verdad» repetía cuatro escenas de MDH-004, del 29/08— y en su sitio ha entrado MDS-013. Aplicadas también las notas de revisiones/ de MDH-005 y MDH-006.",
   "_cambio_10_septiembre_noche": "Planificación semanal. Escritos MDS-016 a MDS-020 y adaptado MDH-007; aplicadas las cuatro correcciones pendientes de revisiones/MDH-006.md y retiradas las notas de MDH-006 y MDH-007. SEGUNDA TANDA CON DEMANDA MEDIDA, y la primera en la que manda C17 por encima de la demanda: de las veinticuatro consultas, siete se rechazan por repetición de ficha o de pregunta y solo tres por falta de fuente. Los cinco Shorts salen de fichas que NO se habían usado nunca —I05, E06, G06, G05, K02 y K03—, y cuatro de los cinco salen de consultas «secuestradas», aplicando la aclaración del codirector del 04/09: la pertinencia descuenta la cifra, no descarta el tema; que hoy responda una pregunta el entretenimiento y no la divulgación es la definición de un hueco. También estrena el campo «icono» (C19+C16): la escena 1 de los cinco Shorts entra con uno de los ocho dibujos de 02_marca/iconos.svg y cuatro palabras o menos, y ninguna es ya una tarjeta de texto sobre fondo. Las series no se rotan por turno: se eligen por la forma que pide cada pregunta, y por eso «El experimento» y «Ríete primero» salen dos veces cada una, alternadas.",
   "_cambio_15_septiembre_direccion": "Dirección, 15/09/2026 (versión 9 de PLAN_DE_CAMBIOS.md, C33.2): MDS-017 pasa del martes 15 al sábado 19 a las 19:00 y MDH-007 del sábado 19 al domingo 20 a las 12:00. Nuevo campo opcional de una emisión: `rehacer_video_id`, el video_id de una subida anterior que no cuenta como subida (ver cola.subido_de_verdad). La planificación del jueves 17 no toca estas dos emisiones.",
-  "_cambio_17_septiembre_noche": "Planificación del jueves 17. Semana del lunes 21 al sábado 26: cinco Shorts (MDS-021 a MDS-025) y el episodio largo MDH-008, los seis con «modo»: «automatico» y «idiomas»: [«es»]. Las cinco preguntas salen de demanda.json, juzgada sobre la medición de hoy, y las cinco fichas centrales (C05, A06, G03, L04, G04) estaban sin abrir. Dos series salen dos veces cada una, alternadas y nunca en días seguidos, porque dos preguntas pedían un estudio contado como historia y dos pedían dos versiones enfrentadas: la serie da la forma, no el turno. Las notas pendientes de revisiones/MDH-007.md se han aplicado al guion del domingo 20 sin tocar ni una narración, así que su caché de voz se conserva entera."
+  "_cambio_17_septiembre_noche": "Planificación del jueves 17. Semana del lunes 21 al sábado 26: cinco Shorts (MDS-021 a MDS-025) y el episodio largo MDH-008, los seis con «modo»: «automatico» y «idiomas»: [«es»]. Las cinco preguntas salen de demanda.json, juzgada sobre la medición de hoy, y las cinco fichas centrales (C05, A06, G03, L04, G04) estaban sin abrir. Dos series salen dos veces cada una, alternadas y nunca en días seguidos, porque dos preguntas pedían un estudio contado como historia y dos pedían dos versiones enfrentadas: la serie da la forma, no el turno. Las notas pendientes de revisiones/MDH-007.md se han aplicado al guion del domingo 20 sin tocar ni una narración, así que su caché de voz se conserva entera.",
+  "_emisiones_suspendidas": [
+    {
+      "fecha": "2026-09-26",
+      "episodio": "MDH-008",
+      "idiomas": [
+        "es"
+      ],
+      "modo": "automatico",
+      "hora": "12:00",
+      "nota": "Sábado. Episodio largo semanal, 4m39s. Adaptado al formato nuevo esta noche: 34 escenas cortas (antes 27), ninguna por encima de once segundos, gancho con la primera risa sobre el segundo ocho y risa cada noventa segundos como máximo, personaje en seis escenas, dos intervenciones del escéptico y «enunciado» del 48 % al 38 %. Serie «Mecanismos». Aplicada la nota de revisiones/MDH-008.md, que pedía la reescritura completa. TREINTA Y CUATRO ESCENAS Y NO CUARENTA Y UNA A PROPÓSITO: con una petición de voz por escena y diez al día (C33.2), MDH-007 no llegó al sábado y hubo que moverlo al domingo; 34 caben en el precacheo de martes a viernes con margen para los rechazos. Se ha quitado además una cifra sin fuente («el noventa por ciento del trabajo»), igual que con los «quince intentos» de MDH-006.",
+      "suspendida_el": "2026-09-21",
+      "suspendida_por": "C42 · la dirección suspende el episodio largo. Siete largos en treinta y cuatro días suman 114 visualizaciones (el mejor, MDH-002, 34); MDH-007 salió el 20/09 y tiene 0. Y el precacheo de voz de este formato gasta 9 de las 10 peticiones diarias de gemini-2.5-flash-preview-tts, que desde C33.1 (15/09) es el PELDAÑO (b) del respaldo de voz de los Shorts: mientras hay un largo pendiente, ese peldaño no puede existir. Se levanta la suspensión cuando la mediana de los últimos veinte Shorts a 48 h llegue a 50. El guion sigue escrito en 05_calendario/guiones/MDH-008.es.json y no se toca. Detalle en PLAN_DE_CAMBIOS.md versión 11."
+    }
+  ],
+  "_nota_formato_largo": "SUSPENDIDO desde el 21/09/2026 (C42). No se programan episodios largos hasta que la mediana de los últimos veinte Shorts a 48 horas llegue a 50. La planificación de los jueves escribe CINCO Shorts, no cinco y un largo. Las emisiones largas retiradas quedan en _emisiones_suspendidas, con su motivo y su fecha."
 }

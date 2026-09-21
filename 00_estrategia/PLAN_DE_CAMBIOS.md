@@ -3628,3 +3628,438 @@ esa hora, y esa es la hora que hay que tener delante, no la de la revisión.
 - **`MDH-002` pasa del máximo del formato largo con el estimador nuevo** (6m44 contra 400 s).
   Está publicado desde agosto y no bloquea nada; se anota para que nadie se asuste al verlo.
 - **E02** tiene dos DOI distintos en el `.md` y en el JSON y ninguno verificado.
+
+
+---
+
+# Versión 11 · 21 de septiembre de 2026 — el canal deja de arrastrar el formato que no funciona
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario, y lo que se anula se dice con su nombre.
+
+La sesión sale de cinco cosas que el codirector trajo el lunes 21: un choque de ficheros entre
+las revisiones del sábado y el domingo; las visitas cayendo en picado y el episodio largo a
+cero; la sospecha de que la voz suena distinta en cada escena; la pregunta de si estas
+conversaciones deberían ser una tarea programada; y la sensación de que no vamos bien de cara a
+los hitos de decisión.
+
+Cuatro de las cinco tienen respuesta medida. La quinta —los hitos— tiene una respuesta que no es
+la que él esperaba.
+
+---
+
+## Lo primero, porque cambia el tono de todo lo demás: dónde estamos de verdad
+
+**El punto de control del 27 de septiembre ya está contestado, y la respuesta es la buena.** Su
+pregunta, escrita en la versión 4 y sin tocar desde entonces, es una sola:
+
+> **¿Algún Short ha pasado de 100 visualizaciones en sus primeras 48 horas?**
+
+Sí. **Tres**, todos en los últimos siete días, leídos por `metricas.py` el 21/09 a las 05:33 UTC:
+
+| Short | Tema | Vistas a 48 h |
+|---|---|---|
+| `MDS-016` (14/09) | la ironía por WhatsApp | **1.210** |
+| `MDS-019` (17/09) | los anuncios graciosos | **161** |
+| `MDS-018` (16/09) | el profesor gracioso | **135** |
+
+El desenlace escrito para ese «sí» es *«el formato funciona, toca escalarlo»*. Antes de esos
+tres, quince Shorts con **mediana 10** y **ninguno por encima de 50**.
+
+**Y una cosa que hay que decir en voz alta antes de que llegue noviembre, no después.** C26 da
+tres puertas para «se sigue» el 15 de noviembre, y una de ellas es *«algún Short por encima de
+1.000»*. **Esa puerta ya está abierta** desde el 14 de septiembre. Mi opinión, y la digo ahora
+porque la cláusula 1 de C26 dice que los umbrales se discuten **antes del 8 de noviembre**:
+**esa puerta está mal escrita.** Un vídeo por encima de mil que no sabemos explicar demuestra
+que el techo existe; no demuestra que tengamos una máquina. Propuesta, para decidir entre los
+dos antes del 8 de noviembre:
+
+> sustituir *«algún Short por encima de 1.000»* por **«dos Shorts por encima de 1.000 en
+> semanas distintas»**, y dejar las otras dos puertas —mediana ≥ 150, o ≥ 100 suscriptores—
+> como están.
+
+Si el codirector prefiere dejarla como está, se deja y se cumple: lo que no vale es llegar al
+15 de noviembre con una puerta abierta que ninguno de los dos se cree.
+
+### La previsión, que es la parte que de verdad contesta a «no vamos bien»
+
+La cifra de C26 es **la mediana de los últimos veinte Shorts a 48 horas**. Hoy vale **11,0**.
+Esa cifra no predice nada, y conviene entender por qué:
+
+**El 15 de noviembre, ninguno de los veinte Shorts publicados hasta hoy estará en la
+ventana.** Quedan 55 días y se publican cinco Shorts por semana: son unos **39 Shorts más**, así
+que los veinte que se medirán serán los de, aproximadamente, el 18 de octubre en adelante.
+**Todos ellos están sin escribir.** El 11,0 de hoy es historia de agosto, no un pronóstico.
+
+Lo que sí pronostica algo es el régimen de la última semana. Las cinco últimas lecturas a 48 h
+son **1.210 · 161 · 135 · 27 · 0**, mediana **135**. Quitando el outlier de 1.210: **81**.
+Quitando también el 0: **148**.
+
+| Si el régimen de la última semana se sostiene | La mediana del 15/11 cae en | Y eso es |
+|---|---|---|
+| tal cual, con sus ceros | 50–150 | **se amplía el tema**, prórroga única de ocho semanas hasta el 10 de enero |
+| sin los ceros | rozando 150 | la frontera entre ampliar y seguir |
+| si vuelve el nivel de agosto | < 50 | **se para** |
+
+**Conclusión honesta: no estamos fracasando, estamos en la frontera.** Y el lado de la frontera
+en el que caigamos **no lo decide el contenido bueno, lo deciden los ceros.** Subir un 161 a un
+200 mueve la mediana bastante menos que evitar que un vídeo haga 0. Dos de los últimos cinco
+Shorts salieron tocados —`MDS-017` con 0 y `MDS-020` con 27—, y en el primero la causa
+documentada no es el guion: es la voz.
+
+Por eso las decisiones de hoy van casi todas contra los ceros y no contra la calidad media.
+
+### Y lo que hay que mirar en Studio antes de sacar conclusiones del cero
+
+**`MDS-017` (19/09) tiene 0 visualizaciones a 48 horas y `MDH-007` (20/09) todavía no tiene
+ninguna lectura.** Un 0 puede significar dos cosas **opuestas**, y la API de analítica no las
+distingue:
+
+- **0 visualizaciones con impresiones normales** → nos lo enseñaron y nadie lo abrió. Eso es
+  contenido, miniatura o primer segundo.
+- **0 visualizaciones con ~0 impresiones** → **no lo enseñaron.** Eso es distribución, y no lo
+  arregla ningún guion.
+
+Las impresiones solo están en Studio: la API de YouTube no las expone (lo dice la cabecera de
+`metricas.json` y de `metricas.yml`). Es la **tarea 1** del codirector esta semana, y es la que
+decide si lo siguiente que tocamos es el guion o la publicación. **Hasta tenerla, nadie
+reescribe nada por culpa de ese cero.**
+
+---
+
+## C42 · El episodio largo se suspende
+
+**Decisión tomada hoy y aplicada hoy.**
+
+### Los números, que son la mitad del motivo
+
+Siete episodios largos, el primero del 18 de agosto. Lectura del 21/09:
+
+| | Publicado | Días | Vistas |
+|---|---|---|---|
+| `MDH-001` | 18/08 | 34 | 18 |
+| `MDH-002` | 19/08 | 33 | **34** |
+| `MDH-003` | 20/08 | 32 | 13 |
+| `MDH-004` | 29/08 | 23 | 10 |
+| `MDH-005` | 05/09 | 16 | 6 |
+| `MDH-006` | 12/09 | 9 | 33 |
+| `MDH-007` | 20/09 | 1 | 0 |
+
+**114 visualizaciones entre los siete, en treinta y cuatro días**: dieciséis de media por
+episodio, contando toda su vida. Los cinco Shorts de la última semana suman **1.533 en sus
+primeras cuarenta y ocho horas**: trescientos seis de media por pieza. Y un largo cuesta siete
+veces más de producir —41 escenas de voz contra 6—. No es que el formato largo vaya peor: es
+que no compite.
+
+Y no es una sorpresa que haya llegado esta semana. `MDH-004`, `MDH-005` y `MDH-006` tuvieron
+**0 visualizaciones en su lectura a 48 horas**, los tres. **Que un episodio largo tenga 0 a las
+48 horas no es una avería nueva: es el comportamiento normal del formato en este canal.** El
+codirector lo ha visto hoy porque hoy lo ha mirado; llevaba pasando desde agosto.
+
+### La otra mitad del motivo, que es la que nadie había visto
+
+**El precacheo del episodio largo se estaba comiendo el respaldo de voz de los Shorts.**
+
+La cabecera de `voz_precache.py` dice, con todas las letras: *«cuota propia, nunca la de los
+Shorts (C7)»*. **Era verdad el 14 de septiembre y es falsa desde el 15.** Ese día C33.1 escribió
+esto en `voz.py`:
+
+```python
+MODELOS_CORTO = (MODELO_GEMINI, MODELO_GEMINI_LARGO)   # 3.1, y si no, 2.5 entero
+```
+
+Es decir: **`gemini-2.5-flash-preview-tts` dejó de ser «el modelo del largo» y pasó a ser el
+peldaño (b) del respaldo de voz de los Shorts.** Y `voz_adelantada.yml` corre **todos los días**
+a las 09:00 UTC con `PRESUPUESTO_POR_DEFECTO = 9` sobre una cuota de 10 peticiones diarias.
+
+**Nueve de cada diez peticiones de la red de seguridad de los Shorts se gastaban en el episodio
+largo.** Un Short necesita seis. El peldaño (b) de C33.1 no podía ejercerse prácticamente nunca:
+existía en el código y no existía en la práctica. `MDS-017` hizo 0 visualizaciones y su historia
+es una historia de voz.
+
+**Es la trampa 1 del proyecto, otra vez** —cuando cambies algo, busca qué dependía de ello— y la
+24 —cuando cambies lo que entra en una clave o en una cuota, busca a todos los que la comparten.
+Queda como **trampa 35**.
+
+### Y la aritmética que hacía imposible a `MDH-007` desde el principio
+
+41 escenas con narración ÷ 9 peticiones al día = **cinco días de precacheo perfecto**, sin un
+solo rechazo, y los rechazos también gastan cuota (trampa 30). El domingo 20 llegó con 38 de 41.
+`MDH-008` tiene 34 escenas: cuatro días perfectos. Es el mismo filo del cuchillo.
+
+### Qué se hace, exactamente
+
+| | Estado |
+|---|---|
+| `MDH-008` (sábado 26/09) | **No se emite.** Retirado de `05_calendario/parrilla.json`; queda con su motivo y su fecha en la clave `_emisiones_suspendidas` del mismo fichero |
+| `05_calendario/guiones/MDH-008.es.json` | **Se queda escrito y sin tocar.** No se borra, no se edita |
+| La semana | **Cinco Shorts, de lunes a viernes a las 19:00. Nada el sábado ni el domingo** |
+| `voz_adelantada.yml` | **El codirector lo desactiva** (tarea 3). Sin largos pendientes en la parrilla, `voz_precache.py` ya no hace nada —imprime «No hay ningún largo pendiente» y no gasta—, pero un workflow que corre todos los días para no hacer nada es una trampa esperando a que alguien reponga un largo sin acordarse de esto |
+| `00_estrategia/tareas/planificacion-jueves.md` | Paso 3 (**adaptar el largo**) **ANULADO** mientras dure la suspensión, con su texto conservado debajo para cuando vuelva. Paso 5 corregido: no se extiende el sábado |
+| `00_estrategia/tareas/revision-diaria.md` | Avisada en la cabecera |
+
+### Cuándo vuelve
+
+**Cuando `control_c26.mediana_vistas_48h` de `metricas.json` llegue a 50**, que es el suelo del
+rango normal para un canal desconocido. Es una condición medible y la escribe sola la tarea de
+métricas cada lunes. Hoy vale 11,0.
+
+No es «nunca». Es: **el formato largo es un lujo de canal con público, y no tenemos público
+todavía.** Lo que se ha aprendido construyéndolo —41 escenas cosidas, la dirección de actor, el
+precacheo— no se tira: está en el código y en los guiones, y el guion de `MDH-008` está
+terminado esperando.
+
+---
+
+## C43 · La dirección no se automatiza. Su salida, sí
+
+**La pregunta del codirector, del 21/09:** *«¿deberíamos convertir nuestras conversaciones de
+dirección en tareas programadas o no? Evalúa la situación y dame tu opinión.»* Va en la misma
+línea que su idea del 18/09 de `08_comunicacion/`.
+
+**Mi respuesta es que no, y creo que la idea buena que hay detrás es otra.**
+
+**Por qué no.** El propio proyecto tiene escrita la frontera, y es del codirector: *«las tareas
+programadas tienen que ejecutarse enteras y solas: lo que no pueda hacerse sin una persona se
+registra y se hace en otro momento, pero no bloquea»*. Una sesión de dirección es, por
+definición, lo que no se puede hacer sin una persona. Esta misma sesión tiene tres puntos en los
+que la respuesta correcta es *«en esto tienes razón y en esto otro no»* —el episodio largo sí,
+el «no vamos bien» no, la puerta de los 1.000 hay que discutirla—, y eso no es una salida que se
+pueda escribir en un fichero: es una conversación en la que alguien puede contestar.
+
+Y hay una razón práctica: el trabajo de leer los nueve documentos del arranque **no es la parte
+cara**. La parte cara es decidir, y no se delega a un modelo más barato sin dejar de ser lo que
+se paga aquí. Automatizar la lectura y dejar la decisión a la tarea programada sería quedarnos
+con el gasto y perder el criterio.
+
+**Lo que sí se automatiza desde hoy, y es la idea suya del 18/09 llevada a su sitio: la salida.**
+
+Hasta hoy, lo que se decide en una sesión de dirección llega a las tareas programadas **por
+reescritura de sus prompts**, que es lenta, se olvida a medias (trampas 12, 18, 32) y no deja
+rastro de cuándo se enteró cada agente. Desde hoy:
+
+- **Después de cada sesión de dirección se escribe `08_comunicacion/AAAA-MM-DD-direccion.md`**
+  con lo decidido, en la forma en que cada agente lo necesita. Los tres prompts ya dicen que
+  esa carpeta se lee antes de trabajar.
+- `08_comunicacion/novedades.md` **es del codirector y solo suyo**: se lee y no se toca. Eso ya
+  estaba en su idea y se respeta tal cual.
+- Los prompts se siguen reescribiendo cuando el cambio es permanente. La carpeta es para que el
+  cambio llegue **el mismo día**, no para sustituir al prompt.
+
+**Y lo que sí debería ser una tarea programada, aunque él no lo haya pedido, es lo de al lado:
+mirar los números todos los días.** Ver C47.
+
+---
+
+## C44 · La voz deja de sonar a montaje
+
+**La observación del codirector, del 21/09:** *«creo que el hecho de hacerlo por escenas provoca
+que las voces en cada escena sean un poco distintas, y eso crea una sensación artificial.»*
+
+**Tiene razón, y el mecanismo es peor de lo que él cree: no es solo que pase, es que se lo
+estamos pidiendo.**
+
+### Las tres causas, por orden de tamaño
+
+1. **Cada escena es una llamada independiente a la API.** `voice_name: Charon` fija la
+   identidad, no la toma: el registro, la velocidad, la energía y hasta la distancia aparente al
+   micrófono los elige el modelo en cada generación. Seis llamadas en un Short son seis tomas;
+   cuarenta y una en un largo son cuarenta y un narradores.
+2. **La dirección de actor pide explícitamente que el timbre cambie.** Textual, hoy, en
+   `DIRECCION_POR_PAPEL`: *«cambia claramente de color de voz en la segunda»* (contraste),
+   *«cambia de color de voz mientras las dices»* (cita), *«baja el tono»* (enumeración, cierre).
+   Esa dirección está bien pensada para una escena suelta y es exactamente lo que no se debe
+   pedir cuando la continuidad entre tomas ya es frágil. **El tono se dirige con el fraseo —las
+   pausas, el acento, la velocidad—, no con el timbre.**
+3. **El volumen de cada toma no se iguala nunca.** `montaje.py` aplica `loudnorm=I=-14` **una
+   sola vez, sobre la mezcla final**. Eso normaliza el programa entero contra el estándar de
+   YouTube y **no hace absolutamente nada** para que la escena 4 suene igual de fuerte que la 3.
+   Es, probablemente, la mitad de lo que se oye como «voz distinta».
+
+Y encima, detrás de cada toma metemos hasta 1,35 s de silencio: un punto final, un silencio y
+otro principio no es una pausa, es un corte. Eso ya estaba escrito como trampa 22 y C33 lo
+atacó por el lado del contexto; el timbre se quedó sin atacar.
+
+### Las tres capas del arreglo, y en qué orden entran
+
+**Capa A · igualar el volumen de cada toma antes de la mezcla.** Determinista, sin red, sin
+cuota, y **no toca la caché**: se aplica en el montaje sobre el mp3 que haya. `loudnorm` en dos
+pasadas por escena a un objetivo fijo, y después la normalización de programa que ya existe.
+Es la más barata y probablemente la que más se nota.
+
+**Capa B · la dirección de actor deja de pedir cambios de timbre.** Dos cosas: una *ficha de
+voz* fija, idéntica en todas las llamadas (registro, velocidad, distancia, energía), y reescribir
+los papeles que piden «color de voz» para que pidan fraseo. **Cuesta invalidar la caché entera**
+—`VERSION_DIRECCION` de 2 a 3—, y eso es asumible **precisamente porque el largo está
+suspendido**: un Short entero son seis peticiones, media cuota diaria.
+
+**Capa C · una sola toma por vídeo.** Es **C36**, propuesto el 15/09 y sin diseño escrito desde
+entonces. Queda **reactivado y con dueño**. Un Short son ~110 palabras: caben de sobra en una
+llamada. Una toma = una voz, y la prosodia fluye porque el modelo ve el guion entero. De regalo,
+el gasto de voz de un Short baja de **seis peticiones a una**, con lo que la cuota deja de ser
+el cuello de botella del canal. Lo que hay que resolver es el corte: partir el audio en escenas
+con un alineador **local** (regla 11.6: nada de red en tiempo de render), tipo `faster-whisper`
+con marcas de palabra, o alineación forzada contra el texto que ya conocemos.
+
+### Cuándo entra cada cosa, y por qué no hoy
+
+**Esta semana no se toca la voz.** La semana del 21 es la **primera medida limpia de C38** —los
+cinco Shorts reescritos a la duración de su serie y con el remate a partir del segundo 10— y
+meter la voz encima tira esa medición a la basura. Regla 11.1.
+
+| Cuándo | Qué |
+|---|---|
+| Semana del 21 | **A y B se escriben y se prueban**, sin encender nada. C36 se diseña por escrito. Nada llega a un vídeo |
+| **Lunes 28** | **A y B entran juntas**, después del punto de control del 27. Juntas y no por separado a propósito: son la misma cosa —«que el narrador suene a una persona»— y separarlas cuesta dos semanas de canal para una atribución que con este volumen no se va a poder hacer de todos modos. Queda dicho, que es lo que la regla 11.1 pide de verdad |
+| Después de medir A+B | **C36**, si su diseño se sostiene |
+
+**Y una cosa que el codirector debe oír tal cual:** el 20/09 se publicó un episodio de 41 tomas
+distintas. Con el largo suspendido, el peor caso pasa a ser de **seis tomas**, no de cuarenta y
+una. Parte del problema que describe se va solo con C42.
+
+---
+
+## C45 · `ESTADO.md` deja de ser un fichero que se reescribe
+
+**El problema del codirector, del 21/09:** *«problema de conflicto de ficheros entre las
+revisiones diarias del sábado y del domingo».*
+
+**La causa es estructural y va a repetirse todos los fines de semana.** La revisión diaria corre
+los siete días y entrega un `.tar.gz` que el codirector aplica a mano. El sábado no lo aplicó
+—era sábado—, el domingo llegó el segundo paquete, y los dos traían **un `ESTADO.md` distinto
+del mismo fichero**. Todo lo demás que entrega esa tarea es un fichero nuevo por ejecución y por
+eso no chocó nada más.
+
+**Y la lección es incómoda, porque la regla que faltaba ya existía.** El 21 de agosto, después
+de que la revisión diaria borrara 188 líneas de bitácora de la planificación, se escribió la
+regla que sostiene todo el reparto de ficheros de este proyecto: **un fichero nuevo no puede
+pisar nada.** El 31 de agosto se le dio a ese mismo agente un fichero más, `ESTADO.md`, **que se
+reescribe entero todos los días** — es decir, se volvió a crear justo la figura que la regla
+existía para eliminar, diez días después de escribirla. Es la trampa 25 (una regla escrita para
+un caso no protege al de al lado) cometida sobre la regla de la que salen las demás. **Trampa
+36.**
+
+**Lo que se hace, y ya está hecho:**
+
+- Nace **`05_calendario/estado/`**, un fichero por día: `estado/AAAA-MM-DD.md`. **El estado de
+  hoy es el fichero de nombre más alto.** Con su `LEEME.md` explicando el porqué.
+- **`05_calendario/ESTADO.md` queda CONGELADO**, igual que `MEJORAS.md` lo está desde agosto: se
+  lee, no se escribe. Su contenido es ahora un puntero.
+- El `ESTADO_old.md` del sábado pasa a ser `estado/2026-09-19.md`, y el del domingo,
+  `estado/2026-09-20.md`. No se pierde nada.
+- El **paso 6** de `revision-diaria.md` está reescrito.
+
+### Y de paso: la incidencia del domingo era falsa por dieciséis minutos
+
+Al mirar el choque apareció otra cosa. `ESTADO.md` del 20/09 decía, como `INCIDENCIA`, que
+`MDH-007` no estaba en `registro_publicaciones.json` tras los tres intentos de cron. **Sí
+estaba.** Se subió el 20/09 a las **09:37:31 UTC** (`6sAuU_OHxwI`, `public`), y la revisión
+escribió a las **09:53 UTC** sobre un clon anterior a ese commit.
+
+El tercer intento de producción (08:23 UTC) arrastra los retrasos habituales de Actions —de dos
+a seis horas— y cae **justo encima** de la ventana de la revisión de las 11:30 de España. No es
+un descuido: es una carrera que estaba garantizada.
+
+Consecuencia: el codirector se encontró el lunes con un pendiente que decía *«la dirección tiene
+que mover MDH-007 de día en parrilla.json»* para un vídeo que llevaba veinticuatro horas
+publicado. **Ese pendiente queda anulado.**
+
+Arreglado en `revision-diaria.md`: antes de escribir una incidencia de «falta el vídeo del día»,
+`git fetch` y releer `registro_publicaciones.json` de `origin/main`, y decir en la bitácora a
+qué hora se releyó.
+
+---
+
+## C46 · El canal se lee a sí mismo
+
+**Nadie había conectado nunca los resultados del canal con la elección de los temas.**
+
+La planificación de los jueves elige la semana con `demanda.json` —lo que la gente busca en
+YouTube— y **no lee `metricas.json`**. Está escrito en su propio prompt: *«NO eres dueño de (…)
+`metricas.json`»*, y de ahí nadie dedujo que sí tenía que leerlo. La tarea de métricas de los
+lunes lo lee y lo interpreta, pero su salida es una bitácora, no una entrada de la planificación
+del jueves.
+
+**El precio, con nombre y apellidos:** `MDS-016`, «por qué la ironía no se entiende por
+WhatsApp», hizo **1.210 visualizaciones a 48 horas** el 14 de septiembre, cuando los quince
+anteriores tenían mediana 10. Una semana después **no hay en el repositorio ni un solo vídeo que
+lo continúe**, y nadie lo decidió: es que el número no llegaba a quien elige los temas. La mejor
+señal que ha producido este canal en un mes se cayó por una rendija de la tabla de propiedad.
+
+**Lo que se hace, y ya está hecho:** paso **1 bis** nuevo en `planificacion-jueves.md`.
+
+1. `metricas.json` entra en su lectura obligatoria, **antes** de elegir tema.
+2. **Los dos mejores temas de las últimas cuatro semanas tienen derecho de tanteo:** al menos
+   uno de los cinco Shorts de la semana continúa, profundiza o mira desde otro ángulo uno de los
+   dos. Si decide que ninguno se puede continuar, lo escribe con el motivo. Lo que no vale es no
+   mirarlo.
+3. **Un tema hundido no se repite en seis semanas**, salvo que el hundimiento tenga causa
+   conocida ajena al tema (`MDS-017` hizo 0 por la voz, no por el asunto: no cuenta).
+4. **`metricas.json` manda sobre `demanda.json`** cuando los dos hablen del mismo sitio. La
+   demanda dice qué se busca ahí fuera; las métricas dicen qué nos funciona **a nosotros**, y
+   eso es más pequeño, más caro y más valioso.
+
+**Y de paso, dos correcciones al mismo prompt**, que llevaba días trabajando con datos falsos:
+
+- Su sección «Dónde está el canal» estaba **congelada en el 7 de septiembre** y decía que
+  sacamos «entre 20 y 30» visualizaciones por Short.
+- Decía que *«el único indicio direccional sigue siendo la búsqueda»*. **Eso lo corrigió C40 el
+  18 de septiembre** —feed 54,6 %, búsqueda 27,7 %— y la corrección se escribió en `LEEME.md` y
+  no se propagó a los prompts. **Trampa 32 otra vez**: una corrección aplicada en un sitio y no
+  en los demás.
+
+---
+
+## C47 · Las métricas se leen todos los días, no solo los lunes
+
+**El agujero:** `metricas.yml` corre **solo los lunes** (`cron: "19 5 * * 1"` y `"37 8 * * 1"`).
+La revisión diaria comprueba todos los días que el vídeo **se publicó**, y no mira nunca cuánta
+gente lo vio. Resultado: **un Short puede hacer 0 visualizaciones durante seis días y no
+enterarse nadie hasta el lunes.** Es literalmente lo que ha pasado con `MDS-017`.
+
+Un cero es la señal más valiosa y más urgente que produce este canal —es la que mueve la mediana
+de C26— y es la única que llega con seis días de retraso.
+
+**Lo que se hace:**
+
+1. **Un encargo para la revisión diaria esta semana:** una lectura ligera diaria en
+   `05_calendario/metricas_diarias.json` con **solo** `id`, `publicado`, `visualizaciones` y
+   `vistas_48h` de los vídeos publicados en los últimos diez días. **Sin curvas de retención**:
+   `metricas.json` ocupa 174 KB con cinco lecturas porque guarda 100 puntos de retención por
+   vídeo, y leer eso a diario lo pondría en varios megas de churn en git. La lectura completa
+   sigue siendo semanal y no se toca.
+2. **Una línea para el codirector** en `metricas.yml` (fichero protegido), tarea 4.
+3. **La revisión diaria mira ese fichero** en su paso 2 y marca `INCIDENCIA` si un Short pasa de
+   las 24 horas con 0 visualizaciones.
+
+---
+
+## Lo que NO cambia hoy
+
+- **El punto de control sigue siendo el domingo 27 de septiembre** y la decisión, el **15 de
+  noviembre**. Los umbrales se discuten **antes del 8 de noviembre** — y hoy queda abierta la
+  única discusión pendiente: la puerta de «algún Short por encima de 1.000».
+- **La semana del 21 no se toca.** Los cinco Shorts reescritos por C38 se producen como están:
+  es la primera medida limpia de C38 y vale más que cualquier mejora que se nos ocurra meter
+  encima. Regla 11.1.
+- **C38, C38.1, C39, C40 y C41 siguen enteros.** El trámite de TikTok sigue donde lo dejó
+  `PLAN_TIKTOK_APP_REVIEW.md`.
+- **No se amplía el tema todavía.** Esa conversación es del 15 de noviembre, salvo que el 27
+  diga otra cosa.
+- No se clona la voz de nadie, no se encienden los subtítulos quemados, y `.github/workflows/`
+  sigue sin poder escribirse en remoto.
+
+## Lo que queda mirado y sin resolver
+
+- **Por qué `MDS-016` hizo 1.210.** Sigue sin explicación desde el 15/09. Con C46 al menos
+  dejará de ser un dato huérfano.
+- **Las impresiones de `MDS-017` y `MDH-007`.** Tarea 1. Hasta tenerlas, el cero no se
+  interpreta.
+- **`E02`** sigue con dos DOI y ninguno verificado. Viene del 18/09.
+- **`F04`** sigue sin sustituir (tarea 5 del 18/09).
+- **P1 (profundidad)** sigue sin respuesta del codirector en `07_pruebas/P1-profundidad/` desde
+  el 14/09. Es la más vieja de las preguntas abiertas.
+- **C34 (banco de imágenes)** estaba bloqueado por los enlaces de origen. **Desbloqueado hoy**:
+  el codirector dejó `02_marca/banco/creditos_pixabay.csv` el 18/09 y la dirección ha generado
+  `02_marca/banco/banco.json` con los tres campos que exige la regla 9 —licencia, autor y
+  enlace— para las quince imágenes. Entra en la cola de presentación.
