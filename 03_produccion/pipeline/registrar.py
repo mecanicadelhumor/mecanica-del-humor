@@ -63,6 +63,22 @@ def main():
             continue
         info = json.loads(subido.read_text(encoding="utf-8"))
         entrada = por_id.get(t["id"], {})
+
+        # MDS-017, 19/09/2026: «rehacer_video_id» hizo que cola.py repitiera la
+        # producción y subiera un video_id nuevo (mPwvmnp1ZNE) sobre una entrada
+        # que ya existía en el registro con OTRO video_id (9H2xEZnFeHA, el
+        # retirado). Antes de este cambio, «subido_utc» y «revisado» se
+        # heredaban de la entrada vieja sin más comprobación («entrada.get(...) or
+        # ...»), así que el registro decía que el vídeo nuevo se había subido —y
+        # revisado— hace días, cuando en realidad esa subida y esa revisión eran
+        # de un vídeo distinto que ya no existe en YouTube. La revisión diaria
+        # usa «subido_utc» para saber si ya han pasado los tres intentos del cron
+        # (01:13, 04:47, 08:23 UTC) y «revisado» para no repasar dos veces lo
+        # mismo: los dos quedaban mintiendo. Un video_id distinto es una subida
+        # distinta, así que ahora solo se hereda lo viejo cuando el video_id no
+        # ha cambiado (relanzar la misma producción, el caso idempotente que
+        # este script ya documentaba).
+        es_video_nuevo = info.get("video_id") != entrada.get("video_id")
         entrada.update({
             "id": t["id"],
             "episodio": t["id"].split(".")[0],
@@ -75,9 +91,11 @@ def main():
             "estado": info.get("estado"),
             "publicar_en": t.get("publicar_en"),
             "musica": Path(t.get("musica", "")).name,
-            "subido_utc": entrada.get("subido_utc") or
-                          datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "revisado": entrada.get("revisado", False),
+            "subido_utc": (datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+                           if es_video_nuevo else
+                           entrada.get("subido_utc") or
+                           datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")),
+            "revisado": False if es_video_nuevo else entrada.get("revisado", False),
         })
         if t["id"] not in por_id:
             datos["publicaciones"].append(entrada)

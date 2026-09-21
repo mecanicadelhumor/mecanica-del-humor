@@ -32,7 +32,21 @@ miente sobre su origen hasta el día en que se vuelve a derivar.
 ## Qué comprueba, y qué NO
 
 Comprueba **lo único que se puede comprobar sin red y sin equivocarse nunca**: que
-cada ficha diga lo mismo en los dos sitios. Título, autores, año y DOI.
+cada ficha diga lo mismo en los dos sitios. Título, autores, año, fuente y DOI.
+
+**19/09/2026 · añadido «fuente».** El primer regenerado tras C39 (revisión diaria,
+19/09) demostró que la lista de arriba se quedaba corta: comparando título, autores,
+año y DOI, este script decía «los dos ficheros dicen lo mismo» y sin embargo
+regenerar borraba el volumen y las páginas de `C05`, `E06`, `G05` y `G06` (estaban
+en el `.md`, hechas a mano, y `semillas.json` solo tenía el nombre de la revista) y
+el párrafo largo de verificación de `E02`, `E06`, `G05` y `G06` (que no tenía —y
+sigue sin tener— ningún campo correspondiente antes de que `generar_md.py` ganara
+`nota_ampliada` ese mismo día). Lo de la fuente sí se puede comprobar sin red, así
+que se comprueba desde hoy. Lo del párrafo largo no tiene un campo estructurado que
+comparar carácter a carácter con algo del `.md` sin re-implementar aquí el propio
+`generar_md.py` — así que, por ahora, sigue siendo un punto ciego: si alguien
+escribe un `nota_ampliada` nuevo a mano en el `.md` en vez de en el JSON, este
+script no lo va a ver. Queda dicho para quien lea esto de aquí en adelante.
 
 **No comprueba que el DOI exista ni que apunte al artículo que la ficha nombra.**
 Eso hace falta —es lo que estaba roto en F04, F05, C05 y G03— pero necesita salir a
@@ -55,8 +69,8 @@ JSON = RAIZ / "01_bibliografia" / "data" / "semillas.json"
 
 # ### `C05` ★★ Título del artículo
 CABECERA = re.compile(r"^### `([A-Z]\d{2})` ([★]*)\s*(.+?)\s*$")
-# **Autores** (2012) · *Revista*, 6(1), 74-82
-AUTORES = re.compile(r"^\*\*(.+?)\*\*\s*\((\d{4})\)")
+# **Autores** (2012) · *Revista*, 6(1), 74-82  ó  **Autores** (2012) · *Revista, 6(1), 74-82*
+AUTORES = re.compile(r"^\*\*(.+?)\*\*\s*\((\d{4})\)\s*·\s*\*(.*?)\*")
 DOI = re.compile(r"^DOI: \[`([^`]+)`\]")
 
 
@@ -100,14 +114,15 @@ def leer_md():
         m = CABECERA.match(linea)
         if m:
             actual = {"id": m.group(1), "titulo": m.group(3),
-                      "autores": None, "anio": None, "doi": None}
+                      "autores": None, "anio": None, "fuente": None, "doi": None}
             fichas[actual["id"]] = actual
             continue
         if actual is None:
             continue
         m = AUTORES.match(linea)
         if m and actual["autores"] is None:
-            actual["autores"], actual["anio"] = m.group(1), int(m.group(2))
+            actual["autores"], actual["anio"], actual["fuente"] = (
+                m.group(1), int(m.group(2)), m.group(3))
             continue
         m = DOI.match(linea)
         if m and actual["doi"] is None:
@@ -141,6 +156,7 @@ def main():
         for campo, va, vb in (("título",  a["titulo"],  b.get("titulo")),
                               ("autores", a["autores"], b.get("autores")),
                               ("año",     a["anio"],    b.get("anio")),
+                              ("fuente",  a["fuente"],  b.get("fuente")),
                               ("DOI",     a["doi"],     b.get("doi"))):
             if va is None and vb is None:
                 continue

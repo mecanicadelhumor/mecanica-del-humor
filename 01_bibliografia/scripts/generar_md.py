@@ -10,6 +10,11 @@ if not FUENTE.exists():
     FUENTE = RAIZ / "data" / "semillas.json"
 SALIDA = RAIZ / "BIBLIOGRAFIA_CURADA.md"
 
+# Valor por defecto de «doi_confianza» en una ficha nueva: significa «nadie lo
+# ha comprobado todavía contra la fuente», no «lo comprobé y no me fío». Ver el
+# bucle de más abajo (19/09/2026, tras C39).
+SIN_VERIFICAR = "por verificar automaticamente"
+
 d = json.loads(FUENTE.read_text(encoding="utf-8"))
 obras = [o for o in d["obras"] if o.get("autores") != "control-negativo"]
 
@@ -49,11 +54,28 @@ for cod, nombre in d["pilares"].items():
         estrellas = "★" * (4 - o["prioridad"])
         A(f"### `{o['id']}` {estrellas} {o['titulo']}\n")
         A(f"**{o['autores']}** ({o.get('anio','s.f.')}) · *{o.get('fuente','')}*  ")
+        # «doi_confianza» hace dos papeles: si sigue en el valor por defecto
+        # (SIN_VERIFICAR, «por verificar automaticamente»), todavía no se ha
+        # comprobado el DOI contra la fuente y se avisa. Si trae cualquier otro
+        # texto, es la nota de quien SÍ lo comprobó (fecha, contra qué y quién) y
+        # se imprime tal cual — antes se pisaba siempre con «⚠️ por verificar»,
+        # así que una ficha ya verificada (p.ej. E06, G05, G06) salía marcada
+        # como si no lo estuviera. Sin DOI, la misma nota va detrás de «Tipo»
+        # (caso G03): no hay línea de DOI donde colgarla.
+        confianza = o.get("doi_confianza")
+        nota = "" if not confianza else (
+            " ⚠️ por verificar" if confianza == SIN_VERIFICAR else f" · {confianza}")
         if o.get("doi"):
-            marca = " ⚠️ por verificar" if o.get("doi_confianza") else ""
-            A(f"DOI: [`{o['doi']}`](https://doi.org/{o['doi']}){marca}  ")
-        A(f"Tipo: {o.get('tipo','')}\n")
+            A(f"DOI: [`{o['doi']}`](https://doi.org/{o['doi']}){nota}  ")
+            nota = ""  # ya colocada; no se repite en la línea de Tipo
+        A(f"Tipo: {o.get('tipo','')}{nota}\n")
         A(f"{o['por_que']}\n")
+        # Nota ampliada (opcional): el párrafo largo de verificación que antes
+        # solo existía escrito a mano en el .md —el «qué dice el artículo y qué
+        # no», la corrección con lo que decía antes— y que la regeneración
+        # borraba sin dejar rastro (C39, 18/09/2026).
+        if o.get("nota_ampliada"):
+            A(f"{o['nota_ampliada']}\n")
 
 A("\n---\n\n## Fuentes abiertas y repositorios\n")
 A("De aquí sale el material, y de aquí seguirá saliendo cuando el agente bibliotecario amplíe el corpus.\n")

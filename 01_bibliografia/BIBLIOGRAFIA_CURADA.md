@@ -208,7 +208,7 @@ Como se mide objetivamente 'ser gracioso' (tarea de pies de foto puntuada por ju
 
 ### `C05` ★★ Personality traits, intelligence, humor styles, and humor production ability of professional stand-up comedians compared to college students
 
-**Greengross, G.; Martin, R. A.; Miller, G.** (2012) · *Psychology of Aesthetics, Creativity, and the Arts*, 6(1), 74-82  
+**Greengross, G.; Martin, R. A.; Miller, G.** (2012) · *Psychology of Aesthetics, Creativity, and the Arts, 6(1), 74-82*  
 DOI: [`10.1037/a0025774`](https://doi.org/10.1037/a0025774) · corregido el 18/09/2026 (el título y el DOI de la ficha eran de otro artículo) y verificado contra la página de la Aberystwyth University y el resumen de Ovid  
 Tipo: articulo
 
@@ -313,10 +313,12 @@ La risa es 30 veces mas probable en grupo que a solas y casi nunca sigue a un ch
 ### `E02` ★★★ Laughter punctuates speech: Linguistic, social and gender contexts of laughter
 
 **Provine, R. R.** (1993) · *Ethology*  
-DOI: [`10.1111/j.1439-0310.1993.tb00478.x`](https://doi.org/10.1111/j.1439-0310.1993.tb00478.x) ✓ verificado 28/08 (el DOI anterior, tb00996.x, no correspondia a este articulo)  
+DOI: [`10.1111/j.1439-0310.1993.tb00478.x`](https://doi.org/10.1111/j.1439-0310.1993.tb00478.x) · verificado el 19/09/2026 contra Wiley Online Library — el título que devuelve es el de la ficha (el DOI anterior, tb00996.x, no correspondía a este artículo)  
 Tipo: articulo
 
-La risa puntua el habla, no la interrumpe. Fundamento de la risa como senal social, no como reaccion comica. Tres cifras verificadas el 28/08 contra fuentes secundarias solventes (no se pudo acceder al articulo original, de pago): 1.200 episodios de risa registrados en observacion de campo; menos de una cuarta parte de los comentarios previos a la risa eran realmente comicos (el guion de MDH-004 dice «entre un diez y un veinte por ciento», que cae dentro de ese margen pero no es una cita exacta de una unica cifra del articulo); quien habla se rie mas que quien escucha, direccion confirmada, sin multiplicador exacto en las fuentes consultadas.
+La risa puntua el habla, no la interrumpe. Fundamento de la risa como senal social, no como reaccion comica.
+
+Tres cifras verificadas el 28/08 contra fuentes secundarias solventes (no se pudo acceder al artículo original, de pago): 1.200 episodios de risa registrados en observación de campo; menos de una cuarta parte de los comentarios previos a la risa eran realmente cómicos (el guion de MDH-004 dice «entre un diez y un veinte por ciento», que cae dentro de ese margen pero no es una cita exacta de una única cifra del artículo); quien habla se ríe más que quien escucha, dirección confirmada, sin multiplicador exacto en las fuentes consultadas.
 
 ### `E03` ★★★ The evolution of laughter in great apes and humans
 
@@ -342,23 +344,15 @@ Tipo: articulo
 
 Duplicado deliberado de D07 para probar la deduplicacion por DOI en el pipeline.
 
-### `E06` ★★ "Laughing" rats and the evolutionary antecedents of human joy?
+### `E06` ★★ “Laughing” rats and the evolutionary antecedents of human joy?
 
-**Panksepp, J.; Burgdorf, J.** (2003) · *Physiology & Behavior*, 79(3), 533-547  
+**Panksepp, J.; Burgdorf, J.** (2003) · *Physiology & Behavior, 79(3), 533-547*  
 DOI: [`10.1016/S0031-9384(03)00159-8`](https://doi.org/10.1016/S0031-9384(03)00159-8) · verificado el 15/09/2026 contra el texto del artículo (dirección)  
 Tipo: articulo
 
 Ratas que 'rien' a 50 kHz. Video con enorme potencial viral y ciencia solida.
 
-*Comprobado el 15/09/2026 (dirección, al reescribir MDS-017), con lo que el artículo dice y lo
-que no:* las cosquillas provocan en ratas jóvenes chirridos ultrasónicos de ~50 kHz, que los
-autores comparan con una risa primitiva; las ratas buscan la mano que les hizo cosquillas y
-«recorren laberintos y aprietan palancas» para que se las hagan (la cosquilla es
-recompensa); la risa humana rudimentaria aparece a los 2-3 meses y los autores la leen como
-una herencia antigua, distinta del humor «cognitivo». **Y la cautela, que es la de los
-propios autores:** no se atan a la interpretación de «risa», porque lo subjetivo no se mide
-en animales ni en personas, se infiere. El título que figuraba aquí hasta hoy («Tickling and
-the evolution of laughter») no es el del artículo.
+*Comprobado el 15/09/2026 (dirección, al reescribir MDS-017), con lo que el artículo dice y lo que no:* las cosquillas provocan en ratas jóvenes chirridos ultrasónicos de ~50 kHz, que los autores comparan con una risa primitiva; las ratas buscan la mano que les hizo cosquillas y «recorren laberintos y aprietan palancas» para que se las hagan (la cosquilla es recompensa); la risa humana rudimentaria aparece a los 2-3 meses y los autores la leen como una herencia antigua, distinta del humor «cognitivo». **Y la cautela, que es la de los propios autores:** no se atan a la interpretación de «risa», porque lo subjetivo no se mide en animales ni en personas, se infiere. El título que figuraba aquí hasta el 15/09 («Tickling and the evolution of laughter») no es el del artículo.
 
 
 ---
@@ -384,7 +378,7 @@ Revision de referencia: deteccion de incongruencia (temporo-parietal) + resoluci
 ### `F03` ★★ Two neural networks for laughter: A tractography study
 
 **Gerbella, M. et al.** (2021) · *Cerebral Cortex*  
-DOI: [`10.1093/cercor/bhaa264`](https://doi.org/10.1093/cercor/bhaa264)
+DOI: [`10.1093/cercor/bhaa264`](https://doi.org/10.1093/cercor/bhaa264) ⚠️ por verificar  
 Tipo: articulo
 
 Dos vias distintas para la risa espontanea y la voluntaria.
@@ -392,7 +386,7 @@ Dos vias distintas para la risa espontanea y la voluntaria.
 ### `F04` ★★ Functional Brain Connectivity at Rest Changes After Working Memory Training
 
 **Jolles et al.** (2013) · *NeuroImage / Human Brain Mapping*  
-DOI: [`10.1002/hbm.21444`](https://doi.org/10.1002/hbm.21444)
+DOI: [`10.1002/hbm.21444`](https://doi.org/10.1002/hbm.21444) ⚠️ por verificar  
 Tipo: articulo
 
 Base neural de las dos fases del chiste.
@@ -400,7 +394,7 @@ Base neural de las dos fases del chiste.
 ### `F05` ★ Neural correlates of humor detection and appreciation in children
 
 **Neely, M. N. et al.** (2012) · *Cerebral Cortex*  
-DOI: [`10.1523/jneurosci.4172-11.2012`](https://doi.org/10.1523/jneurosci.4172-11.2012)
+DOI: [`10.1523/jneurosci.4172-11.2012`](https://doi.org/10.1523/jneurosci.4172-11.2012) ⚠️ por verificar  
 Tipo: articulo
 
 Como madura el humor en la infancia: util para 'el humor se aprende'.
@@ -420,21 +414,13 @@ Humor del lider y desempeno del equipo. Serie 'humor en el trabajo'.
 
 ### `G05` ★★★ A meta-analysis of humor in advertising
 
-**Eisend, M.** (2009) · *Journal of the Academy of Marketing Science*, 37(2), 191-203  
+**Eisend, M.** (2009) · *Journal of the Academy of Marketing Science, 37(2), 191-203*  
 DOI: [`10.1007/s11747-008-0096-y`](https://doi.org/10.1007/s11747-008-0096-y) · verificado el 15/09/2026 contra la página del editor (dirección)  
 Tipo: articulo
 
 Metaanalisis del humor persuasivo: cuando ayuda y cuando distrae del mensaje.
 
-*Corregida el 15/09/2026 (dirección, al reescribir MDS-019).* Hasta hoy esta ficha decía
-«Do funny ads work? Humor in advertising: A meta-analysis», *Marketing Letters*, DOI
-10.1007/s11002-008-9051-4. Ese no es el artículo de Eisend de 2009. **Lo que dice el resumen,
-para no volver a equivocarse:** 369 correlaciones; el humor mejora la actitud hacia el
-anuncio, la atención y el afecto positivo, y también la actitud hacia la marca y la intención
-de compra; **no hay evidencia de que mejore la simpatía hacia el anunciante** (MDS-019 decía
-lo contrario hasta hoy) y **reduce la credibilidad de la fuente**; el efecto sobre la actitud
-hacia el anuncio es el doble que sobre la actitud hacia la marca; y el análisis de
-moderadores indica que la investigación académica sobre humor está algo sesgada.
+*Corregida el 15/09/2026 (dirección, al reescribir MDS-019).* Hasta entonces esta ficha decía «Do funny ads work? Humor in advertising: A meta-analysis», *Marketing Letters*, DOI 10.1007/s11002-008-9051-4. Ese no es el artículo de Eisend de 2009. **Lo que dice el resumen, para no volver a equivocarse:** 369 correlaciones; el humor mejora la actitud hacia el anuncio, la atención y el afecto positivo, y también la actitud hacia la marca y la intención de compra; **no hay evidencia de que mejore la simpatía hacia el anunciante** (MDS-019 decía lo contrario hasta entonces) y **reduce la credibilidad de la fuente**; el efecto sobre la actitud hacia el anuncio es el doble que sobre la actitud hacia la marca; y el análisis de moderadores indica que la investigación académica sobre humor está algo sesgada.
 
 ### `G02` ★★ A meta-analysis of positive humor in the workplace
 
@@ -460,22 +446,13 @@ Efecto del humor sobre cortisol y memoria. Verificar tamano muestral antes de ci
 
 ### `G06` ★★ A review of humor in educational settings: Four decades of research
 
-**Banas, J. A.; Dunbar, N.; Rodriguez, D.; Liu, S.-J.** (2011) · *Communication Education*, 60(1), 115-144  
+**Banas, J. A.; Dunbar, N.; Rodriguez, D.; Liu, S.-J.** (2011) · *Communication Education, 60(1), 115-144*  
 DOI: [`10.1080/03634523.2010.496867`](https://doi.org/10.1080/03634523.2010.496867) · verificado el 15/09/2026 contra ERIC (EJ908233) y la página del editor (dirección)  
 Tipo: articulo
 
 El humor y el aprendizaje: solo funciona si es relevante al contenido. Meta del propio canal.
 
-*Corregida el 15/09/2026 (dirección, al reescribir MDS-018).* **Es una revisión, no un
-metaanálisis**: el título que figuraba aquí no es el del artículo. Recoge cuatro décadas de
-estudios sobre humor en clase, con énfasis en explicar por qué los resultados no coinciden.
-La literatura de ese campo apunta a que el humor relacionado con el contenido mejora el
-recuerdo de ese contenido (Kaplan y Pascoe, 1977) y a que el humor no relacionado no guarda
-relación con el aprendizaje (Wanzer, Frymier e Irwin, 2010, que miden aprendizaje
-**autodeclarado**). **Ojo:** esas dos citas se comprobaron el 15/09 en una fuente secundaria
-(la guía de recursos de Segrist para la Society for the Teaching of Psychology), no en el
-texto completo de Banas, que no se pudo abrir. Si alguien lo abre, que confirme que las
-recoge. No citar como «metaanálisis» ni atribuirle cifras que no se hayan leído en el texto.
+*Corregida el 15/09/2026 (dirección, al reescribir MDS-018).* **Es una revisión, no un metaanálisis**: el título que figuraba aquí no es el del artículo. Recoge cuatro décadas de estudios sobre humor en clase, con énfasis en explicar por qué los resultados no coinciden. La literatura de ese campo apunta a que el humor relacionado con el contenido mejora el recuerdo de ese contenido (Kaplan y Pascoe, 1977) y a que el humor no relacionado no guarda relación con el aprendizaje (Wanzer, Frymier e Irwin, 2010, que miden aprendizaje **autodeclarado**). **Ojo:** esas dos citas se comprobaron el 15/09 en una fuente secundaria (la guía de recursos de Segrist para la Society for the Teaching of Psychology), no en el texto completo de Banas, que no se pudo abrir. Si alguien lo abre, que confirme que las recoge. No citar como «metaanálisis» ni atribuirle cifras que no se hayan leído en el texto.
 
 
 ---
