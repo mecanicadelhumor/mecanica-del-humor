@@ -451,6 +451,21 @@
       "musica": "cama_07_cylinder_one_chris_zabriskie.mp3",
       "subido_utc": "2026-09-21T06:26:54Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-022.es",
+      "episodio": "MDS-022",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "Por qué un chiste hace menos gracia la segunda vez: le falta el primer paso",
+      "guion": "05_calendario/guiones/MDS-022.es.json",
+      "video_id": "jYftzqWFw8Y",
+      "url": "https://youtu.be/jYftzqWFw8Y",
+      "estado": "private",
+      "publicar_en": "2026-09-22T17:00:00Z",
+      "musica": "cama_08_divider_chris_zabriskie.mp3",
+      "subido_utc": "2026-09-22T06:20:12Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-09-20T13:14:00Z"

@@ -1,22 +1,22 @@
 {
-  "id": "MDS-016.es",
-  "duracion_final_s": 58.0,
-  "tamano_mb": 10.0,
+  "id": "MDS-022.es",
+  "duracion_final_s": 40.2,
+  "tamano_mb": 7.1,
   "audio": {
-    "lufs": -14.09,
-    "pico_dbtp": -1.32,
-    "rango_lu": 3.6
+    "lufs": -14.26,
+    "pico_dbtp": -1.38,
+    "rango_lu": 4.2
   },
   "silencio_inicial": {
-    "empieza_s": -0.17,
-    "acaba_s": 0.796,
+    "empieza_s": -0.171,
+    "acaba_s": 0.036,
     "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
   },
   "arranque": {
     "silencios_s": [
       [
         -0.085,
-        0.796
+        0.036
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -41,37 +41,55 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 56.66,
-    "duracion_real_voz_mp3_s": 56.4,
+    "duracion_calculada_s": 38.85,
+    "duracion_real_voz_mp3_s": 38.59,
     "desfase_s": 0.26,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_01_crying_over_you_christophermorrow.mp3",
-    "sha256": "4143a4c48067539963eeff663f43e8c1f880f4e4c1428972a69ed75d0aa28e44"
+    "archivo": "cama_08_divider_chris_zabriskie.mp3",
+    "sha256": "4668b56866e517eb37c34099def2a5f3a07acbdbfd793265eedba1e368fbc328"
   },
   "guion": {
-    "titulo_trabajo": "Por qué la ironía no se entiende por WhatsApp",
+    "titulo_trabajo": "¿Por qué un chiste hace menos gracia la segunda vez?",
     "idioma": "es",
-    "voz": "es-ES-AlvaroNeural",
+    "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 56.66,
+    "duracion_narracion_s": 38.85,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 11.264,
+    "escena_mas_larga_s": 8.048,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
-      "gemini": 6
+      "gemini-3.1-flash-tts-preview": 6
     },
+    "modelo_voz": "gemini-3.1-flash-tts-preview",
+    "voz_mezclada": false,
+    "origen_voz": [
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada"
+    ],
+    "direccion_voz": [
+      "apertura",
+      "planteamiento",
+      "remate",
+      "explicacion",
+      "planteamiento",
+      "objecion"
+    ],
     "escenas_ritmo_fuera_de_rango": []
   },
   "fotogramas_s": [
-    5.34,
-    13.47,
-    21.36,
-    30.68,
-    41.54,
-    52.75
+    3.54,
+    8.42,
+    15.2,
+    22.74,
+    29.09,
+    36.23
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
