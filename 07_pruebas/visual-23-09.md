@@ -69,3 +69,25 @@ Notas adicionales:
 3. Como alternativa al punto anterior, se podría explorar la creación de un avatar de dibujo animado que hiciera este trabajo si el punto 2 es inviable bajo las reglas del proyecto. En cualquier caso, tanto con una solución como con la otra, sería importante encontrar una manera de que hubiera consistencia entre los distintos vídeos, y no contar con un personaje (real o animado) muy distinto en cada vídeo, sobre todo si usan la misma voz después.
 4. Dinamismo es la palabra. Tenemos que conseguir que el vídeo sea atractivo de principio a fin, y no aburrido, ni desde el guion ni desde la presentación.
 Buen trabajo.
+
+---
+
+## Lo que ha hecho la dirección con la respuesta · 23/09/2026, tarde
+
+*Versión 13 de `00_estrategia/PLAN_DE_CAMBIOS.md`, C50. Todo lo que sigue ya está en el código;
+lo único que falta es la tarea 3 de `tareas_codirector_2026-09-23.md` (mover dos workflows).*
+
+**A entra en producción hoy.** El primer Short con vídeo detrás es `MDS-024`, el del jueves 24.
+
+| Lo que dijiste | Lo que se ha hecho |
+|---|---|
+| 1 · El título cae a veces sobre la cara | OpenCV busca caras en cada plano. El texto va **abajo** por defecto y **arriba** si las caras caen abajo; si hay que recortar un plano, el recorte se centra en las caras |
+| 2 · La imagen no corresponde con el momento («roto de fábrica» con el señor fregando; la familia celebrando con Lisboa) | Cada plano entra **en la palabra exacta** que dice el guion (`desde`), medida sobre la voz real. Y cada clip se puntúa por cuánto se parece su título a lo que se busca: si no se parece en nada, no se usa |
+| 3 · El fondo se desenfoca bajo la cifra y los recuadros | **Quitado.** Cifra y recuadros van encima del vídeo, que se ve siempre; el texto se lee por un velo oscuro solo donde está |
+| 4 · El sillón quieto de `MDS-025` | No era a propósito: era un vídeo de trípode donde nada se mueve. Ahora se mide el movimiento de cada clip y el que no se mueve se descarta |
+| B no funciona | Descartada. Los subtítulos quemados siguen apagados |
+| C no hizo nada | Cloudflare no devolvió ni una imagen y el código se tragaba el error. Ahora el error se ve en el resumen de cada ejecución, y el modelo cambia a uno que saca la imagen en vertical |
+| Nota 1 · tarjetas renderizadas intercaladas para los mensajes clave | Hechas: cualquier plano puede ser **tarjeta de marca** (el fondo azul de siempre, la cifra en grande) y luego vuelve el vídeo. Dos por Short como mucho, y el final es siempre la firma de marca |
+| Notas 2 y 3 · un personaje que mueva los labios, o un avatar dibujado, siempre el mismo | Primero el dibujo: **el Engranaje hablará** (la boca movida por la voz), muestrario el viernes 25. La persona realista, se explora si dices que sí a la regla 7: la pregunta está en `tareas_codirector_2026-09-23.md` |
+| Nota 4 · dinamismo | Un plano cada dos o tres segundos, el texto palabra a palabra encima, las imágenes generadas siempre en movimiento |
+

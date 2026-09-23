@@ -248,6 +248,78 @@
        "i-balanza"
       ],
       "description": "Añadido el 07/09 (C19+C16). Uno de los ocho dibujos de 02_marca/iconos.svg. Admisible en cualquier escena; escena.html lo dibuja solo (stroke-dasharray/dashoffset, ~0,55-0,6s) al entrar la escena, determinista y sin coste de render añadido. Pensado sobre todo para que la escena 1 de un Short deje de ser una tarjeta de texto: icono + cuatro palabras o menos + el personaje entrando (C19). Si falta, no aparece."
+     },
+     "visual": {
+      "description": "Añadido el 23/09/2026 (C50, versión 13 del plan). Qué se ve detrás del texto en esta escena: vídeo de archivo (Pexels, Pixabay), una imagen generada con IA o una tarjeta de marca. «marca» = la escena entera como tarjeta de marca (el render de siempre). Si no, una lista de planos, uno cada dos o tres segundos. Lo resuelve el workflow «Visuales (C50)» (03_produccion/pipeline/visual.py) en 05_calendario/visuales/<ID>.json, y render.py lo compone. Si falta o algo falla, la escena sale como tarjeta de marca: nunca para una producción. Cómo se escribe: 04_agentes/prompts/guionista_corto.md, «La imagen de cada escena (C50)». validar_guion.py avisa (C50) de un «desde» que no está en la narración, de búsquedas en castellano y de más de dos tarjetas de marca.",
+      "oneOf": [
+       {
+        "const": "marca"
+       },
+       {
+        "type": "array",
+        "maxItems": 4,
+        "items": {
+         "type": "object",
+         "properties": {
+          "busqueda": {
+           "description": "En inglés, 3-6 palabras concretas (quién + qué hace + dónde). Una cadena o una lista de dos o tres, de más concreta a más general: se prueban en orden.",
+           "oneOf": [
+            {
+             "type": "string"
+            },
+            {
+             "type": "array",
+             "items": {
+              "type": "string"
+             }
+            }
+           ]
+          },
+          "desde": {
+           "type": "string",
+           "description": "Las palabras EXACTAS de la narración en las que entra este plano (tildes y mayúsculas dan igual). Obligatorio en todos los planos menos el primero, que empieza con la escena."
+          },
+          "prompt": {
+           "type": "string",
+           "description": "En inglés: la imagen que se genera con IA si el archivo no tiene nada que pegue. Foto realista: sujeto, acción, lugar, luz."
+          },
+          "fuente": {
+           "enum": [
+            "ia",
+            "archivo"
+           ],
+           "description": "«ia»: no se busca en el archivo, se genera directamente. «archivo»: nunca se genera."
+          },
+          "marca": {
+           "type": "boolean",
+           "description": "true: este tramo es tarjeta de marca (el mensaje clave: la cifra, el mecanismo). Dos por Short como mucho."
+          },
+          "fijar": {
+           "type": "string",
+           "description": "«pexels:<id>» o «pixabay:<id>»: ese clip y ningún otro."
+          },
+          "excluir": {
+           "type": "array",
+           "items": {
+            "type": "string"
+           },
+           "description": "Clips que no («pexels:<id>»)."
+          },
+          "semilla": {
+           "type": "integer",
+           "description": "Semilla de la imagen generada (por defecto, una fija derivada del guion, la escena y el plano)."
+          }
+         }
+        }
+       }
+      ]
+     },
+     "texto_pos": {
+      "enum": [
+       "abajo",
+       "arriba"
+      ],
+      "description": "C50: dónde va el texto sobre el vídeo. Normalmente NO se escribe: lo decide visual.py mirando dónde están las caras (abajo por defecto). Las escenas de paneles van siempre al centro."
      }
     }
    },

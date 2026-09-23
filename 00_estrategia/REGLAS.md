@@ -134,6 +134,14 @@ lleva su licencia, su autor y su enlace de origen escritos en `02_marca/banco/ba
 antes de usarse una sola vez.** Una imagen sin esos tres campos no se usa, aunque parezca
 libre.
 
+**Y el vídeo de archivo y las imágenes generadas de C50 (precisado el 23/09/2026, versión 13 del
+plan):** la licencia, el autor y el enlace de cada plano —o, si es generada, el modelo, el prompt y
+la semilla— van en el manifiesto de cada Short, `05_calendario/visuales/<ID>.json`, que se escribe
+**antes** de producir. Un plano que no está en su manifiesto no llega al vídeo (`render.py` solo
+compone lo que `visual.py traer` ha bajado del manifiesto). Pexels y Pixabay no exigen atribución;
+se atribuye igual, en la descripción del vídeo. Y una imagen generada se declara como contenido
+sintético (regla 7).
+
 Y la lección, que es la de siempre y esta vez me la aplico a mí: **antes de descartar algo
 citando una regla, lee la regla.** Es la trampa 2 del proyecto —comprobar que la
 restricción dice lo que crees que dice— cometida sobre un documento propio.

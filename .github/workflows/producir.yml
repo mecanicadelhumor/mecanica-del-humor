@@ -223,6 +223,30 @@ jobs:
           done < <(jq -r '.trabajos[].id' plan.json)
 
       # ---------------------------------------------------------------
+      # C50 (versión 13 del plan, 23/09/2026) · el material visual.
+      # Baja a build/<ID>/visual/ los planos que el workflow «Visuales
+      # (C50)» eligió para este Short (05_calendario/visuales/<ID>.json).
+      # La red se usa AQUÍ, antes del render, para que el render siga sin
+      # red (regla 11.6). No necesita claves: los enlaces son públicos.
+      # Nunca para la producción: sin manifiesto, sin red o con
+      # 05_calendario/visuales/APAGADO, el Short sale como siempre.
+      # ---------------------------------------------------------------
+      - name: Traer el material visual (C50)
+        # Tope de paso y sin poder tumbar el job: si la red se atasca, este
+        # paso se corta a los 15 minutos y la producción sigue (sin vídeo
+        # detrás: el Short sale como siempre). visual.py ya se limita a 8
+        # minutos por Short; esto es la red por debajo de la red.
+        timeout-minutes: 15
+        continue-on-error: true
+        run: |
+          while read -r ID; do
+            echo "::group::visual $ID"
+            python3 03_produccion/pipeline/visual.py traer "build/$ID/guion.timed.json" \
+              || echo "::warning::$ID sin material visual: sale con el fondo de siempre"
+            echo "::endgroup::"
+          done < <(jq -r '.trabajos[].id' plan.json)
+
+      # ---------------------------------------------------------------
       # Render visual, ya sincronizado con la voz real.
       # ---------------------------------------------------------------
       - name: Renderizar vídeo mudo
@@ -275,6 +299,7 @@ jobs:
             build/**/figuras/*.png
             build/**/voz.mp3
             build/**/voz/escena_*.mp3
+            build/**/visual/*.json
           retention-days: 30
 
       # ---------------------------------------------------------------

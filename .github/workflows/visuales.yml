@@ -1,0 +1,121 @@
+name: Visuales (C50)
+
+# ---------------------------------------------------------------------------
+# C50 (00_estrategia/PLAN_DE_CAMBIOS.md, versión 13, 23/09/2026): la imagen
+# deja de ser una diapositiva. Este workflow ELIGE la imagen de cada plano de
+# los Shorts que aún no se han publicado; no produce ni sube nada.
+#
+# Qué hace (03_produccion/pipeline/visual.py):
+#   1. «diagnostico»: prueba las claves de Pexels, Pixabay y Cloudflare y deja
+#      lo que contesta cada servicio en el resumen de esta ejecución y en
+#      05_calendario/visuales/diagnostico.json;
+#   2. «resolver»: para cada guion con campo «visual» que no esté publicado y
+#      haya cambiado desde la última vez, busca en Pexels y Pixabay, mide cada
+#      candidato (que se mueva, dónde tiene las caras), genera con Cloudflare
+#      lo que el archivo no tiene, y deja en 05_calendario/visuales/:
+#        <ID>.json   el manifiesto (licencia, autor y enlace de cada plano:
+#                    regla 9; y dónde va el texto para no tapar caras),
+#        <ID>.jpg    la hoja de contactos que mira la revisión diaria,
+#        <ID>/       las imágenes generadas, si las hay;
+#   3. lo sube al repositorio. El Short lo usa en su producción: el paso
+#      «Traer el material visual (C50)» de producir.yml baja los planos antes
+#      del render.
+#
+# Cuándo corre: cada vez que cambia un guion o los ajustes de la revisión
+# diaria (05_calendario/visuales/ajustes.json), una vez al día a las 16:37 UTC
+# por si algo se quedó sin resolver, y a mano (Actions → «Visuales (C50)» →
+# Run workflow).
+#
+# Secretos que usa (los mismos de la prueba del 23/09): PEXELS_API_KEY,
+# PIXABAY_API_KEY, CLOUDFLARE_ACCOUNT_ID y CLOUDFLARE_API_TOKEN. Si falta uno,
+# esa fuente se salta y se dice en el resumen; nunca falla por eso.
+# ---------------------------------------------------------------------------
+
+on:
+  push:
+    paths:
+      - "05_calendario/guiones/**.json"
+      - "05_calendario/visuales/ajustes.json"
+      - "03_produccion/pipeline/visual.py"
+      - "03_produccion/pipeline/fondo_visual.py"
+  schedule:
+    - cron: "37 16 * * *"
+  workflow_dispatch:
+    inputs:
+      guiones:
+        description: "Guiones a resolver, separados por espacios (vacío = todo lo pendiente)"
+        required: false
+        default: ""
+      forzar:
+        description: "Volver a elegir aunque el guion no haya cambiado"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: visuales
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  resolver:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependencias
+        timeout-minutes: 15
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          sudo systemctl stop unattended-upgrades 2>/dev/null || true
+          for i in $(seq 1 30); do
+            sudo fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1 || break
+            sleep 10
+          done
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-inter
+          pip install --quiet pillow numpy opencv-python-headless
+
+      - name: Probar las claves
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: python3 03_produccion/pipeline/visual.py diagnostico
+
+      - name: Elegir los planos
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          GUIONES: ${{ inputs.guiones }}
+          FORZAR: ${{ inputs.forzar }}
+        run: |
+          ARGS=()
+          [ "$FORZAR" = "true" ] && ARGS+=(--forzar)
+          python3 03_produccion/pipeline/visual.py resolver $GUIONES "${ARGS[@]}"
+
+      - name: Dejar los manifiestos y las hojas en el repositorio
+        if: ${{ !cancelled() }}
+        run: |
+          git add -A 05_calendario/visuales
+          if ! git diff --cached --quiet; then
+            git config user.name  "Mecánica del Humor (bot)"
+            git config user.email "mecanicadelhumor@users.noreply.github.com"
+            git commit -m "Visuales (C50): manifiestos y hojas de contactos"
+            git pull --rebase --autostash origin "$GITHUB_REF_NAME"
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          fi

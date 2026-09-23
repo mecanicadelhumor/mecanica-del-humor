@@ -10,6 +10,11 @@ env/
 # no tienen que vivir en el repositorio.
 build/
 
+# C50 (23/09/2026): copias ligeras de los clips que visual.py descarga para
+# medirlos (movimiento, caras). Se regeneran solas; lo que cuenta está en
+# 05_calendario/visuales/<ID>.json.
+03_produccion/cache_visual/
+
 # Basura del sistema operativo
 Thumbs.db
 .DS_Store

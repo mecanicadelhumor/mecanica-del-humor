@@ -48,6 +48,12 @@ leerse como si fuera YouTube (el caso MDS-011); entran C28 y C29 en `validar_gui
    retraso, después de ti. Ver el paso 2.
 5. Versión **12** de `PLAN_DE_CAMBIOS.md`, que es la que manda, y
    `08_comunicacion/2026-09-23-direccion.md`.
+6. **Y por la tarde, versión 13: C50 entra en producción.** Desde `MDS-024` (jueves 24) los Shorts
+   llevan vídeo de archivo o imágenes generadas detrás del texto. Tienes **un trabajo nuevo, diario,
+   y va en el paso 1 justo después de la lectura en frío: la hoja de contactos** del Short de
+   mañana y del de pasado (ver «La imagen: la hoja de contactos (C50)»). Y en el paso 3, que la
+   ficha diga si el vídeo salió con archivo o como siempre. Lee
+   `08_comunicacion/2026-09-23-direccion-c50.md`.
 
 **Qué cambió el 21/09 (dirección del lunes):**
 
@@ -212,6 +218,55 @@ Un Short se ve mudo en el metro y se escucha con el móvil en el bolsillo. Los d
 
 Termina con `python3 04_agentes/validar_guion.py <rutas>` sin errores.
 
+### La imagen: la hoja de contactos (C50, desde el 24/09/2026)
+
+**Todos los días, después de la lectura en frío.** El workflow «Visuales (C50)» elige el vídeo de
+cada plano de los Shorts pendientes y deja, por cada uno, `05_calendario/visuales/<ID>.json` (el
+manifiesto) y **`05_calendario/visuales/<ID>.jpg` (la hoja de contactos)**: un cuadro por plano, con
+la banda oscura donde irá el texto y el texto encima, las caras recuadradas en rojo, y debajo **la
+frase que suena durante ese plano**, de dónde sale y tres medidas (`rel` relevancia, `mov`
+movimiento, `caras`). Mira las hojas del Short de **mañana** y del de **pasado mañana** (ábrelas
+con Read: son imágenes). Para cada cuadro, cinco preguntas:
+
+1. **¿La imagen cuenta lo que dice la frase de debajo?** No el tema del Short: esa frase. Es lo
+   que el codirector vio mal el 23/09 («aparece el señor fregando los platos cuando se dice "roto de
+   fábrica"»).
+2. **¿Contradice el texto de pantalla?** (una boda cuando en pantalla pone «Lisboa»).
+3. **¿El texto tapa una cara?** (cara recuadrada en rojo dentro de la banda oscura).
+4. **¿Hay algo que no puede salir?** Logotipos o marcas, texto dentro de la imagen, niños, alguien
+   famoso, o una persona reconocible ilustrando algo negativo de alguien.
+5. **¿Parece de banco de imágenes?** (la oficina con gente sonriendo a cámara). Eso no se excluye
+   por sí solo, pero dilo en tu fichero de `estado/`.
+
+**Si un plano falla, lo corriges tú, y no tocas el guion:** escribes en
+`05_calendario/visuales/ajustes.json`, que es **tuyo** (regla 10), y lo subes. «Visuales (C50)»
+vuelve a elegir solo en unos minutos y deja una hoja nueva: mírala antes de cerrar. El formato,
+con la clave `"<escena>.<plano>"` que ves debajo de cada cuadro:
+
+```json
+{
+  "MDS-024": {
+    "3.2": {"excluir": ["pexels:12345678"]},
+    "5.1": {"busqueda": ["man staring out of window thinking"]},
+    "2.1": {"fuente": "ia"},
+    "4":   {"texto_pos": "arriba"}
+  }
+}
+```
+
+- `excluir`: ese clip no (el identificador es el que sale debajo del cuadro, `fuente:número`).
+- `busqueda`: cambia la búsqueda de ese plano (en inglés, concreta: quién hace qué y dónde).
+- `fuente: "ia"`: que ese plano sea la imagen generada de su `prompt`.
+- `marca: true`: que ese plano sea tarjeta de marca (para lo que no tiene imagen posible).
+- `texto_pos` (por escena, sin punto): `arriba` o `abajo`, si el automático se equivoca.
+
+Si el Short de mañana tiene un plano que no pega y ya no da tiempo, **excluirlo es siempre mejor
+que dejarlo**: sin alternativa buena, ese plano sale como tarjeta de marca, y una tarjeta de marca
+no ha hecho nunca daño a nadie.
+
+**Y lee `05_calendario/visuales/diagnostico.json`.** Si Pexels dice `FALLA`, es `INCIDENCIA`: sin
+Pexels casi no hay vídeo. Si solo falla Cloudflare, bitácora (la IA es el respaldo).
+
 ### La bibliografía es tuya, y tiene dos ficheros (18/09/2026, C39)
 
 `01_bibliografia/BIBLIOGRAFIA_CURADA.md` pasó a ser tuyo el 28/08. Lo que no estaba dicho es que
@@ -266,6 +321,12 @@ Deja de ser «lunes y jueves»: el 03/09 se publicó un Short con una palabra co
 2. **Comprueba los dos canales sobre el vídeo ya producido**, no sólo sobre el guion: para cada fotograma, ¿lo que pone tiene sentido para quien no oye nada? ¿Y la voz para quien no ve nada?
 3. **Lee `ficha.json`:** `audio.lufs` ≈ −14 (±1); `audio.pico_dbtp` ≤ −1,0; `arranque.fragmento_antes_de_la_narracion` en `false`; `subtitulos.quemados` en `false` (correcto); y `subtitulos.lineas_ass` **> 0**, que sigue siendo el canario.
 4. **Sobre el motor C15:** ¿se lee el texto al ritmo al que aparece? ¿La palabra resaltada cae donde el acento de la frase? ¿Molesta la deriva o el acercamiento? ¿El remate de marca se cruza con el texto del cierre?
+5. **C50, desde el 24/09: ¿salió con vídeo detrás?** `ficha.json` trae un campo `visual`: la lista de
+   planos que de verdad salieron, o `null` si el Short salió como siempre. Si el Short tenía
+   manifiesto en `05_calendario/visuales/` y la ficha dice `null`, el modo archivo falló y
+   `render.py` volvió al fondo de siempre: busca en el registro del paso «Renderizar vídeo mudo» la
+   línea que empieza por `C50 ·` y cópiala en tu fichero de `estado/` como `INCIDENCIA`. Y en los
+   fotogramas: ¿se lee el texto sobre el vídeo? ¿Tapa alguna cara? ¿El corte cae con la palabra?
 
 ## Paso 4 — lo tuyo: código y encargos
 

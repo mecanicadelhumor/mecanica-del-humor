@@ -44,6 +44,9 @@ puede es hacer que dos agentes no escriban nunca el mismo fichero.**
 | `05_calendario/metricas.json` | **Métricas** (lunes 09:00) | nadie más lo toca |
 | `03_produccion/` · `04_agentes/` (código, prompts, `MEJORA_VISUAL.md`) | **Revisión diaria** | proponen en el resumen |
 | `05_calendario/registro_publicaciones.json` · `qa/` | **GitHub Actions** | nadie los mete en un paquete, nunca |
+| `05_calendario/visuales/<ID>.json` · `<ID>.jpg` · `<ID>/` · `diagnostico.json` (C50, 23/09/2026) | **Workflow `visuales.yml`** (`visual.py`) | nadie los edita a mano: se corrigen con `ajustes.json` |
+| `05_calendario/visuales/ajustes.json` (C50) | **Revisión diaria** | la planificación corrige en el campo `visual` del guion, que es suyo |
+| `05_calendario/visuales/APAGADO` (C50, el interruptor) | **el codirector y yo** | nadie más lo crea ni lo borra |
 | `00_estrategia/` | **el codirector y yo** | nadie más |
 
 ### Las dos carpetas nuevas que lo hacen posible

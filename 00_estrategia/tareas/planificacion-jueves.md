@@ -39,9 +39,34 @@ modelo: `claude-opus-5`.
    mismo con las aperturas, los títulos de pantalla del cierre y la secuencia de tipos de escena.
    Antes de entregar, pon los cinco cierres en una columna y léelos seguidos: si dos empiezan
    igual, reescribe uno. `validar_guion.py` avisa (C48.1).
-6. **La presentación va a cambiar mucho (C50)**, pero no esta semana y no la tocas tú: escribe
-   los guiones con los tipos de escena de siempre.
-7. Lee `08_comunicacion/2026-09-23-direccion.md`.
+6. ~~La presentación va a cambiar mucho (C50), pero no esta semana y no la tocas tú.~~
+   **ANULADO la misma tarde (versión 13): ver «Lo que cambia el 23/09 por la tarde», justo abajo.**
+7. Lee `08_comunicacion/2026-09-23-direccion.md` y `08_comunicacion/2026-09-23-direccion-c50.md`.
+
+## Lo que cambia el 23/09/2026 por la tarde · versión 13 del plan (C50 entra)
+
+**Manda sobre el punto 6 de arriba.** El codirector vio la prueba de imagen y eligió: **desde esta
+semana, cada escena lleva vídeo de archivo o una imagen generada a pantalla completa, y el texto va
+encima.** El primero que sale así es `MDS-024`. Tú escribes **qué imagen va en cada momento**:
+
+1. **Cada escena de cada Short lleva el campo `visual`** (desde `MDS-026`, el primero tuyo). Cómo
+   se escribe, con un ejemplo entero y ocho reglas: **`04_agentes/prompts/guionista_corto.md`,
+   sección «La imagen de cada escena (C50)»**. Léela entera antes de escribir el primero. Lo
+   esencial: **un plano cada dos o tres segundos; cada plano, salvo el primero, con `desde` (las
+   palabras exactas de la narración en las que entra); búsquedas en inglés, concretas —quién hace
+   qué y dónde—, dos o tres de más concreta a más general; y la imagen cuenta lo que dice la voz en
+   ese momento.**
+2. **Dos tarjetas de marca como mucho** por Short (`{"marca": true, "desde": "…"}`): son para el
+   mensaje clave, la cifra cuando la voz la dice o el mecanismo. El final ya lleva la firma.
+3. **Escribes `visual` en el paso 3 del orden de abajo, con las escenas**, no al final: elegir la
+   imagen es parte de escribir la escena, y a veces obliga a cambiar la frase (si no hay imagen
+   posible para una frase, la frase suele ser abstracta, y eso es un problema del guion).
+4. `validar_guion.py` da **avisos C50**: un `desde` que no está en la narración, una búsqueda en
+   castellano, una escena sin `visual`, demasiadas tarjetas. **No paran nada, pero los arreglas
+   todos**: cada uno es un plano a destiempo o una tarjeta azul donde iba vídeo.
+5. **No tienes que hacer nada más.** Al subir los guiones, el workflow «Visuales (C50)» elige los
+   planos solo y deja en `05_calendario/visuales/` un manifiesto y una hoja de contactos por Short.
+   La revisión diaria los mira y corrige lo que no pegue.
 
 ---
 
@@ -219,7 +244,7 @@ Las dos reglas concretas:
 - **Una ficha que ha sido la fuente central de un vídeo no puede volver a serlo en seis semanas.** Como apoyo de pasada sí, y entonces se cuenta con otras palabras y desde otro ángulo, nunca con la misma frase.
 - **Antes de escribir, lista las fichas ya usadas** (los códigos de `fuente` de todos los guiones de `05_calendario/guiones/`) y **empieza a elegir por las que no aparecen**. Si acabas usando una repetida, escribe en tu bitácora por qué ninguna de las libres servía.
 
-Cada Short: `"formato": "corto"`, `"serie": "..."`, 3–8 escenas, 18–55 s, ninguna escena de más de 12 s, el gancho en el segundo cero, la pausa de 1,2–1,5 s antes del remate, el personaje reaccionando después y el cierre diciendo dónde falla. **Y desde el 23/09, los campos `historia` y `lectura_en_frio` (C48).**
+Cada Short: `"formato": "corto"`, `"serie": "..."`, 3–8 escenas, 18–55 s, ninguna escena de más de 12 s, el gancho en el segundo cero, la pausa de 1,2–1,5 s antes del remate, el personaje reaccionando después y el cierre diciendo dónde falla. **Y desde el 23/09, los campos `historia` y `lectura_en_frio` (C48), y `visual` en cada escena (C50).**
 
 **El orden en que se escribe cada Short, desde el 23/09/2026 (C48). No te lo saltes ni lo reordenes:**
 
@@ -229,7 +254,8 @@ Cada Short: `"formato": "corto"`, `"serie": "..."`, 3–8 escenas, 18–55 s, ni
    acabas de ver es justo lo que midió el estudio». Si hace falta un «y hablando de otra
    cosa», son dos vídeos.
 3. **Las escenas**, con un «pero» o un «por eso» entre cada dos seguidas, frases enteras, y un
-   cierre que se entienda solo.
+   cierre que se entienda solo. **Cada una con su `visual` (C50)**, escrito a la vez que la
+   escena: qué se ve en cada momento de esa narración.
 4. `validar_guion.py` sin errores (salvo los dos de C48, que aún no puedes tener).
 5. **La lectura en frío con un subagente**, con el encargo literal de `guionista_corto.md`.
    Copias lo que conteste en `lectura_en_frio`. Si no pasa, reescribes y lees con **otro**

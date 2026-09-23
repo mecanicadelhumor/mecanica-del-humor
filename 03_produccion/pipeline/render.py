@@ -18,9 +18,11 @@ import argparse
 import json
 import shutil
 import subprocess
+import sys
 import tempfile
 from pathlib import Path
 
+from PIL import Image
 from playwright.sync_api import sync_playwright
 
 # ---------------------------------------------------------------------------
@@ -51,6 +53,8 @@ from playwright.sync_api import sync_playwright
 
 AQUI = Path(__file__).resolve().parent
 ESCENA_HTML = AQUI / "escena.html"
+if str(AQUI) not in sys.path:          # fondo_visual.py vive al lado (C50)
+    sys.path.insert(0, str(AQUI))
 
 # Constantes que deben coincidir con las de escena.html
 ESCALONADO = 0.16     # desfase entre unidades animadas
@@ -113,6 +117,159 @@ def preparar(guion):
     return escenas
 
 
+def _barrera(pag, guion, e):
+    """C21 · La lista de textos que no caben, con la escena ya pintada en su
+    estado asentado (t = dur). Vacía si todo cabe."""
+    pag.evaluate("t => pintar(t)", e["duracion_s"])
+    problemas = pag.evaluate("() => comprobarDesbordes()")
+    pag.evaluate("t => pintar(t)", 0)
+    return problemas
+
+
+def _fotogramas(fichero):
+    r = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-count_packets",
+                        "-show_entries", "stream=nb_read_packets", "-of", "csv=p=0", str(fichero)],
+                       capture_output=True, text=True, stdin=subprocess.DEVNULL)
+    try:
+        return int(r.stdout.strip().split(",")[0])
+    except ValueError:
+        return -1
+
+
+class FalloArchivo(Exception):
+    """El modo archivo (C50) no ha podido montar el vídeo. Nunca para la
+    producción: render() lo recoge y renderiza el Short como siempre."""
+
+
+def render_archivo(guion, escenas, local, carpeta, salida, fps=30, escala=1.0, verbose=True):
+    """C50 (versión 13, 23/09/2026) · el Short con vídeo de archivo detrás.
+
+    Tres pasos, y ninguno usa la red (regla 11.6):
+      1. fondo_visual.pista_de_fondo(): un mp4 mudo con el plano que toca en
+         cada fotograma (negro en los tramos de marca);
+      2. dos páginas de escena.html abiertas a la vez: una en modo archivo
+         (texto con fondo transparente) y otra como siempre (la tarjeta de
+         marca). Cada fotograma se captura de la que toca;
+      3. ffmpeg pone la capa de texto encima del fondo. Donde la captura es
+         una tarjeta de marca, es opaca y tapa el fondo entero.
+    Cualquier fallo lanza FalloArchivo, y render() vuelve al render de siempre.
+    """
+    import fondo_visual
+    ancho, alto = LIENZO["corto"]
+    W, H = int(round(ancho * escala)), int(round(alto * escala))
+    W -= W % 2
+    H -= H % 2
+
+    tmp = Path(tempfile.mkdtemp(prefix="mdh_c50_"))
+    try:
+        plan = fondo_visual.plan(escenas, local, fps, carpeta)
+        if not fondo_visual.hay_archivo(plan):
+            raise FalloArchivo("ningún plano de archivo utilizable")
+        fondo = fondo_visual.pista_de_fondo(plan, W, H, fps, tmp / "fondo", carpeta)
+        if not fondo_visual.hay_archivo(plan):
+            raise FalloArchivo("ningún plano de archivo se pudo montar")
+        capas = tmp / "capas"
+        capas.mkdir()
+        n_cap = 0
+        with sync_playwright() as p:
+            nav = p.chromium.launch(args=["--force-color-profile=srgb",
+                                          "--font-render-hinting=none",
+                                          "--disable-lcd-text",
+                                          "--hide-scrollbars"])
+            paginas = {}
+            for modo in ("marca", "archivo"):
+                pag = nav.new_page(viewport={"width": ancho, "height": alto},
+                                   device_scale_factor=escala)
+                pag.goto(ESCENA_HTML.as_uri())
+                paginas[modo] = pag
+            ultimo = len(escenas)
+            for e, pe in zip(escenas, plan):
+                tipos = {tr["tipo"] for tr in pe["tramos"]}
+                datos = {
+                    # En la tarjeta de marca el Engranaje solo firma el cierre.
+                    "marca": dict(e, personaje=e.get("personaje") if e["n"] == ultimo else None),
+                    "archivo": dict(e, fondo="archivo", texto_pos=pe["texto_pos"],
+                                    personaje=None),
+                }
+                for modo in tipos:
+                    pag = paginas[modo]
+                    pag.evaluate("d => cargar(d)", datos[modo])
+                    problemas = _barrera(pag, guion, datos[modo])
+                    if problemas:
+                        raise FalloArchivo(
+                            f"escena {e['n']} ({modo}): no cabe «{problemas[0]['texto']}»")
+                for tr in pe["tramos"]:
+                    pag = paginas[tr["tipo"]]
+                    for f in range(tr["f0"], tr["f1"]):
+                        pag.evaluate("t => pintar(t)", f / fps)
+                        ruta = capas / f"{n_cap:06d}.png"
+                        pag.screenshot(path=str(ruta), omit_background=True)
+                        if tr["tipo"] == "marca":
+                            # Chromium guarda la tarjeta de marca, que es opaca,
+                            # como PNG sin canal alfa, y la capa de archivo con
+                            # él. Si el formato cambia a mitad de la secuencia,
+                            # ffmpeg rehace el grafo de filtros en cada corte y
+                            # el corte cae un fotograma antes o después (lo cazó
+                            # la revisión en frío del 23/09). Todo en RGBA.
+                            with Image.open(ruta) as im:
+                                if im.mode != "RGBA":
+                                    im.convert("RGBA").save(ruta)
+                        n_cap += 1
+                if verbose:
+                    detalle = " · ".join(
+                        f"{tr['tipo']}{'' if tr['tipo'] == 'marca' else ':' + str((tr['plano'] or {}).get('fuente'))}"
+                        f" {(tr['f1'] - tr['f0']) / fps:.1f}s" for tr in pe["tramos"])
+                    print(f"  {e['n']:>2} [{e.get('tipo', ''):<11}] {e['duracion_s']:>5.1f}s  "
+                          f"texto {pe['texto_pos']:<6} · {detalle}")
+            nav.close()
+
+        total_f = sum(pe["n_f"] for pe in plan)
+        if n_cap != total_f:
+            raise FalloArchivo(f"{n_cap} capturas para {total_f} fotogramas")
+        lista = capas / "lista.txt"
+        with lista.open("w", encoding="utf-8") as fh:
+            for i in range(n_cap):
+                fh.write(f"file '{i:06d}.png'\nduration {1 / fps:.6f}\n")
+            fh.write(f"file '{n_cap - 1:06d}.png'\n")
+        salida = Path(salida).resolve()
+        salida.parent.mkdir(parents=True, exist_ok=True)
+        filtro = (f"[0:v]fps={fps},format=rgba[bg];[1:v]fps={fps},format=rgba[fg];"
+                  f"[bg][fg]overlay=0:0:shortest=1:format=auto,format=yuv420p[v]")
+        cmd = ["ffmpeg", "-y", "-i", str(fondo), "-f", "concat", "-safe", "0", "-i", str(lista),
+               "-filter_complex", filtro, "-map", "[v]", "-frames:v", str(total_f),
+               "-fps_mode", "cfr", "-r", str(fps),
+               "-c:v", "libx264", "-preset", "medium", "-crf", "18",
+               "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(salida)]
+        r = subprocess.run(cmd, capture_output=True, text=True, cwd=capas,
+                           stdin=subprocess.DEVNULL)
+        if r.returncode != 0:
+            raise FalloArchivo(f"ffmpeg al componer: {r.stderr[-1200:]}")
+        # El vídeo tiene que tener EXACTAMENTE los fotogramas de la voz: si sale
+        # más corto (un trozo de fondo que no dio fotogramas y `shortest=1`), el
+        # montaje cortaría el final de la narración sin avisar.
+        salen = _fotogramas(salida)
+        if salen != total_f:
+            raise FalloArchivo(f"el vídeo compuesto tiene {salen} fotogramas y debían ser {total_f}")
+        # Lo que de verdad ha salido en el vídeo: publicar.py lo lee para los
+        # créditos y para marcar el contenido sintético.
+        (Path(carpeta) / "visual").mkdir(exist_ok=True)
+        (Path(carpeta) / "visual" / "usado.json").write_text(
+            json.dumps(fondo_visual.usado(plan, fps), ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8")
+        total_s = total_f / fps
+        if verbose:
+            m, s = divmod(total_s, 60)
+            print(f"\nVídeo mudo (C50, archivo detrás): {salida}  "
+                  f"({int(m)}m {s:04.1f}s, {n_cap} fotogramas capturados)")
+        return salida, total_s
+    except FalloArchivo:
+        raise
+    except Exception as ex:          # cualquier otra cosa, igual: al render de siempre
+        raise FalloArchivo(f"{type(ex).__name__}: {ex}") from ex
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
 def render(guion_path, salida, fps=30, escala=1.0, solo=None, verbose=True):
     guion = json.loads(Path(guion_path).read_text(encoding="utf-8"))
     escenas = preparar(guion)
@@ -126,6 +283,24 @@ def render(guion_path, salida, fps=30, escala=1.0, solo=None, verbose=True):
     # ahí el ritmo lo llevan los cortes, no la animación. Un cambio por vez
     # (regla 11.1): el largo se decide con las métricas del Short delante.
     vivo = guion.get("formato", "largo") == "corto"
+
+    # C50 (versión 13) · si `visual.py traer` ha dejado material para este
+    # Short en build/<ID>/visual/, el Short sale con vídeo detrás. Si no hay
+    # material, o el modo archivo falla por lo que sea, sale como siempre: una
+    # imagen nunca cuesta un vídeo.
+    if vivo and not solo:
+        import fondo_visual
+        carpeta = Path(guion_path).resolve().parent
+        local = fondo_visual.cargar_local(carpeta)
+        if local:
+            try:
+                return render_archivo(guion, escenas, local, carpeta, salida, fps, escala, verbose)
+            except FalloArchivo as ex:
+                print(f"::warning::C50 · el modo archivo no ha podido montar "
+                      f"{guion.get('id', '?')} ({ex}). Se renderiza con el fondo de siempre.")
+                usado = carpeta / "visual" / "usado.json"
+                if usado.exists():
+                    usado.unlink()
 
     tmp = Path(tempfile.mkdtemp(prefix="mdh_"))
     lista = tmp / "lista.txt"

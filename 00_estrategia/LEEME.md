@@ -10,7 +10,7 @@ análisis.
 |---|---|---|
 | **`REGLAS.md`** | Las restricciones que nadie puede saltarse: ética, rigor, coste cero, cómo se cambian las cosas | **Siempre, antes de tocar nada.** Es corto |
 | **`PROPIEDAD_DE_FICHEROS.md`** | Quién escribe qué. De obligado cumplimiento para toda tarea programada | Antes de escribir en cualquier sitio |
-| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 12, al final, manda sobre lo anterior** | Al ir a hacer algo, y al decidir qué se hace antes |
+| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 13, al final, manda sobre lo anterior** (y la 12, justo antes, es la que explica C48 y C50) | Al ir a hacer algo, y al decidir qué se hace antes |
 | **`PROMPT_DE_ARRANQUE.md`** | Cómo empezar una conversación nueva, autorizaciones vigentes, trampas conocidas y dónde está el proyecto hoy | Al abrir una conversación, y al cerrarla |
 | **`PROMPT_DIRECCIÓN.md`** | El cuaderno del codirector entre sesiones: lo que quiere comentar de un día para otro. **Suyo y solo suyo: se lee, no se edita ni se borra** | Al abrir una conversación de dirección |
 | **`TOKEN_DE_YOUTUBE.md`** | Cómo se saca el token de YouTube y por qué caducaba. Quince minutos, una vez | Si el canal deja de publicar, o al tocar los secretos |
@@ -82,6 +82,25 @@ Y fuera de esta carpeta, tres sitios que dicen dónde está el canal hoy:
    Tres Shorts seguidos pasaron todas las comprobaciones y no tenían hilo. Desde ese día, un guion
    no se produce sin que un lector que no lo ha escrito cuente de qué va (C48). Y la imagen pasa de
    diapositiva a vídeo (C50).
+
+## Estado a 23 de septiembre, por la tarde
+
+**C50 entra en producción el mismo día** (**versión 13** del plan). El codirector hizo las cuentas y
+la prueba de imagen por la mañana, eligió la variante A —vídeo de archivo detrás y la frase corta
+encima— con cuatro arreglos, y pidió empezar cuanto antes. Desde `MDS-024` (jueves 24):
+
+- **Cada escena lleva vídeo de archivo o una imagen generada a pantalla completa**, un plano cada dos
+  o tres segundos, y cada plano entra en la palabra de la narración que dice el guion (`desde`).
+- **Lo elige un workflow nuevo, «Visuales (C50)»**, en cuanto cambia un guion, y deja un manifiesto
+  y una hoja de contactos por Short en `05_calendario/visuales/`. La revisión diaria mira la hoja y
+  corrige en `ajustes.json`.
+- **Nada se desenfoca**, el texto no tapa caras (se detectan), no hay planos quietos (se mide el
+  movimiento), y los mensajes clave pueden ir en **tarjeta de marca**, que es lo de siempre, como
+  golpe. El final de cada Short es la firma de marca con el Engranaje.
+- **Si algo falla, sale como tarjeta de marca o como siempre.** Y hay un interruptor:
+  `05_calendario/visuales/APAGADO`.
+- **C51.1**: el Engranaje hablará (muestrario el viernes 25); la persona realista depende de que el
+  codirector diga sí a la regla 7.
 
 ## Estado a 23 de septiembre
 

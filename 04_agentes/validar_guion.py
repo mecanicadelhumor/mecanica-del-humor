@@ -120,6 +120,14 @@ TOLERANCIA_SERIE = 0.12
 # lectura la hizo el codirector en la conversación, no un subagente.
 PRIMER_SHORT_C48 = 26
 
+# C50 (versión 13, 23/09/2026): primer Short al que se le pide «visual» en
+# cada escena. MDS-024 y MDS-025 lo llevan ya (lo escribió la dirección).
+# Solo AVISO: una escena sin imagen sale como tarjeta de marca, y eso no
+# puede parar una producción.
+PRIMER_SHORT_C50 = 26
+MAX_PLANOS_ESCENA = 4
+MAX_TARJETAS_MARCA = 2
+
 # La pausa por encima de la cual `guionista_corto.md` dice que «la pausa es el
 # chiste» y la escena siguiente es el remate. Mismo umbral que usa voz.py para
 # dirigir al actor (PAUSA_DE_REMATE_S): un solo número para las dos piezas.
@@ -283,6 +291,15 @@ def sin_acentos(s):
 
 def palabras(s):
     return re.findall(r"[a-z0-9]+", sin_acentos(s))
+
+
+def aparece(fragmento, texto):
+    """C50: ¿está `fragmento` en `texto`, a principio de palabra, sin mirar
+    tildes, mayúsculas ni signos? Lo mismo que busca fondo_visual.posicion()
+    en el render, para que lo que aquí pasa allí se encuentre."""
+    f = " ".join(palabras(fragmento))
+    t = " " + " ".join(palabras(texto)) + " "
+    return bool(f) and (" " + f) in t
 
 
 VENTANA_C17_DIAS = 42  # seis semanas
@@ -746,6 +763,69 @@ def validar(path):
                             f"{gp.get('id', previo.stem)}, en su {campo} («{a}…»). El cierre honesto es "
                             f"obligatorio; la fórmula no. Dilo de otra manera y dentro de la "
                             f"historia (guionista_corto.md, la séptima regla).")
+
+        # -----------------------------------------------------------------
+        # C50 · LA IMAGEN DE CADA ESCENA (versión 13, 23/09/2026)
+        #
+        # «visual» dice qué se busca en el archivo para cada plano, desde qué
+        # palabras de la narración entra y, de respaldo, qué imagen generar
+        # (guionista_corto.md, «La imagen de cada escena»). Todo AVISO, nunca
+        # ERROR: un plano sin imagen sale como tarjeta de marca, y eso no puede
+        # parar una producción. Lo que sí hace este bloque es que un «desde» mal
+        # copiado se vea antes del render, que es donde pondría la imagen a
+        # destiempo sin avisar a nadie (lo que vio el codirector el 23/09).
+        # -----------------------------------------------------------------
+        tarjetas = 0
+        for j, e in enumerate(escenas, 1):
+            v = e.get("visual")
+            if v is None:
+                if num and int(num.group(1)) >= PRIMER_SHORT_C50:
+                    avisos.append(
+                        f"C50: la escena {j} no lleva «visual» y saldrá como tarjeta de marca. "
+                        f"Si es a propósito, escribe \"visual\": \"marca\".")
+                continue
+            if v == "marca":
+                tarjetas += 1
+                continue
+            planos_v = [v] if isinstance(v, dict) else v
+            if not isinstance(planos_v, list) or not all(isinstance(x, dict) for x in planos_v):
+                avisos.append(f"C50: escena {j}: «visual» tiene que ser \"marca\" o una lista de "
+                              f"planos. Así no se entiende y la escena saldrá como tarjeta de marca.")
+                continue
+            if len(planos_v) > MAX_PLANOS_ESCENA:
+                avisos.append(f"C50: escena {j}: {len(planos_v)} planos. Más de "
+                              f"{MAX_PLANOS_ESCENA} en una escena son parpadeos: sobran.")
+            for k, pl in enumerate(planos_v, 1):
+                if pl.get("marca"):
+                    tarjetas += 1
+                elif not (pl.get("busqueda") or pl.get("prompt") or pl.get("fijar")):
+                    avisos.append(f"C50: escena {j}, plano {k}: sin «busqueda», «prompt» ni "
+                                  f"«marca»: no hay nada que buscar.")
+                d = str(pl.get("desde") or "").strip()
+                if not isinstance(pl.get("desde", ""), (str, type(None))):
+                    avisos.append(f"C50: escena {j}, plano {k}: «desde» tiene que ser texto.")
+                if k > 1 and not d:
+                    avisos.append(
+                        f"C50: escena {j}, plano {k}: sin «desde». Los planos sin «desde» se "
+                        f"reparten la escena a partes iguales, y eso es lo que el 23/09 puso "
+                        f"la imagen a destiempo de la frase.")
+                elif d and not aparece(d, e.get("narracion")):
+                    avisos.append(
+                        f"C50: escena {j}, plano {k}: «desde: {d}» no está en la narración, "
+                        f"así que el corte no sabe dónde caer. Cópialo tal cual de la narración.")
+                consultas = pl.get("busqueda") or []
+                if not isinstance(consultas, list):
+                    consultas = [consultas]
+                for q in consultas:
+                    if re.search(r"[áéíóúñ¿¡]", str(q).lower()):
+                        avisos.append(
+                            f"C50: escena {j}, plano {k}: «{q}» parece estar en castellano. Los "
+                            f"bancos de vídeo están etiquetados en inglés.")
+        if tarjetas > MAX_TARJETAS_MARCA:
+            avisos.append(
+                f"C50: {tarjetas} tarjetas de marca. La tarjeta es el golpe del mensaje "
+                f"clave, no el fondo: {MAX_TARJETAS_MARCA} por Short como mucho (el final ya "
+                f"lleva la firma de marca por su cuenta).")
 
         # -----------------------------------------------------------------
         # C38.3 · la risa escrita (regla 13.1)

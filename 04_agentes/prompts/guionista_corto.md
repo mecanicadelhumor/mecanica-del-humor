@@ -340,6 +340,90 @@ artificial el 14 de septiembre, y por eso existe la prohibición que esto levant
 
 ---
 
+## La imagen de cada escena (C50) — obligatoria desde `MDS-026`
+
+**Desde el 24/09/2026 el Short ya no es texto sobre fondo azul: cada escena lleva vídeo de
+archivo o una imagen generada a pantalla completa, y el texto va encima.** Lo decidió el
+codirector el 23/09 después de ver la prueba (`07_pruebas/visual-23-09.md`), y la regla que
+dejó es esta: *«dinamismo es la palabra: el vídeo tiene que ser atractivo de principio a fin»*.
+Qué imagen lleva cada momento lo decides tú, al escribir, en un campo nuevo de cada escena:
+`visual`. El resto lo hace solo el workflow «Visuales (C50)» (versión 13 del plan, C50).
+
+### El formato
+
+```json
+{
+  "tipo": "enunciado",
+  "texto": "—Vengo de *Lisboa*. —Qué bien.",
+  "narracion": "En una boda, un desconocido te cuenta que acaba de volver de Lisboa. Y tú le dices: «qué bien».",
+  "visual": [
+    {"busqueda": ["two men talking wedding reception table", "wedding guests chatting at table"],
+     "prompt": "two men in suits chatting at a round wedding banquet table, warm evening light"},
+    {"desde": "acaba de volver",
+     "busqueda": ["lisbon yellow tram", "lisbon tram street"],
+     "prompt": "a yellow tram climbing a narrow sunny street in Lisbon"},
+    {"desde": "Y tú le dices",
+     "busqueda": ["man polite smile nodding party", "man nodding listening holding glass"],
+     "prompt": "a man at a wedding party giving a short polite smile and nodding"}
+  ]
+}
+```
+
+Una lista de **planos**. Cada plano, un trozo de la escena:
+
+- **`busqueda`** — lo que se busca en Pexels y Pixabay. **En inglés** (así están etiquetados),
+  de **tres a seis palabras concretas**: quién + qué hace + dónde. Dos o tres búsquedas por plano,
+  **de la más concreta a la más general**: se prueban en orden y solo se pasa a la siguiente si la
+  anterior no da nada que pegue.
+- **`desde`** — **las palabras exactas de la narración** en las que entra ese plano, copiadas tal
+  cual (sin tildes ni mayúsculas no importa; que estén, sí). El primer plano no lo lleva: empieza
+  con la escena. **Todos los demás, sí**: sin `desde` los planos se reparten la escena a partes
+  iguales, y eso es exactamente lo que el 23/09 puso la imagen a destiempo de la frase.
+- **`prompt`** — la imagen que se genera con IA si el archivo no tiene nada que pegue: una frase
+  en inglés, foto realista, sujeto + acción + lugar + luz. Si sabes de antemano que lo que cuentas
+  no existe en ningún banco («un hombre en pijama en una reunión de trabajo»), pon además
+  `"fuente": "ia"` y no se busca en el archivo.
+- **`{"marca": true, "desde": "…"}`** — una **tarjeta de marca**: durante ese tramo se ve la escena
+  como hasta ahora (fondo azul, la cifra o el diagrama en grande) y luego vuelve el vídeo. Es para
+  **el mensaje clave**: la cifra del estudio cuando la voz la dice, el mecanismo en un diagrama.
+  O la escena entera: `"visual": "marca"`. **Dos por Short como mucho**, y el final no la necesita:
+  los últimos 1,75 s de cada Short ya son la firma de marca con el Engranaje.
+
+### Las reglas
+
+1. **La imagen cuenta lo que dice la voz EN ESE MOMENTO**, no el tema del Short. Si la voz dice
+   «caldera, coche y tostadora», son tres planos, y cada uno entra con su palabra. El 23/09 la
+   imagen de un coche salió mientras la voz decía «sonríes»: eso es lo que hay que evitar.
+2. **Y no contradice el texto de pantalla**, que está toda la escena. Si en pantalla pone «Lisboa»,
+   no puede verse solo una boda: que entre Lisboa cuando la voz la dice.
+3. **Un plano cada dos o tres segundos.** Una escena de ocho segundos lleva dos o tres planos;
+   ninguna más de cuatro. Una escena de menos de tres segundos, uno.
+4. **Concreto y visible.** Personas haciendo algo, manos, objetos, lugares. Nunca palabras
+   abstractas («stress», «humor», «memory», «success»): no hay vídeo de eso, y lo que devuelven los
+   bancos con esas palabras es exactamente lo que huele a banco de imágenes.
+5. **Una persona identificable de archivo nunca ilustra algo negativo de alguien** («le dejó en
+   ridículo», «no se enteró de nada»). Para eso: objetos, manos, siluetas, gente de espaldas, o una
+   imagen generada.
+6. **Ni niños, ni marcas, ni texto dentro de la imagen, ni nadie famoso.** No los pidas en la
+   búsqueda ni en el prompt.
+7. **En las escenas de paneles (`comparacion`, `diagrama`, `lista`) el texto va en el centro**:
+   pide planos sin caras (objetos, manos, lugares), porque los paneles taparían la cara. En el resto,
+   el texto va abajo, o arriba si hay caras abajo: eso lo decide solo el resolvedor, midiendo.
+8. **El Engranaje (`personaje`) y los iconos (`icono`) solo salen en las tarjetas de marca** y en
+   el render de siempre, que es el respaldo si algo falla. Sigue escribiéndolos como antes: no
+   estorban y el respaldo los necesita.
+
+### Qué pasa después, para que sepas qué mirar
+
+Al subir los guiones, «Visuales (C50)» elige los planos y deja en `05_calendario/visuales/` el
+manifiesto `<ID>.json` y una **hoja de contactos** `<ID>.jpg`: un cuadro por plano, con la frase
+que suena durante ese plano debajo. `validar_guion.py` avisa (C50) si un `desde` no está en la
+narración, si una búsqueda parece estar en castellano, si hay más de dos tarjetas de marca o si a
+una escena le falta `visual`. **Son avisos: léelos y arréglalos**, porque ninguno para la
+producción y todos se ven en el vídeo.
+
+---
+
 ## Salida
 
 Un archivo `05_calendario/guiones/MDS-0XX.es.json` válido contra `esquema_guion.json`, con:
@@ -349,8 +433,9 @@ Un archivo `05_calendario/guiones/MDS-0XX.es.json` válido contra `esquema_guion
 ```
 
 Entre **3 y 8 escenas**, con los campos **`historia`** y **`lectura_en_frio`** (ver «Lo
-primero de todo: la historia»). **El techo son 55 segundos** y lo comprueba `validar_guion.py`,
-que para la producción si te pasas. La duración de la serie es una referencia (desde el
+primero de todo: la historia»), y **`visual` en cada escena** (ver «La imagen de cada
+escena»). **El techo son 55 segundos** y lo comprueba `validar_guion.py`, que para la
+producción si te pasas. La duración de la serie es una referencia (desde el
 23/09/2026, C48): la duración la decide la historia. Ninguna escena puede durar más de 12 s.
 
 `validar_guion.py` estima la duración a **130 palabras por minuto**, que es lo que mide la
@@ -579,7 +664,7 @@ chiste en el segundo cero, pausa de 1,3 s antes del remate, personaje en tres es
 2, la 4 y la 6 — nunca la del planteamiento) y cierre que dice dónde falla. Léelo antes de
 escribir el primero.
 
-## Y la lista de comprobación final, que cabe en ocho líneas
+## Y la lista de comprobación final, que cabe en diez líneas
 
 Antes de entregar, contra el guion terminado:
 
@@ -596,6 +681,9 @@ Antes de entregar, contra el guion terminado:
 7. No pasa de 55 s. (La duración de la serie y el remate en el segundo 10 son referencia
    desde el 23/09: no se cumplen a costa de trocear el guion.)
 8. Si hay `risa`, es una sola y no está ni en la escena 1, ni en el remate, ni en el cierre.
+9. Cada escena lleva `visual`; cada plano menos el primero lleva `desde` copiado de su
+   narración; las búsquedas van en inglés y dicen quién hace qué y dónde; dos tarjetas de marca
+   como mucho.
 
-Si una falla, no entregues: arregla. Las ocho se comprueban en cinco minutos y cada una ha
+Si una falla, no entregues: arregla. Todas se comprueban en cinco minutos y cada una ha
 costado ya un vídeo.

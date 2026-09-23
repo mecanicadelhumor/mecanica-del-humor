@@ -34,20 +34,68 @@
    "et_a": "diez personas",
    "et_b": "otras diez",
    "narracion": "A diez personas de unos setenta años les ponen vídeos graciosos. A otras diez las sientan veinte minutos sin hacer nada.",
-   "pausa_despues_s": 0.5
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "people watching tv from behind sofa",
+      "elderly couple watching tv from behind",
+      "living room tv screen sofa"
+     ],
+     "prompt": "two elderly people seen from behind sitting on a sofa watching a funny video on a TV, living room"
+    },
+    {
+     "desde": "A otras diez",
+     "busqueda": [
+      "wall clock ticking",
+      "clock ticking close up",
+      "clock time passing"
+     ],
+     "prompt": "a simple wall clock in a quiet plain room, the second hand moving"
+    }
+   ]
   },
   {
    "tipo": "enunciado",
    "texto": "Sin *móvil*, sin leer",
    "narracion": "Sin móvil, sin leer y sin dormirse.",
-   "pausa_despues_s": 1.3
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "putting phone down on table",
+      "smartphone face down table",
+      "hand puts phone away"
+     ],
+     "prompt": "a hand placing a smartphone face down on a wooden table"
+    },
+    {
+     "desde": "sin dormirse",
+     "busqueda": [
+      "old man falling asleep armchair",
+      "elderly man dozing off chair",
+      "senior napping armchair"
+     ],
+     "prompt": "an old man dozing off in an armchair, head nodding"
+    }
+   ]
   },
   {
    "tipo": "enunciado",
    "personaje": "rie",
    "texto": "Ni *cinco* minutos",
    "narracion": "Yo no aguanto ni cinco.",
-   "pausa_despues_s": 0.6
+   "pausa_despues_s": 0.6,
+   "visual": [
+    {
+     "busqueda": [
+      "impatient man checking watch",
+      "bored man fidgeting waiting",
+      "impatient waiting tapping fingers"
+     ],
+     "prompt": "an impatient man checking his wristwatch, close-up"
+    }
+   ]
   },
   {
    "tipo": "dato",
@@ -56,7 +104,21 @@
    "cifra": "43,6%",
    "pie": "las que vieron los *vídeos*",
    "narracion": "Después, en un test de memoria, las que vieron los vídeos mejoraron un cuarenta y tres coma seis por ciento.",
-   "pausa_despues_s": 0.45
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "elderly woman writing test paper",
+      "senior filling questionnaire",
+      "old woman writing on paper"
+     ],
+     "prompt": "an elderly woman writing a list of words on a sheet of paper during a memory test"
+    },
+    {
+     "desde": "mejoraron",
+     "marca": true
+    }
+   ]
   },
   {
    "tipo": "enunciado",
@@ -64,7 +126,26 @@
    "fuente": "G04",
    "texto": "Les bajó el *cortisol*",
    "narracion": "Los autores apuntan al estrés: en ellas bajó el cortisol, la hormona del estrés.",
-   "pausa_despues_s": 0.45
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "saliva sample test tube laboratory",
+      "laboratory test tubes scientist",
+      "lab technician test tube"
+     ],
+     "prompt": "a lab technician holding a small saliva sample tube, close-up, clean clinical light"
+    },
+    {
+     "desde": "en ellas bajó",
+     "busqueda": [
+      "relaxed elderly woman smiling",
+      "calm senior woman smiling",
+      "happy elderly woman relaxing"
+     ],
+     "prompt": "a relaxed elderly woman smiling calmly in a bright living room"
+    }
+   ]
   },
   {
    "tipo": "cierre",
@@ -73,7 +154,26 @@
    "titulo": "Eran *diez* por grupo",
    "subtitulo": "Humor y memoria en mayores · Bains y otros",
    "narracion": "Lo malo es que eran diez por grupo. Y las que solo estuvieron sentadas, sin móvil, mejoraron casi la mitad.",
-   "pausa_despues_s": 0.2
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "small group of elderly people sitting in circle",
+      "group of seniors meeting room",
+      "senior group sitting chairs"
+     ],
+     "prompt": "a small group of ten elderly people sitting on chairs in a circle in a community room"
+    },
+    {
+     "desde": "Y las que solo",
+     "busqueda": [
+      "elderly woman sitting calmly by window",
+      "senior woman sitting quietly",
+      "old woman sitting window"
+     ],
+     "prompt": "an elderly woman sitting quietly by a window, calm afternoon light"
+    }
+   ]
   }
  ]
 }

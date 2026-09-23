@@ -342,11 +342,83 @@
   body.con-personaje #engranaje{display:none}
   body.con-personaje #personaje{display:block}
 
+  /* ================= C50 · MODO ARCHIVO (versión 13, 23/09/2026) ============
+     El texto va ENCIMA de un vídeo de archivo o de una imagen generada. Lo
+     enciende render.py con d.fondo = "archivo" en los tramos que llevan
+     imagen; el resto del Short se pinta exactamente como siempre. Aquí solo
+     cambia la capa de texto: el fondo desaparece (render.py captura con
+     fondo transparente) y ffmpeg compone el vídeo debajo.
+
+     Lo que pidió el codirector al ver la prueba del 23/09
+     (07_pruebas/visual-23-09.md), punto por punto:
+       · «el vídeo de fondo se vuelve borroso y no se ve» bajo la cifra y
+         los recuadros: aquí no se desenfoca nada, nunca. Lo que hace
+         legible el texto es un velo oscuro en degradado SOLO en la banda
+         del texto, y una sombra en la letra;
+       · «a veces el título cae justo encima de la cara»: el texto va abajo
+         por defecto, y arriba cuando visual.py ha visto caras en la banda
+         de abajo (d.texto_pos, medido con OpenCV al elegir el plano);
+       · las escenas de paneles (comparación, diagrama, lista) van al
+         centro, con los recuadros en el azul de marca, translúcido: el
+         vídeo se sigue viendo alrededor y a través.
+     El Engranaje y los iconos no se pintan encima del archivo: el Engranaje
+     firma el final, en la tarjeta de marca (C50, versión 12). */
+  #velo{position:absolute;inset:0;display:none;pointer-events:none}
+  html[data-fondo="archivo"], html[data-fondo="archivo"] body{background:transparent}
+  html[data-fondo="archivo"] #reticula, html[data-fondo="archivo"] #vineta,
+  html[data-fondo="archivo"] #marco, html[data-fondo="archivo"] #engranaje,
+  html[data-fondo="archivo"] #personaje, html[data-fondo="archivo"] .icono{display:none !important}
+  html[data-fondo="archivo"] #velo{display:block}
+  html[data-fondo="archivo"] #avance{z-index:3}  /* #velo va detrás del texto, no de la barra */
+  html[data-fondo="archivo"][data-pos="abajo"] #velo{background:
+      linear-gradient(to top, rgba(0,0,0,.80) 0%, rgba(0,0,0,.66) 24%, rgba(0,0,0,.34) 40%, rgba(0,0,0,0) 56%),
+      linear-gradient(to bottom, rgba(0,0,0,.42) 0%, rgba(0,0,0,0) 8%)}
+  html[data-fondo="archivo"][data-pos="arriba"] #velo{background:
+      linear-gradient(to bottom, rgba(0,0,0,.80) 0%, rgba(0,0,0,.66) 24%, rgba(0,0,0,.34) 44%, rgba(0,0,0,0) 58%),
+      linear-gradient(to top, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 22%)}
+  html[data-fondo="archivo"][data-pos="centro"] #velo{background:
+      linear-gradient(to bottom, rgba(0,0,0,.42) 0%, rgba(0,0,0,.22) 30%, rgba(0,0,0,.22) 70%, rgba(0,0,0,.55) 100%)}
+  /* Bandas. Abajo: de 960 a 1490 px, por encima de la interfaz de Shorts
+     (los ~430 px de abajo) y con 150 px libres a la derecha para la columna
+     de botones. Arriba: de 250 a 920 px. Centro: la de siempre. */
+  html[data-fmt="v"][data-fondo="archivo"] #escena{padding:960px 150px 430px 76px;
+      align-items:flex-end;transform-origin:50% 78%}
+  html[data-fmt="v"][data-fondo="archivo"][data-pos="arriba"] #escena{padding:250px 76px 1000px 76px;
+      align-items:flex-start;transform-origin:50% 13%}
+  html[data-fmt="v"][data-fondo="archivo"][data-pos="centro"] #escena{padding:330px 76px 460px 76px;
+      align-items:center;transform-origin:50% 46%}
+  /* La escala tipográfica baja un escalón: la banda es la mitad de alta que
+     el lienzo de la tarjeta. encajarBanda() termina el trabajo midiendo. */
+  html[data-fmt="v"][data-fondo="archivo"] .enunciado{font-size:86px;line-height:1.12}
+  html[data-fmt="v"][data-fondo="archivo"] body.txt-s  .enunciado{font-size:104px;line-height:1.08}
+  html[data-fmt="v"][data-fondo="archivo"] body.txt-xs .enunciado{font-size:128px;line-height:1.04}
+  html[data-fmt="v"][data-fondo="archivo"] h1,
+  html[data-fmt="v"][data-fondo="archivo"] body.txt-s h1,
+  html[data-fmt="v"][data-fondo="archivo"] body.txt-xs h1{font-size:118px}
+  html[data-fmt="v"][data-fondo="archivo"] h2{font-size:84px}
+  html[data-fmt="v"][data-fondo="archivo"] body.txt-s h2,
+  html[data-fmt="v"][data-fondo="archivo"] body.txt-xs h2{font-size:96px}
+  html[data-fmt="v"][data-fondo="archivo"] .cifra{font-size:240px}
+  html[data-fmt="v"][data-fondo="archivo"] .cifra-pie{font-size:50px}
+  /* Legibilidad sobre cualquier imagen: letra con sombra, y los grises de
+     marca (pensados para el azul noche) pasan a casi blanco. */
+  html[data-fondo="archivo"] #escena, html[data-fondo="archivo"] #firma,
+  html[data-fondo="archivo"] #ref{text-shadow:0 4px 22px rgba(0,0,0,.85),0 2px 5px rgba(0,0,0,.8)}
+  html[data-fondo="archivo"] .sub, html[data-fondo="archivo"] .cifra-pie,
+  html[data-fondo="archivo"] .pie, html[data-fondo="archivo"] .autor,
+  html[data-fondo="archivo"] .panel .et, html[data-fondo="archivo"] .vs,
+  html[data-fondo="archivo"] .pila .pp, html[data-fondo="archivo"] .pila .flecha,
+  html[data-fondo="archivo"] #firma, html[data-fondo="archivo"] #ref{color:rgba(242,244,248,.92)}
+  html[data-fondo="archivo"] .panel, html[data-fondo="archivo"] .pila .paso{
+      background:rgba(11,18,32,.80);text-shadow:none}
+  html[data-fondo="archivo"] .vs{text-shadow:0 2px 10px rgba(0,0,0,.9)}
+
 </style>
 </head>
 <body>
 <div id="avance"><i></i></div>
 <div id="reticula"></div>
+<div id="velo"></div>
 <div id="escena"></div>
 <div id="vineta"></div>
 <div id="marco"></div>
@@ -880,6 +952,15 @@ function cargar(d){
   // usa para el viewport, así no hay forma de que el tamaño de página y el de
   // captura se desincronicen.
   document.documentElement.dataset.fmt = (d.formato === "corto") ? "v" : "h";
+  // C50 · modo archivo (ver el CSS). Va lo primero: cambia la maqueta, y todo
+  // lo que se mide después (ajustarTamano, encajarBanda, la barrera) tiene que
+  // medir la maqueta buena. Encima del archivo no van ni el Engranaje ni el
+  // icono: se quitan del dato, no solo de la vista, para que no cuenten en el
+  // escalonado de entrada.
+  const ARCHIVO = d.fondo === "archivo" && d.formato === "corto";
+  document.documentElement.dataset.fondo = ARCHIVO ? "archivo" : "";
+  document.documentElement.dataset.pos = ARCHIVO ? (d.texto_pos || "abajo") : "";
+  if (ARCHIVO) d = Object.assign({}, d, {personaje: null, icono: null});
   // El personaje: si la escena no lo pide, no existe. Se pone la clase ANTES
   // de recoger UNIDADES para que entre en el escalonado como una unidad más.
   const cara = document.getElementById("personaje");
@@ -932,9 +1013,54 @@ function cargar(d){
   ajustarTamano();
   // C29 · y lo mismo dentro del <svg>, que ajustarTamano() no sabe medir.
   ajustarTextoSVG();
+  // C50 · y en modo archivo, que el bloque entero quepa en su banda.
+  if (ARCHIVO) encajarBanda();
 
   pintar(0);
   return UNIDADES.length;
+}
+
+// ===================================================================
+// C50 · Encajar en la banda (modo archivo, 23/09/2026).
+//
+// En la tarjeta de marca el texto tiene casi todo el lienzo; encima del
+// archivo tiene una banda (abajo, arriba o centro: ver el CSS). ajustarTamano()
+// ya garantiza que cada línea cabe a lo ANCHO; esto garantiza que el bloque
+// entero cabe a lo ALTO de su banda: mientras .caja sea más alta que el hueco,
+// la letra grande del bloque baja un 5 % a la vez (a la vez, para que la
+// jerarquía de tamaños se mantenga).
+//
+// Suelo: 64 px, el mínimo legible de C2 (el mismo de ajustarTamano); la letra
+// que ya era pequeña (antetítulos, pies) no se toca. Si ni así cabe, sobra
+// texto para la banda: se marca, la barrera (comprobarDesbordes) lo cuenta
+// como problema y render.py hace ESE Short con el render de siempre, que tiene
+// todo el lienzo. Nunca sale un texto encogido hasta no leerse.
+//
+// Una vez por escena, dentro de cargar(): mismo guion, mismo píxel (11.5).
+// ===================================================================
+function encajarBanda(){
+  const SUELO = 64;
+  const esc = document.getElementById("escena");
+  const caja = esc && esc.querySelector(".caja");
+  document.body.dataset.bandaDesborda = "";
+  if (!caja) return;
+  esc.style.transform = "";            // el zoom lento de pintar() no cuenta
+  const cs = getComputedStyle(esc);
+  const hueco = esc.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+  const nodos = [caja].concat(Array.from(caja.querySelectorAll("*")))
+                  .filter(el => el instanceof HTMLElement);
+  const base = nodos.map(el => parseFloat(getComputedStyle(el).fontSize) || 0);
+  let k = 1, vueltas = 0, movido = true;
+  while (caja.getBoundingClientRect().height > hueco + 1 && movido && vueltas < 40){
+    k *= 0.95; vueltas++; movido = false;
+    nodos.forEach((el, i) => {
+      if (base[i] <= SUELO) return;
+      const nuevo = Math.max(SUELO, base[i] * k);
+      if (nuevo < parseFloat(el.style.fontSize || base[i]) - 0.01) movido = true;
+      el.style.fontSize = nuevo.toFixed(2) + "px";
+    });
+  }
+  if (caja.getBoundingClientRect().height > hueco + 1) document.body.dataset.bandaDesborda = "1";
 }
 
 // suavizado (ease-out cúbico)
@@ -1244,6 +1370,25 @@ function comprobarDesbordes(){
     });
   });
 
+  // C50 · en modo archivo, además, que el bloque quepa en su banda (lo mide
+  // encajarBanda() dentro de cargar()). Si no cabe, render.py hace el Short con
+  // el render de siempre.
+  if (document.documentElement.dataset.fondo === "archivo" &&
+      document.body.dataset.bandaDesborda === "1"){
+    const caja = document.querySelector("#escena .caja");
+    const rc = caja ? caja.getBoundingClientRect() : {left: 0, top: 0, right: 0, bottom: 0};
+    problemas.push({
+      selector: "#escena .caja (banda del modo archivo)",
+      texto: (caja ? caja.textContent : "").trim().replace(/\s+/g, " ").slice(0, 140),
+      scrollWidth: null, clientWidth: null,
+      scrollHeight: Math.round(rc.bottom - rc.top), clientHeight: null,
+      rect: { left: Math.round(rc.left), top: Math.round(rc.top),
+              right: Math.round(rc.right), bottom: Math.round(rc.bottom) },
+      lienzo: { W, H },
+      desbordaAncho: false, desbordaAlto: true, fueraLienzo: false
+    });
+  }
+
   return problemas;
 }
 
@@ -1252,6 +1397,7 @@ window.pintar = pintar;
 window.comprobarDesbordes = comprobarDesbordes;
 window.ajustarTamano = ajustarTamano;
 window.ajustarTextoSVG = ajustarTextoSVG;
+window.encajarBanda = encajarBanda;
 </script>
 </body>
 </html>

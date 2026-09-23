@@ -386,6 +386,12 @@ def main():
         "musica": json.loads((carpeta / "musica.json").read_text(encoding="utf-8"))
                   if (carpeta / "musica.json").exists() else None,
         "guion": guion,
+        # C50 (23/09/2026): qué salió de verdad detrás del texto —los planos de
+        # archivo o generados, con su escena y su tramo—, o null si el Short
+        # salió como siempre (sin manifiesto, o el modo archivo falló y
+        # render.py volvió al fondo de siempre: eso se ve aquí sin abrir el log).
+        "visual": json.loads((carpeta / "visual" / "usado.json").read_text(encoding="utf-8"))
+                  if (carpeta / "visual" / "usado.json").exists() else None,
         "fotogramas_s": marcas,
         "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión "
                  "diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y "

@@ -150,9 +150,12 @@ confundirlas:
 | `02_marca/banco/banco.json` | **Generado el 21/09** desde `creditos_pixabay.csv` | Los tres campos que exige la regla 9 —licencia, autor, enlace— de las quince fotos. **C34 desbloqueado** |
 | `05_calendario/guiones/MDS-023`, `024` y `025` | **Reescritos por la dirección el 23/09** (C48 y C48.1) | Nadie los edita, **tampoco la revisión diaria con la excepción de las 48 horas**: si ve algo, lo escribe en `revisiones/` y en su fichero de `estado/` |
 | `05_calendario/parrilla.json` · emisión del **sábado 26** con `MDS-023` | **Red de seguridad de la dirección** (23/09) | Si el 23 se rehízo bien, ese día `cola.py` dice «nada que producir». Se puede borrar el lunes 28 |
-| Claves de C50 (Pexels, Pixabay, Cloudflare) como secretos de GitHub | **Pedidas al codirector el 23/09** | Cuentas gratuitas de la marca. Tarea 2 de `tareas_codirector_2026-09-23.md` |
-| `.github/workflows/visual_prueba.yml` | **Entregado el 23/09** en `07_pruebas/visual-23-09/`, **lo crea el codirector a mano** | Prueba de C50. Solo `workflow_dispatch`: no produce ni publica; deja las hojas de contactos en `07_pruebas/visual-23-09/hojas/` y las previas en un artefacto |
-| `03_produccion/pipeline/visual.py` y `muestrario_visual.py` | **De la dirección, en prueba** (23/09) | Hoy solo los llama `visual_prueba.yml`. **La revisión diaria no los toca** hasta que C50 entre en producción |
+| Claves de C50 (Pexels, Pixabay, Cloudflare) como secretos de GitHub | **Puestas por el codirector el 23/09** | `PEXELS_API_KEY`, `PIXABAY_API_KEY`, `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_API_TOKEN`. Las usa `visuales.yml`; `producir.yml` no las necesita |
+| `.github/workflows/visuales.yml` | **Entregado el 23/09 (tarde)** en `00_estrategia/tareas/workflows_2026-09-23/`, **lo mueve el codirector a mano** (tarea 3) | C50 en producción: elige los planos de cada Short al cambiar un guion, a diario a las 16:37 UTC y a mano; sube manifiesto y hoja de contactos a `05_calendario/visuales/` |
+| `.github/workflows/producir.yml` · paso «Traer el material visual (C50)» | **Entregado el 23/09 (tarde)**, el fichero entero en la misma carpeta, **lo sustituye el codirector** (tarea 3) | Baja los planos del manifiesto antes del render (regla 11.6). Nunca falla la producción |
+| `.github/workflows/visual_prueba.yml` | **Se retira el 23/09 (tarde)**: lo borra el codirector en la tarea 3 | Era la prueba de C50; su código (`muestrario_visual.py` y el `visual.py` de prueba) ya no existe |
+| `03_produccion/pipeline/visual.py` · `fondo_visual.py` | **De la dirección** (23/09, C50 en producción) | `visual.py`: resolver, traer, diagnóstico. `fondo_visual.py`: cortes y pista de fondo para `render.py`. **La revisión diaria no los toca sin encargo**; los planos se corrigen con `05_calendario/visuales/ajustes.json`, no con código |
+| `05_calendario/visuales/` | **Del workflow `visuales.yml`**, salvo `ajustes.json` (revisión diaria) y `APAGADO` (el codirector y yo) | Ver su `LEEME.md`. `APAGADO` es el interruptor de C50: si existe, todo sale como antes |
 
 **Y la consecuencia práctica de la autorización general, que es la que importa:** desde el
 12/09 escribo directamente en la carpeta del codirector con `device_commit_files` los
@@ -567,6 +570,46 @@ leer `origin/main`, un clon aparte fuera de su carpeta (`git clone --filter=blob
 dispositivo, GitHub por HTTPS funciona, y su API también, incluidas las ejecuciones de Actions).
 Y ningún fichero temporal dentro de `C:\MisProyectos\Humor`: los scripts de trabajo, en `$HOME`.
 Si se escapa uno, se mueve a `_to_delete/`, que está en `.gitignore`.
+
+**41. Un `except` que convierte un fallo en «no hay resultado» borra la única pista.** El 23/09 la
+variante C de la prueba de imagen no sacó ni una imagen de Cloudflare en 21 intentos, y no hubo forma
+de saber por qué: `visual.py` capturaba la excepción, escribía «sin_imagen» y seguía, y el registro
+de Actions no se puede leer sin permisos de administrador. El codirector vio «todo azul, como hasta
+hoy» y no supo si era un fallo o una decisión.
+→ **Todo lo que habla con un servicio de fuera guarda lo que el servicio contestó** (el código y el
+cuerpo de la respuesta), y lo deja donde se lee sin credenciales: en el repositorio o en el resumen
+de la ejecución, no solo en el registro. Y una prueba que puede fallar en silencio dice en su propio
+resultado que ha fallado.
+
+## Dónde está el proyecto a 23 de septiembre de 2026, por la tarde
+
+**C50 entra en producción el mismo día (versión 13, la que manda).** El codirector creó por la mañana
+las tres cuentas y las cuatro claves, lanzó la prueba y la contestó: **A** —archivo detrás y la frase
+corta encima—, con cuatro problemas (el texto sobre las caras, la imagen a destiempo, el fondo
+desenfocado bajo la cifra y los paneles, un plano quieto), B no, C no llegó a verse, y cuatro notas:
+tarjetas de marca intercaladas, un personaje que hable (o un avatar dibujado), siempre el mismo, y
+*«dinamismo es la palabra»*. Pidió empezar a producir cuanto antes, así que no se esperó al viernes:
+
+- **Código:** `visual.py` reescrito como resolvedor de producción (relevancia por título, varias
+  búsquedas en orden, movimiento, caras con OpenCV, diagnóstico de las APIs, manifiesto y hoja de
+  contactos por plano), `fondo_visual.py` nuevo (cortes anclados a la palabra sobre la voz real,
+  pista de fondo), `render.py` y `escena.html` con **modo archivo** y respaldo automático al render
+  de siempre, `publicar.py` con créditos y `containsSyntheticMedia`, avisos C50 en
+  `validar_guion.py`. Probado de punta a punta en el contenedor con clips sintéticos (bitácora
+  del 23/09, sección 8).
+- **`MDS-024` y `MDS-025` llevan `visual`**: el jueves 24 sale el primer Short con vídeo detrás.
+- **La planificación escribe `visual` desde `MDS-026`**; la revisión diaria mira cada día la hoja de
+  contactos y corrige en `ajustes.json`.
+- **C51.1:** el Engranaje hablará (muestrario el viernes 25); la persona realista, solo si el
+  codirector dice sí a la regla 7 (pregunta en su fichero de tareas).
+
+**Lo que espera al codirector:** la **tarea 3** de `tareas/tareas_codirector_2026-09-23.md`: mover
+`visuales.yml` y `producir.yml` a `.github/workflows/`, borrar `visual_prueba.yml` y hacer `push`; y,
+si puede, una producción de prueba de `MDS-024` sin subir.
+
+**Para la próxima sesión (viernes 25):** mirar `MDS-024` y `MDS-025` publicados, calibrar los
+umbrales de movimiento (0,5) y relevancia (0,34) con los datos reales de sus manifiestos, leer el
+primer `diagnostico.json` (qué le pasaba a Cloudflare), y el muestrario del Engranaje que habla.
 
 ## Dónde está el proyecto a 23 de septiembre de 2026
 

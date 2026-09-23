@@ -29,14 +29,61 @@
    "icono": "i-bocadillos",
    "texto": "—Vengo de *Lisboa*. —Qué bien.",
    "narracion": "En una boda, un desconocido te cuenta que acaba de volver de Lisboa. Y tú le dices: «qué bien».",
-   "pausa_despues_s": 1.3
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "two men talking wedding reception table",
+      "wedding guests chatting at table",
+      "wedding party conversation"
+     ],
+     "prompt": "two men in suits chatting at a round wedding banquet table, one talking enthusiastically, the other listening politely, warm evening light"
+    },
+    {
+     "desde": "acaba de volver",
+     "busqueda": [
+      "lisbon yellow tram",
+      "lisbon tram street",
+      "lisbon old town street"
+     ],
+     "prompt": "a yellow tram climbing a narrow sunny street in Lisbon"
+    },
+    {
+     "desde": "Y tú le dices",
+     "busqueda": [
+      "man polite smile nodding party",
+      "man nodding listening holding glass",
+      "man forced smile wedding"
+     ],
+     "prompt": "a man at a wedding party giving a short polite smile and nodding, holding a glass of wine, candid"
+    }
+   ]
   },
   {
    "tipo": "enunciado",
    "personaje": "rie",
    "texto": "Se va con la copa *llena*",
    "narracion": "Silencio. Y se va a por otra copa con la suya llena.",
-   "pausa_despues_s": 0.6
+   "pausa_despues_s": 0.6,
+   "visual": [
+    {
+     "busqueda": [
+      "awkward silence two men party",
+      "awkward silence wedding table",
+      "two people awkward silence"
+     ],
+     "prompt": "two men sitting side by side at a wedding table in awkward silence, looking away from each other"
+    },
+    {
+     "desde": "Y se va",
+     "busqueda": [
+      "man walking away holding wine glass",
+      "man leaving party with glass of wine",
+      "man walking with wine glass"
+     ],
+     "prompt": "a man in a suit walking away from a wedding table holding a full glass of red wine, seen from behind"
+    }
+   ]
   },
   {
    "tipo": "comparacion",
@@ -46,7 +93,26 @@
    "et_a": "la de antes",
    "et_b": "la de ahora",
    "narracion": "Misma frase, otra respuesta: «qué bien; yo de Lisboa solo conozco los pasteles de nata». Y te cuenta dónde se comen.",
-   "pausa_despues_s": 0.45
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "pastel de nata",
+      "portuguese custard tart",
+      "custard tarts bakery close up"
+     ],
+     "prompt": "Portuguese custard tarts, pasteis de nata, on a small plate on a cafe counter, close-up"
+    },
+    {
+     "desde": "Y te cuenta",
+     "busqueda": [
+      "lisbon pastry shop counter",
+      "bakery display pastries",
+      "pastry shop window"
+     ],
+     "prompt": "the counter of a traditional pastry shop in Lisbon with trays of custard tarts, no people"
+    }
+   ]
   },
   {
    "tipo": "diagrama",
@@ -63,13 +129,46 @@
     }
    ],
    "narracion": "En improvisación lo llaman «sí, y además»: aceptas lo que te dan y añades algo tuyo.",
-   "pausa_despues_s": 0.45
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "marca": true
+    },
+    {
+     "desde": "aceptas",
+     "busqueda": [
+      "microphone on stage spotlight",
+      "comedy club stage",
+      "theater stage lights"
+     ],
+     "prompt": "an empty small comedy stage with a microphone on a stand under a warm spotlight"
+    }
+   ]
   },
   {
    "tipo": "enunciado",
    "texto": "El tema ya estaba: *Lisboa*",
    "narracion": "Por eso te quedas en blanco: buscas un tema nuevo cuando ya te habían dado Lisboa.",
-   "pausa_despues_s": 0.4
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "man thinking blank stare party",
+      "man lost for words thinking",
+      "confused man thinking"
+     ],
+     "prompt": "a man at a party staring into space, lost for words, candid"
+    },
+    {
+     "desde": "cuando ya te habían dado",
+     "busqueda": [
+      "lisbon rooftops view",
+      "lisbon aerial view",
+      "lisbon city view"
+     ],
+     "prompt": "Lisbon rooftops and the river at golden hour, wide view"
+    }
+   ]
   },
   {
    "tipo": "cierre",
@@ -78,7 +177,17 @@
    "titulo": "Truco de *actores*, no de científicos",
    "subtitulo": "Improvisación · el «sí, y además»",
    "narracion": "Eso sí, es un truco de actores, no de científicos: sale de un manual de teatro.",
-   "pausa_despues_s": 0.2
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "theater actors bowing stage",
+      "theatre stage curtain",
+      "theater stage spotlight"
+     ],
+     "prompt": "actors taking a bow on a small theater stage, red curtain, warm stage lights"
+    }
+   ]
   }
  ]
 }

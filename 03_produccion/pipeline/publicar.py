@@ -65,6 +65,10 @@ TEXTOS = {
         "empezamos": "Empezamos",
         "fuentes": "Fuentes",
         "musica": "Música",
+        "imagen": "Imagen",
+        "archivo_de": "Vídeo de archivo de {banco}: {autores}",
+        "generada": ("Algunas imágenes de este vídeo están generadas con IA "
+                     "(FLUX, de Black Forest Labs, en Cloudflare Workers AI)."),
         "cierre": ("Guion documentado con investigación revisada por pares y producido "
                    "con ayuda de IA. Si detectas un error, dímelo en comentarios y lo "
                    "corrijo en pantalla."),
@@ -74,6 +78,10 @@ TEXTOS = {
         "empezamos": "Start",
         "fuentes": "Sources",
         "musica": "Music",
+        "imagen": "Footage",
+        "archivo_de": "Stock footage from {banco}: {autores}",
+        "generada": ("Some images in this video are AI-generated "
+                     "(FLUX by Black Forest Labs, on Cloudflare Workers AI)."),
         "cierre": ("Script sourced from peer-reviewed research and produced with the help "
                    "of AI. If you spot an error, tell me in the comments and I'll correct "
                    "it on screen."),
@@ -139,7 +147,35 @@ def creditos_musica(carpeta, raiz):
     return list(pista["atribucion"])
 
 
-def descripcion(guion, meta, biblio, creditos=()):
+def creditos_visual(carpeta, guion):
+    """C50 (versión 13, 23/09/2026): de dónde sale la imagen del vídeo.
+
+    Lo lee de build/<ID>/visual/usado.json, que render.py escribe con lo que
+    DE VERDAD salió en el vídeo (si el modo archivo falló y el Short salió
+    como siempre, ese fichero no existe y aquí no se añade nada). Pexels y
+    Pixabay no exigen atribución; se atribuye igual (regla 9). Devuelve
+    (líneas para la descripción, lleva imágenes generadas: bool)."""
+    ruta = Path(carpeta) / "visual" / "usado.json"
+    if not ruta.exists():
+        return [], False
+    try:
+        datos = json.loads(ruta.read_text(encoding="utf-8"))
+    except Exception:
+        return [], False
+    T = textos(guion)
+    autores = {"Pexels": [], "Pixabay": []}
+    for p in datos.get("planos", []):
+        banco = {"pexels": "Pexels", "pixabay": "Pixabay"}.get(p.get("fuente"))
+        if banco and p.get("autor") and p["autor"] not in autores[banco]:
+            autores[banco].append(p["autor"])
+    lineas = [T["archivo_de"].format(banco=b, autores=", ".join(a)) for b, a in autores.items() if a]
+    sintetico = bool(datos.get("sintetico"))
+    if sintetico:
+        lineas.append(T["generada"])
+    return lineas, sintetico
+
+
+def descripcion(guion, meta, biblio, creditos=(), visual=()):
     T = textos(guion)
     L = []
     if meta.get("descripcion"):
@@ -162,6 +198,8 @@ def descripcion(guion, meta, biblio, creditos=()):
         L += [f"\n{T['fuentes']}"] + citas
     if creditos:
         L += [f"\n{T['musica']}"] + list(creditos)
+    if visual:
+        L += [f"\n{T['imagen']}"] + list(visual)
     L.append("\n" + T["cierre"])
     return "\n".join(L)[:4900]
 
@@ -235,16 +273,23 @@ def publicar(carpeta, estado="private", publicar_en=None):
     biblio = {o["id"]: o for o in json.loads(sem.read_text(encoding="utf-8"))["obras"]} \
         if sem.exists() else {}
     creditos = creditos_musica(carpeta, raiz)
+    visual, sintetico = creditos_visual(carpeta, guion)
 
     yt = build("youtube", "v3", credentials=credenciales(), cache_discovery=False)
     estado_dict = {"privacyStatus": estado, "selfDeclaredMadeForKids": False}
     if publicar_en:
         estado_dict["publishAt"] = publicar_en   # ISO-8601 UTC; exige privacyStatus private
+    # C50 · un vídeo con imágenes generadas realistas se declara como
+    # contenido alterado o sintético: lo pide YouTube y lo pide la regla 7.
+    # El campo existe en videos.insert (status.containsSyntheticMedia).
+    if sintetico:
+        estado_dict["containsSyntheticMedia"] = True
+        print("  contenido sintético declarado (lleva imágenes generadas)")
 
     cuerpo = {
         "snippet": {
             "title": (meta.get("titulo") or guion["titulo_trabajo"])[:100],
-            "description": descripcion(guion, meta, biblio, creditos),
+            "description": descripcion(guion, meta, biblio, creditos, visual),
             "tags": meta.get("etiquetas", ["humor", "psicología", "ciencia", "habilidades sociales"])[:15],
             "categoryId": "27",                      # Educación
             "defaultLanguage": guion.get("idioma", "es"),

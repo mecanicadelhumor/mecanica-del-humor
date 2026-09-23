@@ -90,3 +90,92 @@ fichero se reescribía entero en git. `metricas.py` pasa a sangría 2.
 - Jueves 24, 22:00: primera planificación con C48. El viernes se miran sus cinco lecturas en frío.
 - Push pendiente: este fichero, `LEEME.md`, el código de C50 y `07_pruebas/visual-23-09/` (van en
   el de la tarea 2.5).
+
+---
+
+# Tarde · C50 entra en producción (versión 13 del plan)
+
+## 6 · La respuesta del codirector a la prueba
+
+Hizo la tarea 2 entera (cuentas, secretos, workflow, ejecución: `Prueba visual (C50)` en verde,
+run 35837673091) y contestó en `07_pruebas/visual-23-09.md`: **A**, con cuatro problemas; B no; C
+no hizo nada; y cuatro notas (tarjetas de marca intercaladas, un personaje que mueva los labios o
+un avatar dibujado, coherencia entre vídeos, «dinamismo es la palabra»). Pidió empezar a producir
+cuanto antes. Decidido: **C50 entra hoy** (versión 13).
+
+## 7 · Lo que se ha visto en los manifiestos de la prueba
+
+- Pexels encontró vertical para los 21 planos de la variante A (1080×1920 o 1080×2048). Pixabay no
+  hizo falta ni una vez.
+- El «sillón quieto» de `MDS-025` escena 6 era un **vídeo** de Pexels (id 6377183, «chair placed
+  next to blank photo frame on wall»): de trípode, sin nada que se mueva. De ahí la medida de
+  movimiento.
+- La variante C: **21 de 21 planos «sin_imagen»**. `visual.py` capturaba la excepción y no guardaba
+  el cuerpo de la respuesta. Sin registro de Actions (403 sin permisos de administrador), la causa
+  no se puede saber desde aquí. De ahí el paso `diagnostico`.
+- Documentación de Cloudflare leída hoy: FLUX.1 [schnell] **no admite ancho ni alto**; FLUX.2
+  [klein] 4B sí (256-1920 px, por formulario multipart, 26,05 neuronas por tesela de salida). Y
+  `status.containsSyntheticMedia` **existe en `videos.insert`** (comprobado en la referencia de la
+  API de YouTube, no supuesto).
+
+## 8 · Lo escrito y cómo se ha probado
+
+- `visual.py` reescrito (resolvedor de producción: `resolver`, `traer`, `diagnostico`),
+  `fondo_visual.py` nuevo (cortes, plan, pista de fondo), `render.py` (modo archivo con respaldo
+  automático al render de siempre), `escena.html` (modo archivo: fondo transparente, velo, bandas
+  abajo/arriba/centro, `encajarBanda()`), `publicar.py` (créditos y contenido sintético), `qa.py`
+  (campo `visual` en la ficha) y `validar_guion.py` (avisos C50). `visual` escrito en `MDS-024` y
+  `MDS-025`.
+- **Prueba de punta a punta en el contenedor, sin red a las APIs:** clips sintéticos (con
+  movimiento, quieto, con una cara abajo, con una cara arriba, horizontal con la cara a un lado) y
+  las respuestas de Pexels, Pixabay y Cloudflare simuladas; voz falsa por escena (pitidos por
+  palabra y silencios en la puntuación) de la que se sabe dónde empieza cada palabra.
+  - El resolvedor descarta el clip quieto, pone el texto arriba cuando la cara cae abajo, se va a
+    la IA cuando el archivo solo tiene un clip poco relevante, y no usa nunca un clip de relevancia
+    cero (con Pexels caído y la IA fallando: tarjetas de marca y manifiesto «incompleto», que se
+    rehace solo en la siguiente pasada).
+  - Cortes contra la verdad de la voz falsa: **error medio 0,06 s, máximo 0,21 s** (antes de anclar
+    en las pausas, hasta 0,58 s en los planos que empiezan frase).
+  - Render de `MDS-024` (a media escala) y `MDS-025` (entero): duración idéntica a la voz; montaje y
+    `qa.py` sin avisos (sincronía 0,04 s). **Tiempos: 3 min 19 s el render de siempre y 3 min 29 s
+    el de archivo**, mismo Short, misma voz, 1.173 capturas los dos.
+  - Un clip corrupto: ese plano sale como tarjeta de marca y el resto con vídeo. Un fallo del modo
+    archivo entero: aviso y render de siempre.
+  - **El render de siempre no cambia.** 72 capturas (24 escenas de cuatro guiones, tres instantes
+    cada una) con el `escena.html` de antes y el de ahora: 4 difieren en una franja de un píxel
+    (el borde del Engranaje o de un panel), y el motor de antes **contra sí mismo** da 2 de esas
+    mismas diferencias: es el rasterizado de Chromium con la página ya usada, no el cambio.
+    Repetidas en un navegador limpio, antes y ahora son idénticas.
+
+## 8 bis · La revisión en frío del código, antes de entregar
+
+Un subagente sin contexto revisó el cambio entero (diff, ejecución de pruebas propias con clips
+raros: HEVC, 10 bits, girados, 60 fps, truncados). Encontró **dos críticos, un grave y nueve menores**;
+corregidos todos antes de entregar:
+
+- **Crítico · los manifiestos de mi prueba se habrían subido.** `05_calendario/visuales/` tenía los
+  de la prueba simulada (enlaces `file://` e imágenes de relleno) con la misma firma que los guiones
+  de verdad: el workflow los habría dado por buenos. No se entregan, y `traer` ya solo acepta enlaces
+  `https://` (salvo `C50_PRUEBA_LOCAL=1`, solo en pruebas).
+- **Crítico · `traer` sin tope de tiempo.** Con la red atascada podía comerse el job de 150 min. Ahora
+  se limita a 8 min por Short, y el paso de `producir.yml` lleva `timeout-minutes: 15` y
+  `continue-on-error: true`.
+- **Grave · la longitud del vídeo no se comprobaba.** Un clip que pasa `ffprobe` pero no da
+  fotogramas dejaba el mudo más corto que la voz y el montaje habría cortado el final. Ahora cada
+  trozo de fondo se cuenta (y si falla, ese plano pasa a tarjeta de marca) y el vídeo compuesto tiene
+  que tener exactamente los fotogramas de la voz, o el Short sale como siempre.
+- **Menores:** capas de marca en RGBA (el cambio de formato de píxel movía un fotograma cada corte;
+  medido y corregido), `plan()` dentro del respaldo, «incompleto» solo con fallos pasajeros (429,
+  5xx, red), `excluir` como cadena, `podar()` con episodio vacío, `validar_guion.py` con búsquedas no
+  textuales, respaldo de la IA con cualquier error, suelo de 64 px en `encajarBanda()` con aviso a la
+  barrera, y los horizontales de Pexels pidiendo 1.920 px de alto.
+
+## 9 · Lo que queda
+
+- **Tarea 3 del codirector** (hoy): mover `visuales.yml` y `producir.yml` desde
+  `00_estrategia/tareas/workflows_2026-09-23/` a `.github/workflows/`, borrar `visual_prueba.yml`, y
+  `push`. Recomendado: una producción de prueba de `MDS-024` sin subir.
+- Viernes 25: umbrales de movimiento y relevancia con los datos reales; muestrario del Engranaje
+  que habla; respuesta del codirector sobre la regla 7 (presentador realista).
+- `muestrario_visual.py` retirado (movido a `_to_delete/`): era de la prueba y ya no casa con
+  `visual.py`.

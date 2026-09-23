@@ -3,8 +3,8 @@
 **Versión 3 · 21 de agosto de 2026** — con las decisiones tomadas y la fase 1 y
 media de la fase 2 ya escritas en el repositorio.
 
-> ⚠️ **La versión que manda es la 12, al final de este documento (23 de
-> septiembre).** Las anteriores siguen vigentes en todo lo que la 12 no corrija.
+> ⚠️ **La versión que manda es la 13, al final de este documento (23 de
+> septiembre, tarde).** Las anteriores siguen vigentes en todo lo que la 13 no corrija.
 > *(Hasta el 23/09 este aviso decía «la 10»: se quedó sin actualizar el 21/09, cuando
 > ya mandaba la 11. Trampa 32: una corrección escrita en un sitio y no en los demás.)*
 > En corto: la **4** partió la escalera de métricas en dos (Shorts y largo); la
@@ -17,9 +17,10 @@ media de la fase 2 ya escritas en el repositorio.
 > reloj al Short —la duración de su serie y el remate en el segundo doce (C38)— y
 > contesta a TikTok, Reels y marketing (C40 y C41); la **11** suspende el episodio largo
 > (C42), pone el estado del canal en un fichero por día (C45) y hace que el canal se lea a sí
-> mismo (C46 y C47); y la **12** pone **la historia antes que el reloj** —la lectura en frío
-> obligatoria (C48)— y decide el **giro de la imagen**, de diapositiva a vídeo (C50).
-> **Si vas a decidir algo con este plan, lee la versión 12 antes.**
+> mismo (C46 y C47); la **12** pone **la historia antes que el reloj** —la lectura en frío
+> obligatoria (C48)— y decide el **giro de la imagen**, de diapositiva a vídeo (C50); y la **13**
+> mete C50 en producción el mismo día, con los arreglos de la prueba.
+> **Si vas a decidir algo con este plan, lee las versiones 12 y 13 antes.**
 
 Este documento es **ejecutable**. Cada cambio trae qué archivos toca, qué tiene que ser
 cierto para darlo por hecho, y qué no hay que hacer. El razonamiento está en
@@ -4459,3 +4460,194 @@ contenido.**
   principio **es** lo mismo que mide el estudio. Pero en `MDS-020` también lo era, y se quedó en
   27. No basta para explicar nada; basta para que C48 lo exija.
 - `E02` (dos DOI), `F04` (sin sustituir) y P1 (sin respuesta desde el 14/09), como estaban.
+
+---
+
+# Versión 13 · 23 de septiembre de 2026, tarde — C50 entra en producción
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario, y lo que se anula se dice con su nombre, en la tabla de abajo.
+
+A media mañana el codirector creó las tres cuentas, subió las cuatro claves, lanzó la prueba y la
+contestó en `07_pruebas/visual-23-09.md`: *«A es nuestra mejor opción. Tiene varios pequeños
+problemas, nada que no se pueda pulir»*. B no funciona, C no llegó a verse, y cuatro notas: tarjetas
+de marca intercaladas para los mensajes clave, un personaje que mueva los labios en momentos
+puntuales, o un avatar dibujado si eso no cabe en las reglas, y *«dinamismo es la palabra»*. Y la
+instrucción: *«realizar cualquier tarea adicional que sea necesaria según tu criterio para empezar
+cuanto antes a producir los resultados que queremos»*.
+
+Así que C50 no espera al viernes: **entra hoy**, en cuanto el codirector mueva dos workflows. El
+primer Short con vídeo detrás es `MDS-024`, el del jueves 24.
+
+## Lo que se anula, lo que se mantiene y lo que se amplía
+
+| Documento o decisión | Estado desde hoy |
+|---|---|
+| Versión 12, C50, calendario: «viernes 25: lo mira el codirector y decide» · «semana del 28: entra» | **ADELANTADO.** Lo miró hoy y decidió A. Entra en cuanto estén los dos workflows; primer Short, `MDS-024` |
+| Versión 12, C50, punto 3: «las escenas de dato, comparación y diagrama siguen siendo tarjetas de marca, pero sobre la imagen desenfocada» | **ANULADO.** Nada se desenfoca nunca. La cifra y los paneles van encima del vídeo, que se ve siempre (problema 3 de la prueba) |
+| Versión 12, C50, «cómo funciona», punto 2: «un paso nuevo de `producir.yml` lo resuelve: busca, descarga…» | **CAMBIA.** Buscar y elegir lo hace un workflow aparte, «Visuales (C50)», en cuanto cambia un guion, y deja manifiesto y hoja de contactos en el repositorio **un día antes** de producir, para que se puedan mirar. `producir.yml` solo baja los ficheros elegidos, antes del render |
+| Versión 12, C50: licencia, autor y enlace «en `02_marca/banco/banco.json`» | **CAMBIA.** Van en el manifiesto de cada Short, `05_calendario/visuales/<ID>.json`, que escribe un solo dueño (regla 10). La regla 9 se precisa en ese sentido. `banco.json` sigue siendo el de las quince fotos de C34 |
+| Variante B de la prueba (subtítulos grandes) | **DESCARTADA** por el codirector. C6.1 (subtítulos quemados apagados) sigue igual |
+| Variante C de la prueba (todo imagen generada) | **NO SE DESCARTA: no llegó a verse.** Cloudflare no devolvió ni una imagen y `visual.py` se tragaba el error. La imagen generada queda como respaldo y para lo que el archivo no tiene; el error, ahora, se ve (C50.4) |
+| Versión 12, C50, punto 4: el Engranaje firma «la apertura y el cierre» | **SE PRECISA.** Firma el cierre: los últimos 1,75 s de cada Short son tarjeta de marca con el Engranaje y el nombre del canal. La apertura va con archivo: es el segundo que más retiene |
+| `planificacion-jueves.md`, punto 6 de la versión 12: «la presentación va a cambiar (C50), pero no esta semana y no la tocas tú» | **ANULADO.** Desde `MDS-026` la planificación escribe `visual` en cada escena |
+| C51 | **SE AMPLÍA** con las notas 2 y 3 del codirector (C51.1, abajo) |
+| Regla 11.1 suspendida para la presentación hasta que C50 esté entero | **SE MANTIENE** |
+
+## C50.1 · Cómo funciona, sin que nadie tenga que hacer nada cada semana
+
+1. **La planificación del jueves escribe `visual` en cada escena** de cada Short: qué se busca en el
+   archivo (en inglés, varias búsquedas de más concreta a más general), **desde qué palabras de la
+   narración entra cada plano** (`desde`), y de respaldo qué imagen generar (`prompt`). Cómo se
+   escribe, con ejemplos: `guionista_corto.md`, sección «La imagen de cada escena (C50)».
+2. **El workflow «Visuales (C50)»** (`.github/workflows/visuales.yml`, nuevo) corre cada vez que
+   cambia un guion o los ajustes de la revisión, una vez al día a las 16:37 UTC por si acaso, y a
+   mano. Lanza `visual.py diagnostico` (qué contesta cada servicio) y `visual.py resolver`, que para
+   cada guion pendiente busca en Pexels y Pixabay, **mide cada candidato** —si se mueve, dónde tiene
+   las caras, si su título tiene que ver con la búsqueda—, genera con Cloudflare lo que el archivo no
+   tiene, y deja en `05_calendario/visuales/`: el manifiesto `<ID>.json`, la hoja de contactos
+   `<ID>.jpg` (un cuadro **por plano**, con la frase exacta que suena durante ese plano, la banda del
+   texto y las caras recuadradas) y las imágenes generadas en `<ID>/`.
+3. **La revisión diaria mira la hoja de contactos** del Short de mañana y del de pasado. Si un plano
+   no pega, lo excluye o cambia su búsqueda en `05_calendario/visuales/ajustes.json`, que es suyo;
+   al subirlo, «Visuales (C50)» vuelve a elegir solo.
+4. **`producir.yml` tiene un paso nuevo, «Traer el material visual (C50)»**, entre las figuras y el
+   render: `visual.py traer` baja los planos del manifiesto a `build/<ID>/visual/`. La red se usa ahí,
+   **antes** del render, que sigue sin red (regla 11.6). No necesita claves.
+5. **`render.py` compone** (`fondo_visual.py`, nuevo): una pista de fondo con el plano que toca en
+   cada fotograma, y encima la capa de texto de `escena.html` en **modo archivo**, capturada con fondo
+   transparente. Los tramos de marca se capturan como siempre, opacos.
+6. **Si algo falla —una API, una descarga, el render—, lo que falle sale como tarjeta de marca, y si
+   falla el modo archivo entero, el Short sale como siempre.** Una imagen nunca cuesta un vídeo.
+7. **`publicar.py`** añade a la descripción de dónde salen las imágenes y **declara el contenido
+   sintético** (`status.containsSyntheticMedia`) cuando hay imágenes generadas.
+8. **El interruptor:** si existe `05_calendario/visuales/APAGADO` (vacío, basta con crearlo), todos
+   los Shorts salen como siempre. Para quitarlo, se borra.
+
+## C50.2 · Los cuatro problemas de la prueba, uno por uno
+
+1. **«A veces el título cae justo encima de la cara.»** El resolvedor busca caras con OpenCV en tres
+   fotogramas de cada plano. El texto va **abajo** por defecto —la banda de 960 a 1.490 px, por
+   encima de la interfaz de Shorts y con la columna de botones libre—, y **arriba** cuando las caras
+   caen en la banda de abajo. Si hay que recortar un plano horizontal para ponerlo en vertical, el
+   recorte se centra en las caras. Las escenas de paneles (comparación, diagrama, lista) van al
+   centro: para esas, la planificación elige planos sin caras (objetos, manos, lugares).
+2. **«A veces la imagen no corresponde con el timing.»** Dos causas, dos arreglos. La primera: los
+   planos se repartían la escena a partes iguales. Ahora cada plano entra **en la palabra que dice
+   `desde`**, estimada sobre la voz real de la escena: se miden sus silencios y se anclan a los
+   signos de puntuación, así que un plano que empieza frase entra justo cuando empieza la frase.
+   Medido con una voz sintética de la que se sabe dónde empieza cada palabra: error medio 0,06 s,
+   máximo 0,21 s. La segunda: el primer resultado del banco no siempre pega (la familia celebrando
+   algo cuando el texto dice Lisboa). Ahora cada candidato se puntúa por **cuántas palabras de la
+   búsqueda están en su título**; se prueban las búsquedas en orden hasta encontrar uno relevante;
+   un clip que no comparte ni una palabra con la búsqueda **no se usa nunca** (antes, la tarjeta de
+   marca); y la regla para quien escribe es que la imagen cuenta **lo que dice la voz en ese
+   momento** y no contradice el texto de pantalla.
+3. **«El vídeo de fondo se vuelve borroso» bajo la cifra y los recuadros.** Quitado. La cifra va
+   sobre el vídeo en la banda del texto, y los recuadros en el azul de marca translúcido, con el
+   vídeo alrededor y a través. Lo que hace legible el texto es un velo oscuro en degradado solo donde
+   va el texto, y la sombra de la letra.
+4. **«La última escena es una imagen fija de un sillón.»** No fue a propósito: era un vídeo de
+   trípode en el que no se mueve nada. Ahora se mide el movimiento de cada candidato (diferencia
+   entre fotogramas) y el que no se mueve se descarta. Umbral inicial 0,5, estimado con clips de
+   prueba; **cada manifiesto guarda el movimiento de lo elegido y de lo descartado**, y con los datos
+   reales de la primera semana se ajusta. Además, ningún clip se repite de un Short a otro.
+
+## C50.3 · Dinamismo, y las tarjetas de marca
+
+*«Dinamismo es la palabra. Tenemos que conseguir que el vídeo sea atractivo de principio a fin».*
+
+- **Un plano cada dos o tres segundos**: dos o tres por escena, cuatro como mucho.
+- **Tarjetas de marca para el mensaje clave** (nota 1 del codirector): un plano puede ser
+  `{"marca": true, "desde": "…"}` y durante ese tramo se ve la escena como siempre —fondo azul,
+  retícula, la cifra o el diagrama en grande— y luego vuelve el vídeo. O una escena entera,
+  `"visual": "marca"`. **Dos por Short como mucho**: es un golpe, no el fondo. Y el final de cada
+  Short es siempre una tarjeta de marca con el Engranaje y el nombre del canal.
+- **El texto sigue entrando palabra a palabra**, con la palabra clave en ámbar y un pequeño rebote,
+  y la barra de avance arriba. Nada de eso cambia.
+- **Una imagen generada nunca está quieta**: acercamiento, alejamiento o paneo lentos.
+
+## C50.4 · Por qué la variante C salió azul, y qué cambia
+
+`visual.py` recogía el error de Cloudflare y lo convertía en «sin imagen» sin decir qué había
+contestado el servicio. Ahora «Visuales (C50)» empieza por `visual.py diagnostico`, que prueba las
+tres claves y deja lo que contesta cada servicio **en el resumen de la ejecución** (se ve sin entrar
+en el registro) y en `05_calendario/visuales/diagnostico.json`; y cada manifiesto guarda los errores
+de la IA. Lo más probable es un permiso del token o el identificador de cuenta; se sabrá en la
+primera ejecución.
+
+Y cambia el modelo: **FLUX.2 [klein] 4B**, que sí admite ancho y alto (256-1920 px) y saca la imagen
+en vertical, 768×1.360. Según la tarifa publicada son 26,05 neuronas por tesela de 512×512 de salida:
+entre 104 y 156 por imagen, de 10.000 diarias gratuitas. FLUX.1 [schnell] queda de respaldo
+(cuadrada, se recorta).
+
+## C50.5 · Lo que cuesta (regla 11.3)
+
+- **Render.** Mismo número de capturas que el render vivo de siempre: una por fotograma (1.173 en
+  `MDS-025`, 39 s). Medido en el contenedor, el mismo Short y la misma voz: **3 min 19 s** el render
+  de siempre y **3 min 29 s** en modo archivo, con la pista de fondo y la composición incluidas.
+  Diez segundos más; de sobra dentro de los 150 min del job.
+- **APIs.** Pexels: las búsquedas de repuesto solo se piden si la anterior no ha servido; unas 15-40
+  peticiones por Short, de 200 por hora. Cloudflare: una imagen generada, unas 150 neuronas.
+- **Repositorio.** Hoja de contactos ~250 KB por Short; imágenes generadas ~150 KB cada una. Las dos
+  cosas **se borran a los 14 días de publicado el Short**; el manifiesto se queda (lleva los
+  créditos).
+
+## C50.6 · Lo que puede salir mal, y qué pasa entonces
+
+| Qué falla | Qué pasa |
+|---|---|
+| Pexels o Pixabay no contestan (cuota, red) | Esos planos salen como tarjeta de marca, el manifiesto queda «incompleto» y **se vuelve a hacer solo** en la siguiente pasada |
+| Cloudflare no genera | El plano usa el clip de archivo aunque sea flojo o, si no hay, tarjeta de marca. El error queda en el resumen y en el manifiesto |
+| Un plano no baja en producción | Ese plano sale como tarjeta de marca; el resto, con vídeo |
+| El modo archivo falla entero (lo que sea) | `render.py` avisa y renderiza el Short como siempre |
+| El guion cambia después de elegir los planos | Las escenas cambiadas salen como tarjeta de marca hasta que «Visuales (C50)» vuelva a elegir, cosa que hace sola en el siguiente push |
+| Un plano elegido no pega | Lo corrige la revisión diaria en `ajustes.json`; si no llega, sale |
+| Todo sale mal | Se crea `05_calendario/visuales/APAGADO` y todo vuelve a ser como ayer |
+
+## C51.1 · El presentador: las notas 2 y 3 del codirector
+
+El codirector propone explorar **un personaje real que mueva los labios**, gratis y **solo en
+momentos puntuales**; o, si eso no cabe en las reglas, **un avatar dibujado**; y en los dos casos,
+**el mismo personaje en todos los vídeos**, sobre todo si usa la misma voz.
+
+Mi decisión, en este orden:
+
+1. **Primero el dibujo, porque ya lo tenemos: el Engranaje habla.** Su boca, movida fotograma a
+   fotograma por el volumen de la voz real de cada escena (determinista, coste cero), más grande, en
+   las tarjetas de marca: la apertura cuando la haya, el mensaje clave y la firma final. Es el mismo
+   personaje en todos los vídeos por construcción, y se ve que es un dibujo, así que no toca la
+   regla 7. **Muestrario el viernes 25.**
+2. **La persona realista se explora, no se decide.** La vía gratuita existe: modelos abiertos que
+   ponen labios a un vídeo o animan un retrato con el audio, en la GPU gratuita de Kaggle (unas 30
+   horas a la semana). La coherencia se consigue igual que con el Engranaje: **una sola cara
+   ficticia**, generada una vez y reutilizada siempre, y la misma voz. Hace falta, una vez, una
+   cuenta de Kaggle a nombre de la marca y su clave como secreto. Y hace falta **su decisión sobre la
+   regla 7**. Mi propuesta de condiciones, si dice que sí: persona ficticia y nunca parecida a nadie
+   real; declarada en la descripción y con `containsSyntheticMedia`; nunca presentada como experta ni
+   como testimonio; y como mucho dos momentos de dos o tres segundos por Short. La pregunta está en
+   `tareas_codirector_2026-09-23.md`.
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Hoy, 23/09 | Código y documentos (hechos). El codirector mueve dos workflows y hace `push`; «Visuales (C50)» elige los planos de `MDS-024` y `MDS-025`. Recomendado, no obligatorio: una producción de prueba de `MDS-024` sin subir, para verlo entero antes de que salga |
+| Jueves 24 | `MDS-024` se produce con vídeo detrás. La planificación escribe `visual` para `MDS-026` a `MDS-030` |
+| Viernes 25 | `MDS-025`. Sesión de dirección: miro los dos primeros, ajusto los umbrales con los datos reales de los manifiestos, y el muestrario del Engranaje que habla |
+| Lunes 28 | Entra C44 (la voz). Primera semana entera con C50 |
+
+## Lo que NO cambia hoy
+
+- **`MDS-023`, el Short de hoy, sale como siempre** (se vuelve a producir con el guion nuevo; no
+  lleva `visual`).
+- **La voz no se toca hasta el lunes 28** (C44). Los subtítulos quemados siguen apagados (C6.1).
+- **El episodio largo sigue suspendido** (C42). El punto de control del 27 y la decisión del 15 de
+  noviembre, igual.
+
+## Lo que queda mirado y sin resolver
+
+- **Los umbrales** de movimiento (0,5) y de relevancia (0,34) son primeras estimaciones.
+- **Cloudflare**, hasta ver el primer diagnóstico.
+- **El Engranaje que habla**: viernes.
+- **La persona realista**: pendiente de la respuesta del codirector sobre la regla 7.
