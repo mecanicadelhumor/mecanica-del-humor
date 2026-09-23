@@ -4182,9 +4182,9 @@ Una pregunta, una respuesta y un puente cada uno, con el campo `historia` rellen
 
 | | Antes (18/09) | Ahora | La historia en una línea |
 |---|---|---|---|
-| `MDS-023` · «¿Reírse es bueno para la salud?» | 68 pal. · ~39 s | **98 pal. · ~52 s** | Hacer chistes a tu costa tiene fama de dañino; en jubilados con muchos problemas iba con menos dolor; pero es una encuesta y puede ser al revés |
-| `MDS-024` · «¿Cómo mantener una conversación sin quedarte en blanco?» | 81 · ~43 s | **97 · ~51 s** | La misma frase («vengo de Lisboa») con la respuesta que mata la conversación y la que la sigue; la regla del «sí, y además»; y es un manual, no un experimento |
-| `MDS-025` · «¿Por qué el humor ayuda a memorizar?» | 89 · ~47 s | **88 · ~47 s** | Diez personas ven vídeos graciosos y diez se quedan sentadas sin móvil; las primeras mejoran la memoria un 43,6 % y les baja el cortisol; pero las otras mejoran casi la mitad |
+| `MDS-023` · «¿Reírse es bueno para la salud?» | 68 pal. · ~39 s | **100 pal. · ~53 s** | Hacer chistes a tu costa tiene fama de dañino; en jubilados con muchos problemas iba con menos dolor; pero es una encuesta y puede ser al revés |
+| `MDS-024` · «¿Cómo mantener una conversación sin quedarte en blanco?» | 81 · ~43 s | **100 · ~53 s** | La misma frase («vengo de Lisboa») con la respuesta que mata la conversación y la que la sigue; la regla del «sí, y además»; y es un manual, no un experimento |
+| `MDS-025` · «¿Por qué el humor ayuda a memorizar?» | 89 · ~47 s | **87 · ~47 s** | Diez personas ven vídeos graciosos y diez se quedan sentadas sin móvil; las primeras mejoran la memoria un 43,6 % y les baja el cortisol; pero las otras mejoran casi la mitad |
 
 - **Afirmaciones comprobadas hoy contra la fuente**, y en `MDS-023` contra el texto completo, no
   solo el resumen (`G03`, DOI 10.5964/ejop.v6i3.211, que la ficha no tenía). Las frases literales

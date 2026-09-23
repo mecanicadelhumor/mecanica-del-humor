@@ -151,6 +151,8 @@ confundirlas:
 | `05_calendario/guiones/MDS-023`, `024` y `025` | **Reescritos por la dirección el 23/09** (C48 y C48.1) | Nadie los edita, **tampoco la revisión diaria con la excepción de las 48 horas**: si ve algo, lo escribe en `revisiones/` y en su fichero de `estado/` |
 | `05_calendario/parrilla.json` · emisión del **sábado 26** con `MDS-023` | **Red de seguridad de la dirección** (23/09) | Si el 23 se rehízo bien, ese día `cola.py` dice «nada que producir». Se puede borrar el lunes 28 |
 | Claves de C50 (Pexels, Pixabay, Cloudflare) como secretos de GitHub | **Pedidas al codirector el 23/09** | Cuentas gratuitas de la marca. Tarea 2 de `tareas_codirector_2026-09-23.md` |
+| `.github/workflows/visual_prueba.yml` | **Entregado el 23/09** en `07_pruebas/visual-23-09/`, **lo crea el codirector a mano** | Prueba de C50. Solo `workflow_dispatch`: no produce ni publica; deja las hojas de contactos en `07_pruebas/visual-23-09/hojas/` y las previas en un artefacto |
+| `03_produccion/pipeline/visual.py` y `muestrario_visual.py` | **De la dirección, en prueba** (23/09) | Hoy solo los llama `visual_prueba.yml`. **La revisión diaria no los toca** hasta que C50 entre en producción |
 
 **Y la consecuencia práctica de la autorización general, que es la que importa:** desde el
 12/09 escribo directamente en la carpeta del codirector con `device_commit_files` los

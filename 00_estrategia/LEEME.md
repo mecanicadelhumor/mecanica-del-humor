@@ -10,7 +10,7 @@ análisis.
 |---|---|---|
 | **`REGLAS.md`** | Las restricciones que nadie puede saltarse: ética, rigor, coste cero, cómo se cambian las cosas | **Siempre, antes de tocar nada.** Es corto |
 | **`PROPIEDAD_DE_FICHEROS.md`** | Quién escribe qué. De obligado cumplimiento para toda tarea programada | Antes de escribir en cualquier sitio |
-| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 11, al final, manda sobre lo anterior** | Al ir a hacer algo, y al decidir qué se hace antes |
+| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 12, al final, manda sobre lo anterior** | Al ir a hacer algo, y al decidir qué se hace antes |
 | **`PROMPT_DE_ARRANQUE.md`** | Cómo empezar una conversación nueva, autorizaciones vigentes, trampas conocidas y dónde está el proyecto hoy | Al abrir una conversación, y al cerrarla |
 | **`PROMPT_DIRECCIÓN.md`** | El cuaderno del codirector entre sesiones: lo que quiere comentar de un día para otro. **Suyo y solo suyo: se lee, no se edita ni se borra** | Al abrir una conversación de dirección |
 | **`TOKEN_DE_YOUTUBE.md`** | Cómo se saca el token de YouTube y por qué caducaba. Quince minutos, una vez | Si el canal deja de publicar, o al tocar los secretos |
@@ -77,6 +77,33 @@ Y fuera de esta carpeta, tres sitios que dicen dónde está el canal hoy:
    voces alternándose porque el respaldo a `edge-tts` era escena a escena; ahora es por vídeo
    entero y en escalera (C33.1). Y el mismo día, **el primer Short por encima de 1.000
    visualizaciones**, `MDS-016`, todavía sin explicación.
+
+10. **Y desde el 23 de septiembre, una décima:** **un guion puede cumplirlo todo y no entenderse.**
+   Tres Shorts seguidos pasaron todas las comprobaciones y no tenían hilo. Desde ese día, un guion
+   no se produce sin que un lector que no lo ha escrito cuente de qué va (C48). Y la imagen pasa de
+   diapositiva a vídeo (C50).
+
+## Estado a 23 de septiembre
+
+**Tres Shorts seguidos sin hilo, y la sesión de dirección fue de un miércoles.** El 21, el 22 y el
+23 se publicaron (o se iban a publicar) guiones que el codirector describió como *«una sucesión de
+mensajes inconexos, sin sentido, que huelen a AI slop de lejos»*. Los tres pasaban el validador. La
+**versión 12** del plan, que manda desde hoy:
+
+- **C48 · la historia antes que el reloj.** Un Short es una pregunta, una respuesta y un puente, y
+  el chiste del principio **es** lo que explica el estudio. La duración de la serie deja de ser
+  error. Y **ningún Short se produce sin una lectura en frío**: un lector que solo ve las
+  narraciones cuenta de qué va el vídeo; si no lo entiende, no sale. Obligatoria desde `MDS-026`.
+  Los tres Shorts que quedaban de la semana, reescritos; el de hoy, rehecho.
+- **C48.1 · ninguna fórmula dos veces.** Los 25 Shorts publicados cerraban con «y aquí falla». El
+  cierre honesto sigue; la coletilla, no.
+- **C49 · la sincronización del registro no estaba rota**: corre con horas de retraso.
+- **C50 · la imagen deja de ser una diapositiva.** Vídeo de archivo e imágenes generadas a pantalla
+  completa, con el texto encima. Se decide mirando un muestrario, y entra la semana del 28.
+- **C51 · el presentador sintético**, que pidió estudiar el codirector: todavía no, y por qué.
+
+**Y una frase del plan que conviene tener delante:** *lo que se puede comprobar sin entender el
+vídeo se cumple sin entender el vídeo.*
 
 ## Estado a 21 de septiembre
 

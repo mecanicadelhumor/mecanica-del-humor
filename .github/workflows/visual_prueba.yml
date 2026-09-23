@@ -1,0 +1,114 @@
+name: Prueba visual (C50)
+
+# ---------------------------------------------------------------------------
+# C50 (00_estrategia/PLAN_DE_CAMBIOS.md, versión 12, 23/09/2026): la imagen
+# deja de ser una diapositiva. ESTO ES UNA PRUEBA: no produce, no sube nada a
+# YouTube y no toca ningún guion ni la parrilla.
+#
+# Qué hace: para los guiones que le digas, busca vídeo de archivo en Pexels y
+# Pixabay y genera imágenes con FLUX.1 [schnell] en Cloudflare Workers AI
+# (03_produccion/pipeline/visual.py, con lo que pide cada escena en
+# 07_pruebas/visual-23-09/visuales.json), y monta un muestrario con tres
+# variantes (03_produccion/pipeline/muestrario_visual.py):
+#   A · archivo detrás + la frase corta de la escena encima
+#   B · archivo detrás + subtítulos grandes
+#   C · imágenes generadas + la frase corta encima
+#
+# Qué deja:
+#   · las hojas de contactos en 07_pruebas/visual-23-09/hojas/ (se suben al
+#     repositorio: son JPG pequeños);
+#   · las previas en vídeo y todo lo descargado, en el ARTEFACTO de esta
+#     ejecución («muestrario-c50»), que se descarga desde la página de la
+#     ejecución en Actions. No van al repositorio: pesan.
+#
+# Se lanza a mano: Actions → «Prueba visual (C50)» → Run workflow.
+# Necesita cuatro secretos: PEXELS_API_KEY, PIXABAY_API_KEY,
+# CLOUDFLARE_ACCOUNT_ID y CLOUDFLARE_API_TOKEN. Si falta alguno, esa fuente se
+# salta y se dice en el log; no falla la prueba entera.
+# ---------------------------------------------------------------------------
+
+on:
+  workflow_dispatch:
+    inputs:
+      guiones:
+        description: "Guiones a probar, separados por espacios"
+        required: false
+        default: "MDS-023 MDS-024 MDS-025"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prueba-visual
+  cancel-in-progress: false
+
+jobs:
+  muestrario:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependencias
+        run: |
+          sudo systemctl stop unattended-upgrades 2>/dev/null || true
+          for i in $(seq 1 30); do
+            sudo fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1 || break
+            sleep 10
+          done
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-inter fonts-jetbrains-mono
+          mkdir -p "$HOME/.local/share/fonts"
+          curl -sSL --retry 3 --max-time 60 \
+            -o "$HOME/.local/share/fonts/ArchivoBlack-Regular.ttf" \
+            https://raw.githubusercontent.com/google/fonts/main/ofl/archivoblack/ArchivoBlack-Regular.ttf \
+            || echo "::warning::No se pudo descargar Archivo Black."
+          fc-cache -f > /dev/null
+          pip install --quiet -r requirements.txt pillow
+          playwright install --with-deps chromium
+
+      - name: Buscar el archivo y generar las imágenes
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          GUIONES: ${{ inputs.guiones }}
+        run: |
+          P=07_pruebas/visual-23-09
+          python3 03_produccion/pipeline/visual.py --especificacion $P/visuales.json --salida $P/salida $GUIONES
+          python3 03_produccion/pipeline/visual.py --especificacion $P/visuales.json --salida $P/salida --solo-ia $GUIONES
+
+      - name: Montar el muestrario
+        env:
+          GUIONES: ${{ inputs.guiones }}
+        run: |
+          P=07_pruebas/visual-23-09
+          python3 03_produccion/pipeline/muestrario_visual.py --salida $P/salida --hojas $P/hojas $GUIONES
+
+      - name: Guardar el muestrario completo (previas en vídeo incluidas)
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: muestrario-c50
+          path: |
+            07_pruebas/visual-23-09/hojas/
+            07_pruebas/visual-23-09/salida/
+          retention-days: 30
+
+      - name: Dejar las hojas de contactos y los manifiestos en el repositorio
+        if: ${{ !cancelled() }}
+        run: |
+          git add 07_pruebas/visual-23-09/hojas/ 2>/dev/null || true
+          git add 07_pruebas/visual-23-09/salida/*/*/manifiesto.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git config user.name  "Mecánica del Humor (bot)"
+            git config user.email "mecanicadelhumor@users.noreply.github.com"
+            git commit -m "Prueba visual (C50): hojas de contactos"
+            git pull --rebase --autostash origin "$GITHUB_REF_NAME"
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          fi

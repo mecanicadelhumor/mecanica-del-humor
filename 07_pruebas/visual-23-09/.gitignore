@@ -1,0 +1,8 @@
+# C50: lo descargado y lo generado pesa y no va a git. Se ve en el artefacto de
+# la ejecución de «Prueba visual (C50)». Sí van las hojas de contactos (hojas/)
+# y los manifiestos (licencia, autor y enlace de cada plano: regla 9).
+salida/**/*.mp4
+salida/**/*.jpg
+salida/**/*.jpeg
+salida/**/*.png
+salida/**/_tmp/

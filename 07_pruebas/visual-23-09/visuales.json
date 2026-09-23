@@ -1,0 +1,89 @@
+{
+  "_nota": "C50 · PRUEBA (23/09/2026). Qué imagen lleva cada escena de los tres Shorts de la semana, en el formato que la planificación escribirá dentro del guion (campo «visual») cuando C50 entre en producción. Por escena, una lista de planos: el vídeo se reparte a partes iguales entre ellos. «busqueda» va en inglés porque así están etiquetados los bancos; «prompt» es la imagen generada de respaldo (y la única en la variante C). Regla de C50: una persona identificable de archivo nunca ilustra una frase negativa sobre alguien.",
+  "MDS-023": {
+    "1": [
+      {"busqueda": "broken car smoke engine roadside",
+       "prompt": "an old car broken down on the side of a road with steam coming from the open hood, overcast morning, realistic photo"},
+      {"busqueda": "burnt toast toaster smoke",
+       "prompt": "a toaster on a kitchen counter with a burnt slice of toast and a thin wisp of smoke, early morning light, realistic photo"}
+    ],
+    "2": [
+      {"busqueda": "man forced smile tired kitchen",
+       "prompt": "a tired man in his forties forcing a big polite smile in a messy kitchen, realistic editorial photo, soft window light"}
+    ],
+    "3": [
+      {"busqueda": "friends laughing together table",
+       "prompt": "a group of friends laughing together around a kitchen table, warm light, realistic photo"}
+    ],
+    "4": [
+      {"busqueda": "senior couple laughing park bench",
+       "prompt": "two retired people in their late sixties laughing on a park bench, natural light, realistic photo"}
+    ],
+    "5": [
+      {"busqueda": "elderly man laughing",
+       "prompt": "an elderly man laughing heartily at home, close-up, warm light, realistic photo"},
+      {"busqueda": "hands holding lower back pain",
+       "prompt": "hands pressing on a lower back, close-up, neutral background, realistic photo, no face"}
+    ],
+    "6": [
+      {"busqueda": "questionnaire form pen close up",
+       "prompt": "a printed questionnaire with checkboxes and a pen on a wooden table, close-up, realistic photo"}
+    ]
+  },
+  "MDS-024": {
+    "1": [
+      {"busqueda": "wedding reception guests table talking",
+       "prompt": "two strangers sitting next to each other at a wedding banquet table, one talking enthusiastically, realistic photo, warm evening light"}
+    ],
+    "2": [
+      {"busqueda": "man walking away holding wine glass party",
+       "prompt": "a man in a suit walking away from a table at a wedding party holding a full glass of wine, seen from behind, realistic photo"}
+    ],
+    "3": [
+      {"busqueda": "pastel de nata custard tart",
+       "prompt": "Portuguese custard tarts on a small plate on a cafe table, close-up, realistic photo"},
+      {"busqueda": "lisbon yellow tram street",
+       "prompt": "a yellow tram climbing a narrow street in Lisbon, sunny day, realistic photo"}
+    ],
+    "4": [
+      {"busqueda": "improv theater actors stage",
+       "prompt": "two improv theater actors on a small stage performing a scene, spotlight, realistic photo"}
+    ],
+    "5": [
+      {"busqueda": "two people conversation cafe laughing",
+       "prompt": "two people talking animatedly at a cafe table, one laughing, realistic photo"}
+    ],
+    "6": [
+      {"busqueda": "theater stage red curtain",
+       "prompt": "an empty theater stage with a red curtain and a single spotlight, realistic photo"}
+    ]
+  },
+  "MDS-025": {
+    "1": [
+      {"busqueda": "senior people watching tv laughing",
+       "prompt": "a group of people in their late sixties watching a funny video on a screen and laughing, living room, realistic photo"},
+      {"busqueda": "elderly woman sitting waiting room chair",
+       "prompt": "an elderly woman sitting alone on a chair in a quiet waiting room, doing nothing, realistic photo"}
+    ],
+    "2": [
+      {"busqueda": "smartphone face down on table",
+       "prompt": "a smartphone lying face down on a wooden table, close-up, realistic photo"}
+    ],
+    "3": [
+      {"busqueda": "person checking phone impatient",
+       "prompt": "a person impatiently checking their phone, close-up of hands and phone, realistic photo"}
+    ],
+    "4": [
+      {"busqueda": "word list memory test paper",
+       "prompt": "a sheet of paper with a handwritten list of words and a pencil, close-up, realistic photo"}
+    ],
+    "5": [
+      {"busqueda": "saliva sample tube laboratory",
+       "prompt": "a saliva sample tube in a laboratory rack, close-up, clean clinical light, realistic photo"}
+    ],
+    "6": [
+      {"busqueda": "empty chairs row room",
+       "prompt": "a row of empty chairs in a quiet room, soft light, realistic photo"}
+    ]
+  }
+}
