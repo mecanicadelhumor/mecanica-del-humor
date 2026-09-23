@@ -49,3 +49,23 @@ Mirando, ten delante estas tres cosas:
 Contesta debajo de esta línea, con fecha.
 
 ---
+
+## Respuesta del codirector: 23/09/26
+
+Me parece un buen camino a explorar. He creado las cuentas, subido los secretos y realizado la prueba con éxito. Te comento los resultados de tal prueba:
+
+- A es nuestra mejor opción. Tiene varios pequeños problemas, nada que no se pueda pulir, creo:
+   1. A veces el título cae justo encima de la cara de la persona que aparece en el vídeo. Sería cuestión de intentar detectar la cara y mover el título para que no cayera justo encima (solución más ambiciosa), o bien colocar los textos en la parte inferior y confiar en que la mayor parte de las veces las caras en un short van a aparecer en la parte superior.
+   2. A veces la imagen no corresponde con el timing en el que aparece el título. En MDS-023 cuando se dice "aparecía roto de fábrica" aparece el vídeo del señor fregando los platos, cuando me imagino que tendría que aparecer el otro chico joven levantando el capó del coche. También hay algún caso extraño de coherencia no ideal como el de ver una familia asiática celebrando algo cuando el título habla de un viaje a Lisboa.
+   3. Cuando aparecen los títulos que son porcentajes grandes o cuando son recuadros azules, entonces el vídeo de fondo se vuelve borroso y no se ve. Esto queda feo y habría que modificarlo para que se viera como el resto de vídeos. Esto pasa siempre en estos títulos. Por ejemplo, en el segundo 28 de MDS-23, bajo el título "265 jubilados".
+   4. En MDS-025_A no sé si fue a propósito o no, pero la última escena, de "Eran 10 por grupo", es con una imagen fija de un sillón, no un vídeo. Como digo, desconozco si fue o no intencional, solo lo señalo.
+- B no funciona. Los títulos no tienen sentido en muchas ocasiones. Se aprecian títulos como "PROBLEMAS, HACER CHISTES A" o "EL COCHE Y LA". Es decir, no es confiable en absoluto.
+- C no sé que ha intentado, pero sea lo que sea que ha intentado no ha funcionado porque se ve todo exactamente como se veía hasta hoy, con el fondo azul y los títulos amarillos en todos los textos.
+
+Notas adicionales:
+
+1. Entre todos los vídeos generados se pueden intercalar pequeñas imágenes renderizadas como hasta ahora (con el fondo azul o cualquier otro) para mostrar los mensajes clave rápidamente antes de volver a los vídeos. Así se gana dinamismo sin mayor coste.
+2. De igual forma, se puede explorar la generación gratuita de un personaje real que mueva los labios a la vez que se habla. Como sé que esto gastaría las cuotas gratuitas muy rápido en caso de que las hubiera, propongo que se utilizara solo para momentos puntuales en los shorts, dejando el resto del vídeo como se han propuesto.
+3. Como alternativa al punto anterior, se podría explorar la creación de un avatar de dibujo animado que hiciera este trabajo si el punto 2 es inviable bajo las reglas del proyecto. En cualquier caso, tanto con una solución como con la otra, sería importante encontrar una manera de que hubiera consistencia entre los distintos vídeos, y no contar con un personaje (real o animado) muy distinto en cada vídeo, sobre todo si usan la misma voz después.
+4. Dinamismo es la palabra. Tenemos que conseguir que el vídeo sea atractivo de principio a fin, y no aburrido, ni desde el guion ni desde la presentación.
+Buen trabajo.
