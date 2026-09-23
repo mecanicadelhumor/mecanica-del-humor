@@ -402,30 +402,42 @@ _DETECTORES = None
 def caras(ruta_imagen):
     """Caras en una imagen, como [x, y, ancho, alto] en fracción del cuadro.
     Haar de OpenCV, frontal y de perfil: es rápido, no necesita red ni
-    modelos descargados, y aquí basta con saber DÓNDE hay una cara."""
+    modelos descargados, y aquí basta con saber DÓNDE hay una cara.
+
+    Cualquier fallo de OpenCV se trata como «no hay caras», nunca como motivo
+    para tirar el candidato. Antes solo se perdonaba `ImportError`, y el
+    23/09/2026 `requirements.txt` no traía OpenCV: `cv2` se importaba desde
+    otra cosa del entorno sin los bindings reales, así que cada candidato de
+    cada plano de MDS-024 y MDS-025 moría con «no se pudo mirar:
+    module 'cv2' has no attribute 'CascadeClassifier'» en `mirar()` (más
+    abajo), y los dos Shorts siguientes se resolvieron enteros en tarjeta de
+    marca el primer día de C50. Añadido `opencv-python-headless` a
+    `requirements.txt`, y esta función ya no deja que un fallo de detección
+    de caras cueste el plano entero: sin caras que perder, se sigue sin
+    ellas."""
     global _DETECTORES
     try:
         import cv2
-    except ImportError:
+        if _DETECTORES is None:
+            _DETECTORES = [cv2.CascadeClassifier(cv2.data.haarcascades + n)
+                           for n in ("haarcascade_frontalface_default.xml", "haarcascade_profileface.xml")]
+        img = cv2.imread(str(ruta_imagen))
+        if img is None:
+            return []
+        alto, ancho = img.shape[:2]
+        gris = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        lado = max(20, min(ancho, alto) // 14)
+        halladas = []
+        # En gris tal cual y con el histograma ecualizado: cada versión encuentra
+        # caras que la otra pierde (la ecualizada falla sobre fondos lisos y
+        # oscuros; la otra, en contraluz). Se juntan y se quitan los duplicados.
+        for imagen in (gris, cv2.equalizeHist(gris)):
+            for det in _DETECTORES:
+                for (x, y, w, h) in det.detectMultiScale(imagen, scaleFactor=1.1, minNeighbors=6,
+                                                          minSize=(lado, lado)):
+                    halladas.append((int(x), int(y), int(w), int(h)))
+    except Exception:
         return []
-    if _DETECTORES is None:
-        _DETECTORES = [cv2.CascadeClassifier(cv2.data.haarcascades + n)
-                       for n in ("haarcascade_frontalface_default.xml", "haarcascade_profileface.xml")]
-    img = cv2.imread(str(ruta_imagen))
-    if img is None:
-        return []
-    alto, ancho = img.shape[:2]
-    gris = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    lado = max(20, min(ancho, alto) // 14)
-    halladas = []
-    # En gris tal cual y con el histograma ecualizado: cada versión encuentra
-    # caras que la otra pierde (la ecualizada falla sobre fondos lisos y
-    # oscuros; la otra, en contraluz). Se juntan y se quitan los duplicados.
-    for imagen in (gris, cv2.equalizeHist(gris)):
-        for det in _DETECTORES:
-            for (x, y, w, h) in det.detectMultiScale(imagen, scaleFactor=1.1, minNeighbors=6,
-                                                      minSize=(lado, lado)):
-                halladas.append((int(x), int(y), int(w), int(h)))
     unicas = []
     for c in sorted(halladas, key=lambda c: -c[2] * c[3]):
         x, y, w, h = c

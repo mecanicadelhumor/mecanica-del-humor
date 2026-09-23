@@ -18,3 +18,14 @@ google-auth-oauthlib
 # aquí, que producir.yml exponga el secreto GEMINI_API_KEY al paso de voz.py
 # (fichero de workflows, protegido: lo añade el codirector antes del 14/09).
 google-genai
+
+# C50 (visual.py, caras() — detección de caras con Haar de OpenCV, 23/09/2026).
+# «headless»: corre en GitHub Actions, sin entorno gráfico; la variante normal
+# arrastra dependencias de Qt que no hacen falta aquí y pueden fallar en CI.
+# Faltaba en este fichero el mismo 23/09: cv2 se importaba desde otra cosa del
+# entorno, sin los bindings reales, y cv2.CascadeClassifier no existía. Cada
+# candidato de cada plano de MDS-024 y MDS-025 murió con «no se pudo mirar» en
+# visual.py y los dos salieron enteros en tarjeta de marca el primer día de
+# C50 (revisión diaria, 23/09). caras() ya no deja que esto tire el plano
+# entero, pero sin el paquete de verdad tampoco hay detección de caras.
+opencv-python-headless
