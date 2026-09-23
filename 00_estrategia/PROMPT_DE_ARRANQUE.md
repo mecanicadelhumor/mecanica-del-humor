@@ -71,6 +71,16 @@ Hoy quiero tratar:
 
 ---
 
+## El cuaderno del codirector no llega a los agentes (anotado el 23/09/2026)
+
+`PROMPT_DIRECCIÓN.md` está en `.gitignore`: lo leo yo al arrancar y **ninguna tarea programada lo
+ve**, porque trabajan sobre un clon de GitHub. Por eso los avisos del codirector del 21 y el 22 sobre
+los guiones no le llegaron a nadie hasta que hubo sesión, el 23 (trampa 37). Se lo he propuesto como
+costumbre, no como obligación: **cuando vea un defecto en un guion que todavía no ha salido y no
+haya sesión cerca, que lo escriba también en `08_comunicacion/novedades.md`**, que la revisión
+diaria lee cada mañana y que desde el 23/09 puede actuar sobre los guiones de las 48 horas
+siguientes (salvo los que haya escrito la dirección).
+
 ## Cuándo me escribe el codirector (decidido el 18/09/2026)
 
 Lo preguntó él el 17/09: si conviene escribirme **antes** de la revisión diaria, para que me dé
@@ -138,6 +148,9 @@ confundirlas:
 | `.github/workflows/voz_adelantada.yml` | **DESACTIVADO el 21/09** | C42: el formato largo está suspendido y este workflow se comía 9 de las 10 peticiones diarias del modelo que es el respaldo de voz de los Shorts. El fichero no se borra: se reactiva con un clic el día que el largo vuelva |
 | `05_calendario/guiones/MDH-008.es.json` | **Escrito y congelado** | Su emisión está en `parrilla.json` → `_emisiones_suspendidas`. No se borra ni se edita |
 | `02_marca/banco/banco.json` | **Generado el 21/09** desde `creditos_pixabay.csv` | Los tres campos que exige la regla 9 —licencia, autor, enlace— de las quince fotos. **C34 desbloqueado** |
+| `05_calendario/guiones/MDS-023`, `024` y `025` | **Reescritos por la dirección el 23/09** (C48 y C48.1) | Nadie los edita, **tampoco la revisión diaria con la excepción de las 48 horas**: si ve algo, lo escribe en `revisiones/` y en su fichero de `estado/` |
+| `05_calendario/parrilla.json` · emisión del **sábado 26** con `MDS-023` | **Red de seguridad de la dirección** (23/09) | Si el 23 se rehízo bien, ese día `cola.py` dice «nada que producir». Se puede borrar el lunes 28 |
+| Claves de C50 (Pexels, Pixabay, Cloudflare) como secretos de GitHub | **Pedidas al codirector el 23/09** | Cuentas gratuitas de la marca. Tarea 2 de `tareas_codirector_2026-09-23.md` |
 
 **Y la consecuencia práctica de la autorización general, que es la que importa:** desde el
 12/09 escribo directamente en la carpeta del codirector con `device_commit_files` los
@@ -159,7 +172,7 @@ arrastraba defectos. Solo puede añadir lo que verifique contra la fuente.
 ## Las trampas en las que ya se ha caído
 
 No son anécdotas: cada una costó tiempo o un vídeo, y todas se repiten solas si nadie las
-tiene delante. Son treinta y seis a 21/09/2026, y la lista crece porque se lee.
+tiene delante. Son cuarenta a 23/09/2026, y la lista crece porque se lee.
 
 **1. Cada documento daba por supuesto que el movimiento lo ponía otro.**
 Los subtítulos quemados se retiraron el 20/08; la respiración de zoom ya estaba
@@ -514,6 +527,76 @@ mismo fichero, y el codirector guardando uno con sufijo `_old` para no perderlo.
 → Trampa 25 cometida sobre la regla madre de todas. **Cuando arregles algo con una regla
 estructural, haz la lista de todo lo que tiene esa misma forma y recórrela entera** — y vuelve a
 recorrerla cada vez que crees un fichero nuevo para un agente que ya tiene uno.
+
+**37. Congelé lo que había que arreglar para poder medirlo.** El 21/09 escribí que la semana del 21
+no se tocaba —ni voz, ni guion, ni presentación— porque era la primera medida limpia de C38. El
+codirector avisó el 21 y el 22 en su cuaderno de que los guiones no se entendían; la revisión
+diaria tenía prohibido tocarlos; y yo no leo el cuaderno hasta que hay sesión. Tres Shorts sin hilo
+publicados con tres avisos delante.
+→ **Una congelación para medir necesita una salida para lo que está roto.** Si el codirector señala
+un defecto, se arregla aunque se pierda la medida: medir con piezas que no funcionan no mide nada.
+
+**38. Recortar para caber se lleva primero las juntas, y quien recorta no lo nota.** El 18/09
+reescribí cinco Shorts a la duración de su serie con una restricción que me pareció rigurosa: *no
+entra ni una afirmación nueva, solo se quita y se recoloca*. Lo que se fue primero fueron los «por
+eso» y los «pero», que son las únicas palabras que no llevan un dato. `MDS-023` pasó de 111 a 68
+palabras con todas sus afirmaciones intactas y sin historia. Y yo lo leí y me pareció bien, porque
+sabía lo que quería decir cada frase.
+→ **Si hay que recortar, se quitan escenas enteras, nunca las juntas. Y quien escribe o recorta un
+guion no puede ser quien comprueba si se entiende**: por eso existe la lectura en frío (C48), que
+la hace un lector que no conoce la historia.
+
+**39. Un ejemplo en un prompt se convierte en plantilla.** El guionista ponía de ejemplo de cierre
+honesto «y esto se rompe cuando…», y los 25 Shorts publicados hasta el 22/09 cierran con «y aquí
+falla». Con las aperturas pasó lo mismo: 23 de 25 empiezan por «mi madre», «mi jefe», «en mi
+familia»… El codirector lo vio al primer vistazo; ninguna comprobación lo miraba.
+→ **Cuando escribas un ejemplo en un prompt, pon tres distintos o ninguno, y di que es un ejemplo de
+contenido, no de forma.** Y todo lo que se repite en todos los vídeos es sospechoso de tic (trampa
+21), sobre todo si es una frase.
+
+**40. En la carpeta del codirector, `git status` deja un `.git/index.lock` que no puedo borrar.** Me
+ha pasado el 21 y el 23 de septiembre. Desde el puente de dispositivos puedo crear y renombrar
+ficheros en su carpeta, pero no borrarlos, y `git status` refresca el índice creando un bloqueo que
+luego no consigue quitar. El siguiente `git add` del codirector falla con *«index.lock: File
+exists»*. Lo mismo con cualquier fichero temporal que cree ahí.
+→ **En su carpeta, git solo con `git --no-optional-locks` y nunca un comando que escriba.** Para
+leer `origin/main`, un clon aparte fuera de su carpeta (`git clone --filter=blob:none
+--no-checkout https://github.com/mecanicadelhumor/mecanica-del-humor.git ~/remoto`: desde el
+dispositivo, GitHub por HTTPS funciona, y su API también, incluidas las ejecuciones de Actions).
+Y ningún fichero temporal dentro de `C:\MisProyectos\Humor`: los scripts de trabajo, en `$HOME`.
+Si se escapa uno, se mueve a `_to_delete/`, que está en `.gitignore`.
+
+## Dónde está el proyecto a 23 de septiembre de 2026
+
+**Sesión extraordinaria, de miércoles, por tres Shorts seguidos sin hilo.** El codirector lo avisó
+el 21, el 22 y el 23 en su cuaderno; el 23 con toda la razón y sin paciencia: *«es una sucesión de
+mensajes inconexos, sin sentido, que huelen a AI slop de lejos»*. Los tres eran guiones que yo había
+reescrito el 18/09 para que cupieran en la duración de su serie (trampas 37 y 38). La sesión
+(**versión 12**, la que manda) cerró cuatro cosas:
+
+- **C48 · la historia antes que el reloj.** `MDS-023`, `024` y `025` reescritos con una pregunta,
+  una respuesta y un puente, y el chiste de la apertura siendo el fenómeno del estudio. La duración
+  de la serie y el remate en el segundo 10 dejan de ser error. **Nueva puerta: la lectura en frío**
+  —un subagente que solo ve las narraciones cuenta de qué va— obligatoria desde `MDS-026`, y la
+  revisión diaria la repite cada día con el Short de la madrugada siguiente. `MDS-023` se rehízo el
+  mismo día (la subida de madrugada, `X1GAp3OUgKg`, la borró el codirector).
+- **C48.1 · ninguna fórmula dos veces.** El codirector, al leerlos: *«¿por qué todos tienen "y aquí
+  falla"?»* Los 25 publicados cierran así (trampa 39). El cierre honesto sigue; la frase, no.
+  `validar_guion.py` avisa si un cierre empieza igual que alguno de los cuatro anteriores.
+- **C49 · `sincroniza_registro.yml` funciona**: corre con horas de retraso, después de la revisión
+  diaria. De paso, `metricas.py` y `registrar.py` escribían el registro con distinta sangría y cada
+  día se reescribía entero en git; arreglado.
+- **C50 · la imagen deja de ser una diapositiva**: vídeo de archivo (Pexels y Pixabay) e imágenes
+  generadas (FLUX en Cloudflare, plan gratuito) a pantalla completa, un cambio cada dos o tres
+  segundos, y el texto como capa encima. Se prueba con un muestrario y **decide el codirector
+  mirándolo**; entra la semana del 28. **C51**: el presentador sintético de @Maestro_Seductor, no
+  por ahora (coste, fragilidad, regla 7); el paso intermedio propuesto es que el Engranaje hable.
+
+**Lo que espera al codirector:** `tareas/tareas_codirector_2026-09-23.md`. La 1 y la 1 bis (los dos
+push y el borrado en Studio) son de hoy mismo; la 2 son las cuentas y claves de C50.
+
+**Lo que queda mirado y sin resolver:** la primera planificación con C48 es el jueves 24; el viernes
+25 se miran sus lecturas en frío. Y sigue abierto por qué `MDS-016` hizo 1.210.
 
 ## Dónde está el proyecto a 21 de septiembre de 2026
 

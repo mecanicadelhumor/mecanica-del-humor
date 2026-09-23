@@ -92,6 +92,33 @@ Shorts de la semana abren en primera persona.** Los demás, con «tú» en una s
 mundo reconoce, o con el propio experimento contado como una escena. Y el narrador no se inventa
 nunca un hecho personal serio (una muerte, una enfermedad, un despido).
 
+## Y la séptima: ninguna fórmula dos veces en la misma semana
+
+*Añadida el 23/09/2026 a petición del codirector, el mismo día, al leer los tres Shorts
+reescritos: «se entienden mejor, pero ¿por qué todos tienen "y aquí falla"? ¿No hay más formas
+de terminar un Short? Se agradecería más variedad entre guiones».*
+
+Tenía razón: **los 25 Shorts publicados hasta el 22/09 cierran con «y aquí falla» o «y falla
+aquí»**, y en pantalla con «Y falla aquí: …». Lo pedía, sin querer, este mismo documento con su
+ejemplo («y esto se rompe cuando…»). Una frase que va en todos los vídeos es un tic, no un estilo
+(trampa 21), y es justo la «plantilla» que se nota desde fuera.
+
+- **El cierre honesto sigue siendo obligatorio** (regla 12): el vídeo termina diciendo dónde no
+  llega lo que ha contado. **La fórmula no.** Se dice cada vez de una manera, y metido en la
+  historia, con el sujeto del Short. Formas que funcionan, para empezar a variar:
+  - una pregunta que es la advertencia: *«¿Y si es al revés?»*;
+  - *«Eso sí, es un truco de actores, no de científicos»*;
+  - *«Lo malo es que eran diez por grupo»*;
+  - *«Ojo, que es una encuesta y no sabe qué va antes»*;
+  - *«Lo que no cuenta el titular es…»*, *«La letra pequeña: …»*, *«Antes de que lo pruebes: …»*;
+  - o volviendo a la situación del principio, con su premisa dicha entera.
+- **En los cinco Shorts de una semana no se repite ninguna fórmula**: ni en el cierre, ni en el
+  título de pantalla del cierre, ni en la apertura («mi madre», «mi jefe»…, como mucho dos, ver la
+  sexta), ni en la secuencia de tipos de escena. Si dos cierres empiezan igual, uno se reescribe.
+- `validar_guion.py` avisa (C48.1) si el cierre de un Short empieza con las mismas palabras que el
+  de cualquiera de los cuatro anteriores. Es un aviso, no un error: el juicio es tuyo, pero el
+  aviso no se ignora.
+
 ## La lectura en frío — obligatoria, y la hace otro
 
 **Quien escribe no puede comprobar si se entiende.** Así que lo comprueba alguien que no sabe
@@ -512,8 +539,10 @@ salir bien escrito de aquí.
 
 ## Lo que también vale para los Shorts
 
-**El cierre dice dónde falla.** Sí, también en cuarenta segundos. «Y esto se rompe cuando…»
-cabe en cinco palabras y es lo único que este canal tiene y los demás no. No se negocia.
+**El cierre dice dónde falla.** Sí, también en cuarenta segundos, y es lo único que este canal
+tiene y los demás no. No se negocia. **Lo que no es obligatorio es la frase**: hasta el 23/09
+este párrafo ponía de ejemplo «y esto se rompe cuando…», y 25 Shorts seguidos cerraron con «y aquí
+falla». Ver la séptima regla de «La historia», arriba.
 
 **Ni un dato inventado.** Toda cifra lleva `fuente`. Si el dato no está en la bibliografía,
 se cambia el Short, no se cambia el dato.

@@ -22,7 +22,8 @@
   "Afirmaciones comprobadas el 23/09/2026 contra el TEXTO COMPLETO del artículo (acceso abierto, ejop.psychopen.eu, DOI 10.5964/ejop.v6i3.211), no solo contra el resumen. Literales: «Two hundred sixty-five retirees over the age of 55 years responded to an on-line survey, completing the RAND 36-Item Health Survey and the Humor Styles Questionnaire.» (resumen); «when daily hassles were high a higher Self-defeating score was related to less Pain, and thus appeared to have an adaptive quality» (resultados, muestra completa, no por sexo); «As always, it is a concern with correlational data that causality cannot be demonstrated, but if the relationship is causal, it may not be clear which variable is the cause and which is the effect.» (discusión). El cierre «igual la broma sale sola cuando duele menos» es esa última frase dicha en castellano de la calle.",
   "La escena 3 (reírse de lo que te pasa = estilo «de mejora personal», considerado sano; chistes a tu costa = estilo «autodestructivo», considerado dañino) es la clasificación del Cuestionario de Estilos de Humor (B01, Martin y otros, 2003), que es el que usa G03. B01 va de apoyo, no de fuente central (C17).",
   "LO QUE SE DEJA FUERA A PROPÓSITO: el humor agresivo también salió «adaptativo» con mucho estrés en la muestra completa, pero en las mujeres salió al revés; en cuarenta segundos eso se lee como una afirmación sobre lo que le pasa a cada sexo (REGLAS.md, regla 1). Tampoco se dice que la muestra es de jubilados blancos con estudios superiores y cómodos con un ordenador (los autores lo avisan): no cabe, y el cierre ya dice lo más importante.",
-  "Ningún consejo de salud: el guion no dice que hagas chistes a tu costa, dice qué salió en una encuesta y por qué no se puede leer como causa."
+  "Ningún consejo de salud: el guion no dice que hagas chistes a tu costa, dice qué salió en una encuesta y por qué no se puede leer como causa.",
+  "CIERRE SIN FÓRMULA (23/09, a petición del codirector: «¿por qué todos tienen “y aquí falla”? ¿No hay más formas de terminar un Short?»). El cierre honesto de la regla 12 sigue siendo obligatorio —es lo que distingue al canal—, pero dicho cada vez de una manera y metido en la historia, no como una coletilla. Este Short lo dice así: una pregunta («¿y si es al revés?») que es exactamente la advertencia de los autores sobre la causalidad."
  ],
  "escenas": [
   {
@@ -70,9 +71,9 @@
    "tipo": "cierre",
    "personaje": "no",
    "fuente": "G03",
-   "titulo": "Y falla aquí: no dice qué causa *qué*",
-   "subtitulo": "Humor y salud en la jubilación · Freeman y Ventis",
-   "narracion": "Y aquí falla: es una encuesta, y no dice qué causa qué. Igual la broma sale sola cuando duele menos.",
+   "titulo": "¿Y si es al *revés*?",
+   "subtitulo": "Es una encuesta · Freeman y Ventis",
+   "narracion": "Ojo, que es una encuesta y no sabe qué va antes. Igual es al revés: con menos dolor, la broma sale sola.",
    "pausa_despues_s": 0.2
   }
  ]

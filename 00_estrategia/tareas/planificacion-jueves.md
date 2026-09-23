@@ -33,9 +33,15 @@ modelo: `claude-opus-5`.
 4. **Como mucho dos de los cinco Shorts abren en primera persona** («mi madre», «mi jefe»…).
    23 de los 25 primeros lo hacían, y un narrador sintético con una familia inventada es la
    firma más reconocible del contenido generado.
-5. **La presentación va a cambiar mucho (C50)**, pero no esta semana y no la tocas tú: escribe
+5. **Ninguna fórmula dos veces en la semana** (lo pidió el codirector el 23/09: los 25 Shorts
+   publicados cierran con «y aquí falla»). El cierre honesto es obligatorio; la frase no: cinco
+   Shorts, cinco maneras distintas de decir dónde no llega el estudio, metidas en la historia. Lo
+   mismo con las aperturas, los títulos de pantalla del cierre y la secuencia de tipos de escena.
+   Antes de entregar, pon los cinco cierres en una columna y léelos seguidos: si dos empiezan
+   igual, reescribe uno. `validar_guion.py` avisa (C48.1).
+6. **La presentación va a cambiar mucho (C50)**, pero no esta semana y no la tocas tú: escribe
    los guiones con los tipos de escena de siempre.
-6. Lee `08_comunicacion/2026-09-23-direccion.md`.
+7. Lee `08_comunicacion/2026-09-23-direccion.md`.
 
 ---
 

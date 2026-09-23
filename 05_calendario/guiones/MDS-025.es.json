@@ -23,7 +23,8 @@
   "«Casi la mitad»: 20,3 entre 43,6 = 0,47. Se dice así, en palabras, para que nadie tenga que hacer la cuenta (regla 13: un chiste no le pide aritmética al espectador).",
   "Se dice «las que vieron los vídeos» y no «las que se rieron»: el estudio no midió cuánto se rió cada uno.",
   "C17: G04 no se ha usado nunca como fuente central (G06 sostuvo MDS-018 el 16/09 y la pregunta allí era otra).",
-  "La cifra va como «43,6%», sin espacio: con espacio el «%» cae a otra línea a 300 px, y con espacio duro no cabe y la barrera de C21 para el render (medido el 23/09). Y escena.html pintaba «43.6» con punto al animar el contador; arreglado el mismo día en contar()."
+  "La cifra va como «43,6%», sin espacio: con espacio el «%» cae a otra línea a 300 px, y con espacio duro no cabe y la barrera de C21 para el render (medido el 23/09). Y escena.html pintaba «43.6» con punto al animar el contador; arreglado el mismo día en contar().",
+  "CIERRE SIN FÓRMULA (23/09, a petición del codirector: «¿por qué todos tienen “y aquí falla”? ¿No hay más formas de terminar un Short?»). El cierre honesto de la regla 12 sigue siendo obligatorio —es lo que distingue al canal—, pero dicho cada vez de una manera y metido en la historia, no como una coletilla. Este Short lo dice así: «lo malo es que eran diez por grupo», y vuelve al grupo que se quedó sentado sin móvil, que es el chiste del principio."
  ],
  "escenas": [
   {
@@ -69,9 +70,9 @@
    "tipo": "cierre",
    "personaje": "no",
    "fuente": "G04",
-   "titulo": "Y falla aquí: son *diez* por grupo",
+   "titulo": "Eran *diez* por grupo",
    "subtitulo": "Humor y memoria en mayores · Bains y otros",
-   "narracion": "Y aquí falla: son diez personas por grupo, y las que solo estuvieron sentadas mejoraron casi la mitad que las otras.",
+   "narracion": "Lo malo es que eran diez por grupo. Y las que solo estuvieron sentadas, sin móvil, mejoraron casi la mitad.",
    "pausa_despues_s": 0.2
   }
  ]

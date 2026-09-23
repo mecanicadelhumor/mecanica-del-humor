@@ -78,7 +78,17 @@ algo que corregir.
 respeta la coma del guion. Solo afecta a cifras con decimales; la barrera de C21 pasa en las 18
 escenas de la semana, medida con las tipografías de marca instaladas.
 
-## 8 · Lo que viene: la presentación cambia de verdad (C50)
+## 8 · Ninguna fórmula dos veces en la semana (añadido a las 09:45)
+
+El codirector, al leer los tres guiones reescritos: *«se entienden mejor, pero ¿por qué todos
+tienen "y aquí falla"? ¿No hay más formas de terminar un Short? Se agradecería más variedad entre
+guiones.»* Los 25 Shorts publicados cierran así. **El cierre honesto sigue siendo obligatorio
+(regla 12); la frase no.** Los tres de esta semana ya cierran de tres maneras distintas. Desde la
+planificación del jueves: cinco Shorts, cinco cierres distintos, y lo mismo con las aperturas y
+los títulos de pantalla. `validar_guion.py` avisa si un cierre empieza igual que el de alguno de
+los cuatro Shorts anteriores (C48.1).
+
+## 9 · Lo que viene: la presentación cambia de verdad (C50)
 
 El codirector pide un giro de 180° en la imagen: fotos y vídeo reales, o generados, en lugar de
 texto sobre fondo azul. La dirección lo está preparando hoy y el plan está en la versión 12.

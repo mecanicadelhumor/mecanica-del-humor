@@ -288,6 +288,18 @@ def palabras(s):
 VENTANA_C17_DIAS = 42  # seis semanas
 
 
+def _inicio_cierre(g, n=3):
+    """C48.1: las `n` primeras palabras (normalizadas) de la narración y del
+    título de la última escena, si es un «cierre». (None, None) si no lo hay."""
+    esc = g.get("escenas") or []
+    if not esc or esc[-1].get("tipo") != "cierre":
+        return (None, None)
+    def ini(texto):
+        w = palabras(re.sub(r"[*_]", " ", texto or ""))[:n]
+        return " ".join(w) if len(w) == n else None
+    return (ini(esc[-1].get("narracion")), ini(esc[-1].get("titulo")))
+
+
 def _fecha_utc(iso):
     """`subido_utc` ('2026-08-29T01:29:00Z') a datetime consciente de zona.
     Nunca lanza: si falta o no se puede leer, devuelve None y esa entrada se
@@ -705,6 +717,35 @@ def validar(path):
                 for k in ("lector", "de_que_va"):
                     if not str(lf.get(k) or "").strip():
                         errores.append(f"C48: «lectura_en_frio» no trae «{k}».")
+
+        # -----------------------------------------------------------------
+        # C48.1 · NINGUNA FÓRMULA DOS VECES SEGUIDAS (23/09/2026)
+        #
+        # El codirector, al leer los tres Shorts reescritos: «se entienden
+        # mejor, pero ¿por qué todos tienen "y aquí falla"? ¿No hay más formas
+        # de terminar un Short?». Los 25 publicados hasta el 22/09 cerraban
+        # así. El cierre honesto (regla 12) es obligatorio; la frase no. Aquí se
+        # compara el principio del cierre —las tres primeras palabras de su
+        # narración y de su título de pantalla— con los de los cuatro Shorts
+        # anteriores por número. AVISO y no error: dos cierres pueden empezar
+        # igual por casualidad y estar bien; lo que no puede es no verse.
+        # -----------------------------------------------------------------
+        if num:
+            propio = _inicio_cierre(g)
+            for k in range(1, 5):
+                previo = Path(path).parent / f"MDS-{int(num.group(1)) - k:03d}.es.json"
+                try:
+                    gp = json.loads(previo.read_text(encoding="utf-8"))
+                except (OSError, json.JSONDecodeError):
+                    continue
+                for campo, a, b in (("narración", propio[0], _inicio_cierre(gp)[0]),
+                                    ("título de pantalla", propio[1], _inicio_cierre(gp)[1])):
+                    if a and a == b:
+                        avisos.append(
+                            f"C48.1: el cierre empieza igual que el de "
+                            f"{gp.get('id', previo.stem)}, en su {campo} («{a}…»). El cierre honesto es "
+                            f"obligatorio; la fórmula no. Dilo de otra manera y dentro de la "
+                            f"historia (guionista_corto.md, la séptima regla).")
 
         # -----------------------------------------------------------------
         # C38.3 · la risa escrita (regla 13.1)

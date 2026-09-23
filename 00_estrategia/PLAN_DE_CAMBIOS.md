@@ -4228,6 +4228,35 @@ defecto está en el encargo del lector**, y se corrige ahí (sería C48.1), no e
 lo es. Se pierde a propósito: medir el reloj con guiones que no se entienden no dice nada del
 reloj.
 
+### C48.1 · Y ninguna fórmula dos veces (añadido a las 09:45, a petición del codirector)
+
+Al leer los tres guiones reescritos, el codirector: *«se entienden mejor, pero ¿por qué todos tienen
+"y aquí falla"? ¿No hay más formas de terminar un Short que esa? Se agradecería más variedad entre
+guiones.»*
+
+**Tiene razón, y es la trampa 21 con otra cara:** los 25 Shorts publicados hasta el 22/09 cierran
+con «y aquí falla» (y en pantalla, «Y falla aquí: …»), y los tres que acababa de reescribir yo,
+también. La regla 12 obliga a decir dónde no llega lo que se ha contado; nunca dijo con qué frase.
+Pero el propio guionista ponía de ejemplo «y esto se rompe cuando…», y de un ejemplo sale una
+plantilla. Una frase que va en todos los vídeos no es rigor: es una coletilla que se oye venir.
+
+- **Los tres cierres, reescritos**: `MDS-023` con una pregunta (*«¿y si es al revés?»*, que es la
+  advertencia de los autores sobre la causalidad), `MDS-024` con *«es un truco de actores, no de
+  científicos»* y `MDS-025` con *«lo malo es que eran diez por grupo»*, volviendo al grupo que se
+  quedó sentado sin móvil, que es el chiste del principio.
+- **La regla**: el cierre honesto sigue siendo obligatorio; la fórmula no. En los cinco Shorts de una
+  semana no se repite ninguna, ni en el cierre, ni en su título de pantalla, ni en la apertura. En
+  `guionista_corto.md` (la séptima regla de «La historia»), en `planificacion-jueves.md` y en la
+  regla 12 de `REGLAS.md`.
+- **`validar_guion.py` avisa (C48.1)** cuando el cierre de un Short empieza con las mismas tres
+  palabras que el de cualquiera de los cuatro anteriores, en la narración o en el título. Probado:
+  salta en `MDS-021` y `MDS-022` (publicados con «y aquí falla») y no en los tres nuevos.
+
+| De la tabla del principio de esta versión | Añadido por C48.1 |
+|---|---|
+| Regla 12 de `REGLAS.md` · «un Short también puede terminar con "y esto falla cuando…"» | **PRECISADA**: la regla es el contenido, no la frase |
+| `guionista_corto.md` · «"Y esto se rompe cuando…" cabe en cinco palabras» | **CORREGIDO**: era el ejemplo del que salió la plantilla |
+
 ---
 
 ## C49 · `sincroniza_registro.yml` funciona. Lo que falla es el reloj de quien lo lee

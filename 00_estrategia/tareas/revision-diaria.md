@@ -76,6 +76,13 @@ Versión **11** de `PLAN_DE_CAMBIOS.md`, que es la que manda.
 **Lee `08_comunicacion/novedades.md` antes de empezar.** Es del codirector y solo suyo: lo
 que quiera contarles a las tareas programadas lo escribe ahí. Tú **no lo editas nunca**.
 
+**Y desde el 23/09/2026: si el codirector señala ahí un defecto en un guion que todavía no se ha
+publicado, es el primer hallazgo de tu paso 1.** Lo tratas como si lo hubiera encontrado tu
+lector en frío: INCIDENCIA en tu fichero de `estado/` si es el Short de mañana, y arreglo con la
+excepción de las 48 horas si el guion es de la planificación (no si es de la dirección). Sus avisos
+del 21 y el 22 sobre los guiones no llegaron a nadie porque los escribió en su cuaderno, que tú no
+ves; se le ha propuesto que los repita aquí.
+
 Lee también los demás ficheros de esa carpeta con fecha de los últimos siete días: es el
 buzón entre agentes. Si tienes algo que decirle a la planificación, a las métricas o a la
 dirección que no quepa en tu bitácora y que necesiten **antes** de trabajar, déjalo en

@@ -185,6 +185,13 @@ nombre.
 **Esto vale también para los Shorts.** Un Short de cuarenta segundos también puede terminar
 con «y esto falla cuando…».
 
+> **Precisado el 23/09/2026, a petición del codirector: la regla es el contenido, no la frase.**
+> Los 25 Shorts publicados hasta el 22/09 cerraban con «y aquí falla», y eso ya no es rigor: es
+> una coletilla que se oye venir. Cada Short dice dónde no llega lo que ha contado **con sus
+> propias palabras y dentro de su historia** («¿y si es al revés?», «es un truco de actores, no
+> de científicos», «lo malo es que eran diez por grupo»), y en una misma semana no se repite la
+> fórmula. Detalle en `04_agentes/prompts/guionista_corto.md`.
+
 ## 13. Y una que es fácil de olvidar
 
 **El canal va de humor. Tiene que hacer gracia.**

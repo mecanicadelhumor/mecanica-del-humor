@@ -20,7 +20,8 @@
   "Qué cambia respecto al 18/09: el señor que contestaba «ya» era un mal conversador ajeno, y la tesis habla de ti; y la comparación «ya» contra «ya, y además» no es algo que nadie diga. Ahora las dos respuestas son tuyas, a la misma frase, y el espectador ve la diferencia antes de que se la expliquen, que es lo que pide la serie.",
   "LÍMITE DE LO QUE SE AFIRMA: L04 («Truth in Comedy», Halpern, Close y Johnson, 1994) es un manual de improvisación, no un estudio. Su ficha recoge la técnica que aquí se cuenta: «El 'sí, y además' y el juego de patrones. Ejercicios directos para el espectador.» El guion enseña la técnica, dice de dónde sale y NO afirma que esté medida: el cierre lo dice en voz alta. «Por eso te quedas en blanco» es la lectura del canal, y va presentada como tal por el cierre.",
   "El chiste no tiene víctima: el que se va a por otra copa con la suya llena no queda como tonto, queda como alguien que se aburría; y quien se queda en blanco eres tú.",
-  "C17: L04 no se ha usado nunca como fuente central. Se evita H05 (improvisación y ansiedad social), que sostuvo MDH-007 el 20/09."
+  "C17: L04 no se ha usado nunca como fuente central. Se evita H05 (improvisación y ansiedad social), que sostuvo MDH-007 el 20/09.",
+  "CIERRE SIN FÓRMULA (23/09, a petición del codirector: «¿por qué todos tienen “y aquí falla”? ¿No hay más formas de terminar un Short?»). El cierre honesto de la regla 12 sigue siendo obligatorio —es lo que distingue al canal—, pero dicho cada vez de una manera y metido en la historia, no como una coletilla. Este Short lo dice así: «un truco de actores, no de científicos», que dice de dónde sale la regla sin la palabra «falla»."
  ],
  "escenas": [
   {
@@ -74,9 +75,9 @@
    "tipo": "cierre",
    "personaje": "no",
    "fuente": "L04",
-   "titulo": "Y falla aquí: es un manual de *teatro*",
+   "titulo": "Truco de *actores*, no de científicos",
    "subtitulo": "Improvisación · el «sí, y además»",
-   "narracion": "Y aquí falla: sale de un manual de teatro, no de un experimento.",
+   "narracion": "Eso sí, es un truco de actores, no de científicos: sale de un manual de teatro.",
    "pausa_despues_s": 0.2
   }
  ]
