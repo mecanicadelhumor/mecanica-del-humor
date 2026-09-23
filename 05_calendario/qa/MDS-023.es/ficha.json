@@ -1,22 +1,26 @@
 {
-  "id": "MDS-017.es",
-  "duracion_final_s": 52.8,
-  "tamano_mb": 9.4,
+  "id": "MDS-023.es",
+  "duracion_final_s": 37.3,
+  "tamano_mb": 6.8,
   "audio": {
-    "lufs": -14.5,
-    "pico_dbtp": -1.26,
-    "rango_lu": 3.2
+    "lufs": -14.77,
+    "pico_dbtp": -1.34,
+    "rango_lu": 5.6
   },
   "silencio_inicial": {
     "empieza_s": -0.171,
-    "acaba_s": 0.893,
+    "acaba_s": 0.906,
     "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
   },
   "arranque": {
     "silencios_s": [
       [
         -0.085,
-        0.893
+        0.906
+      ],
+      [
+        2.172,
+        2.355
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -41,24 +45,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 51.49,
-    "duracion_real_voz_mp3_s": 51.24,
-    "desfase_s": 0.25,
+    "duracion_calculada_s": 35.95,
+    "duracion_real_voz_mp3_s": 35.69,
+    "desfase_s": 0.26,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_03_haru_lofi_roa.mp3",
-    "sha256": "68fe871bcd427b465aa11f71d2f2fc889de234166af65fac305170c0f5bddd6b"
+    "archivo": "cama_09_first_light_galaxytones.mp3",
+    "sha256": "bcdb6043e26b73b7232483c4fe70115da065594d8cdc3735981adabdedd27f94"
   },
   "guion": {
-    "titulo_trabajo": "Por qué nos hacen gracia las cosquillas",
+    "titulo_trabajo": "¿Reírse es bueno para la salud?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 51.49,
+    "duracion_narracion_s": 35.95,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 10.688,
+    "escena_mas_larga_s": 7.938,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 6
@@ -66,35 +70,39 @@
     "modelo_voz": "gemini-3.1-flash-tts-preview",
     "voz_mezclada": false,
     "origen_voz": [
-      "caché",
-      "caché",
-      "caché",
-      "caché",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
       "llamada",
       "llamada"
     ],
     "direccion_voz": [
       "apertura",
+      "planteamiento",
       "remate",
       "cifra",
       "contraste",
-      "planteamiento",
       "objecion"
     ],
     "escenas_ritmo_fuera_de_rango": [
       [
-        1,
-        1.57
+        2,
+        1.18
+      ],
+      [
+        3,
+        1.59
       ]
     ]
   },
   "fotogramas_s": [
-    5.61,
-    12.38,
-    20.0,
-    28.76,
-    37.73,
-    47.82
+    4.08,
+    8.74,
+    13.25,
+    19.98,
+    27.37,
+    34.0
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
