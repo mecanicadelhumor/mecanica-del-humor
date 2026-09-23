@@ -1,0 +1,62 @@
+{
+  "guion": "MDS-024",
+  "variante": "C",
+  "planos": [
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 1,
+      "plano": 1,
+      "duracion_plano_s": 10.57,
+      "frase": "En una boda, un desconocido te cuenta que acaba de volver de Lisboa. Y tú le dices: «qué bien»."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 2,
+      "plano": 1,
+      "duracion_plano_s": 6.64,
+      "frase": "Silencio. Y se va a por otra copa con la suya llena."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 3,
+      "plano": 1,
+      "duracion_plano_s": 5.32,
+      "frase": "Misma frase, otra respuesta: «qué bien; yo de Lisboa solo conozco los pasteles de nata». Y te cuenta dónde se comen."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 3,
+      "plano": 2,
+      "duracion_plano_s": 5.32,
+      "frase": "Misma frase, otra respuesta: «qué bien; yo de Lisboa solo conozco los pasteles de nata». Y te cuenta dónde se comen."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 4,
+      "plano": 1,
+      "duracion_plano_s": 8.33,
+      "frase": "En improvisación lo llaman «sí, y además»: aceptas lo que te dan y añades algo tuyo."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 5,
+      "plano": 1,
+      "duracion_plano_s": 8.28,
+      "frase": "Por eso te quedas en blanco: buscas un tema nuevo cuando ya te habían dado Lisboa."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 6,
+      "plano": 1,
+      "duracion_plano_s": 8.08,
+      "frase": "Eso sí, es un truco de actores, no de científicos: sale de un manual de teatro."
+    }
+  ]
+}

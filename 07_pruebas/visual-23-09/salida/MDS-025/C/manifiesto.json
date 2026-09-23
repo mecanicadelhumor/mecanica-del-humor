@@ -1,0 +1,62 @@
+{
+  "guion": "MDS-025",
+  "variante": "C",
+  "planos": [
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 1,
+      "plano": 1,
+      "duracion_plano_s": 5.35,
+      "frase": "A diez personas de unos setenta años les ponen vídeos graciosos. A otras diez las sientan veinte minutos sin hacer nada."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 1,
+      "plano": 2,
+      "duracion_plano_s": 5.35,
+      "frase": "A diez personas de unos setenta años les ponen vídeos graciosos. A otras diez las sientan veinte minutos sin hacer nada."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 2,
+      "plano": 1,
+      "duracion_plano_s": 5.03,
+      "frase": "Sin móvil, sin leer y sin dormirse."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 3,
+      "plano": 1,
+      "duracion_plano_s": 3.41,
+      "frase": "Yo no aguanto ni cinco."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 4,
+      "plano": 1,
+      "duracion_plano_s": 10.18,
+      "frase": "Después, en un test de memoria, las que vieron los vídeos mejoraron un cuarenta y tres coma seis por ciento."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 5,
+      "plano": 1,
+      "duracion_plano_s": 7.41,
+      "frase": "Los autores apuntan al estrés: en ellas bajó el cortisol, la hormona del estrés."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 6,
+      "plano": 1,
+      "duracion_plano_s": 9.93,
+      "frase": "Lo malo es que eran diez por grupo. Y las que solo estuvieron sentadas, sin móvil, mejoraron casi la mitad."
+    }
+  ]
+}

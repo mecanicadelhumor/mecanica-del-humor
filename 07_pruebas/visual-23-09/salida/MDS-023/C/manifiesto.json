@@ -1,0 +1,70 @@
+{
+  "guion": "MDS-023",
+  "variante": "C",
+  "planos": [
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 1,
+      "plano": 1,
+      "duracion_plano_s": 5.28,
+      "frase": "Semana horrible: se te rompen la caldera, el coche y la tostadora. Y cuando te preguntan cómo estás, sonríes."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 1,
+      "plano": 2,
+      "duracion_plano_s": 5.28,
+      "frase": "Semana horrible: se te rompen la caldera, el coche y la tostadora. Y cuando te preguntan cómo estás, sonríes."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 2,
+      "plano": 1,
+      "duracion_plano_s": 4.79,
+      "frase": "Bien, bien. Yo ya venía roto de fábrica."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 3,
+      "plano": 1,
+      "duracion_plano_s": 8.8,
+      "frase": "En psicología, reírte de lo que te pasa se considera sano; hacer chistes a tu costa, dañino."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 4,
+      "plano": 1,
+      "duracion_plano_s": 9.26,
+      "frase": "Freeman y Ventis midieron los dos en doscientos sesenta y cinco jubilados, con su salud y sus problemas."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 5,
+      "plano": 1,
+      "duracion_plano_s": 4.17,
+      "frase": "Y salió al revés: con muchos problemas, hacer chistes a tu costa iba con menos dolor."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 5,
+      "plano": 2,
+      "duracion_plano_s": 4.17,
+      "frase": "Y salió al revés: con muchos problemas, hacer chistes a tu costa iba con menos dolor."
+    },
+    {
+      "fuente": "sin_imagen",
+      "tipo": "ninguno",
+      "escena": 6,
+      "plano": 1,
+      "duracion_plano_s": 10.85,
+      "frase": "Ojo, que es una encuesta y no sabe qué va antes. Igual es al revés: con menos dolor, la broma sale sola."
+    }
+  ]
+}
