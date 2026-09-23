@@ -1,0 +1,1040 @@
+{
+  "guion": "MDS-024",
+  "version": 1,
+  "firma": "5dc40e969cca2114",
+  "resuelto_utc": "2026-09-23T11:54:03Z",
+  "escenas": {
+    "1": {
+      "narracion_sha": "6b01bdd26f8e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.77
+          ],
+          "frase": "En una boda, un desconocido te cuenta que",
+          "fuente": "sin_imagen",
+          "tipo": "ninguno",
+          "motivo": "ni archivo ni imagen generada: sale como tarjeta de marca"
+        },
+        {
+          "k": 2,
+          "desde": "acaba de volver",
+          "t_estimado": [
+            3.77,
+            6.53
+          ],
+          "frase": "acaba de volver de Lisboa.",
+          "fuente": "sin_imagen",
+          "tipo": "ninguno",
+          "motivo": "ni archivo ni imagen generada: sale como tarjeta de marca"
+        },
+        {
+          "k": 3,
+          "desde": "Y tú le dices",
+          "t_estimado": [
+            6.53,
+            10.57
+          ],
+          "frase": "Y tú le dices: «qué bien».",
+          "fuente": "sin_imagen",
+          "tipo": "ninguno",
+          "motivo": "ni archivo ni imagen generada: sale como tarjeta de marca"
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "e777df6f87b5",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            1.47
+          ],
+          "frase": "Silencio.",
+          "fuente": "sin_imagen",
+          "tipo": "ninguno",
+          "motivo": "ni archivo ni imagen generada: sale como tarjeta de marca"
+        },
+        {
+          "k": 2,
+          "desde": "Y se va",
+          "t_estimado": [
+            1.47,
+            6.64
+          ],
+          "frase": "Y se va a por otra copa con la suya llena.",
+          "fuente": "sin_imagen",
+          "tipo": "ninguno",
+          "motivo": "ni archivo ni imagen generada: sale como tarjeta de marca"
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "2a45317975ee",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.6
+          ],
+          "frase": "Misma frase, otra respuesta: «qué bien; yo de Lisboa solo conozco los pasteles de nata».",
+          "fuente": "sin_imagen",
+          "tipo": "ninguno",
+          "motivo": "ni archivo ni imagen generada: sale como tarjeta de marca"
+        },
+        {
+          "k": 2,
+          "desde": "Y te cuenta",
+          "t_estimado": [
+            7.6,
+            10.64
+          ],
+          "frase": "Y te cuenta dónde se comen.",
+          "fuente": "sin_imagen",
+          "tipo": "ninguno",
+          "motivo": "ni archivo ni imagen generada: sale como tarjeta de marca"
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "89bf23bd52a5",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.87
+          ],
+          "frase": "En improvisación lo llaman «sí, y además»:",
+          "fuente": "marca",
+          "tipo": "marca"
+        },
+        {
+          "k": 2,
+          "desde": "aceptas",
+          "t_estimado": [
+            3.87,
+            8.33
+          ],
+          "frase": "aceptas lo que te dan y añades algo tuyo.",
+          "fuente": "sin_imagen",
+          "tipo": "ninguno",
+          "motivo": "ni archivo ni imagen generada: sale como tarjeta de marca"
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "0c338efb12fb",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.47
+          ],
+          "frase": "Por eso te quedas en blanco: buscas un tema nuevo",
+          "fuente": "sin_imagen",
+          "tipo": "ninguno",
+          "motivo": "ni archivo ni imagen generada: sale como tarjeta de marca"
+        },
+        {
+          "k": 2,
+          "desde": "cuando ya te habían dado",
+          "t_estimado": [
+            4.47,
+            8.28
+          ],
+          "frase": "cuando ya te habían dado Lisboa.",
+          "fuente": "sin_imagen",
+          "tipo": "ninguno",
+          "motivo": "ni archivo ni imagen generada: sale como tarjeta de marca"
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "0529499f5a04",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.08
+          ],
+          "frase": "Eso sí, es un truco de actores, no de científicos: sale de un manual de teatro.",
+          "fuente": "sin_imagen",
+          "tipo": "ninguno",
+          "motivo": "ni archivo ni imagen generada: sale como tarjeta de marca"
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 1,
+      "plano": 1,
+      "id": "pixabay:301635",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 1,
+      "id": "pexels:13324075",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 1,
+      "id": "pexels:13322578",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 1,
+      "id": "pexels:37964387",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 1,
+      "id": "pexels:6575929",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 1,
+      "id": "pexels:35760743",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 1,
+      "id": "pexels:28952505",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 1,
+      "id": "pexels:8765014",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 1,
+      "id": "pexels:38704109",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 1,
+      "id": "pexels:35969014",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 1,
+      "id": "pexels:38881278",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 1,
+      "id": "pixabay:109035",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 1,
+      "motivo": "IA: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pexels:33171550",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pexels:31682899",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pexels:34155132",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pexels:26731409",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pexels:36125542",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pexels:35583333",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pexels:35620666",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pexels:36134115",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pexels:35565454",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pexels:35535640",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pixabay:24745",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pixabay:216951",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "motivo": "IA: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 3,
+      "id": "pexels:6396116",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 3,
+      "id": "pexels:7251509",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 3,
+      "id": "pexels:7866889",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 3,
+      "id": "pexels:5974639",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 3,
+      "id": "pexels:8765143",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 3,
+      "id": "pexels:7644034",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 3,
+      "id": "pexels:37967136",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 3,
+      "id": "pexels:6306130",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 3,
+      "id": "pexels:11698626",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 3,
+      "id": "pixabay:301635",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 3,
+      "id": "pexels:6657874",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 3,
+      "id": "pexels:18171916",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 1,
+      "plano": 3,
+      "motivo": "IA: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 1,
+      "id": "pexels:8425957",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 1,
+      "id": "pexels:13326113",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 1,
+      "id": "pixabay:258799",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 1,
+      "id": "pexels:8757902",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 1,
+      "id": "pexels:32054939",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 1,
+      "id": "pexels:35256140",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 1,
+      "id": "pixabay:29337",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 1,
+      "id": "pexels:35760743",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 1,
+      "id": "pexels:7721832",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 1,
+      "id": "pixabay:171183",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 1,
+      "id": "pexels:37870410",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 1,
+      "id": "pixabay:1271",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 1,
+      "motivo": "IA: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 2,
+      "id": "pexels:9750743",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 2,
+      "id": "pexels:8765152",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 2,
+      "id": "pexels:10507609",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 2,
+      "id": "pexels:7424096",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 2,
+      "id": "pixabay:227113",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 2,
+      "id": "pexels:6575934",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 2,
+      "id": "pexels:5754887",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 2,
+      "id": "pexels:5754896",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 2,
+      "id": "pexels:9354975",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 2,
+      "id": "pexels:5934164",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 2,
+      "id": "pexels:8765145",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 2,
+      "id": "pexels:6657882",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 2,
+      "plano": 2,
+      "motivo": "IA: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 1,
+      "id": "pixabay:186543",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 1,
+      "id": "pexels:37664495",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 1,
+      "id": "pexels:35974442",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 1,
+      "id": "pexels:34145048",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 1,
+      "id": "pixabay:344377",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 1,
+      "id": "pixabay:216467",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 1,
+      "id": "pexels:5794857",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 1,
+      "id": "pexels:37266124",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 1,
+      "id": "pexels:36232992",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 1,
+      "id": "pexels:5930359",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 1,
+      "id": "pexels:31416777",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 1,
+      "id": "pexels:34104320",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 1,
+      "motivo": "IA: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 2,
+      "id": "pexels:6307657",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 2,
+      "id": "pixabay:153806",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 2,
+      "id": "pexels:35872521",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 2,
+      "id": "pixabay:140322",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 2,
+      "id": "pexels:35974442",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 2,
+      "id": "pixabay:357745",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 2,
+      "id": "pixabay:334637",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 2,
+      "id": "pexels:19698996",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 2,
+      "id": "pexels:35721554",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 2,
+      "id": "pexels:35721555",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 2,
+      "id": "pexels:35192429",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 2,
+      "id": "pexels:37282118",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 3,
+      "plano": 2,
+      "motivo": "IA: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pixabay:161885",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pixabay:28976",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pexels:8197868",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pexels:9419258",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pexels:20436209",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pexels:35423799",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pexels:6174609",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pexels:30636173",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pixabay:377073",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pixabay:337428",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pixabay:73593",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pixabay:329299",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "motivo": "IA: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 1,
+      "id": "pexels:19759190",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 1,
+      "id": "pexels:4994160",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 1,
+      "id": "pexels:7690122",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 1,
+      "id": "pexels:18504012",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 1,
+      "id": "pexels:6670687",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 1,
+      "id": "pexels:7343457",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 1,
+      "id": "pixabay:272620",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 1,
+      "id": "pexels:7342323",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 1,
+      "id": "pixabay:80699",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 1,
+      "id": "pixabay:80702",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 1,
+      "id": "pixabay:284347",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 1,
+      "id": "pixabay:280337",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 1,
+      "motivo": "IA: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 2,
+      "id": "pexels:35872536",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 2,
+      "id": "pexels:28962464",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 2,
+      "id": "pexels:35444015",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 2,
+      "id": "pexels:35742602",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 2,
+      "id": "pexels:35585869",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 2,
+      "id": "pexels:35815438",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 2,
+      "id": "pixabay:216058",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 2,
+      "id": "pixabay:192649",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 2,
+      "id": "pixabay:372124",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 2,
+      "id": "pixabay:212404",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 2,
+      "id": "pixabay:225661",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 2,
+      "id": "pixabay:24746",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 5,
+      "plano": 2,
+      "motivo": "IA: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pexels:6899901",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pexels:6899950",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pexels:6896048",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pexels:6899952",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pixabay:377073",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pixabay:73593",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pixabay:40104",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pixabay:202047",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pixabay:337428",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pexels:7989637",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pexels:5124246",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pexels:5124232",
+      "motivo": "no se pudo mirar: module 'cv2' has no attribute 'CascadeClassifier'"
+    },
+    {
+      "escena": 6,
+      "plano": 1,
+      "motivo": "IA: module 'cv2' has no attribute 'CascadeClassifier'"
+    }
+  ],
+  "errores_ia": [
+    "module 'cv2' has no attribute 'CascadeClassifier'"
+  ],
+  "incompleto": false
+}
