@@ -79,6 +79,16 @@ MAX_SEGUIDAS = 2     # escenas consecutivas del mismo tipo
 # ERROR, no aviso, y con una tolerancia estrecha a propósito: con margen ancho
 # el guionista escribe al borde del margen, que es exactamente lo que ha pasado
 # con el techo de 55 s durante veinticinco Shorts.
+#
+# ── ANULADO COMO ERROR EL 23/09/2026 (C48, versión 12 del plan) ──────────────
+# Pasa a ser AVISO. Lo que produjo en la práctica: los cinco Shorts de la
+# semana del 21 se reescribieron para caber en la serie «sin añadir ni una
+# afirmación, solo quitando y recolocando», y lo que se quitó fue justo lo que
+# cosía una escena con la siguiente. El codirector los leyó tres días seguidos
+# como «una sucesión de mensajes inconexos» (MDS-021, 022 y 023). El techo de
+# 55 s sigue siendo ERROR; el número de la serie queda como referencia. Contra
+# el relleno —que era el problema real de agosto— la protección ya no es un
+# reloj: es la lectura en frío (C48, más abajo), que pregunta qué frase sobra.
 # ---------------------------------------------------------------------------
 # Los números de agosto eran 40 / 30 / 45 / 35 / 40. Dos suben hoy, y conviene
 # decir por qué antes de que parezca que se mueve la portería:
@@ -103,6 +113,12 @@ DURACION_SERIE_S = {
     "Diagnósticos": 40,
 }
 TOLERANCIA_SERIE = 0.12
+
+# C48 (23/09/2026): primer Short al que se le exigen «historia» y
+# «lectura_en_frio». Los anteriores ya están escritos o publicados; MDS-023,
+# 024 y 025, reescritos por la dirección el 23/09, llevan «historia» pero su
+# lectura la hizo el codirector en la conversación, no un subagente.
+PRIMER_SHORT_C48 = 26
 
 # La pausa por encima de la cual `guionista_corto.md` dice que «la pausa es el
 # chiste» y la escena siguiente es el remate. Mismo umbral que usa voz.py para
@@ -161,7 +177,7 @@ LIMITES = {
 APERTURAS_PROHIBIDAS = [
     r"\ben este v[ií]deo\b", r"\bhoy (te |os |vamos a |voy a )?(explico|explicamos|cuento|vemos)\b",
     r"\bvamos a ver\b", r"\bte voy a (contar|explicar|ense[nñ]ar)\b",
-    r"\bbienvenid[oa]s?\b", r"\bhola,? (a )?tod[oa]s\b", r"\bqu[ée] tal\b",
+    r"\bbienvenid[oa]s?\b", r"\bhola,? (a )?tod[oa]s\b",
     r"\btodo el mundo cree\b", r"\bseguro que (alguna vez|te ha pasado)\b",
     r"\ben el v[ií]deo de hoy\b", r"\bantes de empezar\b",
     r"\bin this video\b", r"\btoday (i'?ll|we'?ll|i am going to)\b",
@@ -521,6 +537,14 @@ def validar(path):
     # ---------------------------------------------------------------------
     if escenas:
         arranque = " ".join((escenas[0].get("narracion") or "").split()[:40]).lower()
+        # «¿Qué tal?» solo es un saludo en las primeras palabras. Más adentro es
+        # otra cosa («cuando te preguntan qué tal, sonríes»): falso positivo que
+        # paró MDS-023 el 23/09/2026 en su reescritura. Por eso va aparte.
+        saludo = re.match(r"^\W*(hola\W+)?qu[ée] tal\b", arranque)
+        if saludo:
+            errores.append(
+                f"Escena 1: el vídeo abre con un saludo («{saludo.group(0).strip()}»). "
+                f"Abre con el chiste, con una escena concreta o con una pregunta.")
         for patron in APERTURAS_PROHIBIDAS:
             if re.search(patron, arranque):
                 errores.append(
@@ -580,20 +604,18 @@ def validar(path):
         if objetivo:
             margen = objetivo * TOLERANCIA_SERIE
             if total > objetivo + margen and not exento:
-                errores.append(
-                    f"Dura {total:.0f}s y la serie «{g['serie']}» son {objetivo}s "
-                    f"(tolerancia ±{TOLERANCIA_SERIE*100:.0f}%). Sobran {total-objetivo:.0f}s. "
-                    f"No recortes palabras aquí y allá: mira qué escena no hace avanzar "
-                    f"nada entre el remate y el cierre, y quítala entera.")
+                # C48 (23/09/2026): AVISO, ya no ERROR. Ver la cabecera de C38.
+                avisos.append(
+                    f"Dura {total:.0f}s y la referencia de la serie «{g['serie']}» son "
+                    f"{objetivo}s. No es un error: la duración la decide la historia, y el "
+                    f"techo son {LIMITES['corto']['max_s']}s. Pero pregúntale a la lectura en "
+                    f"frío qué frase sobra, y si nombra una, quítala. Lo que NO se quita "
+                    f"nunca es la frase que une una escena con la siguiente.")
             elif total < objetivo - margen:
                 avisos.append(
                     f"Dura {total:.0f}s y la serie «{g['serie']}» son {objetivo}s. "
                     f"Corto no es malo, pero comprueba que el cierre honesto sigue "
                     f"entero: es lo que no se recorta.")
-            if g.get("duracion_objetivo_s") and g["duracion_objetivo_s"] != objetivo:
-                avisos.append(
-                    f"«duracion_objetivo_s: {g['duracion_objetivo_s']}» no coincide con "
-                    f"los {objetivo}s de la serie «{g['serie']}». La serie manda.")
 
         # -----------------------------------------------------------------
         # C38.2 · dónde cae el remate
@@ -615,12 +637,74 @@ def validar(path):
                 f"{PAUSA_DE_REMATE_S}s). Sin esa pausa el sintetizador no sabe que "
                 "viene un remate y lo lee de corrido (voz.py, C33).")
         elif remate_en < SEGUNDO_DEL_ACANTILADO and not exento:
-            errores.append(
+            # C48 (23/09/2026): AVISO, ya no ERROR. Obligar a estirar el
+            # planteamiento hasta el segundo 10 produjo planteamientos a trozos
+            # («Obligatoria. Y fui.», «Cuarenta minutos así.»). La idea sigue en
+            # pie —no gastes lo mejor en el segundo 6—, pero como consejo.
+            avisos.append(
                 f"El remate cae en el segundo {remate_en:.0f}. La mitad de la audiencia "
                 f"se va sobre el segundo {SEGUNDO_DEL_ACANTILADO:.0f}, así que un remate "
                 f"antes de ahí se gasta en gente que se iba a quedar igual, y a partir "
                 f"del {SEGUNDO_DEL_ACANTILADO:.0f} no queda nada. Alarga el planteamiento "
                 f"o mueve la pausa una escena más adelante.")
+
+        # -----------------------------------------------------------------
+        # C48 · LA HISTORIA Y LA LECTURA EN FRÍO (23/09/2026)
+        #
+        # El 21, el 22 y el 23 de septiembre se publicaron tres Shorts que
+        # pasaban este validador sin un error y que el codirector describió
+        # como «una sucesión de mensajes inconexos, sin sentido, que huelen a
+        # AI slop de lejos». Todo lo que este fichero comprueba es forma:
+        # duraciones, campos, marcas, días de la semana. Ninguna línea de aquí
+        # puede saber si alguien que no sabe nada sigue la historia — y quien
+        # escribe el guion es el único lector que NUNCA puede comprobarlo,
+        # porque ya sabe lo que quería decir («y a nadie a las ocho» se
+        # entiende perfectamente si has escrito las cuatro escenas de antes).
+        #
+        # Lo que sí se puede comprobar aquí es que esa lectura SE HIZO y que
+        # dijo que sí. Dos campos, obligatorios desde MDS-026 (el primero que
+        # escribe la planificación con las reglas nuevas):
+        #
+        #   · «historia»: pregunta, respuesta y puente, en una frase cada uno.
+        #     Si quien escribe no puede rellenarlos, el Short no tiene hilo.
+        #   · «lectura_en_frio»: lo que contestó un lector que SOLO vio las
+        #     narraciones y los textos de pantalla (un subagente sin contexto;
+        #     ver guionista_corto.md). Veredicto «pasa» y ninguna frase que no
+        #     entendiera.
+        #
+        # Es ERROR: un Short que no ha pasado la lectura en frío no se produce.
+        # Parar un día cuesta un día; publicar un guion sin hilo cuesta la
+        # confianza de quien lo ve, y eso es lo que decide el 15 de noviembre.
+        # -----------------------------------------------------------------
+        num = re.match(r"^MDS-(\d{3})", str(g.get("id") or ""))
+        if num and int(num.group(1)) >= PRIMER_SHORT_C48:
+            h = g.get("historia") or {}
+            faltan = [k for k in ("pregunta", "respuesta", "puente")
+                      if not str(h.get(k) or "").strip()]
+            if faltan:
+                errores.append(
+                    f"C48: falta «historia» ({', '.join(faltan)}). Una frase cada uno: "
+                    f"qué pregunta responde el Short, qué responde, y qué escena une el "
+                    f"chiste con el estudio. Si no se puede escribir, el guion no tiene hilo.")
+            lf = g.get("lectura_en_frio") or {}
+            if not lf:
+                errores.append(
+                    "C48: falta «lectura_en_frio». Un Short no se produce sin que alguien "
+                    "que solo ha visto las narraciones y los textos de pantalla haya "
+                    "contado de qué va (guionista_corto.md, «La lectura en frío»).")
+            else:
+                if str(lf.get("veredicto") or "").strip().lower() != "pasa":
+                    errores.append(
+                        f"C48: la lectura en frío dice «{lf.get('veredicto')}». Solo se "
+                        f"produce con «pasa».")
+                if lf.get("frases_que_no_se_entienden"):
+                    errores.append(
+                        f"C48: la lectura en frío no entendió: "
+                        f"{lf['frases_que_no_se_entienden']}. Reescríbelas y vuelve a "
+                        f"pasar la lectura con un lector nuevo.")
+                for k in ("lector", "de_que_va"):
+                    if not str(lf.get(k) or "").strip():
+                        errores.append(f"C48: «lectura_en_frio» no trae «{k}».")
 
         # -----------------------------------------------------------------
         # C38.3 · la risa escrita (regla 13.1)

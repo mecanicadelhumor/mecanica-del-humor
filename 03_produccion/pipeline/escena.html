@@ -950,7 +950,11 @@ function contar(texto, p){
   const objetivo = parseFloat(m[1].replace(",", "."));
   const decimales = (m[1].split(/[.,]/)[1] || "").length;
   const actual = objetivo * p;
-  const numTxt = decimales ? actual.toFixed(decimales) : String(Math.round(actual));
+  let numTxt = decimales ? actual.toFixed(decimales) : String(Math.round(actual));
+  // En castellano el decimal va con coma, y toFixed() siempre pone punto: «43,6%» salía
+  // «43.6%» en pantalla (MDS-025, visto por la dirección el 23/09/2026 al comprobar
+  // la reescritura). Se respeta el separador que traiga el guion.
+  if (m[1].includes(",")) numTxt = numTxt.replace(".", ",");
   return rico(numTxt + m[2]);
 }
 

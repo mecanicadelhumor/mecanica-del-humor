@@ -283,6 +283,47 @@ después **no hay un solo intento más hasta el cierre**, que llega treinta segu
 cuenta cosas, mira a qué otros formatos les pasa lo mismo. El 12 de septiembre se arregló la
 mitad de la regla 13 y la otra mitad se quedó rota seis días más.
 
+> **CORREGIDA EL 23/09/2026 (C48): las dos primeras viñetas de la 13.2 pasan de regla a
+> referencia.** Cumplidas como error, los cinco Shorts de la semana del 21 se escribieron a la
+> duración de su serie quitando frases, y las que se quitaron eran las que cosían una escena con
+> la siguiente: el codirector los leyó como *«una sucesión de mensajes inconexos»*. La idea sigue
+> en pie —no gastes lo mejor en el segundo 6, no rellenes entre el remate y el cierre—, pero
+> **la duración la decide la historia** y el techo son 55 s. La tercera viñeta (se quita la
+> escena que no hace avanzar nada, nunca palabras sueltas) sigue entera, y es ahora la pregunta
+> 4 de la lectura en frío.
+
+### 13.3 · Un Short cuenta UNA historia, y lo comprueba alguien que no la conoce
+
+*Añadida el 23 de septiembre de 2026, después de tres Shorts seguidos sin hilo (21, 22 y 23).*
+
+Las reglas de arriba dicen qué tiene que tener un vídeo para que haga gracia. Esta dice qué
+tiene que tener para que **se entienda**, que va antes:
+
+- **Una pregunta, una respuesta y un puente.** El chiste de la apertura **es** el fenómeno que
+  explica el estudio: después del remate tiene que poder decirse «esto que acabas de ver es justo
+  lo que midió el estudio». Si hace falta un «y hablando de otra cosa», son dos vídeos pegados.
+- **Cada escena sale de la anterior**: entre dos seguidas cabe un «pero» o un «por eso», nunca
+  solo un «y además».
+- **Frases enteras, nada que descifrar.** Ningún fragmento telegráfico para ahorrar segundos, y
+  ningún cierre que haya que completar con algo dicho treinta segundos antes («y a nadie a las
+  ocho»).
+- **Lo comprueba alguien que no sabe nada.** Quien escribe el guion es el único lector que no
+  puede detectar un salto, porque ya sabe lo que quería decir. Por eso ningún Short se produce
+  sin una **lectura en frío**: un lector que solo ve las narraciones y los textos de pantalla
+  cuenta de qué va, qué pregunta responde y qué frase no entiende. Si no entiende una, no se
+  produce. `validar_guion.py` lo exige desde `MDS-026`; el procedimiento está en
+  `04_agentes/prompts/guionista_corto.md`.
+- **Y el narrador no se inventa una vida por costumbre.** 23 de los 25 primeros Shorts abrían con
+  «mi madre», «mi jefe», «mi profesor»: un narrador sintético con una familia inventada es la
+  firma más reconocible del contenido generado en serie, que es exactamente lo que YouTube llama
+  desde el 15/07/2025 *contenido no auténtico* («AI-generated content made with generic or
+  unoriginal templates giving the impression of mass production»). **Como mucho dos de cada cinco
+  Shorts abren en primera persona**, y el narrador no se inventa nunca un hecho personal serio.
+
+**La lección general:** una regla que se puede comprobar sin entender el vídeo (duraciones,
+campos, palabras) se cumple sin entender el vídeo. La única comprobación que no se puede
+cumplir de esa manera es preguntarle a alguien de fuera qué ha entendido.
+
 ## 14. Los dos canales: se ve mudo y se escucha a ciegas
 
 *Añadida el 4 de septiembre, después de MDS-009.*

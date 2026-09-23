@@ -4,67 +4,79 @@
  "serie": "Esto no tiene gracia y esto sí",
  "idioma": "es",
  "titulo_trabajo": "¿Cómo mantener una conversación sin quedarte en blanco?",
- "tesis": "No te quedas en blanco por falta de temas: te quedas en blanco porque buscas uno nuevo en vez de coger el que te acaban de dar.",
+ "tesis": "No te quedas en blanco por falta de tema: el tema ya te lo han dado, y la regla del «sí, y además» de la improvisación consiste en cogerlo y añadir algo tuyo.",
  "pilares": [
   "L"
  ],
- "duracion_objetivo_s": 40,
+ "duracion_objetivo_s": 50,
  "bloqueos": [],
+ "historia": {
+  "pregunta": "¿Cómo sigo una conversación cuando me quedo en blanco?",
+  "respuesta": "Cogiendo lo que te acaban de dar y añadiendo algo tuyo: el «sí, y además» de la improvisación. Sale de un manual de teatro, no de un experimento.",
+  "puente": "La misma frase (Lisboa) con las dos respuestas, la que mata la conversación y la que la sigue; la regla le pone nombre a la diferencia, y la escena 5 vuelve a Lisboa para decir por qué te quedas en blanco."
+ },
  "notas_humor": [
-  "REESCRITO POR LA DIRECCIÓN el 18/09/2026 (C38). No se ha añadido ni una afirmación: todo lo que dice este guion estaba en la versión de la planificación del jueves 17, ya verificada contra la fuente. Lo que cambia es la duración —se escribe a la de su serie, que nunca se había cumplido en 25 Shorts— y la posición del remate, que pasa del segundo ~6 al ~11, donde la curva de retención dice que se va la mitad de la audiencia.",
-  "Serie «Esto no tiene gracia y esto sí» elegida por la forma: dos respuestas casi idénticas a la misma frase, las dos puestas delante antes de explicar nada, y el espectador nota la diferencia antes de que se la digan. La escena «comparacion» que pide P10 es esa.",
-  "LÍMITE DE LO QUE SE AFIRMA: L04 («Truth in Comedy», Halpern, Close y Johnson) es un manual de improvisación, no un estudio, y su ficha de BIBLIOGRAFIA_CURADA.md recoge exactamente la técnica que aquí se cuenta: «El 'sí, y además' y el juego de patrones. Ejercicios directos para el espectador.» El guion enseña la técnica y NO afirma que esté medida: el cierre lo dice en voz alta. Regla del 15/09 respetada por la vía de no contar ningún resultado.",
-  "Se ha evitado a propósito H05 (la improvisación y la ansiedad social), que sostiene MDH-007 y se emite el domingo 20: sería la misma fuente central dos días después. C17.",
-  "El chiste no tiene víctima: el señor de la boda no queda como tonto, queda como alguien que no sabía que tenía material."
+  "REESCRITO POR LA DIRECCIÓN el 23/09/2026 (C48, versión 12 del plan). La versión del 18/09 (C38) se escribió a la duración de la serie ±12 % quitando y recolocando frases sin añadir ninguna, y lo que se quitó fue justo lo que cosía una escena con la siguiente: el codirector la leyó como «una sucesión de mensajes inconexos». Esta versión se escribe al revés: primero la historia —una pregunta, una respuesta y el puente entre el chiste y el estudio— y la duración es la que salga, por debajo de 55 s.",
+  "Qué cambia respecto al 18/09: el señor que contestaba «ya» era un mal conversador ajeno, y la tesis habla de ti; y la comparación «ya» contra «ya, y además» no es algo que nadie diga. Ahora las dos respuestas son tuyas, a la misma frase, y el espectador ve la diferencia antes de que se la expliquen, que es lo que pide la serie.",
+  "LÍMITE DE LO QUE SE AFIRMA: L04 («Truth in Comedy», Halpern, Close y Johnson, 1994) es un manual de improvisación, no un estudio. Su ficha recoge la técnica que aquí se cuenta: «El 'sí, y además' y el juego de patrones. Ejercicios directos para el espectador.» El guion enseña la técnica, dice de dónde sale y NO afirma que esté medida: el cierre lo dice en voz alta. «Por eso te quedas en blanco» es la lectura del canal, y va presentada como tal por el cierre.",
+  "El chiste no tiene víctima: el que se va a por otra copa con la suya llena no queda como tonto, queda como alguien que se aburría; y quien se queda en blanco eres tú.",
+  "C17: L04 no se ha usado nunca como fuente central. Se evita H05 (improvisación y ansiedad social), que sostuvo MDH-007 el 20/09."
  ],
  "escenas": [
   {
    "tipo": "enunciado",
    "icono": "i-bocadillos",
-   "texto": "Contestaba a todo: *«ya»*",
-   "narracion": "En una boda me tocó al lado un señor que contestaba a todo que ya.",
+   "texto": "—Vengo de *Lisboa*. —Qué bien.",
+   "narracion": "En una boda, un desconocido te cuenta que acaba de volver de Lisboa. Y tú le dices: «qué bien».",
+   "pausa_despues_s": 1.3
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Se va con la copa *llena*",
+   "narracion": "Silencio. Y se va a por otra copa con la suya llena.",
    "pausa_despues_s": 0.6
   },
   {
-   "tipo": "enunciado",
-   "texto": "Cuarenta minutos *así*",
-   "narracion": "Cuarenta minutos así.",
-   "pausa_despues_s": 1.35
-  },
-  {
-   "tipo": "enunciado",
-   "texto": "«Ha sido un *placer*»",
-   "narracion": "Al levantarnos me dijo que había sido un placer.",
-   "personaje": "rie",
-   "pausa_despues_s": 0.5
-  },
-  {
    "tipo": "comparacion",
-   "a": "«Ya.»",
-   "b": "«Ya, ¿y *además*?»",
-   "et_a": "cierra la frase",
-   "et_b": "te devuelve algo",
-   "fuente": "L04",
-   "narracion": "Ya cierra la frase. Ya, y además, te devuelve algo.",
    "personaje": "entiende",
+   "a": "Qué bien.",
+   "b": "Qué bien, solo conozco los *pasteles*",
+   "et_a": "la de antes",
+   "et_b": "la de ahora",
+   "narracion": "Misma frase, otra respuesta: «qué bien; yo de Lisboa solo conozco los pasteles de nata». Y te cuenta dónde se comen.",
+   "pausa_despues_s": 0.45
+  },
+  {
+   "tipo": "diagrama",
+   "personaje": "piensa",
+   "fuente": "L04",
+   "pasos": [
+    {
+     "titulo": "*Sí*",
+     "pie": "aceptas lo que te dan"
+    },
+    {
+     "titulo": "Y además",
+     "pie": "añades algo tuyo"
+    }
+   ],
+   "narracion": "En improvisación lo llaman «sí, y además»: aceptas lo que te dan y añades algo tuyo.",
    "pausa_despues_s": 0.45
   },
   {
    "tipo": "enunciado",
-   "icono": "i-bisagra",
-   "texto": "No te falta *tema*",
-   "fuente": "L04",
-   "narracion": "Los manuales lo llaman el sí, y además. Por eso te quedas en blanco: no te falta tema, ya te lo han dado.",
-   "personaje": "piensa",
+   "texto": "El tema ya estaba: *Lisboa*",
+   "narracion": "Por eso te quedas en blanco: buscas un tema nuevo cuando ya te habían dado Lisboa.",
    "pausa_despues_s": 0.4
   },
   {
    "tipo": "cierre",
-   "titulo": "Y falla aquí: es un *manual*",
-   "subtitulo": "Improvisación · el «sí, y además»",
-   "fuente": "L04",
-   "narracion": "Y aquí falla: sale de un manual, no de un experimento. Con el señor de la boda no lo probó nadie.",
    "personaje": "no",
+   "fuente": "L04",
+   "titulo": "Y falla aquí: es un manual de *teatro*",
+   "subtitulo": "Improvisación · el «sí, y además»",
+   "narracion": "Y aquí falla: sale de un manual de teatro, no de un experimento.",
    "pausa_despues_s": 0.2
   }
  ]

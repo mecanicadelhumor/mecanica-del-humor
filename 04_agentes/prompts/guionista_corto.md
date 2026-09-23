@@ -17,11 +17,145 @@ Todo lo que sigue existe para servir a eso.
 
 ---
 
-# LO PRIMERO: LAS TRES PRUEBAS DE COSIDO
+# LO PRIMERO DE TODO: LA HISTORIA
+
+*Escrito por la dirección el 23 de septiembre de 2026 (C48, versión 12 del plan). Va delante de
+todo lo demás de este documento y **manda sobre ello**: si una regla de más abajo choca con esta
+sección, gana esta.*
+
+## Por qué existe, con las frases exactas
+
+El 21, el 22 y el 23 de septiembre se publicaron tres Shorts que cumplían **este documento
+entero** y pasaban `validar_guion.py` sin un error. El codirector, el 23: *«Es una sucesión de
+mensajes inconexos, sin sentido, que huelen a AI slop de lejos. ¿Cómo es posible que esto
+llegue a producción? Todos los vídeos deben contar una historia COHERENTE desde el principio
+hasta el final.»* Lo que se oyó:
+
+- `MDS-023` cerraba con **«Y aquí falla: es una encuesta que rellena cada uno. Y a nadie a las
+  ocho.»** Para entender «a nadie a las ocho» hay que haber escrito las cinco escenas de antes.
+- `MDS-021`: **«Veinte años. No se me ha acabado.»** y, al cerrar, **«Yo saldría
+  graciosísimo.»** Dos chistes que el espectador tiene que completar él.
+- `MDS-022`: **«Y ahora vuelve a leerlo.»**, en un vídeo que se escucha.
+
+Y lo que tenían los tres por debajo:
+
+1. **El chiste y el estudio eran dos historias pegadas.** Una risoterapia a las ocho de la
+   mañana no es lo que mide un estudio sobre estilos de humor y estrés. El espectador ve una
+   anécdota, luego ve un estudio, y nadie le dice qué tiene que ver una cosa con la otra.
+2. **Se quitaron las frases que cosían una escena con la siguiente**, para caber en la duración
+   de la serie. Las afirmaciones se quedaron; los «por eso» y los «pero» se fueron.
+3. **El cierre acababa en una frase que había que descifrar.**
+4. **Y la razón de fondo, que es la que importa: quien escribe el guion es el único lector que
+   no puede detectar esto**, porque ya sabe lo que quería decir. Por eso esta sección termina
+   en una lectura que hace otro.
+
+## La forma: una pregunta, una respuesta y un puente
+
+Antes de escribir una sola escena, rellena el campo `historia` del guion:
+
+```json
+"historia": {
+  "pregunta":  "la pregunta que responde el Short, con las palabras que usaría la gente",
+  "respuesta": "lo que el vídeo responde, en una frase que el espectador pueda repetir mañana",
+  "puente":    "qué escena une la situación del principio con el estudio, y cómo"
+}
+```
+
+**Si no puedes escribir las tres, no hay Short.** No se arregla escribiendo escenas: se cambia el
+chiste o se cambia el tema. Desde `MDS-026`, `validar_guion.py` da ERROR si falta.
+
+## Las cinco reglas de la historia
+
+1. **El chiste de la apertura ES el fenómeno que explica el estudio.** La prueba: después del
+   remate tienes que poder decir «esto que acabas de ver es justo lo que midió Fulano». Si
+   necesitas un «y hablando de otra cosa», son dos vídeos. El modelo es `MDS-016`, el único del
+   canal por encima de mil: la ironía que se pierde por WhatsApp **es** lo que midió el estudio.
+2. **Cada escena sale de la anterior.** Entre dos escenas seguidas tiene que caber un «pero», un
+   «por eso» o un «así que». Si solo cabe «y además» o «y luego», ahí no hay hilo: hay un corte.
+   Es la prueba más vieja del oficio de guionista, y en cuarenta segundos es la única que hace
+   falta.
+3. **Frases enteras, de las que se dicen en voz alta.** Nada de fragmentos telegráficos para
+   ahorrar segundos («Obligatoria. Y fui.», «Veinte años. No se me ha acabado.»). Si no cabe,
+   **quita una escena entera; nunca las juntas**.
+4. **Nada que descifrar.** Ninguna frase puede pedirle al espectador que recuerde o reconstruya
+   algo de veinte segundos antes. Un callback vuelve a decir su premisa en la misma frase (regla
+   13 de `REGLAS.md`). Y la última frase del cierre la tiene que entender alguien que solo haya
+   oído la última escena.
+5. **La pregunta del título se responde con sus propias palabras.** Si el título pregunta «¿por
+   qué…?», el vídeo dice por qué. Si el estudio no contesta a la pregunta del título, se cambia
+   el título, nunca lo que dice el estudio.
+
+**Y una sexta, que es la que más huele a máquina:** 23 de los 25 primeros Shorts empiezan con
+«mi madre», «mi jefe», «mi profesor», «en mi familia»… Un narrador sintético con una familia
+inventada es la firma más reconocible del contenido generado. **Como mucho dos de los cinco
+Shorts de la semana abren en primera persona.** Los demás, con «tú» en una situación que todo el
+mundo reconoce, o con el propio experimento contado como una escena. Y el narrador no se inventa
+nunca un hecho personal serio (una muerte, una enfermedad, un despido).
+
+## La lectura en frío — obligatoria, y la hace otro
+
+**Quien escribe no puede comprobar si se entiende.** Así que lo comprueba alguien que no sabe
+nada. Desde `MDS-026`, `validar_guion.py` da ERROR si falta, y el Short no se produce.
+
+1. Copia **solo** la `narracion` de cada escena y, entre corchetes, su texto de pantalla, en
+   orden y numerado. **Nada más**: ni el título, ni la tesis, ni la serie, ni las notas.
+2. Dáselo a un **subagente sin contexto** (herramienta Agent, tipo general-purpose) con este
+   encargo, literal:
+
+   > Eres alguien que va deslizando Shorts en el móvil. Te acaba de salir este vídeo, de unos
+   > cincuenta segundos. Esto es lo que se oye y, entre corchetes, lo que se lee en pantalla,
+   > escena a escena. No sabes nada más. Contesta con sinceridad, sin intentar ayudar a quien
+   > lo escribió:
+   > 1. ¿De qué va el vídeo, en una frase?
+   > 2. ¿Qué pregunta responde, y qué responde?
+   > 3. Copia literalmente cada frase que no hayas entendido a la primera o que no sepas a qué
+   >    se refiere. Si no hay ninguna, escribe «ninguna».
+   > 4. ¿Qué frase quitarías sin que se perdiera nada? Si ninguna, escribe «ninguna».
+   > 5. ¿En qué escena te habrías ido, y por qué? Si te habrías quedado hasta el final, escribe
+   >    «me quedo».
+
+3. Copia lo que conteste en el guion:
+
+   ```json
+   "lectura_en_frio": {
+     "lector": "subagente sin contexto",
+     "fecha": "AAAA-MM-DD",
+     "de_que_va": "…",
+     "pregunta_y_respuesta": "…",
+     "frases_que_no_se_entienden": [],
+     "frase_que_sobra": "ninguna",
+     "donde_me_iria": "me quedo",
+     "veredicto": "pasa"
+   }
+   ```
+
+4. **`veredicto` es `"pasa"` solo si** (a) `frases_que_no_se_entienden` está vacía, (b) lo que
+   dice en `de_que_va` y en `pregunta_y_respuesta` es la misma idea que tu `historia` —no las
+   mismas palabras: la misma idea—, y (c) si nombró una frase que sobra, la has quitado, o
+   explicas en `notas_humor` por qué se queda.
+5. **Si no pasa, reescribe y vuelve a leer con un subagente NUEVO**: el anterior ya conoce la
+   historia y no sirve. Tres vueltas como mucho; si la tercera no pasa, ese Short no se escribe
+   esta semana y se cambia de tema.
+6. Si no tienes la herramienta Agent, haz tú la lectura en un paso aparte, mirando solo esa
+   lista, y pon `"lector": "la propia planificación, sin subagente"`. La revisión diaria la
+   repetirá con un subagente antes de producir.
+
+## Lo que esta sección anula o corrige de más abajo
+
+| De este documento | Desde el 23/09/2026 |
+|---|---|
+| Prueba 4 · «escribe a la duración de tu serie, ±12 %» (ERROR) | **ANULADA como error.** La duración de la serie es una referencia; el techo sigue siendo 55 s. Contra el relleno protege la pregunta 4 de la lectura en frío, no un reloj |
+| Prueba 4 · «el remate no cae antes del segundo 10» (ERROR) | **Se queda como consejo**, no como error: no gastes lo mejor en el segundo 6, pero nunca a costa de trocear el planteamiento |
+| Prueba 1 · «el ejemplo de la escena 1 vuelve por su nombre en una escena del medio» | **SE MANTIENE, y no basta**: cumplida al pie de la letra fabricó callbacks forzados («con el señor de la boda no lo probó nadie», «nadie ha medido el pijama»). El ejemplo vuelve porque la explicación va **sobre** él, no para marcar una casilla |
+| Pruebas 2 y 3 | **Se mantienen** tal cual |
+
+---
+
+# DESPUÉS: LAS PRUEBAS DE COSIDO
 
 *Reescritas el 12 de septiembre de 2026, después de tres avisos de la dirección en cuatro
-días. Van delante de todo lo demás porque son lo que falló, y lo que falló no fue el
-contenido.*
+días. Fueron lo primero de este documento hasta el 23/09/2026; desde entonces van detrás de «La
+historia», porque se cumplieron al pie de la letra y el guion siguió sin entenderse.*
 
 Los tres guiones que la dirección señaló **cumplían este documento entero**. MDS-013 tenía
 su chiste, su mecanismo y su «dónde falla». MDS-014 tenía sus seis campos. Y aun así el
@@ -100,6 +234,11 @@ publicación.
 
 
 ## Prueba 4 · El reloj: la duración de tu serie, y el remate en el segundo doce
+
+> **ANULADA COMO ERROR EL 23/09/2026 (C48).** Se deja escrita porque el razonamiento sobre la
+> retención sigue siendo cierto, pero la respuesta que dio —escribir a la duración de la serie
+> quitando frases— se llevó por delante las que cosían el guion. Ver «Lo primero de todo: la
+> historia», arriba.
 
 *Añadida el 18 de septiembre de 2026, después de dos avisos de la dirección en dos días
 seguidos: «me sigue costando entender el hilo del short» (16/09) y «me sigue pareciendo un
@@ -182,10 +321,10 @@ Un archivo `05_calendario/guiones/MDS-0XX.es.json` válido contra `esquema_guion
 { "id": "MDS-0XX", "formato": "corto", "serie": "<una de las cinco>", "idioma": "es", ... }
 ```
 
-Entre **3 y 8 escenas**, y **la duración de tu serie ±12 %** (prueba 4). Los 55 segundos
-siguen siendo el techo del formato, pero ya no son el objetivo de nadie: el objetivo es el
-número de tu serie. Lo comprueba `validar_guion.py`, que para la producción si te pasas.
-Ninguna escena puede durar más de 12 s.
+Entre **3 y 8 escenas**, con los campos **`historia`** y **`lectura_en_frio`** (ver «Lo
+primero de todo: la historia»). **El techo son 55 segundos** y lo comprueba `validar_guion.py`,
+que para la producción si te pasas. La duración de la serie es una referencia (desde el
+23/09/2026, C48): la duración la decide la historia. Ninguna escena puede durar más de 12 s.
 
 `validar_guion.py` estima la duración a **130 palabras por minuto**, que es lo que mide la
 voz de Gemini en los Shorts publicados (117, 126, 127, 141 y 141 ppm; media 130). Hasta el
@@ -206,7 +345,7 @@ gracia y esto sí» de 35 a 40— porque los de agosto se escribieron antes de q
 honesto fuera obligatorio también en los Shorts, y con él un Short de este canal no baja de
 unas 66 palabras. Un 35 que se cumple es más estricto que un 30 que nadie ha cumplido nunca.
 
-| Serie | Duración | Palabras, más o menos |
+| Serie | Duración de referencia | Palabras, más o menos |
 |---|---|---|
 | Desmonta el chiste | 40 s | 75 |
 | Ríete primero, te explico después | 35 s | 64 |
@@ -400,7 +539,13 @@ responderla honestamente. Si no hay respaldo, el Short no se hace: se anota en
 
 ## Un ejemplo completo
 
-`05_calendario/guiones/MDS-001.es.json`. Seis escenas, 41,6 s, serie «Desmonta el chiste»,
+**El modelo de historia es `MDS-016`** («por qué la ironía no se entiende por WhatsApp», el
+único del canal por encima de mil visualizaciones): la anécdota ES lo que explica el estudio, cada
+escena sale de la anterior, y el cierre remata con una frase que se entiende sola. Y los tres
+Shorts que la dirección reescribió el 23/09 (`MDS-023`, `MDS-024` y `MDS-025`) llevan el campo
+`historia` rellenado como se pide arriba.
+
+Para la mecánica de campos: `05_calendario/guiones/MDS-001.es.json`. Seis escenas, 41,6 s, serie «Desmonta el chiste»,
 chiste en el segundo cero, pausa de 1,3 s antes del remate, personaje en tres escenas (la
 2, la 4 y la 6 — nunca la del planteamiento) y cierre que dice dónde falla. Léelo antes de
 escribir el primero.
@@ -409,13 +554,18 @@ escribir el primero.
 
 Antes de entregar, contra el guion terminado:
 
+0. **`historia` rellena, y la lectura en frío hecha por un subagente, con `veredicto: "pasa"`.**
+   Si solo puedes hacer una comprobación, es esta.
+0 bis. Entre cada dos escenas cabe un «pero» o un «por eso»; el chiste de la apertura es lo que
+   explica el estudio; ninguna frase telegráfica; ningún cierre que haya que descifrar.
 1. Las tres frases de `notas_humor` nombran el mismo sujeto.
 2. El ejemplo de la escena 1 vuelve por su nombre en una escena del medio.
 3. Ninguna idea nueva en las dos últimas escenas.
 4. Ningún día, mes, número o nombre propio en pantalla que no diga la voz de esa escena.
 5. Como máximo tres `enunciado`, y la escena 1 no es una tarjeta de texto.
 6. El chiste pasa la prueba del WhatsApp.
-7. **Dura lo que dice su serie**, y el remate cae del segundo 10 en adelante.
+7. No pasa de 55 s. (La duración de la serie y el remate en el segundo 10 son referencia
+   desde el 23/09: no se cumplen a costa de trocear el guion.)
 8. Si hay `risa`, es una sola y no está ni en la escena 1, ni en el remate, ni en el cierre.
 
 Si una falla, no entregues: arregla. Las ocho se comprueban en cinco minutos y cada una ha

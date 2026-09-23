@@ -4,68 +4,75 @@
  "serie": "Ríete primero, te explico después",
  "idioma": "es",
  "titulo_trabajo": "¿Reírse es bueno para la salud?",
- "tesis": "El estudio que fue a buscar el humor que protege la salud encontró otra cosa: que un estilo de humor te venga bien o mal depende del agobio que lleves encima.",
+ "tesis": "Hacer chistes a tu propia costa se considera el humor dañino, y en jubilados con muchos problemas iba con menos dolor; pero es una encuesta y no dice qué causa qué.",
  "pilares": [
-  "G"
+  "G",
+  "B"
  ],
- "duracion_objetivo_s": 35,
+ "duracion_objetivo_s": 50,
  "bloqueos": [],
+ "historia": {
+  "pregunta": "¿Hacer chistes a tu propia costa cuando todo va mal es malo para ti?",
+  "respuesta": "En 265 jubilados con muchos problemas iba con menos dolor, al revés de lo esperado. Pero es una encuesta: no dice qué causa qué.",
+  "puente": "El chiste de la escena 2 («venía roto de fábrica») es exactamente el humor que mide el estudio: hacer chistes a tu costa cuando todo se rompe. La escena 5 le da la vuelta a lo que dice la escena 3, y el cierre vuelve a «la broma»."
+ },
  "notas_humor": [
-  "REESCRITO POR LA DIRECCIÓN el 18/09/2026 (C38). No se ha añadido ni una afirmación: todo lo que dice este guion estaba en la versión de la planificación del jueves 17, ya verificada contra la fuente. Lo que cambia es la duración —se escribe a la de su serie, que nunca se había cumplido en 25 Shorts— y la posición del remate, que pasa del segundo ~6 al ~11, donde la curva de retención dice que se va la mitad de la audiencia.",
-  "Serie «Ríete primero, te explico después»: el chiste va en el segundo cero y la explicación es el premio. No es «El experimento» porque G03 es una encuesta con regresiones, no un estudio con protagonista, y declarar una forma que el guion no tiene es lo que produjo el MDS-011 «despiezado».",
-  "Afirmaciones comprobadas el 17/09/2026 contra el resumen del artículo, leído en esta ejecución en la página del artículo en Europe's Journal of Psychology (acceso abierto). Frases literales del resumen: «Two hundred sixty-five retirees over the age of 55 years responded to an on-line survey, completing the RAND 36-Item Health Survey and the Humor Styles Questionnaire.»; «Contrary to expectation, and the assumed nature of humor styles, results suggest that the adaptiveness of humor styles depends on the level of stress or hassles one perceives, as well as gender.»",
-  "De esa frase literal se cuenta la parte del agobio y NO la del sexo: en cuarenta segundos una diferencia entre hombres y mujeres se lee como una afirmación sobre lo que le pasa a cada uno por serlo, que es justo lo que REGLAS.md manda rechazar. No es un dato que se esconda: es un dato que no cabe bien, y está dicho aquí.",
-  "AVISO PARA LA BIBLIOGRAFÍA (no es fichero mío): la ficha G03 fecha el artículo en 2015 y no da autores; la página del artículo lo fecha en 2010 y lo firman Gillian P. Freeman y W. Larry Ventis. Conviene comprobarlo antes de volver a citarlo.",
-  "El guion no da ningún consejo de salud, no nombra ninguna enfermedad y no promete ningún beneficio: dice qué midió el estudio y qué le salió."
+  "REESCRITO POR LA DIRECCIÓN el 23/09/2026 (C48, versión 12 del plan). La versión del 18/09 (C38) se escribió a la duración de la serie ±12 % quitando y recolocando frases sin añadir ninguna, y lo que se quitó fue justo lo que cosía una escena con la siguiente: el codirector la leyó como «una sucesión de mensajes inconexos». Esta versión se escribe al revés: primero la historia —una pregunta, una respuesta y el puente entre el chiste y el estudio— y la duración es la que salga, por debajo de 55 s.",
+  "Qué cambia respecto al 18/09: la risoterapia de las ocho de la mañana no era el humor que mide el estudio (estilos de humor y estrés), así que el chiste y el estudio eran dos historias pegadas, y el cierre «y a nadie a las ocho» pedía reconstruir una premisa de hacía treinta segundos. Ahora el chiste ES el fenómeno: un chiste a tu propia costa en una semana en la que todo se rompe.",
+  "Afirmaciones comprobadas el 23/09/2026 contra el TEXTO COMPLETO del artículo (acceso abierto, ejop.psychopen.eu, DOI 10.5964/ejop.v6i3.211), no solo contra el resumen. Literales: «Two hundred sixty-five retirees over the age of 55 years responded to an on-line survey, completing the RAND 36-Item Health Survey and the Humor Styles Questionnaire.» (resumen); «when daily hassles were high a higher Self-defeating score was related to less Pain, and thus appeared to have an adaptive quality» (resultados, muestra completa, no por sexo); «As always, it is a concern with correlational data that causality cannot be demonstrated, but if the relationship is causal, it may not be clear which variable is the cause and which is the effect.» (discusión). El cierre «igual la broma sale sola cuando duele menos» es esa última frase dicha en castellano de la calle.",
+  "La escena 3 (reírse de lo que te pasa = estilo «de mejora personal», considerado sano; chistes a tu costa = estilo «autodestructivo», considerado dañino) es la clasificación del Cuestionario de Estilos de Humor (B01, Martin y otros, 2003), que es el que usa G03. B01 va de apoyo, no de fuente central (C17).",
+  "LO QUE SE DEJA FUERA A PROPÓSITO: el humor agresivo también salió «adaptativo» con mucho estrés en la muestra completa, pero en las mujeres salió al revés; en cuarenta segundos eso se lee como una afirmación sobre lo que le pasa a cada sexo (REGLAS.md, regla 1). Tampoco se dice que la muestra es de jubilados blancos con estudios superiores y cómodos con un ordenador (los autores lo avisan): no cabe, y el cierre ya dice lo más importante.",
+  "Ningún consejo de salud: el guion no dice que hagas chistes a tu costa, dice qué salió en una encuesta y por qué no se puede leer como causa."
  ],
  "escenas": [
   {
    "tipo": "enunciado",
-   "icono": "i-publico",
-   "texto": "Risoterapia. A las *ocho*.",
-   "narracion": "En mi antiguo trabajo pusieron una risoterapia a las ocho de la mañana.",
+   "icono": "i-grieta",
+   "texto": "Caldera, coche y *tostadora*",
+   "narracion": "Semana horrible: se te rompen la caldera, el coche y la tostadora. Y cuando te preguntan cómo estás, sonríes.",
+   "pausa_despues_s": 1.3
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Venía *roto de fábrica*",
+   "narracion": "Bien, bien. Yo ya venía roto de fábrica.",
    "pausa_despues_s": 0.6
   },
   {
-   "tipo": "enunciado",
-   "texto": "Y *obligatoria*",
-   "narracion": "Obligatoria. Y fui.",
-   "pausa_despues_s": 1.35
-  },
-  {
-   "tipo": "enunciado",
-   "texto": "Salí *riéndome*",
-   "narracion": "Salí riéndome. De tener que estar allí.",
-   "personaje": "rie",
-   "pausa_despues_s": 0.5
-  },
-  {
-   "tipo": "dato",
-   "cifra": "265 jubilados",
-   "pie": "encuesta de *salud* y de humor",
-   "fuente": "G03",
-   "narracion": "Freeman y Ventis le pasaron a doscientos sesenta y cinco jubilados dos encuestas: salud y humor.",
-   "personaje": "piensa",
+   "tipo": "comparacion",
+   "fuente": "B01",
+   "a": "De lo que pasa: sano",
+   "b": "A tu costa: *dañino*",
+   "et_a": "reírte de lo que te pasa",
+   "et_b": "hacer chistes a tu costa",
+   "narracion": "En psicología, reírte de lo que te pasa se considera sano; hacer chistes a tu costa, dañino.",
    "pausa_despues_s": 0.45
   },
   {
-   "tipo": "comparacion",
-   "a": "Lo *contrario* de lo buscado",
-   "b": "En una semana mala",
-   "et_a": "no «reírse es sano»",
-   "et_b": "reírse no sirve igual",
+   "tipo": "dato",
+   "personaje": "piensa",
    "fuente": "G03",
-   "narracion": "Y les salió lo contrario: en una semana mala, reírse no sirve igual.",
+   "cifra": "265 jubilados",
+   "pie": "humor, salud y *problemas*",
+   "narracion": "Freeman y Ventis midieron los dos en doscientos sesenta y cinco jubilados, con su salud y sus problemas.",
+   "pausa_despues_s": 0.45
+  },
+  {
+   "tipo": "enunciado",
    "personaje": "entiende",
-   "pausa_despues_s": 0.4
+   "fuente": "G03",
+   "texto": "Con muchos problemas: *menos dolor*",
+   "narracion": "Y salió al revés: con muchos problemas, hacer chistes a tu costa iba con menos dolor.",
+   "pausa_despues_s": 0.45
   },
   {
    "tipo": "cierre",
-   "titulo": "Y falla aquí: es una *encuesta*",
-   "subtitulo": "Humor y salud en la jubilación",
-   "fuente": "G03",
-   "narracion": "Y aquí falla: es una encuesta que rellena cada uno. Y a nadie a las ocho.",
    "personaje": "no",
+   "fuente": "G03",
+   "titulo": "Y falla aquí: no dice qué causa *qué*",
+   "subtitulo": "Humor y salud en la jubilación · Freeman y Ventis",
+   "narracion": "Y aquí falla: es una encuesta, y no dice qué causa qué. Igual la broma sale sola cuando duele menos.",
    "pausa_despues_s": 0.2
   }
  ]

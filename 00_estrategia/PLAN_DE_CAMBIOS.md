@@ -3,8 +3,10 @@
 **Versión 3 · 21 de agosto de 2026** — con las decisiones tomadas y la fase 1 y
 media de la fase 2 ya escritas en el repositorio.
 
-> ⚠️ **La versión que manda es la 10, al final de este documento (18 de
-> septiembre).** Las anteriores siguen vigentes en todo lo que la 10 no corrija.
+> ⚠️ **La versión que manda es la 12, al final de este documento (23 de
+> septiembre).** Las anteriores siguen vigentes en todo lo que la 12 no corrija.
+> *(Hasta el 23/09 este aviso decía «la 10»: se quedó sin actualizar el 21/09, cuando
+> ya mandaba la 11. Trampa 32: una corrección escrita en un sitio y no en los demás.)*
 > En corto: la **4** partió la escalera de métricas en dos (Shorts y largo); la
 > **5** puso la primera barrera antes de publicar y cambió el rumbo de C7; la
 > **6** abrió C25 (la presentación) y fijó en C26 la fecha en la que se decide si
@@ -13,8 +15,11 @@ media de la fase 2 ya escritas en el repositorio.
 > escena (C33) y **revierte el descarte de las imágenes** que había hecho C25
 > (C34); la **9** puso una sola voz por vídeo (C33.1 y C33.2); y la **10** le pone
 > reloj al Short —la duración de su serie y el remate en el segundo doce (C38)— y
-> contesta a TikTok, Reels y marketing (C40 y C41).
-> **Si vas a decidir algo con este plan, lee la versión 10 antes.**
+> contesta a TikTok, Reels y marketing (C40 y C41); la **11** suspende el episodio largo
+> (C42), pone el estado del canal en un fichero por día (C45) y hace que el canal se lea a sí
+> mismo (C46 y C47); y la **12** pone **la historia antes que el reloj** —la lectura en frío
+> obligatoria (C48)— y decide el **giro de la imagen**, de diapositiva a vídeo (C50).
+> **Si vas a decidir algo con este plan, lee la versión 12 antes.**
 
 Este documento es **ejecutable**. Cada cambio trae qué archivos toca, qué tiene que ser
 cierto para darlo por hecho, y qué no hay que hacer. El razonamiento está en
@@ -4063,3 +4068,365 @@ de C26— y es la única que llega con seis días de retraso.
   el codirector dejó `02_marca/banco/creditos_pixabay.csv` el 18/09 y la dirección ha generado
   `02_marca/banco/banco.json` con los tres campos que exige la regla 9 —licencia, autor y
   enlace— para las quince imágenes. Entra en la cola de presentación.
+
+---
+
+# Versión 12 · 23 de septiembre de 2026 — la historia antes que el reloj, y la imagen deja de ser una diapositiva
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario, y lo que se anula se dice con su nombre, en la tabla de abajo.
+
+Sesión **extraordinaria**, de miércoles. La pidió el codirector con tres notas seguidas en
+`PROMPT_DIRECCIÓN.md`:
+
+- **21/09**, sobre `MDS-021`: *«un poco un desastre en términos de guion. ¿Nadie revisa los guiones
+  desde el punto de vista narrativo? Se sienten sin hilo, deslabazados.»*
+- **22/09**, sobre `MDS-022`: *«sigue teniendo problemas de guion evidentes. Tenemos que mejorar la
+  calidad de los guiones con máxima importancia.»*
+- **23/09**, sobre `MDS-023`: *«¿Cómo puede ser que termine el vídeo de hoy con "¿y a nadie a las
+  8?"? ¡El guion de los shorts no se sostiene por ningún sitio! Es una sucesión de mensajes
+  inconexos, sin sentido, que huelen a AI Slop de lejos. […] Hay que cambiar los guiones hoy
+  mismo.»* Y en la misma nota: *«Hay que repensar toda la estrategia de imágenes […] tenemos que
+  darle un giro de 180º a la presentación de los vídeos.»*
+
+Y dos asuntos que venían de antes: la nota de la revisión diaria del 22/09 sobre
+`sincroniza_registro.yml`, y la petición del 21/09 en `08_comunicacion/novedades.md` de estudiar
+el último vídeo de @Maestro_Seductor.
+
+Salen cuatro cambios: **C48** (la historia), **C49** (la sincronización, que no estaba rota),
+**C50** (la imagen) y **C51** (el presentador sintético, que no entra todavía).
+
+---
+
+## Lo que se anula, lo que se mantiene y lo que se amplía
+
+| Documento o decisión | Estado desde hoy |
+|---|---|
+| Nota de dirección del 21/09, punto 5 · «esta semana no se toca voz, guion ni presentación» | **ANULADA en lo que toca al guion.** Medir C38 con guiones que no se entienden no mide nada. La voz sigue sin tocarse hasta el lunes 28 (C44) |
+| C38 · «el Short se escribe a la duración de su serie ±12 %» (ERROR en `validar_guion.py`) | **ANULADA como error.** Pasa a referencia (AVISO). El techo de 55 s sigue siendo ERROR |
+| C38 · «el remate no cae antes del segundo 10» (ERROR) | **Rebajada a AVISO.** La idea se queda como consejo |
+| Regla 13.2 de `REGLAS.md` | **CORREGIDA** en sus dos primeras viñetas (referencia, no regla). La tercera se mantiene |
+| Regla 13.3 de `REGLAS.md` | **NUEVA**: un Short cuenta una historia, y lo comprueba alguien que no la conoce |
+| `guionista_corto.md` · las tres pruebas de cosido | **SE MANTIENEN**, detrás de la sección nueva «Lo primero de todo: la historia», que manda sobre ellas |
+| `guionista_corto.md` · prueba 4 (el reloj) | **ANULADA como error**; se deja escrita por el razonamiento sobre la retención |
+| Versión 10 · los cinco Shorts de la semana del 21 reescritos por la dirección el 18/09 | **SUSTITUIDOS** los tres que quedaban (`MDS-023`, `024` y `025`). `MDS-021` y `MDS-022` ya están publicados y se quedan como están |
+| C44 · la voz (capas A y B el lunes 28) | **SE MANTIENE** tal cual |
+| C26 · la decisión del 15 de noviembre, y el punto de control del 27 | **SE MANTIENEN** |
+| C34 · el banco de imágenes (15 fotos de Pixabay en duotono, primera posición en la escena 1) | **SE AMPLÍA en C50**: el banco deja de ser quince fotos para la escena 1 y pasa a ser una fuente visual por escena |
+| C6.1 · los subtítulos quemados, apagados por decisión del codirector del 20/08 | **SE MANTIENEN apagados.** Con imagen real detrás cambia el argumento que los apagó, así que el muestrario de C50 enseña una variante con ellos, **y decide el codirector** |
+| Regla 11.1 (un cambio por producción), suspendida para la presentación hasta el 27/09 | **SE AMPLÍA la suspensión hasta que C50 esté entero.** Razón en C50 |
+| Nota de la revisión diaria del 22/09 · «`sincroniza_registro.yml` puede no estar corrigiendo el registro» | **CERRADA**: no era una avería (C49) |
+| Petición del 21/09 en `novedades.md` · el vídeo de @Maestro_Seductor | **CONTESTADA** en C51 |
+
+---
+
+## C48 · La historia antes que el reloj
+
+**Hecho hoy.** `MDS-023`, `MDS-024` y `MDS-025` reescritos; `validar_guion.py`;
+`04_agentes/prompts/guionista_corto.md`; `00_estrategia/tareas/planificacion-jueves.md` y
+`revision-diaria.md`; `REGLAS.md` (13.2 corregida y 13.3 nueva); `esquema_guion.json`;
+`08_comunicacion/2026-09-23-direccion.md`.
+
+### Lo que se oyó, con las frases exactas
+
+- `MDS-021` (21/09): *«Veinte años. No se me ha acabado.»* — un chiste que el espectador tiene que
+  terminar él (el narrador tiene tantos defectos que el material no se le acaba). Y al cerrar,
+  *«Yo saldría graciosísimo»*, que es la misma operación con otra premisa.
+- `MDS-022` (22/09): *«Y ahora vuelve a leerlo.»* — en un vídeo que se escucha.
+- `MDS-023` (23/09, retirado antes de publicarse): una risoterapia obligatoria a las ocho de la
+  mañana, un estudio sobre estilos de humor y estrés en jubilados, *«les salió lo contrario»*
+  (¿de qué?), y el cierre *«Y a nadie a las ocho»*.
+
+### Por qué pasó, en orden de tamaño
+
+1. **El chiste y el estudio eran dos historias pegadas, o les faltaba la frase que los unía.** La
+   risoterapia de las ocho no es lo que mide un estudio sobre estilos de humor, y el señor de la
+   boda que contestaba «ya» no era quien se quedaba en blanco. En `MDS-021` la anécdota sí era el
+   fenómeno —el material a costa de uno mismo es el estilo autodestructivo que midió Greengross—,
+   pero no había ninguna frase que lo dijera («o sea, que mis veinte años de material son justo el
+   estilo que peor les va a los cómicos»). En los tres casos el espectador ve una anécdota, luego
+   un estudio, y nadie le dice qué tienen que ver.
+2. **Yo quité las frases que los cosían.** El 18/09 reescribí estos cinco Shorts para que cupieran
+   en la duración de su serie, con una restricción que me pareció rigurosa: *«no entra ni una
+   afirmación nueva; esta reescritura solo quita y recoloca»*. Lo que se quitó fueron los «por eso»
+   y los «pero». `MDS-023` pasó de 111 palabras a 68. Las afirmaciones sobrevivieron todas; la
+   historia, ninguna.
+3. **Los cierres acababan en una frase que había que descifrar**, y eso lo fabricaba en parte una
+   regla nuestra: la prueba 1 del guionista pide que el ejemplo de la escena 1 vuelva «por su
+   nombre», y cumplida al pie de la letra produce callbacks de trámite («con el señor de la boda no
+   lo probó nadie», «nadie ha medido el pijama»).
+4. **Nadie comprobaba si se entendía.** `validar_guion.py` mide la forma. La revisión diaria mide
+   los dos canales, las caras, el marcado y la ficha técnica — y dio los tres por limpios, porque
+   lo eran. La planificación se revisa a sí misma. Y **quien escribe el guion es el único lector
+   que nunca puede detectar un salto**: «y a nadie a las ocho» se entiende perfectamente si has
+   escrito las cinco escenas de antes.
+5. **Y yo había congelado los guiones de la semana** para medir C38 limpio (nota del 21/09, punto
+   5). El codirector avisó el 21 y el 22 en su cuaderno; la revisión diaria no podía tocarlos; y
+   yo no leo el cuaderno hasta que hay sesión. Tres días de avisos sin nadie autorizado a hacer
+   caso.
+
+### Lo que dice YouTube, que no es opinión nuestra
+
+Desde el 15/07/2025, la política de monetización llama **contenido no auténtico** a, entre otras
+cosas, *«image slideshows, templated storylines, or scrolling text with minimal or no narrative»*
+y *«AI-generated content made with generic or unoriginal templates giving the impression of mass
+production»* (YouTube Help, «YouTube channel monetization policies»). Eso afecta a la monetización,
+no a la publicación, y el canal no monetiza todavía. Pero describe con precisión incómoda dos
+rasgos nuestros: **23 de los 25 primeros Shorts abren con «mi madre», «mi jefe», «mi profesor»,
+«en mi familia»…**, un narrador sintético con una familia inventada; y **el 72 % de lo que se ve
+es texto sobre fondo** (medido el 07/09 en C25). La primera es C48; la segunda es C50.
+
+### Los tres guiones, reescritos
+
+Una pregunta, una respuesta y un puente cada uno, con el campo `historia` rellenado.
+
+| | Antes (18/09) | Ahora | La historia en una línea |
+|---|---|---|---|
+| `MDS-023` · «¿Reírse es bueno para la salud?» | 68 pal. · ~39 s | **98 pal. · ~52 s** | Hacer chistes a tu costa tiene fama de dañino; en jubilados con muchos problemas iba con menos dolor; pero es una encuesta y puede ser al revés |
+| `MDS-024` · «¿Cómo mantener una conversación sin quedarte en blanco?» | 81 · ~43 s | **97 · ~51 s** | La misma frase («vengo de Lisboa») con la respuesta que mata la conversación y la que la sigue; la regla del «sí, y además»; y es un manual, no un experimento |
+| `MDS-025` · «¿Por qué el humor ayuda a memorizar?» | 89 · ~47 s | **88 · ~47 s** | Diez personas ven vídeos graciosos y diez se quedan sentadas sin móvil; las primeras mejoran la memoria un 43,6 % y les baja el cortisol; pero las otras mejoran casi la mitad |
+
+- **Afirmaciones comprobadas hoy contra la fuente**, y en `MDS-023` contra el texto completo, no
+  solo el resumen (`G03`, DOI 10.5964/ejop.v6i3.211, que la ficha no tenía). Las frases literales
+  están en las notas de cada guion.
+- **Una corrección de paso:** la nota de `MDS-025` del 17/09 decía que el resumen de Bains y otros
+  solo menciona el cortisol como contexto. **No es así**: lo da como resultado (*«significant
+  decreases in salivary cortisol were observed in the humor group»*). Por eso ahora el vídeo puede
+  contestar al «por qué» de su título.
+- **Los tres pasan `validar_guion.py`**, y **la barrera de C21 en las 18 escenas** con las
+  tipografías de marca instaladas, midiendo en 21 instantes por escena (trampa 15).
+- **Un defecto que salió al mirarlos:** `escena.html` pintaba los decimales con punto («43.6»)
+  porque `toFixed()` siempre lo pone. Arreglado en `contar()`: respeta la coma del guion.
+- **`MDS-023` se rehace hoy.** La subida de madrugada (`X1GAp3OUgKg`) la borra el codirector; la
+  emisión del 23/09 lleva `rehacer_video_id`, y el siguiente intento de cron del día lo produce
+  solo. Hay una **segunda emisión de `MDS-023` el sábado 26** como red de seguridad: si hoy sale
+  bien, ese día `cola.py` dice «nada que producir» (comprobado simulándolo contra el registro de
+  `origin/main`).
+
+### La puerta nueva: la lectura en frío
+
+Lo que se puede comprobar sin entender el vídeo se cumple sin entender el vídeo. Así que la
+comprobación nueva no mide el guion: **le pregunta a alguien que no lo conoce qué ha entendido.**
+
+1. Quien escribe rellena **`historia`**: pregunta, respuesta y puente, antes de la primera escena.
+2. Un **subagente sin contexto** recibe solo las narraciones y los textos de pantalla y contesta
+   cinco preguntas: de qué va, qué pregunta responde y qué responde, qué frase no ha entendido, qué
+   frase sobra, y dónde se habría ido. Encargo literal en `guionista_corto.md`.
+3. Sus respuestas van en **`lectura_en_frio`**. Pasa si no hay frases sin entender y si lo que
+   cuenta es la misma idea que la `historia`.
+4. **Desde `MDS-026`, `validar_guion.py` da ERROR sin las dos cosas**, y el Short no se produce.
+5. **Y la revisión diaria repite la lectura cada día** sobre el Short de la madrugada siguiente,
+   con otro subagente. Si no pasa, es INCIDENCIA; desde `MDS-026` lo arregla ella con la excepción
+   de las 48 horas.
+
+**Lo que esto no arregla, dicho antes de que pase:** el lector en frío es un modelo, no una
+persona que desliza el dedo. Es una aproximación, mucho mejor que ninguna, pero el juez sigue
+siendo el codirector. **Si un Short que pasó la lectura en frío le vuelve a parecer inconexo, el
+defecto está en el encargo del lector**, y se corrige ahí (sería C48.1), no en el guion suelto.
+
+**Y lo que se pierde, también dicho:** la semana del 21 era la primera medida limpia de C38. Ya no
+lo es. Se pierde a propósito: medir el reloj con guiones que no se entienden no dice nada del
+reloj.
+
+---
+
+## C49 · `sincroniza_registro.yml` funciona. Lo que falla es el reloj de quien lo lee
+
+La revisión diaria del 22/09 escribió que el workflow podía no estar corrigiendo el registro
+desde el 20/09, y el codirector contestó que corre en verde. **Tenían razón los dos**, y no hay
+avería:
+
+| Día | Corrió (UTC) | ¿Había algo que corregir? | Commit |
+|---|---|---|---|
+| 21/09 | 15:21 y 15:52 | No: `MDS-021` se publicaba a las 17:00 UTC, **después** | ninguno, y es lo correcto |
+| 22/09 | 13:41 | Sí: `MDS-021` de `private` a `public` | **`77d6c7a`** |
+
+El cron dice 08:50 y 09:10 UTC y llega con **cuatro o cinco horas de retraso**; la revisión diaria
+lee a las 09:30 UTC. **Lee siempre antes de que haya corrido la sincronización de ese día.** Es la
+trampa 14 otra vez: quien lee cuenta el margen desde la hora nominal del que escribe, no desde su
+último reintento real. Escrito en `revision-diaria.md` (paso 2): un Short publicado la víspera que
+aparece como `private` no es incidencia; sí lo son dos días sin sincronización habiendo algo que
+corregir.
+
+**Y un hallazgo de paso, arreglado:** `registrar.py` escribe `registro_publicaciones.json` con
+sangría 2 y `metricas.py --solo-registro` con sangría 1. Cada producción y cada sincronización
+reescribían **las ~950 líneas del fichero**: el commit `77d6c7a` cambiaba un solo campo y git
+decía 470 inserciones y 470 borrados. Es ruido y es riesgo de conflicto. `metricas.py` escribe ya
+con sangría 2.
+
+(La cabecera del workflow dice «tres pasadas» y el `schedule` trae dos. Es un comentario en un
+fichero protegido; no merece un encargo al codirector.)
+
+---
+
+## C50 · La imagen: de diapositiva a vídeo
+
+**Decidido hoy. Se diseña y se prueba esta semana; entra cuando el codirector lo haya visto.**
+
+### Por qué, y por qué ahora
+
+El codirector: *«tenemos que darle un giro de 180º a la presentación de los vídeos. Estamos
+estancados en ~100 visitas por vídeo, a pesar de que las nuevas voces hayan mejorado.»* Y el
+14/09 ya lo había dicho: *«fondo azul con letras amarillas no compite con imágenes reales»*.
+
+Lo que tenemos es, literalmente, lo que la política de YouTube pone como primer ejemplo de
+contenido no auténtico: **texto sobre fondo, con la misma plantilla cada día**. C25 (los iconos,
+la jerarquía tipográfica, el personaje) y C34 (quince fotos para la escena 1) lo han pulido; no lo
+han cambiado. Un Short de un canal que funciona en este nicho es **imagen a pantalla completa que
+cambia cada dos o tres segundos**, con el texto encima y no en lugar de la imagen.
+
+### Qué se queda y qué cambia
+
+**Se queda:** la paleta (azul noche, ámbar, cian), las tipografías, la cifra grande, los
+diagramas y las comparaciones cuando son la explicación, el cierre honesto, y el Engranaje como
+firma.
+
+**Cambia:**
+
+1. **Cada escena lleva una imagen o un vídeo a pantalla completa detrás.** Nada de fondo liso,
+   salvo en el cierre.
+2. **Un cambio de plano cada dos o tres segundos** —una escena de ocho segundos lleva dos o tres—,
+   que es lo que pedía C35 y la regla del codirector de «mucha más densidad de estímulos».
+3. **El texto pasa a ser una capa encima**: la frase corta de la escena (el `texto` de siempre),
+   en blanco con la palabra clave en ámbar, sobre un degradado oscuro que garantiza que se lea. Las
+   escenas de dato, comparación y diagrama siguen siendo tarjetas de marca, pero sobre la imagen
+   desenfocada, no sobre azul.
+4. **El Engranaje deja de reaccionar en cada escena** y se queda como firma: la apertura y el
+   cierre.
+
+### De dónde salen las imágenes, por orden
+
+| Fuente | Para qué | Coste y licencia |
+|---|---|---|
+| **Vídeo de archivo: Pexels y Pixabay** (API) | Situaciones reales y genéricas: una boda, un móvil con WhatsApp, un aula, gente mayor riéndose, un coche averiado | Gratis. Pexels: 200 peticiones/hora y 20.000/mes; Pixabay: 100 por minuto. Las dos licencias permiten uso comercial sin atribución obligatoria, y **atribuimos igual** (regla 9: licencia, autor y enlace en `banco.json`) |
+| **Imagen generada: FLUX.1 [schnell] en Cloudflare Workers AI** | Lo que el archivo no tiene: *un hombre en pijama en una reunión*, *una tostadora echando humo* | Gratis hasta 10.000 «neuronas» al día, y en el plan gratuito lo que pasa de ahí **se bloquea, no se cobra**. Según la tarifa publicada (4,8 por tesela de 512×512 y 9,6 por paso), una imagen de 1024×1024 a 4 pasos cuesta unas 58: **unas 170 al día**, y una semana necesita unas 30. **Dos cosas por comprobar en la prueba, no supuestas:** la documentación no da parámetros de ancho y alto, así que puede que solo saque imágenes cuadradas (entonces van enmarcadas, no a sangre, o se prueba otro de sus modelos); y los pesos abiertos de FLUX.1 [schnell] son Apache 2.0, pero en Cloudflare rigen además los términos de Black Forest Labs, que se leen antes de publicar nada |
+| **Tarjeta de marca** (lo de ahora) | Datos, comparaciones y diagramas, cuando la explicación es el dibujo | — |
+
+**Vídeo generado con IA: no, por ahora.** No hay ninguna vía gratuita que dé vídeo generado a
+nuestro volumen, y los modelos abiertos necesitan una GPU que no tenemos. Una imagen generada con
+movimiento de cámara (acercamiento y paneo lentos) da la mayor parte del efecto a coste cero. Se
+reabre si C50 no mueve el número.
+
+### Cómo funciona, sin que nadie tenga que hacer nada cada semana
+
+1. **La planificación del jueves** escribe en cada escena un campo nuevo, `visual`: qué se busca
+   en el archivo (en inglés, que es como están etiquetados) y, de respaldo, qué imagen generar.
+2. **Un paso nuevo de `producir.yml`, antes del render**, lo resuelve: busca, descarga, guarda en
+   caché, y apunta licencia, autor y enlace en `02_marca/banco/banco.json`. La red se usa **antes**
+   del render, y el render sigue siendo determinista y sin red (regla 11.6).
+3. **Si algo falla —la API no contesta, no hay resultado—, la escena sale como sale hoy.** Nunca se
+   pierde un vídeo por una imagen.
+4. **El render pinta el texto con fondo transparente** y `ffmpeg` lo compone encima del vídeo o la
+   imagen de cada plano.
+5. **`publicar.py` marca el vídeo como contenido sintético** (`status.containsSyntheticMedia`, que
+   la API de YouTube admite) cuando lleva imágenes generadas, y la descripción dice de dónde sale
+   cada cosa.
+6. **La revisión diaria mira la hoja de contactos del Short de mañana**: que cada imagen cuente lo
+   mismo que su frase, que nadie identificable salga en un contexto que le deje mal, y que no haya
+   marcas ni texto dentro de la imagen.
+
+### Lo que necesito del codirector, una sola vez
+
+Tres cuentas gratuitas a nombre de la marca (Pexels, Pixabay y Cloudflare), sus claves como
+secretos de GitHub, y crear a mano un workflow de prueba. Unos veinticinco minutos, explicados paso
+a paso en `tareas_codirector_2026-09-23.md`. Es una intervención de puesta en marcha (regla 5), no
+trabajo recurrente.
+
+### El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Hoy, 23/09 | Decisión y diseño (esto). Código del resolvedor y de la prueba |
+| En cuanto estén las claves | El workflow de prueba monta un **muestrario** con tres variantes sobre un guion real: **A** archivo + frase corta encima; **B** lo mismo con subtítulos palabra a palabra; **C** imágenes generadas con movimiento de cámara |
+| Viernes 25 | **Lo mira el codirector y decide** (regla 11.2: se mira, no se imagina). También decide lo de los subtítulos |
+| Semana del 28 | Entra en producción, en cuanto esté probado. Con suerte, el miércoles 30 |
+
+**Sobre la regla 11.1.** El lunes 28 entra C44 (la voz), y C50 entra la misma semana. Son dos
+cambios a la vez y no se podrá atribuir el resultado a uno de los dos. Lo digo y lo acepto: con
+estos volúmenes la atribución fina no es posible de todos modos, y esperar una semana entre uno y
+otro cuesta una semana de las ocho que quedan hasta el 15 de noviembre.
+
+### Los riesgos, que son reales
+
+- **El archivo huele a archivo.** Un plano de oficina de banco de imágenes es reconocible. Se mitiga
+  eligiendo planos cortos y concretos (manos, objetos, caras en reacción) y mezclando con imágenes
+  generadas. El muestrario lo dirá.
+- **Una imagen que no cuenta lo que dice la frase es peor que ninguna.** Por eso la revisión mira
+  la hoja de contactos cada día.
+- **Personas reales en el archivo.** Las licencias prohíben usarlas de forma ofensiva o que las
+  deje mal, y nosotros hablamos de defectos, fracasos y vergüenza. **Regla:** una persona
+  identificable de archivo nunca ilustra una frase negativa sobre alguien («le dejó en ridículo»);
+  para eso, objetos, manos, siluetas o imagen generada.
+
+---
+
+## C51 · El presentador de @Maestro_Seductor: cómo se hace, y por qué no ahora
+
+**La petición, del 21/09 en `novedades.md`:** estudiar su último vídeo —un hombre «atractivo»
+actuando el guion, con los labios perfectamente sincronizados con la voz—, saber cómo se ha
+conseguido esa calidad y si podríamos replicarlo con la cara de una persona ficticia.
+
+**Lo que he podido comprobar, y lo que no.** El vídeo es *«La Mentalidad para Atraer Sin Rogar»*,
+de @Maestro_Seductor. **No he podido verlo**: YouTube rechaza la descarga automática de la página
+y, aunque no lo hiciera, no tengo forma de analizar un vídeo fotograma a fotograma. Lo que sigue es
+cómo se consigue hoy ese resultado, no una afirmación sobre qué herramienta usó él.
+
+**Cómo se consigue.** El salto de calidad que notó el codirector es real y reciente. Las
+herramientas de 2025-2026 (HeyGen Avatar IV, Hedra, OmniHuman, Kling Avatar, o los generadores de
+vídeo con audio nativo como Veo 3) ya no pegan una boca sobre una cara grabada —que es lo que
+producía la «disonancia» de sus vídeos anteriores—: generan **la cara entera, la cabeza y los
+gestos a partir del audio**, así que la boca y todo lo demás van juntos. Y los Shorts con marca de
+agua de OpusClip son el paso siguiente: un vídeo largo con el avatar, y OpusClip lo trocea solo en
+Shorts; la marca de agua es la de su plan gratuito.
+
+**Por qué no lo hacemos ahora. Son cuatro razones y cualquiera bastaría:**
+
+1. **Coste.** Los planes gratuitos de esas herramientas dan del orden de **tres vídeos al mes con
+   marca de agua**. Nosotros publicamos cinco a la semana. Regla 4.
+2. **La vía gratuita existe, pero es la pieza más frágil que podríamos añadir.** Hay modelos
+   abiertos que animan un retrato a partir del audio o cambian los labios de un vídeo (Hallo,
+   EchoMimic, InfiniteTalk, LatentSync, MuseTalk), y todos necesitan una GPU. La única gratuita y
+   automatizable es la de los cuadernos de Kaggle (unas 30 horas semanales), con una calidad por
+   debajo de las comerciales.
+3. **La regla 7: nada de fingir que hay una persona.** Una persona fotorrealista que no existe,
+   presentando como si existiera, es exactamente eso, salvo que se diga con todas las letras; y
+   YouTube exige declarar el contenido sintético realista. Se puede hacer bien, pero es una
+   decisión tuya y no mía.
+4. **Es el patrón que YouTube persigue**: presentador sintético, voz sintética, plantilla diaria.
+
+Y una quinta que no es razón pero conviene decir: ese canal es de seducción, que es justo el tema
+que la regla 1 nos prohíbe tratar como táctica. **De él copiaríamos la técnica, nunca el
+contenido.**
+
+**Lo que sí propongo, en este orden:**
+
+1. **C50 primero.** Es el cambio grande y es gratis.
+2. **Un paso intermedio, barato y nuestro: que el Engranaje hable.** Su boca movida por la voz real
+   (por volumen o por fonemas), determinista, a coste cero y sin fingir nada: es un personaje
+   dibujado y se ve que lo es. Da presencia de presentador sin la cara de nadie.
+3. **Y si pasado el 15 de noviembre el canal sigue y quiere un presentador con cara humana**, una
+   prueba con un modelo abierto en Kaggle, sobre un personaje ficticio y **declarado**. Esa
+   decisión, la de la regla 7, es del codirector.
+
+---
+
+## Lo que NO cambia hoy
+
+- **La voz no se toca hasta el lunes 28** (C44, capas A y B).
+- **El punto de control del 27 y la decisión del 15 de noviembre** siguen igual, y la discusión de
+  la puerta de los 1.000 sigue abierta hasta el 8 de noviembre.
+- **El episodio largo sigue suspendido** (C42).
+- **TikTok e Instagram** siguen donde los dejó C41.
+- **`MDS-021` y `MDS-022` no se retiran.** Están publicados, se ven poco, y borrarlos no arregla
+  nada: lo que se arregla es lo que viene. (Y retirarlos para que no cuenten en la mediana de C26
+  sería hacerle trampas a nuestra propia regla.)
+
+## Lo que queda mirado y sin resolver
+
+- **La primera planificación con C48 es mañana, jueves 24.** El viernes 25 miro sus cinco
+  lecturas en frío contra sus tesis, y el codirector lee los cinco guiones.
+- **Por qué `MDS-016` hizo 1.210** sigue sin explicación. Hoy hay un indicio de contenido, no
+  una explicación: en los tres Shorts que pasaron de 100 (`016`, `018` y `019`) la anécdota del
+  principio **es** lo mismo que mide el estudio. Pero en `MDS-020` también lo era, y se quedó en
+  27. No basta para explicar nada; basta para que C48 lo exija.
+- `E02` (dos DOI), `F04` (sin sustituir) y P1 (sin respuesta desde el 14/09), como estaban.

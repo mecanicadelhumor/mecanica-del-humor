@@ -1,15 +1,15 @@
 {
   "_nota": "Metadatos de publicación del canal español. Capítulos, fuentes y créditos de música los añade publicar.py debajo de esta descripción.",
   "serie": "Ríete primero, te explico después",
-  "titulo": "¿Reírse es bueno para la salud? Lo que encontró el estudio no era eso",
-  "descripcion": "En mi antiguo trabajo pusieron una clase de risoterapia a las ocho de la mañana. Obligatoria. Salí riéndome, sí, pero de tener que estar allí.\n\nFreeman y Ventis le pasaron a doscientos sesenta y cinco jubilados una encuesta de salud y otra de estilos de humor. Y les salió lo contrario de lo que esperaban: que un humor te venga bien o mal depende del agobio que lleves. O sea que la frase no es «reírse es sano»: es que el mismo humor, en una semana mala, no sirve igual.\n\nY donde falla: es una encuesta por internet que rellena cada uno. A nadie lo mandaron a risoterapia a las ocho.",
+  "titulo": "¿Reírse es bueno para la salud? El humor «dañino» iba con menos dolor",
+  "descripcion": "Semana horrible: se te rompen la caldera, el coche y la tostadora. Y cuando te preguntan cómo estás, sonríes: «bien, bien, yo ya venía roto de fábrica».\n\nEn psicología, reírte de lo que te pasa se considera un humor sano, y hacer chistes a tu propia costa, uno dañino. Freeman y Ventis midieron los dos en 265 jubilados, junto con su salud y sus problemas del día a día. Y salió al revés de lo esperado: entre los que tenían muchos problemas, hacer chistes a su costa iba con menos dolor. Los autores creen que puede ser porque, aunque sea en broma, estás diciendo en voz alta que algo va mal.\n\nY donde falla: es una encuesta, y una encuesta no dice qué causa qué. Igual es al revés, y la broma sale sola cuando duele menos. Este vídeo no es un consejo de salud.",
   "etiquetas": [
     "reírse es bueno para la salud",
     "beneficios de la risa",
-    "risoterapia",
+    "reírse de uno mismo",
+    "humor autodestructivo",
     "estilos de humor",
     "estrés",
-    "bienestar",
     "freeman y ventis",
     "psicología del humor",
     "ciencia del humor",
@@ -19,5 +19,5 @@
     "humor",
     "psicología"
   ],
-  "primer_comentario": "¿Reírse es bueno para la salud? El estudio dice que depende del agobio que lleves encima, que no es la frase de la taza. ¿Te han apuntado alguna vez a una risoterapia obligatoria?"
+  "primer_comentario": "¿Reírse es bueno para la salud? Depende de cómo: hacer chistes a tu propia costa, que tiene fama de dañino, iba con menos dolor en los jubilados con más problemas. ¿Tú también vienes roto de fábrica?"
 }

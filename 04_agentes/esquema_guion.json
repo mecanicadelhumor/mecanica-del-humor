@@ -252,6 +252,70 @@
     }
    },
    "description": "12-45 escenas en formato largo, 3-8 en corto. Lo comprueba validar_guion.py, que es quien conoce los límites de cada formato."
+  },
+  "historia": {
+   "type": "object",
+   "required": [
+    "pregunta",
+    "respuesta",
+    "puente"
+   ],
+   "description": "C48 (23/09/2026). La historia del Short en tres frases, escritas ANTES de las escenas. Obligatorio en los Shorts desde MDS-026 (validar_guion.py da ERROR). Si no se pueden escribir, el guion no tiene hilo.",
+   "properties": {
+    "pregunta": {
+     "type": "string",
+     "description": "La pregunta que responde el Short, con las palabras que usaría la gente."
+    },
+    "respuesta": {
+     "type": "string",
+     "description": "Lo que responde, en una frase que el espectador pueda repetir mañana."
+    },
+    "puente": {
+     "type": "string",
+     "description": "Qué escena une la situación del principio con el estudio, y cómo."
+    }
+   }
+  },
+  "lectura_en_frio": {
+   "type": "object",
+   "required": [
+    "lector",
+    "de_que_va",
+    "veredicto"
+   ],
+   "description": "C48 (23/09/2026). Lo que contestó un lector que SOLO vio las narraciones y los textos de pantalla (un subagente sin contexto). Obligatorio en los Shorts desde MDS-026: sin veredicto «pasa» y sin frases no entendidas, validar_guion.py da ERROR. Procedimiento en 04_agentes/prompts/guionista_corto.md.",
+   "properties": {
+    "lector": {
+     "type": "string"
+    },
+    "fecha": {
+     "type": "string"
+    },
+    "de_que_va": {
+     "type": "string"
+    },
+    "pregunta_y_respuesta": {
+     "type": "string"
+    },
+    "frases_que_no_se_entienden": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "frase_que_sobra": {
+     "type": "string"
+    },
+    "donde_me_iria": {
+     "type": "string"
+    },
+    "veredicto": {
+     "enum": [
+      "pasa",
+      "no pasa"
+     ]
+    }
+   }
   }
  },
  "$comment": "Resaltado en cualquier campo de texto (aclarado el 28/08): *ámbar* = el acento de la frase, uno por escena; _cian_ = el término del oficio, el nombre que la investigación le da a la cosa («conector», «autodestructivo», «ruptura benigna») — ya NO es «solo para datos», las cifras tienen su propio tipo de escena, `dato`, con su campo `cifra`. El audio tiene que ser autosuficiente: lo que está en pantalla y no se dice, quien escucha sin mirar no lo recibe."

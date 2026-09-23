@@ -1,13 +1,15 @@
 {
   "_nota": "Metadatos de publicación del canal español. Capítulos, fuentes y créditos de música los añade publicar.py debajo de esta descripción.",
   "serie": "El experimento",
-  "titulo": "¿Por qué el humor ayuda a memorizar? El estudio del titular tiene veinte personas",
-  "descripcion": "A diez voluntarios de casi setenta años los sentaron veinte minutos sin móvil, sin leer y sin dormir. A los otros diez les pusieron vídeos graciosos. Ese era el experimento entero.\n\nLos que vieron los vídeos mejoraron un 43,6 % al recordar la lista más tarde. Y los que estuvieron sentados sin hacer nada mejoraron un 20,3 %: también mejoraron. Ese 43,6 % es el número que circula por todas partes, y sale de veinte personas, diez y diez.\n\nY donde falla: son veinte personas, todas de casi setenta años. De tu memoria en un examen, esto no dice nada.",
+  "titulo": "¿Por qué el humor ayuda a memorizar? El estudio apunta al estrés, con diez personas por grupo",
+  "descripcion": "A diez personas de unos setenta años les pusieron veinte minutos de vídeos graciosos. A otras diez las sentaron veinte minutos sin hacer nada: sin móvil, sin leer y sin dormirse. Yo no aguanto ni cinco.\n\nDespués, en un test de memoria, las que vieron los vídeos mejoraron un 43,6 % al recordar más tarde una lista de palabras. Los autores apuntan al estrés: en ellas bajó el cortisol, la hormona del estrés, y en el otro grupo no cambió.\n\nY donde falla: son diez personas por grupo, todas de unos setenta años, y las que solo estuvieron sentadas también mejoraron un 20,3 %, casi la mitad. De tu memoria en un examen, este estudio no dice nada.",
   "etiquetas": [
     "por qué el humor ayuda a memorizar",
     "humor y memoria",
     "estudiar riéndose",
     "memoria a corto plazo",
+    "cortisol",
+    "estrés",
     "bains",
     "tamaño de muestra",
     "psicología del humor",
@@ -15,9 +17,7 @@
     "divulgación",
     "shorts",
     "mecánica del humor",
-    "humor",
-    "memoria",
-    "psicología"
+    "humor"
   ],
-  "primer_comentario": "¿Por qué el humor ayuda a memorizar? El estudio del que sale la cifra tiene veinte personas, diez por grupo — y el grupo que no vio nada también mejoró."
+  "primer_comentario": "¿Por qué el humor ayuda a memorizar? Los autores apuntan al cortisol. Pero ojo: diez personas por grupo, y las que solo estuvieron sentadas mejoraron casi la mitad. ¿Tú aguantarías veinte minutos sin móvil?"
 }

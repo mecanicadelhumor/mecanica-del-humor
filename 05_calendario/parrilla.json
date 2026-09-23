@@ -292,7 +292,8 @@
       ],
       "modo": "automatico",
       "hora": "19:00",
-      "nota": "Miércoles. Serie «Ríete primero, te explico después». Pregunta: «reírse es bueno para la salud» — la única de la tanda donde los cinco primeros responden de verdad y aun así la mayor tiene 407.877 y las demás menos de 35.000. Fuente G03, sin abrir, con el resumen leído el 17/09. El moderador por sexo del artículo se deja fuera a propósito (REGLAS.md). Ningún consejo de salud."
+      "nota": "Miércoles. REESCRITO Y REHECHO POR LA DIRECCIÓN el 23/09 (C48, versión 12 del plan). La subida de madrugada (X1GAp3OUgKg, «Lo que encontró el estudio no era eso») llevaba el guion que el codirector describió como una sucesión de mensajes inconexos; el codirector la borra en Studio antes de las 19:00. `rehacer_video_id` hace que cola.py no dé por subido el episodio mientras el registro tenga ese identificador, así que el siguiente intento de producción de hoy (o uno lanzado a mano) produce el guion nuevo. Serie «Ríete primero, te explico después». Pregunta: «reírse es bueno para la salud». Fuente G03, leída entera el 23/09: con muchos problemas encima, hacer chistes a tu costa iba con menos dolor; y el cierre dice que es una encuesta y no dice qué causa qué. Ningún consejo de salud. Lo que decía antes: Miércoles. Serie «Ríete primero, te explico después». Pregunta: «reírse es bueno para la salud» — la única de la tanda donde los cinco primeros responden de verdad y aun así la mayor tiene 407.877 y las demás menos de 35.000. Fuente G03, sin abrir, con el resumen leído el 17/09. El moderador por sexo del artículo se deja fuera a propósito (REGLAS.md). Ningún consejo de salud.",
+      "rehacer_video_id": "X1GAp3OUgKg"
     },
     {
       "fecha": "2026-09-24",
@@ -313,6 +314,17 @@
       "modo": "automatico",
       "hora": "19:00",
       "nota": "Viernes. Serie «El experimento». Pregunta: «por qué el humor ayuda a memorizar» (4.736.709 y 0 de 5 responden: la consulta se va entera hacia «memoria»). Fuente G04, sin abrir, cuya ficha pedía verificar el tamaño muestral antes de citarla: verificado el 17/09 contra el resumen, veinte personas, diez por grupo. Eso no es una nota al pie, es el cierre del Short."
+    },
+    {
+      "fecha": "2026-09-26",
+      "episodio": "MDS-023",
+      "idiomas": [
+        "es"
+      ],
+      "modo": "automatico",
+      "hora": "19:00",
+      "rehacer_video_id": "X1GAp3OUgKg",
+      "nota": "Sábado. RED DE SEGURIDAD DE LA DIRECCIÓN (23/09), no es un Short nuevo. Si la reproducción de MDS-023 del miércoles 23 salió bien, el registro ya tiene otro video_id, cola.py lo da por subido y hoy no se produce nada: es lo esperado. Si el miércoles no llegó a producirse (voz, cuota, o el push llegó tarde), el registro sigue con X1GAp3OUgKg y el MDS-023 reescrito sale hoy a las 19:00 sin que nadie haga nada. Se puede borrar esta emisión el lunes 28."
     }
   ],
   "_archivadas": {

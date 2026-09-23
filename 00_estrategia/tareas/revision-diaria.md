@@ -34,7 +34,22 @@ leerse como si fuera YouTube (el caso MDS-011); entran C28 y C29 en `validar_gui
 `escena.html`; y los dos prompts de guionista están reescritos. Versión **7** de
 `PLAN_DE_CAMBIOS.md`.
 
-**Qué cambia el 21/09 (dirección del lunes), y es lo más importante de esta cabecera:**
+**Qué cambia el 23/09 (dirección extraordinaria del miércoles). Va antes que todo lo demás:**
+
+1. **Tienes un paso nuevo, y va el primero del paso 1: la lectura en frío del Short de mañana**
+   con un subagente. Ver «Lo primero del paso 1», abajo. Sale de que los Shorts del 21, el 22 y
+   el 23 se publicaron sin hilo —«una sucesión de mensajes inconexos», dijo el codirector— y tú
+   los diste por limpios los tres días, porque nada de lo que comprobabas miraba si se entendían.
+   No fue culpa tuya: tu prompt no te lo pedía. Ahora sí.
+2. **Se anula la congelación del 21/09** («esta semana no se toca guion»).
+3. **`MDS-023`, `MDS-024` y `MDS-025` los reescribió la dirección el 23/09: no los edites**, ni con
+   la excepción de las 48 horas. Si ves algo, a `revisiones/` y a tu fichero de `estado/`.
+4. **`sincroniza_registro.yml` funciona.** Lo que viste el 22/09 era que corre con horas de
+   retraso, después de ti. Ver el paso 2.
+5. Versión **12** de `PLAN_DE_CAMBIOS.md`, que es la que manda, y
+   `08_comunicacion/2026-09-23-direccion.md`.
+
+**Qué cambió el 21/09 (dirección del lunes):**
 
 1. **Dónde escribes el estado del canal.** Ya no es `ESTADO.md`. Es un fichero nuevo por día
    en `05_calendario/estado/`. Ver el **paso 6**, reescrito. C45.
@@ -122,6 +137,38 @@ Empieza leyendo `05_calendario/bitacora/` (los últimos días).
 
 ## Paso 1 — revisión editorial (todos los días, y es lo más importante)
 
+### Lo primero del paso 1, desde el 23/09/2026: la lectura en frío del Short de mañana (C48)
+
+**Por qué.** El 21, el 22 y el 23 de septiembre se publicaron tres Shorts que el codirector
+describió como *«una sucesión de mensajes inconexos, sin sentido, que huelen a AI slop de
+lejos»*. Tu bitácora dio los tres por limpios: dos canales bien, caras bien, validador sin
+errores. Todo eso era verdad y no servía de nada, porque **ninguna de tus comprobaciones miraba
+si alguien que no sabe nada entiende el vídeo**. Esa es la única que importa, y la haces tú
+cada día, porque eres el último par de ojos antes de que se produzca.
+
+**Cómo, todos los días, antes que nada más del paso 1:**
+
+1. Localiza el Short que se produce **en la próxima madrugada** (el de mañana en `parrilla.json`).
+   Si mañana no hay emisión, el siguiente que haya.
+2. Copia **solo** la `narracion` de cada escena y, entre corchetes, su texto de pantalla, en
+   orden y numerado. Nada más: ni título, ni tesis, ni notas.
+3. Dáselo a un **subagente sin contexto** (herramienta Agent, tipo general-purpose) con el
+   encargo literal de `04_agentes/prompts/guionista_corto.md`, sección «La lectura en frío», y
+   copia sus cinco respuestas en tu bitácora.
+4. **Es INCIDENCIA** —primera línea de tu fichero de `estado/`, con el ID y la frase exacta—
+   si el lector copió alguna frase que no entendió, o si lo que dice que cuenta el vídeo no es
+   la `tesis` del guion. Aunque el guion lo haya escrito la dirección: **sobre todo** entonces.
+5. **Desde `MDS-026`**, además, lo arreglas tú con la excepción de las 48 horas: reescribes solo
+   lo necesario, vuelves a pasar la lectura con un subagente **nuevo** (el anterior ya conoce la
+   historia), actualizas `lectura_en_frio` en el guion y lo dices en MAYÚSCULAS en la primera
+   línea de tu resumen. **`MDS-023`, `MDS-024` y `MDS-025` no**: son de la dirección; ahí solo
+   avisas.
+6. Si no tienes la herramienta Agent, dilo en la bitácora y haz tú la lectura mirando solo esa
+   lista; pero dilo, porque no es lo mismo.
+
+Y de paso, con la lectura hecha: si el guion lleva `lectura_en_frio` escrita por la
+planificación, compara sus respuestas con las de tu lector. Si no se parecen, dilo.
+
 Lee de principio a fin **todos los guiones españoles que aún no se han producido**, cruzando `parrilla.json` con `registro_publicaciones.json`. Lo que encuentres va a `05_calendario/revisiones/<ID>.md`, salvo la excepción de las 48 horas.
 
 **LA REGLA DE LOS DOS CANALES (regla 14 de `REGLAS.md`, del 04/09). Es la primera que compruebas, escena por escena.**
@@ -186,6 +233,14 @@ de 91 millones de visualizaciones durante semanas.
 Si `registro_publicaciones.json` no tiene la entrada esperada y la parrilla sí preveía emisión, ese es el hallazgo principal: averigua por qué y dilo. No arregles a ciegas.
 
 - El `estado` que ves es el del **momento de la subida**. En modo `automatico`, lo normal es `private` con `publicar_en` a la hora de la parrilla: eso es correcto. `private` **sin** `publicar_en` en una emisión de la parrilla sí es un fallo, y grave: ese vídeo no sale nunca (le pasó a MDH-004 el 29/08).
+- **`sincroniza_registro.yml` corre DESPUÉS de ti, casi siempre (aclarado el 23/09/2026).** Su
+  cron dice 08:50 y 09:10 UTC, pero llega con cuatro o cinco horas de retraso: el 21/09 corrió
+  a las 15:21 y 15:52 UTC y el 22/09 a las 13:41 UTC (commit `77d6c7a`, que pasó `MDS-021` a
+  `public`). Tú lees a las 09:30. Así que **un Short publicado ayer a las 19:00 te aparecerá
+  todavía como `private` con su `publicar_en`, y eso no es incidencia**: se corrige esa misma
+  tarde. Sí lo es si pasan **dos días** sin un commit «registro: sincronizado con YouTube»
+  habiendo algo que corregir. Es la trampa 14: quien lee cuenta el margen desde el último
+  reintento de quien escribe, no desde su hora nominal.
 - **El retraso es normal, la ausencia no.** El cron tiene tres intentos (01:13, 04:47 y 08:23 UTC) y `cola.py` no repite lo ya subido. Si a tu hora falta la entrada del día, ya han pasado los tres: eso sí es incidencia.
 - **Si la subida falló, mira el token de YouTube.** El 01/09 el canal se quedó un día sin publicar por un `YT_REFRESH_TOKEN` caducado. Y el 07/09 apareció la otra cara del mismo problema: el token vigente se generó **sin el ámbito `yt-analytics.readonly`**, así que subir vídeos funciona y las métricas mueren con `invalid_scope`. Los dos síntomas se dicen en tu fichero de `05_calendario/estado/` con esas palabras («posible token de YouTube caducado o revocado» / «al token le faltan ámbitos») para que él sepa dónde mirar sin investigar. Ver `00_estrategia/TOKEN_DE_YOUTUBE.md`.
 - **CAUSA NUEVA desde el 04/09: la barrera.** `render.py` falla el render si un texto no cabe en su caja, así que **un vídeo puede faltar porque la barrera hizo su trabajo**, no porque algo esté roto. Antes de escribir «posible token caducado», mira el log del paso de render en `producir.yml`: si dice `C21 · LA BARRERA`, la causa es el guion y viene con el número de escena y el texto. En ese caso tu fichero de `05_calendario/estado/` va como `INCIDENCIA` diciendo exactamente eso, y el arreglo es tuyo (excepción de 48 h sobre ese guion, o el ajuste de `escena.html`).
@@ -366,7 +421,7 @@ Detalle: 05_calendario/bitacora/AAAA-MM-DD-revision.md
 
 El 03/09 encontraste que el Short de ese día tenía una palabra cortada y decidiste no marcarlo como incidencia razonando que no podías cancelar la publicación. **Ese razonamiento es exactamente el equivocado.** Tú no puedes retirar un vídeo; el codirector sí, y tu fichero del día en `05_calendario/estado/` es el único sitio donde se entera. Que tú no puedas arreglarlo es el motivo para avisar, no para callar.
 
-La regla, sin margen: **si el vídeo que se publica hoy tiene un defecto que un espectador notaría —texto cortado, texto que contradice lo que se oye, una cara que no pega, una falta de ortografía, audio mal— la primera línea dice `INCIDENCIA`,** con el ID, el enlace, la hora de publicación y, en una frase, qué puede hacer el codirector (retirarlo, dejarlo pasar, republicarlo mañana). Da igual que sea «sólo una escena de cinco»: eso lo decide él, no tú. Y sigue siendo `OK` lo que nadie ve: un defecto en un guion todavía sin producir, una idea a medias, un encargo que no has podido hacer — eso va en la bitácora.
+La regla, sin margen: **si el vídeo que se publica hoy tiene un defecto que un espectador notaría —texto cortado, texto que contradice lo que se oye, una cara que no pega, una falta de ortografía, audio mal, o un guion que el lector en frío no entiende— la primera línea dice `INCIDENCIA`,** (y desde el 23/09 también si **el Short de mañana** no pasa la lectura en frío: es el único defecto de un guion sin producir que va arriba, porque es el que el codirector vio publicado tres días seguidos) con el ID, el enlace, la hora de publicación y, en una frase, qué puede hacer el codirector (retirarlo, dejarlo pasar, republicarlo mañana). Da igual que sea «sólo una escena de cinco»: eso lo decide él, no tú. Y sigue siendo `OK` lo que nadie ve: un defecto en un guion todavía sin producir, una idea a medias, un encargo que no has podido hacer — eso va en la bitácora.
 
 `Pendiente del codirector` es **casi siempre «nada»**. Solo lleva algo si el canal se para sin ello: un secreto caducado, un permiso de YouTube, un fichero de `.github/workflows/` que hay que crear a mano. Nunca recordatorios ni peticiones de comodidad.
 

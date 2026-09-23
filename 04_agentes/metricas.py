@@ -221,7 +221,10 @@ def sincronizar_registro(yt, registro):
     corregidos = corregir_registro(reg, fichas)
     if corregidos:
         registro["_estado_leido_utc"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-        REGISTRO.write_text(json.dumps(registro, ensure_ascii=False, indent=1) + "\n",
+        # indent=2, el mismo que registrar.py (23/09/2026). Con indent=1 cada sincronización
+        # reescribía las ~950 líneas del fichero y cada producción las volvía a reescribir
+        # al revés: el commit 77d6c7a cambiaba un solo «estado» y el diff decía 470/470.
+        REGISTRO.write_text(json.dumps(registro, ensure_ascii=False, indent=2) + "\n",
                             encoding="utf-8")
         print(f"  {corregidos} estado(s) puestos al día en registro_publicaciones.json")
     return corregidos, fichas

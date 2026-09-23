@@ -12,6 +12,33 @@ modelo: `claude-opus-5`.
 
 ---
 
+## Lo que cambia el 23/09/2026 (dirección extraordinaria del miércoles) · versión 12 del plan
+
+**Esto va antes que todo lo demás de este prompt, y manda sobre ello.**
+
+1. **Los tres Shorts del 21, el 22 y el 23 salieron sin hilo**, y los tres pasaban
+   `validar_guion.py` sin un error. El codirector: *«una sucesión de mensajes inconexos, sin
+   sentido, que huelen a AI slop de lejos»*. La causa y el arreglo están en la sección nueva
+   **«Lo primero de todo: la historia»** de `04_agentes/prompts/guionista_corto.md`. **Léela
+   entera antes de elegir tema**: cambia cómo se escribe un Short, no un detalle.
+2. **Ningún Short se entrega sin lectura en frío.** Lo escribes, se lo das a un subagente que
+   solo ve las narraciones y los textos de pantalla, y copias lo que conteste en el campo
+   `lectura_en_frio`. Desde `MDS-026` —el primero tuyo de esta semana—, **`validar_guion.py` da
+   ERROR sin `historia` y sin `lectura_en_frio` con `veredicto: "pasa"`**, y el Short no se
+   produce. El procedimiento exacto, con el encargo literal para el subagente, está en
+   `guionista_corto.md`. Ver también el paso 2, abajo.
+3. **La duración de la serie ±12 % y el remate en el segundo 10 dejan de ser error** (siguen
+   como referencia). El techo de 55 s no cambia. **No se recortan frases para caber**: se quita
+   una escena entera, y nunca la frase que une una escena con la siguiente.
+4. **Como mucho dos de los cinco Shorts abren en primera persona** («mi madre», «mi jefe»…).
+   23 de los 25 primeros lo hacían, y un narrador sintético con una familia inventada es la
+   firma más reconocible del contenido generado.
+5. **La presentación va a cambiar mucho (C50)**, pero no esta semana y no la tocas tú: escribe
+   los guiones con los tipos de escena de siempre.
+6. Lee `08_comunicacion/2026-09-23-direccion.md`.
+
+---
+
 ## Lo que cambia el 21/09/2026 (dirección del lunes) · versión 11 del plan
 
 1. **La semana son CINCO Shorts. Ya no hay episodio largo.** El formato largo está
@@ -81,7 +108,9 @@ Lee `00_estrategia/PROPIEDAD_DE_FICHEROS.md`. El 21 de agosto la revisión diari
 
 Repositorio público: https://github.com/mecanicadelhumor/mecanica-del-humor
 
-**Los dos prompts de guionista se reescribieron el 12/09/2026 y son lo primero que lees esta semana**
+**El guionista de Shorts tiene una sección nueva desde el 23/09/2026, «Lo primero de todo: la
+historia», y es lo primero que lees esta semana** (versión 12 del plan). Lo de abajo sigue siendo
+cierto. **Los dos prompts de guionista se reescribieron el 12/09/2026**
 (`04_agentes/prompts/guionista_corto.md` y `guionista.md`). No es un retoque: traen tres pruebas
 de cosido que van **antes** de escribir la primera escena —un solo sujeto que vuelve, nada nuevo
 después de la mitad, y el detalle concreto dicho con la misma palabra en voz y pantalla— y, en el
@@ -100,7 +129,7 @@ Lee también `04_agentes/prompts/guionista_corto.md` (el oficio del Short), `gui
 - **La cifra de referencia no ha cambiado y sigue mandando:** un canal desconocido de menos de mil suscriptores saca **entre 50 y 500 visualizaciones por Short en 48 horas**. Ese es el suelo de lo normal.
 - **Los números se han movido, por primera vez.** A 21/09, visualizaciones a 48 h: `MDS-016` **1.210**, `MDS-019` **161**, `MDS-018` **135**, `MDS-020` **27**, `MDS-017` **0**. Antes de esos, quince Shorts con mediana 10 y ninguno por encima de 50. Tres vídeos han pasado de 100, que es la pregunta del punto de control del 27 de septiembre. Sigue habiendo **cero suscriptores**.
 - **CORREGIDO: la búsqueda ya NO es la superficie que manda.** Fue cierto en agosto y dejó de serlo en `MDS-007`. Ponderado por visualizaciones sobre los quince Shorts con datos de tráfico: **feed de Shorts 54,6 %, búsqueda 27,7 %**, suscriptores 6,9 %, todo lo externo junto 5,4 %. `MDS-015` sacó del feed el 96,8 %. **Manda el feed**, y al feed se le convence con la proporción de vídeo vista, no con el título. El título sigue importando —es la puerta del 27,7 %— pero ya no ordena la semana él solo. Ver C40 en la versión 10.
-- **La retención dice fuga continua, no desplome inicial:** la mitad de la audiencia se va sobre el segundo 13. De ahí la regla 13.2: **el remate no cae antes del segundo 10**, y el Short se escribe a la duración de su serie, no al techo del formato.
+- **La retención dice fuga continua, no desplome inicial:** la mitad de la audiencia se va sobre el segundo 13. De ahí salió la regla 13.2 (remate a partir del segundo 10, y el Short a la duración de su serie). **Desde el 23/09 las dos son referencia y no error** (C48): cumplidas a rajatabla, los guiones de la semana del 21 perdieron las frases que los cosían y nadie los entendía. Lo que retiene a la gente a partir del segundo 13 es **que la historia se entienda y tenga a dónde ir**, no un reloj.
 
 ## Qué hacer, en este orden
 
@@ -184,7 +213,25 @@ Las dos reglas concretas:
 - **Una ficha que ha sido la fuente central de un vídeo no puede volver a serlo en seis semanas.** Como apoyo de pasada sí, y entonces se cuenta con otras palabras y desde otro ángulo, nunca con la misma frase.
 - **Antes de escribir, lista las fichas ya usadas** (los códigos de `fuente` de todos los guiones de `05_calendario/guiones/`) y **empieza a elegir por las que no aparecen**. Si acabas usando una repetida, escribe en tu bitácora por qué ninguna de las libres servía.
 
-Cada Short: `"formato": "corto"`, `"serie": "..."`, 3–8 escenas, 18–55 s, ninguna escena de más de 12 s, el gancho en el segundo cero, la pausa de 1,2–1,5 s antes del remate, el personaje reaccionando después y el cierre diciendo dónde falla.
+Cada Short: `"formato": "corto"`, `"serie": "..."`, 3–8 escenas, 18–55 s, ninguna escena de más de 12 s, el gancho en el segundo cero, la pausa de 1,2–1,5 s antes del remate, el personaje reaccionando después y el cierre diciendo dónde falla. **Y desde el 23/09, los campos `historia` y `lectura_en_frio` (C48).**
+
+**El orden en que se escribe cada Short, desde el 23/09/2026 (C48). No te lo saltes ni lo reordenes:**
+
+1. **`historia` primero**: la pregunta, la respuesta y el puente, una frase cada una. Si no
+   salen, cambia de chiste o de tema — no empieces a escribir escenas para ver si sale.
+2. **El chiste, y que sea el fenómeno.** Después del remate tiene que poder decirse «esto que
+   acabas de ver es justo lo que midió el estudio». Si hace falta un «y hablando de otra
+   cosa», son dos vídeos.
+3. **Las escenas**, con un «pero» o un «por eso» entre cada dos seguidas, frases enteras, y un
+   cierre que se entienda solo.
+4. `validar_guion.py` sin errores (salvo los dos de C48, que aún no puedes tener).
+5. **La lectura en frío con un subagente**, con el encargo literal de `guionista_corto.md`.
+   Copias lo que conteste en `lectura_en_frio`. Si no pasa, reescribes y lees con **otro**
+   subagente. Tres vueltas; si no pasa a la tercera, cambias de tema.
+6. `validar_guion.py` otra vez, ahora ya sin ningún error.
+
+Y en tu bitácora, por cada Short, **la respuesta a la pregunta 1 del lector** («¿de qué va?») al
+lado de tu `tesis`. La dirección las compara el viernes.
 
 **Y la regla 14, nueva del 04/09, que se comprueba escena por escena: los dos canales.**
 
@@ -246,7 +293,7 @@ Lunes a viernes los Shorts (`"hora": "19:00"`), **y nada el sábado ni el doming
 
 ### 6. Valida y entrega
 
-`python3 04_agentes/validar_guion.py 05_calendario/guiones/MD*-0XX.es.json`. Ningún error. **Nunca pongas `[producir]` en el mensaje del commit.**
+`python3 04_agentes/validar_guion.py 05_calendario/guiones/MD*-0XX.es.json`. Ningún error — y desde el 23/09 eso incluye que **cada Short lleva `historia` y `lectura_en_frio` con `veredicto: "pasa"`** (C48). **Nunca pongas `[producir]` en el mensaje del commit.**
 
 ## Criterio editorial que no se negocia
 
@@ -258,7 +305,7 @@ Está en `00_estrategia/REGLAS.md` y manda sobre todo lo anterior:
 - **Lo que un estudio encontró se copia, no se deduce** (añadido por la dirección el 15/09/2026). Muchas fichas de `BIBLIOGRAFIA_CURADA.md` son una sola línea, y esa línea no dice qué salió en el estudio. Toda frase de un guion que cuente un **resultado** («mejora», «reduce», «el doble», «no sirve») tiene que estar en la ficha o en el **resumen del artículo leído en esta misma ejecución**, y esa frase del resumen, copiada literal, va en `notas_humor`. Si no puedes leer el resumen, cuenta solo lo que dice la ficha, o cambia de ficha. El caso que lo escribió: `MDS-019` decía que el humor en un anuncio «mejora cómo te cae quien lo usa», con la fuente `G05`, y el resumen de ese metaanálisis dice literalmente lo contrario (no hay evidencia de que mejore la simpatía hacia el anunciante, y reduce su credibilidad). Pasó la verificación porque la ficha no decía nada y nadie abrió el resumen.
 - **Las emisiones del sábado 19 y el domingo 20 de septiembre no se tocan** (dirección, 15/09). `MDS-017` va el sábado 19 a las 19:00 con `rehacer_video_id`, y `MDH-007` el domingo 20 a las 12:00: con diez peticiones de voz al día, el largo no llegaba al sábado. Las dos notas pendientes de `revisiones/MDH-007.md` se aplican igual, a ese guion, y **cambia solo las dos escenas que dicen las notas**: cada escena que cambia hay que volver a sintetizarla, y la voz de `MDH-007` va muy justa. El largo de la semana que viene (`MDH-008`) va el sábado 26 como siempre.
 - **Una referencia concreta que se nombra se explica en el mismo Short, o no se nombra** (el codirector, 9/09 y 15/09). `MDS-018` hablaba de «el error de Napoleón» sin decir nunca cuál era, y `MDS-017` metía un sobrino, un mando y unos dedos en el aire antes de llegar a las ratas. Un Short, un ejemplo y un mecanismo: las tres pruebas de cosido de `guionista_corto.md` no son opcionales.
-- **Cada Short dura lo que dice su serie, ±12 %** (C38, 18/09/2026, y `validar_guion.py` da ERROR). Los 55 s son el techo del formato y **dejaron de ser el objetivo de nadie**: medido sobre los veinticinco Shorts del canal, los veinticinco tenían entre 88 y 120 palabras dijera lo que dijera su serie, y lo que rellenaba la diferencia era explicación entre el remate y el cierre. Eso es lo que el codirector leyó dos días seguidos como «forzado entre el nudo y el desenlace». **Si no cabe, no recortes palabras de todas las escenas: busca la que no hace avanzar nada —casi siempre la penúltima, la que repite con otras palabras lo que dijo la anterior— y quítala entera.**
+- **ANULADO COMO ERROR EL 23/09/2026 (C48). La duración la decide la historia; el techo son 55 s.** Lo que sigue se deja porque el diagnóstico de agosto (el relleno entre el remate y el cierre) sigue siendo cierto — pero el remedio ya no es cortar hasta caber, es la pregunta 4 de la lectura en frío. Lo que decía: **Cada Short dura lo que dice su serie, ±12 %** (C38, 18/09/2026, y `validar_guion.py` da ERROR). Los 55 s son el techo del formato y **dejaron de ser el objetivo de nadie**: medido sobre los veinticinco Shorts del canal, los veinticinco tenían entre 88 y 120 palabras dijera lo que dijera su serie, y lo que rellenaba la diferencia era explicación entre el remate y el cierre. Eso es lo que el codirector leyó dos días seguidos como «forzado entre el nudo y el desenlace». **Si no cabe, no recortes palabras de todas las escenas: busca la que no hace avanzar nada —casi siempre la penúltima, la que repite con otras palabras lo que dijo la anterior— y quítala entera.**
 - Ningún chiste que necesite una víctima colectiva. Nada de machismo, xenofobia ni humor a costa de un grupo por serlo.
 - Nunca se enseña el humor como táctica para usarlo con alguien que no sabe que lo están usando.
 
