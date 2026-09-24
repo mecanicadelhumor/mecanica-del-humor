@@ -481,6 +481,21 @@
       "musica": "cama_09_first_light_galaxytones.mp3",
       "subido_utc": "2026-09-23T09:42:38Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-024.es",
+      "episodio": "MDS-024",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "Cómo mantener una conversación sin quedarte en blanco: la regla del «sí, y además»",
+      "guion": "05_calendario/guiones/MDS-024.es.json",
+      "video_id": "N2qUpGcAy2Y",
+      "url": "https://youtu.be/N2qUpGcAy2Y",
+      "estado": "private",
+      "publicar_en": "2026-09-24T17:00:00Z",
+      "musica": "cama_10_farewell_galaxytones.mp3",
+      "subido_utc": "2026-09-24T06:15:45Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-09-23T13:52:45Z"
