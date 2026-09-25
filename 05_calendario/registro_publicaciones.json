@@ -496,6 +496,21 @@
       "musica": "cama_10_farewell_galaxytones.mp3",
       "subido_utc": "2026-09-24T06:15:45Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-025.es",
+      "episodio": "MDS-025",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué el humor ayuda a memorizar? El estudio apunta al estrés, con diez personas por grupo",
+      "guion": "05_calendario/guiones/MDS-025.es.json",
+      "video_id": "DVKoEJDPCqM",
+      "url": "https://youtu.be/DVKoEJDPCqM",
+      "estado": "private",
+      "publicar_en": "2026-09-25T17:00:00Z",
+      "musica": "cama_11_watching_anime_piano_version_sakura_hz.mp3",
+      "subido_utc": "2026-09-25T06:19:48Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-09-24T13:49:32Z"
