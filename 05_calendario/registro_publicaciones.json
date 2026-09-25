@@ -491,7 +491,7 @@
       "guion": "05_calendario/guiones/MDS-024.es.json",
       "video_id": "N2qUpGcAy2Y",
       "url": "https://youtu.be/N2qUpGcAy2Y",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-09-24T17:00:00Z",
       "musica": "cama_10_farewell_galaxytones.mp3",
       "subido_utc": "2026-09-24T06:15:45Z",
@@ -513,5 +513,5 @@
       "revisado": false
     }
   ],
-  "_estado_leido_utc": "2026-09-24T13:49:32Z"
+  "_estado_leido_utc": "2026-09-25T14:11:52Z"
 }
