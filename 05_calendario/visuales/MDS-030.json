@@ -1,0 +1,202 @@
+{
+  "guion": "MDS-030",
+  "version": 1,
+  "firma": "dd239657fcc0079a",
+  "resuelto_utc": "2026-09-25T15:35:24Z",
+  "escenas": {
+    "1": {
+      "narracion_sha": "5e4cc3eb89a7",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.77
+          ],
+          "frase": "Hay un chiste que se cuenta desde hace décadas y que no tiene ninguna lógica.",
+          "fuente": "pexels",
+          "id": 7061343,
+          "pagina": "https://www.pexels.com/video/a-man-talking-to-his-friends-at-the-bar-7061343/",
+          "titulo": "a man talking to his friends at the bar",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7061343/7061343-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "friends laughing around a bar table",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 14.43,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "00909f04aebe",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.42
+          ],
+          "frase": "Va así: ¿cuántos surrealistas hacen falta para cambiar una bombilla?",
+          "fuente": "pexels",
+          "id": 7641180,
+          "pagina": "https://www.pexels.com/video/a-man-changing-a-light-bulb-7641180/",
+          "titulo": "a man changing a light bulb",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 35.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/7641180/7641180-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "hand changing light bulb ceiling",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 1.52,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "c9091b5803ad",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.41
+          ],
+          "frase": "La respuesta es: un pez.",
+          "fuente": "pexels",
+          "id": 35356749,
+          "pagina": "https://www.pexels.com/video/serene-fish-swimming-in-aquarium-35356749/",
+          "titulo": "serene fish swimming in aquarium",
+          "autor": "Sanjay Sharma",
+          "autor_url": "https://www.pexels.com/@sanjay-sharma-2150810918",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/35356749/14980313_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "single fish swimming close up",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 6.14,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "9d32e60cf36a",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.03
+          ],
+          "frase": "Para Scott Weems la risa avisa de que el cerebro ha cazado algo que no encaja.",
+          "fuente": "marca",
+          "tipo": "marca"
+        },
+        {
+          "k": 2,
+          "desde": "Y aquí es el pez",
+          "t_estimado": [
+            8.03,
+            10.64
+          ],
+          "frase": "Y aquí es el pez.",
+          "fuente": "pexels",
+          "id": 16668207,
+          "pagina": "https://www.pexels.com/video/a-man-is-standing-next-to-a-table-with-fish-16668207/",
+          "titulo": "a man is standing next to a table with fish",
+          "autor": "K",
+          "autor_url": "https://www.pexels.com/@kelly",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/16668207/16668207-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "fish out of water on a table",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 9.83,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "20aca1822f86",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            10.85
+          ],
+          "frase": "Hay a quien el pez le hace gracia y hay a quien le da rabia, y eso ya no lo sabe nadie.",
+          "fuente": "pexels",
+          "id": 8628287,
+          "pagina": "https://www.pexels.com/video/a-man-laughing-and-pointing-8628287/",
+          "titulo": "a man laughing and pointing",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8628287/8628287-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man annoyed while friend laughs",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 14.33,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

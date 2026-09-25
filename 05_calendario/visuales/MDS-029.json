@@ -1,0 +1,287 @@
+{
+  "guion": "MDS-029",
+  "version": 1,
+  "firma": "00168b8822f39711",
+  "resuelto_utc": "2026-09-25T15:35:13Z",
+  "escenas": {
+    "1": {
+      "narracion_sha": "4a96ebf90f4e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.07
+          ],
+          "frase": "Una viñeta: un náufrago en una isla con una palmera",
+          "fuente": "pixabay",
+          "id": 219241,
+          "pagina": "https://pixabay.com/videos/id-219241/",
+          "titulo": "island, sea, beach, tropical, drone, batisland, indonesia, papua, exotic, palm trees, ocean, desert island, water, oceania, turquoise, aerial view, nature, landscape id",
+          "autor": "NVKEXPLORE",
+          "autor_url": "https://pixabay.com/users/NVKEXPLORE-35987031/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 6.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2024/07/03/219241_large.mp4",
+          "tipo": "video",
+          "consulta": "tiny desert island palm tree sea",
+          "relevancia": 0.833,
+          "inicio_s": 0.0,
+          "movimiento": 11.03,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "y un buzón",
+          "t_estimado": [
+            4.07,
+            11.49
+          ],
+          "frase": "y un buzón. Dos pies posibles: «esperando al cartero», o «facturas».",
+          "fuente": "pexels",
+          "id": 20063577,
+          "pagina": "https://www.pexels.com/video/a-long-empty-road-at-sunset-with-trees-on-both-sides-20063577/",
+          "titulo": "a long empty road at sunset with trees on both sides",
+          "autor": "Serg Alesenko",
+          "autor_url": "https://www.pexels.com/@sergk1",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 73.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/20063577/20063577-hd_1080_1920_60fps.mp4",
+          "tipo": "video",
+          "consulta": "old mailbox on a post empty road",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 6.3,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "a89080055933",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.51
+          ],
+          "frase": "Casi todo el mundo elige «facturas», y nadie ha tenido que explicar por qué.",
+          "fuente": "pixabay",
+          "id": 8256,
+          "pagina": "https://pixabay.com/videos/id-8256/",
+          "titulo": "pencil, write, author, education, pen, paper, school, writing, notes, office, table, idea, letter, creativity, study, homework id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 15.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2017/03/08/8256-207598612_large.mp4",
+          "tipo": "video",
+          "consulta": "stack of letters and bills on table",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 9.49,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "65816f112f0c",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            1.0
+          ],
+          "frase": "En 2023",
+          "fuente": "pixabay",
+          "id": 327876,
+          "pagina": "https://pixabay.com/videos/id-327876/",
+          "titulo": "book, opening book, bible, pages, book opening, book on a table, ai generated id",
+          "autor": "samsabt",
+          "autor_url": "https://pixabay.com/users/samsabt-20943916/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 10.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2026/01/15/327876_large.mp4",
+          "tipo": "video",
+          "consulta": "open magazine on a table",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 3.77,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "pusieron a las máquinas",
+          "t_estimado": [
+            1.0,
+            9.26
+          ],
+          "frase": "pusieron a las máquinas a hacer esto mismo con los pies de foto del New Yorker.",
+          "fuente": "pexels",
+          "id": 7846332,
+          "pagina": "https://www.pexels.com/video/a-woman-inside-a-dark-room-with-flashing-lights-7846332/",
+          "titulo": "a woman inside a dark room with flashing lights",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 36.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/7846332/7846332-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "server room racks blue lights",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 1.41,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "03d125141597",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.49
+          ],
+          "frase": "De cada cien viñetas, las máquinas acertaron treinta menos que las personas.",
+          "fuente": "marca",
+          "tipo": "marca"
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "96d573947d3b",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.4
+          ],
+          "frase": "Y cuando explicaban por qué tenía gracia,",
+          "fuente": "marca",
+          "tipo": "marca"
+        },
+        {
+          "k": 2,
+          "desde": "la gente prefirió",
+          "t_estimado": [
+            3.4,
+            9.26
+          ],
+          "frase": "la gente prefirió la explicación humana dos de cada tres veces.",
+          "fuente": "pexels",
+          "id": 7252690,
+          "pagina": "https://www.pexels.com/video/person-pointing-on-laptop-s-screen-7252690/",
+          "titulo": "person pointing on laptop s screen",
+          "autor": "Ivan S",
+          "autor_url": "https://www.pexels.com/@ivan-s",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7252690/7252690-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "two people discussing pointing at screen",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 6.95,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "d3b0b46cf1cc",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.55
+          ],
+          "frase": "A las máquinas nadie las ha probado con el náufrago: solo con las viñetas de esa revista.",
+          "fuente": "pexels",
+          "id": 27958181,
+          "pagina": "https://www.pexels.com/video/a-magazine-on-a-table-with-a-book-on-it-27958181/",
+          "titulo": "a magazine on a table with a book on it",
+          "autor": "Mila Mir",
+          "autor_url": "https://www.pexels.com/@mila-mir-1695055910",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 7.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/27958181/12273028_1080_1920_60fps.mp4",
+          "tipo": "video",
+          "consulta": "stack of old magazines table",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 10.23,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 3,
+      "plano": 2,
+      "id": "pexels:39625195",
+      "titulo": "abstract blue light in dark room",
+      "motivo": "quieto (movimiento 0.15)"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}

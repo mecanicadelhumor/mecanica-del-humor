@@ -1,0 +1,328 @@
+{
+  "guion": "MDS-027",
+  "version": 1,
+  "firma": "6b4793cdd5fd2f64",
+  "resuelto_utc": "2026-09-25T15:34:51Z",
+  "escenas": {
+    "1": {
+      "narracion_sha": "3f99d77a68b1",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.8
+          ],
+          "frase": "Estás en una cafetería con gente, miras la barra y le preguntas al camarero",
+          "fuente": "pexels",
+          "id": 8936497,
+          "pagina": "https://www.pexels.com/video/man-wearing-face-mask-ordering-at-the-counter-8936497/",
+          "titulo": "man wearing face mask ordering at the counter",
+          "autor": "Thirdman",
+          "autor_url": "https://www.pexels.com/@thirdman",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 18.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8936497/8936497-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "customer ordering at cafe counter",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 3.74,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "si el pan es integral",
+          "t_estimado": [
+            6.8,
+            10.57
+          ],
+          "frase": "si el pan es integral.",
+          "fuente": "pexels",
+          "id": 5757790,
+          "pagina": "https://www.pexels.com/video/two-loafs-of-brown-bread-5757790/",
+          "titulo": "two loafs of brown bread",
+          "autor": "Anna Bondarenko",
+          "autor_url": "https://www.pexels.com/@aaa333",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 4.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5757790/5757790-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "loaf of brown bread on counter",
+          "relevancia": 0.75,
+          "inicio_s": 0.0,
+          "movimiento": 16.93,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "057479e10cb1",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.87
+          ],
+          "frase": "Y te contesta: «no, está cortado».",
+          "fuente": "pexels",
+          "id": 36825699,
+          "pagina": "https://www.pexels.com/video/slicing-artisan-sourdough-bread-on-wooden-board-36825699/",
+          "titulo": "slicing artisan sourdough bread on wooden board",
+          "autor": "Max Griss",
+          "autor_url": "https://www.pexels.com/@max-griss-16866522",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 6.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/36825699/15602675_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "sliced bread on wooden board",
+          "relevancia": 1.0,
+          "inicio_s": 0.0,
+          "movimiento": 6.43,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "c5d3f2619f90",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.13
+          ],
+          "frase": "Y en la mesa hay quien pregunta, en serio,",
+          "fuente": "pexels",
+          "id": 18940146,
+          "pagina": "https://www.pexels.com/video/a-man-sitting-at-a-table-with-other-people-18940146/",
+          "titulo": "a man sitting at a table with other people",
+          "autor": "Kuiyibo Campos",
+          "autor_url": "https://www.pexels.com/@kuiyibo",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/18940146/18940146-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "man serious while others laugh table",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 3.31,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "qué tiene que ver",
+          "t_estimado": [
+            4.13,
+            8.33
+          ],
+          "frase": "qué tiene que ver que esté cortado.",
+          "fuente": "pexels",
+          "id": 13326116,
+          "pagina": "https://www.pexels.com/video/a-man-having-coffee-and-a-sandwich-at-an-outdoor-cafe-13326116/",
+          "titulo": "a man having coffee and a sandwich at an outdoor cafe",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13326116/13326116-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "man serious while others laugh cafe",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 6.32,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "c608783b25f1",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.17
+          ],
+          "frase": "No es que sea lento: «integral» significa dos cosas, de harina completa",
+          "fuente": "pexels",
+          "id": 6092328,
+          "pagina": "https://www.pexels.com/video/person-pouring-cocoa-powder-on-the-bowl-with-flour-6092328/",
+          "titulo": "person pouring cocoa powder on the bowl with flour",
+          "autor": "ROMAN ODINTSOV",
+          "autor_url": "https://www.pexels.com/@roman-odintsov",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 21.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6092328/6092328-hd_1080_2048_30fps.mp4",
+          "tipo": "video",
+          "consulta": "wholemeal flour in a bowl",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 0.93,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "o entero",
+          "t_estimado": [
+            6.17,
+            10.18
+          ],
+          "frase": "o entero, y se quedó en la primera.",
+          "fuente": "pexels",
+          "id": 15634418,
+          "pagina": "https://www.pexels.com/video/a-loaf-of-bread-sitting-on-a-cutting-board-next-to-a-fireplace-15634418/",
+          "titulo": "a loaf of bread sitting on a cutting board next to a fireplace",
+          "autor": "hello aesthe",
+          "autor_url": "https://www.pexels.com/@helloaesthe",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 7.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/15634418/15634418-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "whole uncut loaf of bread",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 2.35,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "7415e383bb93",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.43
+          ],
+          "frase": "Un chiste te obliga a saltar de un significado al otro de golpe,",
+          "fuente": "marca",
+          "tipo": "marca"
+        },
+        {
+          "k": 2,
+          "desde": "y él no saltó",
+          "t_estimado": [
+            6.43,
+            8.8
+          ],
+          "frase": "y él no saltó.",
+          "fuente": "pexels",
+          "id": 6519494,
+          "pagina": "https://www.pexels.com/video/a-group-of-people-at-a-new-year-s-party-6519494/",
+          "titulo": "a group of people at a new year s party",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6519494/6519494-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "person not laughing group laughing table",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 14.63,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "58891bf1a2b2",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            10.39
+          ],
+          "frase": "Esto vale para cualquier chiste: busca la palabra con dos significados. Por qué a unos les cuesta saltar, no se sabe.",
+          "fuente": "pixabay",
+          "id": 1112,
+          "pagina": "https://pixabay.com/videos/id-1112/",
+          "titulo": "talk, discussion, meeting, team, group, conference, discuss, people, chairs, sitting, chatting, talking, debating, argument, men id",
+          "autor": "DistillVideos",
+          "autor_url": "https://pixabay.com/users/DistillVideos-1280814/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 7.0,
+          "ancho": 0,
+          "alto": 0,
+          "url": "https://cdn.pixabay.com/video/2015/10/19/1112-142930259_medium.mp4",
+          "tipo": "video",
+          "consulta": "two people talking one confused",
+          "relevancia": 1.0,
+          "inicio_s": 0.0,
+          "movimiento": 9.39,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

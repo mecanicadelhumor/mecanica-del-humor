@@ -1,0 +1,262 @@
+{
+  "guion": "MDS-026",
+  "version": 1,
+  "firma": "61c947289ac703aa",
+  "resuelto_utc": "2026-09-25T15:34:35Z",
+  "escenas": {
+    "1": {
+      "narracion_sha": "63b9cb546bd2",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.27
+          ],
+          "frase": "En un taller de improvisación te ponen con desconocidos y te dicen:",
+          "fuente": "pexels",
+          "id": 34822990,
+          "pagina": "https://www.pexels.com/video/group-of-photographers-at-indoor-workshop-34822990/",
+          "titulo": "group of photographers at indoor workshop",
+          "autor": "Sofía  Falco",
+          "autor_url": "https://www.pexels.com/@sofia-falco-1148410914",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 7.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/34822990/14762901_1080_1920_60fps.mp4",
+          "tipo": "video",
+          "consulta": "improv theatre workshop group standing",
+          "relevancia": 0.4,
+          "inicio_s": 0.0,
+          "movimiento": 11.37,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "sois astronautas",
+          "t_estimado": [
+            5.27,
+            10.57
+          ],
+          "frase": "sois astronautas y habéis perdido las llaves.",
+          "fuente": "pexels",
+          "id": 7817154,
+          "pagina": "https://www.pexels.com/video/a-realtor-handing-over-the-keys-to-the-married-couple-7817154/",
+          "titulo": "a realtor handing over the keys to the married couple",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 19.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7817154/7817154-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "bunch of keys in a hand",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 0.83,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "df29a5e131d1",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.63
+          ],
+          "frase": "Porque esto es un experimento: veinte minutos de juegos así,",
+          "fuente": "pixabay",
+          "id": 214780,
+          "pagina": "https://pixabay.com/videos/id-214780/",
+          "titulo": "hiking, forest, nature walk, adventure, group of hikers, outdoor activity, woodland, backpacks, recreation, exploration, fitness, greenery, trail, pathway id",
+          "autor": "Peter_Hanzo",
+          "autor_url": "https://pixabay.com/users/Peter_Hanzo-44173646/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 7.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://cdn.pixabay.com/video/2024/06/01/214780_large.mp4",
+          "tipo": "video",
+          "consulta": "two groups in the same hall activity",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 3.61,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "contra otro grupo",
+          "t_estimado": [
+            4.63,
+            8.8
+          ],
+          "frase": "contra otro grupo que solo estuvo charlando.",
+          "fuente": "pexels",
+          "id": 38903358,
+          "pagina": "https://www.pexels.com/video/vintage-mechanical-wall-clock-close-up-38903358/",
+          "titulo": "vintage mechanical wall clock close up",
+          "autor": "Dr. Prashant Vaijinath",
+          "autor_url": "https://www.pexels.com/@dr-prashant-vaijinath-2162248764",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 31.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/38903358/16543079_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "wall clock close up minutes",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 4.94,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "1a5be8798d26",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.26
+          ],
+          "frase": "Los de improvisación dieron después más respuestas distintas en una prueba de creatividad, y salieron de mejor humor.",
+          "fuente": "marca",
+          "tipo": "marca"
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "00fe54ebd56e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.33
+          ],
+          "frase": "O sea que lo del astronauta no era para hacer el ridículo:",
+          "fuente": "pexels",
+          "id": 6245736,
+          "pagina": "https://www.pexels.com/video/person-laughing-while-writing-6245736/",
+          "titulo": "person laughing while writing",
+          "autor": "Monstera Production",
+          "autor_url": "https://www.pexels.com/@gabby-k",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 22.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6245736/6245736-hd_1080_2048_30fps.mp4",
+          "tipo": "video",
+          "consulta": "person laughing embarrassed group workshop",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 2.41,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "era para que te tocara",
+          "t_estimado": [
+            5.33,
+            10.64
+          ],
+          "frase": "era para que te tocara inventar sobre la marcha.",
+          "fuente": "pexels",
+          "id": 4547598,
+          "pagina": "https://www.pexels.com/video/a-door-is-open-in-a-dark-room-with-sunlight-coming-in-4547598/",
+          "titulo": "a door is open in a dark room with sunlight coming in",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 20.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/4547598/4547598-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "open door dark corridor light",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 4.22,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "4292d7317cef",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.16
+          ],
+          "frase": "¿Y dura? No se sabe: les pasaron las pruebas justo al salir del taller.",
+          "fuente": "pexels",
+          "id": 7034335,
+          "pagina": "https://www.pexels.com/video/close-up-of-clock-hands-7034335/",
+          "titulo": "close up of clock hands",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7034335/7034335-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "clock hands close up",
+          "relevancia": 1.0,
+          "inicio_s": 0.4,
+          "movimiento": 1.02,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

@@ -1,0 +1,196 @@
+{
+  "guion": "MDS-028",
+  "version": 1,
+  "firma": "50302102ba3dea29",
+  "resuelto_utc": "2026-09-25T15:34:58Z",
+  "escenas": {
+    "1": {
+      "narracion_sha": "05cb8110b6c8",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.57
+          ],
+          "frase": "«Yo es que no tengo gracia», dice tu cuñado, tan tranquilo,",
+          "fuente": "pexels",
+          "id": 20521672,
+          "pagina": "https://www.pexels.com/video/a-family-is-sitting-at-a-table-with-food-20521672/",
+          "titulo": "a family is sitting at a table with food",
+          "autor": "Gül Işık",
+          "autor_url": "https://www.pexels.com/@ekrulila",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 14.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/20521672/20521672-hd_1080_1920_60fps.mp4",
+          "tipo": "video",
+          "consulta": "family lunch table relatives talking",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 7.86,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "como quien dice cuánto mide",
+          "t_estimado": [
+            5.57,
+            11.95
+          ],
+          "frase": "como quien dice cuánto mide y no hay más que hablar.",
+          "fuente": "pexels",
+          "id": 6615307,
+          "pagina": "https://www.pexels.com/video/man-marking-measuring-points-on-a-paper-6615307/",
+          "titulo": "man marking measuring points on a paper",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 18.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6615307/6615307-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "measuring height wall pencil marks",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 2.12,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "06fb5930b277",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.0
+          ],
+          "frase": "Pues a tu cuñado le interesa: a dieciocho jubilados les dieron ocho clases de humor,",
+          "fuente": "pexels",
+          "id": 5798406,
+          "pagina": "https://www.pexels.com/video/video-of-an-elderly-man-and-elderly-woman-sitting-while-using-a-digital-thermometer-5798406/",
+          "titulo": "video of an elderly man and elderly woman sitting while using a digital thermometer",
+          "autor": "Vlada Karpovich",
+          "autor_url": "https://www.pexels.com/@vlada-karpovich",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5798406/5798406-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "seniors sitting in a circle class",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 4.79,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "y a otros veinte",
+          "t_estimado": [
+            7.0,
+            10.23
+          ],
+          "frase": "y a otros veinte, ninguna.",
+          "fuente": "pexels",
+          "id": 8088081,
+          "pagina": "https://www.pexels.com/video/elderly-women-surprising-their-friend-with-a-birthday-cake-8088081/",
+          "titulo": "elderly women surprising their friend with a birthday cake",
+          "autor": "Yaroslav Shuraev",
+          "autor_url": "https://www.pexels.com/@yaroslav-shuraev",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 28.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8088081/8088081-hd_1080_2048_24fps.mp4",
+          "tipo": "video",
+          "consulta": "older woman laughing with friends",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 5.26,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "4f6db2e1f3ba",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            11.1
+          ],
+          "frase": "Los de las clases pasaron de setenta y siete puntos a ciento uno en el cuestionario. Los otros veinte, igual que estaban.",
+          "fuente": "marca",
+          "tipo": "marca"
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "43b47c434c66",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.08
+          ],
+          "frase": "Y ojo con quién ponía la nota: se la ponían ellos mismos. Tu cuñado también aprobaría.",
+          "fuente": "pixabay",
+          "id": 10824,
+          "pagina": "https://pixabay.com/videos/id-10824/",
+          "titulo": "sketch, draw, pencil, drawing, design, hand, paper, creative, artist, pen, sketching, artistic, artwork, paint, creativity, school, painting, designer id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 15.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2017/07/23/10824-226624979_large.mp4",
+          "tipo": "video",
+          "consulta": "hands filling paper questionnaire pen",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 4.05,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}
