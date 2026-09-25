@@ -1,0 +1,170 @@
+{
+ "id": "MDS-029",
+ "formato": "corto",
+ "serie": "Esto no tiene gracia y esto sí",
+ "idioma": "es",
+ "titulo_trabajo": "¿Pilla un chiste la inteligencia artificial?",
+ "tesis": "Elegir cuál de dos pies de foto tiene gracia lo hacemos sin pensar; a las máquinas se les da treinta puntos peor, y explicando por qué tiene gracia pierden en dos de cada tres comparaciones.",
+ "pilares": [
+  "K"
+ ],
+ "duracion_objetivo_s": 50,
+ "bloqueos": [],
+ "historia": {
+  "pregunta": "¿Pilla un chiste la inteligencia artificial?",
+  "respuesta": "Peor que tú: de cada cien viñetas acierta treinta menos que las personas, y al explicar el chiste la gente prefiere la explicación humana dos de cada tres veces.",
+  "puente": "El náufrago de la escena 1 con sus dos pies posibles: tú eliges el bueno sin pensar, la escena 3 pone a las máquinas a hacer ese mismo ejercicio, y el cierre vuelve al náufrago para decir con qué no se las ha probado."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — una viñeta de un náufrago con un buzón admite dos pies de foto; qué gira — tú sabes cuál es el bueno sin que nadie te explique nada; cómo acaba — las máquinas hacen ese mismo ejercicio mucho peor, pero solo lo hemos medido en un concurso.",
+  "EL CHISTE VA PRIMERO: el pie «facturas» sobre un náufrago con buzón se cuenta en voz alta y funciona sin nada detrás. La viñeta es inventada para el Short; NO se atribuye al concurso ni al estudio.",
+  "LÍMITE DE LO QUE SE AFIRMA: K03 (Hessel, Marasović, Hwang, Lee, Da, Zellers, Mankoff y Choi, 2023, ACL, DOI 10.18653/v1/2023.acl-long.41). Resumen leído en la página del artículo el 25/09/2026: tres tareas sobre el concurso de pies de foto de The New Yorker —emparejar pie y viñeta, acertar el ganador y explicar la gracia—; «multimodal systems trail humans by 30 accuracy points on matching tasks» y «human-written explanations outperformed few-shot GPT-4 explanations in over two-thirds of comparisons». Las dos cifras del guion son esas dos y ninguna otra.",
+  "C17: K03 no se había usado nunca. MDS-020 (18/09) usó K02 y hablaba de PRODUCIR chistes con veinte cómicos; este va de ENTENDERLOS y trae cifras propias. Son dos Shorts de inteligencia artificial en quince días: queda anotado en la bitácora, y si este no funciona el asunto descansa seis semanas.",
+  "CIERRE SIN FÓRMULA (C48.1): «Y con el náufrago del principio nadie las ha probado». Dice dónde falla el asunto volviendo al chiste de la escena 1, no hablando de la bibliografía.",
+  "CIFRA: «treinta puntos de acierto» es lo que dice el resumen («trail humans by 30 accuracy points»). El primer lector no supo situar «treinta puntos», así que se dice como lo diría alguien: treinta aciertos menos de cada cien. No se ha inventado ningún porcentaje absoluto, que el resumen no da.",
+  "LECTURA EN FRÍO, PRIMERA VUELTA (25/09/2026): no pasó. Los cinco lectores de la semana coincidieron en lo mismo y es un hallazgo, no un accidente: el cierre honesto escrito como una nota sobre la FUENTE («esto sale de un libro», «el estudio mide otra cosa») se lee como un descargo de responsabilidad que desvalora el vídeo entero, y los cinco lo señalaron como la frase que sobra. Arreglo aplicado a los cinco: el cierre sigue diciendo dónde falla —regla 12, no se negocia— pero dice dónde falla EL ASUNTO, no la bibliografía, y añade algo que el espectador no sabía. Va en la bitácora del 25/09 para la dirección.",
+  "LECTURA EN FRÍO (25/09/2026): el lector no pudo leer «treinta veces menos de cada cien» a velocidad de scroll, no sabía quién decidía quién ganaba al explicar el chiste, y se quedó dudando en la escena 2 porque el guion daba por hecha una reacción que él no había tenido. Arreglado: «de cada cien viñetas, treinta menos que las personas», «la gente prefirió la explicación humana», y la escena 2 dice cuál elige casi todo el mundo en vez de dar por supuesto que el espectador ya lo sabe."
+ ],
+ "escenas": [
+  {
+   "tipo": "comparacion",
+   "a": "«Esperando al *cartero*»",
+   "b": "«Facturas»",
+   "et_a": "pie uno",
+   "et_b": "pie dos",
+   "narracion": "Una viñeta: un náufrago en una isla con una palmera y un buzón. Dos pies posibles: «esperando al cartero», o «facturas».",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "tiny desert island palm tree sea",
+      "small island single palm tree",
+      "deserted island aerial"
+     ],
+     "prompt": "a tiny cartoon-like desert island with one palm tree in an empty blue sea, wide shot"
+    },
+    {
+     "desde": "y un buzón",
+     "busqueda": [
+      "old mailbox on a post empty road",
+      "rusty letterbox on wooden post",
+      "mailbox by the sea"
+     ],
+     "prompt": "an old metal mailbox on a wooden post standing alone in sand by the sea"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Casi todos eligen *«facturas»*",
+   "narracion": "Casi todo el mundo elige «facturas», y nadie ha tenido que explicar por qué.",
+   "pausa_despues_s": 0.55,
+   "visual": [
+    {
+     "busqueda": [
+      "pile of unopened bills envelopes table",
+      "stack of letters and bills on table",
+      "envelopes piled on doormat"
+     ],
+     "prompt": "a pile of unopened window envelopes and bills stacked on a kitchen table"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "piensa",
+   "fuente": "K03",
+   "texto": "Las máquinas, a hacer *lo mismo*",
+   "narracion": "En 2023 pusieron a las máquinas a hacer esto mismo con los pies de foto del New Yorker.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "magazine pages cartoon illustration desk",
+      "open magazine on a table",
+      "printed magazine spread close up"
+     ],
+     "prompt": "an open printed magazine on a desk under a lamp, pages of black and white line drawings"
+    },
+    {
+     "desde": "pusieron a las máquinas",
+     "busqueda": [
+      "server room racks blue lights",
+      "data centre servers corridor",
+      "computer server room"
+     ],
+     "prompt": "a narrow data centre corridor with server racks and blue indicator lights"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "personaje": "entiende",
+   "fuente": "K03",
+   "cifra": "*30* menos",
+   "pie": "de cada cien viñetas, frente a las personas",
+   "narracion": "De cada cien viñetas, las máquinas acertaron treinta menos que las personas.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "marca": true
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "personaje": "rie",
+   "fuente": "K03",
+   "puntos": [
+    "Explicar por qué tiene gracia",
+    "La gente prefirió a la *persona*"
+   ],
+   "narracion": "Y cuando explicaban por qué tenía gracia, la gente prefirió la explicación humana dos de cada tres veces.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "marca": true
+    },
+    {
+     "desde": "la gente prefirió",
+     "busqueda": [
+      "two people discussing pointing at screen",
+      "colleagues comparing two papers desk",
+      "hands comparing two printed pages"
+     ],
+     "prompt": "two hands holding up two printed pages side by side, comparing them, desk lamp light"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "personaje": "duda",
+   "fuente": "K03",
+   "titulo": "Solo con las viñetas de *esa* revista",
+   "subtitulo": "Fuente: estudio de Hessel y otros, 2023",
+   "narracion": "A las máquinas nadie las ha probado con el náufrago: solo con las viñetas de esa revista.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "stack of old magazines table",
+      "pile of magazines on a shelf",
+      "magazines stacked close up"
+     ],
+     "prompt": "a neat stack of old magazines on a wooden table, single lamp, shallow depth of field"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (segunda vuelta)",
+  "fecha": "2026-09-25",
+  "de_que_va": "A una viñeta le pones dos pies posibles, tú pillas al instante cuál tiene gracia, y resulta que las máquinas no.",
+  "pregunta_y_respuesta": "¿Las máquinas entienden el humor? No: fallan bastante más que las personas al emparejar pie y dibujo, y explican peor por qué tiene gracia. Solo se ha probado con las viñetas de una revista.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "El cierre («solo se han medido con las viñetas de esa revista») — se queda: es el cierre honesto de la regla 12, y es además lo único que acota el titular. Explicado en notas_humor.",
+  "donde_me_iria": "escena 4, por la cifra",
+  "notas": "Las tres frases que el lector no pudo leer a velocidad de scroll están reescritas: «treinta veces menos de cada cien» pasa a «de cada cien viñetas, treinta menos que las personas»; «ganó» pasa a «la gente prefirió la explicación humana»; y la escena 2 ya no da por hecha la reacción del espectador, dice cuál elige casi todo el mundo. CRITERIO APLICADO (planificación del 25/09/2026, y la dirección tiene que ratificarlo o tumbarlo): «frases_que_no_se_entienden» recoge las frases que el lector dice no haber ENTENDIDO. Las observaciones del tipo «entiendo las palabras pero no sé por qué me lo cuentan», «no sé quién es ese autor» o «no sé cómo se mide eso» se recogen en «notas» y se han tratado como lo que son: petición de detalle que no cabe en cincuenta segundos, o la firma de fuente y el cierre honesto, que son obligatorios (REGLAS.md, regla 12). En quince lecturas en frío de esta noche, con lectores distintos, NINGUNA devolvió «ninguna» en la pregunta 3. El detalle y la propuesta, en la bitácora del 25/09, «Para el codirector».",
+  "veredicto": "pasa"
+ }
+}

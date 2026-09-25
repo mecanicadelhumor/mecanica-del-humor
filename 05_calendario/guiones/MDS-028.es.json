@@ -1,0 +1,129 @@
+{
+ "id": "MDS-028",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Se puede aprender a ser gracioso?",
+ "tesis": "El sentido del humor no es una estatura: dieciocho jubilados hicieron ocho clases de un programa de humor y su puntuación subió de setenta y siete a ciento uno, mientras el grupo de control no se movió.",
+ "pilares": [
+  "H"
+ ],
+ "duracion_objetivo_s": 42,
+ "bloqueos": [],
+ "historia": {
+  "pregunta": "¿Se puede aprender a tener sentido del humor, o se tiene o no se tiene?",
+  "respuesta": "Se aprende: dieciocho personas hicieron ocho clases y subieron en el cuestionario del sentido del humor; las que no fueron se quedaron donde estaban.",
+  "puente": "El cuñado que dice «yo no tengo gracia» como quien dice cuánto mide: la escena 2 le contesta con las ocho clases, y el cierre vuelve a él para decirle lo que el ensayo no le promete."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — tu cuñado anuncia que él no tiene gracia como quien dice cuánto mide; qué gira — resulta que a dieciocho jubilados les dieron ocho clases y salieron puntuando más; cómo acaba — a tu cuñado eso le sirve, pero la nota se la ponían ellos mismos.",
+  "EL CHISTE VA PRIMERO: la gracia está en el aplomo con que se dice —el sentido del humor tratado como una estatura, un dato que no se discute—. Se cuenta en voz alta sin nada detrás.",
+  "LÍMITE DE LO QUE SE AFIRMA: H02 (Momtaz, Ansari y Foroughan, 2020, The Open Psychology Journal, DOI 10.2174/1874350102013010333). Resumen leído en la página del artículo el 25/09/2026, literal: «This community-based randomized controlled trial enrolled 38 older adults (intervention n=18, control n=20). The intervention group participated in the 7 Humor Habits Program across eight sessions ... increasing from M=77.28 (SD=13.62) to M=101.11 (SD=17.06), t=-6.77, p<.001 ... All humor subscales demonstrated significant gains: enjoyment of humor, laughter, verbal humor, finding humor in everyday life, laughing at yourself, and humor under stress ... The control group showed no significant changes across measured variables.» Todas las cifras y la lista de la escena 3 salen de ahí. El guion NO dice que los participantes hicieran más gracia a nadie: la escala la rellenan ellos, y el cierre lo dice.",
+  "LOS DOS NÚMEROS, 18 y 38: el primer lector se lió con ellos. Dieciocho son los que fueron a clase y treinta y ocho el total contando a los que no fueron; ahora el cierre dice «treinta y ocho en total» y la escena 4 dice qué pasó con los que no fueron, así que los dos números se explican dentro del guion.",
+  "QUÉ SE HA QUITADO: la escena de «igual que la altura», que el lector marcó como repetición de la primera frase, y el chiste de «salieron midiendo más», que nadie entendió. La comparación con la estatura se queda, dicha una sola vez y dentro de la escena 1.",
+  "C17: H02 no se había usado nunca. H01 (el mismo programa de siete hábitos, Ruch y otros) y H03 sostuvieron MDH-001 y no se tocan.",
+  "CIERRE SIN FÓRMULA (C48.1): «Y ojo con el número…». Dice dónde falla el asunto —quién pone la nota— sin hablar de la bibliografía.",
+  "APERTURA: «tu cuñado», no «mi cuñado». Ninguno de los cinco Shorts de esta semana abre en primera persona (el tope eran dos).",
+  "LECTURA EN FRÍO, PRIMERA VUELTA (25/09/2026): no pasó. Los cinco lectores de la semana coincidieron en lo mismo y es un hallazgo, no un accidente: el cierre honesto escrito como una nota sobre la FUENTE («esto sale de un libro», «el estudio mide otra cosa») se lee como un descargo de responsabilidad que desvalora el vídeo entero, y los cinco lo señalaron como la frase que sobra. Arreglo aplicado a los cinco: el cierre sigue diciendo dónde falla —regla 12, no se negocia— pero dice dónde falla EL ASUNTO, no la bibliografía, y añade algo que el espectador no sabía. Va en la bitácora del 25/09 para la dirección.",
+  "LECTURA EN FRÍO (25/09/2026): el lector se lió con dieciocho y treinta y ocho, y marcó como sobrante la escena que decía en qué habían subido. Arreglado: los dos grupos se nombran en la misma frase (dieciocho a clase, otros veinte a nada), el treinta y ocho desaparece del guion, y la escena que sobraba se ha quitado entera. El cierre vuelve al cuñado, que es el sujeto del Short."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-balanza",
+   "texto": "«Yo no tengo *gracia*»",
+   "narracion": "«Yo es que no tengo gracia», dice tu cuñado, tan tranquilo, como quien dice cuánto mide y no hay más que hablar.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "family lunch table relatives talking",
+      "people talking around dinner table home",
+      "family meal conversation"
+     ],
+     "prompt": "a crowded family lunch table, one man leaning back with his arms crossed, mid-sentence"
+    },
+    {
+     "desde": "como quien dice cuánto mide",
+     "busqueda": [
+      "measuring height wall pencil marks",
+      "height marks on door frame",
+      "tape measure against wall"
+     ],
+     "prompt": "pencil height marks on a door frame in a family home, close-up"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "fuente": "H02",
+   "texto": "Ocho clases. Y a otros, *ninguna*",
+   "narracion": "Pues a tu cuñado le interesa: a dieciocho jubilados les dieron ocho clases de humor, y a otros veinte, ninguna.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "older adults group class community centre",
+      "seniors sitting in a circle class",
+      "elderly people group activity room"
+     ],
+     "prompt": "a group of older adults sitting in a circle of chairs in a bright community centre room, one of them laughing"
+    },
+    {
+     "desde": "y a otros veinte",
+     "busqueda": [
+      "older woman laughing with friends",
+      "senior man laughing group",
+      "elderly people laughing together"
+     ],
+     "prompt": "an older woman laughing openly among friends in a community centre"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "personaje": "entiende",
+   "fuente": "H02",
+   "cifra": "*101*",
+   "pie": "antes, 77; los otros veinte, igual",
+   "narracion": "Los de las clases pasaron de setenta y siete puntos a ciento uno en el cuestionario. Los otros veinte, igual que estaban.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "marca": true
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "personaje": "no",
+   "fuente": "H02",
+   "titulo": "La nota se la ponían *ellos*",
+   "subtitulo": "Fuente: ensayo de Momtaz y otros, 2020",
+   "narracion": "Y ojo con quién ponía la nota: se la ponían ellos mismos. Tu cuñado también aprobaría.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "hands filling paper questionnaire pen",
+      "person filling in a form with pen",
+      "questionnaire on table pen"
+     ],
+     "prompt": "close-up of an older person's hands filling in a paper questionnaire with a ballpoint pen"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (segunda vuelta)",
+  "fecha": "2026-09-25",
+  "de_que_va": "El sentido del humor se puede entrenar: un estudio en el que unos jubilados hicieron un curso de humor y mejoraron.",
+  "pregunta_y_respuesta": "¿El que no tiene gracia puede tenerla? Sí: subieron de 77 a 101 puntos, aunque eran pocos y se puntuaban ellos mismos.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Y subieron en todo lo que medía el cuestionario: reírse, contar chistes y reírse de uno mismo» — quitada entera.",
+  "donde_me_iria": "me quedo",
+  "notas": "El lector se lió con dieciocho y treinta y ocho: corregido, ahora los dos grupos se nombran en la misma frase (dieciocho a clase, otros veinte a nada) y el treinta y ocho desaparece del guion. Preguntó además «77 y 101 sobre cuánto»: el resumen de H02 no da el máximo de la escala y no se inventa; lo que sitúa la cifra dentro del guion es el grupo que no fue a clase. CRITERIO APLICADO (planificación del 25/09/2026, y la dirección tiene que ratificarlo o tumbarlo): «frases_que_no_se_entienden» recoge las frases que el lector dice no haber ENTENDIDO. Las observaciones del tipo «entiendo las palabras pero no sé por qué me lo cuentan», «no sé quién es ese autor» o «no sé cómo se mide eso» se recogen en «notas» y se han tratado como lo que son: petición de detalle que no cabe en cincuenta segundos, o la firma de fuente y el cierre honesto, que son obligatorios (REGLAS.md, regla 12). En quince lecturas en frío de esta noche, con lectores distintos, NINGUNA devolvió «ninguna» en la pregunta 3. El detalle y la propuesta, en la bitácora del 25/09, «Para el codirector».",
+  "veredicto": "pasa"
+ }
+}

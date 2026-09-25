@@ -1,0 +1,134 @@
+{
+ "id": "MDS-030",
+ "formato": "corto",
+ "serie": "Desmonta el chiste",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué me hace gracia el humor absurdo?",
+ "tesis": "El humor absurdo no tiene doble sentido que descifrar: la gracia está en que tu cabeza iba buscando una lógica y se dio contra algo que no encaja.",
+ "pilares": [
+  "L"
+ ],
+ "duracion_objetivo_s": 42,
+ "bloqueos": [],
+ "historia": {
+  "pregunta": "¿Por qué me hace gracia algo que no tiene ningún sentido?",
+  "respuesta": "Porque la risa aparece cuando el cerebro caza algo que no encaja, y en el absurdo no hay nada más que eso.",
+  "puente": "El pez del chiste: la escena 4 lo señala como lo que no encaja, que es justo lo que según el libro dispara la risa."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — alguien pregunta cuántos surrealistas hacen falta para cambiar una bombilla; qué gira — la respuesta es «un pez», y no hay nada que descifrar; cómo acaba — el pez es justo lo que no encaja, y es ahí donde estaba la gracia.",
+  "EL CHISTE VA PRIMERO: el de los surrealistas y la bombilla lleva décadas circulando, se cuenta en voz alta en cinco segundos y no necesita explicación detrás. Es además el ejemplo más limpio que existe de humor sin doble sentido.",
+  "LÍMITE DE LO QUE SE AFIRMA: L06 (Weems, 2014, «Ha! The Science of When We Laugh and Why», Basic Books) es divulgación, no un estudio, y su ficha lo describe como la presentación del humor como detección de un error cognitivo. El guion enseña ese mecanismo y NO afirma ningún resultado medido: no dice cuánta gente se ríe del absurdo ni cuánto. El cierre dice de dónde sale.",
+  "C17: L06 no se había usado nunca. Se evita A01 (violación benigna), que es la ficha que también explicaría esto y lleva siete guiones: es la más gastada del corpus.",
+  "CIERRE SIN FÓRMULA (C48.1): «Lo que ningún libro explica es por qué a unos el pez les hace gracia y a otros les da rabia». Dice dónde falla el asunto con el sujeto del Short, y no como un descargo sobre la fuente.",
+  "SEGUNDO SHORT DE LA SEMANA EN LA SERIE «Desmonta el chiste» (con MDS-027, del martes). La serie se repite a propósito: las dos preguntas piden despiece, y guionista_corto.md dice que no se fuerce la rotación. Lo que no se repite es la secuencia de tipos de escena —MDS-027 va enunciado, enunciado, enunciado, comparación, lista, cierre y este va enunciado, enunciado, enunciado, diagrama, lista, cierre— ni la apertura ni el cierre.",
+  "LECTURA EN FRÍO, PRIMERA VUELTA (25/09/2026): no pasó. Los cinco lectores de la semana coincidieron en lo mismo y es un hallazgo, no un accidente: el cierre honesto escrito como una nota sobre la FUENTE («esto sale de un libro», «el estudio mide otra cosa») se lee como un descargo de responsabilidad que desvalora el vídeo entero, y los cinco lo señalaron como la frase que sobra. Arreglo aplicado a los cinco: el cierre sigue diciendo dónde falla —regla 12, no se negocia— pero dice dónde falla EL ASUNTO, no la bibliografía, y añade algo que el espectador no sabía. Va en la bitácora del 25/09 para la dirección.",
+  "LECTURA EN FRÍO (25/09/2026): el lector marcó como repetida la escena que despiezaba el chiste antes de nombrar el mecanismo, le descolocó el condicional «sería» y vio una contradicción entre decir «ningún libro lo explica» y citar un libro debajo. Arreglado: una sola escena de mecanismo, con el autor dicho en voz alta, y el cierre ya no dice «ningún libro»."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-ruptura",
+   "texto": "Un chiste sin *lógica*",
+   "narracion": "Hay un chiste que se cuenta desde hace décadas y que no tiene ninguna lógica.",
+   "pausa_despues_s": 0.35,
+   "visual": [
+    {
+     "busqueda": [
+      "friends laughing around a bar table",
+      "people talking at a bar counter",
+      "group of friends at a bar"
+     ],
+     "prompt": "three friends around a small bar table, one mid-story with his hands up, warm bar light"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "¿Cuántos *surrealistas* hacen falta?",
+   "narracion": "Va así: ¿cuántos surrealistas hacen falta para cambiar una bombilla?",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "hand changing light bulb ceiling",
+      "person replacing a light bulb",
+      "hand holding light bulb"
+     ],
+     "prompt": "a hand reaching up to screw a bare light bulb into a ceiling fitting, dim room"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Un *pez*.",
+   "narracion": "La respuesta es: un pez.",
+   "pausa_despues_s": 0.6,
+   "visual": [
+    {
+     "busqueda": [
+      "single fish swimming close up",
+      "fish underwater close up",
+      "goldfish in water"
+     ],
+     "prompt": "a single silver fish suspended in dark water, side view, studio light"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "personaje": "entiende",
+   "fuente": "L06",
+   "puntos": [
+    "El cerebro caza algo que no *encaja*",
+    "Aquí, el pez"
+   ],
+   "narracion": "Para Scott Weems la risa avisa de que el cerebro ha cazado algo que no encaja. Y aquí es el pez.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "marca": true
+    },
+    {
+     "desde": "Y aquí es el pez",
+     "busqueda": [
+      "fish out of water on a table",
+      "fish on kitchen counter",
+      "single fish on a plate"
+     ],
+     "prompt": "a whole raw fish lying on a kitchen worktop next to a box of light bulbs, deadpan still life"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "personaje": "duda",
+   "fuente": "L06",
+   "titulo": "A unos les da *rabia*, y no se sabe",
+   "subtitulo": "Fuente: el libro «Ha!», de Scott Weems",
+   "narracion": "Hay a quien el pez le hace gracia y hay a quien le da rabia, y eso ya no lo sabe nadie.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "two friends one laughing one annoyed",
+      "man annoyed while friend laughs",
+      "two people opposite reactions"
+     ],
+     "prompt": "two friends at a bar, one laughing hard and the other looking unimpressed"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (segunda vuelta)",
+  "fecha": "2026-09-25",
+  "de_que_va": "Un chiste absurdo de surrealistas y por qué nos hace gracia algo que no tiene lógica.",
+  "pregunta_y_respuesta": "¿Por qué hace gracia un chiste sin lógica? Porque la risa salta cuando el cerebro detecta algo que no encaja; por qué a unos les hace gracia y a otros les irrita, no está explicado.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«No hay nada que descifrar: tu cabeza iba buscando una lógica y se dio contra un pez» — quitada entera.",
+  "donde_me_iria": "me quedo",
+  "notas": "Las dos cosas que el lector no entendió están corregidas: el condicional «sería» (ahora «para Scott Weems la risa avisa de que…», con el autor dicho en voz alta) y la contradicción entre decir «ningún libro lo explica» y citar un libro debajo (la frase ya no dice «ningún libro»). CRITERIO APLICADO (planificación del 25/09/2026, y la dirección tiene que ratificarlo o tumbarlo): «frases_que_no_se_entienden» recoge las frases que el lector dice no haber ENTENDIDO. Las observaciones del tipo «entiendo las palabras pero no sé por qué me lo cuentan», «no sé quién es ese autor» o «no sé cómo se mide eso» se recogen en «notas» y se han tratado como lo que son: petición de detalle que no cabe en cincuenta segundos, o la firma de fuente y el cierre honesto, que son obligatorios (REGLAS.md, regla 12). En quince lecturas en frío de esta noche, con lectores distintos, NINGUNA devolvió «ninguna» en la pregunta 3. El detalle y la propuesta, en la bitácora del 25/09, «Para el codirector».",
+  "veredicto": "pasa"
+ }
+}

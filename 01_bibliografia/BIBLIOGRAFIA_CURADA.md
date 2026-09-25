@@ -3,7 +3,7 @@
 > Base de conocimiento de **Mecánica del Humor / Humor Mechanics**.
 > Generado desde `data/semillas.json`. No edites este archivo a mano: edita el JSON y vuelve a ejecutar `scripts/generar_md.py`.
 
-**77 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
+**80 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
 
 ## Cómo se ha curado
 
@@ -28,7 +28,7 @@ y fusiona repetidos antes de que nadie los lea. Están marcados y excluidos del 
 - **C. Produccion de humor: habilidad, creatividad e inteligencia** — 6 obras
 - **D. Humor, vinculos sociales, atraccion y estatus** — 9 obras
 - **E. Risa: etologia, acustica y contagio** — 6 obras
-- **F. Neurociencia y cognicion del humor** — 5 obras
+- **F. Neurociencia y cognicion del humor** — 8 obras
 - **G. Humor aplicado: trabajo, aula, salud, persuasion** — 6 obras
 - **H. Entrenabilidad: el humor se puede aprender** — 6 obras
 - **I. Linguistica y estructura del chiste** — 5 obras
@@ -140,8 +140,8 @@ Estructura del gusto humoristico: incongruencia-resolucion, sin sentido, sexual.
 
 ### `B03` ★★ Humour styles, personality and psychological well-being: What's humour got to do with it?
 
-**Heintz, S.; Ruch, W.** (2014) · *European Journal of Humour Research*  
-DOI: [`10.7592/EJHR2014.2.3.heintz`](https://doi.org/10.7592/EJHR2014.2.3.heintz) ⚠️ por verificar  
+**Ruch, W.; Heintz, S.** (2014) · *European Journal of Humour Research*  
+DOI: [`10.7592/EJHR2013.1.4.ruch`](https://doi.org/10.7592/EJHR2013.1.4.ruch) · corregido y verificado 25/09/2026 en europeanjournalofhumour.org/ejhr/article/view/35: titulo, autores y DOI en la misma pagina. La ficha traia 10.7592/EJHR2014.2.3.heintz, que no es el suyo.  
 Tipo: articulo
 
 Acceso abierto. Cuanto del efecto del humor sobre el bienestar es en realidad personalidad.
@@ -375,6 +375,14 @@ Tipo: articulo
 
 Revision de referencia: deteccion de incongruencia (temporo-parietal) + resolucion + recompensa.
 
+### `F06` ★★★ The neural basis of humour processing
+
+**Vrticka, P.; Black, J. M.; Reiss, A. L.** (2013) · *Nature Reviews Neuroscience*  
+DOI: [`10.1038/nrn3566`](https://doi.org/10.1038/nrn3566) · verificado 25/09/2026 en nature.com/articles/nrn3566: titulo y DOI en la misma pagina  
+Tipo: articulo
+
+Revision de referencia de que pasa en el cerebro al entender un chiste: una red que detecta la incongruencia en regiones temporo-occipito-parietales y, despues, el sistema de recompensa. Es la ficha que desbloquea la pregunta «que le pasa a tu cerebro cuando te ries».
+
 ### `F03` ★★ Two neural networks for laughter: A tractography study
 
 **Gerbella, M. et al.** (2021) · *Cerebral Cortex*  
@@ -390,6 +398,22 @@ DOI: [`10.1002/hbm.21444`](https://doi.org/10.1002/hbm.21444) ⚠️ por verific
 Tipo: articulo
 
 Base neural de las dos fases del chiste.
+
+### `F07` ★★ Humor Modulates the Mesolimbic Reward Centers
+
+**Mobbs, D.; Greicius, M. D.; Abdel-Azim, E.; Menon, V.; Reiss, A. L.** (2003) · *Neuron*  
+DOI: [`10.1016/S0896-6273(03)00751-7`](https://doi.org/10.1016/S0896-6273(03)00751-7) · verificado 25/09/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/S0896-6273(03)00751-7 y en la pagina del articulo en sciencedirect  
+Tipo: articulo
+
+El experimento que ensena que un chiste activa el nucleo accumbens, el mismo circuito de recompensa del que se habla al hablar de placer. Y que cuanta mas gracia hacia, mas senal habia.
+
+### `F08` ★★ Neural correlates of laughter and humour
+
+**Wild, B.; Rodden, F. A.; Grodd, W.; Ruch, W.** (2003) · *Brain*  
+DOI: [`10.1093/brain/awg226`](https://doi.org/10.1093/brain/awg226) · verificado 25/09/2026 en academic.oup.com/brain/article/126/10/2121/291937: titulo y DOI en la misma pagina  
+Tipo: articulo
+
+Separa las dos cosas que se confunden siempre: reirse y entender el chiste. La risa depende de dos vias parcialmente independientes, una involuntaria y otra voluntaria; el humor implica sobre todo corteza frontal y regiones temporales posteriores.
 
 ### `F05` ★ Neural correlates of humor detection and appreciation in children
 

@@ -380,3 +380,46 @@ la fecha exacta en la que se liberan: «funcionan las risas enlatadas» y «cóm
 risa falsa de una de verdad» el 10 de octubre, «por qué me hace gracia el humor absurdo» el
 13, «por qué me río cuando estoy nervioso» el 12, «por qué chatgpt no tiene gracia» el 30 y
 «se puede aprender a ser gracioso» a finales de mes.
+
+---
+
+## Semana del 28 de septiembre al 2 de octubre de 2026
+
+Escrita la noche del **viernes 25** (la tarea programada del jueves arrancó con un día de
+retraso; queda anotado en la bitácora). Todo en `parrilla.json` con `"modo": "automatico"` y
+`"idiomas": ["es"]`. **Nada el sábado 3 ni el domingo 4**: el formato largo sigue suspendido
+(C42; `control_c26.mediana_vistas_48h` = 11,0 el 21/09, y la condición de vuelta son 50).
+
+| Día | Emisión | Hora | Serie | Pregunta de demanda | Ficha |
+|---|---|---|---|---|---|
+| Lunes 28 | `MDS-026` | 19:00 | El experimento | se puede aprender a ser gracioso (por el lado de la improvisación) | `H06` |
+| Martes 29 | `MDS-027` | 19:00 | Desmonta el chiste | por qué hay gente que no pilla los chistes | `I03` |
+| Miércoles 30 | `MDS-028` | 19:00 | El experimento | se puede aprender a ser gracioso | `H02` |
+| Jueves 1 | `MDS-029` | 19:00 | Esto no tiene gracia y esto sí | por qué chatgpt no tiene gracia | `K03` |
+| Viernes 2 | `MDS-030` | 19:00 | Desmonta el chiste | por qué me hace gracia el humor absurdo | `L06` |
+
+**Las cinco fichas estaban sin abrir.** Tercera semana seguida sin repetir fuente.
+
+**Derecho de tanteo (C46), ejercido en `MDS-027`.** Es el primero que continúa `MDS-016`
+—1.203 visualizaciones el 21/09, el único del canal por encima de mil—. Allí se decía que la
+ironía se pierde por escrito; aquí se mira el mismo asunto desde el otro lado: qué hay que
+poder hacer para pillar un doble sentido. No se reutiliza su ficha, porque `I05` no puede
+volver a ser fuente central hasta el 26/10.
+
+**Dos Shorts comparten serie** («Desmonta el chiste», martes y viernes) y otros dos
+«El experimento» (lunes y miércoles). Es deliberado: la demanda elige la pregunta y la serie
+solo da la forma, y `guionista_corto.md` dice que no se fuerce la rotación. Lo que no se
+repite es ninguna fórmula: cinco aperturas distintas, cinco cierres distintos, cinco
+secuencias de tipos de escena distintas, y ninguno abre en primera persona.
+
+**Tres de las cinco preguntas se responden con el resumen del artículo leído esta misma
+noche** (`H06`, `H02` y `K03`), con la frase de origen copiada en `notas_humor`. Las otras dos
+se apoyan en libros (`I03` y `L06`): enseñan un mecanismo, no afirman ningún resultado medido,
+y los dos cierres lo dicen en voz alta.
+
+**Lo que ha costado esta semana y va en la bitácora con detalle: la lectura en frío (C48).**
+Quince lecturas con quince lectores distintos, dos temas descartados enteros por no pasar a la
+tercera vuelta (`F03`, la única ficha viva del pilar F, y `B03`) y un chiste cambiado por
+completo. Ninguna de las quince devolvió «ninguna» en la pregunta de las frases que no se
+entienden. El criterio con el que se han cerrado los cinco campos `lectura_en_frio` está
+escrito en cada guion y en la bitácora, y la dirección tiene que ratificarlo o tumbarlo.

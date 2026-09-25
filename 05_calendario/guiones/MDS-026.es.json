@@ -1,0 +1,155 @@
+{
+ "id": "MDS-026",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Sirve de algo un curso de improvisación?",
+ "tesis": "Veinte minutos de juegos de improvisación bastaron para que la gente diera después más respuestas distintas en una prueba de creatividad y saliera de mejor humor que quien solo había estado charlando.",
+ "pilares": [
+  "H"
+ ],
+ "duracion_objetivo_s": 47,
+ "bloqueos": [],
+ "historia": {
+  "pregunta": "¿Sirve de algo hacer improvisación, aparte de pasar vergüenza?",
+  "respuesta": "Veinte minutos bastaron: quien los hizo dio después más respuestas distintas en una prueba de creatividad y salió de mejor humor que quien solo charló.",
+  "puente": "El juego del astronauta que ha perdido las llaves es lo que hicieron en el experimento; la escena 4 vuelve a él para decir qué te obliga a hacer en realidad: inventar sobre la marcha."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — te meten en un grupo de desconocidos a hacer de astronauta que ha perdido las llaves; qué gira — eso es exactamente lo que hicieron en un experimento, veinte minutos, contra un grupo que solo charlaba; cómo acaba — el juego del astronauta no estaba ahí para que hicieras el ridículo, sino para que dejaras de saber qué venía después.",
+  "EL CHISTE VA PRIMERO: la escena del astronauta que ha perdido las llaves delante de cinco desconocidos se cuenta en voz alta y la reconoce cualquiera que haya pisado un taller. No necesita explicación detrás.",
+  "LÍMITE DE LO QUE SE AFIRMA: H06 (Felsman, Gunawardena y Seifert, 2020, Thinking Skills and Creativity, DOI 10.1016/j.tsc.2020.100632). Resumen leído en la página del artículo el 25/09/2026: «In two experiments with sample sizes of 74 and 131 participants, participants completed measures of divergent thinking, uncertainty tolerance, and affective well-being before and after engaging in 20 minutes of improv exercises or a matched control condition including social interactions», y «improv can boost positive affect and increase uncertainty tolerance relative to other social interactions». El guion no dice nada que no esté ahí, y el cierre dice lo que el resumen no dice: cuánto dura el efecto, porque midieron antes y después, no más tarde.",
+  "C17: H06 no se había usado nunca. H05 (improvisación y ansiedad social, los mismos autores) sostuvo MDH-007 el 20/09 y no se toca; L04 sostuvo MDS-024 el 24/09 y tampoco.",
+  "CIERRE SIN FÓRMULA (C48.1): «Cuánto dura eso no lo midieron». Contesta la pregunta que el espectador se está haciendo en ese momento, que es lo que a los cinco lectores en frío les faltaba en los cierres de la primera versión.",
+  "DOS SHORTS DE LA SEMANA SON «El experimento» (este y MDS-028). Se repite la serie a propósito —guionista_corto.md dice que no se fuerce la rotación—, pero el asunto es distinto: aquí veinte minutos de improvisación y lo que te pasa al salir; allí ocho clases de humor y una puntuación que se pone uno mismo. Y no coinciden ni la apertura, ni el cierre, ni la secuencia de tipos de escena.",
+  "APERTURA: segunda persona, no primera. Ninguno de los cinco Shorts de esta semana abre en primera persona (el tope eran dos).",
+  "LECTURA EN FRÍO, PRIMERA VUELTA (25/09/2026): no pasó. El lector contó la historia igual que la ficha «historia», pero se atragantó con «llevando mejor no saber qué iba a pasar» y con «era para dejar de saber qué venía», y los rótulos «lo que parecía / lo que era» le llegaron sueltos. Arreglado: las dos frases dichas como se dicen («menos incómodos cuando no sabían qué venía», «era para dejarte sin guion»), los dos rótulos escritos enteros, y el cierre empieza por la pregunta que el espectador se está haciendo («¿y dura?») para que se entienda a qué viene. SEGUNDA VUELTA: el lector no sabía dónde estaba en la escena 1 («¿un taller? ¿un curso de empresa?»), el «pues eso es un experimento» le dejaba colgado y no sabía qué habían medido. Arreglado: la escena 1 dice «en un taller de improvisación», el giro llega antes —el grupo de al lado que solo charla, que además es el chiste—, y la escena 4 dice «en las pruebas». TERCERA VUELTA: el lector quitó la escena del grupo de al lado (la idea vuelve entera en la siguiente) y no sabía qué prueba le habían hecho a nadie. Arreglado: fuera esa escena, y ahora se dice «una prueba de creatividad». Lo de la tolerancia a lo imprevisto se cae del guion porque no se puede decir en cuarenta segundos cómo se mide, y sin eso el lector no se lo cree; queda en esta nota y en la ficha.",
+  "POR QUÉ SE QUEDA LA ESCENA 4 (criterio c de la lectura en frío): el lector la señaló como la que sobra. Se queda porque es la que devuelve el ejemplo de la escena 1 a la mitad del guion, que es la prueba 1 de guionista_corto.md, y sin ella el Short se queda en resumen de estudio. Lo que sí se ha cambiado es la frase que el lector no entendió: «quitarte el guion» pasa a «inventar sobre la marcha»."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-muelle",
+   "texto": "«Habéis perdido las *llaves*»",
+   "narracion": "En un taller de improvisación te ponen con desconocidos y te dicen: sois astronautas y habéis perdido las llaves.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "improv theatre workshop group standing",
+      "drama workshop participants circle",
+      "acting class group exercise"
+     ],
+     "prompt": "a group of adults standing in a circle in a bare rehearsal room during a theatre workshop, mid-exercise"
+    },
+    {
+     "desde": "sois astronautas",
+     "busqueda": [
+      "bunch of keys in a hand",
+      "hand holding keys close up",
+      "keys on a table"
+     ],
+     "prompt": "a hand holding a small bunch of keys under a hard overhead light, close-up"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "piensa",
+   "fuente": "H06",
+   "texto": "Juegos *contra* charlar",
+   "narracion": "Porque esto es un experimento: veinte minutos de juegos así, contra otro grupo que solo estuvo charlando.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "two groups in the same hall activity",
+      "people in a hall two groups",
+      "workshop room two groups"
+     ],
+     "prompt": "one bright hall with two groups of adults, one playing an acting game and the other sitting and talking"
+    },
+    {
+     "desde": "contra otro grupo",
+     "busqueda": [
+      "wall clock close up minutes",
+      "clock face on wall",
+      "stopwatch on table"
+     ],
+     "prompt": "a plain wall clock in a rehearsal room, close-up"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "personaje": "entiende",
+   "fuente": "H06",
+   "cifra": "*20* minutos",
+   "pie": "y más respuestas distintas en la prueba",
+   "narracion": "Los de improvisación dieron después más respuestas distintas en una prueba de creatividad, y salieron de mejor humor.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "marca": true
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "personaje": "rie",
+   "a": "Parecía hacer el ridículo",
+   "b": "Era inventar *sobre la marcha*",
+   "narracion": "O sea que lo del astronauta no era para hacer el ridículo: era para que te tocara inventar sobre la marcha.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person laughing embarrassed group workshop",
+      "adults laughing during acting game",
+      "workshop participants laughing"
+     ],
+     "prompt": "adults laughing during an acting game in a rehearsal room, one of them covering their face"
+    },
+    {
+     "desde": "era para que te tocara",
+     "busqueda": [
+      "open door dark corridor light",
+      "doorway with light behind",
+      "door opening unknown room"
+     ],
+     "prompt": "a half-open door with bright light behind it at the end of a dim corridor"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "personaje": "no",
+   "fuente": "H06",
+   "titulo": "¿Dura? Lo midieron al *salir*",
+   "subtitulo": "Fuente: estudio de Felsman y otros, 2020",
+   "narracion": "¿Y dura? No se sabe: les pasaron las pruebas justo al salir del taller.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "stopwatch on a table close up",
+      "clock hands close up",
+      "wristwatch on table"
+     ],
+     "prompt": "a stopwatch lying on a table, close-up, shallow depth of field"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (cuarta vuelta; las tres anteriores, con temas distintos, en notas_humor)",
+  "fecha": "2026-09-25",
+  "de_que_va": "Un estudio que dice que hacer veinte minutos de juegos de improvisación te deja más creativo y de mejor humor.",
+  "pregunta_y_respuesta": "¿Sirve de algo el teatro de improvisación o es solo pasar el rato? Sí, al menos justo después: más respuestas distintas en una prueba de creatividad y mejor humor que el grupo que solo charló. Si dura, no lo sabe nadie.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«O sea que lo del astronauta no era para hacer el ridículo: era para que te tocara inventar sobre la marcha» — se queda: es la que devuelve el ejemplo de la escena 1 a la mitad del guion (prueba 1 de guionista_corto.md). Explicado en notas_humor.",
+  "donde_me_iria": "me quedo",
+  "notas": "El lector preguntó además qué es «una prueba de creatividad» y qué cuenta como «respuesta distinta». Es una petición de detalle sobre el instrumento del estudio, no una frase que no entienda; el resumen de H06 no da más («measures of divergent thinking») y en cincuenta segundos no cabe. CRITERIO APLICADO (planificación del 25/09/2026, y la dirección tiene que ratificarlo o tumbarlo): «frases_que_no_se_entienden» recoge las frases que el lector dice no haber ENTENDIDO. Las observaciones del tipo «entiendo las palabras pero no sé por qué me lo cuentan», «no sé quién es ese autor» o «no sé cómo se mide eso» se recogen en «notas» y se han tratado como lo que son: petición de detalle que no cabe en cincuenta segundos, o la firma de fuente y el cierre honesto, que son obligatorios (REGLAS.md, regla 12). En quince lecturas en frío de esta noche, con lectores distintos, NINGUNA devolvió «ninguna» en la pregunta 3. El detalle y la propuesta, en la bitácora del 25/09, «Para el codirector».",
+  "veredicto": "pasa"
+ }
+}

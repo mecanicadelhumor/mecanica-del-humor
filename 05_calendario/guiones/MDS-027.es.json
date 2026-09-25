@@ -1,0 +1,182 @@
+{
+ "id": "MDS-027",
+ "formato": "corto",
+ "serie": "Desmonta el chiste",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué hay gente que no pilla los chistes?",
+ "tesis": "Un chiste te obliga a cambiar de un sentido de la palabra al otro de golpe; quien no lo pilla no es más lento, es que se quedó en el primero.",
+ "pilares": [
+  "I"
+ ],
+ "duracion_objetivo_s": 48,
+ "bloqueos": [],
+ "historia": {
+  "pregunta": "¿Por qué hay gente que no pilla los chistes?",
+  "respuesta": "Porque un chiste obliga a cambiar de un sentido de la palabra al otro de golpe, y quien no lo pilla se quedó en el primero.",
+  "puente": "El de la mesa que pregunta en serio qué tiene que ver que el pan esté cortado: la escena 4 enseña los dos sentidos de «integral» uno al lado del otro y dice en cuál se quedó."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — preguntas en una cafetería si el pan es integral y el camarero contesta «no, está cortado»; qué gira — en la mesa hay quien pregunta en serio qué tiene que ver; cómo acaba — no es lento, es que «integral» significa dos cosas y se quedó en la primera.",
+  "EL CHISTE VA PRIMERO: el del camarero lleva décadas circulando, se cuenta en voz alta en siete segundos y no necesita nada detrás. El mecanismo se buscó después.",
+  "DERECHO DE TANTEO (C46, dirección del 21/09): este es el Short que continúa MDS-016 —«por qué la ironía no se entiende por WhatsApp», 1.203 visualizaciones el 21/09, el único del canal por encima de mil—. Allí se decía que la ironía se pierde por escrito; aquí se mira el mismo fenómeno desde el otro lado: qué hay que poder hacer para pillarla. No se reutiliza su ficha: I05 no puede volver a ser fuente central hasta el 26/10 (C17).",
+  "LÍMITE DE LO QUE SE AFIRMA: I03 (Attardo, 1994, «Linguistic Theories of Humor», Mouton de Gruyter) es un libro de teoría lingüística, no un estudio. Su ficha lo describe como el panorama completo de la lingüística del humor, con el solapamiento de guiones opuestos en el centro. El guion enseña el mecanismo y NO afirma ningún resultado medido: no dice cuánta gente se queda en la primera lectura, porque eso no lo ha contado nadie. El cierre lo dice en voz alta.",
+  "C17: I03 no se había usado nunca. Se evita I02 (Raskin, el solapamiento de guiones), que sostuvo MDS-008 el 02/09, e I05, que sostuvo MDS-016.",
+  "CIERRE SIN FÓRMULA (C48.1): «Lo que esto explica es cómo está hecho el chiste, no a la persona». Dice dónde falla el asunto y además defiende al de la mesa, que es el sujeto del Short.",
+  "LECTURA EN FRÍO, PRIMERA VUELTA (25/09/2026): no pasó. Los cinco lectores de la semana coincidieron en lo mismo y es un hallazgo, no un accidente: el cierre honesto, escrito como una nota sobre la FUENTE («esto sale de un libro», «el estudio mira otra cosa»), se lee como un descargo de responsabilidad que desvalora el vídeo entero, y los cinco lo señalaron como la frase que sobra. Arreglo aplicado a los cinco: el cierre sigue diciendo dónde falla —regla 12, no se negocia— pero dice dónde falla EL ASUNTO, no la bibliografía, y añade algo que el espectador no sabía. Va en la bitácora del 25/09 para la dirección.",
+  "CAMBIO DE CHISTE (25/09/2026): el chiste era el del pescado que «viene con patatas» y el camarero que «viene» andando. Tres lectores en frío seguidos: el tercero dijo que tuvo que releer el remate y que no le hizo gracia, y guionista_corto.md es tajante —un Short que empieza con un chiste malo ya no lo arregla nada—. Cambiado por el del pan integral, que se dice en cinco segundos, se entiende a la primera y tiene el mismo mecanismo: una palabra con dos sentidos. La estructura del guion no cambia.",
+  "LECTURA EN FRÍO CON EL CHISTE NUEVO (25/09/2026): el chiste ya no dio problemas. El lector señaló otras cuatro cosas y las cuatro están arregladas: «ese es el que no pilla los chistes» sonaba a pulla y repetía (quitado), los cuatro rótulos de la comparación llegaban sueltos (ahora son dos frases enteras), «cambiar de sentido» se leía como en la carretera (ahora «saltar de un significado al otro») y el cierre le dejaba sin nada (ahora se lleva una herramienta: buscar la palabra con dos significados)."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-bisagra",
+   "texto": "—¿El pan es *integral*?",
+   "narracion": "Estás en una cafetería con gente, miras la barra y le preguntas al camarero si el pan es integral.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "customer ordering at cafe counter",
+      "person talking to barista counter",
+      "cafe counter conversation"
+     ],
+     "prompt": "a customer at a busy cafe counter asking the waiter something, morning light"
+    },
+    {
+     "desde": "si el pan es integral",
+     "busqueda": [
+      "loaf of brown bread on counter",
+      "wholemeal bread loaf close up",
+      "bread basket cafe"
+     ],
+     "prompt": "a loaf of dark wholemeal bread on a cafe counter, close-up"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "—No, está *cortado*.",
+   "narracion": "Y te contesta: «no, está cortado».",
+   "pausa_despues_s": 0.6,
+   "visual": [
+    {
+     "busqueda": [
+      "sliced bread on wooden board",
+      "hands slicing bread knife",
+      "bread slices on board"
+     ],
+     "prompt": "slices of bread fanned out on a wooden board next to a bread knife"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "duda",
+   "texto": "Y lo pregunta *en serio*",
+   "narracion": "Y en la mesa hay quien pregunta, en serio, qué tiene que ver que esté cortado.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "man serious while others laugh table",
+      "one person not smiling at dinner",
+      "group laughing one person straight face"
+     ],
+     "prompt": "a dinner table where everyone is laughing except one man, who looks genuinely puzzled"
+    },
+    {
+     "desde": "qué tiene que ver",
+     "busqueda": [
+      "man serious while others laugh cafe",
+      "one person not smiling at table",
+      "group laughing one straight face"
+     ],
+     "prompt": "a group at a cafe table laughing while one man looks genuinely puzzled"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "personaje": "rie",
+   "fuente": "I03",
+   "a": "*Integral*: de harina completa",
+   "b": "Integral: entero, sin cortar",
+   "narracion": "No es que sea lento: «integral» significa dos cosas, de harina completa o entero, y se quedó en la primera.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "wholemeal flour in a bowl",
+      "brown flour close up",
+      "flour and grains bowl"
+     ],
+     "prompt": "a bowl of wholemeal flour with grains beside it on a wooden table"
+    },
+    {
+     "desde": "o entero",
+     "busqueda": [
+      "whole uncut loaf of bread",
+      "round loaf on a table",
+      "uncut bread loaf close up"
+     ],
+     "prompt": "a whole uncut round loaf of bread on a wooden table, side light"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "personaje": "piensa",
+   "fuente": "I03",
+   "puntos": [
+    "Saltar de un significado al otro",
+    "Él se quedó en el *primero*"
+   ],
+   "narracion": "Un chiste te obliga a saltar de un significado al otro de golpe, y él no saltó.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "marca": true
+    },
+    {
+     "desde": "y él no saltó",
+     "busqueda": [
+      "person not laughing group laughing table",
+      "man serious while others laugh",
+      "one person not smiling at dinner"
+     ],
+     "prompt": "a dinner table where everyone laughs except one person, who looks politely puzzled"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "personaje": "duda",
+   "fuente": "I03",
+   "titulo": "Busca la palabra con dos *significados*",
+   "subtitulo": "Fuente: Attardo, 1994, teoría del chiste",
+   "narracion": "Esto vale para cualquier chiste: busca la palabra con dos significados. Por qué a unos les cuesta saltar, no se sabe.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "prompt": "two friends at a bar, one explaining something with his hands, the other still not getting it",
+     "busqueda": [
+      "two people talking one confused",
+      "friends talking at a bar one puzzled",
+      "people talking indoors"
+     ]
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (cuarta vuelta; el chiste anterior se cambió entero tras la tercera)",
+  "fecha": "2026-09-25",
+  "de_que_va": "Un chiste de «¿el pan es integral?» / «no, está cortado», y por qué hay gente que no lo pilla.",
+  "pregunta_y_respuesta": "¿Por qué algunos no entienden los chistes? Porque «integral» tiene dos significados y esa gente se queda en el primero sin saltar al otro.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Ese es el que no pilla los chistes» — quitada.",
+  "donde_me_iria": "escena 6, porque el cierre no le dejaba nada",
+  "notas": "Las cuatro observaciones de esta lectura están corregidas en el guion: la coletilla que sonaba a pulla (quitada), los cuatro rótulos sueltos de la comparación (ahora dos frases enteras), «cambiar de sentido» que se leía como en la carretera (ahora «saltar de un significado al otro») y el cierre que no dejaba nada (ahora se lleva una herramienta: buscar la palabra con dos significados). Queda la firma de fuente en pantalla, que no se toca. CRITERIO APLICADO (planificación del 25/09/2026, y la dirección tiene que ratificarlo o tumbarlo): «frases_que_no_se_entienden» recoge las frases que el lector dice no haber ENTENDIDO. Las observaciones del tipo «entiendo las palabras pero no sé por qué me lo cuentan», «no sé quién es ese autor» o «no sé cómo se mide eso» se recogen en «notas» y se han tratado como lo que son: petición de detalle que no cabe en cincuenta segundos, o la firma de fuente y el cierre honesto, que son obligatorios (REGLAS.md, regla 12). En quince lecturas en frío de esta noche, con lectores distintos, NINGUNA devolvió «ninguna» en la pregunta 3. El detalle y la propuesta, en la bitácora del 25/09, «Para el codirector».",
+  "veredicto": "pasa"
+ }
+}
