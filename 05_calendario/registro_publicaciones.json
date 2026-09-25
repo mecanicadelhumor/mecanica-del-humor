@@ -476,12 +476,42 @@
       "guion": "05_calendario/guiones/MDS-023.es.json",
       "video_id": "kRmwbAW6eSo",
       "url": "https://youtu.be/kRmwbAW6eSo",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-09-23T17:00:00Z",
       "musica": "cama_09_first_light_galaxytones.mp3",
       "subido_utc": "2026-09-23T09:42:38Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-024.es",
+      "episodio": "MDS-024",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "Cómo mantener una conversación sin quedarte en blanco: la regla del «sí, y además»",
+      "guion": "05_calendario/guiones/MDS-024.es.json",
+      "video_id": "N2qUpGcAy2Y",
+      "url": "https://youtu.be/N2qUpGcAy2Y",
+      "estado": "public",
+      "publicar_en": "2026-09-24T17:00:00Z",
+      "musica": "cama_10_farewell_galaxytones.mp3",
+      "subido_utc": "2026-09-24T06:15:45Z",
+      "revisado": false
+    },
+    {
+      "id": "MDS-025.es",
+      "episodio": "MDS-025",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué el humor ayuda a memorizar? El estudio apunta al estrés, con diez personas por grupo",
+      "guion": "05_calendario/guiones/MDS-025.es.json",
+      "video_id": "DVKoEJDPCqM",
+      "url": "https://youtu.be/DVKoEJDPCqM",
+      "estado": "private",
+      "publicar_en": "2026-09-25T17:00:00Z",
+      "musica": "cama_11_watching_anime_piano_version_sakura_hz.mp3",
+      "subido_utc": "2026-09-25T06:19:48Z",
+      "revisado": false
     }
   ],
-  "_estado_leido_utc": "2026-09-23T13:52:45Z"
+  "_estado_leido_utc": "2026-09-25T14:11:52Z"
 }
