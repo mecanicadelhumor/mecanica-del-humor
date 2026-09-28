@@ -650,7 +650,7 @@ Tipo: articulo
 ### `K03` ★★ Do Androids Laugh at Electric Sheep? Humor 'Understanding' Benchmarks from The New Yorker Caption Contest
 
 **Hessel, J. et al.** (2023) · *ACL / arXiv*  
-DOI: [`10.18653/v1/2023.acl-long.41`](https://doi.org/10.18653/v1/2023.acl-long.41) ⚠️ por verificar  
+DOI: [`10.18653/v1/2023.acl-long.41`](https://doi.org/10.18653/v1/2023.acl-long.41) · verificado 28/09/2026 en aclanthology.org/2023.acl-long.41: titulo, autores (Hessel, Marasovic, Hwang, Lee, Da, Zellers, Mankoff, Choi) y DOI coinciden; ACL 2023, Long Papers  
 Tipo: articulo
 
 Benchmark de comprension del humor por IA. arXiv abierto.

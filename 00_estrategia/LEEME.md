@@ -10,7 +10,7 @@ análisis.
 |---|---|---|
 | **`REGLAS.md`** | Las restricciones que nadie puede saltarse: ética, rigor, coste cero, cómo se cambian las cosas | **Siempre, antes de tocar nada.** Es corto |
 | **`PROPIEDAD_DE_FICHEROS.md`** | Quién escribe qué. De obligado cumplimiento para toda tarea programada | Antes de escribir en cualquier sitio |
-| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 13, al final, manda sobre lo anterior** (y la 12, justo antes, es la que explica C48 y C50) | Al ir a hacer algo, y al decidir qué se hace antes |
+| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 14, al final, manda sobre lo anterior**: el punto de control del 27/09 con datos, las entregas solas (C53) y la actualidad como gancho (C52) | Al ir a hacer algo, y al decidir qué se hace antes |
 | **`PROMPT_DE_ARRANQUE.md`** | Cómo empezar una conversación nueva, autorizaciones vigentes, trampas conocidas y dónde está el proyecto hoy | Al abrir una conversación, y al cerrarla |
 | **`PROMPT_DIRECCIÓN.md`** | El cuaderno del codirector entre sesiones: lo que quiere comentar de un día para otro. **Suyo y solo suyo: se lee, no se edita ni se borra** | Al abrir una conversación de dirección |
 | **`TOKEN_DE_YOUTUBE.md`** | Cómo se saca el token de YouTube y por qué caducaba. Quince minutos, una vez | Si el canal deja de publicar, o al tocar los secretos |
@@ -82,6 +82,26 @@ Y fuera de esta carpeta, tres sitios que dicen dónde está el canal hoy:
    Tres Shorts seguidos pasaron todas las comprobaciones y no tenían hilo. Desde ese día, un guion
    no se produce sin que un lector que no lo ha escrito cuente de qué va (C48). Y la imagen pasa de
    diapositiva a vídeo (C50).
+
+## Estado a 28 de septiembre
+
+**El punto de control del 27 está contestado con datos, y es un sí.** Versión **14** del plan.
+
+- **Cinco Shorts por encima de 100 visualizaciones en 48 horas**, en dos semanas distintas. La
+  mediana de C26 pasa de 11 a **24**; la de los últimos diez, a **90**. `MDS-021` y `MDS-022`
+  retienen al 60 % en el segundo 30: lo mejor de la historia del canal.
+- **Lo que bloquea ahora es S3**: cero suscriptores y casi cero «me gusta». La gente lo ve y no
+  reacciona. Y uno de cada tres Shorts no llega a enseñarse; dos de esos tres son resubidas, y desde
+  hoy **un Short subido no se vuelve a subir** (C54).
+- **Viabilidad:** si el régimen se sostiene, el 15 de noviembre cae en «se amplía el tema», con la
+  prórroga hasta el 10 de enero. Para llegar a «se sigue» el Short típico tiene que pasar de 100.
+- **El canal empieza a volar solo (C53):** las tareas programadas suben su trabajo a una rama y el
+  workflow «Entregas» lo pasa a `main` comprobando que cada una solo toca lo suyo. Falta un paso de
+  cinco minutos del codirector (añadir el repositorio a las tres tareas).
+- **La actualidad como gancho (C52):** sí, pero para el primer segundo, no para la búsqueda (el feed
+  trae el 93-98 % de las visitas). Un Short de cada cinco, como mucho, desde el jueves 1/10.
+- **Y:** las caras vuelven a detectarse (C50.7), la regla 7 admite una persona sintética con cinco
+  condiciones (7.1), y la voz (C44) espera a que el codirector pueda escuchar una muestra.
 
 ## Estado a 23 de septiembre, por la tarde
 

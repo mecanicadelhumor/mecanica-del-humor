@@ -28,4 +28,5 @@ google-genai
 # visual.py y los dos salieron enteros en tarjeta de marca el primer día de
 # C50 (revisión diaria, 23/09). caras() ya no deja que esto tire el plano
 # entero, pero sin el paquete de verdad tampoco hay detección de caras.
-opencv-python-headless
+# <5 desde el 28/09/2026: la 5.0 ya no trae CascadeClassifier (trampa 42).
+opencv-python-headless<5

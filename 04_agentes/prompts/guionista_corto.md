@@ -152,14 +152,34 @@ nada. Desde `MDS-026`, `validar_guion.py` da ERROR si falta, y el Short no se pr
      "frases_que_no_se_entienden": [],
      "frase_que_sobra": "ninguna",
      "donde_me_iria": "me quedo",
+     "notas": [],
      "veredicto": "pasa"
    }
    ```
 
-4. **`veredicto` es `"pasa"` solo si** (a) `frases_que_no_se_entienden` está vacía, (b) lo que
+4. **`veredicto` es `"pasa"` solo si** (a) `frases_que_no_se_entienden` está vacía —y ahí va
+   **solo lo que el lector dice no haber entendido**; ver la precisión de abajo—, (b) lo que
    dice en `de_que_va` y en `pregunta_y_respuesta` es la misma idea que tu `historia` —no las
    mismas palabras: la misma idea—, y (c) si nombró una frase que sobra, la has quitado, o
    explicas en `notas_humor` por qué se queda.
+   **Precisión de la dirección del 28/09/2026 (ratifica el criterio que aplicó la planificación
+   del 25/09).** En quince lecturas, ninguna contestó «ninguna» a la pregunta 3, y las frases
+   marcadas eran de tres clases. Van a sitios distintos:
+   - **No la entendió** (no sabe a qué se refiere, le falta un dato, no puede repetirla con sus
+     palabras) → `frases_que_no_se_entienden`, y **bloquea**. Da igual en qué escena esté: si el
+     lector no entiende el cierre, el cierre está mal escrito.
+   - **La entendió pero no sabe por qué se la cuentan** («ni idea de quién es este autor», «es
+     el autor cubriéndose las espaldas») → a un campo `notas` dentro de `lectura_en_frio`, **copiado
+     literal**, y **no bloquea**. La firma de la fuente y el cierre honesto van en todos los
+     Shorts por las reglas 2 y 12, así que van a salir en casi todas las lecturas.
+   - **Pero `notas` no es un cajón para olvidar.** Si el lector dice del cierre que suena a
+     excusa, el cierre está pidiendo que lo digas **dentro de la historia** (regla 12,
+     precisión del 23/09): «¿y si es al revés?» se oye como parte del cuento; «aunque el estudio
+     tiene limitaciones» se oye como letra pequeña. Reescríbelo si puedes; si no, dilo en tu
+     bitácora.
+   - **No se lo adelantes al lector.** El encargo de arriba va literal, sin avisarle de qué no
+     cuenta: un lector avisado deja de ser un lector en frío.
+
 5. **Si no pasa, reescribe y vuelve a leer con un subagente NUEVO**: el anterior ya conoce la
    historia y no sirve. Tres vueltas como mucho; si la tercera no pasa, ese Short no se escribe
    esta semana y se cambia de tema.

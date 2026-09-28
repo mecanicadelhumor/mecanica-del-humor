@@ -48,6 +48,7 @@ puede es hacer que dos agentes no escriban nunca el mismo fichero.**
 | `05_calendario/visuales/ajustes.json` (C50) | **Revisión diaria** | la planificación corrige en el campo `visual` del guion, que es suyo |
 | `05_calendario/visuales/APAGADO` (C50, el interruptor) | **el codirector y yo** | nadie más lo crea ni lo borra |
 | `00_estrategia/` | **el codirector y yo** | nadie más |
+| `04_agentes/entregar.py` · `.github/workflows/entregas.yml` (C53, 28/09/2026) | **la dirección** | nadie más: son la tabla de esta página escrita en código |
 
 ### Las dos carpetas nuevas que lo hacen posible
 
@@ -81,7 +82,25 @@ han encontrado hasta ahora justificaba arriesgar una semana de trabajo ajeno.
 
 ---
 
-## Además: cómo se entrega
+## Cómo se entrega desde el 28 de septiembre de 2026 (C53)
+
+**Se acabaron los paquetes.** Cada tarea termina con
+
+    python3 04_agentes/entregar.py --tarea <revision|planificacion|metricas> --mensaje "…"
+
+que lleva **esta misma tabla dentro, en código**: sube lo que es de la tarea a una rama
+`claude/entrega-<tarea>-<fecha>`, deshace lo que no es suyo y lo dice. El workflow
+«Entregas (C53)» lo pasa a `main` con la copia del script que hay en `main`, con una mezcla a tres
+bandas que **no pisa** lo que otro haya cambiado entre medias (si choca, para y deja la rama), y
+escribe en el commit lo que se quedó fuera. Es la salida de verdad al problema de arriba: la
+ventana de horas con una base caduca ya no hace daño, porque nadie sube ficheros enteros.
+
+**Si cambias la tabla de esta página, cambia `PROPIEDAD` en `entregar.py`.** Las dos dicen lo mismo.
+
+El `.tar.gz` queda solo como **plan B**, cuando el `push` de la tarea falla. Las reglas de abajo
+valen para ese caso.
+
+## Además: cómo se entrega (plan B, el paquete)
 
 1. **Un paquete contiene solo ficheros de los que la tarea es dueña.** Si un
    `.tar.gz` lleva algo de otra columna de la tabla, está mal hecho.

@@ -4651,3 +4651,400 @@ Mi decisión, en este orden:
 - **Cloudflare**, hasta ver el primer diagnóstico.
 - **El Engranaje que habla**: viernes.
 - **La persona realista**: pendiente de la respuesta del codirector sobre la regla 7.
+
+---
+
+# Versión 14 · 28 de septiembre de 2026 — el punto de control, y el canal aprende a volar solo
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario, y lo que se anula se dice con su nombre, en la tabla de abajo.
+
+Sesión del lunes. El codirector dejó cinco notas en su cuaderno y una frase que ordena todo lo
+demás: *«No cuentes mucho conmigo esta semana para hacer tareas, de verdad que no puedo. Para esto
+hemos trabajado todas estas semanas, para que el canal pueda volar solo, y es el momento de
+empezar a hacerlo.»* Las otras cuatro:
+
+1. Varios días sin `commit` ni `push`: *«si hay trabajo hecho de la revisión diaria de los últimos
+   días, se habrá perdido, salvo que lo puedas rescatar»*.
+2. El Short de hoy (`MDS-026`) es el primero con vídeo detrás de verdad; la revisión diaria marcó un
+   problema, él lo vio y no le molestó: se queda como está.
+3. El agente de métricas no pudo hacer el punto de control de mitad de ciclo (27/09): *«hazlo tú,
+   revisa el estado del proyecto y su viabilidad tal y como está ahora mismo, sabiendo que en
+   noviembre es la decisión final»*.
+4. Estudiar si algunos Shorts podrían usar **la actualidad** como gancho, con una planificación más
+   diaria y reaprovechando la lectura de búsquedas de la API de YouTube.
+
+Y en la sesión, tres respuestas del codirector con el selector de preguntas: que **lo de hoy lo
+suba la dirección** para que llegue a los vídeos sin que él tenga que hacer nada; que **las tareas
+programadas entreguen solas**, con una comprobación previa de que solo tocan lo suyo; y que **esta
+vez la dirección suba también los cambios de `.github/workflows/`** que hacen falta (fijar OpenCV en
+`visuales.yml`, un intento más en `metricas.yml` y el workflow nuevo «Entregas»).
+
+---
+
+## Lo que se anula, lo que se mantiene y lo que se amplía
+
+| Documento o decisión | Estado desde hoy |
+|---|---|
+| Entrega de las tareas programadas en `.tar.gz` que aplica el codirector | **SUSTITUIDA por C53**: cada tarea sube su trabajo a una rama `claude/entrega-*` y el workflow «Entregas (C53)» lo pasa a `main` con la tabla de propiedad comprobada en código. El `.tar.gz` queda **solo como plan B** |
+| `PROMPT_DE_ARRANQUE.md` · «Yo administro las cuentas y hago los commits» | **SE MANTIENE.** Lo de hoy lo subió la dirección, con autorización del codirector para esta sesión y desde un clon aparte (nunca git en su carpeta, trampa 40); él hace `pull` cuando vuelva. Si eso pasa a ser costumbre, lo decide y lo escribe él |
+| `.github/workflows/` protegida siempre, también para la dirección | **SE MANTIENE**, con la excepción de hoy, autorizada y acotada: `visuales.yml`, `vista.yml`, `metricas.yml` y `entregas.yml` (nuevo). La próxima vez se vuelve a preguntar |
+| C44 · la voz, capas A y B «el lunes 28» | **APLAZADA** hasta que el codirector pueda escuchar una muestra. Razón abajo |
+| C51.1 · «primero el Engranaje que habla, muestrario el viernes 25» | **ANULADA por el codirector** (respuesta a la tarea 3.5 del 23/09): *«el engranaje no tiene la suficiente definición ni el suficiente carisma»*. Sí a Kaggle y sí a cambiar la regla 7 con las condiciones propuestas. Ver C51.2 |
+| Regla 7 de `REGLAS.md` · «nada de fingir que hay una persona» | **SE AMPLÍA** con la 7.1: la persona sintética, con cinco condiciones (decisión del codirector del 23/09, escrita hoy) |
+| Lectura en frío (C48) · condición (a) «`frases_que_no_se_entienden` vacía» | **SE PRECISA**: ahí va solo lo que el lector dice no haber entendido; «lo entiendo pero no sé por qué me lo cuentas» va a `notas` y no bloquea. **Ratifica el criterio que aplicó la planificación del 25/09** |
+| El punto de control del 27/09 | **CONTESTADO** con los datos del 28/09 (abajo). El del 21/09 lo daba por contestado con tres Shorts; ahora son cinco |
+| C26 · la decisión del 15 de noviembre y sus umbrales | **SE MANTIENEN**. La puerta de los 1.000 sigue abierta a discusión hasta el 8 de noviembre |
+| C41 · TikTok y Reels, «se publica cuando C38 haya dado su primera medida» | **La medida ya está** (semana del 21: mediana 68). Sigue parado por el trámite de las APIs, que es del codirector y esta semana no se le pide |
+
+---
+
+## El punto de control de mitad de ciclo (27/09), con los datos del 28/09
+
+### Por qué lo hace la dirección
+
+El workflow «Leer métricas» **no había corrido** el lunes 28 a las 10:57 UTC: ninguno de sus dos
+intentos (05:19 y 08:37 UTC) aparecía en el historial de Actions. No habían fallado: no existían.
+Uno apareció a las 11:47; el otro, nunca (trampa 43). La tarea de métricas leyó
+a las 10:00 la foto del 21/09 y lo dijo con todas las letras. La dirección lo lanzó a mano a las
+10:57 UTC desde el ordenador del codirector (y se lo dijo en la sesión), terminó en un minuto, y
+esto se escribe con esa lectura: `metricas.json` del **28/09 a las 10:58 UTC**, 32 vídeos.
+
+### La pregunta del punto de control, y la respuesta
+
+> **¿Algún Short ha pasado de 100 visualizaciones en sus primeras 48 horas?**
+
+**Sí, cinco, en dos semanas distintas.** Es el «sí» de la versión 4: *el formato funciona*.
+
+| Semana | Shorts | Vistas a 48 h | Mediana |
+|---|---|---|---|
+| 31/08 – 04/09 | `MDS-006` a `010` | 4 · 35 · 27 · 21 · 4 | **21** |
+| 07/09 – 11/09 | `MDS-011` a `015` | 20 · 9 · 6 · 1 · 33 | **9** |
+| 14/09 – 18/09 | `MDS-016` a `020` | **1.115** · 0 · **113** · **137** · 37 | **113** |
+| 21/09 – 25/09 | `MDS-021` a `025` | **122** · **244** · 2 · 4 · 68 | **68** |
+
+- **La cifra de C26** (mediana a 48 h de los últimos veinte Shorts) pasa de **11,0 a 24,0**. Cinco de
+  veinte por encima de 100, seis por encima de 50.
+- **La de los últimos diez** es **90,5**. La de los últimos cinco, **68**.
+- **Retención: los dos mejores Shorts de la historia del canal son de esta semana.** `MDS-021` y
+  `MDS-022` retienen al **59,5 % y al 64,4 % en el segundo 30**, con un **75-76 % visto** de media y
+  solo un 11-16 % de caída en el primer décimo del vídeo. `MDS-016`, el de 1.115, retenía al 17,8 %
+  en el 30. Son los dos que el codirector describió como guiones «sin hilo», y los dos más cortos
+  (41-42 s). No hay que leer eso como que el hilo sobra —con dos vídeos no se lee nada—, pero sí
+  como que el primer segundo y la duración mandan más de lo que creíamos.
+- **Tráfico:** los Shorts recientes sacan del **feed el 93-98 %** de sus visualizaciones; la búsqueda,
+  entre el 0 y el 3 %. Importa para C52.
+
+### La escalera de los Shorts
+
+| Peldaño | Umbral | Dónde está |
+|---|---|---|
+| S1 · el feed nos prueba | ≥ 50 desde `SHORTS` en 48 h | **Pasado** por seis de los últimos diez |
+| S2 · se quedan | ≥ 70 % visto | **Pasado** por `MDS-020`, `021` y `022` (77,9 · 75,1 · 76,5 %) |
+| S3 · reaccionan | ≥ 3 «me gusta» por cada 100 | **Bloqueado.** El mejor, `MDS-016`, 1,2. Veintisiete «me gusta» en 2.283 visualizaciones |
+| S4 · vuelven | ≥ 5 suscriptores por mil | **Bloqueado.** Cero suscriptores en todo el canal, cero comentarios, un compartido |
+
+**En una frase: el canal ha pasado de S1 a la frontera de S2, y lo que lo bloquea ahora es S3**: la
+gente lo ve y no reacciona. Eso es lo que hay que empezar a mirar, y no se arregla con distribución.
+
+### Los ceros, que siguen decidiendo — y esta vez tienen una causa que se puede evitar
+
+En los últimos diez Shorts hay tres casi ceros: `MDS-017` (**0**), `MDS-023` (**2**) y `MDS-024`
+(**4**). Los tres sacan del feed entre el 0 y el 25 %: **YouTube no los enseñó**.
+
+**Dos de los tres son los dos únicos Shorts que se han vuelto a subir.** `MDS-017` se subió el 15/09
+con dos voces (`9H2xEZnFeHA`), se borró y se volvió a subir el 19/09: 0. `MDS-023` se subió el 23/09
+de madrugada (`X1GAp3OUgKg`), se borró y se volvió a subir ese mismo día: 2. Dos de dos. Con n = 2
+no es una prueba, pero es un patrón con un mecanismo conocido —YouTube trata el contenido repetido
+del mismo canal como sospechoso—, y la regla que sale de él no cuesta nada: **C54**, abajo.
+
+`MDS-024` no se explica así: se subió una vez. Salió sin vídeo detrás (C50 falló ese día) y con una
+sílaba suelta al principio, pero con cuatro visualizaciones eso no llegó a verlo nadie. Sin las
+impresiones de Studio no se puede separar «no lo enseñaron» de «lo enseñaron y nadie paró», y la
+API no las da. Queda abierto.
+
+**Y un detalle que cambia cómo se mira la mediana:** un Short que no se publica **no cuenta** en la
+ventana de veinte; uno que hace 0, sí. Si un Short sale roto, no publicarlo sale más barato que
+resubirlo.
+
+### La previsión al 15 de noviembre
+
+La ventana de veinte del 15/11 serán los Shorts publicados entre el **19 de octubre y el 13 de
+noviembre**, más o menos. **Ninguno está escrito todavía.** Lo que se puede prever es el régimen:
+
+| Si el régimen de las dos últimas semanas se sostiene | La mediana del 15/11 cae en | Y eso es |
+|---|---|---|
+| tal cual (mediana de diez, 90) | 50 – 150 | **se amplía el tema**, con una única prórroga hasta el 10 de enero |
+| sin los ceros evitables (sin resubidas) | 100 – 150 | lo mismo, pero en la mitad alta |
+| con los ceros de vuelta y el nivel de primeros de septiembre | < 50 | **se para** |
+| para llegar a ≥ 150 | — | haría falta que el Short *típico* haga 150, y hoy solo lo hacen dos de cada diez |
+
+### Viabilidad, dicho sin adornos
+
+**El canal es viable hasta el 15 de noviembre y el camino más probable lleva a la banda del medio:
+ampliar el tema con la prórroga.** No es fracaso y no es éxito: es un canal que ya sabe hacer que
+el feed lo pruebe y que la gente se quede, y que todavía no ha conseguido que nadie reaccione ni
+vuelva.
+
+Lo que lo hace viable:
+
+- La mediana de los últimos diez se ha multiplicado por nueve respecto a agosto, y la retención de
+  `MDS-021` y `022` es de canal sano.
+- Coste: cero euros, sigue siendo verdad.
+- **Desde hoy, el trabajo recurrente del codirector puede ser cero de verdad** (C53), que era la
+  condición que esta semana ha dejado de cumplirse.
+
+Lo que lo pone en riesgo, por orden de tamaño:
+
+1. **S3 y S4: cero suscriptores en 2.405 visualizaciones.** Sin suscriptores, cada Short empieza de
+   cero y nada se acumula. Es el riesgo a medio plazo, y la prórroga de enero no lo arregla sola.
+2. **Los ceros.** Uno de cada tres de los últimos diez. C54 quita los que tienen causa conocida.
+3. **La operación.** Esta semana se ha visto que el canal dependía de un `push` manual diario. C53
+   lo quita si el codirector hace una sola vez el paso de la tarea de hoy.
+4. **La puerta de los 1.000.** Tal como está escrita, `MDS-016` ya abre la puerta de «se sigue» el
+   15/11 aunque la mediana esté en 60. La propuesta de la dirección del 21/09 —«dos Shorts por
+   encima de 1.000 en semanas distintas»— sigue sin contestar. **Se decide antes del 8 de
+   noviembre**, y no se le pide esta semana.
+
+**Qué haría falta para cambiar de banda**, y es lo que ordena las próximas semanas: que el Short
+típico —no el bueno— pase de 100 (quitar ceros, C50 entero, quizá C52), y empezar a medir y mover
+S3: que el vídeo pida algo al que lo ve (una pregunta que se pueda contestar en un comentario, que
+la regla 7 ya permite como contenido editorial) y que el final dé un motivo para ver el siguiente.
+Esto último es una propuesta para la sesión del lunes 5, no un cambio de hoy.
+
+---
+
+## C52 · La actualidad como gancho: sí, pero no para lo que parecía
+
+**La pregunta del codirector:** si algunos Shorts se apegaran a lo más buscado ese día, con una
+planificación más diaria, ¿atraerían más visitas? Reaprovechando la lectura de búsquedas de la API.
+
+**La respuesta corta:** la intuición es buena, pero el mecanismo no es «lo más buscado». Los Shorts
+del canal sacan **del feed el 93-98 %** de sus visualizaciones y de la búsqueda entre el 0 y el 3 %.
+Acertar con la búsqueda del día movería, como mucho, ese 3 %. Lo que la actualidad **sí** puede
+mover es **el primer segundo**: si quien desliza reconoce de qué va el vídeo porque es de lo que
+todo el mundo habla esa semana, se para. Y el primer segundo es justo donde se nos va la gente.
+
+**Lo que lo limita**, y no es poco:
+
+- **Las reglas 1, 2, 3 y 9.** La mayoría de lo que es tendencia en España un día cualquiera es
+  fútbol, política, sucesos o famosos. Los sucesos y la política no entran nunca; los famosos, solo
+  si no se hace el chiste a costa de nadie real; y ni un clip de nadie. Queda lo que tiene que ver
+  con el humor —un meme o un formato viral, un anuncio que hace gracia, un monólogo del que se
+  habla, una broma que se ha hecho famosa— y el calendario: el cambio de hora (25/10), Halloween,
+  Todos los Santos, el puente del Pilar.
+- **El gancho es la actualidad; el tema sigue siendo un mecanismo con su ficha.** La regla 3 manda:
+  si no hay estudio, no hay vídeo, y nunca se busca una fuente para justificar un tema ya decidido.
+- **La planificación diaria choca con lo que más nos ha costado:** que los guiones se entiendan. Un
+  guion escrito deprisa el día antes es exactamente el riesgo que C48 existe para cerrar.
+- **Y dependía de que el codirector subiera algo cada día**, que es trabajo recurrente (regla 5).
+  C53 lo quita, así que esa objeción desaparece si C53 funciona.
+
+**Lo que se hace, en dos fases:**
+
+1. **Desde la planificación del jueves 1/10: un Short de cada cinco, como mucho, con gancho de
+   actualidad, cuando lo haya.** La planificación mira el **radar de actualidad** nuevo —el mismo
+   workflow «Explorar demanda» de los jueves, que ahora añade a `demanda_bruta.json` las búsquedas
+   en tendencia de Google en España, lo más leído de la Wikipedia en español de los tres últimos
+   días y lo más visto de YouTube España en general y en Comedia (una unidad de cuota cada lista)— y
+   el calendario de la semana siguiente. Si encuentra un gancho que cabe en las reglas y tiene ficha,
+   lo usa en un Short y lo pone en el día que toca; lo marca con `"gancho_actualidad"` en el guion
+   para poder medirlo. Si no hay ninguno, cinco Shorts como siempre. **Nunca se fuerza.**
+2. **Solo si la fase 1 enseña algo y C53 lleva dos semanas funcionando sin el codirector: un
+   hueco de actualidad escrito con 36 horas de antelación**, con su Short de repuesto ya escrito
+   el jueves, de modo que si ese día no hay nada, sale el de repuesto y no se bloquea nada. Se
+   decide en noviembre, no ahora.
+
+**Por qué no se hace ya la planificación diaria:** tres Shorts de cada diez son hoy ceros de
+distribución, no de tema; S3 está a cero; y el canal lleva cuatro semanas cambiando algo grande
+cada semana. La fase 1 es barata y mide la hipótesis; la fase 2 cuesta y la decide el dato.
+
+---
+
+## C53 · Las tareas programadas entregan solas
+
+**El problema, en una frase:** el canal no podía volar solo mientras cada entrega de un agente
+necesitara que una persona descomprimiera un `.tar.gz` y lo subiera. Esta semana el codirector no
+pudo, y las revisiones del 26 y el 27 se perdieron.
+
+**Lo que se descubrió al intentarlo:** el token no basta. Las tareas programadas corren en sesiones
+en la nube cuyo acceso a GitHub pasa por un proxy, y ese proxy **solo deja escribir en un
+repositorio si está añadido a la tarea** (claude.ai/code/routines → Editar → Repositorios).
+Comprobado hoy con un `push` de verdad desde una sesión en la nube: el proxy lo rechaza aunque la
+credencial sea buena, y dice que el repositorio no está entre los de la sesión (trampa 45). Con el
+repositorio añadido, según la documentación de las tareas programadas, la sesión puede subir ramas
+`claude/…`, que se aceptan siempre; **eso no se ha podido probar desde aquí** y se verá en la
+primera entrega después de que el codirector lo añada. Por eso **no hay ningún token en los prompts
+de las tareas**: el acceso lo da el repositorio añadido, no una credencial escrita en un prompt.
+
+**Cómo funciona:**
+
+1. La tarea termina con `python3 04_agentes/entregar.py --tarea <revision|planificacion|metricas>
+   --mensaje "…"`. El script hace `git add -A`, **separa lo suyo de lo ajeno** con la tabla de
+   `PROPIEDAD_DE_FICHEROS.md` escrita en código (lo ajeno se deshace y se dice; no bloquea), valida
+   los guiones que cambian, comprueba que no va un token dentro y sube **una rama nueva**,
+   `claude/entrega-<tarea>-<AAAAMMDD-HHMM>`.
+2. El workflow nuevo **«Entregas (C53)»** (`.github/workflows/entregas.yml`) salta con esa rama y,
+   **con la copia de `entregar.py` que hay en `main`** —una tarea no puede aflojarse las reglas
+   cambiándolo en su rama—, vuelve a clasificar, aplica solo lo de la tarea **encima de lo último de
+   `main` con una mezcla a tres bandas** (si alguien ha cambiado lo mismo mientras tanto, no pisa:
+   para y lo dice), vuelve a validar, sube `main`, borra la rama y lanza «Visuales (C50)» o «Vista
+   previa» si la entrega cambió un guion, `ajustes.json` o `escena.html` (lo que sube el
+   `GITHUB_TOKEN` no dispara otros workflows).
+3. Si el `push` de la tarea falla —el repositorio no está añadido, o GitHub no responde—, **plan
+   B**: el `.tar.gz` de siempre, dicho en la primera línea de la bitácora.
+4. Si «Entregas» no puede aplicar una rama, **la rama se queda** y el resumen de la ejecución dice
+   por qué. La revisión diaria busca cada mañana ramas `claude/entrega-*` vivas: si hay una, es
+   `INCIDENCIA`.
+
+**Lo que resuelve de paso:** el desastre del 21 de agosto (un paquete con ficheros enteros que pisó
+la versión buena) ya no puede repetirse: la mezcla a tres bandas no pisa, y lo ajeno no sube.
+Probado hoy en local contra un origen simulado: entrega normal, entrega con ficheros ajenos (se
+quedan fuera y se escriben en el commit), guion inválido (fuera), choque con un cambio de la
+dirección (no se aplica, la rama se queda), y encima de un commit del bot (se aplica).
+
+**Y la planificación se reintenta sola.** El jueves 24 la ejecución programada de la planificación
+falló a los siete segundos, y la semana se planificó el viernes 25. Desde hoy corre **jueves, viernes y sábado a las 22:00**; el
+viernes y el sábado, si la semana siguiente ya está en `parrilla.json` o hay una entrega suya
+esperando, termina sin hacer nada.
+
+**Lo único que hace falta del codirector, una vez:** añadir el repositorio a las tres tareas.
+`tareas/tareas_codirector_2026-09-28.md`, tarea 1. Antes del jueves 1 a las 22:00.
+
+---
+
+## C50.7 · Las caras: OpenCV 5 las había apagado, y en silencio
+
+Del 24 al 28 de septiembre **ni una cara detectada en 51 planos de siete Shorts** llenos de gente.
+`opencv-python-headless` sin versión fijada instaló la 5.0, que ya no trae `CascadeClassifier`, y el
+arreglo del 25/09 convirtió ese fallo en «no hay caras» sin decirlo. El 28 salió `MDS-026` con la
+banda de texto encima de la cara de una mujer. Es la trampa 41 otra vez (trampa 42).
+
+- **`visuales.yml` y `requirements.txt` fijan `opencv-python-headless<5`.** Comprobado en el
+  contenedor: con la 4.14 el detector monta; con la 5.0, no.
+- **`visual.py` dice lo que pasa:** `detector_caras()` deja su estado en `diagnostico.json` (clave
+  `caras`), en cada manifiesto (`detector_caras`) y, si no hay detector, un aviso en rojo en la hoja
+  de contactos: *«SIN DETECTOR DE CARAS — mirar a ojo»*.
+- **Y una falsa alarma menos:** `cloudflare_token_de_cuenta` daba `FALLA` todos los días porque el
+  token es de usuario, no de cuenta. Ahora dice «no aplica» cuando el de usuario está bien.
+- **`MDS-028`, `029` y `030` se vuelven a resolver hoy con el detector.** `MDS-027` (mañana) no: la
+  revisión de hoy ya miró su hoja cuadro a cuadro y la dio por buena.
+- **Lo que esto no arregla**, dicho para que nadie lo crea: el detector ve caras de frente o de
+  perfil razonablemente nítidas. La de `MDS-026` estaba desenfocada y medio tapada por una mano; es
+  posible que tampoco la hubiera visto. La pregunta 3 de la hoja de contactos sigue siendo a ojo.
+
+---
+
+## C54 · Un Short que ya se subió no se vuelve a subir
+
+**Regla nueva**, de las resubidas de `MDS-017` y `MDS-023` (arriba). Si un Short sale con un defecto:
+
+1. **Se deja como está** si el defecto es menor (lo que hizo el codirector hoy con `MDS-026`), o
+2. **se retira** (privado) si no se puede dejar, y **su guion no vuelve a salir** esa semana ni con
+   otro título. Si más adelante se quiere contar lo mismo, es un Short nuevo: otro guion, otro
+   chiste, otras imágenes.
+
+`rehacer_video_id` en `parrilla.json` (el mecanismo con el que se resubieron los dos) **no se vuelve
+a usar**. La revisión diaria, cuando proponga opciones al codirector, no propone «rehacerlo y volver
+a subirlo».
+
+---
+
+## C48.2 · La lectura en frío: el criterio de la planificación, ratificado
+
+La planificación del 25/09 hizo quince lecturas en frío y **ninguna** contestó «ninguna» a la
+pregunta 3: los lectores marcaban la firma de la fuente en pantalla («ni idea de quién es») y el
+cierre honesto («es el autor cubriéndose las espaldas», nueve de quince). Leído literalmente, el
+filtro no dejaba producir ningún Short. La planificación separó lo que el lector **no entendió** (va
+a `frases_que_no_se_entienden` y bloquea) de lo que **entendió sin saber por qué se lo cuentan** (va
+a `notas` y no bloquea), y pidió que la dirección lo ratificara o lo tumbara.
+
+**Ratificado**, y escrito en `guionista_corto.md`, con dos precisiones: al lector **no se le avisa**
+de qué no cuenta (un lector avisado deja de estar en frío), y `notas` no es un cajón para olvidar:
+si nueve de cada quince oyen el cierre como una excusa, el cierre está pidiendo que se diga dentro
+de la historia, que es lo que ya dice la regla 12 desde el 23/09.
+
+---
+
+## C51.2 · El presentador: el codirector dijo sí, y la regla 7 cambia
+
+La respuesta del codirector a la tarea 3.5 del 23/09, que no había leído nadie hasta hoy: *«Sí a
+Kaggle y modificamos la regla 7. El engranaje no tiene la suficiente definición en su diseño (son
+pocas líneas) ni el suficiente carisma para poder mostrar resultados convincentes. Y ya que vamos a
+generar imágenes y vídeos por IA tiene sentido que un hombre atractivo aparezca con sincronización
+labial para momentos del vídeo más especiales. Estoy de acuerdo con las condiciones que has
+propuesto. Indícame qué necesitas exactamente de Kaggle.»*
+
+- **La regla 7 se amplía hoy** con la 7.1 (`REGLAS.md`): persona ficticia, que no se parezca a nadie
+  real; siempre la misma; declarada en la descripción y con `containsSyntheticMedia`; nunca
+  presentada como experta ni como testimonio, y nunca contando una vida inventada; y como mucho dos
+  momentos de dos o tres segundos por Short.
+- **Lo que hace falta de Kaggle** está escrito entero en la tarea 2 de
+  `tareas_codirector_2026-09-28.md`, **marcada como no urgente**: esta semana no se le pide.
+- **Antes de elegir modelo se mira su licencia.** Varios de los modelos abiertos de sincronía labial
+  dependen de piezas con licencia no comercial (algunos detectores de caras, por ejemplo), y el
+  canal aspira a monetizar. Es lo primero de la prueba, en `07_pruebas/`, cuando esté la cuenta.
+- **No entra en producción sin muestrario**, como C50: se hace sobre un Short ya publicado para
+  poder compararlo, y decide el codirector mirándolo.
+
+---
+
+## C44 · La voz se aplaza, y por qué
+
+Tocaba hoy. **No entra**, por tres razones que se suman:
+
+1. **El codirector es el oído del proyecto** —fue él quien oyó las voces distintas el 21/09— y esta
+   semana no va a poder escuchar una muestra. Cambiar cómo suena el canal sin que nadie lo escuche
+   es la trampa 37 al revés.
+2. **Los dos Shorts que mejor retienen de la historia del canal (`MDS-021` y `022`) se hicieron con
+   la voz de hoy.** La urgencia de C44 ha bajado; el problema sigue siendo real.
+3. **C50 está en su primera semana entera.** Dos cambios grandes a la vez, sin nadie mirando, y no
+   se sabrá cuál hizo qué.
+
+Entra cuando el codirector pueda escuchar una muestra de A+B en `07_pruebas/`, que la dirección
+prepara la semana del 5.
+
+---
+
+## Lo que se perdió el 26 y el 27, y lo que no
+
+Las revisiones diarias del sábado 26 y el domingo 27 corrieron y entregaron su `.tar.gz` en su
+propia conversación, que es el único sitio donde están: **una sesión no puede leer las de otra**, así
+que desde aquí no se pueden rescatar. Si el codirector quiere recuperarlas, están en el historial de
+la tarea «Revisión diaria» de la aplicación.
+
+**No hace falta.** La revisión del lunes 28 trabajó sobre `origin/main` y rehízo todo lo que
+dependía de esos días: la lectura en frío del Short siguiente, las hojas de contactos y la auditoría
+de la cola. **Lo perdido es historia** (dos bitácoras y dos ficheros de `estado/`) y, quizá, un
+ajuste de la hoja de `MDS-026` que habría evitado la cara tapada; eso no se puede saber. Desde hoy
+no vuelve a pasar: C53.
+
+---
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| **Hoy, 28/09** | Todo lo de arriba, empujado por la dirección. «Visuales» vuelve a elegir `MDS-028` a `030` con el detector de caras. `MDS-026` sale a las 19:00 como está |
+| Martes 29 – viernes 2 | `MDS-027` a `MDS-030`. La revisión diaria entrega sola **si** el repositorio ya está añadido a su tarea; si no, plan B |
+| **Jueves 1, 22:00** | Primera planificación con C53 (entrega sola), C52 fase 1 y C48.2. Si falla, se reintenta el viernes y el sábado |
+| Lunes 5 | Métricas a las 12:30 UTC, después de tres intentos del workflow. Sesión de dirección: primera semana entera con C50; S3; muestra de C44 |
+| Antes del 8/11 | La puerta de los 1.000 (C26) |
+| 15/11 | La decisión |
+
+## Lo que NO cambia hoy
+
+- **Cinco Shorts a la semana**, de lunes a viernes. No se escala en volumen: primero quitar ceros.
+- **El episodio largo sigue suspendido** (C42).
+- **`MDS-026` no se toca.** Decisión del codirector.
+- **Los umbrales de C26**, y la fecha.
+
+## Lo que queda mirado y sin resolver
+
+- **`MDS-024`: cuatro visualizaciones y ninguna causa conocida.** Solo las impresiones de Studio lo
+  separarían; no se le piden esta semana.
+- **S3**: cero reacciones. Es lo siguiente.
+- **Por qué `MDS-021` y `022` retienen tanto.** Son los más cortos; es un indicio, no una causa.
+- **Los umbrales de C50** (movimiento 0,5, relevancia 0,34) siguen sin calibrar con datos: la primera
+  semana con planos de verdad es esta.
+- **P9** (los tres sonidos): acreditados, sin mezclar en `montaje.py`. Lo recordó la revisión del 28.

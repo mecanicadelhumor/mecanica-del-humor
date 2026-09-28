@@ -219,6 +219,95 @@ def wikipedia(articulo, dias=365):
     }
 
 
+# ---------------------------------------------------------------------------
+# 4. Radar de actualidad (C52, dirección del 28/09/2026)
+# ---------------------------------------------------------------------------
+# Lo que está pasando esta semana, para que la planificación pueda usar la
+# actualidad como GANCHO de algún Short. No como tema: el tema sigue siendo un
+# mecanismo del humor con su ficha en la bibliografía (reglas 2 y 3). Esto solo
+# dice de qué está hablando la gente en España esta semana. Tres fuentes, las
+# tres sin clave salvo la de YouTube (1 unidad por lista), y cada una por su
+# lado: si una falla, se anota y las otras siguen.
+RADAR_SEMILLAS = ["meme", "chiste de", "por qué es viral", "broma", "parodia de"]
+WIKI_RUIDO = re.compile(r"^(Especial:|Wikipedia:|Anexo:|Portada|Main_Page|Archivo:|Categoría:|-$)")
+
+
+def _tendencias_google():
+    """Búsquedas en tendencia en España (RSS público de Google Trends)."""
+    import xml.etree.ElementTree as ET
+    crudo = _get("https://trends.google.com/trending/rss?geo=ES")
+    if not crudo:
+        return {"error": "sin respuesta de trends.google.com"}
+    try:
+        raiz = ET.fromstring(crudo)
+    except ET.ParseError as e:
+        return {"error": f"RSS ilegible: {e}"}
+    salida = []
+    for it in raiz.iter("item"):
+        d = {"busqueda": (it.findtext("title") or "").strip(), "noticias": []}
+        for hijo in it.iter():
+            etiqueta = hijo.tag.rsplit("}", 1)[-1]
+            if etiqueta == "approx_traffic":
+                d["trafico"] = (hijo.text or "").strip()
+            elif etiqueta == "pubDate":
+                d["fecha"] = (hijo.text or "").strip()
+            elif etiqueta == "news_item_title" and len(d["noticias"]) < 2:
+                d["noticias"].append((hijo.text or "").strip())
+        if d["busqueda"]:
+            salida.append(d)
+    return {"tendencias": salida[:25]}
+
+
+def _wikipedia_top(dias=3):
+    """Los artículos más leídos de la Wikipedia en español, día a día."""
+    salida = {}
+    for n in range(1, dias + 1):
+        dia = date.today() - timedelta(days=n)
+        crudo = _get("https://wikimedia.org/api/rest_v1/metrics/pageviews/top/"
+                     f"es.wikipedia/all-access/{dia:%Y/%m/%d}")
+        if not crudo:
+            continue
+        try:
+            arts = json.loads(crudo)["items"][0]["articles"]
+        except Exception:
+            continue
+        salida[dia.isoformat()] = [{"articulo": a["article"].replace("_", " "), "vistas": a["views"]}
+                                   for a in arts if not WIKI_RUIDO.match(a["article"])][:20]
+    return salida or {"error": "sin respuesta de wikimedia.org"}
+
+
+def _youtube_populares(yt, gasto):
+    """Lo más visto hoy en YouTube España, en general y en Comedia (categoría 23).
+    videos.list con chart=mostPopular cuesta 1 unidad por llamada."""
+    salida = {}
+    for nombre, extra in (("general", {}), ("comedia", {"videoCategoryId": "23"})):
+        try:
+            r = yt.videos().list(part="snippet,statistics", chart="mostPopular", regionCode="ES",
+                                 maxResults=25, **extra).execute()
+            gasto["unidades"] += 1
+            salida[nombre] = [{"titulo": v["snippet"]["title"], "canal": v["snippet"]["channelTitle"],
+                               "vistas": int(v.get("statistics", {}).get("viewCount", 0))}
+                              for v in r.get("items", [])]
+        except Exception as e:                  # una categoría sin lista no tumba nada
+            salida[nombre] = {"error": str(e)[:200]}
+    return salida
+
+
+def radar_actualidad(yt=None, gasto=None):
+    radar = {"_nota": ("C52 · Qué está pasando en España esta semana. Es un GANCHO posible, "
+                       "no un tema: el Short sigue explicando un mecanismo con su ficha "
+                       "(reglas 2 y 3), nunca a costa de nadie real (regla 1) y nunca con "
+                       "tragedias, política o sucesos. Lo juzga la planificación."),
+             "google_tendencias": _tendencias_google(),
+             "wikipedia_top": _wikipedia_top(),
+             "autocompletar": {}}
+    for sem in RADAR_SEMILLAS:
+        radar["autocompletar"][sem] = autocompletar(sem, nivel2=False)
+    if yt is not None:
+        radar["youtube_populares"] = _youtube_populares(yt, gasto if gasto is not None else {"unidades": 0})
+    return radar
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--sin-youtube", action="store_true",
@@ -315,7 +404,20 @@ def main():
                   f"(tope de esta pasada: {a.tope_cuota}). La cuota se renueva a "
                   "medianoche del Pacífico, o sea a las 09:00 de España.")
 
-    print("3. Wikipedia")
+    print("3. Radar de actualidad (C52)")
+    try:
+        yt_radar = None if a.sin_youtube else cliente_youtube()
+        gasto_radar = {"unidades": 0}
+        resultado["actualidad"] = radar_actualidad(yt_radar, gasto_radar)
+        g = resultado["actualidad"]["google_tendencias"]
+        print(f"   tendencias de Google: {len(g.get('tendencias', [])) if isinstance(g, dict) else 0}"
+              f" · wikipedia: {len(resultado['actualidad']['wikipedia_top'])} días"
+              f" · cuota YouTube: {gasto_radar['unidades']}")
+    except Exception as e:                      # el radar nunca tumba la medición
+        resultado["actualidad"] = {"error": f"{type(e).__name__}: {e}"[:300]}
+        resultado["avisos"].append("El radar de actualidad falló; la medición de siempre, no.")
+
+    print("4. Wikipedia")
     for art in ARTICULOS_WIKI:
         w = wikipedia(art)
         resultado["wikipedia"][art] = w

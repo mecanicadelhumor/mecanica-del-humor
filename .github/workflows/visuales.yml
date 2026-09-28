@@ -33,6 +33,12 @@ name: Visuales (C50)
 
 on:
   push:
+    # Solo main (28/09/2026, C53): las tareas suben su trabajo a ramas
+    # claude/entrega-*, y si esto corriera allí escribiría manifiestos en una
+    # rama que «Entregas (C53)» borra en cuanto la aplica. Lo que llega a main
+    # por esa vía no dispara este workflow (lo sube el GITHUB_TOKEN), así que
+    # «Entregas» lo lanza a mano cuando cambia un guion o ajustes.json.
+    branches: [main]
     paths:
       - "05_calendario/guiones/**.json"
       - "05_calendario/visuales/ajustes.json"
@@ -85,7 +91,9 @@ jobs:
           done
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-inter
-          pip install --quiet pillow numpy opencv-python-headless
+          # <5 (28/09/2026, trampa 42): OpenCV 5.0 quitó CascadeClassifier de la
+          # build headless y del 24 al 28/09 no se detectó ni una cara.
+          pip install --quiet pillow numpy "opencv-python-headless<5"
 
       - name: Probar las claves
         env:

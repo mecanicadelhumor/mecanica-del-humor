@@ -397,35 +397,56 @@ def fotograma(fichero, instante, destino):
 
 
 _DETECTORES = None
+# Qué pasó al montar el detector de caras. Va al manifiesto, a la hoja de
+# contactos y a diagnostico.json (28/09/2026, trampa 42): del 24 al 28 de
+# septiembre caras() devolvió [] en los 51 planos de siete Shorts sin que nada
+# lo dijera, y el 28 salió un Short con la banda de texto encima de una cara.
+# Un detector que no está no es «no hay caras»: es «no lo sé», y se dice.
+ESTADO_CARAS = "sin probar"
+
+
+def detector_caras():
+    """Monta los detectores una vez y devuelve (lista, estado)."""
+    global _DETECTORES, ESTADO_CARAS
+    if _DETECTORES is not None:
+        return _DETECTORES, ESTADO_CARAS
+    try:
+        import cv2
+    except ImportError as ex:
+        _DETECTORES, ESTADO_CARAS = [], f"SIN DETECTOR: no se puede importar cv2 ({ex})"
+        return _DETECTORES, ESTADO_CARAS
+    try:
+        _DETECTORES = [cv2.CascadeClassifier(cv2.data.haarcascades + n)
+                       for n in ("haarcascade_frontalface_default.xml", "haarcascade_profileface.xml")]
+        if any(d.empty() for d in _DETECTORES):
+            raise RuntimeError("los ficheros Haar no se han podido cargar")
+        ESTADO_CARAS = f"ok: Haar frontal y de perfil, OpenCV {cv2.__version__}"
+    except Exception as ex:
+        _DETECTORES = []
+        ESTADO_CARAS = (f"SIN DETECTOR: OpenCV {getattr(cv2, '__version__', '?')} "
+                        f"({type(ex).__name__}: {ex}). Las caras no se miran: fijar "
+                        "opencv-python-headless<5 en visuales.yml")
+    return _DETECTORES, ESTADO_CARAS
 
 
 def caras(ruta_imagen):
     """Caras en una imagen, como [x, y, ancho, alto] en fracción del cuadro.
     Haar de OpenCV, frontal y de perfil: es rápido, no necesita red ni
     modelos descargados, y aquí basta con saber DÓNDE hay una cara."""
-    global _DETECTORES
     try:
         import cv2
     except ImportError:
+        detector_caras()
         return []
     if _DETECTORES is None:
-        try:
-            _DETECTORES = [cv2.CascadeClassifier(cv2.data.haarcascades + n)
-                           for n in ("haarcascade_frontalface_default.xml", "haarcascade_profileface.xml")]
-        except AttributeError:
-            # 25/09/2026: OpenCV 5.0 (opencv-python-headless sin versión fijada
-            # en visuales.yml, que esta revisión no puede tocar) quitó
-            # CascadeClassifier de la build headless: antes de este cambio,
-            # este AttributeError no se capturaba, subía hasta mirar() y esa
-            # excepción hacía que CADA candidato de CADA plano se descartara
-            # como "no se pudo mirar" — MDS-024 y MDS-025 salieron enteros sin
-            # una sola imagen o vídeo real (todo "sin_imagen") por esto. Sin
-            # detector no hay forma barata de saber dónde hay caras, pero eso
-            # no puede tirar el candidato entero: se degrada a "sin caras
-            # conocidas" (encuadre() ya centra por defecto) en vez de perder
-            # la imagen. Arreglo de raíz pendiente: fijar la versión de
-            # opencv-python-headless en visuales.yml, que no es mío.
-            _DETECTORES = []
+        detector_caras()
+    # Historia (25/09/2026, revisión diaria): OpenCV 5.0 —opencv-python-headless
+    # sin versión fijada en visuales.yml— quitó CascadeClassifier de la build
+    # headless. Antes de aquel arreglo el AttributeError subía hasta mirar() y
+    # cada candidato de cada plano se descartaba: MDS-024 y MDS-025 salieron sin
+    # una sola imagen. El arreglo lo degradó a «sin caras»… en silencio, y eso
+    # es lo que el 28/09 dejó una cara debajo del texto en MDS-026. Desde el
+    # 28/09 la versión está fijada (<5) y detector_caras() dice lo que pasa.
     if not _DETECTORES:
         return []
     img = cv2.imread(str(ruta_imagen))
@@ -812,6 +833,7 @@ def resolver_guion(ident, forzar=False):
                              "planos": planos_m}
     manifiesto = {"guion": ident, "version": VERSION, "firma": fir,
                   "resuelto_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                  "detector_caras": detector_caras()[1],
                   "escenas": escenas_m, "descartes": descartes,
                   "errores_ia": sorted(set(errores_ia))[:5],
                   # Si un servicio falló por algo pasajero (cuota, 5xx, red), el
@@ -918,6 +940,10 @@ def hoja_de_contactos(guion, manifiesto, destino):
     d.text((14, 12), f"{guion['id']} · {guion.get('titulo_trabajo', '')}"[:110], font=f_tit, fill=(11, 18, 32))
     d.text((14, 46), f"C50 · hoja de contactos · {manifiesto.get('resuelto_utc', '')} · "
                      + ", ".join(f"{v} {k}" for k, v in sorted(resumen.items())), font=f_pie, fill=(70, 76, 90))
+    if not str(manifiesto.get("detector_caras", "ok")).startswith("ok"):
+        # Sin detector, ningún recuadro rojo significa «no lo sé», no «no hay caras».
+        d.text((cols * cw - 470, 46), "ATENCIÓN: SIN DETECTOR DE CARAS — mirar a ojo",
+               font=_fuente_pil("Inter:weight=800", 16), fill=(200, 30, 30))
     for i, (n, e, esc, p) in enumerate(planos):
         x0, y0 = (i % cols) * cw, 76 + (i // cols) * (ch + pie)
         cuadro = None
@@ -1159,6 +1185,7 @@ def orden_diagnostico():
             res["pixabay"] = f"FALLA: {ex}"
     else:
         res["pixabay"] = "sin clave (PIXABAY_API_KEY)"
+    res["caras"] = detector_caras()[1]
     cuenta, token = os.environ.get("CLOUDFLARE_ACCOUNT_ID"), os.environ.get("CLOUDFLARE_API_TOKEN")
     if cuenta and token:
         cab = {"Authorization": f"Bearer {token}"}
@@ -1170,6 +1197,13 @@ def orden_diagnostico():
                 res[f"cloudflare_{nombre}"] = f"ok: {(datos.get('result') or {}).get('status', '?')}"
             except Exception as ex:
                 res[f"cloudflare_{nombre}"] = f"FALLA: {ex}"
+        # 28/09/2026: la comprobación «de cuenta» da 401 todos los días porque el
+        # token es de USUARIO, no de cuenta, y los dos no se verifican en el mismo
+        # sitio. Si el de usuario está bien y la imagen se genera, eso no es un
+        # fallo: era una falsa alarma diaria que enseñaba a no leer «FALLA».
+        if str(res.get("cloudflare_token", "")).startswith("ok") and \
+                str(res.get("cloudflare_token_de_cuenta", "")).startswith("FALLA"):
+            res["cloudflare_token_de_cuenta"] = "no aplica: el token es de usuario (verificado arriba)"
         prueba = CACHE / "_diagnostico.jpg"
         try:
             # 256x256: la prueba cuesta unas 26 neuronas de las 10.000 diarias.

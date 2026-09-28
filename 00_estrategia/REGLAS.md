@@ -109,6 +109,25 @@ nombre, nunca con su cara, nunca con su imagen personal.
 - La pregunta del episodio publicada como primer comentario **sí** vale: es contenido
   editorial, escrito por el guionista, y no finge ser un espectador.
 
+### 7.1 · La persona sintética (decisión del codirector del 23/09/2026, escrita el 28/09)
+
+El codirector contestó que sí a un presentador con cara humana generada, con sincronía labial,
+**para momentos puntuales**, y aceptó estas condiciones. Son la regla, no una recomendación:
+
+1. **Ficticia, y que no se parezca a nadie real.** Se genera una vez; si se parece a alguien
+   conocido, se genera otra.
+2. **Siempre la misma**: una sola cara y una sola voz en todos los vídeos.
+3. **Declarada**: en la descripción de cada vídeo en que aparezca, y marcada en YouTube como
+   contenido sintético (`containsSyntheticMedia`).
+4. **Nunca presentada como experta ni como testimonio**, y nunca contando en primera persona una
+   vida que no tiene («a mí me pasó», «mi madre»): es un presentador, no un personaje con
+   biografía (regla 13.3, última viñeta).
+5. **Como mucho dos momentos de dos o tres segundos por Short.** El resto del vídeo sigue siendo
+   lo de C50.
+
+Lo que no cambia: no se responden comentarios con IA, no se finge un espectador, y el uso de IA
+se declara siempre. No entra en producción sin muestrario que el codirector haya mirado (C51.2).
+
 ## 8. Nada de spam
 
 - **No** se publica automáticamente en Reddit, foros, grupos ni comentarios de otros
@@ -161,6 +180,10 @@ Lo esencial: la bitácora va en `05_calendario/bitacora/<fecha>-<tarea>.md`, un
 fichero nuevo por ejecución. `MEJORAS.md` queda congelado como historia. Quien no
 es dueño de un guion no lo edita: escribe una nota en `05_calendario/revisiones/`.
 
+**Desde el 28/09/2026 esta regla la comprueba el código** (C53): las tareas entregan con
+`04_agentes/entregar.py`, que lleva la tabla de propiedad dentro, y el workflow «Entregas (C53)»
+solo pasa a `main` lo que es de cada una. Lo ajeno no sube, y se queda escrito en el commit.
+
 ## 11. Cómo se cambian las cosas
 
 1. **Un cambio por producción.** Si entran dos y el resultado empeora, no se sabe cuál fue.
@@ -179,6 +202,11 @@ es dueño de un guion no lo edita: escribe una nota en `05_calendario/revisiones
    **`.github/workflows/` queda protegida siempre, también para la dirección**: no se puede
    escribir en remoto y esos ficheros los crea el codirector a mano.
 8. **`MEJORAS.md` se añade al final, nunca se reescribe.**
+9. **Un Short que ya se subió no se vuelve a subir** (C54, 28/09/2026). Los dos únicos que se
+   resubieron, `MDS-017` y `MDS-023`, hicieron 0 y 2 visualizaciones. Si sale con un defecto, se
+   deja o se retira, y su guion no vuelve a salir con otro título: lo que se quiera contar otra
+   vez es un Short nuevo. Un Short que no se publica no cuenta en la mediana de C26; uno que hace
+   0, sí.
 
 ## 12. El criterio editorial que no se negocia
 

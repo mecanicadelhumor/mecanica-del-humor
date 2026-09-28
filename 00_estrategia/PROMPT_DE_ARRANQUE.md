@@ -156,6 +156,10 @@ confundirlas:
 | `.github/workflows/visual_prueba.yml` | **Se retira el 23/09 (tarde)**: lo borra el codirector en la tarea 3 | Era la prueba de C50; su código (`muestrario_visual.py` y el `visual.py` de prueba) ya no existe |
 | `03_produccion/pipeline/visual.py` · `fondo_visual.py` | **De la dirección** (23/09, C50 en producción) | `visual.py`: resolver, traer, diagnóstico. `fondo_visual.py`: cortes y pista de fondo para `render.py`. **La revisión diaria no los toca sin encargo**; los planos se corrigen con `05_calendario/visuales/ajustes.json`, no con código |
 | `05_calendario/visuales/` | **Del workflow `visuales.yml`**, salvo `ajustes.json` (revisión diaria) y `APAGADO` (el codirector y yo) | Ver su `LEEME.md`. `APAGADO` es el interruptor de C50: si existe, todo sale como antes |
+| **Las tareas programadas entregan solas** (C53) | **Autorizado por el codirector el 28/09/2026** | Con `04_agentes/entregar.py` a ramas `claude/entrega-*` y el workflow `entregas.yml` a `main`. Sin credenciales en los prompts: necesitan el repositorio añadido a cada tarea en claude.ai/code/routines (tarea 1 del codirector del 28/09). Hasta entonces, plan B: el `.tar.gz` de siempre |
+| `.github/workflows/` · excepción del 28/09/2026 | **Autorizada por el codirector esa vez, y acotada** | Se cambiaron `visuales.yml` (OpenCV <5 y solo `main`), `vista.yml` (solo `main`), `metricas.yml` (dos intentos más) y `entregas.yml` (nuevo). **La regla sigue**: para el próximo cambio ahí, se pregunta |
+| `04_agentes/entregar.py` · `.github/workflows/entregas.yml` | **De la dirección** (28/09, C53) | Son la tabla de `PROPIEDAD_DE_FICHEROS.md` en código. Ninguna tarea los toca: `entregar.py` se excluye a sí mismo |
+| Regla 7.1 · la persona sintética | **Autorizada por el codirector el 23/09/2026**, escrita el 28/09 | Sí a Kaggle, con las cinco condiciones de `REGLAS.md` 7.1. No entra sin muestrario (C51.2) |
 
 **Y la consecuencia práctica de la autorización general, que es la que importa:** desde el
 12/09 escribo directamente en la carpeta del codirector con `device_commit_files` los
@@ -177,7 +181,7 @@ arrastraba defectos. Solo puede añadir lo que verifique contra la fuente.
 ## Las trampas en las que ya se ha caído
 
 No son anécdotas: cada una costó tiempo o un vídeo, y todas se repiten solas si nadie las
-tiene delante. Son cuarenta a 23/09/2026, y la lista crece porque se lee.
+tiene delante. Son cuarenta y cinco a 28/09/2026, y la lista crece porque se lee.
 
 **1. Cada documento daba por supuesto que el movimiento lo ponía otro.**
 Los subtítulos quemados se retiraron el 20/08; la respiración de zoom ya estaba
@@ -580,6 +584,60 @@ hoy» y no supo si era un fallo o una decisión.
 cuerpo de la respuesta), y lo deja donde se lee sin credenciales: en el repositorio o en el resumen
 de la ejecución, no solo en el registro. Y una prueba que puede fallar en silencio dice en su propio
 resultado que ha fallado.
+
+**42. El arreglo de la trampa 41 la volvió a crear, dos días después.** El 25/09 `caras()` dejó de
+tumbar los planos cuando OpenCV 5.0 —sin versión fijada— no traía `CascadeClassifier`, y lo hizo
+devolviendo `[]`: «no hay caras». Del 24 al 28/09, **ni una cara en 51 planos llenos de gente**, sin
+un aviso, y el 28 salió `MDS-026` con el texto encima de una cara.
+→ **Un detector que no está no dice «no hay»: dice «no lo sé», y lo dice donde se lee** (desde el
+28/09, `diagnostico.json`, el manifiesto y la hoja de contactos). Y una dependencia sin versión
+fijada es un cambio que entra solo un día cualquiera: fíjala por debajo de la siguiente mayor.
+
+**43. Un cron de GitHub puede llegar con seis horas de retraso, o no llegar.** El lunes 28, a las
+10:57 UTC, «Leer métricas» no había corrido ninguno de sus dos intentos (05:19 y 08:37): no habían
+fallado, no existían. Uno apareció a las 11:47 UTC; el otro, nunca. La tarea de las 10:00 leyó la
+foto del 21 y el punto de control se quedó sin datos hasta que se lanzó a mano. Y de propina, la
+pasada tardía machacó la lectura buena de la mañana con una peor (sin la curva de `MDS-022`).
+→ **Dos intentos del mismo cron no son dos caminos.** Quien depende de un workflow programado mira
+la fecha de lo que lee, y tiene que haber otro camino que no sea el mismo reloj: desde el 28/09,
+un tercer intento el lunes, uno el martes, y la tarea de métricas a las 12:30.
+
+**44. Resubir un Short lo mata.** `MDS-017` (resubido el 19/09) hizo 0; `MDS-023` (resubido el mismo
+23/09) hizo 2. Son los dos únicos resubidos y dos de los tres ceros de los últimos diez.
+→ **Un Short que ya se subió no se vuelve a subir** (C54, regla 11.9). Y cuando un arreglo tenga que
+«rehacer y volver a subir», pregúntate qué ve YouTube: el mismo canal subiendo lo mismo dos veces.
+
+**45. En la nube, quien puede escribir en GitHub lo decide el repositorio añadido a la tarea, no una
+credencial.** Probado el 28/09 con un `push` de verdad desde una sesión en la nube: el proxy de la
+sesión lo rechaza («el repositorio no está entre los de la sesión») aunque la credencial sea buena.
+Por eso C53 no pone credenciales en ningún prompt: las tareas escriben porque el repositorio está
+añadido a ellas.
+→ Es la trampa 34 en git: **antes de diseñar alrededor de un acceso, prueba el camino entero con
+una escritura de verdad, desde el mismo sitio desde donde va a correr.**
+
+## Dónde está el proyecto a 28 de septiembre de 2026
+
+**El punto de control del 27 está contestado con datos, y el canal empieza a volar solo.** Versión
+**14** del plan, la que manda.
+
+- **Los números** (`metricas.json` del 28/09, lanzado a mano porque el cron no corrió, trampa 43):
+  mediana C26 **24,0** (era 11,0); **cinco** Shorts por encima de 100 en dos semanas; mediana de los
+  últimos diez **90,5**. `MDS-021` y `022` retienen al 59-64 % en el segundo 30, lo mejor de la
+  historia del canal. **Cero suscriptores y casi cero «me gusta»: el bloqueo ahora es S3.** Tres casi
+  ceros en diez; dos son las dos únicas resubidas (C54).
+- **Viabilidad:** viable hasta el 15/11; lo más probable, la banda del medio (ampliar el tema con
+  prórroga hasta el 10/01). La puerta de los 1.000 sigue sin decidir (antes del 8/11).
+- **C53 · las tareas entregan solas** con `entregar.py` y el workflow «Entregas». Falta que el
+  codirector añada el repositorio a las tres tareas (su tarea 1 del 28/09); hasta entonces, plan B.
+- **C52 · actualidad**, fase 1: un Short de cada cinco, como mucho, con gancho de actualidad, desde
+  la planificación del jueves 1/10. **C50.7:** caras otra vez detectadas (OpenCV <5). **C54:** no se
+  resube nunca. **C48.2:** criterio de la lectura en frío ratificado. **C51.2:** regla 7.1, sí a
+  la persona sintética con condiciones; Kaggle cuando el codirector pueda. **C44 aplazado.**
+- **El codirector no está esta semana.** No se le pide nada más que la tarea 1 (cinco minutos).
+
+**Para la próxima sesión (lunes 5):** comprobar que la primera entrega sola llegó a `main` (o por qué
+no); la primera semana entera con C50 (`MDS-026` a `030`) y si hubo gancho de actualidad; S3 —qué
+le pide el vídeo al que lo ve—; la muestra de C44 en `07_pruebas/`.
 
 ## Dónde está el proyecto a 23 de septiembre de 2026, por la tarde
 
