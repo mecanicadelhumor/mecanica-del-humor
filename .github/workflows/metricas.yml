@@ -26,6 +26,13 @@ on:
     # daño: la segunda pasada vuelve a pedir los mismos datos.
     - cron: "19 5 * * 1"
     - cron: "37 8 * * 1"
+    # Tercer intento el lunes y uno de seguridad el martes (28/09/2026): ese
+    # lunes, a las 10:57 UTC, no había corrido ninguno de los dos anteriores —no
+    # fallaron: no existían—; uno llegó por fin a las 11:47. El punto de control
+    # del 27/09 se quedó sin datos hasta que la dirección lo lanzó a mano. Repetir
+    # la lectura no hace daño: pide los mismos datos.
+    - cron: "7 11 * * 1"
+    - cron: "19 5 * * 2"
   workflow_dispatch:
     inputs:
       desde:
