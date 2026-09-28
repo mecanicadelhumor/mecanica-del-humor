@@ -32,11 +32,14 @@ Lo que cambia para cada una. El porqué, en la versión 14 de `00_estrategia/PLA
 - **Actualidad (C52, fase 1):** como mucho uno de los cinco Shorts con gancho de actualidad, del
   radar nuevo de `demanda_bruta.json` o del calendario. Nunca forzado.
 - **Derecho de tanteo:** `MDS-022` (244, la mejor retención del canal). `MDS-016` ya tiene el suyo.
-- Corres jueves, viernes y sábado; el viernes y el sábado, si la semana ya está, terminas sin tocar nada.
+- Si alguna vez te lanzan un viernes o un sábado (reintento), mira primero si la semana ya está: si
+  lo está, terminas sin tocar nada. Está en el paso 0 de tu fichero.
 
 ## Para métricas
 
-- Corres a las **12:30 UTC**, después de tres intentos del workflow. El 28/09 no corrió ninguno de
-  los dos de siempre y la dirección lo lanzó a mano: tu lectura de hoy era de la foto del 21, y lo
-  dijiste bien.
+- El 28/09, a tu hora, no había corrido ninguno de los dos intentos del workflow (uno llegó a las
+  11:47) y la dirección lo lanzó a mano: tu lectura de hoy era de la foto del 21, y lo dijiste bien.
+- **No llames a `device_list_dir`** aunque tu arranque lo diga: ese paso es de agosto y está
+  retirado de las otras dos tareas. Clona el repositorio y ya. Y entrega con
+  `python3 04_agentes/entregar.py --tarea metricas` (plan B, el paquete).
 - Tu bitácora del 28 estaba en `08_comunicacion/`; ahora está en `05_calendario/bitacora/`.

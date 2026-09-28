@@ -16,9 +16,9 @@ modelo: `claude-opus-5`.
 
 **Esto va antes que todo lo demás de este prompt, y manda sobre ello.**
 
-0. **Si hoy NO es jueves, lo primero es saber si hace falta que trabajes.** Desde el 28/09 esta
-   tarea corre **jueves, viernes y sábado** a las 22:00 de España, porque el jueves 24 la ejecución
-   programada falló a los siete segundos. Calcula el **lunes siguiente** y mira en `origin/main`:
+0. **Si hoy NO es jueves, lo primero es saber si hace falta que trabajes.** Puede que te lancen un
+   viernes o un sábado como reintento (el jueves 24 la ejecución programada falló a los siete
+   segundos). Calcula el **lunes siguiente** y mira en `origin/main`:
    si `05_calendario/parrilla.json` ya tiene emisión para ese lunes **y** su guion existe en
    `05_calendario/guiones/`, la semana ya está: **termina sin tocar nada** (una línea en tu
    respuesta final lo dice). Haz lo mismo si `git ls-remote origin

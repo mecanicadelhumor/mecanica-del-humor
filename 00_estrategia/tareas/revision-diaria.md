@@ -76,8 +76,7 @@ manda sobre lo que diga más abajo:**
 7. **`K03` verificada** por la dirección el 28/09 contra aclanthology.org (título, autores y DOI).
    `MDS-029` cita bien su resumen.
 8. **Los lunes**, si `05_calendario/metricas.json` no es del día cuando lo mires, dilo en tu fichero
-   de `estado/` (no es incidencia: el workflow tiene ahora un tercer intento a las 11:07 UTC y otro
-   el martes, y la tarea de métricas corre a las 12:30).
+   de `estado/` (no es incidencia: el 28/09 el workflow llegó con más de tres horas de retraso).
 
 **Qué cambia el 23/09 (dirección extraordinaria del miércoles). Va antes que todo lo demás:**
 
@@ -154,7 +153,7 @@ Repositorio público: https://github.com/mecanicadelhumor/mecanica-del-humor
 
 Las tres reglas que salen de ahí y que te afectan directamente:
 
-**1. Comprobación de entregas pendientes — es tu PRIMERA acción.** Ejecuta `git log --oneline -8` sobre `origin/main` y `git ls-remote origin 'refs/heads/claude/entrega-*'`. **Desde el 28/09/2026 (C53) las entregas no esperan a nadie** y «Entregas» aplica con una mezcla a tres bandas que no pisa, así que tu trabajo ya no puede borrar el de la planificación aunque tu clon sea viejo. Lo que sí es **INCIDENCIA**: una rama `claude/entrega-*` que sigue viva (no se pudo aplicar), o que un viernes o un sábado **no esté en `parrilla.json` la semana siguiente** (la planificación se reintenta sola el viernes y el sábado a las 22:00; si el sábado a tu hora sigue sin estar, el lunes no sale nada, y eso va en la primera línea de tu fichero de `estado/`).
+**1. Comprobación de entregas pendientes — es tu PRIMERA acción.** Ejecuta `git log --oneline -8` sobre `origin/main` y `git ls-remote origin 'refs/heads/claude/entrega-*'`. **Desde el 28/09/2026 (C53) las entregas no esperan a nadie** y «Entregas» aplica con una mezcla a tres bandas que no pisa, así que tu trabajo ya no puede borrar el de la planificación aunque tu clon sea viejo. Lo que sí es **INCIDENCIA**: una rama `claude/entrega-*` que sigue viva (no se pudo aplicar), o que un viernes o un sábado **no esté en `parrilla.json` la semana siguiente** (si el viernes o el sábado a tu hora sigue sin estar, el lunes no sale nada, y eso va en la primera línea de tu fichero de `estado/` como INCIDENCIA para el codirector).
 
 **2. Tú NO eres el dueño de los guiones.** Lo es la planificación de los jueves. Cuando encuentres un defecto editorial, **no edites el guion**: escribe `05_calendario/revisiones/<ID>.md` con el defecto y la corrección exacta en formato antes/después. La planificación lo aplica el jueves siguiente.
    **Única excepción, y es estrecha:** si ese guion se produce en menos de 48 horas, sí puedes editarlo. Entonces tocas **ese fichero y ninguno más** del calendario, y lo dices en MAYÚSCULAS en la primera línea del resumen.

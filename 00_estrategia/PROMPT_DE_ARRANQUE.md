@@ -600,8 +600,9 @@ fallado, no existían. Uno apareció a las 11:47 UTC; el otro, nunca. La tarea d
 foto del 21 y el punto de control se quedó sin datos hasta que se lanzó a mano. Y de propina, la
 pasada tardía machacó la lectura buena de la mañana con una peor (sin la curva de `MDS-022`).
 → **Dos intentos del mismo cron no son dos caminos.** Quien depende de un workflow programado mira
-la fecha de lo que lee, y tiene que haber otro camino que no sea el mismo reloj: desde el 28/09,
-un tercer intento el lunes, uno el martes, y la tarea de métricas a las 12:30.
+la fecha de lo que lee, y tiene que haber otro camino que no sea el mismo reloj: un tercer intento
+el lunes y uno el martes (en `metricas.yml`, cuando el codirector lo mueva), y la tarea de métricas
+diciendo en su primera línea de qué día es lo que lee.
 
 **44. Resubir un Short lo mata.** `MDS-017` (resubido el 19/09) hizo 0; `MDS-023` (resubido el mismo
 23/09) hizo 2. Son los dos únicos resubidos y dos de los tres ceros de los últimos diez.

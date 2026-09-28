@@ -72,9 +72,12 @@ trampas 42-45, estado a 28/09), `LEEME.md`, `tareas/revision-diaria.md` y
 `05_calendario/bitacora/2026-09-28-metricas.md` (la bitácora de métricas, que había llegado a
 `08_comunicacion/`).
 
-**Tareas programadas** (almacén): los arranques de la revisión y la planificación dicen «entrega con
-`entregar.py`; plan B el paquete»; la planificación corre jueves, viernes y sábado; métricas pasa a
-las 12:30 UTC y deja de decir que pruebe el puente de dispositivos.
+**Tareas programadas** (almacén): el arranque de la **revisión diaria** dice ya «entrega con
+`entregar.py`; plan B el paquete». Los de la **planificación** (con reintento viernes y sábado) y
+**métricas** (sin la sonda al puente de dispositivos) **no se pudieron cambiar**: la comprobación de
+permisos de la sesión bloqueó la escritura en la tarea de la planificación, y no se insistió. Quedan
+para el codirector. Mientras tanto, su fichero de instrucciones del repositorio manda sobre el
+arranque, y el plan B es el mismo de siempre.
 
 ## 5. Cómo se comprobó
 

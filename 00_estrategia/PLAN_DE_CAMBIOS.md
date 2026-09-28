@@ -4906,10 +4906,13 @@ Probado hoy en local contra un origen simulado: entrega normal, entrega con fich
 quedan fuera y se escriben en el commit), guion inválido (fuera), choque con un cambio de la
 dirección (no se aplica, la rama se queda), y encima de un commit del bot (se aplica).
 
-**Y la planificación se reintenta sola.** El jueves 24 la ejecución programada de la planificación
-falló a los siete segundos, y la semana se planificó el viernes 25. Desde hoy corre **jueves, viernes y sábado a las 22:00**; el
-viernes y el sábado, si la semana siguiente ya está en `parrilla.json` o hay una entrega suya
-esperando, termina sin hacer nada.
+**Y la planificación debería reintentarse sola.** El jueves 24 la ejecución programada de la
+planificación falló a los siete segundos, y la semana se planificó el viernes 25. La propuesta es que
+corra **jueves, viernes y sábado a las 22:00** y que el viernes y el sábado, si la semana siguiente
+ya está en `parrilla.json` o hay una entrega suya esperando, termine sin hacer nada (su fichero de
+instrucciones ya lo sabe hacer). **No está aplicado:** el cambio de la tarea programada lo bloqueó la
+comprobación de permisos de la sesión, y queda para que lo autorice o lo haga el codirector. Lo
+mismo con el arranque de la tarea de métricas. El de la revisión diaria sí se actualizó.
 
 **Lo único que hace falta del codirector, una vez:** añadir el repositorio a las tres tareas y
 mover a `.github/workflows/` los cuatro ficheros de `00_estrategia/tareas/workflows_2026-09-28/`
@@ -5038,7 +5041,7 @@ no vuelve a pasar: C53.
 | **Hoy, 28/09** | Todo lo de arriba menos los workflows, subido por la dirección. «Visuales» vuelve a elegir `MDS-028` a `030` con el detector de caras. `MDS-026` sale a las 19:00 como está |
 | Martes 29 – viernes 2 | `MDS-027` a `MDS-030`. La revisión diaria entrega sola **si** el codirector ya hizo su tarea 1; si no, plan B |
 | **Jueves 1, 22:00** | Primera planificación con C53 (entrega sola), C52 fase 1 y C48.2. Si falla, se reintenta el viernes y el sábado |
-| Lunes 5 | Métricas a las 12:30 UTC, después de tres intentos del workflow. Sesión de dirección: primera semana entera con C50; S3; muestra de C44 |
+| Lunes 5 | Métricas a las 10:00 UTC (si el codirector movió `metricas.yml`, con un tercer intento del workflow a las 11:07). Sesión de dirección: primera semana entera con C50; S3; muestra de C44 |
 | Antes del 8/11 | La puerta de los 1.000 (C26) |
 | 15/11 | La decisión |
 
