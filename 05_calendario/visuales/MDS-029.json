@@ -2,7 +2,8 @@
   "guion": "MDS-029",
   "version": 1,
   "firma": "00168b8822f39711",
-  "resuelto_utc": "2026-09-25T15:35:13Z",
+  "resuelto_utc": "2026-09-28T12:09:53Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
       "narracion_sha": "4a96ebf90f4e",
@@ -47,26 +48,33 @@
           ],
           "frase": "y un buzón. Dos pies posibles: «esperando al cartero», o «facturas».",
           "fuente": "pexels",
-          "id": 20063577,
-          "pagina": "https://www.pexels.com/video/a-long-empty-road-at-sunset-with-trees-on-both-sides-20063577/",
-          "titulo": "a long empty road at sunset with trees on both sides",
-          "autor": "Serg Alesenko",
-          "autor_url": "https://www.pexels.com/@sergk1",
+          "id": 38556219,
+          "pagina": "https://www.pexels.com/video/elderly-man-walking-on-empty-rural-road-38556219/",
+          "titulo": "elderly man walking on empty rural road",
+          "autor": "Gönüldenbirkare",
+          "autor_url": "https://www.pexels.com/@gonuldenbirkare-2148244190",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 73.0,
+          "duracion_s": 43.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/20063577/20063577-hd_1080_1920_60fps.mp4",
+          "url": "https://videos.pexels.com/video-files/38556219/16376625_1080_1920_25fps.mp4",
           "tipo": "video",
           "consulta": "old mailbox on a post empty road",
-          "relevancia": 0.4,
+          "relevancia": 0.6,
           "inicio_s": 0.4,
-          "movimiento": 6.3,
+          "movimiento": 4.13,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
-          "caras": []
+          "caras": [
+            [
+              0.2833,
+              0.2891,
+              0.0694,
+              0.0641
+            ]
+          ]
         }
       ]
     },

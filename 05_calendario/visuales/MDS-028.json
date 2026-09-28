@@ -2,11 +2,12 @@
   "guion": "MDS-028",
   "version": 1,
   "firma": "a0126a65e39206bd",
-  "resuelto_utc": "2026-09-28T10:41:43Z",
+  "resuelto_utc": "2026-09-28T12:09:36Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
       "narracion_sha": "05cb8110b6c8",
-      "texto_pos": "abajo",
+      "texto_pos": "arriba",
       "planos": [
         {
           "k": 1,
@@ -66,7 +67,14 @@
             "x": 0.5,
             "y": 0.5
           },
-          "caras": []
+          "caras": [
+            [
+              0.475,
+              0.5219,
+              0.2389,
+              0.1797
+            ]
+          ]
         }
       ]
     },
@@ -83,26 +91,33 @@
           ],
           "frase": "Pues a tu cuñado le interesa: a dieciocho jubilados les dieron ocho clases de humor,",
           "fuente": "pexels",
-          "id": 8155794,
-          "pagina": "https://www.pexels.com/video/elderly-people-drinking-together-8155794/",
-          "titulo": "elderly people drinking together",
+          "id": 8156462,
+          "pagina": "https://www.pexels.com/video/two-people-dancing-together-8156462/",
+          "titulo": "two people dancing together",
           "autor": "Alena Darmel",
           "autor_url": "https://www.pexels.com/@a-darmel",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 8.0,
+          "duracion_s": 10.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/8155794/8155794-hd_1080_1920_25fps.mp4",
+          "url": "https://videos.pexels.com/video-files/8156462/8156462-hd_1080_1920_25fps.mp4",
           "tipo": "video",
           "consulta": "elderly people laughing together in class",
-          "relevancia": 0.6,
+          "relevancia": 0.4,
           "inicio_s": 0.0,
-          "movimiento": 15.09,
+          "movimiento": 25.02,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
-          "caras": []
+          "caras": [
+            [
+              0.0556,
+              0.1828,
+              0.3083,
+              0.25
+            ]
+          ]
         },
         {
           "k": 2,
@@ -130,9 +145,40 @@
           "movimiento": 5.26,
           "encuadre": {
             "x": 0.5,
-            "y": 0.5
+            "y": 0.074
           },
-          "caras": []
+          "caras": [
+            [
+              0.9071,
+              0.293,
+              0.0929,
+              0.1052
+            ],
+            [
+              0.8274,
+              0.3181,
+              0.1106,
+              0.0801
+            ],
+            [
+              0.0796,
+              0.5334,
+              0.0973,
+              0.0801
+            ],
+            [
+              0.6062,
+              0.3957,
+              0.0885,
+              0.0676
+            ],
+            [
+              0.5265,
+              0.3931,
+              0.0841,
+              0.0626
+            ]
+          ]
         }
       ]
     },
