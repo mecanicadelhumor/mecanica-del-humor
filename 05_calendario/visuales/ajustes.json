@@ -1,3 +1,15 @@
 {
- "_nota": "Correcciones de la revisión diaria a los planos que eligió «Visuales (C50)». Es de la revisión diaria (regla 10). Una entrada por Short; dentro, «escena.plano» para un plano (excluir, busqueda, fuente: ia, marca: true) o «escena» para mover el texto (texto_pos). Formato completo en 00_estrategia/tareas/revision-diaria.md, sección «La imagen: la hoja de contactos (C50)». Al subir este fichero, «Visuales (C50)» vuelve a elegir los planos de los Shorts que cambien."
+ "_nota": "Correcciones de la revisión diaria a los planos que eligió «Visuales (C50)». Es de la revisión diaria (regla 10). Una entrada por Short; dentro, «escena.plano» para un plano (excluir, busqueda, fuente: ia, marca: true) o «escena» para mover el texto (texto_pos). Formato completo en 00_estrategia/tareas/revision-diaria.md, sección «La imagen: la hoja de contactos (C50)». Al subir este fichero, «Visuales (C50)» vuelve a elegir los planos de los Shorts que cambien.",
+ "MDS-027": {
+  "5.2": {
+   "excluir": ["pexels:6519494"],
+   "busqueda": ["man not laughing while friends laugh at table", "one person confused among laughing friends dinner", "person puzzled while others laugh restaurant"]
+  }
+ },
+ "MDS-028": {
+  "2.1": {
+   "excluir": ["pexels:5798406"],
+   "busqueda": ["elderly people laughing together in class", "seniors laughing in community workshop room", "retirees laughing in group class indoors"]
+  }
+ }
 }
