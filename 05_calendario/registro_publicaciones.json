@@ -511,6 +511,21 @@
       "musica": "cama_11_watching_anime_piano_version_sakura_hz.mp3",
       "subido_utc": "2026-09-25T06:19:48Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-026.es",
+      "episodio": "MDS-026",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Sirve de algo un curso de improvisación? Veinte minutos y ya se notaba en las pruebas",
+      "guion": "05_calendario/guiones/MDS-026.es.json",
+      "video_id": "QgO0mH_qMTw",
+      "url": "https://youtu.be/QgO0mH_qMTw",
+      "estado": "private",
+      "publicar_en": "2026-09-28T17:00:00Z",
+      "musica": "cama_12_lights_sappheiros.mp3",
+      "subido_utc": "2026-09-28T07:01:03Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-09-26T13:23:58Z"

@@ -1,0 +1,181 @@
+{
+  "id": "MDS-026.es",
+  "duracion_final_s": 40.5,
+  "tamano_mb": 28.0,
+  "audio": {
+    "lufs": -14.65,
+    "pico_dbtp": -1.38,
+    "rango_lu": 3.3
+  },
+  "silencio_inicial": {
+    "empieza_s": -0.17,
+    "acaba_s": 0.744,
+    "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
+  },
+  "arranque": {
+    "silencios_s": [
+      [
+        -0.085,
+        0.744
+      ]
+    ],
+    "fragmento_antes_de_la_narracion": false,
+    "duracion_fragmento_s": null,
+    "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente)."
+  },
+  "fragmentos": {
+    "instantes": [],
+    "cuantos": 0,
+    "_nota": "Cada entrada es un trozo de audio de menos de 0.45 s rodeado de silencio: casi seguro una sílaba suelta que el sintetizador ha metido al empezar una escena. «mmss» es el minuto exacto para ir a escucharlo. Debe estar vacío."
+  },
+  "subtitulos": {
+    "ass_existe": true,
+    "lineas_ass": 0,
+    "srt_existe": true,
+    "quemados": false,
+    "quemados_origen": "leído de montaje.json",
+    "_esperado": {
+      "quemados": false,
+      "lineas_ass": "> 0 con motor edge; puede ser 0 con motor gemini"
+    },
+    "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
+  },
+  "sincronia_voz": {
+    "duracion_calculada_s": 39.09,
+    "duracion_real_voz_mp3_s": 38.88,
+    "desfase_s": 0.21,
+    "_esperado": "desfase_s < 0.5",
+    "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
+  },
+  "musica": {
+    "archivo": "cama_12_lights_sappheiros.mp3",
+    "sha256": "ec8432272d68db1bf39afb8df8546f0783eca7ee54f486c9963e8e7dad1bab23"
+  },
+  "guion": {
+    "titulo_trabajo": "¿Sirve de algo un curso de improvisación?",
+    "idioma": "es",
+    "voz": "Charon",
+    "escenas": 5,
+    "duracion_narracion_s": 39.09,
+    "escenas_por_encima_de_14s": [],
+    "escena_mas_larga_s": 8.788,
+    "motor_voz_pedido": "gemini",
+    "motores_por_escena": {
+      "gemini-3.1-flash-tts-preview": 5
+    },
+    "modelo_voz": "gemini-3.1-flash-tts-preview",
+    "voz_mezclada": false,
+    "origen_voz": [
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada"
+    ],
+    "direccion_voz": [
+      "apertura",
+      "remate",
+      "cifra",
+      "contraste",
+      "objecion"
+    ],
+    "escenas_ritmo_fuera_de_rango": []
+  },
+  "visual": {
+    "planos": [
+      {
+        "escena": 1,
+        "desde_s": 0.0,
+        "hasta_s": 4.43,
+        "fuente": "pexels",
+        "id": 34822990,
+        "pagina": "https://www.pexels.com/video/group-of-photographers-at-indoor-workshop-34822990/",
+        "autor": "Sofía  Falco",
+        "autor_url": "https://www.pexels.com/@sofia-falco-1148410914",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 1,
+        "desde_s": 4.43,
+        "hasta_s": 8.8,
+        "fuente": "pexels",
+        "id": 7817154,
+        "pagina": "https://www.pexels.com/video/a-realtor-handing-over-the-keys-to-the-married-couple-7817154/",
+        "autor": "Pavel Danilyuk",
+        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 8.8,
+        "hasta_s": 13.47,
+        "fuente": "pixabay",
+        "id": 214780,
+        "pagina": "https://pixabay.com/videos/id-214780/",
+        "autor": "Peter_Hanzo",
+        "autor_url": "https://pixabay.com/users/Peter_Hanzo-44173646/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 13.47,
+        "hasta_s": 16.83,
+        "fuente": "pexels",
+        "id": 38903358,
+        "pagina": "https://www.pexels.com/video/vintage-mechanical-wall-clock-close-up-38903358/",
+        "autor": "Dr. Prashant Vaijinath",
+        "autor_url": "https://www.pexels.com/@dr-prashant-vaijinath-2162248764",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 4,
+        "desde_s": 25.13,
+        "hasta_s": 29.23,
+        "fuente": "pexels",
+        "id": 6245736,
+        "pagina": "https://www.pexels.com/video/person-laughing-while-writing-6245736/",
+        "autor": "Monstera Production",
+        "autor_url": "https://www.pexels.com/@gabby-k",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 4,
+        "desde_s": 29.23,
+        "hasta_s": 33.23,
+        "fuente": "pexels",
+        "id": 4547598,
+        "pagina": "https://www.pexels.com/video/a-door-is-open-in-a-dark-room-with-sunlight-coming-in-4547598/",
+        "autor": "cottonbro studio",
+        "autor_url": "https://www.pexels.com/@cottonbro",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 33.23,
+        "hasta_s": 37.37,
+        "fuente": "pexels",
+        "id": 7034335,
+        "pagina": "https://www.pexels.com/video/close-up-of-clock-hands-7034335/",
+        "autor": "Tima Miroshnichenko",
+        "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      }
+    ],
+    "sintetico": false
+  },
+  "fotogramas_s": [
+    5.87,
+    14.21,
+    22.4,
+    30.58,
+    37.34
+  ],
+  "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
+}
