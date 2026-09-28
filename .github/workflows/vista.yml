@@ -10,9 +10,6 @@ name: Vista previa del diseño
 
 on:
   push:
-    # Solo main (28/09/2026, C53): ver visuales.yml. Lo que la revisión diaria
-    # entrega por «Entregas (C53)» lanza este workflow desde allí.
-    branches: [main]
     paths:
       - "03_produccion/pipeline/escena.html"
       - "03_produccion/pipeline/vista.py"

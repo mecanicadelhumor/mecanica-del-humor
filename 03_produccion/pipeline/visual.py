@@ -405,8 +405,19 @@ _DETECTORES = None
 ESTADO_CARAS = "sin probar"
 
 
+MODELO_CARAS = RAIZ / "03_produccion" / "modelos" / "face_detection_yunet_2023mar.onnx"
+
+
 def detector_caras():
-    """Monta los detectores una vez y devuelve (lista, estado)."""
+    """Monta el detector una vez y devuelve (detector, estado).
+
+    YuNet primero (28/09/2026): una red pequeña (232 KB, licencia MIT, del
+    opencv_zoo, en 03_produccion/modelos/ con su licencia al lado) que OpenCV
+    trae de serie desde la 4.5.4 **y también en la 5**, que es la que se instala
+    hoy. Medido sobre las quince fotos de 02_marca/banco/: ve las caras de las
+    quince, incluidos los grupos (cuatro en «grupo mirando el móvil», donde Haar
+    no veía ninguna), y con menos falsos positivos. Haar se queda de respaldo
+    por si faltara el modelo."""
     global _DETECTORES, ESTADO_CARAS
     if _DETECTORES is not None:
         return _DETECTORES, ESTADO_CARAS
@@ -415,55 +426,82 @@ def detector_caras():
     except ImportError as ex:
         _DETECTORES, ESTADO_CARAS = [], f"SIN DETECTOR: no se puede importar cv2 ({ex})"
         return _DETECTORES, ESTADO_CARAS
+    fallos = []
+    if hasattr(cv2, "FaceDetectorYN") and MODELO_CARAS.exists():
+        try:
+            det = cv2.FaceDetectorYN.create(str(MODELO_CARAS), "", (320, 320), 0.6, 0.3, 5000)
+            _DETECTORES = [("yunet", det)]
+            ESTADO_CARAS = f"ok: YuNet, OpenCV {cv2.__version__}"
+            return _DETECTORES, ESTADO_CARAS
+        except Exception as ex:
+            fallos.append(f"YuNet: {type(ex).__name__}: {ex}")
+    else:
+        fallos.append("YuNet: no hay FaceDetectorYN o falta el modelo")
     try:
-        _DETECTORES = [cv2.CascadeClassifier(cv2.data.haarcascades + n)
-                       for n in ("haarcascade_frontalface_default.xml", "haarcascade_profileface.xml")]
-        if any(d.empty() for d in _DETECTORES):
+        haar = [cv2.CascadeClassifier(cv2.data.haarcascades + n)
+                for n in ("haarcascade_frontalface_default.xml", "haarcascade_profileface.xml")]
+        if any(d.empty() for d in haar):
             raise RuntimeError("los ficheros Haar no se han podido cargar")
-        ESTADO_CARAS = f"ok: Haar frontal y de perfil, OpenCV {cv2.__version__}"
+        _DETECTORES = [("haar", d) for d in haar]
+        ESTADO_CARAS = f"ok: Haar frontal y de perfil (respaldo), OpenCV {cv2.__version__}"
     except Exception as ex:
+        fallos.append(f"Haar: {type(ex).__name__}: {ex}")
         _DETECTORES = []
-        ESTADO_CARAS = (f"SIN DETECTOR: OpenCV {getattr(cv2, '__version__', '?')} "
-                        f"({type(ex).__name__}: {ex}). Las caras no se miran: fijar "
-                        "opencv-python-headless<5 en visuales.yml")
+        ESTADO_CARAS = (f"SIN DETECTOR: OpenCV {getattr(cv2, '__version__', '?')}. "
+                        + " · ".join(fallos) + ". Las caras no se miran.")
     return _DETECTORES, ESTADO_CARAS
 
 
 def caras(ruta_imagen):
     """Caras en una imagen, como [x, y, ancho, alto] en fracción del cuadro.
-    Haar de OpenCV, frontal y de perfil: es rápido, no necesita red ni
-    modelos descargados, y aquí basta con saber DÓNDE hay una cara."""
-    try:
-        import cv2
-    except ImportError:
-        detector_caras()
-        return []
-    if _DETECTORES is None:
-        detector_caras()
+    Aquí basta con saber DÓNDE hay una cara: para no poner el texto encima y
+    para centrar el recorte. Sin red en ningún caso: el modelo va en el
+    repositorio."""
     # Historia (25/09/2026, revisión diaria): OpenCV 5.0 —opencv-python-headless
     # sin versión fijada en visuales.yml— quitó CascadeClassifier de la build
     # headless. Antes de aquel arreglo el AttributeError subía hasta mirar() y
     # cada candidato de cada plano se descartaba: MDS-024 y MDS-025 salieron sin
     # una sola imagen. El arreglo lo degradó a «sin caras»… en silencio, y eso
-    # es lo que el 28/09 dejó una cara debajo del texto en MDS-026. Desde el
-    # 28/09 la versión está fijada (<5) y detector_caras() dice lo que pasa.
-    if not _DETECTORES:
+    # es lo que el 28/09 dejó una cara debajo del texto en MDS-026 (trampa 42).
+    # Desde el 28/09 el detector es YuNet, que la 5 sí trae, y
+    # detector_caras() dice en voz alta si no hay ninguno.
+    try:
+        import cv2
+    except ImportError:
+        detector_caras()
+        return []
+    detectores, _ = detector_caras()
+    if not detectores:
         return []
     img = cv2.imread(str(ruta_imagen))
     if img is None:
         return []
     alto, ancho = img.shape[:2]
-    gris = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    lado = max(20, min(ancho, alto) // 14)
     halladas = []
-    # En gris tal cual y con el histograma ecualizado: cada versión encuentra
-    # caras que la otra pierde (la ecualizada falla sobre fondos lisos y
-    # oscuros; la otra, en contraluz). Se juntan y se quitan los duplicados.
-    for imagen in (gris, cv2.equalizeHist(gris)):
-        for det in _DETECTORES:
-            for (x, y, w, h) in det.detectMultiScale(imagen, scaleFactor=1.1, minNeighbors=6,
-                                                      minSize=(lado, lado)):
-                halladas.append((int(x), int(y), int(w), int(h)))
+    if detectores[0][0] == "yunet":
+        det = detectores[0][1]
+        try:
+            det.setInputSize((ancho, alto))
+            _, filas = det.detect(img)
+        except Exception:
+            filas = None
+        for f in (filas if filas is not None else []):
+            x, y, w, h = (int(round(float(v))) for v in f[:4])
+            x0, y0 = max(0, x), max(0, y)
+            x1, y1 = min(ancho, x + w), min(alto, y + h)
+            if x1 > x0 and y1 > y0:
+                halladas.append((x0, y0, x1 - x0, y1 - y0))
+    else:
+        gris = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        lado = max(20, min(ancho, alto) // 14)
+        # En gris tal cual y con el histograma ecualizado: cada versión encuentra
+        # caras que la otra pierde (la ecualizada falla sobre fondos lisos y
+        # oscuros; la otra, en contraluz). Se juntan y se quitan los duplicados.
+        for imagen in (gris, cv2.equalizeHist(gris)):
+            for _, d in detectores:
+                for (x, y, w, h) in d.detectMultiScale(imagen, scaleFactor=1.1, minNeighbors=6,
+                                                        minSize=(lado, lado)):
+                    halladas.append((int(x), int(y), int(w), int(h)))
     unicas = []
     for c in sorted(halladas, key=lambda c: -c[2] * c[3]):
         x, y, w, h = c

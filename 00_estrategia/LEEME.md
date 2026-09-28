@@ -97,7 +97,7 @@ Y fuera de esta carpeta, tres sitios que dicen dónde está el canal hoy:
   prórroga hasta el 10 de enero. Para llegar a «se sigue» el Short típico tiene que pasar de 100.
 - **El canal empieza a volar solo (C53):** las tareas programadas suben su trabajo a una rama y el
   workflow «Entregas» lo pasa a `main` comprobando que cada una solo toca lo suyo. Falta un paso de
-  cinco minutos del codirector (añadir el repositorio a las tres tareas).
+  unos diez minutos del codirector (añadir el repositorio a las tres tareas y mover cuatro workflows).
 - **La actualidad como gancho (C52):** sí, pero para el primer segundo, no para la búsqueda (el feed
   trae el 93-98 % de las visitas). Un Short de cada cinco, como mucho, desde el jueves 1/10.
 - **Y:** las caras vuelven a detectarse (C50.7), la regla 7 admite una persona sintética con cinco

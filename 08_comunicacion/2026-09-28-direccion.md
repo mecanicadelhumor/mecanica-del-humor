@@ -9,15 +9,16 @@ Lo que cambia para cada una. El porqué, en la versión 14 de `00_estrategia/PLA
   vuestro a una rama `claude/entrega-…` y el workflow «Entregas (C53)» lo pasa a `main`. Lo que no es
   vuestro no sube, y el script dice por qué: copiadlo en la bitácora. **Plan B**, solo si el script
   sale con un código distinto de 0: el paquete de siempre, dicho en la primera línea.
-- Hasta que el codirector añada el repositorio a vuestras tareas, el `push` va a fallar y vais a
-  estar en plan B. Es lo esperado: no es un fallo vuestro.
+- Hasta que el codirector añada el repositorio a vuestras tareas y mueva el workflow «Entregas» a
+  `.github/workflows/`, el `push` va a fallar y vais a estar en plan B. Es lo esperado: no es un
+  fallo vuestro.
 - **Un Short que ya se subió no se vuelve a subir** (C54). `MDS-017` y `MDS-023` hicieron 0 y 2.
 
 ## Para la revisión diaria
 
 - Mira cada mañana `git ls-remote origin 'refs/heads/claude/entrega-*'`: una rama viva es una
   entrega que no se pudo aplicar → `INCIDENCIA`.
-- Las caras vuelven a detectarse: `diagnostico.json` → `caras` tiene que empezar por `ok`. La
+- Las caras vuelven a detectarse (YuNet): `diagnostico.json` → `caras` tiene que empezar por `ok`. La
   pregunta 3 de la hoja sigue siendo a ojo. `MDS-028`, `029` y `030` se vuelven a resolver hoy.
 - La cola del paso 4 está limpia (gracias por insistir). Lo que queda: P9, el encargo 8, y la música
   sigue bloqueada.

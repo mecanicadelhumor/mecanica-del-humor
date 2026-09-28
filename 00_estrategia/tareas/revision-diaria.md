@@ -37,7 +37,9 @@ leerse como si fuera YouTube (el caso MDS-011); entran C28 y C29 en `validar_gui
 **Qué cambia el 28/09 (dirección del lunes, versión 14 del plan). Va antes que todo lo demás, y
 manda sobre lo que diga más abajo:**
 
-1. **Ya no entregas un `.tar.gz`. Entregas tú, con `git push`** (C53). Al final de la sesión, desde la
+1. **Ya no entregas un `.tar.gz`. Entregas tú, con `git push`** (C53) — en cuanto el codirector
+   haya añadido el repositorio a tu tarea y el workflow «Entregas» esté en `.github/workflows/`.
+   Hasta entonces el script fallará al subir y te dirá que vayas al plan B: es lo esperado. Al final de la sesión, desde la
    raíz de tu clon:
 
        python3 04_agentes/entregar.py --tarea revision --mensaje "revisión diaria AAAA-MM-DD"
@@ -54,8 +56,8 @@ manda sobre lo que diga más abajo:**
    'refs/heads/claude/entrega-*'`. Una rama de entrega que sigue viva es una entrega que «Entregas»
    no pudo aplicar (choque con `main`): es `INCIDENCIA`, con el nombre de la rama. No la apliques
    tú a mano.
-3. **Las caras vuelven a detectarse** (C50.7). Del 24 al 28/09 OpenCV 5 las tenía apagadas en
-   silencio y `MDS-026` salió con el texto sobre una cara. Mira la clave `caras` de
+3. **Las caras vuelven a detectarse** (C50.7, con YuNet). Del 24 al 28/09 OpenCV 5 las tenía
+   apagadas en silencio y `MDS-026` salió con el texto sobre una cara. Mira la clave `caras` de
    `05_calendario/visuales/diagnostico.json`: si no empieza por `ok`, es **INCIDENCIA**. Y la hoja
    de contactos lo dice en rojo si falta el detector. **La pregunta 3 de la hoja sigue siendo a
    ojo**: el detector no ve caras desenfocadas o medio tapadas por una mano, que era el caso de

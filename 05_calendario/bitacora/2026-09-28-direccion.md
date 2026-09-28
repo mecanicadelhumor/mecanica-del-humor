@@ -42,17 +42,20 @@ Los tres casi ceros de los últimos diez: `MDS-017` (0, resubido), `MDS-023` (2,
 
 ## 4. Lo que se hizo
 
-**Código y workflows** (subido por la dirección, autorizado en la sesión):
+**Código** (subido por la dirección, autorizado en la sesión). **Los workflows no**: el token no
+tiene permiso para escribirlos y GitHub rechazó el primer `push` («refusing to allow a Personal
+Access Token to create or update workflow … without `workflow` scope»). Van al codirector en
+`00_estrategia/tareas/workflows_2026-09-28/` (fuera de git), tarea 1:
 
 - `04_agentes/entregar.py` (nuevo, C53): la entrega de las tareas. Dos mitades: la tarea sube lo
   suyo a `claude/entrega-<tarea>-<fecha>`; el workflow lo aplica en `main` con la copia de `main`
   del script, mezcla a tres bandas, validación de guiones y lista de lo que se quedó fuera.
-- `.github/workflows/entregas.yml` (nuevo, C53).
-- `.github/workflows/visuales.yml`: `opencv-python-headless<5`; el `push` solo en `main`.
-- `.github/workflows/vista.yml`: el `push` solo en `main`.
-- `.github/workflows/metricas.yml`: intentos nuevos el lunes a las 11:07 y el martes a las 05:19 UTC.
-- `requirements.txt`: `opencv-python-headless<5`.
-- `03_produccion/pipeline/visual.py`: `detector_caras()` con estado visible en `diagnostico.json`
+- *(para el codirector)* `entregas.yml` (nuevo, C53); `visuales.yml` y `vista.yml`, el `push` solo
+  en `main`; `metricas.yml`, intentos nuevos el lunes a las 11:07 y el martes a las 05:19 UTC.
+- `03_produccion/modelos/face_detection_yunet_2023mar.onnx` (+ licencia MIT) y `.gitattributes`
+  (`*.onnx binary`).
+- `03_produccion/pipeline/visual.py`: detector de caras YuNet (funciona con OpenCV 5 y 4), Haar de
+  respaldo, y `detector_caras()` con estado visible en `diagnostico.json`
   (`caras`), en el manifiesto (`detector_caras`) y en la hoja de contactos; la falsa alarma diaria
   de `cloudflare_token_de_cuenta` pasa a «no aplica» cuando el token de usuario está bien.
 - `04_agentes/explorador_de_demanda.py`: radar de actualidad (C52) en `demanda_bruta.json` →
@@ -87,9 +90,11 @@ las 12:30 UTC y deja de decir que pruebe el puente de dispositivos.
 - **El proxy de la nube**, con un `push --dry-run` real desde el contenedor: rechazado porque el
   repositorio no está entre los de la sesión (trampa 45). Lo que no se ha podido probar: que con el
   repositorio añadido a la tarea el `push` de una rama `claude/` pasa. Se verá en la primera entrega.
-- **`visual.py`** con OpenCV 4.14 (monta) y 5.0 (dice «SIN DETECTOR» y la razón). Sobre el
-  fotograma de `MDS-026` escena 1, el detector no ve la cara (desenfocada y tapada por una mano): lo
-  dice el plan, la pregunta 3 de la hoja sigue siendo a ojo.
+- **`visual.py`** con OpenCV 5.0 y 4.14: YuNet monta en las dos y da el mismo resultado sobre las
+  quince fotos del banco (28 caras; Haar veía 21, con falsos positivos, y ninguna en el grupo). Sin
+  el modelo: la 4.14 cae a Haar y lo dice; la 5.0 dice «SIN DETECTOR» y por qué. Sobre el fotograma
+  de `MDS-026` escena 1 ninguno ve la cara (desenfocada y tapada por una mano): la pregunta 3 de la
+  hoja sigue siendo a ojo.
 - **El radar de actualidad**, con datos sintéticos (el contenedor no llega a Google Trends ni a
   Wikimedia; Actions sí). Cada fuente falla por su lado sin tumbar la medición.
 

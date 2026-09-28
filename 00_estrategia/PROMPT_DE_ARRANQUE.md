@@ -157,7 +157,7 @@ confundirlas:
 | `03_produccion/pipeline/visual.py` · `fondo_visual.py` | **De la dirección** (23/09, C50 en producción) | `visual.py`: resolver, traer, diagnóstico. `fondo_visual.py`: cortes y pista de fondo para `render.py`. **La revisión diaria no los toca sin encargo**; los planos se corrigen con `05_calendario/visuales/ajustes.json`, no con código |
 | `05_calendario/visuales/` | **Del workflow `visuales.yml`**, salvo `ajustes.json` (revisión diaria) y `APAGADO` (el codirector y yo) | Ver su `LEEME.md`. `APAGADO` es el interruptor de C50: si existe, todo sale como antes |
 | **Las tareas programadas entregan solas** (C53) | **Autorizado por el codirector el 28/09/2026** | Con `04_agentes/entregar.py` a ramas `claude/entrega-*` y el workflow `entregas.yml` a `main`. Sin credenciales en los prompts: necesitan el repositorio añadido a cada tarea en claude.ai/code/routines (tarea 1 del codirector del 28/09). Hasta entonces, plan B: el `.tar.gz` de siempre |
-| `.github/workflows/` · excepción del 28/09/2026 | **Autorizada por el codirector esa vez, y acotada** | Se cambiaron `visuales.yml` (OpenCV <5 y solo `main`), `vista.yml` (solo `main`), `metricas.yml` (dos intentos más) y `entregas.yml` (nuevo). **La regla sigue**: para el próximo cambio ahí, se pregunta |
+| `.github/workflows/` · excepción del 28/09/2026 | **Autorizada por el codirector esa vez, pero GitHub la rechazó**: el token no tiene permiso para workflows | `entregas.yml` (nuevo), `visuales.yml` y `vista.yml` (solo `main`) y `metricas.yml` (dos intentos más) se le entregaron en `00_estrategia/tareas/workflows_2026-09-28/`. **La regla sigue, y ahora además la sostiene el token** |
 | `04_agentes/entregar.py` · `.github/workflows/entregas.yml` | **De la dirección** (28/09, C53) | Son la tabla de `PROPIEDAD_DE_FICHEROS.md` en código. Ninguna tarea los toca: `entregar.py` se excluye a sí mismo |
 | Regla 7.1 · la persona sintética | **Autorizada por el codirector el 23/09/2026**, escrita el 28/09 | Sí a Kaggle, con las cinco condiciones de `REGLAS.md` 7.1. No entra sin muestrario (C51.2) |
 
@@ -591,7 +591,8 @@ devolviendo `[]`: «no hay caras». Del 24 al 28/09, **ni una cara en 51 planos 
 un aviso, y el 28 salió `MDS-026` con el texto encima de una cara.
 → **Un detector que no está no dice «no hay»: dice «no lo sé», y lo dice donde se lee** (desde el
 28/09, `diagnostico.json`, el manifiesto y la hoja de contactos). Y una dependencia sin versión
-fijada es un cambio que entra solo un día cualquiera: fíjala por debajo de la siguiente mayor.
+fijada es un cambio que entra solo un día cualquiera: o se fija, o se usa lo que sobrevive a la
+siguiente versión (desde el 28/09 el detector es YuNet, que la 5 sí trae).
 
 **43. Un cron de GitHub puede llegar con seis horas de retraso, o no llegar.** El lunes 28, a las
 10:57 UTC, «Leer métricas» no había corrido ninguno de sus dos intentos (05:19 y 08:37): no habían
@@ -627,10 +628,11 @@ una escritura de verdad, desde el mismo sitio desde donde va a correr.**
   ceros en diez; dos son las dos únicas resubidas (C54).
 - **Viabilidad:** viable hasta el 15/11; lo más probable, la banda del medio (ampliar el tema con
   prórroga hasta el 10/01). La puerta de los 1.000 sigue sin decidir (antes del 8/11).
-- **C53 · las tareas entregan solas** con `entregar.py` y el workflow «Entregas». Falta que el
-  codirector añada el repositorio a las tres tareas (su tarea 1 del 28/09); hasta entonces, plan B.
+- **C53 · las tareas entregan solas** con `entregar.py` y el workflow «Entregas». Falta la tarea 1
+  del codirector del 28/09: añadir el repositorio a las tres tareas y mover cuatro workflows (el
+  token no puede escribirlos). Hasta entonces, plan B: el `.tar.gz` de siempre.
 - **C52 · actualidad**, fase 1: un Short de cada cinco, como mucho, con gancho de actualidad, desde
-  la planificación del jueves 1/10. **C50.7:** caras otra vez detectadas (OpenCV <5). **C54:** no se
+  la planificación del jueves 1/10. **C50.7:** caras otra vez detectadas (YuNet). **C54:** no se
   resube nunca. **C48.2:** criterio de la lectura en frío ratificado. **C51.2:** regla 7.1, sí a
   la persona sintética con condiciones; Kaggle cuando el codirector pueda. **C44 aplazado.**
 - **El codirector no está esta semana.** No se le pide nada más que la tarea 1 (cinco minutos).

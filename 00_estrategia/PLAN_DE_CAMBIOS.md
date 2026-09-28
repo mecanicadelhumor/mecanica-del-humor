@@ -4677,8 +4677,11 @@ empezar a hacerlo.»* Las otras cuatro:
 Y en la sesión, tres respuestas del codirector con el selector de preguntas: que **lo de hoy lo
 suba la dirección** para que llegue a los vídeos sin que él tenga que hacer nada; que **las tareas
 programadas entreguen solas**, con una comprobación previa de que solo tocan lo suyo; y que **esta
-vez la dirección suba también los cambios de `.github/workflows/`** que hacen falta (fijar OpenCV en
-`visuales.yml`, un intento más en `metricas.yml` y el workflow nuevo «Entregas»).
+vez la dirección suba también los cambios de `.github/workflows/`** que hacen falta (un workflow
+nuevo, «Entregas», y tres retoques). **Eso último no ha sido posible**: el token no tiene permiso
+para escribir workflows y GitHub lo rechazó. La protección de `.github/workflows/` se sostiene
+sola, y los cuatro ficheros van al codirector, en la misma tarea de cinco minutos que ya tenía que
+hacer (añadir el repositorio a las tareas).
 
 ---
 
@@ -4688,7 +4691,7 @@ vez la dirección suba también los cambios de `.github/workflows/`** que hacen 
 |---|---|
 | Entrega de las tareas programadas en `.tar.gz` que aplica el codirector | **SUSTITUIDA por C53**: cada tarea sube su trabajo a una rama `claude/entrega-*` y el workflow «Entregas (C53)» lo pasa a `main` con la tabla de propiedad comprobada en código. El `.tar.gz` queda **solo como plan B** |
 | `PROMPT_DE_ARRANQUE.md` · «Yo administro las cuentas y hago los commits» | **SE MANTIENE.** Lo de hoy lo subió la dirección, con autorización del codirector para esta sesión y desde un clon aparte (nunca git en su carpeta, trampa 40); él hace `pull` cuando vuelva. Si eso pasa a ser costumbre, lo decide y lo escribe él |
-| `.github/workflows/` protegida siempre, también para la dirección | **SE MANTIENE**, con la excepción de hoy, autorizada y acotada: `visuales.yml`, `vista.yml`, `metricas.yml` y `entregas.yml` (nuevo). La próxima vez se vuelve a preguntar |
+| `.github/workflows/` protegida siempre, también para la dirección | **SE MANTIENE.** El codirector autorizó hoy una excepción, pero GitHub la rechazó (el token no tiene permiso para workflows): `entregas.yml` (nuevo), `visuales.yml`, `vista.yml` y `metricas.yml` se le entregan en `00_estrategia/tareas/workflows_2026-09-28/` y los mueve él |
 | C44 · la voz, capas A y B «el lunes 28» | **APLAZADA** hasta que el codirector pueda escuchar una muestra. Razón abajo |
 | C51.1 · «primero el Engranaje que habla, muestrario el viernes 25» | **ANULADA por el codirector** (respuesta a la tarea 3.5 del 23/09): *«el engranaje no tiene la suficiente definición ni el suficiente carisma»*. Sí a Kaggle y sí a cambiar la regla 7 con las condiciones propuestas. Ver C51.2 |
 | Regla 7 de `REGLAS.md` · «nada de fingir que hay una persona» | **SE AMPLÍA** con la 7.1: la persona sintética, con cinco condiciones (decisión del codirector del 23/09, escrita hoy) |
@@ -4908,8 +4911,12 @@ falló a los siete segundos, y la semana se planificó el viernes 25. Desde hoy 
 viernes y el sábado, si la semana siguiente ya está en `parrilla.json` o hay una entrega suya
 esperando, termina sin hacer nada.
 
-**Lo único que hace falta del codirector, una vez:** añadir el repositorio a las tres tareas.
-`tareas/tareas_codirector_2026-09-28.md`, tarea 1. Antes del jueves 1 a las 22:00.
+**Lo único que hace falta del codirector, una vez:** añadir el repositorio a las tres tareas y
+mover a `.github/workflows/` los cuatro ficheros de `00_estrategia/tareas/workflows_2026-09-28/`
+(«Entregas» es nuevo; `visuales.yml` y `vista.yml` pasan a correr solo en `main`, para no escribir
+en las ramas de entrega; `metricas.yml` gana dos intentos). Las dos cosas van juntas: sin
+«Entregas», una rama subida no llega a `main`. `tareas/tareas_codirector_2026-09-28.md`, tarea 1.
+Antes del jueves 1 a las 22:00. Hasta entonces, las tareas entregan el `.tar.gz` de siempre.
 
 ---
 
@@ -4920,8 +4927,11 @@ Del 24 al 28 de septiembre **ni una cara detectada en 51 planos de siete Shorts*
 arreglo del 25/09 convirtió ese fallo en «no hay caras» sin decirlo. El 28 salió `MDS-026` con la
 banda de texto encima de la cara de una mujer. Es la trampa 41 otra vez (trampa 42).
 
-- **`visuales.yml` y `requirements.txt` fijan `opencv-python-headless<5`.** Comprobado en el
-  contenedor: con la 4.14 el detector monta; con la 5.0, no.
+- **El detector pasa a ser YuNet**, una red de 232 KB con licencia MIT (del *opencv_zoo*) que OpenCV
+  trae de serie desde la 4.5.4 **y también en la 5**; el modelo va en `03_produccion/modelos/` con su
+  licencia al lado. No hace falta tocar ningún workflow. Medido en el contenedor sobre las quince
+  fotos de `02_marca/banco/`, con OpenCV 5.0 y con la 4.14, mismo resultado: ve caras en las quince
+  (cuatro en «grupo mirando el móvil», donde Haar no veía ninguna). Haar se queda de respaldo.
 - **`visual.py` dice lo que pasa:** `detector_caras()` deja su estado en `diagnostico.json` (clave
   `caras`), en cada manifiesto (`detector_caras`) y, si no hay detector, un aviso en rojo en la hoja
   de contactos: *«SIN DETECTOR DE CARAS — mirar a ojo»*.
@@ -5025,8 +5035,8 @@ no vuelve a pasar: C53.
 
 | Cuándo | Qué |
 |---|---|
-| **Hoy, 28/09** | Todo lo de arriba, empujado por la dirección. «Visuales» vuelve a elegir `MDS-028` a `030` con el detector de caras. `MDS-026` sale a las 19:00 como está |
-| Martes 29 – viernes 2 | `MDS-027` a `MDS-030`. La revisión diaria entrega sola **si** el repositorio ya está añadido a su tarea; si no, plan B |
+| **Hoy, 28/09** | Todo lo de arriba menos los workflows, subido por la dirección. «Visuales» vuelve a elegir `MDS-028` a `030` con el detector de caras. `MDS-026` sale a las 19:00 como está |
+| Martes 29 – viernes 2 | `MDS-027` a `MDS-030`. La revisión diaria entrega sola **si** el codirector ya hizo su tarea 1; si no, plan B |
 | **Jueves 1, 22:00** | Primera planificación con C53 (entrega sola), C52 fase 1 y C48.2. Si falla, se reintenta el viernes y el sábado |
 | Lunes 5 | Métricas a las 12:30 UTC, después de tres intentos del workflow. Sesión de dirección: primera semana entera con C50; S3; muestra de C44 |
 | Antes del 8/11 | La puerta de los 1.000 (C26) |
