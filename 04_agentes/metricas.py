@@ -672,6 +672,31 @@ def main():
             previo = json.loads(SALIDA.read_text(encoding="utf-8"))
         except Exception:
             pass
+
+    # 28/09/2026: el script puede correr más de una vez el mismo día — a mano
+    # y luego la programada, con retraso — y un reintento puede devolver una
+    # retención o un tráfico vacíos aunque la pasada anterior de hoy sí los
+    # trajera (la API los da vacíos a veces, no es que el vídeo se haya
+    # quedado sin visitas). Si un campo pasaría de tener datos a no tenerlos
+    # al sustituir la lectura de hoy, se conserva el de la lectura anterior
+    # de hoy para ese campo y se anota, para no machacar una lectura buena
+    # con una peor — protege la serie de la que sale la mediana de C26.
+    anteriores_hoy = {l.get("id"): l for l in previo.get("lecturas", [])
+                       if l.get("leido") == hoy.isoformat()}
+    for nueva in lecturas:
+        ant = anteriores_hoy.get(nueva.get("id"))
+        if not ant:
+            continue
+        if (nueva.get("retencion", {}).get("puntos") == 0
+                and ant.get("retencion", {}).get("puntos", 0) > 0):
+            print(f"  {nueva['id']}: retención vacía en esta pasada; se conserva la de la "
+                  f"lectura anterior de hoy ({ant['retencion']['puntos']} puntos).")
+            nueva["retencion"] = ant["retencion"]
+        if not nueva.get("trafico_pct") and ant.get("trafico_pct"):
+            print(f"  {nueva['id']}: tráfico vacío en esta pasada; se conserva el de la "
+                  f"lectura anterior de hoy.")
+            nueva["trafico_pct"] = ant["trafico_pct"]
+
     # Se AÑADE, nunca se reescribe: la serie histórica es lo que permite ver si
     # un cambio funcionó. Una lectura del mismo día para el mismo vídeo se
     # sustituye, para que relanzar el script no duplique.

@@ -8,8 +8,15 @@
  },
  "MDS-028": {
   "2.1": {
-   "excluir": ["pexels:5798406"],
-   "busqueda": ["elderly people laughing together in class", "seniors laughing in community workshop room", "retirees laughing in group class indoors"]
+   "fuente": "ia"
+  }
+ },
+ "MDS-029": {
+  "1.2": {
+   "fuente": "ia"
+  },
+  "3.2": {
+   "fuente": "ia"
   }
  }
 }
