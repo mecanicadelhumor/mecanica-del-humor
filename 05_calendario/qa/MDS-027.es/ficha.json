@@ -1,0 +1,208 @@
+{
+  "id": "MDS-027.es",
+  "duracion_final_s": 43.3,
+  "tamano_mb": 22.6,
+  "audio": {
+    "lufs": -14.19,
+    "pico_dbtp": -1.38,
+    "rango_lu": 4.2
+  },
+  "silencio_inicial": {
+    "empieza_s": -0.17,
+    "acaba_s": 0.758,
+    "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
+  },
+  "arranque": {
+    "silencios_s": [
+      [
+        -0.085,
+        0.758
+      ]
+    ],
+    "fragmento_antes_de_la_narracion": false,
+    "duracion_fragmento_s": null,
+    "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente)."
+  },
+  "fragmentos": {
+    "instantes": [],
+    "cuantos": 0,
+    "_nota": "Cada entrada es un trozo de audio de menos de 0.45 s rodeado de silencio: casi seguro una sílaba suelta que el sintetizador ha metido al empezar una escena. «mmss» es el minuto exacto para ir a escucharlo. Debe estar vacío."
+  },
+  "subtitulos": {
+    "ass_existe": true,
+    "lineas_ass": 0,
+    "srt_existe": true,
+    "quemados": false,
+    "quemados_origen": "leído de montaje.json",
+    "_esperado": {
+      "quemados": false,
+      "lineas_ass": "> 0 con motor edge; puede ser 0 con motor gemini"
+    },
+    "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
+  },
+  "sincronia_voz": {
+    "duracion_calculada_s": 41.99,
+    "duracion_real_voz_mp3_s": 41.71,
+    "desfase_s": 0.28,
+    "_esperado": "desfase_s < 0.5",
+    "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
+  },
+  "musica": {
+    "archivo": "cama_13_embrace_sappheiros.mp3",
+    "sha256": "2ed7b5338cc93932605464610b53237ee1de9fa4e93ac7a88946455443350d43"
+  },
+  "guion": {
+    "titulo_trabajo": "¿Por qué hay gente que no pilla los chistes?",
+    "idioma": "es",
+    "voz": "Charon",
+    "escenas": 6,
+    "duracion_narracion_s": 41.99,
+    "escenas_por_encima_de_14s": [],
+    "escena_mas_larga_s": 8.936,
+    "motor_voz_pedido": "gemini",
+    "motores_por_escena": {
+      "gemini-3.1-flash-tts-preview": 6
+    },
+    "modelo_voz": "gemini-3.1-flash-tts-preview",
+    "voz_mezclada": false,
+    "origen_voz": [
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada"
+    ],
+    "direccion_voz": [
+      "apertura",
+      "remate",
+      "planteamiento",
+      "contraste",
+      "enumeracion",
+      "objecion"
+    ],
+    "escenas_ritmo_fuera_de_rango": []
+  },
+  "visual": {
+    "planos": [
+      {
+        "escena": 1,
+        "desde_s": 0.0,
+        "hasta_s": 5.03,
+        "fuente": "pexels",
+        "id": 8936497,
+        "pagina": "https://www.pexels.com/video/man-wearing-face-mask-ordering-at-the-counter-8936497/",
+        "autor": "Thirdman",
+        "autor_url": "https://www.pexels.com/@thirdman",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 1,
+        "desde_s": 5.03,
+        "hasta_s": 7.93,
+        "fuente": "pexels",
+        "id": 5757790,
+        "pagina": "https://www.pexels.com/video/two-loafs-of-brown-bread-5757790/",
+        "autor": "Anna Bondarenko",
+        "autor_url": "https://www.pexels.com/@aaa333",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 7.93,
+        "hasta_s": 12.03,
+        "fuente": "pexels",
+        "id": 36825699,
+        "pagina": "https://www.pexels.com/video/slicing-artisan-sourdough-bread-on-wooden-board-36825699/",
+        "autor": "Max Griss",
+        "autor_url": "https://www.pexels.com/@max-griss-16866522",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 3,
+        "desde_s": 12.03,
+        "hasta_s": 14.83,
+        "fuente": "pexels",
+        "id": 18940146,
+        "pagina": "https://www.pexels.com/video/a-man-sitting-at-a-table-with-other-people-18940146/",
+        "autor": "Kuiyibo Campos",
+        "autor_url": "https://www.pexels.com/@kuiyibo",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 3,
+        "desde_s": 14.83,
+        "hasta_s": 17.57,
+        "fuente": "pexels",
+        "id": 13326116,
+        "pagina": "https://www.pexels.com/video/a-man-having-coffee-and-a-sandwich-at-an-outdoor-cafe-13326116/",
+        "autor": "Mizuno K",
+        "autor_url": "https://www.pexels.com/@mizunokozuki",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 4,
+        "desde_s": 17.57,
+        "hasta_s": 23.13,
+        "fuente": "pexels",
+        "id": 6092328,
+        "pagina": "https://www.pexels.com/video/person-pouring-cocoa-powder-on-the-bowl-with-flour-6092328/",
+        "autor": "ROMAN ODINTSOV",
+        "autor_url": "https://www.pexels.com/@roman-odintsov",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 4,
+        "desde_s": 23.13,
+        "hasta_s": 26.23,
+        "fuente": "pexels",
+        "id": 15634418,
+        "pagina": "https://www.pexels.com/video/a-loaf-of-bread-sitting-on-a-cutting-board-next-to-a-fireplace-15634418/",
+        "autor": "hello aesthe",
+        "autor_url": "https://www.pexels.com/@helloaesthe",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 30.87,
+        "hasta_s": 33.07,
+        "fuente": "pexels",
+        "id": 13322578,
+        "pagina": "https://www.pexels.com/video/two-young-men-talking-and-laughing-at-home-13322578/",
+        "autor": "Mizuno K",
+        "autor_url": "https://www.pexels.com/@mizunokozuki",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 6,
+        "desde_s": 33.07,
+        "hasta_s": 40.27,
+        "fuente": "pixabay",
+        "id": 1112,
+        "pagina": "https://pixabay.com/videos/id-1112/",
+        "autor": "DistillVideos",
+        "autor_url": "https://pixabay.com/users/DistillVideos-1280814/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      }
+    ],
+    "sintetico": false
+  },
+  "fotogramas_s": [
+    5.35,
+    10.99,
+    15.95,
+    23.36,
+    30.92,
+    39.02
+  ],
+  "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
+}

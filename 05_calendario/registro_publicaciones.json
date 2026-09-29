@@ -526,6 +526,21 @@
       "musica": "cama_12_lights_sappheiros.mp3",
       "subido_utc": "2026-09-28T07:01:03Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-027.es",
+      "episodio": "MDS-027",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué hay gente que no pilla los chistes? La palabra con dos significados",
+      "guion": "05_calendario/guiones/MDS-027.es.json",
+      "video_id": "qlvJWEGc8hM",
+      "url": "https://youtu.be/qlvJWEGc8hM",
+      "estado": "private",
+      "publicar_en": "2026-09-29T17:00:00Z",
+      "musica": "cama_13_embrace_sappheiros.mp3",
+      "subido_utc": "2026-09-29T07:03:23Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-09-28T17:03:20Z"
