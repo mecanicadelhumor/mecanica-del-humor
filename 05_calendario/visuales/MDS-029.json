@@ -1,8 +1,8 @@
 {
   "guion": "MDS-029",
   "version": 1,
-  "firma": "00168b8822f39711",
-  "resuelto_utc": "2026-09-28T12:09:53Z",
+  "firma": "91800413551f2d29",
+  "resuelto_utc": "2026-09-29T16:01:58Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -47,34 +47,16 @@
             11.49
           ],
           "frase": "y un buzón. Dos pies posibles: «esperando al cartero», o «facturas».",
-          "fuente": "pexels",
-          "id": 38556219,
-          "pagina": "https://www.pexels.com/video/elderly-man-walking-on-empty-rural-road-38556219/",
-          "titulo": "elderly man walking on empty rural road",
-          "autor": "Gönüldenbirkare",
-          "autor_url": "https://www.pexels.com/@gonuldenbirkare-2148244190",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 43.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/38556219/16376625_1080_1920_25fps.mp4",
-          "tipo": "video",
-          "consulta": "old mailbox on a post empty road",
-          "relevancia": 0.6,
-          "inicio_s": 0.4,
-          "movimiento": 4.13,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
-          "caras": [
-            [
-              0.2833,
-              0.2891,
-              0.0694,
-              0.0641
-            ]
-          ]
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "an old metal mailbox on a wooden post standing alone in sand by the sea",
+          "semilla": 1405285,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-029/e1_p2.jpg",
+          "caras": []
         }
       ]
     },
@@ -156,26 +138,15 @@
             9.26
           ],
           "frase": "pusieron a las máquinas a hacer esto mismo con los pies de foto del New Yorker.",
-          "fuente": "pexels",
-          "id": 7846332,
-          "pagina": "https://www.pexels.com/video/a-woman-inside-a-dark-room-with-flashing-lights-7846332/",
-          "titulo": "a woman inside a dark room with flashing lights",
-          "autor": "cottonbro studio",
-          "autor_url": "https://www.pexels.com/@cottonbro",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 36.0,
-          "ancho": 1080,
-          "alto": 2048,
-          "url": "https://videos.pexels.com/video-files/7846332/7846332-hd_1080_2048_25fps.mp4",
-          "tipo": "video",
-          "consulta": "server room racks blue lights",
-          "relevancia": 0.4,
-          "inicio_s": 0.4,
-          "movimiento": 1.41,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a narrow data centre corridor with server racks and blue indicator lights",
+          "semilla": 792672,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-029/e3_p2.jpg",
           "caras": []
         }
       ]
@@ -281,15 +252,7 @@
       ]
     }
   },
-  "descartes": [
-    {
-      "escena": 3,
-      "plano": 2,
-      "id": "pexels:39625195",
-      "titulo": "abstract blue light in dark room",
-      "motivo": "quieto (movimiento 0.15)"
-    }
-  ],
+  "descartes": [],
   "errores_ia": [],
   "incompleto": false
 }

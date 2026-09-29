@@ -1,8 +1,8 @@
 {
   "guion": "MDS-028",
   "version": 1,
-  "firma": "a0126a65e39206bd",
-  "resuelto_utc": "2026-09-28T12:09:36Z",
+  "firma": "20b1ab1d167c139a",
+  "resuelto_utc": "2026-09-29T16:00:55Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -90,32 +90,51 @@
             7.0
           ],
           "frase": "Pues a tu cuñado le interesa: a dieciocho jubilados les dieron ocho clases de humor,",
-          "fuente": "pexels",
-          "id": 8156462,
-          "pagina": "https://www.pexels.com/video/two-people-dancing-together-8156462/",
-          "titulo": "two people dancing together",
-          "autor": "Alena Darmel",
-          "autor_url": "https://www.pexels.com/@a-darmel",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 10.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/8156462/8156462-hd_1080_1920_25fps.mp4",
-          "tipo": "video",
-          "consulta": "elderly people laughing together in class",
-          "relevancia": 0.4,
-          "inicio_s": 0.0,
-          "movimiento": 25.02,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a group of older adults sitting in a circle of chairs in a bright community centre room, one of them laughing",
+          "semilla": 12923733,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-028/e2_p1.jpg",
           "caras": [
             [
-              0.0556,
-              0.1828,
-              0.3083,
-              0.25
+              0.8503,
+              0.4485,
+              0.0638,
+              0.0574
+            ],
+            [
+              0.112,
+              0.4404,
+              0.0586,
+              0.0566
+            ],
+            [
+              0.1901,
+              0.4301,
+              0.0534,
+              0.0463
+            ],
+            [
+              0.7695,
+              0.4265,
+              0.0495,
+              0.0434
+            ],
+            [
+              0.5964,
+              0.4029,
+              0.0508,
+              0.0404
+            ],
+            [
+              0.3607,
+              0.414,
+              0.0391,
+              0.0316
             ]
           ]
         },
