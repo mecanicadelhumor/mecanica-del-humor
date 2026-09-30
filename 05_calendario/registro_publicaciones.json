@@ -541,6 +541,21 @@
       "musica": "cama_13_embrace_sappheiros.mp3",
       "subido_utc": "2026-09-29T07:03:23Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-028.es",
+      "episodio": "MDS-028",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Se puede aprender a ser gracioso? Ocho clases, dieciocho jubilados y una nota que se ponían ellos",
+      "guion": "05_calendario/guiones/MDS-028.es.json",
+      "video_id": "U1UDw-UP3bM",
+      "url": "https://youtu.be/U1UDw-UP3bM",
+      "estado": "private",
+      "publicar_en": "2026-09-30T17:00:00Z",
+      "musica": "cama_14_alone_two_days_ago_artificial_music.mp3",
+      "subido_utc": "2026-09-30T06:49:03Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-09-28T17:03:20Z"
