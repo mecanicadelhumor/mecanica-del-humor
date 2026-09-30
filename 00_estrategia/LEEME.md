@@ -10,7 +10,7 @@ análisis.
 |---|---|---|
 | **`REGLAS.md`** | Las restricciones que nadie puede saltarse: ética, rigor, coste cero, cómo se cambian las cosas | **Siempre, antes de tocar nada.** Es corto |
 | **`PROPIEDAD_DE_FICHEROS.md`** | Quién escribe qué. De obligado cumplimiento para toda tarea programada | Antes de escribir en cualquier sitio |
-| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 15, al final, manda sobre lo anterior**: las tareas pasan a ser rutinas de Code para poder entregar solas (C53.1) y el estudio de la animación a medida con Opus 5.5 (C55). La 14 tiene el punto de control del 27/09 con datos | Al ir a hacer algo, y al decidir qué se hace antes |
+| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 16, al final, manda sobre lo anterior**: las rutinas de Code ya entregan solas (C53.1 y C53.2), el muestrario de la animación a medida (C55.1) y las licencias del presentador (C51.3). La 14 tiene el punto de control del 27/09 con datos | Al ir a hacer algo, y al decidir qué se hace antes |
 | **`PROMPT_DE_ARRANQUE.md`** | Cómo empezar una conversación nueva, autorizaciones vigentes, trampas conocidas y dónde está el proyecto hoy | Al abrir una conversación, y al cerrarla |
 | **`PROMPT_DIRECCIÓN.md`** | El cuaderno del codirector entre sesiones: lo que quiere comentar de un día para otro. **Suyo y solo suyo: se lee, no se edita ni se borra** | Al abrir una conversación de dirección |
 | **`TOKEN_DE_YOUTUBE.md`** | Cómo se saca el token de YouTube y por qué caducaba. Quince minutos, una vez | Si el canal deja de publicar, o al tocar los secretos |
@@ -82,6 +82,22 @@ Y fuera de esta carpeta, tres sitios que dicen dónde está el canal hoy:
    Tres Shorts seguidos pasaron todas las comprobaciones y no tenían hilo. Desde ese día, un guion
    no se produce sin que un lector que no lo ha escrito cuente de qué va (C48). Y la imagen pasa de
    diapositiva a vídeo (C50).
+
+## Estado a 30 de septiembre
+
+**El canal vuela solo por primera vez** (versión **16** del plan). Nada de lo que sale en los vídeos
+ha cambiado: es la segunda semana de la imagen real (C50) y se mide.
+
+- **Las rutinas de Code funcionan (C53.1).** La de métricas entregó sola a `main` a la primera; las
+  tres tareas de agosto están apagadas. Desde mañana la revisión diaria tampoco necesita paquetes.
+- **C53.2:** `entregar.py` mide contra `main` (ya no se le escapa un trabajo commiteado antes de
+  tiempo) y el workflow borra las ramas de sesión que ya están en `main`. **El botón «Crear PR» de una
+  ejecución de rutina no se pulsa nunca.**
+- **La animación a medida, vista (C55.1):** `MDS-027` entero, con su voz y su música, en
+  `07_pruebas/animacion-2026-10/`. Enseña el mecanismo mejor que el vídeo de archivo y tiene menos
+  estímulo visual. Decide el codirector; hay una propuesta nueva: animar solo las escenas que explican.
+- **El presentador (C51.3):** Kaggle listo; de siete modelos abiertos de sincronía labial, uno sirve
+  (MuseTalk, con un cambio). Prueba, no antes del 12/10.
 
 ## Estado a 29 de septiembre
 

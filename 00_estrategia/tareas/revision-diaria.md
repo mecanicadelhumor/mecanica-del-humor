@@ -1,8 +1,9 @@
 # Tarea programada · Revisión diaria — Mecánica del Humor
 
 **Copia legible del prompt que corre en el almacén de tareas programadas.**
-Espejo creado el 31/08/2026, reescrito el 04/09/2026, sincronizado el 07/09/2026 y **el 12/09/2026 (dirección del sábado)**. `id`: `trig_019QjtovuzeUocmx1P8NJH3F` · cron: `28 9 * * * (UTC) · todos los días 11:28 hora de España` ·
-modelo: `claude-sonnet-5`.
+Espejo creado el 31/08/2026, reescrito el 04/09/2026, sincronizado el 07/09/2026 y **el 12/09/2026 (dirección del sábado)**. **Desde el 30/09/2026 corre como rutina de Code** (C53.1): `id`: `trig_01K834hHyZ9ytxXXA3uP5y7Y` · todos los días a las
+11:28 hora de España (`28 9 * * *` UTC mientras dure el horario de verano) · modelo: `claude-sonnet-5-5` · repositorio
+añadido · entorno «Mecánica del Humor» (red completa). La tarea vieja (`trig_019QjtovuzeUocmx1P8NJH3F`) está apagada, no borrada.
 
 > ⚠️ **CORREGIDO EL 21/09/2026: este fichero YA NO es una copia. ES el prompt.**
 > Desde C30 (12/09/2026) el almacén de tareas programadas solo lleva un arranque de
@@ -33,6 +34,19 @@ manual— y con ella la posibilidad de pedir permisos; el registro de publicacio
 leerse como si fuera YouTube (el caso MDS-011); entran C28 y C29 en `validar_guion.py` y
 `escena.html`; y los dos prompts de guionista están reescritos. Versión **7** de
 `PLAN_DE_CAMBIOS.md`.
+
+**Qué cambia el 30/09 (dirección del miércoles, versión 16 del plan, C53.2). Corta, y va antes
+que la del 28/09:**
+
+- **Ya corres como rutina de Code, con el repositorio añadido.** `entregar.py` sube de verdad: el
+  plan B (`.tar.gz`) es solo para cuando el script sale con un código distinto de 0.
+- **Tu sesión tiene su propia rama de trabajo** (`claude/<nombre-al-azar>`) y la plataforma puede
+  pedirte que subas ahí tu trabajo. Hazlo si quieres, pero **la entrega es siempre `entregar.py`**,
+  y da igual si has hecho `git commit` antes o no: desde el 30/09 el script entrega todo lo que va
+  de `origin/main` a tu clon. **No abras nunca un pull request.**
+- **Una rama `claude/<nombre>` que no empieza por `claude/entrega-` es una rama de sesión, no una
+  entrega pendiente: no es incidencia.** «Entregas» borra las que ya están enteras en `main`. Solo
+  las `claude/entrega-*` vivas son `INCIDENCIA` (punto 2 de abajo).
 
 **Qué cambia el 28/09 (dirección del lunes, versión 14 del plan). Va antes que todo lo demás, y
 manda sobre lo que diga más abajo:**

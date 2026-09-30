@@ -45,6 +45,25 @@ LAS DOS MITADES
    no pisa: para y lo dice—, vuelve a validar los guiones, hace el commit con lo
    que se ha quedado fuera escrito en el mensaje, sube `main` y borra la rama.
 
+CAMBIO DEL 30/09/2026 (dirección, versión 16 del plan, C53.2)
+--------------------------------------------------------------
+La primera entrega de verdad (la rutina de métricas, 30/09) funcionó, y enseñó
+dos cosas de las rutinas de Code que no estaban previstas:
+
+- **Cada sesión tiene su propia rama de trabajo** (`claude/<nombre-al-azar>`) y
+  la plataforma le pide al modelo que suba ahí su trabajo. Si el modelo hace
+  `git commit` ANTES de llamar a este script, `git add -A` ya no encontraba nada
+  que entregar y el script decía «no hay nada que entregar» con código 0: el
+  trabajo se quedaba en la rama de la sesión y a `main` no llegaba nada, sin un
+  error (trampa 41). Desde hoy lo que se entrega se mide **contra `origin/main`**
+  (su base común con la sesión), no contra el último commit, así que da igual si
+  el modelo hizo commit antes o no.
+- **Esas ramas de sesión se quedan en GitHub** y la página de la sesión ofrece
+  «Create PR» sobre ellas. Nadie tiene que abrir nunca ese PR: saltaría la tabla
+  de propiedad. `--aplicar` borra al final las ramas de sesión cuyo contenido ya
+  está entero en `main`; las que traen algo que no está en `main` se quedan y se
+  dicen en el resumen de la ejecución, para que las mire la dirección.
+
 Lo que este script NO decide: si el trabajo está bien. Eso es de la tarea. Esto
 solo garantiza que cada uno sube lo suyo, encima de lo último, y sin pisar.
 """
@@ -254,21 +273,32 @@ def informe(titulo, vale, fuera):
 # 1 · La mitad de la tarea
 # ---------------------------------------------------------------------------
 
-def deshacer(ruta, estado):
-    """Vuelve a dejar un fichero como estaba en la base del clon."""
+def deshacer(ruta, estado, base="HEAD"):
+    """Vuelve a dejar un fichero como estaba en la base (lo último de main que
+    conoce la sesión), aunque la tarea ya lo hubiera metido en un commit."""
     if estado == "A":
         sh("git", "rm", "--cached", "-q", "-f", "--", ruta, check=False)
         (RAIZ / ruta).unlink(missing_ok=True)
     else:
-        sh("git", "restore", "--staged", "--worktree", "--source=HEAD", "--", ruta, check=False)
+        sh("git", "restore", "--staged", "--worktree", f"--source={base}", "--", ruta, check=False)
+
+
+def base_de_la_sesion():
+    """La base común entre lo que hay en el clon y `origin/main`. Si la tarea hizo
+    commit antes de entregar (la plataforma se lo pide), lo que hay que entregar
+    es todo lo que va de ahí a hoy, no solo lo que quedó sin commitear (C53.2)."""
+    sh("git", "fetch", "-q", "origin", f"+refs/heads/{RAMA}:refs/remotes/origin/{RAMA}", check=False)
+    r = sh("git", "merge-base", "HEAD", f"origin/{RAMA}", check=False)
+    return r.stdout.strip() if r.returncode == 0 and r.stdout.strip() else "HEAD"
 
 
 def entregar(tarea, mensaje, comprobar):
     ahora = datetime.now(timezone.utc)
+    base = base_de_la_sesion()
     sh("git", "add", "-A")
-    lista = estados_git("HEAD", indice=True)
+    lista = estados_git(base, indice=True)
     if not lista:
-        print("entregar.py: no hay nada que entregar.")
+        print("entregar.py: no hay nada que entregar (ni sin commitear ni en commits de la sesión).")
         return 0
     vale, fuera = clasificar(tarea, lista, ahora)
     malos = dict(validar_guiones([r for e, r, _ in vale if e != "D"]))
@@ -282,20 +312,24 @@ def entregar(tarea, mensaje, comprobar):
         return 0
 
     for estado, ruta, _ in fuera:
-        deshacer(ruta, estado)
+        deshacer(ruta, estado, base)
     sh("git", "add", "-A")
-    if sh("git", "diff", "--cached", "--quiet", check=False).returncode == 0:
+    if sh("git", "diff", "--cached", "--quiet", base, check=False).returncode == 0:
         print("entregar.py: después de quitar lo ajeno, no queda nada que subir.")
         return 0
-    if TOKEN_EN_TEXTO.search(sh("git", "diff", "--cached").stdout):
+    if TOKEN_EN_TEXTO.search(sh("git", "diff", "--cached", base).stdout):
         print("entregar.py: HAY UN TOKEN EN LO QUE IBA A SUBIR. No se ha subido nada. Quítalo del "
               "fichero y vuelve a entregar. El repositorio es público.")
         return 4
 
     mensaje = (mensaje or f"{tarea} {ahora.astimezone(MADRID):%Y-%m-%d}").replace("[producir]", "").strip()
-    sh("git", "-c", f"user.name=Mecánica del Humor ({tarea})",
-       "-c", "user.email=mecanicadelhumor@users.noreply.github.com",
-       "commit", "-q", "-m", mensaje)
+    if sh("git", "diff", "--cached", "--quiet", check=False).returncode != 0:
+        sh("git", "-c", f"user.name=Mecánica del Humor ({tarea})",
+           "-c", "user.email=mecanicadelhumor@users.noreply.github.com",
+           "commit", "-q", "-m", mensaje)
+    # (si no hay nada nuevo respecto al último commit, es que la tarea ya lo había
+    # commiteado todo y limpio: se sube tal cual; «Entregas» toma el título del
+    # último commit de la rama)
     rama = f"{PREFIJO}{tarea}-{ahora:%Y%m%d-%H%M}"
     r = sh("git", "push", "-q", "origin", f"HEAD:refs/heads/{rama}", check=False)
     if r.returncode != 0:
@@ -411,6 +445,57 @@ def aplicar(rama):
     return 0
 
 
+SESION = re.compile(r"claude/(?!entrega-)[\w./-]+")
+MARGEN_SESION = timedelta(hours=2)
+
+
+def limpiar_ramas_de_sesion():
+    """Borra las ramas de sesión de las rutinas (`claude/<nombre>`, nunca las de
+    entrega) cuyo contenido ya está entero en main y que llevan más de dos horas
+    quietas. Las que traen algo que no está en main se quedan y se dicen: son
+    trabajo que `entregar.py` dejó fuera o que nunca se entregó (C53.2). Nunca
+    falla la entrega: si algo sale mal aquí, se dice y se sigue."""
+    try:
+        r = sh("git", "ls-remote", "--heads", "origin", "refs/heads/claude/*", check=False)
+        ramas = [l.split("refs/heads/", 1)[1] for l in r.stdout.splitlines() if "refs/heads/" in l]
+        ramas = [x for x in ramas if SESION.fullmatch(x)]
+        if not ramas:
+            return
+        sh("git", "fetch", "-q", "origin", f"+refs/heads/{RAMA}:refs/remotes/origin/{RAMA}",
+           *[f"+refs/heads/{x}:refs/remotes/origin/{x}" for x in ramas], check=False)
+        ahora = datetime.now(timezone.utc)
+        borradas, quedan = [], []
+        for x in ramas:
+            ref = f"refs/remotes/origin/{x}"
+            ts = sh("git", "log", "-1", "--format=%ct", ref, check=False).stdout.strip()
+            if not ts or ahora - datetime.fromtimestamp(int(ts), timezone.utc) < MARGEN_SESION:
+                continue                                   # puede estar trabajando todavía
+            base = sh("git", "merge-base", f"origin/{RAMA}", ref, check=False).stdout.strip()
+            if not base:
+                quedan.append((x, "no comparte historia con main"))
+                continue
+            cambiadas = sh("git", "diff", "--name-only", "--no-renames", base, ref,
+                           check=False).stdout.split()
+            pendiente = sh("git", "diff", "--name-only", "--no-renames", f"origin/{RAMA}", ref,
+                           "--", *cambiadas, check=False).stdout.split() if cambiadas else []
+            if pendiente:
+                quedan.append((x, ", ".join(pendiente[:6]) + (" …" if len(pendiente) > 6 else "")))
+            elif sh("git", "push", "-q", "origin", "--delete", x, check=False).returncode == 0:
+                borradas.append(x)
+        if borradas or quedan:
+            texto = ["### Ramas de sesión de las rutinas (C53.2)"]
+            if borradas:
+                texto.append("Borradas porque todo lo suyo ya está en main: " +
+                             ", ".join(f"`{x}`" for x in borradas))
+            if quedan:
+                texto.append("**Se quedan, porque traen algo que no está en main** (nadie abre un PR "
+                             "con ellas: que las mire la dirección):")
+                texto += [f"- `{x}`: {q}" for x, q in quedan]
+            resumen_actions("\n\n".join(texto))
+    except Exception as e:                                  # nunca tumba la entrega
+        resumen_actions(f"(La limpieza de ramas de sesión ha fallado y se ha saltado: {e})")
+
+
 def main():
     ap = argparse.ArgumentParser(description="Entrega de una tarea programada (C53)")
     ap.add_argument("--tarea", choices=sorted(PROPIEDAD))
@@ -419,7 +504,9 @@ def main():
     ap.add_argument("--aplicar", metavar="RAMA", help="(workflow) pasa a main lo que es de la tarea")
     a = ap.parse_args()
     if a.aplicar:
-        return aplicar(a.aplicar)
+        codigo = aplicar(a.aplicar)
+        limpiar_ramas_de_sesion()
+        return codigo
     if not a.tarea:
         ap.error("falta --tarea")
     return entregar(a.tarea, a.mensaje, a.comprobar)

@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<title>MDS-027 · animación a medida (C55.1)</title>
+<!--
+  C55.1 · muestrario de animación a medida, escrito por la dirección (Opus 5.5) el 30/09/2026.
+  Mismo guion y misma voz (caché) que el MDS-027 publicado el 29/09. NO se sube a YouTube (C54).
+
+  Contrato, el mismo que escena.html: pintar(t) deja el lienzo EXACTAMENTE como
+  tiene que estar en el segundo t de la narración (t = 0 es el principio de la voz,
+  sin el colchón de montaje.py). Nada de Math.random(), nada de la hora del
+  sistema, nada de animaciones CSS: todo sale de t (regla 11.5). Sin red (11.6).
+  Los instantes de cada palabra salen de fondo_visual.mapa_de_tiempo() sobre la
+  voz real de cada escena (el mismo estimador que usa C50 para sus cortes).
+-->
+<style>
+:root{--fondo:#0B1220;--reti:#16213A;--tinta:#F2F4F8;--ambar:#FFB020;--cian:#4CC9F0;--coral:#EF476F;--tenue:#8A97AE;--panel:#121B2E}
+html,body{margin:0;padding:0;background:#05080f}
+#lienzo{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--fondo);
+  font-family:"Inter","DejaVu Sans",sans-serif;color:var(--tinta)}
+svg#dib{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.mono{font-family:"JetBrains Mono","DejaVu Sans Mono",monospace}
+.negra{font-family:"Archivo Black","Inter","DejaVu Sans",sans-serif}
+#cab{position:absolute;left:60px;top:64px;font-size:24px;letter-spacing:.2em;color:var(--tenue);font-weight:700}
+#prog{position:absolute;left:0;top:0;height:8px;width:0;background:var(--ambar)}
+.banda{position:absolute;left:70px;width:940px;top:1250px;font-weight:800;font-size:82px;line-height:1.1;
+  letter-spacing:-.015em;opacity:0}
+.banda .p{display:inline-block;white-space:pre;transform-origin:0 85%}
+.am{color:var(--ambar)}
+.banda .p.am{position:relative;z-index:1}
+.caja{position:absolute;font-weight:800;font-size:46px;line-height:1.15;opacity:0}
+.lista{position:absolute;left:70px;width:940px;top:1180px}
+.item{display:flex;align-items:flex-start;gap:26px;font-weight:800;font-size:62px;line-height:1.12;margin-bottom:34px;opacity:0}
+.num{flex:0 0 auto;font-size:30px;color:var(--cian);border:3px solid var(--cian);padding:6px 10px;margin-top:10px;font-weight:700}
+.sub{position:absolute;left:70px;width:940px;top:1520px;font-size:30px;color:var(--tenue);opacity:0}
+.eti{font-size:30px;fill:var(--cian);font-family:"JetBrains Mono","DejaVu Sans Mono",monospace;font-weight:700;letter-spacing:.06em}
+#eng{position:absolute;width:170px;height:170px;left:870px;top:150px;opacity:0}
+#eng svg{width:100%;height:100%}
+#velo{position:absolute;inset:0;background:var(--fondo);opacity:0}
+#firma{position:absolute;left:0;width:1080px;top:1170px;text-align:center;font-size:66px;opacity:0;letter-spacing:.01em}
+#firma small{display:block;font-size:28px;letter-spacing:.22em;color:var(--tenue);margin-top:18px;font-weight:700}
+</style></head>
+<body>
+<div id="lienzo">
+<svg id="dib" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="reti" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#16213A" stroke-width="2"/>
+    </pattern>
+    <radialGradient id="vi" cx="50%" cy="45%" r="75%">
+      <stop offset="60%" stop-color="#0B1220" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#04070d" stop-opacity=".85"/>
+    </radialGradient>
+    <clipPath id="c0"><rect x="600" y="780" width="72" height="140"/></clipPath>
+    <clipPath id="c1"><rect x="672" y="780" width="58" height="140"/></clipPath>
+    <clipPath id="c2"><rect x="730" y="780" width="58" height="140"/></clipPath>
+    <clipPath id="c3"><rect x="788" y="780" width="58" height="140"/></clipPath>
+    <clipPath id="c4"><rect x="846" y="780" width="80" height="140"/></clipPath>
+    <g id="hogaza">
+      <path d="M620 900 C620 820 670 800 760 800 C850 800 900 820 900 900 Z" fill="#1A2438" stroke="#F2F4F8" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M680 850 l28 -24 M740 846 l28 -24 M800 850 l28 -24" stroke="#8A97AE" stroke-width="5" stroke-linecap="round" fill="none"/>
+    </g>
+  </defs>
+  <rect id="fondo-reti" x="-60" y="-60" width="1200" height="2040" fill="url(#reti)"/>
+
+  <g id="cam">
+    <!-- ====== ESCENAS 1 y 2 · la cafetería ====== -->
+    <g id="cafe">
+      <text id="plano1" class="eti" x="70" y="300"></text>
+      <g id="gente" stroke="#8A97AE" stroke-width="4" fill="none" opacity="0">
+        <circle cx="120" cy="560" r="26"/><path d="M78 640 C78 596 162 596 162 640"/>
+        <circle cx="210" cy="570" r="26"/><path d="M168 650 C168 606 252 606 252 650"/>
+        <path d="M60 650 H270"/>
+        <circle cx="880" cy="560" r="26"/><path d="M838 640 C838 596 922 596 922 640"/>
+        <circle cx="970" cy="570" r="26"/><path d="M928 650 C928 606 1012 606 1012 650"/>
+        <path d="M820 650 H1040"/>
+      </g>
+      <g id="camarero">
+        <g id="cab-cam"><circle class="tr" cx="520" cy="640" r="54" fill="none" stroke="#F2F4F8" stroke-width="6"/></g>
+        <path class="tr" d="M420 900 C420 750 620 750 620 900" fill="none" stroke="#F2F4F8" stroke-width="6"/>
+        <path id="pajarita" d="M520 742 l-30 -16 v32 z M520 742 l30 -16 v32 z" fill="#4CC9F0" opacity="0"/>
+      </g>
+      <g id="maquina" fill="none" stroke="#F2F4F8" stroke-width="5" stroke-linejoin="round">
+        <path class="tr" d="M150 900 V735 H380 V900"/>
+        <path class="tr" d="M140 735 H390"/>
+        <path class="tr" d="M200 790 H330 M230 790 V830 M300 790 V830"/>
+        <path class="tr" d="M218 870 h26 v26 h-26 z"/>
+      </g>
+      <g id="vapor" fill="none" stroke="#8A97AE" stroke-width="4" stroke-linecap="round" opacity="0">
+        <path id="v1" d="M225 860 c-14 -20 14 -30 0 -52 c-14 -22 14 -32 0 -56"/>
+      </g>
+      <g id="barra-g" fill="none" stroke-linecap="round">
+        <path class="tr" d="M80 900 H1000" stroke="#F2F4F8" stroke-width="7"/>
+        <path class="tr" d="M120 900 V1120 H960 V900" stroke="#8A97AE" stroke-width="4"/>
+        <path class="tr" d="M330 912 V1108 M540 912 V1108 M750 912 V1108" stroke="#16213A" stroke-width="4"/>
+      </g>
+      <g id="pan">
+        <g id="rodajas">
+          <g id="r0" clip-path="url(#c0)"><use href="#hogaza"/></g>
+          <g id="r1" clip-path="url(#c1)"><use href="#hogaza"/></g>
+          <g id="r2" clip-path="url(#c2)"><use href="#hogaza"/></g>
+          <g id="r3" clip-path="url(#c3)"><use href="#hogaza"/></g>
+          <g id="r4" clip-path="url(#c4)"><use href="#hogaza"/></g>
+        </g>
+      </g>
+      <g id="cuchillo" opacity="0">
+        <path d="M-10 -250 L10 -250 L10 40 L-2 70 L-10 40 Z" fill="#DCE3EE" stroke="#F2F4F8" stroke-width="3"/>
+        <rect x="-16" y="-370" width="32" height="120" rx="8" fill="#8A97AE"/>
+      </g>
+      <g id="etis">
+        <path id="l-barra" d="M960 1120 l40 40" stroke="#4CC9F0" stroke-width="3" fill="none"/>
+        <text id="t-barra" class="eti" x="900" y="1195">barra</text>
+        <path id="l-cam" d="M574 610 l50 -40" stroke="#4CC9F0" stroke-width="3" fill="none"/>
+        <text id="t-cam" class="eti" x="630" y="566">camarero</text>
+        <path id="l-pan" d="M880 820 l40 -40" stroke="#4CC9F0" stroke-width="3" fill="none"/>
+        <text id="t-pan" class="eti" x="926" y="772">pan</text>
+      </g>
+    </g>
+
+    <!-- ====== ESCENA 3 · la mesa ====== -->
+    <g id="mesa" opacity="0">
+      <text id="plano3" class="eti" x="70" y="300"></text>
+      <g id="figs"></g>
+      <path id="mesa-tablero" class="tr" d="M110 1000 H970" stroke="#F2F4F8" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path id="mesa-patas" class="tr" d="M190 1000 V1130 M890 1000 V1130" stroke="#8A97AE" stroke-width="5" fill="none"/>
+      <g id="jas" class="mono" font-size="34" font-weight="700" fill="#8A97AE"></g>
+      <g id="bocadillo" opacity="0">
+        <path class="tr" d="M455 575 H625 Q645 575 645 595 V705 Q645 725 625 725 H575 L545 760 L548 725 H455 Q435 725 435 705 V595 Q435 575 455 575 Z"
+              fill="#0B1220" stroke="#F2F4F8" stroke-width="5"/>
+        <text id="interroga" class="negra" x="540" y="690" font-size="100" fill="#F2F4F8" text-anchor="middle" opacity="0">?</text>
+        <g id="mini-rodajas" opacity="0" fill="#1A2438" stroke="#F2F4F8" stroke-width="4">
+          <rect x="560" y="610" width="14" height="60" rx="5"/><rect x="580" y="610" width="14" height="60" rx="5"/><rect x="600" y="610" width="14" height="60" rx="5"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- ====== ESCENA 4 · los dos sentidos de «integral» ====== -->
+    <g id="dos" opacity="0">
+      <text id="plano4" class="eti" x="70" y="300"></text>
+      <g id="caracol" opacity="0" fill="none" stroke="#F2F4F8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M360 780 H650 Q700 780 712 730 L720 690" />
+        <circle cx="500" cy="690" r="86" fill="#1A2438"/>
+        <path d="M500 690 m-8 0 a8 8 0 1 1 16 0 a24 24 0 1 1 -40 6 a42 42 0 1 1 78 -12 a60 60 0 1 1 -110 18" stroke="#8A97AE" stroke-width="6"/>
+        <path d="M712 730 L722 640 M724 735 L752 650" stroke-width="6"/>
+        <circle cx="722" cy="634" r="9" fill="#F2F4F8"/><circle cx="754" cy="644" r="9" fill="#F2F4F8"/>
+        <path id="tachon" class="tr" d="M330 560 L790 860" stroke="#F2F4F8" stroke-width="12"/>
+      </g>
+      <g id="palabra" class="negra" font-size="150" fill="#F2F4F8" text-anchor="middle"></g>
+      <g id="via4">
+        <path id="v4-trav" d="M540 600 V700 C540 800 300 800 300 900 M540 700 C540 800 780 800 780 900"
+              fill="none" stroke="#8A97AE" stroke-width="30" stroke-dasharray="5 22" opacity="0"/>
+        <path id="v4-rail-i" class="tr" d="M540 600 V700 C540 800 300 800 300 900" fill="none" stroke="#F2F4F8" stroke-width="18"/>
+        <path id="v4-rail-i2" class="tr" d="M540 600 V700 C540 800 300 800 300 900" fill="none" stroke="#0B1220" stroke-width="9"/>
+        <path id="v4-rail-d" class="tr" d="M540 700 C540 800 780 800 780 900" fill="none" stroke="#F2F4F8" stroke-width="18"/>
+        <path id="v4-rail-d2" class="tr" d="M540 700 C540 800 780 800 780 900" fill="none" stroke="#0B1220" stroke-width="9"/>
+      </g>
+      <g id="harina" opacity="0" fill="none" stroke="#F2F4F8" stroke-width="5" stroke-linecap="round">
+        <path d="M230 930 H370 C370 990 330 1010 300 1010 C270 1010 230 990 230 930 Z" fill="#1A2438"/>
+        <path d="M252 930 C262 902 338 902 348 930" stroke="#DCE3EE" fill="#DCE3EE"/>
+        <path d="M200 1000 l-18 -14 M205 985 l-22 -2 M390 1000 l18 -14 M386 985 l22 -2" stroke="#8A97AE"/>
+      </g>
+      <g id="entera" opacity="0">
+        <path d="M690 1000 C690 940 725 925 780 925 C835 925 870 940 870 1000 Z" fill="#1A2438" stroke="#F2F4F8" stroke-width="5"/>
+        <path d="M735 968 l20 -18 M772 966 l20 -18 M809 968 l20 -18" stroke="#8A97AE" stroke-width="4" stroke-linecap="round"/>
+      </g>
+      <circle id="oyente4" r="22" fill="#F2F4F8" stroke="#0B1220" stroke-width="6" opacity="0"/>
+      <circle id="onda4" r="22" fill="none" stroke="#4CC9F0" stroke-width="4" opacity="0"/>
+    </g>
+
+    <!-- ====== ESCENA 5 · el salto ====== -->
+    <g id="salto" opacity="0">
+      <text id="plano5" class="eti" x="70" y="300"></text>
+      <g id="via5">
+        <path id="v5-trav" d="M90 560 H990 M90 820 H990 M470 560 L610 820" fill="none" stroke="#8A97AE" stroke-width="30" stroke-dasharray="5 22" opacity="0"/>
+        <path class="tr" id="v5-1" d="M90 560 H990" fill="none" stroke="#F2F4F8" stroke-width="18"/>
+        <path class="tr" id="v5-1b" d="M90 560 H990" fill="none" stroke="#0B1220" stroke-width="9"/>
+        <path class="tr" id="v5-2" d="M90 820 H990" fill="none" stroke="#F2F4F8" stroke-width="18"/>
+        <path class="tr" id="v5-2b" d="M90 820 H990" fill="none" stroke="#0B1220" stroke-width="9"/>
+        <path class="tr" id="v5-x" d="M470 560 L610 820" fill="none" stroke="#8A97AE" stroke-width="10" stroke-dasharray="18 12"/>
+      </g>
+      <g class="mono" font-size="34" font-weight="700" fill="#4CC9F0">
+        <text id="n1" x="40" y="572" opacity="0">1</text><text id="n2" x="40" y="832" opacity="0">2</text>
+      </g>
+      <g id="palanca" opacity="0" transform="translate(560 700)">
+        <rect x="-34" y="10" width="68" height="22" rx="6" fill="#8A97AE"/>
+        <g id="brazo"><path d="M0 20 V-60" stroke="#F2F4F8" stroke-width="8" stroke-linecap="round"/><circle cx="0" cy="-66" r="14" fill="#F2F4F8"/></g>
+      </g>
+      <g id="chispa" opacity="0" stroke="#F2F4F8" stroke-width="6" stroke-linecap="round"></g>
+      <circle id="puntoA" r="24" fill="#4CC9F0" opacity="0"/>
+      <circle id="puntoB" r="24" fill="#F2F4F8" stroke="#0B1220" stroke-width="6" opacity="0"/>
+      <text id="interroga5" class="negra" x="0" y="0" font-size="78" fill="#F2F4F8" text-anchor="middle" opacity="0">?</text>
+    </g>
+
+    <!-- ====== ESCENA 6 · el cierre ====== -->
+    <g id="cierre" opacity="0">
+      <text id="plano6" class="eti" x="70" y="300"></text>
+      <g id="bloques"></g>
+      <g id="fork6" opacity="1">
+        <path class="tr" id="f6-i" d="M0 0 V70 C0 120 -110 130 -110 190" fill="none" stroke="#4CC9F0" stroke-width="10" stroke-linecap="round"/>
+        <path class="tr" id="f6-d" d="M0 70 C0 120 110 130 110 190" fill="none" stroke="#4CC9F0" stroke-width="10" stroke-linecap="round"/>
+        <text id="f6-n1" class="eti" x="-122" y="236" opacity="0">1</text>
+        <text id="f6-n2" class="eti" x="98" y="236" opacity="0">2</text>
+        <circle id="duda6" r="18" fill="#F2F4F8" opacity="0"/>
+        <text id="coral6" class="negra" x="0" y="330" font-size="120" fill="#EF476F" text-anchor="middle" opacity="0">?</text>
+      </g>
+      <g id="lupa" opacity="0">
+        <circle r="74" fill="rgba(76,201,240,.08)" stroke="#F2F4F8" stroke-width="9"/>
+        <path d="M52 52 L118 118" stroke="#F2F4F8" stroke-width="18" stroke-linecap="round"/>
+      </g>
+    </g>
+  </g>
+  <rect x="0" y="0" width="1080" height="1920" fill="url(#vi)"/>
+  <rect id="barrido" x="0" y="0" width="6" height="1920" fill="#4CC9F0" opacity="0"/>
+</svg>
+
+<div id="cab" class="mono">MECÁNICA DEL HUMOR</div>
+<div id="prog"></div>
+
+<div class="banda" id="b1"></div>
+<div class="banda" id="b2"></div>
+<div class="banda" id="b3"></div>
+<div class="caja" id="ca" style="left:50px;top:1060px;width:470px"><span class="am">Integral</span>: de harina completa</div>
+<div class="caja" id="cb" style="left:580px;top:1060px;width:450px">Integral: entero, sin cortar</div>
+<div class="lista" id="lista5">
+  <div class="item" id="i1"><span class="num mono">01</span><span>Saltar de un significado al otro</span></div>
+  <div class="item" id="i2"><span class="num mono">02</span><span>Él se quedó en el <span class="am">primero</span></span></div>
+</div>
+<div class="banda" id="b6" style="top:1230px;font-size:86px"></div>
+<div class="sub mono" id="sub6">Fuente: Attardo, 1994, teoría del chiste</div>
+
+<div id="eng"><svg xmlns="http://www.w3.org/2000/svg" viewBox="10 10 180 180" class="mdh-cara ex-neutra" role="img" aria-label="Mecánica del Humor">
+  
+  <style>
+    .mdh-cara{--am:#FFB020;--ci:#4CC9F0;--te:#8A97AE;--ti:#F2F4F8}
+    .mdh-cara .chapa{fill:none;stroke:var(--am);stroke-width:3.2}
+    .mdh-cara .fino {fill:none;stroke:var(--te);stroke-width:1.6;opacity:.75}
+    .mdh-cara .lente{fill:none;stroke:var(--ci);stroke-width:3}
+    .mdh-cara .pupila{fill:var(--ci)}
+    .mdh-cara .biela{fill:var(--ti);transform-box:fill-box;transform-origin:center}
+    .mdh-cara .boca {fill:none;stroke:var(--ti);stroke-width:4.4;stroke-linecap:round;display:none}
+    .mdh-cara .remache{fill:var(--te);opacity:.8}
+    .mdh-cara .diente{stroke:var(--am);stroke-width:4;opacity:.9}
+    .mdh-cara .eje{fill:none;stroke:var(--am);stroke-width:2.6;opacity:.9;
+                   transform-box:fill-box;transform-origin:center}
+
+    /* --- expresiones: qué boca se ve y cómo giran las bielas --- */
+    .ex-media    .b-media   {display:block}
+    .ex-media    .ceja-i    {transform:translateY(-4px)}
+    .ex-media    .ceja-d    {transform:translateY(-4px)}
+
+    .ex-neutra   .b-recta   {display:block}
+    .ex-neutra   .ceja-i    {transform:rotate(0deg)}
+    .ex-neutra   .ceja-d    {transform:rotate(0deg)}
+
+    .ex-duda     .b-torcida {display:block}
+    .ex-duda     .ceja-i    {transform:translateY(-10px) rotate(-8deg)}
+    .ex-duda     .ceja-d    {transform:rotate(4deg)}
+
+    .ex-entiende .b-o       {display:block}
+    .ex-entiende .ceja-i    {transform:translateY(-9px)}
+    .ex-entiende .ceja-d    {transform:translateY(-9px)}
+
+    .ex-no       .b-plana   {display:block}
+    .ex-no       .ceja-i    {transform:translateY(6px)}
+    .ex-no       .ceja-d    {transform:translateY(6px)}
+
+    .ex-rie      .b-risa    {display:block}
+    .ex-rie      .ceja-i    {transform:rotate(-6deg) translateY(-6px)}
+    .ex-rie      .ceja-d    {transform:rotate(6deg) translateY(-6px)}
+
+    .ex-piensa   .b-torcida {display:block}
+    .ex-piensa   .ceja-i    {transform:translateY(-4px) rotate(-5deg)}
+    .ex-piensa   .ceja-d    {transform:translateY(2px) rotate(12deg)}
+    .ex-piensa   .eje       {transform:rotate(24deg)}
+  </style>
+
+  
+  <path class="chapa" d="M62 26 h76 l24 24 v76 l-24 24 h-76 l-24 -24 v-76 z"/>
+  <path class="fino"  d="M70 36 h60 l18 18 v60 l-18 18 h-60 l-18 -18 v-60 z"/>
+
+  
+  <circle class="remache" cx="62" cy="50"  r="3"/>
+  <circle class="remache" cx="138" cy="50"  r="3"/>
+  <circle class="remache" cx="62" cy="150" r="3"/>
+  <circle class="remache" cx="138" cy="150" r="3"/>
+
+  
+  <rect class="biela ceja-i" x="58"  y="73.5" width="30" height="5" rx="2.5"/>
+  <rect class="biela ceja-d" x="112" y="73.5" width="30" height="5" rx="2.5"/>
+
+  
+  <circle class="lente"  cx="74"  cy="98" r="13"/>
+  <circle class="pupila" cx="74"  cy="98" r="4.6"/>
+  <circle class="lente"  cx="126" cy="98" r="13"/>
+  <circle class="pupila" cx="126" cy="98" r="4.6"/>
+
+  
+  <path class="boca b-recta"   d="M79 133 H121"/>
+  <path class="boca b-plana"   d="M84 134 H116"/>
+  <path class="boca b-torcida" d="M78 136 Q100 128 122 133"/>
+  <path class="boca b-o"       d="M100 133 m-11 0 a11 9 0 1 0 22 0 a11 9 0 1 0 -22 0"/>
+  <path class="boca b-risa"    d="M76 127 Q100 149 124 127"/>
+  <path class="boca b-media"   d="M81 129 Q100 142 119 129"/>
+
+  
+  <g class="eje">
+    <circle cx="166" cy="56" r="11"/>
+    <g class="diente">
+      <line x1="166" y1="40" x2="166" y2="47"/>
+      <line x1="166" y1="65" x2="166" y2="72"/>
+      <line x1="150" y1="56" x2="157" y2="56"/>
+      <line x1="175" y1="56" x2="182" y2="56"/>
+      <line x1="155" y1="45" x2="160" y2="50"/>
+      <line x1="172" y1="62" x2="177" y2="67"/>
+    </g>
+  </g>
+</svg>
+</div>
+<div id="velo"></div>
+<div id="firma" class="negra">MECÁNICA DEL HUMOR<small class="mono">LA CIENCIA DEL HUMOR, DESMONTADA</small></div>
+</div>
+
+<script>
+const ESC = [[0, 7.924, [[0.29, "Estás"], [0.62, "en"], [0.76, "una"], [0.96, "cafetería"], [1.54, "con"], [1.74, "gente,"], [2.25, "miras"], [2.67, "la"], [2.86, "barra"], [3.28, "y"], [3.39, "le"], [3.57, "preguntas"], [4.31, "al"], [4.5, "camarero"], [5.16, "si"], [5.35, "el"], [5.53, "pan"], [5.8, "es"], [5.99, "integral."]]], [7.924, 4.104, [[8.24, "Y"], [8.34, "te"], [8.52, "contesta:"], [9.15, "«no,"], [9.81, "está"], [10.43, "cortado»."]]], [12.028, 5.538, [[12.29, "Y"], [12.38, "en"], [12.54, "la"], [12.69, "mesa"], [12.98, "hay"], [13.2, "quien"], [13.55, "pregunta,"], [14.1, "en"], [14.26, "serio,"], [14.96, "qué"], [15.2, "tiene"], [15.58, "que"], [15.82, "ver"], [16.06, "que"], [16.3, "esté"], [16.62, "cortado."]]], [17.566, 8.658, [[17.89, "No"], [18.03, "es"], [18.18, "que"], [18.39, "sea"], [18.6, "lento:"], [19.4, "«integral»"], [20.06, "significa"], [20.79, "dos"], [21.06, "cosas,"], [21.89, "de"], [22.08, "harina"], [22.59, "completa"], [23.26, "o"], [23.37, "entero,"], [24.33, "y"], [24.43, "se"], [24.59, "quedó"], [24.96, "en"], [25.13, "la"], [25.29, "primera."]]], [26.224, 6.834, [[26.48, "Un"], [26.65, "chiste"], [27.1, "te"], [27.27, "obliga"], [27.73, "a"], [27.82, "saltar"], [28.28, "de"], [28.45, "un"], [28.61, "significado"], [29.43, "al"], [29.6, "otro"], [29.91, "de"], [30.08, "golpe,"], [30.99, "y"], [31.19, "él"], [31.53, "no"], [31.87, "saltó."]]], [33.058, 8.936, [[33.33, "Esto"], [33.61, "vale"], [33.88, "para"], [34.16, "cualquier"], [34.75, "chiste:"], [35.45, "busca"], [35.84, "la"], [36.01, "palabra"], [36.55, "con"], [36.79, "dos"], [37.04, "significados."], [38.72, "Por"], [38.92, "qué"], [39.13, "a"], [39.21, "unos"], [39.48, "les"], [39.69, "cuesta"], [40.08, "saltar,"], [40.74, "no"], [41.03, "se"], [41.31, "sabe."]]]];
+
+// ---------------------------------------------------------------- utilidades
+const $ = id => document.getElementById(id);
+const cl = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const tramo = (t, a, b) => cl((t - a) / (b - a));
+const sal = x => 1 - Math.pow(1 - x, 3);                 // easeOutCubic
+const suave = x => x * x * (3 - 2 * x);
+const rebote = x => { x = cl(x); const c = 1.70158; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const mezcla = (a, b, p) => a + (b - a) * p;
+const INI = ESC.map(e => e[0]);
+const TOTAL = ESC[5][0] + ESC[5][1];
+// instante (s, línea de tiempo del vídeo) de la palabra que empieza por `pal` en la escena n (1..6)
+function W(n, pal, vez = 1) {
+  const norm = s => s.normalize("NFD").replace(/[^\p{L}\p{N}]/gu, "").toLowerCase();
+  let k = 0;
+  for (const [t, w] of ESC[n - 1][2]) if (norm(w) === norm(pal) && ++k === vez) return t;
+  throw new Error(`palabra «${pal}» no está en la escena ${n}`);
+}
+const LARGOS = new Map();
+function dibuja(el, p) {                                  // trazo que se dibuja solo
+  if (typeof el === "string") el = $(el);
+  let L = LARGOS.get(el);
+  if (L === undefined) { L = el.getTotalLength ? el.getTotalLength() : 1000; LARGOS.set(el, L); el.style.strokeDasharray = L + " " + L; }
+  el.style.strokeDashoffset = L * (1 - cl(p));
+}
+const op = (el, v) => ((typeof el === "string" ? $(el) : el).style.opacity = cl(v));
+const tf = (el, s) => ((typeof el === "string" ? $(el) : el).setAttribute("transform", s));
+function escribe(el, texto, p) { (typeof el === "string" ? $(el) : el).textContent = texto.slice(0, Math.round(texto.length * cl(p))); }
+
+// Una línea de texto grande que entra palabra a palabra con la voz.
+// partes: [[texto, instante, esAmbar], ...]
+function prepara_banda(id, partes) {
+  const b = $(id); b.innerHTML = "";
+  partes.forEach(([txt, , am]) => {
+    const s = document.createElement("span");
+    s.className = "p" + (am ? " am" : ""); s.textContent = txt; b.appendChild(s);
+  });
+  b._partes = partes;
+}
+function banda(id, t, fuera_a) {
+  const b = $(id);
+  const partes = b._partes;
+  const entra = partes[0][1] - 0.1;
+  let o = tramo(t, entra, entra + 0.15);
+  let dy = 0;
+  if (fuera_a !== undefined) { const f = tramo(t, fuera_a, fuera_a + 0.28); o *= 1 - f; dy = -60 * sal(f); }
+  b.style.opacity = o; b.style.transform = `translateY(${dy}px)`;
+  [...b.children].forEach((s, i) => {
+    const p = sal(tramo(t, partes[i][1] - 0.08, partes[i][1] + 0.22));
+    s.style.opacity = 0.0 + p;
+    s.style.transform = `translateY(${(1 - p) * 38}px) scale(${partes[i][2] ? mezcla(1.25, 1, rebote(tramo(t, partes[i][1] - 0.02, partes[i][1] + 0.4))) : 1})`;
+  });
+}
+// visibilidad de una escena con barrido entre medias
+function visible(g, t, a, b) {
+  const o = tramo(t, a - 0.05, a + 0.2) * (1 - tramo(t, b - 0.12, b + 0.08));
+  op(g, o);
+}
+
+// ---------------------------------------------------------------- cargar
+function cargar() {
+  // la palabra INTEGRAL, letra a letra
+  const g = $("palabra");
+  const letras = "INTEGRAL".split("");
+  const anchos = letras.map(() => 0);
+  letras.forEach(c => { const tx = document.createElementNS("http://www.w3.org/2000/svg", "text"); tx.textContent = c; g.appendChild(tx); });
+  let x = 0;
+  const w = [...g.children].map(e => e.getComputedTextLength());
+  const tot = w.reduce((a, b) => a + b, 0);
+  x = 540 - tot / 2;
+  [...g.children].forEach((e, i) => { e.setAttribute("x", x + w[i] / 2); e.setAttribute("y", 580); x += w[i]; });
+  // las cinco figuras de la mesa
+  const figs = $("figs"), jas = $("jas");
+  [200, 370, 540, 710, 880].forEach((cx, k) => {
+    const f = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    f.innerHTML = `<circle cx="${cx}" cy="835" r="50" fill="#0B1220" stroke="${k === 2 ? "#F2F4F8" : "#8A97AE"}" stroke-width="6"/>` +
+      `<path d="M${cx - 82} 1000 C${cx - 82} 900 ${cx + 82} 900 ${cx + 82} 1000" fill="#0B1220" stroke="${k === 2 ? "#F2F4F8" : "#8A97AE"}" stroke-width="6"/>` +
+      (k === 2 ? `<path d="M${cx - 18} 850 H${cx + 18}" stroke="#F2F4F8" stroke-width="6" stroke-linecap="round"/>`
+               : `<path d="M${cx - 20} 846 Q${cx} 870 ${cx + 20} 846" stroke="#8A97AE" stroke-width="6" fill="none" stroke-linecap="round"/>`);
+    f.id = "fig" + k; figs.appendChild(f);
+    if (k !== 2) for (let j = 0; j < 2; j++) {
+      const tx = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      tx.textContent = "ja"; tx.setAttribute("x", cx + (j ? 34 : -70)); tx.setAttribute("y", 760 - j * 40);
+      tx.id = `ja${k}${j}`; jas.appendChild(tx);
+    }
+  });
+  // los bloques de «cualquier chiste»
+  const bl = $("bloques");
+  const filas = [[150, 90, 210, 120, 160], [120, 180, 150, 110, 190], [200, 130, 170, 140], [110, 160, 230, 120]];
+  let n = 0;
+  filas.forEach((fila, r) => {
+    let x = 110;
+    fila.forEach((wd, c) => {
+      const re = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      re.setAttribute("x", x); re.setAttribute("y", 470 + r * 88); re.setAttribute("width", wd); re.setAttribute("height", 44);
+      re.setAttribute("rx", 12); re.setAttribute("fill", "#8A97AE"); re.id = `bq${r}_${c}`; re._n = n++; re._cx = x + wd / 2; re._cy = 470 + r * 88 + 22;
+      bl.appendChild(re); x += wd + 26;
+    });
+  });
+  // chispa del salto
+  const ch = $("chispa");
+  for (let k = 0; k < 8; k++) {
+    const a = k * Math.PI / 4, l = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    l.setAttribute("x1", Math.cos(a) * 40); l.setAttribute("y1", Math.sin(a) * 40);
+    l.setAttribute("x2", Math.cos(a) * 80); l.setAttribute("y2", Math.sin(a) * 80); ch.appendChild(l);
+  }
+  // las líneas de texto grandes, con la palabra en ámbar donde la marca el guion
+  prepara_banda("b1", [["—¿El ", W(1, "si")], ["pan ", W(1, "pan")], ["es ", W(1, "es")], ["integral", W(1, "integral"), true], ["?", W(1, "integral")]]);
+  prepara_banda("b2", [["—No, ", W(2, "no")], ["está ", W(2, "esta")], ["cortado", W(2, "cortado"), true], [".", W(2, "cortado")]]);
+  prepara_banda("b3", [["Y lo ", W(3, "pregunta")], ["pregunta ", W(3, "pregunta")], ["en serio", W(3, "en", 2), true]]);
+  prepara_banda("b6", [["Busca ", W(6, "busca")], ["la ", W(6, "la")], ["palabra ", W(6, "palabra")], ["con ", W(6, "con")], ["dos ", W(6, "dos")], ["significados", W(6, "significados"), true]]);
+  // el Engranaje de la firma (una copia del de las escenas, grande y en el centro)
+  const fg = $("eng").cloneNode(true); fg.id = "eng-firma"; $("lienzo").appendChild(fg);
+  return true;
+}
+
+// ---------------------------------------------------------------- pintar
+function pintar(t) {
+  const [i1, i2, i3, i4, i5, i6] = INI;
+  // fondo vivo: la retícula deriva despacio
+  tf("fondo-reti", `translate(${-(t * 7) % 60} ${-(t * 11) % 60})`);
+  $("prog").style.width = (cl(t / TOTAL) * 1080) + "px";
+  // barrido de cambio de plano (entre la 2 y la 3, la 3 y la 4, la 4 y la 5, la 5 y la 6)
+  let bar = 0, bx = 0;
+  for (const c of [i3, i4, i5, i6]) { const p = tramo(t, c - 0.18, c + 0.22); if (p > 0 && p < 1) { bar = 1; bx = mezcla(-10, 1090, suave(p)); } }
+  op("barrido", bar * 0.9); $("barrido").setAttribute("x", bx);
+
+  // cámara: empuje lento dentro de cada plano, y el acercamiento al pan en la 2
+  let s = 1, fx = 540, fy = 900;
+  if (t < i3) {
+    const acerca = suave(tramo(t, i2 + 0.05, W(2, "cortado") - 0.1));
+    s = mezcla(mezcla(1.14, 1, sal(tramo(t, 0, 1.8))) + 0.025 * tramo(t, 0, i2), 1.32, acerca); fx = mezcla(540, 760, acerca); fy = mezcla(900, 880, acerca);
+  } else {
+    const n = t < i4 ? 3 : t < i5 ? 4 : t < i6 ? 5 : 6;
+    s = 1 + 0.03 * tramo(t, INI[n - 1], INI[n - 1] + ESC[n - 1][1]);
+  }
+  tf("cam", `translate(${fx} ${fy}) scale(${s}) translate(${-fx} ${-fy})`);
+
+  pinta_cafe(t); pinta_mesa(t); pinta_dos(t); pinta_salto(t); pinta_cierre(t);
+  pinta_textos(t); pinta_engranaje(t); pinta_firma(t);
+}
+
+function pinta_cafe(t) {
+  const [i1, i2, i3] = INI;
+  op("cafe", 1 - tramo(t, i3 - 0.12, i3 + 0.1));
+  if (t > i3 + 0.2) return;
+  escribe("plano1", "FIG. 1 · UNA CAFETERÍA", tramo(t, W(1, "cafeteria") - 0.1, W(1, "cafeteria") + 0.5));
+  op("plano1", 1 - tramo(t, i2 + 0.1, i2 + 0.4));
+  op("gente", 0.55 * tramo(t, W(1, "gente") - 0.1, W(1, "gente") + 0.35));
+  tf("gente", `translate(0 ${(1 - sal(tramo(t, W(1, "gente") - 0.1, W(1, "gente") + 0.4))) * 30})`);
+  const tb = W(1, "barra");
+  document.querySelectorAll("#barra-g .tr").forEach((e, k) => dibuja(e, 1));
+  document.querySelectorAll("#maquina .tr").forEach((e, k) => dibuja(e, 1));
+  const pv = tramo(t, 0.6, 1.2);
+  op("vapor", 0.8 * pv);
+  $("v1").style.strokeDasharray = "30 26"; $("v1").style.strokeDashoffset = (-t * 45) % 56;
+  const tc = W(1, "camarero");
+  document.querySelectorAll("#camarero .tr").forEach((e, k) => dibuja(e, sal(tramo(t, tc - 0.2 + k * 0.1, tc + 0.35 + k * 0.1))));
+  op("pajarita", tramo(t, tc + 0.25, tc + 0.45));
+  // el camarero inclina la cabeza al contestar
+  const inc = sal(tramo(t, i2 + 0.2, i2 + 0.6)) * (1 - sal(tramo(t, W(2, "cortado") + 0.2, W(2, "cortado") + 0.6)));
+  tf("cab-cam", `rotate(${-9 * inc} 520 690)`);
+  // etiquetas de plano técnico
+  const et = (id, lid, t0) => { op(id, tramo(t, t0, t0 + 0.25) * (1 - tramo(t, i2 + 0.2, i2 + 0.5))); dibuja(lid, tramo(t, t0 - 0.1, t0 + 0.2)); op(lid, 1 - tramo(t, i2 + 0.2, i2 + 0.5)); };
+  et("t-barra", "l-barra", tb + 0.1); et("t-cam", "l-cam", tc + 0.1); et("t-pan", "l-pan", W(1, "pan") + 0.1);
+  // el pan entra con un bote
+  const tp = W(1, "pan");
+  const pp = rebote(tramo(t, tp - 0.12, tp + 0.4));
+  tf("pan", `translate(760 900) scale(${cl(pp, 0, 2)}) translate(-760 -900)`);
+  op("pan", tramo(t, tp - 0.12, tp));
+  // el cuchillo baja justo en «cortado» y la hogaza se abre en rodajas
+  const tcor = W(2, "cortado");
+  const pk = tramo(t, tcor - 0.55, tcor - 0.25), baja = suave(tramo(t, tcor - 0.12, tcor + 0.22)), sube = tramo(t, tcor + 0.35, tcor + 0.7);
+  op("cuchillo", pk * (1 - sube));
+  tf("cuchillo", `translate(${mezcla(700, 734, baja)} ${mezcla(700 - 60 * (1 - pk), 890, baja) - 220 * sube}) rotate(${mezcla(-8, 0, baja)})`);
+  const abre = rebote(tramo(t, tcor + 0.12, tcor + 0.6));
+  for (let k = 0; k < 5; k++) tf("r" + k, `translate(${(k - 2) * 40 * abre} ${-Math.abs(k - 2) * 4 * abre}) rotate(${(k - 2) * 4 * abre} ${672 + 58 * k} 900)`);
+}
+
+function pinta_mesa(t) {
+  const [, , i3, i4] = INI;
+  visible("mesa", t, i3, i4);
+  if (t < i3 - 0.3 || t > i4 + 0.3) return;
+  escribe("plano3", "FIG. 2 · LA MESA", tramo(t, i3 + 0.1, i3 + 0.6));
+  const tm = W(3, "mesa");
+  dibuja("mesa-tablero", sal(tramo(t, tm - 0.2, tm + 0.35))); dibuja("mesa-patas", sal(tramo(t, tm + 0.05, tm + 0.45)));
+  const risa0 = W(3, "hay");
+  for (let k = 0; k < 5; k++) {
+    const f = $("fig" + k), a = tramo(t, tm + 0.05 + k * 0.07, tm + 0.35 + k * 0.07);
+    let dy = (1 - rebote(a)) * 60;
+    if (k !== 2) dy -= Math.abs(Math.sin((t - risa0) * 8.5 + k * 1.3)) * 16 * tramo(t, risa0, risa0 + 0.3);
+    op(f, a); tf(f, `translate(0 ${dy})`);
+    if (k !== 2) for (let j = 0; j < 2; j++) {
+      const ph = ((t - risa0) * 1.6 + k * 0.37 + j * 0.5) % 1;
+      const vis = t > risa0 ? Math.sin(ph * Math.PI) : 0;
+      op(`ja${k}${j}`, vis * 0.9); tf(`ja${k}${j}`, `translate(0 ${-ph * 30})`);
+    }
+  }
+  const tq = W(3, "pregunta");
+  op("bocadillo", tramo(t, tq - 0.1, tq + 0.1));
+  dibuja(document.querySelector("#bocadillo .tr"), sal(tramo(t, tq - 0.1, tq + 0.45)));
+  const tqu = W(3, "que");
+  const pq = rebote(tramo(t, tqu - 0.05, tqu + 0.35));
+  op("interroga", tramo(t, tqu - 0.05, tqu + 0.05));
+  const tco = W(3, "cortado");
+  const mueve = sal(tramo(t, tco - 0.1, tco + 0.3));
+  tf("interroga", `translate(${-38 * mueve} 0) translate(540 650) scale(${pq}) translate(-540 -650)`);
+  op("mini-rodajas", mueve);
+}
+
+function pinta_dos(t) {
+  const [, , , i4, i5] = INI;
+  visible("dos", t, i4, i5);
+  if (t < i4 - 0.3 || t > i5 + 0.3) return;
+  escribe("plano4", "FIG. 3 · UNA PALABRA, DOS SENTIDOS", tramo(t, i4 + 0.1, i4 + 0.8));
+  const ti = W(4, "integral"), tl = W(4, "lento"), tno = W(4, "no");
+  const pc = rebote(tramo(t, tno - 0.05, tno + 0.4)), vc = tramo(t, ti - 0.25, ti + 0.05);
+  op("caracol", tramo(t, tno - 0.05, tno + 0.1) * (1 - vc));
+  tf("caracol", `translate(540 700) scale(${pc * (1 - 0.4 * vc)}) translate(${-540 + 40 * tramo(t, tno, tl)} -700)`);
+  dibuja("tachon", sal(tramo(t, tl + 0.05, tl + 0.35)));
+  [...$("palabra").children].forEach((e, k) => {
+    const p = rebote(tramo(t, ti - 0.1 + k * 0.05, ti + 0.25 + k * 0.05));
+    e.setAttribute("opacity", cl(tramo(t, ti - 0.1 + k * 0.05, ti + k * 0.05)));
+    e.setAttribute("transform", `translate(0 ${(1 - p) * -70})`);
+  });
+  // «dos cosas»: la palabra se separa y aparece la bifurcación
+  const td = W(4, "dos");
+  const parte = sal(tramo(t, td - 0.1, td + 0.35));
+  $("palabra").setAttribute("transform", `translate(540 520) scale(${1 + 0.06 * Math.sin(parte * Math.PI)}) translate(-540 -520)`);
+  op("v4-trav", 0.5 * tramo(t, td, td + 0.4));
+  ["v4-rail-i", "v4-rail-i2"].forEach(id => dibuja(id, sal(tramo(t, td - 0.05, td + 0.55))));
+  ["v4-rail-d", "v4-rail-d2"].forEach(id => dibuja(id, sal(tramo(t, td + 0.1, td + 0.7))));
+  const th = W(4, "harina"), te = W(4, "entero");
+  const ph = rebote(tramo(t, th - 0.1, th + 0.35)), pe = rebote(tramo(t, te - 0.1, te + 0.35));
+  op("harina", tramo(t, th - 0.1, th)); tf("harina", `translate(300 960) scale(${ph}) translate(-300 -960)`);
+  op("entera", tramo(t, te - 0.1, te)); tf("entera", `translate(780 960) scale(${pe}) translate(-780 -960)`);
+  // «se quedó en la primera»: el que escucha baja por la vía y se queda en la 1
+  const tq = W(4, "quedo"), tp = W(4, "primera");
+  const camino = $("v4-rail-i"), L = camino.getTotalLength();
+  const pr = suave(tramo(t, tq - 0.1, tp + 0.15));
+  const pt = camino.getPointAtLength(L * pr * 0.93);
+  op("oyente4", tramo(t, tq - 0.2, tq)); $("oyente4").setAttribute("cx", pt.x); $("oyente4").setAttribute("cy", pt.y);
+  const llega = tramo(t, tp + 0.15, tp + 0.9);
+  op("onda4", (1 - llega) * (llega > 0 ? 1 : 0)); $("onda4").setAttribute("cx", pt.x); $("onda4").setAttribute("cy", pt.y); $("onda4").setAttribute("r", 22 + 60 * llega);
+  const apaga = tramo(t, tp, tp + 0.4);
+  ["v4-rail-d", "v4-rail-d2", "entera"].forEach(id => $(id).style.opacity = mezcla(id === "entera" ? cl(tramo(t, te - 0.1, te)) : 1, 0.28, apaga));
+  $("v4-rail-i").style.stroke = apaga > 0.5 ? "#4CC9F0" : "#F2F4F8";
+}
+
+function pinta_salto(t) {
+  const [, , , , i5, i6] = INI;
+  visible("salto", t, i5, i6);
+  if (t < i5 - 0.3 || t > i6 + 0.3) return;
+  escribe("plano5", "FIG. 4 · EL SALTO", tramo(t, i5 + 0.1, i5 + 0.6));
+  op("v5-trav", 0.5 * tramo(t, i5 + 0.1, i5 + 0.6));
+  ["v5-1", "v5-1b"].forEach(id => dibuja(id, sal(tramo(t, i5 + 0.05, i5 + 0.7))));
+  ["v5-2", "v5-2b"].forEach(id => dibuja(id, sal(tramo(t, i5 + 0.2, i5 + 0.85))));
+  op("n1", tramo(t, i5 + 0.3, i5 + 0.6)); op("n2", tramo(t, i5 + 0.45, i5 + 0.75));
+  const ts = W(5, "saltar"), tg = W(5, "golpe"), te = W(5, "el"), tn = W(5, "salto");
+  dibuja("v5-x", sal(tramo(t, ts - 0.1, ts + 0.4)));
+  op("palanca", tramo(t, ts - 0.1, ts + 0.2));
+  tf("brazo", `rotate(${mezcla(-32, 32, suave(tramo(t, tg - 0.45, tg - 0.2)))})`);
+  // A: va por la 1, salta en «de golpe» a la 2 y sigue
+  const ta0 = W(5, "obliga") - 0.1, tsw = tg - 0.08;
+  let ax, ay;
+  if (t < tsw) { ax = mezcla(90, 470, sal(tramo(t, ta0, tsw)) * 0.2 + tramo(t, ta0, tsw) * 0.8); ay = 560; }
+  else if (t < tsw + 0.26) { const p = suave(tramo(t, tsw, tsw + 0.26)); ax = mezcla(470, 610, p); ay = mezcla(560, 820, p) - Math.sin(p * Math.PI) * 90; }
+  else { ax = mezcla(610, 1010, sal(tramo(t, tsw + 0.26, tsw + 1.1))); ay = 820; }
+  $("puntoA").setAttribute("cx", ax); $("puntoA").setAttribute("cy", ay);
+  op("puntoA", tramo(t, ta0 - 0.15, ta0) * (1 - tramo(t, tsw + 0.9, tsw + 1.1)));
+  const pc = tramo(t, tsw + 0.08, tsw + 0.5);
+  op("chispa", (pc > 0 && pc < 1) ? 1 - pc : 0);
+  tf("chispa", `translate(540 690) scale(${0.6 + pc * 1.2})`);
+  // B: «y él no saltó» — pasa por el cambio de vía sin cambiar, y se para en la 1
+  const tb0 = te - 0.1;
+  const bxp = sal(tramo(t, tb0, tn + 0.55));
+  const bx = mezcla(90, 880, bxp);
+  $("puntoB").setAttribute("cx", bx); $("puntoB").setAttribute("cy", 560);
+  op("puntoB", tramo(t, tb0 - 0.15, tb0));
+  const pq = rebote(tramo(t, tn + 0.45, tn + 0.85));
+  op("interroga5", tramo(t, tn + 0.45, tn + 0.55));
+  tf("interroga5", `translate(880 490) scale(${pq})`);
+}
+
+function pinta_cierre(t) {
+  const [, , , , , i6] = INI;
+  const tf6 = TOTAL - 0.9;
+  op("cierre", tramo(t, i6 - 0.05, i6 + 0.2));
+  if (t < i6 - 0.3) return;
+  escribe("plano6", "FIG. 5 · CUALQUIER CHISTE", tramo(t, i6 + 0.1, i6 + 0.7));
+  const t0 = W(6, "esto");
+  const bq = [...$("bloques").children];
+  const tb = W(6, "busca"), tpal = W(6, "palabra"), tdos = W(6, "dos"), tsig = W(6, "significados");
+  const elegido = $("bq3_1");
+  bq.forEach(re => {
+    const a = tramo(t, t0 + re._n * 0.05, t0 + 0.25 + re._n * 0.05);
+    re.setAttribute("opacity", 0.38 * a * (re === elegido ? 1 : 1 - 0.45 * tramo(t, tpal, tpal + 0.3)));
+    re.setAttribute("transform", `translate(0 ${(1 - sal(a)) * 24})`);
+  });
+  const luz = tramo(t, tpal - 0.05, tpal + 0.25);
+  elegido.setAttribute("fill", luz > 0.5 ? "#4CC9F0" : "#8A97AE");
+  elegido.setAttribute("opacity", mezcla(0.38, 1, luz) * tramo(t, t0 + elegido._n * 0.05, t0 + 0.25 + elegido._n * 0.05));
+  // la lupa recorre las filas y se para en la palabra
+  const ruta = [[180, 492], [760, 492], [180, 668], [elegido._cx, elegido._cy]];
+  const pl = tramo(t, tb - 0.3, tpal);
+  const seg = Math.min(2, Math.floor(pl * 3)), ps = suave(pl * 3 - seg);
+  const lx = mezcla(ruta[seg][0], ruta[seg + 1][0], pl >= 1 ? 1 : ps), ly = mezcla(ruta[seg][1], ruta[seg + 1][1], pl >= 1 ? 1 : ps);
+  op("lupa", tramo(t, tb - 0.4, tb - 0.2) * (1 - tramo(t, tdos, tdos + 0.3)));
+  tf("lupa", `translate(${lx} ${ly})`);
+  // la palabra se bifurca: dos significados
+  tf("fork6", `translate(${elegido._cx} ${elegido._cy + 30})`);
+  dibuja("f6-i", sal(tramo(t, tdos - 0.1, tsig + 0.3))); dibuja("f6-d", sal(tramo(t, tdos, tsig + 0.4)));
+  op("f6-n1", tramo(t, tsig + 0.2, tsig + 0.4)); op("f6-n2", tramo(t, tsig + 0.3, tsig + 0.5));
+  // «por qué a unos les cuesta saltar»: alguien duda en la bifurcación
+  const tpq = W(6, "por"), tns = W(6, "no");
+  const bam = Math.sin((t - tpq) * 6) * 55 * tramo(t, tpq + 0.2, tpq + 0.6);
+  op("duda6", tramo(t, tpq - 0.1, tpq + 0.1)); $("duda6").setAttribute("cx", bam); $("duda6").setAttribute("cy", 70);
+  const pco = rebote(tramo(t, tns - 0.05, tns + 0.35));
+  op("coral6", tramo(t, tns - 0.05, tns + 0.05)); $("coral6").setAttribute("transform", `translate(0 290) scale(${pco}) translate(0 -290)`);
+}
+
+function pinta_textos(t) {
+  const [i1, i2, i3, i4, i5, i6] = INI;
+  banda("b1", t, i2 + 0.05);
+  banda("b2", t, i3 - 0.15);
+  banda("b3", t, i4 - 0.15);
+  banda("b6", t);
+  // la comparación
+  const th = W(4, "harina"), te = W(4, "entero"), fin4 = i5 - 0.15;
+  [["ca", th], ["cb", te]].forEach(([id, t0]) => {
+    const p = sal(tramo(t, t0 - 0.1, t0 + 0.25)), f = tramo(t, fin4, fin4 + 0.25);
+    const e = $(id); e.style.opacity = p * (1 - f); e.style.transform = `translateY(${(1 - p) * 30}px)`;
+  });
+  const apaga = tramo(t, W(4, "primera"), W(4, "primera") + 0.4);
+  $("cb").style.opacity = parseFloat($("cb").style.opacity) * mezcla(1, 0.35, apaga);
+  // la lista
+  [["i1", W(5, "un")], ["i2", W(5, "el")]].forEach(([id, t0]) => {
+    const p = sal(tramo(t, t0 - 0.1, t0 + 0.25)), f = tramo(t, i6 - 0.15, i6 + 0.1);
+    const e = $(id); e.style.opacity = p * (1 - f); e.style.transform = `translateX(${(1 - p) * -40}px)`;
+  });
+  const ts = W(6, "significados");
+  const ps = sal(tramo(t, ts + 0.3, ts + 0.7));
+  $("sub6").style.opacity = ps * (1 - tramo(t, TOTAL - 0.62, TOTAL - 0.47));
+  $("b6").style.opacity = parseFloat($("b6").style.opacity || 0) * (1 - tramo(t, TOTAL - 0.62, TOTAL - 0.47));
+}
+
+const EXPR = [null, null, "duda", "rie", "piensa", "duda"];   // las del guion, escena a escena
+function pinta_engranaje(t) {
+  const [, , i3] = INI;
+  const n = INI.filter(x => x <= t).length;             // escena actual (1..6)
+  const e = $("eng"), s = e.querySelector("svg");
+  const p = rebote(tramo(t, i3 + 0.2, i3 + 0.6));
+  const fuera = tramo(t, TOTAL - 0.55, TOTAL - 0.35);
+  e.style.opacity = tramo(t, i3 + 0.2, i3 + 0.3) * (1 - fuera);
+  e.style.transform = `scale(${p})`;
+  const ex = EXPR[n - 1] || "neutra";
+  s.setAttribute("class", "mdh-cara ex-" + ex);
+  const eje = s.querySelector(".eje"); if (eje) eje.style.transform = `rotate(${t * 60}deg)`;
+}
+
+function pinta_firma(t) {
+  const t0 = TOTAL - 0.55;
+  const p = sal(tramo(t, t0, t0 + 0.45));
+  op("velo", 0.94 * p);
+  const f = $("firma"); f.style.opacity = p; f.style.transform = `translateY(${(1 - p) * 30}px)`;
+  // el Engranaje de la firma: grande y en el centro
+  const fg = $("eng-firma");
+  const q = rebote(tramo(t, t0 + 0.05, t0 + 0.5));
+  fg.style.cssText = `position:absolute;width:340px;height:340px;left:370px;top:760px;opacity:${tramo(t, t0 + 0.05, t0 + 0.15)};transform:scale(${q})`;
+  fg.querySelector("svg").setAttribute("class", "mdh-cara ex-media");
+  const eje = fg.querySelector(".eje"); if (eje) eje.style.transform = `rotate(${t * 60}deg)`;
+}
+
+// Comprobación de la barrera C21 aplicada a este lienzo: ningún texto se sale de su caja ni del lienzo.
+function comprobar(t) {
+  pintar(t);
+  const malos = [];
+  document.querySelectorAll(".banda,.caja,.item,.sub,#firma").forEach(e => {
+    if (parseFloat(getComputedStyle(e).opacity) < 0.05) return;
+    if (e.scrollWidth > e.clientWidth + 1) malos.push(`${e.id || e.className}: ${e.scrollWidth}>${e.clientWidth}`);
+    const r = e.getBoundingClientRect();
+    if (r.right > 1080 || r.left < 0 || r.bottom > 1650) malos.push(`${e.id || e.className}: fuera de la zona segura (${Math.round(r.left)},${Math.round(r.bottom)})`);
+  });
+  return malos;
+}
+window.cargar = cargar; window.pintar = pintar; window.comprobar = comprobar; window.TOTAL = TOTAL;
+cargar(); pintar(0);
+</script>
+</body></html>

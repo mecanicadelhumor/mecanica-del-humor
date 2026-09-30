@@ -58,6 +58,6 @@ instrucciones no tiene instrucciones.
 
 | Fichero | Tarea | Cuándo corre | `trigger_id` |
 |---|---|---|---|
-| `revision-diaria.md` | Revisión de calidad | todos los días, 11:28 hora de España | `trig_019QjtovuzeUocmx1P8NJH3F` |
-| `planificacion-jueves.md` | Equipo editorial | jueves, 22:00 | `trig_015qkb2sqbbJwJE1qgoNMK95` |
-| `metricas-lunes.md` | Analista | lunes, 09:00 | `trig_01GhNrF8nA2w2nXSfetcrHkQ` — **sigue con el prompt entero en el almacén**, pendiente de pasar al mismo esquema |
+| `revision-diaria.md` | Revisión de calidad | todos los días, 11:28 hora de España | `trig_01K834hHyZ9ytxXXA3uP5y7Y` (rutina de Code desde el 30/09; la vieja, `trig_019Qjt…`, apagada) |
+| `planificacion-jueves.md` | Equipo editorial | jueves 22:07 (+ viernes y sábado de reintento) | `trig_014hUCsYDz9mSVNKTFtQxZpR` (rutina de Code desde el 30/09; la vieja, `trig_015qkb…`, apagada) |
+| `metricas-lunes.md` | Analista | lunes, 12:03 | `trig_01TmnPoPLXBx65x9Po4Y2PYh` (rutina de Code desde el 30/09; la vieja, `trig_01GhNr…`, apagada) — **sigue con el prompt entero en el almacén**, pendiente de pasar al mismo esquema |

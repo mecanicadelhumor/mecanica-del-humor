@@ -1,7 +1,8 @@
 # Tarea programada · Métricas semanales — lunes
 
 **Copia legible del prompt que corre en el almacén de tareas programadas.**
-Espejo creado el 31/08/2026, **corregido el 07/09/2026: la hora cambia de 07:00 a 10:00 UTC**. `id`: `trig_01GhNrF8nA2w2nXSfetcrHkQ` · cron: `0 10 * * 1 (UTC) · lunes 12:00 hora de España` ·
+Espejo creado el 31/08/2026, **corregido el 07/09/2026: la hora cambia de 07:00 a 10:00 UTC**. **Desde el 30/09/2026 corre como rutina de Code** (C53.1): `id`: `trig_01TmnPoPLXBx65x9Po4Y2PYh` · lunes 12:03 hora de España ·
+modelo `claude-sonnet-5-5` · repositorio añadido. La tarea vieja (`trig_01GhNrF8nA2w2nXSfetcrHkQ`, apagada) decía: cron: `0 10 * * 1 (UTC) · lunes 12:00 hora de España` ·
 modelo: `claude-sonnet-5`.
 
 **Por qué se movió.** `metricas.yml` tiene dos intentos, a las 05:19 y a las 08:37 UTC, porque el cron de Actions se retrasa. Esta tarea corría a las **07:00 UTC, justo entre los dos**: si el primer intento se retrasaba —el 7 de septiembre se retrasó más de dos horas— leía un `metricas.json` de la semana anterior y la lectura de esa semana se perdía entera. A las 10:00 UTC el segundo intento ya ha pasado con hora y media de margen.

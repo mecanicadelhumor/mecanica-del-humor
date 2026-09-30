@@ -97,6 +97,12 @@ ventana de horas con una base caduca ya no hace daño, porque nadie sube fichero
 
 **Si cambias la tabla de esta página, cambia `PROPIEDAD` en `entregar.py`.** Las dos dicen lo mismo.
 
+**Y desde el 30 de septiembre (C53.2):** cada ejecución de una rutina trabaja en una rama propia
+(`claude/<nombre-al-azar>`) que la plataforma sube a GitHub y sobre la que ofrece «Crear PR». **Ese PR no
+se abre nunca**: metería en `main` lo que la tarea haya hecho sin pasar por esta tabla. `entregar.py`
+entrega lo que va de `origin/main` al clon (aunque el modelo ya lo hubiera commiteado) y «Entregas» borra
+las ramas de sesión que ya están enteras en `main`; las que traen algo más se quedan, y se dicen.
+
 El `.tar.gz` queda solo como **plan B**, cuando el `push` de la tarea falla. Las reglas de abajo
 valen para ese caso.
 

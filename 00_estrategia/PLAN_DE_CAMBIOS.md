@@ -5296,3 +5296,175 @@ la necesita, aunque podrían juntarse más adelante.
   Pixabay o tarjeta. La revisión de hoy ha forzado `fuente: ia` en tres planos; se verá si llegan.
 - Lo de la versión 14 sigue abierto: `MDS-024`, S3, por qué `MDS-021` y `022` retienen tanto, los
   umbrales de C50 y P9.
+
+---
+
+# Versión 16 · 30 de septiembre de 2026 — las rutinas funcionan; la animación a medida, vista; Kaggle, listo
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario, y lo que se anula se dice con su nombre, en la tabla de abajo.
+
+Sesión de miércoles, adelantada por el codirector porque el viernes quizá no pueda. Traía su respuesta
+a las tres tareas del 29/09, escrita en su fichero:
+
+1. **Tarea 1 hecha**: las tres rutinas de Code creadas, la prueba de métricas **correcta a la
+   primera**, y una duda: al terminar la ejecución, la página le ofreció «Crear PR» sobre
+   `claude/charming-mccarthy-ztub1k` y no sabía qué era.
+2. **Kaggle hecho**, con un matiz: Kaggle ya no descarga `kaggle.json`; creó el token, y como el
+   nombre de usuario no aparecía puso `mecanicadelhumor` en `KAGGLE_USERNAME`.
+3. **El muestrario, sobre `MDS-027`**, y con un argumento mejor que el mío: coger el Short que mejor
+   ha retenido no sería representativo; `MDS-027` es uno cualquiera cuyos datos todavía no conocemos.
+
+---
+
+## Lo que se anula, lo que se mantiene y lo que se amplía
+
+| Documento o decisión | Estado desde hoy |
+|---|---|
+| **C53.1 · las rutinas de Code** | **HECHO y comprobado.** `entregar.py` subió `claude/entrega-metricas-20260930-1354`, «Entregas (C53)» salió en verde y el commit `d234237` («métricas 2026-09-30», de «Mecánica del Humor (metricas)») está en `main` desde las 13:55 UTC. Las tres tareas viejas, apagadas (no borradas) a las 13:58 UTC |
+| Versión 15 · «el horario de la planificación lo pone la dirección» | **ANULADO: no puedo.** Las rutinas creadas desde la web **no las puede cambiar la dirección**: la herramienta lo rechaza (*«Agents can only update routines they created»*). Puedo leerlas, no tocarlas. **SUSTITUIDO por la tarea 2 de `tareas_codirector_2026-09-30.md`** (el codirector: modelo y horario). Trampa 47 |
+| Versión 15 · el arreglo pensado por si una rutina solo podía subir su rama de trabajo | **ANULADO, no hace falta.** La prueba subió una rama `claude/entrega-…` sin problema: las ramas `claude/` se aceptan todas |
+| `04_agentes/entregar.py` | **AMPLIADO (C53.2)**: lo que se entrega se mide contra `origin/main`, no contra el último commit; y `--aplicar` borra las ramas de sesión que ya están enteras en `main` |
+| `00_estrategia/tareas/planificacion-jueves.md`, paso 0 | **AMPLIADO**: de domingo a miércoles termina sin hacer nada (para que el horario pueda ser diario si el formulario no deja poner tres días) |
+| El modelo de la planificación | **CAMBIA a Opus 5.5**, decisión del codirector en la sesión (era Opus 5; la rutina se creó sin modelo). Lo pone él (tarea 2) |
+| **C55.1 · el muestrario** | **HECHO**: `07_pruebas/animacion-2026-10/`. Decide el codirector (tarea 3) |
+| C55.2 · «un Short de cada cinco, entero animado» | **SE MANTIENE como propuesta, con una alternativa nueva** (abajo): animar solo las escenas de mecanismo y dejar el vídeo de archivo en las de situación |
+| C51.2 · Kaggle | **HECHO por el codirector.** Los secretos valen como están |
+| **C51.3 · el presentador: las licencias** | **NUEVO: estudiado**, `07_pruebas/presentador-2026-10/LICENCIAS.md`. La prueba, no antes de la semana del 12/10 |
+| C50 · segunda semana de imagen real | **SE MANTIENE, sin tocar** |
+| C44 (la voz), C47 (`metricas_diarias.yml`), P9 (los sonidos) | **Siguen para el lunes 5**, como decía la versión 15 |
+
+---
+
+## C53.2 · Lo que enseñó la primera entrega de verdad
+
+**Funciona.** Es la primera vez desde agosto que un trabajo de una tarea llega a `main` sin que nadie
+aplique un paquete. Y la prueba enseñó dos cosas de las rutinas que no estaban en ninguna página:
+
+**1 · Cada sesión tiene su propia rama, y la plataforma la sube.** La rutina de métricas trabajó en
+`claude/charming-mccarthy-ztub1k` (un nombre al azar que pone la plataforma), `entregar.py` hizo su
+commit ahí y lo subió a `claude/entrega-metricas-…`, y **además** la rama de la sesión acabó en GitHub
+con el mismo commit. Por eso la página de la ejecución ofrecía «Crear PR»: es el botón normal de
+cualquier sesión de Code con cambios. **No se pulsa nunca**: un PR de esa rama metería en `main` lo que
+la tarea haya hecho **sin pasar por la tabla de propiedad**, que es justo lo que `entregar.py` existe
+para impedir. Esta vez habría sido inofensivo (era lo mismo que ya estaba en `main`); otro día puede
+llevar dentro lo que `entregar.py` dejó fuera a propósito.
+
+**2 · Y eso escondía un fallo en silencio que todavía no había pasado.** La plataforma le pide al
+modelo que suba su trabajo a su rama. Si un día el modelo hace `git commit` **antes** de llamar a
+`entregar.py`, el script hacía `git add -A`, no encontraba nada nuevo respecto al último commit y
+decía *«no hay nada que entregar»*… **con código 0**. La tarea no iría al plan B, el trabajo se
+quedaría en la rama de la sesión y a `main` no llegaría nada. Es la trampa 41 esperando su día.
+
+**Lo que se ha cambiado en `entregar.py`** (la dirección es su dueña):
+
+- **Lo que se entrega se mide contra la base común con `origin/main`**, no contra el último commit: da
+  igual si el modelo hizo commit antes o no. Lo ajeno se deshace contra esa misma base, aunque viniera
+  en un commit. Si todo estaba ya commiteado y limpio, se sube tal cual.
+- **`--aplicar` (el workflow) borra al final las ramas de sesión** (`claude/…` que no son
+  `claude/entrega-…`) que lleven más de dos horas quietas **y cuyo contenido ya esté entero en
+  `main`**. Las que traen algo que no está en `main` se quedan y se dicen en el resumen de la
+  ejecución. Nunca tumba una entrega: si falla, se dice y se sigue. Va en `entregar.py` y no en
+  `entregas.yml` a propósito: el workflow ejecuta la copia de `main`, así que el cambio entra con un
+  `push` normal y el codirector no tiene que mover ningún workflow.
+- **Probado en un repositorio de juguete** con cinco casos: sin commitear; con commit previo y la
+  rama de sesión subida; con un fichero ajeno commiteado (no sube, y en la sesión vuelve a como
+  estaba); nada que entregar; y la limpieza (borra la rama que ya está en `main`, deja la que trae un
+  fichero de `00_estrategia/` y lo dice).
+- **Los dos ficheros de instrucciones** (revisión y planificación) dicen desde hoy lo mismo en tres
+  líneas: la entrega es siempre `entregar.py`, nunca un PR, y una rama `claude/<nombre>` que no es de
+  entrega no es incidencia.
+
+**El horario de la planificación, por fin.** Lo pone el codirector (tarea 2), porque yo no puedo tocar
+estas rutinas. Lo que se busca es jueves, viernes y sábado a las 22:07. La documentación de las
+rutinas dice que el formulario ofrece frecuencias fijas (cada hora, diaria, entre semana, semanal) y
+que se pueden **añadir varios disparadores** a una rutina; **no dice** si admite dos semanales. Así
+que la tarea tiene dos caminos: tres disparadores semanales (jueves, viernes, sábado) o, si el
+formulario no lo deja, **uno diario a las 22:07**, que cuesta cuatro arranques cortos a la semana
+(de domingo a miércoles el paso 0 termina en cuanto mira la fecha). No uso `/schedule update` de la
+línea de comandos, que es la forma documentada de poner un cron a medida, porque el codirector no
+trabaja con ella y sería otra pantalla que no he visto (trampa 46).
+
+---
+
+## C55.1 · El muestrario: `MDS-027`, animado a medida
+
+En `07_pruebas/animacion-2026-10/`, con su `LEEME.md`. En corto:
+
+- **Lo mismo que el publicado salvo la imagen**: el guion sin tocar, **la voz de la caché** (cero
+  peticiones a Gemini), la misma música, `montaje.py` tal cual (43,3 s y −14,1 LUFS, contra 43,3 s y
+  −14,2 del publicado) y los textos de pantalla del guion palabra por palabra.
+- **Lo que cambia**: seis planos técnicos dibujados para esta historia, con cada cosa entrando en la
+  palabra que la nombra (el cuchillo corta en la sílaba de «cortado»; en «de golpe» un punto salta de
+  una vía a otra; en «y él no saltó» otro pasa de largo). **Enseña el mecanismo** en vez de ilustrar
+  la situación.
+- **Coste:** cero euros; **unos 110.000 tokens de Opus 5.5** (lo que creció la conversación), de ellos
+  unos 18.000 escritos. La mitad baja de mi estimación; una rutina que empiece sin contexto rondaría
+  **120.000-200.000 por Short**. Render: 1.260 capturas en unos siete minutos y medio. Tres vueltas
+  (una versión y dos de arreglos sobre la hoja de contactos).
+- **Lo que le veo en contra, dicho antes de que lo mire el codirector**: menos estímulo que la imagen
+  real (línea sobre azul, mucho vacío); un primer segundo tranquilo; y un parecido de familia con la
+  plantilla que él ya juzgó el 14/09.
+
+**Una alternativa a C55.2 que no estaba**: en vez de «un Short de cada cinco, entero animado»,
+**animar solo las escenas de mecanismo** (en `MDS-027`, la 4 y la 5) y dejar el vídeo de archivo en
+las de situación. En las escenas que explican, el archivo no tiene nada concreto que enseñar —en el
+publicado, la 5 es una tarjeta de marca y la 4 un cuenco de harina detrás de dos cajas de texto—, y es
+justo donde la animación gana. Técnicamente cabe: `render.py` ya compone tramos distintos por escena
+(archivo o tarjeta, C50); la animación sería un tercer tipo de tramo. Coste por Short, menor.
+
+**Decide el codirector mirándolo** (regla 11.2): tarea 3 del 30/09. Si dice que sí, C55.2 se diseña en
+la sesión del lunes 5 y entra, como pronto, la semana del 12/10, con la regla de decisión de la
+versión 15 (retención a 30 s, escrita antes de ver los datos).
+
+---
+
+## C51.3 · El presentador: Kaggle listo, y las licencias primero
+
+- **Kaggle:** los tokens nuevos son una sola cadena que la herramienta lee de `KAGGLE_API_TOKEN`; no
+  necesitan usuario. El workflow de la prueba pasará `KAGGLE_KEY` como `KAGGLE_API_TOKEN`. El usuario
+  (`mecanicadelhumor`) sí hace falta, pero para el nombre del cuaderno. **No hay que cambiar nada.**
+- **Las licencias, pieza a pieza** (`07_pruebas/presentador-2026-10/LICENCIAS.md`): de siete modelos
+  abiertos mirados, **cinco no sirven para un canal que algún día puede monetizar** (Wav2Lip;
+  SadTalker, por el Basel Face Model; Hallo y LivePortrait, por InsightFace; EchoMimic, por pesos sin
+  licencia), **LatentSync solo cambiándole el detector de caras** (también InsightFace), y **MuseTalk 1.5
+  sí** (MIT en código y pesos), con una pieza que
+  hay que cambiar (la máscara de la cara, entrenada sobre fotos de uso no comercial). Para mover la
+  cabeza, Wan 2.2 (Apache 2.0), si cabe en la GPU de Kaggle. La cara, FLUX schnell, que ya usamos.
+- **La prueba, no antes de la semana del 12/10**, y con un workflow que el codirector tendrá que crear
+  a mano. Nada entra en un vídeo sin que lo vea.
+
+---
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| **Hoy, 30/09** | Esto escrito. `MDS-028` sale a las 19:00 |
+| Antes del jueves 1, 11:28 | Tarea 1 del codirector: el `push` (lleva el `entregar.py` nuevo, que usa la revisión de mañana) |
+| Antes del jueves 1, 22:07 | Tarea 2: modelo y horario de la planificación |
+| **Jueves 1, 22:07** | Primera planificación como rutina de Code: entrega sola |
+| Viernes 2 y sábado 3, 22:07 | Reintentos (si la tarea 2 está hecha): terminan sin tocar nada si la semana ya está |
+| Lunes 5 | Métricas (rutina nueva, 12:03); sesión: primera semana de C50 entera, S3, C44, C47, P9, y la respuesta a la tarea 3 |
+| Semana del 12/10 | C55.2 si el codirector dice sí; la prueba del presentador (C51.3) |
+| Antes del 8/11 | La puerta de los 1.000 (C26) y la decisión de C55.3 |
+| 15/11 | La decisión |
+
+## Lo que NO cambia hoy
+
+- **Nada de lo que sale en los vídeos**: ni guiones, ni código de producción, ni planos. Es la
+  segunda semana de C50 y se mide.
+- **Los prompts de las rutinas**: solo dos notas de C53.2 en los ficheros de instrucciones de la
+  revisión y la planificación (los prompts de las rutinas los leen del repositorio). El de métricas
+  vive entero en su rutina y no lo puedo tocar; no le hace falta.
+- **`entregas.yml`**, igual que el 28/09.
+
+## Lo que queda mirado y sin resolver
+
+- **Si el formulario de rutinas admite tres disparadores semanales.** Lo contesta la tarea 2.
+- **Cuánto se ve de verdad la limpieza de ramas**: la primera vez que corra será en la entrega de la
+  revisión de mañana, si el `push` de hoy está en `main` antes.
+- **El medidor de uso del codirector** para el muestrario: mi cifra es la de la conversación, no la
+  facturada.
+- Lo de la versión 15 sigue abierto: `metricas_diarias.yml` (C47), los planos de FLUX que no salen,
+  S3, por qué `MDS-021` y `022` retienen tanto, los umbrales de C50 y P9.

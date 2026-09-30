@@ -156,10 +156,12 @@ confundirlas:
 | `.github/workflows/visual_prueba.yml` | **Se retira el 23/09 (tarde)**: lo borra el codirector en la tarea 3 | Era la prueba de C50; su código (`muestrario_visual.py` y el `visual.py` de prueba) ya no existe |
 | `03_produccion/pipeline/visual.py` · `fondo_visual.py` | **De la dirección** (23/09, C50 en producción) | `visual.py`: resolver, traer, diagnóstico. `fondo_visual.py`: cortes y pista de fondo para `render.py`. **La revisión diaria no los toca sin encargo**; los planos se corrigen con `05_calendario/visuales/ajustes.json`, no con código |
 | `05_calendario/visuales/` | **Del workflow `visuales.yml`**, salvo `ajustes.json` (revisión diaria) y `APAGADO` (el codirector y yo) | Ver su `LEEME.md`. `APAGADO` es el interruptor de C50: si existe, todo sale como antes |
-| **Las tareas programadas entregan solas** (C53) | **Autorizado por el codirector el 28/09/2026** | Con `04_agentes/entregar.py` a ramas `claude/entrega-*` y el workflow `entregas.yml` a `main`. Sin credenciales en los prompts: necesitan el repositorio añadido a cada tarea, **y eso solo existe en las rutinas de Code**. Las tres tareas de agosto se crearon desde Cowork y no lo admiten (trampa 46): **se rehacen como rutinas de Code** (C53.1, tarea 1 de `tareas_codirector_2026-09-29.md`) y se apagan las viejas. Hasta entonces, plan B: el `.tar.gz` de siempre |
+| **Las tareas programadas entregan solas** (C53, C53.1, C53.2) | **Autorizado el 28/09/2026 · FUNCIONA desde el 30/09** | Tres **rutinas de Code** con el repositorio añadido, creadas por el codirector desde la web el 30/09 (revisión `trig_01K834hHyZ9ytxXXA3uP5y7Y`, planificación `trig_014hUCsYDz9mSVNKTFtQxZpR`, métricas `trig_01TmnPoPLXBx65x9Po4Y2PYh`); las tres de agosto, **apagadas, no borradas**. Primera entrega sola: `d234237`. **La dirección puede leerlas pero NO cambiarlas** (ni horario, ni modelo, ni texto: trampa 47): todo cambio va en el fichero de tareas del codirector. El `.tar.gz` queda solo como plan B |
 | `.github/workflows/` · excepción del 28/09/2026 | **Autorizada por el codirector esa vez, pero GitHub la rechazó**: el token no tiene permiso para workflows | `entregas.yml` (nuevo), `visuales.yml` y `vista.yml` (solo `main`) y `metricas.yml` (dos intentos más) se le entregaron en `00_estrategia/tareas/workflows_2026-09-28/`. **La regla sigue, y ahora además la sostiene el token** |
 | `04_agentes/entregar.py` · `.github/workflows/entregas.yml` | **De la dirección** (28/09, C53) | Son la tabla de `PROPIEDAD_DE_FICHEROS.md` en código. Ninguna tarea los toca: `entregar.py` se excluye a sí mismo |
 | Regla 7.1 · la persona sintética | **Autorizada por el codirector el 23/09/2026**, escrita el 28/09 | Sí a Kaggle, con las cinco condiciones de `REGLAS.md` 7.1. No entra sin muestrario (C51.2) |
+| Kaggle de la marca · secretos `KAGGLE_USERNAME` y `KAGGLE_KEY` | **Puestos por el codirector el 29-30/09** | El token es del formato nuevo (una sola cadena): el workflow que lo use lo pasa como `KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_KEY }}`. El usuario, `mecanicadelhumor`, sirve para el nombre de los cuadernos. Licencias de cada pieza del presentador: `07_pruebas/presentador-2026-10/LICENCIAS.md` (C51.3) |
+| `04_agentes/entregar.py` · C53.2 (30/09) | **De la dirección** | Mide lo entregado contra `origin/main` y borra en `--aplicar` las ramas de sesión ya enteras en `main`. **Nadie abre nunca un PR de una rama de sesión**: se saltaría la tabla de propiedad |
 
 **Y la consecuencia práctica de la autorización general, que es la que importa:** desde el
 12/09 escribo directamente en la carpeta del codirector con `device_commit_files` los
@@ -181,7 +183,7 @@ arrastraba defectos. Solo puede añadir lo que verifique contra la fuente.
 ## Las trampas en las que ya se ha caído
 
 No son anécdotas: cada una costó tiempo o un vídeo, y todas se repiten solas si nadie las
-tiene delante. Son cuarenta y seis a 29/09/2026, y la lista crece porque se lee.
+tiene delante. Son cuarenta y ocho a 30/09/2026, y la lista crece porque se lee.
 
 **1. Cada documento daba por supuesto que el movimiento lo ponía otro.**
 Los subtítulos quemados se retiraron el 20/08; la respiración de zoom ya estaba
@@ -627,6 +629,50 @@ con la herramienta de tareas programadas, que enseña cómo nació cada una y qu
 con lo que tengas a mano que el objeto que va a buscar allí existe y tiene ese campo.** Una
 advertencia de «no lo he visto» no sustituye a mirarlo; solo traslada la duda a quien menos medios
 tiene para resolverla.
+
+**47. Prometí cambiar un horario con una herramienta que no podía tocar ese objeto.** La versión 15 decía
+«puedo cambiar horarios, no repositorios», y era verdad **para las tareas de agosto, que había creado un
+agente**. El 30/09 el codirector las rehízo como rutinas desde la web y la herramienta rechazó el cambio:
+*«Agents can only update routines they created»*. Lo que era cierto de la clase («las tareas programadas»)
+dejó de serlo del objeto concreto en cuanto cambió quién lo creó.
+→ Es la trampa 46 cometida sobre mí mismo: **antes de escribir «esto lo hago yo», comprueba que la
+herramienta puede actuar sobre ESE objeto**, no sobre los de su tipo. Y cuando alguien rehace algo por ti,
+vuelve a comprobar lo que podías hacer con lo viejo.
+
+**48. «No hay nada que entregar», con código 0, cuando sí lo había.** `entregar.py` comparaba contra el
+último commit. Las rutinas trabajan en una rama propia y la plataforma le pide al modelo que suba ahí su
+trabajo: si un día hacía `git commit` antes de llamar al script, el script no veía nada nuevo, decía que no
+había nada que entregar y salía **bien**. Sin plan B y sin aviso: el trabajo, en una rama que nadie mira. Se
+vio el 30/09 leyendo la primera entrega buena, antes de que pasara.
+→ **Cuando un script decide que no hay nada que hacer, que lo decida contra la referencia que importa
+(`main`), no contra un estado intermedio que otro puede haber movido.** Y cada vez que un proceso nuevo
+empieza a llamar a un script viejo, léelo pensando en lo que el proceso nuevo hace antes de llamarlo.
+
+## Dónde está el proyecto a 30 de septiembre de 2026
+
+**Sesión de miércoles, adelantada.** Versión **16** del plan, la que manda.
+
+- **El canal vuela solo por primera vez (C53.1).** Las tres rutinas de Code funcionan: la de métricas
+  entregó sola (`d234237`) y las tres tareas de agosto están apagadas. La revisión de hoy aún fue la
+  vieja (`.tar.gz`, aplicado por el codirector); desde mañana entrega sola.
+- **C53.2**: `entregar.py` ya no se deja engañar por un commit previo (trampa 48) y el workflow borra las
+  ramas de sesión que ya están en `main`. «Crear PR» en una ejecución de rutina **no se pulsa nunca**.
+- **Yo no puedo tocar las rutinas nuevas** (trampa 47). El modelo de la planificación (Opus 5.5,
+  decisión del codirector hoy) y su horario jueves-viernes-sábado los pone él: tarea 2 del 30/09.
+- **C55.1 · el muestrario de la animación a medida, hecho**: `07_pruebas/animacion-2026-10/`. Unos
+  110.000 tokens; enseña el mecanismo mejor que el archivo, con menos estímulo visual. Propuesta nueva:
+  animar solo las escenas de mecanismo. **Decide el codirector** (tarea 3).
+- **C51.3 · Kaggle listo; licencias estudiadas**: MuseTalk 1.5 sí (con un cambio), cinco de siete no.
+  Prueba, no antes del 12/10.
+
+**Lo que espera al codirector:** `tareas/tareas_codirector_2026-09-30.md` — el `push` antes de mañana
+a las 11:28, el modelo y el horario de la planificación antes del jueves a las 22:07, y mirar el
+muestrario.
+
+**Para la próxima sesión (lunes 5):** que la revisión del jueves y la planificación entregaron solas y
+si la limpieza de ramas corrió; si la tarea 2 salió por tres disparadores o por el diario; la respuesta
+a la tarea 3 (C55.2, entero o mezclado); y lo del lunes 5 que ya estaba: primera semana entera de C50,
+S3, C44, C47 y P9.
 
 ## Dónde está el proyecto a 29 de septiembre de 2026
 

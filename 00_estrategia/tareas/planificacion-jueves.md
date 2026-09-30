@@ -1,8 +1,10 @@
 # Tarea programada · Planificación semanal — jueves noche
 
 **Copia legible del prompt que corre en el almacén de tareas programadas.**
-Espejo creado el 31/08/2026, sincronizado el 04/09/2026, **el 07/09/2026** y **el 12/09/2026 (dirección del sábado)**. `id`: `trig_015qkb2sqbbJwJE1qgoNMK95` · cron: `0 20 * * 4 (UTC) · jueves 22:00 hora de España` ·
-modelo: `claude-opus-5`.
+Espejo creado el 31/08/2026, sincronizado el 04/09/2026, **el 07/09/2026** y **el 12/09/2026 (dirección del sábado)**. **Desde el 30/09/2026 corre como rutina de Code** (C53.1): `id`: `trig_014hUCsYDz9mSVNKTFtQxZpR` · jueves a las 22:07
+hora de España, y viernes y sábado como reintento en cuanto el codirector los añada (tarea 1 de
+`tareas_codirector_2026-09-30.md`) · modelo: **Opus 5.5** desde que el codirector lo cambie en esa misma tarea (se creó sin
+modelo) · repositorio añadido · entorno «Mecánica del Humor». La tarea vieja (`trig_015qkb2sqbbJwJE1qgoNMK95`) está apagada.
 
 > ⚠️ **CORREGIDO EL 21/09/2026: este fichero YA NO es una copia. ES el prompt.**
 > Desde C30 (12/09/2026) el almacén solo lleva un arranque que lee este fichero de
@@ -12,11 +14,29 @@ modelo: `claude-opus-5`.
 
 ---
 
+## Lo que cambia el 30/09/2026 (dirección del miércoles) · versión 16 del plan · C53.2
+
+**Va antes que «Lo que cambia el 28/09/2026», y lo completa.**
+
+- **Ya corres como rutina de Code, con el repositorio añadido.** `entregar.py` sube de verdad; el
+  `.tar.gz` es solo el plan B.
+- **Puedes correr jueves, viernes y sábado a las 22:07** (o, si el formulario no dejaba poner tres
+  días, **todos los días**). Por eso el paso 0 de abajo tiene ahora una línea más, que va la
+  primera: **si hoy (hora de España) es domingo, lunes, martes o miércoles, termina sin tocar
+  nada** y dilo en una línea en tu respuesta final. La semana se planifica de jueves a sábado,
+  nunca antes: el lunes es de las métricas y de la dirección, y lo que decidan tiene que llegarte.
+- **Tu sesión tiene su propia rama de trabajo** (`claude/<nombre-al-azar>`) y la plataforma puede
+  pedirte que subas ahí tu trabajo. Hazlo si quieres, pero **la entrega es siempre `entregar.py`**,
+  y da igual si has hecho `git commit` antes: desde el 30/09 el script entrega todo lo que va de
+  `origin/main` a tu clon. **No abras nunca un pull request.** En el paso 0, solo cuentan las ramas
+  `claude/entrega-planificacion-*`; las demás `claude/…` son ramas de sesión.
+
 ## Lo que cambia el 28/09/2026 (dirección del lunes) · versión 14 del plan
 
 **Esto va antes que todo lo demás de este prompt, y manda sobre ello.**
 
-0. **Si hoy NO es jueves, lo primero es saber si hace falta que trabajes.** Puede que te lancen un
+0. **Si hoy (hora de España) es domingo, lunes, martes o miércoles, terminas sin tocar nada** (30/09).
+   **Si es viernes o sábado, lo primero es saber si hace falta que trabajes.** Puede que te lancen un
    viernes o un sábado como reintento (el jueves 24 la ejecución programada falló a los siete
    segundos). Calcula el **lunes siguiente** y mira en `origin/main`:
    si `05_calendario/parrilla.json` ya tiene emisión para ese lunes **y** su guion existe en
