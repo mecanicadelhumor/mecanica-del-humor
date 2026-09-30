@@ -156,7 +156,7 @@ confundirlas:
 | `.github/workflows/visual_prueba.yml` | **Se retira el 23/09 (tarde)**: lo borra el codirector en la tarea 3 | Era la prueba de C50; su código (`muestrario_visual.py` y el `visual.py` de prueba) ya no existe |
 | `03_produccion/pipeline/visual.py` · `fondo_visual.py` | **De la dirección** (23/09, C50 en producción) | `visual.py`: resolver, traer, diagnóstico. `fondo_visual.py`: cortes y pista de fondo para `render.py`. **La revisión diaria no los toca sin encargo**; los planos se corrigen con `05_calendario/visuales/ajustes.json`, no con código |
 | `05_calendario/visuales/` | **Del workflow `visuales.yml`**, salvo `ajustes.json` (revisión diaria) y `APAGADO` (el codirector y yo) | Ver su `LEEME.md`. `APAGADO` es el interruptor de C50: si existe, todo sale como antes |
-| **Las tareas programadas entregan solas** (C53) | **Autorizado por el codirector el 28/09/2026** | Con `04_agentes/entregar.py` a ramas `claude/entrega-*` y el workflow `entregas.yml` a `main`. Sin credenciales en los prompts: necesitan el repositorio añadido a cada tarea en claude.ai/code/routines (tarea 1 del codirector del 28/09). Hasta entonces, plan B: el `.tar.gz` de siempre |
+| **Las tareas programadas entregan solas** (C53) | **Autorizado por el codirector el 28/09/2026** | Con `04_agentes/entregar.py` a ramas `claude/entrega-*` y el workflow `entregas.yml` a `main`. Sin credenciales en los prompts: necesitan el repositorio añadido a cada tarea, **y eso solo existe en las rutinas de Code**. Las tres tareas de agosto se crearon desde Cowork y no lo admiten (trampa 46): **se rehacen como rutinas de Code** (C53.1, tarea 1 de `tareas_codirector_2026-09-29.md`) y se apagan las viejas. Hasta entonces, plan B: el `.tar.gz` de siempre |
 | `.github/workflows/` · excepción del 28/09/2026 | **Autorizada por el codirector esa vez, pero GitHub la rechazó**: el token no tiene permiso para workflows | `entregas.yml` (nuevo), `visuales.yml` y `vista.yml` (solo `main`) y `metricas.yml` (dos intentos más) se le entregaron en `00_estrategia/tareas/workflows_2026-09-28/`. **La regla sigue, y ahora además la sostiene el token** |
 | `04_agentes/entregar.py` · `.github/workflows/entregas.yml` | **De la dirección** (28/09, C53) | Son la tabla de `PROPIEDAD_DE_FICHEROS.md` en código. Ninguna tarea los toca: `entregar.py` se excluye a sí mismo |
 | Regla 7.1 · la persona sintética | **Autorizada por el codirector el 23/09/2026**, escrita el 28/09 | Sí a Kaggle, con las cinco condiciones de `REGLAS.md` 7.1. No entra sin muestrario (C51.2) |
@@ -181,7 +181,7 @@ arrastraba defectos. Solo puede añadir lo que verifique contra la fuente.
 ## Las trampas en las que ya se ha caído
 
 No son anécdotas: cada una costó tiempo o un vídeo, y todas se repiten solas si nadie las
-tiene delante. Son cuarenta y cinco a 28/09/2026, y la lista crece porque se lee.
+tiene delante. Son cuarenta y seis a 29/09/2026, y la lista crece porque se lee.
 
 **1. Cada documento daba por supuesto que el movimiento lo ponía otro.**
 Los subtítulos quemados se retiraron el 20/08; la respiración de zoom ya estaba
@@ -616,6 +616,46 @@ Por eso C53 no pone credenciales en ningún prompt: las tareas escriben porque e
 añadido a ellas.
 → Es la trampa 34 en git: **antes de diseñar alrededor de un acceso, prueba el camino entero con
 una escritura de verdad, desde el mismo sitio desde donde va a correr.**
+
+**46. Le pedí al codirector una opción de una pantalla que no había visto, y no existía.** La tarea
+1.3 del 28/09 le mandaba a añadir el repositorio a las tres tareas programadas en la página de
+rutinas de Code, con una «advertencia honesta» de que yo no había visto esa pantalla. Las tres tareas
+se habían creado en agosto desde una conversación de Cowork (`created_via: meta_mcp`): no salen en
+esa página y no tienen campo de repositorio. Lo supe al día siguiente, **en un minuto**, listándolas
+con la herramienta de tareas programadas, que enseña cómo nació cada una y qué campos tiene.
+→ Es la trampa 45 aplicada a una instrucción: **antes de mandar a alguien a una pantalla, comprueba
+con lo que tengas a mano que el objeto que va a buscar allí existe y tiene ese campo.** Una
+advertencia de «no lo he visto» no sustituye a mirarlo; solo traslada la duda a quien menos medios
+tiene para resolverla.
+
+## Dónde está el proyecto a 29 de septiembre de 2026
+
+**Sesión de martes, sin cambios en producción.** Versión **15** del plan, la que manda.
+
+- **El canal, bien:** `MDS-027` salió con vídeo de archivo detrás; la revisión corrigió tres planos
+  de `MDS-028` y `029` y el codirector aplicó su `.tar.gz`. Mediana C26, **24,0**, sin cambios.
+- **C53.1 · las tareas se rehacen como rutinas de Code.** Las de agosto no admiten repositorio
+  (trampa 46). El codirector crea tres rutinas nuevas con el mismo texto y modelo, el repositorio y
+  un entorno «Mecánica del Humor» con red completa; prueba la de métricas con «Run now»; apaga las
+  viejas. **Sin probar:** si una rutina puede subir cualquier rama `claude/` o solo la suya; si es lo
+  segundo, la prueba dará plan B y el arreglo está pensado en la versión 15 (no aplicado: tocaba el
+  mecanismo de subida y la comprobación de permisos de la sesión lo paró).
+- **El horario jueves-viernes-sábado de la planificación lo pone la dirección** (puedo cambiar
+  horarios, no repositorios), pero **solo cuando C53.1 funcione**: con `.tar.gz`, el reintento del
+  viernes no ve el paquete del jueves y planificaría dos veces.
+- **C55 · animación a medida con Opus 5.5** (el codirector entiende por animación la hecha con
+  JavaScript por Opus). Todos los Shorts con datos son ya animación JS de plantilla, incluidos los
+  tres mejores; la imagen real no tiene datos todavía. Propuesta: muestrario de un Short publicado
+  (sin subirlo), y si convence, un Short de cada cinco del 12/10 al 6/11, decidido por la retención
+  a 30 s con una regla escrita de antemano. Estimación: 150.000-400.000 tokens de Opus 5.5 por Short.
+- **Lo que espera al codirector:** `tareas/tareas_codirector_2026-09-29.md` — la tarea 1 (rutinas,
+  antes del jueves 22:00), la 2 (Kaggle, no urgente) y la 3 (¿muestrario, y sobre qué Short?).
+
+**Para la próxima sesión:** el resultado de la prueba de métricas; si hay rutinas nuevas, apagar las
+viejas si siguen encendidas y poner el horario de la planificación; el muestrario si el codirector
+dijo sí (**dijo sí: `MDS-027`, en la siguiente sesión**, en `07_pruebas/animacion-2026-10/`,
+con la misma voz de la caché y sin subirlo; que mire su uso antes y después); y el lunes 5, lo que ya estaba (C50, S3, C44) más `metricas_diarias.yml` (C47), que nunca se
+le pidió en un fichero de tareas.
 
 ## Dónde está el proyecto a 28 de septiembre de 2026
 

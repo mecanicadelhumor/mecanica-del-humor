@@ -5061,3 +5061,238 @@ no vuelve a pasar: C53.
 - **Los umbrales de C50** (movimiento 0,5, relevancia 0,34) siguen sin calibrar con datos: la primera
   semana con planos de verdad es esta.
 - **P9** (los tres sonidos): acreditados, sin mezclar en `montaje.py`. Lo recordó la revisión del 28.
+
+---
+
+# Versión 15 · 29 de septiembre de 2026 — las tareas, en su sitio; y la animación a medida, estudiada
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario, y lo que se anula se dice con su nombre, en la tabla de abajo.
+
+Sesión de martes, pedida por el codirector. Traía dos notas en su cuaderno y su respuesta a la tarea
+del 28/09:
+
+1. *«Quizás podríamos explorar la posibilidad de hacer algunos vídeos con animaciones mediante Opus
+   5.5, controlando bien el número de ellos para temas de cuota, y analizar con cifras de audiencia
+   si es preferible eso o los vídeos con imágenes reales. […] No digo de implementar esto de
+   inmediato, simplemente de estudiarlo y decidir estos días entre los dos.»* Y en la sesión,
+   precisado: por animación entiende **animación creada con JavaScript por Opus**.
+2. Kaggle, pendiente: lo hará en cuanto pueda (y el 28/09 dijo que está dispuesto a dar su teléfono).
+3. En la tarea 1 del 28/09: hizo el `pull`, movió los cuatro workflows y cambió los prompts, pero
+   **no pudo añadir el repositorio a las tareas ni cambiar el horario de la planificación**: las
+   tareas no aparecen como rutinas de Code y el horario solo admite «entre semana», «semanal»,
+   «mensual»…
+
+El canal, hoy: bien. `MDS-027` subido y con vídeo de archivo detrás (nueve planos), sin incidencias;
+la revisión diaria corrigió tres planos de `MDS-028` y `029`, y el codirector aplicó su `.tar.gz` a
+las 17:59. Los números no se han movido desde el punto de control (mediana C26 **24,0**).
+
+---
+
+## Lo que se anula, lo que se mantiene y lo que se amplía
+
+| Documento o decisión | Estado desde hoy |
+|---|---|
+| C53 · «añadir el repositorio a las tres tareas en claude.ai/code/routines» (tarea 1.3 del 28/09) | **ANULADO: no era posible.** Las tres tareas se crearon desde Cowork y no tienen dónde poner un repositorio. **SUSTITUIDO por C53.1**: se crean tres rutinas de Code nuevas, con el repositorio, y se apagan las viejas |
+| C53 · horario de la planificación jueves-viernes-sábado (tarea 1.4 del 28/09) | **APLAZADO, y lo pone la dirección** (puede cambiar horarios, no repositorios). No antes de que C53.1 funcione: con el `.tar.gz` un reintento del viernes no ve el paquete del jueves y planificaría la semana dos veces |
+| `entregar.py`, `entregas.yml` y los prompts de las tareas | **SE MANTIENEN sin cambios.** Ya suponen que el repositorio está añadido; con las rutinas nuevas, por fin lo estará |
+| C50 · primera semana entera con imagen real (`MDS-026` a `030`) | **SE MANTIENE y no se toca.** Se mide |
+| C51.2 · Kaggle y la persona sintética | **SE MANTIENE, no urgente.** Tarea 2 de `tareas_codirector_2026-09-29.md` |
+| C44 · la voz | **Sigue aplazada** (versión 14) |
+| **C55 · animación a medida con Opus 5.5** | **NUEVO: estudio y propuesta.** Nada entra en producción esta semana. Primer paso, un muestrario, si el codirector dice sí (tarea 3) |
+
+---
+
+## C53.1 · Por qué no se pudo añadir el repositorio, y lo que se hace
+
+**Lo que se ha visto hoy.** La herramienta con la que la dirección lee las tareas programadas las
+lista las tres, con su texto, su horario y su última ejecución, y dice cómo nacieron:
+**`created_via: meta_mcp`**, es decir, desde una conversación de Cowork en agosto. No tienen ningún
+campo de repositorio, ni se puede añadir: esa herramienta cambia nombre, horario, texto, modelo y
+encendido, **y nada más**. La página de rutinas de Code, que es la única con el campo
+«repositorios», no las enseña. **La tarea 1.3 del 28/09 le pedía al codirector una opción que no
+existe**, y le puse una «advertencia honesta» («esa pantalla no la he visto») en vez de comprobarlo
+antes: es la trampa 45 otra vez, y queda escrita como trampa 46.
+
+**Lo que se hace:** el codirector crea tres **rutinas de Code** nuevas (una vez, unos 25 minutos),
+con el mismo texto (lo copia de la tarea vieja), el mismo modelo, el repositorio
+`mecanicadelhumor/mecanica-del-humor`, un entorno propio con acceso completo a internet y sin
+conectores; lanza una vez la de métricas como prueba de punta a punta; y apaga las tres viejas (sin
+borrarlas). Paso a paso en `tareas/tareas_codirector_2026-09-29.md`, tarea 1.
+
+Tres decisiones dentro de eso, con su porqué:
+
+- **El entorno, con acceso completo.** El «Default» de Code solo deja llegar a GitHub y a los
+  repositorios de paquetes. La planificación copia los resultados de los resúmenes de los artículos
+  (regla nueva del 15/09) y la revisión comprueba DOI: con el entorno por defecto, las páginas de las
+  revistas se quedarían fuera sin un error claro (trampa 34). En esas rutinas no hay ninguna clave y
+  el repositorio es público, así que abrir la red no expone nada.
+- **La prueba es la de métricas, con «Run now».** Es la tarea que menos toca (su bitácora) y la
+  única que se puede lanzar un martes sin rehacer trabajo de nadie. Si «Entregas (C53)» sale en
+  verde y aparece el commit de «Mecánica del Humor (metricas)», el camino entero funciona.
+- **La cuenta de GitHub.** Los commits llevan de autor «Mecánica del Humor (…)» porque lo pone
+  `entregar.py`, pero el `push` lo hace la cuenta de GitHub conectada a la cuenta de Claude del
+  codirector. **Tiene que ser la de la marca** (regla 6). Si está conectada su cuenta personal, para
+  y lo decide él: cambiarla afecta a sus otros proyectos con Claude Code.
+
+**Lo que no se ha podido comprobar, dicho:** la documentación de Claude Code dice en la página de
+rutinas que las ramas `claude/` «se aceptan siempre», y en la de entornos que `git push` solo se
+admite «contra la rama de trabajo de la sesión». `entregar.py` sube a `claude/entrega-<tarea>-…`,
+así que cuenta con lo primero. Si mandara lo segundo, la prueba saldría con código 2: **plan B, no
+se pierde nada**, y el arreglo está pensado —que `entregar.py` suba el mismo commit a la rama de
+trabajo de la sesión con una línea `Entrega-C53: <tarea>`, y que «Entregas» se dispare con
+cualquier rama `claude/` y lea esa línea—. **No se ha aplicado hoy**: es un cambio en el mecanismo
+que sube cosas a GitHub, la comprobación de permisos de la sesión lo paró, y no se toca algo así
+sin que la prueba diga que hace falta y sin que el codirector lo vea.
+
+**Y lo que desbloquea:** en cuanto la rutina de planificación exista y la prueba salga bien, la
+dirección le pone el horario jueves-viernes-sábado a las 22:07 (`CRON_TZ=Europe/Madrid 7 22 * * 4,5,6`);
+su paso 0 ya sabe terminar sin hacer nada si la semana está hecha o su entrega está esperando.
+
+---
+
+## C55 · Animación a medida con Opus 5.5: el estudio
+
+### La pregunta, bien puesta
+
+Lo primero que salió al mirarlo es que la pregunta del codirector es mejor de lo que parece. **Todos
+los Shorts de los que tenemos datos son ya animación en JavaScript escrita por Claude**: el motor
+`03_produccion/pipeline/escena.html` (1.403 líneas, `cargar(d)` y `pintar(t)`) pinta cada fotograma
+en función del tiempo, y `render.py` lo captura con Chromium. Eso es lo que hicieron `MDS-016`
+(1.115 a 48 h), `MDS-022` (244, **64 % de retención en el segundo 30**, la mejor de la historia del
+canal) y `MDS-021`. `MDS-024` y `MDS-025` intentaron C50 y cayeron a la plantilla (11 y 10 planos
+«sin imagen»). **La imagen real empezó ayer**, con `MDS-026`, y todavía no tiene ni una lectura a
+48 horas.
+
+Así que la comparación que hay que hacer no es «gráficos contra imagen real», sino tres cosas:
+
+| | Qué es | Qué sabemos |
+|---|---|---|
+| **A · la plantilla** | `escena.html`: la misma animación para todos los Shorts, que cambia de texto, icono y cara del Engranaje | 25 Shorts. Los tres mejores del canal son de aquí. El codirector la juzgó el 14/09 (*«fondo azul con letras amarillas no compite con imágenes reales»*) y por eso existe C50 |
+| **B · la imagen real** (C50) | vídeo de archivo de Pexels y Pixabay detrás, la frase encima, tarjetas de marca intercaladas | 2 Shorts publicados, **cero datos**. En cinco días la revisión ha tenido que corregir **4 de 33 planos** de archivo (uno de ellos dos veces) porque no contaban lo que decía la frase —«no hay ningún buzón», «un hombre solo en un bar» en vez de una clase— y `MDS-026` salió con texto sobre una cara |
+| **C · la animación a medida** (lo que propone el codirector) | una animación escrita por Opus 5.5 **para ese Short**, escena a escena, a partir de su guion | Nada todavía |
+
+### Qué es, técnicamente: lo que ya tenemos, llevado más lejos
+
+Los vídeos de Opus 5.5 que circulan se hacen exactamente como los nuestros: el modelo escribe una
+página HTML (Canvas o SVG) en la que **cada píxel es función del tiempo**, un navegador sin pantalla
+la captura fotograma a fotograma y `ffmpeg` la codifica. Es literalmente la regla 11.5. Por eso:
+
+- **No hace falta ninguna pieza nueva**, ni Remotion ni nada de pago: `render.py`, Chromium, la
+  barrera de C21 y el montaje con la voz ya existen. Lo que cambiaría es que, en vez de la plantilla,
+  `render.py` cargaría la página propia de ese Short, con el mismo contrato (`cargar`, `pintar`).
+- **Coste en euros: cero.** Sin licencias (regla 9): no hay material de nadie. Sin internet en el
+  render (regla 11.6). Uso de IA declarado en la descripción, como hoy (regla 7); no es contenido
+  realista, así que no lleva `containsSyntheticMedia`.
+- **Coste en cuota**, que es el de verdad: la cifra publicada para un vídeo corto hecho así es de
+  **unos 90.000 tokens de entrada y 15.000 de salida, unos cuatro minutos**, la primera versión. Un
+  Short nuestro pide más: seis escenas, sincronía con las palabras de la voz real (las marcas de
+  tiempo ya las calcula `fondo_visual.py`) y un par de vueltas mirando hojas de contactos. **Estimo
+  150.000-400.000 tokens de Opus 5.5 por Short animado.** Es una estimación: el muestrario la mide.
+
+### Por qué puede funcionar, y por qué puede no hacerlo
+
+**A favor:**
+
+1. **Cuenta siempre lo que dice la frase**, porque se construye a partir de ella. Es justo donde C50
+   flojea (uno de cada ocho planos corregido en cinco días, y los que no se corrigen son «genéricos
+   pero no contradicen»).
+2. **Puede enseñar el mecanismo**, que es lo que dice el nombre del canal: la incongruencia que se
+   resuelve, el tiempo del remate, la curva del estudio. Un plano de archivo cuenta una situación;
+   una animación puede contar por qué hace gracia.
+3. **Es de la marca y es nuestra**: colores, tipografía y el Engranaje, sin caras que tapar, sin
+   menores ni marcas en plano, sin licencias que apuntar.
+4. **Los datos que hay no la castigan**: la mejor retención del canal es de animación, aunque sea de
+   plantilla.
+
+**En contra, por orden de peligro:**
+
+1. **El tic.** Si todas las animaciones acaban usando el mismo vocabulario, se convierten en la
+   plantilla con más adornos, y en el «huele a IA» que el codirector detectó en los guiones. Es la
+   trampa 39 (un ejemplo en un prompt se convierte en plantilla) y la 21. Se evita con tres
+   referencias de estilo distintas o ninguna, y prohibiendo repetir la idea visual de la semana
+   anterior.
+2. **Nadie la mira antes de publicarse.** Los ejemplos buenos que circulan necesitaron *«unas
+   cuantas rondas de arreglos»* con una persona delante; aquí no la hay. La barrera de C21 caza un
+   texto que no cabe, no una animación fea o que va a destiempo. Hace falta que la propia tarea mire
+   su hoja de contactos (veinte instantes por escena, trampa 15) y que la revisión diaria la mire
+   como mira la de C50.
+3. **La cuota.** Uno por semana es asumible; cinco, no. Y el codirector lo paga con la suya.
+4. **Al feed pueden gustarle más las caras y la imagen real.** No lo sabemos: es lo que se mide.
+5. **Choca con C50 si se hace ya.** Esta semana es la primera medida de la imagen real (regla 11.1).
+
+### La recomendación: sí, a una prueba acotada, en tres pasos
+
+1. **C55.1 · El muestrario (sin producción, sin subir nada).** La dirección hace, en una sesión, la
+   versión animada de **un Short ya publicado**, con la misma voz (está en la caché) y el mismo
+   guion, en `07_pruebas/animacion-2026-10/`, al lado del publicado. **No se sube a YouTube** (C54:
+   el mismo Short dos veces es lo que mató a `MDS-017` y `MDS-023`). Propuesta: `MDS-027`, para
+   comparar la misma historia con imagen real y con animación a medida; alternativa, `MDS-022`, para
+   compararla con la plantilla en su mejor día. **Decide el codirector mirándolo** (regla 11.2), y
+   la sesión sirve de paso para medir lo que cuesta: el codirector mira su porcentaje de uso en
+   claude.ai/settings/usage antes y después.
+2. **C55.2 · Si el muestrario convence: un Short de cada cinco, cuatro semanas.** Desde la semana
+   del **12 de octubre** (la del 5 es la segunda de C50, que también hay que dejar medirse) y hasta
+   el **6 de noviembre**: cuatro Shorts animados. La planificación marca uno por semana con
+   `"estilo": "animacion"`; una **rutina nueva, «Animación», con Opus 5.5**, el viernes, le escribe
+   su página en `05_calendario/animaciones/<ID>/` (dueña única de esa carpeta, regla 10), se mira su
+   hoja de contactos y entrega con `entregar.py`. Si la animación falla la barrera o no llega, **el
+   Short sale con C50**: nunca bloquea la producción (reglas 5 y C30). **Requiere que C53.1
+   funcione**: con `.tar.gz`, sería un paquete más a la semana para el codirector.
+3. **C55.3 · La regla de decisión, escrita antes de ver los datos** (como C26):
+   - **Métrica principal: la retención a 30 s** (o el % visto cuando la curva no llegue) de los
+     cuatro animados contra los Shorts con imagen real de las mismas semanas. Es la única que con
+     cuatro vídeos se puede leer: entre Shorts se mueve hasta 46 puntos (del 17,8 % de `MDS-016`
+     al 64,4 % de `MDS-022`), mientras que las visualizaciones van de 0 a 1.115 según el feed.
+   - **Secundarias:** qué parte viene del feed (¿YouTube lo enseñó?), vistas a 48 h y «me gusta» por
+     cada 100 (S3).
+   - **Si los animados superan a los de imagen real en 10 puntos o más de retención a 30 s y ninguno
+     es un cero de feed → pasan a dos de cada cinco. Si quedan 10 puntos o más por debajo, o dos son
+     ceros de feed → se para. En medio → se queda uno de cada cinco solo si al codirector le gusta
+     más; si no, se para.**
+   - **Honestidad sobre la muestra:** cuatro contra dieciséis solo distinguen una diferencia grande.
+     Y tres de esos cuatro caen en la ventana de veinte del 15 de noviembre (19/10-13/11), así que
+     la prueba también se juega algo en C26. Por eso se decide antes del **8 de noviembre**, que es
+     cuando se congelan los umbrales, y por eso es uno de cada cinco y no más.
+
+**Decidido en la sesión (29/09):** el codirector eligió **el muestrario sobre `MDS-027`, en otra
+sesión**, no en esta. Se hace en la siguiente, con la semana de C50 ya medida.
+
+**Lo que C55 no decide:** la persona sintética (regla 7.1, Kaggle) va por su lado; la animación no
+la necesita, aunque podrían juntarse más adelante.
+
+---
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| **Hoy, 29/09** | Esto escrito. `MDS-027` sale a las 19:00 |
+| Antes del jueves 1, 22:00 | Tarea 1 del codirector: las tres rutinas de Code y la prueba de métricas |
+| **Jueves 1, 22:00** | Planificación: con la rutina nueva, entrega sola; si no, `.tar.gz` que hay que aplicar **antes del lunes 5 a las 03:13** |
+| Viernes 2 | Sesión, si hay algo que mirar: el resultado de la prueba y, si el codirector dice sí, el muestrario de C55.1 |
+| Lunes 5 | Métricas; sesión de dirección: primera semana entera con C50, S3, la muestra de C44, el horario de la planificación |
+| Semana del 12/10 | C55.2, si el muestrario convence y C53.1 funciona |
+| Antes del 8/11 | La puerta de los 1.000 (C26) y la decisión de C55.3 |
+| 15/11 | La decisión |
+
+## Lo que NO cambia hoy
+
+- **Ningún código de producción, ningún guion, ningún prompt de tarea, ningún horario.** Es la
+  primera semana entera de C50 y se mide.
+- **`entregar.py` y `entregas.yml`**, tal como están desde el 28/09.
+- **Cinco Shorts a la semana**, el episodio largo suspendido (C42), los umbrales de C26.
+
+## Lo que queda mirado y sin resolver
+
+- **Si una rutina puede subir cualquier rama `claude/` o solo la suya.** Lo contesta la prueba de la
+  tarea 1.4.
+- **C47 · `metricas_diarias.yml`**, diseñado por la revisión diaria el 21/09 en
+  `07_pruebas/metricas-diarias-21-09/`, **nunca se le ha pedido al codirector en un fichero de
+  tareas**: la revisión lo sigue anotando como pendiente suyo. Desde el 28/09 `metricas.yml` corre
+  también los martes, y hay que ver si ese workflow sigue haciendo falta y si choca con él antes de
+  pedírselo. Para el lunes 5.
+- **Ningún plano de C50 ha salido de FLUX** (Cloudflare) en `MDS-026` a `030`: todo es Pexels,
+  Pixabay o tarjeta. La revisión de hoy ha forzado `fuente: ia` en tres planos; se verá si llegan.
+- Lo de la versión 14 sigue abierto: `MDS-024`, S3, por qué `MDS-021` y `022` retienen tanto, los
+  umbrales de C50 y P9.
