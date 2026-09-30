@@ -536,7 +536,7 @@
       "guion": "05_calendario/guiones/MDS-027.es.json",
       "video_id": "qlvJWEGc8hM",
       "url": "https://youtu.be/qlvJWEGc8hM",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-09-29T17:00:00Z",
       "musica": "cama_13_embrace_sappheiros.mp3",
       "subido_utc": "2026-09-29T07:03:23Z",
@@ -558,5 +558,5 @@
       "revisado": false
     }
   ],
-  "_estado_leido_utc": "2026-09-28T17:03:20Z"
+  "_estado_leido_utc": "2026-09-30T15:22:26Z"
 }
