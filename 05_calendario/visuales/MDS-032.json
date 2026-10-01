@@ -1,0 +1,360 @@
+{
+  "guion": "MDS-032",
+  "version": 1,
+  "firma": "582dc8adf65e2739",
+  "resuelto_utc": "2026-10-01T22:36:14Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "0a8e346ab004",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.9
+          ],
+          "frase": "Tras la mampara, dos compañeros se ríen juntos. No les ves la cara.",
+          "fuente": "pixabay",
+          "id": 34317,
+          "pagina": "https://pixabay.com/videos/id-34317/",
+          "titulo": "hong kong, sunset, sky, structure, office, city, skyscrapers, dawn, glass, high-rise, 2020, business, architecture id",
+          "autor": "RafterJr72",
+          "autor_url": "https://pixabay.com/users/RafterJr72-11468402/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 12.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2020/03/26/34317-400974371_large.mp4",
+          "tipo": "video",
+          "consulta": "office partition frosted glass",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 19.76,
+          "encuadre": {
+            "x": 0.311,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.7231,
+              0.3167,
+              0.0717,
+              0.0556
+            ],
+            [
+              0.4219,
+              0.1722,
+              0.0569,
+              0.0458
+            ],
+            [
+              -0.0054,
+              0.0153,
+              0.0518,
+              0.0361
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "82b700efe8b6",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.72
+          ],
+          "frase": "Y aun así apostarías a que son amigos, de los que bajan juntos a desayunar.",
+          "fuente": "pexels",
+          "id": 8296444,
+          "pagina": "https://www.pexels.com/video/dating-couple-having-coffee-8296444/",
+          "titulo": "dating couple having coffee",
+          "autor": "Mikhail Nilov",
+          "autor_url": "https://www.pexels.com/@mikhail-nilov",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 20.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8296444/8296444-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "two coworkers having coffee together cafe",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 5.04,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6278,
+              0.4156,
+              0.1417,
+              0.1016
+            ],
+            [
+              0.2778,
+              0.4313,
+              0.125,
+              0.1
+            ],
+            [
+              0.1972,
+              0.4234,
+              0.1056,
+              0.0891
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "ca0816d15bd4",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.69
+          ],
+          "frase": "¿Lo sabes de verdad, o te lo imaginas?",
+          "fuente": "pixabay",
+          "id": 10822,
+          "pagina": "https://pixabay.com/videos/id-10822/",
+          "titulo": "keyboard, typing, writing, notebook, computer, technology, laptop, business, internet, work, office, person, hand, communication, working, using, connection, pc, information, desktop, web, workplace id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 12.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4",
+          "tipo": "video",
+          "consulta": "person listening at office desk",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 14.89,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "a154a66d6fb8",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.57
+          ],
+          "frase": "Greg Bryant lo probó con gente de veinticuatro culturas: oían un segundo de risa de dos personas. ¿",
+          "fuente": "pixabay",
+          "id": 342901,
+          "pagina": "https://pixabay.com/videos/id-342901/",
+          "titulo": "headphones, computer, person, typing, home, window, screen, headset, vintage, lifestyle, old computer, cozy room, digital immersion, interior space, listening music, personal tech, anime, ai created id",
+          "autor": "Hideaki_AnimeTH",
+          "autor_url": "https://pixabay.com/users/Hideaki_AnimeTH-29800360/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 10.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2026/03/27/342901_large.mp4",
+          "tipo": "video",
+          "consulta": "person listening with headphones laptop",
+          "relevancia": 0.75,
+          "inicio_s": 0.0,
+          "movimiento": 2.39,
+          "encuadre": {
+            "x": 0.616,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.353,
+              0.2028,
+              0.2939,
+              0.2375
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Amigas o desconocidas",
+          "t_estimado": [
+            7.57,
+            10.18
+          ],
+          "frase": "Amigas o desconocidas?",
+          "fuente": "marca",
+          "tipo": "marca"
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "e87833208af6",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            1.8
+          ],
+          "frase": "Y acertaban más que",
+          "fuente": "marca",
+          "tipo": "marca"
+        },
+        {
+          "k": 2,
+          "desde": "a cara o cruz",
+          "t_estimado": [
+            1.8,
+            11.1
+          ],
+          "frase": "a cara o cruz: según la cultura, entre cincuenta y tres y sesenta y siete de cada cien.",
+          "fuente": "pexels",
+          "id": 8817000,
+          "pagina": "https://www.pexels.com/video/hand-flipping-a-coin-8817000/",
+          "titulo": "hand flipping a coin",
+          "autor": "cottonbro CG studio",
+          "autor_url": "https://www.pexels.com/@cottonbro-cg-studio",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 5.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8817000/8817000-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "coin flip in the air",
+          "relevancia": 0.667,
+          "inicio_s": 0.0,
+          "movimiento": 3.32,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "54cbe25abfc4",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            1.0
+          ],
+          "frase": "O sea, que",
+          "fuente": "pexels",
+          "id": 35829041,
+          "pagina": "https://www.pexels.com/video/argentine-coin-spinning-on-banknotes-close-up-35829041/",
+          "titulo": "argentine coin spinning on banknotes close up",
+          "autor": "Andrew Schwark",
+          "autor_url": "https://www.pexels.com/@andrew-schwark-540305",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/35829041/15192633_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "coin spinning on table",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 21.11,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "tu apuesta por los del desayuno",
+          "t_estimado": [
+            1.0,
+            10.85
+          ],
+          "frase": "tu apuesta por los del desayuno es buena, pero no segura: a veces, acertar era casi tirar una moneda.",
+          "fuente": "pexels",
+          "id": 13324074,
+          "pagina": "https://www.pexels.com/video/two-men-talking-while-having-coffee-13324074/",
+          "titulo": "two men talking while having coffee",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13324074/13324074-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "two coworkers having coffee together cafe",
+          "relevancia": 0.4,
+          "inicio_s": 0.0,
+          "movimiento": 2.22,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5111,
+              0.3094,
+              0.2278,
+              0.1875
+            ],
+            [
+              0.0306,
+              0.3719,
+              0.1306,
+              0.1422
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 2,
+      "plano": 1,
+      "id": "pixabay:171178",
+      "titulo": "ai generated, coffee, premium coffee, restaurant, coffee menu, drink, cafe, coffee shop id",
+      "motivo": "quieto (movimiento 0.2)"
+    },
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pixabay:8389",
+      "titulo": "candle, macro, burn, tea light, wooden table id",
+      "motivo": "quieto (movimiento 0.19)"
+    },
+    {
+      "escena": 6,
+      "plano": 2,
+      "id": "pixabay:171178",
+      "titulo": "ai generated, coffee, premium coffee, restaurant, coffee menu, drink, cafe, coffee shop id",
+      "motivo": "quieto (movimiento 0.2)"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}

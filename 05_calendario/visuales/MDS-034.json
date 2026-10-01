@@ -1,0 +1,444 @@
+{
+  "guion": "MDS-034",
+  "version": 1,
+  "firma": "72e477cb753bf712",
+  "resuelto_utc": "2026-10-01T22:37:40Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "52363d10db97",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            2.47
+          ],
+          "frase": "Foto de grupo en una boda.",
+          "fuente": "pexels",
+          "id": 38881278,
+          "pagina": "https://www.pexels.com/video/elegant-wedding-party-on-stairs-group-photo-38881278/",
+          "titulo": "elegant wedding party on stairs group photo",
+          "autor": "Victoria  Ofere",
+          "autor_url": "https://www.pexels.com/@victoria-ofere-2149128219",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/38881278/16530536_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "wedding guests posing for group photo",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 14.86,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3528,
+              0.3625,
+              0.0611,
+              0.0437
+            ],
+            [
+              0.5278,
+              0.3734,
+              0.0583,
+              0.0406
+            ],
+            [
+              0.375,
+              0.3281,
+              0.0528,
+              0.0391
+            ],
+            [
+              0.7778,
+              0.3406,
+              0.0528,
+              0.0359
+            ],
+            [
+              0.1972,
+              0.2859,
+              0.05,
+              0.0344
+            ],
+            [
+              0.2333,
+              0.3219,
+              0.0472,
+              0.0359
+            ],
+            [
+              0.1611,
+              0.3078,
+              0.0472,
+              0.0344
+            ],
+            [
+              0.7667,
+              0.3094,
+              0.0472,
+              0.0312
+            ],
+            [
+              0.0694,
+              0.3625,
+              0.0444,
+              0.0312
+            ],
+            [
+              0.6,
+              0.3359,
+              0.0444,
+              0.0312
+            ],
+            [
+              0.0583,
+              0.3266,
+              0.0444,
+              0.0297
+            ],
+            [
+              0.0306,
+              0.3484,
+              0.0417,
+              0.0312
+            ],
+            [
+              0.525,
+              0.3359,
+              0.0417,
+              0.0297
+            ],
+            [
+              0.6444,
+              0.35,
+              0.0417,
+              0.0281
+            ],
+            [
+              0.8278,
+              0.3203,
+              0.0417,
+              0.0281
+            ],
+            [
+              0.2806,
+              0.3391,
+              0.0417,
+              0.0281
+            ],
+            [
+              0.4833,
+              0.3219,
+              0.0417,
+              0.0266
+            ],
+            [
+              0.9472,
+              0.3203,
+              0.0389,
+              0.0281
+            ],
+            [
+              0.3917,
+              0.3047,
+              0.0361,
+              0.0266
+            ],
+            [
+              0.4417,
+              0.3359,
+              0.0361,
+              0.025
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "El fotógrafo grita",
+          "t_estimado": [
+            2.47,
+            8.8
+          ],
+          "frase": "El fotógrafo grita: ¡reíd! Y sale un ja, ja de compromiso.",
+          "fuente": "pexels",
+          "id": 26799582,
+          "pagina": "https://www.pexels.com/video/a-camera-on-a-tripod-with-the-words-the-best-camera-is-the-one-you-have-with-you-26799582/",
+          "titulo": "a camera on a tripod with the words the best camera is the one you have with you",
+          "autor": "Tahir Osman",
+          "autor_url": "https://www.pexels.com/@tahir-osman-109306362",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 18.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/26799582/12009477_1080_1920_60fps.mp4",
+          "tipo": "video",
+          "consulta": "photographer with camera on tripod",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 7.4,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.7889,
+              0.5266,
+              0.2,
+              0.1359
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "a9e8d4594ec9",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.95
+          ],
+          "frase": "Entonces el trípode se vuelca despacito, con la cámara.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a camera on a tripod slowly tipping over sideways onto the grass in a garden",
+          "semilla": 11720261,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-034/e2_p1.jpg",
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "2d3384cfe292",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.26
+          ],
+          "frase": "Ahí sí os reís de verdad. La primera risa la pidió el fotógrafo; la segunda se os escapó.",
+          "fuente": "pexels",
+          "id": 28952505,
+          "pagina": "https://www.pexels.com/video/woman-singing-outdoors-at-wedding-ceremony-28952505/",
+          "titulo": "woman singing outdoors at wedding ceremony",
+          "autor": "Alexander Mass",
+          "autor_url": "https://www.pexels.com/@rebornfilmes",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 29.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/28952505/12526878_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "wedding guests laughing together outdoors",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 3.91,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3917,
+              0.3891,
+              0.1778,
+              0.1437
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "b767e9c713f0",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.93
+          ],
+          "frase": "Una investigadora, Barbara Wild, repasó lo que se sabe: la risa parece ir por",
+          "fuente": "pixabay",
+          "id": 159029,
+          "pagina": "https://pixabay.com/videos/id-159029/",
+          "titulo": "students, books, papers, text, study, studying, library, research, academic, college, university, desk, teamwork, collaboration, group project, young, essay id",
+          "autor": "eloguers",
+          "autor_url": "https://pixabay.com/users/eloguers-35030510/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 60.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2023/04/15/159029-818026300_large.mp4",
+          "tipo": "video",
+          "consulta": "scientist reading research papers desk",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 3.09,
+          "encuadre": {
+            "x": 0.403,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.0329,
+              0.2778,
+              0.2667,
+              0.2083
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "dos caminos casi independientes",
+          "t_estimado": [
+            5.93,
+            9.21
+          ],
+          "frase": "dos caminos casi independientes.",
+          "fuente": "marca",
+          "tipo": "marca"
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "906b0632c72e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.57
+          ],
+          "frase": "La que se pide sale de la zona que mueve los músculos.",
+          "fuente": "pexels",
+          "id": 6574006,
+          "pagina": "https://www.pexels.com/video/a-man-smiling-at-the-camera-6574006/",
+          "titulo": "a man smiling at the camera",
+          "autor": "Andres  Ayrton",
+          "autor_url": "https://www.pexels.com/@andres-ayrton",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6574006/6574006-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "man forcing a smile for camera",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 4.04,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2472,
+              0.2062,
+              0.4944,
+              0.4094
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "La que se escapa",
+          "t_estimado": [
+            5.57,
+            10.64
+          ],
+          "frase": "La que se escapa, de la de las emociones.",
+          "fuente": "pexels",
+          "id": 13322590,
+          "pagina": "https://www.pexels.com/video/a-man-in-a-white-t-shirt-talking-and-laughing-13322590/",
+          "titulo": "a man in a white t shirt talking and laughing",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13322590/13322590-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "man laughing uncontrollably",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 3.36,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2778,
+              0.2531,
+              0.3167,
+              0.2437
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "737ace6eb46d",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.47
+          ],
+          "frase": "¿Y puede el fotógrafo provocar la de verdad? Wild no lo responde. Por ahora, solo funciona tirar el trípode.",
+          "fuente": "pexels",
+          "id": 28598940,
+          "pagina": "https://www.pexels.com/video/professional-photographer-adjusts-dslr-camera-28598940/",
+          "titulo": "professional photographer adjusts dslr camera",
+          "autor": "Amar  Preciado",
+          "autor_url": "https://www.pexels.com/@amar",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 5.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/28598940/12429642_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "photographer adjusting camera tripod",
+          "relevancia": 0.75,
+          "inicio_s": 0.0,
+          "movimiento": 5.97,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

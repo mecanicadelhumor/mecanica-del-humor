@@ -1,0 +1,334 @@
+{
+  "guion": "MDS-035",
+  "version": 1,
+  "firma": "851feeaa183225df",
+  "resuelto_utc": "2026-10-01T22:38:23Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "d1f1d777cbd9",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.21
+          ],
+          "frase": "Esta noche, antes de dormir, apunta tres cosas que hoy te hayan hecho gracia. Te doy la primera.",
+          "fuente": "pexels",
+          "id": 6716603,
+          "pagina": "https://www.pexels.com/video/woman-writing-on-her-notebook-in-bed-6716603/",
+          "titulo": "woman writing on her notebook in bed",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 19.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6716603/6716603-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "person writing in notebook in bed at night",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 4.61,
+          "encuadre": {
+            "x": 0.5,
+            "y": 1
+          },
+          "caras": [
+            [
+              0.5316,
+              0.4178,
+              0.2115,
+              0.1311
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "a08a109c0861",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.18
+          ],
+          "frase": "El compañero que se pasó diez minutos explicando su plan en la videollamada, con mucha pasión.",
+          "fuente": "pexels",
+          "id": 7261922,
+          "pagina": "https://www.pexels.com/video/a-man-in-a-video-call-7261922/",
+          "titulo": "a man in a video call",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 51.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7261922/7261922-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man gesturing passionately on video call",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 2.15,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4056,
+              0.4,
+              0.1944,
+              0.1281
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "2e6fd5c3bf5e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.2
+          ],
+          "frase": "Con el micro apagado.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a laptop screen showing a video call where one enthusiastic participant is clearly muted, colleagues watching patiently",
+          "semilla": 2598424,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-035/e3_p1.jpg",
+          "caras": [
+            [
+              0.2643,
+              0.3537,
+              0.1211,
+              0.1051
+            ],
+            [
+              0.6497,
+              0.3728,
+              0.0964,
+              0.0809
+            ],
+            [
+              0.6654,
+              0.5147,
+              0.1029,
+              0.0757
+            ],
+            [
+              0.2617,
+              0.5191,
+              0.0951,
+              0.0728
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "dbd84c0b9177",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.6
+          ],
+          "frase": "El equipo de Willibald Ruch lo probó por internet con cientos de adultos.",
+          "fuente": "pexels",
+          "id": 39425771,
+          "pagina": "https://www.pexels.com/video/focused-typing-on-laptop-in-low-light-39425771/",
+          "titulo": "focused typing on laptop in low light",
+          "autor": "Sergei Starostin",
+          "autor_url": "https://www.pexels.com/@sejio402",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 14.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/39425771/16788437_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "person typing on laptop at night",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 1.35,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Otros hicieron un ejercicio de relleno",
+          "t_estimado": [
+            5.6,
+            10.64
+          ],
+          "frase": "Otros hicieron un ejercicio de relleno, para comparar.",
+          "fuente": "pexels",
+          "id": 7698438,
+          "pagina": "https://www.pexels.com/video/person-writing-on-a-notebook-7698438/",
+          "titulo": "person writing on a notebook",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 28.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/7698438/7698438-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "person writing in notebook bored",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 1.34,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "8d10de251182",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.43
+          ],
+          "frase": "Quienes apuntaron sus tres cosas cada noche, durante una semana, estaban más felices.",
+          "fuente": "marca",
+          "tipo": "marca"
+        },
+        {
+          "k": 2,
+          "desde": "Y seis meses después",
+          "t_estimado": [
+            6.43,
+            10.18
+          ],
+          "frase": "Y seis meses después, todavía se notaba.",
+          "fuente": "pexels",
+          "id": 6607911,
+          "pagina": "https://www.pexels.com/video/woman-in-orange-sweater-smiling-while-writing-on-a-notebook-6607911/",
+          "titulo": "woman in orange sweater smiling while writing on a notebook",
+          "autor": "Anastasia  Shuraeva",
+          "autor_url": "https://www.pexels.com/@anastasia-shuraeva",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 18.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6607911/6607911-hd_1080_2048_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman smiling reading her notebook",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 1.58,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.5531,
+              0.3055,
+              0.1814,
+              0.1477
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "ac21330f2d23",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.1
+          ],
+          "frase": "La letra pequeña: esa felicidad la puntuaba cada uno en un cuestionario. Y",
+          "fuente": "pixabay",
+          "id": 6378,
+          "pagina": "https://pixabay.com/videos/id-6378/",
+          "titulo": "notebook, keyboard, typing, writing, hand, fingers, computer, internet, laptop, professional, office, job, technology, home, education, device, blogging, programmer, programming, online, digital id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 15.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2016/11/15/6378-191636243_large.mp4",
+          "tipo": "video",
+          "consulta": "hand filling online questionnaire laptop",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 9.16,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "el del micro apagado",
+          "t_estimado": [
+            6.1,
+            11.78
+          ],
+          "frase": "el del micro apagado, esa semana, seguro que se puntuó bajito.",
+          "fuente": "pexels",
+          "id": 6878205,
+          "pagina": "https://www.pexels.com/video/a-man-talking-in-microphone-6878205/",
+          "titulo": "a man talking in microphone",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 67.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6878205/6878205-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man realizing microphone was muted",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 8.58,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

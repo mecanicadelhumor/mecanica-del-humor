@@ -1,0 +1,429 @@
+{
+  "guion": "MDS-033",
+  "version": 1,
+  "firma": "bfa12a66a7f7d54f",
+  "resuelto_utc": "2026-10-01T22:37:11Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "69e7219ff445",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.83
+          ],
+          "frase": "Tu amigo baja del autobús mirando el móvil, pisa mal el bordillo y",
+          "fuente": "pexels",
+          "id": 32896752,
+          "pagina": "https://www.pexels.com/video/man-waiting-at-tram-stop-using-smartphone-32896752/",
+          "titulo": "man waiting at tram stop using smartphone",
+          "autor": "Ahmed ؜",
+          "autor_url": "https://www.pexels.com/@mutecevvil",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 9.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/32896752/14020073_1080_1920_60fps.mp4",
+          "tipo": "video",
+          "consulta": "man stepping off bus looking at phone",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 16.99,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4306,
+              0.3328,
+              0.2,
+              0.1344
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "hace el molinillo",
+          "t_estimado": [
+            5.83,
+            9.67
+          ],
+          "frase": "hace el molinillo con los brazos.",
+          "fuente": "pexels",
+          "id": 10943538,
+          "pagina": "https://www.pexels.com/video/man-with-rosary-on-sidewalk-10943538/",
+          "titulo": "man with rosary on sidewalk",
+          "autor": "Muhammed İKİTEPE",
+          "autor_url": "https://www.pexels.com/@muhammed-i-ki-tepe-155329832",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 16.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/10943538/10943538-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "man losing balance on sidewalk",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 9.94,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.45,
+              0.2484,
+              0.1194,
+              0.0813
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "82ec73514cf7",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.34
+          ],
+          "frase": "Y acaba sentado en un charco, con el móvil en alto, intacto.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a man sitting in a big rain puddle on the pavement, holding his phone up high and dry, slightly stunned",
+          "semilla": 13457025,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-033/e2_p1.jpg",
+          "caras": [
+            [
+              0.4779,
+              0.3132,
+              0.1081,
+              0.0838
+            ],
+            [
+              0.4844,
+              0.8603,
+              0.0964,
+              0.0522
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "28cfc13b5e00",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.6
+          ],
+          "frase": "Esa tarde no podéis parar de reír.",
+          "fuente": "pexels",
+          "id": 6243984,
+          "pagina": "https://www.pexels.com/video/man-and-woman-crossing-street-under-the-rain-6243984/",
+          "titulo": "man and woman crossing street under the rain",
+          "autor": "Gary  Barnes",
+          "autor_url": "https://www.pexels.com/@gary-barnes",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6243984/6243984-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "friends laughing on rainy street",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 2.53,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5306,
+              0.4625,
+              0.0472,
+              0.0359
+            ],
+            [
+              0.3278,
+              0.4766,
+              0.0472,
+              0.0328
+            ],
+            [
+              0.3778,
+              0.4969,
+              0.0472,
+              0.0328
+            ],
+            [
+              0.4889,
+              0.4578,
+              0.0444,
+              0.0344
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Un año después",
+          "t_estimado": [
+            3.6,
+            9.72
+          ],
+          "frase": "Un año después lo cuentas en una cena, y nadie se ríe.",
+          "fuente": "pexels",
+          "id": 6073876,
+          "pagina": "https://www.pexels.com/video/child-at-the-dinner-table-6073876/",
+          "titulo": "child at the dinner table",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6073876/6073876-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "dinner table guests polite silence",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 5.18,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.2194,
+              0.2289,
+              0.3043,
+              0.2311
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "ba652d06ce37",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.23
+          ],
+          "frase": "Un psicólogo, Peter McGraw, lo estudió:",
+          "fuente": "marca",
+          "tipo": "marca"
+        },
+        {
+          "k": 2,
+          "desde": "un percance pequeño",
+          "t_estimado": [
+            3.23,
+            10.18
+          ],
+          "frase": "un percance pequeño tiene gracia de cerca, y una desgracia grande, solo de lejos.",
+          "fuente": "pixabay",
+          "id": 217710,
+          "pagina": "https://pixabay.com/videos/id-217710/",
+          "titulo": "puddle, raindrops, rain, water, reflection, wet, closeup, pavement, downpour, wet ground, beautiful wallpaper, atmospheric, dark, melancholic, gloomy, rainy day, dim, background id",
+          "autor": "YanaHD",
+          "autor_url": "https://pixabay.com/users/YanaHD-13823158/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 36.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2024/06/22/217710_large.mp4",
+          "tipo": "video",
+          "consulta": "puddle on wet pavement",
+          "relevancia": 1.0,
+          "inicio_s": 0.4,
+          "movimiento": 10.08,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "00065540f36d",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            2.27
+          ],
+          "frase": "Y el charco era pequeño.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a man sitting in a rain puddle holding his phone up, his friend laughing beside him",
+          "semilla": 14467715,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-033/e5_p1.jpg",
+          "caras": [
+            [
+              0.3268,
+              0.7926,
+              0.1289,
+              0.0993
+            ],
+            [
+              0.4935,
+              0.1743,
+              0.1237,
+              0.0757
+            ],
+            [
+              0.332,
+              0.3684,
+              0.099,
+              0.0757
+            ],
+            [
+              0.625,
+              0.7757,
+              0.0391,
+              0.0279
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Un año después",
+          "t_estimado": [
+            2.27,
+            6.03
+          ],
+          "frase": "Un año después, ya quedaba lejos.",
+          "fuente": "pexels",
+          "id": 35332817,
+          "pagina": "https://www.pexels.com/video/flipping-calendar-pages-in-motion-35332817/",
+          "titulo": "flipping calendar pages in motion",
+          "autor": "Cis14_04 09",
+          "autor_url": "https://www.pexels.com/@cis14_04-09-2156191398",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 7.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/35332817/14970411_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "calendar pages turning",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 5.1,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "d0d2a382458c",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.57
+          ],
+          "frase": "Así que el charco, cuéntalo esa semana.",
+          "fuente": "pixabay",
+          "id": 7686,
+          "pagina": "https://pixabay.com/videos/id-7686/",
+          "titulo": "man, sahara, desert, adventure, laughed at, storm dune, sand id",
+          "autor": "Espace-Aventures",
+          "autor_url": "https://pixabay.com/users/Espace-Aventures-4213878/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 35.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2017/02/06/7686-202893456_large.mp4",
+          "tipo": "video",
+          "consulta": "friends laughing telling story at cafe",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 0.68,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Con una desgracia de verdad",
+          "t_estimado": [
+            3.57,
+            9.01
+          ],
+          "frase": "Con una desgracia de verdad es al revés: hace falta tiempo.",
+          "fuente": "pexels",
+          "id": 38122234,
+          "pagina": "https://www.pexels.com/video/rainy-empty-city-street-with-modern-architecture-38122234/",
+          "titulo": "rainy empty city street with modern architecture",
+          "autor": "Mallesh Baithi",
+          "autor_url": "https://www.pexels.com/@mallesh-baithi-392053733",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/38122234/16185852_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "empty street after rain",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 1.77,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 3,
+      "plano": 2,
+      "id": "pixabay:237504",
+      "titulo": "cup, drink, biscuits, breakfast, food, coffee, healthy, fruits, restaurant, cereal, table, sheet, bread, cappuccino, dinner, plate, waffles, berries, bowl, grapes, nutrition id",
+      "motivo": "quieto (movimiento 0.32)"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}

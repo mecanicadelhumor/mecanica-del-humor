@@ -1,0 +1,314 @@
+{
+  "guion": "MDS-031",
+  "version": 1,
+  "firma": "1343aeb9a75058c9",
+  "resuelto_utc": "2026-10-01T22:35:58Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "d2f49254c66e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.18
+          ],
+          "frase": "Un paciente entra en la consulta: doctor, tengo la sensación de que nadie me hace caso.",
+          "fuente": "pexels",
+          "id": 7579338,
+          "pagina": "https://www.pexels.com/video/doctor-talking-to-the-patient-7579338/",
+          "titulo": "doctor talking to the patient",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 23.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/7579338/7579338-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "patient sitting in doctor office talking",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 8.77,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.2411,
+              0.1933,
+              0.3261,
+              0.2578
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "c142edc3c588",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.18
+          ],
+          "frase": "Y el médico, sin mirarle siquiera, dice: que pase el siguiente.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a doctor writing on a pad without looking up, one hand raised calling the next patient, deadpan",
+          "semilla": 11062241,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-031/e2_p1.jpg",
+          "caras": [
+            [
+              0.3372,
+              0.3654,
+              0.1654,
+              0.1265
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "7f49086f436e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.0
+          ],
+          "frase": "¿Qué le pasa a tu cerebro cuando te ríes con eso?",
+          "fuente": "pixabay",
+          "id": 129426,
+          "pagina": "https://pixabay.com/videos/id-129426/",
+          "titulo": "girl, phone, text, cheerful, confident, face, gesture, happy, idea, lady, looking, model, portrait, smile, surprise, teenage id",
+          "autor": "SYG_Anime",
+          "autor_url": "https://pixabay.com/users/SYG_Anime-7158719/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 16.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2022/08/28/129426-744370614_large.mp4",
+          "tipo": "video",
+          "consulta": "woman smiling looking at phone",
+          "relevancia": 1.0,
+          "inicio_s": 0.4,
+          "movimiento": 1.52,
+          "encuadre": {
+            "x": 0.593,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3139,
+              0.2444,
+              0.3704,
+              0.2806
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Dean Mobbs",
+          "t_estimado": [
+            4.0,
+            11.1
+          ],
+          "frase": "Dean Mobbs, neurocientífico, enseñó chistes a gente metida en un escáner.",
+          "fuente": "pexels",
+          "id": 7089941,
+          "pagina": "https://www.pexels.com/video/a-male-patient-undergoing-medical-scanning-test-7089941/",
+          "titulo": "a male patient undergoing medical scanning test",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 17.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7089941/7089941-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "patient lying in mri scanner",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 6.67,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.45,
+              0.162,
+              0.1917,
+              0.1502
+            ],
+            [
+              0.7708,
+              0.1878,
+              0.1667,
+              0.1362
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "50354aa1bc23",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.03
+          ],
+          "frase": "Cuando un chiste les hacía gracia, se les encendía",
+          "fuente": "pexels",
+          "id": 6010950,
+          "pagina": "https://www.pexels.com/video/a-doctor-using-tablet-while-looking-the-patient-s-results-of-disease-condition-6010950/",
+          "titulo": "a doctor using tablet while looking the patient s results of disease condition",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 9.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6010950/6010950-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "doctor looking at brain scan monitor",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 4.19,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2417,
+              0.1344,
+              0.2222,
+              0.1516
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "el circuito de recompensa",
+          "t_estimado": [
+            4.03,
+            9.26
+          ],
+          "frase": "el circuito de recompensa del cerebro, el del placer.",
+          "fuente": "marca",
+          "tipo": "marca"
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "5292cb461621",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.03
+          ],
+          "frase": "Y cuanta más gracia les hacía el chiste, más se encendía.",
+          "fuente": "marca",
+          "tipo": "marca"
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "0ef3f0540df6",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.73
+          ],
+          "frase": "Eso sí: cada uno estaba solo, tumbado en una máquina, que es",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "the narrow tunnel of an MRI scanner seen from the foot of the bed, cold light",
+          "semilla": 4696998,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-031/e6_p1.jpg",
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "el peor sitio del mundo",
+          "t_estimado": [
+            5.73,
+            10.85
+          ],
+          "frase": "el peor sitio del mundo para contar lo del médico.",
+          "fuente": "pexels",
+          "id": 10375459,
+          "pagina": "https://www.pexels.com/video/woman-at-a-bar-with-her-friend-10375459/",
+          "titulo": "woman at a bar with her friend",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 8.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/10375459/10375459-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "friends laughing at bar table",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 8.67,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5528,
+              0.5203,
+              0.1583,
+              0.1203
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pexels:7089360",
+      "titulo": "an mri machine in a medical facility",
+      "motivo": "poco relevante (0.333): se prueba la IA"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}
