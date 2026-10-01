@@ -551,7 +551,7 @@
       "guion": "05_calendario/guiones/MDS-028.es.json",
       "video_id": "U1UDw-UP3bM",
       "url": "https://youtu.be/U1UDw-UP3bM",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-09-30T17:00:00Z",
       "musica": "cama_14_alone_two_days_ago_artificial_music.mp3",
       "subido_utc": "2026-09-30T06:49:03Z",
@@ -573,5 +573,5 @@
       "revisado": false
     }
   ],
-  "_estado_leido_utc": "2026-09-30T15:22:26Z"
+  "_estado_leido_utc": "2026-10-01T15:42:23Z"
 }
