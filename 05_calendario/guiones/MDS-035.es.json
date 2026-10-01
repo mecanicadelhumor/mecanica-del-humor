@@ -1,0 +1,177 @@
+{
+ "id": "MDS-035",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Apuntar tres cosas graciosas al día te hace más feliz?",
+ "tesis": "Apuntar cada noche, durante una semana, tres cosas que te hicieron gracia subió la felicidad de quienes lo hicieron frente a un placebo, y seis meses después todavía se notaba.",
+ "pilares": [
+  "H"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "historia": {
+  "pregunta": "¿Apuntar cada noche tres cosas que te hicieron gracia te hace más feliz?",
+  "respuesta": "En un ensayo con un grupo de placebo, sí: quienes lo hicieron una semana estaban más felices, y seis meses después todavía se notaba.",
+  "puente": "El compañero que explicó su plan diez minutos con el micro apagado es una de las tres cosas de esta noche: la escena 4 cuenta que ese mismo ejercicio es el que probó el equipo de Ruch."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — esta noche apuntas tres cosas que te hicieron gracia, por ejemplo el compañero que explicó su plan diez minutos con el micro apagado; qué gira — ese ejercicio exacto se probó contra un placebo con 632 adultos; cómo acaba — los que lo hicieron estaban más felices seis meses después, aunque la felicidad la puntuaba cada uno.",
+  "EL CHISTE VA PRIMERO: el del micro apagado en la videollamada le ha pasado a todo el mundo, no tiene víctima (nadie sale mal parado; es el despiste de siempre) y se entiende sin explicación. Y es el ejemplo de lo que el ejercicio pide apuntar.",
+  "FUENTE Y LÍMITE: H03 (Wellenzohn, Proyer y Ruch, 2016, The Journal of Positive Psychology). La ficha dice: «Ejercicios concretos ('tres cosas divertidas') con efecto medido a 6 meses», y el título: ensayo aleatorizado, controlado con placebo, a largo plazo. El resumen NO se ha podido abrir en la página de la revista (la red del contenedor la bloquea); se ha leído en esta ejecución tal como lo reproduce el buscador web (instituteofcoaching.org, que publica el resumen): «five humor-based activities on happiness and depression in a placebo-controlled, self-administered online positive psychology intervention study with 632 adults. All five one-week interventions enhanced happiness, with three showing effects lasting up to six months (three funny things, applying humor, and counting funny things), while depression effects were only short-term». Es una reproducción, no la página de la revista: la revisión diaria puede comprobarla antes de producir.",
+  "LO QUE NO SE DICE: ni cuánto subió la felicidad (no está en lo leído), ni nada sobre la depresión (sería un consejo de salud y el canal no los da), ni que el ejercicio sirva a todo el mundo. Los 632 se reparten entre los cinco ejercicios y el placebo, y el guion lo dice así: «probaron cinco ejercicios con 632 adultos».",
+  "C17: H03 salió de apoyo en MDH-001 el 18/08, fuera de la ventana. H01 y H02 (el programa de siete hábitos) no se tocan: H02 fue MDS-028 hace una semana.",
+  "CIERRE SIN FÓRMULA (C48.1): «La letra pequeña: …», que no usa ninguno de los cuatro anteriores, y vuelve al compañero del micro con su premisa dicha entera.",
+  "LECTURA EN FRÍO, VUELTAS 1 Y 2 (01/10/2026): no pasaron. La primera no entendía «placebo» con un ejercicio de escribir y sobraban «otros cuatro» ejercicios; se cambió por «un ejercicio de relleno, para comparar», que es lo que es un placebo aquí. La segunda dudó del cierre («nadie le preguntó cómo se quedó»: ¿broma o pega?) y propuso quitar el ejercicio de relleno. El ejercicio de relleno se queda: es el grupo de comparación y sin él el resultado no vale nada (regla 12). El cierre se reescribe para que la broma sea broma y la pega, pega.",
+  "LECTURA EN FRÍO, VUELTA 3 (01/10/2026): pasa, por el criterio ratificado el 28/09 (C48.2): las dos frases que el lector marca las interpreta bien él mismo, así que van a notas. Es el caso más justo de la semana y la bitácora lo dice. El lector dice que se iría en la escena 4: aviso para la revisión diaria si la retención de este Short cae ahí."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-bocadillos",
+   "texto": "Tres cosas *graciosas*",
+   "narracion": "Esta noche, antes de dormir, apunta tres cosas que hoy te hayan hecho gracia. Te doy la primera.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "person writing in notebook in bed at night",
+      "writing journal in bed",
+      "hand writing in notebook lamp"
+     ],
+     "prompt": "a person sitting in bed at night writing in a small notebook by the light of a bedside lamp"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Diez minutos de *pasión*",
+   "narracion": "El compañero que se pasó diez minutos explicando su plan en la videollamada, con mucha pasión.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "man gesturing passionately on video call",
+      "man talking enthusiastically laptop",
+      "man presenting on video call"
+     ],
+     "prompt": "a man in a home office gesturing passionately at his laptop webcam during a video call"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Con el micro *apagado*",
+   "narracion": "Con el micro apagado.",
+   "pausa_despues_s": 0.6,
+   "visual": [
+    {
+     "busqueda": [
+      "muted microphone icon laptop screen",
+      "video call muted participant",
+      "laptop video call grid"
+     ],
+     "prompt": "a laptop screen showing a video call where one enthusiastic participant is clearly muted, colleagues watching patiently",
+     "fuente": "ia"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "H03",
+   "personaje": "piensa",
+   "a": "Tres cosas graciosas",
+   "et_a": "el ejercicio, por internet",
+   "b": "Ejercicio de relleno",
+   "et_b": "para *comparar*",
+   "narracion": "El equipo de Willibald Ruch lo probó por internet con cientos de adultos. Otros hicieron un ejercicio de relleno, para comparar.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person typing on laptop at night",
+      "adults using laptop at home",
+      "woman using laptop evening"
+     ],
+     "prompt": "an adult at home in the evening typing on a laptop, warm lamp light"
+    },
+    {
+     "desde": "Otros hicieron un ejercicio de relleno",
+     "busqueda": [
+      "person writing in notebook bored",
+      "writing diary at desk",
+      "hand writing notes desk"
+     ],
+     "prompt": "a hand writing plain notes in a notebook at a desk, neutral mood"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "H03",
+   "personaje": "entiende",
+   "cifra": "6 meses",
+   "pie": "más felices, y todavía se *notaba*",
+   "narracion": "Quienes apuntaron sus tres cosas cada noche, durante una semana, estaban más felices. Y seis meses después, todavía se notaba.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "marca": true
+    },
+    {
+     "desde": "Y seis meses después",
+     "busqueda": [
+      "woman smiling reading her notebook",
+      "person smiling at journal",
+      "smiling woman reading notes"
+     ],
+     "prompt": "a woman smiling to herself while rereading a small handwritten notebook at a kitchen table"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "H03",
+   "personaje": "duda",
+   "titulo": "La nota la ponía *cada uno*",
+   "subtitulo": "Fuente: Wellenzohn, Proyer y Ruch, 2016",
+   "narracion": "La letra pequeña: esa felicidad la puntuaba cada uno en un cuestionario. Y el del micro apagado, esa semana, seguro que se puntuó bajito.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "hand filling online questionnaire laptop",
+      "person answering survey on laptop",
+      "online form on laptop"
+     ],
+     "prompt": "close-up of a hand using a laptop trackpad to answer an online questionnaire with rating scales"
+    },
+    {
+     "desde": "el del micro apagado",
+     "busqueda": [
+      "man realizing microphone was muted",
+      "embarrassed man at laptop",
+      "man facepalm at laptop"
+     ],
+     "prompt": "a man at his laptop realizing his microphone was muted all along, hand on forehead"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (tercera vuelta, lector nuevo)",
+  "fecha": "2026-10-01",
+  "de_que_va": "Apuntar cada noche tres cosas que te hayan hecho gracia te hace más feliz, y según un estudio el efecto dura meses.",
+  "pregunta_y_respuesta": "Si sirve de algo apuntar cosas graciosas antes de dormir. Sí: quienes lo hicieron una semana estaban más felices, y seis meses después todavía se notaba. Eso sí, la felicidad la puntuaba cada uno.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Otros hicieron un ejercicio de relleno, para comparar.» Se queda: es el grupo de placebo, y sin grupo de comparación el resultado no dice nada (regla 12); ver notas_humor.",
+  "donde_me_iria": "escena 4: «el vídeo pasa a ser una clase». Si se quedara, por el dato de los seis meses.",
+  "notas": [
+   "«Otros hicieron un ejercicio de relleno, para comparar.» — «No sé qué es un ejercicio de relleno. Lo entiendo como un grupo de control, pero tengo que pararme a pensarlo.» (lo interpreta bien: va a notas)",
+   "«Y el del micro apagado, esa semana, seguro que se puntuó bajito.» — «Tardé un segundo… ¿Se puso poca felicidad por la vergüenza?» (es exactamente eso: va a notas)",
+   "«El equipo de Willibald Ruch…» — «Se entiende, pero el nombre no me dice nada y me saca del rollo.» (firma de la fuente, regla 2)"
+  ],
+  "veredicto": "pasa"
+ }
+}

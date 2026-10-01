@@ -375,6 +375,56 @@
    "modo": "automatico",
    "hora": "19:00",
    "nota": "Viernes. Serie «Desmonta el chiste», la segunda de la semana: las dos preguntas piden despiece y guionista_corto.md dice que no se fuerce la rotación. Pregunta: «por qué me hace gracia el humor absurdo» (132.253.483, 0 de 5 responden: recopilaciones de vídeos de risa; la cifra no ordena nada, el hueco sí). Fuente L06 (Weems, 2014), nunca usada; es divulgación y el cierre lo dice, con el autor nombrado en voz alta."
+  },
+  {
+   "fecha": "2026-10-05",
+   "episodio": "MDS-031",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Lunes. Serie «El experimento». Pregunta: «qué le pasa a tu cerebro cuando te ríes» (159.304 en el top 10, 2 de 5 responden y el mejor es de 2015) con «por qué nos gusta que nos hagan reír» al lado (66.469.030, 0 de 5 en tema: sketches y dos de «hacer reír a una mujer», que no se tocan). Fuente F07 (Mobbs y otros, 2003), nunca usada en un Short, con el resumen verificado el 25/09: un chiste que hace gracia enciende el circuito de recompensa, y más cuanta más gracia. El cierre dice que cada uno estaba solo dentro de una máquina. Chiste cambiado tras dos lecturas en frío (el del perro que sabe restar no se pillaba); pasa a la tercera."
+  },
+  {
+   "fecha": "2026-10-06",
+   "episodio": "MDS-032",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Martes. Serie «El experimento». Pregunta: «¿se nota en la risa si dos personas son amigas?», sin número propio (se mide el jueves 8); entra por el hueco de «cómo distinguir una risa falsa de una de verdad» (4.920.459, 1 de 5). Fuente D07 (Bryant y otros, 2016, PNAS: 966 personas de 24 sociedades acertaban amigos o desconocidos entre el 53 y el 67 %), resumen leído vía buscador porque la red bloquea la revista; nunca fuente central. OJO: la ficha D07 lleva un título que no es el de su DOI (ver bitácora). SUSTITUYE al MDS-032 con B03 («¿tener sentido del humor te hace más feliz?»), que no pasó la lectura en frío a la tercera vuelta, por segunda semana."
+  },
+  {
+   "fecha": "2026-10-07",
+   "episodio": "MDS-033",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Miércoles. Serie «Ríete primero, te explico después». DERECHO DE TANTEO (C46) de MDS-022: el mismo asunto —lo que tuvo gracia y deja de tenerla— desde la distancia en vez de la repetición. Pregunta: «¿por qué una anécdota graciosa deja de hacer gracia?», cerca de «por qué hay chistes que envejecen mal» (3.856.586, 0 de 5). Fuente A03 (McGraw y otros, 2012: humor en las tragedias lejanas y en los percances cercanos, que es el propio título de la ficha); su ventana de C17 desde MDS-003 se cierra hoy. Sin cifras: el resumen no se ha podido leer."
+  },
+  {
+   "fecha": "2026-10-08",
+   "episodio": "MDS-034",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Jueves. Serie «Esto no tiene gracia y esto sí»: la risa de «¡reíd!» y la del trípode que se cae, en la misma foto. Pregunta: «¿por qué no puedes reírte de verdad cuando te lo piden?», del hueco de «cómo distinguir una risa falsa de una de verdad» (4.920.459, 1 de 5). Fuente F08 (Wild y otros, 2003, Brain), nunca usada, resumen verificado el 25/09: dos caminos casi independientes para la risa, uno voluntario y otro involuntario. Es una revisión y el subtítulo lo dice. Pasa a la tercera lectura en frío."
+  },
+  {
+   "fecha": "2026-10-09",
+   "episodio": "MDS-035",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Viernes. Serie «El experimento». Pregunta: «¿apuntar tres cosas graciosas al día te hace más feliz?», sin número propio (se mide el jueves 8). Fuente H03 (Wellenzohn, Proyer y Ruch, 2016): ensayo por internet con placebo; las tres cosas graciosas cada noche una semana subieron la felicidad y seguía notándose a los seis meses. Resumen leído vía buscador (la red bloquea la revista). El cierre dice que la felicidad la puntuaba cada uno. Nada sobre depresión: no se dan consejos de salud."
   }
  ],
  "_archivadas": {
@@ -412,5 +462,6 @@
   }
  ],
  "_nota_formato_largo": "SUSPENDIDO desde el 21/09/2026 (C42). No se programan episodios largos hasta que la mediana de los últimos veinte Shorts a 48 horas llegue a 50. La planificación de los jueves escribe CINCO Shorts, no cinco y un largo. Las emisiones largas retiradas quedan en _emisiones_suspendidas, con su motivo y su fecha.",
- "_cambio_25_septiembre_noche": "Planificación semanal del 25/09/2026 (la tarea del jueves corrió el viernes: el contenedor arrancó el 25). Se añaden las cinco emisiones del lunes 28 de septiembre al viernes 2 de octubre, todas «automatico» y a las 19:00. NADA el sábado 3 ni el domingo 4: el formato largo sigue suspendido (C42) — control_c26.mediana_vistas_48h = 11,0 el 21/09, y hace falta 50. La emisión de red de seguridad de MDS-023 del sábado 26 no se toca; la dirección dijo que se puede borrar el lunes 28, y esa decisión no es de la planificación."
+ "_cambio_25_septiembre_noche": "Planificación semanal del 25/09/2026 (la tarea del jueves corrió el viernes: el contenedor arrancó el 25). Se añaden las cinco emisiones del lunes 28 de septiembre al viernes 2 de octubre, todas «automatico» y a las 19:00. NADA el sábado 3 ni el domingo 4: el formato largo sigue suspendido (C42) — control_c26.mediana_vistas_48h = 11,0 el 21/09, y hace falta 50. La emisión de red de seguridad de MDS-023 del sábado 26 no se toca; la dirección dijo que se puede borrar el lunes 28, y esa decisión no es de la planificación.",
+ "_cambio_01_octubre_noche": "Planificación semanal del jueves 01/10/2026 (primera como rutina de Code; entrega por rama con entregar.py). Se añaden las cinco emisiones del lunes 5 al viernes 9 de octubre, todas «automatico» y a las 19:00. NADA el sábado 10 ni el domingo 11: el formato largo sigue suspendido (C42) — control_c26.mediana_vistas_48h = 24,0 el 29/09, y hace falta 50. Ninguna emisión lleva rehacer_video_id (C54)."
 }

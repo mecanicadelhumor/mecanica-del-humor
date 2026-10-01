@@ -1,0 +1,173 @@
+{
+ "id": "MDS-032",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Se nota en la risa si dos personas son amigas?",
+ "tesis": "Con oír un segundo de dos personas riéndose a la vez, gente de 24 sociedades distintas acertaba si eran amigas o desconocidas más que a cara o cruz, aunque a veces por muy poco.",
+ "pilares": [
+  "D"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "historia": {
+  "pregunta": "¿Se nota en la risa si dos personas son amigas?",
+  "respuesta": "Sí, un poco: oyendo un segundo de dos personas riéndose juntas, la gente acierta si son amigas más que tirando una moneda.",
+  "puente": "Los dos compañeros que se ríen detrás de la mampara: apuestas a que son amigos sin verlos, y Bryant puso a prueba justo esa apuesta con un segundo de risa."
+ },
+ "notas_humor": [
+  "SUSTITUYE AL PRIMER MDS-032, que preguntaba «¿tener sentido del humor te hace más feliz?» con B03 y no pasó la lectura en frío a la tercera vuelta (el tercer lector no sabía si los psicólogos «miraron» el test pasándolo a gente o analizándolo). Es la segunda semana que B03 se cae: queda anotado en la bitácora y en demanda.json.",
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — al otro lado de la mampara se ríen dos compañeros y, sin verlos, sabes que esos dos van juntos a desayunar; qué gira — no te lo ha dicho nadie, te lo ha dicho la risa, y Bryant lo puso a prueba con un segundo de risa en 24 sociedades; cómo acaba — se acierta más que a cara o cruz, pero a veces por tan poco que lo de los dos del desayuno también puede ser suerte.",
+  "EL CHISTE VA PRIMERO: la situación de oír reírse a dos compañeros y saber que «esos dos» son uña y carne la reconoce cualquiera que haya trabajado en una oficina; el remate («no te lo ha dicho nadie: te lo ha dicho la risa») es justo el fenómeno que mide el estudio.",
+  "FUENTE Y LÍMITE: D07, que en la bibliografía lleva el DOI 10.1073/pnas.1524993113. OJO, LA FICHA TIENE UN ERROR: ese DOI es el de Bryant y otros (2016), «Detecting affiliation in colaughter across 24 societies», PNAS —el título que lleva la ficha E05, el duplicado de prueba—, y no el de «Convergent evidence that laughter serves as a signal of cooperation…», que es como se titula D07. Se cita D07 porque es la ficha viva y su comentario («24 sociedades») es este trabajo; va a la bitácora para que se corrija el título. El resumen NO se ha podido abrir en la revista (la red del contenedor bloquea pnas.org y doi.org); se ha leído en esta ejecución tal como lo reproduce el buscador web a partir de los repositorios de varias universidades coautoras: «In a sample of 966 participants from 24 societies, people reliably distinguished friends from strangers with an accuracy of 53-67%», sobre «brief, decontextualized instances of colaughter between either established friends or recently acquainted strangers». Lo de «un segundo» sale de la nota de prensa de la Universidad de Aarhus que devuelve el mismo buscador («Just a second of laughter can reveal relationship status»). La revisión diaria puede comprobarlo antes de producir.",
+  "LO QUE NO SE DICE: ni de dónde eran las parejas que se reían, ni qué rasgo de la risa delataba a los amigos (el resumen habla de «voicing dynamics» y no cabe sin explicar), ni que sirva para ligar o para saber si alguien te miente.",
+  "C17: D07 salió de apoyo en MDH-004 (29/08, tres escenas de treinta y una; la central era E02) y en MDH-006 (12/09, una escena). Nunca ha sido fuente central de nada.",
+  "CIERRE SIN FÓRMULA (C48.1): «Ahora, …» no lo usa ninguno de los cuatro anteriores, y vuelve a los dos del desayuno con su premisa dicha entera.",
+  "LECTURA EN FRÍO, VUELTA 1 (01/10/2026): no pasó. El lector no vio a la primera que «se van juntos a desayunar» quería decir «son amigos», no sabía de dónde salía el rango 53-67 y leyó el cierre como ambiguo; propuso quitar «Nadie te lo ha dicho». Cambios: «son amigos» dicho en voz alta, «según de dónde fueran» delante del rango (el resumen da la horquilla entre las 24 sociedades), el cierre dice qué significa el 53 para tu oído, y la frase que sobraba, fuera.",
+  "LECTURA EN FRÍO, VUELTA 2 (01/10/2026): no pasó. El lector no supo si el cierre decía que su intuición era suerte o que podía fallar, porque el principio la daba por segura («sabes», «te lo ha dicho su risa»), y no entendía «sociedades». Cambios: el principio ya no la da por segura —«apostarías»— y una pregunta en la escena 3 abre el experimento; «culturas» en vez de «sociedades» (el estudio habla de 24 sociedades; en el habla corriente, culturas); el cierre resuelve la apuesta: buena, pero no segura.",
+  "LECTURA EN FRÍO, VUELTA 3 (01/10/2026): pasa; las tres frases marcadas las interpreta bien el propio lector y van a notas (C48.2). Único cambio posterior a la lectura: «según el sitio» → «según la cultura», que es la interpretación que el lector dio. Es el Short más flojo de la semana en gracia (el lector casi se va en la escena 5): queda dicho en la bitácora."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-publico",
+   "texto": "Dos risas tras la *mampara*",
+   "narracion": "Tras la mampara, dos compañeros se ríen juntos. No les ves la cara.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "office partition frosted glass",
+      "open plan office glass partition",
+      "office divider wall"
+     ],
+     "prompt": "a frosted glass partition in an open plan office, two blurred silhouettes laughing behind it"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Apuestas: son *amigos*",
+   "narracion": "Y aun así apostarías a que son amigos, de los que bajan juntos a desayunar.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "two coworkers having coffee together cafe",
+      "two colleagues breakfast cafe",
+      "coworkers coffee break together"
+     ],
+     "prompt": "two office colleagues having breakfast together at a small cafe counter, relaxed, seen from behind"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "piensa",
+   "texto": "¿Lo *sabes*, o te lo imaginas?",
+   "narracion": "¿Lo sabes de verdad, o te lo imaginas?",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "person listening at office desk",
+      "woman listening at desk",
+      "man at desk turning head listening"
+     ],
+     "prompt": "a person at an office desk pausing and turning their head slightly, listening to laughter from behind a partition"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "fuente": "D07",
+   "personaje": "piensa",
+   "puntos": [
+    "24 *culturas*",
+    "Un segundo de risa: ¿amigos o no?"
+   ],
+   "narracion": "Greg Bryant lo probó con gente de veinticuatro culturas: oían un segundo de risa de dos personas. ¿Amigas o desconocidas?",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person listening with headphones laptop",
+      "woman wearing headphones listening",
+      "man with headphones concentrating"
+     ],
+     "prompt": "a person wearing headphones in a quiet room, listening carefully to a short audio clip on a laptop"
+    },
+    {
+     "marca": true,
+     "desde": "Amigas o desconocidas"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "D07",
+   "personaje": "rie",
+   "cifra": "*53-67*",
+   "pie": "aciertos de cada 100, según la cultura",
+   "narracion": "Y acertaban más que a cara o cruz: según la cultura, entre cincuenta y tres y sesenta y siete de cada cien.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "marca": true
+    },
+    {
+     "desde": "a cara o cruz",
+     "busqueda": [
+      "coin flip in the air",
+      "hand flipping coin",
+      "coin toss close up"
+     ],
+     "prompt": "a coin spinning in the air above an open hand, close-up, soft light"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "D07",
+   "personaje": "duda",
+   "titulo": "Buena apuesta, no *segura*",
+   "subtitulo": "Fuente: Bryant y otros, 2016",
+   "narracion": "O sea, que tu apuesta por los del desayuno es buena, pero no segura: a veces, acertar era casi tirar una moneda.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "coin landing on table",
+      "coin on wooden table",
+      "coin spinning on table"
+     ],
+     "prompt": "a coin spinning on a wooden office desk, about to fall"
+    },
+    {
+     "desde": "tu apuesta por los del desayuno",
+     "busqueda": [
+      "two coworkers having coffee together cafe",
+      "two colleagues breakfast cafe",
+      "coworkers coffee break together"
+     ],
+     "prompt": "two office colleagues having breakfast together at a small cafe counter, laughing, seen from behind"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (tercera vuelta, lector nuevo)",
+  "fecha": "2026-10-01",
+  "de_que_va": "Si puedes saber que dos personas son amigas con solo oírlas reír juntas.",
+  "pregunta_y_respuesta": "Si, con oír reír a dos personas, sabes si son amigas o desconocidas. Más o menos sí: se acierta algo más que por azar, entre 53 y 67 de cada 100, pero no es seguro.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«¿Lo sabes de verdad, o te lo imaginas?» Se queda: es el «pero» entre la apuesta de la escena 2 y el experimento de la 4 (regla 2 de la historia); sin ella, Bryant entra sin que nadie haya dudado de nada.",
+  "donde_me_iria": "me quedo, «pero por poco» (escena 5, la ristra de números)",
+  "notas": [
+   "«según el sitio» — «al principio pensé en una página web. Luego deduje que se refiere al país o la cultura» (la interpreta bien; corregido después de la lectura a «según la cultura», que es exactamente lo que el lector dedujo)",
+   "«tu apuesta por los del desayuno» — «tardé un segundo en caer en que eran los compañeros de la mampara»",
+   "«Greg Bryant lo probó» — «no sé quién es. Se entiende que es un investigador» (firma de la fuente, regla 2)"
+  ],
+  "veredicto": "pasa"
+ }
+}

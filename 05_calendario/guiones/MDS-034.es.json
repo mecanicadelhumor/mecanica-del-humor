@@ -1,0 +1,181 @@
+{
+ "id": "MDS-034",
+ "formato": "corto",
+ "serie": "Esto no tiene gracia y esto sí",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué no puedes reírte de verdad cuando te lo piden?",
+ "tesis": "La risa que mandas y la que se te escapa no son la misma risa hecha mejor o peor: parecen salir por dos caminos del cerebro casi independientes.",
+ "pilares": [
+  "F"
+ ],
+ "duracion_objetivo_s": 42,
+ "bloqueos": [],
+ "historia": {
+  "pregunta": "¿Por qué no puedes reírte de verdad cuando te lo piden?",
+  "respuesta": "Porque la risa que mandas tú y la que se te escapa parecen ir por dos caminos distintos del cerebro, y al que se escapa no se le puede dar una orden.",
+  "puente": "La foto de grupo: el fotógrafo grita «¡reíd!» y sale la risa de compromiso; se cae el trípode y sale la de verdad. La escena 4 dice que son los dos caminos del repaso de Wild."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — en una foto de grupo el fotógrafo grita «¡reíd!» y sale un «ja, ja» de compromiso; qué gira — se cae el trípode y os reís todos de verdad; cómo acaba — la risa que pidió el fotógrafo y la del trípode van por caminos distintos, y al fotógrafo no le vale gritar.",
+  "LAS DOS VERSIONES (serie «Esto no tiene gracia y esto sí»): la misma foto, la misma gente, dos risas. Se cuentan las dos antes de explicar nada, y la comparación de la escena 3 las pone una al lado de la otra.",
+  "FUENTE Y LÍMITE: F08 (Wild, Rodden, Grodd y Ruch, 2003, Brain, DOI 10.1093/brain/awg226, verificado el 25/09/2026). Frase del resumen copiada literal en la ficha: «the expression of laughter seems to depend on two partially independent neuronal pathways» —una involuntaria, con amígdala y tronco del encéfalo, y otra voluntaria que arranca en áreas motoras frontales—. El guion dice eso con palabras de la calle: la que mandas sale de la parte que mueve los músculos; la que se te escapa, de más adentro. Es una revisión, no un experimento, y el guion la llama «repaso». NO dice cómo distingue el oído una risa de otra: el resumen no lo dice.",
+  "POR QUÉ NO SE REPITE EL FALLO DEL 25/09: aquel día «¿por qué se nota una risa falsa?» con F03 se cayó tres veces en la escena del cerebro («no van juntas», «de donde se mueve la boca»). Aquí la escena del cerebro no nombra ninguna región: dice «la que pides tú» y «la que se te escapa», que el espectador ya ha visto en la foto. Y el título pregunta lo que el repaso sí contesta (por qué no sale a la orden), no cómo se nota.",
+  "C17: F08 no se ha usado nunca. F03, la otra ficha de la risa voluntaria e involuntaria, se deja descansar después de tres lecturas fallidas.",
+  "LECTURA EN FRÍO, VUELTAS 1 Y 2 (01/10/2026): no pasaron. Marcaron «de más adentro» / «zonas más hondas» (¿qué zonas?), el «tú» de «la pediste» cuando quien pide es el fotógrafo, y «el repaso» del cierre. Tercera vuelta: la vía involuntaria se dice como «la parte de las emociones» —la ficha nombra la amígdala, que es lo que se entiende por esa parte— y el cierre nombra a Wild en vez de «el repaso».",
+  "LECTURA EN FRÍO, VUELTA 3 (01/10/2026): pasa, con «ninguna» en frases sin entender. La frase que propone quitar se queda por la condición (c), con el motivo escrito en la lectura."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-publico",
+   "texto": "«¡*Reíd*!»",
+   "narracion": "Foto de grupo en una boda. El fotógrafo grita: ¡reíd! Y sale un ja, ja de compromiso.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "wedding guests posing for group photo",
+      "group photo wedding guests",
+      "people posing for group photo outdoors"
+     ],
+     "prompt": "a group of wedding guests in suits and dresses lined up posing for a photo in a garden, stiff smiles"
+    },
+    {
+     "desde": "El fotógrafo grita",
+     "busqueda": [
+      "photographer with camera on tripod",
+      "photographer directing group",
+      "camera on tripod outdoors"
+     ],
+     "prompt": "a photographer behind a camera on a tripod, one arm raised, shouting instructions"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Y se cae el *trípode*",
+   "narracion": "Entonces el trípode se vuelca despacito, con la cámara.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "camera tripod falling over grass",
+      "tripod tipping over",
+      "camera falling on grass"
+     ],
+     "prompt": "a camera on a tripod slowly tipping over sideways onto the grass in a garden",
+     "fuente": "ia"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "personaje": "rie",
+   "a": "«¡Reíd!»",
+   "et_a": "la risa que pides",
+   "b": "El trípode",
+   "et_b": "la risa que se *escapa*",
+   "narracion": "Ahí sí os reís de verdad. La primera risa la pidió el fotógrafo; la segunda se os escapó.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "wedding guests laughing together outdoors",
+      "group of people laughing garden party",
+      "friends burst out laughing"
+     ],
+     "prompt": "wedding guests bursting into genuine laughter together in a garden, some bending over"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "F08",
+   "texto": "Dos *caminos* para la risa",
+   "narracion": "Una investigadora, Barbara Wild, repasó lo que se sabe: la risa parece ir por dos caminos casi independientes.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "scientist reading research papers desk",
+      "researcher reading journal",
+      "person reading scientific papers"
+     ],
+     "prompt": "a researcher at a desk surrounded by open scientific journals, reading lamp"
+    },
+    {
+     "marca": true,
+     "desde": "dos caminos casi independientes"
+    }
+   ]
+  },
+  {
+   "tipo": "diagrama",
+   "fuente": "F08",
+   "personaje": "piensa",
+   "pasos": [
+    {
+     "titulo": "La que se pide",
+     "pie": "la zona que mueve los músculos"
+    },
+    {
+     "titulo": "La que se *escapa*",
+     "pie": "la parte de las emociones"
+    }
+   ],
+   "narracion": "La que se pide sale de la zona que mueve los músculos. La que se escapa, de la de las emociones.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "man forcing a smile for camera",
+      "forced smile portrait",
+      "stiff smile photo"
+     ],
+     "prompt": "a man in a suit forcing a stiff smile for a photo, close-up"
+    },
+    {
+     "desde": "La que se escapa",
+     "busqueda": [
+      "man laughing uncontrollably",
+      "genuine laughter close up",
+      "man bursting into laughter"
+     ],
+     "prompt": "the same man bursting into genuine, uncontrollable laughter, eyes creased"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "F08",
+   "personaje": "duda",
+   "titulo": "Lo único que funciona: el *trípode*",
+   "subtitulo": "Fuente: Wild y otros, 2003 (revisión)",
+   "narracion": "¿Y puede el fotógrafo provocar la de verdad? Wild no lo responde. Por ahora, solo funciona tirar el trípode.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "photographer picking up fallen tripod",
+      "photographer adjusting camera tripod",
+      "photographer looking at camera"
+     ],
+     "prompt": "a photographer picking up a fallen tripod from the grass, slightly embarrassed, guests blurred behind"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (tercera vuelta, lector nuevo)",
+  "fecha": "2026-10-01",
+  "de_que_va": "La risa que te piden y la risa que se te escapa no son lo mismo: según una investigadora, salen de partes distintas del cerebro.",
+  "pregunta_y_respuesta": "¿Por qué el «¡reíd!» del fotógrafo da un ja, ja falso y el trípode que se cae da una risa de verdad? Porque son dos caminos casi independientes: la pedida sale de la zona que mueve los músculos y la que se escapa, de la de las emociones.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Wild no lo responde.» Se queda: es el límite honesto del Short (regla 12) y nombra de quién es el repaso; sin ella, «por ahora, solo funciona tirar el trípode» suena a consejo.",
+  "donde_me_iria": "me quedo (duda en la escena 4: «pasa de chiste a clase. Como dura poco, sigo»)",
+  "notas": [
+   "«Lo más flojo es ‹la zona que mueve los músculos›. La entiendo, pero se queda vaga y no sé qué zona es. Aun así no me frena.»"
+  ],
+  "veredicto": "pasa"
+ }
+}

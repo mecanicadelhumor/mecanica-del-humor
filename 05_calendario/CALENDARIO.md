@@ -423,3 +423,35 @@ tercera vuelta (`F03`, la única ficha viva del pilar F, y `B03`) y un chiste ca
 completo. Ninguna de las quince devolvió «ninguna» en la pregunta de las frases que no se
 entienden. El criterio con el que se han cerrado los cinco campos `lectura_en_frio` está
 escrito en cada guion y en la bitácora, y la dirección tiene que ratificarlo o tumbarlo.
+
+---
+
+## Semana del 5 al 9 de octubre de 2026
+
+Escrita la noche del **jueves 1 de octubre**, la primera como rutina de Code. Todo en
+`parrilla.json` con `"modo": "automatico"` y `"idiomas": ["es"]`. **Nada el sábado 10 ni el
+domingo 11**: el formato largo sigue suspendido (C42; `control_c26.mediana_vistas_48h` = 24,0
+el 29/09, y la condición de vuelta son 50).
+
+| Día | Emisión | Hora | Serie | Pregunta | Ficha |
+|---|---|---|---|---|---|
+| Lunes 5 | `MDS-031` | 19:00 | El experimento | qué le pasa a tu cerebro cuando te ríes | `F07` |
+| Martes 6 | `MDS-032` | 19:00 | El experimento | se nota en la risa si dos personas son amigas | `D07` |
+| Miércoles 7 | `MDS-033` | 19:00 | Ríete primero, te explico después | por qué una anécdota graciosa deja de hacer gracia | `A03` |
+| Jueves 8 | `MDS-034` | 19:00 | Esto no tiene gracia y esto sí | por qué no puedes reírte de verdad cuando te lo piden | `F08` |
+| Viernes 9 | `MDS-035` | 19:00 | El experimento | apuntar tres cosas graciosas al día te hace más feliz | `H03` |
+
+**Derecho de tanteo (C46), ejercido en `MDS-033`.** `MDS-022` («por qué un chiste hace menos
+gracia la segunda vez», 244 a 48 h y la mejor retención del canal) se continúa por el mismo
+asunto —lo que tuvo gracia y deja de tenerla— desde la distancia en vez de la repetición. Su
+ficha, `A06`, no puede volver a ser central hasta el 03/11.
+
+**Ningún gancho de actualidad (C52)** esta semana: ningún candidato del radar cumplía a la vez
+las reglas 1 y 3 y tenía ficha que lo explicara. Los descartados, en la bitácora.
+
+**Ninguno abre en primera persona**, y los cinco cierres empiezan distinto. Tres son «El
+experimento»: la serie da la forma de la respuesta, y no se fuerza la rotación.
+
+**Un tema caído:** el primer `MDS-032` («¿tener sentido del humor te hace más feliz?», `B03`)
+no pasó la lectura en frío a la tercera vuelta, por segunda semana seguida. Lo sustituye el de
+`D07`. Detalle en la bitácora del 01/10.

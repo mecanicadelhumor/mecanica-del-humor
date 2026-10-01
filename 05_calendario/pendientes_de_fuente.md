@@ -276,3 +276,28 @@ que un guion de comedia funcione»** tiene tres fichas libres (`L05`, `L06`, `L0
 se hace en Short. No es falta de fuente: es falta de hallazgo. Son divulgación y entrevistas, y
 con la regla del 15/09 delante eso es lo mismo para un Short. Encaja en un episodio largo sobre
 el oficio, no en cuarenta segundos.
+
+---
+
+## 1 de octubre de 2026 · planificación de la semana del 5 de octubre
+
+### «Por qué los memes nos hacen gracia» — sigue aquí (es la nº 3 del 20/08), con número nuevo
+
+**Demanda:** 158.948.035 visualizaciones en el top 10 de la medición del 01/10, con **0 de 5
+en tema**: los cinco primeros son recopilatorios de memes. Es, por volumen, la tercera
+pregunta medida de la tanda, y el autocompletar de actualidad (C52) trae además «meme 67» y
+«por qué es viral 67».
+
+**Por qué no se hace:** ninguna ficha trata el meme como formato (imagen fija + texto que se
+reutiliza y se copia). Se podría explicar «con incongruencia» (`A05`, `A06`, `L06`), pero eso
+sería deducir y no copiar (regla del 15/09): lo que haya medido alguien sobre por qué hace
+gracia un meme no está en el corpus.
+
+**Qué haría falta:** uno o dos trabajos empíricos sobre humor en memes de internet (hay
+literatura desde 2018 sobre memes y risa compartida en grupo). Con ficha, la pregunta es de
+las mejores libres: volumen enorme y nadie respondiendo.
+
+**Y una nota de inventario, del mismo día:** el contenedor de la planificación no llega a
+las páginas de las revistas (crossref, doi.org, pubmed y las editoriales devuelven 403 en
+el proxy de salida), así que esta noche no se ha podido escribir ninguna ficha nueva con
+título y DOI vistos juntos (C39). Ver la bitácora del 01/10.

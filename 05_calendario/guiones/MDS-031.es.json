@@ -1,0 +1,178 @@
+{
+ "id": "MDS-031",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Qué le pasa a tu cerebro cuando te ríes?",
+ "tesis": "Cuando un chiste te hace gracia se enciende el circuito de recompensa del cerebro, y cuanta más gracia te hace, más se enciende.",
+ "pilares": [
+  "F"
+ ],
+ "duracion_objetivo_s": 42,
+ "bloqueos": [],
+ "historia": {
+  "pregunta": "¿Qué le pasa a tu cerebro cuando te ríes con un chiste?",
+  "respuesta": "Se enciende el circuito de recompensa, el del placer, y cuanta más gracia te hace el chiste, más se enciende.",
+  "puente": "El chiste del médico que contesta «¡siguiente!»: la escena 3 pregunta qué le pasa a tu cerebro cuando te ríes con eso, y Mobbs lo miró enseñando chistes dentro de un escáner."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — un paciente le dice al médico que nadie le hace caso y el médico contesta «¡siguiente!»; qué gira — si te has reído con el médico, en tu cerebro se ha encendido el circuito de recompensa, y Mobbs lo vio en un escáner; cómo acaba — eso se midió con cada uno solo dentro de una máquina, el peor sitio para contar lo del médico.",
+  "EL CHISTE VA PRIMERO: el del médico que contesta «¡siguiente!» al paciente al que nadie hace caso lleva décadas circulando, se entiende en voz alta a la primera y no tiene víctima colectiva. Sustituye al del perro que sabe restar, que dos lectores en frío tardaron en pillar («nada» es cero) y uno llamó flojo. Y es el fenómeno: después del remate se puede decir «lo que te acaba de pasar es justo lo que midió Mobbs».",
+  "FUENTE Y LÍMITE DE LO QUE SE AFIRMA: F07 (Mobbs, Greicius, Abdel-Azim, Menon y Reiss, 2003, Neuron, DOI 10.1016/S0896-6273(03)00751-7), nunca usada como fuente de un Short. Frase del resumen copiada literal en la ficha (resumen_verificado, leído el 25/09/2026): «humor engages a network of subcortical regions including the nucleus accumbens, a key component of the mesolimbic dopaminergic reward system. Further, the degree of humor intensity was positively correlated with BOLD signal intensity in these regions.» El guion dice exactamente esas dos cosas: se enciende el circuito de recompensa, y más cuanta más gracia. NO dice que sea «como una droga» (la ficha gemela F01 lo dice en su comentario y no está en el resumen), ni cuántas personas eran, ni qué chistes vieron: no está en lo leído.",
+  "C17: F07 es el mismo artículo que F01, que salió de apoyo en MDH-002 el 19/08, fuera ya de la ventana de seis semanas. Se cita F07 porque es la que tiene el resumen verificado.",
+  "DERECHO DE TANTEO: este Short NO es el del tanteo (lo es MDS-033). Pero conversa con MDS-022, que cerró diciendo que su explicación en dos pasos «lo predice un modelo, no un experimento»: este es un experimento que sí miró qué pasa cuando un chiste funciona.",
+  "LECTURA EN FRÍO, VUELTAS 1 Y 2 (01/10/2026): no pasaron. Las dos marcaron como vaga la escena puente («por dentro te ha pasado algo que alguien ya midió») y el cierre del bar como una frase que no lleva a ninguna parte; la primera, además, «cuanto mejor te parezca, más premio». En la tercera vuelta: chiste nuevo, la escena puente fuera (la pregunta del título se dice en voz alta en la escena 3, pegada al escáner) y un cierre que dice el límite dentro de la historia, con su premisa entera.",
+  "LECTURA EN FRÍO, VUELTA 3 (01/10/2026): pasa. La frase que el lector propone quitar (escena 5) se queda por la condición (c): es la segunda mitad del resumen —«the degree of humor intensity was positively correlated with BOLD signal intensity»— y sin ella el Short solo diría que reírse da placer.",
+  "CIERRE SIN FÓRMULA (C48.1): «Eso sí: …» no lo usa ninguno de los cuatro anteriores. Dice dónde no llega el estudio —gente sola dentro de una máquina— con el sujeto del Short (lo del médico)."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-bocadillos",
+   "texto": "«Nadie me hace *caso*»",
+   "narracion": "Un paciente entra en la consulta: doctor, tengo la sensación de que nadie me hace caso.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "patient sitting in doctor office talking",
+      "patient talking to doctor clinic",
+      "man in doctor consultation room"
+     ],
+     "prompt": "a worried man sitting across the desk from a doctor in a small clinic office, explaining something earnestly"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "«Que pase el *siguiente*»",
+   "narracion": "Y el médico, sin mirarle siquiera, dice: que pase el siguiente.",
+   "pausa_despues_s": 0.6,
+   "visual": [
+    {
+     "busqueda": [
+      "doctor writing not looking up desk",
+      "doctor writing at desk",
+      "doctor busy writing notes"
+     ],
+     "prompt": "a doctor writing on a pad without looking up, one hand raised calling the next patient, deadpan",
+     "fuente": "ia"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "fuente": "F07",
+   "texto": "Chistes dentro de un *escáner*",
+   "narracion": "¿Qué le pasa a tu cerebro cuando te ríes con eso? Dean Mobbs, neurocientífico, enseñó chistes a gente metida en un escáner.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "woman smiling looking at phone",
+      "person smiling at smartphone",
+      "smiling at phone screen"
+     ],
+     "prompt": "a young woman on a bus smiling to herself while looking at her phone"
+    },
+    {
+     "desde": "Dean Mobbs",
+     "busqueda": [
+      "patient lying in mri scanner",
+      "person entering mri machine",
+      "mri scan patient"
+     ],
+     "prompt": "a person lying on the bed of an MRI scanner, about to slide in, calm clinical light"
+    }
+   ]
+  },
+  {
+   "tipo": "diagrama",
+   "fuente": "F07",
+   "personaje": "piensa",
+   "pasos": [
+    {
+     "titulo": "Te hace *gracia*",
+     "pie": "un chiste dentro del escáner"
+    },
+    {
+     "titulo": "Se enciende la _recompensa_",
+     "pie": "el circuito del placer"
+    }
+   ],
+   "narracion": "Cuando un chiste les hacía gracia, se les encendía el circuito de recompensa del cerebro, el del placer.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "doctor looking at brain scan monitor",
+      "brain scan images on screen",
+      "radiologist screen"
+     ],
+     "prompt": "a researcher looking at colourful brain scan images on a computer monitor in a dark control room"
+    },
+    {
+     "marca": true,
+     "desde": "el circuito de recompensa"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "F07",
+   "personaje": "entiende",
+   "cifra": "Más *gracia*",
+   "pie": "más se enciende la recompensa",
+   "narracion": "Y cuanta más gracia les hacía el chiste, más se encendía.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "marca": true
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "F07",
+   "personaje": "duda",
+   "titulo": "El peor sitio para un *chiste*",
+   "subtitulo": "Fuente: Mobbs y otros, 2003",
+   "narracion": "Eso sí: cada uno estaba solo, tumbado en una máquina, que es el peor sitio del mundo para contar lo del médico.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "mri scanner tunnel",
+      "inside mri machine",
+      "mri machine close up"
+     ],
+     "prompt": "the narrow tunnel of an MRI scanner seen from the foot of the bed, cold light"
+    },
+    {
+     "desde": "el peor sitio del mundo",
+     "busqueda": [
+      "friends laughing at bar table",
+      "group of friends laughing in a bar",
+      "friends laughing together"
+     ],
+     "prompt": "a group of friends laughing loudly around a bar table at night, warm light"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (tercera vuelta, lector nuevo)",
+  "fecha": "2026-10-01",
+  "de_que_va": "Un chiste viejo de médicos sirve de excusa para contar que, cuando algo te hace gracia, el cerebro activa el circuito del placer, según un experimento con escáner.",
+  "pregunta_y_respuesta": "«¿Qué le pasa a tu cerebro cuando te ríes con eso?» Se enciende el circuito de recompensa, el del placer, y se enciende más cuanto más gracia te hace el chiste.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "La escena 5 entera: «Y cuanta más gracia les hacía el chiste, más se encendía.» Se queda: es la mitad del hallazgo copiado del resumen (la intensidad de la gracia correlaciona con la señal) y lo que separa el estudio de «reírse da placer»; ver notas_humor.",
+  "donde_me_iria": "me quedo, «pero por poco» (lo más cerca, la escena 5)",
+  "notas": [
+   "«que es el peor sitio del mundo para contar lo del médico» — «Lo entiendo como una gracia que vuelve al chiste del principio. Pero no sé si quiere decir algo más, por ejemplo que el experimento falla porque reírse es cosa de grupo y ahí estaban solos.» (la entiende, y la lectura que propone es la buena: va a notas, no bloquea)",
+   "«El chiste del principio me engancha poco porque ya lo conocía.»"
+  ],
+  "veredicto": "pasa"
+ }
+}

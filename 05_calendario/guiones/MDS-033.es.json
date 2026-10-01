@@ -1,0 +1,197 @@
+{
+ "id": "MDS-033",
+ "formato": "corto",
+ "serie": "Ríete primero, te explico después",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué una anécdota graciosa deja de tener gracia?",
+ "tesis": "Un percance pequeño tiene gracia cuando queda cerca y la pierde al alejarse; con una desgracia grande pasa al revés.",
+ "pilares": [
+  "A"
+ ],
+ "duracion_objetivo_s": 38,
+ "bloqueos": [],
+ "historia": {
+  "pregunta": "¿Por qué lo que te hizo llorar de risa un día, contado un año después, ya no hace gracia?",
+  "respuesta": "Porque un percance pequeño tiene gracia cuando queda cerca, y al alejarse la pierde.",
+  "puente": "El amigo que cae sentado en el charco con el móvil en alto: la escena 3 lo cuenta un año después y nadie se ríe, y la 5 explica con el estudio por qué el charco funcionaba esa tarde y no en la cena."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — tu amigo baja del autobús mirando el móvil, tropieza y cae sentado en un charco con el móvil en alto, intacto; qué gira — un año después lo cuentas en una cena y nadie se ríe; cómo acaba — el charco era pequeño y estaba cerca, y al alejarse perdió la gracia.",
+  "DERECHO DE TANTEO (C46): este es el Short que continúa MDS-022 (244 a 48 h, la mejor retención del canal), que preguntaba por qué un chiste hace menos gracia la segunda vez. Aquí el mismo asunto —lo que tuvo gracia y deja de tenerla— desde otro ángulo: no la repetición, sino la distancia. A06 (la ficha de MDS-022) no puede volver a ser central hasta el 03/11 (C17), así que entra A03.",
+  "FUENTE Y LÍMITE: A03 (McGraw, Warren, Williams y Leonard, 2012, Psychological Science). El hallazgo está en el propio título de la ficha: «Finding humor in distant tragedies and close mishaps» —el humor en las tragedias lejanas y en los percances cercanos—, y en su comentario: «La distancia psicológica como perilla regulable». El guion dice eso y nada más. NO se ha podido leer el resumen en esta ejecución (la red del contenedor bloquea las páginas de las revistas), así que no se da ninguna cifra, ningún tamaño de muestra ni qué tipo de distancia midieron: la historia usa el tiempo porque es la distancia que todo el mundo reconoce, y el texto dice «cerca» y «lejos», que es lo que dice el título.",
+  "C17: A03 fue fuente de MDS-003 el 26/08; seis semanas se cumplen el 07/10, que es justo el día de este Short. A01 (violación benigna), que también serviría, sigue siendo la más gastada del corpus y no se usa.",
+  "EL CHISTE VA PRIMERO (serie «Ríete primero»): el tropiezo con el móvil en alto es una situación que le ha pasado a todo el mundo, sin víctima (se levanta, el móvil está intacto) y se ríe hasta él. Es el fenómeno: el Short entero va de ese charco.",
+  "CIERRE: dice dónde deja de valer la explicación —con una desgracia grande el sentido es el contrario—, que es la otra mitad del título de la ficha. No nombra ninguna desgracia concreta.",
+  "LECTURA EN FRÍO, VUELTA 1 (01/10/2026): no pasó. El lector no entendió «pero un año después ya quedaba lejos» (el «pero» le hizo esperar una contradicción) ni el cierre «ese charco no te dice cuándo se puede bromear…», y propuso quitar «con algo grave es al revés» por repetido. Cambios: el «pero» fuera, «un psicólogo» delante de McGraw y un cierre con una conclusión que se puede llevar y el límite dicho dentro de la historia. VUELTA 2, lector nuevo: pasa; lo que marcó dice haberlo entendido y va a «notas».",
+  "CIERRE: «cuéntalo esa semana» es una broma sobre la propia historia, no un consejo que dé el estudio; lo que el estudio respalda es la frase siguiente (con una desgracia grande, al revés)."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-ruptura",
+   "texto": "Mirando el *móvil*",
+   "narracion": "Tu amigo baja del autobús mirando el móvil, pisa mal el bordillo y hace el molinillo con los brazos.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "man stepping off bus looking at phone",
+      "man getting off bus with phone",
+      "man walking looking at smartphone street"
+     ],
+     "prompt": "a young man stepping off a city bus while staring at his phone, rainy street"
+    },
+    {
+     "desde": "hace el molinillo",
+     "busqueda": [
+      "man losing balance on sidewalk",
+      "man stumbling on street",
+      "person tripping on curb"
+     ],
+     "prompt": "a man losing his balance on a wet curb, arms windmilling, seen from behind"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Al *charco*, con el móvil en alto",
+   "narracion": "Y acaba sentado en un charco, con el móvil en alto, intacto.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "man sitting in puddle holding phone up",
+      "man sitting in puddle rain",
+      "person sitting in puddle"
+     ],
+     "prompt": "a man sitting in a big rain puddle on the pavement, holding his phone up high and dry, slightly stunned",
+     "fuente": "ia"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "personaje": "rie",
+   "a": "Esa tarde",
+   "et_a": "no podéis parar de reír",
+   "b": "Un año después",
+   "et_b": "en la cena, *nadie*",
+   "narracion": "Esa tarde no podéis parar de reír. Un año después lo cuentas en una cena, y nadie se ríe.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "friends laughing on rainy street",
+      "friends laughing outdoors",
+      "two friends laughing hard"
+     ],
+     "prompt": "two friends laughing uncontrollably on a rainy street, one of them soaked"
+    },
+    {
+     "desde": "Un año después",
+     "busqueda": [
+      "dinner table guests polite silence",
+      "people at dinner table not laughing",
+      "awkward dinner party"
+     ],
+     "prompt": "a dinner party table where guests listen politely without laughing, warm indoor light"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "A03",
+   "personaje": "piensa",
+   "a": "Percance pequeño",
+   "et_a": "gracia de *cerca*",
+   "b": "Desgracia grande",
+   "et_b": "solo de _lejos_",
+   "narracion": "Un psicólogo, Peter McGraw, lo estudió: un percance pequeño tiene gracia de cerca, y una desgracia grande, solo de lejos.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "marca": true
+    },
+    {
+     "desde": "un percance pequeño",
+     "busqueda": [
+      "puddle on wet pavement",
+      "rain puddle street",
+      "puddle reflection city"
+     ],
+     "prompt": "a single rain puddle on wet city pavement, reflections, no people"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "A03",
+   "personaje": "entiende",
+   "texto": "Pequeño, y ya *lejos*",
+   "narracion": "Y el charco era pequeño. Un año después, ya quedaba lejos.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "man sitting in puddle holding phone up",
+      "man sitting in puddle rain",
+      "person sitting in puddle"
+     ],
+     "prompt": "a man sitting in a rain puddle holding his phone up, his friend laughing beside him",
+     "fuente": "ia"
+    },
+    {
+     "desde": "Un año después",
+     "busqueda": [
+      "calendar pages turning",
+      "wall calendar flipping",
+      "desk calendar"
+     ],
+     "prompt": "pages of a paper wall calendar flipping by, soft light"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "A03",
+   "personaje": "no",
+   "titulo": "El charco, *esa* semana",
+   "subtitulo": "Fuente: McGraw y otros, 2012",
+   "narracion": "Así que el charco, cuéntalo esa semana. Con una desgracia de verdad es al revés: hace falta tiempo.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "friends laughing telling story at cafe",
+      "friends laughing at cafe table",
+      "friend telling funny story"
+     ],
+     "prompt": "a young man telling a story with big gestures to laughing friends at a cafe table, his jeans still wet"
+    },
+    {
+     "desde": "Con una desgracia de verdad",
+     "busqueda": [
+      "empty street after rain",
+      "wet empty street evening",
+      "rainy street evening"
+     ],
+     "prompt": "an empty city street after the rain at dusk, wet pavement, quiet"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (segunda vuelta, lector nuevo)",
+  "fecha": "2026-10-01",
+  "de_que_va": "Por qué algo que te hizo llorar de risa un día deja de tener gracia cuando lo cuentas un año después.",
+  "pregunta_y_respuesta": "¿Por qué la anécdota del charco ya no hace gracia en la cena? Porque un percance pequeño solo tiene gracia mientras está reciente; cuando ya queda lejos, deja de tenerla. Con una desgracia grande pasa lo contrario: hace falta tiempo.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "ninguna",
+  "donde_me_iria": "me quedo (lo más cerca, la escena 4: «pasa de anécdota a clase. Pero dura poco y enseguida vuelve al charco»)",
+  "notas": [
+   "«Y el charco era pequeño. Un año después, ya quedaba lejos.» — «La entendí, pero tardé un segundo. La escena 4 dice que lo pequeño tiene gracia de cerca, pero no dice claramente que de lejos la pierda.»",
+   "«En la escena 3 yo había pensado otra explicación: en la cena nadie se ríe porque no estaban allí, es el típico tenías que estar. El vídeo no descarta esa idea.» (no es una frase sin entender: es una explicación rival legítima; va a la bitácora)"
+  ],
+  "veredicto": "pasa"
+ }
+}
