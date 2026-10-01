@@ -23,14 +23,15 @@
   "CIERRE SIN FÓRMULA (C48.1): «Lo que ningún libro explica es por qué a unos el pez les hace gracia y a otros les da rabia». Dice dónde falla el asunto con el sujeto del Short, y no como un descargo sobre la fuente.",
   "SEGUNDO SHORT DE LA SEMANA EN LA SERIE «Desmonta el chiste» (con MDS-027, del martes). La serie se repite a propósito: las dos preguntas piden despiece, y guionista_corto.md dice que no se fuerce la rotación. Lo que no se repite es la secuencia de tipos de escena —MDS-027 va enunciado, enunciado, enunciado, comparación, lista, cierre y este va enunciado, enunciado, enunciado, diagrama, lista, cierre— ni la apertura ni el cierre.",
   "LECTURA EN FRÍO, PRIMERA VUELTA (25/09/2026): no pasó. Los cinco lectores de la semana coincidieron en lo mismo y es un hallazgo, no un accidente: el cierre honesto escrito como una nota sobre la FUENTE («esto sale de un libro», «el estudio mide otra cosa») se lee como un descargo de responsabilidad que desvalora el vídeo entero, y los cinco lo señalaron como la frase que sobra. Arreglo aplicado a los cinco: el cierre sigue diciendo dónde falla —regla 12, no se negocia— pero dice dónde falla EL ASUNTO, no la bibliografía, y añade algo que el espectador no sabía. Va en la bitácora del 25/09 para la dirección.",
-  "LECTURA EN FRÍO (25/09/2026): el lector marcó como repetida la escena que despiezaba el chiste antes de nombrar el mecanismo, le descolocó el condicional «sería» y vio una contradicción entre decir «ningún libro lo explica» y citar un libro debajo. Arreglado: una sola escena de mecanismo, con el autor dicho en voz alta, y el cierre ya no dice «ningún libro»."
+  "LECTURA EN FRÍO (25/09/2026): el lector marcó como repetida la escena que despiezaba el chiste antes de nombrar el mecanismo, le descolocó el condicional «sería» y vio una contradicción entre decir «ningún libro lo explica» y citar un libro debajo. Arreglado: una sola escena de mecanismo, con el autor dicho en voz alta, y el cierre ya no dice «ningún libro».",
+  "REVISIÓN DIARIA 01/10/2026 (excepción de 48 h): la primera lectura de la revisión no contestó la pregunta del Short (dijo que respondía a «¿cuántos surrealistas…?») porque la escena 1 solo afirmaba y nunca preguntaba, y dudó de «el pez es lo que no encaja» y de «eso» en el cierre. Cambios: escena 1 pregunta en voz alta «¿Por qué nos hace gracia un chiste que no tiene ninguna lógica?» (y sale «desde hace décadas», cifra sin respaldo); escena 4 sitúa a Weems como autor de un libro y dice «Aquí, el pez»; escena 5 nombra el «por qué» en vez de «eso». La segunda lectura, con otro subagente, ya cuenta la tesis. Quedan dudas menores de redacción («cazar»), que se dejan."
  ],
  "escenas": [
   {
    "tipo": "enunciado",
    "icono": "i-ruptura",
    "texto": "Un chiste sin *lógica*",
-   "narracion": "Hay un chiste que se cuenta desde hace décadas y que no tiene ninguna lógica.",
+   "narracion": "¿Por qué nos hace gracia un chiste que no tiene ninguna lógica? Mira este.",
    "pausa_despues_s": 0.35,
    "visual": [
     {
@@ -83,14 +84,14 @@
     "El cerebro caza algo que no *encaja*",
     "Aquí, el pez"
    ],
-   "narracion": "Para Scott Weems la risa avisa de que el cerebro ha cazado algo que no encaja. Y aquí es el pez.",
+   "narracion": "Según Scott Weems, autor de un libro sobre la risa, reímos cuando el cerebro caza algo que no encaja. Aquí, el pez.",
    "pausa_despues_s": 0.45,
    "visual": [
     {
      "marca": true
     },
     {
-     "desde": "Y aquí es el pez",
+     "desde": "Aquí, el pez",
      "busqueda": [
       "fish out of water on a table",
       "fish on kitchen counter",
@@ -106,7 +107,7 @@
    "fuente": "L06",
    "titulo": "A unos les da *rabia*, y no se sabe",
    "subtitulo": "Fuente: el libro «Ha!», de Scott Weems",
-   "narracion": "Hay a quien el pez le hace gracia y hay a quien le da rabia, y eso ya no lo sabe nadie.",
+   "narracion": "A unos el pez les hace gracia y a otros les da rabia, y por qué pasa eso, nadie lo sabe.",
    "pausa_despues_s": 0.2,
    "visual": [
     {
@@ -121,14 +122,18 @@
   }
  ],
  "lectura_en_frio": {
-  "lector": "subagente sin contexto (segunda vuelta)",
-  "fecha": "2026-09-25",
-  "de_que_va": "Un chiste absurdo de surrealistas y por qué nos hace gracia algo que no tiene lógica.",
-  "pregunta_y_respuesta": "¿Por qué hace gracia un chiste sin lógica? Porque la risa salta cuando el cerebro detecta algo que no encaja; por qué a unos les hace gracia y a otros les irrita, no está explicado.",
+  "lector": "subagente sin contexto (revisión diaria, segunda vuelta tras la corrección del 01/10/2026)",
+  "fecha": "2026-10-01",
+  "de_que_va": "Por qué nos hace gracia un chiste absurdo (el del pez y los surrealistas): según un autor, porque el cerebro caza algo que no encaja.",
+  "pregunta_y_respuesta": "Por qué nos reímos de un chiste sin lógica. Porque el cerebro detecta algo que no encaja (el pez); y que a unos les haga gracia y a otros rabia, nadie lo sabe.",
   "frases_que_no_se_entienden": [],
-  "frase_que_sobra": "«No hay nada que descifrar: tu cabeza iba buscando una lógica y se dio contra un pez» — quitada entera.",
-  "donde_me_iria": "me quedo",
-  "notas": "Las dos cosas que el lector no entendió están corregidas: el condicional «sería» (ahora «para Scott Weems la risa avisa de que…», con el autor dicho en voz alta) y la contradicción entre decir «ningún libro lo explica» y citar un libro debajo (la frase ya no dice «ningún libro»). CRITERIO APLICADO (planificación del 25/09/2026, y la dirección tiene que ratificarlo o tumbarlo): «frases_que_no_se_entienden» recoge las frases que el lector dice no haber ENTENDIDO. Las observaciones del tipo «entiendo las palabras pero no sé por qué me lo cuentan», «no sé quién es ese autor» o «no sé cómo se mide eso» se recogen en «notas» y se han tratado como lo que son: petición de detalle que no cabe en cincuenta segundos, o la firma de fuente y el cierre honesto, que son obligatorios (REGLAS.md, regla 12). En quince lecturas en frío de esta noche, con lectores distintos, NINGUNA devolvió «ninguna» en la pregunta 3. El detalle y la propuesta, en la bitácora del 25/09, «Para el codirector».",
+  "frase_que_sobra": "«Mira este.» (la dejo: marca el paso al chiste; la escena 1 sigue dando la pregunta en voz alta, que es lo que faltaba).",
+  "donde_me_iria": "escena 4: explicar el chiste lo mata (el lector habría llegado a la 5).",
+  "notas": [
+   "«no sé bien qué significa \"cazar\" algo que no encaja»",
+   "«Aquí, el pez.» (tardo en ver que se refiere a que el pez es lo que no encaja)",
+   "«nadie lo sabe» me deja sin respuesta tras prometerme una (es el cierre honesto, regla 12)"
+  ],
   "veredicto": "pasa"
  }
 }
