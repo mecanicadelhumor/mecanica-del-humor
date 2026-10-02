@@ -571,6 +571,21 @@
       "musica": "cama_01_crying_over_you_christophermorrow.mp3",
       "subido_utc": "2026-10-01T07:26:27Z",
       "revisado": false
+    },
+    {
+      "id": "MDS-030.es",
+      "episodio": "MDS-030",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué me hace gracia el humor absurdo? El chiste de los surrealistas y la bombilla",
+      "guion": "05_calendario/guiones/MDS-030.es.json",
+      "video_id": "_bfR8VOquU8",
+      "url": "https://youtu.be/_bfR8VOquU8",
+      "estado": "private",
+      "publicar_en": "2026-10-02T17:00:00Z",
+      "musica": "cama_02_dusk_next_route.mp3",
+      "subido_utc": "2026-10-02T07:08:05Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-01T15:42:23Z"
