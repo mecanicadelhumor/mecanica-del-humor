@@ -33,6 +33,7 @@ on:
   schedule:
     - cron: "50 8 * * *"   # 08:50 UTC — después del último cron de producción (08:23)
     - cron: "10 9 * * *"   # 09:10 UTC — segundo intento, por si el primero se retrasa
+    - cron: "25 17 * * *"  # 17:25 UTC — C57: la pregunta del Short de hoy, recién publicado
   workflow_dispatch: {}
 
 permissions:
