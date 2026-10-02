@@ -1,7 +1,7 @@
 {
   "_nota": "Metadatos de publicación del canal español. Capítulos, fuentes y créditos de música los añade publicar.py debajo de esta descripción.",
   "serie": "El experimento",
-  "titulo": "¿Qué le pasa a tu cerebro cuando te ríes? Lo midieron con chistes dentro de un escáner",
+  "titulo": "¿Qué le pasa a tu cerebro cuando te ríes?",
   "descripcion": "Un paciente: «Doctor, tengo la sensación de que nadie me hace caso». El médico, sin mirarle: «Que pase el siguiente».\n\nSi te ha hecho gracia, en tu cabeza acaba de pasar algo que Dean Mobbs y su equipo miraron con resonancia magnética: cuando un chiste hace gracia se enciende el circuito de recompensa del cerebro, el del placer. Y cuanta más gracia hace, más se enciende.\n\nEso sí: cada persona estaba sola, tumbada dentro de una máquina. Qué pasa cuando el chiste se cuenta entre amigos, en un bar, no lo midieron.",
   "etiquetas": [
     "qué le pasa a tu cerebro cuando te ríes",
@@ -17,5 +17,6 @@
     "mecánica del humor",
     "humor"
   ],
-  "primer_comentario": "¿Qué le pasa a tu cerebro cuando te ríes? Se enciende el circuito de recompensa, y más cuanta más gracia te hace. ¿Cuál es el chiste que más te ha encendido a ti?"
+  "primer_comentario": "¿Qué le pasa a tu cerebro cuando te ríes? Se enciende el circuito de recompensa, y más cuanta más gracia te hace. ¿Cuál es el chiste que más te ha encendido a ti?",
+  "pregunta_al_espectador": "¿Te sabes un chiste de médicos mejor que este? Déjalo aquí."
 }

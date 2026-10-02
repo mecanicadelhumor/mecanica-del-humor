@@ -162,6 +162,9 @@ confundirlas:
 | Regla 7.1 · la persona sintética | **Autorizada por el codirector el 23/09/2026**, escrita el 28/09 | Sí a Kaggle, con las cinco condiciones de `REGLAS.md` 7.1. No entra sin muestrario (C51.2) |
 | Kaggle de la marca · secretos `KAGGLE_USERNAME` y `KAGGLE_KEY` | **Puestos por el codirector el 29-30/09** | El token es del formato nuevo (una sola cadena): el workflow que lo use lo pasa como `KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_KEY }}`. El usuario, `mecanicadelhumor`, sirve para el nombre de los cuadernos. Licencias de cada pieza del presentador: `07_pruebas/presentador-2026-10/LICENCIAS.md` (C51.3) |
 | `04_agentes/entregar.py` · C53.2 (30/09) | **De la dirección** | Mide lo entregado contra `origin/main` y borra en `--aplicar` las ramas de sesión ya enteras en `main`. **Nadie abre nunca un PR de una rama de sesión**: se saltaría la tabla de propiedad |
+| `03_produccion/pipeline/montaje.py` · C58 (02/10/2026) | **Decisión del codirector en la sesión** | En los **Shorts**, 0,1 s de colchón y ningún fundido de entrada (era 0,6 s y fundido desde negro, del 18/08). En los largos, como siempre. El colchón usado se apunta en `montaje.json` y `qa.py` mide contra él |
+| `03_produccion/pipeline/render.py` · `escena.html` · C59 (02/10/2026) | **Decisión del codirector en la sesión** | El remate de marca dice «Síguenos» y «un mecanismo nuevo de lunes a viernes», **siempre la misma frase y sin voz**. No se convierte en una frase por Short |
+| `04_agentes/metricas.py --solo-registro` · C57 (02/10/2026) | **De la dirección** | Publica en YouTube **un comentario del canal por Short**: la `pregunta_al_espectador` de su publicación, cuando el vídeo ya es público, una sola vez. Es lo único que el sistema escribe en los comentarios. **Nunca responde a nadie** (regla 7) |
 
 **Y la consecuencia práctica de la autorización general, que es la que importa:** desde el
 12/09 escribo directamente en la carpeta del codirector con `device_commit_files` los
@@ -183,7 +186,7 @@ arrastraba defectos. Solo puede añadir lo que verifique contra la fuente.
 ## Las trampas en las que ya se ha caído
 
 No son anécdotas: cada una costó tiempo o un vídeo, y todas se repiten solas si nadie las
-tiene delante. Son cuarenta y ocho a 30/09/2026, y la lista crece porque se lee.
+tiene delante. Son cincuenta y una a 02/10/2026, y la lista crece porque se lee.
 
 **1. Cada documento daba por supuesto que el movimiento lo ponía otro.**
 Los subtítulos quemados se retiraron el 20/08; la respiración de zoom ya estaba
@@ -647,6 +650,69 @@ vio el 30/09 leyendo la primera entrega buena, antes de que pasara.
 → **Cuando un script decide que no hay nada que hacer, que lo decida contra la referencia que importa
 (`main`), no contra un estado intermedio que otro puede haber movido.** Y cada vez que un proceso nuevo
 empieza a llamar a un script viejo, léelo pensando en lo que el proceso nuevo hace antes de llamarlo.
+
+**49. Durante seis semanas subimos una portada que YouTube no enseñaba, y la que enseñaba era negra.**
+`miniatura.py` dibuja cada día una portada de color con el Engranaje y `publicar.py` la sube sin un
+error. Nadie había mirado qué imagen ponía YouTube en cada sitio. El 02/10, píxel a píxel: en el feed no
+hay portada; en la pestaña del canal, un fotograma 90-95 % azul marino; en el buscador, **el primer
+fotograma, negro al 100 %**, por el fundido de entrada que se puso el 18/08 por otro motivo; y la
+nuestra, solo en las superficies horizontales (las verticales personalizadas son, de momento, para
+canales del Programa de Partners).
+→ Es la trampa 1 en la plataforma: **comprueba lo que la plataforma enseña, en la superficie donde se
+ve, no lo que le mandas.** Y cuando cambies el principio o el final de un vídeo, pregúntate quién usa
+ese fotograma.
+
+**50. Un aplazamiento sin el dato que lo reabre se queda aplazado para siempre.** C20 —el primer
+comentario no se publicaba desde el 31/08— se aplazó «porque el canal tiene cero comentarios y una
+decena de espectadores». Un mes después había 2.400 visualizaciones, S3 era el bloqueo declarado, y la
+planificación seguía escribiendo cada semana un `primer_comentario` que nadie publicaba. Nadie lo
+reabrió porque nadie había escrito **cuándo** reabrirlo.
+→ **Cuando aplaces algo, escribe el dato concreto que lo reabre** («cuando un Short pase de 100», «cuando
+S3 sea el bloqueo») **y ponlo en «lo que queda mirado» de cada versión** hasta que se cumpla.
+
+**51. La regla del título se escribió para la búsqueda, y se quedó cuando mandaba el feed.** «El título
+debe contener la pregunta que la gente escribe — es lo que nos está trayendo la poca audiencia» era
+verdad en agosto. El 18/09 C40 dejó escrito que la búsqueda ya no mandaba; la regla del título no se
+tocó, y su «menos de 100 caracteres» se usaba como objetivo: 74-98 caracteres, cuando entre los Shorts en
+tendencia la franja que mejor funciona es la de 20-40 y el mejor nuestro tenía 45.
+→ Son la 25 y la 31 juntas: **cuando cambie la superficie que manda, recorre todas las reglas que se
+escribieron para la anterior.** Y un máximo vuelve a ser un objetivo en cuanto nadie mira el número de
+al lado.
+
+## Dónde está el proyecto a 2 de octubre de 2026
+
+**Sesión de viernes: el estudio de mercado y el envoltorio del Short.** Versión **17** del plan, la que
+manda. El estudio entero, con fuentes, está en **`00_estrategia/MERCADO_2026-10.md`**.
+
+- **La conclusión del estudio:** el guion ya está por encima del nicho; lo que nos separa de los que
+  crecen es lo que lo rodea. Se arreglan cuatro piezas baratas, todas desde el `MDS-031` (lunes 5):
+  - **C56 · el título es la pregunta, sola**, 55 caracteres como mucho (eran 74-98);
+  - **C57 · la pregunta al espectador se publica de verdad**, como comentario del canal, por la
+    sincronización diaria del registro (nunca se había publicado: C20);
+  - **C58 · el primer segundo sin negro**: 0,1 s de colchón y ningún fundido en los Shorts (decisión del
+    codirector);
+  - **C59 · la firma final pide que sigan el canal**, siempre con la misma frase (decisión del
+    codirector).
+- **Las miniaturas no se tocan:** YouTube solo enseña la nuestra en las superficies horizontales. La
+  portada real es el primer fotograma, y eso lo arregla C58 (trampa 49).
+- **La música no tenía fallo:** la rueda de 14 pistas dio la vuelta en `MDS-029`. Las 14 se quedan.
+- **Hoy en público:** 5 suscriptores (eran 0). Semana de C50: 67 · 66 · 6 · 10. Todavía sin efecto
+  visible de la imagen real.
+- **Lo que no se toca antes del 15/11:** cinco Shorts a la semana y el largo suspendido. El estudio
+  dice que lo mejor por vídeo son 2-4 a la semana y que el dinero y los suscriptores de la divulgación
+  están en el largo; las dos cosas se piensan después de la decisión.
+- **Comprobado:** la rutina de planificación corre en `claude-opus-5-5` con `7 22 * * THU,FRI,SAT`,
+  que es **UTC** (00:07 de España del día siguiente). El paso 0 de su fichero ya lo tiene en cuenta.
+
+**Lo que espera al codirector:** `tareas/tareas_codirector_2026-10-02.md` — el `push` antes del lunes 5
+a las 03:13 (sin él, `MDS-031` sale como hasta ahora), una línea opcional en `sincroniza_registro.yml` y
+una consulta única en Studio («visto frente a deslizado»).
+
+**Para la próxima sesión (lunes 5):** lo que ya estaba (primera semana entera de C50, las rutinas
+entregando solas, C44, C47, P9); que `MDS-031` salió con título corto, sin negro y con la firma nueva
+(ficha: `silencio_inicial.acaba_s` ≈ 0,1); el bucle; y «visto frente a deslizado» si el codirector lo
+ha mirado. **Y el martes 6**, que la primera pregunta se publicó en `MDS-031` (`pregunta_publicada` en
+el registro).
 
 ## Dónde está el proyecto a 30 de septiembre de 2026
 

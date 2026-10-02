@@ -1,7 +1,7 @@
 {
   "_nota": "Metadatos de publicación del canal español. Capítulos, fuentes y créditos de música los añade publicar.py debajo de esta descripción.",
   "serie": "El experimento",
-  "titulo": "¿Se nota en la risa si dos personas son amigas? Lo probaron en 24 culturas",
+  "titulo": "¿Se nota en la risa si dos personas son amigas?",
   "descripcion": "Tras la mampara se ríen dos compañeros. No les ves la cara, y aun así apostarías a que son amigos.\n\nGreg Bryant y su equipo lo pusieron a prueba: gente de 24 sociedades de todo el mundo oyó un segundo de risa de dos personas y tenía que adivinar si eran amigas o desconocidas. Acertaban más que a cara o cruz: según el sitio, entre 53 y 67 de cada 100.\n\nO sea, que la apuesta es buena pero no segura: en algún sitio, acertar era casi tirar una moneda.",
   "etiquetas": [
     "se nota si dos personas son amigas",
@@ -16,5 +16,6 @@
     "mecánica del humor",
     "humor"
   ],
-  "primer_comentario": "¿Se nota en la risa si dos personas son amigas? Un poco: entre 53 y 67 aciertos de cada 100. ¿Tú lo notas?"
+  "primer_comentario": "¿Se nota en la risa si dos personas son amigas? Un poco: entre 53 y 67 aciertos de cada 100. ¿Tú lo notas?",
+  "pregunta_al_espectador": "¿Reconocerías la risa de tu mejor amigo sin verle la cara?"
 }

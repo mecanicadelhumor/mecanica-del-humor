@@ -323,8 +323,15 @@
         padding-bottom:300px;text-align:center;
           opacity:0;display:none;pointer-events:none}
   #remate .n{font-size:52px;letter-spacing:.14em;text-transform:uppercase;color:var(--ambar)}
-  #remate .q{font-size:38px;color:var(--tenue);margin-top:18px;
-             font-family:"Inter","DejaVu Sans",sans-serif}
+  /* C59 (02/10/2026): la segunda línea pide que sigan el canal. Va en dos
+     renglones (render.py manda el salto): «Síguenos», grande y en el blanco
+     de marca, y debajo la promesa, más pequeña. Una llamada que no se lee no
+     llama. Y en vertical el bloque se aparta de la columna de botones de la
+     interfaz de Shorts (los ~150 px de la derecha), como las bandas de C50. */
+  #remate .q{font-size:40px;line-height:1.3;color:var(--tinta);margin-top:22px;
+             white-space:pre-line;font-family:"Inter","DejaVu Sans",sans-serif}
+  #remate .q::first-line{font-size:66px;font-weight:700}
+  html[data-fmt="v"] #remate{padding-left:40px;padding-right:150px}
   html[data-fmt="v"] body.con-remate #remate{display:flex}
 
   /* motivo de marca: engranaje técnico en la esquina, fijo y discreto en

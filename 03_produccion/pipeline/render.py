@@ -73,8 +73,19 @@ MARCAS = {"es": "Mecánica del Humor", "en": "Humor Mechanics"}
 
 # La línea del remate de marca con la que termina cada Short. Un guion puede
 # poner la suya en la clave "remate"; si no, se usa esta.
-REMATES = {"es": "El mecanismo, cada día a las 19:00",
-           "en": "The mechanism, every day"}
+#
+# C59 (02/10/2026, con el sí del codirector): la línea pide que sigan el canal,
+# siempre la misma y sin voz. Era «El mecanismo, cada día a las 19:00», que
+# además no era verdad: los fines de semana no sale nada. Con cero comentarios y
+# casi cero «me gusta» (S3) el vídeo no le pedía nada a nadie; en un canal sin
+# cara, pedirlo es lo que más se nota (experimento de Kapwing, en
+# 00_estrategia/MERCADO_2026-10.md). Una frase fija, no una por Short: una
+# llamada distinta cada vez acaba sonando a coletilla forzada (trampa 39).
+# Dos líneas a propósito (escena.html pinta la primera más grande): en una sola,
+# la frase ocupaba el ancho entero del lienzo y su final caía debajo de la
+# columna de botones de la interfaz de Shorts (medido en la muestra del 02/10).
+REMATES = {"es": "Síguenos\nun mecanismo nuevo de lunes a viernes",
+           "en": "Follow us\na new mechanism every weekday"}
 
 # Los dos formatos del canal. El vertical es para Shorts: 1080x1920, que es lo
 # que YouTube clasifica automáticamente como Short al subirlo por la API — no

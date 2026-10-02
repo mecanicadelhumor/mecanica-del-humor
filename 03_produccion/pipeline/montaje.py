@@ -55,6 +55,19 @@ PAD_INICIO = 0.6
 PAD_FIN = 1.0
 FUNDE_IN = 0.4
 FUNDE_OUT = 0.6
+# C58 (02/10/2026, con el sí del codirector): en los SHORTS, ni fundido desde
+# negro ni 0,6 s de imagen congelada al empezar. El colchón de arriba se puso el
+# 18/08 para que el vídeo «no entrara en seco», y en un episodio largo tiene
+# sentido; en el feed de Shorts todo entra en seco y el primer segundo es el que
+# decide si deslizan. Y había una segunda factura que nadie veía: YouTube usa el
+# PRIMER fotograma (`frame0.jpg`) como portada del Short en la estantería del
+# buscador, y ese fotograma era negro al 100 % en todos los Shorts del canal
+# (medido el 02/10 sobre i.ytimg.com). Con una décima de colchón y sin fundido,
+# el primer fotograma es la primera imagen de la escena 1 y la voz entra a los
+# 0,1 s. El final no cambia (el bucle es otra decisión). El colchón que se ha
+# usado se apunta en montaje.json para que qa.py mida contra él, no contra 0,6.
+PAD_INICIO_CORTO = 0.1
+FUNDE_IN_CORTO = 0.0
 # La música se apaga sola antes de que el amix la corte. Ver el comentario
 # largo en la cadena de audio.
 FUNDE_MUSICA = 1.5
@@ -78,8 +91,26 @@ def duracion_s(ruta):
     return float(r.stdout.strip())
 
 
+def formato_de(carpeta):
+    """«corto» o «largo», según el guion cronometrado de la carpeta (C58)."""
+    timed = Path(carpeta) / "guion.timed.json"
+    try:
+        return json.loads(timed.read_text(encoding="utf-8")).get("formato", "largo")
+    except (OSError, ValueError):
+        return "largo"
+
+
+def colchon_de(formato):
+    """(colchón de entrada en s, fundido de entrada en s) para ese formato (C58)."""
+    if formato == "corto":
+        return PAD_INICIO_CORTO, FUNDE_IN_CORTO
+    return PAD_INICIO, FUNDE_IN
+
+
 def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=False, salida=None):
     carpeta = Path(carpeta)
+    formato = formato_de(carpeta)
+    pad_inicio, funde_in = colchon_de(formato)
     mudo = carpeta / "mudo.mp4"
     voz = carpeta / "voz.mp3"
     ass = carpeta / "subtitulos.ass"
@@ -95,7 +126,7 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=False, salida=None
     # Duración del vídeo mudo ya renderizado: sobre ella calculamos dónde debe
     # empezar el fundido de salida, una vez sumado el colchón de ambos lados.
     dur_mudo = duracion_s(mudo)
-    dur_total = dur_mudo + PAD_INICIO + PAD_FIN
+    dur_total = dur_mudo + pad_inicio + PAD_FIN
     # El amix lleva duration=first y su primera entrada es la voz, así que la
     # mezcla termina exactamente cuando termina voz.mp3. Ese es el instante en
     # el que hay que tener la música ya en silencio.
@@ -104,11 +135,14 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=False, salida=None
     # --- cadena de audio ---
     # Colchón de audio: silencio al principio (adelay) y al final (apad), más
     # un fundido de entrada/salida sobre ese silencio para que no suene a corte.
+    # C58: con el colchón de una décima (Shorts) no hay fundido de entrada: el
+    # adelay ya mete 0,1 s de silencio digital delante de la voz, así que no
+    # hay chasquido que tapar.
     colchon_audio = (
-        f"adelay={int(round(PAD_INICIO * 1000))}|{int(round(PAD_INICIO * 1000))},"
+        f"adelay={int(round(pad_inicio * 1000))}|{int(round(pad_inicio * 1000))},"
         f"apad=pad_dur={PAD_FIN},"
-        f"afade=t=in:st=0:d={FUNDE_IN},"
-        f"afade=t=out:st={dur_total - FUNDE_OUT:.3f}:d={FUNDE_OUT}"
+        + (f"afade=t=in:st=0:d={funde_in}," if funde_in > 0 else "")
+        + f"afade=t=out:st={dur_total - FUNDE_OUT:.3f}:d={FUNDE_OUT}"
     )
     if musica:
         # sidechaincompress: la voz (cadena lateral) comprime la música.
@@ -160,14 +194,16 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=False, salida=None
     # igual que adelay hace con el audio, así que vídeo, voz y subtítulos
     # siguen sincronizados.
     PAD = (
-        f"tpad=start_duration={PAD_INICIO}:start_mode=clone:"
+        f"tpad=start_duration={pad_inicio}:start_mode=clone:"
         f"stop_duration={PAD_FIN}:stop_mode=clone"
     )
     # El fundido a negro va el último, sobre el vídeo ya paginado (y con subs
     # quemados si los hay), con los mismos tiempos que el fundido de audio.
+    # C58: en los Shorts no hay fundido de ENTRADA (el primer fotograma es la
+    # portada del buscador); el de salida se queda.
     FUNDE = (
-        f"fade=t=in:st=0:d={FUNDE_IN}:c=black,"
-        f"fade=t=out:st={dur_total - FUNDE_OUT:.3f}:d={FUNDE_OUT}:c=black"
+        (f"fade=t=in:st=0:d={funde_in}:c=black," if funde_in > 0 else "")
+        + f"fade=t=out:st={dur_total - FUNDE_OUT:.3f}:d={FUNDE_OUT}:c=black"
     )
     # ---------------------------------------------------------------------
     # Subtítulos quemados: APAGADOS por decisión de canal (20/08).
@@ -236,6 +272,10 @@ def montar(carpeta, musica=None, vol_musica=0.14, quemar_subs=False, salida=None
     # sigue teniendo líneas y la adivinanza salía mal.
     (carpeta / "montaje.json").write_text(json.dumps({
         "subtitulos_quemados": bool(quemar_subs and n_subs),
+        # C58: el colchón y el fundido de entrada que se han usado de verdad.
+        "formato": formato,
+        "colchon_inicio_s": pad_inicio,
+        "fundido_entrada_s": funde_in,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
 
     mb = salida.stat().st_size / 1e6

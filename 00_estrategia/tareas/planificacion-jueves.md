@@ -1,10 +1,10 @@
 # Tarea programada · Planificación semanal — jueves noche
 
 **Copia legible del prompt que corre en el almacén de tareas programadas.**
-Espejo creado el 31/08/2026, sincronizado el 04/09/2026, **el 07/09/2026** y **el 12/09/2026 (dirección del sábado)**. **Desde el 30/09/2026 corre como rutina de Code** (C53.1): `id`: `trig_014hUCsYDz9mSVNKTFtQxZpR` · jueves a las 22:07
-hora de España, y viernes y sábado como reintento en cuanto el codirector los añada (tarea 1 de
-`tareas_codirector_2026-09-30.md`) · modelo: **Opus 5.5** desde que el codirector lo cambie en esa misma tarea (se creó sin
-modelo) · repositorio añadido · entorno «Mecánica del Humor». La tarea vieja (`trig_015qkb2sqbbJwJE1qgoNMK95`) está apagada.
+Espejo creado el 31/08/2026, sincronizado el 04/09/2026, **el 07/09/2026** y **el 12/09/2026 (dirección del sábado)**. **Desde el 30/09/2026 corre como rutina de Code** (C53.1): `id`: `trig_014hUCsYDz9mSVNKTFtQxZpR` · **comprobado el
+02/10/2026:** `7 22 * * THU,FRI,SAT` en UTC, es decir **las 00:07 de España** del viernes (la buena),
+el sábado y el domingo (reintentos; ver el paso 0) · modelo: **Opus 5.5** (`claude-opus-5-5`, lo puso el
+codirector el 30/09) · repositorio añadido · entorno «Mecánica del Humor». La tarea vieja (`trig_015qkb2sqbbJwJE1qgoNMK95`) está apagada.
 
 > ⚠️ **CORREGIDO EL 21/09/2026: este fichero YA NO es una copia. ES el prompt.**
 > Desde C30 (12/09/2026) el almacén solo lleva un arranque que lee este fichero de
@@ -13,6 +13,37 @@ modelo) · repositorio añadido · entorno «Mecánica del Humor». La tarea vie
 > contrario y llevaba nueve días mintiendo.
 
 ---
+
+## Lo que cambia el 02/10/2026 (dirección del viernes) · versión 17 del plan · C56 y C57
+
+**Va antes que todo lo demás, y cambia el paso 4.** Sale del estudio de mercado del 02/10
+(`00_estrategia/MERCADO_2026-10.md`).
+
+- **C56 · El título de un Short es la pregunta, sola: 55 caracteres como mucho.** Nada de segunda
+  parte con el detalle del estudio («… Ocho clases, dieciocho jubilados y una nota que se ponían
+  ellos»): eso va en la descripción. Entre los Shorts en tendencia, la franja que mejor funciona es 20-40 caracteres (la media, 51); los
+  nuestros tenían 74-98, y el mejor del canal (`MDS-016`, «Por qué la ironía no se entiende por WhatsApp»)
+  tenía 45. La pregunta sigue siendo la que la gente escribiría, y **nombra la situación que todo el
+  mundo reconoce, no el estudio**. `validar_guion.py` avisa por encima de 55.
+- **C57 · `"pregunta_al_espectador"`, obligatoria en cada publicación de Short.** Es una pregunta que
+  el espectador puede contestar **desde su propia vida o con un chiste suyo**, ligada a la historia
+  del Short, en una o dos frases y sin resumir el vídeo. Ejemplos de contenido, no de forma (trampa
+  39: no copies su molde): para el chiste del médico, «¿Te sabes un chiste de médicos mejor que
+  este? Déjalo aquí»; para el charco, «¿Cuál es tu charco: la anécdota que te hizo llorar de risa y
+  que ya no le hace gracia a nadie?»; para el diario de cosas graciosas, «Si hoy tuvieras que apuntar
+  una sola cosa que te ha hecho gracia, ¿cuál sería?». **Lo publica el canal** cuando el Short ya es
+  público (la sincronización diaria del registro): es contenido editorial firmado por la marca y no
+  responde a nadie (regla 7). Nada de pedir «me gusta», nada de «comenta si…» genérico, y nunca la
+  misma pregunta dos veces en una semana. `validar_guion.py` avisa si falta. El campo viejo
+  `"primer_comentario"` ya no se publica; puedes dejar de escribirlo.
+- **Lo que no cambia:** la historia manda sobre el reloj (C48), y la lectura en frío, igual. Pero
+  ten delante una cifra que tú misma señalaste el jueves: los dos Shorts que mejor retienen duran
+  41-42 s, y los de esta semana, 52-54. Cuando un guion pase de 50 s, antes de entregarlo mira si
+  hay una **escena entera** que sobre (la pregunta 4 de la lectura en frío). No se recortan juntas
+  (trampa 38).
+- **Ya no hace falta que lo cuentes en el guion:** desde el lunes 5 los Shorts empiezan sin fundido
+  desde negro (C58) y la firma final pide que sigan el canal (C59). Eso lo pone el código; no
+  escribas tú ninguna llamada a suscribirse en la narración.
 
 ## Lo que cambia el 30/09/2026 (dirección del miércoles) · versión 16 del plan · C53.2
 
@@ -36,6 +67,10 @@ modelo) · repositorio añadido · entorno «Mecánica del Humor». La tarea vie
 **Esto va antes que todo lo demás de este prompt, y manda sobre ello.**
 
 0. **Si hoy (hora de España) es domingo, lunes, martes o miércoles, terminas sin tocar nada** (30/09).
+   **Corrección del 02/10/2026: antes de las 03:00 de España, cuenta como el día anterior.** Tu
+   horario es `7 22 * * THU,FRI,SAT` en **UTC**, o sea las **00:07 de España del día siguiente**
+   (viernes, sábado y domingo de madrugada). Sin esta línea, el reintento del sábado arrancaba en
+   domingo y se cerraba solo. Las 00:07 del domingo son, para este paso, el sábado.
    **Si es viernes o sábado, lo primero es saber si hace falta que trabajes.** Puede que te lancen un
    viernes o un sábado como reintento (el jueves 24 la ejecución programada falló a los siete
    segundos). Calcula el **lunes siguiente** y mira en `origin/main`:
@@ -400,7 +435,7 @@ Lo que decía antes, para cuando vuelva:
 
 ### 4. Metadatos de publicación
 
-`05_calendario/publicaciones/<ID>.json` con título (menos de 100 caracteres), descripción y hasta 15 etiquetas. **El título debe contener la pregunta que la gente escribe**, literal o en su formulación más natural — es lo que nos está trayendo la poca audiencia que hay. Un título de ensayo es motivo de rechazo. Añade `"primer_comentario"` con la pregunta del episodio y `"serie"` para la lista de reproducción.
+`05_calendario/publicaciones/<ID>.json` con título, descripción y hasta 15 etiquetas. **El título es la pregunta que la gente escribe, sola, y en un Short no pasa de 55 caracteres** (C56, 02/10/2026; antes «menos de 100», que se usaba como objetivo): el detalle del estudio va en la descripción. Un título de ensayo es motivo de rechazo. Añade `"pregunta_al_espectador"` (C57: una pregunta que se contesta desde la propia vida; ver «Lo que cambia el 02/10/2026» arriba) y `"serie"` para la lista de reproducción. `"primer_comentario"` ya no se publica.
 
 ### 5. Extiende `parrilla.json`
 

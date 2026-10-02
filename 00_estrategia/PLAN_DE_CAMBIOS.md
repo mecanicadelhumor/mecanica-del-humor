@@ -5468,3 +5468,199 @@ versión 15 (retención a 30 s, escrita antes de ver los datos).
   facturada.
 - Lo de la versión 15 sigue abierto: `metricas_diarias.yml` (C47), los planos de FLUX que no salen,
   S3, por qué `MDS-021` y `022` retienen tanto, los umbrales de C50 y P9.
+
+---
+
+# Versión 17 · 2 de octubre de 2026 — el envoltorio: el primer segundo, el título y la pregunta
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario, y lo que se anula se dice con su nombre, en la tabla de abajo.
+
+Sesión de viernes. El codirector dejó en su cuaderno dos preguntas y un encargo grande:
+
+1. Estudiar las miniaturas: si cumplen su función o hay que cambiarlas.
+2. Los Shorts del 1 y el 2 de octubre volvieron a las tres músicas del principio: ¿problema o azar?
+3. **El encargo:** investigar a fondo el mercado de YouTube de divulgación y entretenimiento basado en
+   conocimiento —el marketing, cómo están hechos los vídeos, qué funciona y qué no en cada pieza, con
+   más atención a los canales automatizados— para encontrar las diferencias con este canal y mejorar
+   los números, no solo los procesos. Con permiso para decidir, y con la oferta de decidir juntos lo
+   importante.
+
+**El estudio está en `00_estrategia/MERCADO_2026-10.md`**, con sus fuentes. Esta versión recoge lo
+que se decidió a partir de él. En la sesión, el codirector contestó tres preguntas: **sí** al primer
+segundo sin negro (C58), **sí** a una línea fija que pida seguir el canal (C59) y **las tres músicas
+originales se quedan** en la rueda.
+
+---
+
+## Lo que se anula, lo que se mantiene y lo que se amplía
+
+| Documento o decisión | Estado desde hoy |
+|---|---|
+| `montaje.py` · colchón de entrada de 0,6 s y fundido desde negro de 0,4 s (feedback del 18/08) | **SE MANTIENE en el formato largo. En los Shorts, SUSTITUIDO por C58**: 0,1 s de colchón y ningún fundido de entrada. El final no cambia. Decisión del codirector en la sesión |
+| `render.py` · remate de marca «El mecanismo, cada día a las 19:00» | **SUSTITUIDO por C59**: «Síguenos» y, debajo, «un mecanismo nuevo de lunes a viernes». La frase vieja además no era verdad: los fines de semana no sale nada |
+| `planificacion-jueves.md`, paso 4 · «título de menos de 100 caracteres que contenga la pregunta» | **SUSTITUIDO por C56**: la pregunta, sola, 55 caracteres como mucho |
+| C20 · «el primer comentario ya no se publica (aplazado a propósito)» | **CERRADO por C57**, con otro campo: `pregunta_al_espectador`. `primer_comentario` deja de publicarse (era un resumen, no una pregunta) |
+| C40 · «la búsqueda es la puerta del 27,7 %» en los títulos | **SE PRECISA**: hoy la búsqueda trae el 0-3 % de las visualizaciones de un Short; el título se escribe para el reproductor de Shorts (una línea) y para la pestaña del canal, y sigue siendo la pregunta que la gente escribiría |
+| `miniatura.py` | **SE MANTIENE, sin tocar.** YouTube solo la usa en las superficies horizontales; en las verticales enseña un fotograma (abajo). Se revisa el día que el canal entre en el Programa de Partners |
+| La música de cama (rueda de 14 pistas por número de Short) | **SE MANTIENE**: no había fallo. Decisión del codirector |
+| Cinco Shorts a la semana; el formato largo suspendido (C42); los umbrales de C26 | **SE MANTIENEN** hasta el 15/11. Razón abajo |
+| C50, C55.2 (animación mezclada desde la semana del 12/10), C51.3 (presentador) | **SE MANTIENEN**, sin cambios |
+
+---
+
+## Las dos preguntas del cuaderno
+
+**La música no fue azar ni un fallo.** `cola.py` elige `pistas[(n − 1) % 14]` por el número del
+Short; `MDS-029` es el 29.º y la rueda volvió a `cama_01` (`MDS-029`) y `cama_02` (`MDS-030`),
+comprobado en sus fichas de producción. El lunes 5 suena `cama_03` y el martes 6 ya `cama_04`. Cada
+pista vuelve cada 14 Shorts. El codirector decidió dejarlas todas.
+
+**Las miniaturas no cumplen su función, y el motivo no es el diseño.** Medido píxel a píxel sobre las
+imágenes que sirve `i.ytimg.com` para doce Shorts del canal:
+
+- en el **feed** (93-98 % de las visualizaciones) no hay miniatura: el vídeo arranca solo;
+- en la **pestaña Shorts del canal** y en la estantería de la portada, YouTube usa `oar2.jpg`, un
+  fotograma del vídeo: **90-95 % azul marino casi vacío** en los Shorts de plantilla;
+- en la **estantería de Shorts del buscador**, `frame0.jpg`, el primer fotograma: **negro al 100 %**
+  en todos, por el fundido de entrada de `montaje.py`;
+- la nuestra solo sale en `hqdefault.jpg`, que usan las superficies horizontales.
+
+Las miniaturas verticales personalizadas de Shorts existen desde el 25/07/2026, **primero solo para
+canales del Programa de Partners**, no salen nunca en el feed y se recortan a una franja central de
+proporción 3:2. Así que la portada que de verdad tenemos es **el primer fotograma**, y eso es C58.
+
+---
+
+## C56 · El título es la pregunta, sola
+
+Entre los Shorts en tendencia, la franja de título que mejor funciona es la de 20-40 caracteres (la
+media, 51; TunePocket, más de 10.000 analizados). Los nuestros iban de 74 a 98: la pregunta y, detrás, un detalle del estudio. El mejor título del canal es
+también el más corto: `MDS-016`, 45 caracteres, 1.200 visualizaciones. Y en el reproductor de Shorts
+el título ocupa una línea.
+
+- **Regla:** la pregunta que la gente escribiría, sola, **55 caracteres como mucho**, y que nombre la
+  situación que todo el mundo reconoce, no el estudio. El detalle va en la descripción.
+- **Hecho hoy:** `MDS-031` a `035` reescritos (de 74-93 a 41-52 caracteres). Ejemplo: «¿Qué le pasa a
+  tu cerebro cuando te ríes? Lo midieron con chistes dentro de un escáner» → «¿Qué le pasa a tu
+  cerebro cuando te ríes?».
+- **En el código:** `validar_guion.py` avisa (no para nada, C30) si el título de un Short pasa de 55.
+  `planificacion-jueves.md`, paso 4 y sección del 02/10.
+
+## C57 · La pregunta al espectador, publicada de verdad
+
+Desde el 31/08 cada Short se sube en privado con `publishAt`, y `publicar.py` solo publicaba el primer
+comentario si el vídeo era público al subirlo: **ningún Short ha tenido nunca su pregunta.** C20 lo
+aplazó «hasta que el canal tuviera espectadores»; los tiene, y S3 es el bloqueo. Además, lo que se
+escribía en `primer_comentario` era un resumen del vídeo con una pregunta al final, no una pregunta.
+
+- **Campo nuevo:** `pregunta_al_espectador` en `05_calendario/publicaciones/<ID>.json`. Una pregunta que
+  se contesta desde la propia vida o con un chiste propio, ligada a la historia, sin resumir el
+  vídeo. Escrita hoy para `MDS-031` a `035`; desde el jueves 8, la escribe la planificación.
+- **Quién la publica:** `metricas.py --solo-registro`, que ya corre a diario en «Sincroniza el
+  registro con YouTube» con las credenciales del canal. Después de poner al día el estado de cada
+  vídeo, publica la pregunta de los Shorts que ya son públicos (de los últimos siete días), una sola
+  vez: lo marca en el registro con `pregunta_publicada` y, antes de escribir, comprueba que el canal
+  no tenga ya un comentario en ese vídeo. Si YouTube dice que no, deja escrito lo que contestó y
+  sigue (trampa 41). **No toca ningún workflow.**
+- **Regla 7:** es contenido editorial firmado por el canal; no finge ser un espectador ni responde a
+  nadie. No se fija (la API no deja).
+- **Probado** con un YouTube de mentira: publica en el Short público y reciente, se salta el privado,
+  el antiguo y el que no tiene pregunta, marca sin escribir el que ya tenía comentario del canal, y la
+  segunda pasada no hace nada.
+- **Lo que mejoraría el reloj (tarea 2 del codirector, opcional):** la sincronización corre a las
+  08:50 UTC, así que la pregunta llega unas 16 horas después de publicarse el Short. Una línea más en
+  el `cron` de `sincroniza_registro.yml` (17:25 UTC) la deja en media hora.
+
+## C58 · El primer segundo, sin negro (decisión del codirector)
+
+Todos nuestros Shorts empezaban con **0,6 s de fotograma clonado y un fundido desde negro de 0,4 s**, y
+la voz entraba a los 0,6 s. El colchón se puso el 18/08 para que el vídeo no entrara «en seco», y en
+un episodio largo tiene sentido. En el feed de Shorts todo entra en seco, el primer segundo es el que
+decide si deslizan —desde el 31/03/2025 cuenta como visualización cualquier reproducción, y la prueba
+del feed se corta si la gente no se queda— y, además, ese fotograma negro era la portada del Short en
+el buscador.
+
+- **`montaje.py`:** en los Shorts (lo lee de `guion.timed.json`), 0,1 s de colchón y ningún fundido de
+  entrada, ni de vídeo ni de audio (el `adelay` ya deja 0,1 s de silencio digital: no hay chasquido).
+  El final, igual. Apunta en `montaje.json` el colchón que ha usado.
+- **`qa.py`:** mide contra ese colchón y no contra 0,6 fijo (`silencio_inicial.esperado_s`); el
+  detector de la sílaba suelta (`arranque`) añade el colchón corto a mano para que la cuenta siga
+  preguntando lo mismo; `silencio_inicial` ya no confunde la primera pausa de la narración con el
+  silencio del principio.
+- **Probado** en el contenedor con `MDS-030` entero (voz de la caché, `cama_02`): 34,1 s; silencio
+  inicial de 0 a 0,129 s; ningún falso positivo de sílaba suelta; desfase de sincronía 0,24 s (el
+  mismo que en producción). Muestra entregada al codirector en la sesión.
+- **Lo que no arregla:** en la plantilla, el primer fotograma sigue siendo el fondo azul sin texto (las
+  palabras entran con la voz). En los Shorts con vídeo de archivo detrás, que desde C50 son casi
+  todos, el primer fotograma es el plano de la escena 1.
+
+## C59 · La firma final pide que sigan el canal (decisión del codirector)
+
+El vídeo no le pedía nada a nadie: veintisiete «me gusta» en 2.283 visualizaciones, cero comentarios.
+En el experimento de Kapwing con un canal sin cara, la llamada a suscribirse fue lo que más se notó.
+
+- **`render.py`:** el remate de marca de los últimos 1,25 s del cierre dice «Síguenos» y, debajo, «un
+  mecanismo nuevo de lunes a viernes». **Siempre la misma frase**, sin voz: una distinta en cada Short
+  acabaría siendo una coletilla (trampa 39).
+- **`escena.html`:** «Síguenos» a 66 px en el blanco de marca, la promesa a 40 px, y en vertical el
+  bloque se aparta de la columna de botones de la derecha (150 px). En la primera muestra, en una sola
+  línea, la frase ocupaba el lienzo de lado a lado y su final caía debajo de los botones.
+- **Regla 11.2:** el cambio en `render.py` y `escena.html` dispara la vista previa (`vista.yml`) al
+  hacer `push`.
+
+---
+
+## Lo que dice el estudio y no se toca todavía
+
+- **La cadencia.** Por vídeo, lo mejor es publicar 2-4 a la semana (Metricool, 2026), y los grandes de
+  la divulgación publican 2-6 al mes. Pero la decisión del 15/11 se toma con la mediana de los últimos
+  veinte Shorts: con tres a la semana, esa ventana empezaría a principios de octubre y metería dentro
+  los Shorts de estas semanas, que son los que estamos arreglando. **Se mantiene cinco a la semana
+  hasta el 15/11** y se vuelve a pensar después.
+- **El formato largo.** En ciencia, los canales que solo hacen largo tienen más suscriptores que los
+  que mezclan (AIR, 18.000 canales), y en la audiencia hispana el vídeo de 8-20 minutos es el que mejor
+  capta suscriptores (2btube). Y el dinero está ahí: desde el 1/02/2027 hacen falta 10 millones de
+  visualizaciones de Shorts cada 90 días para cobrar de ellos. Pero el largo que hicimos no funcionaba
+  (114 visualizaciones en siete episodios). **Sigue suspendido**; un formato largo nuevo es una
+  decisión para después del 15/11.
+- **El bucle.** Que la última frase empalme con la primera y el vídeo no cierre a negro. Para la
+  sesión del lunes 5.
+- **El riesgo de «contenido no auténtico».** YouTube cerró en enero 16 canales automatizados por
+  plantillas en serie. Nos protege lo que nos diferencia (guiones originales con fuente, lectura en
+  frío, cierre honesto), y conviene que se note también en la forma: dos o tres formatos que se
+  alternen. C55.2 es el primer paso.
+
+---
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| **Hoy, 2/10** | Esto escrito. `MDS-030` sale a las 19:00 como estaba |
+| **Antes del lunes 5 a las 03:13** | Tarea 1 del codirector: el `push` de lo de hoy. Sin él, `MDS-031` sale con el título largo, sin pregunta y con el arranque de siempre |
+| Lunes 5, 03:13 | `MDS-031`, el primer Short con C56, C58 y C59. A las 17:00 UTC se publica |
+| Martes 6, 08:50 UTC | Primera pregunta publicada (C57), en `MDS-031`; antes, si el codirector añade el cron de las 17:25 (tarea 2) |
+| Lunes 5 | Sesión: lo de la versión 16 (primera semana entera de C50, la revisión y la planificación entregando solas, C44, C47, P9) más el bucle y, si el codirector lo ha mirado, «visto frente a deslizado» (tarea 3) |
+| Semana del 12/10 | C55.2 (animación en las escenas de mecanismo) y la prueba del presentador (C51.3) |
+| Antes del 8/11 | La puerta de los 1.000 (C26) y la decisión de C55.3 |
+| 15/11 | La decisión |
+
+## Lo que NO cambia hoy
+
+- **Ningún guion**: solo títulos y preguntas de `MDS-031` a `035`, que son metadatos.
+- **Los workflows**: C57 cabe en el que ya existe; el cron de las 17:25 es opcional y lo pone el
+  codirector.
+- **Cinco Shorts a la semana, el largo suspendido, los umbrales de C26, la música.**
+
+## Lo que queda mirado y sin resolver
+
+- **«Visto frente a deslizado».** Es la métrica que decide la prueba del feed y la API no la da. Sin ella
+  no se puede separar «el primer segundo espanta» de «el feed no nos prueba». Una consulta del
+  codirector en Studio (tarea 3), una vez.
+- **C50 todavía no ha movido el número**: 67 · 66 · 6 · 10 en su primera semana, contra 147 · 268 · 2
+  · 4 · 67 en la anterior. Con cuatro vídeos no se separa la imagen de los temas.
+- **La cara del Engranaje en el remate** es la del cierre, a menudo `duda`, y queda debajo de
+  «Síguenos». Si se ve rara, es un ajuste de `escena.html`.
+- Lo de la versión 16 sigue abierto: `metricas_diarias.yml` (C47), los planos de FLUX que no salen, S3,
+  por qué `MDS-021` y `022` retienen tanto, los umbrales de C50 y P9.

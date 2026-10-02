@@ -10,7 +10,8 @@ análisis.
 |---|---|---|
 | **`REGLAS.md`** | Las restricciones que nadie puede saltarse: ética, rigor, coste cero, cómo se cambian las cosas | **Siempre, antes de tocar nada.** Es corto |
 | **`PROPIEDAD_DE_FICHEROS.md`** | Quién escribe qué. De obligado cumplimiento para toda tarea programada | Antes de escribir en cualquier sitio |
-| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 16, al final, manda sobre lo anterior**: las rutinas de Code ya entregan solas (C53.1 y C53.2), el muestrario de la animación a medida (C55.1) y las licencias del presentador (C51.3). La 14 tiene el punto de control del 27/09 con datos | Al ir a hacer algo, y al decidir qué se hace antes |
+| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 17, al final, manda sobre lo anterior**: el envoltorio del Short —título corto (C56), la pregunta al espectador publicada (C57), el primer segundo sin negro (C58) y la firma que pide seguir el canal (C59)—. La 16 tiene las rutinas de Code (C53.2) y la animación a medida (C55.1); la 14, el punto de control del 27/09 con datos | Al ir a hacer algo, y al decidir qué se hace antes |
+| **`MERCADO_2026-10.md`** | El estudio del mercado de la divulgación en YouTube del 02/10/2026: cómo reparte el feed, qué funciona pieza a pieza, los canales automatizados y la IA, el dinero, y dónde estamos. Con fuentes | Cuando haga falta saber **qué hace el mercado**, al lado de `DIAGNOSTICO.md`, que dice por qué el canal se diseñó así |
 | **`PROMPT_DE_ARRANQUE.md`** | Cómo empezar una conversación nueva, autorizaciones vigentes, trampas conocidas y dónde está el proyecto hoy | Al abrir una conversación, y al cerrarla |
 | **`PROMPT_DIRECCIÓN.md`** | El cuaderno del codirector entre sesiones: lo que quiere comentar de un día para otro. **Suyo y solo suyo: se lee, no se edita ni se borra** | Al abrir una conversación de dirección |
 | **`TOKEN_DE_YOUTUBE.md`** | Cómo se saca el token de YouTube y por qué caducaba. Quince minutos, una vez | Si el canal deja de publicar, o al tocar los secretos |
@@ -82,6 +83,29 @@ Y fuera de esta carpeta, tres sitios que dicen dónde está el canal hoy:
    Tres Shorts seguidos pasaron todas las comprobaciones y no tenían hilo. Desde ese día, un guion
    no se produce sin que un lector que no lo ha escrito cuente de qué va (C48). Y la imagen pasa de
    diapositiva a vídeo (C50).
+
+11. **Y desde el 2 de octubre, una undécima:** **el guion ya está por encima del mercado; el envoltorio,
+   por debajo.** El estudio de mercado (`MERCADO_2026-10.md`) encontró que lo que nos separa de los
+   canales que crecen son piezas baratas alrededor del guion —el primer segundo, el título, la
+   pregunta al espectador, la llamada a seguir— y que ninguna de las cuatro estaba bien. Y que **lo que
+   enseña YouTube no es lo que le mandamos**: la portada que veía el público era un fotograma negro.
+
+## Estado a 2 de octubre
+
+**El estudio de mercado, y cuatro arreglos baratos** (versión **17** del plan; el estudio, en
+`MERCADO_2026-10.md`). La conclusión: el guion ya está por encima del nicho, y lo que nos separa de los
+que crecen es lo que lo rodea. Desde `MDS-031` (lunes 5):
+
+- **El título es la pregunta, sola**, 55 caracteres como mucho (eran 74-98; el mejor del canal tenía 45).
+- **La pregunta al espectador se publica de verdad**, como comentario del canal, cuando el Short ya es
+  público. Desde el 31/08 no se había publicado ninguna.
+- **El primer segundo, sin negro**: los Shorts empezaban con 0,6 s de imagen congelada y un fundido desde
+  negro, y ese fotograma negro era además su portada en el buscador.
+- **La firma final pide que sigan el canal**, con una frase fija.
+
+Y dos respuestas: **las miniaturas** no se tocan, porque YouTube solo enseña la nuestra en las
+superficies horizontales (la portada que se ve es el primer fotograma); y **la música** de los días 1 y 2
+no fue un fallo: la rueda de 14 pistas dio la vuelta.
 
 ## Estado a 30 de septiembre
 

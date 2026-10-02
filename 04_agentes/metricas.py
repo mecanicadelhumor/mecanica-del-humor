@@ -230,6 +230,94 @@ def sincronizar_registro(yt, registro):
     return corregidos, fichas
 
 
+PUBLICACIONES = RAIZ / "05_calendario" / "publicaciones"
+# C57: solo los Shorts publicados en los últimos días reciben su pregunta. A un
+# Short de hace un mes ya no lo ve nadie, y llenar el canal de comentarios
+# atrasados el primer día sería ruido.
+DIAS_PREGUNTA = 7
+
+
+def _utc(iso):
+    try:
+        return datetime.fromisoformat(str(iso).replace("Z", "+00:00"))
+    except (TypeError, ValueError):
+        return None
+
+
+def publicar_preguntas(yt, registro, ahora=None):
+    """C57 (02/10/2026): la pregunta al espectador, publicada de verdad.
+
+    Desde el 31/08 `publicar.py` sube cada Short en privado con `publishAt`, y
+    solo publicaba el primer comentario si el vídeo era ya público al subirlo:
+    no lo era nunca, así que **ningún Short ha tenido nunca su pregunta** (C20).
+    Con cero comentarios en todo el canal y S3 bloqueado, era la pieza más barata
+    parada. Esto la publica cuando YouTube ya dice que el vídeo es público.
+
+    Qué publica: el campo `pregunta_al_espectador` de
+    `05_calendario/publicaciones/<ID>.json`, que escribe la planificación. Es una
+    pregunta que se contesta desde la propia vida, firmada por el canal: contenido
+    editorial, no un comentario que finge ser un espectador ni una respuesta a
+    nadie (regla 7). El campo viejo `primer_comentario` NO se publica: era un
+    resumen del vídeo, no una pregunta.
+
+    Una sola vez por vídeo, y comprobado dos veces: la marca
+    `pregunta_publicada` en el registro, y antes de escribir se mira si el canal
+    ya tiene un comentario en ese vídeo. Nunca falla la ejecución: si YouTube
+    dice que no, se escribe lo que contestó (trampa 41) y se sigue.
+
+    Devuelve cuántas preguntas ha publicado (y ha marcado en `registro`).
+    """
+    from googleapiclient.errors import HttpError
+    ahora = ahora or datetime.now(timezone.utc)
+    pendientes = []
+    for p in registro.get("publicaciones", []):
+        if p.get("estado") != "public" or p.get("pregunta_publicada") or not p.get("video_id"):
+            continue
+        cuando = _utc(p.get("publicar_en"))
+        if not cuando or not (timedelta(0) <= ahora - cuando <= timedelta(days=DIAS_PREGUNTA)):
+            continue
+        meta = PUBLICACIONES / f"{p['id']}.json"
+        try:
+            pregunta = (json.loads(meta.read_text(encoding="utf-8"))
+                        .get("pregunta_al_espectador") or "").strip()
+        except (OSError, ValueError):
+            pregunta = ""
+        if pregunta:
+            pendientes.append((p, pregunta))
+    if not pendientes:
+        return 0
+    try:
+        canal = yt.channels().list(part="id", mine=True).execute()["items"][0]["id"]
+    except (HttpError, KeyError, IndexError) as e:
+        print(f"::warning::C57: no se ha podido saber el id del canal ({e}); "
+              "no se publica ninguna pregunta hoy.")
+        return 0
+    publicadas = 0
+    for p, pregunta in pendientes:
+        vid = p["video_id"]
+        try:
+            hilos = yt.commentThreads().list(part="snippet", videoId=vid,
+                                             maxResults=50, order="time").execute()
+            ya = any(((h.get("snippet", {}).get("topLevelComment", {}).get("snippet", {})
+                       .get("authorChannelId") or {}).get("value") == canal)
+                     for h in hilos.get("items", []))
+            if not ya:
+                yt.commentThreads().insert(part="snippet", body={"snippet": {
+                    "videoId": vid,
+                    "topLevelComment": {"snippet": {"textOriginal": pregunta}}}}).execute()
+                print(f"  C57: pregunta publicada en {p['id']}: «{pregunta}»")
+            else:
+                print(f"  C57: {p['id']} ya tenía un comentario del canal; solo se marca.")
+            p["pregunta_publicada"] = ahora.strftime("%Y-%m-%dT%H:%M:%SZ")
+            publicadas += 1
+        except HttpError as e:
+            cuerpo = getattr(e, "content", b"") or b""
+            print(f"::warning::C57: YouTube no ha aceptado la pregunta de {p['id']} "
+                  f"(HTTP {getattr(e.resp, 'status', '?')}): "
+                  f"{cuerpo.decode('utf-8', 'replace')[:400]}")
+    return publicadas
+
+
 def fila(ya, vid, desde, hasta):
     """Una fila de métricas por vídeo. Devuelve ceros si aún no hay datos.
 
@@ -548,6 +636,13 @@ def main():
         corregidos, _fichas = sincronizar_registro(yt, registro)
         if not corregidos:
             print("Sin cambios: el registro ya coincidía con YouTube.")
+        # C57: con el estado ya al día, la pregunta de cada Short recién publicado.
+        # sincronizar_registro() solo escribe el fichero si corrigió algo, así que
+        # si aquí se ha marcado alguna pregunta se vuelve a escribir. El workflow
+        # sube registro_publicaciones.json, que es justo donde queda la marca.
+        if publicar_preguntas(yt, registro):
+            REGISTRO.write_text(json.dumps(registro, ensure_ascii=False, indent=2) + "\n",
+                                encoding="utf-8")
         return
 
     if a.diario:

@@ -20,6 +20,12 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[1]
+
+# C56 (02/10/2026): el título de un Short es la pregunta, sola. Entre los Shorts
+# en tendencia, la franja que mejor funciona es la de 20-40 caracteres (la media,
+# 51); los nuestros iban de 74 a 98, y el mejor del canal (MDS-016, 1.200
+# visualizaciones) tenía 45.
+TITULO_CORTO_MAX = 55
 REGISTRO = RAIZ / "05_calendario" / "registro_publicaciones.json"
 
 # PPM · palabras por minuto de la narración.
@@ -926,6 +932,25 @@ def validar(path):
                               f"(producido en las últimas seis semanas). Si allí también "
                               f"sostenía la tesis y no era un apoyo de pasada, es una "
                               f"repetición — revisar con el criterio del paso 1 antes de producir.")
+
+    # C56 y C57 (02/10/2026) — lo que se publica junto al Short, que vive en
+    # 05_calendario/publicaciones/<ID>.json. Solo avisos: nada de esto puede
+    # parar una producción (C30), pero la planificación los ve al validar.
+    if formato == "corto":
+        pub = RAIZ / "05_calendario" / "publicaciones" / Path(path).name
+        try:
+            meta = json.loads(pub.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            meta = None
+        if meta is not None:
+            tit = (meta.get("titulo") or "").strip()
+            if len(tit) > TITULO_CORTO_MAX:
+                avisos.append(f"C56: el título tiene {len(tit)} caracteres (máximo "
+                              f"{TITULO_CORTO_MAX}). En un Short el título es la pregunta, "
+                              "sola: el detalle del estudio va en la descripción.")
+            if not (meta.get("pregunta_al_espectador") or "").strip():
+                avisos.append("C57: falta «pregunta_al_espectador» en la publicación: sin "
+                              "ella el Short sale sin pregunta en los comentarios.")
 
     print(f"\n{path}")
     print(f"  [{formato}] {len(escenas)} escenas · {int(m)}m {s:04.1f}s · reparto {dict(reparto)}")

@@ -49,7 +49,21 @@ from pathlib import Path
 
 N_FOTOGRAMAS = 6
 ANCHO = 640          # suficiente para leer titulares y ver desencuadres
-PAD_INICIO = 0.6     # el mismo colchón que mete montaje.py al principio
+PAD_INICIO = 0.6     # el colchón de los episodios largos; ver colchon() (C58)
+
+
+def colchon(carpeta):
+    """El colchón de entrada que montaje.py puso DE VERDAD en este vídeo.
+
+    C58 (02/10/2026): desde ese día los Shorts llevan 0,1 s y ningún fundido,
+    y los largos siguen con 0,6. montaje.py lo apunta en montaje.json; si no
+    está (un vídeo montado antes del cambio), se supone el de siempre.
+    """
+    try:
+        m = json.loads((Path(carpeta) / "montaje.json").read_text(encoding="utf-8"))
+        return float(m.get("colchon_inicio_s", PAD_INICIO))
+    except (OSError, ValueError, TypeError):
+        return PAD_INICIO
 
 
 def ffprobe(ruta, entradas, stream=None):
@@ -81,20 +95,19 @@ def medir_audio(mp4):
 
 def silencio_inicial(mp4):
     """Segundos de silencio al empezar. El falso arranque de la voz inglesa se
-    veía aquí: 0.0 s de colchón donde debería haber ~0.6."""
-    r = subprocess.run(
-        ["ffmpeg", "-hide_banner", "-nostats", "-i", str(mp4),
-         "-af", "silencedetect=n=-45dB:d=0.2", "-f", "null", "-"],
-        capture_output=True, text=True, stdin=subprocess.DEVNULL)
-    for linea in r.stderr.splitlines():
-        if "silence_end" in linea:
-            try:
-                fin = float(linea.split("silence_end:")[1].split("|")[0])
-                dur = float(linea.split("silence_duration:")[1])
-                return round(fin - dur, 3), round(fin, 3)
-            except (IndexError, ValueError):
-                break
-    return None, None
+    veía aquí: 0.0 s de colchón donde debería haber ~0.6.
+
+    C58 (02/10/2026): antes buscaba silencios de 0,2 s o más en todo el vídeo y
+    devolvía el primero que encontrase. Con el colchón de 0,1 s de los Shorts
+    ese primero ya no sería el del principio sino la primera pausa de la
+    narración, y la ficha diría que el vídeo «empieza» a los dos segundos. Ahora
+    mira solo los tres primeros segundos, con un umbral de 0,05 s, y solo vale un
+    silencio que empiece en el instante 0. Si no lo hay, el vídeo entra en seco:
+    (0.0, 0.0)."""
+    sil = _silencios(mp4, ventana=3.0, umbral_s=0.05)
+    if sil and sil[0][0] <= 0.02 and sil[0][1] is not None:
+        return sil[0][0], sil[0][1]
+    return 0.0, 0.0
 
 
 def _silencios(mp4, ventana=None, umbral_s=0.12):
@@ -162,13 +175,22 @@ def fragmentos(mp4):
     }
 
 
-def arranque(mp4, ventana=4.0):
+def arranque(mp4, ventana=4.0, pad=PAD_INICIO):
     """El colchón de entrada, y si hay algo antes de la primera frase.
 
     Se mantiene aparte de fragmentos() porque aquí importa además que el
-    colchón de 0,6 s que pone montaje.py esté donde debe.
+    colchón que pone montaje.py esté donde debe.
+
+    C58 (02/10/2026): la detección de abajo compara el PRIMER silencio (el
+    colchón) con el SEGUNDO. Con el colchón de 0,1 s de los Shorts, el primero
+    no llega al umbral de 0,12 s y no aparece, y la cuenta compararía dos pausas
+    de la narración. Así que, si el colchón es más corto que el umbral, se pone
+    delante a mano: la pregunta sigue siendo la misma —¿hay un trozo de voz de
+    menos de 0,9 s y luego un hueco antes de la primera frase?—.
     """
     sil = _silencios(mp4, ventana=ventana)
+    if pad < 0.12 and not (sil and sil[0][0] <= 0.02):
+        sil = [[0.0, round(pad, 3)]] + sil
     fragmento, dur_frag = False, None
     if len(sil) >= 2 and sil[0][1] is not None:
         hueco = sil[1][0] - sil[0][1]
@@ -199,7 +221,7 @@ def instantes(carpeta, dur_total, n=N_FOTOGRAMAS):
     if not timed.exists():
         return ciego
     escenas = json.loads(timed.read_text(encoding="utf-8")).get("escenas", [])
-    tramos, reloj = [], PAD_INICIO
+    tramos, reloj = [], colchon(carpeta)
     for e in escenas:
         d = float(e.get("duracion_s") or 0)
         if d >= 3.0:                     # las muy cortas no dan un buen fotograma
@@ -377,9 +399,12 @@ def main():
         "tamano_mb": round(int(fmt.get("size", 0)) / 1e6, 1),
         "audio": medir_audio(mp4),
         "silencio_inicial": {"empieza_s": ini, "acaba_s": fin,
-                             "_nota": "Debe rondar 0.6 s: es el colchón de entrada. "
-                                      "Un 0 aquí significa que el vídeo entra en seco."},
-        "arranque": arranque(mp4),
+                             "esperado_s": colchon(carpeta),
+                             "_nota": "Debe rondar «esperado_s»: es el colchón de entrada "
+                                      "(0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s "
+                                      "en los largos). Un 0 en un largo significa que el "
+                                      "vídeo entra en seco."},
+        "arranque": arranque(mp4, pad=colchon(carpeta)),
         "fragmentos": fragmentos(mp4),
         "subtitulos": subtitulos(carpeta),
         "sincronia_voz": sincronia_voz(carpeta, guion.get("duracion_narracion_s")) if guion else None,
