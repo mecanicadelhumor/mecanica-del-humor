@@ -35,5 +35,27 @@
     "annoyed man rolling his eyes at camera"
    ]
   }
+ },
+ "MDS-031": {
+  "6.2": {
+   "excluir": [
+    "pexels:10375459"
+   ],
+   "marca": true
+  }
+ },
+ "MDS-032": {
+  "1.1": {
+   "excluir": [
+    "pixabay:34317"
+   ],
+   "fuente": "ia"
+  },
+  "4.1": {
+   "busqueda": [
+    "person listening with headphones smiling",
+    "woman wearing headphones laughing at desk"
+   ]
+  }
  }
 }
