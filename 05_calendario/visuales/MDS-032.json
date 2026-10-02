@@ -1,8 +1,8 @@
 {
   "guion": "MDS-032",
   "version": 1,
-  "firma": "582dc8adf65e2739",
-  "resuelto_utc": "2026-10-01T22:36:14Z",
+  "firma": "daf9b7fc06e9bac2",
+  "resuelto_utc": "2026-10-02T09:32:26Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -17,44 +17,27 @@
             6.9
           ],
           "frase": "Tras la mampara, dos compañeros se ríen juntos. No les ves la cara.",
-          "fuente": "pixabay",
-          "id": 34317,
-          "pagina": "https://pixabay.com/videos/id-34317/",
-          "titulo": "hong kong, sunset, sky, structure, office, city, skyscrapers, dawn, glass, high-rise, 2020, business, architecture id",
-          "autor": "RafterJr72",
-          "autor_url": "https://pixabay.com/users/RafterJr72-11468402/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 12.0,
-          "ancho": 3840,
-          "alto": 2160,
-          "url": "https://cdn.pixabay.com/video/2020/03/26/34317-400974371_large.mp4",
-          "tipo": "video",
-          "consulta": "office partition frosted glass",
-          "relevancia": 0.5,
-          "inicio_s": 0.4,
-          "movimiento": 19.76,
-          "encuadre": {
-            "x": 0.311,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a frosted glass partition in an open plan office, two blurred silhouettes laughing behind it",
+          "semilla": 11817904,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-032/e1_p1.jpg",
           "caras": [
             [
-              0.7231,
-              0.3167,
-              0.0717,
-              0.0556
+              0.0807,
+              0.4529,
+              0.0547,
+              0.0412
             ],
             [
-              0.4219,
-              0.1722,
-              0.0569,
-              0.0458
-            ],
-            [
-              -0.0054,
-              0.0153,
-              0.0518,
-              0.0361
+              0.9453,
+              0.461,
+              0.0508,
+              0.039
             ]
           ]
         }
@@ -163,32 +146,32 @@
             7.57
           ],
           "frase": "Greg Bryant lo probó con gente de veinticuatro culturas: oían un segundo de risa de dos personas. ¿",
-          "fuente": "pixabay",
-          "id": 342901,
-          "pagina": "https://pixabay.com/videos/id-342901/",
-          "titulo": "headphones, computer, person, typing, home, window, screen, headset, vintage, lifestyle, old computer, cozy room, digital immersion, interior space, listening music, personal tech, anime, ai created id",
-          "autor": "Hideaki_AnimeTH",
-          "autor_url": "https://pixabay.com/users/Hideaki_AnimeTH-29800360/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 10.0,
-          "ancho": 3840,
-          "alto": 2160,
-          "url": "https://cdn.pixabay.com/video/2026/03/27/342901_large.mp4",
+          "fuente": "pexels",
+          "id": 6688142,
+          "pagina": "https://www.pexels.com/video/a-person-listening-to-music-using-a-wireless-headphones-6688142/",
+          "titulo": "a person listening to music using a wireless headphones",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 19.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6688142/6688142-hd_1080_1920_25fps.mp4",
           "tipo": "video",
-          "consulta": "person listening with headphones laptop",
+          "consulta": "person listening with headphones smiling",
           "relevancia": 0.75,
-          "inicio_s": 0.0,
-          "movimiento": 2.39,
+          "inicio_s": 0.4,
+          "movimiento": 8.8,
           "encuadre": {
-            "x": 0.616,
+            "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.353,
-              0.2028,
-              0.2939,
-              0.2375
+              0.5167,
+              0.0016,
+              0.4833,
+              0.5422
             ]
           ]
         },

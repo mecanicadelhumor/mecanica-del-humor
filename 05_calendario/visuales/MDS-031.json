@@ -1,8 +1,8 @@
 {
   "guion": "MDS-031",
   "version": 1,
-  "firma": "1343aeb9a75058c9",
-  "resuelto_utc": "2026-10-01T22:35:58Z",
+  "firma": "3e746615026a4b14",
+  "resuelto_utc": "2026-10-02T09:32:01Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -71,10 +71,10 @@
           "fichero": "05_calendario/visuales/MDS-031/e2_p1.jpg",
           "caras": [
             [
-              0.3372,
-              0.3654,
-              0.1654,
-              0.1265
+              0.388,
+              0.2706,
+              0.2344,
+              0.1676
             ]
           ]
         }
@@ -239,7 +239,7 @@
     },
     "6": {
       "narracion_sha": "0ef3f0540df6",
-      "texto_pos": "arriba",
+      "texto_pos": "abajo",
       "planos": [
         {
           "k": 1,
@@ -268,34 +268,8 @@
             10.85
           ],
           "frase": "el peor sitio del mundo para contar lo del médico.",
-          "fuente": "pexels",
-          "id": 10375459,
-          "pagina": "https://www.pexels.com/video/woman-at-a-bar-with-her-friend-10375459/",
-          "titulo": "woman at a bar with her friend",
-          "autor": "RDNE Stock project",
-          "autor_url": "https://www.pexels.com/@rdne",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 8.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/10375459/10375459-hd_1080_1920_30fps.mp4",
-          "tipo": "video",
-          "consulta": "friends laughing at bar table",
-          "relevancia": 0.5,
-          "inicio_s": 0.4,
-          "movimiento": 8.67,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
-          "caras": [
-            [
-              0.5528,
-              0.5203,
-              0.1583,
-              0.1203
-            ]
-          ]
+          "fuente": "marca",
+          "tipo": "marca"
         }
       ]
     }
