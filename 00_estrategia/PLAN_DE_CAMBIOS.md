@@ -5664,3 +5664,385 @@ En el experimento de Kapwing con un canal sin cara, la llamada a suscribirse fue
   «Síguenos». Si se ve rara, es un ajuste de `escena.html`.
 - Lo de la versión 16 sigue abierto: `metricas_diarias.yml` (C47), los planos de FLUX que no salen, S3,
   por qué `MDS-021` y `022` retienen tanto, los umbrales de C50 y P9.
+
+---
+
+# Versión 18 · 5 de octubre de 2026 — el bucle: el canal aprende de su audiencia cada semana
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario, y lo que se anula se dice con su nombre, en la tabla de abajo.
+
+Sesión de lunes, con el codirector delante. Su cuaderno traía seis puntos y una tarea especial:
+
+1. Una revisión general: dónde estamos, qué queda, qué perspectivas hay, y cuándo llega cada cambio
+   en marcha al canal.
+2. Cómo van Kaggle (la persona sintética) y la animación frente al vídeo real, con fechas.
+3. Cómo se haría un **personaje animado tipo VTuber**, siempre el mismo y que hable, y, si los dos son
+   viables, **un A/B entre persona sintética y personaje animado**, independiente de la imagen de
+   fondo: *«la idea es tener distintos métodos e ir combinándolos hasta encontrar la opción que mejor
+   nos funcione»*.
+4. Que hoy no había vídeo programado (sí lo había: la producción llegó con seis horas de retraso).
+5. Si conviene convertir la dirección en **una rutina de Code más**, con el modelo más potente, para
+   hablar de forma asíncrona.
+6. Que la rutina de métricas no vio una lectura que sí estaba hecha.
+
+**Y la tarea especial, en sus palabras:** *«Tenemos que iterar más rápido si queremos la
+supervivencia del canal. Necesitamos un proceso de mejora continua en el que se propongan dos cambios
+diferentes en vídeos diferentes, y se comparen entre ellos y con la versión anterior […] Lo que
+quiero, en definitiva, es un proceso de aprendizaje automático por refuerzo, donde ese refuerzo son
+las métricas.»*
+
+**Lo que decidió en la sesión** (cuatro preguntas, cuatro respuestas): **7 Shorts a la semana desde el
+12/10 y 14 desde el 19/10** si C36 pasa sus pruebas; **la dirección en diferido con un repositorio
+privado** para su cuaderno; **los dos caminos de personaje animado** en el muestrario (2D propio y 3D
+VRM); y, en el primer ciclo del bucle, **la variante B es «arranque con el dato»**.
+
+---
+
+## Lo que se anula, lo que se mantiene y lo que se amplía
+
+| Documento o decisión | Estado desde hoy |
+|---|---|
+| Versión 17 · «cinco Shorts a la semana hasta el 15/11» | **SUSTITUIDO por C60**: siete a la semana (lunes a domingo, 19:00) desde el **12/10**; **catorce** (dos al día) desde el **19/10**, solo si C36 pasa sus pruebas. Decisión del codirector |
+| C43 (21/09) · «la dirección no se automatiza; su salida sí» | **SUSTITUIDO por C62**: la dirección corre también como rutina (lunes y jueves y a demanda), con el cuaderno en un repositorio privado. Las sesiones interactivas siguen para lo que hay que mirar juntos |
+| C55.2 · animación mezclada, un Short de cada cinco desde el 12/10 | **SE MANTIENE y pasa a ser el brazo A del ciclo B1** (C60): un tercio de los Shorts del 12 al 25/10. La implementación (render y rutina «Animación») es del miércoles 7/10 |
+| C55.3 · regla de decisión de la animación (retención a 30 s) | **SUSTITUIDA por la regla del bucle** (C60), que mide la animación contra un control del mismo ciclo y con la cifra que más pesa en el feed |
+| C47 · `metricas_diarias.yml`, un workflow nuevo que nunca se pidió | **SUSTITUIDO**: la lectura diaria va dentro de `metricas.yml` (dos crons más). Un workflow menos |
+| Propiedad de `01_bibliografia/` (revisión diaria desde el 28/08) | **CAMBIA a la planificación**, que es la que necesita fichas nuevas cada semana. La revisión avisa en `revisiones/bibliografia.md` |
+| C58 · 0,1 s de colchón en los Shorts | **AMPLIADO por C58.1**: `voz.py` quita también el silencio que trae la toma de Gemini en la escena 1 |
+| Regla 11.1 · un cambio por producción | **SE PRECISA**: en el bucle, cada brazo es **un** cambio contra un control del mismo ciclo. Es la regla aplicada bien, no suspendida |
+| C26 · umbrales del 15/11 | **SE MANTIENEN**. Con 7-14 Shorts a la semana, la ventana de veinte del 15/11 empieza hacia el 31/10 (ver abajo) |
+| C44 · la voz | **Sigue aplazada** y entra en la cola del bucle como hipótesis (`H-voz-una-toma`), junto con C36 |
+| C51.3 (persona sintética) | **SE MANTIENE, con fechas** (abajo) y como un brazo del ciclo B2 |
+| **C60 · el bucle de aprendizaje** | **NUEVO** |
+| **C61 · el personaje animado** | **NUEVO** |
+| **C62 · la dirección en diferido** | **NUEVO** |
+
+---
+
+## 1 · Dónde estamos (punto 1 del cuaderno)
+
+**Los números**, de la lectura de hoy (`metricas.json`, 12:23 UTC):
+
+- **Mediana C26 de los últimos veinte Shorts a 48 h: 35** (11 el 21/09, 24 el 29/09). Seis de veinte
+  pasan de 100 y nueve de 50. Tres lecturas seguidas subiendo.
+- **Semana del 28/09** (la primera entera con imagen real): 62 · 62 · 5 · 14 · 153, mediana **62**. La
+  del 21/09, 66; la del 14/09, 113.
+- **Los primeros suscriptores que vienen de Shorts** (`MDS-026` y `027`, uno cada uno); cinco en
+  total. «Me gusta» por cada 100: entre 0 y 1,4 (S3 sigue bloqueado).
+- **Lo nuevo de hoy: «Se quedaron viendo»**, que el codirector sacó a mano de Studio para diez
+  Shorts: entre el **2,7 %** y el **40 %** (mediana ~20 %). Ver C60.1: es probablemente la cifra más
+  importante que tenemos y no estaba en ningún fichero.
+
+**Lo que significa, sin adornos.** El feed nos prueba: la mayoría de los Shorts aparecen delante de
+decenas o cientos de personas. **Cuatro de cada cinco deslizan antes de que pase nada.** Los que se
+quedan, se quedan bastante (los mejores retienen al 60-67 % a los 30 s). Y casi nadie reacciona. El
+cuello de botella, por orden: **los dos primeros segundos**, después el remate (S3).
+
+**Perspectivas.** La decisión del 15/11 (C26): mediana ≥ 150 se sigue; entre 50 y 150 se amplía el tema
+con prórroga hasta el 10/01; por debajo de 50 se para. Si el régimen de estas tres semanas se sostiene
+(medianas semanales 113 · 66 · 62), el 15/11 cae **en la banda del medio**. Para llegar a 150 hace
+falta un salto, no una mejora gradual: es justo para lo que existe C60. **Un dato que cambia con el
+ritmo nuevo:** con siete o catorce Shorts a la semana, los veinte últimos el 15/11 serán los
+publicados desde finales de octubre, es decir, los que ya habrá hecho el bucle.
+
+**Lo que queda por hacer** (el detalle, en el calendario del final): el bucle funcionando (C60), la
+animación de mecanismo (C55.2), el presentador —persona sintética (C51.3) y personaje animado (C61)—,
+una sola toma de voz (C36) para poder hacer dos al día, el corpus ampliado, y la dirección en diferido
+(C62). El formato largo sigue suspendido: se piensa después del 15/11, con lo que el bucle haya
+enseñado de los Shorts.
+
+---
+
+## 2 · Los cambios en marcha y cuándo llegan al canal (puntos 1 y 2)
+
+| Cambio | Estado | Cuándo se ve en el canal |
+|---|---|---|
+| **C56-C59** (título corto, pregunta al espectador, sin negro, firma «Síguenos») | En producción | **Hoy, `MDS-031`**. La primera pregunta se publica en la sincronización de esta tarde (17:25 UTC si llega a su hora) o mañana a las 08:50 |
+| **C58.1** (sin el silencio de la toma) | Escrito y probado hoy | `MDS-032` (martes 6), **si el `push` está antes de las 03:13** |
+| **C60 · el bucle**, ciclo B1 | Escrito hoy | Desde el **lunes 12/10**, siete Shorts a la semana con tres brazos |
+| **C55.2 · animación en las escenas de mecanismo** (brazo A) | Diseñada; se implementa el **miércoles 7/10** | El primer Short animado del ciclo es el del **miércoles 14/10** (el tercero del `orden`) |
+| **C36 · una sola toma de voz** | Se prueba **7-9/10** con `voz_prueba.yml` | Si pasa, **14 a la semana desde el lunes 19/10** |
+| **C51.3 · persona sintética (Kaggle)** | Kaggle listo; licencias estudiadas (MuseTalk 1.5 con un cambio) | Caras con FLUX el **12/10**; prueba en Kaggle **13-15/10**; muestrario el **viernes 16/10**; si el codirector dice sí, entra en el ciclo **B2 desde el 26/10** |
+| **C61 · personaje animado** | Diseñado hoy | Muestrario 2D el **12/10**; 3D VRM cuando esté el avatar (el codirector, ~14/10); elección el **16/10**; ciclo **B2 desde el 26/10** |
+| **C62 · la dirección en diferido** | Instrucciones escritas hoy | Primera ejecución el **jueves 8/10** si el codirector la crea el martes |
+| **Ciclo B2 · presentador**: sin presentador, persona sintética, personaje animado | — | **26/10 → 8/11**, decidido antes del 8/11 (cuando se congelan los umbrales de C26) |
+
+---
+
+## C60 · El bucle de aprendizaje (la tarea especial)
+
+### La idea del codirector, y lo que le añado
+
+Su propuesta es la buena: dos cambios en vídeos distintos, comparados entre sí y con lo anterior; si
+gana uno, se queda; si ganan los dos, se combinan y se vuelve a probar. Es, literalmente, un
+aprendizaje por refuerzo con la audiencia como recompensa. Le añado seis cosas, porque sin ellas el
+bucle aprendería ruido:
+
+1. **El control va dentro del mismo ciclo, no es «la versión anterior».** El feed cambia de una
+   semana a otra (la mediana semanal ha ido 113 → 66 → 62 sin que nosotros cambiásemos nada que lo
+   explique). Si comparamos con la semana pasada, medimos la semana, no el cambio. Así que en cada
+   ciclo hay **tres brazos a la vez**: control, A y B.
+2. **La recompensa es «Se quedaron viendo» a 48 horas** (C60.1). Las visualizaciones van de 0 a
+   1.200 según quiera el feed: con eso harían falta cientos de vídeos para ver nada. «Se quedaron» es
+   un porcentaje, varía mucho menos de un Short a otro, es la primera barrera del feed y es
+   exactamente donde estamos perdiendo. Las demás (% visto, vistas a 48 h, «me gusta») se miran y
+   frenan, pero no deciden.
+3. **La regla se escribe antes del primer dato**, como C26. Está en `04_agentes/bucle.py` y en el
+   apartado de abajo.
+4. **No elige nadie qué Short va a qué brazo.** La planificación elige los temas de la semana y
+   después aplica un `orden` barajado de antemano. Si eligiera, mediríamos su criterio.
+5. **Lo cuenta el código**, todos los días, en `05_calendario/bucle/resultados.json`. Los agentes lo
+   leen y lo explican; no lo reinterpretan.
+6. **Honestidad con el tamaño.** Entre un Short y otro, «se quedaron» se mueve unos 12 puntos (lo que
+   copió el codirector). Con 6 Shorts por brazo solo se ven diferencias de **8 puntos o más**; con 4,
+   de 15. **Es lo que buscamos**: las palancas grandes (una cara, una animación, el arranque). Para
+   afinar detalles de ±3 puntos haría falta diez veces más volumen, y eso no lo tenemos.
+
+### C60.1 · «Se quedaron viendo», ahora en los ficheros
+
+Desde el 31/03/2025 YouTube cuenta como visualización de un Short cualquier reproducción que empiece,
+aunque se deslice en el primer segundo. Las que pasan de los primeros segundos se llaman
+**visualizaciones comprometidas** (`engagedViews` en la API de analítica), y su cociente es lo que
+Studio enseña como «Se quedaron viendo». **`metricas.py` lo lee desde hoy** (`se_quedaron_48h` y
+`se_quedaron_total`, en una llamada aparte que si falla no tumba la lectura y deja escrito lo que
+contestó la API). Primera comprobación pendiente: que la cifra de la API coincida con la que el
+codirector copió de Studio el 02/10 (trampa 53).
+
+### Cómo funciona, pieza a pieza
+
+| Pieza | Qué hace | Quién |
+|---|---|---|
+| `05_calendario/bucle/ciclos.json` | El ciclo vigente: brazos, receta de cada uno, y el `orden` | La dirección (nadie más: `entregar.py` lo protege) |
+| `05_calendario/bucle/hipotesis.json` | La cola de lo que se probará después, por orden | La dirección; el codirector añade en su cuaderno |
+| La planificación (jueves) | Elige temas, aplica el `orden`, escribe `"ciclo"` y `"variante"` en cada guion y cumple la receta | Rutina de planificación |
+| La rutina «Animación» (viernes, C55.2) | Escribe la animación de las escenas marcadas de los Shorts del brazo A | Rutina nueva |
+| La revisión diaria | Comprueba que el Short de mañana cumple su receta; copia «se quedaron» del de anteayer | Rutina de revisión |
+| `metricas.yml` | Lectura completa los lunes; **ligera todos los días** (`metricas_diarias.json`); y `bucle.py` detrás | GitHub Actions |
+| `04_agentes/bucle.py` | El marcador: por brazo, la media de «se quedaron», % visto, vistas, «me gusta», ceros de feed; y el veredicto | Código (de la dirección) |
+| La rutina de métricas (lunes) | Lo explica: qué dice cada brazo y qué falta para que cambie el veredicto | Rutina de métricas |
+| La dirección (lunes y jueves, C62) | Aplica los veredictos: el ganador pasa a control, el perdedor sale, entra la hipótesis siguiente | Rutina de dirección |
+
+**Se mide lo que salió, no lo que se planificó.** Si un Short del brazo A no consiguió su animación
+(sale como el control, por diseño: nunca bloquea), `bucle.py` lo aparta del ciclo con el motivo, mirando
+la ficha de producción (`animacion.escenas_animadas`).
+
+### La regla (escrita hoy, antes del primer dato)
+
+Cada variante contra el control **del mismo ciclo**, con la media por Short de «se quedaron» (cada
+Short pesa uno, para que un viral no decida solo):
+
+- con **4** o más Shorts por brazo: diferencia ≥ **+15** puntos → **GANA**; ≤ −15 → **PIERDE**;
+- con **6** o más: ≥ **+8** → GANA; ≤ −8 → PIERDE;
+- con **10** o más y dentro de ±8 → **SIN EFECTO**: se queda el control (lo más simple);
+- y si no, **SIGUE MIDIENDO**.
+
+Dos frenos: si gana pero su % visto queda más de 5 puntos por debajo del control, o tiene dos ceros de
+feed más que el control, es «gana con reparo» y decide la dirección diciendo por qué. Si ganan las dos
+variantes, el control del ciclo siguiente es **la combinación**, y se vuelve a medir contra la mejor de
+las dos por separado (la idea del codirector, tal cual).
+
+### Ciclo B1 · del 12 al 25 de octubre
+
+**La pregunta:** ¿qué retiene más en los dos primeros segundos: lo de ahora, ver el mecanismo animado o
+abrir con el dato?
+
+| Brazo | Receta |
+|---|---|
+| **control** | Lo de ahora (C50 + C56-C59): la escena 1 cuenta la situación o el chiste que el estudio explica |
+| **A · animación de mecanismo** (C55.2) | Igual, pero las una o dos escenas que explican el mecanismo se animan a medida (Opus 5.5, rutina «Animación») |
+| **B · arranque con el dato** | La escena 1 abre con lo que encontró el estudio, dicho como un hecho que sorprende, en 12 palabras como mucho y con su fuente; la situación pasa a la escena 2 |
+
+**El `orden`**, en bloques de tres barajados (semilla 20261012): B, control, A · A, B, control · A, B,
+control · B, A, control… Con 7 Shorts la primera semana y 14 la segunda, cada brazo llega a unos 7
+Shorts el 25/10: suficiente para la regla de 6, con los últimos medidos el martes 27.
+
+### La cola (`hipotesis.json`)
+
+Por orden: **el presentador** (ciclo B2, desde el 26/10: sin presentador, persona sintética, personaje
+animado), **la duración** (≤ 40 s), **el remate** (S3), **el bucle final** (que la última frase empalme
+con la primera), **la voz de una toma**, **la variedad de fondo** (idea del codirector del 30/09) y
+**ampliar el tema hacia el humor en la conversación** (la ampliación de C26, probada antes del 15/11 y no
+después).
+
+### Lo que el ritmo nuevo le hace a cada pieza (la parte de «todo se verá sometido a más estrés»)
+
+- **La voz.** Un Short gasta hoy 6 de las 10 peticiones diarias de Gemini 3.1. Siete a la semana caben
+  (uno al día). **Catorce no caben con margen**: o C36 (una toma por Short: 1-2 peticiones) o un modelo
+  por vídeo (3.1 para uno, 2.5 para otro) sin margen para un solo rechazo. C36 se prueba esta semana;
+  si falla, 14 a la semana se hace con un modelo por vídeo y se dice.
+- **YouTube.** Subir cuesta 1.600 de las 10.000 unidades diarias de la API: como mucho seis al día. Dos
+  caben de sobra.
+- **La bibliografía.** El jueves quedaban **seis fichas libres**. Con siete a la semana se acaban en
+  una. Por eso cambia de dueño (a la planificación), el paso 7 pide **diez fichas nuevas por semana**, y
+  la red del entorno de las rutinas tiene que llegar a OpenAlex, Crossref y doi.org (hoy da 403: tarea
+  del codirector). Mientras tanto, la regla de las seis semanas de C17 libera las fichas de agosto.
+- **La cuota de Claude** (la del codirector). Lo que más gasta: la planificación con Opus 5.5 (pasa de
+  5 a 7 y luego 14 guiones, cada uno con su lectura en frío), la animación (~120.000-200.000 tokens por
+  Short animado, unos 5 a la semana con 14) y la dirección en diferido (dos veces por semana). La
+  revisión y las métricas siguen en Sonnet 5.5. **Si la cuota aprieta, lo primero que se recorta es
+  la animación** (baja a un brazo más pequeño), no la planificación ni la revisión.
+- **Las ideas y la vigilancia de los que crecen.** La cola de hipótesis se alimenta de tres sitios: lo
+  que dicen nuestros números, el cuaderno del codirector y un repaso mensual del mercado (el estudio
+  del 02/10, actualizado el primer lunes de cada mes por la dirección en diferido).
+- **El riesgo de «contenido no auténtico».** Más volumen de un mismo molde es lo que YouTube castiga. El
+  bucle lo reduce en vez de aumentarlo: los brazos son formas distintas, y todo sigue pasando por la
+  lectura en frío, la fuente y el cierre honesto.
+
+---
+
+## C61 · El personaje animado (punto 3 del cuaderno)
+
+### Cómo lo hacen los VTubers
+
+Un VTuber son tres piezas: **el personaje** (una ilustración por capas en 2D, o un modelo 3D), **el
+rigging** (articularlo: párpados, boca, cejas, giro de cabeza…) y **la interpretación**, que en directo
+viene de una persona delante de una cámara. En 2D el estándar es **Live2D** (la ilustración por capas se
+articula en Cubism y se anima con VTube Studio); en 3D, **VRM** (el formato abierto de los avatares; se
+diseñan, por ejemplo, con VRoid Studio, gratis) animado con un programa de captura facial.
+
+### Cómo lo hacemos nosotros: sin persona delante
+
+Nos sobra la pieza del directo y nos falta la persona. Lo que la sustituye es una **pista de
+interpretación** que sale del guion y de la voz, sin nadie delante:
+
+- **La boca**: las formas de la boca (visemas) a partir del texto, que conocemos, y de la voz real. El
+  español se pronuncia casi como se escribe, así que las vocales y las consonantes que cierran la boca
+  (m, b, p) salen del propio texto, y el momento de cada palabra sale del audio (el mismo reconocedor
+  local de C36). Alternativa ya hecha: **Rhubarb Lip Sync** (MIT), que tiene un reconocedor fonético
+  para idiomas que no son el inglés.
+- **Los ojos y la cabeza**: parpadeos con un calendario fijo (determinista, regla 11.5), y gestos por
+  **papel de escena** (los de la dirección de actor de C33: el remate se dice serio y quieto, la cifra
+  se inclina, la objeción ladea la cabeza).
+- **El render**: en el mismo Chromium de siempre, fotograma a fotograma. Sin GPU, sin cuota, coste cero.
+
+**Dos caminos, y se prueban los dos** (decisión del codirector):
+
+| | **2D propio** | **3D VRM** |
+|---|---|---|
+| Qué es | Un personaje vectorial (SVG) dibujado y articulado por la dirección, con la paleta de la marca | Un avatar 3D en formato VRM, animado con `three-vrm` (pixiv, MIT) dentro de `escena.html` |
+| Quién lo diseña | La dirección | **El codirector, una vez, en VRoid Studio** (gratis, 1-2 h): las condiciones de uso de los modelos se comprueban antes de publicar, como se hizo con MuseTalk. Plan B: un avatar VRM con licencia CC0 recoloreado a la marca |
+| A favor | Cero trabajo del codirector; encaja con la marca; ya sabemos renderizarlo | Más definición y el aspecto de VTuber clásico; boca y ojos ya vienen articulados (`aa`, `ih`, `ou`, `ee`, `oh`, parpadeo, mirada) |
+| En contra | El riesgo del Engranaje: poca definición y poco carisma | Aspecto tirando a anime; render 3D por software en Actions (más lento, pero son 2-6 s) |
+
+**Descartados, con su porqué:** Live2D (hace falta una ilustración por capas y un rigging de oficio, que
+son de pago, y su licencia para vídeo monetizado no es clara); los modelos que animan una imagen fija
+(los de licencia limpia están hechos para caras reales y en dibujos fallan); encargar el personaje
+(regla 4).
+
+**Las reglas que se le aplican** (las de la regla 7.1, adaptadas): siempre el mismo personaje y la misma
+voz; el uso de IA declarado en la descripción; nunca presentado como experto ni con una vida inventada
+(nada de «a mí me pasó»). No es una persona realista, así que no lleva `containsSyntheticMedia`. Y
+**la misma exposición que la persona sintética** —el arranque y el remate, dos o tres segundos cada
+uno— para que el A/B compare personajes y no minutos en pantalla.
+
+### El A/B que pidió el codirector: ciclo B2, desde el 26/10
+
+Tres brazos: **sin presentador** (el control que gane en B1), **persona sintética** (C51.3) y
+**personaje animado** (el camino que elija el codirector en C61). La misma regla, la misma cifra. Si
+alguno de los dos personajes no pasa su muestrario, el ciclo es de dos brazos. Y se decide antes del
+**8/11**, que es cuando se congelan los umbrales de C26. **Lo que no se mezcla**: el fondo (archivo o
+animación) es otro eje y ya se mide en B1. Después se combinan los ganadores de cada eje, como pidió.
+
+---
+
+## C62 · La dirección en diferido (punto 5 del cuaderno)
+
+**Sí, y es buena idea.** Lo que ha cambiado desde el 21/09, cuando dije que no (C43): entonces las
+tareas entregaban un `.tar.gz`; hoy las rutinas suben solas con `entregar.py`. Y la ganancia más grande
+no es la asincronía: **lo que la dirección decide llega a `main` sin que el codirector haga `push`.**
+Eso elimina el reloj de la trampa 11, que es lo que más retrasa cada cambio.
+
+**Lo que se le escapaba, y cómo queda resuelto:**
+
+1. **Las rutinas solo leen GitHub**, no la memoria del proyecto de claude.ai. Y el repositorio es
+   público. Por eso el cuaderno y los ficheros de tareas se van a un **repositorio privado**
+   (`mecanicadelhumor/direccion`), clonado en `00_estrategia/privado/` (ignorado por el público). El
+   codirector escribe ahí como hasta ahora (o desde la web de GitHub, también desde el móvil).
+2. **No se le pueden hacer preguntas a mitad de sesión.** Lo que necesite de él va a su fichero de
+   tareas, como ahora, y la rutina sigue con lo demás.
+3. **Lo que no podía la dirección, tampoco lo puede la rutina:** los workflows y las rutinas se le
+   siguen pidiendo a él (trampas 45 y 47).
+4. **Lo que se ve o se oye en el vídeo sigue necesitando sus ojos** (regla 11.2): la rutina deja la
+   muestra y la pide.
+5. **Dos direcciones el mismo día chocan en git.** Si hay sesión interactiva, la rutina de ese día solo
+   lee y contesta. Y las sesiones interactivas empiezan comprobando que su carpeta está al día con
+   `main` (si no, `git pull` antes de nada).
+6. **Coste:** Opus 5.5, dos veces por semana, con unos 200.000 tokens de contexto solo para arrancar.
+   Es del orden de lo que ya cuestan estas sesiones. El arranque hay que adelgazarlo (el plan tiene
+   5.700 líneas): queda en «lo mirado y sin resolver».
+
+**Cómo queda:** rutina «Dirección», Opus 5.5, **lunes y jueves a las 13:07 UTC** (después de las
+métricas del lunes y antes de la planificación del jueves) y con «Run now» cuando él quiera. Sus
+instrucciones: `00_estrategia/tareas/direccion.md`. `entregar.py` tiene desde hoy la tarea
+`direccion`, que puede escribir todo salvo los workflows, el cuaderno, `novedades.md` y lo que escribe
+Actions. Montarlo es una vez y unos 25 minutos del codirector (tarea 4 del 05/10).
+
+---
+
+## Puntos 4 y 6 del cuaderno: los relojes de GitHub
+
+- **El vídeo de hoy sí estaba programado.** `MDS-031` se subió a las 07:12 UTC (`RRhe-WDHgl0`, privado,
+  público a las 19:00): la producción de las 01:13 llegó seis horas tarde. El codirector lo confirmó en
+  Studio a mediodía.
+- **Las métricas: el `pull` no fue lo que lo arregló.** La lectura semanal no existía cuando corrió la
+  rutina (~10:05 UTC): el workflow se lanzó a las **12:22 UTC**, un disparo programado que GitHub
+  retrasó siete horas. Es la cuarta vez (trampa 43). **El arreglo no es otro reloj:** desde hoy
+  `metricas.yml` **despierta a la rutina** con su disparador por API en cuanto la lectura está en
+  `main`, y la rutina conserva su horario como red, por la tarde.
+- **Y al mirarlo apareció la trampa 52:** la rutina de métricas nunca ha leído su fichero de
+  instrucciones del repositorio; lleva el texto viejo pegado. Se arregla cambiando su prompt por un
+  arranque, como las otras dos (tarea del codirector).
+
+## C58.1 · El silencio que traía la toma
+
+`MDS-031`, el primero con C58, arrancó la voz a los 0,381 s y no a los 0,1: la toma de Gemini de la
+escena 1 traía 0,28 s de silencio delante, y el montaje no lo ve. **Se publicó tal cual** (0,28 s con
+imagen no justifican retirar un Short). Arreglo: `voz.py` recorta ese silencio en la escena 1 de los
+Shorts con voz de Gemini, **antes de medir la duración**, para que todo lo de detrás (los tiempos, los
+cortes de imagen, `qa.py`) vea ya la toma recortada. Deja 0,03 s para el ataque de la primera sílaba.
+Probado con una toma sintética de 0,28 s de silencio: detecta 0,28 y la deja limpia.
+
+---
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| **Hoy, lunes 5** | Esto escrito. `MDS-031` sale a las 19:00 |
+| **Antes del martes 6 a las 03:13** | Tarea 1 del codirector: el `push` (C58.1 para `MDS-032`, `metricas.py` con «se quedaron», el bucle, las instrucciones nuevas) |
+| Martes 6 | Tareas 2-5 del codirector (workflow de métricas, rutina de métricas, red del entorno, repositorio privado y rutina de dirección) |
+| **Miércoles 7** | Dirección (sesión o rutina con «Run now»): **C55.2** (la animación en `render.py` y las instrucciones de la rutina «Animación») y **C36** (la prueba de una toma) |
+| **Jueves 8, 13:07 UTC** | Primera dirección en diferido (si existe): revisa C36 y deja listo lo del viernes |
+| **Jueves 8, 22:07 UTC** | Planificación: la semana del 12 al 18 con **siete** Shorts y los brazos del ciclo B1; al menos diez fichas nuevas |
+| Viernes 9 | Rutina «Animación» (la crea el codirector): las escenas del brazo A de la semana del 12 |
+| **Lunes 12** | **Empieza el ciclo B1.** Dirección: muestrario del personaje 2D (C61) y las caras de la persona sintética (C51.3) |
+| 13-15/10 | Prueba en Kaggle de la persona sintética; el codirector diseña el avatar VRoid (si quiere el 3D) |
+| **Viernes 16** | Muestrarios de los dos presentadores: decide el codirector mirándolos |
+| **Lunes 19** | **Catorce a la semana**, si C36 pasó |
+| 19-23/10 | Integración del presentador (o presentadores) elegido |
+| Domingo 25 | Fin del ciclo B1 (los últimos, medidos el martes 27). Cambio de hora: `cola.py` lo cuenta solo |
+| **Lunes 26** | **Ciclo B2: el presentador** |
+| Antes del 8/11 | Veredicto de B2; la puerta de los 1.000 y los umbrales de C26, congelados |
+| 15/11 | La decisión |
+
+## Lo que NO cambia hoy
+
+- **Nada de lo que se ve en el vídeo** salvo C58.1 (0,28 s menos de silencio al principio).
+- **Los umbrales de C26**, la música, el formato largo suspendido, la regla 7 y la 7.1.
+- **Las rutinas** (no las puede tocar la dirección): se le piden al codirector.
+
+## Lo que queda mirado y sin resolver
+
+- **Que «se quedaron» de la API sea el de Studio.** Lo dirá la primera lectura con el código nuevo;
+  hasta entonces el bucle cuenta con ello, y es lo primero que se comprueba (trampa 53).
+- **El tamaño de la muestra**: con este volumen solo se ven diferencias grandes. Dicho en la regla.
+- **El arranque de la dirección pesa demasiado**: `PLAN_DE_CAMBIOS.md` tiene 5.700 líneas y
+  `PROMPT_DE_ARRANQUE.md` 85 KB. Hay que partir el plan (una versión por fichero) antes de que la
+  dirección en diferido lo lea dos veces por semana.
+- **Dos al día, a qué horas.** Se decide con C36 el miércoles.
+- **El vídeo de muestra de C58/C59** (6 MB) entró en el repositorio público con el `commit` del
+  mediodía (`Claude outputs/`). No pasa nada; si el codirector prefiere que esa carpeta no viaje a git,
+  es una línea en `.gitignore`.
+- Lo de la versión 17 sigue abierto: los planos de FLUX que no salen, por qué `MDS-021` y `022`
+  retienen tanto, P9.

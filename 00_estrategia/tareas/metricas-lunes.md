@@ -15,6 +15,38 @@ modelo: `claude-sonnet-5`.
 
 ---
 
+## Lo que cambia el 05/10/2026 (dirección del lunes) · versión 18 del plan · C60
+
+**Va antes que todo lo demás y manda sobre lo que diga más abajo.**
+
+0. **Ahora sí lees este fichero** (trampa 52). Hasta el 05/10 la rutina llevaba pegado el texto viejo
+   y este fichero no lo leía nadie, aunque su cabecera dijera lo contrario. Desde que el codirector
+   cambió el prompt de la rutina por un arranque, **este fichero es tu prompt**.
+1. **Ya no corres a ciegas a las 12:03.** `metricas.yml` te despierta en cuanto la lectura completa
+   del lunes está en `main` (llega un mensaje con «metricas.json de hoy (AAAA-MM-DD) ya está en
+   main»). Tu horario propio queda como red, por la tarde. **Paso 0 nuevo:** si ya existe
+   `05_calendario/bitacora/<hoy>-metricas*.md` hecha con un `metricas.json` de hoy, **terminas sin
+   escribir nada**: ya se hizo. Si existe pero se hizo con un `metricas.json` viejo y ahora hay uno de
+   hoy, escribes la lectura buena en `<hoy>-metricas_2.md` (como el 05/10).
+2. **La cifra nueva, y va la segunda en tu primera línea, detrás de la mediana C26: «Se quedaron
+   viendo»** (`se_quedaron_48h.pct` en cada lectura = `engagedViews` / `views` en las primeras 48 h).
+   Desde el 31/03/2025 YouTube cuenta como visualización de un Short cualquier reproducción que
+   empiece, aunque el espectador deslice en el primer segundo; «se quedaron» es la parte que no
+   deslizó. Es la primera barrera del feed. **Compárala con lo que el codirector copió de Studio el
+   02/10** (MDS-021 25 % · 022 17,6 % · 025 2,7 % · 026 19,7 % · 027 34,9 % · 028 40 % · 029
+   15,4 %): si no se parecen, dilo, porque entonces la cifra de la API no es la de Studio y el bucle
+   estaría midiendo otra cosa.
+3. **El bucle (C60).** Desde el 12/10 cada Short es de un brazo (`"variante"` en el guion; recetas
+   en `05_calendario/bucle/ciclos.json`). El marcador lo calcula el código en
+   `05_calendario/bucle/resultados.json`. **Tú no decides quién gana** —la regla está escrita y la
+   aplica `bucle.py`—: lo copias, lo explicas en una frase por brazo y dices **qué falta para que el
+   veredicto cambie** (cuántos Shorts más, o qué diferencia). Y separas lo que el bucle no puede ver:
+   si en un brazo hay un tema que lo explica todo (un viral, un cero de feed), dilo.
+4. **La escalera S** sigue, con S1 medido ahora también como «se quedaron»: un Short con muchas
+   visualizaciones y «se quedaron» bajo es un Short que el feed enseñó mucho y la gente deslizó.
+5. **La lectura diaria** (`metricas_diarias.json`) la escribe el workflow todos los días: úsala para
+   los Shorts de los últimos días que la completa del lunes todavía no tenga a 48 horas.
+
 ## Lo que cambia el 21/09/2026 (dirección del lunes) · versión 11 del plan
 
 1. **El formato largo está suspendido (C42).** No esperes un `MDH-` nuevo cada sábado y no lo

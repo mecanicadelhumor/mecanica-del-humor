@@ -1,0 +1,58 @@
+{
+ "_nota": "C60 · El bucle de aprendizaje. Lo escribe la dirección (nadie más: entregar.py lo protege). La planificación lo LEE: asigna a cada Short el brazo que le toca según «orden», por fecha y hora de emisión, y lo escribe en el guion como \"variante\" y \"ciclo\". El marcador lo calcula 04_agentes/bucle.py en resultados.json. Ver PLAN_DE_CAMBIOS.md, versión 18.",
+ "ciclos": [
+  {
+   "id": "B1",
+   "desde": "2026-10-12",
+   "hasta": "2026-10-25",
+   "control": "control",
+   "pregunta": "¿Qué retiene más en los dos primeros segundos: lo de ahora, ver el mecanismo animado o abrir con el dato?",
+   "metrica_principal": "se_quedaron_48h.pct (Se quedaron viendo, primeras 48 h)",
+   "brazos": {
+    "control": {
+     "nombre": "Lo de ahora (C50 + C56-C59), apertura en situación",
+     "receta": "Como la semana del 5/10: la escena 1 cuenta la situación o el chiste que el estudio explica; vídeo de archivo detrás (C50); título = la pregunta (C56); pregunta al espectador (C57)."
+    },
+    "A": {
+     "nombre": "Animación a medida en las escenas de mecanismo (C55.2)",
+     "receta": "Igual que el control, pero las una o dos escenas que EXPLICAN el mecanismo (las de tipo diagrama, comparacion o dato que cuentan qué midió el estudio) llevan \"animar\": true y una nota \"animacion\" de una línea con la idea visual. La rutina «Animación» escribe su página; si no llega, la escena sale como en el control y el Short se aparta del ciclo.",
+     "comprobar_en_ficha": {
+      "campo": "animacion.escenas_animadas",
+      "minimo": 1
+     }
+    },
+    "B": {
+     "nombre": "Arranque con el dato",
+     "receta": "La escena 1 abre con lo que encontró el estudio, dicho como un hecho que sorprende (no como pregunta), en 12 palabras como mucho y con su \"fuente\"; el texto de pantalla de la escena 1 es ese mismo dato. La situación o el chiste va en la escena 2. Título = la pregunta (C56), igual que el control. El remate, el cierre honesto y la lectura en frío, igual."
+    }
+   },
+   "orden": [
+    "B",
+    "control",
+    "A",
+    "A",
+    "B",
+    "control",
+    "A",
+    "B",
+    "control",
+    "B",
+    "A",
+    "control",
+    "A",
+    "B",
+    "control",
+    "A",
+    "B",
+    "control",
+    "B",
+    "A",
+    "control",
+    "B",
+    "control",
+    "A"
+   ],
+   "_orden": "Bloques de tres con los tres brazos barajados (semilla 20261012), para que cada día y cada semana tengan de los tres. Se aplica en orden de emisión (fecha y hora) a partir del primer Short del ciclo, sin saltar ninguno. La planificación elige y ordena los temas de la semana ANTES de mirar qué brazo le toca a cada hueco."
+  }
+ ]
+}

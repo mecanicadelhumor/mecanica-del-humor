@@ -100,8 +100,8 @@ PROPIEDAD = {
     "revision": [
         r"03_produccion/.+",
         r"04_agentes/.+",
-        r"01_bibliografia/BIBLIOGRAFIA_CURADA\.md",
-        r"01_bibliografia/data/semillas\.json",
+        # 01_bibliografia/ pasó a la planificación el 05/10/2026 (C60): es la que
+        # necesita fichas nuevas cada semana. La revisión avisa en revisiones/.
         r"05_calendario/revisiones/.+",
         r"05_calendario/visuales/ajustes\.json",
         r"05_calendario/estado/{F}\.md",
@@ -118,6 +118,8 @@ PROPIEDAD = {
         r"05_calendario/demanda\.json",
         r"05_calendario/semillas_demanda\.json",
         r"05_calendario/pendientes_de_fuente\.md",
+        r"01_bibliografia/BIBLIOGRAFIA_CURADA\.md",   # desde el 05/10/2026 (C60)
+        r"01_bibliografia/data/semillas\.json",
         r"05_calendario/revisiones/.+",          # aplica las notas y las retira
         r"05_calendario/bitacora/{F}-planificacion[^/]*\.md",
         r"08_comunicacion/{F}-planificacion[^/]*\.md",
@@ -126,6 +128,16 @@ PROPIEDAD = {
         r"05_calendario/bitacora/{F}-metricas[^/]*\.md",
         r"08_comunicacion/{F}-metricas[^/]*\.md",
     ],
+    # C55.2 (05/10/2026): la rutina «Animación» escribe la animación a medida de
+    # las escenas de mecanismo, una carpeta por Short. Nada más.
+    "animacion": [
+        r"05_calendario/animaciones/.+",
+        r"05_calendario/bitacora/{F}-animacion[^/]*\.md",
+        r"08_comunicacion/{F}-animacion[^/]*\.md",
+    ],
+    # C62 (05/10/2026): la dirección en diferido. Puede escribir todo el
+    # repositorio (autorización del 07/09/2026) salvo NUNCA_DIRECCION.
+    "direccion": [r".+"],
 }
 
 # Aunque un patrón de arriba lo cubra, esto no lo sube ninguna tarea nunca.
@@ -137,14 +149,37 @@ NUNCA = [
     r"05_calendario/registro_publicaciones\.json",
     r"05_calendario/qa/.+",
     r"05_calendario/metricas\.json",
+    r"05_calendario/metricas_diarias\.json",  # C47/C60: lo escribe Actions
+    r"05_calendario/bucle/.+",                 # C60: la dirección y Actions
     r"05_calendario/demanda_bruta\.json",
     r"05_calendario/ESTADO\.md",               # congelado (C45)
     r"05_calendario/MEJORAS\.md",              # congelado (21/08)
     r"08_comunicacion/novedades\.md",          # del codirector
     r"04_agentes/entregar\.py",                # este fichero: de la dirección
+    r"04_agentes/bucle\.py",                   # C60: de la dirección
     r"03_produccion/pipeline/visual\.py",      # C50: de la dirección
     r"03_produccion/pipeline/fondo_visual\.py",
     r"03_produccion/cache_voz/.+",             # lo escribe Actions
+    r"03_produccion/cache_visual/.+",
+]
+
+# C62 · Lo que la dirección no sube aunque pueda escribir todo lo demás: lo
+# protegido por GitHub, lo que es del codirector y lo que escribe Actions.
+NUNCA_DIRECCION = [
+    r"\.github/.+",
+    r"\.secrets/.+",
+    r"00_estrategia/PROMPT_DIRECCI.N\.md",    # el cuaderno del codirector
+    r"00_estrategia/tareas/tareas_codirector_.+",
+    r"08_comunicacion/novedades\.md",
+    r"05_calendario/registro_publicaciones\.json",
+    r"05_calendario/qa/.+",
+    r"05_calendario/metricas\.json",
+    r"05_calendario/metricas_diarias\.json",
+    r"05_calendario/bucle/resultados\.json",
+    r"05_calendario/demanda_bruta\.json",
+    r"05_calendario/ESTADO\.md",
+    r"05_calendario/MEJORAS\.md",
+    r"03_produccion/cache_voz/.+",
     r"03_produccion/cache_visual/.+",
 ]
 
@@ -213,9 +248,19 @@ def clasificar(tarea, lista, ahora):
     nunca = [patron(p, fechas) for p in NUNCA]
     borrables = [patron(p, fechas) for p in BORRAR_PERMITIDO]
     vale, fuera = [], []
+    nunca_dir = [patron(p, fechas) for p in NUNCA_DIRECCION]
     for estado, ruta in lista:
         motivo = None
         g = GUION.fullmatch(ruta)
+        if tarea == "direccion":
+            # C62: la dirección puede escribir y borrar casi todo; solo le
+            # quedan fuera NUNCA_DIRECCION y la regla 11.4.
+            if any(p.match(ruta) for p in nunca_dir):
+                motivo = "la dirección no sube esto (codirector, GitHub o Actions)"
+            elif g and ya_subido(g.group(1)):
+                motivo = "guion ya producido: nunca sobre un episodio producido (regla 11.4)"
+            (fuera if motivo else vale).append((estado, ruta, motivo))
+            continue
         if any(p.match(ruta) for p in nunca):
             motivo = "no es de ninguna tarea (dirección, codirector o Actions)"
         elif g and tarea == "revision":
@@ -365,7 +410,7 @@ def resumen_actions(texto):
 
 
 def aplicar(rama):
-    m = re.fullmatch(re.escape(PREFIJO) + r"(revision|planificacion|metricas)-[\w.-]+", rama)
+    m = re.fullmatch(re.escape(PREFIJO) + r"(" + "|".join(sorted(PROPIEDAD)) + r")-[\w.-]+", rama)
     if not m:
         resumen_actions(f"«{rama}» no es una rama de entrega: no se aplica nada.")
         return 1

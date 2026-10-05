@@ -49,6 +49,12 @@ puede es hacer que dos agentes no escriban nunca el mismo fichero.**
 | `05_calendario/visuales/APAGADO` (C50, el interruptor) | **el codirector y yo** | nadie más lo crea ni lo borra |
 | `00_estrategia/` | **el codirector y yo** | nadie más |
 | `04_agentes/entregar.py` · `.github/workflows/entregas.yml` (C53, 28/09/2026) | **la dirección** | nadie más: son la tabla de esta página escrita en código |
+| `01_bibliografia/data/semillas.json` · `BIBLIOGRAFIA_CURADA.md` (**desde el 05/10/2026**, C60; antes, la revisión diaria) | **Planificación** | la revisión avisa en `05_calendario/revisiones/bibliografia.md` |
+| `05_calendario/bucle/ciclos.json` · `hipotesis.json` (C60, 05/10/2026) | **la dirección** | la planificación los lee y aplica el `orden`; nadie más los escribe |
+| `05_calendario/bucle/resultados.json` · `05_calendario/metricas_diarias.json` (C60) | **Workflow `metricas.yml`** (`bucle.py`, `metricas.py --diario`) | nadie los edita a mano |
+| `04_agentes/bucle.py` (C60) | **la dirección** | nadie más |
+| `05_calendario/animaciones/` (C55.2, 05/10/2026) | **Rutina «Animación»** (viernes) | la planificación marca las escenas en el guion; la revisión avisa |
+| Todo el repositorio salvo workflows, el cuaderno, `novedades.md` y lo que escribe Actions (C62, 05/10/2026) | **la dirección en diferido** (`entregar.py --tarea direccion`) | — |
 
 ### Las dos carpetas nuevas que lo hacen posible
 

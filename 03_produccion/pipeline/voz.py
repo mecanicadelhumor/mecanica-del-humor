@@ -976,6 +976,41 @@ def fragmento_inicial(mp3):
     return 0.0
 
 
+# C58.1 (05/10/2026) · El silencio que trae la propia toma de Gemini.
+# C58 dejó el colchón del montaje en 0,1 s, pero MDS-031 (el primero con C58)
+# arrancó la voz a los 0,381 s: la toma de Gemini de la escena 1 traía 0,28 s
+# de silencio delante, y eso el montaje no lo ve. Se recorta aquí, ANTES de
+# medir la duración, para que todo lo que va detrás (guion.timed.json, los
+# cortes de imagen, los subtítulos, qa.py) vea ya la toma recortada.
+# Solo la escena 1 de los Shorts: en las demás, ese silencio forma parte de la
+# pausa entre escenas y tocarlo cambia el ritmo de todo el vídeo (regla 11.1).
+SILENCIO_DELANTERO_DEJA_S = 0.03   # lo que se deja: el ataque de la primera sílaba
+SILENCIO_DELANTERO_MAX_S = 1.0     # más que esto no es un silencio de arranque
+
+
+def silencio_delantero(mp3):
+    """Segundos de silencio con los que empieza la toma (0 si empieza con voz)."""
+    r = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-t", "2",
+                        "-i", str(mp3), "-af", "silencedetect=n=-45dB:d=0.05",
+                        "-f", "null", "-"], capture_output=True, text=True,
+                       stdin=subprocess.DEVNULL)
+    inicio = None
+    for linea in r.stderr.splitlines():
+        if "silence_start" in linea and inicio is None:
+            try:
+                inicio = float(linea.split("silence_start:")[1].strip().split()[0])
+            except (IndexError, ValueError):
+                return 0.0
+            if inicio > 0.01:          # el primer silencio no está al principio
+                return 0.0
+        elif "silence_end" in linea and inicio is not None:
+            try:
+                return round(float(linea.split("silence_end:")[1].split("|")[0]), 3)
+            except (IndexError, ValueError):
+                return 0.0
+    return 0.0
+
+
 def _recortar(mp3, desde_s):
     """Quita los primeros `desde_s` segundos del mp3, en su sitio."""
     tmp = mp3.with_suffix(".rec.mp3")
@@ -1183,6 +1218,16 @@ async def principal(guion_path, salida, voz=None, motor="edge"):
                 pal = [(max(0.0, a - recorte), max(0.0, b - recorte), w) for a, b, w in pal]
                 recortadas.append((i, recorte))
                 print(f"  escena {i:>2}  recortada sílaba suelta de {recorte:.2f}s al principio")
+        # C58.1: la escena 1 de un Short con voz de Gemini empieza en su
+        # primera sílaba (ver silencio_delantero). edge-tts ya tiene su recorte.
+        if es_corto and i == 1 and not motor_usado.startswith("edge"):
+            sil = silencio_delantero(mp3)
+            if SILENCIO_DELANTERO_DEJA_S + 0.05 < sil <= SILENCIO_DELANTERO_MAX_S:
+                quita = round(sil - SILENCIO_DELANTERO_DEJA_S, 3)
+                _recortar(mp3, quita)
+                pal = [(max(0.0, a - quita), max(0.0, b - quita), w) for a, b, w in pal]
+                e["recorte_inicial_s"] = quita
+                print(f"  escena  1  quitados {quita:.2f}s de silencio delante de la voz (C58.1)")
         dur = duracion_real(mp3) or (pal[-1][1] if pal else 3.0)
         cola = e.get("pausa_despues_s", 0.45)      # respiración entre escenas
         e["duracion_s"] = round(dur + cola, 3)

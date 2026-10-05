@@ -35,6 +35,39 @@ leerse como si fuera YouTube (el caso MDS-011); entran C28 y C29 en `validar_gui
 `escena.html`; y los dos prompts de guionista están reescritos. Versión **7** de
 `PLAN_DE_CAMBIOS.md`.
 
+**Qué cambia el 05/10 (dirección del lunes, versión 18 del plan, C60). Va antes que todo lo demás
+y manda sobre lo que diga más abajo:**
+
+1. **La bibliografía deja de ser tuya.** `01_bibliografia/data/semillas.json` y
+   `BIBLIOGRAFIA_CURADA.md` pasan a la planificación, que es la que necesita fichas nuevas cada
+   semana. Si ves un error en una ficha, **no la tocas**: lo escribes en
+   `05_calendario/revisiones/bibliografia.md` (antes/después, con el DOI y la página donde lo has
+   visto) y la planificación lo aplica el jueves. `entregar.py` ya no te deja subirlas. **La regla 5
+   de tu arranque todavía dice que son tuyas: está escrita antes de hoy y manda esta.**
+2. **Desde el lunes 12/10 hay Short los siete días** (uno al día, a las 19:00) y cada uno pertenece a
+   un brazo del bucle (C60): mira en el guion `"ciclo"` y `"variante"`, y la receta de cada brazo en
+   `05_calendario/bucle/ciclos.json`. En tu paso 1, además de lo de siempre, comprueba que **el
+   Short de mañana cumple su receta**: un `B` abre con el dato (escena 1, 12 palabras como mucho, con
+   `fuente`) y la situación va en la 2; un `A` lleva `"animar": true` en una o dos escenas de
+   mecanismo **y su página existe** en `05_calendario/animaciones/<ID>/` el día antes de producirse.
+   Si a un `A` le falta la animación el día antes, no es incidencia (sale como el control y el
+   marcador lo aparta): es una **nota** en tu fichero de `estado/`. Nunca cambias la `variante` de
+   un guion.
+3. **«Se quedaron viendo».** Desde hoy `metricas.py` lee `engagedViews` y escribe
+   `se_quedaron_48h` (la parte de los que el feed puso delante que no deslizaron). Está en
+   `05_calendario/metricas_diarias.json` (todos los días) y en el marcador del bucle,
+   `05_calendario/bucle/resultados.json`. **Copia en tu fichero de `estado/` la cifra del Short de
+   anteayer** (ya tiene 48 horas). Si es menor del 5 %, es nota, no incidencia: el vídeo está
+   publicado y no se toca.
+4. **El arranque (C58.1).** `voz.py` quita desde hoy el silencio que la toma de Gemini trae delante
+   en la escena 1 de los Shorts. Lo esperado en la ficha es `silencio_inicial.acaba_s` entre 0,10 y
+   0,20 s. `MDS-031` (0,381 s) se publicó tal cual: la decisión de la dirección fue dejarlo.
+5. **La pregunta al espectador (C57) solo existe desde `MDS-031`.** `MDS-027` a `MDS-030` no
+   llevaban `pregunta_al_espectador`, así que no tienen `pregunta_publicada` y **no hay nada que
+   avisar**. La nota de la dirección del 02/10 («el Short de ayer tiene que traer
+   `pregunta_publicada`») se refería a los Shorts desde el `MDS-031` y estaba mal dicha.
+6. **`04_agentes/bucle.py` es de la dirección**, como `entregar.py`: no lo tocas.
+
 **Qué cambia el 30/09 (dirección del miércoles, versión 16 del plan, C53.2). Corta, y va antes
 que la del 28/09:**
 

@@ -40,6 +40,9 @@ _to_delete/
 # asuntos internos de dirección
 00_estrategia/tareas/tareas*.md
 00_estrategia/PROMPT_DIRECCIÓN.md
+# C62 (05/10/2026): el repositorio PRIVADO de la dirección (cuaderno del codirector y
+# ficheros de tareas), clonado aquí dentro. Tiene su propio git; este no lo ve.
+00_estrategia/privado/
 # Vídeos de las pruebas (dirección, 30/09/2026): pesan y se miran en la carpeta
 # del codirector. Lo que se versiona es cómo se hicieron: la página, el script, el LEEME.
 07_pruebas/**/*.mp4

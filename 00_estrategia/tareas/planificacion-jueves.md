@@ -14,6 +14,81 @@ codirector el 30/09) · repositorio añadido · entorno «Mecánica del Humor».
 
 ---
 
+## Lo que cambia el 05/10/2026 (dirección del lunes) · versión 18 del plan · C60, el bucle
+
+**Va antes que todo lo demás y manda sobre lo que diga más abajo.** El codirector ha pedido iterar
+más rápido: proponer cambios, medirlos con la audiencia y quedarse con lo que funcione. Desde la
+semana del 12/10 cada Short pertenece a un **brazo** de un experimento, y tú eres quien lo escribe.
+
+### 1 · Siete Shorts a la semana, desde el lunes 12/10
+
+- **De lunes a domingo, uno al día, `"hora": "19:00"`** (hora de España, como siempre: `cola.py`
+  hace la cuenta, también cuando cambia el horario el domingo 25/10). La parrilla lleva también
+  sábado y domingo.
+- **Catorce a la semana (dos al día) solo cuando la dirección lo diga** en `08_comunicacion/` y en
+  `05_calendario/bucle/ciclos.json`. Depende de C36 (una sola petición de voz por Short), que
+  todavía no está probado. Hasta entonces, siete.
+- Sigue valiendo todo lo demás: la historia manda sobre el reloj (C48), la lectura en frío, el
+  título corto (C56), la pregunta al espectador (C57), nada de repetir fórmulas (C48.1).
+
+### 2 · El bucle: a cada Short le toca un brazo, y no lo eliges tú
+
+Lee **`05_calendario/bucle/ciclos.json`** (lo escribe la dirección; tú no lo tocas). El ciclo
+vigente es el **`B1`** (del 12/10 al 25/10) y tiene tres brazos:
+
+| Brazo | Qué es | Qué escribes tú |
+|---|---|---|
+| `control` | Lo de ahora: la escena 1 cuenta la situación o el chiste que el estudio explica | Nada distinto de lo de siempre |
+| `A` · animación de mecanismo (C55.2) | Igual que el control, pero las **una o dos escenas que explican el mecanismo** (qué midió el estudio y qué encontró: las de tipo `diagrama`, `comparacion` o `dato` que lo cuentan) se animan a medida | En esas escenas, `"animar": true` y `"animacion": "<una línea con la idea visual: qué se mueve y en qué palabra>"`. **Nada más**: la página la escribe la rutina «Animación». Si no llega, la escena sale como en el control |
+| `B` · arranque con el dato | La escena 1 abre con **lo que encontró el estudio, dicho como un hecho que sorprende** (no como pregunta), en **12 palabras como mucho**, con su `fuente`; el texto de pantalla de la escena 1 es ese mismo dato. La situación o el chiste pasa a la escena 2 | La escena 1 y la 2 como se dice a la izquierda. El título sigue siendo la pregunta (C56). El dato se copia del resumen o de la ficha, **nunca se deduce** (regla del 15/09) |
+
+**Cómo se asigna, y es la parte que no se negocia:**
+
+1. **Primero eliges y ordenas los temas de la semana, como siempre, sin mirar los brazos.**
+2. Después aplicas el **`orden`** de `ciclos.json` a los huecos de emisión **por orden de fecha y
+   hora**, empezando por donde se quedó la semana anterior (cuenta cuántos guiones llevan ya
+   `"ciclo": "B1"` y sigue desde esa posición). No saltes ninguno ni cambies uno por otro: si eliges
+   tú qué tema va a qué brazo, la comparación mide tu criterio y no el cambio.
+3. En cada guion escribes **`"ciclo": "B1"`** y **`"variante": "control" | "A" | "B"`**, en la raíz
+   del JSON. Sin esos dos campos, el Short no cuenta para nada.
+4. **La lectura en frío es igual para los tres brazos.** Si un `B` no pasa con el dato delante, se
+   arregla el `B`; no se convierte en `control`.
+5. **No cambies nada más entre brazos.** Misma duración orientativa, misma música (la rueda), mismo
+   tipo de cierre. Un brazo es UNA diferencia con el control.
+
+El marcador lo calcula `04_agentes/bucle.py` todos los días en `05_calendario/bucle/resultados.json`.
+**Léelo antes de empezar** y cópialo en tu bitácora (las tres medias de «se quedaron viendo» y los
+veredictos). No decides tú si un brazo gana: lo dice la regla, que se escribió antes del primer dato.
+Si un veredicto dice GANA o PIERDE, la dirección cambia `ciclos.json` y tú lo verás la semana
+siguiente.
+
+### 3 · La bibliografía es tuya desde hoy
+
+Con siete Shorts a la semana, y catorce después, el corpus es el primer cuello de botella: el jueves
+1/10 quedaban seis fichas libres.
+
+- **`01_bibliografia/data/semillas.json` y `BIBLIOGRAFIA_CURADA.md` pasan a ser tuyos** (eran de la
+  revisión diaria). `entregar.py` ya los deja subir. **La regla 5 de tu arranque** (la lista de lo que
+  es tuyo, «y de nada más») se escribió antes de hoy: desde el 05/10 incluye también estos dos. La revisión, si ve un error en una ficha, te lo
+  deja en `05_calendario/revisiones/bibliografia.md` y tú lo aplicas.
+- **El paso 7 cambia de umbral:** cada semana, **añade al menos diez fichas** con hallazgo que pueda
+  ser fuente central, con la misma regla de siempre (título y DOI vistos juntos en la misma página,
+  la frase del resumen copiada). Busca en este orden: la API de OpenAlex
+  (`https://api.openalex.org/works?search=…`), la de Crossref (`https://api.crossref.org/works?query=…`)
+  y la página del DOI.
+- **Si la red sigue cerrada** (el 1/10 daban 403): no inventas nada. Usa la regla 1 de C17 a tu
+  favor: una ficha que fue fuente central hace **más de seis semanas** vuelve a estar libre, y las de
+  los Shorts de agosto y primeros de septiembre ya lo están. Cuéntalo en la bitácora y pide la red en
+  «Para el codirector».
+- **Corrige esta semana lo que ya sabes:** el título de `D07` (es el de `E05`), y marca `F06` y `F07`
+  como duplicados de `F02` y `F01`.
+
+### 4 · Lo demás de esta semana
+
+- La semana del 12 al 18/10 son **siete** Shorts. El primero del ciclo es el del lunes 12.
+- La pregunta al espectador (C57) también los sábados y domingos.
+- **Tu reloj está en UTC** (00:07 de España del viernes): ya lo sabías; no cambia.
+
 ## Lo que cambia el 02/10/2026 (dirección del viernes) · versión 17 del plan · C56 y C57
 
 **Va antes que todo lo demás, y cambia el paso 4.** Sale del estudio de mercado del 02/10

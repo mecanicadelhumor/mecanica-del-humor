@@ -10,7 +10,7 @@ análisis.
 |---|---|---|
 | **`REGLAS.md`** | Las restricciones que nadie puede saltarse: ética, rigor, coste cero, cómo se cambian las cosas | **Siempre, antes de tocar nada.** Es corto |
 | **`PROPIEDAD_DE_FICHEROS.md`** | Quién escribe qué. De obligado cumplimiento para toda tarea programada | Antes de escribir en cualquier sitio |
-| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 17, al final, manda sobre lo anterior**: el envoltorio del Short —título corto (C56), la pregunta al espectador publicada (C57), el primer segundo sin negro (C58) y la firma que pide seguir el canal (C59)—. La 16 tiene las rutinas de Code (C53.2) y la animación a medida (C55.1); la 14, el punto de control del 27/09 con datos | Al ir a hacer algo, y al decidir qué se hace antes |
+| **`PLAN_DE_CAMBIOS.md`** | La cola de cambios con sus criterios de aceptación. **La versión 18, al final, manda sobre lo anterior**: **el bucle de aprendizaje (C60)** —siete Shorts a la semana desde el 12/10 y catorce desde el 19/10, cada uno de un brazo de un experimento, medido con «Se quedaron viendo»—, el personaje animado (C61) y la dirección en diferido (C62). La 17 tiene el envoltorio del Short (C56-C59); la 16, las rutinas de Code y la animación a medida | Al ir a hacer algo, y al decidir qué se hace antes |
 | **`MERCADO_2026-10.md`** | El estudio del mercado de la divulgación en YouTube del 02/10/2026: cómo reparte el feed, qué funciona pieza a pieza, los canales automatizados y la IA, el dinero, y dónde estamos. Con fuentes | Cuando haga falta saber **qué hace el mercado**, al lado de `DIAGNOSTICO.md`, que dice por qué el canal se diseñó así |
 | **`PROMPT_DE_ARRANQUE.md`** | Cómo empezar una conversación nueva, autorizaciones vigentes, trampas conocidas y dónde está el proyecto hoy | Al abrir una conversación, y al cerrarla |
 | **`PROMPT_DIRECCIÓN.md`** | El cuaderno del codirector entre sesiones: lo que quiere comentar de un día para otro. **Suyo y solo suyo: se lee, no se edita ni se borra** | Al abrir una conversación de dirección |
@@ -89,6 +89,25 @@ Y fuera de esta carpeta, tres sitios que dicen dónde está el canal hoy:
    canales que crecen son piezas baratas alrededor del guion —el primer segundo, el título, la
    pregunta al espectador, la llamada a seguir— y que ninguna de las cuatro estaba bien. Y que **lo que
    enseña YouTube no es lo que le mandamos**: la portada que veía el público era un fotograma negro.
+
+## Estado a 5 de octubre
+
+**El canal empieza a aprender solo** (versión **18** del plan). El codirector pidió iterar más rápido,
+con las métricas como recompensa, y eso es C60:
+
+- **Siete Shorts a la semana desde el 12/10** (también sábado y domingo) y **catorce desde el 19/10** si
+  la voz de una sola toma (C36) pasa sus pruebas.
+- **Cada Short es de un brazo de un experimento**: el control, la animación del mecanismo (A) y el
+  arranque con el dato (B), asignados por un orden barajado y no por quien escribe. Lo cuenta el código
+  (`04_agentes/bucle.py`) todos los días y lo decide una regla escrita antes del primer dato.
+- **La cifra que manda en el bucle es «Se quedaron viendo»**: la parte de los que el feed puso delante
+  que no deslizaron. El codirector la copió de Studio: entre el 2,7 % y el 40 %. Es donde perdemos.
+- **El presentador, con fechas:** persona sintética (Kaggle) y personaje animado (2D propio y 3D VRM),
+  muestrarios el 16/10 y A/B entre los dos desde el 26/10.
+- **La dirección también corre como rutina** (C62), lunes y jueves, con el cuaderno del codirector en un
+  repositorio privado. Lo que decide llega a `main` sin esperar a un `push`.
+- **Las métricas ya no dependen del reloj de GitHub:** el workflow despierta a la rutina en cuanto
+  escribe. Y la mediana C26 sigue subiendo: **35** (era 24).
 
 ## Estado a 2 de octubre
 

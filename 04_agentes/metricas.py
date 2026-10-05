@@ -394,6 +394,45 @@ def vistas_primeras_48h(ya, vid, subido):
     return sum(f[1] for f in filas)
 
 
+def se_quedaron(ya, vid, desde, hasta):
+    """C60 (05/10/2026): «Se quedaron viendo», la cifra que decide el feed.
+
+    Desde el 31/03/2025 YouTube cuenta como visualización de un Short cualquier
+    reproducción que empiece, aunque el espectador deslice en el primer
+    segundo; las de antes, las que pasan de los primeros segundos, se llaman
+    ahora «visualizaciones comprometidas» y la API las da como `engagedViews`.
+    Su cociente es lo que Studio enseña como «Se quedaron viendo» (antes, «Lo
+    vieron frente a Deslizaron»). El 02/10 el codirector lo sacó a mano de
+    Studio para MDS-021 a MDS-030: entre el 2,7 % y el 40 %. Es la primera
+    barrera del feed, y hasta hoy no estaba en ningún fichero.
+
+    Llamada aparte de `fila()` a propósito: si la API no aceptara
+    `engagedViews` para un vídeo, que falle esto y no la lectura entera.
+    Devuelve siempre un dict; si falla, con lo que contestó la API (trampa 41).
+    """
+    try:
+        r = ya.reports().query(ids="channel==MINE", startDate=desde, endDate=hasta,
+                               metrics="views,engagedViews",
+                               filters=f"video=={vid}").execute()
+    except Exception as e:
+        return {"error": str(e)[:300]}
+    cab = [c["name"] for c in r.get("columnHeaders", [])]
+    filas = r.get("rows") or []
+    if not filas:
+        return {"vistas": 0, "comprometidas": 0, "pct": None}
+    d = dict(zip(cab, filas[0]))
+    v, c = int(d.get("views", 0) or 0), int(d.get("engagedViews", 0) or 0)
+    return {"vistas": v, "comprometidas": c,
+            "pct": round(100.0 * c / v, 1) if v else None}
+
+
+def se_quedaron_48h(ya, vid, subido):
+    """`se_quedaron()` en la misma ventana que `vistas_primeras_48h()`: el día
+    de la subida y el siguiente. Es la que compara el bucle (C60)."""
+    return se_quedaron(ya, vid, subido.isoformat(),
+                       (subido + timedelta(days=1)).isoformat())
+
+
 def mediana_48h_ultimos_shorts(lecturas, n=20):
     """C26 (versión 6 del plan): la mediana de vistas a 48h de los últimos
     veinte Shorts, más cuántos de esos veinte pasan de 100 y de 50 vistas.
@@ -477,6 +516,7 @@ def escribir_metricas_diarias(ya, registro, dias=DIAS_VENTANA_DIARIA):
     videos = []
     for p, subido in candidatos:
         vid = p["video_id"]
+        base = {}
         try:
             base = fila(ya, vid, subido.isoformat(), hoy.isoformat())
             vis = int(base.get("views", 0))
@@ -489,11 +529,20 @@ def escribir_metricas_diarias(ya, registro, dias=DIAS_VENTANA_DIARIA):
             "publicado": subido.isoformat(),
             "visualizaciones": vis,
             "vistas_48h": vistas_primeras_48h(ya, vid, subido),
+            # C60 (05/10/2026): lo que necesita el bucle cada día, sin curvas.
+            "se_quedaron_48h": se_quedaron_48h(ya, vid, subido),
+            "porcentaje_visto": (round(float(base.get("averageViewPercentage", 0)), 1)
+                                 if base else None),
+            "me_gusta": int(base.get("likes", 0)) if base else None,
+            "suscriptores": int(base.get("subscribersGained", 0)) if base else None,
+            "compartidos": int(base.get("shares", 0)) if base else None,
         })
 
     salida = {
-        "_nota": "C47: lectura ligera diaria, solo id/publicado/visualizaciones/"
-                 f"vistas_48h de los vídeos publicados en los últimos {dias} días. "
+        "_nota": "C47: lectura ligera diaria de los vídeos publicados en los últimos "
+                 f"{dias} días: visualizaciones, vistas_48h y, desde el 05/10/2026 (C60), "
+                 "se_quedaron_48h («Se quedaron viendo» de Studio = engagedViews/views), "
+                 "porcentaje_visto, me_gusta, suscriptores y compartidos. "
                  "Sin curvas de retención a propósito (ver la cabecera de "
                  "escribir_metricas_diarias() en 04_agentes/metricas.py). Se "
                  "SOBRESCRIBE entero cada vez: es una ventana rodante, no una "
@@ -752,6 +801,8 @@ def main():
             "retencion": retencion(ya, vid, desde, hasta, d),
             "trafico_pct": trafico(ya, vid, desde, hasta),
             "vistas_48h": vistas_primeras_48h(ya, vid, subido),
+            "se_quedaron_48h": se_quedaron_48h(ya, vid, subido),
+            "se_quedaron_total": se_quedaron(ya, vid, desde, hasta),
         }
         fila_out.update(studio.get(vid) or studio.get(p.get("titulo", ""), {})
                         or {"impresiones": None, "ctr": None})
@@ -759,6 +810,7 @@ def main():
         print(f"  {p['id']:12} {fila_out['visualizaciones']:>5} vistas · "
               f"{fila_out['porcentaje_visto']:>5.1f}% visto · "
               f"ret30s {fila_out['retencion'].get('a_30s_pct')} · "
+              f"se quedaron 48h {fila_out['se_quedaron_48h'].get('pct')} % · "
               f"CTR {fila_out.get('ctr')}")
 
     previo = {"lecturas": []}

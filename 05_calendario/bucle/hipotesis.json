@@ -1,0 +1,56 @@
+{
+ "_nota": "C60 · La cola de hipótesis del bucle: lo que se probará cuando un ciclo se cierre, por orden. La escribe la dirección; el codirector puede añadir en su cuaderno y la dirección la pasa aquí. Cada hipótesis cambia UNA cosa respecto al control vigente.",
+ "en_curso": [
+  "A · animación de mecanismo (B1)",
+  "B · arranque con el dato (B1)"
+ ],
+ "cola": [
+  {
+   "id": "H-presentador",
+   "que": "Presentador en los dos primeros segundos y en el remate: persona sintética (C51) frente a personaje animado (C61) frente a sin presentador",
+   "metrica": "se quedaron 48 h",
+   "depende_de": "C51.3 y C61 aprobados por el codirector mirando su muestrario",
+   "no_antes_de": "2026-10-26"
+  },
+  {
+   "id": "H-duracion",
+   "que": "Short corto (≤ 40 s, una cosa menos) frente al control",
+   "metrica": "% visto y retención a 30 s; se quedaron como freno",
+   "depende_de": "nada",
+   "no_antes_de": "2026-10-26"
+  },
+  {
+   "id": "H-remate",
+   "que": "Remate más claro y una reacción pedida en el propio remate (S3)",
+   "metrica": "me gusta por 100",
+   "depende_de": "nada"
+  },
+  {
+   "id": "H-bucle-final",
+   "que": "La última frase empalma con la primera (el vídeo no cierra: vuelve a empezar)",
+   "metrica": "% visto (pasa de 100 si repiten)",
+   "depende_de": "un ajuste en montaje/render (sin fundido final)"
+  },
+  {
+   "id": "H-voz-una-toma",
+   "que": "Voz de una sola toma (C36) frente a seis tomas",
+   "metrica": "% visto",
+   "depende_de": "C36 probado",
+   "nota": "Si C36 entra para poder hacer 14 a la semana, entra para todos y no se mide como brazo"
+  },
+  {
+   "id": "H-fondo",
+   "que": "Variedad de fondo (no siempre el azul de marca) en las tarjetas",
+   "metrica": "se quedaron",
+   "depende_de": "un ajuste de escena.html",
+   "origen": "codirector, 30/09"
+  },
+  {
+   "id": "H-tema-social",
+   "que": "Temas de humor en la conversación y las relaciones (no solo ciencia del chiste)",
+   "metrica": "vistas 48 h y se quedaron",
+   "depende_de": "bibliografía ampliada",
+   "nota": "Es la ampliación de tema de C26 probada antes del 15/11, no después"
+  }
+ ]
+}

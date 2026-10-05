@@ -32,13 +32,22 @@ ANTES DE RESPONDER NADA, lee en este orden:
 3. 00_estrategia/PROPIEDAD_DE_FICHEROS.md — quién escribe qué
 4. 00_estrategia/PLAN_DE_CAMBIOS.md — la hoja de ruta y el estado de cada cambio
 5. 00_estrategia/PROMPT_DE_ARRANQUE.md — autorizaciones vigentes y trampas conocidas
-6. 00_estrategia/PROMPT_DIRECCIÓN.md — lo que el codirector me ha ido anotando
+6. PROMPT_DIRECCIÓN.md              — lo que el codirector me ha ido anotando. Desde
+                                     C62 (05/10/2026) vive en 00_estrategia/privado/,
+                                     el repositorio privado; si aún no se ha movido,
+                                     en 00_estrategia/. Y su último fichero de tareas
 7. 05_calendario/estado/          — ¿está el canal bien hoy? El fichero de nombre
                                      MÁS ALTO de esa carpeta, que es el de hoy. (Hasta el
                                      20/09 esto era ESTADO.md, que ya está congelado)
 8. 08_comunicacion/               — novedades.md, que es tuyo, y el buzón entre agentes
 9. 05_calendario/bitacora/         — los ficheros de los últimos siete días
 10. 05_calendario/metricas.json     — dónde está el canal en la escalera
+11. 05_calendario/bucle/resultados.json — cómo va el bucle (C60), brazo a brazo
+
+Y antes de escribir nada en mi carpeta: comprueba que está al día con
+origin/main (si no, que haga git pull). Desde C62 la dirección también
+corre como rutina y sube sola; dos direcciones sobre ficheros viejos
+acaban en un conflicto que tendría que resolver yo a mano.
 
 `PROMPT_DIRECCIÓN.md` es del codirector y solo suyo: lo escribe él entre sesión y
 sesión para que no se le olvide nada. **Se lee siempre y no se edita ni se borra
@@ -163,6 +172,10 @@ confundirlas:
 | Kaggle de la marca · secretos `KAGGLE_USERNAME` y `KAGGLE_KEY` | **Puestos por el codirector el 29-30/09** | El token es del formato nuevo (una sola cadena): el workflow que lo use lo pasa como `KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_KEY }}`. El usuario, `mecanicadelhumor`, sirve para el nombre de los cuadernos. Licencias de cada pieza del presentador: `07_pruebas/presentador-2026-10/LICENCIAS.md` (C51.3) |
 | `04_agentes/entregar.py` · C53.2 (30/09) | **De la dirección** | Mide lo entregado contra `origin/main` y borra en `--aplicar` las ramas de sesión ya enteras en `main`. **Nadie abre nunca un PR de una rama de sesión**: se saltaría la tabla de propiedad |
 | `03_produccion/pipeline/montaje.py` · C58 (02/10/2026) | **Decisión del codirector en la sesión** | En los **Shorts**, 0,1 s de colchón y ningún fundido de entrada (era 0,6 s y fundido desde negro, del 18/08). En los largos, como siempre. El colchón usado se apunta en `montaje.json` y `qa.py` mide contra él |
+| **C60 · el bucle** (05/10/2026): `05_calendario/bucle/ciclos.json` e `hipotesis.json`, y `04_agentes/bucle.py` | **De la dirección** | La planificación lee `ciclos.json` y aplica su `orden`; `resultados.json` y `metricas_diarias.json` los escribe `metricas.yml`. **Decisión del codirector en la sesión: 7 Shorts a la semana desde el 12/10 y 14 desde el 19/10 (si C36 pasa)** |
+| `01_bibliografia/` (05/10/2026) | **Pasa de la revisión diaria a la planificación** | La revisión avisa en `05_calendario/revisiones/bibliografia.md`. `entregar.py` ya lo aplica |
+| **C62 · la dirección en diferido** (05/10/2026) | **Autorizada por el codirector en la sesión**, con repositorio privado | Rutina «Dirección», Opus 5.5, lunes y jueves 13:07 UTC y «Run now». Instrucciones: `00_estrategia/tareas/direccion.md`. Entrega con `entregar.py --tarea direccion` (todo salvo workflows, el cuaderno, `novedades.md` y lo de Actions). El cuaderno y las tareas, en `mecanicadelhumor/direccion` (privado), clonado en `00_estrategia/privado/` |
+| `.github/workflows/metricas.yml` · versión del 05/10/2026 | **Entregada** en `00_estrategia/tareas/workflows_2026-10-05/`, **la mueve el codirector** | Lectura diaria ligera (C47/C60), `bucle.py` detrás, y despierta a la rutina de métricas por su disparador de API (secreto `RUTINA_METRICAS_TOKEN`) |
 | `03_produccion/pipeline/render.py` · `escena.html` · C59 (02/10/2026) | **Decisión del codirector en la sesión** | El remate de marca dice «Síguenos» y «un mecanismo nuevo de lunes a viernes», **siempre la misma frase y sin voz**. No se convierte en una frase por Short |
 | `04_agentes/metricas.py --solo-registro` · C57 (02/10/2026) | **De la dirección** | Publica en YouTube **un comentario del canal por Short**: la `pregunta_al_espectador` de su publicación, cuando el vídeo ya es público, una sola vez. Es lo único que el sistema escribe en los comentarios. **Nunca responde a nadie** (regla 7) |
 
@@ -186,7 +199,7 @@ arrastraba defectos. Solo puede añadir lo que verifique contra la fuente.
 ## Las trampas en las que ya se ha caído
 
 No son anécdotas: cada una costó tiempo o un vídeo, y todas se repiten solas si nadie las
-tiene delante. Son cincuenta y una a 02/10/2026, y la lista crece porque se lee.
+tiene delante. Son cincuenta y cuatro a 05/10/2026, y la lista crece porque se lee.
 
 **1. Cada documento daba por supuesto que el movimiento lo ponía otro.**
 Los subtítulos quemados se retiraron el 20/08; la respiración de zoom ya estaba
@@ -678,6 +691,56 @@ tendencia la franja que mejor funciona es la de 20-40 y el mejor nuestro tenía 
 → Son la 25 y la 31 juntas: **cuando cambie la superficie que manda, recorre todas las reglas que se
 escribieron para la anterior.** Y un máximo vuelve a ser un objetivo en cuanto nadie mira el número de
 al lado.
+
+**52. Un fichero decía «soy el prompt» y la rutina no lo leía.** `metricas-lunes.md` lleva desde el 21/09
+un aviso en mayúsculas: *«este fichero YA NO es una copia. ES el prompt»*. Era verdad para la revisión y la
+planificación. **La de métricas nunca tuvo arranque**: la tarea de agosto llevaba el texto entero pegado, y
+la rutina del 30/09 se creó copiando ese texto. Las instrucciones del 21/09 para métricas no le llegaron
+nunca. Se vio el 05/10 leyendo el prompt de la rutina con `list_triggers`.
+→ Es la trampa 46 sobre una afirmación propia: **cuando un documento diga cómo funciona otra pieza,
+compruébalo en la pieza** (aquí, leyendo el prompt de la rutina), no en el documento.
+
+**53. Una cifra cambió de significado sin cambiar de nombre.** Desde el 31/03/2025, una «visualización» de
+un Short es cualquier reproducción que empiece, también la de quien desliza en el primer segundo. La
+mediana de C26 mide, por tanto, cuántas veces nos enseñó el feed, no cuántos se quedaron. Studio ya lo
+separaba («Se quedaron viendo»; la API, `engagedViews`) y en nuestros ficheros no estaba: el codirector lo
+sacó a mano el 02/10 y salió entre el 2,7 % y el 40 %.
+→ **Cuando una plataforma redefine una métrica, busca qué decisión colgaba de ella.** Y antes de fiarte de
+la cifra de la API, compárala una vez con la que enseña la plataforma.
+
+**54. Arreglé la pieza que ponía yo y no la que traía otro.** C58 dejó el colchón del montaje en 0,1 s, y
+`MDS-031` arrancó la voz a los 0,381 s: la toma de Gemini traía 0,28 s de silencio delante. `qa.py` lo
+cazó (por eso se mide el resultado y no la intención).
+→ **Cuando quites un retraso, mide el resultado final, no la pieza que tocaste.** Es la trampa 1 en el
+tiempo: lo que llega al espectador es la suma de todo lo que va delante.
+
+## Dónde está el proyecto a 5 de octubre de 2026
+
+**Sesión de lunes: el bucle de aprendizaje.** Versión **18** del plan, la que manda.
+
+- **El canal, bien:** `MDS-031` (el primero con C56-C59) salió subido a las 07:12 UTC, seis horas tarde
+  por el cron, y se publica a las 19:00. La mediana C26 sube a **35** (24 el 29/09). Semana del 28/09:
+  mediana 62; los primeros suscriptores que llegan de Shorts.
+- **C60 · el bucle.** Siete Shorts a la semana desde el 12/10 y catorce desde el 19/10 (si C36 pasa).
+  Cada Short es de un brazo —control, **A** animación del mecanismo, **B** arranque con el dato— por un
+  `orden` barajado en `05_calendario/bucle/ciclos.json`. La recompensa es **«Se quedaron viendo» a 48 h**
+  (`engagedViews`/`views`, nuevo en `metricas.py`). Lo cuenta `04_agentes/bucle.py` todos los días y lo
+  decide una regla escrita hoy. La bibliografía pasa a la planificación (diez fichas por semana).
+- **C61 · personaje animado**: dos caminos (2D propio y 3D VRM con un avatar que diseña el codirector en
+  VRoid), con boca, ojos y gestos sacados del guion y de la voz. **C51.3 · persona sintética** con fechas.
+  Muestrarios el 16/10; A/B de presentadores (ciclo B2) desde el 26/10.
+- **C62 · la dirección en diferido**: rutina «Dirección» lunes y jueves, cuaderno en un repositorio
+  privado. Sustituye a C43.
+- **Los relojes de GitHub**: `metricas.yml` despierta a la rutina de métricas por API; y C58.1 quita el
+  silencio de la toma de Gemini.
+
+**Lo que espera al codirector:** `tareas/tareas_codirector_2026-10-05.md` — el `push` antes del martes 6
+a las 03:13, el workflow de métricas, la rutina de métricas (arranque y disparador), la red del entorno,
+y el repositorio privado con la rutina de dirección.
+
+**Para la próxima (miércoles 7):** C55.2 (la animación en `render.py` y la rutina «Animación») y la prueba
+de C36. **Y en cuanto haya lectura con el código nuevo:** que «se quedaron» de la API coincida con lo que
+el codirector copió de Studio el 02/10 (trampa 53).
 
 ## Dónde está el proyecto a 2 de octubre de 2026
 
