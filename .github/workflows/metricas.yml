@@ -15,6 +15,9 @@ name: Leer métricas
 #
 # CUÁNDO: lunes a las 05:00 UTC (07:00 en España), dos horas antes de que la
 # tarea de métricas de Cowork se despierte y lea el fichero.
+# 05/10/2026 (C60): además, una lectura LIGERA todos los días para el bucle de
+# aprendizaje, y al terminar la completa despierta a la rutina de métricas en
+# vez de esperar a su hora (el cron de Actions llegó siete horas tarde ese día).
 # ---------------------------------------------------------------------------
 
 on:
@@ -33,11 +36,21 @@ on:
     # la lectura no hace daño: pide los mismos datos.
     - cron: "7 11 * * 1"
     - cron: "19 5 * * 2"
+    # C60 (05/10/2026) · Lectura diaria LIGERA para el bucle de aprendizaje:
+    # metricas_diarias.json (con «Se quedaron viendo») y el marcador
+    # 05_calendario/bucle/resultados.json. Dos intentos, por lo de siempre:
+    # el cron de Actions se retrasa horas o no llega (trampa 43).
+    - cron: "41 6 * * *"
+    - cron: "53 13 * * *"
   workflow_dispatch:
     inputs:
       desde:
         description: "Fecha inicial YYYY-MM-DD (por defecto, la de subida de cada vídeo)"
         required: false
+      modo:
+        description: "completa (la del lunes) o diaria (solo la ligera y el marcador)"
+        required: false
+        default: "completa"
 
 permissions:
   contents: write
@@ -60,7 +73,27 @@ jobs:
       - name: Dependencias
         run: pip install --quiet google-api-python-client google-auth
 
-      - name: Leer analítica
+      # C60: los dos crons diarios hacen solo la lectura ligera; los del lunes
+      # (y el del martes) y el lanzamiento a mano, la completa.
+      - name: Qué lectura toca
+        id: modo
+        run: |
+          MODO=completa
+          case "${{ github.event.schedule }}" in
+            "41 6 * * *"|"53 13 * * *") MODO=diaria ;;
+          esac
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ inputs.modo }}" ]; then
+            MODO="${{ inputs.modo }}"
+          fi
+          # Fecha de la lectura completa que había ANTES de esta ejecución: si
+          # hoy es la primera completa, al final se avisa a la rutina de métricas.
+          PREVIA=$(python3 -c "import json;print((json.load(open('05_calendario/metricas.json')).get('actualizado_utc') or '')[:10])" 2>/dev/null || echo "")
+          echo "modo=$MODO" >> "$GITHUB_OUTPUT"
+          echo "previa=$PREVIA" >> "$GITHUB_OUTPUT"
+          echo "Lectura: $MODO · completa anterior: ${PREVIA:-ninguna}"
+
+      - name: Leer analítica (completa)
+        if: steps.modo.outputs.modo == 'completa'
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
@@ -68,6 +101,19 @@ jobs:
         run: |
           python3 04_agentes/metricas.py \
             ${{ inputs.desde && format('--desde {0}', inputs.desde) || '' }}
+
+      # La ligera corre SIEMPRE, también detrás de la completa: es la que lleva
+      # los Shorts de los últimos días al marcador del bucle. Si falla, no tumba
+      # la lectura completa (que ya está escrita): se dice y se sigue.
+      - name: Leer analítica (diaria, C47/C60)
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 04_agentes/metricas.py --diario || echo "::warning::La lectura diaria ha fallado; la completa, si tocaba, sigue valiendo."
+
+      - name: Marcador del bucle (C60)
+        run: python3 04_agentes/bucle.py --imprimir || echo "::warning::bucle.py ha fallado; no tumba la lectura."
 
       # Este workflow es el ÚNICO que escribe metricas.json.
       # Ver 00_estrategia/PROPIEDAD_DE_FICHEROS.md.
@@ -81,10 +127,41 @@ jobs:
           # la revisión diaria saben qué está publicado de verdad. Los dos
           # ficheros son de Actions, así que no pisa a nadie.
           git add 05_calendario/metricas.json 05_calendario/registro_publicaciones.json
+          # C60: la lectura diaria y el marcador del bucle, también de Actions.
+          git add 05_calendario/metricas_diarias.json 05_calendario/bucle/resultados.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "Sin cambios en las métricas."
           else
-            git commit -m "métricas $(date -u +%Y-%m-%d)"
+            git commit -m "métricas $(date -u +%Y-%m-%d) (${{ steps.modo.outputs.modo }})"
             git pull --rebase --autostash origin main
             git push
           fi
+
+      # C60 (05/10/2026) · La rutina de métricas ya no espera a su reloj: este
+      # paso la despierta en cuanto la lectura completa del día está en main.
+      # Solo la primera completa de cada día (las demás no la vuelven a lanzar).
+      # Sin el secreto RUTINA_METRICAS_TOKEN no hace nada y lo dice: la rutina
+      # sigue teniendo su horario como red. Nunca tumba el workflow.
+      - name: Despertar a la rutina de métricas
+        if: steps.modo.outputs.modo == 'completa'
+        env:
+          TOKEN: ${{ secrets.RUTINA_METRICAS_TOKEN }}
+          PREVIA: ${{ steps.modo.outputs.previa }}
+        run: |
+          HOY=$(date -u +%Y-%m-%d)
+          AHORA=$(python3 -c "import json;print((json.load(open('05_calendario/metricas.json')).get('actualizado_utc') or '')[:10])")
+          if [ -z "$TOKEN" ]; then
+            echo "::notice::Sin RUTINA_METRICAS_TOKEN: la rutina leerá a su hora."; exit 0
+          fi
+          if [ "$AHORA" != "$HOY" ] || [ "$PREVIA" = "$HOY" ]; then
+            echo "No toca despertarla (lectura de hoy: $AHORA · anterior: $PREVIA)."; exit 0
+          fi
+          curl -sS -o respuesta.json -w "%{http_code}\n" -X POST \
+            "https://api.anthropic.com/v1/claude_code/routines/trig_01TmnPoPLXBx65x9Po4Y2PYh/fire" \
+            -H "Authorization: Bearer $TOKEN" \
+            -H "anthropic-beta: experimental-cc-routine-2026-04-01" \
+            -H "anthropic-version: 2023-06-01" \
+            -H "Content-Type: application/json" \
+            -d "{\"text\": \"metricas.json de hoy ($HOY) ya está en main. Lectura semanal.\"}" \
+            > codigo.txt || true
+          echo "Respuesta de la rutina: $(cat codigo.txt) $(head -c 300 respuesta.json 2>/dev/null)"
