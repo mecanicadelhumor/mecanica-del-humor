@@ -1,0 +1,169 @@
+{
+  "id": "MDS-031.es",
+  "duracion_final_s": 45.3,
+  "tamano_mb": 17.6,
+  "audio": {
+    "lufs": -14.58,
+    "pico_dbtp": -1.46,
+    "rango_lu": 4.5
+  },
+  "silencio_inicial": {
+    "empieza_s": -0.021,
+    "acaba_s": 0.381,
+    "esperado_s": 0.1,
+    "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
+  },
+  "arranque": {
+    "silencios_s": [
+      [
+        0.0,
+        0.381
+      ]
+    ],
+    "fragmento_antes_de_la_narracion": false,
+    "duracion_fragmento_s": null,
+    "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente)."
+  },
+  "fragmentos": {
+    "instantes": [],
+    "cuantos": 0,
+    "_nota": "Cada entrada es un trozo de audio de menos de 0.45 s rodeado de silencio: casi seguro una sílaba suelta que el sintetizador ha metido al empezar una escena. «mmss» es el minuto exacto para ir a escucharlo. Debe estar vacío."
+  },
+  "subtitulos": {
+    "ass_existe": true,
+    "lineas_ass": 0,
+    "srt_existe": true,
+    "quemados": false,
+    "quemados_origen": "leído de montaje.json",
+    "_esperado": {
+      "quemados": false,
+      "lineas_ass": "> 0 con motor edge; puede ser 0 con motor gemini"
+    },
+    "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
+  },
+  "sincronia_voz": {
+    "duracion_calculada_s": 44.47,
+    "duracion_real_voz_mp3_s": 44.18,
+    "desfase_s": 0.29,
+    "_esperado": "desfase_s < 0.5",
+    "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
+  },
+  "musica": {
+    "archivo": "cama_03_haru_lofi_roa.mp3",
+    "sha256": "68fe871bcd427b465aa11f71d2f2fc889de234166af65fac305170c0f5bddd6b"
+  },
+  "guion": {
+    "titulo_trabajo": "¿Qué le pasa a tu cerebro cuando te ríes?",
+    "idioma": "es",
+    "voz": "Charon",
+    "escenas": 6,
+    "duracion_narracion_s": 44.47,
+    "escenas_por_encima_de_14s": [],
+    "escena_mas_larga_s": 9.498,
+    "motor_voz_pedido": "gemini",
+    "motores_por_escena": {
+      "gemini-3.1-flash-tts-preview": 6
+    },
+    "modelo_voz": "gemini-3.1-flash-tts-preview",
+    "voz_mezclada": false,
+    "origen_voz": [
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada"
+    ],
+    "direccion_voz": [
+      "apertura",
+      "remate",
+      "planteamiento",
+      "explicacion",
+      "cifra",
+      "objecion"
+    ],
+    "escenas_ritmo_fuera_de_rango": []
+  },
+  "visual": {
+    "planos": [
+      {
+        "escena": 1,
+        "desde_s": 0.0,
+        "hasta_s": 8.53,
+        "fuente": "pexels",
+        "id": 7579338,
+        "pagina": "https://www.pexels.com/video/doctor-talking-to-the-patient-7579338/",
+        "autor": "cottonbro studio",
+        "autor_url": "https://www.pexels.com/@cottonbro",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 8.53,
+        "hasta_s": 14.2,
+        "fuente": "ia",
+        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+        "prompt": "a doctor writing on a pad without looking up, one hand raised calling the next patient, deadpan",
+        "tipo": "imagen"
+      },
+      {
+        "escena": 3,
+        "desde_s": 14.2,
+        "hasta_s": 17.37,
+        "fuente": "pixabay",
+        "id": 129426,
+        "pagina": "https://pixabay.com/videos/id-129426/",
+        "autor": "SYG_Anime",
+        "autor_url": "https://pixabay.com/users/SYG_Anime-7158719/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 3,
+        "desde_s": 17.37,
+        "hasta_s": 23.7,
+        "fuente": "pexels",
+        "id": 7089941,
+        "pagina": "https://www.pexels.com/video/a-male-patient-undergoing-medical-scanning-test-7089941/",
+        "autor": "MART  PRODUCTION",
+        "autor_url": "https://www.pexels.com/@mart-production",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 4,
+        "desde_s": 23.7,
+        "hasta_s": 26.77,
+        "fuente": "pexels",
+        "id": 6010950,
+        "pagina": "https://www.pexels.com/video/a-doctor-using-tablet-while-looking-the-patient-s-results-of-disease-condition-6010950/",
+        "autor": "Tima Miroshnichenko",
+        "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 6,
+        "desde_s": 35.6,
+        "hasta_s": 40.93,
+        "fuente": "ia",
+        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+        "prompt": "the narrow tunnel of an MRI scanner seen from the foot of the bed, cold light",
+        "tipo": "imagen"
+      }
+    ],
+    "sintetico": true
+  },
+  "fotogramas_s": [
+    5.23,
+    12.05,
+    20.01,
+    27.98,
+    33.73,
+    41.02
+  ],
+  "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
+}
