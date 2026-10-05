@@ -1,0 +1,89 @@
+{
+ "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
+ "actualizado_utc": "2026-10-05T17:22:33Z",
+ "regla": {
+  "temprano": {
+   "n": 4,
+   "umbral_pp": 15.0
+  },
+  "normal": {
+   "n": 6,
+   "umbral_pp": 8.0
+  },
+  "cierre": {
+   "n": 10
+  },
+  "reparo_visto_pp": 5.0,
+  "cero_feed_vistas": 10
+ },
+ "ciclos": [
+  {
+   "id": "B1",
+   "desde": "2026-10-12",
+   "hasta": "2026-10-25",
+   "referencia_anterior": {
+    "n": 5,
+    "se_quedaron_media": 31.2,
+    "porcentaje_visto_media": 78.5,
+    "vistas_48h_mediana": 62,
+    "me_gusta_por_100": 0.64,
+    "ceros_de_feed": 1,
+    "ids": [
+     "MDS-026",
+     "MDS-027",
+     "MDS-028",
+     "MDS-029",
+     "MDS-030"
+    ]
+   },
+   "brazos": {
+    "control": {
+     "nombre": "Lo de ahora (C50 + C56-C59), apertura en situación",
+     "n": 0,
+     "se_quedaron_media": null,
+     "porcentaje_visto_media": null,
+     "vistas_48h_mediana": null,
+     "me_gusta_por_100": null,
+     "ceros_de_feed": 0,
+     "shorts": []
+    },
+    "A": {
+     "nombre": "Animación a medida en las escenas de mecanismo (C55.2)",
+     "n": 0,
+     "se_quedaron_media": null,
+     "porcentaje_visto_media": null,
+     "vistas_48h_mediana": null,
+     "me_gusta_por_100": null,
+     "ceros_de_feed": 0,
+     "shorts": []
+    },
+    "B": {
+     "nombre": "Arranque con el dato",
+     "n": 0,
+     "se_quedaron_media": null,
+     "porcentaje_visto_media": null,
+     "vistas_48h_mediana": null,
+     "me_gusta_por_100": null,
+     "ceros_de_feed": 0,
+     "shorts": []
+    }
+   },
+   "comparaciones": {
+    "A": {
+     "contra": "control",
+     "diferencia_pp": null,
+     "prob_mejor": null,
+     "veredicto": "faltan datos"
+    },
+    "B": {
+     "contra": "control",
+     "diferencia_pp": null,
+     "prob_mejor": null,
+     "veredicto": "faltan datos"
+    }
+   },
+   "apartados": [],
+   "pendientes": []
+  }
+ ]
+}

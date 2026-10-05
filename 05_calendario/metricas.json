@@ -22184,6 +22184,36 @@
   },
   {
    "leido": "2026-10-05",
+   "id": "MDS-023.es",
+   "video_id": "kRmwbAW6eSo",
+   "titulo": "¿Reírse es bueno para la salud? El humor «dañino» iba con menos dolor",
+   "formato": "corto",
+   "serie": "",
+   "publicado": "2026-09-23",
+   "privacidad": "public",
+   "dias_publicado": 12,
+   "duracion_s": 49.0,
+   "visualizaciones": 2,
+   "duracion_media_s": 50.0,
+   "porcentaje_visto": 104.0,
+   "minutos_vistos": 0.0,
+   "suscriptores": 0,
+   "me_gusta": 0,
+   "comentarios": 0,
+   "compartidos": 0,
+   "retencion": {
+    "puntos": 0
+   },
+   "trafico_pct": {
+    "SUBSCRIBER": 100.0,
+    "NO_LINK_OTHER": 0.0
+   },
+   "vistas_48h": 2,
+   "impresiones": null,
+   "ctr": null
+  },
+  {
+   "leido": "2026-10-05",
    "id": "MDH-001.es",
    "video_id": "nmADYAksYoo",
    "titulo": "Nadie nace gracioso — lo que 50 años de investigación han medido de verdad",
@@ -22616,6 +22646,16 @@
     "NO_LINK_OTHER": 5.6
    },
    "vistas_48h": 9,
+   "se_quedaron_48h": {
+    "vistas": 9,
+    "comprometidas": 9,
+    "pct": 100.0
+   },
+   "se_quedaron_total": {
+    "vistas": 18,
+    "comprometidas": 16,
+    "pct": 88.9
+   },
    "impresiones": 501.0,
    "ctr": 1.8
   },
@@ -23053,6 +23093,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 13,
+   "se_quedaron_48h": {
+    "vistas": 13,
+    "comprometidas": 13,
+    "pct": 100.0
+   },
+   "se_quedaron_total": {
+    "vistas": 34,
+    "comprometidas": 28,
+    "pct": 82.4
+   },
    "impresiones": 822.0,
    "ctr": 1.58
   },
@@ -23490,6 +23540,16 @@
     "YT_SEARCH": 7.7
    },
    "vistas_48h": 7,
+   "se_quedaron_48h": {
+    "vistas": 7,
+    "comprometidas": 7,
+    "pct": 100.0
+   },
+   "se_quedaron_total": {
+    "vistas": 13,
+    "comprometidas": 11,
+    "pct": 84.6
+   },
    "impresiones": 498.0,
    "ctr": 0.8
   },
@@ -23522,6 +23582,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 0,
+   "se_quedaron_48h": {
+    "vistas": 0,
+    "comprometidas": 0,
+    "pct": null
+   },
+   "se_quedaron_total": {
+    "vistas": 16,
+    "comprometidas": 6,
+    "pct": 37.5
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -23554,6 +23624,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 2,
+   "se_quedaron_48h": {
+    "vistas": 2,
+    "comprometidas": 1,
+    "pct": 50.0
+   },
+   "se_quedaron_total": {
+    "vistas": 8,
+    "comprometidas": 3,
+    "pct": 37.5
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -23585,6 +23665,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 1,
+   "se_quedaron_48h": {
+    "vistas": 1,
+    "comprometidas": 1,
+    "pct": 100.0
+   },
+   "se_quedaron_total": {
+    "vistas": 37,
+    "comprometidas": 5,
+    "pct": 13.5
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -23614,6 +23704,16 @@
     "SUBSCRIBER": 100.0
    },
    "vistas_48h": 3,
+   "se_quedaron_48h": {
+    "vistas": 3,
+    "comprometidas": 1,
+    "pct": 33.3
+   },
+   "se_quedaron_total": {
+    "vistas": 4,
+    "comprometidas": 1,
+    "pct": 25.0
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -23645,6 +23745,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 6,
+   "se_quedaron_48h": {
+    "vistas": 6,
+    "comprometidas": 0,
+    "pct": 0.0
+   },
+   "se_quedaron_total": {
+    "vistas": 7,
+    "comprometidas": 0,
+    "pct": 0.0
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -23677,6 +23787,16 @@
     "SHORTS": 4.8
    },
    "vistas_48h": 11,
+   "se_quedaron_48h": {
+    "vistas": 11,
+    "comprometidas": 4,
+    "pct": 36.4
+   },
+   "se_quedaron_total": {
+    "vistas": 21,
+    "comprometidas": 7,
+    "pct": 33.3
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -23710,6 +23830,16 @@
     "YT_CHANNEL": 6.2
    },
    "vistas_48h": 10,
+   "se_quedaron_48h": {
+    "vistas": 10,
+    "comprometidas": 4,
+    "pct": 40.0
+   },
+   "se_quedaron_total": {
+    "vistas": 16,
+    "comprometidas": 6,
+    "pct": 37.5
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -24146,6 +24276,16 @@
     "YT_CHANNEL": 3.8
    },
    "vistas_48h": 3,
+   "se_quedaron_48h": {
+    "vistas": 3,
+    "comprometidas": 1,
+    "pct": 33.3
+   },
+   "se_quedaron_total": {
+    "vistas": 26,
+    "comprometidas": 10,
+    "pct": 38.5
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -24177,6 +24317,16 @@
     "YT_CHANNEL": 8.3
    },
    "vistas_48h": 11,
+   "se_quedaron_48h": {
+    "vistas": 11,
+    "comprometidas": 6,
+    "pct": 54.5
+   },
+   "se_quedaron_total": {
+    "vistas": 12,
+    "comprometidas": 6,
+    "pct": 50.0
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -24208,6 +24358,16 @@
     "YT_CHANNEL": 6.2
    },
    "vistas_48h": 4,
+   "se_quedaron_48h": {
+    "vistas": 4,
+    "comprometidas": 2,
+    "pct": 50.0
+   },
+   "se_quedaron_total": {
+    "vistas": 16,
+    "comprometidas": 4,
+    "pct": 25.0
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -24644,6 +24804,16 @@
     "NO_LINK_OTHER": 2.3
    },
    "vistas_48h": 35,
+   "se_quedaron_48h": {
+    "vistas": 35,
+    "comprometidas": 8,
+    "pct": 22.9
+   },
+   "se_quedaron_total": {
+    "vistas": 44,
+    "comprometidas": 14,
+    "pct": 31.8
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -24677,6 +24847,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 27,
+   "se_quedaron_48h": {
+    "vistas": 27,
+    "comprometidas": 9,
+    "pct": 33.3
+   },
+   "se_quedaron_total": {
+    "vistas": 28,
+    "comprometidas": 9,
+    "pct": 32.1
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -24707,6 +24887,16 @@
     "SUBSCRIBER": 28.6
    },
    "vistas_48h": 21,
+   "se_quedaron_48h": {
+    "vistas": 21,
+    "comprometidas": 8,
+    "pct": 38.1
+   },
+   "se_quedaron_total": {
+    "vistas": 21,
+    "comprometidas": 8,
+    "pct": 38.1
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -24737,6 +24927,16 @@
     "SHORTS": 50.0
    },
    "vistas_48h": 4,
+   "se_quedaron_48h": {
+    "vistas": 4,
+    "comprometidas": 1,
+    "pct": 25.0
+   },
+   "se_quedaron_total": {
+    "vistas": 4,
+    "comprometidas": 1,
+    "pct": 25.0
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -25173,6 +25373,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 20,
+   "se_quedaron_48h": {
+    "vistas": 20,
+    "comprometidas": 7,
+    "pct": 35.0
+   },
+   "se_quedaron_total": {
+    "vistas": 30,
+    "comprometidas": 12,
+    "pct": 40.0
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -25205,6 +25415,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 9,
+   "se_quedaron_48h": {
+    "vistas": 9,
+    "comprometidas": 2,
+    "pct": 22.2
+   },
+   "se_quedaron_total": {
+    "vistas": 16,
+    "comprometidas": 4,
+    "pct": 25.0
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -25237,6 +25457,16 @@
     "SHORTS": 14.3
    },
    "vistas_48h": 6,
+   "se_quedaron_48h": {
+    "vistas": 6,
+    "comprometidas": 3,
+    "pct": 50.0
+   },
+   "se_quedaron_total": {
+    "vistas": 7,
+    "comprometidas": 3,
+    "pct": 42.9
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -25268,6 +25498,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 1,
+   "se_quedaron_48h": {
+    "vistas": 1,
+    "comprometidas": 0,
+    "pct": 0.0
+   },
+   "se_quedaron_total": {
+    "vistas": 7,
+    "comprometidas": 5,
+    "pct": 71.4
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -25703,6 +25943,16 @@
     "SUBSCRIBER": 2.6
    },
    "vistas_48h": 33,
+   "se_quedaron_48h": {
+    "vistas": 33,
+    "comprometidas": 12,
+    "pct": 36.4
+   },
+   "se_quedaron_total": {
+    "vistas": 39,
+    "comprometidas": 14,
+    "pct": 35.9
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -26141,6 +26391,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 1115,
+   "se_quedaron_48h": {
+    "vistas": 1115,
+    "comprometidas": 138,
+    "pct": 12.4
+   },
+   "se_quedaron_total": {
+    "vistas": 1203,
+    "comprometidas": 146,
+    "pct": 12.1
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -26171,6 +26431,16 @@
     "YT_SEARCH": 26.7
    },
    "vistas_48h": 0,
+   "se_quedaron_48h": {
+    "vistas": 0,
+    "comprometidas": 0,
+    "pct": null
+   },
+   "se_quedaron_total": {
+    "vistas": 15,
+    "comprometidas": 2,
+    "pct": 13.3
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -26608,6 +26878,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 113,
+   "se_quedaron_48h": {
+    "vistas": 113,
+    "comprometidas": 24,
+    "pct": 21.2
+   },
+   "se_quedaron_total": {
+    "vistas": 115,
+    "comprometidas": 25,
+    "pct": 21.7
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -27043,6 +27323,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 137,
+   "se_quedaron_48h": {
+    "vistas": 137,
+    "comprometidas": 22,
+    "pct": 16.1
+   },
+   "se_quedaron_total": {
+    "vistas": 141,
+    "comprometidas": 22,
+    "pct": 15.6
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -27074,6 +27364,16 @@
     "YT_SEARCH": 4.9
    },
    "vistas_48h": 37,
+   "se_quedaron_48h": {
+    "vistas": 37,
+    "comprometidas": 7,
+    "pct": 18.9
+   },
+   "se_quedaron_total": {
+    "vistas": 41,
+    "comprometidas": 9,
+    "pct": 22.0
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -27510,6 +27810,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 122,
+   "se_quedaron_48h": {
+    "vistas": 122,
+    "comprometidas": 32,
+    "pct": 26.2
+   },
+   "se_quedaron_total": {
+    "vistas": 147,
+    "comprometidas": 37,
+    "pct": 25.2
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -27947,36 +28257,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 244,
-   "impresiones": null,
-   "ctr": null
-  },
-  {
-   "leido": "2026-10-05",
-   "id": "MDS-023.es",
-   "video_id": "kRmwbAW6eSo",
-   "titulo": "¿Reírse es bueno para la salud? El humor «dañino» iba con menos dolor",
-   "formato": "corto",
-   "serie": "",
-   "publicado": "2026-09-23",
-   "privacidad": "public",
-   "dias_publicado": 12,
-   "duracion_s": 49.0,
-   "visualizaciones": 2,
-   "duracion_media_s": 50.0,
-   "porcentaje_visto": 104.0,
-   "minutos_vistos": 0.0,
-   "suscriptores": 0,
-   "me_gusta": 0,
-   "comentarios": 0,
-   "compartidos": 0,
-   "retencion": {
-    "puntos": 0
+   "se_quedaron_48h": {
+    "vistas": 244,
+    "comprometidas": 44,
+    "pct": 18.0
    },
-   "trafico_pct": {
-    "SUBSCRIBER": 100.0,
-    "NO_LINK_OTHER": 0.0
+   "se_quedaron_total": {
+    "vistas": 266,
+    "comprometidas": 46,
+    "pct": 17.3
    },
-   "vistas_48h": 2,
    "impresiones": null,
    "ctr": null
   },
@@ -28007,6 +28297,16 @@
     "SHORTS": 25.0
    },
    "vistas_48h": 4,
+   "se_quedaron_48h": {
+    "vistas": 4,
+    "comprometidas": 3,
+    "pct": 75.0
+   },
+   "se_quedaron_total": {
+    "vistas": 4,
+    "comprometidas": 3,
+    "pct": 75.0
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -28039,6 +28339,16 @@
     "YT_OTHER_PAGE": 1.5
    },
    "vistas_48h": 66,
+   "se_quedaron_48h": {
+    "vistas": 66,
+    "comprometidas": 3,
+    "pct": 4.5
+   },
+   "se_quedaron_total": {
+    "vistas": 67,
+    "comprometidas": 3,
+    "pct": 4.5
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -28477,6 +28787,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 62,
+   "se_quedaron_48h": {
+    "vistas": 62,
+    "comprometidas": 11,
+    "pct": 17.7
+   },
+   "se_quedaron_total": {
+    "vistas": 69,
+    "comprometidas": 13,
+    "pct": 18.8
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -28914,6 +29234,16 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 62,
+   "se_quedaron_48h": {
+    "vistas": 62,
+    "comprometidas": 20,
+    "pct": 32.3
+   },
+   "se_quedaron_total": {
+    "vistas": 69,
+    "comprometidas": 24,
+    "pct": 34.8
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -28940,11 +29270,19 @@
     "puntos": 0
    },
    "trafico_pct": {
-    "YT_SEARCH": 62.5,
-    "SUBSCRIBER": 25.0,
-    "SHORTS": 12.5
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-30&endDate=2026-10-04&metrics=views&di"
    },
    "vistas_48h": 5,
+   "se_quedaron_48h": {
+    "vistas": 5,
+    "comprometidas": 2,
+    "pct": 40.0
+   },
+   "se_quedaron_total": {
+    "vistas": 8,
+    "comprometidas": 3,
+    "pct": 37.5
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -28976,6 +29314,16 @@
     "YT_SEARCH": 7.1
    },
    "vistas_48h": 14,
+   "se_quedaron_48h": {
+    "vistas": 14,
+    "comprometidas": 4,
+    "pct": 28.6
+   },
+   "se_quedaron_total": {
+    "vistas": 14,
+    "comprometidas": 4,
+    "pct": 28.6
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -29413,12 +29761,22 @@
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 153,
+   "se_quedaron_48h": {
+    "vistas": 153,
+    "comprometidas": 57,
+    "pct": 37.3
+   },
+   "se_quedaron_total": {
+    "vistas": 153,
+    "comprometidas": 57,
+    "pct": 37.3
+   },
    "impresiones": null,
    "ctr": null
   }
  ],
  "miniaturas": [],
- "actualizado_utc": "2026-10-05T12:23:26Z",
+ "actualizado_utc": "2026-10-05T17:22:28Z",
  "control_c26": {
   "mediana_vistas_48h": 35.0,
   "n_videos": 20,
