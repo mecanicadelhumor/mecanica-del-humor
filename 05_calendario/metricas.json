@@ -22184,31 +22184,446 @@
   },
   {
    "leido": "2026-10-05",
-   "id": "MDS-023.es",
-   "video_id": "kRmwbAW6eSo",
-   "titulo": "¿Reírse es bueno para la salud? El humor «dañino» iba con menos dolor",
+   "id": "MDS-019.es",
+   "video_id": "H94l0VBdtyI",
+   "titulo": "¿Los anuncios graciosos venden más? Sí, pero se lo queda el anuncio",
    "formato": "corto",
    "serie": "",
-   "publicado": "2026-09-23",
+   "publicado": "2026-09-17",
    "privacidad": "public",
-   "dias_publicado": 12,
+   "dias_publicado": 18,
    "duracion_s": 49.0,
-   "visualizaciones": 2,
-   "duracion_media_s": 50.0,
-   "porcentaje_visto": 104.0,
-   "minutos_vistos": 0.0,
+   "visualizaciones": 141,
+   "duracion_media_s": 22.0,
+   "porcentaje_visto": 46.8,
+   "minutos_vistos": 10.0,
    "suscriptores": 0,
-   "me_gusta": 0,
+   "me_gusta": 1,
    "comentarios": 0,
    "compartidos": 0,
    "retencion": {
-    "puntos": 0
+    "puntos": 100,
+    "a_30s_pct": 27.3,
+    "caida_primer_10_pct": 18.2,
+    "curva": [
+     {
+      "t": 0.5,
+      "ratio": 1.2273
+     },
+     {
+      "t": 1.0,
+      "ratio": 1.2273
+     },
+     {
+      "t": 1.5,
+      "ratio": 1.2273
+     },
+     {
+      "t": 2.0,
+      "ratio": 1.2273
+     },
+     {
+      "t": 2.5,
+      "ratio": 1.2273
+     },
+     {
+      "t": 2.9,
+      "ratio": 1.2273
+     },
+     {
+      "t": 3.4,
+      "ratio": 1.2273
+     },
+     {
+      "t": 3.9,
+      "ratio": 1.2273
+     },
+     {
+      "t": 4.4,
+      "ratio": 1.2273
+     },
+     {
+      "t": 4.9,
+      "ratio": 1.2273
+     },
+     {
+      "t": 5.4,
+      "ratio": 1.0455
+     },
+     {
+      "t": 5.9,
+      "ratio": 1.0455
+     },
+     {
+      "t": 6.4,
+      "ratio": 1
+     },
+     {
+      "t": 6.9,
+      "ratio": 1
+     },
+     {
+      "t": 7.3,
+      "ratio": 1
+     },
+     {
+      "t": 7.8,
+      "ratio": 0.9545
+     },
+     {
+      "t": 8.3,
+      "ratio": 0.9091
+     },
+     {
+      "t": 8.8,
+      "ratio": 0.8182
+     },
+     {
+      "t": 9.3,
+      "ratio": 0.8182
+     },
+     {
+      "t": 9.8,
+      "ratio": 0.8182
+     },
+     {
+      "t": 10.3,
+      "ratio": 0.7727
+     },
+     {
+      "t": 10.8,
+      "ratio": 0.7727
+     },
+     {
+      "t": 11.3,
+      "ratio": 0.6818
+     },
+     {
+      "t": 11.8,
+      "ratio": 0.6364
+     },
+     {
+      "t": 12.2,
+      "ratio": 0.6364
+     },
+     {
+      "t": 12.7,
+      "ratio": 0.5909
+     },
+     {
+      "t": 13.2,
+      "ratio": 0.5
+     },
+     {
+      "t": 13.7,
+      "ratio": 0.5
+     },
+     {
+      "t": 14.2,
+      "ratio": 0.5
+     },
+     {
+      "t": 14.7,
+      "ratio": 0.4545
+     },
+     {
+      "t": 15.2,
+      "ratio": 0.4545
+     },
+     {
+      "t": 15.7,
+      "ratio": 0.4091
+     },
+     {
+      "t": 16.2,
+      "ratio": 0.3636
+     },
+     {
+      "t": 16.7,
+      "ratio": 0.3636
+     },
+     {
+      "t": 17.1,
+      "ratio": 0.3636
+     },
+     {
+      "t": 17.6,
+      "ratio": 0.3636
+     },
+     {
+      "t": 18.1,
+      "ratio": 0.3636
+     },
+     {
+      "t": 18.6,
+      "ratio": 0.3636
+     },
+     {
+      "t": 19.1,
+      "ratio": 0.3636
+     },
+     {
+      "t": 19.6,
+      "ratio": 0.3636
+     },
+     {
+      "t": 20.1,
+      "ratio": 0.3636
+     },
+     {
+      "t": 20.6,
+      "ratio": 0.3636
+     },
+     {
+      "t": 21.1,
+      "ratio": 0.3636
+     },
+     {
+      "t": 21.6,
+      "ratio": 0.3636
+     },
+     {
+      "t": 22.1,
+      "ratio": 0.3636
+     },
+     {
+      "t": 22.5,
+      "ratio": 0.3636
+     },
+     {
+      "t": 23.0,
+      "ratio": 0.3636
+     },
+     {
+      "t": 23.5,
+      "ratio": 0.3636
+     },
+     {
+      "t": 24.0,
+      "ratio": 0.3636
+     },
+     {
+      "t": 24.5,
+      "ratio": 0.3636
+     },
+     {
+      "t": 25.0,
+      "ratio": 0.3636
+     },
+     {
+      "t": 25.5,
+      "ratio": 0.3182
+     },
+     {
+      "t": 26.0,
+      "ratio": 0.3182
+     },
+     {
+      "t": 26.5,
+      "ratio": 0.3182
+     },
+     {
+      "t": 27.0,
+      "ratio": 0.3182
+     },
+     {
+      "t": 27.4,
+      "ratio": 0.3182
+     },
+     {
+      "t": 27.9,
+      "ratio": 0.3182
+     },
+     {
+      "t": 28.4,
+      "ratio": 0.2727
+     },
+     {
+      "t": 28.9,
+      "ratio": 0.2727
+     },
+     {
+      "t": 29.4,
+      "ratio": 0.2727
+     },
+     {
+      "t": 29.9,
+      "ratio": 0.2727
+     },
+     {
+      "t": 30.4,
+      "ratio": 0.2727
+     },
+     {
+      "t": 30.9,
+      "ratio": 0.2727
+     },
+     {
+      "t": 31.4,
+      "ratio": 0.2727
+     },
+     {
+      "t": 31.9,
+      "ratio": 0.2273
+     },
+     {
+      "t": 32.3,
+      "ratio": 0.2273
+     },
+     {
+      "t": 32.8,
+      "ratio": 0.2273
+     },
+     {
+      "t": 33.3,
+      "ratio": 0.2273
+     },
+     {
+      "t": 33.8,
+      "ratio": 0.2273
+     },
+     {
+      "t": 34.3,
+      "ratio": 0.2273
+     },
+     {
+      "t": 34.8,
+      "ratio": 0.2273
+     },
+     {
+      "t": 35.3,
+      "ratio": 0.2273
+     },
+     {
+      "t": 35.8,
+      "ratio": 0.2273
+     },
+     {
+      "t": 36.3,
+      "ratio": 0.2273
+     },
+     {
+      "t": 36.8,
+      "ratio": 0.2273
+     },
+     {
+      "t": 37.2,
+      "ratio": 0.2273
+     },
+     {
+      "t": 37.7,
+      "ratio": 0.2273
+     },
+     {
+      "t": 38.2,
+      "ratio": 0.2273
+     },
+     {
+      "t": 38.7,
+      "ratio": 0.2273
+     },
+     {
+      "t": 39.2,
+      "ratio": 0.2273
+     },
+     {
+      "t": 39.7,
+      "ratio": 0.2273
+     },
+     {
+      "t": 40.2,
+      "ratio": 0.2273
+     },
+     {
+      "t": 40.7,
+      "ratio": 0.2273
+     },
+     {
+      "t": 41.2,
+      "ratio": 0.2273
+     },
+     {
+      "t": 41.6,
+      "ratio": 0.2273
+     },
+     {
+      "t": 42.1,
+      "ratio": 0.2273
+     },
+     {
+      "t": 42.6,
+      "ratio": 0.2273
+     },
+     {
+      "t": 43.1,
+      "ratio": 0.2273
+     },
+     {
+      "t": 43.6,
+      "ratio": 0.2273
+     },
+     {
+      "t": 44.1,
+      "ratio": 0.2273
+     },
+     {
+      "t": 44.6,
+      "ratio": 0.2273
+     },
+     {
+      "t": 45.1,
+      "ratio": 0.2273
+     },
+     {
+      "t": 45.6,
+      "ratio": 0.2273
+     },
+     {
+      "t": 46.1,
+      "ratio": 0.2273
+     },
+     {
+      "t": 46.5,
+      "ratio": 0.2273
+     },
+     {
+      "t": 47.0,
+      "ratio": 0.2273
+     },
+     {
+      "t": 47.5,
+      "ratio": 0.2273
+     },
+     {
+      "t": 48.0,
+      "ratio": 0.2273
+     },
+     {
+      "t": 48.5,
+      "ratio": 0.2273
+     },
+     {
+      "t": 49.0,
+      "ratio": 0.2273
+     }
+    ]
    },
    "trafico_pct": {
-    "SUBSCRIBER": 100.0,
+    "SHORTS": 97.9,
+    "YT_SEARCH": 2.1,
     "NO_LINK_OTHER": 0.0
    },
-   "vistas_48h": 2,
+   "vistas_48h": 137,
+   "se_quedaron_48h": {
+    "vistas": 137,
+    "comprometidas": 22,
+    "pct": 16.1
+   },
+   "se_quedaron_total": {
+    "vistas": 141,
+    "comprometidas": 22,
+    "pct": 15.6
+   },
    "impresiones": null,
    "ctr": null
   },
@@ -26893,451 +27308,6 @@
   },
   {
    "leido": "2026-10-05",
-   "id": "MDS-019.es",
-   "video_id": "H94l0VBdtyI",
-   "titulo": "¿Los anuncios graciosos venden más? Sí, pero se lo queda el anuncio",
-   "formato": "corto",
-   "serie": "",
-   "publicado": "2026-09-17",
-   "privacidad": "public",
-   "dias_publicado": 18,
-   "duracion_s": 49.0,
-   "visualizaciones": 141,
-   "duracion_media_s": 22.0,
-   "porcentaje_visto": 46.8,
-   "minutos_vistos": 10.0,
-   "suscriptores": 0,
-   "me_gusta": 1,
-   "comentarios": 0,
-   "compartidos": 0,
-   "retencion": {
-    "puntos": 100,
-    "a_30s_pct": 27.3,
-    "caida_primer_10_pct": 18.2,
-    "curva": [
-     {
-      "t": 0.5,
-      "ratio": 1.2273
-     },
-     {
-      "t": 1.0,
-      "ratio": 1.2273
-     },
-     {
-      "t": 1.5,
-      "ratio": 1.2273
-     },
-     {
-      "t": 2.0,
-      "ratio": 1.2273
-     },
-     {
-      "t": 2.5,
-      "ratio": 1.2273
-     },
-     {
-      "t": 2.9,
-      "ratio": 1.2273
-     },
-     {
-      "t": 3.4,
-      "ratio": 1.2273
-     },
-     {
-      "t": 3.9,
-      "ratio": 1.2273
-     },
-     {
-      "t": 4.4,
-      "ratio": 1.2273
-     },
-     {
-      "t": 4.9,
-      "ratio": 1.2273
-     },
-     {
-      "t": 5.4,
-      "ratio": 1.0455
-     },
-     {
-      "t": 5.9,
-      "ratio": 1.0455
-     },
-     {
-      "t": 6.4,
-      "ratio": 1
-     },
-     {
-      "t": 6.9,
-      "ratio": 1
-     },
-     {
-      "t": 7.3,
-      "ratio": 1
-     },
-     {
-      "t": 7.8,
-      "ratio": 0.9545
-     },
-     {
-      "t": 8.3,
-      "ratio": 0.9091
-     },
-     {
-      "t": 8.8,
-      "ratio": 0.8182
-     },
-     {
-      "t": 9.3,
-      "ratio": 0.8182
-     },
-     {
-      "t": 9.8,
-      "ratio": 0.8182
-     },
-     {
-      "t": 10.3,
-      "ratio": 0.7727
-     },
-     {
-      "t": 10.8,
-      "ratio": 0.7727
-     },
-     {
-      "t": 11.3,
-      "ratio": 0.6818
-     },
-     {
-      "t": 11.8,
-      "ratio": 0.6364
-     },
-     {
-      "t": 12.2,
-      "ratio": 0.6364
-     },
-     {
-      "t": 12.7,
-      "ratio": 0.5909
-     },
-     {
-      "t": 13.2,
-      "ratio": 0.5
-     },
-     {
-      "t": 13.7,
-      "ratio": 0.5
-     },
-     {
-      "t": 14.2,
-      "ratio": 0.5
-     },
-     {
-      "t": 14.7,
-      "ratio": 0.4545
-     },
-     {
-      "t": 15.2,
-      "ratio": 0.4545
-     },
-     {
-      "t": 15.7,
-      "ratio": 0.4091
-     },
-     {
-      "t": 16.2,
-      "ratio": 0.3636
-     },
-     {
-      "t": 16.7,
-      "ratio": 0.3636
-     },
-     {
-      "t": 17.1,
-      "ratio": 0.3636
-     },
-     {
-      "t": 17.6,
-      "ratio": 0.3636
-     },
-     {
-      "t": 18.1,
-      "ratio": 0.3636
-     },
-     {
-      "t": 18.6,
-      "ratio": 0.3636
-     },
-     {
-      "t": 19.1,
-      "ratio": 0.3636
-     },
-     {
-      "t": 19.6,
-      "ratio": 0.3636
-     },
-     {
-      "t": 20.1,
-      "ratio": 0.3636
-     },
-     {
-      "t": 20.6,
-      "ratio": 0.3636
-     },
-     {
-      "t": 21.1,
-      "ratio": 0.3636
-     },
-     {
-      "t": 21.6,
-      "ratio": 0.3636
-     },
-     {
-      "t": 22.1,
-      "ratio": 0.3636
-     },
-     {
-      "t": 22.5,
-      "ratio": 0.3636
-     },
-     {
-      "t": 23.0,
-      "ratio": 0.3636
-     },
-     {
-      "t": 23.5,
-      "ratio": 0.3636
-     },
-     {
-      "t": 24.0,
-      "ratio": 0.3636
-     },
-     {
-      "t": 24.5,
-      "ratio": 0.3636
-     },
-     {
-      "t": 25.0,
-      "ratio": 0.3636
-     },
-     {
-      "t": 25.5,
-      "ratio": 0.3182
-     },
-     {
-      "t": 26.0,
-      "ratio": 0.3182
-     },
-     {
-      "t": 26.5,
-      "ratio": 0.3182
-     },
-     {
-      "t": 27.0,
-      "ratio": 0.3182
-     },
-     {
-      "t": 27.4,
-      "ratio": 0.3182
-     },
-     {
-      "t": 27.9,
-      "ratio": 0.3182
-     },
-     {
-      "t": 28.4,
-      "ratio": 0.2727
-     },
-     {
-      "t": 28.9,
-      "ratio": 0.2727
-     },
-     {
-      "t": 29.4,
-      "ratio": 0.2727
-     },
-     {
-      "t": 29.9,
-      "ratio": 0.2727
-     },
-     {
-      "t": 30.4,
-      "ratio": 0.2727
-     },
-     {
-      "t": 30.9,
-      "ratio": 0.2727
-     },
-     {
-      "t": 31.4,
-      "ratio": 0.2727
-     },
-     {
-      "t": 31.9,
-      "ratio": 0.2273
-     },
-     {
-      "t": 32.3,
-      "ratio": 0.2273
-     },
-     {
-      "t": 32.8,
-      "ratio": 0.2273
-     },
-     {
-      "t": 33.3,
-      "ratio": 0.2273
-     },
-     {
-      "t": 33.8,
-      "ratio": 0.2273
-     },
-     {
-      "t": 34.3,
-      "ratio": 0.2273
-     },
-     {
-      "t": 34.8,
-      "ratio": 0.2273
-     },
-     {
-      "t": 35.3,
-      "ratio": 0.2273
-     },
-     {
-      "t": 35.8,
-      "ratio": 0.2273
-     },
-     {
-      "t": 36.3,
-      "ratio": 0.2273
-     },
-     {
-      "t": 36.8,
-      "ratio": 0.2273
-     },
-     {
-      "t": 37.2,
-      "ratio": 0.2273
-     },
-     {
-      "t": 37.7,
-      "ratio": 0.2273
-     },
-     {
-      "t": 38.2,
-      "ratio": 0.2273
-     },
-     {
-      "t": 38.7,
-      "ratio": 0.2273
-     },
-     {
-      "t": 39.2,
-      "ratio": 0.2273
-     },
-     {
-      "t": 39.7,
-      "ratio": 0.2273
-     },
-     {
-      "t": 40.2,
-      "ratio": 0.2273
-     },
-     {
-      "t": 40.7,
-      "ratio": 0.2273
-     },
-     {
-      "t": 41.2,
-      "ratio": 0.2273
-     },
-     {
-      "t": 41.6,
-      "ratio": 0.2273
-     },
-     {
-      "t": 42.1,
-      "ratio": 0.2273
-     },
-     {
-      "t": 42.6,
-      "ratio": 0.2273
-     },
-     {
-      "t": 43.1,
-      "ratio": 0.2273
-     },
-     {
-      "t": 43.6,
-      "ratio": 0.2273
-     },
-     {
-      "t": 44.1,
-      "ratio": 0.2273
-     },
-     {
-      "t": 44.6,
-      "ratio": 0.2273
-     },
-     {
-      "t": 45.1,
-      "ratio": 0.2273
-     },
-     {
-      "t": 45.6,
-      "ratio": 0.2273
-     },
-     {
-      "t": 46.1,
-      "ratio": 0.2273
-     },
-     {
-      "t": 46.5,
-      "ratio": 0.2273
-     },
-     {
-      "t": 47.0,
-      "ratio": 0.2273
-     },
-     {
-      "t": 47.5,
-      "ratio": 0.2273
-     },
-     {
-      "t": 48.0,
-      "ratio": 0.2273
-     },
-     {
-      "t": 48.5,
-      "ratio": 0.2273
-     },
-     {
-      "t": 49.0,
-      "ratio": 0.2273
-     }
-    ]
-   },
-   "trafico_pct": {
-    "SHORTS": 97.9,
-    "YT_SEARCH": 2.1,
-    "NO_LINK_OTHER": 0.0
-   },
-   "vistas_48h": 137,
-   "se_quedaron_48h": {
-    "vistas": 137,
-    "comprometidas": 22,
-    "pct": 16.1
-   },
-   "se_quedaron_total": {
-    "vistas": 141,
-    "comprometidas": 22,
-    "pct": 15.6
-   },
-   "impresiones": null,
-   "ctr": null
-  },
-  {
-   "leido": "2026-10-05",
    "id": "MDS-020.es",
    "video_id": "80dqV63PhIU",
    "titulo": "¿Puede la inteligencia artificial hacer chistes? Veinte cómicos lo probaron",
@@ -27834,7 +27804,7 @@
    "privacidad": "public",
    "dias_publicado": 13,
    "duracion_s": 41.0,
-   "visualizaciones": 266,
+   "visualizaciones": 267,
    "duracion_media_s": 32.0,
    "porcentaje_visto": 78.9,
    "minutos_vistos": 29.0,
@@ -28250,8 +28220,8 @@
     ]
    },
    "trafico_pct": {
-    "SHORTS": 91.4,
-    "YT_SEARCH": 4.1,
+    "SHORTS": 91.0,
+    "YT_SEARCH": 4.5,
     "YT_OTHER_PAGE": 4.1,
     "NOTIFICATION": 0.4,
     "NO_LINK_OTHER": 0.0
@@ -28263,9 +28233,49 @@
     "pct": 18.0
    },
    "se_quedaron_total": {
-    "vistas": 266,
+    "vistas": 267,
     "comprometidas": 46,
-    "pct": 17.3
+    "pct": 17.2
+   },
+   "impresiones": null,
+   "ctr": null
+  },
+  {
+   "leido": "2026-10-05",
+   "id": "MDS-023.es",
+   "video_id": "kRmwbAW6eSo",
+   "titulo": "¿Reírse es bueno para la salud? El humor «dañino» iba con menos dolor",
+   "formato": "corto",
+   "serie": "",
+   "publicado": "2026-09-23",
+   "privacidad": "public",
+   "dias_publicado": 12,
+   "duracion_s": 49.0,
+   "visualizaciones": 2,
+   "duracion_media_s": 50.0,
+   "porcentaje_visto": 104.0,
+   "minutos_vistos": 0.0,
+   "suscriptores": 0,
+   "me_gusta": 0,
+   "comentarios": 0,
+   "compartidos": 0,
+   "retencion": {
+    "puntos": 0
+   },
+   "trafico_pct": {
+    "SUBSCRIBER": 100.0,
+    "NO_LINK_OTHER": 0.0
+   },
+   "vistas_48h": 2,
+   "se_quedaron_48h": {
+    "vistas": 2,
+    "comprometidas": 1,
+    "pct": 50.0
+   },
+   "se_quedaron_total": {
+    "vistas": 2,
+    "comprometidas": 1,
+    "pct": 50.0
    },
    "impresiones": null,
    "ctr": null
@@ -28811,126 +28821,126 @@
    "privacidad": "public",
    "dias_publicado": 6,
    "duracion_s": 44.0,
-   "visualizaciones": 69,
+   "visualizaciones": 73,
    "duracion_media_s": 34.0,
-   "porcentaje_visto": 78.3,
-   "minutos_vistos": 14.0,
+   "porcentaje_visto": 79.2,
+   "minutos_vistos": 15.0,
    "suscriptores": 1,
    "me_gusta": 1,
    "comentarios": 0,
    "compartidos": 0,
    "retencion": {
     "puntos": 100,
-    "a_30s_pct": 62.5,
-    "caida_primer_10_pct": 12.5,
+    "a_30s_pct": 64.0,
+    "caida_primer_10_pct": 16.0,
     "curva": [
      {
       "t": 0.4,
-      "ratio": 1.2917
+      "ratio": 1.32
      },
      {
       "t": 0.9,
-      "ratio": 1.25
+      "ratio": 1.28
      },
      {
       "t": 1.3,
-      "ratio": 1.1667
+      "ratio": 1.2
      },
      {
       "t": 1.8,
-      "ratio": 1.1667
+      "ratio": 1.16
      },
      {
       "t": 2.2,
-      "ratio": 1.1667
+      "ratio": 1.16
      },
      {
       "t": 2.6,
-      "ratio": 1.1667
+      "ratio": 1.16
      },
      {
       "t": 3.1,
-      "ratio": 1.1667
+      "ratio": 1.16
      },
      {
       "t": 3.5,
-      "ratio": 1.1667
+      "ratio": 1.16
      },
      {
       "t": 4.0,
-      "ratio": 1.1667
+      "ratio": 1.16
      },
      {
       "t": 4.4,
-      "ratio": 1.1667
+      "ratio": 1.16
      },
      {
       "t": 4.8,
-      "ratio": 1.1667
+      "ratio": 1.16
      },
      {
       "t": 5.3,
-      "ratio": 1.1667
+      "ratio": 1.16
      },
      {
       "t": 5.7,
-      "ratio": 1.1667
+      "ratio": 1.16
      },
      {
       "t": 6.2,
-      "ratio": 1.1667
+      "ratio": 1.16
      },
      {
       "t": 6.6,
-      "ratio": 1.125
+      "ratio": 1.12
      },
      {
       "t": 7.0,
-      "ratio": 1.125
+      "ratio": 1.12
      },
      {
       "t": 7.5,
-      "ratio": 1.125
+      "ratio": 1.12
      },
      {
       "t": 7.9,
-      "ratio": 1.0833
+      "ratio": 1.08
      },
      {
       "t": 8.4,
-      "ratio": 1.0833
+      "ratio": 1.08
      },
      {
       "t": 8.8,
-      "ratio": 1.0833
+      "ratio": 1.08
      },
      {
       "t": 9.2,
-      "ratio": 1.0833
+      "ratio": 1.08
      },
      {
       "t": 9.7,
-      "ratio": 1.0833
+      "ratio": 1.08
      },
      {
       "t": 10.1,
-      "ratio": 1.0833
+      "ratio": 1.08
      },
      {
       "t": 10.6,
-      "ratio": 1.0833
+      "ratio": 1.08
      },
      {
       "t": 11.0,
-      "ratio": 1.0417
+      "ratio": 1.04
      },
      {
       "t": 11.4,
-      "ratio": 1.0417
+      "ratio": 1.04
      },
      {
       "t": 11.9,
-      "ratio": 1.0417
+      "ratio": 1.04
      },
      {
       "t": 12.3,
@@ -28958,278 +28968,279 @@
      },
      {
       "t": 15.0,
-      "ratio": 0.9583
+      "ratio": 0.96
      },
      {
       "t": 15.4,
-      "ratio": 0.9583
+      "ratio": 0.96
      },
      {
       "t": 15.8,
-      "ratio": 0.9583
+      "ratio": 0.96
      },
      {
       "t": 16.3,
-      "ratio": 0.9583
+      "ratio": 0.96
      },
      {
       "t": 16.7,
-      "ratio": 0.9583
+      "ratio": 0.96
      },
      {
       "t": 17.2,
-      "ratio": 0.9583
+      "ratio": 0.96
      },
      {
       "t": 17.6,
-      "ratio": 0.9167
+      "ratio": 0.92
      },
      {
       "t": 18.0,
-      "ratio": 0.875
+      "ratio": 0.88
      },
      {
       "t": 18.5,
-      "ratio": 0.875
+      "ratio": 0.88
      },
      {
       "t": 18.9,
-      "ratio": 0.875
+      "ratio": 0.88
      },
      {
       "t": 19.4,
-      "ratio": 0.875
+      "ratio": 0.88
      },
      {
       "t": 19.8,
-      "ratio": 0.875
+      "ratio": 0.88
      },
      {
       "t": 20.2,
-      "ratio": 0.875
+      "ratio": 0.88
      },
      {
       "t": 20.7,
-      "ratio": 0.8333
+      "ratio": 0.84
      },
      {
       "t": 21.1,
-      "ratio": 0.875
+      "ratio": 0.88
      },
      {
       "t": 21.6,
-      "ratio": 0.875
+      "ratio": 0.88
      },
      {
       "t": 22.0,
-      "ratio": 0.875
+      "ratio": 0.88
      },
      {
       "t": 22.4,
-      "ratio": 0.875
+      "ratio": 0.88
      },
      {
       "t": 22.9,
-      "ratio": 0.875
+      "ratio": 0.88
      },
      {
       "t": 23.3,
-      "ratio": 0.875
+      "ratio": 0.88
      },
      {
       "t": 23.8,
-      "ratio": 0.8333
+      "ratio": 0.84
      },
      {
       "t": 24.2,
-      "ratio": 0.8333
+      "ratio": 0.84
      },
      {
       "t": 24.6,
-      "ratio": 0.8333
+      "ratio": 0.84
      },
      {
       "t": 25.1,
-      "ratio": 0.8333
+      "ratio": 0.84
      },
      {
       "t": 25.5,
-      "ratio": 0.7917
+      "ratio": 0.8
      },
      {
       "t": 26.0,
-      "ratio": 0.75
+      "ratio": 0.76
      },
      {
       "t": 26.4,
-      "ratio": 0.75
+      "ratio": 0.76
      },
      {
       "t": 26.8,
-      "ratio": 0.75
+      "ratio": 0.76
      },
      {
       "t": 27.3,
-      "ratio": 0.75
+      "ratio": 0.76
      },
      {
       "t": 27.7,
-      "ratio": 0.7083
+      "ratio": 0.72
      },
      {
       "t": 28.2,
-      "ratio": 0.6667
+      "ratio": 0.68
      },
      {
       "t": 28.6,
-      "ratio": 0.625
+      "ratio": 0.64
      },
      {
       "t": 29.0,
-      "ratio": 0.625
+      "ratio": 0.64
      },
      {
       "t": 29.5,
-      "ratio": 0.625
+      "ratio": 0.64
      },
      {
       "t": 29.9,
-      "ratio": 0.625
+      "ratio": 0.64
      },
      {
       "t": 30.4,
-      "ratio": 0.5417
+      "ratio": 0.56
      },
      {
       "t": 30.8,
-      "ratio": 0.5417
+      "ratio": 0.56
      },
      {
       "t": 31.2,
-      "ratio": 0.5417
+      "ratio": 0.56
      },
      {
       "t": 31.7,
-      "ratio": 0.5
+      "ratio": 0.52
      },
      {
       "t": 32.1,
-      "ratio": 0.5
+      "ratio": 0.52
      },
      {
       "t": 32.6,
-      "ratio": 0.5
+      "ratio": 0.52
      },
      {
       "t": 33.0,
-      "ratio": 0.5
+      "ratio": 0.52
      },
      {
       "t": 33.4,
-      "ratio": 0.5
+      "ratio": 0.52
      },
      {
       "t": 33.9,
-      "ratio": 0.5
+      "ratio": 0.52
      },
      {
       "t": 34.3,
-      "ratio": 0.5
+      "ratio": 0.52
      },
      {
       "t": 34.8,
-      "ratio": 0.5
+      "ratio": 0.52
      },
      {
       "t": 35.2,
-      "ratio": 0.5
+      "ratio": 0.52
      },
      {
       "t": 35.6,
-      "ratio": 0.5
+      "ratio": 0.52
      },
      {
       "t": 36.1,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 36.5,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 37.0,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 37.4,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 37.8,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 38.3,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 38.7,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 39.2,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 39.6,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 40.0,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 40.5,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 40.9,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 41.4,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 41.8,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 42.2,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 42.7,
-      "ratio": 0.4583
+      "ratio": 0.48
      },
      {
       "t": 43.1,
-      "ratio": 0.4167
+      "ratio": 0.44
      },
      {
       "t": 43.6,
-      "ratio": 0.375
+      "ratio": 0.4
      },
      {
       "t": 44.0,
-      "ratio": 0.375
+      "ratio": 0.4
      }
     ]
    },
    "trafico_pct": {
-    "SHORTS": 89.9,
-    "SUBSCRIBER": 5.8,
-    "YT_SEARCH": 2.9,
+    "SHORTS": 87.7,
+    "SUBSCRIBER": 5.5,
+    "YT_SEARCH": 2.7,
+    "NOTIFICATION": 2.7,
     "YT_OTHER_PAGE": 1.4,
     "NO_LINK_OTHER": 0.0
    },
@@ -29240,9 +29251,9 @@
     "pct": 32.3
    },
    "se_quedaron_total": {
-    "vistas": 69,
-    "comprometidas": 24,
-    "pct": 34.8
+    "vistas": 73,
+    "comprometidas": 25,
+    "pct": 34.2
    },
    "impresiones": null,
    "ctr": null
@@ -29270,7 +29281,9 @@
     "puntos": 0
    },
    "trafico_pct": {
-    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-30&endDate=2026-10-04&metrics=views&di"
+    "YT_SEARCH": 62.5,
+    "SUBSCRIBER": 25.0,
+    "SHORTS": 12.5
    },
    "vistas_48h": 5,
    "se_quedaron_48h": {
@@ -29297,10 +29310,10 @@
    "privacidad": "public",
    "dias_publicado": 4,
    "duracion_s": 49.0,
-   "visualizaciones": 14,
-   "duracion_media_s": 16.0,
-   "porcentaje_visto": 33.7,
-   "minutos_vistos": 1.0,
+   "visualizaciones": 22,
+   "duracion_media_s": 27.0,
+   "porcentaje_visto": 57.1,
+   "minutos_vistos": 3.0,
    "suscriptores": 0,
    "me_gusta": 0,
    "comentarios": 0,
@@ -29309,9 +29322,9 @@
     "puntos": 0
    },
    "trafico_pct": {
-    "SHORTS": 85.7,
-    "SUBSCRIBER": 7.1,
-    "YT_SEARCH": 7.1
+    "SHORTS": 90.9,
+    "SUBSCRIBER": 4.5,
+    "YT_SEARCH": 4.5
    },
    "vistas_48h": 14,
    "se_quedaron_48h": {
@@ -29320,9 +29333,9 @@
     "pct": 28.6
    },
    "se_quedaron_total": {
-    "vistas": 14,
-    "comprometidas": 4,
-    "pct": 28.6
+    "vistas": 22,
+    "comprometidas": 7,
+    "pct": 31.8
    },
    "impresiones": null,
    "ctr": null
@@ -29338,445 +29351,445 @@
    "privacidad": "public",
    "dias_publicado": 3,
    "duracion_s": 35.0,
-   "visualizaciones": 153,
-   "duracion_media_s": 23.0,
-   "porcentaje_visto": 68.0,
-   "minutos_vistos": 24.0,
+   "visualizaciones": 156,
+   "duracion_media_s": 24.0,
+   "porcentaje_visto": 70.0,
+   "minutos_vistos": 26.0,
    "suscriptores": 0,
    "me_gusta": 1,
    "comentarios": 0,
    "compartidos": 0,
    "retencion": {
     "puntos": 100,
-    "a_30s_pct": 43.9,
-    "caida_primer_10_pct": 14.0,
+    "a_30s_pct": 45.8,
+    "caida_primer_10_pct": 13.6,
     "curva": [
      {
       "t": 0.4,
-      "ratio": 1.193
+      "ratio": 1.2034
      },
      {
       "t": 0.7,
-      "ratio": 1.1404
+      "ratio": 1.1525
      },
      {
       "t": 1.1,
-      "ratio": 1.1404
+      "ratio": 1.1525
      },
      {
       "t": 1.4,
-      "ratio": 1.1053
+      "ratio": 1.1186
      },
      {
       "t": 1.8,
-      "ratio": 1.0702
+      "ratio": 1.0847
      },
      {
       "t": 2.1,
-      "ratio": 1.0702
+      "ratio": 1.0847
      },
      {
       "t": 2.5,
-      "ratio": 1.0526
+      "ratio": 1.0678
      },
      {
       "t": 2.8,
-      "ratio": 1.0526
+      "ratio": 1.0678
      },
      {
       "t": 3.1,
-      "ratio": 1.0526
+      "ratio": 1.0678
      },
      {
       "t": 3.5,
-      "ratio": 1.0526
+      "ratio": 1.0678
      },
      {
       "t": 3.9,
-      "ratio": 1.0526
+      "ratio": 1.0678
      },
      {
       "t": 4.2,
-      "ratio": 1.0526
+      "ratio": 1.0678
      },
      {
       "t": 4.5,
-      "ratio": 1
+      "ratio": 1.0169
      },
      {
       "t": 4.9,
-      "ratio": 0.9649
+      "ratio": 0.9831
      },
      {
       "t": 5.2,
-      "ratio": 0.9474
+      "ratio": 0.9661
      },
      {
       "t": 5.6,
-      "ratio": 0.9123
+      "ratio": 0.9322
      },
      {
       "t": 6.0,
-      "ratio": 0.9123
+      "ratio": 0.9322
      },
      {
       "t": 6.3,
-      "ratio": 0.9123
+      "ratio": 0.9322
      },
      {
       "t": 6.7,
-      "ratio": 0.8947
+      "ratio": 0.9153
      },
      {
       "t": 7.0,
-      "ratio": 0.8947
+      "ratio": 0.9153
      },
      {
       "t": 7.3,
-      "ratio": 0.8772
+      "ratio": 0.8983
      },
      {
       "t": 7.7,
-      "ratio": 0.8596
+      "ratio": 0.8814
      },
      {
       "t": 8.1,
-      "ratio": 0.8596
+      "ratio": 0.8814
      },
      {
       "t": 8.4,
-      "ratio": 0.8246
+      "ratio": 0.8475
      },
      {
       "t": 8.8,
-      "ratio": 0.807
+      "ratio": 0.8305
      },
      {
       "t": 9.1,
-      "ratio": 0.807
+      "ratio": 0.8305
      },
      {
       "t": 9.5,
-      "ratio": 0.807
+      "ratio": 0.8305
      },
      {
       "t": 9.8,
-      "ratio": 0.807
+      "ratio": 0.8305
      },
      {
       "t": 10.1,
-      "ratio": 0.807
+      "ratio": 0.8305
      },
      {
       "t": 10.5,
-      "ratio": 0.7895
+      "ratio": 0.8136
      },
      {
       "t": 10.8,
-      "ratio": 0.7719
+      "ratio": 0.7966
      },
      {
       "t": 11.2,
-      "ratio": 0.7719
+      "ratio": 0.7966
      },
      {
       "t": 11.6,
-      "ratio": 0.7719
+      "ratio": 0.7966
      },
      {
       "t": 11.9,
-      "ratio": 0.7719
+      "ratio": 0.7966
      },
      {
       "t": 12.2,
-      "ratio": 0.7719
+      "ratio": 0.7966
      },
      {
       "t": 12.6,
-      "ratio": 0.7719
+      "ratio": 0.7966
      },
      {
       "t": 12.9,
-      "ratio": 0.7719
+      "ratio": 0.7966
      },
      {
       "t": 13.3,
-      "ratio": 0.7719
+      "ratio": 0.7966
      },
      {
       "t": 13.7,
-      "ratio": 0.7544
+      "ratio": 0.7797
      },
      {
       "t": 14.0,
-      "ratio": 0.7544
+      "ratio": 0.7797
      },
      {
       "t": 14.3,
-      "ratio": 0.7544
+      "ratio": 0.7797
      },
      {
       "t": 14.7,
-      "ratio": 0.7544
+      "ratio": 0.7797
      },
      {
       "t": 15.0,
-      "ratio": 0.7544
+      "ratio": 0.7797
      },
      {
       "t": 15.4,
-      "ratio": 0.7544
+      "ratio": 0.7797
      },
      {
       "t": 15.8,
-      "ratio": 0.7368
+      "ratio": 0.7627
      },
      {
       "t": 16.1,
-      "ratio": 0.7368
+      "ratio": 0.7627
      },
      {
       "t": 16.4,
-      "ratio": 0.7193
+      "ratio": 0.7458
      },
      {
       "t": 16.8,
-      "ratio": 0.7193
+      "ratio": 0.7458
      },
      {
       "t": 17.1,
-      "ratio": 0.7193
+      "ratio": 0.7458
      },
      {
       "t": 17.5,
-      "ratio": 0.7193
+      "ratio": 0.7458
      },
      {
       "t": 17.9,
-      "ratio": 0.7193
+      "ratio": 0.7458
      },
      {
       "t": 18.2,
-      "ratio": 0.7193
+      "ratio": 0.7458
      },
      {
       "t": 18.6,
-      "ratio": 0.7018
+      "ratio": 0.7288
      },
      {
       "t": 18.9,
-      "ratio": 0.7018
+      "ratio": 0.7288
      },
      {
       "t": 19.2,
-      "ratio": 0.6842
+      "ratio": 0.7119
      },
      {
       "t": 19.6,
-      "ratio": 0.6667
+      "ratio": 0.6949
      },
      {
       "t": 19.9,
-      "ratio": 0.6316
+      "ratio": 0.661
      },
      {
       "t": 20.3,
-      "ratio": 0.6316
+      "ratio": 0.661
      },
      {
       "t": 20.6,
-      "ratio": 0.614
+      "ratio": 0.6271
      },
      {
       "t": 21.0,
-      "ratio": 0.5789
+      "ratio": 0.5932
      },
      {
       "t": 21.3,
-      "ratio": 0.5789
+      "ratio": 0.5932
      },
      {
       "t": 21.7,
-      "ratio": 0.5614
+      "ratio": 0.5763
      },
      {
       "t": 22.1,
-      "ratio": 0.5614
+      "ratio": 0.5763
      },
      {
       "t": 22.4,
-      "ratio": 0.5439
+      "ratio": 0.5593
      },
      {
       "t": 22.8,
-      "ratio": 0.5439
+      "ratio": 0.5593
      },
      {
       "t": 23.1,
-      "ratio": 0.5439
+      "ratio": 0.5593
      },
      {
       "t": 23.5,
-      "ratio": 0.5439
+      "ratio": 0.5593
      },
      {
       "t": 23.8,
-      "ratio": 0.5439
+      "ratio": 0.5593
      },
      {
       "t": 24.1,
-      "ratio": 0.5439
+      "ratio": 0.5593
      },
      {
       "t": 24.5,
-      "ratio": 0.5439
+      "ratio": 0.5593
      },
      {
       "t": 24.8,
-      "ratio": 0.5439
+      "ratio": 0.5593
      },
      {
       "t": 25.2,
-      "ratio": 0.5439
+      "ratio": 0.5593
      },
      {
       "t": 25.6,
-      "ratio": 0.5439
+      "ratio": 0.5593
      },
      {
       "t": 25.9,
-      "ratio": 0.5439
+      "ratio": 0.5593
      },
      {
       "t": 26.2,
-      "ratio": 0.5439
+      "ratio": 0.5593
      },
      {
       "t": 26.6,
-      "ratio": 0.5263
+      "ratio": 0.5424
      },
      {
       "t": 26.9,
-      "ratio": 0.5088
+      "ratio": 0.5254
      },
      {
       "t": 27.3,
-      "ratio": 0.5088
+      "ratio": 0.5254
      },
      {
       "t": 27.7,
-      "ratio": 0.5088
+      "ratio": 0.5254
      },
      {
       "t": 28.0,
-      "ratio": 0.4737
+      "ratio": 0.4915
      },
      {
       "t": 28.4,
-      "ratio": 0.4737
+      "ratio": 0.4915
      },
      {
       "t": 28.7,
-      "ratio": 0.4561
+      "ratio": 0.4746
      },
      {
       "t": 29.0,
-      "ratio": 0.4561
+      "ratio": 0.4746
      },
      {
       "t": 29.4,
-      "ratio": 0.4386
+      "ratio": 0.4576
      },
      {
       "t": 29.8,
-      "ratio": 0.4386
+      "ratio": 0.4576
      },
      {
       "t": 30.1,
-      "ratio": 0.4386
+      "ratio": 0.4576
      },
      {
       "t": 30.4,
-      "ratio": 0.4386
+      "ratio": 0.4576
      },
      {
       "t": 30.8,
-      "ratio": 0.4211
+      "ratio": 0.4407
      },
      {
       "t": 31.2,
-      "ratio": 0.4211
+      "ratio": 0.4407
      },
      {
       "t": 31.5,
-      "ratio": 0.4211
+      "ratio": 0.4407
      },
      {
       "t": 31.9,
-      "ratio": 0.4035
+      "ratio": 0.4237
      },
      {
       "t": 32.2,
-      "ratio": 0.386
+      "ratio": 0.4068
      },
      {
       "t": 32.6,
-      "ratio": 0.3509
+      "ratio": 0.3729
      },
      {
       "t": 32.9,
-      "ratio": 0.3509
+      "ratio": 0.3729
      },
      {
       "t": 33.2,
-      "ratio": 0.3509
+      "ratio": 0.3729
      },
      {
       "t": 33.6,
-      "ratio": 0.3333
+      "ratio": 0.3559
      },
      {
       "t": 33.9,
-      "ratio": 0.3158
+      "ratio": 0.339
      },
      {
       "t": 34.3,
-      "ratio": 0.2807
+      "ratio": 0.3051
      },
      {
       "t": 34.6,
-      "ratio": 0.2807
+      "ratio": 0.3051
      },
      {
       "t": 35.0,
-      "ratio": 0.2807
+      "ratio": 0.3051
      }
     ]
    },
    "trafico_pct": {
-    "SHORTS": 97.4,
+    "SHORTS": 96.2,
+    "YT_SEARCH": 1.9,
     "YT_OTHER_PAGE": 1.3,
-    "SUBSCRIBER": 0.7,
-    "YT_SEARCH": 0.7,
+    "SUBSCRIBER": 0.6,
     "NO_LINK_OTHER": 0.0
    },
-   "vistas_48h": 153,
+   "vistas_48h": 156,
    "se_quedaron_48h": {
-    "vistas": 153,
-    "comprometidas": 57,
-    "pct": 37.3
+    "vistas": 156,
+    "comprometidas": 59,
+    "pct": 37.8
    },
    "se_quedaron_total": {
-    "vistas": 153,
-    "comprometidas": 57,
-    "pct": 37.3
+    "vistas": 156,
+    "comprometidas": 59,
+    "pct": 37.8
    },
    "impresiones": null,
    "ctr": null
   }
  ],
  "miniaturas": [],
- "actualizado_utc": "2026-10-05T17:22:28Z",
+ "actualizado_utc": "2026-10-05T19:36:01Z",
  "control_c26": {
   "mediana_vistas_48h": 35.0,
   "n_videos": 20,
