@@ -86,7 +86,7 @@
     "24 *culturas*",
     "Un segundo de risa: ¿amigos o no?"
    ],
-   "narracion": "Greg Bryant lo probó con gente de veinticuatro culturas: oían un segundo de risa de dos personas. ¿Amigas o desconocidas?",
+   "narracion": "El investigador Greg Bryant lo probó con gente de veinticuatro culturas: oían un segundo de risa de dos personas. ¿Amigas o desconocidas?",
    "pausa_despues_s": 0.45,
    "visual": [
     {
@@ -130,9 +130,9 @@
    "tipo": "cierre",
    "fuente": "D07",
    "personaje": "duda",
-   "titulo": "Buena apuesta, no *segura*",
+   "titulo": "Vale algo, no es *segura*",
    "subtitulo": "Fuente: Bryant y otros, 2016",
-   "narracion": "O sea, que tu apuesta por los del desayuno es buena, pero no segura: a veces, acertar era casi tirar una moneda.",
+   "narracion": "O sea, que tu apuesta por los del desayuno vale algo, pero no es segura: a veces, acertar era casi tirar una moneda.",
    "pausa_despues_s": 0.2,
    "visual": [
     {
@@ -156,17 +156,17 @@
   }
  ],
  "lectura_en_frio": {
-  "lector": "subagente sin contexto (tercera vuelta, lector nuevo)",
-  "fecha": "2026-10-01",
-  "de_que_va": "Si puedes saber que dos personas son amigas con solo oírlas reír juntas.",
-  "pregunta_y_respuesta": "Si, con oír reír a dos personas, sabes si son amigas o desconocidas. Más o menos sí: se acierta algo más que por azar, entre 53 y 67 de cada 100, pero no es seguro.",
+  "lector": "subagente sin contexto (cuarta vuelta, lector nuevo; la revisión diaria reescribió las escenas 4, 5-6 tras la tercera)",
+  "fecha": "2026-10-05",
+  "de_que_va": "Si se puede saber, solo por la risa, si dos personas son amigas; un estudio dice que se acierta algo más que al azar, pero no mucho.",
+  "pregunta_y_respuesta": "¿Lo sabes de verdad o te lo imaginas? No del todo: se acierta más que con una moneda (53-67 de cada 100, según la cultura), pero no es fiable.",
   "frases_que_no_se_entienden": [],
-  "frase_que_sobra": "«¿Lo sabes de verdad, o te lo imaginas?» Se queda: es el «pero» entre la apuesta de la escena 2 y el experimento de la 4 (regla 2 de la historia); sin ella, Bryant entra sin que nadie haya dudado de nada.",
-  "donde_me_iria": "me quedo, «pero por poco» (escena 5, la ristra de números)",
+  "frase_que_sobra": "«Y aun así apostarías a que son amigos, de los que bajan juntos a desayunar.» (solo si hubiera que quitar una; se retoma en el cierre, se queda)",
+  "donde_me_iria": "me quedo; riesgo de deslizar en la escena 4 (nada en pantalla)",
   "notas": [
-   "«según el sitio» — «al principio pensé en una página web. Luego deduje que se refiere al país o la cultura» (la interpreta bien; corregido después de la lectura a «según la cultura», que es exactamente lo que el lector dedujo)",
-   "«tu apuesta por los del desayuno» — «tardé un segundo en caer en que eran los compañeros de la mampara»",
-   "«Greg Bryant lo probó» — «no sé quién es. Se entiende que es un investigador» (firma de la fuente, regla 2)"
+   "Todas las frases que copió son «tardé en pillar» (que cara o cruz es 50 de 100; volver a ubicar «los del desayuno»), no «no entendí»; no bloquean (criterio del 28/09).",
+   "La primera lectura de hoy (sobre el texto de la tercera vuelta) copió el cierre «buena apuesta… casi una moneda» como contradictorio y «Greg Bryant» sin presentar: se cambió a «vale algo, pero no es segura» y «El investigador Greg Bryant».",
+   "Pantalla vacía en la escena 4: queda como aviso para la planificación."
   ],
   "veredicto": "pasa"
  }

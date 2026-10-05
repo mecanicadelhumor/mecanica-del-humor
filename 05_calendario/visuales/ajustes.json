@@ -45,16 +45,9 @@
   }
  },
  "MDS-032": {
-  "1.1": {
+  "5.2": {
    "excluir": [
-    "pixabay:34317"
-   ],
-   "fuente": "ia"
-  },
-  "4.1": {
-   "busqueda": [
-    "person listening with headphones smiling",
-    "woman wearing headphones laughing at desk"
+    "pexels:8817000"
    ]
   }
  }
