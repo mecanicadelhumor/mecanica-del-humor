@@ -1,26 +1,31 @@
 {
-  "id": "MDS-026.es",
-  "duracion_final_s": 40.5,
-  "tamano_mb": 28.0,
+  "id": "MDS-032.es",
+  "duracion_final_s": 47.7,
+  "tamano_mb": 24.6,
   "audio": {
-    "lufs": -14.65,
-    "pico_dbtp": -1.38,
-    "rango_lu": 3.3
+    "lufs": -14.12,
+    "pico_dbtp": -1.19,
+    "rango_lu": 3.9
   },
   "silencio_inicial": {
-    "empieza_s": -0.17,
-    "acaba_s": 0.744,
-    "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
+    "empieza_s": -0.021,
+    "acaba_s": 0.129,
+    "esperado_s": 0.1,
+    "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
   "arranque": {
     "silencios_s": [
       [
-        -0.085,
-        0.744
+        0.0,
+        0.129
+      ],
+      [
+        0.941,
+        1.197
       ]
     ],
-    "fragmento_antes_de_la_narracion": false,
-    "duracion_fragmento_s": null,
+    "fragmento_antes_de_la_narracion": true,
+    "duracion_fragmento_s": 0.812,
     "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente)."
   },
   "fragmentos": {
@@ -41,27 +46,27 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 39.09,
-    "duracion_real_voz_mp3_s": 38.88,
-    "desfase_s": 0.21,
+    "duracion_calculada_s": 46.93,
+    "duracion_real_voz_mp3_s": 46.66,
+    "desfase_s": 0.27,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_12_lights_sappheiros.mp3",
-    "sha256": "ec8432272d68db1bf39afb8df8546f0783eca7ee54f486c9963e8e7dad1bab23"
+    "archivo": "cama_04_reverie_piano_version_ft_adarsh_lucjo.mp3",
+    "sha256": "f5686d0d74fbcfca353106bf734605cf404103b3e58e38c4e48e29e8bb2904f0"
   },
   "guion": {
-    "titulo_trabajo": "¿Sirve de algo un curso de improvisación?",
+    "titulo_trabajo": "¿Se nota en la risa si dos personas son amigas?",
     "idioma": "es",
     "voz": "Charon",
-    "escenas": 5,
-    "duracion_narracion_s": 39.09,
+    "escenas": 6,
+    "duracion_narracion_s": 46.93,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 8.788,
+    "escena_mas_larga_s": 11.466,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
-      "gemini-3.1-flash-tts-preview": 5
+      "gemini-3.1-flash-tts-preview": 6
     },
     "modelo_voz": "gemini-3.1-flash-tts-preview",
     "voz_mezclada": false,
@@ -70,13 +75,15 @@
       "llamada",
       "llamada",
       "llamada",
+      "llamada",
       "llamada"
     ],
     "direccion_voz": [
       "apertura",
+      "planteamiento",
       "remate",
+      "enumeracion",
       "cifra",
-      "contraste",
       "objecion"
     ],
     "escenas_ritmo_fuera_de_rango": []
@@ -86,84 +93,84 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 4.43,
-        "fuente": "pexels",
-        "id": 34822990,
-        "pagina": "https://www.pexels.com/video/group-of-photographers-at-indoor-workshop-34822990/",
-        "autor": "Sofía  Falco",
-        "autor_url": "https://www.pexels.com/@sofia-falco-1148410914",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 1,
-        "desde_s": 4.43,
-        "hasta_s": 8.8,
-        "fuente": "pexels",
-        "id": 7817154,
-        "pagina": "https://www.pexels.com/video/a-realtor-handing-over-the-keys-to-the-married-couple-7817154/",
-        "autor": "Pavel Danilyuk",
-        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 2,
-        "desde_s": 8.8,
-        "hasta_s": 13.47,
+        "hasta_s": 5.77,
         "fuente": "pixabay",
-        "id": 214780,
-        "pagina": "https://pixabay.com/videos/id-214780/",
-        "autor": "Peter_Hanzo",
-        "autor_url": "https://pixabay.com/users/Peter_Hanzo-44173646/",
+        "id": 34317,
+        "pagina": "https://pixabay.com/videos/id-34317/",
+        "autor": "RafterJr72",
+        "autor_url": "https://pixabay.com/users/RafterJr72-11468402/",
         "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 13.47,
-        "hasta_s": 16.83,
+        "desde_s": 5.77,
+        "hasta_s": 12.6,
         "fuente": "pexels",
-        "id": 38903358,
-        "pagina": "https://www.pexels.com/video/vintage-mechanical-wall-clock-close-up-38903358/",
-        "autor": "Dr. Prashant Vaijinath",
-        "autor_url": "https://www.pexels.com/@dr-prashant-vaijinath-2162248764",
+        "id": 8296444,
+        "pagina": "https://www.pexels.com/video/dating-couple-having-coffee-8296444/",
+        "autor": "Mikhail Nilov",
+        "autor_url": "https://www.pexels.com/@mikhail-nilov",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
-        "escena": 4,
-        "desde_s": 25.13,
-        "hasta_s": 29.23,
-        "fuente": "pexels",
-        "id": 6245736,
-        "pagina": "https://www.pexels.com/video/person-laughing-while-writing-6245736/",
-        "autor": "Monstera Production",
-        "autor_url": "https://www.pexels.com/@gabby-k",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "escena": 3,
+        "desde_s": 12.6,
+        "hasta_s": 16.23,
+        "fuente": "pixabay",
+        "id": 10822,
+        "pagina": "https://pixabay.com/videos/id-10822/",
+        "autor": "Coverr-Free-Footage",
+        "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       },
       {
         "escena": 4,
-        "desde_s": 29.23,
-        "hasta_s": 33.23,
+        "desde_s": 16.23,
+        "hasta_s": 25.07,
         "fuente": "pexels",
-        "id": 4547598,
-        "pagina": "https://www.pexels.com/video/a-door-is-open-in-a-dark-room-with-sunlight-coming-in-4547598/",
-        "autor": "cottonbro studio",
-        "autor_url": "https://www.pexels.com/@cottonbro",
+        "id": 8927989,
+        "pagina": "https://www.pexels.com/video/a-woman-putting-on-headphones-while-using-a-laptop-8927989/",
+        "autor": "SHVETS production",
+        "autor_url": "https://www.pexels.com/@shvets-production",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 5,
-        "desde_s": 33.23,
-        "hasta_s": 37.37,
+        "desde_s": 29.13,
+        "hasta_s": 36.2,
         "fuente": "pexels",
-        "id": 7034335,
-        "pagina": "https://www.pexels.com/video/close-up-of-clock-hands-7034335/",
-        "autor": "Tima Miroshnichenko",
-        "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+        "id": 8816948,
+        "pagina": "https://www.pexels.com/video/animation-of-a-hand-flipping-a-coin-8816948/",
+        "autor": "cottonbro CG studio",
+        "autor_url": "https://www.pexels.com/@cottonbro-cg-studio",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 6,
+        "desde_s": 36.2,
+        "hasta_s": 37.7,
+        "fuente": "pexels",
+        "id": 35829041,
+        "pagina": "https://www.pexels.com/video/argentine-coin-spinning-on-banknotes-close-up-35829041/",
+        "autor": "Andrew Schwark",
+        "autor_url": "https://www.pexels.com/@andrew-schwark-540305",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 6,
+        "desde_s": 37.7,
+        "hasta_s": 45.17,
+        "fuente": "pexels",
+        "id": 13324074,
+        "pagina": "https://www.pexels.com/video/two-men-talking-while-having-coffee-13324074/",
+        "autor": "Mizuno K",
+        "autor_url": "https://www.pexels.com/@mizunokozuki",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       }
@@ -171,11 +178,12 @@
     "sintetico": false
   },
   "fotogramas_s": [
-    5.87,
-    14.21,
-    22.4,
-    30.58,
-    37.34
+    3.57,
+    9.98,
+    14.91,
+    23.24,
+    32.94,
+    42.76
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }

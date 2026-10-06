@@ -602,6 +602,21 @@
       "subido_utc": "2026-10-05T07:12:01Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-05T17:26:37Z"
+    },
+    {
+      "id": "MDS-032.es",
+      "episodio": "MDS-032",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Se nota en la risa si dos personas son amigas?",
+      "guion": "05_calendario/guiones/MDS-032.es.json",
+      "video_id": "gcCHTEGCYcY",
+      "url": "https://youtu.be/gcCHTEGCYcY",
+      "estado": "private",
+      "publicar_en": "2026-10-06T17:00:00Z",
+      "musica": "cama_04_reverie_piano_version_ft_adarsh_lucjo.mp3",
+      "subido_utc": "2026-10-06T07:43:35Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-05T17:21:39Z"
