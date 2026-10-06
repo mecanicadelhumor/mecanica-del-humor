@@ -1,8 +1,8 @@
 {
   "guion": "MDS-034",
   "version": 1,
-  "firma": "72e477cb753bf712",
-  "resuelto_utc": "2026-10-01T22:37:40Z",
+  "firma": "e5eaf7af3411b741",
+  "resuelto_utc": "2026-10-06T09:35:17Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -333,32 +333,21 @@
             5.57
           ],
           "frase": "La que se pide sale de la zona que mueve los músculos.",
-          "fuente": "pexels",
-          "id": 6574006,
-          "pagina": "https://www.pexels.com/video/a-man-smiling-at-the-camera-6574006/",
-          "titulo": "a man smiling at the camera",
-          "autor": "Andres  Ayrton",
-          "autor_url": "https://www.pexels.com/@andres-ayrton",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 10.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/6574006/6574006-hd_1080_1920_24fps.mp4",
-          "tipo": "video",
-          "consulta": "man forcing a smile for camera",
-          "relevancia": 0.75,
-          "inicio_s": 0.4,
-          "movimiento": 4.04,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a man in a suit forcing a stiff smile for a photo, close-up",
+          "semilla": 8358634,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-034/e5_p1.jpg",
           "caras": [
             [
-              0.2472,
-              0.2062,
-              0.4944,
-              0.4094
+              0.2812,
+              0.1853,
+              0.4531,
+              0.3596
             ]
           ]
         },
@@ -370,32 +359,21 @@
             10.64
           ],
           "frase": "La que se escapa, de la de las emociones.",
-          "fuente": "pexels",
-          "id": 13322590,
-          "pagina": "https://www.pexels.com/video/a-man-in-a-white-t-shirt-talking-and-laughing-13322590/",
-          "titulo": "a man in a white t shirt talking and laughing",
-          "autor": "Mizuno K",
-          "autor_url": "https://www.pexels.com/@mizunokozuki",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 10.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/13322590/13322590-hd_1080_1920_24fps.mp4",
-          "tipo": "video",
-          "consulta": "man laughing uncontrollably",
-          "relevancia": 0.667,
-          "inicio_s": 0.4,
-          "movimiento": 3.36,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "the same man bursting into genuine, uncontrollable laughter, eyes creased",
+          "semilla": 597173,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-034/e5_p2.jpg",
           "caras": [
             [
-              0.2778,
-              0.2531,
-              0.3167,
-              0.2437
+              0.138,
+              0.2912,
+              0.6315,
+              0.4449
             ]
           ]
         }

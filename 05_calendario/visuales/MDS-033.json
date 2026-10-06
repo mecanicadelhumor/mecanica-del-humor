@@ -1,8 +1,8 @@
 {
   "guion": "MDS-033",
   "version": 1,
-  "firma": "bfa12a66a7f7d54f",
-  "resuelto_utc": "2026-10-01T22:37:11Z",
+  "firma": "73345df37a6befbd",
+  "resuelto_utc": "2026-10-06T09:34:21Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -108,16 +108,10 @@
           "fichero": "05_calendario/visuales/MDS-033/e2_p1.jpg",
           "caras": [
             [
-              0.4779,
-              0.3132,
-              0.1081,
-              0.0838
-            ],
-            [
-              0.4844,
-              0.8603,
-              0.0964,
-              0.0522
+              0.4987,
+              0.3647,
+              0.1094,
+              0.0794
             ]
           ]
         }
@@ -222,7 +216,7 @@
       ]
     },
     "4": {
-      "narracion_sha": "ba652d06ce37",
+      "narracion_sha": "46d70b39a564",
       "texto_pos": "abajo",
       "planos": [
         {
@@ -230,9 +224,9 @@
           "desde": null,
           "t_estimado": [
             0.0,
-            3.23
+            3.9
           ],
-          "frase": "Un psicólogo, Peter McGraw, lo estudió:",
+          "frase": "Un psicólogo, Peter McGraw, estudió la distancia:",
           "fuente": "marca",
           "tipo": "marca"
         },
@@ -240,14 +234,14 @@
           "k": 2,
           "desde": "un percance pequeño",
           "t_estimado": [
-            3.23,
-            10.18
+            3.9,
+            11.57
           ],
-          "frase": "un percance pequeño tiene gracia de cerca, y una desgracia grande, solo de lejos.",
+          "frase": "un percance pequeño tiene gracia si queda cerca, y una desgracia grande, solo si queda lejos.",
           "fuente": "pixabay",
           "id": 217710,
           "pagina": "https://pixabay.com/videos/id-217710/",
-          "titulo": "puddle, raindrops, rain, water, reflection, wet, closeup, pavement, downpour, wet ground, beautiful wallpaper, atmospheric, dark, melancholic, gloomy, rainy day, dim, background id",
+          "titulo": "puddle, raindrops, beautiful wallpaper, rain, water, reflection, wet, closeup, pavement, downpour, wet ground, atmospheric, dark, melancholic, gloomy, rainy day, dim, background id",
           "autor": "YanaHD",
           "autor_url": "https://pixabay.com/users/YanaHD-13823158/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
@@ -291,28 +285,22 @@
           "fichero": "05_calendario/visuales/MDS-033/e5_p1.jpg",
           "caras": [
             [
-              0.3268,
-              0.7926,
-              0.1289,
-              0.0993
+              0.6198,
+              0.164,
+              0.0911,
+              0.0632
             ],
             [
-              0.4935,
-              0.1743,
-              0.1237,
-              0.0757
+              0.3581,
+              0.1603,
+              0.0911,
+              0.0618
             ],
             [
-              0.332,
-              0.3684,
-              0.099,
-              0.0757
-            ],
-            [
-              0.625,
-              0.7757,
-              0.0391,
-              0.0279
+              0.3711,
+              0.3904,
+              0.0833,
+              0.061
             ]
           ]
         },
@@ -349,7 +337,7 @@
       ]
     },
     "6": {
-      "narracion_sha": "d0d2a382458c",
+      "narracion_sha": "080ba2f8097c",
       "texto_pos": "abajo",
       "planos": [
         {
@@ -357,25 +345,25 @@
           "desde": null,
           "t_estimado": [
             0.0,
-            3.57
+            3.53
           ],
           "frase": "Así que el charco, cuéntalo esa semana.",
-          "fuente": "pixabay",
-          "id": 7686,
-          "pagina": "https://pixabay.com/videos/id-7686/",
-          "titulo": "man, sahara, desert, adventure, laughed at, storm dune, sand id",
-          "autor": "Espace-Aventures",
-          "autor_url": "https://pixabay.com/users/Espace-Aventures-4213878/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 35.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2017/02/06/7686-202893456_large.mp4",
+          "fuente": "pexels",
+          "id": 13543395,
+          "pagina": "https://www.pexels.com/video/wet-asphalt-on-road-after-rain-13543395/",
+          "titulo": "wet asphalt on road after rain",
+          "autor": "izzet çakallı",
+          "autor_url": "https://www.pexels.com/@izzet-cakalli-239176330",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13543395/13543395-hd_1080_1920_30fps.mp4",
           "tipo": "video",
-          "consulta": "friends laughing telling story at cafe",
-          "relevancia": 0.4,
+          "consulta": "puddle on wet street after rain",
+          "relevancia": 0.6,
           "inicio_s": 0.4,
-          "movimiento": 0.68,
+          "movimiento": 1.99,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
@@ -386,10 +374,10 @@
           "k": 2,
           "desde": "Con una desgracia de verdad",
           "t_estimado": [
-            3.57,
-            9.01
+            3.53,
+            9.93
           ],
-          "frase": "Con una desgracia de verdad es al revés: hace falta tiempo.",
+          "frase": "Con una desgracia de verdad pasa al revés: antes tiene que pasar tiempo.",
           "fuente": "pexels",
           "id": 38122234,
           "pagina": "https://www.pexels.com/video/rainy-empty-city-street-with-modern-architecture-38122234/",
