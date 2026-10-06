@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-05T21:20:33Z",
+ "actualizado_utc": "2026-10-06T12:03:42Z",
  "regla": {
   "temprano": {
    "n": 4,
