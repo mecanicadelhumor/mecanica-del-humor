@@ -106,7 +106,7 @@
    "et_a": "gracia de *cerca*",
    "b": "Desgracia grande",
    "et_b": "solo de _lejos_",
-   "narracion": "Un psicólogo, Peter McGraw, lo estudió: un percance pequeño tiene gracia de cerca, y una desgracia grande, solo de lejos.",
+   "narracion": "Un psicólogo, Peter McGraw, estudió la distancia: un percance pequeño tiene gracia si queda cerca, y una desgracia grande, solo si queda lejos.",
    "pausa_despues_s": 0.45,
    "visual": [
     {
@@ -157,7 +157,7 @@
    "personaje": "no",
    "titulo": "El charco, *esa* semana",
    "subtitulo": "Fuente: McGraw y otros, 2012",
-   "narracion": "Así que el charco, cuéntalo esa semana. Con una desgracia de verdad es al revés: hace falta tiempo.",
+   "narracion": "Así que el charco, cuéntalo esa semana. Con una desgracia de verdad pasa al revés: antes tiene que pasar tiempo.",
    "pausa_despues_s": 0.2,
    "visual": [
     {
@@ -181,16 +181,17 @@
   }
  ],
  "lectura_en_frio": {
-  "lector": "subagente sin contexto (segunda vuelta, lector nuevo)",
-  "fecha": "2026-10-01",
-  "de_que_va": "Por qué algo que te hizo llorar de risa un día deja de tener gracia cuando lo cuentas un año después.",
-  "pregunta_y_respuesta": "¿Por qué la anécdota del charco ya no hace gracia en la cena? Porque un percance pequeño solo tiene gracia mientras está reciente; cuando ya queda lejos, deja de tenerla. Con una desgracia grande pasa lo contrario: hace falta tiempo.",
+  "lector": "subagente sin contexto (tercera vuelta tras reescribir escenas 4 y 6; lector nuevo)",
+  "fecha": "2026-10-06",
+  "de_que_va": "Una caída ridícula te da risa al momento pero no un año después, y cuándo conviene contar lo gracioso según su gravedad.",
+  "pregunta_y_respuesta": "¿Por qué algo que hizo mucha gracia deja de tenerla con el tiempo? Porque el humor depende de la distancia: un percance pequeño tiene gracia si es reciente y una desgracia grande, solo cuando ha pasado mucho tiempo.",
   "frases_que_no_se_entienden": [],
-  "frase_que_sobra": "ninguna",
-  "donde_me_iria": "me quedo (lo más cerca, la escena 4: «pasa de anécdota a clase. Pero dura poco y enseguida vuelve al charco»)",
+  "frase_que_sobra": "escena 5 (repite lo de 3 y 4); se queda: es la que une el charco con la distancia",
+  "donde_me_iria": "escena 4 («suena a clase»), pero aguanta por el gancho de la 3",
   "notas": [
-   "«Y el charco era pequeño. Un año después, ya quedaba lejos.» — «La entendí, pero tardé un segundo. La escena 4 dice que lo pequeño tiene gracia de cerca, pero no dice claramente que de lejos la pierda.»",
-   "«En la escena 3 yo había pensado otra explicación: en la cena nadie se ríe porque no estaban allí, es el típico tenías que estar. El vídeo no descarta esa idea.» (no es una frase sin entender: es una explicación rival legítima; va a la bitácora)"
+   "Primera lectura del 06/10 (texto del 01/10): copió como no entendidas «lo estudió… de cerca/de lejos», «ya quedaba lejos» (pensaba que el charco estaba lejos) y «al revés: hace falta tiempo». Cambios: «estudió la distancia… si queda cerca / si queda lejos»; «pasa al revés: antes tiene que pasar tiempo».",
+   "Segunda lectura: idea = tesis; marca como «tardé en pillar» «intacto» (es el chiste), «estudió la distancia» (se aclara en la frase siguiente) y «al revés» (un segundo). Según el criterio del 28/09 van a notas.",
+   "Dura 54,2 s (techo 55)."
   ],
   "veredicto": "pasa"
  }

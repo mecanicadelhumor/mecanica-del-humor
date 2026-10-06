@@ -50,5 +50,30 @@
     "pexels:8817000"
    ]
   }
+ },
+ "MDS-033": {
+  "3": {
+   "texto_pos": "abajo"
+  },
+  "6.1": {
+   "excluir": [
+    "pixabay:7686"
+   ],
+   "busqueda": [
+    "puddle on wet street after rain",
+    "raindrops falling in a puddle on the pavement"
+   ]
+  }
+ },
+ "MDS-034": {
+  "3": {
+   "texto_pos": "abajo"
+  },
+  "5.1": {
+   "fuente": "ia"
+  },
+  "5.2": {
+   "fuente": "ia"
+  }
  }
 }
