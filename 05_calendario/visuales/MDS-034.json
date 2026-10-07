@@ -1,8 +1,8 @@
 {
   "guion": "MDS-034",
   "version": 1,
-  "firma": "e5eaf7af3411b741",
-  "resuelto_utc": "2026-10-06T09:35:17Z",
+  "firma": "0a1662ee8d39d237",
+  "resuelto_utc": "2026-10-07T09:32:35Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -237,31 +237,91 @@
           ],
           "frase": "Ahí sí os reís de verdad. La primera risa la pidió el fotógrafo; la segunda se os escapó.",
           "fuente": "pexels",
-          "id": 28952505,
-          "pagina": "https://www.pexels.com/video/woman-singing-outdoors-at-wedding-ceremony-28952505/",
-          "titulo": "woman singing outdoors at wedding ceremony",
+          "id": 28952515,
+          "pagina": "https://www.pexels.com/video/elegant-outdoor-wedding-ceremony-with-guests-28952515/",
+          "titulo": "elegant outdoor wedding ceremony with guests",
           "autor": "Alexander Mass",
           "autor_url": "https://www.pexels.com/@rebornfilmes",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 29.0,
+          "duracion_s": 14.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/28952505/12526878_1080_1920_30fps.mp4",
+          "url": "https://videos.pexels.com/video-files/28952515/12526862_1080_1920_30fps.mp4",
           "tipo": "video",
           "consulta": "wedding guests laughing together outdoors",
-          "relevancia": 0.4,
+          "relevancia": 0.6,
           "inicio_s": 0.4,
-          "movimiento": 3.91,
+          "movimiento": 7.43,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.3917,
-              0.3891,
-              0.1778,
-              0.1437
+              0.2861,
+              0.3453,
+              0.0722,
+              0.0625
+            ],
+            [
+              0.4583,
+              0.3672,
+              0.0667,
+              0.0531
+            ],
+            [
+              0.9056,
+              0.4359,
+              0.0528,
+              0.0375
+            ],
+            [
+              0.7028,
+              0.4406,
+              0.0528,
+              0.0359
+            ],
+            [
+              0.0778,
+              0.4453,
+              0.0444,
+              0.0297
+            ],
+            [
+              0.0389,
+              0.425,
+              0.0444,
+              0.0297
+            ],
+            [
+              0.7167,
+              0.4844,
+              0.0389,
+              0.0266
+            ],
+            [
+              0.1944,
+              0.4734,
+              0.0333,
+              0.0234
+            ],
+            [
+              0.8472,
+              0.525,
+              0.0278,
+              0.0203
+            ],
+            [
+              0.8889,
+              0.5094,
+              0.0278,
+              0.0187
+            ],
+            [
+              0.7833,
+              0.4875,
+              0.0278,
+              0.0187
             ]
           ]
         }
@@ -323,7 +383,7 @@
     },
     "5": {
       "narracion_sha": "906b0632c72e",
-      "texto_pos": "abajo",
+      "texto_pos": "arriba",
       "planos": [
         {
           "k": 1,
@@ -333,21 +393,38 @@
             5.57
           ],
           "frase": "La que se pide sale de la zona que mueve los músculos.",
-          "fuente": "ia",
-          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-          "prompt": "a man in a suit forcing a stiff smile for a photo, close-up",
-          "semilla": 8358634,
-          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-          "ancho": 768,
-          "alto": 1360,
-          "tipo": "imagen",
-          "fichero": "05_calendario/visuales/MDS-034/e5_p1.jpg",
+          "fuente": "pixabay",
+          "id": 324831,
+          "pagina": "https://pixabay.com/videos/id-324831/",
+          "titulo": "neuron, brain, neural network, artificial intelligence, synapse, neuroscience, science, technology, biology, abstract, data, connection, intelligence, mind, energy, glow, anatomy, medical, digital, futuristic, concept, cells, nervous system, microscopic, 3d animation, ai generated id",
+          "autor": "WhiteHatDesigner",
+          "autor_url": "https://pixabay.com/users/WhiteHatDesigner-25779762/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 8.0,
+          "ancho": 2160,
+          "alto": 3840,
+          "url": "https://cdn.pixabay.com/video/2025/12/29/324831_large.mp4",
+          "tipo": "video",
+          "consulta": "neurons glowing abstract brain network",
+          "relevancia": 1.0,
+          "inicio_s": 0.0,
+          "movimiento": 8.22,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
           "caras": [
             [
-              0.2812,
-              0.1853,
-              0.4531,
-              0.3596
+              0.8903,
+              0.3672,
+              0.0458,
+              0.0367
+            ],
+            [
+              0.6181,
+              0.0289,
+              0.0181,
+              0.0133
             ]
           ]
         },
@@ -359,21 +436,38 @@
             10.64
           ],
           "frase": "La que se escapa, de la de las emociones.",
-          "fuente": "ia",
-          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-          "prompt": "the same man bursting into genuine, uncontrollable laughter, eyes creased",
-          "semilla": 597173,
-          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-          "ancho": 768,
-          "alto": 1360,
-          "tipo": "imagen",
-          "fichero": "05_calendario/visuales/MDS-034/e5_p2.jpg",
+          "fuente": "pexels",
+          "id": 7088472,
+          "pagina": "https://www.pexels.com/video/a-doctor-and-a-sonographer-diagnosing-a-patient-mri-test-7088472/",
+          "titulo": "a doctor and a sonographer diagnosing a patient mri test",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 19.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7088472/7088472-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "brain scan MRI screen doctor",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 2.52,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
           "caras": [
             [
-              0.138,
-              0.2912,
-              0.6315,
-              0.4449
+              0.6972,
+              0.4953,
+              0.1056,
+              0.1125
+            ],
+            [
+              0.6556,
+              0.4094,
+              0.1,
+              0.0813
             ]
           ]
         }
