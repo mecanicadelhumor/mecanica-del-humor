@@ -1,22 +1,23 @@
 {
-  "id": "MDS-027.es",
-  "duracion_final_s": 43.3,
-  "tamano_mb": 22.6,
+  "id": "MDS-033.es",
+  "duracion_final_s": 51.7,
+  "tamano_mb": 40.6,
   "audio": {
-    "lufs": -14.19,
-    "pico_dbtp": -1.38,
-    "rango_lu": 4.2
+    "lufs": -15.13,
+    "pico_dbtp": -1.46,
+    "rango_lu": 3.2
   },
   "silencio_inicial": {
-    "empieza_s": -0.17,
-    "acaba_s": 0.758,
-    "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
+    "empieza_s": -0.021,
+    "acaba_s": 0.13,
+    "esperado_s": 0.1,
+    "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
   "arranque": {
     "silencios_s": [
       [
-        -0.085,
-        0.758
+        0.0,
+        0.13
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -41,24 +42,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 41.99,
-    "duracion_real_voz_mp3_s": 41.71,
-    "desfase_s": 0.28,
+    "duracion_calculada_s": 50.84,
+    "duracion_real_voz_mp3_s": 50.57,
+    "desfase_s": 0.27,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_13_embrace_sappheiros.mp3",
-    "sha256": "2ed7b5338cc93932605464610b53237ee1de9fa4e93ac7a88946455443350d43"
+    "archivo": "cama_05_prelude_no_13_chris_zabriskie.mp3",
+    "sha256": "14fc9c6d547249a5250cf2ef09c67e1c9b13bef562c899bc8e6bf5f3d321846b"
   },
   "guion": {
-    "titulo_trabajo": "¿Por qué hay gente que no pilla los chistes?",
+    "titulo_trabajo": "¿Por qué una anécdota graciosa deja de tener gracia?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 41.99,
+    "duracion_narracion_s": 50.84,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 8.936,
+    "escena_mas_larga_s": 12.498,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 6
@@ -75,10 +76,10 @@
     ],
     "direccion_voz": [
       "apertura",
-      "remate",
       "planteamiento",
+      "remate",
       "contraste",
-      "enumeracion",
+      "planteamiento",
       "objecion"
     ],
     "escenas_ritmo_fuera_de_rango": []
@@ -88,121 +89,129 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 5.03,
+        "hasta_s": 4.0,
         "fuente": "pexels",
-        "id": 8936497,
-        "pagina": "https://www.pexels.com/video/man-wearing-face-mask-ordering-at-the-counter-8936497/",
-        "autor": "Thirdman",
-        "autor_url": "https://www.pexels.com/@thirdman",
+        "id": 32896752,
+        "pagina": "https://www.pexels.com/video/man-waiting-at-tram-stop-using-smartphone-32896752/",
+        "autor": "Ahmed ؜",
+        "autor_url": "https://www.pexels.com/@mutecevvil",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 1,
-        "desde_s": 5.03,
-        "hasta_s": 7.93,
+        "desde_s": 4.0,
+        "hasta_s": 6.67,
         "fuente": "pexels",
-        "id": 5757790,
-        "pagina": "https://www.pexels.com/video/two-loafs-of-brown-bread-5757790/",
-        "autor": "Anna Bondarenko",
-        "autor_url": "https://www.pexels.com/@aaa333",
+        "id": 10943538,
+        "pagina": "https://www.pexels.com/video/man-with-rosary-on-sidewalk-10943538/",
+        "autor": "Muhammed İKİTEPE",
+        "autor_url": "https://www.pexels.com/@muhammed-i-ki-tepe-155329832",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 7.93,
-        "hasta_s": 12.03,
+        "desde_s": 6.67,
+        "hasta_s": 13.03,
+        "fuente": "ia",
+        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+        "prompt": "a man sitting in a big rain puddle on the pavement, holding his phone up high and dry, slightly stunned",
+        "tipo": "imagen"
+      },
+      {
+        "escena": 3,
+        "desde_s": 13.03,
+        "hasta_s": 15.8,
         "fuente": "pexels",
-        "id": 36825699,
-        "pagina": "https://www.pexels.com/video/slicing-artisan-sourdough-bread-on-wooden-board-36825699/",
-        "autor": "Max Griss",
-        "autor_url": "https://www.pexels.com/@max-griss-16866522",
+        "id": 6243984,
+        "pagina": "https://www.pexels.com/video/man-and-woman-crossing-street-under-the-rain-6243984/",
+        "autor": "Gary  Barnes",
+        "autor_url": "https://www.pexels.com/@gary-barnes",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 3,
-        "desde_s": 12.03,
-        "hasta_s": 14.83,
+        "desde_s": 15.8,
+        "hasta_s": 21.37,
         "fuente": "pexels",
-        "id": 18940146,
-        "pagina": "https://www.pexels.com/video/a-man-sitting-at-a-table-with-other-people-18940146/",
-        "autor": "Kuiyibo Campos",
-        "autor_url": "https://www.pexels.com/@kuiyibo",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 3,
-        "desde_s": 14.83,
-        "hasta_s": 17.57,
-        "fuente": "pexels",
-        "id": 13326116,
-        "pagina": "https://www.pexels.com/video/a-man-having-coffee-and-a-sandwich-at-an-outdoor-cafe-13326116/",
-        "autor": "Mizuno K",
-        "autor_url": "https://www.pexels.com/@mizunokozuki",
+        "id": 6073876,
+        "pagina": "https://www.pexels.com/video/child-at-the-dinner-table-6073876/",
+        "autor": "cottonbro studio",
+        "autor_url": "https://www.pexels.com/@cottonbro",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 4,
-        "desde_s": 17.57,
-        "hasta_s": 23.13,
-        "fuente": "pexels",
-        "id": 6092328,
-        "pagina": "https://www.pexels.com/video/person-pouring-cocoa-powder-on-the-bowl-with-flour-6092328/",
-        "autor": "ROMAN ODINTSOV",
-        "autor_url": "https://www.pexels.com/@roman-odintsov",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 4,
-        "desde_s": 23.13,
-        "hasta_s": 26.23,
-        "fuente": "pexels",
-        "id": 15634418,
-        "pagina": "https://www.pexels.com/video/a-loaf-of-bread-sitting-on-a-cutting-board-next-to-a-fireplace-15634418/",
-        "autor": "hello aesthe",
-        "autor_url": "https://www.pexels.com/@helloaesthe",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "desde_s": 26.1,
+        "hasta_s": 33.87,
+        "fuente": "pixabay",
+        "id": 217710,
+        "pagina": "https://pixabay.com/videos/id-217710/",
+        "autor": "YanaHD",
+        "autor_url": "https://pixabay.com/users/YanaHD-13823158/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       },
       {
         "escena": 5,
-        "desde_s": 30.87,
-        "hasta_s": 33.07,
+        "desde_s": 33.87,
+        "hasta_s": 36.9,
+        "fuente": "ia",
+        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+        "prompt": "a man sitting in a rain puddle holding his phone up, his friend laughing beside him",
+        "tipo": "imagen"
+      },
+      {
+        "escena": 5,
+        "desde_s": 36.9,
+        "hasta_s": 40.17,
         "fuente": "pexels",
-        "id": 13322578,
-        "pagina": "https://www.pexels.com/video/two-young-men-talking-and-laughing-at-home-13322578/",
-        "autor": "Mizuno K",
-        "autor_url": "https://www.pexels.com/@mizunokozuki",
+        "id": 35332817,
+        "pagina": "https://www.pexels.com/video/flipping-calendar-pages-in-motion-35332817/",
+        "autor": "Cis14_04 09",
+        "autor_url": "https://www.pexels.com/@cis14_04-09-2156191398",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 6,
-        "desde_s": 33.07,
-        "hasta_s": 40.27,
-        "fuente": "pixabay",
-        "id": 1112,
-        "pagina": "https://pixabay.com/videos/id-1112/",
-        "autor": "DistillVideos",
-        "autor_url": "https://pixabay.com/users/DistillVideos-1280814/",
-        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "desde_s": 40.17,
+        "hasta_s": 43.57,
+        "fuente": "pexels",
+        "id": 13543395,
+        "pagina": "https://www.pexels.com/video/wet-asphalt-on-road-after-rain-13543395/",
+        "autor": "izzet çakallı",
+        "autor_url": "https://www.pexels.com/@izzet-cakalli-239176330",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 6,
+        "desde_s": 43.57,
+        "hasta_s": 49.1,
+        "fuente": "pexels",
+        "id": 38122234,
+        "pagina": "https://www.pexels.com/video/rainy-empty-city-street-with-modern-architecture-38122234/",
+        "autor": "Mallesh Baithi",
+        "autor_url": "https://www.pexels.com/@mallesh-baithi-392053733",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       }
     ],
-    "sintetico": false
+    "sintetico": true
   },
   "fotogramas_s": [
-    5.35,
-    10.99,
-    15.95,
-    23.36,
-    30.92,
-    39.02
+    4.1,
+    10.58,
+    18.14,
+    28.97,
+    37.76,
+    46.68
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }

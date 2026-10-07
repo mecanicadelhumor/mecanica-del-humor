@@ -618,6 +618,21 @@
       "subido_utc": "2026-10-06T07:43:35Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-06T21:42:38Z"
+    },
+    {
+      "id": "MDS-033.es",
+      "episodio": "MDS-033",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué una anécdota graciosa deja de hacer gracia?",
+      "guion": "05_calendario/guiones/MDS-033.es.json",
+      "video_id": "CZnJYkcfUXk",
+      "url": "https://youtu.be/CZnJYkcfUXk",
+      "estado": "private",
+      "publicar_en": "2026-10-07T17:00:00Z",
+      "musica": "cama_05_prelude_no_13_chris_zabriskie.mp3",
+      "subido_utc": "2026-10-07T07:23:34Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-06T21:42:38Z"
