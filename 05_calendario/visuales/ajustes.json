@@ -70,10 +70,14 @@
    "texto_pos": "abajo"
   },
   "5.1": {
-   "fuente": "ia"
+   "busqueda": [
+    "neurons glowing abstract brain network"
+   ]
   },
   "5.2": {
-   "fuente": "ia"
+   "busqueda": [
+    "brain scan MRI screen doctor"
+   ]
   }
  }
 }
