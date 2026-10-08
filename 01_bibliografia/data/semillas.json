@@ -8,7 +8,7 @@
       "Prioridad 2 = importante: aporta evidencia concreta para uno o varios videos.",
       "Prioridad 3 = complementario: contexto, replicaciones, aplicaciones."
     ],
-    "actualizado": "2026-09-25"
+    "actualizado": "2026-10-08"
   },
   "pilares": {
     "A": "Teorias fundacionales del humor",
@@ -398,13 +398,13 @@
       "pilar": "D",
       "prioridad": 2,
       "tipo": "articulo",
-      "titulo": "Convergent evidence that laughter serves as a signal of cooperation and affiliation across societies",
+      "titulo": "Detecting affiliation in colaughter across 24 societies",
       "autores": "Bryant, G. A. et al.",
       "anio": 2016,
       "fuente": "PNAS",
       "doi": "10.1073/pnas.1524993113",
-      "por_que": "24 sociedades distinguen risa real de fingida. Universalidad de la senal.",
-      "doi_confianza": "por verificar automaticamente"
+      "por_que": "Oyendo un segundo de dos personas riendose a la vez, oyentes de 24 sociedades distinguian si eran amigas o desconocidas por encima del azar. (Corregido el 08/10/2026: el titulo era el de otro articulo del mismo grupo y el comentario hablaba de risa real o fingida, que es otro trabajo.)",
+      "doi_confianza": "titulo corregido el 08/10/2026 contra api.crossref.org/works/10.1073/pnas.1524993113 (es el de E05, el duplicado de prueba)"
     },
     {
       "id": "D08",
@@ -430,6 +430,34 @@
       "fuente": "Personality and Individual Differences",
       "doi": null,
       "por_que": "Humor y mantenimiento de la relacion a largo plazo."
+    },
+    {
+      "id": "D10",
+      "pilar": "D",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "The impact of emojis on perceived responsiveness and relationship satisfaction in text messaging",
+      "autores": "Huh, E.",
+      "anio": 2025,
+      "fuente": "PLOS One, 20(7), e0326189",
+      "doi": "10.1371/journal.pone.0326189",
+      "por_que": "Familia «mensajes». La misma respuesta de un amigo con emoji se percibe como mas atenta que sin el, y eso predice mas cercania. 260 participantes, 15 conversaciones.",
+      "doi_confianza": "verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1371/journal.pone.0326189 y en Europe PMC (PMID 40601618)",
+      "resumen_verificado": "Literal del resumen leido el 08/10/2026 (Crossref y Europe PMC): «A sample of 260 participants viewed 15 text-based conversations»; «messages containing emojis were perceived as more responsive than text-only messages. Perceived responsiveness, in turn, significantly predicted higher ratings of closeness and relationship satisfaction.» Conversaciones imaginadas, no reales."
+    },
+    {
+      "id": "D11",
+      "pilar": "D",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "Laughing and liking: Exploring the interpersonal effects of humor use in initial social interactions",
+      "autores": "Treger, S.; Sprecher, S.; Erber, R.",
+      "anio": 2013,
+      "fuente": "European Journal of Social Psychology, 43(6), 532-543",
+      "doi": "10.1002/ejsp.1962",
+      "por_que": "Caer bien en una primera conversacion: entre desconocidos, el humor va con mas simpatia y cercania. Responde a «como caer bien en una primera conversacion» sin tocar la atraccion (no es tema de Short).",
+      "doi_confianza": "verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1002/ejsp.1962 (con el resumen en el mismo registro)",
+      "resumen_verificado": "Literal del resumen leido el 08/10/2026 (Crossref): «In Experiment 2, unacquainted mixed-sex dyads participated in a series of either humorous or similar but non-humorous tasks. In both studies, humor was positively associated with liking and closeness»; «perceived reciprocal liking and enjoyment of the interaction mediated the association between humor and liking». Ojo: parejas mixtas de desconocidos; el guion no habla de ligar."
     },
     {
       "id": "E01",
@@ -508,6 +536,34 @@
       "por_que": "Ratas que 'rien' a 50 kHz. Video con enorme potencial viral y ciencia solida.",
       "doi_confianza": "verificado el 15/09/2026 contra el texto del artículo (dirección)",
       "nota_ampliada": "*Comprobado el 15/09/2026 (dirección, al reescribir MDS-017), con lo que el artículo dice y lo que no:* las cosquillas provocan en ratas jóvenes chirridos ultrasónicos de ~50 kHz, que los autores comparan con una risa primitiva; las ratas buscan la mano que les hizo cosquillas y «recorren laberintos y aprietan palancas» para que se las hagan (la cosquilla es recompensa); la risa humana rudimentaria aparece a los 2-3 meses y los autores la leen como una herencia antigua, distinta del humor «cognitivo». **Y la cautela, que es la de los propios autores:** no se atan a la interpretación de «risa», porque lo subjetivo no se mide en animales ni en personas, se infiere. El título que figuraba aquí hasta el 15/09 («Tickling and the evolution of laughter») no es el del artículo."
+    },
+    {
+      "id": "E07",
+      "pilar": "E",
+      "prioridad": 1,
+      "tipo": "articulo",
+      "titulo": "Modulation of humor ratings of bad jokes by other people's laughter",
+      "autores": "Cai, Q.; Chen, S.; White, S. J.; Scott, S. K.",
+      "anio": 2019,
+      "fuente": "Current Biology, 29(14), R677-R678",
+      "doi": "10.1016/j.cub.2019.05.073",
+      "por_que": "Las risas enlatadas: los chistes malos parecen mas graciosos con risas detras, y mas aun si la risa es espontanea. Desbloquea «por que las series tienen risas grabadas».",
+      "doi_confianza": "verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/j.cub.2019.05.073 y en Europe PMC (PMID 31336080)",
+      "resumen_verificado": "Literal del resumen leido el 08/10/2026 (Europe PMC): «we show that the presence of laughter enhances how funny people find jokes and that this effect is increased for spontaneous laughter. This effect was present for both neurotypical and autistic participants». Los chistes eran chistes malos («bad jokes», en el titulo)."
+    },
+    {
+      "id": "E08",
+      "pilar": "E",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "A study of laughter and dissociation: Distinct correlates of laughter and smiling during bereavement",
+      "autores": "Keltner, D.; Bonanno, G. A.",
+      "anio": 1997,
+      "fuente": "Journal of Personality and Social Psychology, 73(4), 687-702",
+      "doi": "10.1037/0022-3514.73.4.687",
+      "por_que": "La risa en el duelo: entre personas que habian perdido a su pareja, la risa de verdad (la que arruga los ojos) iba con menos enfado, mas distancia del malestar y mejores relaciones; la de compromiso, no. Responde a «por que nos reimos en un funeral».",
+      "doi_confianza": "verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1037/0022-3514.73.4.687; resumen leido en el PDF del autor (greatergood.berkeley.edu/dacherkeltner/docs/keltner.laughter.jpsp.1997.pdf), mismo titulo",
+      "resumen_verificado": "Literal del resumen leido el 08/10/2026 (PDF del autor): «the authors related measures of bereaved adults' laughter and smiling 6 months postloss»; «Duchenne laughter, which involves orbicularis oculi muscle action, related to self-reports of reduced anger and increased enjoyment, the dissociation of distress, better social relations, and positive responses from strangers, whereas non-Duchenne laughter did not.» Correlaciones, no causa."
     },
     {
       "id": "F01",
@@ -795,6 +851,62 @@
       "por_que": "Como se senala la ironia: prosodia y marcadores. Muy accionable para hablar mejor."
     },
     {
+      "id": "I06",
+      "pilar": "I",
+      "prioridad": 1,
+      "tipo": "articulo",
+      "titulo": "Texting insincerely: The role of the period in text messaging",
+      "autores": "Gunraj, D. N.; Drumm-Hewitt, A. M.; Dashow, E. M.; Upadhyay, S. S. N.; Klin, C. M.",
+      "anio": 2016,
+      "fuente": "Computers in Human Behavior, 55, 1067-1075",
+      "doi": "10.1016/j.chb.2015.11.003",
+      "por_que": "Familia «mensajes» (R-TE-03). La misma respuesta corta a una invitacion, con punto final, se lee como menos sincera en un mensaje de texto; escrita a mano, no. El punto es una senal social en el chat.",
+      "doi_confianza": "verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/j.chb.2015.11.003 y en researchconnect.suny.edu (ficha de la publicacion, con resumen)",
+      "resumen_verificado": "Literal del resumen leido el 08/10/2026 (researchconnect.suny.edu): «the responses that ended with a period were rated as less sincere than those that did not end with a period»; «No such difference was found for handwritten notes»; «punctuation is one cue used by senders, and understood by receivers, to convey pragmatic and social information». No da cifras en el resumen."
+    },
+    {
+      "id": "I07",
+      "pilar": "I",
+      "prioridad": 1,
+      "tipo": "articulo",
+      "titulo": "Egocentrism over e-mail: Can we communicate as well as we think?",
+      "autores": "Kruger, J.; Epley, N.; Parker, J.; Ng, Z.-W.",
+      "anio": 2005,
+      "fuente": "Journal of Personality and Social Psychology, 89(6), 925-936",
+      "doi": "10.1037/0022-3514.89.6.925",
+      "por_que": "Familia «mensajes». Por que crees que tu ironia se entiende por escrito: quien escribe «oye» su propio tono y sobreestima lo bien que se entiende. Continuacion natural de MDS-016.",
+      "doi_confianza": "verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1037/0022-3514.89.6.925 y en Europe PMC (PMID 16393025)",
+      "resumen_verificado": "Literal del resumen leido el 08/10/2026 (Europe PMC): «Five experiments suggest that this limitation is often underappreciated, such that people tend to believe that they can communicate over e-mail more effectively than they actually can»; «this overconfidence is born of egocentrism»; «Because e-mail communicators \"hear\" a statement differently depending on whether they intend to be, say, sarcastic or funny, it can be difficult to appreciate that their electronic audience may not.» El resumen no da porcentajes: no se citan."
+    },
+    {
+      "id": "I08",
+      "pilar": "I",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "Sarcasm in written communication: Emoticons are efficient markers of intention",
+      "autores": "Thompson, D.; Filik, R.",
+      "anio": 2016,
+      "fuente": "Journal of Computer-Mediated Communication, 21(2), 105-120",
+      "doi": "10.1111/jcc4.12156",
+      "por_que": "Familia «mensajes». Que se pone la gente para marcar la ironia por escrito: la carita que saca la lengua y la del guino son las marcas principales; los puntos suspensivos van mas con la critica.",
+      "doi_confianza": "verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1111/jcc4.12156 y en academic.oup.com/jcmc/article/21/2/105/4065376",
+      "resumen_verificado": "Literal del resumen leido el 08/10/2026 (academic.oup.com): «Results provided clear evidence that tongue and wink emoticons are the principal indicators of sarcastic intent»; los puntos suspensivos se asocian mas con la critica que con el sarcasmo. Dos estudios: editar frases dadas sin cambiar las palabras, y escribir frases propias."
+    },
+    {
+      "id": "I09",
+      "pilar": "I",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "A smile says it all: Intergenerational differences in the interpretation of smiley emoji in response to sarcasm",
+      "autores": "Cui, J.; Dandan, Y. R.; Cui, Y.; Jing, Y.",
+      "anio": 2026,
+      "fuente": "Acta Psychologica, 268, 107245",
+      "doi": "10.1016/j.actpsy.2026.107245",
+      "por_que": "Familia «mensajes». El emoji de la sonrisa no dice lo mismo segun quien lo lea: los mayores de 60 lo leen literal, como sonrisa sincera; los de 18-30 hacen lo contrario.",
+      "doi_confianza": "verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/j.actpsy.2026.107245 y en Europe PMC (PMID 42296743)",
+      "resumen_verificado": "Literal del resumen leido el 08/10/2026 (Europe PMC): «Younger (aged 18-30) and older (over 60) adults evaluated each emoji»; «older adults tended to favor literal interpretations, viewing the smile emoji as genuine and more pleasant»; «In contrast, younger adults, more attuned to innovative and conventionalized uses shaped by youth subcultures, displayed the opposite pattern.» Ojo: la diferencia aparece en los emojis «with complex cues, but not for simple ones»."
+    },
+    {
       "id": "J01",
       "pilar": "J",
       "prioridad": 1,
@@ -1028,9 +1140,10 @@
       "anio": 2013,
       "fuente": "Nature Reviews Neuroscience",
       "doi": "10.1038/nrn3566",
-      "por_que": "Revision de referencia de que pasa en el cerebro al entender un chiste: una red que detecta la incongruencia en regiones temporo-occipito-parietales y, despues, el sistema de recompensa. Es la ficha que desbloquea la pregunta «que le pasa a tu cerebro cuando te ries».",
+      "por_que": "DUPLICADO de F02 (mismo DOI; marcado el 08/10/2026). Se conserva porque lo citan guiones ya publicados. Revision de referencia de que pasa en el cerebro al entender un chiste: una red que detecta la incongruencia en regiones temporo-occipito-parietales y, despues, el sistema de recompensa. Es la ficha que desbloquea la pregunta «que le pasa a tu cerebro cuando te ries».",
       "doi_confianza": "verificado 25/09/2026 en nature.com/articles/nrn3566: titulo y DOI en la misma pagina",
-      "resumen_verificado": "Literal del resumen leido el 25/09/2026: «a core network of cortical and subcortical structures», con las regiones temporo-occipito-parietales detectando la incongruencia y los sistemas de recompensa (vias dopaminergicas y amigdala) implicados despues. Es una revision, no un experimento: no da una cifra propia."
+      "resumen_verificado": "Literal del resumen leido el 25/09/2026: «a core network of cortical and subcortical structures», con las regiones temporo-occipito-parietales detectando la incongruencia y los sistemas de recompensa (vias dopaminergicas y amigdala) implicados despues. Es una revision, no un experimento: no da una cifra propia.",
+      "duplicado_de": "F02"
     },
     {
       "id": "F07",
@@ -1042,9 +1155,10 @@
       "anio": 2003,
       "fuente": "Neuron",
       "doi": "10.1016/S0896-6273(03)00751-7",
-      "por_que": "El experimento que ensena que un chiste activa el nucleo accumbens, el mismo circuito de recompensa del que se habla al hablar de placer. Y que cuanta mas gracia hacia, mas senal habia.",
+      "por_que": "DUPLICADO de F01 (mismo DOI; marcado el 08/10/2026). Se conserva porque lo citan guiones ya publicados. El experimento que ensena que un chiste activa el nucleo accumbens, el mismo circuito de recompensa del que se habla al hablar de placer. Y que cuanta mas gracia hacia, mas senal habia.",
       "doi_confianza": "verificado 25/09/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/S0896-6273(03)00751-7 y en la pagina del articulo en sciencedirect",
-      "resumen_verificado": "Literal del resumen leido el 25/09/2026: «humor engages a network of subcortical regions including the nucleus accumbens, a key component of the mesolimbic dopaminergic reward system. Further, the degree of humor intensity was positively correlated with BOLD signal intensity in these regions.» Resonancia magnetica funcional a 3 teslas, disenio de eventos relacionados."
+      "resumen_verificado": "Literal del resumen leido el 25/09/2026: «humor engages a network of subcortical regions including the nucleus accumbens, a key component of the mesolimbic dopaminergic reward system. Further, the degree of humor intensity was positively correlated with BOLD signal intensity in these regions.» Resonancia magnetica funcional a 3 teslas, disenio de eventos relacionados.",
+      "duplicado_de": "F01"
     },
     {
       "id": "F08",
@@ -1059,6 +1173,34 @@
       "por_que": "Separa las dos cosas que se confunden siempre: reirse y entender el chiste. La risa depende de dos vias parcialmente independientes, una involuntaria y otra voluntaria; el humor implica sobre todo corteza frontal y regiones temporales posteriores.",
       "doi_confianza": "verificado 25/09/2026 en academic.oup.com/brain/article/126/10/2121/291937: titulo y DOI en la misma pagina",
       "resumen_verificado": "Literal del resumen leido el 25/09/2026: «the expression of laughter seems to depend on two partially independent neuronal pathways» —una involuntaria, con amigdala y tronco, y otra voluntaria que arranca en areas motoras frontales—; y «the right frontal cortex, the medial ventral prefrontal cortex, the right and left posterior temporal regions and possibly the cerebellum seem to be involved to varying degrees». Es una revision, no un experimento propio."
+    },
+    {
+      "id": "F09",
+      "pilar": "F",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "Your flaws are my pain: Linking empathy to vicarious embarrassment",
+      "autores": "Krach, S.; Cohrs, J. C.; de Echeverria Loebell, N. C.; Kircher, T.; Sommer, J.; Jansen, A.; Paulus, F. M.",
+      "anio": 2011,
+      "fuente": "PLoS ONE, 6(4), e18675",
+      "doi": "10.1371/journal.pone.0018675",
+      "por_que": "La verguenza ajena (el motor de la comedia de incomodidad): se siente aunque el otro no sepa que esta haciendo el ridiculo, y en el cerebro se parece al dolor ajeno.",
+      "doi_confianza": "verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1371/journal.pone.0018675 y en Europe PMC (PMID 21533250)",
+      "resumen_verificado": "Literal del resumen leido el 08/10/2026 (Europe PMC): «vicarious embarrassment was experienced regardless of whether the observed protagonist acted accidentally or intentionally and was aware or unaware that he/she was in an embarrassing situation»; «the anterior cingulate cortex and the left anterior insula, two cortical structures typically involved in vicarious feelings of others' pain»; su actividad «positively correlated with individual differences in trait empathy»."
+    },
+    {
+      "id": "F10",
+      "pilar": "F",
+      "prioridad": 1,
+      "tipo": "articulo",
+      "titulo": "Central cancellation of self-produced tickle sensation",
+      "autores": "Blakemore, S.-J.; Wolpert, D. M.; Frith, C. D.",
+      "anio": 1998,
+      "fuente": "Nature Neuroscience, 1(7), 635-640",
+      "doi": "10.1038/2870",
+      "por_que": "Por que no puedes hacerte cosquillas a ti mismo: el cerebelo predice lo que va a sentir tu propio movimiento y lo cancela. La pregunta de cosquillas que todo el mundo se ha hecho.",
+      "doi_confianza": "verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1038/2870 y en Europe PMC (PMID 10196573)",
+      "resumen_verificado": "Literal del resumen leido el 08/10/2026 (Europe PMC): «A self-produced tactile stimulus is perceived as less ticklish than the same stimulus generated externally»; «More activity was found in somatosensory cortex when the stimulus was externally produced»; «the cerebellum is involved in predicting the specific sensory consequences of movements, providing the signal that is used to cancel the sensory response to self-generated stimulation»."
     }
   ],
   "fuentes_abiertas": [

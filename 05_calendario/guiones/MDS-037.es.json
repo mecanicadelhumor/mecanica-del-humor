@@ -1,0 +1,178 @@
+{
+ "id": "MDS-037",
+ "formato": "corto",
+ "serie": "Esto no tiene gracia y esto sí",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué un «vale.» con punto suena a enfado?",
+ "tesis": "En un mensaje, una respuesta corta con punto final se lee como menos sincera que la misma sin punto; escrita a mano, el punto no cambia nada.",
+ "pilares": [
+  "I"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "control",
+ "familia_tema": "mensajes",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué un «vale» con punto suena a enfado?",
+  "respuesta": "Porque en un mensaje el punto final hace que una respuesta corta se lea como menos sincera; escrita a mano, no pasa.",
+  "puente": "El «vale.» de tu amigo con punto: la escena 4 cuenta que eso mismo, respuestas cortas a una invitación con punto y sin punto, es lo que dio a leer el equipo de Celia Klin."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — propones cine y tu amigo contesta «vale.», con punto; qué gira — con punto empiezas a repasar qué le has hecho, y acabas releyendo la conversación desde el verano; cómo acaba — el punto se lee como menos sincero, y casi seguro que tu amigo se viene.",
+  "LAS DOS VERSIONES (serie «Esto no tiene gracia y esto sí»): «vale» y «vale.», el mismo mensaje con un punto de diferencia, en la comparación de la escena 2, antes de explicar nada.",
+  "FAMILIA mensajes (R-TE-03): malentendido en la comunicación por móvil. Ficha nueva I06.",
+  "FUENTE: I06 (Gunraj, Drumm-Hewitt, Dashow, Upadhyay y Klin, 2016, Computers in Human Behavior, DOI 10.1016/j.chb.2015.11.003), verificada el 08/10/2026 en Crossref y en la ficha de SUNY. Frases del resumen copiadas literal: «the responses that ended with a period were rated as less sincere than those that did not end with a period» y «No such difference was found for handwritten notes». Las respuestas eran a una invitación (el diseño del estudio); el guion no da cifras.",
+  "LÍMITE (regla 12): el estudio mide cómo lo lee quien lo recibe, no qué quería decir quien lo escribe. Eso es el cierre.",
+  "C17: I06 es nueva.",
+  "LECTURA EN FRÍO (2026-10-08): Vuelta 1: «no sé quién es Celia Klin» y la fuente en pantalla era Gunraj (¿uno o dos estudios?), y «no cambiaba nada» sin saber qué → Klin presentada como psicóloga, subtítulo con los dos apellidos. Vuelta 2: «sonaban igual» (¿igual que qué?) y un cierre sin conclusión → «en el móvil» explícito y el cierre vuelve al amigo. Vuelta 3: pasa (la frase de la nota la interpreta bien él mismo: C48.2, a notas)."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-bocadillos",
+   "texto": "«Vale.»",
+   "narracion": "Propones ir al cine esta noche. Tu amigo contesta: vale. Con punto.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "hands typing smartphone message",
+      "person texting on phone close up",
+      "thumb typing phone chat"
+     ],
+     "prompt": "close-up of hands typing a message on a smartphone, evening, cozy room"
+    },
+    {
+     "desde": "Tu amigo contesta",
+     "busqueda": [
+      "man looking at phone screen serious",
+      "person reading text message frowning"
+     ],
+     "prompt": "a person staring at a phone screen with a puzzled, worried look"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "a": "Vale",
+   "et_a": "sin punto: se viene",
+   "b": "Vale.",
+   "et_b": "con punto: ¿qué le *pasa*?",
+   "narracion": "Sin punto, es que se viene. Con punto, empiezas a repasar qué le has hecho.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "phone screen on table",
+      "smartphone lying on desk"
+     ],
+     "prompt": "a smartphone lying on a wooden table with a chat open, no readable text"
+    },
+    {
+     "desde": "Con punto",
+     "busqueda": [
+      "person thinking holding phone worried",
+      "man staring at phone thinking"
+     ],
+     "prompt": "a person sitting on a sofa holding a phone, staring into space, thinking hard"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Releyendo desde el *verano*",
+   "narracion": "Y acabas releyendo la conversación entera desde el verano, buscando la ofensa.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "person scrolling phone in bed night",
+      "scrolling smartphone dark room"
+     ],
+     "prompt": "a person in bed at night scrolling endlessly through a phone chat, face lit by the screen"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "I06",
+   "personaje": "rie",
+   "texto": "Con punto o *sin punto*",
+   "narracion": "El equipo de la psicóloga Celia Klin dio a leer respuestas cortas a una invitación, unas con punto final y otras sin él.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "students reading phones university classroom",
+      "young adults reading phones table"
+     ],
+     "prompt": "university students in a classroom reading messages on their phones, focused"
+    },
+    {
+     "marca": true,
+     "desde": "unas con punto final"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "I06",
+   "personaje": "entiende",
+   "cifra": "Menos sincero",
+   "pie": "con punto; a mano, *igual*",
+   "narracion": "En el móvil, con punto, parecían menos sinceras. En una nota escrita a mano, el punto no las cambiaba.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person frowning reading phone",
+      "woman reading text message suspicious"
+     ],
+     "prompt": "a person reading a phone with a slightly suspicious frown"
+    },
+    {
+     "desde": "escrita a mano",
+     "busqueda": [
+      "handwritten note paper pen",
+      "writing note by hand desk"
+     ],
+     "prompt": "a hand writing a short note with a pen on a small piece of paper"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "I06",
+   "personaje": "duda",
+   "titulo": "Mide cómo lo lees *tú*",
+   "subtitulo": "Fuente: Gunraj, …, Klin, 2016",
+   "narracion": "Eso sí: el estudio mide cómo lo lees tú, no lo que quería decir tu amigo. Que, seguramente, solo quería ir al cine.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "friends meeting outside cinema night",
+      "people waiting outside movie theater"
+     ],
+     "prompt": "two friends meeting outside a cinema at night, one waving, warm street lights"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 3, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-08",
+  "de_que_va": "Va de por qué un «Vale.» con punto en un mensaje suena seco o enfadado, y de un estudio que lo comprueba.",
+  "pregunta_y_respuesta": "Si el punto final de un mensaje corto hace que suene peor: sí, en el móvil las respuestas con punto parecen menos sinceras, y a mano el punto no cambia nada; el estudio mide cómo lo interpretas tú, no lo que quería decir tu amigo.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Y acabas releyendo la conversación entera desde el verano, buscando la ofensa.» Se queda: es el remate (va detrás de la pausa de 1,3 s) y el propio lector dice que tiene gracia y se identifica.",
+  "donde_me_iria": "me quedo (duda en la escena 4: «cambia el tono a clase. Pero ya quería saber la respuesta»)",
+  "notas": [
+   "«‹En una nota escrita a mano, el punto no las cambiaba.› La entendí, pero tardé un segundo: no sabía por qué de repente salía una nota a mano. Luego vi que era la comparación.»",
+   "«El final del amigo que solo quería ir al cine cierra bien.»"
+  ],
+  "veredicto": "pasa"
+ }
+}

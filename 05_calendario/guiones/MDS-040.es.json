@@ -1,0 +1,184 @@
+{
+ "id": "MDS-040",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué nadie pilla tu ironía por escrito?",
+ "tesis": "Quien escribe con ironía cree que se va a notar mucho más de lo que se nota, porque oye su propio tono al escribir y le cuesta imaginar que el otro lo lee sin él.",
+ "pilares": [
+  "I"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "B",
+ "familia_tema": "mensajes",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué nadie pilla tu ironía por escrito?",
+  "respuesta": "Porque tú oyes tu propio retintín al escribir y crees que se va a notar mucho más de lo que se nota: el otro lo lee sin él.",
+  "puente": "El «genial, otra reunión a las ocho» al jefe, que él se toma en serio: la escena 4 dice que eso, quien escribe con ironía y cree que se nota, es lo que midió Justin Kruger."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — le escribes a tu jefe «genial, otra reunión a las ocho de la tarde», con todo el retintín; qué gira — te contesta «¡me alegro de que te guste! Te pongo otra el viernes»; cómo acaba — tú oías tu retintín al escribirlo y él lo leyó sin él, y si un emoji te habría librado de la reunión extra, nadie lo midió.",
+  "DERECHO DE TANTEO (C46) de MDS-016 (1.115 a 48 h, el mejor del canal): el mismo asunto —la ironía que se pierde por escrito— desde quien escribe y no desde quien lee. Otra ficha (I07, no I05) y otro chiste.",
+  "BRAZO B (ciclo B1, posición 5): la escena 1 abre con el hallazgo como hecho, 11 palabras, con fuente; la pantalla dice lo mismo. El chiste va en las escenas 2 y 3.",
+  "FAMILIA mensajes (R-TE-03).",
+  "FUENTE: I07 (Kruger, Epley, Parker y Ng, 2005, JPSP, DOI 10.1037/0022-3514.89.6.925), verificada el 08/10/2026 en Crossref y Europe PMC. Frases del resumen copiadas literal: «people tend to believe that they can communicate over e-mail more effectively than they actually can»; «this overconfidence is born of egocentrism»; «Because e-mail communicators \"hear\" a statement differently depending on whether they intend to be, say, sarcastic or funny, it can be difficult to appreciate that their electronic audience may not.» Cinco experimentos («varios»). Sin porcentajes: el resumen no los da.",
+  "LÍMITE (regla 12): eran correos electrónicos de 2005, sin emojis; si un emoji lo arregla, este estudio no lo dice (I08, Thompson y Filik, queda para otra semana).",
+  "C17: I07 es nueva. I05 (MDS-016) no se usa.",
+  "LECTURA EN FRÍO (2026-10-08): Vuelta 1: el cierre «Si un emoji te habría librado de la reunión, no lo midieron» se leyó como condicional y lió → el cierre pregunta «¿Te habría librado un emoji de la reunión?» y luego dice que no se midió; Kruger presentado como psicólogo. Vuelta 2: pasa."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "I07",
+   "icono": "i-bocadillos",
+   "texto": "Tu ironía escrita: peor de lo que *crees*",
+   "narracion": "Tu ironía por escrito se entiende peor de lo que crees.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "person typing on laptop smirking",
+      "man typing email smiling office"
+     ],
+     "prompt": "a person typing on a laptop in an office with a sly, sarcastic smirk"
+    },
+    {
+     "marca": true,
+     "desde": "se entiende peor"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "«Genial, otra *reunión*»",
+   "narracion": "Le escribes a tu jefe: genial, otra reunión a las ocho de la tarde. Con todo el retintín.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "hands typing phone office desk",
+      "typing message phone office"
+     ],
+     "prompt": "close-up of hands typing a message on a phone at an office desk, late afternoon"
+    },
+    {
+     "desde": "con todo el retintín",
+     "busqueda": [
+      "man rolling eyes office",
+      "person eye roll desk"
+     ],
+     "prompt": "an office worker rolling their eyes theatrically at their phone"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Y otra el *viernes*",
+   "narracion": "Y te contesta: ¡me alegro de que te guste! Te pongo otra el viernes.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "man reading phone shocked office",
+      "person staring at phone disbelief"
+     ],
+     "prompt": "an office worker staring at their phone in frozen disbelief, empty office behind"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "I07",
+   "personaje": "rie",
+   "cifra": "Se nota menos",
+   "pie": "de lo que *crees*",
+   "narracion": "El psicólogo Justin Kruger lo midió: quien escribe con ironía cree que se nota mucho más de lo que se nota.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "students typing laptops classroom",
+      "people writing emails computers room"
+     ],
+     "prompt": "several adults typing on laptops in a university room, focused"
+    },
+    {
+     "desde": "cree que se nota",
+     "busqueda": [
+      "person confident smiling laptop",
+      "woman pleased typing laptop"
+     ],
+     "prompt": "a person at a laptop smiling confidently, sure of themselves"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "I07",
+   "personaje": "entiende",
+   "texto": "Tú oyes tu *retintín*; él, no",
+   "narracion": "Porque tú oyes tu propio retintín al escribirlo, y el otro lo lee sin él.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person typing mouthing words",
+      "man typing talking to himself"
+     ],
+     "prompt": "a person typing while mouthing the words to themselves with exaggerated expression"
+    },
+    {
+     "desde": "y el otro lo lee",
+     "busqueda": [
+      "man reading phone neutral face",
+      "person reading message calmly"
+     ],
+     "prompt": "another person reading the message on a phone with a perfectly neutral face"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "I07",
+   "personaje": "duda",
+   "titulo": "¿Y con un *emoji*?",
+   "subtitulo": "Fuente: Kruger y otros, 2005",
+   "narracion": "¿Te habría librado un emoji de la reunión? Eso no lo midieron: eran correos de hace veinte años, sin emojis.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "old computer email screen office",
+      "vintage computer desk office"
+     ],
+     "prompt": "an old beige computer on an office desk with an email client open, no readable text"
+    },
+    {
+     "desde": "eran correos",
+     "busqueda": [
+      "empty meeting room evening",
+      "office meeting room chairs night"
+     ],
+     "prompt": "an empty office meeting room in the evening, chairs pushed in, lights on"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 2, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-08",
+  "de_que_va": "Va de que, cuando escribes con ironía, el otro la pilla mucho menos de lo que tú crees.",
+  "pregunta_y_respuesta": "Si se nota tu ironía por escrito: se nota menos de lo que crees, porque tú oyes tu propio retintín al escribir y el que lee no lo oye. Por eso el jefe se toma el «genial» al pie de la letra.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "ninguna",
+  "donde_me_iria": "me quedo (el final «se queda corto como remate»)",
+  "notas": [
+   "«Como mucho, no sé cómo ‹lo midió› Kruger, pero eso no me impide seguir el vídeo.»",
+   "«La primera frase y la escena 4 dicen casi lo mismo, pero la primera hace de gancho y la cuarta aporta el dato.» (es la receta del brazo B)"
+  ],
+  "veredicto": "pasa"
+ }
+}

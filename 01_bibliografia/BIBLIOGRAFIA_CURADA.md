@@ -3,7 +3,7 @@
 > Base de conocimiento de **Mecánica del Humor / Humor Mechanics**.
 > Generado desde `data/semillas.json`. No edites este archivo a mano: edita el JSON y vuelve a ejecutar `scripts/generar_md.py`.
 
-**80 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
+**90 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
 
 ## Cómo se ha curado
 
@@ -26,12 +26,12 @@ y fusiona repetidos antes de que nadie los lea. Están marcados y excluidos del 
 - **A. Teorias fundacionales del humor** — 9 obras
 - **B. Diferencias individuales, estilos y medicion** — 7 obras
 - **C. Produccion de humor: habilidad, creatividad e inteligencia** — 6 obras
-- **D. Humor, vinculos sociales, atraccion y estatus** — 9 obras
-- **E. Risa: etologia, acustica y contagio** — 6 obras
-- **F. Neurociencia y cognicion del humor** — 8 obras
+- **D. Humor, vinculos sociales, atraccion y estatus** — 11 obras
+- **E. Risa: etologia, acustica y contagio** — 8 obras
+- **F. Neurociencia y cognicion del humor** — 10 obras
 - **G. Humor aplicado: trabajo, aula, salud, persuasion** — 6 obras
 - **H. Entrenabilidad: el humor se puede aprender** — 6 obras
-- **I. Linguistica y estructura del chiste** — 5 obras
+- **I. Linguistica y estructura del chiste** — 9 obras
 - **J. El lado oscuro: gelotofobia, burla, humor que falla** — 6 obras
 - **K. Humor computacional e IA** — 4 obras
 - **L. Oficio: manuales de stand-up, improvisacion y guion** — 8 obras
@@ -275,13 +275,13 @@ Tipo: articulo
 
 Endorfinas y risa grupal. Explica el vinculo fisiologico del humor compartido.
 
-### `D07` ★★ Convergent evidence that laughter serves as a signal of cooperation and affiliation across societies
+### `D07` ★★ Detecting affiliation in colaughter across 24 societies
 
 **Bryant, G. A. et al.** (2016) · *PNAS*  
-DOI: [`10.1073/pnas.1524993113`](https://doi.org/10.1073/pnas.1524993113) ⚠️ por verificar  
+DOI: [`10.1073/pnas.1524993113`](https://doi.org/10.1073/pnas.1524993113) · titulo corregido el 08/10/2026 contra api.crossref.org/works/10.1073/pnas.1524993113 (es el de E05, el duplicado de prueba)  
 Tipo: articulo
 
-24 sociedades distinguen risa real de fingida. Universalidad de la senal.
+Oyendo un segundo de dos personas riendose a la vez, oyentes de 24 sociedades distinguian si eran amigas o desconocidas por encima del azar. (Corregido el 08/10/2026: el titulo era el de otro articulo del mismo grupo y el comentario hablaba de risa real o fingida, que es otro trabajo.)
 
 ### `D08` ★★ Humor in romantic relationships: A meta-analysis
 
@@ -297,6 +297,22 @@ Metaanalisis: que tipo de humor predice satisfaccion de pareja.
 Tipo: articulo
 
 Humor y mantenimiento de la relacion a largo plazo.
+
+### `D10` ★★ The impact of emojis on perceived responsiveness and relationship satisfaction in text messaging
+
+**Huh, E.** (2025) · *PLOS One, 20(7), e0326189*  
+DOI: [`10.1371/journal.pone.0326189`](https://doi.org/10.1371/journal.pone.0326189) · verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1371/journal.pone.0326189 y en Europe PMC (PMID 40601618)  
+Tipo: articulo
+
+Familia «mensajes». La misma respuesta de un amigo con emoji se percibe como mas atenta que sin el, y eso predice mas cercania. 260 participantes, 15 conversaciones.
+
+### `D11` ★★ Laughing and liking: Exploring the interpersonal effects of humor use in initial social interactions
+
+**Treger, S.; Sprecher, S.; Erber, R.** (2013) · *European Journal of Social Psychology, 43(6), 532-543*  
+DOI: [`10.1002/ejsp.1962`](https://doi.org/10.1002/ejsp.1962) · verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1002/ejsp.1962 (con el resumen en el mismo registro)  
+Tipo: articulo
+
+Caer bien en una primera conversacion: entre desconocidos, el humor va con mas simpatia y cercania. Responde a «como caer bien en una primera conversacion» sin tocar la atraccion (no es tema de Short).
 
 
 ---
@@ -328,6 +344,14 @@ Tipo: articulo
 
 Filogenia de la risa: 10-16 millones de anios. Gancho narrativo potentisimo.
 
+### `E07` ★★★ Modulation of humor ratings of bad jokes by other people's laughter
+
+**Cai, Q.; Chen, S.; White, S. J.; Scott, S. K.** (2019) · *Current Biology, 29(14), R677-R678*  
+DOI: [`10.1016/j.cub.2019.05.073`](https://doi.org/10.1016/j.cub.2019.05.073) · verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/j.cub.2019.05.073 y en Europe PMC (PMID 31336080)  
+Tipo: articulo
+
+Las risas enlatadas: los chistes malos parecen mas graciosos con risas detras, y mas aun si la risa es espontanea. Desbloquea «por que las series tienen risas grabadas».
+
 ### `E04` ★★ The social life of laughter
 
 **Scott, S. K.; Lavan, N.; Chen, S.; McGettigan, C.** (2014) · *Trends in Cognitive Sciences*  
@@ -353,6 +377,14 @@ Tipo: articulo
 Ratas que 'rien' a 50 kHz. Video con enorme potencial viral y ciencia solida.
 
 *Comprobado el 15/09/2026 (dirección, al reescribir MDS-017), con lo que el artículo dice y lo que no:* las cosquillas provocan en ratas jóvenes chirridos ultrasónicos de ~50 kHz, que los autores comparan con una risa primitiva; las ratas buscan la mano que les hizo cosquillas y «recorren laberintos y aprietan palancas» para que se las hagan (la cosquilla es recompensa); la risa humana rudimentaria aparece a los 2-3 meses y los autores la leen como una herencia antigua, distinta del humor «cognitivo». **Y la cautela, que es la de los propios autores:** no se atan a la interpretación de «risa», porque lo subjetivo no se mide en animales ni en personas, se infiere. El título que figuraba aquí hasta el 15/09 («Tickling and the evolution of laughter») no es el del artículo.
+
+### `E08` ★★ A study of laughter and dissociation: Distinct correlates of laughter and smiling during bereavement
+
+**Keltner, D.; Bonanno, G. A.** (1997) · *Journal of Personality and Social Psychology, 73(4), 687-702*  
+DOI: [`10.1037/0022-3514.73.4.687`](https://doi.org/10.1037/0022-3514.73.4.687) · verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1037/0022-3514.73.4.687; resumen leido en el PDF del autor (greatergood.berkeley.edu/dacherkeltner/docs/keltner.laughter.jpsp.1997.pdf), mismo titulo  
+Tipo: articulo
+
+La risa en el duelo: entre personas que habian perdido a su pareja, la risa de verdad (la que arruga los ojos) iba con menos enfado, mas distancia del malestar y mejores relaciones; la de compromiso, no. Responde a «por que nos reimos en un funeral».
 
 
 ---
@@ -381,7 +413,15 @@ Revision de referencia: deteccion de incongruencia (temporo-parietal) + resoluci
 DOI: [`10.1038/nrn3566`](https://doi.org/10.1038/nrn3566) · verificado 25/09/2026 en nature.com/articles/nrn3566: titulo y DOI en la misma pagina  
 Tipo: articulo
 
-Revision de referencia de que pasa en el cerebro al entender un chiste: una red que detecta la incongruencia en regiones temporo-occipito-parietales y, despues, el sistema de recompensa. Es la ficha que desbloquea la pregunta «que le pasa a tu cerebro cuando te ries».
+DUPLICADO de F02 (mismo DOI; marcado el 08/10/2026). Se conserva porque lo citan guiones ya publicados. Revision de referencia de que pasa en el cerebro al entender un chiste: una red que detecta la incongruencia en regiones temporo-occipito-parietales y, despues, el sistema de recompensa. Es la ficha que desbloquea la pregunta «que le pasa a tu cerebro cuando te ries».
+
+### `F10` ★★★ Central cancellation of self-produced tickle sensation
+
+**Blakemore, S.-J.; Wolpert, D. M.; Frith, C. D.** (1998) · *Nature Neuroscience, 1(7), 635-640*  
+DOI: [`10.1038/2870`](https://doi.org/10.1038/2870) · verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1038/2870 y en Europe PMC (PMID 10196573)  
+Tipo: articulo
+
+Por que no puedes hacerte cosquillas a ti mismo: el cerebelo predice lo que va a sentir tu propio movimiento y lo cancela. La pregunta de cosquillas que todo el mundo se ha hecho.
 
 ### `F03` ★★ Two neural networks for laughter: A tractography study
 
@@ -405,7 +445,7 @@ Base neural de las dos fases del chiste.
 DOI: [`10.1016/S0896-6273(03)00751-7`](https://doi.org/10.1016/S0896-6273(03)00751-7) · verificado 25/09/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/S0896-6273(03)00751-7 y en la pagina del articulo en sciencedirect  
 Tipo: articulo
 
-El experimento que ensena que un chiste activa el nucleo accumbens, el mismo circuito de recompensa del que se habla al hablar de placer. Y que cuanta mas gracia hacia, mas senal habia.
+DUPLICADO de F01 (mismo DOI; marcado el 08/10/2026). Se conserva porque lo citan guiones ya publicados. El experimento que ensena que un chiste activa el nucleo accumbens, el mismo circuito de recompensa del que se habla al hablar de placer. Y que cuanta mas gracia hacia, mas senal habia.
 
 ### `F08` ★★ Neural correlates of laughter and humour
 
@@ -414,6 +454,14 @@ DOI: [`10.1093/brain/awg226`](https://doi.org/10.1093/brain/awg226) · verificad
 Tipo: articulo
 
 Separa las dos cosas que se confunden siempre: reirse y entender el chiste. La risa depende de dos vias parcialmente independientes, una involuntaria y otra voluntaria; el humor implica sobre todo corteza frontal y regiones temporales posteriores.
+
+### `F09` ★★ Your flaws are my pain: Linking empathy to vicarious embarrassment
+
+**Krach, S.; Cohrs, J. C.; de Echeverria Loebell, N. C.; Kircher, T.; Sommer, J.; Jansen, A.; Paulus, F. M.** (2011) · *PLoS ONE, 6(4), e18675*  
+DOI: [`10.1371/journal.pone.0018675`](https://doi.org/10.1371/journal.pone.0018675) · verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1371/journal.pone.0018675 y en Europe PMC (PMID 21533250)  
+Tipo: articulo
+
+La verguenza ajena (el motor de la comedia de incomodidad): se siente aunque el otro no sepa que esta haciendo el ridiculo, y en el cerebro se parece al dolor ajeno.
 
 ### `F05` ★ Neural correlates of humor detection and appreciation in children
 
@@ -551,6 +599,22 @@ Tipo: libro
 
 Teoria del solapamiento de guiones opuestos. La base linguistica del chiste.
 
+### `I06` ★★★ Texting insincerely: The role of the period in text messaging
+
+**Gunraj, D. N.; Drumm-Hewitt, A. M.; Dashow, E. M.; Upadhyay, S. S. N.; Klin, C. M.** (2016) · *Computers in Human Behavior, 55, 1067-1075*  
+DOI: [`10.1016/j.chb.2015.11.003`](https://doi.org/10.1016/j.chb.2015.11.003) · verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/j.chb.2015.11.003 y en researchconnect.suny.edu (ficha de la publicacion, con resumen)  
+Tipo: articulo
+
+Familia «mensajes» (R-TE-03). La misma respuesta corta a una invitacion, con punto final, se lee como menos sincera en un mensaje de texto; escrita a mano, no. El punto es una senal social en el chat.
+
+### `I07` ★★★ Egocentrism over e-mail: Can we communicate as well as we think?
+
+**Kruger, J.; Epley, N.; Parker, J.; Ng, Z.-W.** (2005) · *Journal of Personality and Social Psychology, 89(6), 925-936*  
+DOI: [`10.1037/0022-3514.89.6.925`](https://doi.org/10.1037/0022-3514.89.6.925) · verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1037/0022-3514.89.6.925 y en Europe PMC (PMID 16393025)  
+Tipo: articulo
+
+Familia «mensajes». Por que crees que tu ironia se entiende por escrito: quien escribe «oye» su propio tono y sobreestima lo bien que se entiende. Continuacion natural de MDS-016.
+
 ### `I03` ★★ Linguistic Theories of Humor
 
 **Attardo, S.** (1994) · *Mouton de Gruyter*  
@@ -572,6 +636,22 @@ Manual actualizado: puns, ironia, humor conversacional.
 Tipo: articulo
 
 Como se senala la ironia: prosodia y marcadores. Muy accionable para hablar mejor.
+
+### `I08` ★★ Sarcasm in written communication: Emoticons are efficient markers of intention
+
+**Thompson, D.; Filik, R.** (2016) · *Journal of Computer-Mediated Communication, 21(2), 105-120*  
+DOI: [`10.1111/jcc4.12156`](https://doi.org/10.1111/jcc4.12156) · verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1111/jcc4.12156 y en academic.oup.com/jcmc/article/21/2/105/4065376  
+Tipo: articulo
+
+Familia «mensajes». Que se pone la gente para marcar la ironia por escrito: la carita que saca la lengua y la del guino son las marcas principales; los puntos suspensivos van mas con la critica.
+
+### `I09` ★★ A smile says it all: Intergenerational differences in the interpretation of smiley emoji in response to sarcasm
+
+**Cui, J.; Dandan, Y. R.; Cui, Y.; Jing, Y.** (2026) · *Acta Psychologica, 268, 107245*  
+DOI: [`10.1016/j.actpsy.2026.107245`](https://doi.org/10.1016/j.actpsy.2026.107245) · verificado 08/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/j.actpsy.2026.107245 y en Europe PMC (PMID 42296743)  
+Tipo: articulo
+
+Familia «mensajes». El emoji de la sonrisa no dice lo mismo segun quien lo lea: los mayores de 60 lo leen literal, como sonrisa sincera; los de 18-30 hacen lo contrario.
 
 
 ---

@@ -455,3 +455,30 @@ experimento»: la serie da la forma de la respuesta, y no se fuerza la rotación
 **Un tema caído:** el primer `MDS-032` («¿tener sentido del humor te hace más feliz?», `B03`)
 no pasó la lectura en frío a la tercera vuelta, por segunda semana seguida. Lo sustituye el de
 `D07`. Detalle en la bitácora del 01/10.
+
+---
+
+## Semana del 12 al 18 de octubre de 2026 · primera del bucle (C60, ciclo B1)
+
+Escrita la noche del **jueves 8 de octubre**. **Siete Shorts, uno al día a las 19:00**, también
+sábado y domingo. Todo en `parrilla.json` con `"modo": "automatico"` y `"idiomas": ["es"]`. Cada
+guion lleva `"ciclo": "B1"`, su `"variante"` (el brazo, por el `orden` de `bucle/ciclos.json` desde
+la posición 1) y las etiquetas `familia_tema` y `chiste`. Los temas se eligieron y ordenaron **antes**
+de mirar los brazos.
+
+| Día | Emisión | Brazo | Serie | Pregunta | Ficha |
+|---|---|---|---|---|---|
+| Lunes 12 (festivo) | `MDS-036` | B | Esto no tiene gracia y esto sí | por qué las series ponen risas grabadas | `E07` |
+| Martes 13 | `MDS-037` | control | Esto no tiene gracia y esto sí | por qué un «vale.» con punto suena a enfado · *mensajes* | `I06` |
+| Miércoles 14 | `MDS-038` | A | Ríete primero, te explico después | por qué no puedes hacerte cosquillas a ti mismo | `F10` |
+| Jueves 15 | `MDS-039` | A | El experimento | hacer reír ayuda a caer bien a un desconocido | `D11` |
+| Viernes 16 | `MDS-040` | B | El experimento | por qué nadie pilla tu ironía por escrito · *mensajes* | `I07` |
+| Sábado 17 | `MDS-041` | control | Ríete primero, te explico después | por qué sentimos vergüenza ajena | `F09` |
+| Domingo 18 | `MDS-042` | A | El experimento | por qué nos da la risa en un funeral | `E08` |
+
+**Las siete fuentes son fichas nuevas**, añadidas esta noche a la bibliografía con título y DOI
+vistos juntos (Crossref) y la frase del resumen copiada. **Dos de la familia `mensajes`** (R-TE-03).
+**Derecho de tanteo (C46) de `MDS-016`** en `MDS-040`: la ironía por escrito, desde quien escribe.
+**Brazo A** (`MDS-038`, `039`, `042`): dos escenas de mecanismo con `animar` cada uno; si la rutina
+«Animación» no deja la página, salen como el control. **Ningún gancho de actualidad** (C52).
+Ninguno abre en primera persona y los siete cierres empiezan distinto. Detalle en la bitácora del 08/10.

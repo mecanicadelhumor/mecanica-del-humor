@@ -1,0 +1,178 @@
+{
+ "id": "MDS-039",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Hacer reír ayuda a caer bien a un desconocido?",
+ "tesis": "Entre desconocidos, compartir algo con humor hace que se caigan mejor y se sientan más cerca que con lo mismo sin humor.",
+ "pilares": [
+  "D"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "A",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Hacer reír ayuda a caer bien a un desconocido?",
+  "respuesta": "Sí: en un experimento, parejas de desconocidos que hicieron tareas con humor acabaron cayéndose mejor y sintiéndose más cerca que las que hicieron tareas parecidas sin humor.",
+  "puente": "Los dos desconocidos del ascensor que salen hablando como si se conocieran: la escena 4 dice que eso, desconocidos con humor o sin él, es lo que probó el equipo de Treger."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — dos desconocidos se quedan atrapados en un ascensor y se hace un silencio incómodo; qué gira — uno dice «bueno, pues ya somos compañeros de piso» y se ríen los dos; cómo acaba — salen charlando como si se conocieran de siempre, que es lo que midió el experimento, aunque allí la risa la provocaban los investigadores con sus tareas.",
+  "BRAZO A (ciclo B1, posición 4): las dos escenas del mecanismo (4, comparación; 5, dato) llevan animar y la idea visual.",
+  "NADA DE LIGAR: el estudio usó parejas mixtas de desconocidos; el guion no lo dice y no habla de atracción (prohibido en Short). Habla de caer bien y sentirse cerca, que son las palabras del resumen («liking and closeness»).",
+  "FUENTE: D11 (Treger, Sprecher y Erber, 2013, European Journal of Social Psychology, DOI 10.1002/ejsp.1962), ficha nueva verificada el 08/10/2026 en Crossref, con el resumen en el mismo registro. Frases copiadas literal: «unacquainted mixed-sex dyads participated in a series of either humorous or similar but non-humorous tasks. In both studies, humor was positively associated with liking and closeness».",
+  "LÍMITE (regla 12): en el laboratorio el humor venía en las tareas que daban los investigadores; en la vida lo tiene que poner alguien. Es el cierre.",
+  "C17: D11 es nueva.",
+  "LECTURA EN FRÍO (2026-10-08): Vuelta 1: «tareas con humor» (¿qué es una tarea con humor?) y «parecidas» en voz contra «las mismas» en pantalla; el «Pero» del cierre descolocaba → «tareas pensadas para reírse / parecidas pero serias», en voz y pantalla. Vuelta 2: el «Eso sí» del cierre sonaba a pega y luego era un consejo; dos lectores pedían quitar «Como los dos del ascensor» → cierre con «La pega:», frase quitada. Vuelta 3: pasa."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-pausa",
+   "texto": "Atrapados en el *ascensor*",
+   "narracion": "Dos desconocidos se quedan atrapados en un ascensor, y se hace un silencio muy incómodo.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "two people standing in elevator awkward",
+      "people inside elevator waiting"
+     ],
+     "prompt": "two adult strangers standing in a stopped office elevator, avoiding eye contact"
+    },
+    {
+     "desde": "Se hace un silencio",
+     "busqueda": [
+      "elevator buttons close up",
+      "man looking up in elevator"
+     ],
+     "prompt": "close-up of a man in an elevator staring at the ceiling, awkward silence"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Compañeros de *piso*",
+   "narracion": "Hasta que uno dice: bueno, pues ya somos compañeros de piso.",
+   "pausa_despues_s": 0.6,
+   "visual": [
+    {
+     "busqueda": [
+      "man smiling joking elevator",
+      "man making a joke smiling"
+     ],
+     "prompt": "a man in an elevator turning to a stranger with a deadpan half smile, delivering a joke"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Salen como si se *conocieran*",
+   "narracion": "Se ríen, y al abrirse la puerta salen charlando como si se conocieran de siempre.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "two people laughing in elevator",
+      "strangers laughing together"
+     ],
+     "prompt": "two strangers laughing together inside an elevator"
+    },
+    {
+     "desde": "al abrirse la puerta",
+     "busqueda": [
+      "elevator doors opening people walking out talking",
+      "colleagues walking out of elevator chatting"
+     ],
+     "prompt": "elevator doors opening and two people walking out chatting happily"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "D11",
+   "animar": true,
+   "animacion": "Dos parejas de figuras de línea: en «con humor» entre la primera salta un bocadillo con un garabato de risa; en «sin gracia» la segunda se queda quieta y separada.",
+   "a": "Con humor",
+   "et_a": "tareas para *reírse*",
+   "b": "Sin humor",
+   "et_b": "parecidas, pero serias",
+   "narracion": "El psicólogo Stanislav Treger juntó parejas de desconocidos: unas hacían tareas pensadas para reírse, y otras, tareas parecidas pero serias.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "two people working on task table laboratory",
+      "pair of students doing activity table"
+     ],
+     "prompt": "two adults sitting across a small table in a university lab doing a paper task together, no logos"
+    },
+    {
+     "desde": "otras, tareas parecidas",
+     "busqueda": [
+      "two people working silently table",
+      "serious pair filling forms"
+     ],
+     "prompt": "two adults at a table filling in forms in silence, serious faces"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "D11",
+   "personaje": "entiende",
+   "animar": true,
+   "animacion": "Dos puntos sobre una línea de distancia: en «más cerca» se acercan hasta tocarse; en «cayéndose mejor» los dos puntos se iluminan en ámbar.",
+   "cifra": "Más cerca",
+   "pie": "y se caían *mejor*",
+   "narracion": "Las parejas del humor acabaron cayéndose mejor y sintiéndose más cerca.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "two people laughing table laboratory",
+      "pair chatting smiling table"
+     ],
+     "prompt": "the same two adults at the lab table now laughing and leaning toward each other"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "D11",
+   "personaje": "duda",
+   "titulo": "En el ascensor lo pones *tú*",
+   "subtitulo": "Fuente: Treger y otros, 2013",
+   "narracion": "La pega: en el laboratorio, la risa la provocaban los investigadores con sus tareas. En un ascensor, el chiste lo tienes que poner tú.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "man alone in elevator thinking",
+      "person waiting elevator alone"
+     ],
+     "prompt": "a person alone in an elevator rehearsing a line in their head, looking at their reflection"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 3, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-08",
+  "de_que_va": "Va de que reírse juntos hace que dos desconocidos conecten: un chiste en un ascensor lo rompe todo, y hay un estudio que dice que la risa compartida acerca a la gente.",
+  "pregunta_y_respuesta": "Si reírse con alguien hace que te caiga mejor y te sientas más cerca: sí, según un experimento con parejas de desconocidos; pero en la vida real nadie te monta la situación graciosa, el chiste lo tienes que hacer tú.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "ninguna",
+  "donde_me_iria": "me quedo (duda en la escena 4, «cambia el tono a clase»)",
+  "notas": [
+   "«‹La pega: en el laboratorio, la risa la provocaban los investigadores con sus tareas.› A la primera no supe por qué eso era una pega. Lo entendí con la frase siguiente.» Lo interpreta él mismo: C48.2, a notas.",
+   "«‹unas hacían tareas pensadas para reírse›. No me imagino qué tareas eran, se queda abstracto.» El resumen no dice qué tareas eran: no se inventan (regla del 15/09).",
+   "«El final me deja un poco a medias: ‹el chiste lo tienes que poner tú›, vale, pero ¿y cómo?» El canal no da consejos de ligue ni tácticas (regla 1); se queda."
+  ],
+  "veredicto": "pasa"
+ }
+}

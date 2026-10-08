@@ -301,3 +301,24 @@ las mejores libres: volumen enorme y nadie respondiendo.
 las páginas de las revistas (crossref, doi.org, pubmed y las editoriales devuelven 403 en
 el proxy de salida), así que esta noche no se ha podido escribir ninguna ficha nueva con
 título y DOI vistos juntos (C39). Ver la bitácora del 01/10.
+
+---
+
+## 08/10/2026 · lo que se desbloquea y lo que sigue pendiente
+
+**Desbloqueadas esta noche** (fichas nuevas con título y DOI vistos juntos en Crossref, la red ya
+llega): risas grabadas (`E07`), reírse en un funeral (`E08`), vergüenza ajena (`F09`), cosquillas
+(`F10`), caer bien con humor (`D11`) y cuatro de la familia «mensajes» (`I06`-`I09`, `D10`).
+
+**Siguen sin ficha:**
+
+- **«por qué me río cuando estoy nervioso»** (7,8 M en el top 10). `E08` habla de la risa en el
+  duelo, no de los nervios; deducirlo sería romper la regla del 15/09. Hace falta un trabajo sobre
+  risa nerviosa o risa en situaciones de estrés social.
+- **«por qué los memes nos hacen gracia»** (82,1 M): lo de arriba sigue igual. Esta noche la
+  búsqueda en Europe PMC solo devolvió trabajos de detección automática de sarcasmo, no de humor
+  en memes.
+- **«por qué todos se ríen de los chistes del jefe»** y **«por qué tengo la risa floja»**: van a
+  las semillas para saber si hay demanda antes de buscar ficha. `Laughter conveys status` (Oveis y
+  otros, 2016, JESP, DOI 10.1016/j.jesp.2016.04.005) está localizada en Crossref, pero no se ha
+  podido leer el resumen: no se ha escrito la ficha.

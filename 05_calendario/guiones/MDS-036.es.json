@@ -1,0 +1,170 @@
+{
+ "id": "MDS-036",
+ "formato": "corto",
+ "serie": "Esto no tiene gracia y esto sí",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué las series ponen risas grabadas?",
+ "tesis": "Oír reír detrás hace que un chiste malo parezca más gracioso, y más si la risa suena espontánea: por eso las series ponen risas grabadas.",
+ "pilares": [
+  "E"
+ ],
+ "duracion_objetivo_s": 42,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "B",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué las series ponen risas grabadas?",
+  "respuesta": "Porque un chiste malo parece más gracioso si se oye reír a otros detrás, y más todavía si la risa suena de verdad.",
+  "puente": "El chiste del pez: con el público de la serie detrás tiene gracia; contado a tu cuñado sin público, silencio. La escena 4 dice que eso es lo que midió el equipo de Sophie Scott con chistes malos, con risas y sin ellas."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — en una serie, el chiste del pez («¿qué hace un pez? Nada») va con un público entero riéndose; qué gira — al día siguiente se lo cuentas a tu cuñado, sin público, y silencio; cómo acaba — al chiste del pez no le faltaba gracia, le faltaba público detrás.",
+  "BRAZO B (ciclo B1, posición 1): la escena 1 abre con lo que encontró el estudio, como un hecho, en 11 palabras, con su fuente; el texto de pantalla es ese mismo dato. La situación pasa a la escena 2. Título = la pregunta (C56).",
+  "FUENTE: E07 (Cai, Chen, White y Scott, 2019, Current Biology, DOI 10.1016/j.cub.2019.05.073), ficha nueva verificada el 08/10/2026 en Crossref y Europe PMC. Frase del resumen copiada literal: «we show that the presence of laughter enhances how funny people find jokes and that this effect is increased for spontaneous laughter». Los chistes eran malos: lo dice el título («bad jokes»). El resumen no da cifras: el guion no da ninguna.",
+  "LÍMITE (regla 12): solo se probó con chistes malos; con uno bueno, el estudio no dice si las risas suman. Eso es el cierre.",
+  "C17: E07 es nueva, nunca usada. E01, E02 y E04 (Provine, risas en general) libres desde el 10/10, pero no hacen falta.",
+  "LECTURA EN FRÍO (2026-10-08): Vuelta 1: «no sé quién es Sophie Scott» y la fuente en pantalla era «Cai y otros» (¿quién hizo el estudio?) → la narración presenta a Scott como neurocientífica y el subtítulo lleva los cuatro autores. Vuelta 2: «a tu cuñado le faltaba público» no se entendía (el chiste lo cuentas tú) → el cierre habla del chiste del pez. Vuelta 3: pasa."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "E07",
+   "icono": "i-publico",
+   "texto": "Con risas detrás, un chiste malo *mejora*",
+   "narracion": "Un chiste malo parece más gracioso si alguien se ríe detrás.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "sitcom studio audience laughing",
+      "theater audience laughing seats",
+      "audience laughing dark room"
+     ],
+     "prompt": "a studio audience in tiered seats laughing loudly under warm stage lights"
+    },
+    {
+     "marca": true,
+     "desde": "parece más gracioso"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "El pez, con *público*",
+   "narracion": "Por eso las series ponen risas grabadas. Un personaje pregunta: ¿qué hace un pez? Nada. Y el público entero se parte.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "person watching tv sofa night",
+      "man watching television living room",
+      "tv screen living room evening"
+     ],
+     "prompt": "a person on a sofa watching a sitcom on TV in a dim living room, screen glow"
+    },
+    {
+     "desde": "qué hace un pez",
+     "busqueda": [
+      "goldfish swimming bowl",
+      "fish swimming aquarium close up"
+     ],
+     "prompt": "a goldfish swimming alone in a round glass bowl"
+    },
+    {
+     "desde": "el público entero",
+     "busqueda": [
+      "audience laughing applauding theater",
+      "crowd laughing seats"
+     ],
+     "prompt": "a theater audience bursting into laughter and clapping"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Tu cuñado, en *silencio*",
+   "narracion": "Al día siguiente se lo cuentas a tu cuñado, sin público detrás. Y te mira en silencio.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "family dinner table conversation",
+      "man telling story dinner table",
+      "people eating dinner home"
+     ],
+     "prompt": "a man telling a joke at a family dinner table, plates and glasses, warm light"
+    },
+    {
+     "desde": "Y te mira",
+     "busqueda": [
+      "man staring blank expression dinner",
+      "man unimpressed face table"
+     ],
+     "prompt": "a man at a dinner table staring back with a completely blank expression, fork in hand"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "E07",
+   "personaje": "rie",
+   "a": "Sin risas",
+   "et_a": "el chiste, solo",
+   "b": "Con risas",
+   "et_b": "el mismo, más *gracioso*",
+   "narracion": "Un equipo de la neurocientífica Sophie Scott hizo puntuar chistes malos con risas de fondo y sin ellas. Con risas, hacían más gracia.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person wearing headphones listening laptop",
+      "woman listening headphones desk"
+     ],
+     "prompt": "a person wearing headphones at a desk listening carefully, laptop open, lab room"
+    },
+    {
+     "desde": "Con risas",
+     "busqueda": [
+      "woman smiling headphones laptop",
+      "person laughing wearing headphones"
+     ],
+     "prompt": "a person with headphones starting to smile at a laptop"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "E07",
+   "personaje": "duda",
+   "titulo": "Probado solo con chistes *malos*",
+   "subtitulo": "Fuente: Cai, Chen, White y Scott, 2019",
+   "narracion": "Así que al chiste del pez no le faltaba gracia: le faltaba público. Ojo: solo se probó con chistes malos.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "man shrugging dinner table",
+      "man laughing alone dinner"
+     ],
+     "prompt": "a man at a dinner table shrugging with a small proud smile, empty chairs around"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 3, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-08",
+  "de_que_va": "Va de que un chiste malo parece más gracioso si se oyen risas de fondo, y por eso las series usan risas grabadas.",
+  "pregunta_y_respuesta": "Por qué un chiste que en una serie hace gracia no funciona cuando se lo cuentas a alguien en persona: no le faltaba gracia, le faltaba público; las risas de los demás hacen que parezca mejor.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Con risas, hacían más gracia.» Se queda: es el resultado del estudio (la mitad del hallazgo); que repita la escena 1 es la receta del brazo B (abrir con el dato), no un fallo.",
+  "donde_me_iria": "me iría en la escena 4: «la primera frase ya me da la conclusión… cuando entra el estudio solo confirma lo que ya me han dicho»",
+  "notas": [
+   "«Lo más dudoso fue ‹Así que al chiste del pez no le faltaba gracia: le faltaba público›. Llevaba todo el vídeo oyendo que era un chiste malo y por un segundo me chocó, pero lo entendí como juego de palabras.»",
+   "El lector se iría en la escena 4 porque el dato ya se dio en la escena 1: es el coste esperable del brazo B y es justo lo que mide el ciclo. No se cambia (regla 4 del bucle: la lectura en frío es igual para los tres brazos, y el B no se convierte en control)."
+  ],
+  "veredicto": "pasa"
+ }
+}

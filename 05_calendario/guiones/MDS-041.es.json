@@ -1,0 +1,169 @@
+{
+ "id": "MDS-041",
+ "formato": "corto",
+ "serie": "Ríete primero, te explico después",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué sentimos vergüenza ajena?",
+ "tesis": "La vergüenza ajena aparece aunque el otro no sepa que está haciendo el ridículo, y en el cerebro se parece a sentir el dolor de otro: va con la empatía.",
+ "pilares": [
+  "F"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "control",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué sentimos vergüenza ajena?",
+  "respuesta": "Porque sentimos el ridículo del otro como sentimos su dolor, con la empatía, y aparece aunque él no sepa que está haciendo el ridículo.",
+  "puente": "El invitado que desafina en el karaoke de la boda, feliz, y tú detrás de la servilleta: la escena 4 dice que eso, vergüenza aunque el otro no lo sepa, es lo que estudió el equipo de Sören Krach."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — en una boda un invitado canta en el karaoke desafinando con toda el alma; qué gira — él está feliz y no sabe que desafina, y tú, que no has hecho nada, te escondes detrás de la servilleta; cómo acaba — la servilleta es empatía, y lo que no se sabe es por qué a la mesa de al lado el mismo karaoke le da risa.",
+  "EL HUMOR: la vergüenza ajena es el motor de la comedia de incomodidad. El canal puede entretener (regla 3); el remate es la servilleta.",
+  "NADIE COMO VÍCTIMA: el invitado no está identificado, está feliz, y en los planos de archivo sale de espaldas o lejos (C50, regla 5).",
+  "FUENTE: F09 (Krach y otros, 2011, PLoS ONE, DOI 10.1371/journal.pone.0018675), ficha nueva verificada el 08/10/2026 en Crossref y Europe PMC. Frases del resumen copiadas literal: «vicarious embarrassment was experienced regardless of whether the observed protagonist acted accidentally or intentionally and was aware or unaware that he/she was in an embarrassing situation»; «the anterior cingulate cortex and the left anterior insula, two cortical structures typically involved in vicarious feelings of others' pain»; y su actividad «positively correlated with individual differences in trait empathy».",
+  "LÍMITE (regla 12): no explica por qué la misma escena a unos les da vergüenza y a otros risa. Es el cierre, con la misma boda.",
+  "C17: F09 es nueva.",
+  "LECTURA EN FRÍO (2026-10-08): Vuelta 1: «¿quién es Krach?», «las dos zonas» (¿cuáles?), «y más, cuanta más empatía» y una mesa que se reía y salía de la nada en el cierre → Krach presentado como psicólogo, «las mismas zonas», y el primo que se ríe entra en la escena 3. Vuelta 2: «En el escáner» (¿qué escáner?) → «Con un escáner del cerebro vieron…». Vuelta 3: pasa."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-publico",
+   "texto": "Karaoke en la *boda*",
+   "narracion": "En una boda, un invitado canta una balada en el karaoke con toda el alma.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "wedding party karaoke microphone back view",
+      "man singing karaoke party from behind"
+     ],
+     "prompt": "a wedding guest seen from behind singing into a microphone on a small stage, eyes closed, fairy lights"
+    },
+    {
+     "desde": "con toda el alma",
+     "busqueda": [
+      "microphone close up party lights",
+      "karaoke microphone stage"
+     ],
+     "prompt": "close-up of a microphone in a hand under colorful party lights"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Desafina un *poquito*",
+   "narracion": "Lo que no sabe es que desafina un poquito.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "silhouette man singing stage lights",
+      "singer silhouette spotlight party"
+     ],
+     "prompt": "silhouette of a man singing with arms open under a spotlight at a party"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Tú, detrás de la *servilleta*",
+   "narracion": "Y tú, que no has hecho nada, te escondes detrás de la servilleta. Tu primo, en cambio, se parte.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "person hiding face behind napkin wedding table",
+      "woman covering face napkin dinner"
+     ],
+     "prompt": "a wedding guest at a round table hiding their face behind a white napkin, cringing"
+    }
+   ]
+  },
+  {
+   "tipo": "diagrama",
+   "fuente": "F09",
+   "personaje": "rie",
+   "pasos": [
+    {
+     "titulo": "Él no lo sabe",
+     "pie": "canta feliz"
+    },
+    {
+     "titulo": "Tú lo *sientes*",
+     "pie": "vergüenza ajena"
+    }
+   ],
+   "narracion": "El psicólogo Sören Krach lo estudió: la vergüenza ajena aparece aunque el otro no sepa que hace el ridículo.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "researcher reviewing brain scans screen",
+      "scientist looking at monitor lab"
+     ],
+     "prompt": "a researcher looking at brain scan images on a monitor in a dim lab"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "F09",
+   "personaje": "entiende",
+   "a": "Dolor ajeno",
+   "et_a": "ves a alguien sufrir",
+   "b": "Ridículo ajeno",
+   "et_b": "las mismas *zonas*",
+   "narracion": "Con un escáner del cerebro vieron que se encienden las mismas zonas que al ver a alguien sufrir. Más, cuanta más empatía.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "marca": true,
+     "desde": "Con un escáner del cerebro"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "F09",
+   "personaje": "duda",
+   "titulo": "¿Y tu primo, que se *ríe*?",
+   "subtitulo": "Fuente: Krach y otros, 2011",
+   "narracion": "Tu servilleta, entonces, es empatía. Lo que no explica es por qué a tu primo le da risa.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "wedding guests laughing table",
+      "people laughing at wedding table"
+     ],
+     "prompt": "guests at another wedding table laughing and clapping along, warm lights"
+    },
+    {
+     "desde": "por qué a tu primo",
+     "busqueda": [
+      "wedding table guests clapping",
+      "party guests clapping laughing"
+     ],
+     "prompt": "a table of wedding guests clapping and laughing with delight"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 3, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-08",
+  "de_que_va": "Va de la vergüenza ajena: por qué te da apuro que otro haga el ridículo aunque él ni se entere. Según un estudio con escáner cerebral, es empatía.",
+  "pregunta_y_respuesta": "Por qué sientes vergüenza por alguien que ni sabe que está haciendo el ridículo: tu cerebro lo procesa como si vieras a alguien sufrir, se encienden las mismas zonas, y más cuanta más empatía tienes.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Lo que no explica es por qué a tu primo le da risa.» Se queda: es el cierre honesto (regla 12) y vuelve a la misma mesa de la escena 3, donde el primo ya estaba presentado (prueba 2).",
+  "donde_me_iria": "me quedo (el final le deja «un poco frío»)",
+  "notas": [
+   "«‹Más, cuanta más empatía.› Es tan corta que al oírla tardé un segundo en entender que quería decir ‹se encienden más cuanta más empatía tienes›.» Lo interpreta él mismo: C48.2, a notas."
+  ],
+  "veredicto": "pasa"
+ }
+}

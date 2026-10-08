@@ -1,0 +1,168 @@
+{
+ "id": "MDS-042",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué nos da la risa en un funeral?",
+ "tesis": "En el duelo, la risa de verdad (la que arruga los ojos) va con menos enfado, más distancia del malestar y mejores relaciones; la de compromiso, no. Es una correlación.",
+ "pilares": [
+  "E"
+ ],
+ "duracion_objetivo_s": 48,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "A",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué nos da la risa en un funeral?",
+  "respuesta": "Porque la risa de verdad ayuda a tomar distancia del dolor: en personas en duelo, la que arruga los ojos iba con menos enfado y mejores relaciones, y la de compromiso no.",
+  "puente": "La sala del velatorio que se ríe con «hoy ha sido el primero en llegar» y luego siente culpa: la escena 4 dice que esa risa en el duelo es lo que estudiaron Keltner y Bonanno."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — en un velatorio alguien recuerda que el difunto llegaba tarde a todo; qué gira — «pues hoy ha sido el primero en llegar», y se ríe toda la sala con un poco de culpa; cómo acaba — esa risa en el velatorio iba con estar mejor, aunque quizá se reían más los que ya estaban mejor.",
+  "TONO: el chiste es cariñoso y lo cuenta alguien del velatorio, no el narrador; el narrador no se inventa ninguna muerte propia (sexta regla de la historia). Nadie es víctima. Planos sin caras identificables en duelo: manos, flores, sillas, gente de espaldas.",
+  "BRAZO A (ciclo B1, posición 7): las dos escenas del mecanismo (4, comparación; 5, dato) llevan animar y la idea visual. Sin caras humanas en la animación: la 4 se dibuja con dos curvas de risa y la 5 con medidores.",
+  "FUENTE: E08 (Keltner y Bonanno, 1997, JPSP, DOI 10.1037/0022-3514.73.4.687), ficha nueva verificada el 08/10/2026 en Crossref; resumen leído en el PDF del autor. Frases copiadas literal: «bereaved adults' laughter and smiling 6 months postloss»; «Duchenne laughter, which involves orbicularis oculi muscle action, related to self-reports of reduced anger and increased enjoyment, the dissociation of distress, better social relations, and positive responses from strangers, whereas non-Duchenne laughter did not.» El guion dice «personas en duelo, seis meses después de la pérdida» (no «de su pareja»: el resumen dice «bereaved adults»).",
+  "LÍMITE (regla 12): son correlaciones; el estudio no separa si la risa ayuda o si se reía más quien ya estaba mejor. Es el cierre, en forma de «¿y si es al revés?».",
+  "C17: E08 es nueva. A10 (risa en contexto evolutivo, libre desde el 12/10) no hace falta.",
+  "LECTURA EN FRÍO (2026-10-08): Vuelta 1: «más distancia del dolor» (¿qué significa?) y un final que «da la respuesta y luego me la quita» → «un respiro de la pena» y un cierre que separa lo que se sabe de lo que no. Vuelta 2: «menos enfado» (¿con quién?) y «mejor trato con los demás» (¿quién trata a quién?) → «estaba menos enfadado, sentía alivio y se llevaba mejor con su gente». Vuelta 3: pasa."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-pausa",
+   "texto": "Llegaba tarde a *todo*",
+   "narracion": "En un velatorio, alguien recuerda que el difunto llegaba tarde a todo.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "funeral flowers candles room",
+      "condolence flowers wreath indoors"
+     ],
+     "prompt": "white flower arrangements and lit candles in a quiet funeral home room"
+    },
+    {
+     "desde": "llegaba tarde",
+     "busqueda": [
+      "old wristwatch on table",
+      "man looking at watch hurry"
+     ],
+     "prompt": "an old wristwatch lying on a wooden table, soft light"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "«Hoy, el *primero*»",
+   "narracion": "Y añade, muy serio: pues hoy ha sido el primero en llegar.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "people in dark clothes standing back view",
+      "mourners standing from behind"
+     ],
+     "prompt": "people in dark clothes standing in a funeral home, seen from behind"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "entiende",
+   "texto": "Risa, y luego *culpa*",
+   "narracion": "Se ríe toda la sala, y después, todos con un poco de culpa.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "hands holding tissue funeral",
+      "hand covering mouth laughing back view"
+     ],
+     "prompt": "close-up of a hand covering a mouth holding back laughter, dark sleeve, no full face"
+    },
+    {
+     "desde": "con un poco de culpa",
+     "busqueda": [
+      "people looking down dark clothes",
+      "mourners heads bowed"
+     ],
+     "prompt": "people in dark clothes looking down quietly, seen from the side, out of focus"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "E08",
+   "animar": true,
+   "animacion": "Dos curvas de sonido de risa: en «la que arruga los ojos» la primera se ensancha y se vuelve cálida (ámbar); en «la de compromiso» la segunda se queda plana y gris.",
+   "a": "La que arruga los *ojos*",
+   "et_a": "risa de verdad",
+   "b": "De compromiso",
+   "et_b": "solo la boca",
+   "narracion": "Los psicólogos Keltner y Bonanno observaron a personas en duelo y separaron la risa que arruga los ojos de la de compromiso.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "two people talking interview room",
+      "interview two chairs room"
+     ],
+     "prompt": "two chairs facing each other in a calm interview room, a recorder on a small table"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "E08",
+   "personaje": "rie",
+   "animar": true,
+   "animacion": "Dos medidores: en «menos enfadado» baja la aguja del enfado; en «sentía alivio» una nube gris se aleja de una figura; en «Con la otra risa, no» los medidores no se mueven.",
+   "cifra": "Menos enfado",
+   "pie": "y más *alivio*",
+   "narracion": "Quien se reía arrugando los ojos estaba menos enfadado, sentía alivio y se llevaba mejor con su gente. Con la otra risa, no.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "friends sharing memories coffee table",
+      "people talking warmly kitchen"
+     ],
+     "prompt": "friends sharing memories around a kitchen table with coffee, one laughing warmly, seen from the side"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "E08",
+   "personaje": "duda",
+   "titulo": "¿Qué va *antes*?",
+   "subtitulo": "Fuente: Keltner y Bonanno, 1997",
+   "narracion": "Esa risa no es falta de respeto. Lo que no se sabe es qué va antes: la risa o el estar mejor.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "sunlight through window flowers",
+      "window light vase flowers"
+     ],
+     "prompt": "soft afternoon sunlight through a window onto a vase of white flowers"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 3, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-08",
+  "de_que_va": "Va de que reírse en un velatorio no es faltar al respeto: según un estudio, quien se ríe de verdad en pleno duelo está mejor.",
+  "pregunta_y_respuesta": "¿Está mal reírse en un funeral, y por qué nos pasa? No está mal: la risa sincera, la que arruga los ojos, va con menos enfado, más alivio y mejor relación con los demás. Lo que no se sabe es si la risa hace que estés mejor o si te ríes porque ya estás mejor.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Con la otra risa, no.» Se queda: es la mitad del hallazgo (la risa de compromiso no iba con nada de eso), y el lector dice que quitarla cambia poco.",
+  "donde_me_iria": "me quedo (duda en la escena 4: «dos apellidos de psicólogos… me retiene lo de la risa que arruga los ojos»)",
+  "notas": [
+   "«Como mucho, ‹el estar mejor› suena un poco raro al oído, pero se entiende.»"
+  ],
+  "veredicto": "pasa"
+ }
+}

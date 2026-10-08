@@ -425,6 +425,76 @@
    "modo": "automatico",
    "hora": "19:00",
    "nota": "Viernes. Serie «El experimento». Pregunta: «¿apuntar tres cosas graciosas al día te hace más feliz?», sin número propio (se mide el jueves 8). Fuente H03 (Wellenzohn, Proyer y Ruch, 2016): ensayo por internet con placebo; las tres cosas graciosas cada noche una semana subieron la felicidad y seguía notándose a los seis meses. Resumen leído vía buscador (la red bloquea la revista). El cierre dice que la felicidad la puntuaba cada uno. Nada sobre depresión: no se dan consejos de salud."
+  },
+  {
+   "fecha": "2026-10-12",
+   "episodio": "MDS-036",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Lunes (festivo, 12 de octubre). Ciclo B1, brazo B (posición 1): la escena 1 abre con el dato. Serie «Esto no tiene gracia y esto sí»: el chiste del pez con risas de serie y contado al cuñado sin público. Pregunta: «¿por qué las series ponen risas grabadas?» (57.944.215 en el top 10, 0 de 5 en tema). Fuente E07 (Cai, Chen, White y Scott, 2019, Current Biology), ficha nueva verificada el 08/10. Cierre: solo se probó con chistes malos."
+  },
+  {
+   "fecha": "2026-10-13",
+   "episodio": "MDS-037",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Martes. Ciclo B1, brazo control. Familia «mensajes» (R-TE-03). Serie «Esto no tiene gracia y esto sí»: «vale» y «vale.». Pregunta: «¿por qué un «vale.» con punto suena a enfado?», sin número propio (va a las semillas). Fuente I06 (Gunraj y otros, 2016), ficha nueva: con punto, menos sincero en el móvil; a mano, igual."
+  },
+  {
+   "fecha": "2026-10-14",
+   "episodio": "MDS-038",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Miércoles. Ciclo B1, brazo A (posición 3): escenas 4 y 5 con animar. Serie «Ríete primero, te explico después»: hazte cosquillas y no pasa nada; el cerebro te hace spoiler. Pregunta: «¿por qué no puedes hacerte cosquillas a ti mismo?», sin número propio (a las semillas). Fuente F10 (Blakemore, Wolpert y Frith, 1998), ficha nueva. Si la rutina «Animación» no deja la página, sale como el control y bucle.py lo aparta."
+  },
+  {
+   "fecha": "2026-10-15",
+   "episodio": "MDS-039",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Jueves. Ciclo B1, brazo A (posición 4): escenas 4 y 5 con animar. Serie «El experimento»: el ascensor y «ya somos compañeros de piso». Pregunta: «¿hacer reír ayuda a caer bien a un desconocido?», del hueco de «cómo caer bien en una primera conversación» (4.773.663). Fuente D11 (Treger, Sprecher y Erber, 2013), ficha nueva. Nada de ligar: caer bien y sentirse cerca."
+  },
+  {
+   "fecha": "2026-10-16",
+   "episodio": "MDS-040",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Viernes. Ciclo B1, brazo B (posición 5). Familia «mensajes» y DERECHO DE TANTEO (C46) de MDS-016: la ironía por escrito desde quien la escribe. Serie «El experimento». Pregunta: «¿por qué nadie pilla tu ironía por escrito?» (cerca de «por qué la ironía no se entiende por whatsapp», 374.171). Fuente I07 (Kruger, Epley, Parker y Ng, 2005), ficha nueva."
+  },
+  {
+   "fecha": "2026-10-17",
+   "episodio": "MDS-041",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Sábado. Ciclo B1, brazo control. Serie «Ríete primero, te explico después»: el karaoke de la boda y la servilleta. Pregunta: «¿por qué sentimos vergüenza ajena?» (186.924). Fuente F09 (Krach y otros, 2011, PLoS ONE), ficha nueva."
+  },
+  {
+   "fecha": "2026-10-18",
+   "episodio": "MDS-042",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Domingo. Ciclo B1, brazo A (posición 7): escenas 4 y 5 con animar. Serie «El experimento»: el difunto que llegaba tarde a todo y hoy ha sido el primero. Pregunta: «¿por qué nos da la risa en un funeral?» (22.962.202; y «por qué me da la risa en los momentos serios», 18.426.746). Fuente E08 (Keltner y Bonanno, 1997), ficha nueva. Correlación: el cierre lo dice."
   }
  ],
  "_archivadas": {
@@ -463,5 +533,6 @@
  ],
  "_nota_formato_largo": "SUSPENDIDO desde el 21/09/2026 (C42). No se programan episodios largos hasta que la mediana de los últimos veinte Shorts a 48 horas llegue a 50. La planificación de los jueves escribe CINCO Shorts, no cinco y un largo. Las emisiones largas retiradas quedan en _emisiones_suspendidas, con su motivo y su fecha.",
  "_cambio_25_septiembre_noche": "Planificación semanal del 25/09/2026 (la tarea del jueves corrió el viernes: el contenedor arrancó el 25). Se añaden las cinco emisiones del lunes 28 de septiembre al viernes 2 de octubre, todas «automatico» y a las 19:00. NADA el sábado 3 ni el domingo 4: el formato largo sigue suspendido (C42) — control_c26.mediana_vistas_48h = 11,0 el 21/09, y hace falta 50. La emisión de red de seguridad de MDS-023 del sábado 26 no se toca; la dirección dijo que se puede borrar el lunes 28, y esa decisión no es de la planificación.",
- "_cambio_01_octubre_noche": "Planificación semanal del jueves 01/10/2026 (primera como rutina de Code; entrega por rama con entregar.py). Se añaden las cinco emisiones del lunes 5 al viernes 9 de octubre, todas «automatico» y a las 19:00. NADA el sábado 10 ni el domingo 11: el formato largo sigue suspendido (C42) — control_c26.mediana_vistas_48h = 24,0 el 29/09, y hace falta 50. Ninguna emisión lleva rehacer_video_id (C54)."
+ "_cambio_01_octubre_noche": "Planificación semanal del jueves 01/10/2026 (primera como rutina de Code; entrega por rama con entregar.py). Se añaden las cinco emisiones del lunes 5 al viernes 9 de octubre, todas «automatico» y a las 19:00. NADA el sábado 10 ni el domingo 11: el formato largo sigue suspendido (C42) — control_c26.mediana_vistas_48h = 24,0 el 29/09, y hace falta 50. Ninguna emisión lleva rehacer_video_id (C54).",
+ "_cambio_08_octubre_noche": "Planificación semanal del jueves 08/10/2026. Primera semana del bucle (C60, ciclo B1): SIETE Shorts, del lunes 12 al domingo 18 de octubre, uno al día a las 19:00, todos «automatico». Brazos por el «orden» de ciclos.json desde la posición 1: B, control, A, A, B, control, A. Los temas se eligieron y ordenaron antes de mirar los brazos. Ninguna emisión lleva rehacer_video_id (C54). El largo sigue suspendido (C42)."
 }

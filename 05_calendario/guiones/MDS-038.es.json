@@ -1,0 +1,187 @@
+{
+ "id": "MDS-038",
+ "formato": "corto",
+ "serie": "Ríete primero, te explico después",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué no puedes hacerte cosquillas a ti mismo?",
+ "tesis": "No puedes hacerte cosquillas porque tu cerebro predice lo que va a sentir tu propio movimiento y lo atenúa; la mano de otro no la puede predecir.",
+ "pilares": [
+  "F",
+  "E"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "A",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué no puedes hacerte cosquillas a ti mismo?",
+  "respuesta": "Porque tu cerebro predice lo que va a sentir tu propio movimiento y le baja el volumen; la mano de otra persona no la puede predecir.",
+  "puente": "La cosquilla que te haces en el pie y no sientes: la escena 4 dice que eso es lo que vio Blakemore con un escáner, el cerebelo prediciendo el movimiento."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — te haces cosquillas en la planta del pie y no pasa nada; qué gira — con otra persona y el mismo dedo, das un salto: tu cerebro te ha hecho un spoiler; cómo acaba — el cerebelo predice tu propia cosquilla y la apaga, la de otro no.",
+  "EL CHISTE: «tu cerebro te ha hecho un spoiler». Es el fenómeno: una sensación que ya sabes cómo acaba pierde la gracia, como un chiste que ya conoces.",
+  "BRAZO A (ciclo B1, posición 3): las dos escenas del mecanismo (4, diagrama; 5, comparación) llevan animar y la idea visual. Nada más cambia.",
+  "FUENTE: F10 (Blakemore, Wolpert y Frith, 1998, Nature Neuroscience, DOI 10.1038/2870), ficha nueva verificada el 08/10/2026 en Crossref y Europe PMC. Frases del resumen copiadas literal: «A self-produced tactile stimulus is perceived as less ticklish than the same stimulus generated externally» y «the cerebellum is involved in predicting the specific sensory consequences of movements, providing the signal that is used to cancel the sensory response to self-generated stimulation». El guion dice «llega más flojita» (menos cosquillas), no «desaparece».",
+  "LÍMITE (regla 12): el escáner muestra dónde se apaga la sensación, no por qué la cosquilla de otro da risa. Eso es el cierre.",
+  "C17: F10 es nueva. MDS-017 (cosquillas y ratas, E06) fue una resubida: no cuenta como tema hundido (C54).",
+  "LECTURA EN FRÍO (2026-10-08): Vuelta 1: «no sé quién es Sarah-Jayne Blakemore» y el texto de pantalla del cierre («Dónde se apaga…») no se entendía; «Ahora, en serio» sobraba → Blakemore presentada como neurocientífica, cierre en pantalla «¿Y por qué da risa?», arranque cambiado. Vuelta 2: pasa; se quita la frase que sobraba."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-muelle",
+   "texto": "Hazte *cosquillas*",
+   "narracion": "Hazte cosquillas en la planta del pie. Venga, pruébalo.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "bare feet on sofa",
+      "person touching own foot sofa",
+      "bare foot close up"
+     ],
+     "prompt": "close-up of a person sitting on a sofa touching the sole of their own bare foot with a finger"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Otra persona: das un *salto*",
+   "narracion": "Nada, ¿verdad? Pero si te las hace otra persona, con el mismo dedo, das un salto.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "person bored face sofa",
+      "man shrugging sofa"
+     ],
+     "prompt": "a person on a sofa looking at their own foot with a bored, unimpressed face"
+    },
+    {
+     "desde": "si te las hace otra persona",
+     "busqueda": [
+      "friends tickling feet laughing sofa",
+      "tickling feet sofa laughing"
+     ],
+     "prompt": "one adult tickling another adult's bare foot on a sofa, the second one jerking and laughing"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Tu cerebro te hizo *spoiler*",
+   "narracion": "Es que tu cerebro te ha hecho un spoiler: ya sabía lo que ibas a sentir.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "man covering ears spoiler",
+      "person disappointed watching tv"
+     ],
+     "prompt": "a person on a sofa throwing up their hands in mock outrage, as if someone just spoiled a film"
+    }
+   ]
+  },
+  {
+   "tipo": "diagrama",
+   "fuente": "F10",
+   "personaje": "rie",
+   "animar": true,
+   "animacion": "Una mano de línea se acerca al pie; en «predice» se dibuja antes en el cerebelo la misma huella prevista, y al tocar las dos se superponen.",
+   "pasos": [
+    {
+     "titulo": "Te mueves",
+     "pie": "tu propia mano"
+    },
+    {
+     "titulo": "El cerebelo *predice*",
+     "pie": "lo que vas a sentir"
+    }
+   ],
+   "narracion": "La neurocientífica Sarah-Jayne Blakemore lo vio con un escáner: cuando te mueves, el cerebelo predice lo que vas a sentir.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "mri scanner hospital room",
+      "brain scanner machine"
+     ],
+     "prompt": "an MRI scanner in a clean hospital room, empty, soft blue light"
+    },
+    {
+     "desde": "Cuando te mueves",
+     "busqueda": [
+      "hand moving close up slow",
+      "finger moving close up"
+     ],
+     "prompt": "close-up of a hand slowly moving a finger, dark background"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "F10",
+   "personaje": "entiende",
+   "animar": true,
+   "animacion": "Dos barras de volumen: en «más flojita» baja la de «Tu mano»; en «la mano de otro» la otra sube de golpe hasta arriba.",
+   "a": "Tu mano",
+   "et_a": "prevista: flojita",
+   "b": "Otra mano",
+   "et_b": "sorpresa: *cosquillas*",
+   "narracion": "Y con esa predicción, la sensación llega más flojita. La mano de otro no se puede predecir: esa sí hace cosquillas.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "hand touching own arm close up",
+      "hand on knee close up"
+     ],
+     "prompt": "close-up of a hand gently touching its own forearm, no face"
+    },
+    {
+     "desde": "La mano de otro",
+     "busqueda": [
+      "hand tickling foot close up",
+      "two hands foot tickle"
+     ],
+     "prompt": "close-up of another person's hand tickling a bare foot, no faces"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "F10",
+   "personaje": "duda",
+   "titulo": "¿Y por qué da *risa*?",
+   "subtitulo": "Fuente: Blakemore y otros, 1998",
+   "narracion": "Lo que no enseña el escáner es por qué la cosquilla de otra persona, además, nos da risa.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "friends laughing sofa tickle",
+      "people laughing on couch"
+     ],
+     "prompt": "two adult friends laughing on a sofa after a tickle fight, cushions everywhere"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 2, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-08",
+  "de_que_va": "Explica por qué no puedes hacerte cosquillas a ti mismo: tu cerebro predice lo que vas a sentir y eso lo amortigua.",
+  "pregunta_y_respuesta": "¿Por qué no me hacen efecto mis propias cosquillas y las de otra persona sí? Cuando te mueves, el cerebelo predice lo que vas a sentir y la sensación llega más floja; la mano de otra persona no se puede predecir, así que sí hace cosquillas.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Eso, este estudio no lo responde.» Quitada (condición c): repetía la frase anterior.",
+  "donde_me_iria": "me quedo (el final «me deja algo frío»)",
+  "notas": [
+   "«‹Lo vio con un escáner›. Al principio no tengo claro qué vio exactamente. ¿Vio al cerebelo ‹prediciendo›? Luego, con la frase siguiente, se entiende más o menos.» Lo interpreta él mismo: C48.2, a notas.",
+   "«El final me deja algo frío: termina con una pregunta que no responde.» Es el cierre honesto (regla 12); lo dejo dicho en la bitácora."
+  ],
+  "veredicto": "pasa"
+ }
+}
