@@ -1,0 +1,297 @@
+{
+  "guion": "MDS-041",
+  "version": 1,
+  "firma": "98f40f2ea282247f",
+  "resuelto_utc": "2026-10-08T22:30:47Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "c7668b772d5a",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.3
+          ],
+          "frase": "En una boda, un invitado canta una balada en el karaoke",
+          "fuente": "pexels",
+          "id": 7424068,
+          "pagina": "https://www.pexels.com/video/man-with-afro-hair-singing-7424068/",
+          "titulo": "man with afro hair singing",
+          "autor": "Gustavo Fring",
+          "autor_url": "https://www.pexels.com/@gustavo-fring",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 26.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7424068/7424068-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "man singing karaoke party from behind",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 15.13,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2583,
+              0.2297,
+              0.3278,
+              0.2547
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "con toda el alma",
+          "t_estimado": [
+            5.3,
+            7.87
+          ],
+          "frase": "con toda el alma.",
+          "fuente": "pexels",
+          "id": 12330884,
+          "pagina": "https://www.pexels.com/video/microphone-in-red-light-12330884/",
+          "titulo": "microphone in red light",
+          "autor": "utopia 36",
+          "autor_url": "https://www.pexels.com/@utopia36",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 5.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/12330884/12330884-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "microphone close up party lights",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 11.6,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "a400fae7c17b",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.95
+          ],
+          "frase": "Lo que no sabe es que desafina un poquito.",
+          "fuente": "pexels",
+          "id": 8117112,
+          "pagina": "https://www.pexels.com/video/a-man-singing-8117112/",
+          "titulo": "a man singing",
+          "autor": "Ivan S",
+          "autor_url": "https://www.pexels.com/@ivan-s",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8117112/8117112-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "silhouette man singing stage lights",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 8.42,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4722,
+              0.4078,
+              0.1583,
+              0.1391
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "049a7754baf7",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.77
+          ],
+          "frase": "Y tú, que no has hecho nada, te escondes detrás de la servilleta. Tu primo, en cambio, se parte.",
+          "fuente": "pexels",
+          "id": 6958207,
+          "pagina": "https://www.pexels.com/video/woman-wiping-her-face-with-a-table-napkin-6958207/",
+          "titulo": "woman wiping her face with a table napkin",
+          "autor": "https://kaboompics.com/",
+          "autor_url": "https://www.pexels.com/@karola-g",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6958207/6958207-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "person hiding face behind napkin wedding table",
+          "relevancia": 0.429,
+          "inicio_s": 0.0,
+          "movimiento": 5.37,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.3775,
+              0.28,
+              0.2589,
+              0.2123
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "c5b0962bc6d2",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.72
+          ],
+          "frase": "El psicólogo Sören Krach lo estudió: la vergüenza ajena aparece aunque el otro no sepa que hace el ridículo.",
+          "fuente": "pixabay",
+          "id": 6282,
+          "pagina": "https://pixabay.com/videos/id-6282/",
+          "titulo": "skull, radiology, healthcare, x-ray, brain, teeth, human, anatomy, medicine, 3d, medical graphics, scan id",
+          "autor": "sbtlneet",
+          "autor_url": "https://pixabay.com/users/sbtlneet-3591002/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 13.0,
+          "ancho": 1920,
+          "alto": 1012,
+          "url": "https://cdn.pixabay.com/video/2016/11/06/6282-190551027_large.mp4",
+          "tipo": "video",
+          "consulta": "researcher reviewing brain scans screen",
+          "relevancia": 0.4,
+          "inicio_s": 0.0,
+          "movimiento": 2.4,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "93b9b94f2675",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": "Con un escáner del cerebro",
+          "t_estimado": [
+            0.0,
+            11.1
+          ],
+          "frase": "Con un escáner del cerebro vieron que se encienden las mismas zonas que al ver a alguien sufrir. Más, cuanta más empatía.",
+          "fuente": "marca",
+          "tipo": "marca"
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "4d408f48e87a",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.77
+          ],
+          "frase": "Tu servilleta, entonces, es empatía. Lo que no explica es",
+          "fuente": "pixabay",
+          "id": 29337,
+          "pagina": "https://pixabay.com/videos/id-29337/",
+          "titulo": "wedding, board, welcome, cover, hello, table, dining table, napkin, cutlery, celebration, wedding party, decoration, festive, festivity, wedding decoration, weddingfeast, room, ballroom, banquet id",
+          "autor": "Buzzimilian",
+          "autor_url": "https://pixabay.com/users/Buzzimilian-2956790/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 21.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2019/11/22/29337-374868359_large.mp4",
+          "tipo": "video",
+          "consulta": "wedding guests laughing table",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 3.75,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "por qué a tu primo",
+          "t_estimado": [
+            5.77,
+            9.01
+          ],
+          "frase": "por qué a tu primo le da risa.",
+          "fuente": "pexels",
+          "id": 6054228,
+          "pagina": "https://www.pexels.com/video/man-enjoying-and-clapping-with-the-music-at-the-table-6054228/",
+          "titulo": "man enjoying and clapping with the music at the table",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 5.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6054228/6054228-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "wedding table guests clapping",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 13.15,
+          "encuadre": {
+            "x": 0.5,
+            "y": 1
+          },
+          "caras": [
+            [
+              0.4328,
+              0.3489,
+              0.2213,
+              0.1477
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

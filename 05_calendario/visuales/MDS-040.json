@@ -1,0 +1,409 @@
+{
+  "guion": "MDS-040",
+  "version": 1,
+  "firma": "b0fa8f17e2247d4c",
+  "resuelto_utc": "2026-10-08T22:30:35Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "9d1fcf690c34",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            2.0
+          ],
+          "frase": "Tu ironía por escrito",
+          "fuente": "pexels",
+          "id": 35315358,
+          "pagina": "https://www.pexels.com/video/focused-man-typing-on-laptop-indoors-35315358/",
+          "titulo": "focused man typing on laptop indoors",
+          "autor": "Orhan Pergel",
+          "autor_url": "https://www.pexels.com/@skylake",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 7.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/35315358/14961806_1080_1920_50fps.mp4",
+          "tipo": "video",
+          "consulta": "person typing on laptop smirking",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 3.61,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.1278,
+              0.1437,
+              0.3028,
+              0.2375
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "se entiende peor",
+          "t_estimado": [
+            2.0,
+            5.98
+          ],
+          "frase": "se entiende peor de lo que crees.",
+          "fuente": "marca",
+          "tipo": "marca"
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "04fbf8159ffa",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.43
+          ],
+          "frase": "Le escribes a tu jefe: genial, otra reunión a las ocho de la tarde.",
+          "fuente": "pixabay",
+          "id": 43559,
+          "pagina": "https://pixabay.com/videos/id-43559/",
+          "titulo": "keyboard, laptop, computer, technology, work, typing, desk, student, workplace, working, work from home, home, office, internet, study, web, pc, notebook, keyboard typing, typing on keyboard, hands on laptop, hands on keyboard id",
+          "autor": "PhotoDhaba",
+          "autor_url": "https://pixabay.com/users/PhotoDhaba-14220438/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 18.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2020/07/01/43559-436237492_large.mp4",
+          "tipo": "video",
+          "consulta": "hands typing phone office desk",
+          "relevancia": 0.8,
+          "inicio_s": 0.4,
+          "movimiento": 10.95,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "con todo el retintín",
+          "t_estimado": [
+            6.43,
+            10.11
+          ],
+          "frase": "Con todo el retintín.",
+          "fuente": "pexels",
+          "id": 8134383,
+          "pagina": "https://www.pexels.com/video/a-man-removing-eyeglasses-while-massaging-eyes-8134383/",
+          "titulo": "a man removing eyeglasses while massaging eyes",
+          "autor": "https://kaboompics.com/",
+          "autor_url": "https://www.pexels.com/@karola-g",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 21.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8134383/8134383-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man rolling eyes office",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 7.14,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.567
+          },
+          "caras": [
+            [
+              0.4269,
+              0.26,
+              0.4308,
+              0.32
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "63a8759f10ac",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.46
+          ],
+          "frase": "Y te contesta: ¡me alegro de que te guste! Te pongo otra el viernes.",
+          "fuente": "pexels",
+          "id": 36656152,
+          "pagina": "https://www.pexels.com/video/senior-man-talking-on-mobile-phone-in-office-36656152/",
+          "titulo": "senior man talking on mobile phone in office",
+          "autor": "GIUSEPPE DE BERGOLIS",
+          "autor_url": "https://www.pexels.com/@giuseppe-de-bergolis-416966285",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 20.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/36656152/15539841_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "man reading phone shocked office",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 5.4,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4139,
+              0.1828,
+              0.2167,
+              0.1766
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "85686aa9d183",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.77
+          ],
+          "frase": "El psicólogo Justin Kruger lo midió: quien escribe con ironía",
+          "fuente": "pixabay",
+          "id": 1058,
+          "pagina": "https://pixabay.com/videos/id-1058/",
+          "titulo": "laptop, notebook, student, studying, typing, writing, computer, technology, business, screen, laptop screen, office, internet, computer technology, computer screen, work, mobile, communication, woman, girl, female id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 12.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2015/10/16/1058-142621439_large.mp4",
+          "tipo": "video",
+          "consulta": "students typing laptops classroom",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 6.59,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "cree que se nota",
+          "t_estimado": [
+            5.77,
+            10.64
+          ],
+          "frase": "cree que se nota mucho más de lo que se nota.",
+          "fuente": "pixabay",
+          "id": 171044,
+          "pagina": "https://pixabay.com/videos/id-171044/",
+          "titulo": "man, smile, smiling, happy, male, person, outdoors, portrait id",
+          "autor": "magicmore",
+          "autor_url": "https://pixabay.com/users/magicmore-37989617/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 8.0,
+          "ancho": 4096,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2023/07/11/171044-844787782_large.mp4",
+          "tipo": "video",
+          "consulta": "person confident smiling laptop",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 2.08,
+          "encuadre": {
+            "x": 0.553,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.1869,
+              0.1222,
+              0.6267,
+              0.4931
+            ]
+          ]
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "57a00b98a985",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.77
+          ],
+          "frase": "Porque tú oyes tu propio retintín al escribirlo,",
+          "fuente": "pexels",
+          "id": 6963412,
+          "pagina": "https://www.pexels.com/video/person-typing-on-a-laptop-6963412/",
+          "titulo": "person typing on a laptop",
+          "autor": "Eva Bronzini",
+          "autor_url": "https://www.pexels.com/@eva-bronzini",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 25.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6963412/6963412-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "person typing mouthing words",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 7.88,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "y el otro lo lee",
+          "t_estimado": [
+            4.77,
+            7.87
+          ],
+          "frase": "y el otro lo lee sin él.",
+          "fuente": "pexels",
+          "id": 8118109,
+          "pagina": "https://www.pexels.com/video/a-man-reading-text-message-on-his-phone-8118109/",
+          "titulo": "a man reading text message on his phone",
+          "autor": "Anna Pou",
+          "autor_url": "https://www.pexels.com/@anna-pou",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8118109/8118109-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "man reading phone neutral face",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 1.5,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6639,
+              0.2156,
+              0.2889,
+              0.2125
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "e60bb38ffbf1",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.4
+          ],
+          "frase": "¿Te habría librado un emoji de la reunión? Eso no lo midieron:",
+          "fuente": "pixabay",
+          "id": 6395,
+          "pagina": "https://pixabay.com/videos/id-6395/",
+          "titulo": "office, desk, beautiful wallpaper, computer, work, bokeh, blur, background, business, table, room, screen, technology, laptop, workplace, notebook, desktop id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 14.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2016/11/15/6395-191712337_large.mp4",
+          "tipo": "video",
+          "consulta": "old computer email screen office",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 1.58,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "eran correos",
+          "t_estimado": [
+            5.4,
+            9.93
+          ],
+          "frase": "eran correos de hace veinte años, sin emojis.",
+          "fuente": "pixabay",
+          "id": 1191,
+          "pagina": "https://pixabay.com/videos/id-1191/",
+          "titulo": "conference room, furniture, modern, equipment, conference, business, chair, table, interior, boardroom, workplace, board, contemporary, elegant, meetings, place, room, empty, 133411649 id",
+          "autor": "Vimeo-Free-Videos",
+          "autor_url": "https://pixabay.com/users/Vimeo-Free-Videos-1283884/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 17.0,
+          "ancho": 1920,
+          "alto": 746,
+          "url": "https://cdn.pixabay.com/video/2015/10/27/1191-143842658_large.mp4",
+          "tipo": "video",
+          "consulta": "empty meeting room evening",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 11.83,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 2,
+      "plano": 1,
+      "id": "pexels:32259631",
+      "titulo": "modern home office desk setup with typing",
+      "motivo": "quieto (movimiento 0.29)"
+    },
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pixabay:42305",
+      "titulo": "man, computer, work, pc, home, mac, windows, desk, clics, house, mouse, books, table, office, modern, at work, black, busy, working, email, screen, electronic id",
+      "motivo": "quieto (movimiento 0.38)"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}

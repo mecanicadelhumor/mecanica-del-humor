@@ -1,0 +1,339 @@
+{
+  "guion": "MDS-039",
+  "version": 1,
+  "firma": "be413105123f0e85",
+  "resuelto_utc": "2026-10-08T22:30:20Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "747258f7a87e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.37
+          ],
+          "frase": "Dos desconocidos se quedan atrapados en un ascensor, y",
+          "fuente": "pexels",
+          "id": 7407710,
+          "pagina": "https://www.pexels.com/video/a-person-standing-while-wearing-cardboard-box-on-her-head-7407710/",
+          "titulo": "a person standing while wearing cardboard box on her head",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 25.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/7407710/7407710-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "two people standing in elevator awkward",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 9.67,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Se hace un silencio",
+          "t_estimado": [
+            4.37,
+            8.72
+          ],
+          "frase": "se hace un silencio muy incómodo.",
+          "fuente": "pexels",
+          "id": 8089529,
+          "pagina": "https://www.pexels.com/video/close-up-footage-of-a-person-clicking-the-button-8089529/",
+          "titulo": "close up footage of a person clicking the button",
+          "autor": "Ron Lach",
+          "autor_url": "https://www.pexels.com/@ron-lach",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 16.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8089529/8089529-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "elevator buttons close up",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 7.2,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "b11076a41f32",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.18
+          ],
+          "frase": "Hasta que uno dice: bueno, pues ya somos compañeros de piso.",
+          "fuente": "pexels",
+          "id": 8111771,
+          "pagina": "https://www.pexels.com/video/man-standing-in-elevator-8111771/",
+          "titulo": "man standing in elevator",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8111771/8111771-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "man smiling joking elevator",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 9.17,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3667,
+              0.27,
+              0.2042,
+              0.1432
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "c4cb25306c0c",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            1.0
+          ],
+          "frase": "Se ríen, y",
+          "fuente": "pixabay",
+          "id": 32938,
+          "pagina": "https://pixabay.com/videos/id-32938/",
+          "titulo": "dance, celebrate, fun, celebration, happy, dancing, girl, festive, colorful, laughing, young, people, person id",
+          "autor": "Stuck1",
+          "autor_url": "https://pixabay.com/users/Stuck1-15406262/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 34.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2020/02/27/32938-395456384_large.mp4",
+          "tipo": "video",
+          "consulta": "two people laughing in elevator",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 18.42,
+          "encuadre": {
+            "x": 0.472,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.1999,
+              0.1889,
+              0.5999,
+              0.4375
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "al abrirse la puerta",
+          "t_estimado": [
+            1.0,
+            7.87
+          ],
+          "frase": "al abrirse la puerta salen charlando como si se conocieran de siempre.",
+          "fuente": "pexels",
+          "id": 5985196,
+          "pagina": "https://www.pexels.com/video/man-in-black-coat-opening-the-door-and-walks-inside-5985196/",
+          "titulo": "man in black coat opening the door and walks inside",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/5985196/5985196-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "elevator doors opening people walking out talking",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 4.23,
+          "encuadre": {
+            "x": 0.5,
+            "y": 1
+          },
+          "caras": [
+            [
+              0.4625,
+              0.5167,
+              0.0692,
+              0.0523
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "8a038c448dbf",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.87
+          ],
+          "frase": "El psicólogo Stanislav Treger juntó parejas de desconocidos: unas hacían tareas pensadas para reírse, y",
+          "fuente": "pixabay",
+          "id": 92480,
+          "pagina": "https://pixabay.com/videos/id-92480/",
+          "titulo": "laptop, work, internet, business, occupation, sitting, social media, typing, home, freelancer, entrepreneur, computer, workplace, working, technology, table, person, people, online, office, job, interior, employee id",
+          "autor": "jamescheney82",
+          "autor_url": "https://pixabay.com/users/jamescheney82-2913757/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 13.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2021/10/18/92480-637690589_large.mp4",
+          "tipo": "video",
+          "consulta": "two people working on task table laboratory",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 1.77,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "otras, tareas parecidas",
+          "t_estimado": [
+            6.87,
+            10.18
+          ],
+          "frase": "otras, tareas parecidas pero serias.",
+          "fuente": "pexels",
+          "id": 4828603,
+          "pagina": "https://www.pexels.com/video/two-persons-sitting-by-the-table-while-drinking-their-coffee-4828603/",
+          "titulo": "two persons sitting by the table while drinking their coffee",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 28.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/4828603/4828603-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "two people working silently table",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 7.21,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "a03143d61626",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.03
+          ],
+          "frase": "Las parejas del humor acabaron cayéndose mejor y sintiéndose más cerca.",
+          "fuente": "pixabay",
+          "id": 2339,
+          "pagina": "https://pixabay.com/videos/id-2339/",
+          "titulo": "lunch, meal, people, tea cup, tea, couple, table, restaurant, diner, service, food, snack, eating id",
+          "autor": "Life-Of-Vids",
+          "autor_url": "https://pixabay.com/users/Life-Of-Vids-1282862/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 35.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2016/02/29/2339-157269920_large.mp4",
+          "tipo": "video",
+          "consulta": "two people laughing table laboratory",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 4.03,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "5b7402902d21",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            11.78
+          ],
+          "frase": "La pega: en el laboratorio, la risa la provocaban los investigadores con sus tareas. En un ascensor, el chiste lo tienes que poner tú.",
+          "fuente": "pixabay",
+          "id": 78804,
+          "pagina": "https://pixabay.com/videos/id-78804/",
+          "titulo": "man, abstract, black, shadow, circle, circling, alone, human, mind, thought, idea, think, inspiration, silhouette, thinking, soul, science, stand, standing id",
+          "autor": "ChristianBodhi",
+          "autor_url": "https://pixabay.com/users/ChristianBodhi-9869182/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 20.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2021/06/24/78804-567321742_large.mp4",
+          "tipo": "video",
+          "consulta": "man alone in elevator thinking",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 5.33,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

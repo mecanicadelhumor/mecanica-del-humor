@@ -1,0 +1,350 @@
+{
+  "guion": "MDS-042",
+  "version": 1,
+  "firma": "5db902b48bff4d93",
+  "resuelto_utc": "2026-10-08T22:31:08Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "40afbaeb33ec",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.9
+          ],
+          "frase": "En un velatorio, alguien recuerda que el difunto",
+          "fuente": "pexels",
+          "id": 11660976,
+          "pagina": "https://www.pexels.com/video/white-flowers-and-lighted-candle-11660976/",
+          "titulo": "white flowers and lighted candle",
+          "autor": "Sumaja Lippert",
+          "autor_url": "https://www.pexels.com/@sumaja-lippert-164426904",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 922,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/11660976/11660976-hd_922_2048_30fps.mp4",
+          "tipo": "video",
+          "consulta": "funeral flowers candles room",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 1.11,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "llegaba tarde",
+          "t_estimado": [
+            3.9,
+            6.54
+          ],
+          "frase": "llegaba tarde a todo.",
+          "fuente": "pexels",
+          "id": 7580268,
+          "pagina": "https://www.pexels.com/video/a-man-looking-at-his-watch-then-smiling-in-the-camera-7580268/",
+          "titulo": "a man looking at his watch then smiling in the camera",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 17.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/7580268/7580268-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man looking at watch hurry",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 7.34,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.4387,
+              0.2489,
+              0.1759,
+              0.1356
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "220aa2649ce0",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.34
+          ],
+          "frase": "Y añade, muy serio: pues hoy ha sido el primero en llegar.",
+          "fuente": "pixabay",
+          "id": 231147,
+          "pagina": "https://pixabay.com/videos/id-231147/",
+          "titulo": "woman, sea, dock, alone, wave, view, sky, human, person, youth, bikini, hair, wind, back, beach, model, fashion, nature id",
+          "autor": "Engin_Akyurt",
+          "autor_url": "https://pixabay.com/users/Engin_Akyurt-3656355/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 59.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2024/09/13/231147_large.mp4",
+          "tipo": "video",
+          "consulta": "people in dark clothes standing back view",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 7.48,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "ca7264f87e9f",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.93
+          ],
+          "frase": "Se ríe toda la sala, y después, todos",
+          "fuente": "pexels",
+          "id": 6275798,
+          "pagina": "https://www.pexels.com/video/people-holding-hands-close-up-6275798/",
+          "titulo": "people holding hands close up",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 24.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6275798/6275798-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "hands holding tissue funeral",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 10.75,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "con un poco de culpa",
+          "t_estimado": [
+            3.93,
+            6.95
+          ],
+          "frase": "con un poco de culpa.",
+          "fuente": "pixabay",
+          "id": 253997,
+          "pagina": "https://pixabay.com/videos/id-253997/",
+          "titulo": "kiss, love, together, father, family, baby, parent, child, dad, man, people, happy, play, girl, cold, winter, snow, look id",
+          "autor": "iddea_photo",
+          "autor_url": "https://pixabay.com/users/iddea_photo-45788187/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 8.0,
+          "ancho": 2160,
+          "alto": 3840,
+          "url": "https://cdn.pixabay.com/video/2025/01/22/253997_large.mp4",
+          "tipo": "video",
+          "consulta": "people looking down dark clothes",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 7.35,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5444,
+              0.1812,
+              0.2167,
+              0.1555
+            ],
+            [
+              0.3889,
+              0.1875,
+              0.1458,
+              0.1133
+            ],
+            [
+              0.2819,
+              0.1664,
+              0.1431,
+              0.1055
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "f03e77112753",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            11.1
+          ],
+          "frase": "Los psicólogos Keltner y Bonanno observaron a personas en duelo y separaron la risa que arruga los ojos de la de compromiso.",
+          "fuente": "pexels",
+          "id": 5439075,
+          "pagina": "https://www.pexels.com/video/a-man-talking-to-an-interviewer-5439075/",
+          "titulo": "a man talking to an interviewer",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 41.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5439075/5439075-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "two people talking interview room",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 6.05,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3611,
+              0.4,
+              0.1694,
+              0.1313
+            ]
+          ]
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "e02a3b3a5693",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            11.57
+          ],
+          "frase": "Quien se reía arrugando los ojos estaba menos enfadado, sentía alivio y se llevaba mejor con su gente. Con la otra risa, no.",
+          "fuente": "pixabay",
+          "id": 238823,
+          "pagina": "https://pixabay.com/videos/id-238823/",
+          "titulo": "coffee, bread, fruit, breakfast, food, healthy, cup, table, delicious, biscuits id",
+          "autor": "xBriantcx",
+          "autor_url": "https://pixabay.com/users/xBriantcx-36275440/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 17.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://cdn.pixabay.com/video/2024/10/29/238823_large.mp4",
+          "tipo": "video",
+          "consulta": "friends sharing memories coffee table",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 3.22,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "e6a03255e7d6",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            10.85
+          ],
+          "frase": "Esa risa no es falta de respeto. Lo que no se sabe es qué va antes: la risa o el estar mejor.",
+          "fuente": "pexels",
+          "id": 31582475,
+          "pagina": "https://www.pexels.com/video/bright-white-flowers-in-the-sunlight-at-a-window-31582475/",
+          "titulo": "bright white flowers in the sunlight at a window",
+          "autor": "Rahime Gül",
+          "autor_url": "https://www.pexels.com/@rahimegul",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 6.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/31582475/13458747_1080_1920_60fps.mp4",
+          "tipo": "video",
+          "consulta": "sunlight through window flowers",
+          "relevancia": 0.75,
+          "inicio_s": 0.0,
+          "movimiento": 4.12,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 1,
+      "plano": 1,
+      "id": "pixabay:233390",
+      "titulo": "woman, female, room, phone, candle, pose, modeling, bed, tired, relax, resting, night id",
+      "motivo": "quieto (movimiento 0.34)"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pixabay:106885",
+      "titulo": "background, texture, book, candle, light, beautiful wallpaper, effects, bible, table, shadows, flame, fire, old, screensaver id",
+      "motivo": "quieto (movimiento 0.49)"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pexels:12976047",
+      "titulo": "close up view of golden wristwatch",
+      "motivo": "quieto (movimiento 0.3)"
+    },
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pexels:12560255",
+      "titulo": "close up of the clock face of an expensive wristwatch",
+      "motivo": "quieto (movimiento 0.39)"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}

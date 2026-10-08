@@ -1,0 +1,384 @@
+{
+  "guion": "MDS-036",
+  "version": 1,
+  "firma": "506e005707e0060e",
+  "resuelto_utc": "2026-10-08T22:29:15Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "1f05c7a52062",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            1.2
+          ],
+          "frase": "Un chiste malo",
+          "fuente": "pexels",
+          "id": 36956689,
+          "pagina": "https://www.pexels.com/video/stylish-woman-laughing-in-studio-setting-36956689/",
+          "titulo": "stylish woman laughing in studio setting",
+          "autor": "Bakarii_photography",
+          "autor_url": "https://www.pexels.com/@bakarii_photography-2159420192",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/36956689/15656901_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "sitcom studio audience laughing",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 6.54,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5222,
+              0.1531,
+              0.1083,
+              0.1078
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "parece más gracioso",
+          "t_estimado": [
+            1.2,
+            5.98
+          ],
+          "frase": "parece más gracioso si alguien se ríe detrás.",
+          "fuente": "marca",
+          "tipo": "marca"
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "d81de1a49515",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.27
+          ],
+          "frase": "Por eso las series ponen risas grabadas. Un personaje pregunta: ¿",
+          "fuente": "pexels",
+          "id": 6951584,
+          "pagina": "https://www.pexels.com/video/a-woman-sitting-while-watching-tv-6951584/",
+          "titulo": "a woman sitting while watching tv",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 38.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6951584/6951584-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "person watching tv sofa night",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 3.44,
+          "encuadre": {
+            "x": 0.5,
+            "y": 1
+          },
+          "caras": [
+            [
+              0.2708,
+              0.3967,
+              0.1364,
+              0.0855
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "qué hace un pez",
+          "t_estimado": [
+            5.27,
+            7.7
+          ],
+          "frase": "qué hace un pez? Nada. Y",
+          "fuente": "pexels",
+          "id": 35147318,
+          "pagina": "https://www.pexels.com/video/captivating-goldfish-in-a-bowl-with-elegant-fins-35147318/",
+          "titulo": "captivating goldfish in a bowl with elegant fins",
+          "autor": "Dursen",
+          "autor_url": "https://www.pexels.com/@dursen-389236388",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 21.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/35147318/14889495_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "goldfish swimming bowl",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 5.45,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 3,
+          "desde": "el público entero",
+          "t_estimado": [
+            7.7,
+            11.49
+          ],
+          "frase": "el público entero se parte.",
+          "fuente": "pixabay",
+          "id": 1630,
+          "pagina": "https://pixabay.com/videos/id-1630/",
+          "titulo": "concert, light effects, cheering, audience, light beams, people, crowd, happy, party, festival, music, dance, performance, stage, band, group, cheering crowd, event, entertainment, young, happiness, cheerful, fun, festival crowd, crowd of people, rock, concert crowd, live, excitement, rock concert, celebration, applauding, popular, light, concert stage, music festival, sound id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 15.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2015/12/11/1630-148614385_large.mp4",
+          "tipo": "video",
+          "consulta": "audience laughing applauding theater",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 9.68,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "60217a013f2e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.97
+          ],
+          "frase": "Al día siguiente se lo cuentas a tu cuñado, sin público detrás.",
+          "fuente": "pixabay",
+          "id": 172686,
+          "pagina": "https://pixabay.com/videos/id-172686/",
+          "titulo": "dining table, table, eat, dinner, family, family dinner id",
+          "autor": "Eaktas06",
+          "autor_url": "https://pixabay.com/users/Eaktas06-19261019/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 12.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2023/07/21/172686-849651729_large.mp4",
+          "tipo": "video",
+          "consulta": "family dinner table conversation",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 18.9,
+          "encuadre": {
+            "x": 0.369,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.0226,
+              0.2722,
+              0.316,
+              0.2944
+            ],
+            [
+              0.3535,
+              0.2694,
+              0.311,
+              0.2972
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Y te mira",
+          "t_estimado": [
+            5.97,
+            8.85
+          ],
+          "frase": "Y te mira en silencio.",
+          "fuente": "pexels",
+          "id": 7126075,
+          "pagina": "https://www.pexels.com/video/man-eating-dinner-7126075/",
+          "titulo": "man eating dinner",
+          "autor": "Michael Burrows",
+          "autor_url": "https://www.pexels.com/@michael-burrows",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7126075/7126075-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "man staring blank expression dinner",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 4.28,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.525,
+              0.2906,
+              0.2222,
+              0.1719
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "5f089d62841c",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.53
+          ],
+          "frase": "Un equipo de la neurocientífica Sophie Scott hizo puntuar chistes malos",
+          "fuente": "pexels",
+          "id": 6688136,
+          "pagina": "https://www.pexels.com/video/a-person-wearing-a-wireless-headset-6688136/",
+          "titulo": "a person wearing a wireless headset",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 24.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6688136/6688136-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "person wearing headphones listening laptop",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 2.8,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5389,
+              0.1781,
+              0.3778,
+              0.2875
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Con risas",
+          "t_estimado": [
+            5.53,
+            11.57
+          ],
+          "frase": "con risas de fondo y sin ellas. Con risas, hacían más gracia.",
+          "fuente": "pexels",
+          "id": 8927997,
+          "pagina": "https://www.pexels.com/video/a-woman-using-a-laptop-while-wearing-headphones-8927997/",
+          "titulo": "a woman using a laptop while wearing headphones",
+          "autor": "SHVETS production",
+          "autor_url": "https://www.pexels.com/@shvets-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 19.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8927997/8927997-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman smiling headphones laptop",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 11.69,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2167,
+              0.2625,
+              0.2,
+              0.1953
+            ]
+          ]
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "67bfbc50c621",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.93
+          ],
+          "frase": "Así que al chiste del pez no le faltaba gracia: le faltaba público. Ojo: solo se probó con chistes malos.",
+          "fuente": "pexels",
+          "id": 8765013,
+          "pagina": "https://www.pexels.com/video/a-man-talking-at-a-dinner-table-8765013/",
+          "titulo": "a man talking at a dinner table",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8765013/8765013-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man shrugging dinner table",
+          "relevancia": 0.75,
+          "inicio_s": 0.0,
+          "movimiento": 5.13,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.0778,
+              0.5437,
+              0.2833,
+              0.2313
+            ],
+            [
+              0.5028,
+              0.4437,
+              0.2389,
+              0.1672
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

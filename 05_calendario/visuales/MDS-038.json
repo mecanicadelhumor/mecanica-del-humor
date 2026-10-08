@@ -1,0 +1,374 @@
+{
+  "guion": "MDS-038",
+  "version": 1,
+  "firma": "2895b9fe33632a22",
+  "resuelto_utc": "2026-10-08T22:30:05Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "39f774ce6b6d",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.15
+          ],
+          "frase": "Hazte cosquillas en la planta del pie. Venga, pruébalo.",
+          "fuente": "pexels",
+          "id": 13770905,
+          "pagina": "https://www.pexels.com/video/close-up-of-female-bare-feet-13770905/",
+          "titulo": "close up of female bare feet",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13770905/13770905-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "bare feet on sofa",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 3.67,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "e7780c61005f",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            2.1
+          ],
+          "frase": "Nada, ¿verdad? Pero",
+          "fuente": "pixabay",
+          "id": 44637,
+          "pagina": "https://pixabay.com/videos/id-44637/",
+          "titulo": "stress, woman, face, depression, trouble, sadness, will be bored, quarantine, hair, portrait, coronavirus, sad, expression, young, adult, anxiety, people, worried, concern, migraine, girl, despair, person, emotion, loneliness id",
+          "autor": "Engin_Akyurt",
+          "autor_url": "https://pixabay.com/users/Engin_Akyurt-3656355/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 29.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2020/07/13/44637-439413041_large.mp4",
+          "tipo": "video",
+          "consulta": "person bored face sofa",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 2.43,
+          "encuadre": {
+            "x": 0.466,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.198,
+              0.1306,
+              0.6024,
+              0.4806
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "si te las hace otra persona",
+          "t_estimado": [
+            2.1,
+            9.18
+          ],
+          "frase": "si te las hace otra persona, con el mismo dedo, das un salto.",
+          "fuente": "pexels",
+          "id": 4008364,
+          "pagina": "https://www.pexels.com/video/couple-feet-legs-friends-4008364/",
+          "titulo": "couple feet legs friends",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 20.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/4008364/4008364-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "friends tickling feet laughing sofa",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 21.27,
+          "encuadre": {
+            "x": 0.5,
+            "y": 1
+          },
+          "caras": [
+            [
+              0.6957,
+              0.4589,
+              0.0751,
+              0.0533
+            ],
+            [
+              0.7628,
+              0.4455,
+              0.0593,
+              0.0556
+            ],
+            [
+              0.8696,
+              0.4544,
+              0.0553,
+              0.0544
+            ],
+            [
+              0.7273,
+              0.4178,
+              0.0455,
+              0.0378
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "368c9f17315f",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.38
+          ],
+          "frase": "Es que tu cerebro te ha hecho un spoiler: ya sabía lo que ibas a sentir.",
+          "fuente": "pexels",
+          "id": 9645549,
+          "pagina": "https://www.pexels.com/video/a-sad-elderly-man-covering-his-face-using-his-hands-9645549/",
+          "titulo": "a sad elderly man covering his face using his hands",
+          "autor": "Ivan S",
+          "autor_url": "https://www.pexels.com/@ivan-s",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/9645549/9645549-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man covering ears spoiler",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 2.35,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2889,
+              0.0766,
+              0.2194,
+              0.1453
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "62d7bbc07531",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.87
+          ],
+          "frase": "La neurocientífica Sarah-Jayne Blakemore lo vio con un escáner:",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "an MRI scanner in a clean hospital room, empty, soft blue light",
+          "semilla": 3908369,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-038/e4_p1.jpg",
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Cuando te mueves",
+          "t_estimado": [
+            4.87,
+            10.18
+          ],
+          "frase": "cuando te mueves, el cerebelo predice lo que vas a sentir.",
+          "fuente": "pexels",
+          "id": 9165944,
+          "pagina": "https://www.pexels.com/video/close-up-of-people-rubbing-soap-on-their-hands-9165944/",
+          "titulo": "close up of people rubbing soap on their hands",
+          "autor": "Ron Lach",
+          "autor_url": "https://www.pexels.com/@ron-lach",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 29.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/9165944/9165944-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "hand moving close up slow",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 7.27,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "1bc4c6b21647",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.77
+          ],
+          "frase": "Y con esa predicción, la sensación llega más flojita.",
+          "fuente": "pexels",
+          "id": 7477178,
+          "pagina": "https://www.pexels.com/video/hands-touching-arms-7477178/",
+          "titulo": "hands touching arms",
+          "autor": "Angela Roma",
+          "autor_url": "https://www.pexels.com/@angela-roma",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7477178/7477178-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "hand touching own arm close up",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 11.71,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "La mano de otro",
+          "t_estimado": [
+            4.77,
+            10.64
+          ],
+          "frase": "La mano de otro no se puede predecir: esa sí hace cosquillas.",
+          "fuente": "pexels",
+          "id": 7477543,
+          "pagina": "https://www.pexels.com/video/close-up-video-of-a-foot-7477543/",
+          "titulo": "close up video of a foot",
+          "autor": "Angela Roma",
+          "autor_url": "https://www.pexels.com/@angela-roma",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7477543/7477543-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "hand tickling foot close up",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 0.84,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "4ce181079fa4",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.01
+          ],
+          "frase": "Lo que no enseña el escáner es por qué la cosquilla de otra persona, además, nos da risa.",
+          "fuente": "pexels",
+          "id": 6247901,
+          "pagina": "https://www.pexels.com/video/two-people-on-the-couch-chatting-over-coffee-6247901/",
+          "titulo": "two people on the couch chatting over coffee",
+          "autor": "Gary  Barnes",
+          "autor_url": "https://www.pexels.com/@gary-barnes",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6247901/6247901-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "people laughing on couch",
+          "relevancia": 0.667,
+          "inicio_s": 0.0,
+          "movimiento": 1.05,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.0958,
+              0.3803,
+              0.125,
+              0.108
+            ],
+            [
+              0.4417,
+              0.4343,
+              0.1167,
+              0.0822
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 4,
+      "plano": 1,
+      "id": "pexels:7088500",
+      "titulo": "a mri machine in a medical facility",
+      "motivo": "quieto (movimiento 0.47)"
+    },
+    {
+      "escena": 4,
+      "plano": 1,
+      "id": "pexels:7089373",
+      "titulo": "a medical scanning machine ready for use",
+      "motivo": "poco relevante (0.25): se prueba la IA"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}

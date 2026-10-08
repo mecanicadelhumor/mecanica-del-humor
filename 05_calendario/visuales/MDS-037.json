@@ -1,0 +1,433 @@
+{
+  "guion": "MDS-037",
+  "version": 1,
+  "firma": "e5dcfae7c4b10fd5",
+  "resuelto_utc": "2026-10-08T22:29:30Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "0851eb3aa6bd",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            2.57
+          ],
+          "frase": "Propones ir al cine esta noche.",
+          "fuente": "pixabay",
+          "id": 169446,
+          "pagina": "https://pixabay.com/videos/id-169446/",
+          "titulo": "smartphone, keyboard, typing, message, messenger, communication, mobile phone, cellphone, phone, hand, finger, online, social media, internet, app, screen id",
+          "autor": "magicmore",
+          "autor_url": "https://pixabay.com/users/magicmore-37989617/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 16.0,
+          "ancho": 4096,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2023/06/30/169446-841382825_large.mp4",
+          "tipo": "video",
+          "consulta": "hands typing smartphone message",
+          "relevancia": 1.0,
+          "inicio_s": 0.4,
+          "movimiento": 16.67,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Tu amigo contesta",
+          "t_estimado": [
+            2.57,
+            6.49
+          ],
+          "frase": "Tu amigo contesta: vale. Con punto.",
+          "fuente": "pexels",
+          "id": 13802095,
+          "pagina": "https://www.pexels.com/video/a-man-in-corporate-attire-using-his-smartphone-13802095/",
+          "titulo": "a man in corporate attire using his smartphone",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13802095/13802095-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "man looking at phone screen serious",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 3.0,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2806,
+              0.175,
+              0.225,
+              0.1781
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "787e96293732",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            2.8
+          ],
+          "frase": "Sin punto, es que se viene.",
+          "fuente": "pixabay",
+          "id": 2294,
+          "pagina": "https://pixabay.com/videos/id-2294/",
+          "titulo": "scrolling, touchscreen, mobile phone, smartphone, background, tablet, computer, using, internet, communication, beautiful wallpaper, screen, tablet pc, technology, bokeh, blur id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 14.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2016/02/29/2294-157183594_large.mp4",
+          "tipo": "video",
+          "consulta": "phone screen on table",
+          "relevancia": 1.0,
+          "inicio_s": 0.4,
+          "movimiento": 27.36,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Con punto",
+          "t_estimado": [
+            2.8,
+            8.72
+          ],
+          "frase": "Con punto, empiezas a repasar qué le has hecho.",
+          "fuente": "pexels",
+          "id": 8052328,
+          "pagina": "https://www.pexels.com/video/woman-got-worried-after-a-phone-call-8052328/",
+          "titulo": "woman got worried after a phone call",
+          "autor": "Kampus Production",
+          "autor_url": "https://www.pexels.com/@kampus",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8052328/8052328-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "person thinking holding phone worried",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 7.98,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4694,
+              0.1078,
+              0.3111,
+              0.2359
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "ad3cdd0063be",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.54
+          ],
+          "frase": "Y acabas releyendo la conversación entera desde el verano, buscando la ofensa.",
+          "fuente": "pixabay",
+          "id": 375632,
+          "pagina": "https://pixabay.com/videos/id-375632/",
+          "titulo": "ai generated, guy, man, male, person, young, cellphone, smartphone, mobile, phone, communication, texting, chatting, scrolling, browsing, social, connection, message id",
+          "autor": "flutie8211",
+          "autor_url": "https://pixabay.com/users/flutie8211-17475707/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 5.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://cdn.pixabay.com/video/2026/09/10/375632_large.mp4",
+          "tipo": "video",
+          "consulta": "person scrolling phone in bed night",
+          "relevancia": 0.6,
+          "inicio_s": 0.0,
+          "movimiento": 5.24,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.425,
+              0.2703,
+              0.1806,
+              0.1234
+            ],
+            [
+              0.0056,
+              0.45,
+              0.0611,
+              0.0547
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "0ce8a962abce",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.47
+          ],
+          "frase": "El equipo de la psicóloga Celia Klin dio a leer respuestas cortas a una invitación,",
+          "fuente": "pexels",
+          "id": 5426855,
+          "pagina": "https://www.pexels.com/video/students-sharing-a-phone-inside-the-classroom-during-break-time-5426855/",
+          "titulo": "students sharing a phone inside the classroom during break time",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5426855/5426855-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "students reading phones university classroom",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 4.51,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6528,
+              0.5,
+              0.0944,
+              0.0625
+            ],
+            [
+              0.175,
+              0.5031,
+              0.0833,
+              0.0609
+            ],
+            [
+              0.2306,
+              0.5188,
+              0.0722,
+              0.0578
+            ],
+            [
+              0.3528,
+              0.5531,
+              0.0722,
+              0.0516
+            ],
+            [
+              0.6333,
+              0.5672,
+              0.0694,
+              0.0516
+            ],
+            [
+              0.4806,
+              0.5781,
+              0.0694,
+              0.0516
+            ],
+            [
+              0.3083,
+              0.5406,
+              0.0694,
+              0.0516
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "unas con punto final",
+          "t_estimado": [
+            7.47,
+            11.57
+          ],
+          "frase": "unas con punto final y otras sin él.",
+          "fuente": "marca",
+          "tipo": "marca"
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "af62d3b1e344",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.4
+          ],
+          "frase": "En el móvil, con punto, parecían menos sinceras. En una nota",
+          "fuente": "pexels",
+          "id": 8279339,
+          "pagina": "https://www.pexels.com/video/a-woman-scrolling-and-reading-through-her-cellphone-8279339/",
+          "titulo": "a woman scrolling and reading through her cellphone",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 14.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8279339/8279339-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "person frowning reading phone",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 2.5,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5167,
+              0.0047,
+              0.4139,
+              0.3203
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "escrita a mano",
+          "t_estimado": [
+            5.4,
+            9.72
+          ],
+          "frase": "escrita a mano, el punto no las cambiaba.",
+          "fuente": "pixabay",
+          "id": 100344,
+          "pagina": "https://pixabay.com/videos/id-100344/",
+          "titulo": "write, letter, to write, pen, office, paper, feeling, feelings, post, note, notes, writing, hand, hands id",
+          "autor": "egemen_izmirli",
+          "autor_url": "https://pixabay.com/users/egemen_izmirli-19724738/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 10.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2021/12/11/100344-656497420_large.mp4",
+          "tipo": "video",
+          "consulta": "handwritten note paper pen",
+          "relevancia": 1.0,
+          "inicio_s": 0.4,
+          "movimiento": 3.02,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "f4523cc8be54",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            11.32
+          ],
+          "frase": "Eso sí: el estudio mide cómo lo lees tú, no lo que quería decir tu amigo. Que, seguramente, solo quería ir al cine.",
+          "fuente": "pexels",
+          "id": 7233474,
+          "pagina": "https://www.pexels.com/video/friends-eating-popcorn-while-watching-movie-in-cinema-7233474/",
+          "titulo": "friends eating popcorn while watching movie in cinema",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7233474/7233474-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "friends meeting outside cinema night",
+          "relevancia": 0.4,
+          "inicio_s": 0.0,
+          "movimiento": 13.91,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6833,
+              0.6062,
+              0.3167,
+              0.2188
+            ],
+            [
+              0.8361,
+              0.4125,
+              0.125,
+              0.0859
+            ],
+            [
+              0.425,
+              0.3781,
+              0.0944,
+              0.0797
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 3,
+      "plano": 1,
+      "id": "pixabay:233390",
+      "titulo": "woman, female, room, phone, candle, pose, modeling, bed, tired, relax, resting, night id",
+      "motivo": "quieto (movimiento 0.34)"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}
