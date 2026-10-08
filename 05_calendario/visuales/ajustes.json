@@ -79,5 +79,16 @@
     "brain scan MRI screen doctor"
    ]
   }
+ },
+ "MDS-035": {
+  "1": {
+   "texto_pos": "arriba"
+  },
+  "2": {
+   "texto_pos": "arriba"
+  },
+  "3": {
+   "texto_pos": "arriba"
+  }
  }
 }

@@ -83,9 +83,9 @@
    "personaje": "piensa",
    "a": "Tres cosas graciosas",
    "et_a": "el ejercicio, por internet",
-   "b": "Ejercicio de relleno",
+   "b": "Ejercicio neutro",
    "et_b": "para *comparar*",
-   "narracion": "El equipo de Willibald Ruch lo probó por internet con cientos de adultos. Otros hicieron un ejercicio de relleno, para comparar.",
+   "narracion": "El equipo de Willibald Ruch lo probó por internet con cientos de adultos. Otros hicieron un ejercicio neutro, para comparar.",
    "pausa_despues_s": 0.45,
    "visual": [
     {
@@ -97,7 +97,7 @@
      "prompt": "an adult at home in the evening typing on a laptop, warm lamp light"
     },
     {
-     "desde": "Otros hicieron un ejercicio de relleno",
+     "desde": "Otros hicieron un ejercicio neutro",
      "busqueda": [
       "person writing in notebook bored",
       "writing diary at desk",
@@ -136,7 +136,7 @@
    "personaje": "duda",
    "titulo": "La nota la ponía *cada uno*",
    "subtitulo": "Fuente: Wellenzohn, Proyer y Ruch, 2016",
-   "narracion": "La letra pequeña: esa felicidad la puntuaba cada uno en un cuestionario. Y el del micro apagado, esa semana, seguro que se puntuó bajito.",
+   "narracion": "La letra pequeña: la felicidad la puntuaba cada uno en un cuestionario. Y cada uno pone la nota que quiere.",
    "pausa_despues_s": 0.2,
    "visual": [
     {
@@ -146,31 +146,22 @@
       "online form on laptop"
      ],
      "prompt": "close-up of a hand using a laptop trackpad to answer an online questionnaire with rating scales"
-    },
-    {
-     "desde": "el del micro apagado",
-     "busqueda": [
-      "man realizing microphone was muted",
-      "embarrassed man at laptop",
-      "man facepalm at laptop"
-     ],
-     "prompt": "a man at his laptop realizing his microphone was muted all along, hand on forehead"
     }
    ]
   }
  ],
  "lectura_en_frio": {
-  "lector": "subagente sin contexto (tercera vuelta, lector nuevo)",
-  "fecha": "2026-10-01",
-  "de_que_va": "Apuntar cada noche tres cosas que te hayan hecho gracia te hace más feliz, y según un estudio el efecto dura meses.",
-  "pregunta_y_respuesta": "Si sirve de algo apuntar cosas graciosas antes de dormir. Sí: quienes lo hicieron una semana estaban más felices, y seis meses después todavía se notaba. Eso sí, la felicidad la puntuaba cada uno.",
+  "lector": "subagente sin contexto (revisión diaria 08/10, tercer lector nuevo)",
+  "fecha": "2026-10-08",
+  "de_que_va": "Apuntar cada noche tres cosas graciosas hace más feliz, según un estudio, durante meses.",
+  "pregunta_y_respuesta": "¿Sirve de algo apuntar cosas graciosas antes de dormir? Sí: tras una semana estaban más felices y seguía a los seis meses, aunque cada uno se ponía su nota.",
   "frases_que_no_se_entienden": [],
-  "frase_que_sobra": "«Otros hicieron un ejercicio de relleno, para comparar.» Se queda: es el grupo de placebo, y sin grupo de comparación el resultado no dice nada (regla 12); ver notas_humor.",
-  "donde_me_iria": "escena 4: «el vídeo pasa a ser una clase». Si se quedara, por el dato de los seis meses.",
+  "frase_que_sobra": "«Y cada uno pone la nota que quiere.» (repite la frase anterior; se deja: es la que cierra el sentido de «La nota la ponía cada uno»)",
+  "donde_me_iria": "me quedo",
   "notas": [
-   "«Otros hicieron un ejercicio de relleno, para comparar.» — «No sé qué es un ejercicio de relleno. Lo entiendo como un grupo de control, pero tengo que pararme a pensarlo.» (lo interpreta bien: va a notas)",
-   "«Y el del micro apagado, esa semana, seguro que se puntuó bajito.» — «Tardé un segundo… ¿Se puso poca felicidad por la vergüenza?» (es exactamente eso: va a notas)",
-   "«El equipo de Willibald Ruch…» — «Se entiende, pero el nombre no me dice nada y me saca del rollo.» (firma de la fuente, regla 2)"
+   "Los dos primeros lectores del 08/10 NO entendieron «seguro que se puntuó bajito» (cierre original) ni «se la puede subir hasta el del micro apagado»: reescrito el cierre sin el callback del micro y quitado su plano.",
+   "«Con el micro apagado.» solo se entiende al unirlo con la escena 2 (es el remate; va a notas).",
+   "«un ejercicio neutro, para comparar» — no sabe qué ejercicio era (grupo de comparación; va a notas)."
   ],
   "veredicto": "pasa"
  }
