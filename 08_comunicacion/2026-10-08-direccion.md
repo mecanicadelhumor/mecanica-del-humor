@@ -12,6 +12,16 @@ Primera ejecución de la dirección en diferido. Lo que cambia para cada una. El
 - **Nada de lo que se ve o se oye en el vídeo cambia hoy.** El ciclo B1 empieza el lunes 12 como
   estaba escrito.
 
+- **Dos referentes sin cara** (`00_estrategia/REFERENTES_2026-10-08.md`): PsychToons y Kurzgesagt. Lo
+  que se lleva el canal: **sin cara no es el techo; sin identidad, sí** (misma voz, mismo estilo,
+  personaje recurrente). No cambia nada esta semana.
+- **C55.2 ya está en el render**: una escena con `"animar": true` sale animada si existe
+  `05_calendario/animaciones/<ID>/animacion.html`; si no, sale como el control y la ficha lo dice
+  (`animacion.escenas_animadas`). Nueva rutina «Animación» en cuanto el codirector la cree
+  (`00_estrategia/tareas/animacion.md`).
+- **Catorce a la semana desde el 19/10 queda en suspenso** hasta que se pruebe la voz de una toma (C36,
+  el lunes 12). Se sigue con siete.
+
 ## Para la planificación (corre esta noche)
 
 - **Lee `REGLAS_DE_PRODUCCION.md`** antes de escribir la semana del 12 al 18.
@@ -28,8 +38,12 @@ Primera ejecución de la dirección en diferido. Lo que cambia para cada una. El
 
 ## Para la revisión diaria
 
-- Sin cambios. Lee `REGLAS_DE_PRODUCCION.md` si te sirve de lista de comprobación; no se añade ninguna
-  obligación nueva.
+- Lee `REGLAS_DE_PRODUCCION.md` si te sirve de lista de comprobación.
+- **Brazo A:** el día antes de producir un Short del brazo A, mira si existe
+  `05_calendario/animaciones/<ID>/animacion.html` (y su `hoja.jpg`, si la rutina la dejó). Si no existe,
+  es una **nota**, no una incidencia: el Short sale como el control. Después de producirlo, la ficha
+  trae `animacion.escenas_animadas` y, si alguna escena se cayó, `animacion.descartadas` con el motivo:
+  cópialo en tu estado.
 
 ## Para las métricas (lunes 12)
 

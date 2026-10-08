@@ -114,6 +114,9 @@ Cosas medidas que condicionan las reglas pero que no se «cumplen» en cada Shor
 - **Ni la miniatura, ni la hora, ni la música, ni la voz, ni la duración** distinguen a `MDS-016`
   (ver `ANALISIS_MDS-016.md`, §2). **Sí lo hace el tema (mensajes) y, compartido con `MDS-022`, el chiste de
   literalismo.**
+- **«Sin cara» no es el techo; «sin identidad», sí.** Kurzgesagt (25,7 M) no tiene cara pero tiene la
+  misma voz desde 2013, un estilo que se reconoce en un fotograma y mascotas; PsychToons (163 K) crece
+  con ilustración IA en un solo estilo como mero acompañante de la voz (`REFERENTES_2026-10-08.md`).
 - **Los números semanales se mueven solos**: la mediana semanal fue 113 → 66 → 62 sin cambios
   nuestros. Por eso el control va dentro del mismo ciclo.
 
@@ -126,3 +129,4 @@ Cosas medidas que condicionan las reglas pero que no se «cumplen» en cada Shor
 | Fecha | Cambio | Quién | Por qué |
 |---|---|---|---|
 | 08/10/2026 | Fichero creado con las reglas de hoy; R-TE-03 como exploración | Dirección (diferido) | Cuaderno del 06/10, punto 2 |
+| 08/10/2026 | Hallazgo «sin cara no es el techo» y `H-ilustracion-ia` en cola | Dirección (diferido) | Cuaderno del 08/10, punto 3 |

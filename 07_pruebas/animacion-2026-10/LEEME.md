@@ -92,3 +92,14 @@ animación gana. Eso es un cambio de C55.2: en vez de «un Short de cada cinco, 
 La tarea 3 de `tareas_codirector_2026-09-30.md`: **¿sigue C55.2?** Y si sigue, ¿entero animado o
 mezclado? Nada entra en producción antes de la semana del 12/10 (la del 5 es la segunda de C50), y
 nada entra sin que las rutinas entreguen solas (C53.1: ya funciona).
+
+---
+
+## C55.2 · La mezcla, ya dentro del render (dirección en diferido, 08/10/2026)
+
+**`c55-2_mezcla_MDS-027.jpg`**: diez instantes del mismo `MDS-027` renderizado por el `render.py` de
+producción con `"animar": true` en las escenas 4 y 5. Las escenas 1-3 y 6 salen como siempre (aquí con
+tarjeta de marca, porque el contenedor no tiene los planos de archivo; en un Short real llevan el vídeo
+detrás, C50) y la 4 y la 5 salen de esta misma página, adaptada al contrato de
+`03_produccion/pipeline/animacion.py`. Es lo que verá el espectador en los Shorts del brazo A del ciclo
+B1. **Codirector: míralo antes de crear la rutina «Animación»**; crearla es el visto bueno (regla 11.2).

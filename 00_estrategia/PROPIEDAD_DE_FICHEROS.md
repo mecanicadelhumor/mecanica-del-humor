@@ -53,6 +53,8 @@ puede es hacer que dos agentes no escriban nunca el mismo fichero.**
 | `05_calendario/bucle/ciclos.json` · `hipotesis.json` (C60, 05/10/2026) | **la dirección** | la planificación los lee y aplica el `orden`; nadie más los escribe |
 | `05_calendario/bucle/resultados.json` · `05_calendario/metricas_diarias.json` (C60) | **Workflow `metricas.yml`** (`bucle.py`, `metricas.py --diario`) | nadie los edita a mano |
 | `04_agentes/bucle.py` (C60) | **la dirección** | nadie más |
+| `00_estrategia/REGLAS_DE_PRODUCCION.md` (08/10/2026) | **la dirección** | todas las tareas lo leen; las sugerencias, en su bitácora |
+| `00_estrategia/tareas/animacion.md` (C55.2, 08/10/2026) | **la dirección y el codirector** | es el prompt de la rutina «Animación»: ella no lo edita |
 | `05_calendario/animaciones/` (C55.2, 05/10/2026) | **Rutina «Animación»** (viernes) | la planificación marca las escenas en el guion; la revisión avisa |
 | Todo el repositorio salvo workflows, el cuaderno, `novedades.md` y lo que escribe Actions (C62, 05/10/2026) | **la dirección en diferido** (`entregar.py --tarea direccion`) | — |
 

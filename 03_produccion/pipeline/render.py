@@ -152,7 +152,7 @@ class FalloArchivo(Exception):
     producción: render() lo recoge y renderiza el Short como siempre."""
 
 
-def render_archivo(guion, escenas, local, carpeta, salida, fps=30, escala=1.0, verbose=True):
+def render_archivo(guion, escenas, local, carpeta, salida, fps=30, escala=1.0, verbose=True, anim=None):
     """C50 (versión 13, 23/09/2026) · el Short con vídeo de archivo detrás.
 
     Tres pasos, y ninguno usa la red (regla 11.6):
@@ -164,6 +164,11 @@ def render_archivo(guion, escenas, local, carpeta, salida, fps=30, escala=1.0, v
       3. ffmpeg pone la capa de texto encima del fondo. Donde la captura es
          una tarjeta de marca, es opaca y tapa el fondo entero.
     Cualquier fallo lanza FalloArchivo, y render() vuelve al render de siempre.
+
+    C55.2 (08/10/2026): `anim` trae los fotogramas ya renderizados de las escenas
+    de mecanismo animadas a medida (animacion.hacer). Esas escenas son un cuarto
+    tipo de tramo: opaco como la tarjeta de marca, con su propio texto, que se
+    copia tal cual en lugar de capturarse de escena.html.
     """
     import fondo_visual
     ancho, alto = LIENZO["corto"]
@@ -174,6 +179,15 @@ def render_archivo(guion, escenas, local, carpeta, salida, fps=30, escala=1.0, v
     tmp = Path(tempfile.mkdtemp(prefix="mdh_c50_"))
     try:
         plan = fondo_visual.plan(escenas, local, fps, carpeta)
+        frames_anim = (anim or {}).get("frames") or {}
+        for pe in plan:
+            if pe["n"] in frames_anim:
+                if len(frames_anim[pe["n"]]) != pe["n_f"]:
+                    # no debería pasar (los dos cuentan round(dur*fps)); si pasa, como el control
+                    frames_anim.pop(pe["n"])
+                    continue
+                pe["tramos"] = [{"f0": 0, "f1": pe["n_f"], "tipo": "marca", "plano": None,
+                                 "animacion": True}]
         if not fondo_visual.hay_archivo(plan):
             raise FalloArchivo("ningún plano de archivo utilizable")
         fondo = fondo_visual.pista_de_fondo(plan, W, H, fps, tmp / "fondo", carpeta)
@@ -195,7 +209,7 @@ def render_archivo(guion, escenas, local, carpeta, salida, fps=30, escala=1.0, v
                 paginas[modo] = pag
             ultimo = len(escenas)
             for e, pe in zip(escenas, plan):
-                tipos = {tr["tipo"] for tr in pe["tramos"]}
+                tipos = {tr["tipo"] for tr in pe["tramos"] if not tr.get("animacion")}
                 datos = {
                     # En la tarjeta de marca el Engranaje solo firma el cierre.
                     "marca": dict(e, personaje=e.get("personaje") if e["n"] == ultimo else None),
@@ -210,6 +224,16 @@ def render_archivo(guion, escenas, local, carpeta, salida, fps=30, escala=1.0, v
                         raise FalloArchivo(
                             f"escena {e['n']} ({modo}): no cabe «{problemas[0]['texto']}»")
                 for tr in pe["tramos"]:
+                    if tr.get("animacion"):
+                        for f in range(tr["f0"], tr["f1"]):
+                            ruta = capas / f"{n_cap:06d}.png"
+                            with Image.open(frames_anim[e["n"]][f]) as im:
+                                im.convert("RGBA").save(ruta)
+                            n_cap += 1
+                        if verbose:
+                            print(f"  {e['n']:>2} [{e.get('tipo', ''):<11}] {e['duracion_s']:>5.1f}s  "
+                                  f"ANIMACIÓN A MEDIDA (C55.2)")
+                        continue
                     pag = paginas[tr["tipo"]]
                     for f in range(tr["f0"], tr["f1"]):
                         pag.evaluate("t => pintar(t)", f / fps)
@@ -226,7 +250,7 @@ def render_archivo(guion, escenas, local, carpeta, salida, fps=30, escala=1.0, v
                                 if im.mode != "RGBA":
                                     im.convert("RGBA").save(ruta)
                         n_cap += 1
-                if verbose:
+                if verbose and not any(tr.get("animacion") for tr in pe["tramos"]):
                     detalle = " · ".join(
                         f"{tr['tipo']}{'' if tr['tipo'] == 'marca' else ':' + str((tr['plano'] or {}).get('fuente'))}"
                         f" {(tr['f1'] - tr['f0']) / fps:.1f}s" for tr in pe["tramos"])
@@ -282,8 +306,38 @@ def render_archivo(guion, escenas, local, carpeta, salida, fps=30, escala=1.0, v
 
 
 def render(guion_path, salida, fps=30, escala=1.0, solo=None, verbose=True):
+    """C55.2 (08/10/2026): envuelve al render de siempre con la animación a
+    medida de las escenas de mecanismo. Si nada pide animación, es exactamente el
+    render de antes. Si algo falla, la escena sale como en el control."""
     guion = json.loads(Path(guion_path).read_text(encoding="utf-8"))
     escenas = preparar(guion)
+    anim, tmp_an = None, None
+    if guion.get("formato") == "corto" and not solo and any(e.get("animar") for e in escenas):
+        tmp_an = Path(tempfile.mkdtemp(prefix="mdh_c552_"))
+        carpeta = Path(guion_path).resolve().parent
+        try:
+            import animacion
+            frames, descartadas, previos = animacion.hacer(guion, escenas, carpeta, fps, escala, tmp_an)
+        except Exception as ex:           # ni siquiera el módulo: todo como el control
+            frames, descartadas, previos = {}, {}, {
+                e["n"]: f"{type(ex).__name__}: {ex}"[:300] for e in escenas if e.get("animar")}
+        anim = {"frames": frames}
+        for n, motivo in {**previos, **descartadas}.items():
+            print(f"::warning::C55.2 · escena {n} de {guion.get('id', '?')}: sale como el control ({motivo})")
+        try:
+            import animacion
+            animacion.escribir_usado(carpeta, guion, list(frames), descartadas, previos)
+        except Exception as ex:
+            print(f"::warning::C55.2 · no se pudo escribir animacion/usado.json ({ex})")
+    try:
+        return _render(guion_path, guion, escenas, salida, fps, escala, solo, verbose, anim)
+    finally:
+        if tmp_an is not None:
+            shutil.rmtree(tmp_an, ignore_errors=True)
+
+
+def _render(guion_path, guion, escenas, salida, fps, escala, solo, verbose, anim):
+    frames_anim = (anim or {}).get("frames") or {}
     ancho, alto = LIENZO.get(guion.get("formato", "largo"), LIENZO["largo"])
     if solo:
         escenas = [e for e in escenas if e["n"] == solo]
@@ -305,7 +359,7 @@ def render(guion_path, salida, fps=30, escala=1.0, solo=None, verbose=True):
         local = fondo_visual.cargar_local(carpeta)
         if local:
             try:
-                return render_archivo(guion, escenas, local, carpeta, salida, fps, escala, verbose)
+                return render_archivo(guion, escenas, local, carpeta, salida, fps, escala, verbose, anim)
             except FalloArchivo as ex:
                 print(f"::warning::C50 · el modo archivo no ha podido montar "
                       f"{guion.get('id', '?')} ({ex}). Se renderiza con el fondo de siempre.")
@@ -332,6 +386,23 @@ def render(guion_path, salida, fps=30, escala=1.0, solo=None, verbose=True):
         pag.goto(ESCENA_HTML.as_uri())
 
         for e in escenas:
+            dur = e["duracion_s"]
+            if vivo and e["n"] in frames_anim and len(frames_anim[e["n"]]) == max(1, int(round(dur * fps))):
+                # ---- C55.2 · escena de mecanismo animada a medida -------
+                # Los fotogramas ya están hechos (animacion.hacer): se copian
+                # tal cual, uno por fotograma, con el mismo recuento que abajo.
+                n_f = max(1, int(round(dur * fps)))
+                for f in range(n_f):
+                    ruta = tmp / f"{capturados:06d}.png"
+                    shutil.copyfile(frames_anim[e["n"]][f], ruta)
+                    capturados += 1
+                    entradas.append((ruta, 1 / fps))
+                total_s += dur
+                if verbose:
+                    print(f"  {e['n']:>2} [{e['tipo']:<11}] {dur:>5.1f}s  "
+                          f"{n_f:>4} fotogramas · ANIMACIÓN A MEDIDA (C55.2)")
+                continue
+
             n_uds = pag.evaluate("d => cargar(d)", e)
             dur = e["duracion_s"]
 

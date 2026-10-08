@@ -714,6 +714,27 @@ cazó (por eso se mide el resultado y no la intención).
 → **Cuando quites un retraso, mide el resultado final, no la pieza que tocaste.** Es la trampa 1 en el
 tiempo: lo que llega al espectador es la suma de todo lo que va delante.
 
+**55. Dos renders iguales no dan el mismo vídeo.** Al probar C55.2 (08/10), el mismo guion renderizado
+dos veces con el `render.py` de `main` sin tocar dio fotogramas distintos a partir del 36 (a 5 fps). La
+regla 11.5 dice «mismo guion y mismo `t`, mismo píxel», y no se cumple; nadie lo había comprobado.
+→ **Antes de usar «no ha cambiado ni un píxel» como prueba de que un cambio es inocuo, renderiza dos veces
+lo de antes.** La comparación de C55.2 se hizo así (contra dos pasadas del original), no contra una.
+
+## Dónde está el proyecto a 8 de octubre de 2026
+
+**Primera dirección en diferido (rutina del jueves).** Versión **19** del plan, la que manda.
+
+- **`MDS-016` desgranado** (`ANALISIS_MDS-016.md`): no fue la retención (la peor curva de los que pasan de
+  60 vistas) ni la imagen; quedan el tema (mensajes del móvil) y el chiste de literalismo, y el azar no
+  se descarta. Nada adelanta a B1; dos de siete Shorts por semana exploran la familia `mensajes`.
+- **`REGLAS_DE_PRODUCCION.md`**: la línea principal de un Short, con una sola modificación por vídeo (la
+  de su brazo). Lo escribe la dirección.
+- **Referentes sin cara** (`REFERENTES_2026-10-08.md`): PsychToons y Kurzgesagt. Sin cara no es el
+  techo; sin identidad, sí. `H-ilustracion-ia` en cola.
+- **C55.2 en el render** (`animacion.py`), probado e inerte hasta que la rutina «Animación» (la crea el
+  codirector) escriba páginas. **C36 no hecho**: pasa al lunes 12; sin él, siete a la semana.
+- `MDS-034` no se produjo a las 07:22 UTC por una avería del runner (revisión diaria); el reintento lo subió a las 11:48 UTC, a tiempo para las 17:00.
+
 ## Dónde está el proyecto a 5 de octubre de 2026
 
 **Sesión de lunes: el bucle de aprendizaje.** Versión **18** del plan, la que manda.
