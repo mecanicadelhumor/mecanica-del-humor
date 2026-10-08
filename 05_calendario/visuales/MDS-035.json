@@ -1,13 +1,13 @@
 {
   "guion": "MDS-035",
   "version": 1,
-  "firma": "851feeaa183225df",
-  "resuelto_utc": "2026-10-01T22:38:23Z",
+  "firma": "7c5356f443a342bd",
+  "resuelto_utc": "2026-10-08T09:35:32Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
       "narracion_sha": "d1f1d777cbd9",
-      "texto_pos": "abajo",
+      "texto_pos": "arriba",
       "planos": [
         {
           "k": 1,
@@ -50,7 +50,7 @@
     },
     "2": {
       "narracion_sha": "a08a109c0861",
-      "texto_pos": "abajo",
+      "texto_pos": "arriba",
       "planos": [
         {
           "k": 1,
@@ -93,7 +93,7 @@
     },
     "3": {
       "narracion_sha": "2e6fd5c3bf5e",
-      "texto_pos": "abajo",
+      "texto_pos": "arriba",
       "planos": [
         {
           "k": 1,
@@ -115,34 +115,34 @@
           "caras": [
             [
               0.2643,
-              0.3537,
-              0.1211,
-              0.1051
+              0.3478,
+              0.1016,
+              0.0838
             ],
             [
-              0.6497,
-              0.3728,
-              0.0964,
-              0.0809
+              0.6771,
+              0.35,
+              0.1003,
+              0.0779
             ],
             [
-              0.6654,
+              0.681,
               0.5147,
-              0.1029,
-              0.0757
+              0.0964,
+              0.0779
             ],
             [
-              0.2617,
-              0.5191,
-              0.0951,
-              0.0728
+              0.2591,
+              0.5228,
+              0.0938,
+              0.0721
             ]
           ]
         }
       ]
     },
     "4": {
-      "narracion_sha": "dbd84c0b9177",
+      "narracion_sha": "3e6ffa05fa6e",
       "texto_pos": "abajo",
       "planos": [
         {
@@ -150,7 +150,7 @@
           "desde": null,
           "t_estimado": [
             0.0,
-            5.6
+            5.5
           ],
           "frase": "El equipo de Willibald Ruch lo probó por internet con cientos de adultos.",
           "fuente": "pexels",
@@ -177,12 +177,12 @@
         },
         {
           "k": 2,
-          "desde": "Otros hicieron un ejercicio de relleno",
+          "desde": "Otros hicieron un ejercicio neutro",
           "t_estimado": [
-            5.6,
-            10.64
+            5.5,
+            10.18
           ],
-          "frase": "Otros hicieron un ejercicio de relleno, para comparar.",
+          "frase": "Otros hicieron un ejercicio neutro, para comparar.",
           "fuente": "pexels",
           "id": 7698438,
           "pagina": "https://www.pexels.com/video/person-writing-on-a-notebook-7698438/",
@@ -262,7 +262,7 @@
       ]
     },
     "6": {
-      "narracion_sha": "ac21330f2d23",
+      "narracion_sha": "ecbb6bfe7887",
       "texto_pos": "abajo",
       "planos": [
         {
@@ -270,9 +270,9 @@
           "desde": null,
           "t_estimado": [
             0.0,
-            6.1
+            9.93
           ],
-          "frase": "La letra pequeña: esa felicidad la puntuaba cada uno en un cuestionario. Y",
+          "frase": "La letra pequeña: la felicidad la puntuaba cada uno en un cuestionario. Y cada uno pone la nota que quiere.",
           "fuente": "pixabay",
           "id": 6378,
           "pagina": "https://pixabay.com/videos/id-6378/",
@@ -289,36 +289,6 @@
           "relevancia": 0.6,
           "inicio_s": 0.4,
           "movimiento": 9.16,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
-          "caras": []
-        },
-        {
-          "k": 2,
-          "desde": "el del micro apagado",
-          "t_estimado": [
-            6.1,
-            11.78
-          ],
-          "frase": "el del micro apagado, esa semana, seguro que se puntuó bajito.",
-          "fuente": "pexels",
-          "id": 6878205,
-          "pagina": "https://www.pexels.com/video/a-man-talking-in-microphone-6878205/",
-          "titulo": "a man talking in microphone",
-          "autor": "cottonbro studio",
-          "autor_url": "https://www.pexels.com/@cottonbro",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 67.0,
-          "ancho": 1080,
-          "alto": 2048,
-          "url": "https://videos.pexels.com/video-files/6878205/6878205-hd_1080_2048_25fps.mp4",
-          "tipo": "video",
-          "consulta": "man realizing microphone was muted",
-          "relevancia": 0.4,
-          "inicio_s": 0.4,
-          "movimiento": 8.58,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
