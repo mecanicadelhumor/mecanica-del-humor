@@ -634,6 +634,21 @@
       "subido_utc": "2026-10-07T07:23:34Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-07T22:04:34Z"
+    },
+    {
+      "id": "MDS-034.es",
+      "episodio": "MDS-034",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué no puedes reírte cuando te lo piden?",
+      "guion": "05_calendario/guiones/MDS-034.es.json",
+      "video_id": "pb8nZ5qhm8E",
+      "url": "https://youtu.be/pb8nZ5qhm8E",
+      "estado": "private",
+      "publicar_en": "2026-10-08T17:00:00Z",
+      "musica": "cama_06_prelude_no_20_chris_zabriskie.mp3",
+      "subido_utc": "2026-10-08T11:48:08Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-07T22:04:34Z"

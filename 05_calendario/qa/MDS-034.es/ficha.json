@@ -1,0 +1,231 @@
+{
+  "id": "MDS-034.es",
+  "duracion_final_s": 49.6,
+  "tamano_mb": 26.6,
+  "audio": {
+    "lufs": -14.56,
+    "pico_dbtp": -1.45,
+    "rango_lu": 4.1
+  },
+  "silencio_inicial": {
+    "empieza_s": -0.021,
+    "acaba_s": 0.118,
+    "esperado_s": 0.1,
+    "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
+  },
+  "arranque": {
+    "silencios_s": [
+      [
+        0.0,
+        0.1
+      ]
+    ],
+    "fragmento_antes_de_la_narracion": false,
+    "duracion_fragmento_s": null,
+    "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente)."
+  },
+  "fragmentos": {
+    "instantes": [
+      {
+        "s": 4.45,
+        "mmss": "0:04.5",
+        "dura_s": 0.02
+      },
+      {
+        "s": 7.585,
+        "mmss": "0:07.6",
+        "dura_s": 0.125
+      },
+      {
+        "s": 12.03,
+        "mmss": "0:12.0",
+        "dura_s": 0.069
+      },
+      {
+        "s": 13.556,
+        "mmss": "0:13.6",
+        "dura_s": 0.289
+      },
+      {
+        "s": 23.313,
+        "mmss": "0:23.3",
+        "dura_s": 0.269
+      },
+      {
+        "s": 39.087,
+        "mmss": "0:39.1",
+        "dura_s": 0.256
+      },
+      {
+        "s": 39.67,
+        "mmss": "0:39.7",
+        "dura_s": 0.426
+      }
+    ],
+    "cuantos": 7,
+    "_nota": "Cada entrada es un trozo de audio de menos de 0.45 s rodeado de silencio: casi seguro una sílaba suelta que el sintetizador ha metido al empezar una escena. «mmss» es el minuto exacto para ir a escucharlo. Debe estar vacío."
+  },
+  "subtitulos": {
+    "ass_existe": true,
+    "lineas_ass": 0,
+    "srt_existe": true,
+    "quemados": false,
+    "quemados_origen": "leído de montaje.json",
+    "_esperado": {
+      "quemados": false,
+      "lineas_ass": "> 0 con motor edge; puede ser 0 con motor gemini"
+    },
+    "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
+  },
+  "sincronia_voz": {
+    "duracion_calculada_s": 48.78,
+    "duracion_real_voz_mp3_s": 48.5,
+    "desfase_s": 0.28,
+    "_esperado": "desfase_s < 0.5",
+    "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
+  },
+  "musica": {
+    "archivo": "cama_06_prelude_no_20_chris_zabriskie.mp3",
+    "sha256": "82f9edf6eab772e453e740b5415a54b892c9ac85c58c28d8318ac9011360def1"
+  },
+  "guion": {
+    "titulo_trabajo": "¿Por qué no puedes reírte de verdad cuando te lo piden?",
+    "idioma": "es",
+    "voz": "Charon",
+    "escenas": 6,
+    "duracion_narracion_s": 48.78,
+    "escenas_por_encima_de_14s": [],
+    "escena_mas_larga_s": 8.968,
+    "motor_voz_pedido": "gemini",
+    "motores_por_escena": {
+      "gemini-3.1-flash-tts-preview": 6
+    },
+    "modelo_voz": "gemini-3.1-flash-tts-preview",
+    "voz_mezclada": false,
+    "origen_voz": [
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada"
+    ],
+    "direccion_voz": [
+      "apertura",
+      "planteamiento",
+      "remate",
+      "planteamiento",
+      "explicacion",
+      "objecion"
+    ],
+    "escenas_ritmo_fuera_de_rango": []
+  },
+  "visual": {
+    "planos": [
+      {
+        "escena": 1,
+        "desde_s": 0.0,
+        "hasta_s": 1.9,
+        "fuente": "pexels",
+        "id": 38881278,
+        "pagina": "https://www.pexels.com/video/elegant-wedding-party-on-stairs-group-photo-38881278/",
+        "autor": "Victoria  Ofere",
+        "autor_url": "https://www.pexels.com/@victoria-ofere-2149128219",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 1,
+        "desde_s": 1.9,
+        "hasta_s": 7.93,
+        "fuente": "pexels",
+        "id": 26799582,
+        "pagina": "https://www.pexels.com/video/a-camera-on-a-tripod-with-the-words-the-best-camera-is-the-one-you-have-with-you-26799582/",
+        "autor": "Tahir Osman",
+        "autor_url": "https://www.pexels.com/@tahir-osman-109306362",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 7.93,
+        "hasta_s": 14.67,
+        "fuente": "ia",
+        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+        "prompt": "a camera on a tripod slowly tipping over sideways onto the grass in a garden",
+        "tipo": "imagen"
+      },
+      {
+        "escena": 3,
+        "desde_s": 14.67,
+        "hasta_s": 23.6,
+        "fuente": "pexels",
+        "id": 28952515,
+        "pagina": "https://www.pexels.com/video/elegant-outdoor-wedding-ceremony-with-guests-28952515/",
+        "autor": "Alexander Mass",
+        "autor_url": "https://www.pexels.com/@rebornfilmes",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 4,
+        "desde_s": 23.6,
+        "hasta_s": 29.67,
+        "fuente": "pixabay",
+        "id": 159029,
+        "pagina": "https://pixabay.com/videos/id-159029/",
+        "autor": "eloguers",
+        "autor_url": "https://pixabay.com/users/eloguers-35030510/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 32.57,
+        "hasta_s": 36.5,
+        "fuente": "pixabay",
+        "id": 324831,
+        "pagina": "https://pixabay.com/videos/id-324831/",
+        "autor": "WhiteHatDesigner",
+        "autor_url": "https://pixabay.com/users/WhiteHatDesigner-25779762/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 36.5,
+        "hasta_s": 39.83,
+        "fuente": "pexels",
+        "id": 7088472,
+        "pagina": "https://www.pexels.com/video/a-doctor-and-a-sonographer-diagnosing-a-patient-mri-test-7088472/",
+        "autor": "MART  PRODUCTION",
+        "autor_url": "https://www.pexels.com/@mart-production",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 6,
+        "desde_s": 39.83,
+        "hasta_s": 47.03,
+        "fuente": "pexels",
+        "id": 28598940,
+        "pagina": "https://www.pexels.com/video/professional-photographer-adjusts-dslr-camera-28598940/",
+        "autor": "Amar  Preciado",
+        "autor_url": "https://www.pexels.com/@amar",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      }
+    ],
+    "sintetico": true
+  },
+  "fotogramas_s": [
+    4.86,
+    12.07,
+    20.13,
+    29.09,
+    37.04,
+    45.3
+  ],
+  "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
+}
