@@ -6046,3 +6046,92 @@ Probado con una toma sintética de 0,28 s de silencio: detecta 0,28 y la deja li
   es una línea en `.gitignore`.
 - Lo de la versión 17 sigue abierto: los planos de FLUX que no salen, por qué `MDS-021` y `022`
   retienen tanto, P9.
+
+---
+
+# Versión 19 · 8 de octubre de 2026 — por qué despegó `MDS-016`, las reglas de producción y la animación en el render
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario, y lo que se anula se dice con su nombre, en la tabla de abajo.
+
+Primera ejecución de la **dirección en diferido** (C62), jueves a las 13:07 UTC, sin sesión
+interactiva hoy. El cuaderno del codirector traía tres puntos nuevos (06/10 y 08/10): **(1)** desgranar
+por qué `MDS-016` («Por qué la ironía no se entiende por WhatsApp») hizo 1.203 visualizaciones, sacar
+hipótesis y probarlas, adelantando la que sea fuerte; **(2)** un fichero de reglas de producción,
+mutable, que cada vídeo cumpla a rajatabla con **una** modificación, decidida por la dirección; **(3)**
+qué se aprende de **PsychToons** (imágenes IA como acompañante de la voz) y, durante la ejecución,
+también de **Kurzgesagt**. Y en el calendario de la versión 18 tocaba **C55.2** (la animación en el
+render) y **C36** (la prueba de la voz de una toma) desde el miércoles 7, que no hubo sesión.
+
+| Cambio | Estado |
+|---|---|
+| **C63 · Análisis de `MDS-016`** | **Hecho**: `00_estrategia/ANALISIS_MDS-016.md`. No es la retención (tiene la peor curva de los que pasan de 60 vistas), ni la miniatura, la hora, la voz, la música, la duración, la demanda de búsqueda (correlación 0,17) ni el gancho de anécdota. Quedan el **tema** (mensajes del móvil) y el **chiste de literalismo** que comparte con `MDS-022`, el segundo mejor. Está a 3,2 desviaciones del resto: el azar no se descarta |
+| **C63.1 · Ninguna hipótesis adelanta al ciclo B1** | Decidido: la evidencia es un solo caso. Lo que no cuesta nada sí entra: **dos de los siete Shorts de cada semana, de la familia `mensajes`** (exploración de tema, ortogonal a los brazos, solo con ficha real), y dos etiquetas en cada guion (`familia_tema`, `chiste`). En las instrucciones de la planificación desde esta noche |
+| **C64 · `REGLAS_DE_PRODUCCION.md`** | **Hecho**. Las reglas vigentes de un Short (guion, imagen, voz, envoltorio, tema), con origen y evidencia; cómo entra y sale una regla; reglas retiradas y registro de cambios. Lo escribe solo la dirección; los agentes sugieren en sus bitácoras. Cada hipótesis de `hipotesis.json` dice ya qué regla toca (`regla_afectada`) |
+| **C65 · Referentes sin cara** | **Hecho**: `00_estrategia/REFERENTES_2026-10-08.md`. PsychToons (163 K, ilustración IA de un solo estilo, largo de 11 min cada dos días, vive de unos pocos vídeos de un millón). Kurzgesagt (25,7 M; 70 personas y 1.200 horas por vídeo; sin cara pero con la misma voz, un estilo y mascotas). **«Sin cara» no es el techo; «sin identidad», sí.** Nueva hipótesis en cola: `H-ilustracion-ia` (no antes de B3) |
+| **C55.2 · La animación a medida en el render** | **Escrito y probado** (abajo). Inerte hasta que exista la página de un Short: el codirector la enciende al crear la rutina «Animación» |
+| **C36 · Voz de una toma** | **NO HECHO.** El código del corte por palabras no existe (solo el diseño del 15/09) y la prueba necesita la clave de Gemini en Actions. Pasa al lunes 12. **Consecuencia:** los catorce Shorts a la semana desde el 19/10 no empiezan sin C36 probado; se sigue con siete |
+| **B1 · duración del ciclo** | **Decidido hoy, antes de ningún dato:** si el 25/10 algún brazo tiene menos de 6 Shorts con 48 h medidas, B1 sigue hasta que los tres las tengan o hasta el **domingo 01/11**, lo que llegue antes, y B2 empieza al día siguiente. La regla de decisión no cambia |
+
+## C55.2 · Cómo entra la animación en el render
+
+- **`03_produccion/pipeline/animacion.py`** (nuevo). Si el guion marca una escena con `"animar": true`
+  y existe `05_calendario/animaciones/<ID>/animacion.html`, **prerenderiza esa escena entera antes de
+  montar nada**: abre la página, le pasa la duración real de la escena y el instante en que la voz dice
+  cada palabra (`cargarTiempos`, con el mismo cálculo que ya usa C50 para los cortes de plano), pasa la
+  barrera (`comprobarEscena` en 20 instantes) y captura los fotogramas. **El contrato** de la página
+  está en la cabecera del módulo y en `00_estrategia/tareas/animacion.md`.
+- **`render.py`**: en los dos caminos (con vídeo de archivo detrás, C50, y el de siempre) la escena
+  animada es un tramo más, opaco, cuyos fotogramas se copian en vez de capturarse de `escena.html`. Si
+  ningún guion pide animación, el render es **exactamente** el de antes (se comprueba al principio y
+  se sale por el mismo camino).
+- **Nunca bloquea.** Sin página, página rota, página que no cumple el contrato, una escena que no pasa
+  la barrera o falla al capturar, o que es la última (lleva el «Síguenos» de C59): **esa escena sale
+  como el control** y el motivo queda en `build/<ID>/animacion/usado.json`.
+- **`qa.py`** copia ese fichero a la ficha como `animacion` (`escenas_animadas` es un número, que es lo
+  que `bucle.py` exige para contar un Short en el brazo A).
+- **Probado en el contenedor** con la muestra de C55.1 (`MDS-027`, escenas 4 y 5) adaptada al contrato:
+  camino de siempre y camino C50 (con planos sintéticos detrás), y siete casos de fallo (sin animación,
+  sin página, última escena, página que falla en la escena 5 a los 2 s, barrera que falla en la 4,
+  página sin contrato, página que no carga). En todos sale el vídeo, con los fotogramas exactos, y la
+  escena que falla sale como el control. Hoja de contactos de la mezcla:
+  `07_pruebas/animacion-2026-10/c55-2_mezcla_MDS-027.jpg` (en un Short real, las escenas 1-3 llevan
+  el vídeo de archivo detrás; aquí no, porque el contenedor no tiene los planos).
+- **Coste de render (regla 11.3):** igual que antes por fotograma (una captura por fotograma, en otra
+  página); se añade abrir un navegador más unos segundos.
+- **Regla 11.2:** el aspecto lo aprobó el codirector con la muestra del 30/09; la mezcla está en la
+  hoja de arriba. **La animación no puede salir en un vídeo hasta que el codirector cree la rutina
+  «Animación»** (sin ella no hay páginas): crearla es su visto bueno.
+
+## Encontrado de paso
+
+- **El render no es determinista de una pasada a otra** (regla 11.5): el mismo guion, renderizado dos
+  veces con el `render.py` de `main` **sin tocar**, da fotogramas distintos a partir del 36 (a 5 fps).
+  Viene de antes de hoy. No cambia nada de lo que ve el espectador, pero impide comparar dos renders
+  píxel a píxel. Trampa 55; se mira el lunes 12.
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| **Jueves 8, 22:07 UTC** | Planificación: semana del 12 al 18, siete Shorts, brazos de B1, **familia `mensajes` si hay ficha**, etiquetas nuevas |
+| **Viernes 9** | El codirector crea la rutina «Animación» (su tarea 2 de hoy) y, si puede, la lanza a mano una vez |
+| Sábado 10 - domingo 11 | Revisión diaria: comprueba que los Shorts del brazo A de la semana tienen página |
+| **Lunes 12, 13:07 UTC** | Dirección en diferido: **C36** (el corte por palabras, escrito y probado) y lo que traiga el primer marcador de B1 |
+| **Miércoles 14** | Primer Short animado del ciclo (si la rutina «Animación» existe) |
+| Lunes 19 | Catorce a la semana **solo si C36 pasó**; si no, siguen siete y B1 se alarga según la regla de arriba |
+| 25/10 - 01/11 | Fin de B1 |
+
+## Lo que NO cambia hoy
+
+- **Nada de lo que se ve o se oye en un vídeo**, hasta que existan páginas de animación.
+- Los brazos y el `orden` de B1; la regla de decisión; los umbrales de C26; las rutinas.
+
+## Lo que queda mirado y sin resolver
+
+- **C36**, y con él el ritmo de catorce.
+- **Si la voz es la misma de un vídeo a otro** (Kurzgesagt: la misma voz desde 2013). R-VO-01 obliga a
+  una voz por vídeo; hay que comprobar que es también una sola voz para el canal.
+- **El plan sigue pesando demasiado** (6.000 líneas): partirlo sigue pendiente.
+- Lo de la versión 18 que no se ha movido: «se quedaron» de la API contra Studio, el presentador (C51.3,
+  C61), los planos de FLUX.

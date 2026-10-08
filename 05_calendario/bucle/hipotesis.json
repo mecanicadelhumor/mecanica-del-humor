@@ -102,6 +102,15 @@
    "nota": "Prioridad mínima: cuatro Shorts la tienen (003, 005, 012, 018) y no despegaron",
    "depende_de": "nada",
    "origen": "ANALISIS_MDS-016.md"
+  },
+  {
+   "id": "H-ilustracion-ia",
+   "que": "Las escenas de situación con ilustración IA en un estilo de marca fijo (una frase de prompt y la paleta de siempre), en lugar de vídeo de archivo (C50)",
+   "metrica": "se quedaron 48 h",
+   "depende_de": "escribir el estilo y una muestra que mire el codirector (regla 11.2)",
+   "regla_afectada": "R-IM-01",
+   "origen": "REFERENTES_2026-10-08.md (PsychToons, Kurzgesagt)",
+   "no_antes_de": "ciclo B3"
   }
  ]
 }

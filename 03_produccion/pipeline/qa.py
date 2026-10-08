@@ -417,6 +417,13 @@ def main():
         # render.py volvió al fondo de siempre: eso se ve aquí sin abrir el log).
         "visual": json.loads((carpeta / "visual" / "usado.json").read_text(encoding="utf-8"))
                   if (carpeta / "visual" / "usado.json").exists() else None,
+        # C55.2 (08/10/2026): la animación a medida de las escenas de mecanismo
+        # (brazo A del ciclo B1). `escenas_animadas` es un NÚMERO: es lo que
+        # 04_agentes/bucle.py exige (mínimo 1) para que el Short cuente en el
+        # brazo A. null = el guion no pidió animación; con `animar` pero sin
+        # animación real, el número es 0 y `descartadas` dice por qué.
+        "animacion": json.loads((carpeta / "animacion" / "usado.json").read_text(encoding="utf-8"))
+                     if (carpeta / "animacion" / "usado.json").exists() else None,
         "fotogramas_s": marcas,
         "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión "
                  "diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y "
