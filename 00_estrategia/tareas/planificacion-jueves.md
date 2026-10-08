@@ -56,6 +56,26 @@ vigente es el **`B1`** (del 12/10 al 25/10) y tiene tres brazos:
 5. **No cambies nada más entre brazos.** Misma duración orientativa, misma música (la rueda), mismo
    tipo de cierre. Un brazo es UNA diferencia con el control.
 
+**Desde el 08/10/2026 (dirección en diferido), tres cosas más, que no son brazos:**
+
+1. **Lee `00_estrategia/REGLAS_DE_PRODUCCION.md`** antes de escribir. Cada Short sigue **todas** las
+   reglas vigentes de ese fichero y, como mucho, **una** modificación: la de su brazo. No te saltas
+   una regla «porque este Short lo pide». Si crees que una regla sobra o que falta una, lo escribes en
+   tu bitácora (sección «Sugerencias a la dirección», con la regla, el porqué y cómo se mediría):
+   **sugerir es tuyo; decidir qué se prueba es de la dirección.**
+2. **Dos de los siete Shorts de la semana son de la familia `mensajes`** (R-TE-03, `H-016-tema`, ver
+   `00_estrategia/ANALISIS_MDS-016.md`): una pregunta sobre un malentendido o un comportamiento en la
+   comunicación **por texto o por móvil** (ironía y emojis, el «vale», el visto, los audios, los
+   grupos). Los eliges **antes** de mirar los brazos, como todos los temas. **Solo si hay ficha de
+   bibliografía real** que la sostenga; hoy solo existe `I05` (la ironía) y la regla de las seis
+   semanas la libera el 26/10, así que **esta semana busca fichas nuevas de ese terreno** (con la red
+   abierta: título y DOI vistos juntos) y, si no encuentras ninguna buena, haces la semana sin la
+   familia y lo dices en la bitácora. **Nunca inventes un Short sin fuente para cumplir la cuota.**
+3. **Dos etiquetas en la raíz de cada guion**, para poder cortar después. No cambian lo que se escribe:
+   `"familia_tema": "mensajes" | "ciencia_del_chiste"` y `"chiste": "literalismo" | "otro"`
+   (`literalismo` = el chiste de las primeras escenas es un dicho tomado al pie de la letra que escala
+   solo y se cuenta en cinco segundos sin explicación, como el de `MDS-016` y el de `MDS-022`).
+
 El marcador lo calcula `04_agentes/bucle.py` todos los días en `05_calendario/bucle/resultados.json`.
 **Léelo antes de empezar** y cópialo en tu bitácora (las tres medias de «se quedaron viendo» y los
 veredictos). No decides tú si un brazo gana: lo dice la regla, que se escribió antes del primer dato.
