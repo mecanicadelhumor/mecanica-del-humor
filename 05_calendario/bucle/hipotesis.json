@@ -1,56 +1,107 @@
 {
- "_nota": "C60 · La cola de hipótesis del bucle: lo que se probará cuando un ciclo se cierre, por orden. La escribe la dirección; el codirector puede añadir en su cuaderno y la dirección la pasa aquí. Cada hipótesis cambia UNA cosa respecto al control vigente.",
+ "_nota": "C60 · La cola de hipótesis del bucle: lo que se probará cuando un ciclo se cierre, por orden. La escribe la dirección; el codirector puede añadir en su cuaderno y la dirección la pasa aquí. Cada hipótesis cambia UNA cosa respecto al control vigente. Desde el 08/10/2026 cada hipótesis dice qué regla de 00_estrategia/REGLAS_DE_PRODUCCION.md toca (regla_afectada); cuando el bucle la da por buena, esa regla cambia allí y se anota en su registro.",
  "en_curso": [
-  "A · animación de mecanismo (B1)",
-  "B · arranque con el dato (B1)"
+  "A · animación de mecanismo (B1) · sustituye R-IM-04",
+  "B · arranque con el dato (B1) · sustituye R-GU-01",
+  "H-016-tema · exploración de tema (no es un brazo), desde la semana del 12/10"
  ],
  "cola": [
+  {
+   "id": "H-016-tema",
+   "que": "El tema —un malentendido en los mensajes del móvil, algo que el espectador vive— llega a más gente que la ciencia del chiste, aunque retenga igual o peor",
+   "metrica": "vistas 48 h (mediana) y se quedaron como freno",
+   "como_se_mide": "2 de los 7 Shorts de cada semana con \"familia_tema\": \"mensajes\" (resto \"ciencia_del_chiste\"); no es un brazo: los brazos se reparten después con el orden barajado",
+   "se_confirma_si": "mediana de vistas 48 h de la familia ≥ 3 veces la del resto del ciclo, con 4 o más Shorts, y al menos 2 por encima de 300",
+   "se_descarta_si": "6 Shorts de la familia y ninguno pasa de 150",
+   "depende_de": "fichas de bibliografía de comunicación por texto o móvil (hoy solo I05, libre el 26/10); la planificación busca fichas nuevas",
+   "regla_afectada": "R-TE-03 (exploración)",
+   "origen": "ANALISIS_MDS-016.md",
+   "desde": "2026-10-12",
+   "caduca": "2026-11-22"
+  },
+  {
+   "id": "H-016-literalismo",
+   "que": "Lo que gusta es un chiste de dicho tomado al pie de la letra, que escala solo y se cuenta en cinco segundos sin explicación (MDS-016 y MDS-022), con independencia del tema",
+   "metrica": "vistas 48 h (mediana)",
+   "como_se_mide": "etiqueta \"chiste\": \"literalismo\" | \"otro\" en cada guion; comparación observacional al cerrar B1 y B2",
+   "se_confirma_si": "mediana de los literalismo ≥ 3 veces la de los otros, con 4 o más de cada",
+   "se_descarta_si": "6 de cada y sin diferencia",
+   "depende_de": "nada",
+   "regla_afectada": "R-GU-01 (tipo de chiste de apertura)",
+   "origen": "ANALISIS_MDS-016.md"
+  },
   {
    "id": "H-presentador",
    "que": "Presentador en los dos primeros segundos y en el remate: persona sintética (C51) frente a personaje animado (C61) frente a sin presentador",
    "metrica": "se quedaron 48 h",
    "depende_de": "C51.3 y C61 aprobados por el codirector mirando su muestrario",
-   "no_antes_de": "2026-10-26"
+   "no_antes_de": "2026-10-26",
+   "regla_afectada": "R-IM-01 (añade presentador)"
   },
   {
    "id": "H-duracion",
    "que": "Short corto (≤ 40 s, una cosa menos) frente al control",
    "metrica": "% visto y retención a 30 s; se quedaron como freno",
    "depende_de": "nada",
-   "no_antes_de": "2026-10-26"
+   "no_antes_de": "2026-10-26",
+   "regla_afectada": "R-GU-03"
   },
   {
    "id": "H-remate",
-   "que": "Remate más claro y una reacción pedida en el propio remate (S3)",
+   "que": "Remate más claro y una reacción pedida en el propio remate (S3). Variante del 08/10: el remate exagera hasta el absurdo con un número concreto (el «somos doce» de MDS-016)",
    "metrica": "me gusta por 100",
-   "depende_de": "nada"
+   "depende_de": "nada",
+   "regla_afectada": "R-GU-02 y R-GU-08",
+   "origen": "Planificación (S3) y ANALISIS_MDS-016.md"
   },
   {
    "id": "H-bucle-final",
    "que": "La última frase empalma con la primera (el vídeo no cierra: vuelve a empezar)",
    "metrica": "% visto (pasa de 100 si repiten)",
-   "depende_de": "un ajuste en montaje/render (sin fundido final)"
+   "depende_de": "un ajuste en montaje/render (sin fundido final)",
+   "regla_afectada": "R-GU-07 (cierre)"
   },
   {
    "id": "H-voz-una-toma",
    "que": "Voz de una sola toma (C36) frente a seis tomas",
    "metrica": "% visto",
    "depende_de": "C36 probado",
-   "nota": "Si C36 entra para poder hacer 14 a la semana, entra para todos y no se mide como brazo"
+   "nota": "Si C36 entra para poder hacer 14 a la semana, entra para todos y no se mide como brazo",
+   "regla_afectada": "R-VO-01"
   },
   {
    "id": "H-fondo",
    "que": "Variedad de fondo (no siempre el azul de marca) en las tarjetas",
    "metrica": "se quedaron",
    "depende_de": "un ajuste de escena.html",
-   "origen": "codirector, 30/09"
+   "origen": "codirector, 30/09",
+   "regla_afectada": "R-IM-02"
   },
   {
    "id": "H-tema-social",
    "que": "Temas de humor en la conversación y las relaciones (no solo ciencia del chiste)",
    "metrica": "vistas 48 h y se quedaron",
    "depende_de": "bibliografía ampliada",
-   "nota": "Es la ampliación de tema de C26 probada antes del 15/11, no después"
+   "nota": "Parte barata adelantada el 08/10 como H-016-tema (dos de siete Shorts, familia «mensajes»). La ampliación amplia sigue con la bibliografía.",
+   "regla_afectada": "R-TE-01"
+  },
+  {
+   "id": "H-016-azar",
+   "que": "MDS-016 fue un valor extremo del reparto del feed, sin causa en el vídeo",
+   "metrica": "cuántos Shorts pasan de 500 vistas en los próximos 30",
+   "como_se_mide": "vigilancia, no prueba: la dirección cuenta en cada lectura de los lunes",
+   "se_confirma_si": "otro Short fuera de la familia «mensajes» pasa de 500",
+   "se_descarta_si": "los que pasen de 500 son todos de la familia «mensajes»",
+   "depende_de": "nada",
+   "origen": "ANALISIS_MDS-016.md"
+  },
+  {
+   "id": "H-016-misma-frase",
+   "que": "La estructura «mismo estímulo, dos versiones» es lo que funciona",
+   "metrica": "vistas 48 h",
+   "nota": "Prioridad mínima: cuatro Shorts la tienen (003, 005, 012, 018) y no despegaron",
+   "depende_de": "nada",
+   "origen": "ANALISIS_MDS-016.md"
   }
  ]
 }
