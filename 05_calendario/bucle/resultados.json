@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-08T19:30:33Z",
+ "actualizado_utc": "2026-10-09T13:45:48Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -85,7 +85,43 @@
     }
    },
    "apartados": [],
-   "pendientes": []
+   "pendientes": [
+    {
+     "id": "MDS-036",
+     "variante": "B",
+     "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-037",
+     "variante": "control",
+     "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-038",
+     "variante": "A",
+     "motivo": "sin ficha de producción todavía"
+    },
+    {
+     "id": "MDS-039",
+     "variante": "A",
+     "motivo": "sin ficha de producción todavía"
+    },
+    {
+     "id": "MDS-040",
+     "variante": "B",
+     "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-041",
+     "variante": "control",
+     "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-042",
+     "variante": "A",
+     "motivo": "sin ficha de producción todavía"
+    }
+   ]
   }
  ]
 }
