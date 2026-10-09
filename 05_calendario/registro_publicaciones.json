@@ -650,6 +650,21 @@
       "subido_utc": "2026-10-08T11:48:08Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-08T22:11:16Z"
+    },
+    {
+      "id": "MDS-035.es",
+      "episodio": "MDS-035",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Apuntar cosas graciosas te hace más feliz?",
+      "guion": "05_calendario/guiones/MDS-035.es.json",
+      "video_id": "rUb4iLoNPhU",
+      "url": "https://youtu.be/rUb4iLoNPhU",
+      "estado": "private",
+      "publicar_en": "2026-10-09T17:00:00Z",
+      "musica": "cama_07_cylinder_one_chris_zabriskie.mp3",
+      "subido_utc": "2026-10-09T07:31:25Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-08T22:11:16Z"
