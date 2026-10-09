@@ -90,5 +90,24 @@
   "3": {
    "texto_pos": "arriba"
   }
+ },
+ "MDS-036": {
+  "2.1": {
+   "excluir": [
+    "pexels:6951584"
+   ],
+   "busqueda": [
+    "woman laughing watching sitcom on tv sofa",
+    "people laughing watching television at home"
+   ]
+  },
+  "4": {
+   "texto_pos": "abajo"
+  }
+ },
+ "MDS-037": {
+  "2": {
+   "texto_pos": "abajo"
+  }
  }
 }
