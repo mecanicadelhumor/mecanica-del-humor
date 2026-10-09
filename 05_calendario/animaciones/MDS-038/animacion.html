@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<title>MDS-038 · animación a medida (C55.2)</title>
+<!--
+  MDS-038 · escenas [4, 5] · brazo A del ciclo B1 (C55.2). Página autónoma: sin red, sin Math.random ni Date.
+  Todo sale de (n, t); los movimientos se anclan a las palabras de la voz con W(), nunca a segundos escritos.
+-->
+<style>
+html,body{margin:0;padding:0;background:#05080f}
+body{margin:0}
+#lienzo{position:relative;left:0;top:0;width:1080px;height:1920px;overflow:hidden;background:#16213A;
+  font-family:system-ui,"DejaVu Sans",Arial,sans-serif;color:#F2F4F8}
+#dib{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bq{position:absolute;font-weight:800;line-height:1.12;letter-spacing:-.01em}
+.bq .p{display:inline-block;opacity:0;transform-origin:0 80%}
+</style></head>
+<body><div id="lienzo"></div>
+<script>
+const ESCENAS_LISTA = [4, 5];
+const ESCENAS = ESCENAS_LISTA;
+// ---------------------------------------------------------------- núcleo común
+const cl = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const tramo = (t, a, b) => cl((t - a) / (b - a));
+const suave = x => x * x * (3 - 2 * x);
+const sal = x => 1 - Math.pow(1 - x, 3);
+const rebote = x => { x = cl(x); const c = 1.70158; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const lerp = (a, b, p) => a + (b - a) * p;
+const $ = id => document.getElementById(id);
+const NS = "http://www.w3.org/2000/svg";
+const AM = "#FFB020", CI = "#4CC9F0", TI = "#F2F4F8", TE = "#8A97AE", PA = "#0F1930", GR = "#6B7790";
+function E(tag, at, par) { const e = document.createElementNS(NS, tag); for (const k in at) e.setAttribute(k, at[k]); if (par) par.appendChild(e); return e; }
+function hex(c) { return [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16)); }
+function mezcla(a, b, p) { const A = hex(a), B = hex(b); return "#" + A.map((v, i) => Math.round(lerp(v, B[i], cl(p))).toString(16).padStart(2, "0")).join(""); }
+const LARGOS = new Map();
+function dibuja(el, p) {
+  let L = LARGOS.get(el);
+  if (L === undefined) { L = el.getTotalLength ? el.getTotalLength() : 1000; LARGOS.set(el, L); el.style.strokeDasharray = L + " " + L; }
+  el.style.strokeDashoffset = L * (1 - cl(p));
+}
+const op = (el, v) => { el.style.opacity = cl(v); };
+const tf = (el, s) => el.setAttribute("transform", s);
+
+// tiempos de la voz (los pone el render antes de pintar)
+let T = {};
+window.cargarTiempos = d => { T = d || {}; };
+const norm = s => s.normalize("NFD").replace(/[^\p{L}\p{N}]/gu, "").toLowerCase();
+function W(n, pal, vez = 1) {
+  let k = 0;
+  for (const [t, w] of (T[n] || {}).palabras || []) if (norm(w) === norm(pal) && ++k === vez) return t;
+  return 0.6;
+}
+const DUR = n => ((T[n] || {}).dur) || 8;
+const S = {};
+
+// ---------------------------------------------------------------- construcción
+let FONDO, PART = [], BLQ = {};
+function construir() {
+  const lienzo = $("lienzo");
+  const svg = E("svg", { id: "dib", viewBox: "0 0 1080 1920", width: 1080, height: 1920 }, lienzo);
+  const defs = E("defs", {}, svg);
+  const pat = E("pattern", { id: "reti", width: 60, height: 60, patternUnits: "userSpaceOnUse" }, defs);
+  E("path", { d: "M60 0H0V60", fill: "none", stroke: "#1F2D4D", "stroke-width": 2 }, pat);
+  FONDO = pat;
+  E("rect", { x: 0, y: 0, width: 1080, height: 1920, fill: "url(#reti)" }, svg);
+  for (let i = 0; i < 18; i++) {
+    const c = E("circle", { r: 3 + (i % 4) * 1.5, fill: i % 3 ? CI : AM, opacity: 0.35 }, svg);
+    c._x = (i * 197) % 1080; c._y = (i * 331) % 1920; c._v = 14 + (i * 7) % 22; c._f = i * 1.3;
+    PART.push(c);
+  }
+  const cam = E("g", { id: "cam" }, svg);
+  const barra = E("rect", { id: "prog", x: 0, y: 0, width: 0, height: 8, fill: AM }, svg);
+  for (const n of ESCENAS) {
+    const g = E("g", { id: "s" + n }, cam);
+    S[n].build(g);
+    const cont = document.createElement("div"); cont.id = "tx" + n; lienzo.appendChild(cont);
+    BLQ[n] = (S[n].bloques || []).map(b => {
+      const d = document.createElement("div"); d.className = "bq";
+      d.style.cssText = `left:${b.x}px;top:${b.y}px;width:${b.w}px;height:${b.h}px;font-size:${b.size}px;color:${b.col || TI}`;
+      let am = false; const sp = [];
+      b.txt.split(" ").forEach((tok, i) => {
+        let t = tok;
+        if (t.startsWith("*")) { am = true; t = t.slice(1); }
+        const cierra = t.endsWith("*"); if (cierra) t = t.slice(0, -1);
+        const s = document.createElement("span"); s.className = "p"; s.textContent = t;
+        if (am) s.style.color = AM, s._am = true;
+        if (i) d.appendChild(document.createTextNode(" "));
+        d.appendChild(s); sp.push(s);
+        if (cierra) am = false;
+      });
+      cont.appendChild(d);
+      return { b, d, sp };
+    });
+  }
+}
+
+// ---------------------------------------------------------------- pintar
+window.ESCENAS = ESCENAS_LISTA;
+window.pintarEscena = function (n, t) {
+  if (!FONDO) construir();
+  const dur = DUR(n);
+  for (const m of ESCENAS) { $("s" + m).style.display = m === n ? "" : "none"; $("tx" + m).style.display = m === n ? "" : "none"; }
+  FONDO.setAttribute("patternTransform", `translate(${(t * 14) % 60} ${(t * -9) % 60})`);
+  PART.forEach(c => {
+    const y = ((c._y - t * c._v) % 1980 + 1980) % 1980 - 30;
+    c.setAttribute("cx", c._x + 18 * Math.sin(t * 0.8 + c._f)); c.setAttribute("cy", y);
+  });
+  const z = 1 + 0.035 * (t / dur);
+  tf($("cam"), `translate(${540 + 6 * Math.sin(t * 0.5)} ${960 - 8 * t / dur * 4}) scale(${z}) translate(-540 -960)`);
+  $("prog").setAttribute("width", 1080 * cl(t / dur));
+  S[n].paint(t, dur);
+  for (const { b, sp } of BLQ[n]) {
+    const t0 = Math.min(b.en(), dur - 0.6);
+    sp.forEach((s, i) => {
+      const a = t0 + i * 0.09, p = sal(tramo(t, a, a + 0.28));
+      const k = s._am ? lerp(1.3, 1, rebote(tramo(t, a, a + 0.45))) : 1;
+      s.style.opacity = p;
+      s.style.transform = `translateY(${(1 - p) * 34}px) scale(${k})`;
+    });
+  }
+};
+window.comprobarEscena = function (n, t) {
+  window.pintarEscena(n, t);
+  const m = [];
+  for (const { b, d, sp } of BLQ[n]) {          // se mide sin transformaciones (offset*), no con la animación de entrada
+    const ancho = Math.max(...sp.map(s => s.offsetLeft + s.offsetWidth));
+    const alto = Math.max(...sp.map(s => s.offsetTop + s.offsetHeight));
+    if (ancho > b.w + 1) m.push(`${b.txt}: no cabe a lo ancho`);
+    if (alto > b.h + 1) m.push(`${b.txt}: no cabe en su caja (${alto} > ${b.h})`);
+    if (b.y + Math.max(alto, b.h) > 1650) m.push(`${b.txt}: pasa de la zona segura`);
+    if (b.x < 30 || b.x + b.w > 1050) m.push(`${b.txt}: fuera del ancho`);
+  }
+  return m;
+};
+window.addEventListener("DOMContentLoaded", () => { if (!FONDO) construir(); });
+
+// ======================= ESCENA 4 · el cerebelo predice
+S[4] = {
+  bloques: [
+    { x: 110, y: 925, w: 860, h: 100, size: 78, txt: "Te mueves", en: () => W(4, "mueves") - 0.05 },
+    { x: 110, y: 1030, w: 860, h: 70, size: 44, col: "#B7C2D6", txt: "tu propia mano", en: () => W(4, "mueves") + 0.25 },
+    { x: 110, y: 1205, w: 860, h: 100, size: 78, txt: "El cerebelo *predice*", en: () => W(4, "cerebelo") - 0.1 },
+    { x: 110, y: 1310, w: 860, h: 70, size: 44, col: "#B7C2D6", txt: "lo que vas a sentir", en: () => W(4, "predice") + 0.3 },
+  ],
+  build(g) {
+    const r = this.r = {};
+    r.anillo = E("ellipse", { cx: 540, cy: 430, rx: 330, ry: 215, fill: "none", stroke: CI, "stroke-width": 5, "stroke-dasharray": "34 26", opacity: 0.7 }, g);
+    r.cerebro = E("path", { d: "M310 430 C300 300 420 250 540 270 C660 250 780 300 770 430 C760 520 680 560 540 555 C400 560 320 520 310 430 Z", fill: PA, stroke: TI, "stroke-width": 7, "stroke-linejoin": "round" }, g);
+    E("path", { d: "M400 340 C440 380 420 420 470 430 M540 290 C560 350 520 390 560 450 M660 340 C620 380 650 420 600 440", fill: "none", stroke: TE, "stroke-width": 5, "stroke-linecap": "round" }, g);
+    r.cereb = E("g", { transform: "translate(640 545)" }, g);
+    E("ellipse", { rx: 92, ry: 46, fill: PA, stroke: CI, "stroke-width": 6 }, r.cereb);
+    E("path", { d: "M-60 -18 H60 M-72 0 H72 M-60 18 H60", stroke: CI, "stroke-width": 4, opacity: 0.7 }, r.cereb);
+    r.scan = E("rect", { x: 300, width: 480, height: 6, fill: CI, opacity: 0.8 }, g);
+    r.estela = E("rect", { x: 300, width: 480, height: 40, fill: CI, opacity: 0.12 }, g);
+    r.pie = E("path", { d: "M790 660 C850 660 885 720 875 790 C870 835 835 862 805 855 C775 848 762 800 762 745 C762 700 764 670 790 660 Z", fill: PA, stroke: TI, "stroke-width": 6 }, g);
+    [[782, 632, 14], [815, 636, 12], [843, 650, 11], [862, 672, 10], [874, 698, 9]].forEach(([x, y, rr]) => E("circle", { cx: x, cy: y, r: rr, fill: PA, stroke: TI, "stroke-width": 5 }, g));
+    const cur = E("path", { d: "M640 592 C640 680 760 650 815 745", fill: "none" }, g);
+    r.puntos = []; const LC = cur.getTotalLength();
+    for (let j = 0; j < 14; j++) { const pt = cur.getPointAtLength(LC * (j + 0.5) / 14); r.puntos.push(E("circle", { cx: pt.x, cy: pt.y, r: 8, fill: AM }, g)); }
+    r.fantasma = E("circle", { cx: 640, cy: 545, r: 30, fill: "none", stroke: AM, "stroke-width": 6, "stroke-dasharray": "10 8" }, g);
+    r.fantasma2 = E("circle", { cx: 815, cy: 745, r: 42, fill: "none", stroke: AM, "stroke-width": 6, "stroke-dasharray": "10 8" }, g);
+    r.real = E("circle", { cx: 815, cy: 745, r: 42, fill: CI, "fill-opacity": 0.35, stroke: CI, "stroke-width": 7 }, g);
+    r.onda = E("circle", { cx: 815, cy: 745, r: 42, fill: "none", stroke: AM, "stroke-width": 5 }, g);
+    r.mano = E("g", {}, g);
+    E("rect", { x: 0, y: -38, width: 110, height: 76, rx: 22, fill: PA, stroke: TI, "stroke-width": 6 }, r.mano);
+    E("path", { d: "M20 -38 V-62 M48 -38 V-70 M76 -38 V-62", stroke: TI, "stroke-width": 6, "stroke-linecap": "round" }, r.mano);
+    E("line", { x1: 100, y1: 4, x2: 192, y2: 4, stroke: TI, "stroke-width": 28, "stroke-linecap": "round" }, r.mano);
+    E("line", { x1: 100, y1: 4, x2: 192, y2: 4, stroke: PA, "stroke-width": 16, "stroke-linecap": "round" }, r.mano);
+    r.c1 = E("rect", { x: 70, y: 905, width: 940, height: 215, rx: 26, fill: "none", stroke: TE, "stroke-width": 4, "stroke-dasharray": "18 14" }, g);
+    r.c2 = E("rect", { x: 70, y: 1185, width: 940, height: 215, rx: 26, fill: "none", stroke: TE, "stroke-width": 4, "stroke-dasharray": "18 14" }, g);
+  },
+  paint(t, dur) {
+    const r = this.r;
+    r.anillo.style.strokeDashoffset = -t * 70;
+    const y = (t * 0.5) % 1;
+    r.scan.setAttribute("y", 268 + y * 290); r.estela.setAttribute("y", 268 + y * 290 - 36);
+    op(r.scan, 0.8); r.cereb.setAttribute("transform", `translate(640 ${545 + 3 * Math.sin(t * 2)})`);
+    const tm = W(4, "mueves") - 0.15, tend = Math.min(dur - 0.4, Math.max(tm + 1.2, W(4, "sentir") + 0.8));
+    const p = suave(tramo(t, tm, tend));
+    const x = lerp(40, 611, p) + 10 * Math.sin(t * 3.2) * (1 - p);
+    tf(r.mano, `translate(${x} ${745 + 7 * Math.sin(t * 2.4)})`);
+    const tp = W(4, "predice") - 0.1;
+    const q = tramo(t, tp, tp + 0.5);
+    op(r.fantasma, q); op(r.fantasma2, tramo(t, tp + 0.6, tp + 1.0));
+    r.puntos.forEach((d, j) => { const a = tp + 0.2 + j * 0.055; op(d, tramo(t, a, a + 0.12)); d.setAttribute("r", 8 + 3 * Math.sin(t * 8 - j)); });
+    r.fantasma.setAttribute("r", 30 + 5 * Math.sin(t * 7) * q);
+    const c = tramo(t, tend - 0.05, tend + 0.12);
+    op(r.real, c);
+    const o = tramo(t, tend, tend + 0.5);
+    r.onda.setAttribute("r", 42 + 70 * o); op(r.onda, c * (1 - o));
+    op(r.c1, tramo(t, 0.1, 0.8)); op(r.c2, tramo(t, 0.1, 0.8));
+    r.c1.setAttribute("stroke", mezcla(TE, CI, tramo(t, W(4, "mueves") - 0.05, W(4, "mueves") + 0.2)));
+    r.c2.setAttribute("stroke", mezcla(TE, AM, tramo(t, W(4, "cerebelo") - 0.1, W(4, "cerebelo") + 0.2)));
+    r.c1.style.strokeDashoffset = -t * 20; r.c2.style.strokeDashoffset = -t * 20;
+  },
+};
+// ======================= ESCENA 5 · dos volúmenes
+S[5] = {
+  bloques: [
+    { x: 70, y: 905, w: 440, h: 90, size: 66, txt: "Tu mano", en: () => W(5, "predicción") },
+    { x: 70, y: 1000, w: 440, h: 130, size: 40, col: "#B7C2D6", txt: "prevista: flojita", en: () => W(5, "flojita") - 0.3 },
+    { x: 570, y: 905, w: 440, h: 90, size: 66, txt: "Otra mano", en: () => W(5, "otro") - 0.45 },
+    { x: 570, y: 1000, w: 440, h: 130, size: 40, col: "#B7C2D6", txt: "sorpresa: *cosquillas*", en: () => W(5, "predecir") - 0.2 },
+  ],
+  build(g) {
+    const r = this.r = { c: [] };
+    [300, 780].forEach((cx, i) => {
+      const k = {};
+      k.alt = 440; k.y0 = 790;
+      E("rect", { x: cx - 62, y: k.y0 - k.alt, width: 124, height: k.alt, rx: 26, fill: PA, stroke: TE, "stroke-width": 5 }, g);
+      for (let j = 1; j < 8; j++) E("line", { x1: cx - 62, x2: cx - 30, y1: k.y0 - k.alt * j / 8, y2: k.y0 - k.alt * j / 8, stroke: TE, "stroke-width": 3, opacity: 0.6 }, g);
+      k.cl = E("clipPath", { id: "cb" + i }, g.ownerSVGElement.querySelector("defs"));
+      E("rect", { x: cx - 62, y: k.y0 - k.alt, width: 124, height: k.alt, rx: 26 }, k.cl);
+      k.bar = E("rect", { x: cx - 62, width: 124, "clip-path": `url(#cb${i})` }, g);
+      const alt = E("g", { transform: `translate(${cx} 270)` }, g);
+      E("path", { d: "M-34 -20 H-12 L16 -44 V44 L-12 20 H-34 Z", fill: TI }, alt);
+      k.arcos = [0, 1, 2].map(j => E("path", { d: `M${30 + j * 20} ${-16 - j * 12} Q${48 + j * 20} 0 ${30 + j * 20} ${16 + j * 12}`, fill: "none", stroke: TI, "stroke-width": 6, "stroke-linecap": "round" }, alt));
+      k.sacude = E("g", { stroke: AM, "stroke-width": 6, "stroke-linecap": "round" }, g);
+      for (let j = 0; j < 6; j++) { const a = -Math.PI * (0.15 + j * 0.14); E("line", { x1: cx + Math.cos(a) * 90, y1: 330 + Math.sin(a) * 40, x2: cx + Math.cos(a) * 126, y2: 330 + Math.sin(a) * 56 }, k.sacude); }
+      k.cx = cx; r.c.push(k);
+    });
+  },
+  paint(t, dur) {
+    const r = this.r;
+    const tf1 = W(5, "flojita"), to = W(5, "otro");
+    const L0 = 0.72 - 0.57 * suave(tramo(t, tf1 - 0.15, tf1 + 0.65)) + 0.025 * Math.sin(t * 7);
+    const L1 = Math.min(1, 0.3 + 0.67 * rebote(tramo(t, to - 0.05, to + 0.55))) + 0.02 * Math.sin(t * 8 + 1) * (1 - tramo(t, to, to + 0.3) * 0.7);
+    [L0, L1].forEach((L, i) => {
+      const k = r.c[i]; const h = k.alt * cl(L, 0.02, 1);
+      k.bar.setAttribute("y", k.y0 - h); k.bar.setAttribute("height", h);
+      const col = i === 0 ? mezcla(CI, GR, tramo(t, tf1, tf1 + 0.6)) : mezcla(CI, AM, tramo(t, to - 0.05, to + 0.25));
+      k.bar.setAttribute("fill", col);
+      k.arcos.forEach((a, j) => { a.style.opacity = cl((L - 0.2 - j * 0.25) * 6); a.setAttribute("stroke", col); });
+    });
+    const q = tramo(t, to, to + 0.9);
+    r.c[1].sacude.style.opacity = q > 0 && q < 1 ? 1 - q : 0;
+    r.c[1].sacude.setAttribute("transform", `translate(0 ${-q * 20})`);
+  },
+};
+
+</script></body></html>

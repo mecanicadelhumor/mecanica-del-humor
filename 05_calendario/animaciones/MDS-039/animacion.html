@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<title>MDS-039 · animación a medida (C55.2)</title>
+<!--
+  MDS-039 · escenas [4, 5] · brazo A del ciclo B1 (C55.2). Página autónoma: sin red, sin Math.random ni Date.
+  Todo sale de (n, t); los movimientos se anclan a las palabras de la voz con W(), nunca a segundos escritos.
+-->
+<style>
+html,body{margin:0;padding:0;background:#05080f}
+body{margin:0}
+#lienzo{position:relative;left:0;top:0;width:1080px;height:1920px;overflow:hidden;background:#16213A;
+  font-family:system-ui,"DejaVu Sans",Arial,sans-serif;color:#F2F4F8}
+#dib{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bq{position:absolute;font-weight:800;line-height:1.12;letter-spacing:-.01em}
+.bq .p{display:inline-block;opacity:0;transform-origin:0 80%}
+</style></head>
+<body><div id="lienzo"></div>
+<script>
+const ESCENAS_LISTA = [4, 5];
+const ESCENAS = ESCENAS_LISTA;
+// ---------------------------------------------------------------- núcleo común
+const cl = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const tramo = (t, a, b) => cl((t - a) / (b - a));
+const suave = x => x * x * (3 - 2 * x);
+const sal = x => 1 - Math.pow(1 - x, 3);
+const rebote = x => { x = cl(x); const c = 1.70158; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const lerp = (a, b, p) => a + (b - a) * p;
+const $ = id => document.getElementById(id);
+const NS = "http://www.w3.org/2000/svg";
+const AM = "#FFB020", CI = "#4CC9F0", TI = "#F2F4F8", TE = "#8A97AE", PA = "#0F1930", GR = "#6B7790";
+function E(tag, at, par) { const e = document.createElementNS(NS, tag); for (const k in at) e.setAttribute(k, at[k]); if (par) par.appendChild(e); return e; }
+function hex(c) { return [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16)); }
+function mezcla(a, b, p) { const A = hex(a), B = hex(b); return "#" + A.map((v, i) => Math.round(lerp(v, B[i], cl(p))).toString(16).padStart(2, "0")).join(""); }
+const LARGOS = new Map();
+function dibuja(el, p) {
+  let L = LARGOS.get(el);
+  if (L === undefined) { L = el.getTotalLength ? el.getTotalLength() : 1000; LARGOS.set(el, L); el.style.strokeDasharray = L + " " + L; }
+  el.style.strokeDashoffset = L * (1 - cl(p));
+}
+const op = (el, v) => { el.style.opacity = cl(v); };
+const tf = (el, s) => el.setAttribute("transform", s);
+
+// tiempos de la voz (los pone el render antes de pintar)
+let T = {};
+window.cargarTiempos = d => { T = d || {}; };
+const norm = s => s.normalize("NFD").replace(/[^\p{L}\p{N}]/gu, "").toLowerCase();
+function W(n, pal, vez = 1) {
+  let k = 0;
+  for (const [t, w] of (T[n] || {}).palabras || []) if (norm(w) === norm(pal) && ++k === vez) return t;
+  return 0.6;
+}
+const DUR = n => ((T[n] || {}).dur) || 8;
+const S = {};
+
+// ---------------------------------------------------------------- construcción
+let FONDO, PART = [], BLQ = {};
+function construir() {
+  const lienzo = $("lienzo");
+  const svg = E("svg", { id: "dib", viewBox: "0 0 1080 1920", width: 1080, height: 1920 }, lienzo);
+  const defs = E("defs", {}, svg);
+  const pat = E("pattern", { id: "reti", width: 60, height: 60, patternUnits: "userSpaceOnUse" }, defs);
+  E("path", { d: "M60 0H0V60", fill: "none", stroke: "#1F2D4D", "stroke-width": 2 }, pat);
+  FONDO = pat;
+  E("rect", { x: 0, y: 0, width: 1080, height: 1920, fill: "url(#reti)" }, svg);
+  for (let i = 0; i < 18; i++) {
+    const c = E("circle", { r: 3 + (i % 4) * 1.5, fill: i % 3 ? CI : AM, opacity: 0.35 }, svg);
+    c._x = (i * 197) % 1080; c._y = (i * 331) % 1920; c._v = 14 + (i * 7) % 22; c._f = i * 1.3;
+    PART.push(c);
+  }
+  const cam = E("g", { id: "cam" }, svg);
+  const barra = E("rect", { id: "prog", x: 0, y: 0, width: 0, height: 8, fill: AM }, svg);
+  for (const n of ESCENAS) {
+    const g = E("g", { id: "s" + n }, cam);
+    S[n].build(g);
+    const cont = document.createElement("div"); cont.id = "tx" + n; lienzo.appendChild(cont);
+    BLQ[n] = (S[n].bloques || []).map(b => {
+      const d = document.createElement("div"); d.className = "bq";
+      d.style.cssText = `left:${b.x}px;top:${b.y}px;width:${b.w}px;height:${b.h}px;font-size:${b.size}px;color:${b.col || TI}`;
+      let am = false; const sp = [];
+      b.txt.split(" ").forEach((tok, i) => {
+        let t = tok;
+        if (t.startsWith("*")) { am = true; t = t.slice(1); }
+        const cierra = t.endsWith("*"); if (cierra) t = t.slice(0, -1);
+        const s = document.createElement("span"); s.className = "p"; s.textContent = t;
+        if (am) s.style.color = AM, s._am = true;
+        if (i) d.appendChild(document.createTextNode(" "));
+        d.appendChild(s); sp.push(s);
+        if (cierra) am = false;
+      });
+      cont.appendChild(d);
+      return { b, d, sp };
+    });
+  }
+}
+
+// ---------------------------------------------------------------- pintar
+window.ESCENAS = ESCENAS_LISTA;
+window.pintarEscena = function (n, t) {
+  if (!FONDO) construir();
+  const dur = DUR(n);
+  for (const m of ESCENAS) { $("s" + m).style.display = m === n ? "" : "none"; $("tx" + m).style.display = m === n ? "" : "none"; }
+  FONDO.setAttribute("patternTransform", `translate(${(t * 14) % 60} ${(t * -9) % 60})`);
+  PART.forEach(c => {
+    const y = ((c._y - t * c._v) % 1980 + 1980) % 1980 - 30;
+    c.setAttribute("cx", c._x + 18 * Math.sin(t * 0.8 + c._f)); c.setAttribute("cy", y);
+  });
+  const z = 1 + 0.035 * (t / dur);
+  tf($("cam"), `translate(${540 + 6 * Math.sin(t * 0.5)} ${960 - 8 * t / dur * 4}) scale(${z}) translate(-540 -960)`);
+  $("prog").setAttribute("width", 1080 * cl(t / dur));
+  S[n].paint(t, dur);
+  for (const { b, sp } of BLQ[n]) {
+    const t0 = Math.min(b.en(), dur - 0.6);
+    sp.forEach((s, i) => {
+      const a = t0 + i * 0.09, p = sal(tramo(t, a, a + 0.28));
+      const k = s._am ? lerp(1.3, 1, rebote(tramo(t, a, a + 0.45))) : 1;
+      s.style.opacity = p;
+      s.style.transform = `translateY(${(1 - p) * 34}px) scale(${k})`;
+    });
+  }
+};
+window.comprobarEscena = function (n, t) {
+  window.pintarEscena(n, t);
+  const m = [];
+  for (const { b, d, sp } of BLQ[n]) {          // se mide sin transformaciones (offset*), no con la animación de entrada
+    const ancho = Math.max(...sp.map(s => s.offsetLeft + s.offsetWidth));
+    const alto = Math.max(...sp.map(s => s.offsetTop + s.offsetHeight));
+    if (ancho > b.w + 1) m.push(`${b.txt}: no cabe a lo ancho`);
+    if (alto > b.h + 1) m.push(`${b.txt}: no cabe en su caja (${alto} > ${b.h})`);
+    if (b.y + Math.max(alto, b.h) > 1650) m.push(`${b.txt}: pasa de la zona segura`);
+    if (b.x < 30 || b.x + b.w > 1050) m.push(`${b.txt}: fuera del ancho`);
+  }
+  return m;
+};
+window.addEventListener("DOMContentLoaded", () => { if (!FONDO) construir(); });
+
+// ======================= ESCENA 4 · dos parejas
+function figura(g, col) {
+  const f = E("g", {}, g);
+  E("circle", { cx: 0, cy: -150, r: 34, fill: PA, stroke: col, "stroke-width": 6 }, f);
+  E("path", { d: "M-48 0 C-48 -78 48 -78 48 0 Z", fill: PA, stroke: col, "stroke-width": 6, "stroke-linejoin": "round" }, f);
+  f.brazo = E("path", { d: "M30 -64 L78 -34", stroke: col, "stroke-width": 6, "stroke-linecap": "round", fill: "none" }, f);
+  return f;
+}
+S[4] = {
+  bloques: [
+    { x: 110, y: 925, w: 860, h: 90, size: 70, txt: "Con humor", en: () => W(4, "unas") - 0.05 },
+    { x: 110, y: 1015, w: 860, h: 70, size: 44, col: "#B7C2D6", txt: "tareas para *reírse*", en: () => W(4, "unas") + 0.25 },
+    { x: 110, y: 1200, w: 860, h: 90, size: 70, txt: "Sin humor", en: () => W(4, "otras") - 0.05 },
+    { x: 110, y: 1290, w: 860, h: 70, size: 44, col: "#B7C2D6", txt: "parecidas, pero serias", en: () => W(4, "otras") + 0.3 },
+  ],
+  build(g) {
+    const r = this.r = {};
+    r.c1 = E("rect", { x: 70, y: 905, width: 940, height: 195, rx: 26, fill: "none", stroke: TE, "stroke-width": 4, "stroke-dasharray": "18 14" }, g);
+    r.c2 = E("rect", { x: 70, y: 1180, width: 940, height: 195, rx: 26, fill: "none", stroke: TE, "stroke-width": 4, "stroke-dasharray": "18 14" }, g);
+    r.fa = [figura(g, TI), figura(g, TI)];
+    r.fb = [figura(g, TE), figura(g, TE)];
+    r.mesaA = E("g", {}, g); E("path", { d: "M-70 0 H70 M-50 0 V50 M50 0 V50", stroke: TI, "stroke-width": 6, "stroke-linecap": "round" }, r.mesaA);
+    E("rect", { x: -26, y: -34, width: 52, height: 34, rx: 4, fill: PA, stroke: AM, "stroke-width": 5 }, r.mesaA);
+    r.mesaB = E("g", {}, g); E("path", { d: "M-70 0 H70 M-50 0 V50 M50 0 V50", stroke: TE, "stroke-width": 6, "stroke-linecap": "round" }, r.mesaB);
+    E("rect", { x: -26, y: -34, width: 52, height: 34, rx: 4, fill: PA, stroke: TE, "stroke-width": 5 }, r.mesaB);
+    r.bocadillo = E("g", {}, g);
+    E("path", { d: "M-130 -50 H130 Q150 -50 150 -30 V30 Q150 50 130 50 H30 L0 92 L-10 50 H-130 Q-150 50 -150 30 V-30 Q-150 -50 -130 -50 Z", fill: PA, stroke: AM, "stroke-width": 6, "stroke-linejoin": "round" }, r.bocadillo);
+    r.gara = E("path", { d: "M-110 0 q16 -34 32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0", fill: "none", stroke: AM, "stroke-width": 7, "stroke-linecap": "round" }, r.bocadillo);
+    r.marca = E("path", { d: "M-70 0 H70", stroke: TE, "stroke-width": 6, "stroke-linecap": "round", "stroke-dasharray": "4 14" }, g);
+  },
+  paint(t, dur) {
+    const r = this.r;
+    const tr = W(4, "reírse"), ts = W(4, "serias"), tj = W(4, "juntó");
+    const ent = suave(tramo(t, 0, 1.1));
+    const ya = 520, yb = 830;
+    const rie = tramo(t, tr, tr + 0.4);
+    const acerca = 70 * suave(tramo(t, tr, tr + 0.8));
+    const xa0 = lerp(-120, 360, ent) + acerca, xa1 = lerp(1200, 720, ent) - acerca;
+    const bA = Math.sin(t * 3) * 3 + rie * Math.abs(Math.sin(t * 9)) * -14;
+    tf(r.fa[0], `translate(${xa0} ${ya + bA}) rotate(${acerca * 0.08})`);
+    tf(r.fa[1], `translate(${xa1} ${ya - bA}) rotate(${-acerca * 0.08})`);
+    const xb0 = lerp(-120, 240, ent), xb1 = lerp(1200, 840, ent);
+    tf(r.fb[0], `translate(${xb0} ${yb + Math.sin(t * 1.6) * 2})`);
+    tf(r.fb[1], `translate(${xb1} ${yb + Math.sin(t * 1.6 + 1) * 2})`);
+    tf(r.mesaA, `translate(540 ${ya - 42})`); tf(r.mesaB, `translate(540 ${yb - 42})`);
+    op(r.mesaA, ent); op(r.mesaB, ent);
+    const q = rebote(tramo(t, tr, tr + 0.5));
+    tf(r.bocadillo, `translate(540 ${268 + 3 * Math.sin(t * 4)}) scale(${cl(q, 0, 1.2)})`);
+    op(r.bocadillo, tramo(t, tr, tr + 0.1));
+    dibuja(r.gara, tramo(t, tr + 0.1, tr + 0.9));
+    r.gara.setAttribute("transform", `translate(0 ${3 * Math.sin(t * 10)})`);
+    tf(r.marca, `translate(540 ${yb - 205})`); op(r.marca, tramo(t, ts - 0.1, ts + 0.3)); r.marca.style.strokeDashoffset = t * 20;
+    r.fb.forEach(f => f.style.opacity = lerp(1, 0.75, tramo(t, ts, ts + 0.5)));
+    r.fa.forEach(f => f.style.opacity = lerp(1, 0.55, tramo(t, ts - 0.2, ts + 0.5)));
+    op(r.c1, tramo(t, 0.1, 0.8)); op(r.c2, tramo(t, 0.1, 0.8));
+    r.c1.setAttribute("stroke", mezcla(TE, AM, tramo(t, W(4, "unas") - 0.05, W(4, "unas") + 0.2)));
+    r.c2.setAttribute("stroke", mezcla(TE, CI, tramo(t, W(4, "otras") - 0.05, W(4, "otras") + 0.2)));
+    r.c1.style.strokeDashoffset = -t * 20; r.c2.style.strokeDashoffset = -t * 20;
+  },
+};
+
+// ======================= ESCENA 5 · más cerca
+S[5] = {
+  bloques: [
+    { x: 100, y: 905, w: 880, h: 160, size: 130, txt: "Más cerca", en: () => W(5, "cerca") - 0.35 },
+    { x: 100, y: 1085, w: 880, h: 110, size: 78, txt: "y se caían *mejor*", en: () => W(5, "mejor") - 0.15 },
+  ],
+  build(g) {
+    const r = this.r = {};
+    E("path", { d: "M110 560 H970", stroke: TE, "stroke-width": 5, "stroke-linecap": "round" }, g);
+    r.marcas = E("g", { stroke: TE, "stroke-width": 4 }, g);
+    for (let i = 0; i <= 16; i++) E("line", { x1: 110 + i * 53.75, x2: 110 + i * 53.75, y1: 548, y2: 572 }, r.marcas);
+    r.puente = E("path", { fill: "none", stroke: CI, "stroke-width": 5, "stroke-dasharray": "10 10" }, g);
+    r.halo = [E("circle", { r: 50, fill: "none", stroke: AM, "stroke-width": 5 }, g), E("circle", { r: 50, fill: "none", stroke: AM, "stroke-width": 5 }, g)];
+    r.pa = E("circle", { r: 46, fill: PA, "stroke-width": 8, cy: 560 }, g);
+    r.pb = E("circle", { r: 46, fill: PA, "stroke-width": 8, cy: 560 }, g);
+    r.chis = E("g", { stroke: AM, "stroke-width": 6, "stroke-linecap": "round" }, g);
+    for (let j = 0; j < 8; j++) { const a = j * Math.PI / 4 + 0.4; E("line", { x1: 540 + Math.cos(a) * 110, y1: 560 + Math.sin(a) * 110, x2: 540 + Math.cos(a) * 150, y2: 560 + Math.sin(a) * 150 }, r.chis); }
+  },
+  paint(t, dur) {
+    const r = this.r;
+    const tm = W(5, "mejor"), tc = W(5, "cerca");
+    const ent = suave(tramo(t, 0, 0.9));
+    const ap = suave(tramo(t, tc - 0.2, tc + 0.8));
+    const luz = tramo(t, tm - 0.05, tm + 0.35);
+    const xa = lerp(-40, 230, ent) + 262 * ap + 10 * Math.sin(t * 2) * (1 - ap);
+    const xb = lerp(1120, 850, ent) - 262 * ap - 10 * Math.sin(t * 2 + 1) * (1 - ap);
+    const col = mezcla(TI, AM, luz);
+    r.pa.setAttribute("cx", xa); r.pb.setAttribute("cx", xb); r.pa.setAttribute("stroke", col); r.pb.setAttribute("stroke", col);
+    r.pa.setAttribute("fill", mezcla(PA, "#5A4210", luz)); r.pb.setAttribute("fill", mezcla(PA, "#5A4210", luz));
+    r.puente.setAttribute("d", `M${xa + 46} 640 V680 H${xb - 46} V640`); r.puente.style.strokeDashoffset = -t * 30;
+    op(r.puente, 1 - tramo(t, tc + 0.6, tc + 0.9));
+    r.halo.forEach((h, i) => {
+      const k = ((((t - tm) * 1.3 + i * 0.5) % 1) + 1) % 1;
+      h.setAttribute("cx", i ? xb : xa); h.setAttribute("cy", 560); h.setAttribute("r", 50 + 70 * k);
+      op(h, luz * (1 - k) * 0.9);
+    });
+    op(r.chis, tramo(t, tc + 0.5, tc + 0.7) * (0.5 + 0.5 * Math.sin(t * 12)));
+    r.marcas.setAttribute("transform", `translate(${(t * 12) % 53.75 - 53.75} 0)`);
+  },
+};
+
+</script></body></html>
