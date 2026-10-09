@@ -1,8 +1,8 @@
 {
   "guion": "MDS-037",
   "version": 1,
-  "firma": "e5dcfae7c4b10fd5",
-  "resuelto_utc": "2026-10-08T22:29:30Z",
+  "firma": "360fb84c4376e7cd",
+  "resuelto_utc": "2026-10-09T12:02:10Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -93,7 +93,7 @@
           "fuente": "pixabay",
           "id": 2294,
           "pagina": "https://pixabay.com/videos/id-2294/",
-          "titulo": "scrolling, touchscreen, mobile phone, smartphone, background, tablet, computer, using, internet, communication, beautiful wallpaper, screen, tablet pc, technology, bokeh, blur id",
+          "titulo": "scrolling, touchscreen, mobile phone, smartphone, background, tablet, computer, using, beautiful wallpaper, internet, communication, screen, tablet pc, technology, bokeh, blur id",
           "autor": "Coverr-Free-Footage",
           "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",

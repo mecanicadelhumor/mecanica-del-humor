@@ -1,8 +1,8 @@
 {
   "guion": "MDS-036",
   "version": 1,
-  "firma": "506e005707e0060e",
-  "resuelto_utc": "2026-10-08T22:29:15Z",
+  "firma": "ad913c1083727c57",
+  "resuelto_utc": "2026-10-09T12:01:57Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -72,31 +72,43 @@
           ],
           "frase": "Por eso las series ponen risas grabadas. Un personaje pregunta: ¿",
           "fuente": "pexels",
-          "id": 6951584,
-          "pagina": "https://www.pexels.com/video/a-woman-sitting-while-watching-tv-6951584/",
-          "titulo": "a woman sitting while watching tv",
-          "autor": "cottonbro studio",
-          "autor_url": "https://www.pexels.com/@cottonbro",
+          "id": 12751584,
+          "pagina": "https://www.pexels.com/video/family-watching-tv-together-on-a-sofa-12751584/",
+          "titulo": "family watching tv together on a sofa",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 38.0,
+          "duracion_s": 10.0,
           "ancho": 1080,
-          "alto": 2048,
-          "url": "https://videos.pexels.com/video-files/6951584/6951584-hd_1080_2048_25fps.mp4",
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/12751584/12751584-hd_1080_1920_24fps.mp4",
           "tipo": "video",
-          "consulta": "person watching tv sofa night",
-          "relevancia": 0.4,
+          "consulta": "woman laughing watching sitcom on tv sofa",
+          "relevancia": 0.5,
           "inicio_s": 0.4,
-          "movimiento": 3.44,
+          "movimiento": 2.11,
           "encuadre": {
             "x": 0.5,
-            "y": 1
+            "y": 0.5
           },
           "caras": [
             [
-              0.2708,
-              0.3967,
-              0.1364,
-              0.0855
+              0.1167,
+              0.2703,
+              0.1333,
+              0.1016
+            ],
+            [
+              0.6639,
+              0.2594,
+              0.125,
+              0.0938
+            ],
+            [
+              0.6333,
+              0.4047,
+              0.1139,
+              0.0813
             ]
           ]
         },
