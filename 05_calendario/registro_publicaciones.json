@@ -660,12 +660,13 @@
       "guion": "05_calendario/guiones/MDS-035.es.json",
       "video_id": "rUb4iLoNPhU",
       "url": "https://youtu.be/rUb4iLoNPhU",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-10-09T17:00:00Z",
       "musica": "cama_07_cylinder_one_chris_zabriskie.mp3",
       "subido_utc": "2026-10-09T07:31:25Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-10-09T21:45:57Z"
     }
   ],
-  "_estado_leido_utc": "2026-10-08T22:11:16Z"
+  "_estado_leido_utc": "2026-10-09T21:45:57Z"
 }
