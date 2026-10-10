@@ -94,7 +94,8 @@
  "MDS-036": {
   "2.1": {
    "excluir": [
-    "pexels:6951584"
+    "pexels:6951584",
+    "pexels:12751584"
    ],
    "busqueda": [
     "woman laughing watching sitcom on tv sofa",
@@ -103,11 +104,21 @@
   },
   "4": {
    "texto_pos": "abajo"
+  },
+  "3.1": {
+   "excluir": [
+    "pixabay:172686"
+   ]
   }
  },
  "MDS-037": {
   "2": {
    "texto_pos": "abajo"
+  },
+  "4.1": {
+   "excluir": [
+    "pexels:5426855"
+   ]
   }
  }
 }
