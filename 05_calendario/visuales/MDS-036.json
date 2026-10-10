@@ -1,8 +1,8 @@
 {
   "guion": "MDS-036",
   "version": 1,
-  "firma": "ad913c1083727c57",
-  "resuelto_utc": "2026-10-09T12:01:57Z",
+  "firma": "dd59a940dbaae545",
+  "resuelto_utc": "2026-10-10T09:34:31Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -72,43 +72,31 @@
           ],
           "frase": "Por eso las series ponen risas grabadas. Un personaje pregunta: ¿",
           "fuente": "pexels",
-          "id": 12751584,
-          "pagina": "https://www.pexels.com/video/family-watching-tv-together-on-a-sofa-12751584/",
-          "titulo": "family watching tv together on a sofa",
-          "autor": "Mizuno K",
-          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "id": 6575890,
+          "pagina": "https://www.pexels.com/video/woman-holding-a-remote-while-watching-tv-6575890/",
+          "titulo": "woman holding a remote while watching tv",
+          "autor": "Andres  Ayrton",
+          "autor_url": "https://www.pexels.com/@andres-ayrton",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
           "duracion_s": 10.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/12751584/12751584-hd_1080_1920_24fps.mp4",
+          "url": "https://videos.pexels.com/video-files/6575890/6575890-hd_1080_1920_24fps.mp4",
           "tipo": "video",
           "consulta": "woman laughing watching sitcom on tv sofa",
           "relevancia": 0.5,
           "inicio_s": 0.4,
-          "movimiento": 2.11,
+          "movimiento": 4.56,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.1167,
-              0.2703,
-              0.1333,
-              0.1016
-            ],
-            [
-              0.6639,
-              0.2594,
-              0.125,
-              0.0938
-            ],
-            [
-              0.6333,
-              0.4047,
-              0.1139,
-              0.0813
+              0.6667,
+              0.3141,
+              0.2083,
+              0.1656
             ]
           ]
         },
@@ -186,38 +174,38 @@
             5.97
           ],
           "frase": "Al día siguiente se lo cuentas a tu cuñado, sin público detrás.",
-          "fuente": "pixabay",
-          "id": 172686,
-          "pagina": "https://pixabay.com/videos/id-172686/",
-          "titulo": "dining table, table, eat, dinner, family, family dinner id",
-          "autor": "Eaktas06",
-          "autor_url": "https://pixabay.com/users/Eaktas06-19261019/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 12.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2023/07/21/172686-849651729_large.mp4",
+          "fuente": "pexels",
+          "id": 3198214,
+          "pagina": "https://www.pexels.com/video/dad-talking-in-a-family-dinner-gathering-3198214/",
+          "titulo": "dad talking in a family dinner gathering",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 8.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/3198214/3198214-hd_1080_1920_25fps.mp4",
           "tipo": "video",
           "consulta": "family dinner table conversation",
-          "relevancia": 0.75,
-          "inicio_s": 0.4,
-          "movimiento": 18.9,
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 9.07,
           "encuadre": {
-            "x": 0.369,
+            "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.0226,
-              0.2722,
-              0.316,
-              0.2944
+              0.2306,
+              0.2953,
+              0.1667,
+              0.125
             ],
             [
-              0.3535,
-              0.2694,
-              0.311,
-              0.2972
+              0.7778,
+              0.4625,
+              0.1389,
+              0.1156
             ]
           ]
         },
@@ -230,31 +218,31 @@
           ],
           "frase": "Y te mira en silencio.",
           "fuente": "pexels",
-          "id": 7126075,
-          "pagina": "https://www.pexels.com/video/man-eating-dinner-7126075/",
-          "titulo": "man eating dinner",
-          "autor": "Michael Burrows",
-          "autor_url": "https://www.pexels.com/@michael-burrows",
+          "id": 34885398,
+          "pagina": "https://www.pexels.com/video/man-outdoors-looking-up-with-thoughtful-expression-34885398/",
+          "titulo": "man outdoors looking up with thoughtful expression",
+          "autor": "khezez  | خزاز",
+          "autor_url": "https://www.pexels.com/@khezez",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 10.0,
+          "duracion_s": 21.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/7126075/7126075-hd_1080_1920_24fps.mp4",
+          "url": "https://videos.pexels.com/video-files/34885398/14780380_1080_1920_30fps.mp4",
           "tipo": "video",
           "consulta": "man staring blank expression dinner",
           "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 4.28,
+          "movimiento": 5.02,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.525,
-              0.2906,
-              0.2222,
-              0.1719
+              0.3861,
+              0.4125,
+              0.3278,
+              0.2266
             ]
           ]
         }

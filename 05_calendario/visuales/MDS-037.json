@@ -1,8 +1,8 @@
 {
   "guion": "MDS-037",
   "version": 1,
-  "firma": "360fb84c4376e7cd",
-  "resuelto_utc": "2026-10-09T12:02:10Z",
+  "firma": "f25b973ec51569fd",
+  "resuelto_utc": "2026-10-10T09:34:47Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -93,7 +93,7 @@
           "fuente": "pixabay",
           "id": 2294,
           "pagina": "https://pixabay.com/videos/id-2294/",
-          "titulo": "scrolling, touchscreen, mobile phone, smartphone, background, tablet, computer, using, beautiful wallpaper, internet, communication, screen, tablet pc, technology, bokeh, blur id",
+          "titulo": "scrolling, touchscreen, mobile phone, smartphone, background, tablet, computer, using, internet, beautiful wallpaper, communication, screen, tablet pc, technology, bokeh, blur id",
           "autor": "Coverr-Free-Footage",
           "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
@@ -213,67 +213,49 @@
           ],
           "frase": "El equipo de la psicóloga Celia Klin dio a leer respuestas cortas a una invitación,",
           "fuente": "pexels",
-          "id": 5426855,
-          "pagina": "https://www.pexels.com/video/students-sharing-a-phone-inside-the-classroom-during-break-time-5426855/",
-          "titulo": "students sharing a phone inside the classroom during break time",
-          "autor": "Tima Miroshnichenko",
-          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "id": 5676174,
+          "pagina": "https://www.pexels.com/video/students-in-a-classroom-5676174/",
+          "titulo": "students in a classroom",
+          "autor": "Ivan S",
+          "autor_url": "https://www.pexels.com/@ivan-s",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
           "duracion_s": 15.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/5426855/5426855-hd_1080_1920_25fps.mp4",
+          "url": "https://videos.pexels.com/video-files/5676174/5676174-hd_1080_1920_25fps.mp4",
           "tipo": "video",
           "consulta": "students reading phones university classroom",
-          "relevancia": 0.6,
+          "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 4.51,
+          "movimiento": 4.72,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.6528,
-              0.5,
-              0.0944,
-              0.0625
+              0.2111,
+              0.5844,
+              0.1444,
+              0.0813
             ],
             [
-              0.175,
-              0.5031,
-              0.0833,
-              0.0609
+              0.8639,
+              0.525,
+              0.1222,
+              0.0844
             ],
             [
-              0.2306,
-              0.5188,
-              0.0722,
-              0.0578
+              0.0639,
+              0.4953,
+              0.1139,
+              0.0703
             ],
             [
-              0.3528,
-              0.5531,
-              0.0722,
-              0.0516
-            ],
-            [
-              0.6333,
-              0.5672,
-              0.0694,
-              0.0516
-            ],
-            [
-              0.4806,
-              0.5781,
-              0.0694,
-              0.0516
-            ],
-            [
-              0.3083,
-              0.5406,
-              0.0694,
-              0.0516
+              0.5444,
+              0.4859,
+              0.0889,
+              0.0672
             ]
           ]
         },
