@@ -109,6 +109,27 @@
    "excluir": [
     "pixabay:172686"
    ]
+  },
+  "4.1": {
+   "excluir": [
+    "pexels:6688136"
+   ],
+   "marca": true
+  },
+  "4.2": {
+   "excluir": [
+    "pexels:8927997"
+   ],
+   "marca": true
+  },
+  "3.2": {
+   "excluir": [
+    "pexels:34885398"
+   ],
+   "busqueda": [
+    "man looking at camera in silence dinner table candles",
+    "man staring silently across a dinner table"
+   ]
   }
  },
  "MDS-037": {
@@ -117,7 +138,12 @@
   },
   "4.1": {
    "excluir": [
-    "pexels:5426855"
+    "pexels:5426855",
+    "pexels:5676174"
+   ],
+   "busqueda": [
+    "hands holding smartphone reading text message close up",
+    "person reading messages on phone in cafe"
    ]
   }
  }
