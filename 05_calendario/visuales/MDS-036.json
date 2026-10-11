@@ -1,8 +1,8 @@
 {
   "guion": "MDS-036",
   "version": 1,
-  "firma": "dd59a940dbaae545",
-  "resuelto_utc": "2026-10-10T09:34:31Z",
+  "firma": "d62b715202775056",
+  "resuelto_utc": "2026-10-11T09:31:44Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -218,33 +218,26 @@
           ],
           "frase": "Y te mira en silencio.",
           "fuente": "pexels",
-          "id": 34885398,
-          "pagina": "https://www.pexels.com/video/man-outdoors-looking-up-with-thoughtful-expression-34885398/",
-          "titulo": "man outdoors looking up with thoughtful expression",
-          "autor": "khezez  | خزاز",
-          "autor_url": "https://www.pexels.com/@khezez",
+          "id": 5019033,
+          "pagina": "https://www.pexels.com/video/a-man-sitting-at-a-table-with-a-candle-and-wine-5019033/",
+          "titulo": "a man sitting at a table with a candle and wine",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 21.0,
+          "duracion_s": 28.0,
           "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/34885398/14780380_1080_1920_30fps.mp4",
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/5019033/5019033-hd_1080_2048_25fps.mp4",
           "tipo": "video",
-          "consulta": "man staring blank expression dinner",
-          "relevancia": 0.4,
+          "consulta": "man looking at camera in silence dinner table candles",
+          "relevancia": 0.429,
           "inicio_s": 0.4,
-          "movimiento": 5.02,
+          "movimiento": 9.02,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
-          "caras": [
-            [
-              0.3861,
-              0.4125,
-              0.3278,
-              0.2266
-            ]
-          ]
+          "caras": []
         }
       ]
     },
@@ -260,34 +253,8 @@
             5.53
           ],
           "frase": "Un equipo de la neurocientífica Sophie Scott hizo puntuar chistes malos",
-          "fuente": "pexels",
-          "id": 6688136,
-          "pagina": "https://www.pexels.com/video/a-person-wearing-a-wireless-headset-6688136/",
-          "titulo": "a person wearing a wireless headset",
-          "autor": "cottonbro studio",
-          "autor_url": "https://www.pexels.com/@cottonbro",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 24.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/6688136/6688136-hd_1080_1920_25fps.mp4",
-          "tipo": "video",
-          "consulta": "person wearing headphones listening laptop",
-          "relevancia": 0.6,
-          "inicio_s": 0.4,
-          "movimiento": 2.8,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
-          "caras": [
-            [
-              0.5389,
-              0.1781,
-              0.3778,
-              0.2875
-            ]
-          ]
+          "fuente": "marca",
+          "tipo": "marca"
         },
         {
           "k": 2,
@@ -297,34 +264,8 @@
             11.57
           ],
           "frase": "con risas de fondo y sin ellas. Con risas, hacían más gracia.",
-          "fuente": "pexels",
-          "id": 8927997,
-          "pagina": "https://www.pexels.com/video/a-woman-using-a-laptop-while-wearing-headphones-8927997/",
-          "titulo": "a woman using a laptop while wearing headphones",
-          "autor": "SHVETS production",
-          "autor_url": "https://www.pexels.com/@shvets-production",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 19.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/8927997/8927997-hd_1080_1920_25fps.mp4",
-          "tipo": "video",
-          "consulta": "woman smiling headphones laptop",
-          "relevancia": 0.75,
-          "inicio_s": 0.4,
-          "movimiento": 11.69,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
-          "caras": [
-            [
-              0.2167,
-              0.2625,
-              0.2,
-              0.1953
-            ]
-          ]
+          "fuente": "marca",
+          "tipo": "marca"
         }
       ]
     },

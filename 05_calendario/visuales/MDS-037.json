@@ -1,8 +1,8 @@
 {
   "guion": "MDS-037",
   "version": 1,
-  "firma": "f25b973ec51569fd",
-  "resuelto_utc": "2026-10-10T09:34:47Z",
+  "firma": "02dd0e8a1b48e418",
+  "resuelto_utc": "2026-10-11T09:31:57Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -202,7 +202,7 @@
     },
     "4": {
       "narracion_sha": "0ce8a962abce",
-      "texto_pos": "arriba",
+      "texto_pos": "abajo",
       "planos": [
         {
           "k": 1,
@@ -213,51 +213,26 @@
           ],
           "frase": "El equipo de la psicóloga Celia Klin dio a leer respuestas cortas a una invitación,",
           "fuente": "pexels",
-          "id": 5676174,
-          "pagina": "https://www.pexels.com/video/students-in-a-classroom-5676174/",
-          "titulo": "students in a classroom",
-          "autor": "Ivan S",
-          "autor_url": "https://www.pexels.com/@ivan-s",
+          "id": 10374888,
+          "pagina": "https://www.pexels.com/video/close-up-on-man-hand-scrolling-phone-gallery-10374888/",
+          "titulo": "close up on man hand scrolling phone gallery",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 15.0,
+          "duracion_s": 8.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/5676174/5676174-hd_1080_1920_25fps.mp4",
+          "url": "https://videos.pexels.com/video-files/10374888/10374888-hd_1080_1920_24fps.mp4",
           "tipo": "video",
-          "consulta": "students reading phones university classroom",
-          "relevancia": 0.4,
-          "inicio_s": 0.4,
-          "movimiento": 4.72,
+          "consulta": "hands holding smartphone reading text message close up",
+          "relevancia": 0.429,
+          "inicio_s": 0.0,
+          "movimiento": 2.37,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
-          "caras": [
-            [
-              0.2111,
-              0.5844,
-              0.1444,
-              0.0813
-            ],
-            [
-              0.8639,
-              0.525,
-              0.1222,
-              0.0844
-            ],
-            [
-              0.0639,
-              0.4953,
-              0.1139,
-              0.0703
-            ],
-            [
-              0.5444,
-              0.4859,
-              0.0889,
-              0.0672
-            ]
-          ]
+          "caras": []
         },
         {
           "k": 2,
