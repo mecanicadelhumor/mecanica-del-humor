@@ -1,8 +1,8 @@
 {
   "guion": "MDS-037",
   "version": 1,
-  "firma": "02dd0e8a1b48e418",
-  "resuelto_utc": "2026-10-11T09:31:57Z",
+  "firma": "dfefdb2f96adf5c4",
+  "resuelto_utc": "2026-10-12T09:32:05Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -93,7 +93,7 @@
           "fuente": "pixabay",
           "id": 2294,
           "pagina": "https://pixabay.com/videos/id-2294/",
-          "titulo": "scrolling, touchscreen, mobile phone, smartphone, background, tablet, computer, using, internet, beautiful wallpaper, communication, screen, tablet pc, technology, bokeh, blur id",
+          "titulo": "scrolling, touchscreen, mobile phone, smartphone, background, beautiful wallpaper, tablet, computer, using, internet, communication, screen, tablet pc, technology, bokeh, blur id",
           "autor": "Coverr-Free-Footage",
           "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
@@ -121,33 +121,26 @@
           ],
           "frase": "Con punto, empiezas a repasar qué le has hecho.",
           "fuente": "pexels",
-          "id": 8052328,
-          "pagina": "https://www.pexels.com/video/woman-got-worried-after-a-phone-call-8052328/",
-          "titulo": "woman got worried after a phone call",
-          "autor": "Kampus Production",
-          "autor_url": "https://www.pexels.com/@kampus",
+          "id": 10374885,
+          "pagina": "https://www.pexels.com/video/close-up-on-man-hands-using-phone-10374885/",
+          "titulo": "close up on man hands using phone",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 15.0,
+          "duracion_s": 11.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/8052328/8052328-hd_1080_1920_25fps.mp4",
+          "url": "https://videos.pexels.com/video-files/10374885/10374885-hd_1080_1920_24fps.mp4",
           "tipo": "video",
-          "consulta": "person thinking holding phone worried",
-          "relevancia": 0.4,
+          "consulta": "hands typing message on smartphone close up",
+          "relevancia": 0.6,
           "inicio_s": 0.4,
-          "movimiento": 7.98,
+          "movimiento": 1.98,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
-          "caras": [
-            [
-              0.4694,
-              0.1078,
-              0.3111,
-              0.2359
-            ]
-          ]
+          "caras": []
         }
       ]
     },
@@ -296,22 +289,22 @@
             9.72
           ],
           "frase": "escrita a mano, el punto no las cambiaba.",
-          "fuente": "pixabay",
-          "id": 100344,
-          "pagina": "https://pixabay.com/videos/id-100344/",
-          "titulo": "write, letter, to write, pen, office, paper, feeling, feelings, post, note, notes, writing, hand, hands id",
-          "autor": "egemen_izmirli",
-          "autor_url": "https://pixabay.com/users/egemen_izmirli-19724738/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 10.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2021/12/11/100344-656497420_large.mp4",
+          "fuente": "pexels",
+          "id": 8873100,
+          "pagina": "https://www.pexels.com/video/close-up-of-a-person-writing-on-paper-8873100/",
+          "titulo": "close up of a person writing on paper",
+          "autor": "Mikhail Nilov",
+          "autor_url": "https://www.pexels.com/@mikhail-nilov",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 16.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8873100/8873100-hd_1080_1920_25fps.mp4",
           "tipo": "video",
-          "consulta": "handwritten note paper pen",
-          "relevancia": 1.0,
+          "consulta": "hand writing a note with pen on paper close up",
+          "relevancia": 0.5,
           "inicio_s": 0.4,
-          "movimiento": 3.02,
+          "movimiento": 6.9,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
