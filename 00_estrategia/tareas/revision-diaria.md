@@ -35,6 +35,34 @@ leerse como si fuera YouTube (el caso MDS-011); entran C28 y C29 en `validar_gui
 `escena.html`; y los dos prompts de guionista están reescritos. Versión **7** de
 `PLAN_DE_CAMBIOS.md`.
 
+**Qué cambia el 12/10 (dirección en diferido, versión 20 del plan, C66). Va antes que todo lo demás,
+también antes del bloque del 05/10:**
+
+1. **La ficha del Short que sale HOY se lee hoy, antes de que salga.** La producción sube el vídeo
+   como `private` hacia las 03:13-08:30 UTC y se publica a las 17:00 UTC; tú corres a las 09:30. Es
+   la única ventana en la que un defecto todavía no lo ha visto nadie. `MDS-035` (09/10) salió con la
+   frase del cierre dicha **dos veces seguidas**, y su ficha lo decía —`guion.escenas_ritmo_fuera_de_rango:
+   [[6, 1.17]]` y `escenas_por_encima_de_14s: [[6, 17.3]]`—, pero ese día no se abrió y al día
+   siguiente se leyó sin ver esos dos campos. Desde hoy, en el **paso 3**, para el Short de hoy y
+   antes que nada:
+   - `guion.escenas_ritmo_fuera_de_rango` tiene que estar **vacío**. Si no lo está, es `INCIDENCIA`, con
+     la escena, el ritmo y el minuto exacto en que empieza esa escena (suma de duraciones), para que el
+     codirector pueda escucharlo y ponerlo privado antes de las 17:00 UTC si hace falta.
+   - **`guion.voz_fiel` (nuevo, C66):** una entrada por escena, del tipo «20/20 palabras, 0 trozos
+     repetidos». Es lo que Whisper oyó en la toma. Una toma que añade o repite algo ya no debería
+     llegar (voz.py pide otra), así que si ves **más palabras que el texto en un 30 % o más**, o un
+     número de trozos repetidos mayor que 0, es `INCIDENCIA`. Si pone **«sin comprobar»**, Whisper no
+     se pudo cargar ese día: nota, no incidencia, y dilo.
+   - `fragmentos.instantes` vacío y `sincronia_voz.desfase_s` < 0,5, como siempre.
+   - **Los campos de la voz están dentro de `guion`** (`guion.modelo_voz`, `guion.voz_mezclada`,
+     `guion.origen_voz`), no en la raíz. El 10/10 se escribió que «salen vacíos» y no lo estaban.
+2. **Una cifra que escribes es una cifra que has copiado, con su fichero y su campo.** El 11/10 tu
+   bitácora dijo que `MDS-034` tenía 0 visualizaciones a 48 h; `metricas_diarias.json` decía **97**.
+   Si das una cifra de visualizaciones o de «se quedaron», cita `metricas_diarias.json` (o
+   `metricas.json`) y el `actualizado_utc` de ese fichero. Si no la tienes, escribe «sin cifra», no 0.
+   Y recuerda que la API de Analytics llega con dos o tres días de retraso: un Short de anteayer con
+   0 es casi siempre una lectura que todavía no lo incluye, no un cero de feed.
+
 **Qué cambia el 05/10 (dirección del lunes, versión 18 del plan, C60). Va antes que todo lo demás
 y manda sobre lo que diga más abajo:**
 

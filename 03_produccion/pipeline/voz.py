@@ -710,11 +710,105 @@ def _audio_plausible(texto, dur):
     van de 5 palabras/s (nadie habla más rápido) a 1,1 palabras/s más 1,5 s de
     margen (nadie habla más lento). Una toma buena cae siempre dentro: el
     control de ritmo de verdad (1,6-3,2) sigue siendo solo un aviso.
+
+    C66 (12/10/2026): el techo baja de n/1,1 + 1,5 s a **n/1,45 + 1,2 s**.
+    `MDS-035` salió con la frase del cierre dicha dos veces (17,1 s para 20
+    palabras) y el techo viejo (19,7 s) la dejó pasar. Medido sobre las 129
+    tomas de la caché: la buena más lenta queda a 2 s del techo nuevo, y
+    la de `MDS-035` 2 s por encima. La comprobación de verdad es
+    `_toma_fiel`, abajo; esto es lo que queda si Whisper no está.
     """
     n = max(1, len((texto or "").split()))
     if dur <= 0.3:
         return False
-    return n / 5.0 <= dur <= max(4.0, n / 1.1 + 1.5)
+    return n / 5.0 <= dur <= max(4.0, n / 1.45 + 1.2)
+
+
+# ---------------------------------------------------------------------------
+# C66 (12/10/2026) · la voz dice lo que dice el guion, y solo eso.
+#
+# `MDS-035` (09/10) se publicó con la frase del cierre dicha dos veces seguidas,
+# y `MDS-020` (septiembre) con la dirección de actor leída en voz alta al final
+# de la escena 3 («sin énfasis de anuncio, no estás vendiendo el número…»).
+# Ninguno de los dos estaba en el guion: los metió el sintetizador. Nada lo
+# miraba, porque Gemini no devuelve marcas de palabra y lo único que se medía
+# era la duración.
+#
+# Ahora cada toma se transcribe con Whisper (`tiny`, en CPU, ~1 s por escena,
+# gratis, se baja una vez por producción) y se compara con la narración:
+#   · si la transcripción tiene muchas más palabras que el texto (> 1,35 veces
+#     y al menos 4 de más), sobra algo: instrucciones leídas o una repetición;
+#   · si un trozo de cuatro palabras sale dos veces más de lo que sale en el
+#     texto (3 o más trozos así), es una repetición.
+# Medido sobre las 115 tomas de la caché que se pueden casar con su guion: la
+# buena con más palabras sobrantes da 1,20; `MDS-020`/3 da 1,57 y `MDS-035`/6,
+# 2,05 con 17 trozos repetidos. Ninguna buena tiene un trozo repetido.
+# NO se mira lo que falta: Whisper escribe «265» donde el texto dice
+# «doscientos sesenta y cinco», y eso da tomas buenas con 0,72.
+#
+# Una toma que no es fiel se trata como una toma implausible: fallo transitorio,
+# se pide otra (gasta una petición del día). Si Whisper no se puede cargar
+# (sin red, sin el paquete), se avisa y se sigue con el techo de duración: la
+# comprobación nunca es la que deja al canal sin vídeo.
+# ---------------------------------------------------------------------------
+FIEL_MAX_RATIO = 1.35
+FIEL_MIN_SOBRANTES = 4
+FIEL_MAX_REPETIDOS = 3
+_TRANSCRIPTOR = {}
+
+
+def _tokens(s):
+    import unicodedata
+    s = unicodedata.normalize("NFKD", (s or "").lower())
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    return re.findall(r"[a-z0-9ñ]+", s)
+
+
+def _repetidos(texto_tok, oido_tok, n=4):
+    """Trozos de n palabras que se oyen dos veces o más y más de lo que están escritos."""
+    from collections import Counter
+    def trozos(t):
+        return Counter(tuple(t[i:i + n]) for i in range(len(t) - n + 1))
+    escritos, oidos = trozos(texto_tok), trozos(oido_tok)
+    return sum(1 for k, c in oidos.items() if c >= 2 and c > escritos.get(k, 0))
+
+
+def _transcriptor():
+    """El modelo de Whisper, cargado una vez. None si no se puede (y lo dice una vez)."""
+    if "modelo" not in _TRANSCRIPTOR:
+        try:
+            from faster_whisper import WhisperModel
+            _TRANSCRIPTOR["modelo"] = WhisperModel("tiny", device="cpu", compute_type="int8")
+        except Exception as exc:     # sin paquete, sin red para bajar el modelo...
+            print(f"::warning::C66: no se puede cargar Whisper ({str(exc)[:160]!r}); las tomas "
+                  f"se comprueban solo por duración.")
+            _TRANSCRIPTOR["modelo"] = None
+    return _TRANSCRIPTOR["modelo"]
+
+
+def _toma_fiel(texto, mp3):
+    """(fiel, detalle). ¿Dice esta toma el texto, sin añadir ni repetir nada?"""
+    modelo = _transcriptor()
+    if modelo is None:
+        return True, "sin comprobar"
+    try:
+        trozos, _ = modelo.transcribe(str(mp3), language="es", beam_size=1,
+                                      vad_filter=False, condition_on_previous_text=False)
+        oido = " ".join(t.text for t in trozos)
+    except Exception as exc:
+        print(f"::warning::C66: Whisper falló con {mp3.name} ({str(exc)[:160]!r}); sin comprobar.")
+        return True, "sin comprobar"
+    a, b = _tokens(texto), _tokens(oido)
+    ratio = len(b) / max(1, len(a))
+    rep = _repetidos(a, b)
+    detalle = f"{len(b)}/{len(a)} palabras, {rep} trozos repetidos"
+    if (ratio > FIEL_MAX_RATIO and len(b) - len(a) >= FIEL_MIN_SOBRANTES) \
+            or rep >= FIEL_MAX_REPETIDOS:
+        # Sin cifras: este texto acaba en una excepción y `clase_de_error` leería
+        # un «400» o un «429» que se haya oído como un rechazo o una cuota.
+        oido_sin_cifras = re.sub(r"\d", "#", oido.strip())[:200]
+        return False, f"{detalle} · se oye: «{oido_sin_cifras}»"
+    return True, detalle
 
 
 def _edge_permitido(ahora=None):
@@ -767,7 +861,16 @@ async def _gemini_escena(it, modelo, estado):
     vieja = _cache_voz_ruta(it["texto"], modelo, it["voz_gemini"], it["dirigido_v1"])
     for cache in (nueva, vieja):
         if cache.exists():
+            # C66: una toma de la caché se comprueba igual que una nueva; si no
+            # es fiel, se borra y se pide otra.
+            fiel, detalle = _toma_fiel(it["texto"], cache)
+            if not fiel:
+                print(f"::warning::escena {it['i']} · la toma de la caché no dice el guion "
+                      f"({detalle}): se borra y se pide otra.")
+                cache.unlink(missing_ok=True)
+                continue
             it["mp3"].write_bytes(cache.read_bytes())
+            it["fidelidad"] = detalle
             return "caché"
     if estado["agotados"].get(modelo):
         raise CuotaDiariaAgotada(modelo)
@@ -799,6 +902,10 @@ async def _gemini_escena(it, modelo, estado):
                 raise RuntimeError(
                     f"toma descartada: {dur:.1f} s para {len(it['texto'].split())} palabras "
                     "(¿ha leído las instrucciones en voz alta?)")
+            fiel, detalle = _toma_fiel(it["texto"], tmp)
+            if not fiel:
+                raise RuntimeError(f"toma descartada (C66, no dice el guion): {detalle}")
+            it["fidelidad"] = detalle
             tmp.replace(it["mp3"])
             CACHE_VOZ_DIR.mkdir(parents=True, exist_ok=True)
             tmp_cache = nueva.with_suffix(".tmp.mp3")
@@ -1234,6 +1341,10 @@ async def principal(guion_path, salida, voz=None, motor="edge"):
         e["audio"] = str(mp3.relative_to(salida))
         e["motor_voz"] = motor_usado
         e["origen_voz"] = origen
+        # C66: qué oyó Whisper en la toma («20/20 palabras, 0 trozos repetidos»).
+        fiel = next((it.get("fidelidad") for it in items if it["i"] == i), None)
+        if fiel:
+            e["voz_fiel"] = fiel
         # Control de ritmo (salvaguarda 4 de C7): fuera de 1,6-3,2 pal/s es la
         # firma de la pista plana de Gemini (corría al doble, 4,74 pal/s en
         # la prueba del 04/09). No bloquea —el vídeo se sincroniza con `dur`

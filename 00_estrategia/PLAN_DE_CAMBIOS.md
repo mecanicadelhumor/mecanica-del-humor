@@ -6135,3 +6135,104 @@ render) y **C36** (la prueba de la voz de una toma) desde el miércoles 7, que n
 - **El plan sigue pesando demasiado** (6.000 líneas): partirlo sigue pendiente.
 - Lo de la versión 18 que no se ha movido: «se quedaron» de la API contra Studio, el presentador (C51.3,
   C61), los planos de FLUX.
+
+---
+
+# Versión 20 · 12 de octubre de 2026 — la voz dice el guion, el corte por palabras y los largos, pensados
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario, y lo que se anula se dice con su nombre, en la tabla de abajo.
+
+Dirección en diferido (C62), lunes a las 13:07 UTC, sin sesión interactiva hoy. El cuaderno traía
+(12/10): **(1)** el Short del 9/10 repite una frase después de «la letra pequeña» y nadie lo vio,
+«la revisión no es exhaustiva y el guionista tampoco hace su trabajo»; **(2)** un informe de los cambios
+de esta semana y la siguiente y lo que se pueda decidir con las métricas; el diseño VRoid estará antes
+del 14; **(especial)** cómo vuelven los largos. Y su respuesta a la tarea del 08/10: la animación le
+gusta, pero quiere **más color y un aspecto más alegre**. En el calendario de la versión 19 tocaba
+**C36** y lo que trajera el primer marcador de B1.
+
+| Cambio | Estado |
+|---|---|
+| **C66 · La voz dice el guion, y solo eso** | **Hecho y probado** (abajo). `voz.py` transcribe cada toma de Gemini con Whisper y pide otra si sobra o se repite algo; el techo de duración baja. `qa.py` copia lo oído a la ficha (`guion.voz_fiel`) |
+| **Revisión diaria: la ficha de HOY, antes de las 17:00 UTC** | **Hecho** en `tareas/revision-diaria.md` (bloque del 12/10), y que toda cifra que escriba la copie de su fichero |
+| **C36 · Una toma por vídeo** | **Avanza, no termina**: `03_produccion/pipeline/corte_palabras.py`, 70 de 70 fronteras bien sin conexión. Falta la prueba en vivo (jueves 15). **Sin ella, siguen siete a la semana desde el 19/10** |
+| **C55.4 · La animación, con más color** | **Hecho** en `tareas/animacion.md`: tres fondos (azul noche, crema, ámbar suave), dibujos a color con dos colores más (menta y violeta), texto azul noche y resalte coral sobre claro. Desde las páginas del viernes 16; la hoja de contactos es la muestra (regla 11.2) |
+| **C67 · Los largos, propuesta** | **Escrita**: `00_estrategia/LARGOS_2026-10.md`. Decide el codirector antes del 1/11 |
+| **La firma «de lunes a viernes»** (C59) | **Se le pregunta al codirector**: desde el 12/10 hay Short también en fin de semana. Si dice sí antes del jueves 15, la dirección del jueves cambia la línea por «un mecanismo nuevo cada día» antes del sábado 17 |
+| Trampa 55 (render no determinista) | **Sin mirar hoy**; pasa al jueves 15 |
+| B1 | Empieza hoy (`MDS-036`, brazo B). **Sin marcador todavía**: nada que decidir |
+
+## C66 · Qué pasó con `MDS-035` y qué cambia
+
+**El guion no tenía la repetición.** La narración del cierre era «La letra pequeña: la felicidad la
+puntuaba cada uno en un cuestionario. Y cada uno pone la nota que quiere.» (la dejó así la revisión del
+08/10, con la excepción de las 48 horas, y estaba bien). **La toma de Gemini la dijo dos veces**: 17,1 s
+para 20 palabras, 1,17 palabras/s; Whisper oye 41 palabras. El guionista no tuvo nada que ver.
+
+**Por qué no se paró:** el techo de duración de `_audio_plausible` (n/1,1 + 1,5 s = 19,7 s) estaba
+pensado para cazar la dirección de actor leída entera, diez veces más larga, y dejó pasar una repetición
+de una frase. `qa.py` sí lo marcó (`escenas_ritmo_fuera_de_rango: [[6, 1.17]]`), pero como aviso, y la
+revisión diaria del 09/10 no abrió la ficha; la del 10/10 la leyó sin ver ese campo (y dijo que los campos
+de la voz «salían vacíos»: están dentro de `guion`). **El codirector tiene razón en que la revisión falló;
+no en que fallara el guionista.**
+
+**Lo que cambia:**
+
+1. **`voz.py`, `_toma_fiel`**: cada toma (nueva o de la caché) se transcribe con `faster-whisper` `tiny` en
+   CPU y se compara con la narración. Se descarta si la transcripción tiene más de 1,35 veces las palabras
+   del texto y al menos 4 de más, o si 3 o más trozos de cuatro palabras se oyen dos veces más de lo
+   escrito. No se mira lo que falta (Whisper escribe «265» por «doscientos sesenta y cinco»). Descartada,
+   es un fallo transitorio: se pide otra toma (gasta una petición del día). Una toma mala en la caché se
+   borra.
+2. **El techo de duración baja** a n/1,45 + 1,2 s (sigue valiendo si Whisper no carga).
+3. **Si Whisper no carga** (sin red para bajar el modelo, sin paquete), se avisa y se sigue solo con la
+   duración: la comprobación nunca deja al canal sin vídeo.
+4. `requirements.txt`: `faster-whisper>=1.1,<2`. `producir.yml` ya instala desde ahí: **no hay que tocar
+   ningún workflow**.
+
+**Calibrado y probado en el contenedor:** sobre las 129 tomas de la caché que se pueden casar con su
+guion (todas las de Gemini desde `MDS-017`), la comprobación rechaza exactamente dos: `MDS-035`/6 y
+**`MDS-020`/3, publicado en septiembre con la dirección de actor leída en voz alta al final de la escena**
+(«sin énfasis de anuncio, no estás vendiendo el número; lo estás enseñando»). La buena con más palabras
+sobrantes da 1,20. El techo nuevo de duración rechaza solo `MDS-035`/6. Con un Gemini simulado: la toma
+mala en caché se borra, la primera llamada que devuelve la toma mala se descarta y la segunda (buena) se
+queda; si Gemini devuelve siempre la mala, la escena no sale tras tres intentos y la escalera sigue como
+siempre (no se sube nada mala); sin Whisper, «sin comprobar». Whisper tarda ~6 s en cargar y <1 s por
+escena. **Regla 11.2:** no cambia nada de lo que se oye en una toma buena; solo impide que salga una mala.
+
+## C36 · El corte por palabras, sin conexión
+
+`03_produccion/pipeline/corte_palabras.py`: Whisper da cada palabra con su instante, se casan con las
+palabras del guion (difflib) y la frontera entre dos escenas se pone en la ventana más silenciosa del
+hueco entre la última palabra de una y la primera de la otra (si Whisper pega las dos palabras, se busca
+0,15 s antes y 0,6 s después). **Prueba:** las seis tomas de quince Shorts reales (`MDS-021` a `036`,
+sin `020` ni `035`) pegadas en un solo mp3, como si fueran una toma: **70 de 70 cortes caen en el silencio
+de verdad entre escenas**, en 2-3 s de CPU por Short. **Lo que falta** (pruebas 1, 3 y 4 del diseño del
+15/09): una toma real de Gemini con el Short entero —la pausa entre escenas será más corta que en estas
+tomas pegadas—, que una tanda de seis no derive y que el desfase de sincronía quede bajo 0,5 s. Eso pide la
+clave de Gemini, que solo está en Actions: el jueves 15.
+
+## Las métricas de la semana (punto 2 del cuaderno)
+
+La lectura completa del lunes no había llegado a las 13:10 UTC (los crons de `metricas.yml` llegan con
+6-7 horas de retraso toda la semana). Con la diaria del 11/10, 18:29 UTC: semana del 5/10 —`MDS-031` 171 ·
+`032` 19 · `033` 1 · `034` 97 · `035` sin lectura todavía—; «se quedaron» 21,6 % · 11,1 % · — · 30,9 %. La
+mediana C26 sigue en 35 (lectura del 06/10). **No hay nada que decidir con esto**: B1 empieza hoy y su
+regla está escrita; `MDS-033` es un cero de feed (el tercero) y no se resube (C54).
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Lunes 12, 19:00 | `MDS-036`, primer Short de B1 (brazo B) |
+| Martes 13 | La revisión diaria lee la ficha de `MDS-037` con el bloque nuevo; `MDS-037` es el primero con C66 |
+| Miércoles 14 | Primer Short animado (`MDS-038`). VRoid listo (codirector) |
+| **Jueves 15, 13:07 UTC** | Dirección: **C36 en vivo**, la firma de fin de semana si el codirector dice sí, trampa 55, y el avatar VRoid para el muestrario del 16 |
+| Viernes 16 | Rutina «Animación» con colores nuevos (C55.4). Muestrarios de presentador (C61/C51.3) |
+| Lunes 19 | Siete a la semana (catorce solo si C36 pasó el jueves y el codirector oyó la muestra) |
+| Antes del 1/11 | El codirector, sobre `LARGOS_2026-10.md` |
+
+## Lo que NO cambia hoy
+
+- Lo que se ve y se oye en una toma buena; los brazos y el `orden` de B1; la regla de decisión; los
+  umbrales de C26; las rutinas.

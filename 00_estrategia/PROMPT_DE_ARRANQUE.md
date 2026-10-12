@@ -174,7 +174,7 @@ confundirlas:
 | `03_produccion/pipeline/montaje.py` · C58 (02/10/2026) | **Decisión del codirector en la sesión** | En los **Shorts**, 0,1 s de colchón y ningún fundido de entrada (era 0,6 s y fundido desde negro, del 18/08). En los largos, como siempre. El colchón usado se apunta en `montaje.json` y `qa.py` mide contra él |
 | **C60 · el bucle** (05/10/2026): `05_calendario/bucle/ciclos.json` e `hipotesis.json`, y `04_agentes/bucle.py` | **De la dirección** | La planificación lee `ciclos.json` y aplica su `orden`; `resultados.json` y `metricas_diarias.json` los escribe `metricas.yml`. **Decisión del codirector en la sesión: 7 Shorts a la semana desde el 12/10 y 14 desde el 19/10 (si C36 pasa)** |
 | `01_bibliografia/` (05/10/2026) | **Pasa de la revisión diaria a la planificación** | La revisión avisa en `05_calendario/revisiones/bibliografia.md`. `entregar.py` ya lo aplica |
-| **C62 · la dirección en diferido** (05/10/2026) | **Autorizada por el codirector en la sesión**, con repositorio privado | Rutina «Dirección», Opus 5.5, lunes y jueves 13:07 UTC y «Run now». Instrucciones: `00_estrategia/tareas/direccion.md`. Entrega con `entregar.py --tarea direccion` (todo salvo workflows, el cuaderno, `novedades.md` y lo de Actions). El cuaderno y las tareas, en `mecanicadelhumor/direccion` (privado), clonado en `00_estrategia/privado/` |
+| **C62 · la dirección en diferido** (05/10/2026) | **Autorizada por el codirector en la sesión**, con repositorio privado | Rutina «Dirección», Opus 5.5, lunes y jueves 13:07 UTC y «Run now». Instrucciones: `direccion/tareas/direccion.md` (en el privado desde el 09/10; trampa 58). Entrega con `entregar.py --tarea direccion` (todo salvo workflows, el cuaderno, `novedades.md` y lo de Actions). El cuaderno y las tareas, en `mecanicadelhumor/direccion` (privado), clonado en `00_estrategia/privado/` |
 | `.github/workflows/metricas.yml` · versión del 05/10/2026 | **Entregada** en `00_estrategia/tareas/workflows_2026-10-05/`, **la mueve el codirector** | Lectura diaria ligera (C47/C60), `bucle.py` detrás, y despierta a la rutina de métricas por su disparador de API (secreto `RUTINA_METRICAS_TOKEN`) |
 | `03_produccion/pipeline/render.py` · `escena.html` · C59 (02/10/2026) | **Decisión del codirector en la sesión** | El remate de marca dice «Síguenos» y «un mecanismo nuevo de lunes a viernes», **siempre la misma frase y sin voz**. No se convierte en una frase por Short |
 | `04_agentes/metricas.py --solo-registro` · C57 (02/10/2026) | **De la dirección** | Publica en YouTube **un comentario del canal por Short**: la `pregunta_al_espectador` de su publicación, cuando el vídeo ya es público, una sola vez. Es lo único que el sistema escribe en los comentarios. **Nunca responde a nadie** (regla 7) |
@@ -719,6 +719,46 @@ dos veces con el `render.py` de `main` sin tocar dio fotogramas distintos a part
 regla 11.5 dice «mismo guion y mismo `t`, mismo píxel», y no se cumple; nadie lo había comprobado.
 → **Antes de usar «no ha cambiado ni un píxel» como prueba de que un cambio es inocuo, renderiza dos veces
 lo de antes.** La comparación de C55.2 se hizo así (contra dos pasadas del original), no contra una.
+
+**56. La medida avisaba y nadie leía el aviso a tiempo.** `qa.py` marca desde el 07/09 las escenas con
+ritmo fuera de 1,6-3,2 palabras/s («aviso, no bloquea»). `MDS-035` (09/10) salió con la frase del cierre
+dicha dos veces y su ficha lo decía —`[[6, 1.17]]`—, pero la revisión diaria no abrió la ficha ese día y al
+siguiente la leyó sin ver el campo. El guion estaba bien: lo metió el sintetizador.
+→ **Si una comprobación solo avisa, di quién lee el aviso y antes de qué hora.** Si nadie puede actuar a
+tiempo, el aviso tiene que ser una barrera en el código (C66).
+
+**57. Una comprobación nueva encontró un defecto publicado hace un mes.** Al calibrar Whisper (C66) sobre
+las 129 tomas de la caché salió, además de `MDS-035`, `MDS-020` escena 3: la voz leyó en alto la
+dirección de actor («sin énfasis de anuncio, no estás vendiendo el número»). Nadie lo había oído.
+→ **Cuando escribas una comprobación, pásala por todo lo que ya existe antes de fijar el umbral**: es la
+calibración y, de paso, la auditoría.
+
+**58. Se movió el fichero que lee una rutina y su arranque siguió apuntando al sitio viejo.** El 09/10
+`00_estrategia/tareas/direccion.md` pasó al repositorio privado (`direccion/tareas/direccion.md`) y el
+arranque de la rutina «Dirección» sigue diciendo la ruta pública. El 12/10 se encontró a mano; otra rutina
+con instrucciones de «si no existe, para» se habría parado. La revisión del viernes 9 falló por lo mismo.
+→ **Mover un prompt es cambiar dos cosas: el fichero y el arranque de la rutina.** El segundo es del
+codirector (trampa 47) y se le pide el mismo día.
+
+
+## Dónde está el proyecto a 12 de octubre de 2026
+
+**Dirección en diferido (rutina del lunes).** Versión **20** del plan, la que manda.
+
+- **El Short del 9/10 (`MDS-035`) salió con la frase del cierre dicha dos veces.** No era el guion: era la
+  toma de Gemini. **C66**: `voz.py` transcribe cada toma con Whisper (`tiny`, gratis, ~1 s por escena) y
+  pide otra si sobra o se repite algo; además el techo de duración baja a n/1,45 + 1,2 s. Calibrado sobre
+  las 129 tomas de la caché: caza `MDS-035`/6 y `MDS-020`/3 (la dirección de actor leída en alto, en
+  septiembre) y ninguna buena. La revisión diaria lee desde hoy la ficha del Short del día **antes** de las
+  17:00 UTC.
+- **C36 avanza sin conexión**: `corte_palabras.py` parte una toma entera por palabras; 70 de 70 fronteras
+  bien en quince Shorts reales. Falta la prueba en vivo (jueves 15). Sin ella, **siguen siete a la semana**.
+- **C55.4**: la animación, con más color (fondos crema y ámbar, dibujos a color), a petición del
+  codirector, desde las páginas del viernes 16.
+- **Los largos** (tarea especial): propuesta en `LARGOS_2026-10.md` — «El caso, entero», 7-9 min, piloto
+  de tres cada dos semanas desde el 1 u 8/11, voz con la cuota de `2.5-pro` que hoy no usa nadie.
+- **B1 empieza hoy** (`MDS-036`, brazo B). La lectura del lunes no había llegado a las 13:10 UTC (cron de
+  Actions con 6-7 h de retraso, como toda la semana).
 
 ## Dónde está el proyecto a 8 de octubre de 2026
 

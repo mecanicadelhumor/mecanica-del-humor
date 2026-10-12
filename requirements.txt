@@ -29,3 +29,11 @@ google-genai
 # C50 (revisión diaria, 23/09). caras() ya no deja que esto tire el plano
 # entero, pero sin el paquete de verdad tampoco hay detección de caras.
 opencv-python-headless
+
+# C66 (12/10/2026, voz.py _toma_fiel): cada toma de Gemini se transcribe con
+# Whisper «tiny» en CPU y se compara con la narración, para que no vuelva a
+# publicarse una frase dicha dos veces (MDS-035) ni la dirección de actor leída
+# en voz alta (MDS-020). El modelo (~75 MB) se baja de Hugging Face la primera
+# vez en cada producción. Si el paquete o la descarga fallan, voz.py avisa y
+# sigue con el control de duración: nunca deja al canal sin vídeo.
+faster-whisper>=1.1,<2

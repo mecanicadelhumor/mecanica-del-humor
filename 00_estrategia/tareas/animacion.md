@@ -37,6 +37,27 @@ ciclo: no se rompe nada, pero se pierde una medida. Por eso tu trabajo tiene fec
    plantilla) son lo que tienes que mejorar.
 3. `02_marca/` para los colores y la tipografía: azul marino `#16213A` de fondo, ámbar `#FFB020` para
    lo que importa, cian `#4CC9F0` como segundo color.
+
+   **Desde el 12/10/2026 (dirección, C55.4, a petición del codirector): más color y un aspecto más
+   alegre.** Al ver la muestra mezclada dijo: *«no quiero que nos ciñamos siempre al azul oscuro de fondo
+   y a las animaciones en blanco y gris. Podemos explorar más colores y un aspecto más alegre, no todo
+   tiene que ser tan serio.»* Así que, desde las páginas que escribas el **viernes 16/10**:
+   - **El fondo azul noche deja de ser obligatorio.** Cada Short elige **uno** de estos tres fondos y lo
+     mantiene en todas sus escenas animadas: **azul noche** `#16213A` (el de siempre), **crema**
+     `#FFF4E0` o **ámbar suave** `#FFE3A3`. Rota entre los tres de un Short al siguiente de la misma
+     semana, para que se vean los tres.
+   - **Los dibujos, a color, no en blanco y gris.** Además de ámbar `#FFB020`, cian `#4CC9F0` y coral
+     `#EF476F` (los de la marca), puedes usar **verde menta** `#06D6A0` y **violeta** `#9B5DE5`. Rellenos
+     planos, trazo grueso, formas redondeadas; que parezca un dibujo animado de pizarra, no un plano
+     técnico. El gris solo para lo que «se apaga».
+   - **Sobre fondo claro**, el texto va en azul noche `#16213A` y la palabra resaltada en coral `#EF476F`
+     (el ámbar sobre crema no se lee); sobre azul noche, como hasta ahora.
+   - **Alegre no es payaso**: nada de caras (sigue la regla de abajo), nada de chistes visuales que la
+     voz no diga, y el cierre honesto del Short no es tuyo. El tono lo pone el color y el movimiento
+     (rebotes cortos, cosas que «saltan» en la palabra clave), no lo que se dice.
+   - En tu bitácora, **di qué fondo llevó cada Short**. Las hojas de contactos son la muestra que mira el
+     codirector (regla 11.2): si no le gusta, lo dirá antes del jueves 22, que es el primer Short animado
+     de esa semana.
 4. El contrato y el código que te va a usar: la cabecera de `03_produccion/pipeline/animacion.py`.
 
 ## El contrato de la página (si no se cumple, la escena sale como el control)

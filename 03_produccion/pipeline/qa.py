@@ -390,6 +390,10 @@ def main():
             # C33: el papel que se le pidió al actor en cada escena.
             "direccion_voz": [e.get("direccion_voz") for e in escenas if e.get("motor_voz")],
             "escenas_ritmo_fuera_de_rango": ritmos_fuera,
+            # C66 (12/10/2026): lo que Whisper oyó en cada toma de Gemini. Una toma
+            # que añade o repite algo ya no llega aquí (voz.py pide otra); «sin
+            # comprobar» quiere decir que Whisper no se pudo cargar ese día.
+            "voz_fiel": [e.get("voz_fiel") for e in escenas if e.get("motor_voz")],
         }
 
     ini, fin = silencio_inicial(mp4)
