@@ -666,6 +666,21 @@
       "subido_utc": "2026-10-09T07:31:25Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-09T21:45:57Z"
+    },
+    {
+      "id": "MDS-036.es",
+      "episodio": "MDS-036",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué las series ponen risas grabadas?",
+      "guion": "05_calendario/guiones/MDS-036.es.json",
+      "video_id": "r4PCUFPDlJk",
+      "url": "https://youtu.be/r4PCUFPDlJk",
+      "estado": "private",
+      "publicar_en": "2026-10-12T17:00:00Z",
+      "musica": "cama_08_divider_chris_zabriskie.mp3",
+      "subido_utc": "2026-10-12T07:27:57Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-09T21:45:57Z"

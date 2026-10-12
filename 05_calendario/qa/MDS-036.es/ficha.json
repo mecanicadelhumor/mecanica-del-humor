@@ -1,22 +1,23 @@
 {
-  "id": "MDS-030.es",
-  "duracion_final_s": 34.6,
-  "tamano_mb": 18.1,
+  "id": "MDS-036.es",
+  "duracion_final_s": 45.5,
+  "tamano_mb": 22.5,
   "audio": {
-    "lufs": -15.09,
-    "pico_dbtp": -1.27,
-    "rango_lu": 5.2
+    "lufs": -14.96,
+    "pico_dbtp": -1.39,
+    "rango_lu": 4.9
   },
   "silencio_inicial": {
-    "empieza_s": -0.17,
-    "acaba_s": 0.629,
-    "_nota": "Debe rondar 0.6 s: es el colchón de entrada. Un 0 aquí significa que el vídeo entra en seco."
+    "empieza_s": -0.021,
+    "acaba_s": 0.129,
+    "esperado_s": 0.1,
+    "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
   "arranque": {
     "silencios_s": [
       [
-        -0.085,
-        0.629
+        0.0,
+        0.129
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -41,24 +42,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 33.24,
-    "duracion_real_voz_mp3_s": 33.0,
-    "desfase_s": 0.24,
+    "duracion_calculada_s": 44.63,
+    "duracion_real_voz_mp3_s": 44.38,
+    "desfase_s": 0.25,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_02_dusk_next_route.mp3",
-    "sha256": "3f93cfef7318ae5e93a365a3fe16282de13c279e2733dd7c18fcfbe38f530c74"
+    "archivo": "cama_08_divider_chris_zabriskie.mp3",
+    "sha256": "4668b56866e517eb37c34099def2a5f3a07acbdbfd793265eedba1e368fbc328"
   },
   "guion": {
-    "titulo_trabajo": "¿Por qué me hace gracia el humor absurdo?",
+    "titulo_trabajo": "¿Por qué las series ponen risas grabadas?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 5,
-    "duracion_narracion_s": 33.24,
+    "duracion_narracion_s": 44.63,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 9.666,
+    "escena_mas_larga_s": 12.004,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 5
@@ -76,7 +77,7 @@
       "apertura",
       "planteamiento",
       "remate",
-      "enumeracion",
+      "contraste",
       "objecion"
     ],
     "escenas_ritmo_fuera_de_rango": []
@@ -86,72 +87,97 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 5.4,
+        "hasta_s": 1.0,
         "fuente": "pexels",
-        "id": 7061343,
-        "pagina": "https://www.pexels.com/video/a-man-talking-to-his-friends-at-the-bar-7061343/",
-        "autor": "RDNE Stock project",
-        "autor_url": "https://www.pexels.com/@rdne",
+        "id": 36956689,
+        "pagina": "https://www.pexels.com/video/stylish-woman-laughing-in-studio-setting-36956689/",
+        "autor": "Bakarii_photography",
+        "autor_url": "https://www.pexels.com/@bakarii_photography-2159420192",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 5.4,
-        "hasta_s": 12.2,
+        "desde_s": 4.4,
+        "hasta_s": 9.23,
         "fuente": "pexels",
-        "id": 7641180,
-        "pagina": "https://www.pexels.com/video/a-man-changing-a-light-bulb-7641180/",
-        "autor": "MART  PRODUCTION",
-        "autor_url": "https://www.pexels.com/@mart-production",
+        "id": 6575890,
+        "pagina": "https://www.pexels.com/video/woman-holding-a-remote-while-watching-tv-6575890/",
+        "autor": "Andres  Ayrton",
+        "autor_url": "https://www.pexels.com/@andres-ayrton",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 9.23,
+        "hasta_s": 12.13,
+        "fuente": "pexels",
+        "id": 35147318,
+        "pagina": "https://www.pexels.com/video/captivating-goldfish-in-a-bowl-with-elegant-fins-35147318/",
+        "autor": "Dursen",
+        "autor_url": "https://www.pexels.com/@dursen-389236388",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 12.13,
+        "hasta_s": 16.4,
+        "fuente": "pixabay",
+        "id": 1630,
+        "pagina": "https://pixabay.com/videos/id-1630/",
+        "autor": "Coverr-Free-Footage",
+        "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 3,
+        "desde_s": 16.4,
+        "hasta_s": 22.7,
+        "fuente": "pexels",
+        "id": 3198214,
+        "pagina": "https://www.pexels.com/video/dad-talking-in-a-family-dinner-gathering-3198214/",
+        "autor": "cottonbro studio",
+        "autor_url": "https://www.pexels.com/@cottonbro",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 3,
-        "desde_s": 12.2,
-        "hasta_s": 15.7,
+        "desde_s": 22.7,
+        "hasta_s": 24.97,
         "fuente": "pexels",
-        "id": 35356749,
-        "pagina": "https://www.pexels.com/video/serene-fish-swimming-in-aquarium-35356749/",
-        "autor": "Sanjay Sharma",
-        "autor_url": "https://www.pexels.com/@sanjay-sharma-2150810918",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 4,
-        "desde_s": 23.33,
-        "hasta_s": 25.37,
-        "fuente": "pexels",
-        "id": 16668207,
-        "pagina": "https://www.pexels.com/video/a-man-is-standing-next-to-a-table-with-fish-16668207/",
-        "autor": "K",
-        "autor_url": "https://www.pexels.com/@kelly",
+        "id": 5019033,
+        "pagina": "https://www.pexels.com/video/a-man-sitting-at-a-table-with-a-candle-and-wine-5019033/",
+        "autor": "cottonbro studio",
+        "autor_url": "https://www.pexels.com/@cottonbro",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 5,
-        "desde_s": 25.37,
-        "hasta_s": 31.5,
+        "desde_s": 35.17,
+        "hasta_s": 42.9,
         "fuente": "pexels",
-        "id": 7597569,
-        "pagina": "https://www.pexels.com/video/a-man-typing-on-his-tablet-while-looking-at-his-laptop-7597569/",
-        "autor": "MART  PRODUCTION",
-        "autor_url": "https://www.pexels.com/@mart-production",
+        "id": 8765013,
+        "pagina": "https://www.pexels.com/video/a-man-talking-at-a-dinner-table-8765013/",
+        "autor": "Pavel Danilyuk",
+        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       }
     ],
     "sintetico": false
   },
+  "animacion": null,
   "fotogramas_s": [
-    3.85,
-    10.09,
-    14.91,
-    22.11,
-    30.69
+    2.74,
+    11.71,
+    21.65,
+    31.19,
+    40.95
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
