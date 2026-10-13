@@ -692,12 +692,13 @@
       "guion": "05_calendario/guiones/MDS-037.es.json",
       "video_id": "wCOAS7j6v70",
       "url": "https://youtu.be/wCOAS7j6v70",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-10-13T17:00:00Z",
       "musica": "cama_09_first_light_galaxytones.mp3",
       "subido_utc": "2026-10-13T07:52:16Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-10-13T21:52:58Z"
     }
   ],
-  "_estado_leido_utc": "2026-10-12T18:10:05Z"
+  "_estado_leido_utc": "2026-10-13T21:52:58Z"
 }
