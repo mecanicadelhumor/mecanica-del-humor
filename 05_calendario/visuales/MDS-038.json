@@ -1,8 +1,8 @@
 {
   "guion": "MDS-038",
   "version": 1,
-  "firma": "2895b9fe33632a22",
-  "resuelto_utc": "2026-10-08T22:30:05Z",
+  "firma": "a34d049f26f36686",
+  "resuelto_utc": "2026-10-13T09:33:22Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -54,31 +54,31 @@
           ],
           "frase": "Nada, ¿verdad? Pero",
           "fuente": "pixabay",
-          "id": 44637,
-          "pagina": "https://pixabay.com/videos/id-44637/",
-          "titulo": "stress, woman, face, depression, trouble, sadness, will be bored, quarantine, hair, portrait, coronavirus, sad, expression, young, adult, anxiety, people, worried, concern, migraine, girl, despair, person, emotion, loneliness id",
-          "autor": "Engin_Akyurt",
-          "autor_url": "https://pixabay.com/users/Engin_Akyurt-3656355/",
+          "id": 293085,
+          "pagina": "https://pixabay.com/videos/id-293085/",
+          "titulo": "woman, cardio, workout, home fitness, intense workout, woman training, high intensity, living room workout, fitness at home, active lifestyle, strength training, cardio routine, home gym, female athlete, health and fitness, energy boost, body workout, personal training, young woman, sweat session, full body workout, workout motivation, indoor training, daily exercise, strong woman id",
+          "autor": "RainMeditateHub",
+          "autor_url": "https://pixabay.com/users/RainMeditateHub-51172146/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 29.0,
-          "ancho": 3840,
-          "alto": 2160,
-          "url": "https://cdn.pixabay.com/video/2020/07/13/44637-439413041_large.mp4",
+          "duracion_s": 23.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2025/07/23/293085_large.mp4",
           "tipo": "video",
-          "consulta": "person bored face sofa",
-          "relevancia": 0.75,
+          "consulta": "young woman startled jumping on couch at home",
+          "relevancia": 0.5,
           "inicio_s": 0.4,
-          "movimiento": 2.43,
+          "movimiento": 6.23,
           "encuadre": {
-            "x": 0.466,
+            "x": 0.414,
             "y": 0.5
           },
           "caras": [
             [
-              0.198,
-              0.1306,
-              0.6024,
-              0.4806
+              0.3748,
+              0.0472,
+              0.2519,
+              0.1833
             ]
           ]
         },
@@ -183,7 +183,7 @@
       ]
     },
     "4": {
-      "narracion_sha": "62d7bbc07531",
+      "narracion_sha": "70aedaa73a80",
       "texto_pos": "abajo",
       "planos": [
         {
@@ -191,9 +191,9 @@
           "desde": null,
           "t_estimado": [
             0.0,
-            4.87
+            4.17
           ],
-          "frase": "La neurocientífica Sarah-Jayne Blakemore lo vio con un escáner:",
+          "frase": "La neurocientífica Blakemore lo midió con un escáner:",
           "fuente": "ia",
           "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
           "prompt": "an MRI scanner in a clean hospital room, empty, soft blue light",
@@ -209,10 +209,10 @@
           "k": 2,
           "desde": "Cuando te mueves",
           "t_estimado": [
-            4.87,
-            10.18
+            4.17,
+            11.57
           ],
-          "frase": "cuando te mueves, el cerebelo predice lo que vas a sentir.",
+          "frase": "cuando te mueves, una parte del cerebro, el cerebelo, predice lo que vas a sentir.",
           "fuente": "pexels",
           "id": 9165944,
           "pagina": "https://www.pexels.com/video/close-up-of-people-rubbing-soap-on-their-hands-9165944/",
@@ -359,13 +359,6 @@
       "plano": 1,
       "id": "pexels:7088500",
       "titulo": "a mri machine in a medical facility",
-      "motivo": "quieto (movimiento 0.47)"
-    },
-    {
-      "escena": 4,
-      "plano": 1,
-      "id": "pexels:7089373",
-      "titulo": "a medical scanning machine ready for use",
       "motivo": "poco relevante (0.25): se prueba la IA"
     }
   ],

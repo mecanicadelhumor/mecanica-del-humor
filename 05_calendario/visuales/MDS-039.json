@@ -1,8 +1,8 @@
 {
   "guion": "MDS-039",
   "version": 1,
-  "firma": "be413105123f0e85",
-  "resuelto_utc": "2026-10-08T22:30:20Z",
+  "firma": "e3cbb80ad8690778",
+  "resuelto_utc": "2026-10-13T09:33:51Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -126,32 +126,44 @@
             1.0
           ],
           "frase": "Se ríen, y",
-          "fuente": "pixabay",
-          "id": 32938,
-          "pagina": "https://pixabay.com/videos/id-32938/",
-          "titulo": "dance, celebrate, fun, celebration, happy, dancing, girl, festive, colorful, laughing, young, people, person id",
-          "autor": "Stuck1",
-          "autor_url": "https://pixabay.com/users/Stuck1-15406262/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 34.0,
-          "ancho": 3840,
-          "alto": 2160,
-          "url": "https://cdn.pixabay.com/video/2020/02/27/32938-395456384_large.mp4",
+          "fuente": "pexels",
+          "id": 6245501,
+          "pagina": "https://www.pexels.com/video/man-and-woman-laughing-together-6245501/",
+          "titulo": "man and woman laughing together",
+          "autor": "Monstera Production",
+          "autor_url": "https://www.pexels.com/@gabby-k",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6245501/6245501-hd_1080_2048_30fps.mp4",
           "tipo": "video",
-          "consulta": "two people laughing in elevator",
-          "relevancia": 0.667,
+          "consulta": "two adults laughing together leaving elevator",
+          "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 18.42,
+          "movimiento": 12.57,
           "encuadre": {
-            "x": 0.472,
-            "y": 0.5
+            "x": 0.5,
+            "y": 0.373
           },
           "caras": [
             [
-              0.1999,
-              0.1889,
-              0.5999,
-              0.4375
+              0.5752,
+              0.2581,
+              0.2655,
+              0.2154
+            ],
+            [
+              0.2035,
+              0.4734,
+              0.2566,
+              0.1903
+            ],
+            [
+              0.8186,
+              0.2055,
+              0.1814,
+              0.2278
             ]
           ]
         },
@@ -206,6 +218,38 @@
             6.87
           ],
           "frase": "El psicólogo Stanislav Treger juntó parejas de desconocidos: unas hacían tareas pensadas para reírse, y",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "two adults sitting across a small table in a university lab doing a paper task together, no logos",
+          "semilla": 11913891,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-039/e4_p1.jpg",
+          "caras": [
+            [
+              0.2591,
+              0.4022,
+              0.0911,
+              0.0779
+            ],
+            [
+              0.7018,
+              0.4088,
+              0.0833,
+              0.0794
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "otras, tareas parecidas",
+          "t_estimado": [
+            6.87,
+            10.18
+          ],
+          "frase": "otras, tareas parecidas pero serias.",
           "fuente": "pixabay",
           "id": 92480,
           "pagina": "https://pixabay.com/videos/id-92480/",
@@ -218,40 +262,10 @@
           "alto": 1080,
           "url": "https://cdn.pixabay.com/video/2021/10/18/92480-637690589_large.mp4",
           "tipo": "video",
-          "consulta": "two people working on task table laboratory",
-          "relevancia": 0.6,
+          "consulta": "two people working silently table",
+          "relevancia": 0.75,
           "inicio_s": 0.4,
           "movimiento": 1.77,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
-          "caras": []
-        },
-        {
-          "k": 2,
-          "desde": "otras, tareas parecidas",
-          "t_estimado": [
-            6.87,
-            10.18
-          ],
-          "frase": "otras, tareas parecidas pero serias.",
-          "fuente": "pexels",
-          "id": 4828603,
-          "pagina": "https://www.pexels.com/video/two-persons-sitting-by-the-table-while-drinking-their-coffee-4828603/",
-          "titulo": "two persons sitting by the table while drinking their coffee",
-          "autor": "cottonbro studio",
-          "autor_url": "https://www.pexels.com/@cottonbro",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 28.0,
-          "ancho": 1080,
-          "alto": 2048,
-          "url": "https://videos.pexels.com/video-files/4828603/4828603-hd_1080_2048_25fps.mp4",
-          "tipo": "video",
-          "consulta": "two people working silently table",
-          "relevancia": 0.5,
-          "inicio_s": 0.4,
-          "movimiento": 7.21,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
@@ -333,7 +347,15 @@
       ]
     }
   },
-  "descartes": [],
+  "descartes": [
+    {
+      "escena": 4,
+      "plano": 1,
+      "id": "pexels:6307655",
+      "titulo": "people eating together",
+      "motivo": "poco relevante (0.25): se prueba la IA"
+    }
+  ],
   "errores_ia": [],
   "incompleto": false
 }
