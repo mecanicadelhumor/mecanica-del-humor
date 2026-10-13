@@ -101,7 +101,7 @@
      "pie": "lo que vas a sentir"
     }
    ],
-   "narracion": "La neurocientífica Sarah-Jayne Blakemore lo vio con un escáner: cuando te mueves, el cerebelo predice lo que vas a sentir.",
+   "narracion": "La neurocientífica Blakemore lo midió con un escáner: cuando te mueves, una parte del cerebro, el cerebelo, predice lo que vas a sentir.",
    "pausa_despues_s": 0.45,
    "visual": [
     {
@@ -171,16 +171,18 @@
   }
  ],
  "lectura_en_frio": {
-  "lector": "subagente sin contexto (vuelta 2, lector nuevo en cada vuelta)",
-  "fecha": "2026-10-08",
-  "de_que_va": "Explica por qué no puedes hacerte cosquillas a ti mismo: tu cerebro predice lo que vas a sentir y eso lo amortigua.",
-  "pregunta_y_respuesta": "¿Por qué no me hacen efecto mis propias cosquillas y las de otra persona sí? Cuando te mueves, el cerebelo predice lo que vas a sentir y la sensación llega más floja; la mano de otra persona no se puede predecir, así que sí hace cosquillas.",
+  "lector": "subagente sin contexto (vuelta 3, lector nuevo; guion editado por la revisión diaria el 2026-10-13, escena 4)",
+  "fecha": "2026-10-13",
+  "de_que_va": "Explica por qué no puedes hacerte cosquillas a ti mismo: el cerebro predice tus propios movimientos y la sensación llega más débil.",
+  "pregunta_y_respuesta": "¿Por qué no me puedo hacer cosquillas yo solo? Porque el cerebelo predice lo que vas a sentir cuando te mueves tú y eso atenúa la sensación; la mano de otra persona no se puede predecir, así que sí hace cosquillas.",
   "frases_que_no_se_entienden": [],
-  "frase_que_sobra": "«Eso, este estudio no lo responde.» Quitada (condición c): repetía la frase anterior.",
-  "donde_me_iria": "me quedo (el final «me deja algo frío»)",
+  "frase_que_sobra": "ninguna acordada (el lector nombra la escena 2 por repetir la 5; es el contraste que sostiene el chiste, se queda)",
+  "donde_me_iria": "escena 4 (pasa de lo cotidiano al término técnico); si llega al final, el cierre le deja colgado",
   "notas": [
-   "«‹Lo vio con un escáner›. Al principio no tengo claro qué vio exactamente. ¿Vio al cerebelo ‹prediciendo›? Luego, con la frase siguiente, se entiende más o menos.» Lo interpreta él mismo: C48.2, a notas.",
-   "«El final me deja algo frío: termina con una pregunta que no responde.» Es el cierre honesto (regla 12); lo dejo dicho en la bitácora."
+   "Vuelta 2 del día (antes de editar): el lector no sabía qué es el cerebelo ni qué 'vio con un escáner'; por eso la escena 4 pasó de «lo vio con un escáner: … el cerebelo predice» a «lo midió con un escáner: … una parte del cerebro, el cerebelo, predice» y «Sarah-Jayne Blakemore» a «Blakemore» (el validador da error a más de 12 s).",
+   "«La neurocientífica Blakemore lo midió con un escáner»: no sabe quién es ni si es real; es la firma de la fuente (C48.2, a notas).",
+   "«Lo que no enseña el escáner es por qué … nos da risa»: «además» le descoloca; cierre honesto (regla 12), a notas.",
+   "«Es que tu cerebro te ha hecho un spoiler…»: la metáfora la pilla por contexto (C48.2, a notas)."
   ],
   "veredicto": "pasa"
  }

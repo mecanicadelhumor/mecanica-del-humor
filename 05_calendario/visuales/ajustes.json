@@ -164,5 +164,33 @@
     "handwritten note on paper pen"
    ]
   }
+ },
+ "MDS-038": {
+  "2.1": {
+   "excluir": [
+    "pixabay:44637"
+   ],
+   "busqueda": [
+    "young woman startled jumping on couch at home"
+   ]
+  }
+ },
+ "MDS-039": {
+  "3.1": {
+   "excluir": [
+    "pixabay:32938"
+   ],
+   "busqueda": [
+    "two adults laughing together leaving elevator"
+   ]
+  },
+  "4.1": {
+   "excluir": [
+    "pixabay:92480"
+   ],
+   "busqueda": [
+    "two strangers laughing together at table"
+   ]
+  }
  }
 }
