@@ -1,15 +1,15 @@
 {
-  "id": "MDS-031.es",
-  "duracion_final_s": 45.3,
-  "tamano_mb": 17.6,
+  "id": "MDS-037.es",
+  "duracion_final_s": 48.1,
+  "tamano_mb": 23.8,
   "audio": {
-    "lufs": -14.58,
-    "pico_dbtp": -1.46,
+    "lufs": -14.27,
+    "pico_dbtp": -1.35,
     "rango_lu": 4.5
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.381,
+    "acaba_s": 0.129,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,7 +17,7 @@
     "silencios_s": [
       [
         0.0,
-        0.381
+        0.129
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -42,24 +42,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 44.47,
-    "duracion_real_voz_mp3_s": 44.18,
-    "desfase_s": 0.29,
+    "duracion_calculada_s": 47.32,
+    "duracion_real_voz_mp3_s": 47.02,
+    "desfase_s": 0.3,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_03_haru_lofi_roa.mp3",
-    "sha256": "68fe871bcd427b465aa11f71d2f2fc889de234166af65fac305170c0f5bddd6b"
+    "archivo": "cama_09_first_light_galaxytones.mp3",
+    "sha256": "bcdb6043e26b73b7232483c4fe70115da065594d8cdc3735981adabdedd27f94"
   },
   "guion": {
-    "titulo_trabajo": "¿Qué le pasa a tu cerebro cuando te ríes?",
+    "titulo_trabajo": "¿Por qué un «vale.» con punto suena a enfado?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 44.47,
+    "duracion_narracion_s": 47.32,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 9.498,
+    "escena_mas_larga_s": 9.786,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 6
@@ -76,94 +76,143 @@
     ],
     "direccion_voz": [
       "apertura",
+      "contraste",
       "remate",
       "planteamiento",
-      "explicacion",
       "cifra",
       "objecion"
     ],
-    "escenas_ritmo_fuera_de_rango": []
+    "escenas_ritmo_fuera_de_rango": [],
+    "voz_fiel": [
+      "sin comprobar",
+      "sin comprobar",
+      "sin comprobar",
+      "sin comprobar",
+      "sin comprobar",
+      "sin comprobar"
+    ]
   },
   "visual": {
     "planos": [
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 8.53,
+        "hasta_s": 2.27,
+        "fuente": "pixabay",
+        "id": 169446,
+        "pagina": "https://pixabay.com/videos/id-169446/",
+        "autor": "magicmore",
+        "autor_url": "https://pixabay.com/users/magicmore-37989617/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 1,
+        "desde_s": 2.27,
+        "hasta_s": 6.53,
         "fuente": "pexels",
-        "id": 7579338,
-        "pagina": "https://www.pexels.com/video/doctor-talking-to-the-patient-7579338/",
-        "autor": "cottonbro studio",
-        "autor_url": "https://www.pexels.com/@cottonbro",
+        "id": 13802095,
+        "pagina": "https://www.pexels.com/video/a-man-in-corporate-attire-using-his-smartphone-13802095/",
+        "autor": "Mizuno K",
+        "autor_url": "https://www.pexels.com/@mizunokozuki",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 8.53,
-        "hasta_s": 14.2,
-        "fuente": "ia",
-        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "a doctor writing on a pad without looking up, one hand raised calling the next patient, deadpan",
-        "tipo": "imagen"
-      },
-      {
-        "escena": 3,
-        "desde_s": 14.2,
-        "hasta_s": 17.37,
+        "desde_s": 6.53,
+        "hasta_s": 9.23,
         "fuente": "pixabay",
-        "id": 129426,
-        "pagina": "https://pixabay.com/videos/id-129426/",
-        "autor": "SYG_Anime",
-        "autor_url": "https://pixabay.com/users/SYG_Anime-7158719/",
+        "id": 2294,
+        "pagina": "https://pixabay.com/videos/id-2294/",
+        "autor": "Coverr-Free-Footage",
+        "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
         "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       },
       {
-        "escena": 3,
-        "desde_s": 17.37,
-        "hasta_s": 23.7,
+        "escena": 2,
+        "desde_s": 9.23,
+        "hasta_s": 13.87,
         "fuente": "pexels",
-        "id": 7089941,
-        "pagina": "https://www.pexels.com/video/a-male-patient-undergoing-medical-scanning-test-7089941/",
-        "autor": "MART  PRODUCTION",
-        "autor_url": "https://www.pexels.com/@mart-production",
+        "id": 10374885,
+        "pagina": "https://www.pexels.com/video/close-up-on-man-hands-using-phone-10374885/",
+        "autor": "RDNE Stock project",
+        "autor_url": "https://www.pexels.com/@rdne",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
+        "escena": 3,
+        "desde_s": 13.87,
+        "hasta_s": 20.63,
+        "fuente": "pixabay",
+        "id": 375632,
+        "pagina": "https://pixabay.com/videos/id-375632/",
+        "autor": "flutie8211",
+        "autor_url": "https://pixabay.com/users/flutie8211-17475707/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
         "escena": 4,
-        "desde_s": 23.7,
-        "hasta_s": 26.77,
+        "desde_s": 20.63,
+        "hasta_s": 26.33,
         "fuente": "pexels",
-        "id": 6010950,
-        "pagina": "https://www.pexels.com/video/a-doctor-using-tablet-while-looking-the-patient-s-results-of-disease-condition-6010950/",
-        "autor": "Tima Miroshnichenko",
-        "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+        "id": 10374888,
+        "pagina": "https://www.pexels.com/video/close-up-on-man-hand-scrolling-phone-gallery-10374888/",
+        "autor": "RDNE Stock project",
+        "autor_url": "https://www.pexels.com/@rdne",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 30.43,
+        "hasta_s": 34.67,
+        "fuente": "pexels",
+        "id": 8279339,
+        "pagina": "https://www.pexels.com/video/a-woman-scrolling-and-reading-through-her-cellphone-8279339/",
+        "autor": "RDNE Stock project",
+        "autor_url": "https://www.pexels.com/@rdne",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 34.67,
+        "hasta_s": 38.13,
+        "fuente": "pexels",
+        "id": 8873100,
+        "pagina": "https://www.pexels.com/video/close-up-of-a-person-writing-on-paper-8873100/",
+        "autor": "Mikhail Nilov",
+        "autor_url": "https://www.pexels.com/@mikhail-nilov",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 6,
-        "desde_s": 35.6,
-        "hasta_s": 40.93,
-        "fuente": "ia",
-        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "the narrow tunnel of an MRI scanner seen from the foot of the bed, cold light",
-        "tipo": "imagen"
+        "desde_s": 38.13,
+        "hasta_s": 45.63,
+        "fuente": "pexels",
+        "id": 7233474,
+        "pagina": "https://www.pexels.com/video/friends-eating-popcorn-while-watching-movie-in-cinema-7233474/",
+        "autor": "Pavel Danilyuk",
+        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
       }
     ],
-    "sintetico": true
+    "sintetico": false
   },
+  "animacion": null,
   "fotogramas_s": [
-    5.23,
-    12.05,
-    20.01,
-    27.98,
-    33.73,
-    41.02
+    4.01,
+    11.02,
+    18.0,
+    26.58,
+    35.11,
+    43.73
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }

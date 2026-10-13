@@ -682,6 +682,21 @@
       "subido_utc": "2026-10-12T07:27:57Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-12T18:14:21Z"
+    },
+    {
+      "id": "MDS-037.es",
+      "episodio": "MDS-037",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué un «vale.» con punto suena a enfado?",
+      "guion": "05_calendario/guiones/MDS-037.es.json",
+      "video_id": "wCOAS7j6v70",
+      "url": "https://youtu.be/wCOAS7j6v70",
+      "estado": "private",
+      "publicar_en": "2026-10-13T17:00:00Z",
+      "musica": "cama_09_first_light_galaxytones.mp3",
+      "subido_utc": "2026-10-13T07:52:16Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-12T18:10:05Z"
