@@ -178,7 +178,8 @@
  "MDS-039": {
   "3.1": {
    "excluir": [
-    "pixabay:32938"
+    "pixabay:32938",
+    "pexels:6245501"
    ],
    "busqueda": [
     "two adults laughing together leaving elevator"
@@ -191,6 +192,26 @@
    "busqueda": [
     "two strangers laughing together at table"
    ]
+  },
+  "4.2": {
+   "excluir": [
+    "pixabay:92480"
+   ],
+   "marca": true
+  }
+ },
+ "MDS-040": {
+  "2.2": {
+   "excluir": [
+    "pexels:8134383"
+   ],
+   "marca": true
+  },
+  "4.2": {
+   "excluir": [
+    "pixabay:171044"
+   ],
+   "marca": true
   }
  }
 }
