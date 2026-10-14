@@ -1,8 +1,8 @@
 {
   "guion": "MDS-040",
   "version": 1,
-  "firma": "b0fa8f17e2247d4c",
-  "resuelto_utc": "2026-10-08T22:30:35Z",
+  "firma": "73885c57644119d6",
+  "resuelto_utc": "2026-10-14T09:32:30Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -101,34 +101,8 @@
             10.11
           ],
           "frase": "Con todo el retintín.",
-          "fuente": "pexels",
-          "id": 8134383,
-          "pagina": "https://www.pexels.com/video/a-man-removing-eyeglasses-while-massaging-eyes-8134383/",
-          "titulo": "a man removing eyeglasses while massaging eyes",
-          "autor": "https://kaboompics.com/",
-          "autor_url": "https://www.pexels.com/@karola-g",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 21.0,
-          "ancho": 1080,
-          "alto": 2048,
-          "url": "https://videos.pexels.com/video-files/8134383/8134383-hd_1080_2048_25fps.mp4",
-          "tipo": "video",
-          "consulta": "man rolling eyes office",
-          "relevancia": 0.5,
-          "inicio_s": 0.4,
-          "movimiento": 7.14,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.567
-          },
-          "caras": [
-            [
-              0.4269,
-              0.26,
-              0.4308,
-              0.32
-            ]
-          ]
+          "fuente": "marca",
+          "tipo": "marca"
         }
       ]
     },
@@ -217,34 +191,8 @@
             10.64
           ],
           "frase": "cree que se nota mucho más de lo que se nota.",
-          "fuente": "pixabay",
-          "id": 171044,
-          "pagina": "https://pixabay.com/videos/id-171044/",
-          "titulo": "man, smile, smiling, happy, male, person, outdoors, portrait id",
-          "autor": "magicmore",
-          "autor_url": "https://pixabay.com/users/magicmore-37989617/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 8.0,
-          "ancho": 4096,
-          "alto": 2160,
-          "url": "https://cdn.pixabay.com/video/2023/07/11/171044-844787782_large.mp4",
-          "tipo": "video",
-          "consulta": "person confident smiling laptop",
-          "relevancia": 0.5,
-          "inicio_s": 0.4,
-          "movimiento": 2.08,
-          "encuadre": {
-            "x": 0.553,
-            "y": 0.5
-          },
-          "caras": [
-            [
-              0.1869,
-              0.1222,
-              0.6267,
-              0.4931
-            ]
-          ]
+          "fuente": "marca",
+          "tipo": "marca"
         }
       ]
     },
@@ -336,7 +284,7 @@
           "fuente": "pixabay",
           "id": 6395,
           "pagina": "https://pixabay.com/videos/id-6395/",
-          "titulo": "office, desk, beautiful wallpaper, computer, work, bokeh, blur, background, business, table, room, screen, technology, laptop, workplace, notebook, desktop id",
+          "titulo": "office, desk, computer, work, bokeh, blur, background, business, table, room, screen, technology, laptop, workplace, notebook, beautiful wallpaper, desktop id",
           "autor": "Coverr-Free-Footage",
           "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
