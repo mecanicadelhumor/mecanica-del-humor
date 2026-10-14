@@ -1,15 +1,15 @@
 {
-  "id": "MDS-032.es",
-  "duracion_final_s": 47.7,
-  "tamano_mb": 24.6,
+  "id": "MDS-038.es",
+  "duracion_final_s": 46.8,
+  "tamano_mb": 21.3,
   "audio": {
-    "lufs": -14.12,
-    "pico_dbtp": -1.19,
-    "rango_lu": 3.9
+    "lufs": -14.3,
+    "pico_dbtp": -1.26,
+    "rango_lu": 5.7
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.129,
+    "acaba_s": 0.122,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,15 +17,11 @@
     "silencios_s": [
       [
         0.0,
-        0.129
-      ],
-      [
-        0.941,
-        1.197
+        0.122
       ]
     ],
-    "fragmento_antes_de_la_narracion": true,
-    "duracion_fragmento_s": 0.812,
+    "fragmento_antes_de_la_narracion": false,
+    "duracion_fragmento_s": null,
     "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente)."
   },
   "fragmentos": {
@@ -46,24 +42,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 46.93,
-    "duracion_real_voz_mp3_s": 46.66,
-    "desfase_s": 0.27,
+    "duracion_calculada_s": 46.0,
+    "duracion_real_voz_mp3_s": 45.7,
+    "desfase_s": 0.3,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_04_reverie_piano_version_ft_adarsh_lucjo.mp3",
-    "sha256": "f5686d0d74fbcfca353106bf734605cf404103b3e58e38c4e48e29e8bb2904f0"
+    "archivo": "cama_10_farewell_galaxytones.mp3",
+    "sha256": "69dcf8f36cf5cd76332baaa29681a990c569856a97b4c0334e86a27e906c01dc"
   },
   "guion": {
-    "titulo_trabajo": "¿Se nota en la risa si dos personas son amigas?",
+    "titulo_trabajo": "¿Por qué no puedes hacerte cosquillas a ti mismo?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 46.93,
+    "duracion_narracion_s": 46.0,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 11.466,
+    "escena_mas_larga_s": 9.714,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 6
@@ -82,108 +78,105 @@
       "apertura",
       "planteamiento",
       "remate",
-      "enumeracion",
-      "cifra",
+      "explicacion",
+      "contraste",
       "objecion"
     ],
-    "escenas_ritmo_fuera_de_rango": []
+    "escenas_ritmo_fuera_de_rango": [],
+    "voz_fiel": [
+      "sin comprobar",
+      "sin comprobar",
+      "sin comprobar",
+      "sin comprobar",
+      "sin comprobar",
+      "sin comprobar"
+    ]
   },
   "visual": {
     "planos": [
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 5.77,
+        "hasta_s": 4.83,
+        "fuente": "pexels",
+        "id": 13770905,
+        "pagina": "https://www.pexels.com/video/close-up-of-female-bare-feet-13770905/",
+        "autor": "Mizuno K",
+        "autor_url": "https://www.pexels.com/@mizunokozuki",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 4.83,
+        "hasta_s": 6.87,
         "fuente": "pixabay",
-        "id": 34317,
-        "pagina": "https://pixabay.com/videos/id-34317/",
-        "autor": "RafterJr72",
-        "autor_url": "https://pixabay.com/users/RafterJr72-11468402/",
+        "id": 293085,
+        "pagina": "https://pixabay.com/videos/id-293085/",
+        "autor": "RainMeditateHub",
+        "autor_url": "https://pixabay.com/users/RainMeditateHub-51172146/",
         "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 5.77,
-        "hasta_s": 12.6,
+        "desde_s": 6.87,
+        "hasta_s": 13.2,
         "fuente": "pexels",
-        "id": 8296444,
-        "pagina": "https://www.pexels.com/video/dating-couple-having-coffee-8296444/",
-        "autor": "Mikhail Nilov",
-        "autor_url": "https://www.pexels.com/@mikhail-nilov",
+        "id": 4008364,
+        "pagina": "https://www.pexels.com/video/couple-feet-legs-friends-4008364/",
+        "autor": "cottonbro studio",
+        "autor_url": "https://www.pexels.com/@cottonbro",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 3,
-        "desde_s": 12.6,
-        "hasta_s": 16.23,
-        "fuente": "pixabay",
-        "id": 10822,
-        "pagina": "https://pixabay.com/videos/id-10822/",
-        "autor": "Coverr-Free-Footage",
-        "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
-        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 4,
-        "desde_s": 16.23,
-        "hasta_s": 25.07,
+        "desde_s": 13.2,
+        "hasta_s": 18.7,
         "fuente": "pexels",
-        "id": 8927989,
-        "pagina": "https://www.pexels.com/video/a-woman-putting-on-headphones-while-using-a-laptop-8927989/",
-        "autor": "SHVETS production",
-        "autor_url": "https://www.pexels.com/@shvets-production",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 5,
-        "desde_s": 29.13,
-        "hasta_s": 36.2,
-        "fuente": "pexels",
-        "id": 8816948,
-        "pagina": "https://www.pexels.com/video/animation-of-a-hand-flipping-a-coin-8816948/",
-        "autor": "cottonbro CG studio",
-        "autor_url": "https://www.pexels.com/@cottonbro-cg-studio",
+        "id": 9645549,
+        "pagina": "https://www.pexels.com/video/a-sad-elderly-man-covering-his-face-using-his-hands-9645549/",
+        "autor": "Ivan S",
+        "autor_url": "https://www.pexels.com/@ivan-s",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 6,
-        "desde_s": 36.2,
-        "hasta_s": 37.7,
+        "desde_s": 38.07,
+        "hasta_s": 44.23,
         "fuente": "pexels",
-        "id": 35829041,
-        "pagina": "https://www.pexels.com/video/argentine-coin-spinning-on-banknotes-close-up-35829041/",
-        "autor": "Andrew Schwark",
-        "autor_url": "https://www.pexels.com/@andrew-schwark-540305",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 6,
-        "desde_s": 37.7,
-        "hasta_s": 45.17,
-        "fuente": "pexels",
-        "id": 13324074,
-        "pagina": "https://www.pexels.com/video/two-men-talking-while-having-coffee-13324074/",
-        "autor": "Mizuno K",
-        "autor_url": "https://www.pexels.com/@mizunokozuki",
+        "id": 6247901,
+        "pagina": "https://www.pexels.com/video/two-people-on-the-couch-chatting-over-coffee-6247901/",
+        "autor": "Gary  Barnes",
+        "autor_url": "https://www.pexels.com/@gary-barnes",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       }
     ],
     "sintetico": false
   },
+  "animacion": {
+    "escenas_animadas": 2,
+    "escenas": [
+      4,
+      5
+    ],
+    "pedidas": [
+      4,
+      5
+    ],
+    "descartadas": {},
+    "pagina": "05_calendario/animaciones/MDS-038/animacion.html"
+  },
   "fotogramas_s": [
-    3.57,
-    9.98,
-    14.91,
-    23.24,
-    32.94,
-    42.76
+    3.01,
+    9.96,
+    16.61,
+    24.64,
+    34.33,
+    42.94
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }

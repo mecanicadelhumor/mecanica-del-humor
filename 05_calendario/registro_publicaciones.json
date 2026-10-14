@@ -698,6 +698,21 @@
       "subido_utc": "2026-10-13T07:52:16Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-13T21:52:58Z"
+    },
+    {
+      "id": "MDS-038.es",
+      "episodio": "MDS-038",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué no puedes hacerte cosquillas a ti mismo?",
+      "guion": "05_calendario/guiones/MDS-038.es.json",
+      "video_id": "9jacWFrJdoI",
+      "url": "https://youtu.be/9jacWFrJdoI",
+      "estado": "private",
+      "publicar_en": "2026-10-14T17:00:00Z",
+      "musica": "cama_10_farewell_galaxytones.mp3",
+      "subido_utc": "2026-10-14T06:18:13Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-13T21:52:58Z"
