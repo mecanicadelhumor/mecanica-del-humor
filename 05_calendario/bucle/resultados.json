@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-13T19:58:25Z",
+ "actualizado_utc": "2026-10-14T12:22:39Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -102,7 +102,7 @@
     {
      "id": "MDS-038",
      "variante": "A",
-     "motivo": "sin ficha de producción todavía"
+     "motivo": "sin «se quedaron» a 48 h todavía"
     },
     {
      "id": "MDS-039",
