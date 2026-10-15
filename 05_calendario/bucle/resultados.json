@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-14T18:11:46Z",
+ "actualizado_utc": "2026-10-15T12:07:20Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -64,13 +64,24 @@
     },
     "B": {
      "nombre": "Arranque con el dato",
-     "n": 0,
-     "se_quedaron_media": null,
-     "porcentaje_visto_media": null,
-     "vistas_48h_mediana": null,
-     "me_gusta_por_100": null,
+     "n": 1,
+     "se_quedaron_media": 15.6,
+     "porcentaje_visto_media": 35.4,
+     "vistas_48h_mediana": 321,
+     "me_gusta_por_100": 0.93,
      "ceros_de_feed": 0,
-     "shorts": []
+     "shorts": [
+      {
+       "id": "MDS-036",
+       "publicado": "2026-10-12",
+       "se_quedaron_pct": 15.6,
+       "vistas_48h": 321,
+       "porcentaje_visto": 35.4,
+       "me_gusta": 3,
+       "visualizaciones": 321,
+       "leido": "2026-10-15"
+      }
+     ]
     }
    },
    "comparaciones": {
@@ -90,11 +101,6 @@
    "apartados": [],
    "pendientes": [
     {
-     "id": "MDS-036",
-     "variante": "B",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    },
-    {
      "id": "MDS-037",
      "variante": "control",
      "motivo": "sin «se quedaron» a 48 h todavía"
@@ -107,7 +113,7 @@
     {
      "id": "MDS-039",
      "variante": "A",
-     "motivo": "sin ficha de producción todavía"
+     "motivo": "sin «se quedaron» a 48 h todavía"
     },
     {
      "id": "MDS-040",
