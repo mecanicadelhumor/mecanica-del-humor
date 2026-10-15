@@ -1,0 +1,400 @@
+{
+  "guion": "MDS-048",
+  "version": 1,
+  "firma": "9bc1ef452ac4f785",
+  "resuelto_utc": "2026-10-15T22:34:30Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "d7b29a95ab1b",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            2.17
+          ],
+          "frase": "Grupo de la familia.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a Spanish potato omelette on a plate on a family kitchen table",
+          "semilla": 10281474,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-048/e1_p1.jpg",
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Tu tío escribe",
+          "t_estimado": [
+            2.17,
+            9.77
+          ],
+          "frase": "Tu tío escribe que la tortilla, sin cebolla, y que lo demás es un delito.",
+          "fuente": "pexels",
+          "id": 5971597,
+          "pagina": "https://www.pexels.com/video/a-man-sitting-on-a-sofa-using-a-smartphone-5971597/",
+          "titulo": "a man sitting on a sofa using a smartphone",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 20.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/5971597/5971597-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "older man typing phone sofa",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 4.33,
+          "encuadre": {
+            "x": 0.5,
+            "y": 1
+          },
+          "caras": [
+            [
+              0.751,
+              0.4722,
+              0.0968,
+              0.0755
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "709aaa56cd23",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            2.77
+          ],
+          "frase": "Y tú contestas que sin cebolla es",
+          "fuente": "pexels",
+          "id": 7550765,
+          "pagina": "https://www.pexels.com/video/woman-on-couch-typing-on-phone-7550765/",
+          "titulo": "woman on couch typing on phone",
+          "autor": "Hanna Pad",
+          "autor_url": "https://www.pexels.com/@anna-nekrashevich",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 7.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7550765/7550765-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "young woman typing phone smirking",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 0.92,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4194,
+              0.3391,
+              0.2361,
+              0.1609
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "un huevo frito",
+          "t_estimado": [
+            2.77,
+            7.34
+          ],
+          "frase": "un huevo frito con pretensiones.",
+          "fuente": "pexels",
+          "id": 6288847,
+          "pagina": "https://www.pexels.com/video/fried-quail-eggs-being-in-a-pan-6288847/",
+          "titulo": "fried quail eggs being in a pan",
+          "autor": "Klaus Nielsen",
+          "autor_url": "https://www.pexels.com/@klaus-nielsen",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6288847/6288847-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "fried egg in pan close up",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 7.37,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "af1af9241dc9",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.62
+          ],
+          "frase": "A la media hora, tu tío ha salido del grupo.",
+          "fuente": "pexels",
+          "id": 36656153,
+          "pagina": "https://www.pexels.com/video/senior-man-using-mobile-phone-in-office-setting-36656153/",
+          "titulo": "senior man using mobile phone in office setting",
+          "autor": "GIUSEPPE DE BERGOLIS",
+          "autor_url": "https://www.pexels.com/@giuseppe-de-bergolis-416966285",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/36656153/15539848_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "man putting phone down offended",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 1.89,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3528,
+              0.1906,
+              0.2361,
+              0.1859
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "4e89d4e57077",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.4
+          ],
+          "frase": "Unos psicólogos pusieron a gente a leer,",
+          "fuente": "pixabay",
+          "id": 1028,
+          "pagina": "https://pixabay.com/videos/id-1028/",
+          "titulo": "homework, girl, student, laptop, study, studying, notebook, work, fan, chair, desk, concentrated, concentrating, education, school, learning, reading, female, people, college id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 12.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2015/10/16/1028-142624363_large.mp4",
+          "tipo": "video",
+          "consulta": "person reading text on laptop",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 1.59,
+          "encuadre": {
+            "x": 0.922,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.398,
+              0.0296,
+              0.2042,
+              0.1704
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "o a escuchar",
+          "t_estimado": [
+            3.4,
+            10.18
+          ],
+          "frase": "o a escuchar, las mismas palabras de alguien que no pensaba como ellos.",
+          "fuente": "pexels",
+          "id": 6688137,
+          "pagina": "https://www.pexels.com/video/a-person-listening-to-music-using-a-wireless-headphones-6688137/",
+          "titulo": "a person listening to music using a wireless headphones",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 8.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6688137/6688137-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "person listening with headphones desk",
+          "relevancia": 0.75,
+          "inicio_s": 0.0,
+          "movimiento": 3.66,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3472,
+              0.3828,
+              0.2667,
+              0.1891
+            ]
+          ]
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "ace0cd7a4905",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.95
+          ],
+          "frase": "Al oír su voz, le veían más sensato que leyendo exactamente lo mismo.",
+          "fuente": "pexels",
+          "id": 6614771,
+          "pagina": "https://www.pexels.com/video/man-listening-to-music-with-headphones-6614771/",
+          "titulo": "man listening to music with headphones",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 30.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6614771/6614771-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man nodding listening headphones",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 3.87,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5083,
+              0.338,
+              0.0833,
+              0.0587
+            ],
+            [
+              0.3875,
+              0.3427,
+              0.075,
+              0.0563
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "e2a06b3c0272",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.63
+          ],
+          "frase": "Con tu tío, la próxima vez, mejor un audio. Aunque ojo: se probó con temas serios de verdad,",
+          "fuente": "pexels",
+          "id": 6998329,
+          "pagina": "https://www.pexels.com/video/a-man-using-a-smartphone-6998329/",
+          "titulo": "a man using a smartphone",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 39.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6998329/6998329-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man recording voice message phone",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 3.88,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.7611,
+              0.3,
+              0.2306,
+              0.1734
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "no con la cebolla",
+          "t_estimado": [
+            8.63,
+            10.85
+          ],
+          "frase": "no con la cebolla.",
+          "fuente": "pexels",
+          "id": 31479043,
+          "pagina": "https://www.pexels.com/video/slicing-onion-on-cutting-board-in-sunlight-31479043/",
+          "titulo": "slicing onion on cutting board in sunlight",
+          "autor": "Nadin Sh",
+          "autor_url": "https://www.pexels.com/@nadin-sh-78971847",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 7.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/31479043/13421832_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "onion on cutting board",
+          "relevancia": 1.0,
+          "inicio_s": 0.4,
+          "movimiento": 17.61,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 1,
+      "plano": 1,
+      "id": "pexels:8448184",
+      "titulo": "a person making tortilla wrap",
+      "motivo": "poco relevante (0.333): se prueba la IA"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}

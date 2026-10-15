@@ -1,0 +1,406 @@
+{
+  "guion": "MDS-045",
+  "version": 1,
+  "firma": "d0c472f0ece57228",
+  "resuelto_utc": "2026-10-15T22:32:45Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "99fd19f57474",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            2.47
+          ],
+          "frase": "Te ríes más de los chistes",
+          "fuente": "pexels",
+          "id": 6245895,
+          "pagina": "https://www.pexels.com/video/christmas-party-at-the-office-6245895/",
+          "titulo": "christmas party at the office",
+          "autor": "olia danilevich",
+          "autor_url": "https://www.pexels.com/@olia-danilevich",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6245895/6245895-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "office party colleagues laughing at boss",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 5.5,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4972,
+              0.1812,
+              0.1,
+              0.0797
+            ],
+            [
+              0.1472,
+              0.2078,
+              0.0861,
+              0.0688
+            ],
+            [
+              0.7222,
+              0.2453,
+              0.0833,
+              0.0703
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "de quien decide",
+          "t_estimado": [
+            2.47,
+            5.98
+          ],
+          "frase": "de quien decide tu dinero.",
+          "fuente": "marca",
+          "tipo": "marca"
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "df30d6d7d8ce",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.83
+          ],
+          "frase": "Cena de empresa. El jefe pregunta: ¿cuál es el café más peligroso del mundo?",
+          "fuente": "pexels",
+          "id": 6100901,
+          "pagina": "https://www.pexels.com/video/man-wearing-a-suit-talking-6100901/",
+          "titulo": "man wearing a suit talking",
+          "autor": "KATRIN  BOLOVTSOVA",
+          "autor_url": "https://www.pexels.com/@ekaterina-bolovtsova",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 25.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6100901/6100901-hd_1080_2048_30fps.mp4",
+          "tipo": "video",
+          "consulta": "man in suit talking at restaurant table",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 2.3,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.2743,
+              0.0751,
+              0.323,
+              0.2479
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "El ex-preso",
+          "t_estimado": [
+            6.83,
+            8.13
+          ],
+          "frase": "El ex-preso.",
+          "fuente": "pexels",
+          "id": 15389923,
+          "pagina": "https://www.pexels.com/video/close-up-of-a-paper-cup-on-a-coffee-shop-table-15389923/",
+          "titulo": "close up of a paper cup on a coffee shop table",
+          "autor": "Viktorya  Sergeeva 🫂",
+          "autor_url": "https://www.pexels.com/@johndetochka",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 9.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/15389923/15389923-hd_1080_1920_60fps.mp4",
+          "tipo": "video",
+          "consulta": "espresso cup on table close up",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 1.21,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 3,
+          "desde": "Y la mesa entera",
+          "t_estimado": [
+            8.13,
+            11.95
+          ],
+          "frase": "Y la mesa entera se parte.",
+          "fuente": "pexels",
+          "id": 3256852,
+          "pagina": "https://www.pexels.com/video/a-group-of-people-eating-together-in-a-table-3256852/",
+          "titulo": "a group of people eating together in a table",
+          "autor": "fauxels",
+          "autor_url": "https://www.pexels.com/@fauxels",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 7.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/3256852/3256852-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "group laughing restaurant table",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 15.42,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2861,
+              0.2359,
+              0.225,
+              0.1688
+            ],
+            [
+              0.7667,
+              0.2969,
+              0.1861,
+              0.1875
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "412a2b949fc1",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.9
+          ],
+          "frase": "Diez minutos después, el becario cuenta el mismo chiste. Y",
+          "fuente": "pexels",
+          "id": 6185418,
+          "pagina": "https://www.pexels.com/video/young-man-with-fedora-hat-sitting-at-table-and-talking-6185418/",
+          "titulo": "young man with fedora hat sitting at table and talking",
+          "autor": "Yaroslav Shuraev",
+          "autor_url": "https://www.pexels.com/@yaroslav-shuraev",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 16.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6185418/6185418-hd_1080_2048_24fps.mp4",
+          "tipo": "video",
+          "consulta": "young man talking at dinner table",
+          "relevancia": 0.8,
+          "inicio_s": 0.4,
+          "movimiento": 8.11,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.3538,
+              0.1434,
+              0.3261,
+              0.2589
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "solo se oyen los cubiertos",
+          "t_estimado": [
+            4.9,
+            7.92
+          ],
+          "frase": "solo se oyen los cubiertos.",
+          "fuente": "pexels",
+          "id": 9733240,
+          "pagina": "https://www.pexels.com/video/extreme-close-up-of-a-person-painting-on-a-ceramic-plate-9733240/",
+          "titulo": "extreme close up of a person painting on a ceramic plate",
+          "autor": "KoolShooters",
+          "autor_url": "https://www.pexels.com/@koolshooters",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 9.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/9733240/9733240-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "cutlery on plate close up",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 12.08,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "4adbd8d76772",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.47
+          ],
+          "frase": "Unos psicólogos lo probaron con entrevistas: la gente se reía más de los chistes del entrevistador si él decidía",
+          "fuente": "pixabay",
+          "id": 136284,
+          "pagina": "https://pixabay.com/videos/id-136284/",
+          "titulo": "business, beautiful wallpaper, office, contemporary, computer, work, desk, table, technology, room, background, design, interior, workplace, programmer, software, developer, internet, engineer, programming, job, monitor, program, people id",
+          "autor": "blackmarketmusic",
+          "autor_url": "https://pixabay.com/users/blackmarketmusic-2976878/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 13.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2022/10/24/136284-764387740_large.mp4",
+          "tipo": "video",
+          "consulta": "job interview office desk",
+          "relevancia": 1.0,
+          "inicio_s": 0.4,
+          "movimiento": 5.73,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "cuánto dinero ganaban",
+          "t_estimado": [
+            8.47,
+            11.1
+          ],
+          "frase": "cuánto dinero ganaban.",
+          "fuente": "pexels",
+          "id": 34719386,
+          "pagina": "https://www.pexels.com/video/counting-cash-at-desk-for-financial-planning-34719386/",
+          "titulo": "counting cash at desk for financial planning",
+          "autor": "Jakub Zerdzicki",
+          "autor_url": "https://www.pexels.com/@jakubzerdzicki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/34719386/14717145_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "cash envelope on desk",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 9.73,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "daeb9f2a1afe",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.9
+          ],
+          "frase": "El chiste del ex-preso no mejoró: mejoró quién lo contaba.",
+          "fuente": "pexels",
+          "id": 34535720,
+          "pagina": "https://www.pexels.com/video/top-view-of-espresso-cups-on-wooden-table-34535720/",
+          "titulo": "top view of espresso cups on wooden table",
+          "autor": "peri ✨",
+          "autor_url": "https://www.pexels.com/@peri-2149976252",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 7.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/34535720/14632459_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "espresso cup empty table",
+          "relevancia": 0.75,
+          "inicio_s": 0.0,
+          "movimiento": 1.85,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Aunque en el estudio",
+          "t_estimado": [
+            4.9,
+            11.78
+          ],
+          "frase": "Aunque en el estudio no había sueldos: el dinero era un premio del experimento.",
+          "fuente": "pixabay",
+          "id": 130645,
+          "pagina": "https://pixabay.com/videos/id-130645/",
+          "titulo": "woman, model, notebook, book, creator, desk, businesswoman, young, writing, working, paper, lifestyle, laptop, computer, adult, work, student, pen, business, typing, table, sitting, creative, casual id",
+          "autor": "SYG_Anime",
+          "autor_url": "https://pixabay.com/users/SYG_Anime-7158719/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 15.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2022/09/08/130645-747868363_large.mp4",
+          "tipo": "video",
+          "consulta": "university lab desk papers",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 4.98,
+          "encuadre": {
+            "x": 0.643,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.1983,
+              0.1847,
+              0.6049,
+              0.4208
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

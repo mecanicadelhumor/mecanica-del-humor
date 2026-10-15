@@ -1,0 +1,545 @@
+{
+  "guion": "MDS-043",
+  "version": 1,
+  "firma": "4a02150496cf0039",
+  "resuelto_utc": "2026-10-15T22:32:16Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "b5d96dafbc74",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            2.9
+          ],
+          "frase": "La risa se pega más al oírla;",
+          "fuente": "pexels",
+          "id": 7251561,
+          "pagina": "https://www.pexels.com/video/man-with-headphones-and-notebook-on-a-train-7251561/",
+          "titulo": "man with headphones and notebook on a train",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7251561/7251561-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man laughing on train headphones",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 4.23,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3625,
+              0.3052,
+              0.3167,
+              0.2183
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "el bostezo, más al verlo",
+          "t_estimado": [
+            2.9,
+            6.44
+          ],
+          "frase": "el bostezo, más al verlo.",
+          "fuente": "pexels",
+          "id": 31364111,
+          "pagina": "https://www.pexels.com/video/man-relaxing-with-coffee-on-train-journey-31364111/",
+          "titulo": "man relaxing with coffee on train journey",
+          "autor": "Dara  Visuals",
+          "autor_url": "https://www.pexels.com/@daravisuals",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/31364111/13383908_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "man yawning on train",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 1.41,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3611,
+              0.3094,
+              0.0972,
+              0.0813
+            ],
+            [
+              0.45,
+              0.325,
+              0.1056,
+              0.0656
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "10f427ae498d",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.3
+          ],
+          "frase": "En el tren, el de al lado se ríe a carcajadas con un audio.",
+          "fuente": "pexels",
+          "id": 4962639,
+          "pagina": "https://www.pexels.com/video/a-woman-listening-to-a-voice-message-4962639/",
+          "titulo": "a woman listening to a voice message",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/4962639/4962639-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man laughing listening voice message train",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 11.72,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.35,
+              0.3063,
+              0.2056,
+              0.1719
+            ],
+            [
+              0.5,
+              0.3797,
+              0.2333,
+              0.1453
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Y tú sonríes",
+          "t_estimado": [
+            6.3,
+            10.57
+          ],
+          "frase": "Y tú sonríes sin querer.",
+          "fuente": "pexels",
+          "id": 8553613,
+          "pagina": "https://www.pexels.com/video/a-man-and-a-woman-talking-while-sitting-on-a-train-8553613/",
+          "titulo": "a man and a woman talking while sitting on a train",
+          "autor": "Liliana Drew",
+          "autor_url": "https://www.pexels.com/@liliana-drew",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8553613/8553613-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman smiling on train looking aside",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 4.96,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2694,
+              0.4453,
+              0.1833,
+              0.1328
+            ],
+            [
+              0.6167,
+              0.7484,
+              0.1583,
+              0.1141
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "2d3b962818aa",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.23
+          ],
+          "frase": "A la vigésima carcajada, ya no. Pero",
+          "fuente": "pexels",
+          "id": 8721788,
+          "pagina": "https://www.pexels.com/video/a-young-woman-riding-a-train-8721788/",
+          "titulo": "a young woman riding a train",
+          "autor": "Darina Belonogova",
+          "autor_url": "https://www.pexels.com/@darina-belonogova",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8721788/8721788-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "annoyed woman on train",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 5.45,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4778,
+              0.375,
+              0.1139,
+              0.0844
+            ],
+            [
+              0.3972,
+              0.3609,
+              0.1056,
+              0.0766
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "en cuanto él bosteza",
+          "t_estimado": [
+            3.23,
+            5.07
+          ],
+          "frase": "en cuanto él bosteza,",
+          "fuente": "pexels",
+          "id": 7252618,
+          "pagina": "https://www.pexels.com/video/man-browsing-his-smartphone-while-sitting-inside-a-train-7252618/",
+          "titulo": "man browsing his smartphone while sitting inside a train",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 19.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7252618/7252618-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man yawning train seat",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 2.05,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.375,
+              0.3375,
+              0.1889,
+              0.1453
+            ]
+          ]
+        },
+        {
+          "k": 3,
+          "desde": "bostezas tú",
+          "t_estimado": [
+            5.07,
+            7.0
+          ],
+          "frase": "bostezas tú.",
+          "fuente": "pexels",
+          "id": 6083389,
+          "pagina": "https://www.pexels.com/video/woman-wearing-face-mask-inside-the-train-6083389/",
+          "titulo": "woman wearing face mask inside the train",
+          "autor": "Keira Burton",
+          "autor_url": "https://www.pexels.com/@keira-burton",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6083389/6083389-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman yawning on train",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 3.91,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2583,
+              0.2375,
+              0.2083,
+              0.15
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "0f801123f7c0",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            1.77
+          ],
+          "frase": "Unos neurocientíficos",
+          "fuente": "pexels",
+          "id": 29276577,
+          "pagina": "https://www.pexels.com/video/silhouette-with-headphones-in-front-of-computer-screen-29276577/",
+          "titulo": "silhouette with headphones in front of computer screen",
+          "autor": "Azhaan Bashmil",
+          "autor_url": "https://www.pexels.com/@azhaan-bashmil-728761857",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/29276577/12627814_1080_1920_60fps.mp4",
+          "tipo": "video",
+          "consulta": "person alone watching screen headphones",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 4.5,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "grabaron la cara",
+          "t_estimado": [
+            1.77,
+            7.87
+          ],
+          "frase": "grabaron la cara de gente sola mientras oía o veía risas y bostezos.",
+          "fuente": "pexels",
+          "id": 6883838,
+          "pagina": "https://www.pexels.com/video/an-interview-being-recorded-in-camera-6883838/",
+          "titulo": "an interview being recorded in camera",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 24.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6883838/6883838-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "camera recording face close up",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 4.04,
+          "encuadre": {
+            "x": 0.5,
+            "y": 1
+          },
+          "caras": [
+            [
+              0.0,
+              0.4166,
+              0.1759,
+              0.1233
+            ]
+          ]
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "045797fe1e04",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.87
+          ],
+          "frase": "La risa se pegaba más al oírla, casi siempre como sonrisa, y cada vez menos.",
+          "fuente": "pixabay",
+          "id": 161062,
+          "pagina": "https://pixabay.com/videos/id-161062/",
+          "titulo": "woman, headphones, earphones, music, listen, relax, park id",
+          "autor": "u_ayuc6ef9vb",
+          "autor_url": "https://pixabay.com/users/u_ayuc6ef9vb-30649611/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 10.0,
+          "ancho": 2160,
+          "alto": 3840,
+          "url": "https://cdn.pixabay.com/video/2023/04/30/161062-822582130_large.mp4",
+          "tipo": "video",
+          "consulta": "person smiling listening headphones",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 1.88,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5542,
+              0.3086,
+              0.1597,
+              0.1289
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "El bostezo, más al verlo",
+          "t_estimado": [
+            6.87,
+            11.57
+          ],
+          "frase": "El bostezo, más al verlo, y siempre igual.",
+          "fuente": "pixabay",
+          "id": 123268,
+          "pagina": "https://pixabay.com/videos/id-123268/",
+          "titulo": "man, green screen, gold, trophy, award, winner, fight, chroma key, human, person id",
+          "autor": "Exceptional_3D",
+          "autor_url": "https://pixabay.com/users/Exceptional_3D-16154516/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 7.0,
+          "ancho": 1440,
+          "alto": 2000,
+          "url": "https://cdn.pixabay.com/video/2022/07/05/123268-727221670_large.mp4",
+          "tipo": "video",
+          "consulta": "person yawning watching screen",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 1.14,
+          "encuadre": {
+            "x": 0.572,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4798,
+              0.2707,
+              0.1066,
+              0.076
+            ],
+            [
+              0.4134,
+              0.2627,
+              0.1043,
+              0.0747
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "8d79e6d46630",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.43
+          ],
+          "frase": "Por eso en el tren dejaste de sonreír y seguiste bostezando.",
+          "fuente": "pexels",
+          "id": 9485344,
+          "pagina": "https://www.pexels.com/video/a-man-sleeping-on-a-subway-train-9485344/",
+          "titulo": "a man sleeping on a subway train",
+          "autor": "Timur Weber",
+          "autor_url": "https://www.pexels.com/@timur-weber",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/9485344/9485344-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "train window passenger sleeping",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 6.21,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3639,
+              0.4641,
+              0.1972,
+              0.1125
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Ojo: era gente sola",
+          "t_estimado": [
+            5.43,
+            10.85
+          ],
+          "frase": "Ojo: era gente sola ante una pantalla, no en un tren.",
+          "fuente": "pixabay",
+          "id": 223892,
+          "pagina": "https://pixabay.com/videos/id-223892/",
+          "titulo": "computer, monitor, keyboard, mouse, table, chair, columns, lighting, design, interior, technology, organization, ergonomics, modern, workplace id",
+          "autor": "ZT_OSCAR",
+          "autor_url": "https://pixabay.com/users/ZT_OSCAR-5239946/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 5.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://cdn.pixabay.com/video/2024/07/30/223892_large.mp4",
+          "tipo": "video",
+          "consulta": "empty lab room chair monitor",
+          "relevancia": 0.4,
+          "inicio_s": 0.0,
+          "movimiento": 4.17,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

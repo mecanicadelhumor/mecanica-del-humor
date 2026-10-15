@@ -1,0 +1,492 @@
+{
+  "guion": "MDS-049",
+  "version": 1,
+  "firma": "4bc713c6bb04cf40",
+  "resuelto_utc": "2026-10-15T22:34:47Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "e837fa876b0b",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            1.47
+          ],
+          "frase": "Después de reírte,",
+          "fuente": "pixabay",
+          "id": 176024,
+          "pagina": "https://pixabay.com/videos/id-176024/",
+          "titulo": "compass, night, moon, evening, window, table, book, chain, curtains, light, fantasy id",
+          "autor": "Mabelle-Elise",
+          "autor_url": "https://pixabay.com/users/Mabelle-Elise-15751335/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://cdn.pixabay.com/video/2023/08/14/176024-854496277_large.mp4",
+          "tipo": "video",
+          "consulta": "friends laughing at dinner table night",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 1.2,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "cuentas cosas",
+          "t_estimado": [
+            1.47,
+            5.52
+          ],
+          "frase": "cuentas cosas más íntimas sin darte cuenta.",
+          "fuente": "marca",
+          "tipo": "marca"
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "0b395d119f4c",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.43
+          ],
+          "frase": "Primera cena con los compañeros nuevos.",
+          "fuente": "pixabay",
+          "id": 227128,
+          "pagina": "https://pixabay.com/videos/id-227128/",
+          "titulo": "lunch, food, dinner, meal, cooking, restaurant, breakfast, sandwich, delicious, dish id",
+          "autor": "kurt_BID",
+          "autor_url": "https://pixabay.com/users/kurt_BID-45319899/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 6.0,
+          "ancho": 2160,
+          "alto": 3840,
+          "url": "https://cdn.pixabay.com/video/2024/08/18/227128_large.mp4",
+          "tipo": "video",
+          "consulta": "coworkers dinner restaurant evening",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 17.05,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3417,
+              0.4719,
+              0.2306,
+              0.1461
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Alguien imita al jefe",
+          "t_estimado": [
+            3.43,
+            8.26
+          ],
+          "frase": "Alguien imita al jefe y lloráis de risa.",
+          "fuente": "pexels",
+          "id": 10582083,
+          "pagina": "https://www.pexels.com/video/man-and-woman-on-dinner-at-restaurant-10582083/",
+          "titulo": "man and woman on dinner at restaurant",
+          "autor": "Nadin Sh",
+          "autor_url": "https://www.pexels.com/@nadin-sh-78971847",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 22.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/10582083/10582083-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "man doing impression at dinner",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 27.11,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "346a5c23773c",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.03
+          ],
+          "frase": "Media hora después, ya saben cómo se llama tu ex y",
+          "fuente": "pexels",
+          "id": 5791526,
+          "pagina": "https://www.pexels.com/video/woman-having-dinner-and-talking-to-other-members-5791526/",
+          "titulo": "woman having dinner and talking to other members",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 32.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/5791526/5791526-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman talking animatedly dinner",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 8.27,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.413,
+              0.1344,
+              0.2628,
+              0.2111
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "tu miedo a las palomas",
+          "t_estimado": [
+            5.03,
+            8.38
+          ],
+          "frase": "tu miedo a las palomas.",
+          "fuente": "pexels",
+          "id": 29398627,
+          "pagina": "https://www.pexels.com/video/pigeons-pecking-on-city-street-with-people-29398627/",
+          "titulo": "pigeons pecking on city street with people",
+          "autor": "Ebahir",
+          "autor_url": "https://www.pexels.com/@ebahir",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 7.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/29398627/12662231_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "pigeons on city square",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 21.25,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.7472,
+              0.0094,
+              0.1111,
+              0.0766
+            ],
+            [
+              0.3056,
+              0.0922,
+              0.1,
+              0.0781
+            ],
+            [
+              0.325,
+              0.3844,
+              0.1083,
+              0.0672
+            ],
+            [
+              0.3944,
+              0.3547,
+              0.1056,
+              0.0641
+            ],
+            [
+              0.8306,
+              0.0688,
+              0.1,
+              0.0672
+            ],
+            [
+              0.8639,
+              0.2172,
+              0.0861,
+              0.0688
+            ],
+            [
+              0.7083,
+              0.0766,
+              0.0917,
+              0.0625
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "67df44c75565",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.6
+          ],
+          "frase": "Unos psicólogos pusieron a gente a ver un vídeo, de risa o sin gracia,",
+          "fuente": "pexels",
+          "id": 5359024,
+          "pagina": "https://www.pexels.com/video/people-looking-at-a-laptop-5359024/",
+          "titulo": "people looking at a laptop",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 31.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5359024/5359024-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "people watching laptop laughing",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 3.96,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2139,
+              0.3609,
+              0.125,
+              0.0859
+            ],
+            [
+              0.5944,
+              0.4172,
+              0.1194,
+              0.0844
+            ],
+            [
+              0.4028,
+              0.3031,
+              0.1222,
+              0.075
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "y luego a escribir",
+          "t_estimado": [
+            6.6,
+            10.64
+          ],
+          "frase": "y luego a escribir sobre sí misma.",
+          "fuente": "pexels",
+          "id": 20413321,
+          "pagina": "https://www.pexels.com/video/a-person-writing-on-a-piece-of-paper-with-a-pen-20413321/",
+          "titulo": "a person writing on a piece of paper with a pen",
+          "autor": "Orhan Pergel",
+          "autor_url": "https://www.pexels.com/@skylake",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/20413321/20413321-hd_1080_1920_50fps.mp4",
+          "tipo": "video",
+          "consulta": "hand writing on paper desk",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 1.74,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.225,
+              0.2606,
+              0.6875,
+              0.6573
+            ]
+          ]
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "599a5d7a3bfb",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.6
+          ],
+          "frase": "Quien se había reído contaba cosas más íntimas. Lo notaban otras personas al leerlo;",
+          "fuente": "pexels",
+          "id": 6857721,
+          "pagina": "https://www.pexels.com/video/a-man-reading-a-document-and-writing-notes-6857721/",
+          "titulo": "a man reading a document and writing notes",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 31.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6857721/6857721-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "person reading notes surprised",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 2.51,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.154
+          },
+          "caras": [
+            [
+              0.1504,
+              0.1425,
+              0.2212,
+              0.2128
+            ],
+            [
+              0.5796,
+              0.6883,
+              0.1814,
+              0.1327
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "quien lo escribió, no",
+          "t_estimado": [
+            6.6,
+            9.26
+          ],
+          "frase": "quien lo escribió, no.",
+          "fuente": "pexels",
+          "id": 9710751,
+          "pagina": "https://www.pexels.com/video/man-with-white-shirt-smiling-at-the-camera-9710751/",
+          "titulo": "man with white shirt smiling at the camera",
+          "autor": "SHVETS production",
+          "autor_url": "https://www.pexels.com/@shvets-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 9.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/9710751/9710751-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man shrugging smiling",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 3.35,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.375,
+              0.1221,
+              0.4167,
+              0.3075
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "5ed39419a814",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.53
+          ],
+          "frase": "Lo de las palomas pudo ser la risa, y ni te enteraste.",
+          "fuente": "pexels",
+          "id": 29323727,
+          "pagina": "https://www.pexels.com/video/pigeons-on-a-cobblestone-street-29323727/",
+          "titulo": "pigeons on a cobblestone street",
+          "autor": "m.emre_celik",
+          "autor_url": "https://www.pexels.com/@m-emre_celik-2054744248",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/29323727/12640900_1080_1920_32fps.mp4",
+          "tipo": "video",
+          "consulta": "pigeon walking alone street",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 9.39,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Eso sí, se probó",
+          "t_estimado": [
+            5.53,
+            11.32
+          ],
+          "frase": "Eso sí, se probó en un laboratorio, no en una cena.",
+          "fuente": "pexels",
+          "id": 37883389,
+          "pagina": "https://www.pexels.com/video/empty-classroom-with-desks-and-whiteboard-37883389/",
+          "titulo": "empty classroom with desks and whiteboard",
+          "autor": "Belén Montero",
+          "autor_url": "https://www.pexels.com/@belenmontero",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/37883389/16073099_1080_1920_60fps.mp4",
+          "tipo": "video",
+          "consulta": "empty classroom desks papers",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 7.26,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

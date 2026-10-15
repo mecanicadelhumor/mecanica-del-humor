@@ -1,0 +1,429 @@
+{
+  "guion": "MDS-047",
+  "version": 1,
+  "firma": "56f941905c8eb48a",
+  "resuelto_utc": "2026-10-15T22:33:33Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "9f9072770797",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.7
+          ],
+          "frase": "Fiesta de Halloween en la oficina. Andrés, el de contabilidad,",
+          "fuente": "pexels",
+          "id": 9720877,
+          "pagina": "https://www.pexels.com/video/two-children-in-mummy-costumes-during-halloween-9720877/",
+          "titulo": "two children in mummy costumes during halloween",
+          "autor": "Mike Jones",
+          "autor_url": "https://www.pexels.com/@mike-jones",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/9720877/9720877-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "office halloween party costumes",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 26.3,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2528,
+              0.1656,
+              0.2167,
+              0.1406
+            ],
+            [
+              0.8861,
+              0.2391,
+              0.1139,
+              0.0984
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "viene disfrazado de payaso",
+          "t_estimado": [
+            4.7,
+            7.46
+          ],
+          "frase": "viene disfrazado de payaso.",
+          "fuente": "pixabay",
+          "id": 80862,
+          "pagina": "https://pixabay.com/videos/id-80862/",
+          "titulo": "clown, circus, evil clown, horror, it, halloween, scary, wicked, adult, face painting, comedian, hopeless, loneliness, alone, lonely, mental health, green screen, chroma, joker, creepy, fear, terror id",
+          "autor": "videoplasty",
+          "autor_url": "https://pixabay.com/users/videoplasty-19751245/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 10.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2021/07/09/80862-573481999_large.mp4",
+          "tipo": "video",
+          "consulta": "adult in clown costume office",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 0.58,
+          "encuadre": {
+            "x": 0.493,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3868,
+              0.1639,
+              0.2272,
+              0.1444
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "5ad69762aeb4",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.95
+          ],
+          "frase": "Se te acerca sonriendo y te ofrece un caramelo.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a gloved clown hand holding out a wrapped sweet, close-up",
+          "semilla": 6742181,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-047/e2_p1.jpg",
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "07af39491b7e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            2.03
+          ],
+          "frase": "Y tú das un paso atrás.",
+          "fuente": "pexels",
+          "id": 8061672,
+          "pagina": "https://www.pexels.com/video/a-woman-talking-on-a-cellphone-in-her-office-8061672/",
+          "titulo": "a woman talking on a cellphone in her office",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 25.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8061672/8061672-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman stepping back startled office",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 4.86,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5278,
+              0.3422,
+              0.0917,
+              0.0672
+            ],
+            [
+              0.5917,
+              0.3609,
+              0.0861,
+              0.0594
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Andrés lleva diez años",
+          "t_estimado": [
+            2.03,
+            6.54
+          ],
+          "frase": "Andrés lleva diez años trayéndote caramelos.",
+          "fuente": "pixabay",
+          "id": 130878,
+          "pagina": "https://pixabay.com/videos/id-130878/",
+          "titulo": "room, desk, vintage, old, candle, window, snow, winter, clock, dark, quiet, office, antique, meditation, soothing, peaceful id",
+          "autor": "Joe_hackney",
+          "autor_url": "https://pixabay.com/users/Joe_hackney-15024843/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 60.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2022/09/11/130878-748595919_large.mp4",
+          "tipo": "video",
+          "consulta": "jar of candy on office desk",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 0.69,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "aad24dc43cd0",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.37
+          ],
+          "frase": "Unos psicólogos preguntaron a gente con miedo a los payasos de dónde les venía.",
+          "fuente": "pexels",
+          "id": 8480685,
+          "pagina": "https://www.pexels.com/video/close-up-video-of-a-person-using-a-laptop-8480685/",
+          "titulo": "close up video of a person using a laptop",
+          "autor": "ArtHouse Studio",
+          "autor_url": "https://www.pexels.com/@arthousestudio",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 38.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8480685/8480685-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "person filling questionnaire laptop",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 5.24,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Y no solía ser",
+          "t_estimado": [
+            7.37,
+            11.57
+          ],
+          "frase": "Y no solía ser de algo que les pasara.",
+          "fuente": "pixabay",
+          "id": 63749,
+          "pagina": "https://pixabay.com/videos/id-63749/",
+          "titulo": "abandoned, building, ruins, old, decay, architecture, destruction, barricaded, empty id",
+          "autor": "Matthias_Groeneveld",
+          "autor_url": "https://pixabay.com/users/Matthias_Groeneveld-4535957/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 17.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2021/02/01/63749-507811827_large.mp4",
+          "tipo": "video",
+          "consulta": "old circus tent empty",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 5.36,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "b7e1a39117bc",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.2
+          ],
+          "frase": "Pesaban no saber si te quieren hacer daño ni qué van a hacer, su cara pintada y",
+          "fuente": "pixabay",
+          "id": 12004,
+          "pagina": "https://pixabay.com/videos/id-12004/",
+          "titulo": "woman applying makeup, mask, make up, attractive, melted, fashion, lips, human, woman, portrait, girl, face, close up, female, pretty, young woman, beauty id",
+          "autor": "whitesession",
+          "autor_url": "https://pixabay.com/users/whitesession-4645995/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 8.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2017/09/15/12004-234428494_large.mp4",
+          "tipo": "video",
+          "consulta": "clown face makeup close up",
+          "relevancia": 0.75,
+          "inicio_s": 0.0,
+          "movimiento": 11.77,
+          "encuadre": {
+            "x": 0.905,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              -0.1923,
+              0.0,
+              1.3827,
+              1.0
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "las películas de payasos",
+          "t_estimado": [
+            7.2,
+            11.1
+          ],
+          "frase": "las películas de payasos malos.",
+          "fuente": "pexels",
+          "id": 7989632,
+          "pagina": "https://www.pexels.com/video/an-empty-movie-theater-7989632/",
+          "titulo": "an empty movie theater",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/7989632/7989632-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "old movie theater dark screen",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 1.0,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "3bc769cf4439",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.8
+          ],
+          "frase": "Sin la pintura, Andrés solo sería Andrés.",
+          "fuente": "pexels",
+          "id": 4716691,
+          "pagina": "https://www.pexels.com/video/a-man-in-a-white-shirt-is-sitting-in-front-of-a-mirror-4716691/",
+          "titulo": "a man in a white shirt is sitting in front of a mirror",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 49.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/4716691/4716691-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man removing clown makeup mirror",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 16.8,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.948
+          },
+          "caras": [
+            [
+              0.1195,
+              0.2347,
+              0.531,
+              0.3706
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "La pega",
+          "t_estimado": [
+            3.8,
+            9.93
+          ],
+          "frase": "La pega: solo preguntaron a gente que ya tenía miedo a los payasos.",
+          "fuente": "pixabay",
+          "id": 2340,
+          "pagina": "https://pixabay.com/videos/id-2340/",
+          "titulo": "meeting, planning, marketing, business, team, people, office, teamwork, group, discussion, business meeting, group meeting, office meeting, team meeting, communication, corporate, talking, plan id",
+          "autor": "Life-Of-Vids",
+          "autor_url": "https://pixabay.com/users/Life-Of-Vids-1282862/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 44.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2016/02/29/2340-157269921_large.mp4",
+          "tipo": "video",
+          "consulta": "group of people office",
+          "relevancia": 1.0,
+          "inicio_s": 0.4,
+          "movimiento": 2.87,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 1,
+      "plano": 2,
+      "id": "pixabay:27683",
+      "titulo": "clown, circus, fun, 3d, cartoon, entertainment, character, happy, people, performer, man, costume, make-up, hat, bowler, superhero id",
+      "motivo": "quieto (movimiento 0.18)"
+    },
+    {
+      "escena": 2,
+      "plano": 1,
+      "id": "pexels:8670646",
+      "titulo": "person putting assorted candies on white surface",
+      "motivo": "poco relevante (0.25): se prueba la IA"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}

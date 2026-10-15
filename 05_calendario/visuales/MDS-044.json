@@ -1,0 +1,366 @@
+{
+  "guion": "MDS-044",
+  "version": 1,
+  "firma": "8d8de235df717a4a",
+  "resuelto_utc": "2026-10-15T22:32:29Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "e4909b07f737",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.54
+          ],
+          "frase": "Le escribes a tu madre que has aprobado el carné de conducir.",
+          "fuente": "pexels",
+          "id": 5386540,
+          "pagina": "https://www.pexels.com/video/young-man-text-messaging-with-smartphone-outdoors-5386540/",
+          "titulo": "young man text messaging with smartphone outdoors",
+          "autor": "Monstera Production",
+          "autor_url": "https://www.pexels.com/@gabby-k",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 8.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/5386540/5386540-hd_1080_2048_30fps.mp4",
+          "tipo": "video",
+          "consulta": "young man texting happily car",
+          "relevancia": 0.6,
+          "inicio_s": 0.0,
+          "movimiento": 2.24,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.4249,
+              0.1189,
+              0.2549,
+              0.1733
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "6cfc2de2228f",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.95
+          ],
+          "frase": "Y te contesta: qué bien. Con la carita sonriente.",
+          "fuente": "pexels",
+          "id": 7970351,
+          "pagina": "https://www.pexels.com/video/an-elderly-woman-using-a-laptop-and-a-cellphone-7970351/",
+          "titulo": "an elderly woman using a laptop and a cellphone",
+          "autor": "Antoni Shkraba",
+          "autor_url": "https://www.pexels.com/@shkrabaanthony",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7970351/7970351-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "older woman typing on phone kitchen",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 4.88,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4833,
+              0.2019,
+              0.2625,
+              0.1737
+            ],
+            [
+              0.0917,
+              0.0,
+              0.2958,
+              0.1385
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "2bdeab67d102",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.08
+          ],
+          "frase": "Y tú te pasas la tarde pensando qué has hecho mal.",
+          "fuente": "pexels",
+          "id": 13441323,
+          "pagina": "https://www.pexels.com/video/a-young-man-ordering-food-online-while-sitting-on-a-sofa-13441323/",
+          "titulo": "a young man ordering food online while sitting on a sofa",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13441323/13441323-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "young man staring at phone worried sofa",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 1.94,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2028,
+              0.2844,
+              0.1611,
+              0.1219
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "b4b8b74a83ee",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.73
+          ],
+          "frase": "Unos psicólogos enseñaron caritas sonrientes a gente de dieciocho a treinta años y",
+          "fuente": "pexels",
+          "id": 8546869,
+          "pagina": "https://www.pexels.com/video/a-woman-using-a-mobile-phone-on-a-table-8546869/",
+          "titulo": "a woman using a mobile phone on a table",
+          "autor": "https://kaboompics.com/",
+          "autor_url": "https://www.pexels.com/@karola-g",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 14.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8546869/8546869-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "hands holding smartphone table",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 10.72,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.5296,
+              0.0144,
+              0.2787,
+              0.3034
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "a gente de más de sesenta",
+          "t_estimado": [
+            6.73,
+            9.72
+          ],
+          "frase": "a gente de más de sesenta.",
+          "fuente": "pexels",
+          "id": 11698130,
+          "pagina": "https://www.pexels.com/video/hand-holding-phone-with-icons-on-screen-11698130/",
+          "titulo": "hand holding phone with icons on screen",
+          "autor": "Mger Akopian",
+          "autor_url": "https://www.pexels.com/@spitak",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/11698130/11698130-hd_1080_1920_60fps.mp4",
+          "tipo": "video",
+          "consulta": "older hands holding phone",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 8.71,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "07434323bd00",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.8
+          ],
+          "frase": "Los mayores leían la carita sonriente como sincera y agradable.",
+          "fuente": "pexels",
+          "id": 8724460,
+          "pagina": "https://www.pexels.com/video/elderly-woman-smiling-at-the-camera-8724460/",
+          "titulo": "elderly woman smiling at the camera",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 27.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8724460/8724460-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "older woman smiling warmly",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 2.33,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.2826,
+              0.1989,
+              0.504,
+              0.3711
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Los jóvenes, al revés",
+          "t_estimado": [
+            4.8,
+            9.26
+          ],
+          "frase": "Los jóvenes, al revés: falsa y menos agradable.",
+          "fuente": "pexels",
+          "id": 9558741,
+          "pagina": "https://www.pexels.com/video/a-young-man-in-a-pink-shirt-is-holding-his-phone-9558741/",
+          "titulo": "a young man in a pink shirt is holding his phone",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 14.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/9558741/9558741-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "young man raising eyebrow phone",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 3.33,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.3407,
+              0.1978,
+              0.3319,
+              0.2529
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "c5234c6e9afc",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.93
+          ],
+          "frase": "Así que tu madre, seguramente, iba de buena fe.",
+          "fuente": "pixabay",
+          "id": 2301,
+          "pagina": "https://pixabay.com/videos/id-2301/",
+          "titulo": "couple, love, romance, valentine, loving couple, woman, young, love couple, man, bench, sitting, hugging, happy, hug, two, relationship, together, adult, romantic, boyfriend, girlfriend, chubby, lumpy id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 17.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2016/02/29/2301-157183628_large.mp4",
+          "tipo": "video",
+          "consulta": "mother hugging young adult",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 0.69,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Lo que no se midió",
+          "t_estimado": [
+            4.93,
+            10.39
+          ],
+          "frase": "Lo que no se midió es qué quería decir quien la manda.",
+          "fuente": "pexels",
+          "id": 6278824,
+          "pagina": "https://www.pexels.com/video/person-holding-mobile-phone-while-touching-screen-6278824/",
+          "titulo": "person holding mobile phone while touching screen",
+          "autor": "Artem Podrez",
+          "autor_url": "https://www.pexels.com/@artempodrez",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6278824/6278824-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "phone keyboard emoji screen",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 3.67,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

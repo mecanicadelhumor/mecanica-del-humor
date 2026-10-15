@@ -1,0 +1,418 @@
+{
+  "guion": "MDS-046",
+  "version": 1,
+  "firma": "89e22b8f4f7fef7e",
+  "resuelto_utc": "2026-10-15T22:33:02Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "cadc3fb110fc",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.54
+          ],
+          "frase": "Videollamada de trabajo. Tu jefe explica, muy serio, los objetivos del trimestre.",
+          "fuente": "pexels",
+          "id": 4872888,
+          "pagina": "https://www.pexels.com/video/a-young-man-talking-while-having-video-call-using-laptop-4872888/",
+          "titulo": "a young man talking while having video call using laptop",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 24.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/4872888/4872888-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "video call on laptop home office",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 8.92,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2472,
+              0.225,
+              0.2667,
+              0.2047
+            ],
+            [
+              0.5083,
+              0.2359,
+              0.2167,
+              0.1531
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "d633aed43714",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.26
+          ],
+          "frase": "Y se le congela la imagen con la boca abierta y un ojo cerrado.",
+          "fuente": "pixabay",
+          "id": 30438,
+          "pagina": "https://pixabay.com/videos/id-30438/",
+          "titulo": "subscribe video, green screen, social action, social, share, like, subscribe button, like button, share button, social action video, call to action, green screen video, subscribe, green background, green screen animation, ninja, funny ninja, subscribe green screen, green, screen id",
+          "autor": "CryptoSkylark",
+          "autor_url": "https://pixabay.com/users/CryptoSkylark-12887619/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 7.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2019/12/21/30438-381229864_large.mp4",
+          "tipo": "video",
+          "consulta": "frozen video call screen funny face",
+          "relevancia": 0.667,
+          "inicio_s": 0.0,
+          "movimiento": 3.08,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "d193a0145dcc",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.54
+          ],
+          "frase": "Y tú, con la cámara encendida, apretando los labios para no reírte.",
+          "fuente": "pexels",
+          "id": 6000413,
+          "pagina": "https://www.pexels.com/video/a-woman-giggling-while-using-a-laptop-6000413/",
+          "titulo": "a woman giggling while using a laptop",
+          "autor": "Sam Lion",
+          "autor_url": "https://www.pexels.com/@sam-lion",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6000413/6000413-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman trying not to laugh laptop",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 2.97,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3222,
+              0.3016,
+              0.2944,
+              0.2141
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "1f7ef1b8c4a2",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.4
+          ],
+          "frase": "Unos psicólogos pusieron a ciento ochenta mujeres a ver películas graciosas.",
+          "fuente": "pexels",
+          "id": 7988178,
+          "pagina": "https://www.pexels.com/video/young-woman-watching-movie-in-a-cinema-7988178/",
+          "titulo": "young woman watching movie in a cinema",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 24.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/7988178/7988178-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "women watching screen in dark room",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 1.77,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.4941,
+              0.2234,
+              0.168,
+              0.1511
+            ],
+            [
+              0.1225,
+              0.3867,
+              0.1285,
+              0.1034
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "A la mitad",
+          "t_estimado": [
+            6.4,
+            11.1
+          ],
+          "frase": "A la mitad les pidieron que no se les notara nada.",
+          "fuente": "pexels",
+          "id": 4821003,
+          "pagina": "https://www.pexels.com/video/close-up-footage-of-a-woman-face-4821003/",
+          "titulo": "close up footage of a woman face",
+          "autor": "Ivan S",
+          "autor_url": "https://www.pexels.com/@ivan-s",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/4821003/4821003-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman serious face watching screen",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 2.88,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.075,
+              0.1,
+              0.925,
+              0.7766
+            ]
+          ]
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "24bfa8b78b9e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.47
+          ],
+          "frase": "Las que se aguantaban dijeron que la película les había hecho menos gracia",
+          "fuente": "pixabay",
+          "id": 61706,
+          "pagina": "https://pixabay.com/videos/id-61706/",
+          "titulo": "woman, television, watch, quarantine, home, human, girl, portrait, epidemic, disease, relax, covid-19, virus, health, corona, at home, comfortable, screen, night, winter, cold, flu, depression, stress id",
+          "autor": "Engin_Akyurt",
+          "autor_url": "https://pixabay.com/users/Engin_Akyurt-3656355/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 27.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2021/01/11/61706-500316063_large.mp4",
+          "tipo": "video",
+          "consulta": "woman tense watching screen",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 1.39,
+          "encuadre": {
+            "x": 0.758,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.1006,
+              0.0583,
+              0.7999,
+              0.6347
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "que a las demás",
+          "t_estimado": [
+            6.47,
+            8.8
+          ],
+          "frase": "que a las demás.",
+          "fuente": "pexels",
+          "id": 8451937,
+          "pagina": "https://www.pexels.com/video/couple-laughing-while-watching-on-a-laptop-8451937/",
+          "titulo": "couple laughing while watching on a laptop",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 16.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8451937/8451937-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "women laughing watching film",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 2.72,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3583,
+              0.3984,
+              0.1722,
+              0.1156
+            ],
+            [
+              0.5194,
+              0.425,
+              0.1667,
+              0.1125
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "96a7c5e03670",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.07
+          ],
+          "frase": "Así que aguantándote con tu jefe congelado te perdías parte de la gracia.",
+          "fuente": "pixabay",
+          "id": 268230,
+          "pagina": "https://pixabay.com/videos/id-268230/",
+          "titulo": "business, office, computer, man, laptop, company, corporate, meeting, work, marketing, team, technology, people, internet, planning, professional, working, project, web, startup, building, young, students, plan id",
+          "autor": "isuruzampa",
+          "autor_url": "https://pixabay.com/users/isuruzampa-49576546/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 12.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2025/03/28/268230_large.mp4",
+          "tipo": "video",
+          "consulta": "closing laptop after meeting",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 10.64,
+          "encuadre": {
+            "x": 0.578,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4649,
+              0.2556,
+              0.3654,
+              0.2889
+            ],
+            [
+              0.255,
+              0.2736,
+              0.3334,
+              0.2806
+            ],
+            [
+              0.7686,
+              0.2306,
+              0.3037,
+              0.3014
+            ],
+            [
+              -0.0487,
+              0.1875,
+              0.3233,
+              0.2542
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "La letra pequeña",
+          "t_estimado": [
+            6.07,
+            11.78
+          ],
+          "frase": "La letra pequeña: se midió con películas, y solo con mujeres.",
+          "fuente": "pixabay",
+          "id": 262637,
+          "pagina": "https://pixabay.com/videos/id-262637/",
+          "titulo": "tv, lcd, blue background, hd, technology, television, floor, furniture, gallery, horizontal, living, living room, luxury, plasma, room, screen, sofa, three-dimensional, video, chair, color image, interior, empty, green screen, home id",
+          "autor": "ja519492",
+          "autor_url": "https://pixabay.com/users/ja519492-16093000/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 10.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2025/03/05/262637_large.mp4",
+          "tipo": "video",
+          "consulta": "empty screening room chairs",
+          "relevancia": 1.0,
+          "inicio_s": 0.4,
+          "movimiento": 2.18,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 5,
+      "plano": 1,
+      "id": "pixabay:61699",
+      "titulo": "woman, watch, television, home, quarantine, human, portrait, relax, covid-19, health, at home, comfortable, screen, night, winter, cold, flu id",
+      "motivo": "quieto (movimiento 0.19)"
+    },
+    {
+      "escena": 5,
+      "plano": 1,
+      "id": "pixabay:61702",
+      "titulo": "woman, television, watch, quarantine, home, human, portrait, epidemic, disease, relax, covid-19, virus, health, corona, at home, comfortable, screen, night, winter, cold, flu id",
+      "motivo": "quieto (movimiento 0.32)"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}
