@@ -17,7 +17,8 @@ Versión 21 del plan (`00_estrategia/PLAN_DE_CAMBIOS.md`, al final).
 - `MDS-040` es el primer Short con la firma «un mecanismo nuevo cada día» y el remate centrado: en el
   último fotograma de la ficha, el bloque tiene que estar al centro. Muestra en
   `07_pruebas/remate-2026-10-15/`.
-- La rama `claude/entrega-direccion-20261008-1338` la limpia «Entregas» con esta entrega.
+- La rama `claude/entrega-direccion-20261008-1338` sigue en GitHub: su contenido está en `main` y es
+  inofensiva. Se le dice al codirector que puede borrarla; no hace falta repetirlo cada día.
 
 ## Planificación (esta noche)
 
