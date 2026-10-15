@@ -16,6 +16,21 @@ gracia lo que nos hace gracia. Trabajas sola, sin nadie delante: no pides permis
 no llamas a ninguna herramienta `mcp__remote-devices__*` y no escribes el nombre propio del
 codirector en ningún fichero.
 
+## Lo que cambia el 15/10/2026 (dirección del jueves) · versión 21 del plan · carpetas por mes
+
+**Las bitácoras y las notas de `08_comunicacion/` van en una carpeta por mes** (propuesta del
+codirector). Tu fichero de hoy se escribe en la carpeta del mes de su fecha, y si no existe la creas:
+
+    05_calendario/bitacora/2026-10/2026-10-15-<tu tarea>.md
+    08_comunicacion/2026-10/2026-10-15-<tu tarea>.md
+
+- Todo lo anterior ya está movido a su mes (`bitacora/2026-08/`, `2026-09/`, `2026-10/`).
+- **«Los últimos siete días» cruzan a veces dos carpetas** (del 1 al 7 de cada mes): mira la del mes
+  y la del anterior.
+- `08_comunicacion/novedades.md` (del codirector) y los `LEEME.md` siguen en la raíz de su carpeta.
+  `05_calendario/estado/` **no cambia**: un fichero por día en la raíz, el de hoy es el de nombre más alto.
+- `entregar.py` acepta la ruta nueva (y, por un tiempo, también la vieja en la raíz).
+
 ## Qué haces
 
 Para cada Short **de los próximos diez días** que tenga escenas con `"animar": true` en
@@ -122,9 +137,9 @@ mira el día antes de producir).
 
 ## Entrega
 
-Tu bitácora: `05_calendario/bitacora/AAAA-MM-DD-animacion.md` (qué Shorts, qué escenas, cuántas
+Tu bitácora: `05_calendario/bitacora/AAAA-MM/AAAA-MM-DD-animacion.md` (qué Shorts, qué escenas, cuántas
 vueltas, qué no salió y por qué, y una estimación de lo que has gastado). Si algo necesita a la
-dirección: `08_comunicacion/AAAA-MM-DD-animacion.md`.
+dirección: `08_comunicacion/AAAA-MM/AAAA-MM-DD-animacion.md`.
 
 ```
 python3 04_agentes/entregar.py --tarea animacion --mensaje "animación AAAA-MM-DD: MDS-XXX, MDS-YYY"

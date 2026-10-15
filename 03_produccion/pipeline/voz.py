@@ -786,13 +786,28 @@ def _transcriptor():
     return _TRANSCRIPTOR["modelo"]
 
 
+def _audio_16k(mp3):
+    """La toma como float32 mono a 16 kHz, decodificada con ffmpeg.
+
+    15/10/2026: a Whisper no se le pasa la ruta. faster-whisper la abre con PyAV
+    y la 19 de PyAV ya no acepta `metadata_errors`: del 13 al 15/10 las tres
+    producciones dieron «sin comprobar» en todas las escenas sin que nada fallara.
+    ffmpeg ya está en el runner (lo usa todo el pipeline)."""
+    import numpy as np
+    crudo = subprocess.run(
+        ["ffmpeg", "-loglevel", "error", "-i", str(mp3), "-f", "s16le", "-ac", "1",
+         "-ar", "16000", "-"], capture_output=True, check=True,
+        stdin=subprocess.DEVNULL).stdout
+    return np.frombuffer(crudo[: len(crudo) // 2 * 2], dtype=np.int16).astype(np.float32) / 32768.0
+
+
 def _toma_fiel(texto, mp3):
     """(fiel, detalle). ¿Dice esta toma el texto, sin añadir ni repetir nada?"""
     modelo = _transcriptor()
     if modelo is None:
         return True, "sin comprobar"
     try:
-        trozos, _ = modelo.transcribe(str(mp3), language="es", beam_size=1,
+        trozos, _ = modelo.transcribe(_audio_16k(mp3), language="es", beam_size=1,
                                       vad_filter=False, condition_on_previous_text=False)
         oido = " ".join(t.text for t in trozos)
     except Exception as exc:

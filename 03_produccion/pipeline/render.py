@@ -84,8 +84,10 @@ MARCAS = {"es": "Mecánica del Humor", "en": "Humor Mechanics"}
 # Dos líneas a propósito (escena.html pinta la primera más grande): en una sola,
 # la frase ocupaba el ancho entero del lienzo y su final caía debajo de la
 # columna de botones de la interfaz de Shorts (medido en la muestra del 02/10).
-REMATES = {"es": "Síguenos\nun mecanismo nuevo de lunes a viernes",
-           "en": "Follow us\na new mechanism every weekday"}
+# 15/10/2026: «cada día» en vez de «de lunes a viernes» (desde el 12/10 hay Short
+# también el fin de semana; «firma: sí» del codirector en sus tareas del 12/10).
+REMATES = {"es": "Síguenos\nun mecanismo nuevo cada día",
+           "en": "Follow us\na new mechanism every day"}
 
 # Los dos formatos del canal. El vertical es para Shorts: 1080x1920, que es lo
 # que YouTube clasifica automáticamente como Short al subirlo por la API — no

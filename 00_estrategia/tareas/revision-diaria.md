@@ -51,8 +51,10 @@ también antes del bloque del 05/10:**
    - **`guion.voz_fiel` (nuevo, C66):** una entrada por escena, del tipo «20/20 palabras, 0 trozos
      repetidos». Es lo que Whisper oyó en la toma. Una toma que añade o repite algo ya no debería
      llegar (voz.py pide otra), así que si ves **más palabras que el texto en un 30 % o más**, o un
-     número de trozos repetidos mayor que 0, es `INCIDENCIA`. Si pone **«sin comprobar»**, Whisper no
-     se pudo cargar ese día: nota, no incidencia, y dilo.
+     número de trozos repetidos mayor que 0, es `INCIDENCIA`. ~~Si pone «sin comprobar», nota, no
+     incidencia~~ — **CAMBIADO el 15/10:** «sin comprobar» en **todas** las escenas es `INCIDENCIA`
+     (del 13 al 15/10 Whisper no comprobó ni una toma por un fallo de PyAV y se anotó como nota tres
+     días; arreglado el 15/10). En una o dos escenas sueltas, nota.
    - `fragmentos.instantes` vacío y `sincronia_voz.desfase_s` < 0,5, como siempre.
    - **Los campos de la voz están dentro de `guion`** (`guion.modelo_voz`, `guion.voz_mezclada`,
      `guion.origen_voz`), no en la raíz. El 10/10 se escribió que «salen vacíos» y no lo estaban.
@@ -166,13 +168,13 @@ manda sobre lo que diga más abajo:**
 4. **`sincroniza_registro.yml` funciona.** Lo que viste el 22/09 era que corre con horas de
    retraso, después de ti. Ver el paso 2.
 5. Versión **12** de `PLAN_DE_CAMBIOS.md`, que es la que manda, y
-   `08_comunicacion/2026-09-23-direccion.md`.
+   `08_comunicacion/2026-09/2026-09-23-direccion.md`.
 6. **Y por la tarde, versión 13: C50 entra en producción.** Desde `MDS-024` (jueves 24) los Shorts
    llevan vídeo de archivo o imágenes generadas detrás del texto. Tienes **un trabajo nuevo, diario,
    y va en el paso 1 justo después de la lectura en frío: la hoja de contactos** del Short de
    mañana y del de pasado (ver «La imagen: la hoja de contactos (C50)»). Y en el paso 3, que la
    ficha diga si el vídeo salió con archivo o como siempre. Lee
-   `08_comunicacion/2026-09-23-direccion-c50.md`.
+   `08_comunicacion/2026-09/2026-09-23-direccion-c50.md`.
 
 **Qué cambió el 21/09 (dirección del lunes):**
 
@@ -194,6 +196,21 @@ Versión **11** de `PLAN_DE_CAMBIOS.md`, que es la que manda.
 
 ---
 
+## Lo que cambia el 15/10/2026 (dirección del jueves) · versión 21 del plan · carpetas por mes
+
+**Las bitácoras y las notas de `08_comunicacion/` van en una carpeta por mes** (propuesta del
+codirector). Tu fichero de hoy se escribe en la carpeta del mes de su fecha, y si no existe la creas:
+
+    05_calendario/bitacora/2026-10/2026-10-15-<tu tarea>.md
+    08_comunicacion/2026-10/2026-10-15-<tu tarea>.md
+
+- Todo lo anterior ya está movido a su mes (`bitacora/2026-08/`, `2026-09/`, `2026-10/`).
+- **«Los últimos siete días» cruzan a veces dos carpetas** (del 1 al 7 de cada mes): mira la del mes
+  y la del anterior.
+- `08_comunicacion/novedades.md` (del codirector) y los `LEEME.md` siguen en la raíz de su carpeta.
+  `05_calendario/estado/` **no cambia**: un fichero por día en la raíz, el de hoy es el de nombre más alto.
+- `entregar.py` acepta la ruta nueva (y, por un tiempo, también la vieja en la raíz).
+
 ## Antes de nada: `08_comunicacion/`
 
 *Carpeta creada por el codirector el 18/09/2026, y en estos prompts desde el 21/09.*
@@ -211,7 +228,7 @@ ves; se le ha propuesto que los repita aquí.
 Lee también los demás ficheros de esa carpeta con fecha de los últimos siete días: es el
 buzón entre agentes. Si tienes algo que decirle a la planificación, a las métricas o a la
 dirección que no quepa en tu bitácora y que necesiten **antes** de trabajar, déjalo en
-`08_comunicacion/AAAA-MM-DD-revision-diaria.md`. Un fichero nuevo por vez, nunca encima del
+`08_comunicacion/AAAA-MM/AAAA-MM-DD-revision-diaria.md`. Un fichero nuevo por vez, nunca encima del
 de otro. La idea del codirector es que los agentes se hablen por ficheros y no por prompts.
 
 ---
@@ -233,7 +250,7 @@ Las tres reglas que salen de ahí y que te afectan directamente:
 **2. Tú NO eres el dueño de los guiones.** Lo es la planificación de los jueves. Cuando encuentres un defecto editorial, **no edites el guion**: escribe `05_calendario/revisiones/<ID>.md` con el defecto y la corrección exacta en formato antes/después. La planificación lo aplica el jueves siguiente.
    **Única excepción, y es estrecha:** si ese guion se produce en menos de 48 horas, sí puedes editarlo. Entonces tocas **ese fichero y ninguno más** del calendario, y lo dices en MAYÚSCULAS en la primera línea del resumen.
 
-**3. La bitácora ya no va en `MEJORAS.md`.** `MEJORAS.md` está congelado como historia: se lee, no se escribe. Tú creas un fichero nuevo cada día: `05_calendario/bitacora/AAAA-MM-DD-revision.md`. Un fichero nuevo no puede pisar nada.
+**3. La bitácora ya no va en `MEJORAS.md`.** `MEJORAS.md` está congelado como historia: se lee, no se escribe. Tú creas un fichero nuevo cada día: `05_calendario/bitacora/AAAA-MM/AAAA-MM-DD-revision.md`. Un fichero nuevo no puede pisar nada.
 
 **De lo que SÍ eres dueño:** `03_produccion/` y `04_agentes/` (código, prompts, `MEJORA_VISUAL.md`), `01_bibliografia/BIBLIOGRAFIA_CURADA.md` (solo añades o corriges lo que hayas verificado contra la fuente; si no puedes verificarlo, lo dejas y lo dices) y, desde el 31/08, **el estado del canal** — que desde el 21/09/2026 ya no es `ESTADO.md` sino **un fichero nuevo por día en `05_calendario/estado/`** (ver paso 6).
 
@@ -595,7 +612,7 @@ El codirector la creó el 04/09 para dejar ahí material que hay que mirar y esc
 
 ## Paso 5 — cierra la bitácora
 
-Escribe `05_calendario/bitacora/AAAA-MM-DD-revision.md` con qué has mirado, qué has encontrado y qué has hecho. Concreto. Si descartas una idea, escribe por qué.
+Escribe `05_calendario/bitacora/AAAA-MM/AAAA-MM-DD-revision.md` con qué has mirado, qué has encontrado y qué has hecho. Concreto. Si descartas una idea, escribe por qué.
 
 ## Paso 6 — `05_calendario/estado/AAAA-MM-DD.md` (obligatorio, todos los días)
 
@@ -622,7 +639,7 @@ ESTADO: OK            (o: ESTADO: INCIDENCIA — <una línea, qué pasa>)
 Fecha: AAAA-MM-DD 11:30
 Último vídeo publicado: <ID> (<fecha>) · Próxima emisión: <ID> (<fecha y hora>)
 Pendiente del codirector: nada
-Detalle: 05_calendario/bitacora/AAAA-MM-DD-revision.md
+Detalle: 05_calendario/bitacora/AAAA-MM/AAAA-MM-DD-revision.md
 ```
 
 **Cuándo se pone INCIDENCIA — corregido el 04/09, porque el criterio anterior estaba al revés.**

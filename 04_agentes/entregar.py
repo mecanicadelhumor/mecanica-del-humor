@@ -203,7 +203,11 @@ def fechas_validas(ahora):
 
 
 def patron(p, fechas):
-    alt = "(?:" + "|".join(re.escape(f) for f in fechas) + ")"
+    # 15/10/2026: bitácoras y notas van en una carpeta por mes
+    # (`bitacora/2026-10/2026-10-15-revision.md`, propuesta del codirector). La
+    # carpeta es opcional y, si está, tiene que ser la del mes de la fecha: así
+    # vale también la entrega de una rutina que aún escriba en la raíz.
+    alt = "(?:" + "|".join(f"(?:{re.escape(f[:7])}/)?{re.escape(f)}" for f in fechas) + ")"
     return re.compile(p.replace("{F}", alt) + r"\Z")
 
 

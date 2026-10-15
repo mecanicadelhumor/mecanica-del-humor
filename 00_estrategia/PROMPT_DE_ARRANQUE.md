@@ -741,6 +741,30 @@ con instrucciones de «si no existe, para» se habría parado. La revisión del 
 codirector (trampa 47) y se le pide el mismo día.
 
 
+**59. Una barrera que no deja al canal sin vídeo tampoco avisa cuando deja de funcionar.** C66 se diseñó
+para que, si Whisper no se puede usar, el vídeo salga igual con el control de duración. Del 13 al 15/10
+Whisper falló en todas las tomas (PyAV 19 rompía faster-whisper, que en el contenedor se calibró con la
+18) y los tres vídeos salieron sin comprobar: el aviso estaba en el log de Actions y la ficha decía «sin
+comprobar», que el prompt de la revisión mandaba anotar como nota.
+→ **Cuando una comprobación degrada en silencio, di qué cuenta como «está apagada del todo» y que eso
+sea incidencia.** Y prueba la comprobación con las versiones que instala Actions, no con las del
+contenedor: `requirements.txt` sin tope instala la última.
+
+## Dónde está el proyecto a 15 de octubre de 2026
+
+**Dirección en diferido (rutina del jueves).** Versión **21** del plan, la que manda.
+
+- **C66 no había comprobado ni una toma** desde que entró (`MDS-037` a `039`): PyAV 19 rompía faster-whisper.
+  Arreglado (ffmpeg decodifica, `av<19`) y probado con PyAV 19. Entra en `MDS-040`. La revisión trata
+  «sin comprobar» en todas las escenas como incidencia (trampa 59).
+- **La firma dice «un mecanismo nuevo cada día»** («firma: sí» del codirector) y **el remate vuelve al
+  centro** (el margen 40/150 de C59 lo movía 55 px a la izquierda; el codirector lo vio). Desde `MDS-040`.
+- **Carpetas por mes** (C68) para bitácoras y `08_comunicacion/`; en el privado, pendiente de que el
+  codirector cambie dos líneas de `tareas/direccion.md`.
+- **Largos**: uno a la semana, domingo 12:00, desde el 8/11 (1/11 si C36 pasa), sin rama «se para».
+- **C36 en vivo, sin resultado**: `gemini-2.5-pro-preview-tts` no contestó en 20 min. El lunes 19, otra vez.
+- B1: un Short medido (`MDS-036`, 321 a 48 h, 15,6 % de «se quedaron»). Nada que decidir.
+
 ## Dónde está el proyecto a 12 de octubre de 2026
 
 **Dirección en diferido (rutina del lunes).** Versión **20** del plan, la que manda.

@@ -54,7 +54,7 @@ MAX_ESCENA = 20.0    # con la deriva lenta aguanta hasta aquí; más es narrativ
 # un par de prueba: una escena de 18,6s captura 30 fotogramas; la misma
 # narración partida en dos de ~10s captura 60 — el doble de movimiento por el
 # mismo contenido, a cambio de más render (el coste sube con el número de
-# escenas, no con el metraje — ver 05_calendario/bitacora/2026-08-27-revision.md).
+# escenas, no con el metraje — ver 05_calendario/bitacora/2026-08/2026-08-27-revision.md).
 # Sigue siendo AVISO, no error: no bloquea producción, solo adelanta al guion
 # lo que antes solo delataba el vídeo terminado.
 MAX_IDEAL = 10.0

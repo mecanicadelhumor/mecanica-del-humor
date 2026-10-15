@@ -66,7 +66,11 @@ def palabras_oidas(mp3, modelo=None):
     if modelo is None:
         from faster_whisper import WhisperModel
         modelo = WhisperModel("tiny", device="cpu", compute_type="int8")
-    trozos, _ = modelo.transcribe(str(mp3), language="es", beam_size=1,
+    # Las muestras, no la ruta: faster-whisper abre rutas con PyAV y la 19 rompe
+    # (`metadata_errors`, 15/10/2026). Mismo ffmpeg que _muestras().
+    import numpy as np
+    audio = np.array(_muestras(mp3), dtype=np.float32) / 32768.0
+    trozos, _ = modelo.transcribe(audio, language="es", beam_size=1,
                                   word_timestamps=True, vad_filter=False,
                                   condition_on_previous_text=False)
     out = []

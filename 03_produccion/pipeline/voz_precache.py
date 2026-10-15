@@ -8,7 +8,7 @@ Por qué existe: un episodio largo tiene ~40 escenas y el nivel gratuito de
 Gemini da 10 peticiones al día POR MODELO. No cabe en un solo día — el
 sábado de producción — pero sí de viernes a viernes: la planificación ya
 escribe el guion del sábado con nueve días de margen (ver
-05_calendario/bitacora/2026-09-12-direccion.md, punto 1). Este script es lo
+05_calendario/bitacora/2026-09/2026-09-12-direccion.md, punto 1). Este script es lo
 que gasta esos días: se llama una vez al día, mira qué escenas del guion del
 sábado que viene todavía no están en la caché de voz.py y sintetiza tantas
 como el presupuesto de llamadas de hoy permita. El sábado, `voz.py` (cuando

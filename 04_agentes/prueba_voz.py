@@ -90,7 +90,12 @@ def cliente():
     if not os.environ.get("GEMINI_API_KEY"):
         raise SystemExit("Falta GEMINI_API_KEY en el entorno.")
     from google import genai
-    return genai.Client()
+    from google.genai import types
+    # 15/10/2026: con gemini-2.5-pro-preview-tts la primera llamada se quedó 20 min
+    # sin respuesta y el workflow la canceló sin dejar nada. Cuatro minutos por
+    # llamada sobran (una toma de un Short tarda menos de uno) y, si se pasa, el
+    # error dice qué modelo no contestó en vez de perder la ejecución entera.
+    return genai.Client(http_options=types.HttpOptions(timeout=240_000))
 
 
 def _una_peticion(cli, modelo, texto, hablantes):

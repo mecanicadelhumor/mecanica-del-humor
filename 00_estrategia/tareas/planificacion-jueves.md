@@ -14,6 +14,21 @@ codirector el 30/09) · repositorio añadido · entorno «Mecánica del Humor».
 
 ---
 
+## Lo que cambia el 15/10/2026 (dirección del jueves) · versión 21 del plan · carpetas por mes
+
+**Las bitácoras y las notas de `08_comunicacion/` van en una carpeta por mes** (propuesta del
+codirector). Tu fichero de hoy se escribe en la carpeta del mes de su fecha, y si no existe la creas:
+
+    05_calendario/bitacora/2026-10/2026-10-15-<tu tarea>.md
+    08_comunicacion/2026-10/2026-10-15-<tu tarea>.md
+
+- Todo lo anterior ya está movido a su mes (`bitacora/2026-08/`, `2026-09/`, `2026-10/`).
+- **«Los últimos siete días» cruzan a veces dos carpetas** (del 1 al 7 de cada mes): mira la del mes
+  y la del anterior.
+- `08_comunicacion/novedades.md` (del codirector) y los `LEEME.md` siguen en la raíz de su carpeta.
+  `05_calendario/estado/` **no cambia**: un fichero por día en la raíz, el de hoy es el de nombre más alto.
+- `entregar.py` acepta la ruta nueva (y, por un tiempo, también la vieja en la raíz).
+
 ## Lo que cambia el 05/10/2026 (dirección del lunes) · versión 18 del plan · C60, el bucle
 
 **Va antes que todo lo demás y manda sobre lo que diga más abajo.** El codirector ha pedido iterar
@@ -254,7 +269,7 @@ Con siete Shorts a la semana, y catorce después, el corpus es el primer cuello 
    igual, reescribe uno. `validar_guion.py` avisa (C48.1).
 6. ~~La presentación va a cambiar mucho (C50), pero no esta semana y no la tocas tú.~~
    **ANULADO la misma tarde (versión 13): ver «Lo que cambia el 23/09 por la tarde», justo abajo.**
-7. Lee `08_comunicacion/2026-09-23-direccion.md` y `08_comunicacion/2026-09-23-direccion-c50.md`.
+7. Lee `08_comunicacion/2026-09/2026-09-23-direccion.md` y `08_comunicacion/2026-09/2026-09-23-direccion-c50.md`.
 
 ## Lo que cambia el 23/09/2026 por la tarde · versión 13 del plan (C50 entra)
 
@@ -294,7 +309,7 @@ encima.** El primero que sale así es `MDS-024`. Tú escribes **qué imagen va e
 3. **Lee `08_comunicacion/` antes de trabajar.** `novedades.md` es del codirector: se lee y
    no se toca. Los demás ficheros con fecha de los últimos siete días son el buzón entre
    agentes; si tienes algo que decirles, deja
-   `08_comunicacion/AAAA-MM-DD-planificacion.md`, un fichero nuevo por vez.
+   `08_comunicacion/AAAA-MM/AAAA-MM-DD-planificacion.md`, un fichero nuevo por vez.
 4. **El estado del canal ya no está en `ESTADO.md`**, que está congelado, sino en
    `05_calendario/estado/`, un fichero por día (C45).
 
@@ -343,7 +358,7 @@ Lee `00_estrategia/PROPIEDAD_DE_FICHEROS.md`. El 21 de agosto la revisión diari
 - **Eres dueño de** `05_calendario/guiones/`, `parrilla.json`, `publicaciones/`, `CALENDARIO.md`, `demanda.json`, `semillas_demanda.json` y `pendientes_de_fuente.md`, y de retirar de `revisiones/` las notas que aplicas. Desde el 28/09 lo comprueba `entregar.py`: lo que no es tuyo no sube.
 - **No escribas el nombre propio del codirector en ningún fichero.** El repositorio es público y el 07/09 se retiró de los 58 ficheros donde aparecía. Se le llama «el codirector» o «la dirección».
 - **NO eres dueño de** `03_produccion/` ni `04_agentes/` (son de la revisión diaria), ni de `demanda_bruta.json`, `registro_publicaciones.json`, `qa/` ni `05_calendario/estado/`. Si hay que cambiar algo de ahí, lo dices en tu bitácora. **`metricas.json` tampoco lo escribes tú — pero desde el 21/09 SÍ lo lees, y es obligatorio: ver el paso 1 bis.**
-- **Tu bitácora es un fichero nuevo:** `05_calendario/bitacora/AAAA-MM-DD-planificacion.md`. **`MEJORAS.md` está congelado**: se lee, no se escribe.
+- **Tu bitácora es un fichero nuevo:** `05_calendario/bitacora/AAAA-MM/AAAA-MM-DD-planificacion.md`. **`MEJORAS.md` está congelado**: se lee, no se escribe.
 - **Antes de escribir un guion, lee `05_calendario/revisiones/`.** Ahí deja la revisión diaria los defectos que ha encontrado y no ha podido corregir porque el guion es tuyo. Aplícalos y borra la nota al aplicarla.
 
 ---

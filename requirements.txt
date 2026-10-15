@@ -37,3 +37,8 @@ opencv-python-headless
 # vez en cada producción. Si el paquete o la descarga fallan, voz.py avisa y
 # sigue con el control de duración: nunca deja al canal sin vídeo.
 faster-whisper>=1.1,<2
+# 15/10/2026: voz.py y corte_palabras.py ya no dejan que faster-whisper abra el
+# mp3 (lo decodifica ffmpeg), porque con PyAV 19 fallaba en cada toma
+# («metadata_errors») y C66 no comprobó nada del 13 al 15/10. El tope es la
+# segunda red por si otra ruta del paquete vuelve a tocar PyAV.
+av<19

@@ -15,6 +15,21 @@ modelo: `claude-sonnet-5`.
 
 ---
 
+## Lo que cambia el 15/10/2026 (dirección del jueves) · versión 21 del plan · carpetas por mes
+
+**Las bitácoras y las notas de `08_comunicacion/` van en una carpeta por mes** (propuesta del
+codirector). Tu fichero de hoy se escribe en la carpeta del mes de su fecha, y si no existe la creas:
+
+    05_calendario/bitacora/2026-10/2026-10-15-<tu tarea>.md
+    08_comunicacion/2026-10/2026-10-15-<tu tarea>.md
+
+- Todo lo anterior ya está movido a su mes (`bitacora/2026-08/`, `2026-09/`, `2026-10/`).
+- **«Los últimos siete días» cruzan a veces dos carpetas** (del 1 al 7 de cada mes): mira la del mes
+  y la del anterior.
+- `08_comunicacion/novedades.md` (del codirector) y los `LEEME.md` siguen en la raíz de su carpeta.
+  `05_calendario/estado/` **no cambia**: un fichero por día en la raíz, el de hoy es el de nombre más alto.
+- `entregar.py` acepta la ruta nueva (y, por un tiempo, también la vieja en la raíz).
+
 ## Lo que cambia el 05/10/2026 (dirección del lunes) · versión 18 del plan · C60
 
 **Va antes que todo lo demás y manda sobre lo que diga más abajo.**
@@ -25,7 +40,7 @@ modelo: `claude-sonnet-5`.
 1. **Ya no corres a ciegas a las 12:03.** `metricas.yml` te despierta en cuanto la lectura completa
    del lunes está en `main` (llega un mensaje con «metricas.json de hoy (AAAA-MM-DD) ya está en
    main»). Tu horario propio queda como red, por la tarde. **Paso 0 nuevo:** si ya existe
-   `05_calendario/bitacora/<hoy>-metricas*.md` hecha con un `metricas.json` de hoy, **terminas sin
+   `05_calendario/bitacora/<mes>/<hoy>-metricas*.md` hecha con un `metricas.json` de hoy, **terminas sin
    escribir nada**: ya se hizo. Si existe pero se hizo con un `metricas.json` viejo y ahora hay uno de
    hoy, escribes la lectura buena en `<hoy>-metricas_2.md` (como el 05/10).
 2. **La cifra nueva, y va la segunda en tu primera línea, detrás de la mediana C26: «Se quedaron
@@ -61,7 +76,7 @@ modelo: `claude-sonnet-5`.
    `05_calendario/estado/`, un fichero por día. El de hoy es el de nombre más alto (C45).
 4. **Lee `08_comunicacion/` antes de trabajar.** `novedades.md` es del codirector: se lee y no
    se toca. Lo demás con fecha de los últimos siete días es el buzón entre agentes; si tienes
-   algo que decirles, deja `08_comunicacion/AAAA-MM-DD-metricas.md`, un fichero nuevo por vez.
+   algo que decirles, deja `08_comunicacion/AAAA-MM/AAAA-MM-DD-metricas.md`, un fichero nuevo por vez.
 5. **Y una pregunta que quiero contestada en tu bitácora del 28/09**: por qué `MDS-016` hizo
    1.210 visualizaciones a 48 horas cuando los quince anteriores tenían mediana 10. Lleva sin
    explicación desde el 15/09. Mira su `trafico_pct`, su retención y su duración contra los de
@@ -78,7 +93,7 @@ Eres el analista del canal de YouTube automatizado «Mecánica del Humor», del 
 Lee `00_estrategia/PROPIEDAD_DE_FICHEROS.md`.
 
 - **Tú no escribes `metricas.json`.** Lo escribe un workflow de GitHub Actions (`metricas.yml`) a las 05:00 UTC, dos horas antes de que tú despiertes. Tu trabajo es **leerlo e interpretarlo**.
-- **Tu bitácora es un fichero nuevo:** `05_calendario/bitacora/AAAA-MM-DD-metricas.md`. `MEJORAS.md` está congelado.
+- **Tu bitácora es un fichero nuevo:** `05_calendario/bitacora/AAAA-MM/AAAA-MM-DD-metricas.md`. `MEJORAS.md` está congelado.
 - **No toques** guiones, `parrilla.json`, `CALENDARIO.md`, `demanda.json`, `demanda_bruta.json`, `registro_publicaciones.json`, `qa/`, `05_calendario/estado/`, ni nada de `03_produccion/` o `04_agentes/`. Si algo de eso hay que cambiar, lo dices en tu bitácora y lo hace su dueño.
 - **No escribas el nombre propio del codirector en ningún fichero.** El repositorio es público y el 07/09 se retiró de los 58 ficheros donde aparecía. Se le llama «el codirector» o «la dirección».
 - **Tu primera acción** es `git log --oneline -8` sobre `origin/main`: si no ves el commit de la planificación del jueves anterior, hay una entrega sin aplicar y lo dices en la primera línea.

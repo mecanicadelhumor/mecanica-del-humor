@@ -4126,7 +4126,7 @@ Salen cuatro cambios: **C48** (la historia), **C49** (la sincronización, que no
 **Hecho hoy.** `MDS-023`, `MDS-024` y `MDS-025` reescritos; `validar_guion.py`;
 `04_agentes/prompts/guionista_corto.md`; `00_estrategia/tareas/planificacion-jueves.md` y
 `revision-diaria.md`; `REGLAS.md` (13.2 corregida y 13.3 nueva); `esquema_guion.json`;
-`08_comunicacion/2026-09-23-direccion.md`.
+`08_comunicacion/2026-09/2026-09-23-direccion.md`.
 
 ### Lo que se oyó, con las frases exactas
 
@@ -6236,3 +6236,89 @@ regla está escrita; `MDS-033` es un cero de feed (el tercero) y no se resube (C
 
 - Lo que se ve y se oye en una toma buena; los brazos y el `orden` de B1; la regla de decisión; los
   umbrales de C26; las rutinas.
+
+
+# Versión 21 · 15 de octubre de 2026 — Whisper no comprobaba nada, la firma «cada día», el remate al centro y las carpetas por mes
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario, y lo que se anula se dice con su nombre, en la tabla de abajo.
+
+Dirección en diferido (C62), jueves a las 13:07 UTC, sin sesión interactiva hoy. El cuaderno traía
+(13-14/10): **(1)** en los Shorts del 12, 13 y 14/10 el remate «MECÁNICA DEL HUMOR / Síguenos…» sale
+**ligeramente descentrado a la izquierda**, «antes no ocurría»; **(2)** propuesta: **agrupar bitácoras,
+notas de `08_comunicacion/` y sus ficheros de tareas en carpetas por mes** (y por año al cambiar de
+año). Y sus respuestas del 12/10: tarea 1 hecha (el arranque de esta rutina ya apunta al privado: esta
+ejecución lo ha leído de ahí), **«firma: sí»** a «un mecanismo nuevo cada día», y sobre los largos:
+bien el formato, **uno a la semana**, umbrales a criterio de la dirección, y parar los largos sería
+parar el canal. Tocaba hoy: C36 en vivo, la firma, la trampa 55 y el avatar.
+
+| Cambio | Estado |
+|---|---|
+| **C66.1 · Whisper no comprobaba ninguna toma** | **Arreglado y probado** (abajo). Desde `MDS-037` las tres producciones dieron `voz_fiel` «sin comprobar» en las 18 escenas: faster-whisper abre el mp3 con PyAV y la 19 de PyAV rechaza `metadata_errors`. Ahora el audio lo decodifica ffmpeg y a Whisper se le pasa el array; `av<19` en `requirements.txt` como segunda red. Entra en `MDS-040` |
+| **C59.1 · La firma «cada día»** | **Hecho**: `REMATES` en `render.py` dice «un mecanismo nuevo cada día» (y «every day» en inglés). Aprobado por el codirector («firma: sí»). Entra en `MDS-040` (viernes 16), un día antes del primer sábado |
+| **C59.2 · El remate, al centro** | **Hecho**, muestra en `07_pruebas/remate-2026-10-15/`. Causa: desde C59 (02/10) el bloque lleva 40 px de margen a la izquierda y 150 a la derecha, para apartarse de los botones de Shorts; el centro caía en x = 485 de 1080. Ahora 150 y 150: centro medido 537-540, borde derecho en 896 (los botones empiezan hacia 930). Entra con la firma, en el mismo elemento |
+| **C68 · Carpetas por mes** | **Hecho en el público**: `05_calendario/bitacora/AAAA-MM/` y `08_comunicacion/AAAA-MM/`, todo lo anterior movido, las referencias de los documentos y del código corregidas, `entregar.py` acepta la ruta nueva (y la vieja, para que ninguna entrega de una rutina con prompt antiguo se pierda), los cuatro prompts de rutina con su bloque. `estado/` no cambia. **En el privado, pendiente del codirector**: `tareas/direccion.md` dice dónde se escribe el fichero de tareas, y ese fichero no lo edita la rutina |
+| **C67 · Los largos** | **Decidido** con la respuesta del codirector: uno a la semana, domingo 12:00, desde el 8/11 (o el 1/11 si C36 pasa); la regla de la sección 6 sin la rama «se para» (se cambia de formato). Escrito en `LARGOS_2026-10.md`, sección 8. Prompt del guionista largo: lunes 19 o jueves 22 |
+| **C36 · Una toma por vídeo, en vivo** | **Intentado, sin resultado.** `voz_prueba.yml` (a mano, 13:17 UTC) con el guion de `MDS-041` y `gemini-2.5-pro-preview-tts` —el modelo de los largos, para no tocar la cuota de la producción de mañana—: la primera llamada **no contestó en 20 minutos** y el workflow la canceló. `prueba_voz.py` lleva desde hoy un tope de 4 min por llamada. **Siguen siete a la semana**; la prueba, el lunes 19 |
+| Trampa 55 (render no determinista) | **Sin mirar hoy**, otra vez; pasa al lunes 19 |
+| Avatar VRoid (C61) | Hecho por el codirector (respuesta en sus tareas del 05/10). El muestrario del viernes 16 lo usa |
+| B1 | Un solo Short medido (`MDS-036`, brazo B: 321 visualizaciones a 48 h, la mejor desde `MDS-016`, pero 15,6 % de «se quedaron», por debajo de la referencia de 34,2 %). **Faltan datos**: nada que decidir |
+
+## C66.1 · Por qué Whisper no comprobaba nada, y por qué nadie lo vio en tres días
+
+El 12/10 C66 se calibró en el contenedor con PyAV 18. En Actions, `pip install -r requirements.txt` instala
+la última, la 19, que ha quitado el argumento `metadata_errors` que faster-whisper 1.2.1 pasa a `av.open`.
+Cada transcripción fallaba, `_toma_fiel` lo trataba (bien) como «no se puede comprobar, que salga» y el
+vídeo salía con solo el control de duración. **El diseño hizo lo que debía —no dejar al canal sin
+vídeo— y por eso mismo el fallo fue silencioso**: el aviso `::warning::` está en el log de Actions, que
+nadie lee, y la ficha decía «sin comprobar», que la revisión del 15 anotó como nota («Whisper no se
+carga») y no como incidencia.
+
+**Arreglo:** `voz.py` decodifica la toma con ffmpeg a float32 mono de 16 kHz (`_audio_16k`) y se la pasa
+a Whisper; `corte_palabras.py`, igual (reutiliza `_muestras`). Así faster-whisper no toca PyAV para
+abrir audio. `requirements.txt`: `av<19`. **Probado en el contenedor con PyAV 19.0.1** (el mismo fallo
+reproducido antes del arreglo): una toma buena de la caché da «20/20 palabras, 0 trozos repetidos»; la
+misma toma pegada dos veces da «40/20, 17 trozos repetidos» y se rechaza; `corte_palabras` oye las 40
+palabras.
+
+**Y para que no vuelva a ser silencioso:** la revisión diaria trata desde hoy «sin comprobar» en **todas**
+las escenas de la ficha del día como INCIDENCIA (bloque del 15/10 en `tareas/revision-diaria.md`).
+
+## Las métricas, sin decisión
+
+`control_c26` (lectura del 12/10): mediana 64, 8 de 20 por encima de 100. `MDS-036` (12/10) 321 a 48 h;
+`MDS-037` a `039`, aún a cero en la diaria de las 12:07 UTC (el retraso de Analytics, no un cero de feed:
+se mira el lunes). **No hay nada que decidir**: B1 tiene un Short medido de dieciséis.
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Jueves 15, 22:00 | Planificación: semana del 19 al 25 (B1, segunda semana), con las carpetas por mes |
+| Viernes 16, ~01:13 UTC | `MDS-040`: primer Short con la firma «cada día», el remate al centro y Whisper comprobando de verdad |
+| Viernes 16 | Rutina «Animación» (colores nuevos). Muestrarios del presentador con el avatar VRoid |
+| Sábado 17 | `MDS-041`, primer Short en sábado |
+| **Lunes 19, 13:07 UTC** | Dirección: ficha de `MDS-040` (¿`voz_fiel` con cifras?), C36 en vivo otra vez (abajo), trampa 55, prompt del guionista largo |
+| Antes del 29/10 | Prompt del guionista largo y bloque de la planificación |
+
+## C36 en vivo: qué pasó y qué se hace el lunes
+
+No se relanzó con `gemini-3.1-flash-tts-preview` porque la cuota diaria de Gemini se reinicia a medianoche
+de California (07:00 UTC): las 2 peticiones de la prueba y las ~6 de la producción de `MDS-040` (mañana
+hacia las 05:50 UTC) caen en el mismo día de cuota, y desde hoy Whisper puede pedir tomas de más. Con
+`2.5-flash` tampoco: es el respaldo de la producción.
+
+**El dato que sí deja:** `gemini-2.5-pro-preview-tts` no devolvió ni una toma de 102 palabras en 20
+minutos. Es el modelo que `LARGOS_2026-10.md` reserva para los largos. Antes del piloto hay que saber si
+fue un mal día o es así: **el lunes 19 se lanza primero con `2.5-pro` (ya con el tope de 4 min) y, si
+vuelve a no contestar, con `3.1`**; el lunes la producción del martes cae también en el mismo día de
+cuota, así que con `3.1` se lanza solo si no ha hecho falta ningún reintento en la producción del lunes.
+
+**Y una cosa que queda anotada**: `voz.py` tampoco pone tope de tiempo a la llamada a Gemini. En
+producción nunca se ha colgado (el paso de voz tarda 2-4 min), y un tope corto podría cortar una toma
+buena; se mira con los tiempos reales de la caché el lunes, no hoy.
+
+## Lo que NO cambia hoy
+
+- Los brazos y el `orden` de B1; la regla de decisión; los umbrales de C26; las rutinas; `estado/`;
+  `voz.py` fuera del arreglo de Whisper.

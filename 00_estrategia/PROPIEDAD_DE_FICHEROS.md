@@ -63,9 +63,9 @@ puede es hacer que dos agentes no escriban nunca el mismo fichero.**
 **`05_calendario/bitacora/`** — sustituye a escribir en `MEJORAS.md`.
 Cada tarea crea **un fichero nuevo** por ejecución:
 
-    bitacora/2026-08-21-revision.md
-    bitacora/2026-08-21-planificacion.md
-    bitacora/2026-08-24-metricas.md
+    bitacora/2026-08/2026-08-21-revision.md
+    bitacora/2026-08/2026-08-21-planificacion.md
+    bitacora/2026-08/2026-08-24-metricas.md
 
 Un fichero nuevo no puede pisar nada. `MEJORAS.md` queda **congelado** como
 historia hasta el 21 de agosto: se lee, no se escribe.
