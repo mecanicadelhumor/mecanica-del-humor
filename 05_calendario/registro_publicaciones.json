@@ -714,6 +714,21 @@
       "subido_utc": "2026-10-14T06:18:13Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-14T20:45:57Z"
+    },
+    {
+      "id": "MDS-039.es",
+      "episodio": "MDS-039",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Hacer reír ayuda a caer bien a un desconocido?",
+      "guion": "05_calendario/guiones/MDS-039.es.json",
+      "video_id": "7NadrxhvXoo",
+      "url": "https://youtu.be/7NadrxhvXoo",
+      "estado": "private",
+      "publicar_en": "2026-10-15T17:00:00Z",
+      "musica": "cama_11_watching_anime_piano_version_sakura_hz.mp3",
+      "subido_utc": "2026-10-15T06:04:50Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-14T20:45:57Z"

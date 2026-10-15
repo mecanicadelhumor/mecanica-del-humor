@@ -1,11 +1,11 @@
 {
-  "id": "MDS-033.es",
-  "duracion_final_s": 51.7,
-  "tamano_mb": 40.6,
+  "id": "MDS-039.es",
+  "duracion_final_s": 47.6,
+  "tamano_mb": 20.6,
   "audio": {
-    "lufs": -15.13,
-    "pico_dbtp": -1.46,
-    "rango_lu": 3.2
+    "lufs": -14.49,
+    "pico_dbtp": -1.38,
+    "rango_lu": 3.8
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
@@ -42,24 +42,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 50.84,
-    "duracion_real_voz_mp3_s": 50.57,
-    "desfase_s": 0.27,
+    "duracion_calculada_s": 46.77,
+    "duracion_real_voz_mp3_s": 46.51,
+    "desfase_s": 0.26,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_05_prelude_no_13_chris_zabriskie.mp3",
-    "sha256": "14fc9c6d547249a5250cf2ef09c67e1c9b13bef562c899bc8e6bf5f3d321846b"
+    "archivo": "cama_11_watching_anime_piano_version_sakura_hz.mp3",
+    "sha256": "68c5a0968524d6fecfc53aa5c0bd1f97e63248b2c7f667f60e073b4e72f8ac43"
   },
   "guion": {
-    "titulo_trabajo": "¿Por qué una anécdota graciosa deja de tener gracia?",
+    "titulo_trabajo": "¿Hacer reír ayuda a caer bien a un desconocido?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 50.84,
+    "duracion_narracion_s": 46.77,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 12.498,
+    "escena_mas_larga_s": 11.346,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 6
@@ -76,142 +76,117 @@
     ],
     "direccion_voz": [
       "apertura",
-      "planteamiento",
       "remate",
-      "contraste",
       "planteamiento",
+      "contraste",
+      "cifra",
       "objecion"
     ],
-    "escenas_ritmo_fuera_de_rango": []
+    "escenas_ritmo_fuera_de_rango": [],
+    "voz_fiel": [
+      "sin comprobar",
+      "sin comprobar",
+      "sin comprobar",
+      "sin comprobar",
+      "sin comprobar",
+      "sin comprobar"
+    ]
   },
   "visual": {
     "planos": [
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 4.0,
+        "hasta_s": 3.83,
         "fuente": "pexels",
-        "id": 32896752,
-        "pagina": "https://www.pexels.com/video/man-waiting-at-tram-stop-using-smartphone-32896752/",
-        "autor": "Ahmed ؜",
-        "autor_url": "https://www.pexels.com/@mutecevvil",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 1,
-        "desde_s": 4.0,
-        "hasta_s": 6.67,
-        "fuente": "pexels",
-        "id": 10943538,
-        "pagina": "https://www.pexels.com/video/man-with-rosary-on-sidewalk-10943538/",
-        "autor": "Muhammed İKİTEPE",
-        "autor_url": "https://www.pexels.com/@muhammed-i-ki-tepe-155329832",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 2,
-        "desde_s": 6.67,
-        "hasta_s": 13.03,
-        "fuente": "ia",
-        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "a man sitting in a big rain puddle on the pavement, holding his phone up high and dry, slightly stunned",
-        "tipo": "imagen"
-      },
-      {
-        "escena": 3,
-        "desde_s": 13.03,
-        "hasta_s": 15.8,
-        "fuente": "pexels",
-        "id": 6243984,
-        "pagina": "https://www.pexels.com/video/man-and-woman-crossing-street-under-the-rain-6243984/",
-        "autor": "Gary  Barnes",
-        "autor_url": "https://www.pexels.com/@gary-barnes",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 3,
-        "desde_s": 15.8,
-        "hasta_s": 21.37,
-        "fuente": "pexels",
-        "id": 6073876,
-        "pagina": "https://www.pexels.com/video/child-at-the-dinner-table-6073876/",
+        "id": 7407710,
+        "pagina": "https://www.pexels.com/video/a-person-standing-while-wearing-cardboard-box-on-her-head-7407710/",
         "autor": "cottonbro studio",
         "autor_url": "https://www.pexels.com/@cottonbro",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
-        "escena": 4,
-        "desde_s": 26.1,
-        "hasta_s": 33.87,
-        "fuente": "pixabay",
-        "id": 217710,
-        "pagina": "https://pixabay.com/videos/id-217710/",
-        "autor": "YanaHD",
-        "autor_url": "https://pixabay.com/users/YanaHD-13823158/",
-        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "escena": 1,
+        "desde_s": 3.83,
+        "hasta_s": 8.1,
+        "fuente": "pexels",
+        "id": 8089529,
+        "pagina": "https://www.pexels.com/video/close-up-footage-of-a-person-clicking-the-button-8089529/",
+        "autor": "Ron Lach",
+        "autor_url": "https://www.pexels.com/@ron-lach",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
-        "escena": 5,
-        "desde_s": 33.87,
-        "hasta_s": 36.9,
+        "escena": 2,
+        "desde_s": 8.1,
+        "hasta_s": 14.07,
+        "fuente": "pexels",
+        "id": 8111771,
+        "pagina": "https://www.pexels.com/video/man-standing-in-elevator-8111771/",
+        "autor": "RDNE Stock project",
+        "autor_url": "https://www.pexels.com/@rdne",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 3,
+        "desde_s": 14.07,
+        "hasta_s": 15.07,
         "fuente": "ia",
         "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
         "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "a man sitting in a rain puddle holding his phone up, his friend laughing beside him",
+        "prompt": "two strangers laughing together inside an elevator",
         "tipo": "imagen"
       },
       {
-        "escena": 5,
-        "desde_s": 36.9,
-        "hasta_s": 40.17,
+        "escena": 3,
+        "desde_s": 15.07,
+        "hasta_s": 20.27,
         "fuente": "pexels",
-        "id": 35332817,
-        "pagina": "https://www.pexels.com/video/flipping-calendar-pages-in-motion-35332817/",
-        "autor": "Cis14_04 09",
-        "autor_url": "https://www.pexels.com/@cis14_04-09-2156191398",
+        "id": 5985196,
+        "pagina": "https://www.pexels.com/video/man-in-black-coat-opening-the-door-and-walks-inside-5985196/",
+        "autor": "cottonbro studio",
+        "autor_url": "https://www.pexels.com/@cottonbro",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 6,
-        "desde_s": 40.17,
-        "hasta_s": 43.57,
-        "fuente": "pexels",
-        "id": 13543395,
-        "pagina": "https://www.pexels.com/video/wet-asphalt-on-road-after-rain-13543395/",
-        "autor": "izzet çakallı",
-        "autor_url": "https://www.pexels.com/@izzet-cakalli-239176330",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 6,
-        "desde_s": 43.57,
-        "hasta_s": 49.1,
-        "fuente": "pexels",
-        "id": 38122234,
-        "pagina": "https://www.pexels.com/video/rainy-empty-city-street-with-modern-architecture-38122234/",
-        "autor": "Mallesh Baithi",
-        "autor_url": "https://www.pexels.com/@mallesh-baithi-392053733",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "desde_s": 37.37,
+        "hasta_s": 45.0,
+        "fuente": "pixabay",
+        "id": 78804,
+        "pagina": "https://pixabay.com/videos/id-78804/",
+        "autor": "ChristianBodhi",
+        "autor_url": "https://pixabay.com/users/ChristianBodhi-9869182/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       }
     ],
     "sintetico": true
   },
+  "animacion": {
+    "escenas_animadas": 2,
+    "escenas": [
+      4,
+      5
+    ],
+    "pedidas": [
+      4,
+      5
+    ],
+    "descartadas": {},
+    "pagina": "05_calendario/animaciones/MDS-039/animacion.html"
+  },
   "fotogramas_s": [
-    4.1,
-    10.58,
-    18.14,
-    28.97,
-    37.76,
-    46.68
+    4.97,
+    11.8,
+    17.9,
+    27.19,
+    35.19,
+    43.12
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
