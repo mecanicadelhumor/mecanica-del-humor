@@ -1,0 +1,194 @@
+{
+ "id": "MDS-049",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué después de reírte cuentas de más?",
+ "tesis": "Después de reírse, la gente cuenta cosas más íntimas de sí misma, y no se da cuenta: lo notan los demás.",
+ "pilares": [
+  "D"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "B",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué después de reírte cuentas de más?",
+  "respuesta": "Porque reírse te hace contar cosas más íntimas, y no lo notas tú: lo notan los demás.",
+  "puente": "La cena con los compañeros nuevos en la que, después de llorar de risa, acabas contando tu miedo a las palomas: la escena 4 dice que eso, contar más después de reírse, es lo que midieron."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — en la cena con los compañeros nuevos, alguien imita al jefe y lloráis de risa; qué gira — media hora después saben cómo se llama tu ex y tu miedo a las palomas; cómo acaba — lo de las palomas pudo ser la risa, y tú ni lo notaste, aunque en el laboratorio no había cena.",
+  "BRAZO B (ciclo B1, posición 14): la escena 1 abre con el hallazgo como hecho, 9 palabras, con su fuente; la pantalla dice lo mismo. La cena va en la 2 y la 3.",
+  "FUENTE: D13 (Gray, Parkinson y Dunbar, 2015, Human Nature, DOI 10.1007/s12110-015-9225-8), verificada el 15/10/2026 en Crossref y Europe PMC. Frases del resumen copiadas literal: «comparing the characteristics of self-disclosing statements produced by those who had previously watched one of three video clips»; «disclosure intimacy is significantly higher after laughter than in the control condition»; «the disclosure intimacy effect was only found for observers' ratings of participants' disclosures and was absent in the participants' own ratings».",
+  "LÍMITE (regla 12): en el laboratorio no había cena ni compañeros: escribían frases sobre sí mismos después de un vídeo. Lo dice el cierre.",
+  "C17: D13 es nueva.",
+  "LECTURA EN FRÍO (2026-10-15): Vuelta 1: «Lo notaban los que lo leían; ellos, no» (¿quiénes?) y un cierre que repetía la escena 4 → «otras personas al leerlo; quien lo escribió, no» y el cierre vuelve a las palomas. Vuelta 2: pasa."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "D13",
+   "icono": "i-bocadillos",
+   "texto": "Después de reír, cuentas *más*",
+   "narracion": "Después de reírte, cuentas cosas más íntimas sin darte cuenta.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "friends laughing at dinner table night",
+      "coworkers laughing restaurant"
+     ],
+     "prompt": "a group of coworkers laughing hard around a restaurant table at night"
+    },
+    {
+     "marca": true,
+     "desde": "cuentas cosas"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Cena con los *nuevos*",
+   "narracion": "Primera cena con los compañeros nuevos. Alguien imita al jefe y lloráis de risa.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "coworkers dinner restaurant evening",
+      "colleagues dinner table conversation"
+     ],
+     "prompt": "new colleagues at a restaurant table in the evening, slightly formal"
+    },
+    {
+     "desde": "Alguien imita al jefe",
+     "busqueda": [
+      "man doing impression at dinner",
+      "person imitating someone friends laughing"
+     ],
+     "prompt": "a man at a dinner table doing an exaggerated impression, everyone laughing"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Tu ex y las *palomas*",
+   "narracion": "Media hora después, ya saben cómo se llama tu ex y tu miedo a las palomas.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "woman talking animatedly dinner",
+      "person confessing at dinner table"
+     ],
+     "prompt": "a person talking animatedly at a dinner table, colleagues listening wide-eyed"
+    },
+    {
+     "desde": "tu miedo a las palomas",
+     "busqueda": [
+      "pigeons on city square",
+      "pigeon close up street"
+     ],
+     "prompt": "a group of pigeons on a city square, close-up"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "D13",
+   "a": "Vídeo de *risa*",
+   "et_a": "y luego escribir",
+   "b": "Vídeo sin gracia",
+   "et_b": "y luego escribir",
+   "narracion": "Unos psicólogos pusieron a gente a ver un vídeo, de risa o sin gracia, y luego a escribir sobre sí misma.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "people watching laptop laughing",
+      "person laughing watching video"
+     ],
+     "prompt": "a person laughing while watching a video on a laptop"
+    },
+    {
+     "desde": "y luego a escribir",
+     "busqueda": [
+      "hand writing on paper desk",
+      "person writing notes"
+     ],
+     "prompt": "a hand writing on a sheet of paper at a desk"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "D13",
+   "personaje": "entiende",
+   "cifra": "Más íntimo",
+   "pie": "sin que tú lo *notes*",
+   "narracion": "Quien se había reído contaba cosas más íntimas. Lo notaban otras personas al leerlo; quien lo escribió, no.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person reading notes surprised",
+      "researcher reading papers raising eyebrows"
+     ],
+     "prompt": "a person reading a handwritten page with raised eyebrows"
+    },
+    {
+     "desde": "quien lo escribió, no",
+     "busqueda": [
+      "man shrugging smiling",
+      "person relaxed shrug"
+     ],
+     "prompt": "a relaxed person shrugging with a smile, unaware"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "D13",
+   "personaje": "duda",
+   "titulo": "¿Y en una cena de *verdad*?",
+   "subtitulo": "Fuente: Gray, Parkinson y Dunbar, 2015",
+   "narracion": "Lo de las palomas pudo ser la risa, y ni te enteraste. Eso sí, se probó en un laboratorio, no en una cena.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "pigeon walking alone street",
+      "single pigeon pavement"
+     ],
+     "prompt": "a single pigeon walking on a pavement at night under a street light"
+    },
+    {
+     "desde": "Eso sí, se probó",
+     "busqueda": [
+      "empty classroom desks papers",
+      "lab room desk paper"
+     ],
+     "prompt": "a plain lab room with a desk, a sheet of paper and a pen"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 2, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-15",
+  "de_que_va": "Va de que, después de reírte con alguien, le cuentas cosas más personales sin darte cuenta.",
+  "pregunta_y_respuesta": "¿Por qué acabo contando tanto de mí cuando lo paso bien con gente que casi no conozco? Porque la risa te hace abrirte más, y tú no lo notas aunque los demás sí.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "ninguna",
+  "donde_me_iria": "me quedo (en la escena 4 «bajaba el ritmo»)",
+  "notas": [
+   "«Lo notaban otras personas al leerlo; quien lo escribió, no.» — «La tuve que releer mentalmente para saber qué era ‹lo›. Al final entendí.»",
+   "«Lo de las palomas pudo ser la risa» — «Durante un segundo parece que la risa fuera la causa del miedo a las palomas.»",
+   "El final «me dejó algo frío»: solo se probó en un laboratorio."
+  ],
+  "veredicto": "pasa"
+ }
+}

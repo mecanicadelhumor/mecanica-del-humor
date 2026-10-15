@@ -1,0 +1,196 @@
+{
+ "id": "MDS-047",
+ "formato": "corto",
+ "serie": "Ríete primero, te explico después",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué dan miedo los payasos?",
+ "tesis": "Los payasos dan miedo sobre todo porque no sabes si te quieren hacer daño, no sabes qué van a hacer y por su cara; casi nunca por un mal recuerdo propio.",
+ "pilares": [
+  "J"
+ ],
+ "duracion_objetivo_s": 35,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "control",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "gancho_actualidad": {
+  "que": "Halloween, el sábado 31 de octubre (la semana siguiente)",
+  "fuente": "calendario",
+  "por_que_encaja": "el disfraz de payaso es de los más vistos en Halloween, y el payaso es el oficio del humor que da miedo; la ficha J07 explica de dónde sale ese miedo"
+ },
+ "historia": {
+  "pregunta": "¿Por qué dan miedo los payasos?",
+  "respuesta": "Porque no sabes si te quieren hacer daño ni qué van a hacer, y por su cara; casi nadie lo tiene por algo que le pasara.",
+  "puente": "Tu compañero Andrés, disfrazado de payaso en la fiesta de Halloween de la oficina, y tú dando un paso atrás: la escena 4 dice que eso, el miedo al payaso sin motivo propio, es lo que preguntaron."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — en la fiesta de Halloween de la oficina, Andrés, de contabilidad, viene de payaso y te ofrece un caramelo; qué gira — das un paso atrás, aunque lleva diez años trayéndote caramelos; cómo acaba — a Andrés le sobraba la cara pintada, aunque solo se preguntó a gente que ya tenía miedo a los payasos.",
+  "SUSTITUYE al primer MDS-047 («¿Reírte con amigos hace que duela menos?», ficha D06), que no pasó la lectura en frío a la tercera vuelta: el lector no sabía si se comparaba a la misma gente antes y después o a dos grupos, ni quién «ponía» el dolor. Regla: tema nuevo.",
+  "GANCHO DE ACTUALIDAD (C52): Halloween, el sábado de la semana siguiente («chistes de halloween», 16.372.358 en el top 10 el 15/10). El tema sigue siendo la ficha: de dónde sale el miedo a quien hace reír.",
+  "FUENTE: J07 (Tyson, Davies, Scorey y Greville, 2023, Frontiers in Psychology, DOI 10.3389/fpsyg.2023.1109466), verificada el 15/10/2026 en Crossref y Europe PMC. Frases del resumen copiadas literal: «a sample of 528 participants who reported such a fear»; «uncertainty of harmful intent, media influences and unpredictability of behaviour play an important role in the origins of coulrophobia»; «primarily relate to aspects of their facial appearance, their behaviour, and how they have been portrayed in the media»; «Surprisingly, fear derived from personal experience was not one of our main findings».",
+  "LO QUE NO SE DICE: que la sonrisa pintada «esconda lo que piensa» (es plausible, pero el resumen dice «facial appearance», sin más). Nada de niños: la fiesta es de la oficina.",
+  "LÍMITE (regla 12): solo preguntaron a gente que ya tenía miedo; no dice cuánta gente lo tiene.",
+  "C17: J07 es nueva.",
+  "LECTURA EN FRÍO (2026-10-15): el primer MDS-047 (D06, «¿reírte con amigos hace que duela menos?») cayó a la tercera vuelta; este, tema nuevo, pasa a la segunda. Vuelta 1: «y su cara» suelto, «le sobraba la cara pintada» y «no cuánta lo tiene» → la cara pintada y las películas de payasos malos entran en la escena 5 y el cierre es «Sin la pintura, Andrés solo sería Andrés». Vuelta 2: pasa. El lector propone juntar las escenas 2 y 3: no se juntan, entre las dos va la pausa del remate."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-grieta",
+   "texto": "Halloween en la *oficina*",
+   "narracion": "Fiesta de Halloween en la oficina. Andrés, el de contabilidad, viene disfrazado de payaso.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "office halloween party costumes",
+      "coworkers in costumes office"
+     ],
+     "prompt": "an office Halloween party, adults in costumes among desks and orange decorations"
+    },
+    {
+     "desde": "viene disfrazado de payaso",
+     "busqueda": [
+      "adult in clown costume office",
+      "man in clown makeup party"
+     ],
+     "prompt": "an adult man in a colourful clown costume and white face paint standing in an office"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Un *caramelo*",
+   "narracion": "Se te acerca sonriendo y te ofrece un caramelo.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "clown hand offering candy",
+      "hand offering wrapped sweet"
+     ],
+     "prompt": "a gloved clown hand holding out a wrapped sweet, close-up"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Diez años de *caramelos*",
+   "narracion": "Y tú das un paso atrás. Andrés lleva diez años trayéndote caramelos.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "woman stepping back startled office",
+      "person recoiling surprised"
+     ],
+     "prompt": "an office worker stepping back, startled, holding a coffee cup"
+    },
+    {
+     "desde": "Andrés lleva diez años",
+     "busqueda": [
+      "jar of candy on office desk",
+      "sweets bowl on desk"
+     ],
+     "prompt": "a jar of wrapped sweets on an office desk"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "J07",
+   "a": "Lo que *creían*",
+   "et_a": "un mal recuerdo",
+   "b": "Lo que salió",
+   "et_b": "otra cosa",
+   "narracion": "Unos psicólogos preguntaron a gente con miedo a los payasos de dónde les venía. Y no solía ser de algo que les pasara.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person filling questionnaire laptop",
+      "adult answering survey online"
+     ],
+     "prompt": "an adult filling in an online questionnaire on a laptop at home"
+    },
+    {
+     "desde": "Y no solía ser",
+     "busqueda": [
+      "old circus tent empty",
+      "empty circus ring"
+     ],
+     "prompt": "an empty old circus ring under a striped tent"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "J07",
+   "personaje": "entiende",
+   "cifra": "No saber",
+   "pie": "si te quiere hacer *daño*",
+   "narracion": "Pesaban no saber si te quieren hacer daño ni qué van a hacer, su cara pintada y las películas de payasos malos.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "clown face makeup close up",
+      "clown painted smile close up"
+     ],
+     "prompt": "close-up of a clown's painted face with a fixed red smile, no expression in the eyes"
+    },
+    {
+     "desde": "las películas de payasos",
+     "busqueda": [
+      "old movie theater dark screen",
+      "cinema audience dark"
+     ],
+     "prompt": "a dark cinema with an audience lit by the screen, seen from behind"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "J07",
+   "personaje": "duda",
+   "titulo": "Solo a quien ya *temía*",
+   "subtitulo": "Fuente: Tyson y otros, 2023",
+   "narracion": "Sin la pintura, Andrés solo sería Andrés. La pega: solo preguntaron a gente que ya tenía miedo a los payasos.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "man removing clown makeup mirror",
+      "man wiping face paint"
+     ],
+     "prompt": "a man wiping off white clown face paint in an office bathroom mirror, smiling"
+    },
+    {
+     "desde": "La pega",
+     "busqueda": [
+      "group of people office",
+      "office crowd party"
+     ],
+     "prompt": "a crowd of colleagues at an office party, seen from behind"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 2 del tema nuevo; el primer MDS-047 cayó a la tercera)",
+  "fecha": "2026-10-15",
+  "de_que_va": "Va de por qué a la gente le dan miedo los payasos, con el ejemplo de un compañero de oficina disfrazado.",
+  "pregunta_y_respuesta": "¿De dónde viene el miedo a los payasos? Casi nunca de algo malo que te pasara: de no saber qué intenciones tienen ni qué van a hacer, de la cara pintada y de las películas de payasos malos.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "ninguna que quitar (propone juntar la escena 2 con la 3; no se juntan: la pausa antes del remate va entre las dos)",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "«Pesaban no saber si te quieren hacer daño…» — «El ‹Pesaban› al principio me descolocó. Tuve que volver a oírla para entender que eran las causas.»",
+   "«Y no solía ser de algo que les pasara.» — «Se entiende, pero un poco a destiempo»; el rótulo «Lo que salió (otra cosa)» no le dice nada.",
+   "«La pega: solo preguntaron a gente que ya tenía miedo a los payasos.» — «Entiendo lo que dice, pero no sé qué hacer con ello.»"
+  ],
+  "veredicto": "pasa"
+ }
+}

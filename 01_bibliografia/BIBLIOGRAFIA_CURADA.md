@@ -3,7 +3,7 @@
 > Base de conocimiento de **Mecánica del Humor / Humor Mechanics**.
 > Generado desde `data/semillas.json`. No edites este archivo a mano: edita el JSON y vuelve a ejecutar `scripts/generar_md.py`.
 
-**90 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
+**102 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
 
 ## Cómo se ha curado
 
@@ -26,13 +26,13 @@ y fusiona repetidos antes de que nadie los lea. Están marcados y excluidos del 
 - **A. Teorias fundacionales del humor** — 9 obras
 - **B. Diferencias individuales, estilos y medicion** — 7 obras
 - **C. Produccion de humor: habilidad, creatividad e inteligencia** — 6 obras
-- **D. Humor, vinculos sociales, atraccion y estatus** — 11 obras
-- **E. Risa: etologia, acustica y contagio** — 8 obras
-- **F. Neurociencia y cognicion del humor** — 10 obras
+- **D. Humor, vinculos sociales, atraccion y estatus** — 13 obras
+- **E. Risa: etologia, acustica y contagio** — 12 obras
+- **F. Neurociencia y cognicion del humor** — 13 obras
 - **G. Humor aplicado: trabajo, aula, salud, persuasion** — 6 obras
 - **H. Entrenabilidad: el humor se puede aprender** — 6 obras
-- **I. Linguistica y estructura del chiste** — 9 obras
-- **J. El lado oscuro: gelotofobia, burla, humor que falla** — 6 obras
+- **I. Linguistica y estructura del chiste** — 11 obras
+- **J. El lado oscuro: gelotofobia, burla, humor que falla** — 7 obras
 - **K. Humor computacional e IA** — 4 obras
 - **L. Oficio: manuales de stand-up, improvisacion y guion** — 8 obras
 
@@ -259,6 +259,14 @@ Tipo: articulo
 
 Humor como rasgo de seleccion sexual. Angulo de alto trafico tratado con rigor.
 
+### `D12` ★★★ What's so funny about not having money? The effects of power on laughter
+
+**Stillman, T. F.; Baumeister, R. F.; DeWall, C. N.** (2007) · *Personality and Social Psychology Bulletin, 33(11), 1547-1558*  
+DOI: [`10.1177/0146167207305863`](https://doi.org/10.1177/0146167207305863) · verificado 15/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1177/0146167207305863 y en Europe PMC (PMID 17933745)  
+Tipo: articulo
+
+Por que todos se rien de los chistes del jefe: quien tiene menos poder se rie mas de los chistes de quien decide su dinero. Para «por que todos se rien de los chistes del jefe».
+
 ### `D05` ★★ Sharing a joke: The effects of a similar sense of humor on affiliation and altruism
 
 **Curry, O. S.; Dunbar, R. I. M.** (2013) · *Evolution and Human Behavior*  
@@ -269,8 +277,8 @@ Compartir sentido del humor aumenta la afiliacion y la generosidad medida. Puent
 
 ### `D06` ★★ Social laughter is correlated with an elevated pain threshold
 
-**Dunbar, R. I. M. et al.** (2012) · *Proceedings of the Royal Society B*  
-DOI: [`10.1098/rspb.2011.1373`](https://doi.org/10.1098/rspb.2011.1373) ⚠️ por verificar  
+**Dunbar, R. I. M.; Baron, R.; Frangou, A.; Pearce, E.; van Leeuwen, E. J. C.; Stow, J.; Partridge, G.; MacDonald, I.; Barra, V.; van Vugt, M.** (2012) · *Proceedings of the Royal Society B, 279(1731), 1161-1167*  
+DOI: [`10.1098/rspb.2011.1373`](https://doi.org/10.1098/rspb.2011.1373) · verificado 15/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1098/rspb.2011.1373 y en Europe PMC (PMID 21920973)  
 Tipo: articulo
 
 Endorfinas y risa grupal. Explica el vinculo fisiologico del humor compartido.
@@ -314,6 +322,14 @@ Tipo: articulo
 
 Caer bien en una primera conversacion: entre desconocidos, el humor va con mas simpatia y cercania. Responde a «como caer bien en una primera conversacion» sin tocar la atraccion (no es tema de Short).
 
+### `D13` ★★ Laughter's influence on the intimacy of self-disclosure
+
+**Gray, A. W.; Parkinson, B.; Dunbar, R. I. M.** (2015) · *Human Nature, 26(1), 28-43*  
+DOI: [`10.1007/s12110-015-9225-8`](https://doi.org/10.1007/s12110-015-9225-8) · verificado 15/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1007/s12110-015-9225-8 y en Europe PMC (PMID 25762120)  
+Tipo: articulo
+
+Despues de reirse, la gente cuenta cosas mas intimas de si misma, y no se da cuenta. Contraintuitivo y de la vida diaria.
+
 
 ---
 
@@ -352,6 +368,22 @@ Tipo: articulo
 
 Las risas enlatadas: los chistes malos parecen mas graciosos con risas detras, y mas aun si la risa es espontanea. Desbloquea «por que las series tienen risas grabadas».
 
+### `E09` ★★★ Positive emotions preferentially engage an auditory-motor "mirror" system
+
+**Warren, J. E.; Sauter, D. A.; Eisner, F.; Wiland, J.; Dresner, M. A.; Wise, R. J. S.; Rosen, S.; Scott, S. K.** (2006) · *The Journal of Neuroscience, 26(50), 13067-13075*  
+DOI: [`10.1523/jneurosci.3907-06.2006`](https://doi.org/10.1523/jneurosci.3907-06.2006) · verificado 15/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1523/jneurosci.3907-06.2006 y en Europe PMC (PMID 17167096)  
+Tipo: articulo
+
+Por que se pega la risa: oir sonidos de emocion positiva activa solo la parte del cerebro que prepara los gestos de la cara para responder. La pregunta de «por que se nos pega la risa de otro» (37,7 M en el top 10 el 15/10).
+
+### `E12` ★★★ Hearing someone laugh and seeing someone yawn: Modality-specific contagion of laughter and yawning in the absence of others
+
+**De Weck, M.; Perriard, B.; Annoni, J.-M.; Britz, J.** (2022) · *Frontiers in Psychology, 13, 780665*  
+DOI: [`10.3389/fpsyg.2022.780665`](https://doi.org/10.3389/fpsyg.2022.780665) · verificado 15/10/2026: titulo y DOI juntos en api.crossref.org/works/10.3389/fpsyg.2022.780665 y en Europe PMC (PMID 35250722)  
+Tipo: articulo
+
+La risa se pega por el oido y el bostezo por la vista, incluso a solas; y la risa se gasta con el tiempo y el bostezo no. Para «por que se nos pega la risa de otro» (37,7 M).
+
 ### `E04` ★★ The social life of laughter
 
 **Scott, S. K.; Lavan, N.; Chen, S.; McGettigan, C.** (2014) · *Trends in Cognitive Sciences*  
@@ -385,6 +417,22 @@ DOI: [`10.1037/0022-3514.73.4.687`](https://doi.org/10.1037/0022-3514.73.4.687) 
 Tipo: articulo
 
 La risa en el duelo: entre personas que habian perdido a su pareja, la risa de verdad (la que arruga los ojos) iba con menos enfado, mas distancia del malestar y mejores relaciones; la de compromiso, no. Responde a «por que nos reimos en un funeral».
+
+### `E10` ★★ Social laughter triggers endogenous opioid release in humans
+
+**Manninen, S.; Tuominen, L.; Dunbar, R. I. M.; Karjalainen, T.; Hirvonen, J.; Arponen, E.; Hari, R.; Jaaskelainen, I. P.; Sams, M.; Nummenmaa, L.** (2017) · *The Journal of Neuroscience, 37(25), 6125-6131*  
+DOI: [`10.1523/jneurosci.0688-16.2017`](https://doi.org/10.1523/jneurosci.0688-16.2017) · verificado 15/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1523/jneurosci.0688-16.2017 y en Europe PMC (PMID 28536272)  
+Tipo: articulo
+
+La risa en compania libera opioides en el cerebro (PET): el mecanismo quimico de por que reirse con amigos une. Apoyo de D06.
+
+### `E11` ★★ The perception of spontaneous and volitional laughter across 21 societies
+
+**Bryant, G. A.; Fessler, D. M. T.; Fusaroli, R.; Clint, E.; et al.** (2018) · *Psychological Science, 29(9), 1515-1525*  
+DOI: [`10.1177/0956797618778235`](https://doi.org/10.1177/0956797618778235) · verificado 15/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1177/0956797618778235 y en Europe PMC (PMID 30044711)  
+Tipo: articulo
+
+Risa de verdad y risa fingida se distinguen en 21 sociedades, por encima del azar pero no mucho. Para «como distinguir una risa falsa de una de verdad» (5,1 M).
 
 
 ---
@@ -422,6 +470,14 @@ DOI: [`10.1038/2870`](https://doi.org/10.1038/2870) · verificado 08/10/2026: ti
 Tipo: articulo
 
 Por que no puedes hacerte cosquillas a ti mismo: el cerebelo predice lo que va a sentir tu propio movimiento y lo cancela. La pregunta de cosquillas que todo el mundo se ha hecho.
+
+### `F12` ★★★ Hiding feelings: The acute effects of inhibiting negative and positive emotion
+
+**Gross, J. J.; Levenson, R. W.** (1997) · *Journal of Abnormal Psychology, 106(1), 95-103*  
+DOI: [`10.1037/0021-843x.106.1.95`](https://doi.org/10.1037/0021-843x.106.1.95) · verificado 15/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1037/0021-843x.106.1.95 y en Europe PMC (PMID 9103721)  
+Tipo: articulo
+
+Aguantarse la risa: quien la contiene viendo algo gracioso dice que le ha hecho menos gracia, y su corazon se acelera. Para «si te ries pierdes» y «risa floja».
 
 ### `F03` ★★ Two neural networks for laughter: A tractography study
 
@@ -463,6 +519,14 @@ Tipo: articulo
 
 La verguenza ajena (el motor de la comedia de incomodidad): se siente aunque el otro no sepa que esta haciendo el ridiculo, y en el cerebro se parece al dolor ajeno.
 
+### `F13` ★★ Individual differences in laughter perception reveal roles for mentalizing and sensorimotor systems in the evaluation of emotional authenticity
+
+**McGettigan, C.; Walsh, E.; Jessop, R.; Agnew, Z. K.; Sauter, D. A.; Warren, J. E.; Scott, S. K.** (2015) · *Cerebral Cortex, 25(1), 246-257*  
+DOI: [`10.1093/cercor/bht227`](https://doi.org/10.1093/cercor/bht227) · verificado 15/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1093/cercor/bht227 y en Europe PMC (PMID 23968840)  
+Tipo: articulo
+
+Ante una risa de compromiso el cerebro se pone a averiguar que piensa el otro; ante una de verdad, no. Apoyo para risa falsa y risa real.
+
 ### `F05` ★ Neural correlates of humor detection and appreciation in children
 
 **Neely, M. N. et al.** (2012) · *Cerebral Cortex*  
@@ -470,6 +534,14 @@ DOI: [`10.1523/jneurosci.4172-11.2012`](https://doi.org/10.1523/jneurosci.4172-1
 Tipo: articulo
 
 Como madura el humor en la infancia: util para 'el humor se aprende'.
+
+### `F11` ★ Relations between tickling and humorous laughter: Preliminary support for the Darwin-Hecker hypothesis
+
+**Fridlund, A. J.; Loftis, J. M.** (1990) · *Biological Psychology, 30(2), 141-150*  
+DOI: [`10.1016/0301-0511(90)90023-p`](https://doi.org/10.1016/0301-0511(90)90023-p) · verificado 15/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/0301-0511(90)90023-p y en Europe PMC (PMID 2285764)  
+Tipo: articulo
+
+Quien tiene mas cosquillas tambien dice reirse mas: la vieja idea de Darwin de que cosquillas y humor van juntos. Cuestionario, preliminar.
 
 
 ---
@@ -615,6 +687,14 @@ Tipo: articulo
 
 Familia «mensajes». Por que crees que tu ironia se entiende por escrito: quien escribe «oye» su propio tono y sobreestima lo bien que se entiende. Continuacion natural de MDS-016.
 
+### `I11` ★★★ The humanizing voice: Speech reveals, and text conceals, a more thoughtful mind in the midst of disagreement
+
+**Schroeder, J.; Kardas, M.; Epley, N.** (2017) · *Psychological Science, 28(12), 1745-1762*  
+DOI: [`10.1177/0956797617713798`](https://doi.org/10.1177/0956797617713798) · verificado 15/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1177/0956797617713798 y en Europe PMC (PMID 29068763)  
+Tipo: articulo
+
+Familia «mensajes». Las mismas palabras, oidas, hacen parecer a quien no piensa como tu mas sensato que leidas: por que una discusion por escrito sale peor.
+
 ### `I03` ★★ Linguistic Theories of Humor
 
 **Attardo, S.** (1994) · *Mouton de Gruyter*  
@@ -652,6 +732,14 @@ DOI: [`10.1016/j.actpsy.2026.107245`](https://doi.org/10.1016/j.actpsy.2026.1072
 Tipo: articulo
 
 Familia «mensajes». El emoji de la sonrisa no dice lo mismo segun quien lo lea: los mayores de 60 lo leen literal, como sonrisa sincera; los de 18-30 hacen lo contrario.
+
+### `I10` ★★ It's surprisingly nice to hear you: Misunderstanding the impact of communication media can lead to suboptimal choices of how to connect with others
+
+**Kumar, A.; Epley, N.** (2021) · *Journal of Experimental Psychology: General, 150(3), 595-607*  
+DOI: [`10.1037/xge0000962`](https://doi.org/10.1037/xge0000962) · verificado 15/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1037/xge0000962 y en Europe PMC (PMID 32915017)  
+Tipo: articulo
+
+Familia «mensajes». Llamar une mas que escribir y no es mas incomodo, aunque esperamos que lo sea: por eso escribimos cuando seria mejor llamar.
 
 
 ---
@@ -705,6 +793,14 @@ DOI: [`10.1037/pspi0000079`](https://doi.org/10.1037/pspi0000079)
 Tipo: articulo
 
 Duplicado deliberado de D01 con distinto titulo. Prueba de deduplicacion difusa por titulo.
+
+### `J07` ★★ Fear of clowns: An investigation into the aetiology of coulrophobia
+
+**Tyson, P. J.; Davies, S. K.; Scorey, S.; Greville, W. J.** (2023) · *Frontiers in Psychology, 14, 1109466*  
+DOI: [`10.3389/fpsyg.2023.1109466`](https://doi.org/10.3389/fpsyg.2023.1109466) · verificado 15/10/2026: titulo y DOI juntos en api.crossref.org/works/10.3389/fpsyg.2023.1109466 y en Europe PMC (PMID 36818074)  
+Tipo: articulo
+
+Por que dan miedo los payasos: no saber si quieren hacerte dano, lo impredecible y la cara pintada. Gancho de Halloween (31/10), para la semana del 26/10.
 
 
 ---

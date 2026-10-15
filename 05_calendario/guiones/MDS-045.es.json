@@ -1,0 +1,177 @@
+{
+ "id": "MDS-045",
+ "formato": "corto",
+ "serie": "Esto no tiene gracia y esto sí",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué todos se ríen de los chistes del jefe?",
+ "tesis": "Nos reímos más de los chistes de quien decide sobre nuestro dinero: no es que el chiste sea mejor, es quién lo cuenta.",
+ "pilares": [
+  "D"
+ ],
+ "duracion_objetivo_s": 40,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "B",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué todos se ríen de los chistes del jefe?",
+  "respuesta": "Porque nos reímos más de quien decide sobre nuestro dinero: el mismo chiste, contado por alguien sin poder, no hace gracia.",
+  "puente": "El chiste del ex-preso, que en boca del jefe arranca carcajadas y en boca del becario, silencio: la escena 4 dice que eso es lo que midieron, risas a quien controla el dinero."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — en la cena de empresa, el jefe cuenta el chiste del café ex-preso y la mesa se parte; qué gira — el becario cuenta el mismo chiste y solo se oyen los cubiertos; cómo acaba — el chiste del ex-preso no mejoró, mejoró quién lo contaba, aunque el dinero del estudio era de laboratorio.",
+  "SERIE: dos chistes idénticos (el mismo, dos narradores), contados los dos antes de explicar nada. La comparación es la escena 4.",
+  "BRAZO B (ciclo B1, posición 10): la escena 1 abre con el hallazgo como hecho, 10 palabras, con su fuente; la pantalla dice lo mismo.",
+  "FUENTE: D12 (Stillman, Baumeister y DeWall, 2007, Personality and Social Psychology Bulletin, DOI 10.1177/0146167207305863), verificada el 15/10/2026 en Crossref y Europe PMC. Frase del resumen copiada literal: «In Study 1, participants laughed more at an interviewer's jokes when the interviewer controlled their cash rewards than in the absence of monetary contingencies».",
+  "LÍMITE (regla 12): el dinero era una recompensa de un experimento, no un sueldo. El estudio 2 (los de menos poder se reían más incluso solos) no entra: sería una idea nueva después de la mitad (prueba 2).",
+  "CHISTE: «¿Cuál es el café más peligroso del mundo? El ex-preso», de los que llevan años circulando. Tiene que ser malo: así se ve que la risa no la pone el chiste.",
+  "C17: D12 es nueva.",
+  "LECTURA EN FRÍO (2026-10-15): Vuelta 1: el rótulo «El becario: cubiertos» → «Con el becario, silencio». Vuelta 2: el cierre en pregunta («¿Y con un sueldo?») y «premio de laboratorio» no se entendían; el entrevistador salía de golpe → «lo probaron con entrevistas» y el cierre lo dice en afirmativo. Vuelta 3: pasa. El lector quitaría el límite; se queda (regla 12)."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "D12",
+   "icono": "i-balanza",
+   "texto": "Te ríes más de quien decide tu *dinero*",
+   "narracion": "Te ríes más de los chistes de quien decide tu dinero.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "office party colleagues laughing at boss",
+      "coworkers laughing dinner table"
+     ],
+     "prompt": "colleagues at a company dinner laughing loudly at a man at the head of the table"
+    },
+    {
+     "marca": true,
+     "desde": "de quien decide"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "El jefe: «El *ex-preso*»",
+   "narracion": "Cena de empresa. El jefe pregunta: ¿cuál es el café más peligroso del mundo? El ex-preso. Y la mesa entera se parte.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "businessman telling joke dinner",
+      "man in suit talking at restaurant table"
+     ],
+     "prompt": "a man in a suit at the head of a restaurant table telling a story, raising a finger"
+    },
+    {
+     "desde": "El ex-preso",
+     "busqueda": [
+      "espresso cup on table close up",
+      "small coffee cup restaurant"
+     ],
+     "prompt": "a small espresso cup on a white tablecloth, close-up"
+    },
+    {
+     "desde": "Y la mesa entera",
+     "busqueda": [
+      "group laughing restaurant table",
+      "colleagues laughing dinner"
+     ],
+     "prompt": "a long restaurant table of colleagues laughing exaggeratedly"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Con el becario, *silencio*",
+   "narracion": "Diez minutos después, el becario cuenta el mismo chiste. Y solo se oyen los cubiertos.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "young man talking at dinner table",
+      "young employee speaking restaurant"
+     ],
+     "prompt": "a young employee at the end of a restaurant table telling a joke, hopeful"
+    },
+    {
+     "desde": "solo se oyen los cubiertos",
+     "busqueda": [
+      "cutlery on plate close up",
+      "people eating silently restaurant"
+     ],
+     "prompt": "close-up of forks and knives on plates, people eating in silence"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "D12",
+   "personaje": "rie",
+   "a": "Decide tu *dinero*",
+   "et_a": "más risas",
+   "b": "No decide nada",
+   "et_b": "menos risas",
+   "narracion": "Unos psicólogos lo probaron con entrevistas: la gente se reía más de los chistes del entrevistador si él decidía cuánto dinero ganaban.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "job interview office desk",
+      "interviewer and candidate office"
+     ],
+     "prompt": "a job interview across an office desk, seen from the side, faces not prominent"
+    },
+    {
+     "desde": "cuánto dinero ganaban",
+     "busqueda": [
+      "cash envelope on desk",
+      "banknotes on office table"
+     ],
+     "prompt": "an envelope with a few banknotes on an office desk"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "D12",
+   "personaje": "duda",
+   "titulo": "Sin sueldos de *verdad*",
+   "subtitulo": "Fuente: Stillman y otros, 2007",
+   "narracion": "El chiste del ex-preso no mejoró: mejoró quién lo contaba. Aunque en el estudio no había sueldos: el dinero era un premio del experimento.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "espresso cup empty table",
+      "coffee cup after dinner"
+     ],
+     "prompt": "an empty espresso cup on a restaurant table after dinner"
+    },
+    {
+     "desde": "Aunque en el estudio",
+     "busqueda": [
+      "university lab desk papers",
+      "research lab table forms"
+     ],
+     "prompt": "a plain university lab desk with paper forms and a pen"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 3, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-15",
+  "de_que_va": "Va de que nos reímos más de los chistes de quien manda sobre nuestro dinero, aunque el chiste sea el mismo.",
+  "pregunta_y_respuesta": "¿Por qué todos se ríen del chiste del jefe y nadie del del becario? No es por el chiste, sino porque el jefe decide lo que cobras: un estudio vio que la gente se reía más del entrevistador cuando este decidía cuánto dinero ganaban.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Aunque en el estudio no había sueldos: el dinero era un premio del experimento.» (se queda: es el cierre honesto, regla 12; ver notas_humor)",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "«Unos psicólogos lo probaron con entrevistas» — «no sé si eran entrevistas de trabajo de verdad o algo montado».",
+   "«Aunque en el estudio no había sueldos: el dinero era un premio del experimento.» — «la tuve que procesar dos veces. No sé qué premio era ni si eso desmonta lo que acaban de contar.» (lo entiende; es el cierre honesto)"
+  ],
+  "veredicto": "pasa"
+ }
+}

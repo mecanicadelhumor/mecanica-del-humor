@@ -1,0 +1,216 @@
+{
+ "id": "MDS-043",
+ "formato": "corto",
+ "serie": "Ríete primero, te explico después",
+ "idioma": "es",
+ "titulo_trabajo": "¿Se pega más una risa o un bostezo?",
+ "tesis": "La risa se pega sobre todo al oírla y el bostezo al verlo, incluso a solas; y la risa se pega cada vez menos, mientras el bostezo sigue pegándose igual.",
+ "pilares": [
+  "E"
+ ],
+ "duracion_objetivo_s": 35,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "B",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Se pega más una risa o un bostezo?",
+  "respuesta": "Depende del sentido: la risa se pega al oírla y el bostezo al verlo. Y la risa se gasta: a la larga se pega menos; el bostezo, no.",
+  "puente": "El vecino del tren que se ríe con un audio: primero sonríes con él, a la vigésima carcajada ya no, pero en cuanto bosteza, bostezas. La escena 4 dice que eso es lo que grabaron en las caras de gente sola."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — en el tren, el de al lado escucha un audio y se ríe a carcajadas, y tú sonríes sin querer; qué gira — a la vigésima carcajada ya no sonríes, pero en cuanto él bosteza, bostezas tú; cómo acaba — no es culpa de tu vecino: su risa se gasta y su bostezo no, aunque se midió a gente sola delante de vídeos.",
+  "SUSTITUYE al primer MDS-043 («¿Por qué se nos pega la risa de otro?», ficha E09), que no pasó la lectura en frío a la tercera vuelta: el lector no entendía «lo que mueve tu cara» ni que el escáner «viera» la cara. Regla: tema nuevo. Este cambia la pregunta (risa contra bostezo, oído contra vista, y la risa que se gasta) y la ficha, y el hallazgo es de conducta grabada, no de escáner.",
+  "DERECHO DE TANTEO (C46) de MDS-036 (321 a 48 h): las risas de los demás, ahora cómo se pegan y cuándo dejan de pegarse.",
+  "BRAZO B (ciclo B1, posición 8): la escena 1 abre con el hallazgo como hecho, 12 palabras, con su fuente; la pantalla dice lo mismo.",
+  "FUENTE: E12 (De Weck, Perriard, Annoni y Britz, 2022, Frontiers in Psychology, DOI 10.3389/fpsyg.2022.780665), verificada el 15/10/2026 en Crossref y Europe PMC. Frases del resumen copiadas literal: «laughter elicited more contagious responses than yawning, albeit mostly smiling rather than overt laughter»; «laughter was more contagious in the auditory modality, and yawning was more contagious in the visual modality»; «laughter became decreasingly contagious over time, while yawning remained steadily contagious»; «in the absence of a social situation».",
+  "LÍMITE (regla 12): gente sola en un laboratorio, con grabaciones; no se midió en un tren con alguien al lado.",
+  "C17: E12 es nueva. E07 (MDS-036) no se usa.",
+  "LECTURA EN FRÍO (2026-10-15): el primer MDS-043 (E09, «¿por qué se nos pega la risa de otro?») cayó a la tercera vuelta; este, tema nuevo, pasa a la segunda. Vuelta 1: «sobre todo en sonrisa», «no tiene la culpa» (¿de qué?) y el aviso final sin consecuencia; además, «¿un bostezo solo oído no se pega?» → «se pega más al oírla / más al verlo» y el cierre vuelve al tren. Vuelta 2: pasa. La frase que el lector quitaría («Por eso en el tren dejaste de sonreír y seguiste bostezando») se queda: es la vuelta a la situación del principio, la que en diecinueve lecturas del 08/10 se oía como final."
+ ],
+ "escenas": [
+  {
+   "tipo": "comparacion",
+   "fuente": "E12",
+   "icono": "i-publico",
+   "a": "La risa",
+   "et_a": "se pega al *oírla*",
+   "b": "El bostezo",
+   "et_b": "se pega al verlo",
+   "narracion": "La risa se pega más al oírla; el bostezo, más al verlo.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "man laughing on train headphones",
+      "passenger laughing listening phone"
+     ],
+     "prompt": "a man on a train laughing while listening to his phone with one earbud"
+    },
+    {
+     "desde": "el bostezo, más al verlo",
+     "busqueda": [
+      "man yawning on train",
+      "passenger yawning commuter"
+     ],
+     "prompt": "a commuter on a train yawning widely"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Se ríe con un *audio*",
+   "narracion": "En el tren, el de al lado se ríe a carcajadas con un audio. Y tú sonríes sin querer.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "man laughing listening voice message train",
+      "man laughing phone to ear train"
+     ],
+     "prompt": "a man on a train holding his phone to his ear, laughing out loud"
+    },
+    {
+     "desde": "Y tú sonríes",
+     "busqueda": [
+      "woman smiling on train looking aside",
+      "commuter smiling sideways"
+     ],
+     "prompt": "a commuter on a train smiling despite herself, glancing sideways"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Él bosteza. Tú *también*",
+   "narracion": "A la vigésima carcajada, ya no. Pero en cuanto él bosteza, bostezas tú.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "annoyed woman on train",
+      "commuter annoyed noise train"
+     ],
+     "prompt": "a commuter on a train with a tired, annoyed face"
+    },
+    {
+     "desde": "en cuanto él bosteza",
+     "busqueda": [
+      "man yawning train seat",
+      "yawning passenger"
+     ],
+     "prompt": "the man on the train yawning"
+    },
+    {
+     "desde": "bostezas tú",
+     "busqueda": [
+      "woman yawning on train",
+      "woman yawning covering mouth"
+     ],
+     "prompt": "a woman on a train yawning and covering her mouth"
+    }
+   ]
+  },
+  {
+   "tipo": "diagrama",
+   "fuente": "E12",
+   "pasos": [
+    {
+     "titulo": "Risas y *bostezos*",
+     "pie": "oídos o vistos"
+    },
+    {
+     "titulo": "Su cara",
+     "pie": "grabada"
+    }
+   ],
+   "narracion": "Unos neurocientíficos grabaron la cara de gente sola mientras oía o veía risas y bostezos.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person alone watching screen headphones",
+      "man watching monitor alone room"
+     ],
+     "prompt": "a person sitting alone in a small room in front of a monitor, wearing headphones"
+    },
+    {
+     "desde": "grabaron la cara",
+     "busqueda": [
+      "camera recording face close up",
+      "webcam on monitor"
+     ],
+     "prompt": "a small camera on top of a monitor, pointed at the viewer"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "E12",
+   "personaje": "entiende",
+   "cifra": "Se gasta",
+   "pie": "la risa; el bostezo, *no*",
+   "narracion": "La risa se pegaba más al oírla, casi siempre como sonrisa, y cada vez menos. El bostezo, más al verlo, y siempre igual.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person smiling listening headphones",
+      "woman smiling with headphones"
+     ],
+     "prompt": "a person with headphones breaking into a small smile"
+    },
+    {
+     "desde": "El bostezo, más al verlo",
+     "busqueda": [
+      "person yawning watching screen",
+      "man yawning at computer"
+     ],
+     "prompt": "a person in front of a screen yawning while their smile has faded"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "E12",
+   "personaje": "duda",
+   "titulo": "¿Y en un tren *lleno*?",
+   "subtitulo": "Fuente: De Weck y otros, 2022",
+   "narracion": "Por eso en el tren dejaste de sonreír y seguiste bostezando. Ojo: era gente sola ante una pantalla, no en un tren.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "train window passenger sleeping",
+      "man asleep on train"
+     ],
+     "prompt": "the man on the train now asleep against the window"
+    },
+    {
+     "desde": "Ojo: era gente sola",
+     "busqueda": [
+      "empty lab room chair monitor",
+      "empty small room with screen"
+     ],
+     "prompt": "an empty small room with one chair facing a monitor"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 2 del tema nuevo; el primer MDS-043 cayó a la tercera)",
+  "fecha": "2026-10-15",
+  "de_que_va": "Va de que la risa se te pega más cuando la oyes y el bostezo cuando lo ves, y de que la risa contagiada se va gastando y el bostezo no.",
+  "pregunta_y_respuesta": "¿Por qué dejé de sonreír con las carcajadas del de al lado y, en cambio, seguí bostezando cuando él bostezaba? La risa se contagia sobre todo por el oído y cada vez menos; el bostezo, por la vista y siempre igual.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Por eso en el tren dejaste de sonreír y seguiste bostezando.» (se queda: devuelve el cierre a la situación del principio; ver notas_humor)",
+  "donde_me_iria": "me quedo (casi en la escena 4: «se vuelve seca, de laboratorio»)",
+  "notas": [
+   "«La risa se pegaba más al oírla, casi siempre como sonrisa, y cada vez menos.» — «La tuve que releer… Lo entendí cuando apareció el texto ‹Se gasta›.»",
+   "«la primera frase ya me había dado la respuesta» (es la receta del brazo B)"
+  ],
+  "veredicto": "pasa"
+ }
+}

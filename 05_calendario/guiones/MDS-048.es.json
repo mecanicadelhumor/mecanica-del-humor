@@ -1,0 +1,185 @@
+{
+ "id": "MDS-048",
+ "formato": "corto",
+ "serie": "Esto no tiene gracia y esto sí",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué discutir por WhatsApp sale peor?",
+ "tesis": "Las mismas palabras de alguien que no piensa como tú, oídas con su voz, le hacen parecer más sensato y más persona que leídas: por eso una discusión por escrito sale peor.",
+ "pilares": [
+  "I"
+ ],
+ "duracion_objetivo_s": 40,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "A",
+ "familia_tema": "mensajes",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué discutir por WhatsApp sale peor?",
+  "respuesta": "Porque leída, la gente que no piensa como tú parece menos sensata que oyendo esas mismas palabras con su voz.",
+  "puente": "La tortilla con o sin cebolla en el grupo de la familia, que por escrito acaba con la tía fuera del grupo: la escena 4 dice que leer u oír las mismas palabras de quien no piensa como tú es lo que compararon."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — en el grupo de la familia, tu tío escribe que la tortilla, sin cebolla; qué gira — le contestas que sin cebolla es un huevo frito con pretensiones y tu tía se sale del grupo; cómo acaba — con tu tío, mejor un audio, aunque se probó con temas mucho más serios que la cebolla.",
+  "FAMILIA mensajes (R-TE-03). Pregunta de la demanda: «por que los mensajes de texto se malinterpretan» (529.433) y «por que la gente manda audios en vez de escribir» (3.505.748).",
+  "SERIE: la misma frase, escrita y dicha, en la comparación de la escena 4 (lo que el estudio comparó).",
+  "BRAZO A (ciclo B1, posición 13): las escenas 4 y 5, las que cuentan qué midió el estudio y qué encontró, llevan «animar».",
+  "FUENTE: I11 (Schroeder, Kardas y Epley, 2017, Psychological Science, DOI 10.1177/0956797617713798), verificada el 15/10/2026 en Crossref y Europe PMC. Frases del resumen copiadas literal: «hearing a person explain his or her beliefs makes the person seem more mentally capable-and therefore seem to possess more uniquely human mental traits-than reading the same content»; «We expected this effect to emerge when people are perceived as relatively mindless, such as when they disagree with the evaluator's own beliefs»; «Three experiments involving polarizing attitudinal issues and political opinions supported these hypotheses».",
+  "LÍMITE (regla 12): se probó con temas polémicos de verdad, no con la cebolla. Los temas no se nombran (regla 1: nada de política).",
+  "C17: I11 es nueva.",
+  "LECTURA EN FRÍO (2026-10-15): Vuelta 1: por qué se iba la tía y no el tío, «más persona» y «Lo malo:» → se va el tío, fuera «más persona» y el límite es «se probó con temas serios de verdad, no con la cebolla». Vuelta 2: pasa."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-bocadillos",
+   "texto": "La tortilla, sin *cebolla*",
+   "narracion": "Grupo de la familia. Tu tío escribe que la tortilla, sin cebolla, y que lo demás es un delito.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "spanish potato omelette on plate",
+      "tortilla espanola kitchen"
+     ],
+     "prompt": "a Spanish potato omelette on a plate on a family kitchen table"
+    },
+    {
+     "desde": "Tu tío escribe",
+     "busqueda": [
+      "older man typing phone sofa",
+      "man texting on phone living room"
+     ],
+     "prompt": "a man in his fifties typing firmly on his phone on a sofa"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Sin cebolla: huevo *frito*",
+   "narracion": "Y tú contestas que sin cebolla es un huevo frito con pretensiones.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "young woman typing phone smirking",
+      "person texting grinning"
+     ],
+     "prompt": "a young adult typing on a phone with a mischievous grin"
+    },
+    {
+     "desde": "un huevo frito",
+     "busqueda": [
+      "fried egg in pan close up",
+      "fried egg on plate"
+     ],
+     "prompt": "a single fried egg in a frying pan, close-up"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "El tío sale del *grupo*",
+   "narracion": "A la media hora, tu tío ha salido del grupo.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "man putting phone down offended",
+      "older man upset with phone sofa"
+     ],
+     "prompt": "a man in his fifties putting his phone face down on a coffee table, offended"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "I11",
+   "animar": true,
+   "animacion": "La misma frase en un bocadillo de texto gris y, al lado, en una onda de voz: en «a escuchar» la onda se mueve y se colorea en ámbar; el texto se queda quieto.",
+   "a": "Leído",
+   "et_a": "las mismas palabras",
+   "b": "Oído",
+   "et_b": "con su *voz*",
+   "narracion": "Unos psicólogos pusieron a gente a leer, o a escuchar, las mismas palabras de alguien que no pensaba como ellos.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person reading text on laptop",
+      "man reading screen at desk"
+     ],
+     "prompt": "a person reading a long text on a laptop at a desk"
+    },
+    {
+     "desde": "o a escuchar",
+     "busqueda": [
+      "person listening with headphones desk",
+      "woman listening headphones laptop"
+     ],
+     "prompt": "a person at a desk listening carefully through headphones"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "I11",
+   "personaje": "entiende",
+   "animar": true,
+   "animacion": "Una figura de línea a la que, en «más sensato», se le enciende la cabeza en ámbar y, en «más persona», le salen ojos y boca; en «leer» se apaga a un contorno gris.",
+   "cifra": "Más sensato",
+   "pie": "si lo *oyes*",
+   "narracion": "Al oír su voz, le veían más sensato que leyendo exactamente lo mismo.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "man nodding listening headphones",
+      "person listening thoughtfully"
+     ],
+     "prompt": "a person nodding slowly while listening through headphones, thoughtful"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "I11",
+   "personaje": "duda",
+   "titulo": "Con la cebolla, sin *probar*",
+   "subtitulo": "Fuente: Schroeder y otros, 2017",
+   "narracion": "Con tu tío, la próxima vez, mejor un audio. Aunque ojo: se probó con temas serios de verdad, no con la cebolla.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "man recording voice message phone",
+      "person speaking into phone voice note"
+     ],
+     "prompt": "a person holding a phone close to their mouth, recording a voice message, smiling"
+    },
+    {
+     "desde": "no con la cebolla",
+     "busqueda": [
+      "onion on cutting board",
+      "chopped onion kitchen"
+     ],
+     "prompt": "a chopped onion on a cutting board next to potatoes"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 2, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-15",
+  "de_que_va": "Una pelea por la tortilla con o sin cebolla en el grupo de la familia sirve para contar que, si oyes la voz de alguien que no piensa como tú, te parece más sensato que si lees lo mismo por escrito.",
+  "pregunta_y_respuesta": "Por qué las discusiones por escrito acaban tan mal y si conviene mandar un audio: al oír la voz de alguien que piensa distinto se le ve más sensato que leyendo exactamente las mismas palabras. Solo se probó con temas serios, no con la cebolla.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "ninguna de lo hablado (en pantalla, «El tío sale del grupo» repite la voz)",
+  "donde_me_iria": "me quedo (la escena 4 «suena a clase»)",
+  "notas": [
+   "«Con la cebolla, sin probar» — «lo tuve que leer dos veces. Al principio pensé en probar la tortilla.»",
+   "«y que lo demás es un delito» — «Deduje que era la tortilla con cebolla, pero tardé un segundo.»"
+  ],
+  "veredicto": "pasa"
+ }
+}

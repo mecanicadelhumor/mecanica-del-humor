@@ -1,0 +1,177 @@
+{
+ "id": "MDS-046",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Qué pasa si te aguantas la risa?",
+ "tesis": "Aguantarse la risa no sale gratis: quien la contiene viendo algo gracioso dice que le ha hecho menos gracia.",
+ "pilares": [
+  "F"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "A",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Qué pasa si te aguantas la risa?",
+  "respuesta": "Que lo que estás viendo te hace menos gracia: aguantarla te quita parte de la risa.",
+  "puente": "La cara congelada del jefe en la videollamada y tú apretando los labios: la escena 4 dice que eso, aguantarse la risa delante de algo gracioso, es lo que pidieron a la mitad de las participantes."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — en una videollamada seria, a tu jefe se le congela la imagen con la boca abierta y un ojo cerrado; qué gira — tú, con la cámara encendida, aprietas los labios para no reírte; cómo acaba — aguantándote, esa cara te hizo menos gracia de la que te tocaba, aunque el estudio era con películas y solo con mujeres.",
+  "BRAZO A (ciclo B1, posición 11): las escenas 4 y 5, las que cuentan qué midió el estudio y qué encontró, llevan «animar» y una línea de animación. Nada más cambia.",
+  "FUENTE: F12 (Gross y Levenson, 1997, Journal of Abnormal Psychology, DOI 10.1037/0021-843x.106.1.95), verificada el 15/10/2026 en Crossref y Europe PMC. Frases del resumen copiadas literal: «we asked 180 female participants to watch sad, neutral, and amusing films under 1 of 2 conditions»; «Suppression diminished expressive behavior in all 3 films and decreased amusement self-reports in sad and amusing films»; «clear effects in both negative and positive emotional films, including increased sympathetic activation of the cardiovascular system».",
+  "LO QUE NO SE DICE: «el corazón se acelera» no está en el resumen (dice «activación simpática del sistema cardiovascular»): la voz dice «su cuerpo se ponía más en alerta». Tampoco se dice que sea malo para la salud.",
+  "LÍMITE (regla 12): solo mujeres y películas en un laboratorio; con un jefe congelado no lo probó nadie.",
+  "C17: F12 es nueva.",
+  "LECTURA EN FRÍO (2026-10-15): Vuelta 1: «su cuerpo se ponía más en alerta» (¿qué es?), «de la que tocaba», el rótulo «Con jefes, sin probar» y un cierre que chocaba con la historia → fuera la frase del cuerpo (el hallazgo de la gracia basta y es el que vuelve en el cierre) y el cierre dice que aguantándote te perdías parte de la gracia. Vuelta 2: pasa."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-pausa",
+   "texto": "Videollamada *seria*",
+   "narracion": "Videollamada de trabajo. Tu jefe explica, muy serio, los objetivos del trimestre.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "video call on laptop home office",
+      "online meeting laptop screen"
+     ],
+     "prompt": "a laptop on a home desk showing a serious video meeting, no readable text"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Congelado, con la boca *abierta*",
+   "narracion": "Y se le congela la imagen con la boca abierta y un ojo cerrado.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "frozen video call screen funny face",
+      "glitching video call laptop"
+     ],
+     "prompt": "a laptop screen in a video call where a man's image is frozen mid-word with his mouth open and one eye shut"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Labios *apretados*",
+   "narracion": "Y tú, con la cámara encendida, apretando los labios para no reírte.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "woman trying not to laugh laptop",
+      "person holding back laughter video call"
+     ],
+     "prompt": "a person at a laptop pressing their lips together, trying hard not to laugh"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "F12",
+   "animar": true,
+   "animacion": "Dos caras de línea viendo la misma pantalla: en «a la mitad» la segunda cierra la boca con una cremallera que se cierra sola; la primera sigue sonriendo.",
+   "a": "Ríete si quieres",
+   "et_a": "la mitad",
+   "b": "Que no se *note*",
+   "et_b": "la otra mitad",
+   "narracion": "Unos psicólogos pusieron a ciento ochenta mujeres a ver películas graciosas. A la mitad les pidieron que no se les notara nada.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "women watching screen in dark room",
+      "audience watching film dark room"
+     ],
+     "prompt": "a small group watching a film in a darkened room, lit by the screen, seen from behind"
+    },
+    {
+     "desde": "A la mitad",
+     "busqueda": [
+      "woman serious face watching screen",
+      "person poker face watching film"
+     ],
+     "prompt": "a woman watching a screen with a carefully blank face"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "F12",
+   "personaje": "entiende",
+   "animar": true,
+   "animacion": "Dos medidores de gracia, uno por grupo: en «menos gracia» la aguja del grupo que se aguanta baja mientras la del otro se queda arriba.",
+   "cifra": "Menos gracia",
+   "pie": "si te la *aguantas*",
+   "narracion": "Las que se aguantaban dijeron que la película les había hecho menos gracia que a las demás.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "woman tense watching screen",
+      "person clenching jaw watching"
+     ],
+     "prompt": "a woman watching a screen, jaw clenched, shoulders tense"
+    },
+    {
+     "desde": "que a las demás",
+     "busqueda": [
+      "women laughing watching film",
+      "audience laughing at screen"
+     ],
+     "prompt": "women in a darkened room laughing freely at a screen"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "F12",
+   "personaje": "duda",
+   "titulo": "Aguantarse *resta*",
+   "subtitulo": "Fuente: Gross y Levenson, 1997",
+   "narracion": "Así que aguantándote con tu jefe congelado te perdías parte de la gracia. La letra pequeña: se midió con películas, y solo con mujeres.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "closing laptop after meeting",
+      "person shutting laptop desk"
+     ],
+     "prompt": "a person closing a laptop at the end of a video meeting, then bursting into laughter"
+    },
+    {
+     "desde": "La letra pequeña",
+     "busqueda": [
+      "empty screening room chairs",
+      "small lab room with screen"
+     ],
+     "prompt": "a small empty lab room with chairs facing a screen"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 2, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-15",
+  "de_que_va": "Va de que, si te aguantas la risa (como cuando a tu jefe se le congela la cara en una videollamada), luego la cosa te parece menos graciosa.",
+  "pregunta_y_respuesta": "¿Aguantarse la risa cambia lo gracioso que te parece algo? Sí: en un estudio, las que tenían que disimular dijeron que la película les había hecho menos gracia que a las que podían reírse.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "ninguna",
+  "donde_me_iria": "me quedo (estuvo a punto en la escena 4: «suena a clase»)",
+  "notas": [
+   "«Así que aguantándote con tu jefe congelado te perdías parte de la gracia.» — «Lo entiendo, pero el ‹te perdías› me descoloca un momento.»",
+   "«Aguantarse resta»: «tarda un segundo en encajar. ¿Resta qué? La gracia, supongo.»",
+   "El final «se me queda algo plano, termina con la letra pequeña»."
+  ],
+  "veredicto": "pasa"
+ }
+}

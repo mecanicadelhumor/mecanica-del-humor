@@ -1,0 +1,172 @@
+{
+ "id": "MDS-044",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Qué significa el emoji de la sonrisa?",
+ "tesis": "La carita sonriente no significa lo mismo según la edad de quien la lee: los mayores de 60 la leen como una sonrisa sincera y agradable; los de 18 a 30, al revés.",
+ "pilares": [
+  "I"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "control",
+ "familia_tema": "mensajes",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Qué significa el emoji de la sonrisa?",
+  "respuesta": "Depende de quién lo lea: para los mayores es una sonrisa sincera y agradable; para los jóvenes, justo lo contrario.",
+  "puente": "El «qué bien» con carita de tu madre, que tú lees como un enfado: la escena 4 dice que eso, jóvenes y mayores leyendo al revés la misma carita, es lo que midieron."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — le dices a tu madre que has aprobado el carné y te contesta «qué bien» con la carita sonriente; qué gira — tú te pasas la tarde pensando qué has hecho mal; cómo acaba — tu madre estaba contenta de verdad, porque la carita se lee al revés según la edad, aunque no pasa con todas las caritas.",
+  "FAMILIA mensajes (R-TE-03). Pregunta medida el 15/10: «que significa el emoji de la sonrisa», 4.221.071 en el top 10, y ninguno de los cinco primeros responde con un estudio.",
+  "FUENTE: I09 (Cui, Dandan, Cui y Jing, 2026, Acta Psychologica, DOI 10.1016/j.actpsy.2026.107245), verificada el 08/10/2026 y releída el 15/10/2026 en Europe PMC. Frases del resumen copiadas literal: «Younger (aged 18-30) and older (over 60) adults evaluated each emoji in terms of perceived attitude, friendliness, politeness, and appropriateness»; «older adults tended to favor literal interpretations, viewing the smile emoji as genuine and more pleasant»; «In contrast, younger adults ... displayed the opposite pattern»; «Significant intergenerational differences emerged for smiley emoji with complex cues, but not for simple ones».",
+  "LÍMITE (regla 12): la diferencia salió con unas caritas y no con otras (las de señales «simples» las leían igual). Lo dice el cierre, metido en la historia.",
+  "LO QUE NO SE DICE: ni el país ni cuántas personas eran (el resumen no lo da); la narración no lleva el emoji (la voz no lo puede decir): dice «la carita sonriente».",
+  "C17: I09 es nueva; nunca fuente central.",
+  "LECTURA EN FRÍO (2026-10-15): Vuelta 1: «Los jóvenes, justo al revés» (¿falsa, borde?), «la» sin referente y el cierre de las caritas «más sencillas», que hacía dudar de la de la madre → el revés se dice entero («falsa y menos agradable») y el límite pasa a ser lo que de verdad no se midió: qué quería decir quien la manda. Vuelta 2: pasa. El lector quitaría el límite; se queda (regla 12)."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-bocadillos",
+   "texto": "«He aprobado el *carné*»",
+   "narracion": "Le escribes a tu madre que has aprobado el carné de conducir.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "young man texting happily car",
+      "person typing phone excited street"
+     ],
+     "prompt": "a young adult beside a small car typing on a phone, smiling, holding a driving school folder"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "«Qué bien», y una *carita*",
+   "narracion": "Y te contesta: qué bien. Con la carita sonriente.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "older woman typing on phone kitchen",
+      "senior woman texting at home"
+     ],
+     "prompt": "a woman in her sixties typing on her phone in a kitchen, with a soft genuine smile"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "piensa",
+   "texto": "¿Qué he hecho *mal*?",
+   "narracion": "Y tú te pasas la tarde pensando qué has hecho mal.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "young man staring at phone worried sofa",
+      "person anxious reading phone couch"
+     ],
+     "prompt": "a young adult on a sofa staring at a phone screen with a worried frown, evening light"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "I09",
+   "a": "De 18 a 30",
+   "et_a": "jóvenes",
+   "b": "Más de 60",
+   "et_b": "*mayores*",
+   "narracion": "Unos psicólogos enseñaron caritas sonrientes a gente de dieciocho a treinta años y a gente de más de sesenta.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "hands holding smartphone table",
+      "two phones on a table"
+     ],
+     "prompt": "two smartphones lying side by side on a wooden table, screens off"
+    },
+    {
+     "desde": "a gente de más de sesenta",
+     "busqueda": [
+      "older hands holding phone",
+      "senior hands smartphone"
+     ],
+     "prompt": "close-up of an older person's hands holding a smartphone"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "I09",
+   "personaje": "entiende",
+   "cifra": "Al revés",
+   "pie": "según la *edad*",
+   "narracion": "Los mayores leían la carita sonriente como sincera y agradable. Los jóvenes, al revés: falsa y menos agradable.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "older woman smiling warmly",
+      "senior woman genuine smile home"
+     ],
+     "prompt": "a woman in her sixties smiling warmly at home"
+    },
+    {
+     "desde": "Los jóvenes, al revés",
+     "busqueda": [
+      "young man raising eyebrow phone",
+      "young woman skeptical look phone"
+     ],
+     "prompt": "a young adult raising one eyebrow at a phone screen, skeptical"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "I09",
+   "personaje": "duda",
+   "titulo": "¿Y qué *quería* decir?",
+   "subtitulo": "Fuente: Cui y otros, 2026",
+   "narracion": "Así que tu madre, seguramente, iba de buena fe. Lo que no se midió es qué quería decir quien la manda.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "mother hugging young adult",
+      "older woman hugging son"
+     ],
+     "prompt": "a mother hugging her grown-up child next to a small car, both smiling"
+    },
+    {
+     "desde": "Lo que no se midió",
+     "busqueda": [
+      "phone keyboard emoji screen",
+      "person scrolling phone close up"
+     ],
+     "prompt": "close-up of a thumb scrolling on a phone keyboard, screen blurred"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 2, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-15",
+  "de_que_va": "Va de que los jóvenes y los mayores no entienden igual la carita sonriente, y por eso el «qué bien» con carita de tu madre te sienta mal aunque ella no lo diga con mala intención.",
+  "pregunta_y_respuesta": "Por qué te escama que tu madre conteste «qué bien» con una carita sonriente: según un estudio, los mayores de 60 ven esa carita como sincera y agradable, y los de 18 a 30 la ven falsa. Así que tu madre seguramente lo decía de verdad.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Lo que no se midió es qué quería decir quien la manda.» (se queda: es el cierre honesto; ver notas_humor)",
+  "donde_me_iria": "me quedo (la escena 4, cuando empieza el estudio, es la más floja)",
+  "notas": [
+   "«Lo que no se midió es qué quería decir quien la manda.» — «A la primera no supe a qué se refería ‹la›: tuve que pensar que era la carita. Tampoco entendí por qué me lo cuentan al final. Parece que quita la conclusión que me acababan de dar.»"
+  ],
+  "veredicto": "pasa"
+ }
+}

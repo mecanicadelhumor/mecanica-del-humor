@@ -322,3 +322,26 @@ llega): risas grabadas (`E07`), reírse en un funeral (`E08`), vergüenza ajena 
   las semillas para saber si hay demanda antes de buscar ficha. `Laughter conveys status` (Oveis y
   otros, 2016, JESP, DOI 10.1016/j.jesp.2016.04.005) está localizada en Crossref, pero no se ha
   podido leer el resumen: no se ha escrito la ficha.
+
+---
+
+## 15/10/2026 · lo que se desbloquea y lo que sigue pendiente
+
+**Desbloqueadas esta noche** (doce fichas nuevas con título y DOI vistos juntos en Crossref y
+Europe PMC): los chistes del jefe (`D12`), aguantarse la risa (`F12`), por qué dan miedo los payasos
+(`J07`), contar de más después de reírse (`D13`), la risa contra el bostezo (`E12`), la voz frente al
+texto (`I10`, `I11`), la risa falsa y la de verdad (`E11`, `F13`), la risa con amigos y los opioides
+(`E10`), el cerebro que se prepara al oír alegría (`E09`) y cosquillas y risa (`F11`). `D06` tiene
+por fin el resumen verificado.
+
+**Siguen sin ficha:**
+
+- **«por qué me río cuando estoy nervioso»** (7,3 M): nada nuevo; `F12` es aguantarse la risa, no
+  la risa nerviosa.
+- **«por qué me molesta que me dejen en visto»** (2,0 M): no he encontrado un estudio con resumen
+  legible sobre la confirmación de lectura.
+- **«por qué nos reímos de las caídas»** (4,9 M): `Laugh or cringe?` (Paulus y otros, 2018,
+  Neuropsychologia, DOI 10.1016/j.neuropsychologia.2017.05.030) está localizada con resumen, pero es
+  del mismo grupo y diseño que `F09` (vergüenza ajena, 17/10); se escribe la ficha cuando haga falta.
+- **«por qué los memes nos hacen gracia»** (135 M): Europe PMC sigue sin devolver un trabajo de humor
+  en memes con resumen.

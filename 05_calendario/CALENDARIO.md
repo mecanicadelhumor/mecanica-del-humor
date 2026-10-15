@@ -482,3 +482,26 @@ vistos juntos (Crossref) y la frase del resumen copiada. **Dos de la familia `me
 **Brazo A** (`MDS-038`, `039`, `042`): dos escenas de mecanismo con `animar` cada uno; si la rutina
 «Animación» no deja la página, salen como el control. **Ningún gancho de actualidad** (C52).
 Ninguno abre en primera persona y los siete cierres empiezan distinto. Detalle en la bitácora del 08/10.
+
+## Semana del 19 al 25 de octubre de 2026 · segunda del bucle (C60, ciclo B1)
+
+Escrita la noche del **jueves 15 de octubre**. **Siete Shorts, uno al día a las 19:00** (hora de
+España; el domingo 25 cambia la hora y `cola.py` hace la cuenta). Todo en `parrilla.json` con
+`"modo": "automatico"` y `"idiomas": ["es"]`. Cada guion lleva `"ciclo": "B1"`, su `"variante"` (por
+el `orden` de `bucle/ciclos.json`, posiciones 8 a 14: el domingo cierra el ciclo) y las etiquetas
+`familia_tema` y `chiste`.
+
+| Día | Emisión | Brazo | Serie | Pregunta | Ficha |
+|---|---|---|---|---|---|
+| Lunes 19 | `MDS-043` | B | Ríete primero, te explico después | ¿se pega más una risa o un bostezo? | `E12` |
+| Martes 20 | `MDS-044` | control | El experimento | ¿qué significa el emoji de la sonrisa? · *mensajes* | `I09` |
+| Miércoles 21 | `MDS-045` | B | Esto no tiene gracia y esto sí | ¿por qué todos se ríen de los chistes del jefe? | `D12` |
+| Jueves 22 | `MDS-046` | A | El experimento | ¿qué pasa si te aguantas la risa? | `F12` |
+| Viernes 23 | `MDS-047` | control | Ríete primero, te explico después | ¿por qué dan miedo los payasos? · *Halloween* | `J07` |
+| Sábado 24 | `MDS-048` | A | Esto no tiene gracia y esto sí | ¿por qué discutir por WhatsApp sale peor? · *mensajes* | `I11` |
+| Domingo 25 | `MDS-049` | B | El experimento | ¿por qué después de reírte cuentas de más? | `D13` |
+
+**Las siete fuentes centrales son fichas nunca usadas**, seis de ellas nuevas esta noche. **Dos de la
+familia `mensajes`** (R-TE-03). **Derecho de tanteo (C46) de `MDS-036`** en `MDS-043`. **Un gancho de
+actualidad** (C52): Halloween en `MDS-047`. `MDS-043` y `MDS-047` sustituyen a dos temas que no
+pasaron la lectura en frío a la tercera vuelta. Detalle en la bitácora del 15/10.
