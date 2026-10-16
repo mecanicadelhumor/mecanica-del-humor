@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<title>MDS-046 · animación a medida (C55.2)</title>
+<!--
+  MDS-046 · escenas [4, 5] · brazo A del ciclo B1 (C55.2) · fondo crema #FFF4E0.
+  Página autónoma: sin red, sin Math.random ni Date. Todo sale de (n, t); los movimientos se anclan
+  a las palabras de la voz con W(), nunca a segundos escritos a mano. Sin caras: formas, objetos, esquemas.
+-->
+<style>
+html,body{margin:0;padding:0;background:#05080f}
+body{margin:0}
+#lienzo{position:relative;left:0;top:0;width:1080px;height:1920px;overflow:hidden;background:#FFF4E0;
+  font-family:system-ui,"DejaVu Sans",Arial,sans-serif;color:#16213A}
+#dib{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bq{position:absolute;font-weight:900;line-height:1.12;letter-spacing:-.01em}
+.bq .p{display:inline-block;opacity:0;transform-origin:50% 80%}
+</style></head>
+<body><div id="lienzo"></div>
+<script>
+const ESCENAS_LISTA = [4, 5];
+const BG = "#FFF4E0", PUNTO = "#F6DDB0", TX = "#16213A", HL = "#EF476F", SUB = "#6A5F7A", GR = "#B9AE9C", PANEL = "#FFFFFF";
+const PAL = ["#EF476F","#4CC9F0","#06D6A0","#9B5DE5","#FFB020"];
+// ---------------------------------------------------------------- núcleo común
+const cl = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const tramo = (t, a, b) => cl((t - a) / (b - a));
+const suave = x => x * x * (3 - 2 * x);
+const sal = x => 1 - Math.pow(1 - x, 3);
+const rebote = x => { x = cl(x); const c = 1.70158; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const lerp = (a, b, p) => a + (b - a) * p;
+const $ = id => document.getElementById(id);
+const NS = "http://www.w3.org/2000/svg";
+const AM = "#FFB020", CI = "#4CC9F0", CO = "#EF476F", ME = "#06D6A0", VI = "#9B5DE5";
+function E(tag, at, par) { const e = document.createElementNS(NS, tag); for (const k in at) e.setAttribute(k, at[k]); if (par) par.appendChild(e); return e; }
+function hex(c) { return [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16)); }
+function mezcla(a, b, p) { const A = hex(a), B = hex(b); return "#" + A.map((v, i) => Math.round(lerp(v, B[i], cl(p))).toString(16).padStart(2, "0")).join(""); }
+const op = (el, v) => { el.style.opacity = cl(v); };
+const tf = (el, s) => el.setAttribute("transform", s);
+
+// tiempos de la voz (los pone el render antes de pintar)
+let T = {};
+window.cargarTiempos = d => { T = d || {}; };
+const norm = s => s.normalize("NFD").replace(/[^\p{L}\p{N}]/gu, "").toLowerCase();
+function W(n, pal, vez = 1) {           // instante en que la voz dice `pal` en la escena n
+  let k = 0;
+  for (const [t, w] of (T[n] || {}).palabras || []) if (norm(w) === norm(pal) && ++k === vez) return t;
+  return 0.6;
+}
+const DUR = n => ((T[n] || {}).dur) || 8;
+const S = {};
+
+// ---------------------------------------------------------------- construcción
+let FONDO, PART = [], BLQ = {};
+function construir() {
+  const lienzo = $("lienzo");
+  const svg = E("svg", { id: "dib", viewBox: "0 0 1080 1920", width: 1080, height: 1920 }, lienzo);
+  const defs = E("defs", {}, svg);
+  const pat = E("pattern", { id: "reti", width: 72, height: 72, patternUnits: "userSpaceOnUse" }, defs);
+  E("circle", { cx: 18, cy: 18, r: 5, fill: PUNTO }, pat);
+  E("circle", { cx: 54, cy: 54, r: 5, fill: PUNTO }, pat);
+  FONDO = pat;
+  E("rect", { x: 0, y: 0, width: 1080, height: 1920, fill: "url(#reti)" }, svg);
+  for (let i = 0; i < 22; i++) {
+    const col = PAL[i % PAL.length];
+    const c = i % 2 ? E("circle", { r: 7 + (i % 4) * 3, fill: col, opacity: 0.55 }, svg)
+                    : E("rect", { x: -9, y: -9, width: 18 + (i % 3) * 4, height: 18 + (i % 3) * 4, rx: 5, fill: col, opacity: 0.55 }, svg);
+    c._x = (i * 197) % 1080; c._y = (i * 331) % 1920; c._v = 16 + (i * 7) % 26; c._f = i * 1.3; c._r = i % 2;
+    PART.push(c);
+  }
+  const cam = E("g", { id: "cam" }, svg);
+  E("rect", { id: "prog", x: 0, y: 0, width: 0, height: 12, fill: HL }, svg);
+  for (const n of ESCENAS_LISTA) {
+    const g = E("g", { id: "s" + n }, cam);
+    S[n].build(g, defs);
+    const cont = document.createElement("div"); cont.id = "tx" + n; lienzo.appendChild(cont);
+    BLQ[n] = (S[n].bloques || []).map(b => {
+      const d = document.createElement("div"); d.className = "bq";
+      d.style.cssText = `left:${b.x}px;top:${b.y}px;width:${b.w}px;height:${b.h}px;font-size:${b.size}px;color:${b.col || TX};text-align:${b.al || "left"}`;
+      let am = false; const sp = [];
+      b.txt.split(" ").forEach((tok, i) => {
+        let t = tok;
+        if (t.startsWith("*")) { am = true; t = t.slice(1); }
+        const cierra = t.endsWith("*"); if (cierra) t = t.slice(0, -1);
+        const s = document.createElement("span"); s.className = "p"; s.textContent = t;
+        if (am) s.style.color = HL, s._am = true;
+        if (i) d.appendChild(document.createTextNode(" "));
+        d.appendChild(s); sp.push(s);
+        if (cierra) am = false;
+      });
+      cont.appendChild(d);
+      return { b, d, sp };
+    });
+  }
+}
+
+// ---------------------------------------------------------------- pintar
+window.ESCENAS = ESCENAS_LISTA;
+window.pintarEscena = function (n, t) {
+  if (!FONDO) construir();
+  const dur = DUR(n);
+  for (const m of ESCENAS_LISTA) { $("s" + m).style.display = m === n ? "" : "none"; $("tx" + m).style.display = m === n ? "" : "none"; }
+  FONDO.setAttribute("patternTransform", `translate(${(t * 16) % 72} ${(t * -11) % 72})`);
+  PART.forEach(c => {
+    const y = ((c._y - t * c._v) % 1980 + 1980) % 1980 - 30;
+    const x = c._x + 22 * Math.sin(t * 0.8 + c._f);
+    if (c._r) { c.setAttribute("cx", x); c.setAttribute("cy", y); }
+    else c.setAttribute("transform", `translate(${x} ${y}) rotate(${t * 40 + c._f * 50})`);
+  });
+  const z = 1 + 0.04 * (t / dur);
+  tf($("cam"), `translate(${540 + 7 * Math.sin(t * 0.5)} ${960 - 10 * t / dur * 4}) scale(${z}) translate(-540 -960)`);
+  $("prog").setAttribute("width", 1080 * cl(t / dur));
+  S[n].paint(t, dur);
+  for (const { b, sp } of BLQ[n]) {
+    const t0 = Math.min(b.en(), dur - 0.6);
+    sp.forEach((s, i) => {
+      const a = t0 + i * 0.09, p = sal(tramo(t, a, a + 0.28));
+      const k = s._am ? lerp(1.35, 1, rebote(tramo(t, a, a + 0.45))) : lerp(0.9, 1, p);
+      s.style.opacity = p;
+      s.style.transform = `translateY(${(1 - p) * 40}px) scale(${k})`;
+    });
+  }
+};
+window.comprobarEscena = function (n, t) {
+  window.pintarEscena(n, t);
+  const m = [];
+  for (const { b, sp } of BLQ[n]) {             // se mide sin transformaciones (offset*), no con la animación de entrada
+    const ancho = Math.max(...sp.map(s => s.offsetLeft + s.offsetWidth));
+    const alto = Math.max(...sp.map(s => s.offsetTop + s.offsetHeight));
+    if (ancho > b.w + 1) m.push(`${b.txt}: no cabe a lo ancho`);
+    if (alto > b.h + 1) m.push(`${b.txt}: no cabe en su caja (${alto} > ${b.h})`);
+    if (b.y + Math.max(alto, b.h) > 1650) m.push(`${b.txt}: pasa de la zona segura`);
+    if (b.x < 30 || b.x + b.w > 1050) m.push(`${b.txt}: fuera del ancho`);
+  }
+  return m;
+};
+window.addEventListener("DOMContentLoaded", () => { if (!FONDO) construir(); });
+
+// ======================= ESCENA 4 · ciento ochenta, la mitad a cada lado
+S[4] = {
+  bloques: [
+    { x: 70, y: 1060, w: 450, h: 150, size: 60, txt: "Ríete si quieres", en: () => W(4, "graciosas") - 0.1 },
+    { x: 70, y: 1220, w: 450, h: 60, size: 38, col: SUB, txt: "la mitad", en: () => W(4, "mitad") - 0.1 },
+    { x: 560, y: 1060, w: 450, h: 150, size: 60, txt: "Que no se *note*", en: () => W(4, "pidieron") - 0.1 },
+    { x: 560, y: 1220, w: 450, h: 60, size: 38, col: SUB, txt: "la otra mitad", en: () => W(4, "notara") - 0.1 },
+  ],
+  build(g) {
+    const r = this.r = { d: [], pan: [] };
+    for (let k = 0; k < 180; k++) {
+      const c = k % 20, f = Math.floor(k / 20);
+      const d = E("circle", { r: 15, fill: ME }, g);
+      d._c = c; d._f = f; d._k = k; d._x = 103 + 46 * c; d._y = 330 + 46 * f;
+      r.d.push(d);
+    }
+    [70, 560].forEach((x, i) => {
+      const p = E("rect", { x, y: 750, width: 450, height: 250, rx: 36, fill: PANEL, stroke: TX, "stroke-width": 6, "stroke-dasharray": "20 14" }, g);
+      r.pan.push(p);
+    });
+    r.sm = E("path", { fill: "none", "stroke-width": 22, "stroke-linecap": "round" }, g);
+    r.ri = E("g", {}, g);
+    r.bo = E("path", { fill: "none", "stroke-width": 22, "stroke-linecap": "round" }, r.ri);
+    r.dientes = [];
+    for (let i = 0; i < 14; i++) {
+      const u = E("rect", { width: 14, height: 22, rx: 3, fill: TX }, r.ri);
+      const l = E("rect", { width: 14, height: 22, rx: 3, fill: TX }, r.ri);
+      r.dientes.push([u, l]);
+    }
+    r.cur = E("g", {}, r.ri);
+    E("rect", { x: -22, y: -26, width: 44, height: 52, rx: 14, fill: AM, stroke: TX, "stroke-width": 5 }, r.cur);
+    E("circle", { cx: 0, cy: 38, r: 11, fill: "none", stroke: TX, "stroke-width": 5 }, r.cur);
+  },
+  paint(t, dur) {
+    const r = this.r;
+    const t0 = Math.max(0.05, W(4, "ciento") - 0.6), tg = W(4, "graciosas"), tm = W(4, "mitad"), tn = W(4, "notara");
+    const split = suave(tramo(t, tm - 0.15, tm + 0.7));
+    r.d.forEach(d => {
+      const a = t0 + d._k * 0.0045;
+      const pop = rebote(tramo(t, a, a + 0.4));
+      const risa = Math.max(0, Math.sin((t - tg - d._c * 0.035) * 9)) * tramo(t, tg, tg + 0.3) * (1 - split);
+      const lado = d._c < 10 ? -1 : 1;
+      const x = d._x + lado * 26 * split;
+      const y = d._y + 5 * Math.sin(t * 2 + d._c * 0.5 + d._f * 0.7) - 12 * risa;
+      d.setAttribute("cx", x); d.setAttribute("cy", y);
+      d.setAttribute("r", 15 * pop * (1 + 0.25 * risa));
+      d.setAttribute("fill", mezcla(ME, d._c < 10 ? CI : CO, split));
+    });
+    const pm = rebote(tramo(t, tm - 0.1, tm + 0.6));
+    r.pan.forEach((p, i) => {
+      p.style.strokeDashoffset = -t * 24;
+      p.setAttribute("stroke", mezcla(TX, i ? CO : CI, split));
+      p.setAttribute("stroke-dasharray", pm > 0.99 ? "none" : "20 14");
+    });
+    // izquierda: sonrisa que sigue
+    const pl = rebote(tramo(t, tm - 0.1, tm + 0.6));
+    r.sm.setAttribute("d", `M140 850 Q295 ${940 + 12 * Math.sin(t * 5)} 450 850`);
+    r.sm.setAttribute("stroke", CI); op(r.sm, pl);
+    // derecha: la cremallera se cierra y aplana la boca
+    const zi = suave(tramo(t, tn - 0.9, tn + 0.5));
+    const cy = 850 + 90 * (1 - zi) * pl + 12 * Math.sin(t * 5) * (1 - zi);
+    r.bo.setAttribute("d", `M630 850 Q785 ${cy} 940 850`);
+    r.bo.setAttribute("stroke", CO); op(r.ri, pl);
+    const xs = lerp(630, 940, zi);
+    r.dientes.forEach(([u, l], i) => {
+      const x = 636 + i * 22.5, s = (x - 630) / 310;
+      const y = 850 + 2 * s * (1 - s) * (cy - 850) / 1;
+      const vis = x < xs ? 1 : 0;
+      u.setAttribute("x", x); u.setAttribute("y", y - 24); u.style.opacity = vis;
+      l.setAttribute("x", x + 11); l.setAttribute("y", y + 2); l.style.opacity = vis;
+    });
+    const ys = 850 + 2 * zi * (1 - zi) * 0 + 0;
+    r.cur.setAttribute("transform", `translate(${xs} ${850 + 2 * ((xs - 630) / 310) * (1 - (xs - 630) / 310) * (cy - 850)})`);
+    r.cur.style.opacity = tramo(t, tn - 1.0, tn - 0.8) * (1 - tramo(t, tn + 0.9, tn + 1.2));
+  },
+};
+
+// ======================= ESCENA 5 · dos vasos de gracia
+function vaso(cx) { return `M${cx - 125} 380 L${cx + 125} 380 L${cx + 95} 900 L${cx - 95} 900 Z`; }
+S[5] = {
+  bloques: [
+    { x: 70, y: 990, w: 940, h: 80, size: 64, al: "center", txt: "si te la *aguantas*", en: () => W(5, "aguantaban") - 0.3 },
+    { x: 70, y: 1085, w: 940, h: 120, size: 100, al: "center", txt: "Menos gracia", en: () => W(5, "menos") - 0.3 },
+  ],
+  build(g, defs) {
+    const r = this.r = { v: [] };
+    [[290, CI], [790, CO]].forEach(([cx, col], i) => {
+      const v = { cx, col };
+      const cp = E("clipPath", { id: "cv" + i }, defs); E("path", { d: vaso(cx) }, cp);
+      v.g = E("g", {}, g);
+      E("path", { d: vaso(cx), fill: "#FFFFFF", opacity: 0.45 }, v.g);
+      const li = E("g", { "clip-path": `url(#cv${i})` }, v.g);
+      v.liq = E("path", { fill: col }, li);
+      v.bub = [];
+      for (let k = 0; k < 7; k++) v.bub.push(E("circle", { r: 7 + (k % 3) * 4, fill: "#FFFFFF", opacity: 0.7 }, li));
+      E("path", { d: vaso(cx), fill: "none", stroke: TX, "stroke-width": 9, "stroke-linejoin": "round" }, v.g);
+      for (let k = 1; k <= 3; k++) E("line", { x1: cx + 125 - 22 - k * 3, y1: 380 + k * 130, x2: cx + 125 - 70, y2: 380 + k * 130, stroke: TX, "stroke-width": 6, "stroke-linecap": "round", opacity: 0.5 }, v.g);
+      v.chis = [];
+      for (let k = 0; k < 7; k++) v.chis.push(E("line", { stroke: AM, "stroke-width": 9, "stroke-linecap": "round" }, v.g));
+      r.v.push(v);
+    });
+  },
+  paint(t, dur) {
+    const r = this.r;
+    const tm = W(5, "menos"), td = W(5, "demás");
+    const llena = suave(tramo(t, 0.05, 1.1));
+    r.v.forEach((v, i) => {
+      let L = 0.85 * llena;
+      if (i === 1) L = lerp(L, 0.3, suave(tramo(t, tm - 0.2, tm + 1.0)));
+      const top = 900 - L * 500;
+      let d = `M${v.cx - 140} 910`;
+      for (let x = v.cx - 140; x <= v.cx + 140; x += 10) d += ` L${x} ${(top + 9 * Math.sin(x * 0.045 + t * 3.2 + i)).toFixed(1)}`;
+      v.liq.setAttribute("d", d + ` L${v.cx + 140} 910 Z`);
+      v.bub.forEach((b, k) => {
+        const h = Math.max(30, L * 500 - 20);
+        const y = 890 - ((t * (50 + k * 9) + k * 83) % h);
+        b.setAttribute("cx", v.cx + 50 * Math.sin(t * 1.3 + k * 2.1) * (0.4 + (k % 3) * 0.3));
+        b.setAttribute("cy", y);
+      });
+      const s = i === 0 ? 1 + 0.07 * rebote(tramo(t, td - 0.1, td + 0.5)) * (1 - tramo(t, td + 0.7, td + 1.2)) : 1;
+      v.g.setAttribute("transform", `translate(${v.cx} 640) scale(${s}) translate(${-v.cx} -640)`);
+      v.chis.forEach((c, k) => {
+        const a = (-70 + k * 23) * Math.PI / 180, p = i === 0 ? tramo(t, td - 0.1, td + 0.5) * (1 - tramo(t, td + 0.8, td + 1.3)) : 0;
+        const r0 = 170 + 20 * p, r1 = r0 + 55 * p;
+        c.setAttribute("x1", v.cx + r0 * Math.sin(a)); c.setAttribute("y1", 640 - r0 * Math.cos(a) * 1.0);
+        c.setAttribute("x2", v.cx + r1 * Math.sin(a)); c.setAttribute("y2", 640 - r1 * Math.cos(a));
+        c.style.opacity = p;
+      });
+    });
+  },
+};
+
+</script></body></html>
