@@ -213,5 +213,45 @@
    ],
    "marca": true
   }
+ },
+ "MDS-041": {
+  "6.1": {
+   "excluir": [
+    "pixabay:29337"
+   ],
+   "busqueda": [
+    "folded napkin on table close up",
+    "white napkin on restaurant table"
+   ]
+  }
+ },
+ "MDS-042": {
+  "2.1": {
+   "excluir": [
+    "pixabay:231147"
+   ],
+   "busqueda": [
+    "man in black suit standing alone looking down serious",
+    "mourner in black suit standing church"
+   ]
+  },
+  "3.2": {
+   "excluir": [
+    "pixabay:253997"
+   ],
+   "busqueda": [
+    "adults in black clothes smiling softly together after ceremony",
+    "group of adults in black talking quietly"
+   ]
+  },
+  "4.1": {
+   "excluir": [
+    "pexels:5439075"
+   ],
+   "busqueda": [
+    "psychologist hands holding clipboard notes close up",
+    "therapist writing notes on notepad close up"
+   ]
+  }
  }
 }
