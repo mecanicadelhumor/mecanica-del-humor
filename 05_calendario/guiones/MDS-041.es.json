@@ -117,12 +117,12 @@
    "et_a": "ves a alguien sufrir",
    "b": "Ridículo ajeno",
    "et_b": "las mismas *zonas*",
-   "narracion": "Con un escáner del cerebro vieron que se encienden las mismas zonas que al ver a alguien sufrir. Más, cuanta más empatía.",
+   "narracion": "Con un escáner vieron que se activan las mismas zonas que al ver sufrir a alguien, y más cuanta más empatía tienes.",
    "pausa_despues_s": 0.45,
    "visual": [
     {
      "marca": true,
-     "desde": "Con un escáner del cerebro"
+     "desde": "Con un escáner"
     }
    ]
   },
@@ -164,6 +164,13 @@
   "notas": [
    "«‹Más, cuanta más empatía.› Es tan corta que al oírla tardé un segundo en entender que quería decir ‹se encienden más cuanta más empatía tienes›.» Lo interpreta él mismo: C48.2, a notas."
   ],
-  "veredicto": "pasa"
+  "veredicto": "pasa",
+  "revision_diaria_2026-10-16": {
+   "lector": "subagente sin contexto, uno nuevo por vuelta",
+   "vuelta_1": "No entendió «Más, cuanta más empatía.» («Más ¿qué?»). Resto: notas (C48.2).",
+   "cambio": "escena 5: «Con un escáner vieron que se activan las mismas zonas que al ver sufrir a alguien, y más cuanta más empatía tienes.»",
+   "vuelta_2": "Lector nuevo, sobre la redacción intermedia «…Y se encienden más cuanta más empatía tienes.» (la final es la misma frase más corta y no se releyó literal): ya no cita «Más…». Cita solo cosas de nota (servilleta=metáfora, cierre que no explica el primo, Krach sin imagen).",
+   "veredicto": "pasa; tesis coincide"
+  }
  }
 }
