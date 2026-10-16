@@ -740,12 +740,13 @@
       "guion": "05_calendario/guiones/MDS-040.es.json",
       "video_id": "OY5sukUO0Hk",
       "url": "https://youtu.be/OY5sukUO0Hk",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-10-16T17:00:00Z",
       "musica": "cama_12_lights_sappheiros.mp3",
       "subido_utc": "2026-10-16T06:00:31Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-10-16T19:58:55Z"
     }
   ],
-  "_estado_leido_utc": "2026-10-15T20:23:56Z"
+  "_estado_leido_utc": "2026-10-16T19:58:55Z"
 }
