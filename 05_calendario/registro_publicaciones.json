@@ -730,6 +730,21 @@
       "subido_utc": "2026-10-15T06:04:50Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-15T20:23:56Z"
+    },
+    {
+      "id": "MDS-040.es",
+      "episodio": "MDS-040",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué nadie pilla tu ironía por escrito?",
+      "guion": "05_calendario/guiones/MDS-040.es.json",
+      "video_id": "OY5sukUO0Hk",
+      "url": "https://youtu.be/OY5sukUO0Hk",
+      "estado": "private",
+      "publicar_en": "2026-10-16T17:00:00Z",
+      "musica": "cama_12_lights_sappheiros.mp3",
+      "subido_utc": "2026-10-16T06:00:31Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-15T20:23:56Z"
