@@ -1,8 +1,8 @@
 {
   "guion": "MDS-041",
   "version": 1,
-  "firma": "98f40f2ea282247f",
-  "resuelto_utc": "2026-10-08T22:30:47Z",
+  "firma": "c59df78d9db7f937",
+  "resuelto_utc": "2026-10-16T09:32:55Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -201,17 +201,17 @@
       ]
     },
     "5": {
-      "narracion_sha": "93b9b94f2675",
+      "narracion_sha": "c999f75b1f31",
       "texto_pos": "abajo",
       "planos": [
         {
           "k": 1,
-          "desde": "Con un escáner del cerebro",
+          "desde": "Con un escáner",
           "t_estimado": [
             0.0,
             11.1
           ],
-          "frase": "Con un escáner del cerebro vieron que se encienden las mismas zonas que al ver a alguien sufrir. Más, cuanta más empatía.",
+          "frase": "Con un escáner vieron que se activan las mismas zonas que al ver sufrir a alguien, y más cuanta más empatía tienes.",
           "fuente": "marca",
           "tipo": "marca"
         }
@@ -229,27 +229,34 @@
             5.77
           ],
           "frase": "Tu servilleta, entonces, es empatía. Lo que no explica es",
-          "fuente": "pixabay",
-          "id": 29337,
-          "pagina": "https://pixabay.com/videos/id-29337/",
-          "titulo": "wedding, board, welcome, cover, hello, table, dining table, napkin, cutlery, celebration, wedding party, decoration, festive, festivity, wedding decoration, weddingfeast, room, ballroom, banquet id",
-          "autor": "Buzzimilian",
-          "autor_url": "https://pixabay.com/users/Buzzimilian-2956790/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 21.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2019/11/22/29337-374868359_large.mp4",
+          "fuente": "pexels",
+          "id": 5813778,
+          "pagina": "https://www.pexels.com/video/close-up-video-of-a-table-5813778/",
+          "titulo": "close up video of a table",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5813778/5813778-hd_1080_1920_25fps.mp4",
           "tipo": "video",
-          "consulta": "wedding guests laughing table",
+          "consulta": "folded napkin on table close up",
           "relevancia": 0.5,
           "inicio_s": 0.4,
-          "movimiento": 3.75,
+          "movimiento": 3.76,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
-          "caras": []
+          "caras": [
+            [
+              0.2944,
+              0.0063,
+              0.6139,
+              0.4547
+            ]
+          ]
         },
         {
           "k": 2,
