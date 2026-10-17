@@ -756,12 +756,13 @@
       "guion": "05_calendario/guiones/MDS-041.es.json",
       "video_id": "DAWdg3Rc3as",
       "url": "https://youtu.be/DAWdg3Rc3as",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-10-17T17:00:00Z",
       "musica": "cama_13_embrace_sappheiros.mp3",
       "subido_utc": "2026-10-17T05:46:13Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-10-17T19:29:09Z"
     }
   ],
-  "_estado_leido_utc": "2026-10-16T19:58:55Z"
+  "_estado_leido_utc": "2026-10-17T19:29:09Z"
 }
