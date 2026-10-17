@@ -1,15 +1,15 @@
 {
-  "id": "MDS-035.es",
-  "duracion_final_s": 53.9,
-  "tamano_mb": 24.1,
+  "id": "MDS-041.es",
+  "duracion_final_s": 43.6,
+  "tamano_mb": 24.0,
   "audio": {
-    "lufs": -15.14,
-    "pico_dbtp": -1.27,
-    "rango_lu": 4.3
+    "lufs": -14.57,
+    "pico_dbtp": -1.45,
+    "rango_lu": 5.3
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.128,
+    "acaba_s": 0.036,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,7 +17,7 @@
     "silencios_s": [
       [
         0.0,
-        0.128
+        0.1
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -25,14 +25,8 @@
     "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente)."
   },
   "fragmentos": {
-    "instantes": [
-      {
-        "s": 21.811,
-        "mmss": "0:21.8",
-        "dura_s": 0.238
-      }
-    ],
-    "cuantos": 1,
+    "instantes": [],
+    "cuantos": 0,
     "_nota": "Cada entrada es un trozo de audio de menos de 0.45 s rodeado de silencio: casi seguro una sílaba suelta que el sintetizador ha metido al empezar una escena. «mmss» es el minuto exacto para ir a escucharlo. Debe estar vacío."
   },
   "subtitulos": {
@@ -48,29 +42,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 53.06,
-    "duracion_real_voz_mp3_s": 52.78,
-    "desfase_s": 0.28,
+    "duracion_calculada_s": 42.81,
+    "duracion_real_voz_mp3_s": 42.55,
+    "desfase_s": 0.26,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_07_cylinder_one_chris_zabriskie.mp3",
-    "sha256": "ea941f18640ca2829b748a0017662ecb299ea2bf742cf2ea166640b7a32e4edb"
+    "archivo": "cama_13_embrace_sappheiros.mp3",
+    "sha256": "2ed7b5338cc93932605464610b53237ee1de9fa4e93ac7a88946455443350d43"
   },
   "guion": {
-    "titulo_trabajo": "¿Apuntar tres cosas graciosas al día te hace más feliz?",
+    "titulo_trabajo": "¿Por qué sentimos vergüenza ajena?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 53.06,
-    "escenas_por_encima_de_14s": [
-      [
-        6,
-        17.3
-      ]
-    ],
-    "escena_mas_larga_s": 17.288,
+    "duracion_narracion_s": 42.81,
+    "escenas_por_encima_de_14s": [],
+    "escena_mas_larga_s": 8.778,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 6
@@ -89,15 +78,18 @@
       "apertura",
       "planteamiento",
       "remate",
+      "explicacion",
       "contraste",
-      "cifra",
       "objecion"
     ],
-    "escenas_ritmo_fuera_de_rango": [
-      [
-        6,
-        1.17
-      ]
+    "escenas_ritmo_fuera_de_rango": [],
+    "voz_fiel": [
+      "15/15 palabras, 0 trozos repetidos",
+      "9/9 palabras, 0 trozos repetidos",
+      "19/19 palabras, 0 trozos repetidos",
+      "19/19 palabras, 0 trozos repetidos",
+      "21/22 palabras, 0 trozos repetidos",
+      "17/18 palabras, 0 trozos repetidos"
     ]
   },
   "visual": {
@@ -105,95 +97,98 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 6.9,
+        "hasta_s": 3.83,
         "fuente": "pexels",
-        "id": 6716603,
-        "pagina": "https://www.pexels.com/video/woman-writing-on-her-notebook-in-bed-6716603/",
-        "autor": "cottonbro studio",
-        "autor_url": "https://www.pexels.com/@cottonbro",
+        "id": 7424068,
+        "pagina": "https://www.pexels.com/video/man-with-afro-hair-singing-7424068/",
+        "autor": "Gustavo Fring",
+        "autor_url": "https://www.pexels.com/@gustavo-fring",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 1,
+        "desde_s": 3.83,
+        "hasta_s": 5.5,
+        "fuente": "pexels",
+        "id": 12330884,
+        "pagina": "https://www.pexels.com/video/microphone-in-red-light-12330884/",
+        "autor": "utopia 36",
+        "autor_url": "https://www.pexels.com/@utopia36",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 6.9,
-        "hasta_s": 14.37,
+        "desde_s": 5.5,
+        "hasta_s": 10.5,
         "fuente": "pexels",
-        "id": 7261922,
-        "pagina": "https://www.pexels.com/video/a-man-in-a-video-call-7261922/",
-        "autor": "MART  PRODUCTION",
-        "autor_url": "https://www.pexels.com/@mart-production",
+        "id": 8117112,
+        "pagina": "https://www.pexels.com/video/a-man-singing-8117112/",
+        "autor": "Ivan S",
+        "autor_url": "https://www.pexels.com/@ivan-s",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 3,
-        "desde_s": 14.37,
-        "hasta_s": 17.03,
-        "fuente": "ia",
-        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "a laptop screen showing a video call where one enthusiastic participant is clearly muted, colleagues watching patiently",
-        "tipo": "imagen"
-      },
-      {
-        "escena": 4,
-        "desde_s": 17.03,
-        "hasta_s": 22.2,
+        "desde_s": 10.5,
+        "hasta_s": 18.07,
         "fuente": "pexels",
-        "id": 39425771,
-        "pagina": "https://www.pexels.com/video/focused-typing-on-laptop-in-low-light-39425771/",
-        "autor": "Sergei Starostin",
-        "autor_url": "https://www.pexels.com/@sejio402",
+        "id": 6958207,
+        "pagina": "https://www.pexels.com/video/woman-wiping-her-face-with-a-table-napkin-6958207/",
+        "autor": "https://kaboompics.com/",
+        "autor_url": "https://www.pexels.com/@karola-g",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 4,
-        "desde_s": 22.2,
-        "hasta_s": 25.87,
-        "fuente": "pexels",
-        "id": 7698438,
-        "pagina": "https://www.pexels.com/video/person-writing-on-a-notebook-7698438/",
-        "autor": "MART  PRODUCTION",
-        "autor_url": "https://www.pexels.com/@mart-production",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "desde_s": 18.07,
+        "hasta_s": 26.0,
+        "fuente": "pixabay",
+        "id": 6282,
+        "pagina": "https://pixabay.com/videos/id-6282/",
+        "autor": "sbtlneet",
+        "autor_url": "https://pixabay.com/users/sbtlneet-3591002/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       },
       {
-        "escena": 5,
-        "desde_s": 32.0,
-        "hasta_s": 35.77,
+        "escena": 6,
+        "desde_s": 34.77,
+        "hasta_s": 40.0,
         "fuente": "pexels",
-        "id": 6607911,
-        "pagina": "https://www.pexels.com/video/woman-in-orange-sweater-smiling-while-writing-on-a-notebook-6607911/",
-        "autor": "Anastasia  Shuraeva",
-        "autor_url": "https://www.pexels.com/@anastasia-shuraeva",
+        "id": 5813778,
+        "pagina": "https://www.pexels.com/video/close-up-video-of-a-table-5813778/",
+        "autor": "Tima Miroshnichenko",
+        "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 6,
-        "desde_s": 35.77,
-        "hasta_s": 51.33,
-        "fuente": "pixabay",
-        "id": 6378,
-        "pagina": "https://pixabay.com/videos/id-6378/",
-        "autor": "Coverr-Free-Footage",
-        "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
-        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "desde_s": 40.0,
+        "hasta_s": 41.07,
+        "fuente": "pexels",
+        "id": 6054228,
+        "pagina": "https://www.pexels.com/video/man-enjoying-and-clapping-with-the-music-at-the-table-6054228/",
+        "autor": "cottonbro studio",
+        "autor_url": "https://www.pexels.com/@cottonbro",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       }
     ],
-    "sintetico": true
+    "sintetico": false
   },
   "animacion": null,
   "fotogramas_s": [
-    4.24,
-    11.48,
-    22.43,
-    31.91,
-    46.24
+    3.39,
+    8.59,
+    15.12,
+    22.9,
+    31.35,
+    39.69
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
