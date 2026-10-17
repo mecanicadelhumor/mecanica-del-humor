@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-16T17:42:46Z",
+ "actualizado_utc": "2026-10-17T11:10:44Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -45,33 +45,44 @@
     "control": {
      "nombre": "Lo de ahora (C50 + C56-C59), apertura en situación",
      "n": 1,
-     "se_quedaron_media": 6.7,
-     "porcentaje_visto_media": 165.5,
-     "vistas_48h_mediana": 15,
+     "se_quedaron_media": 10.0,
+     "porcentaje_visto_media": 165.1,
+     "vistas_48h_mediana": 20,
      "me_gusta_por_100": 0.0,
      "ceros_de_feed": 0,
      "shorts": [
       {
        "id": "MDS-037",
        "publicado": "2026-10-13",
-       "se_quedaron_pct": 6.7,
-       "vistas_48h": 15,
-       "porcentaje_visto": 165.5,
+       "se_quedaron_pct": 10.0,
+       "vistas_48h": 20,
+       "porcentaje_visto": 165.1,
        "me_gusta": 0,
-       "visualizaciones": 15,
-       "leido": "2026-10-16"
+       "visualizaciones": 20,
+       "leido": "2026-10-17"
       }
      ]
     },
     "A": {
      "nombre": "Animación a medida en las escenas de mecanismo (C55.2)",
-     "n": 0,
-     "se_quedaron_media": null,
-     "porcentaje_visto_media": null,
-     "vistas_48h_mediana": null,
-     "me_gusta_por_100": null,
+     "n": 1,
+     "se_quedaron_media": 20.4,
+     "porcentaje_visto_media": 48.9,
+     "vistas_48h_mediana": 920,
+     "me_gusta_por_100": 0.87,
      "ceros_de_feed": 0,
-     "shorts": []
+     "shorts": [
+      {
+       "id": "MDS-038",
+       "publicado": "2026-10-14",
+       "se_quedaron_pct": 20.4,
+       "vistas_48h": 920,
+       "porcentaje_visto": 48.9,
+       "me_gusta": 8,
+       "visualizaciones": 920,
+       "leido": "2026-10-17"
+      }
+     ]
     },
     "B": {
      "nombre": "Arranque con el dato",
@@ -79,7 +90,7 @@
      "se_quedaron_media": 15.8,
      "porcentaje_visto_media": 37.0,
      "vistas_48h_mediana": 393,
-     "me_gusta_por_100": 1.27,
+     "me_gusta_por_100": 1.26,
      "ceros_de_feed": 0,
      "shorts": [
       {
@@ -89,8 +100,8 @@
        "vistas_48h": 393,
        "porcentaje_visto": 37.0,
        "me_gusta": 5,
-       "visualizaciones": 393,
-       "leido": "2026-10-16"
+       "visualizaciones": 396,
+       "leido": "2026-10-17"
       }
      ]
     }
@@ -111,11 +122,6 @@
    },
    "apartados": [],
    "pendientes": [
-    {
-     "id": "MDS-038",
-     "variante": "A",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    },
     {
      "id": "MDS-039",
      "variante": "A",
