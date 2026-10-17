@@ -237,7 +237,8 @@
   },
   "3.2": {
    "excluir": [
-    "pixabay:253997"
+    "pixabay:253997",
+    "pixabay:1309"
    ],
    "busqueda": [
     "adults in black clothes smiling softly together after ceremony",
@@ -251,6 +252,23 @@
    "busqueda": [
     "psychologist hands holding clipboard notes close up",
     "therapist writing notes on notepad close up"
+   ]
+  },
+  "4": {
+   "texto_pos": "abajo"
+  }
+ },
+ "MDS-043": {
+  "1": {
+   "texto_pos": "arriba"
+  },
+  "5.2": {
+   "excluir": [
+    "pixabay:123268"
+   ],
+   "busqueda": [
+    "woman yawning tired close up",
+    "person yawning on sofa"
    ]
   }
  }
