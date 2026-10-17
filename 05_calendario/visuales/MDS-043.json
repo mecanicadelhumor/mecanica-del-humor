@@ -1,13 +1,13 @@
 {
   "guion": "MDS-043",
   "version": 1,
-  "firma": "4a02150496cf0039",
-  "resuelto_utc": "2026-10-15T22:32:16Z",
+  "firma": "27ac318ac618b0a0",
+  "resuelto_utc": "2026-10-17T09:32:39Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
       "narracion_sha": "b5d96dafbc74",
-      "texto_pos": "abajo",
+      "texto_pos": "arriba",
       "planos": [
         {
           "k": 1,
@@ -428,38 +428,32 @@
             11.57
           ],
           "frase": "El bostezo, más al verlo, y siempre igual.",
-          "fuente": "pixabay",
-          "id": 123268,
-          "pagina": "https://pixabay.com/videos/id-123268/",
-          "titulo": "man, green screen, gold, trophy, award, winner, fight, chroma key, human, person id",
-          "autor": "Exceptional_3D",
-          "autor_url": "https://pixabay.com/users/Exceptional_3D-16154516/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 7.0,
-          "ancho": 1440,
-          "alto": 2000,
-          "url": "https://cdn.pixabay.com/video/2022/07/05/123268-727221670_large.mp4",
+          "fuente": "pexels",
+          "id": 8724306,
+          "pagina": "https://www.pexels.com/video/close-up-video-of-an-annoyed-woman-8724306/",
+          "titulo": "close up video of an annoyed woman",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 30.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8724306/8724306-hd_1080_2048_25fps.mp4",
           "tipo": "video",
-          "consulta": "person yawning watching screen",
+          "consulta": "woman yawning tired close up",
           "relevancia": 0.5,
-          "inicio_s": 0.0,
-          "movimiento": 1.14,
+          "inicio_s": 0.4,
+          "movimiento": 4.56,
           "encuadre": {
-            "x": 0.572,
-            "y": 0.5
+            "x": 0.5,
+            "y": 1
           },
           "caras": [
             [
-              0.4798,
-              0.2707,
-              0.1066,
-              0.076
-            ],
-            [
-              0.4134,
-              0.2627,
-              0.1043,
-              0.0747
+              0.2273,
+              0.2033,
+              0.6719,
+              0.56
             ]
           ]
         }

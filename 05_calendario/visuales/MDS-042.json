@@ -1,8 +1,8 @@
 {
   "guion": "MDS-042",
   "version": 1,
-  "firma": "3e8767c34f707e66",
-  "resuelto_utc": "2026-10-16T09:33:17Z",
+  "firma": "232ea25b0e0550a5",
+  "resuelto_utc": "2026-10-17T09:32:18Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -164,31 +164,44 @@
           ],
           "frase": "con un poco de culpa.",
           "fuente": "pixabay",
-          "id": 1309,
-          "pagina": "https://pixabay.com/videos/id-1309/",
-          "titulo": "wedding, dress, shoes, decoration, marriage, wedding dress, white, fashion, gown, bridal, adult, flower, elegance, romantic, style, clothing, ceremony, glamour, luxury, suit, footwear, detail, 145140336 id",
-          "autor": "Vimeo-Free-Videos",
-          "autor_url": "https://pixabay.com/users/Vimeo-Free-Videos-1283884/",
+          "id": 41820,
+          "pagina": "https://pixabay.com/videos/id-41820/",
+          "titulo": "diversity, meeting, communication, people, against racism, black, connection, ethnicities, friends, fun, group, happy, human, mixed race, multiracial, person, race racism, sharing, smiling, together, woman, young, summer id",
+          "autor": "aghyadnajjar",
+          "autor_url": "https://pixabay.com/users/aghyadnajjar-14736497/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 14.0,
-          "ancho": 0,
-          "alto": 0,
-          "url": "https://cdn.pixabay.com/video/2015/11/10/1309-145351537_medium.mp4",
+          "duracion_s": 17.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2020/06/12/41820-431406508_large.mp4",
           "tipo": "video",
           "consulta": "adults in black clothes smiling softly together after ceremony",
           "relevancia": 0.375,
           "inicio_s": 0.4,
-          "movimiento": 10.6,
+          "movimiento": 21.29,
           "encuadre": {
-            "x": 0.5,
+            "x": 0.515,
             "y": 0.5
           },
-          "caras": []
+          "caras": [
+            [
+              0.5169,
+              0.0,
+              0.6223,
+              0.475
+            ],
+            [
+              -0.1497,
+              0.0444,
+              0.6074,
+              0.4639
+            ]
+          ]
         }
       ]
     },
     "4": {
-      "narracion_sha": "f03e77112753",
+      "narracion_sha": "24c184395c80",
       "texto_pos": "abajo",
       "planos": [
         {
@@ -198,7 +211,7 @@
             0.0,
             11.1
           ],
-          "frase": "Los psicólogos Keltner y Bonanno observaron a personas en duelo y separaron la risa que arruga los ojos de la de compromiso.",
+          "frase": "Keltner y Bonanno observaron a personas en duelo y separaron dos risas: la sincera, que arruga los ojos, y la de cortesía.",
           "fuente": "pexels",
           "id": 7698897,
           "pagina": "https://www.pexels.com/video/therapist-writing-notes-7698897/",
@@ -231,7 +244,7 @@
       ]
     },
     "5": {
-      "narracion_sha": "e02a3b3a5693",
+      "narracion_sha": "aecd40b0daa6",
       "texto_pos": "abajo",
       "planos": [
         {
@@ -239,9 +252,9 @@
           "desde": null,
           "t_estimado": [
             0.0,
-            11.57
+            11.1
           ],
-          "frase": "Quien se reía arrugando los ojos estaba menos enfadado, sentía alivio y se llevaba mejor con su gente. Con la otra risa, no.",
+          "frase": "Quien se reía arrugando los ojos estaba menos enfadado, sentía alivio y se llevaba mejor con su gente. La de cortesía, no.",
           "fuente": "pixabay",
           "id": 238823,
           "pagina": "https://pixabay.com/videos/id-238823/",
@@ -315,7 +328,7 @@
       "escena": 1,
       "plano": 2,
       "id": "pixabay:106885",
-      "titulo": "background, texture, book, candle, light, beautiful wallpaper, effects, bible, table, shadows, flame, fire, old, screensaver id",
+      "titulo": "background, texture, book, beautiful wallpaper, candle, light, effects, bible, table, shadows, flame, fire, old, screensaver id",
       "motivo": "quieto (movimiento 0.49)"
     },
     {
