@@ -152,7 +152,7 @@
    "personaje": "entiende",
    "cifra": "Se gasta",
    "pie": "la risa; el bostezo, *no*",
-   "narracion": "La risa se pegaba más al oírla, casi siempre como sonrisa, y cada vez menos. El bostezo, más al verlo, y siempre igual.",
+   "narracion": "La risa se pegaba más al oírla, pero cada vez menos. El bostezo, más al verlo, y siempre igual.",
    "pausa_despues_s": 0.45,
    "visual": [
     {
@@ -178,7 +178,7 @@
    "personaje": "duda",
    "titulo": "¿Y en un tren *lleno*?",
    "subtitulo": "Fuente: De Weck y otros, 2022",
-   "narracion": "Por eso en el tren dejaste de sonreír y seguiste bostezando. Ojo: era gente sola ante una pantalla, no en un tren.",
+   "narracion": "Como en el tren: dejaste de sonreír y seguiste bostezando. Ojo: era gente sola ante una pantalla, no en un tren.",
    "pausa_despues_s": 0.2,
    "visual": [
     {
@@ -211,6 +211,21 @@
    "«La risa se pegaba más al oírla, casi siempre como sonrisa, y cada vez menos.» — «La tuve que releer… Lo entendí cuando apareció el texto ‹Se gasta›.»",
    "«la primera frase ya me había dado la respuesta» (es la receta del brazo B)"
   ],
-  "veredicto": "pasa"
+  "veredicto": "pasa",
+  "revision_diaria_2026-10-18": {
+   "lector": "subagente sin contexto (vuelta 2 de la revisión diaria, tras reescribir escenas 5 y 6)",
+   "vuelta_1": "Dudó de «casi siempre como sonrisa, y cada vez menos» y de «Por eso en el tren dejaste de sonreír…» (presenta como hecho lo que luego se matiza). Se reescribieron: escena 5 «La risa se pegaba más al oírla, pero cada vez menos.»; escena 6 «Como en el tren: dejaste de sonreír y seguiste bostezando.»",
+   "de_que_va": "La risa y el bostezo se contagian, pero la risa se «gasta» con la repetición y el bostezo no.",
+   "frases_dudosas_vuelta_2": [
+    "«Unos neurocientíficos grabaron la cara de gente sola…» (no sabe qué medían hasta la siguiente)",
+    "«…pero cada vez menos» (¿respecto a qué?)",
+    "«…y siempre igual» (ambiguo)",
+    "«Como en el tren: dejaste de sonreír…» (salto de «tú» al estudio)",
+    "«Ojo: era gente sola ante una pantalla…» (no ve para qué sirve)"
+   ],
+   "frase_que_quitaria": "«Ojo: era gente sola ante una pantalla, no en un tren.»",
+   "donde_me_iria": "escena 4 (paso del tren al laboratorio)",
+   "veredicto": "pasa con notas: entiende la tesis; son ambigüedades, no frases ininteligibles. Pendiente para la planificación."
+  }
  }
 }
