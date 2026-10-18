@@ -772,12 +772,13 @@
       "guion": "05_calendario/guiones/MDS-042.es.json",
       "video_id": "A6XRuzhbDI8",
       "url": "https://youtu.be/A6XRuzhbDI8",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-10-18T17:00:00Z",
       "musica": "cama_14_alone_two_days_ago_artificial_music.mp3",
       "subido_utc": "2026-10-18T06:02:26Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-10-18T19:28:09Z"
     }
   ],
-  "_estado_leido_utc": "2026-10-17T19:29:09Z"
+  "_estado_leido_utc": "2026-10-18T19:28:09Z"
 }
