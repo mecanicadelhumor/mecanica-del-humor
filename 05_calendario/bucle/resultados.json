@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-17T16:40:32Z",
+ "actualizado_utc": "2026-10-18T11:42:31Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -58,29 +58,39 @@
        "vistas_48h": 20,
        "porcentaje_visto": 165.1,
        "me_gusta": 0,
-       "visualizaciones": 20,
-       "leido": "2026-10-17"
+       "visualizaciones": 21,
+       "leido": "2026-10-18"
       }
      ]
     },
     "A": {
      "nombre": "Animación a medida en las escenas de mecanismo (C55.2)",
-     "n": 1,
-     "se_quedaron_media": 20.4,
-     "porcentaje_visto_media": 48.9,
-     "vistas_48h_mediana": 920,
-     "me_gusta_por_100": 0.87,
+     "n": 2,
+     "se_quedaron_media": 36.6,
+     "porcentaje_visto_media": 63.8,
+     "vistas_48h_mediana": 475.0,
+     "me_gusta_por_100": 1.05,
      "ceros_de_feed": 0,
      "shorts": [
       {
        "id": "MDS-038",
        "publicado": "2026-10-14",
-       "se_quedaron_pct": 20.4,
-       "vistas_48h": 920,
-       "porcentaje_visto": 48.9,
-       "me_gusta": 8,
-       "visualizaciones": 920,
-       "leido": "2026-10-17"
+       "se_quedaron_pct": 20.6,
+       "vistas_48h": 931,
+       "porcentaje_visto": 48.7,
+       "me_gusta": 9,
+       "visualizaciones": 931,
+       "leido": "2026-10-18"
+      },
+      {
+       "id": "MDS-039",
+       "publicado": "2026-10-15",
+       "se_quedaron_pct": 52.6,
+       "vistas_48h": 19,
+       "porcentaje_visto": 78.9,
+       "me_gusta": 1,
+       "visualizaciones": 19,
+       "leido": "2026-10-18"
       }
      ]
     },
@@ -101,7 +111,7 @@
        "porcentaje_visto": 37.0,
        "me_gusta": 5,
        "visualizaciones": 396,
-       "leido": "2026-10-17"
+       "leido": "2026-10-18"
       }
      ]
     }
@@ -123,11 +133,6 @@
    "apartados": [],
    "pendientes": [
     {
-     "id": "MDS-039",
-     "variante": "A",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    },
-    {
      "id": "MDS-040",
      "variante": "B",
      "motivo": "sin «se quedaron» a 48 h todavía"
@@ -140,7 +145,7 @@
     {
      "id": "MDS-042",
      "variante": "A",
-     "motivo": "sin ficha de producción todavía"
+     "motivo": "sin «se quedaron» a 48 h todavía"
     },
     {
      "id": "MDS-043",
