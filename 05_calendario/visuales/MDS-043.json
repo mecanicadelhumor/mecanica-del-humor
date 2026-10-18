@@ -1,8 +1,8 @@
 {
   "guion": "MDS-043",
   "version": 1,
-  "firma": "27ac318ac618b0a0",
-  "resuelto_utc": "2026-10-17T09:32:39Z",
+  "firma": "2c2ff37e0801407b",
+  "resuelto_utc": "2026-10-18T09:32:46Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -18,33 +18,26 @@
           ],
           "frase": "La risa se pega más al oírla;",
           "fuente": "pexels",
-          "id": 7251561,
-          "pagina": "https://www.pexels.com/video/man-with-headphones-and-notebook-on-a-train-7251561/",
-          "titulo": "man with headphones and notebook on a train",
-          "autor": "MART  PRODUCTION",
-          "autor_url": "https://www.pexels.com/@mart-production",
+          "id": 36169984,
+          "pagina": "https://www.pexels.com/video/empty-modern-subway-train-interior-36169984/",
+          "titulo": "empty modern subway train interior",
+          "autor": "Val А",
+          "autor_url": "https://www.pexels.com/@val-2157529886",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 13.0,
+          "duracion_s": 14.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/7251561/7251561-hd_1080_1920_25fps.mp4",
+          "url": "https://videos.pexels.com/video-files/36169984/15339063_1080_1920_60fps.mp4",
           "tipo": "video",
-          "consulta": "man laughing on train headphones",
-          "relevancia": 0.75,
+          "consulta": "subway train interior empty seats close up",
+          "relevancia": 0.667,
           "inicio_s": 0.4,
-          "movimiento": 4.23,
+          "movimiento": 2.2,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
-          "caras": [
-            [
-              0.3625,
-              0.3052,
-              0.3167,
-              0.2183
-            ]
-          ]
+          "caras": []
         },
         {
           "k": 2,
@@ -55,39 +48,26 @@
           ],
           "frase": "el bostezo, más al verlo.",
           "fuente": "pexels",
-          "id": 31364111,
-          "pagina": "https://www.pexels.com/video/man-relaxing-with-coffee-on-train-journey-31364111/",
-          "titulo": "man relaxing with coffee on train journey",
-          "autor": "Dara  Visuals",
-          "autor_url": "https://www.pexels.com/@daravisuals",
+          "id": 31646448,
+          "pagina": "https://www.pexels.com/video/passing-freight-train-view-from-a-car-window-31646448/",
+          "titulo": "passing freight train view from a car window",
+          "autor": "K",
+          "autor_url": "https://www.pexels.com/@kelly",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 12.0,
+          "duracion_s": 24.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/31364111/13383908_1080_1920_30fps.mp4",
+          "url": "https://videos.pexels.com/video-files/31646448/13482852_1080_1920_24fps.mp4",
           "tipo": "video",
-          "consulta": "man yawning on train",
+          "consulta": "train window view passing city from inside",
           "relevancia": 0.667,
           "inicio_s": 0.4,
-          "movimiento": 1.41,
+          "movimiento": 2.25,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
-          "caras": [
-            [
-              0.3611,
-              0.3094,
-              0.0972,
-              0.0813
-            ],
-            [
-              0.45,
-              0.325,
-              0.1056,
-              0.0656
-            ]
-          ]
+          "caras": []
         }
       ]
     },
@@ -239,21 +219,21 @@
           ],
           "frase": "en cuanto él bosteza,",
           "fuente": "pexels",
-          "id": 7252618,
-          "pagina": "https://www.pexels.com/video/man-browsing-his-smartphone-while-sitting-inside-a-train-7252618/",
-          "titulo": "man browsing his smartphone while sitting inside a train",
-          "autor": "MART  PRODUCTION",
-          "autor_url": "https://www.pexels.com/@mart-production",
+          "id": 31364111,
+          "pagina": "https://www.pexels.com/video/man-relaxing-with-coffee-on-train-journey-31364111/",
+          "titulo": "man relaxing with coffee on train journey",
+          "autor": "Dara  Visuals",
+          "autor_url": "https://www.pexels.com/@daravisuals",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 19.0,
+          "duracion_s": 12.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/7252618/7252618-hd_1080_1920_25fps.mp4",
+          "url": "https://videos.pexels.com/video-files/31364111/13383908_1080_1920_30fps.mp4",
           "tipo": "video",
           "consulta": "man yawning train seat",
           "relevancia": 0.5,
           "inicio_s": 0.4,
-          "movimiento": 2.05,
+          "movimiento": 1.45,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
@@ -261,9 +241,9 @@
           "caras": [
             [
               0.375,
-              0.3375,
-              0.1889,
-              0.1453
+              0.3109,
+              0.0972,
+              0.0844
             ]
           ]
         },
@@ -380,7 +360,7 @@
       ]
     },
     "5": {
-      "narracion_sha": "045797fe1e04",
+      "narracion_sha": "f25a49956ee0",
       "texto_pos": "abajo",
       "planos": [
         {
@@ -388,9 +368,9 @@
           "desde": null,
           "t_estimado": [
             0.0,
-            6.87
+            4.87
           ],
-          "frase": "La risa se pegaba más al oírla, casi siempre como sonrisa, y cada vez menos.",
+          "frase": "La risa se pegaba más al oírla, pero cada vez menos.",
           "fuente": "pixabay",
           "id": 161062,
           "pagina": "https://pixabay.com/videos/id-161062/",
@@ -424,43 +404,43 @@
           "k": 2,
           "desde": "El bostezo, más al verlo",
           "t_estimado": [
-            6.87,
-            11.57
+            4.87,
+            9.72
           ],
           "frase": "El bostezo, más al verlo, y siempre igual.",
           "fuente": "pexels",
-          "id": 8724306,
-          "pagina": "https://www.pexels.com/video/close-up-video-of-an-annoyed-woman-8724306/",
-          "titulo": "close up video of an annoyed woman",
-          "autor": "Tima Miroshnichenko",
-          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "id": 9035656,
+          "pagina": "https://www.pexels.com/video/close-up-up-footage-of-a-woman-stretching-her-neck-9035656/",
+          "titulo": "close up up footage of a woman stretching her neck",
+          "autor": "Kevin  Malik",
+          "autor_url": "https://www.pexels.com/@kevin-malik",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 30.0,
+          "duracion_s": 15.0,
           "ancho": 1080,
-          "alto": 2048,
-          "url": "https://videos.pexels.com/video-files/8724306/8724306-hd_1080_2048_25fps.mp4",
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/9035656/9035656-hd_1080_1920_24fps.mp4",
           "tipo": "video",
           "consulta": "woman yawning tired close up",
           "relevancia": 0.5,
           "inicio_s": 0.4,
-          "movimiento": 4.56,
+          "movimiento": 9.99,
           "encuadre": {
             "x": 0.5,
-            "y": 1
+            "y": 0.5
           },
           "caras": [
             [
-              0.2273,
-              0.2033,
-              0.6719,
-              0.56
+              0.1889,
+              0.1422,
+              0.8,
+              0.5094
             ]
           ]
         }
       ]
     },
     "6": {
-      "narracion_sha": "8d79e6d46630",
+      "narracion_sha": "a06b8af335a7",
       "texto_pos": "arriba",
       "planos": [
         {
@@ -468,9 +448,9 @@
           "desde": null,
           "t_estimado": [
             0.0,
-            5.43
+            5.2
           ],
-          "frase": "Por eso en el tren dejaste de sonreír y seguiste bostezando.",
+          "frase": "Como en el tren: dejaste de sonreír y seguiste bostezando.",
           "fuente": "pexels",
           "id": 9485344,
           "pagina": "https://www.pexels.com/video/a-man-sleeping-on-a-subway-train-9485344/",
@@ -504,8 +484,8 @@
           "k": 2,
           "desde": "Ojo: era gente sola",
           "t_estimado": [
-            5.43,
-            10.85
+            5.2,
+            10.39
           ],
           "frase": "Ojo: era gente sola ante una pantalla, no en un tren.",
           "fuente": "pixabay",
