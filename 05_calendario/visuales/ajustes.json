@@ -264,11 +264,31 @@
   },
   "5.2": {
    "excluir": [
-    "pixabay:123268"
+    "pixabay:123268",
+    "pexels:8724306"
    ],
    "busqueda": [
     "woman yawning tired close up",
-    "person yawning on sofa"
+    "person yawning on sofa",
+    "man yawning at desk wide shot"
+   ]
+  },
+  "1.1": {
+   "excluir": [
+    "pexels:7251561"
+   ],
+   "busqueda": [
+    "subway train interior empty seats close up",
+    "empty tram seats and handrails morning"
+   ]
+  },
+  "1.2": {
+   "excluir": [
+    "pexels:31364111"
+   ],
+   "busqueda": [
+    "train window view passing city from inside",
+    "tram handrails and window close up no people"
    ]
   }
  }
