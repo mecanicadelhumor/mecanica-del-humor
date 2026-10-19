@@ -1,0 +1,266 @@
+{
+  "id": "MDS-043.es",
+  "duracion_final_s": 45.8,
+  "tamano_mb": 25.5,
+  "audio": {
+    "lufs": -14.84,
+    "pico_dbtp": -1.25,
+    "rango_lu": 4.1
+  },
+  "silencio_inicial": {
+    "empieza_s": -0.021,
+    "acaba_s": 0.117,
+    "esperado_s": 0.1,
+    "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
+  },
+  "arranque": {
+    "silencios_s": [
+      [
+        0.0,
+        0.1
+      ]
+    ],
+    "fragmento_antes_de_la_narracion": false,
+    "duracion_fragmento_s": null,
+    "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente)."
+  },
+  "fragmentos": {
+    "instantes": [],
+    "cuantos": 0,
+    "_nota": "Cada entrada es un trozo de audio de menos de 0.45 s rodeado de silencio: casi seguro una sílaba suelta que el sintetizador ha metido al empezar una escena. «mmss» es el minuto exacto para ir a escucharlo. Debe estar vacío."
+  },
+  "subtitulos": {
+    "ass_existe": true,
+    "lineas_ass": 0,
+    "srt_existe": true,
+    "quemados": false,
+    "quemados_origen": "leído de montaje.json",
+    "_esperado": {
+      "quemados": false,
+      "lineas_ass": "> 0 con motor edge; puede ser 0 con motor gemini"
+    },
+    "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
+  },
+  "sincronia_voz": {
+    "duracion_calculada_s": 45.06,
+    "duracion_real_voz_mp3_s": 44.76,
+    "desfase_s": 0.3,
+    "_esperado": "desfase_s < 0.5",
+    "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
+  },
+  "musica": {
+    "archivo": "cama_01_crying_over_you_christophermorrow.mp3",
+    "sha256": "4143a4c48067539963eeff663f43e8c1f880f4e4c1428972a69ed75d0aa28e44"
+  },
+  "guion": {
+    "titulo_trabajo": "¿Se pega más una risa o un bostezo?",
+    "idioma": "es",
+    "voz": "Charon",
+    "escenas": 6,
+    "duracion_narracion_s": 45.06,
+    "escenas_por_encima_de_14s": [],
+    "escena_mas_larga_s": 9.344,
+    "motor_voz_pedido": "gemini",
+    "motores_por_escena": {
+      "gemini-3.1-flash-tts-preview": 6
+    },
+    "modelo_voz": "gemini-3.1-flash-tts-preview",
+    "voz_mezclada": false,
+    "origen_voz": [
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada"
+    ],
+    "direccion_voz": [
+      "apertura",
+      "planteamiento",
+      "remate",
+      "explicacion",
+      "cifra",
+      "objecion"
+    ],
+    "escenas_ritmo_fuera_de_rango": [],
+    "voz_fiel": [
+      "13/12 palabras, 0 trozos repetidos",
+      "19/19 palabras, 0 trozos repetidos",
+      "12/13 palabras, 0 trozos repetidos",
+      "16/15 palabras, 0 trozos repetidos",
+      "20/19 palabras, 0 trozos repetidos",
+      "21/21 palabras, 0 trozos repetidos"
+    ]
+  },
+  "visual": {
+    "planos": [
+      {
+        "escena": 1,
+        "desde_s": 0.0,
+        "hasta_s": 2.5,
+        "fuente": "pexels",
+        "id": 36169984,
+        "pagina": "https://www.pexels.com/video/empty-modern-subway-train-interior-36169984/",
+        "autor": "Val А",
+        "autor_url": "https://www.pexels.com/@val-2157529886",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 1,
+        "desde_s": 2.5,
+        "hasta_s": 4.93,
+        "fuente": "pexels",
+        "id": 31646448,
+        "pagina": "https://www.pexels.com/video/passing-freight-train-view-from-a-car-window-31646448/",
+        "autor": "K",
+        "autor_url": "https://www.pexels.com/@kelly",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 4.93,
+        "hasta_s": 10.13,
+        "fuente": "pexels",
+        "id": 4962639,
+        "pagina": "https://www.pexels.com/video/a-woman-listening-to-a-voice-message-4962639/",
+        "autor": "Tima Miroshnichenko",
+        "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 10.13,
+        "hasta_s": 13.83,
+        "fuente": "pexels",
+        "id": 8553613,
+        "pagina": "https://www.pexels.com/video/a-man-and-a-woman-talking-while-sitting-on-a-train-8553613/",
+        "autor": "Liliana Drew",
+        "autor_url": "https://www.pexels.com/@liliana-drew",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 3,
+        "desde_s": 13.83,
+        "hasta_s": 16.83,
+        "fuente": "pexels",
+        "id": 8721788,
+        "pagina": "https://www.pexels.com/video/a-young-woman-riding-a-train-8721788/",
+        "autor": "Darina Belonogova",
+        "autor_url": "https://www.pexels.com/@darina-belonogova",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 3,
+        "desde_s": 16.83,
+        "hasta_s": 18.43,
+        "fuente": "pexels",
+        "id": 31364111,
+        "pagina": "https://www.pexels.com/video/man-relaxing-with-coffee-on-train-journey-31364111/",
+        "autor": "Dara  Visuals",
+        "autor_url": "https://www.pexels.com/@daravisuals",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 3,
+        "desde_s": 18.43,
+        "hasta_s": 20.23,
+        "fuente": "pexels",
+        "id": 6083389,
+        "pagina": "https://www.pexels.com/video/woman-wearing-face-mask-inside-the-train-6083389/",
+        "autor": "Keira Burton",
+        "autor_url": "https://www.pexels.com/@keira-burton",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 4,
+        "desde_s": 20.23,
+        "hasta_s": 22.0,
+        "fuente": "pexels",
+        "id": 29276577,
+        "pagina": "https://www.pexels.com/video/silhouette-with-headphones-in-front-of-computer-screen-29276577/",
+        "autor": "Azhaan Bashmil",
+        "autor_url": "https://www.pexels.com/@azhaan-bashmil-728761857",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 4,
+        "desde_s": 22.0,
+        "hasta_s": 27.2,
+        "fuente": "pexels",
+        "id": 6883838,
+        "pagina": "https://www.pexels.com/video/an-interview-being-recorded-in-camera-6883838/",
+        "autor": "cottonbro studio",
+        "autor_url": "https://www.pexels.com/@cottonbro",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 27.2,
+        "hasta_s": 31.57,
+        "fuente": "pixabay",
+        "id": 161062,
+        "pagina": "https://pixabay.com/videos/id-161062/",
+        "autor": "u_ayuc6ef9vb",
+        "autor_url": "https://pixabay.com/users/u_ayuc6ef9vb-30649611/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 31.57,
+        "hasta_s": 35.7,
+        "fuente": "pexels",
+        "id": 9035656,
+        "pagina": "https://www.pexels.com/video/close-up-up-footage-of-a-woman-stretching-her-neck-9035656/",
+        "autor": "Kevin  Malik",
+        "autor_url": "https://www.pexels.com/@kevin-malik",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 6,
+        "desde_s": 35.7,
+        "hasta_s": 40.43,
+        "fuente": "pexels",
+        "id": 9485344,
+        "pagina": "https://www.pexels.com/video/a-man-sleeping-on-a-subway-train-9485344/",
+        "autor": "Timur Weber",
+        "autor_url": "https://www.pexels.com/@timur-weber",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 6,
+        "desde_s": 40.43,
+        "hasta_s": 43.3,
+        "fuente": "pixabay",
+        "id": 223892,
+        "pagina": "https://pixabay.com/videos/id-223892/",
+        "autor": "ZT_OSCAR",
+        "autor_url": "https://pixabay.com/users/ZT_OSCAR-5239946/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      }
+    ],
+    "sintetico": false
+  },
+  "animacion": null,
+  "fotogramas_s": [
+    3.06,
+    10.38,
+    17.79,
+    24.52,
+    32.41,
+    41.42
+  ],
+  "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
+}
