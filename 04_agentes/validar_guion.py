@@ -801,6 +801,13 @@ def validar(path):
             if len(planos_v) > MAX_PLANOS_ESCENA:
                 avisos.append(f"C50: escena {j}: {len(planos_v)} planos. Más de "
                               f"{MAX_PLANOS_ESCENA} en una escena son parpadeos: sobran.")
+            if any(pl.get("marca") for pl in planos_v) and not all(pl.get("marca") for pl in planos_v):
+                # 19/10/2026: fondo_visual._una_superficie() ya no pasa a la tarjeta
+                # a mitad de escena (el rótulo se veía dos veces, MDS-040).
+                avisos.append(
+                    f"C50: escena {j}: tarjeta de marca mezclada con planos de archivo. Desde el "
+                    f"19/10 eso no se hace: la tarjeta se ignora y sigue el plano de al lado. Si "
+                    f"el mensaje clave pide la tarjeta, que sea la escena entera: \"visual\": \"marca\".")
             for k, pl in enumerate(planos_v, 1):
                 if pl.get("marca"):
                     tarjetas += 1

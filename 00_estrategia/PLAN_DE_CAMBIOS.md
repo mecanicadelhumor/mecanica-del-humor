@@ -6322,3 +6322,73 @@ buena; se mira con los tiempos reales de la caché el lunes, no hoy.
 
 - Los brazos y el `orden` de B1; la regla de decisión; los umbrales de C26; las rutinas; `estado/`;
   `voz.py` fuera del arreglo de Whisper.
+
+
+# Versión 22 · 19 de octubre de 2026 — lo que el codirector vio en `MDS-040`, la mediana bien contada y B1 hasta el 4/11
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario, y lo que se anula se dice con su nombre, en la tabla de abajo.
+
+Dirección en diferido (C62), lunes a las 13:07 UTC, sin sesión interactiva hoy. El cuaderno traía
+(16-19/10): **(1)** errores en el Short del 16/10 (`MDS-040`): la frase de la escena 1 se corta al pasar
+del vídeo a la tarjeta azul y se termina de escribir allí; un `»` y un `?` solos en la línea de abajo;
+rótulos repetidos en el vídeo y luego en el azul; y la firma final «aparece y desaparece»; **(2)** qué es
+OpenAlex y si nos ayuda una clave; **(especial)** los lunes, un resumen de la semana pasada y de la que
+empieza. Y su respuesta a las tareas del 15/10: tarea 1 hecha (las carpetas por mes en su prompt) y la
+muestra del remate centrado, bien. Tocaba hoy: C36 en vivo, la trampa 55, el prompt del guionista largo.
+
+| Cambio | Estado |
+|---|---|
+| **C69.1 · Un rótulo, una superficie por escena** | **Hecho y probado.** `fondo_visual._una_superficie()`: si una escena tiene plano de archivo, sus tramos de tarjeta pasan al plano de al lado. Arregla la frase cortada en el cambio y el rótulo visto dos veces. `validar_guion.py` avisa; `guionista_corto.md` y el prompt de la planificación dicen que la tarjeta es la escena entera o nada. Desde `MDS-044` |
+| **C69.2 · Ningún signo solo en una línea** | **Hecho y probado.** Cada palabra es un `inline-block`, y el signo pegado a una palabra resaltada era otra unidad: Chromium podía partir entre las dos sin espacio (reproducido). `rico()` envuelve el resalte y lo pegado en `.nw` (`white-space:nowrap`). Desde `MDS-044` |
+| **C69.3 · La firma final se lee** | **Hecho, con muestra** en `07_pruebas/remate-2026-10-19/`. La tarjeta pasa de 1,75 a 2,2 s (`REMATE_S` en `escena.html` y `fondo_visual.py`), el texto del cierre se va antes de ella y `voz.py` alarga la pausa tras el cierre de un Short a 2,95 s (`COLA_REMATE_S`) para que nada pise la voz. Remate legible ~2 s (era <1). Cada Short, ~2,7 s más largo. `qa.py` descuenta esa pausa en `escenas_por_encima_de_14s` |
+| **`control_c26` sin lecturas inmaduras** | **Hecho.** `metricas.py` ignora una lectura de `vistas_48h` hecha a menos de 3 días de la publicación (Analytics llega con ~2 días de retraso). Recalculado sobre el `metricas.json` de hoy: **62** (el fichero dice 42 por el 0 de `MDS-041`), 7 de 20 sobre 100 |
+| **B1 hasta el 4/11** | **Decidido** (`ciclos.json`, `hasta`). Ver abajo |
+| **OpenAlex** | **Explicado al codirector** (sus tareas de hoy): una clave gratuita da a la planificación su propio presupuesto (1 $ al día, unas mil búsquedas) y se acaba el 429. El prompt de la planificación ya la usa si existe `OPENALEX_API_KEY` |
+| **Resumen semanal** (tarea especial) | **Desde hoy, cada lunes**, al principio del fichero de tareas del codirector |
+| **C36 en vivo** | **Prueba 1 pasada.** `2.5-pro` volvió a no contestar en 20 min (y el tope de 4 min de `prueba_voz.py` no saltó); con `3.1`, el Short entero (`MDS-045`) en una toma en un minuto, y `corte_palabras.py` pone los 8 cortes de las dos tomas en el silencio entre escenas. Muestra en `07_pruebas/c36-2026-10-19/`. Faltan: que lo oiga el codirector y meterlo en `voz.py` (jueves 22). **Siguen siete a la semana** |
+| **La voz de los largos** | **Cambia**: `gemini-2.5-pro-preview-tts` no ha contestado ni una vez; los largos irán con `3.1` (su cuota se reparte con los Shorts: con C36, una llamada por Short deja sitio). Se corrige `LARGOS_2026-10.md` el jueves con el prompt del guionista largo |
+| Trampa 55 · prompt del guionista largo | **No hoy.** Pasan al jueves 22 (el prompt del largo tiene que estar antes del 29/10) |
+
+## Regla 11.2, otra vez sin esperar, y por qué
+
+Los tres arreglos cambian lo que se ve, y la regla dice que no entran sin una muestra mirada. Entran
+mañana (`MDS-044`) con la muestra del final en `07_pruebas/remate-2026-10-19/` por lo mismo que el 15/10:
+**son los defectos que el codirector señaló, con la corrección que él mismo describía** («no debería
+cambiarse de escena si queda texto por escribir», «el mismo rótulo solo una vez por escena», «la imagen
+final debería estar algo más de tiempo»). No cambia el diseño de nada; quita lo que estaba mal. Si algo
+no le gusta, se deshace en tres constantes y una función, escritas en sus tareas.
+
+## B1: por qué se alarga y qué no cambia
+
+B1 se pensó del 12 al 25/10 con catorce Shorts a la semana desde el 19. Siguen siendo siete (C36 no ha
+pasado), así que el 25/10 habría ~5 por brazo y el control —el que menos tiene— no llegaría a la n = 4 de
+la regla temprana. Cerrar así sería cerrar sin decidir. **Se alarga hasta el 4/11, cuando se acaba su
+`orden` de 24** (un Short al día desde el 12/10). No cambian ni el orden, ni los brazos, ni la regla
+(n = 4 con 15 puntos, n = 6 con 8, cierre a n = 10): si un brazo la cumple antes, se decide antes. Lo que
+sí queda dicho es que **con siete a la semana la regla de cierre a n = 10 pide diez semanas por ciclo**;
+si C36 sigue sin pasar, el jueves 22 se propone para B2 una regla para siete a la semana (dos brazos en
+vez de tres), no para B1.
+
+## Las métricas, sin decisión
+
+Mediana C26 bien contada: **62** (la segunda lectura seguida por encima de 50: 64 el 12/10). La semana
+del 12/10: `MDS-038` (A) **933** visualizaciones, la segunda mejor de la historia; `MDS-036` (B) 392; los
+otros tres, 7-22 (ceros de feed). «Se quedaron» sigue en ~20 % en los que el feed enseña. **El largo ya
+está decidido** (uno a la semana desde el 8/11): las dos lecturas por encima de 50 no cambian la fecha,
+que depende de la voz del largo, no de la mediana.
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Martes 20, ~01:13 UTC | `MDS-044`: el primero con C69.1-C69.3 |
+| Martes 20, 11:30 UTC | La revisión diaria mira los tres arreglos en los fotogramas (bloque del 19/10 de su prompt) |
+| **Jueves 22, 13:07 UTC** | Dirección: C36 dentro de `voz.py` (si el codirector ha oído la muestra), prompt del guionista largo con `3.1`, trampa 55, propuesta de B2 |
+| Jueves 22, 22:00 | Planificación: semana del 26/10 (B1 sigue) |
+| 4/11 | Fin de B1 (antes si un brazo cumple la regla) |
+| 8/11 | Primer largo |
+
+## Lo que NO cambia hoy
+
+- Los brazos, el `orden` y la regla de decisión de B1; los umbrales de C26; las rutinas; lo que se oye.

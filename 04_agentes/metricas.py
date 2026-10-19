@@ -433,6 +433,16 @@ def se_quedaron_48h(ya, vid, subido):
                        (subido + timedelta(days=1)).isoformat())
 
 
+VISTAS_48H_MADURAS_DIAS = 3
+
+
+def _dias_entre(publicado, leido):
+    try:
+        return (date.fromisoformat(str(leido)[:10]) - date.fromisoformat(str(publicado)[:10])).days
+    except (TypeError, ValueError):
+        return 0
+
+
 def mediana_48h_ultimos_shorts(lecturas, n=20):
     """C26 (versión 6 del plan): la mediana de vistas a 48h de los últimos
     veinte Shorts, más cuántos de esos veinte pasan de 100 y de 50 vistas.
@@ -454,6 +464,14 @@ def mediana_48h_ultimos_shorts(lecturas, n=20):
         if l.get("formato") != "corto":
             continue
         if l.get("vistas_48h") is None:
+            continue
+        # 19/10/2026: una lectura hecha a menos de VISTAS_48H_MADURAS_DIAS de la
+        # publicación todavía no tiene el segundo día en Analytics (llega con unos
+        # dos días de retraso) y da un 0 que no es un cero. Contaba igual: el 19/10
+        # MDS-041, publicado el 17, entró con 0 y bajó la mediana de 62 a 42
+        # (bitácora de métricas de ese día). Esa lectura se ignora; la del día
+        # siguiente ya vale.
+        if _dias_entre(l.get("publicado"), l.get("leido")) < VISTAS_48H_MADURAS_DIAS:
             continue
         actual = por_id.get(l["id"])
         if actual is None or l["leido"] > actual["leido"]:

@@ -403,11 +403,14 @@ Una lista de **planos**. Cada plano, un trozo de la escena:
   en inglés, foto realista, sujeto + acción + lugar + luz. Si sabes de antemano que lo que cuentas
   no existe en ningún banco («un hombre en pijama en una reunión de trabajo»), pon además
   `"fuente": "ia"` y no se busca en el archivo.
-- **`{"marca": true, "desde": "…"}`** — una **tarjeta de marca**: durante ese tramo se ve la escena
-  como hasta ahora (fondo azul, la cifra o el diagrama en grande) y luego vuelve el vídeo. Es para
-  **el mensaje clave**: la cifra del estudio cuando la voz la dice, el mecanismo en un diagrama.
-  O la escena entera: `"visual": "marca"`. **Dos por Short como mucho**, y el final no la necesita:
-  los últimos 1,75 s de cada Short ya son la firma de marca con el Engranaje.
+- **`"visual": "marca"`** — la escena entera como **tarjeta de marca** (fondo azul, la cifra o el
+  diagrama en grande). Es para **el mensaje clave**: la cifra del estudio cuando la voz la dice, el
+  mecanismo en un diagrama. **Dos por Short como mucho**, y el final no la necesita: los últimos 2,2 s
+  de cada Short ya son la firma de marca con el Engranaje.
+  **Desde el 19/10/2026 no hay tarjeta a mitad de escena** (`{"marca": true, "desde": "…"}` junto a
+  planos de archivo): el texto de la escena se pintaba en el vídeo y otra vez en la tarjeta, y la
+  frase que se estaba escribiendo se cortaba en el cambio (lo vio el codirector en `MDS-040`). Si lo
+  escribes, el render lo ignora y sigue el plano de al lado, y `validar_guion.py` avisa.
 
 ### Las reglas
 

@@ -359,8 +359,11 @@ def main():
     if timed.exists():
         g = json.loads(timed.read_text(encoding="utf-8"))
         escenas = g.get("escenas", [])
-        largas = [(i, round(e.get("duracion_s", 0), 1))
-                  for i, e in enumerate(escenas, 1) if e.get("duracion_s", 0) > 14]
+        # Sin la pausa que voz.py añade tras el cierre para la firma final
+        # (cola_remate_s, 19/10/2026): esto busca voz de más, no música.
+        largas = [(i, round(e.get("duracion_s", 0) - e.get("cola_remate_s", 0), 1))
+                  for i, e in enumerate(escenas, 1)
+                  if e.get("duracion_s", 0) - e.get("cola_remate_s", 0) > 14]
         motores = [e.get("motor_voz") for e in escenas if e.get("motor_voz")]
         ritmos_fuera = [(i, e.get("ritmo_pal_s")) for i, e in enumerate(escenas, 1)
                         if e.get("ritmo_pal_s") is not None

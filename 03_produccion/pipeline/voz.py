@@ -1109,6 +1109,15 @@ def fragmento_inicial(mp3):
 SILENCIO_DELANTERO_DEJA_S = 0.03   # lo que se deja: el ataque de la primera sílaba
 SILENCIO_DELANTERO_MAX_S = 1.0     # más que esto no es un silencio de arranque
 
+# 19/10/2026 · La firma final de un Short se leía menos de un segundo. La tarjeta
+# de marca ocupa los últimos REMATE_S = 2,2 s del cierre (escena.html y
+# fondo_visual.py) y el texto del cierre sale en los 0,45 s de antes; hasta hoy
+# la pausa tras el cierre era la del guion (0,2 s en MDS-040), así que todo eso
+# caía ENCIMA de las últimas palabras. Ahora la pausa tras el cierre de un Short
+# es como mínimo esta: la voz termina, el texto se queda 0,3 s, se va, y el
+# remate se lee entero. Alarga cada Short unos 2,7 s, de música sola.
+COLA_REMATE_S = 2.2 + 0.45 + 0.3
+
 
 def silencio_delantero(mp3):
     """Segundos de silencio con los que empieza la toma (0 si empieza con voz)."""
@@ -1352,6 +1361,11 @@ async def principal(guion_path, salida, voz=None, motor="edge"):
                 print(f"  escena  1  quitados {quita:.2f}s de silencio delante de la voz (C58.1)")
         dur = duracion_real(mp3) or (pal[-1][1] if pal else 3.0)
         cola = e.get("pausa_despues_s", 0.45)      # respiración entre escenas
+        if es_corto and i == len(escenas) and e.get("tipo") == "cierre":
+            extra = round(max(0.0, COLA_REMATE_S - float(cola or 0.0)), 3)
+            if extra:
+                cola = COLA_REMATE_S
+                e["cola_remate_s"] = extra     # qa.py lo descuenta al buscar escenas largas
         e["duracion_s"] = round(dur + cola, 3)
         e["audio"] = str(mp3.relative_to(salida))
         e["motor_voz"] = motor_usado

@@ -196,6 +196,23 @@ Versión **11** de `PLAN_DE_CAMBIOS.md`, que es la que manda.
 
 ---
 
+## Lo que cambia el 19/10/2026 (dirección del lunes) · versión 22 del plan
+
+Desde `MDS-044` (martes 20) entran tres arreglos de lo que el codirector vio en `MDS-040`. Al mirar los
+fotogramas del Short del día, comprueba que se cumplen y, si no, es INCIDENCIA:
+
+1. **Ningún signo solo en una línea** («reunión» con su `»`, «emoji» con su `?`): lo pegado a una
+   palabra resaltada ya no se separa de ella.
+2. **Un rótulo, una superficie por escena**: ninguna escena pasa del vídeo a la tarjeta azul a la
+   mitad, así que ninguna frase se corta en el cambio ni se ve dos veces. Si en la hoja de contactos
+   una escena sale con plano de archivo y tarjeta, la tarjeta no se va a ver: no hace falta corregirla.
+3. **La firma final se lee**: el texto del cierre se va cuando la voz ha terminado y la tarjeta
+   «Síguenos / un mecanismo nuevo cada día» dura 2,2 s. Los Shorts duran ~2,7 s más; en la ficha,
+   `escenas_por_encima_de_14s` ya descuenta esa pausa (`cola_remate_s` en `guion.timed.json`).
+
+Y `control_c26` (en `metricas.json`) ya no cuenta un Short leído con menos de tres días: el 0 de
+`MDS-041` era el retraso de Analytics, no un cero.
+
 ## Lo que cambia el 15/10/2026 (dirección del jueves) · versión 21 del plan · carpetas por mes
 
 **Las bitácoras y las notas de `08_comunicacion/` van en una carpeta por mes** (propuesta del

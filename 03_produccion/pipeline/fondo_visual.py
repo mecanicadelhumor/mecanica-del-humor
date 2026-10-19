@@ -31,7 +31,7 @@ from pathlib import Path
 PAUSA_POR_DEFECTO = 0.45   # la misma que voz.py cuando la escena no dice otra
 ANTICIPO_S = 0.12          # la imagen entra un pelo antes que la palabra: así se ve a la vez que se oye
 MIN_PLANO_S = 1.0          # un plano de menos de un segundo no se ve: es un parpadeo
-REMATE_S = 1.75            # los últimos 1,75 s del cierre: la firma de marca (C15.5, igual que escena.html)
+REMATE_S = 2.2             # los últimos 2,2 s del cierre: la firma de marca (C15.5, igual que escena.html; era 1,75 hasta el 19/10/2026)
 SILENCIO_DB = -38          # umbral de silencio para medir la voz de cada escena
 SILENCIO_S = 0.14          # un silencio más corto que esto no es una pausa, es una consonante
 
@@ -336,6 +336,35 @@ def _partir(tramos, f_corte):
     return salida
 
 
+def _una_superficie(tramos):
+    """19/10/2026 · Un rótulo, una superficie por escena.
+
+    escena.html pinta el mismo texto en las dos páginas (archivo y marca) con el
+    mismo reloj, así que una escena que pasaba de un plano de archivo a una
+    tarjeta de marca a mitad seguía escribiendo su frase en la tarjeta («Tu
+    ironía escrita: peor de» sobre el vídeo y el resto sobre el azul) y el mismo
+    rótulo se veía dos veces, en dos sitios y dos tamaños. Lo vio el codirector
+    en MDS-040 (escena 1, `{"marca": true, "desde": …}` del brazo B). Si una
+    escena tiene algún tramo de archivo, sus tramos de marca pasan al plano de
+    archivo de al lado (el anterior; si la marca va primero, el siguiente). Una
+    escena entera de marca sigue siendo de marca, y el remate del cierre se
+    parte después (_partir), cuando el texto ya se ha ido."""
+    if not any(tr["tipo"] == "archivo" for tr in tramos):
+        return tramos
+    salida = []
+    for tr in tramos:
+        if tr["tipo"] == "archivo":
+            salida.append(dict(tr))
+        elif salida:
+            salida[-1]["f1"] = tr["f1"]
+        else:
+            salida.append(dict(tr))          # la marca va primero: se queda hasta ver el archivo
+    if salida[0]["tipo"] != "archivo":
+        sig = salida[1]
+        salida = [dict(sig, f0=salida[0]["f0"])] + salida[2:]
+    return salida
+
+
 def _fusionar(tramos):
     salida = []
     for tr in tramos:
@@ -372,6 +401,7 @@ def plan(escenas, local, fps, carpeta_build):
                            and _legible(Path(carpeta_build) / p["local"], p.get("tipo")))
                 tramos.append({"f0": f0, "f1": f1, "tipo": "archivo" if archivo else "marca",
                                "plano": p if archivo else None})
+        tramos = _una_superficie(tramos)
         if i == len(escenas) - 1 and e.get("tipo") == "cierre":
             tramos = _partir(tramos, max(0, n_f - int(round(REMATE_S * fps))))
         pos = "centro" if e.get("tipo") in TIPOS_CENTRO else (v.get("texto_pos") or "abajo")

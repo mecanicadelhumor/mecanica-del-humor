@@ -14,6 +14,25 @@ codirector el 30/09) · repositorio añadido · entorno «Mecánica del Humor».
 
 ---
 
+## Lo que cambia el 19/10/2026 (dirección del lunes) · versión 22 del plan
+
+1. **No hay tarjeta de marca a mitad de escena.** Un `{"marca": true, "desde": "…"}` junto a planos de
+   archivo hacía que la frase de la escena se escribiera sobre el vídeo, se cortara en el cambio y se
+   viera otra vez en la tarjeta azul (`MDS-040`, escena 1; lo vio el codirector). Desde hoy el render
+   la ignora y sigue el plano de al lado, y `validar_guion.py` avisa. **Si el mensaje clave pide la
+   tarjeta, es la escena entera: `"visual": "marca"`** (dos por Short como mucho, como siempre). En el
+   brazo B eso vale para la escena 1: o vídeo detrás del dato, o la escena entera en tarjeta. Los
+   guiones ya escritos (`MDS-045`, `MDS-049`) no hace falta tocarlos: salen con el vídeo.
+2. **La firma final dura más** (2,2 s, antes 1,75, y ya no pisa la última frase): cada Short sale unos
+   **2,7 s más largo** que lo que estima `validar_guion.py`. El techo de 55 s no cambia; si un guion
+   pasa de 52, mira con la lectura en frío si sobra una frase.
+3. **B1 sigue hasta el 4/11** (`ciclos.json`, `hasta`): con siete Shorts a la semana el 25/10 ningún
+   brazo tenía datos para decidir. Sigues el mismo `orden` desde donde vaya, sin saltar ninguno.
+4. **OpenAlex**: si en el entorno existe la variable `OPENALEX_API_KEY` (la pone el codirector, una
+   vez), añade `&api_key=$OPENALEX_API_KEY` a cada llamada a `api.openalex.org`. Con clave tienes tu
+   propio presupuesto diario y se acaba el 429. Sin ella, todo como hasta ahora (Crossref y Europe PMC).
+   **No escribas nunca el valor de la clave** en un fichero, una bitácora ni un commit.
+
 ## Lo que cambia el 15/10/2026 (dirección del jueves) · versión 21 del plan · carpetas por mes
 
 **Las bitácoras y las notas de `08_comunicacion/` van en una carpeta por mes** (propuesta del

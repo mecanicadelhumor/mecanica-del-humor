@@ -258,6 +258,12 @@
   /* La palabra: unidad de revelado. El texto ya no aparece de golpe, llega
      a la velocidad a la que se lee. */
   .p{display:inline-block;will-change:opacity,transform}
+  /* 19/10/2026: cada palabra es un inline-block, y entre dos inline-block
+     seguidos el navegador puede partir la línea aunque no haya espacio. Un
+     signo pegado a una palabra resaltada («reunión*»», «*emoji*?») es otro
+     nodo de texto y otra unidad, así que caía solo en la línea de abajo (lo vio
+     el codirector en MDS-040). rico() los envuelve juntos en .nw. */
+  .nw{white-space:nowrap}
 
   /* ---- Composicion vertical rehecha ----
      El hueco muerto de abajo era de 700 px de padding + un personaje de
@@ -316,8 +322,8 @@
      cuando la escena se mueve. */
   html[data-fmt="v"] body.con-personaje #escena{padding-bottom:790px}
 
-  /* Remate de marca: los ultimos ~1,4 s de la escena «cierre». El video ya
-     no acaba en seco sobre una negacion. Ver C15.5. */
+  /* Remate de marca: los ultimos REMATE_S segundos de la escena «cierre» (ver
+     pintar()). El video ya no acaba en seco sobre una negacion. Ver C15.5. */
   #remate{position:absolute;left:0;right:0;top:0;bottom:0;display:flex;
         flex-direction:column;align-items:center;justify-content:center;
         padding-bottom:300px;text-align:center;
@@ -563,6 +569,13 @@ let PALABRAS = [];      // unidades de revelado, en orden de lectura
 let VERTICAL = false;
 let T0 = 0, TOTAL = 0;  // posicion de la escena dentro del video entero
 let REMATE = false;
+// 19/10/2026: lo que dura la tarjeta de marca del final (C15.5). Era 1,75 s, con el
+// remate entrando a 1,25 s del final y el texto del cierre saliendo encima de la
+// voz: «aparece y desaparece y no se lee si no pausas el short» (el codirector, de
+// MDS-040). Ahora el texto del cierre se va ANTES de la tarjeta y el remate se lee
+// casi dos segundos. Es el mismo número que fondo_visual.REMATE_S, y voz.py alarga
+// la pausa tras el cierre para que la voz haya terminado (COLA_REMATE_S).
+const REMATE_S = 2.2;
 
 // Reparte cada palabra de una unidad de texto en su propio <span class="p">,
 // sin romper los <span class="amb"> que pone rico(): se recorren los nodos de
@@ -597,7 +610,11 @@ function esc(s){ return String(s==null?"":s)
 function rico(s){
   return esc(s)
     .replace(/\*([^*]+)\*/g,'<span class="amb">$1</span>')
-    .replace(/_([^_]+)_/g,'<span class="cia">$1</span>');
+    .replace(/_([^_]+)_/g,'<span class="cia">$1</span>')
+    // Lo que va pegado al resalte, sin espacio (comillas, signos), viaja con él
+    // en la misma línea (ver .nw en el CSS).
+    .replace(/([^\s<>]*)(<span class="(?:amb|cia)">[^<]*<\/span>)([^\s<>]*)/g,
+             (m, a, sp, b) => (a || b) ? `<span class="nw">${a}${sp}${b}</span>` : m);
 }
 
 // C29 · el mismo resaltado, pero dentro de un <svg> (12/09/2026).
@@ -1100,8 +1117,8 @@ function pintar(t){
   const entrada    = 0.55;              // lo que tarda cada unidad en entrar
   // En la escena de cierre el texto se retira ANTES para dejar sitio al remate
   // de marca: si se cruzan, el final se lee como una mancha.
-  const salida_ini = Math.max(DUR - (REMATE ? 1.75 : 0.45), entrada);
-  const fuera_g    = t > salida_ini ? suave((t - salida_ini)/(REMATE ? 0.6 : 0.45)) : 0;
+  const salida_ini = Math.max(DUR - (REMATE ? REMATE_S + 0.45 : 0.45), entrada);
+  const fuera_g    = t > salida_ini ? suave((t - salida_ini)/0.45) : 0;
 
   // ---------- Unidades ----------
   UNIDADES.forEach((el,i)=>{
@@ -1204,14 +1221,14 @@ function pintar(t){
   }
 
   // ---------- C15.5 · remate de marca ----------
-  // Entra en los últimos 1,4 s de la escena de cierre. El vídeo deja de
+  // Entra al empezar los últimos REMATE_S segundos de la escena de cierre. El vídeo deja de
   // terminar en seco sobre una negación ("No es un test.") y termina con el
   // nombre del canal y la cita de mañana. La crítica sigue estando —regla
   // 12— pero ya no es lo último que se ve.
   if (REMATE){
     const rem = document.getElementById("remate");
     if (rem){
-      const q = suave((t - Math.max(0, DUR - 1.25)) / 0.45);
+      const q = suave((t - Math.max(0, DUR - REMATE_S + 0.05)) / 0.45);
       rem.style.opacity = q.toFixed(4);
       rem.style.transform = `translateY(${((1-q)*20).toFixed(2)}px)`;
     }

@@ -750,6 +750,29 @@ comprobar», que el prompt de la revisión mandaba anotar como nota.
 sea incidencia.** Y prueba la comprobación con las versiones que instala Actions, no con las del
 contenedor: `requirements.txt` sin tope instala la última.
 
+
+**60. Una lectura que todavía no era definitiva entró en la cifra que decide.** `vistas_48h` de un Short
+leído a los dos días de publicarse sale 0, porque Analytics trae el segundo día con retraso; `control_c26`
+lo contaba igual, y el 19/10 la mediana del punto de control del 15/11 bajó de 62 a 42 por `MDS-041`. Lo
+vio la rutina de métricas a mano. `bucle.py` ya esperaba; `metricas.py` no.
+→ **Cuando una cifra se calcule con datos que maduran, di desde cuándo vale cada dato** y no lo cuentes
+antes, en todos los sitios que la usen.
+
+## Dónde está el proyecto a 19 de octubre de 2026
+
+**Dirección en diferido (rutina del lunes).** Versión **22** del plan, la que manda.
+
+- **Tres defectos de `MDS-040` que vio el codirector, arreglados desde `MDS-044`** (C69): una escena ya no
+  pasa del vídeo a la tarjeta a la mitad (la frase se cortaba y se veía dos veces); un signo pegado a una
+  palabra resaltada ya no cae solo en la línea de abajo; y la firma final dura 2,2 s, sin pisar la voz
+  (cada Short, ~2,7 s más). Muestra en `07_pruebas/remate-2026-10-19/`.
+- **`control_c26` contaba un 0 que era el retraso de Analytics** (`MDS-041`): bien contada, **62**.
+- **B1 se alarga hasta el 4/11** (con siete a la semana no llegaba a la n de la regla); la regla no cambia.
+- **C36, prueba 1 pasada**: el Short entero en una toma con `3.1` y los 8 cortes en el silencio entre escenas. `2.5-pro` no contesta nunca: los largos, con `3.1`. Falta que lo oiga el codirector y meterlo en `voz.py` (jueves 22).
+- **OpenAlex**: explicado; la clave la pide el codirector en un minuto y la planificación la usa si existe.
+- **Resumen semanal** para el codirector cada lunes, en su fichero de tareas. Sus ficheros de tareas, en
+  carpetas por mes también en el privado.
+
 ## Dónde está el proyecto a 15 de octubre de 2026
 
 **Dirección en diferido (rutina del jueves).** Versión **21** del plan, la que manda.

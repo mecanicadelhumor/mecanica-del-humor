@@ -4,7 +4,8 @@
   {
    "id": "B1",
    "desde": "2026-10-12",
-   "hasta": "2026-10-25",
+   "hasta": "2026-11-04",
+      "_hasta": "19/10/2026 (dirección): era 2026-10-25, pensado para catorce Shorts a la semana desde el 19/10. Con siete (C36 sin pasar), el 25/10 ningún brazo llega a n = 6 y el control, ni a 4. Se alarga hasta que se agota el «orden» de 24 (un Short al día desde el 12/10 llega al 4/11): el orden, los brazos y la regla de decisión no cambian. Si un brazo cumple la regla antes, se decide antes, como siempre.",
    "control": "control",
    "pregunta": "¿Qué retiene más en los dos primeros segundos: lo de ahora, ver el mecanismo animado o abrir con el dato?",
    "metrica_principal": "se_quedaron_48h.pct (Se quedaron viendo, primeras 48 h)",
