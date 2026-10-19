@@ -1,6 +1,6 @@
 {
  "_nota": "C47: lectura ligera diaria de los vídeos publicados en los últimos 10 días: visualizaciones, vistas_48h y, desde el 05/10/2026 (C60), se_quedaron_48h («Se quedaron viendo» de Studio = engagedViews/views), porcentaje_visto, me_gusta, suscriptores y compartidos. Sin curvas de retención a propósito (ver la cabecera de escribir_metricas_diarias() en 04_agentes/metricas.py). Se SOBRESCRIBE entero cada vez: es una ventana rodante, no una serie histórica. La lectura completa semanal (metricas.json, control_c26) es la que manda y no cambia con este fichero.",
- "actualizado_utc": "2026-10-19T17:26:09Z",
+ "actualizado_utc": "2026-10-19T19:30:23Z",
  "videos": [
   {
    "id": "MDS-035.es",
@@ -20,16 +20,16 @@
   {
    "id": "MDS-036.es",
    "publicado": "2026-10-12",
-   "visualizaciones": 395,
+   "visualizaciones": 396,
    "vistas_48h": 392,
    "se_quedaron_48h": {
     "vistas": 392,
     "comprometidas": 62,
     "pct": 15.8
    },
-   "porcentaje_visto": 37.0,
-   "me_gusta": 5,
-   "suscriptores": 0,
+   "porcentaje_visto": 36.7,
+   "me_gusta": 6,
+   "suscriptores": 1,
    "compartidos": 0
   },
   {
@@ -50,7 +50,7 @@
   {
    "id": "MDS-038.es",
    "publicado": "2026-10-14",
-   "visualizaciones": 939,
+   "visualizaciones": 940,
    "vistas_48h": 933,
    "se_quedaron_48h": {
     "vistas": 933,
@@ -80,12 +80,12 @@
   {
    "id": "MDS-040.es",
    "publicado": "2026-10-16",
-   "visualizaciones": 7,
-   "vistas_48h": 7,
+   "visualizaciones": 9,
+   "vistas_48h": 9,
    "se_quedaron_48h": {
-    "vistas": 7,
+    "vistas": 9,
     "comprometidas": 2,
-    "pct": 28.6
+    "pct": 22.2
    },
    "porcentaje_visto": 186.9,
    "me_gusta": 0,
@@ -95,15 +95,15 @@
   {
    "id": "MDS-041.es",
    "publicado": "2026-10-17",
-   "visualizaciones": 0,
-   "vistas_48h": 0,
+   "visualizaciones": 84,
+   "vistas_48h": 84,
    "se_quedaron_48h": {
-    "vistas": 0,
-    "comprometidas": 0,
-    "pct": null
+    "vistas": 84,
+    "comprometidas": 6,
+    "pct": 7.1
    },
-   "porcentaje_visto": 0.0,
-   "me_gusta": 0,
+   "porcentaje_visto": 42.2,
+   "me_gusta": 2,
    "suscriptores": 0,
    "compartidos": 0
   },
