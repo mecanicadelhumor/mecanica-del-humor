@@ -291,5 +291,36 @@
     "tram handrails and window close up no people"
    ]
   }
+ },
+ "MDS-044": {
+  "4.2": {
+   "excluir": [
+    "pexels:11698130"
+   ],
+   "busqueda": [
+    "older person hands holding smartphone no logo",
+    "senior hands typing on phone close up"
+   ]
+  },
+  "5.1": {
+   "excluir": [
+    "pexels:8724460"
+   ],
+   "busqueda": [
+    "older woman smiling looking at phone",
+    "grandmother happy reading smartphone"
+   ]
+  }
+ },
+ "MDS-045": {
+  "5.2": {
+   "excluir": [
+    "pixabay:130645"
+   ],
+   "busqueda": [
+    "coins on table close up",
+    "paying cash hands counter"
+   ]
+  }
  }
 }

@@ -135,7 +135,7 @@
    "personaje": "duda",
    "titulo": "¿Y qué *quería* decir?",
    "subtitulo": "Fuente: Cui y otros, 2026",
-   "narracion": "Así que tu madre, seguramente, iba de buena fe. Lo que no se midió es qué quería decir quien la manda.",
+   "narracion": "Así que tu madre, seguramente, iba de buena fe. Lo que no se midió es qué quería decir ella con esa carita.",
    "pausa_despues_s": 0.2,
    "visual": [
     {
@@ -162,11 +162,18 @@
   "de_que_va": "Va de que los jóvenes y los mayores no entienden igual la carita sonriente, y por eso el «qué bien» con carita de tu madre te sienta mal aunque ella no lo diga con mala intención.",
   "pregunta_y_respuesta": "Por qué te escama que tu madre conteste «qué bien» con una carita sonriente: según un estudio, los mayores de 60 ven esa carita como sincera y agradable, y los de 18 a 30 la ven falsa. Así que tu madre seguramente lo decía de verdad.",
   "frases_que_no_se_entienden": [],
-  "frase_que_sobra": "«Lo que no se midió es qué quería decir quien la manda.» (se queda: es el cierre honesto; ver notas_humor)",
+  "frase_que_sobra": "«Lo que no se midió es qué quería decir ella con esa carita.» (se queda: es el cierre honesto; ver notas_humor)",
   "donde_me_iria": "me quedo (la escena 4, cuando empieza el estudio, es la más floja)",
   "notas": [
-   "«Lo que no se midió es qué quería decir quien la manda.» — «A la primera no supe a qué se refería ‹la›: tuve que pensar que era la carita. Tampoco entendí por qué me lo cuentan al final. Parece que quita la conclusión que me acababan de dar.»"
+   "«Lo que no se midió es qué quería decir ella con esa carita.» — «A la primera no supe a qué se refería ‹la›: tuve que pensar que era la carita. Tampoco entendí por qué me lo cuentan al final. Parece que quita la conclusión que me acababan de dar.»"
   ],
-  "veredicto": "pasa"
+  "veredicto": "pasa",
+  "revision_diaria_2026-10-19": {
+   "lector": "subagente sin contexto (vuelta 1 y vuelta 2, lector nuevo en cada una)",
+   "vuelta_1": "no entendió «Lo que no se midió es qué quería decir quien la manda.» (qué es lo que no se midió; «la» sin referente). Tesis entendida.",
+   "cambio": "escena 6: «…qué quería decir quien la manda» → «…qué quería decir ella con esa carita» (excepción de 48 h)",
+   "vuelta_2": "tesis entendida; duda de a qué «ella» se refiere y qué significa «enseñaron»; quitaría una de las dos frases del cierre; se queda hasta el final.",
+   "veredicto": "pasa con notas (entiende la tesis; ambigüedad menor en el cierre). Para la planificación: valorar «el estudio no midió qué quería decir tu madre»."
+  }
  }
 }
