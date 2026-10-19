@@ -1,13 +1,13 @@
 {
   "guion": "MDS-045",
   "version": 1,
-  "firma": "d0c472f0ece57228",
-  "resuelto_utc": "2026-10-15T22:32:45Z",
+  "firma": "4956bd17a82a8bf7",
+  "resuelto_utc": "2026-10-19T09:32:43Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
       "narracion_sha": "99fd19f57474",
-      "texto_pos": "abajo",
+      "texto_pos": "arriba",
       "planos": [
         {
           "k": 1,
@@ -18,43 +18,55 @@
           ],
           "frase": "Te ríes más de los chistes",
           "fuente": "pexels",
-          "id": 6245895,
-          "pagina": "https://www.pexels.com/video/christmas-party-at-the-office-6245895/",
-          "titulo": "christmas party at the office",
-          "autor": "olia danilevich",
-          "autor_url": "https://www.pexels.com/@olia-danilevich",
+          "id": 7581230,
+          "pagina": "https://www.pexels.com/video/surprise-birthday-party-at-the-office-7581230/",
+          "titulo": "surprise birthday party at the office",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 12.0,
+          "duracion_s": 14.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/6245895/6245895-hd_1080_1920_25fps.mp4",
+          "url": "https://videos.pexels.com/video-files/7581230/7581230-hd_1080_1920_30fps.mp4",
           "tipo": "video",
           "consulta": "office party colleagues laughing at boss",
           "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 5.5,
+          "movimiento": 4.89,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.4972,
-              0.1812,
-              0.1,
-              0.0797
+              0.5083,
+              0.5047,
+              0.075,
+              0.054
             ],
             [
-              0.1472,
-              0.2078,
-              0.0861,
-              0.0688
+              0.7125,
+              0.5047,
+              0.0708,
+              0.0516
             ],
             [
-              0.7222,
-              0.2453,
-              0.0833,
-              0.0703
+              0.5833,
+              0.5047,
+              0.0667,
+              0.0516
+            ],
+            [
+              0.8917,
+              0.5047,
+              0.0667,
+              0.0493
+            ],
+            [
+              0.8458,
+              0.5164,
+              0.0625,
+              0.0469
             ]
           ]
         },
@@ -275,7 +287,7 @@
           "fuente": "pixabay",
           "id": 136284,
           "pagina": "https://pixabay.com/videos/id-136284/",
-          "titulo": "business, beautiful wallpaper, office, contemporary, computer, work, desk, table, technology, room, background, design, interior, workplace, programmer, software, developer, internet, engineer, programming, job, monitor, program, people id",
+          "titulo": "business, office, contemporary, computer, work, desk, table, technology, room, background, design, interior, workplace, programmer, software, developer, internet, engineer, programming, job, monitor, program, beautiful wallpaper, people id",
           "autor": "blackmarketmusic",
           "autor_url": "https://pixabay.com/users/blackmarketmusic-2976878/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
@@ -369,33 +381,26 @@
           ],
           "frase": "Aunque en el estudio no había sueldos: el dinero era un premio del experimento.",
           "fuente": "pixabay",
-          "id": 130645,
-          "pagina": "https://pixabay.com/videos/id-130645/",
-          "titulo": "woman, model, notebook, book, creator, desk, businesswoman, young, writing, working, paper, lifestyle, laptop, computer, adult, work, student, pen, business, typing, table, sitting, creative, casual id",
-          "autor": "SYG_Anime",
-          "autor_url": "https://pixabay.com/users/SYG_Anime-7158719/",
+          "id": 38048,
+          "pagina": "https://pixabay.com/videos/id-38048/",
+          "titulo": "drink, café, clean, close-up, coffee, cup, foliage, food, fresh, garden, green, herbal, hot, sheet, morning, natural, nature, new, plantation, silhouette, spring, stem, style, table, tea id",
+          "autor": "Gam-Ol",
+          "autor_url": "https://pixabay.com/users/Gam-Ol-2829280/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
           "duracion_s": 15.0,
           "ancho": 3840,
           "alto": 2160,
-          "url": "https://cdn.pixabay.com/video/2022/09/08/130645-747868363_large.mp4",
+          "url": "https://cdn.pixabay.com/video/2020/05/04/38048-415950712_large.mp4",
           "tipo": "video",
-          "consulta": "university lab desk papers",
-          "relevancia": 0.5,
+          "consulta": "coins on table close up",
+          "relevancia": 0.667,
           "inicio_s": 0.4,
-          "movimiento": 4.98,
+          "movimiento": 4.14,
           "encuadre": {
-            "x": 0.643,
+            "x": 0.5,
             "y": 0.5
           },
-          "caras": [
-            [
-              0.1983,
-              0.1847,
-              0.6049,
-              0.4208
-            ]
-          ]
+          "caras": []
         }
       ]
     }

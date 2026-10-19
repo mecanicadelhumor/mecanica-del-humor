@@ -1,8 +1,8 @@
 {
   "guion": "MDS-044",
   "version": 1,
-  "firma": "8d8de235df717a4a",
-  "resuelto_utc": "2026-10-15T22:32:29Z",
+  "firma": "2f3b47d2aec6ac0c",
+  "resuelto_utc": "2026-10-19T09:32:28Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -190,21 +190,21 @@
           ],
           "frase": "a gente de más de sesenta.",
           "fuente": "pexels",
-          "id": 11698130,
-          "pagina": "https://www.pexels.com/video/hand-holding-phone-with-icons-on-screen-11698130/",
-          "titulo": "hand holding phone with icons on screen",
-          "autor": "Mger Akopian",
-          "autor_url": "https://www.pexels.com/@spitak",
+          "id": 7417201,
+          "pagina": "https://www.pexels.com/video/person-holding-a-cellphone-7417201/",
+          "titulo": "person holding a cellphone",
+          "autor": "Leeloo The First",
+          "autor_url": "https://www.pexels.com/@leeloothefirst",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 12.0,
+          "duracion_s": 6.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/11698130/11698130-hd_1080_1920_60fps.mp4",
+          "url": "https://videos.pexels.com/video-files/7417201/7417201-hd_1080_1920_30fps.mp4",
           "tipo": "video",
-          "consulta": "older hands holding phone",
-          "relevancia": 0.75,
+          "consulta": "older person hands holding smartphone no logo",
+          "relevancia": 0.429,
           "inicio_s": 0.4,
-          "movimiento": 8.71,
+          "movimiento": 8.14,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
@@ -226,31 +226,31 @@
           ],
           "frase": "Los mayores leían la carita sonriente como sincera y agradable.",
           "fuente": "pexels",
-          "id": 8724460,
-          "pagina": "https://www.pexels.com/video/elderly-woman-smiling-at-the-camera-8724460/",
-          "titulo": "elderly woman smiling at the camera",
-          "autor": "Tima Miroshnichenko",
-          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "id": 4800108,
+          "pagina": "https://www.pexels.com/video/woman-smiling-while-using-her-smartphone-4800108/",
+          "titulo": "woman smiling while using her smartphone",
+          "autor": "Artem Podrez",
+          "autor_url": "https://www.pexels.com/@artempodrez",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 27.0,
+          "duracion_s": 13.0,
           "ancho": 1080,
-          "alto": 2048,
-          "url": "https://videos.pexels.com/video-files/8724460/8724460-hd_1080_2048_25fps.mp4",
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/4800108/4800108-hd_1080_1920_30fps.mp4",
           "tipo": "video",
-          "consulta": "older woman smiling warmly",
-          "relevancia": 0.75,
+          "consulta": "older woman smiling looking at phone",
+          "relevancia": 0.6,
           "inicio_s": 0.4,
-          "movimiento": 2.33,
+          "movimiento": 7.45,
           "encuadre": {
             "x": 0.5,
-            "y": 0
+            "y": 0.5
           },
           "caras": [
             [
-              0.2826,
-              0.1989,
-              0.504,
-              0.3711
+              0.4333,
+              0.1406,
+              0.4194,
+              0.2953
             ]
           ]
         },
@@ -294,7 +294,7 @@
       ]
     },
     "6": {
-      "narracion_sha": "c5234c6e9afc",
+      "narracion_sha": "f4dff0edcc9d",
       "texto_pos": "abajo",
       "planos": [
         {
@@ -302,7 +302,7 @@
           "desde": null,
           "t_estimado": [
             0.0,
-            4.93
+            4.97
           ],
           "frase": "Así que tu madre, seguramente, iba de buena fe.",
           "fuente": "pixabay",
@@ -331,10 +331,10 @@
           "k": 2,
           "desde": "Lo que no se midió",
           "t_estimado": [
-            4.93,
-            10.39
+            4.97,
+            10.85
           ],
-          "frase": "Lo que no se midió es qué quería decir quien la manda.",
+          "frase": "Lo que no se midió es qué quería decir ella con esa carita.",
           "fuente": "pexels",
           "id": 6278824,
           "pagina": "https://www.pexels.com/video/person-holding-mobile-phone-while-touching-screen-6278824/",
