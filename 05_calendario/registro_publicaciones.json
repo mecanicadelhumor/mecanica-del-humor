@@ -794,6 +794,21 @@
       "subido_utc": "2026-10-19T06:21:58Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-19T21:35:45Z"
+    },
+    {
+      "id": "MDS-044.es",
+      "episodio": "MDS-044",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Qué significa el emoji de la sonrisa?",
+      "guion": "05_calendario/guiones/MDS-044.es.json",
+      "video_id": "H9h7Tl3XAIU",
+      "url": "https://youtu.be/H9h7Tl3XAIU",
+      "estado": "private",
+      "publicar_en": "2026-10-20T17:00:00Z",
+      "musica": "cama_02_dusk_next_route.mp3",
+      "subido_utc": "2026-10-20T06:08:40Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-19T17:25:07Z"

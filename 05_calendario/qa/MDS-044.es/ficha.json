@@ -1,15 +1,15 @@
 {
-  "id": "MDS-038.es",
-  "duracion_final_s": 46.8,
-  "tamano_mb": 21.3,
+  "id": "MDS-044.es",
+  "duracion_final_s": 44.0,
+  "tamano_mb": 23.2,
   "audio": {
-    "lufs": -14.3,
-    "pico_dbtp": -1.26,
-    "rango_lu": 5.7
+    "lufs": -14.9,
+    "pico_dbtp": -1.36,
+    "rango_lu": 6.0
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.122,
+    "acaba_s": 0.129,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,7 +17,7 @@
     "silencios_s": [
       [
         0.0,
-        0.122
+        0.129
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -42,24 +42,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 46.0,
-    "duracion_real_voz_mp3_s": 45.7,
+    "duracion_calculada_s": 43.21,
+    "duracion_real_voz_mp3_s": 42.91,
     "desfase_s": 0.3,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_10_farewell_galaxytones.mp3",
-    "sha256": "69dcf8f36cf5cd76332baaa29681a990c569856a97b4c0334e86a27e906c01dc"
+    "archivo": "cama_02_dusk_next_route.mp3",
+    "sha256": "3f93cfef7318ae5e93a365a3fe16282de13c279e2733dd7c18fcfbe38f530c74"
   },
   "guion": {
-    "titulo_trabajo": "¿Por qué no puedes hacerte cosquillas a ti mismo?",
+    "titulo_trabajo": "¿Qué significa el emoji de la sonrisa?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 46.0,
+    "duracion_narracion_s": 43.21,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 9.714,
+    "escena_mas_larga_s": 11.086,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 6
@@ -78,18 +78,23 @@
       "apertura",
       "planteamiento",
       "remate",
-      "explicacion",
       "contraste",
+      "cifra",
       "objecion"
     ],
-    "escenas_ritmo_fuera_de_rango": [],
+    "escenas_ritmo_fuera_de_rango": [
+      [
+        1,
+        3.33
+      ]
+    ],
     "voz_fiel": [
-      "sin comprobar",
-      "sin comprobar",
-      "sin comprobar",
-      "sin comprobar",
-      "sin comprobar",
-      "sin comprobar"
+      "11/12 palabras, 0 trozos repetidos",
+      "9/9 palabras, 0 trozos repetidos",
+      "10/11 palabras, 0 trozos repetidos",
+      "20/19 palabras, 0 trozos repetidos",
+      "18/18 palabras, 0 trozos repetidos",
+      "22/22 palabras, 0 trozos repetidos"
     ]
   },
   "visual": {
@@ -97,86 +102,122 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 4.83,
+        "hasta_s": 4.1,
         "fuente": "pexels",
-        "id": 13770905,
-        "pagina": "https://www.pexels.com/video/close-up-of-female-bare-feet-13770905/",
+        "id": 5386540,
+        "pagina": "https://www.pexels.com/video/young-man-text-messaging-with-smartphone-outdoors-5386540/",
+        "autor": "Monstera Production",
+        "autor_url": "https://www.pexels.com/@gabby-k",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 4.1,
+        "hasta_s": 10.1,
+        "fuente": "pexels",
+        "id": 7970351,
+        "pagina": "https://www.pexels.com/video/an-elderly-woman-using-a-laptop-and-a-cellphone-7970351/",
+        "autor": "Antoni Shkraba",
+        "autor_url": "https://www.pexels.com/@shkrabaanthony",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 3,
+        "desde_s": 10.1,
+        "hasta_s": 14.23,
+        "fuente": "pexels",
+        "id": 13441323,
+        "pagina": "https://www.pexels.com/video/a-young-man-ordering-food-online-while-sitting-on-a-sofa-13441323/",
         "autor": "Mizuno K",
         "autor_url": "https://www.pexels.com/@mizunokozuki",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
-        "escena": 2,
-        "desde_s": 4.83,
-        "hasta_s": 6.87,
-        "fuente": "pixabay",
-        "id": 293085,
-        "pagina": "https://pixabay.com/videos/id-293085/",
-        "autor": "RainMeditateHub",
-        "autor_url": "https://pixabay.com/users/RainMeditateHub-51172146/",
-        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 2,
-        "desde_s": 6.87,
-        "hasta_s": 13.2,
+        "escena": 4,
+        "desde_s": 14.23,
+        "hasta_s": 20.07,
         "fuente": "pexels",
-        "id": 4008364,
-        "pagina": "https://www.pexels.com/video/couple-feet-legs-friends-4008364/",
-        "autor": "cottonbro studio",
-        "autor_url": "https://www.pexels.com/@cottonbro",
+        "id": 8546869,
+        "pagina": "https://www.pexels.com/video/a-woman-using-a-mobile-phone-on-a-table-8546869/",
+        "autor": "https://kaboompics.com/",
+        "autor_url": "https://www.pexels.com/@karola-g",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
-        "escena": 3,
-        "desde_s": 13.2,
-        "hasta_s": 18.7,
+        "escena": 4,
+        "desde_s": 20.07,
+        "hasta_s": 22.3,
         "fuente": "pexels",
-        "id": 9645549,
-        "pagina": "https://www.pexels.com/video/a-sad-elderly-man-covering-his-face-using-his-hands-9645549/",
-        "autor": "Ivan S",
-        "autor_url": "https://www.pexels.com/@ivan-s",
+        "id": 7417201,
+        "pagina": "https://www.pexels.com/video/person-holding-a-cellphone-7417201/",
+        "autor": "Leeloo The First",
+        "autor_url": "https://www.pexels.com/@leeloothefirst",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 22.3,
+        "hasta_s": 27.6,
+        "fuente": "pexels",
+        "id": 4800108,
+        "pagina": "https://www.pexels.com/video/woman-smiling-while-using-her-smartphone-4800108/",
+        "autor": "Artem Podrez",
+        "autor_url": "https://www.pexels.com/@artempodrez",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 27.6,
+        "hasta_s": 32.13,
+        "fuente": "pexels",
+        "id": 9558741,
+        "pagina": "https://www.pexels.com/video/a-young-man-in-a-pink-shirt-is-holding-his-phone-9558741/",
+        "autor": "MART  PRODUCTION",
+        "autor_url": "https://www.pexels.com/@mart-production",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 6,
-        "desde_s": 38.07,
-        "hasta_s": 44.23,
+        "desde_s": 32.13,
+        "hasta_s": 35.87,
+        "fuente": "pixabay",
+        "id": 2301,
+        "pagina": "https://pixabay.com/videos/id-2301/",
+        "autor": "Coverr-Free-Footage",
+        "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 6,
+        "desde_s": 35.87,
+        "hasta_s": 41.03,
         "fuente": "pexels",
-        "id": 6247901,
-        "pagina": "https://www.pexels.com/video/two-people-on-the-couch-chatting-over-coffee-6247901/",
-        "autor": "Gary  Barnes",
-        "autor_url": "https://www.pexels.com/@gary-barnes",
+        "id": 6278824,
+        "pagina": "https://www.pexels.com/video/person-holding-mobile-phone-while-touching-screen-6278824/",
+        "autor": "Artem Podrez",
+        "autor_url": "https://www.pexels.com/@artempodrez",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       }
     ],
     "sintetico": false
   },
-  "animacion": {
-    "escenas_animadas": 2,
-    "escenas": [
-      4,
-      5
-    ],
-    "pedidas": [
-      4,
-      5
-    ],
-    "descartadas": {},
-    "pagina": "05_calendario/animaciones/MDS-038/animacion.html"
-  },
+  "animacion": null,
   "fotogramas_s": [
-    3.01,
-    9.96,
-    16.61,
-    24.64,
-    34.33,
-    42.94
+    2.56,
+    7.8,
+    12.68,
+    19.16,
+    28.29,
+    38.87
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
