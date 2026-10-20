@@ -322,5 +322,49 @@
     "paying cash hands counter"
    ]
   }
+ },
+ "MDS-046": {
+  "2.1": {
+   "excluir": [
+    "pixabay:30438"
+   ],
+   "busqueda": [
+    "man frozen face on video call laptop screen",
+    "person with frozen expression in online meeting"
+   ]
+  },
+  "4.2": {
+   "excluir": [
+    "pexels:4821003"
+   ],
+   "busqueda": [
+    "women watching a funny movie on laptop at home",
+    "woman watching comedy film smiling sofa"
+   ]
+  },
+  "5.1": {
+   "excluir": [
+    "pixabay:61706"
+   ],
+   "busqueda": [
+    "woman watching movie on laptop not laughing",
+    "bored woman watching screen at home"
+   ]
+  },
+  "6.1": {
+   "excluir": [
+    "pixabay:268230"
+   ],
+   "busqueda": [
+    "frozen frame video call meeting laptop",
+    "colleagues watching boss on video call laptop"
+   ]
+  },
+  "6.2": {
+   "excluir": [
+    "pixabay:262637"
+   ],
+   "marca": true
+  }
  }
 }
