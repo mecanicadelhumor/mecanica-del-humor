@@ -804,12 +804,13 @@
       "guion": "05_calendario/guiones/MDS-044.es.json",
       "video_id": "H9h7Tl3XAIU",
       "url": "https://youtu.be/H9h7Tl3XAIU",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-10-20T17:00:00Z",
       "musica": "cama_02_dusk_next_route.mp3",
       "subido_utc": "2026-10-20T06:08:40Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-10-20T20:41:23Z"
     }
   ],
-  "_estado_leido_utc": "2026-10-19T17:25:07Z"
+  "_estado_leido_utc": "2026-10-20T20:41:23Z"
 }
