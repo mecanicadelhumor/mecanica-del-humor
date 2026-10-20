@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-19T19:30:23Z",
+ "actualizado_utc": "2026-10-20T10:06:40Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -24,7 +24,7 @@
    "referencia_anterior": {
     "n": 10,
     "se_quedaron_media": 34.3,
-    "porcentaje_visto_media": 57.5,
+    "porcentaje_visto_media": 57.3,
     "vistas_48h_mediana": 62.0,
     "me_gusta_por_100": 0.67,
     "ceros_de_feed": 2,
@@ -59,7 +59,7 @@
        "porcentaje_visto": 165.1,
        "me_gusta": 0,
        "visualizaciones": 21,
-       "leido": "2026-10-19"
+       "leido": "2026-10-20"
       },
       {
        "id": "MDS-041",
@@ -69,29 +69,19 @@
        "porcentaje_visto": 42.2,
        "me_gusta": 2,
        "visualizaciones": 84,
-       "leido": "2026-10-19"
+       "leido": "2026-10-20"
       }
      ]
     },
     "A": {
      "nombre": "Animación a medida en las escenas de mecanismo (C55.2)",
-     "n": 2,
-     "se_quedaron_media": 35.3,
-     "porcentaje_visto_media": 64.6,
-     "vistas_48h_mediana": 477.5,
-     "me_gusta_por_100": 1.04,
+     "n": 1,
+     "se_quedaron_media": 50.0,
+     "porcentaje_visto_media": 81.0,
+     "vistas_48h_mediana": 22,
+     "me_gusta_por_100": 4.55,
      "ceros_de_feed": 0,
      "shorts": [
-      {
-       "id": "MDS-038",
-       "publicado": "2026-10-14",
-       "se_quedaron_pct": 20.6,
-       "vistas_48h": 933,
-       "porcentaje_visto": 48.2,
-       "me_gusta": 9,
-       "visualizaciones": 940,
-       "leido": "2026-10-19"
-      },
       {
        "id": "MDS-039",
        "publicado": "2026-10-15",
@@ -100,7 +90,7 @@
        "porcentaje_visto": 81.0,
        "me_gusta": 1,
        "visualizaciones": 22,
-       "leido": "2026-10-19"
+       "leido": "2026-10-20"
       }
      ]
     },
@@ -121,7 +111,7 @@
        "porcentaje_visto": 36.7,
        "me_gusta": 6,
        "visualizaciones": 396,
-       "leido": "2026-10-19"
+       "leido": "2026-10-20"
       },
       {
        "id": "MDS-040",
@@ -131,7 +121,7 @@
        "porcentaje_visto": 186.9,
        "me_gusta": 0,
        "visualizaciones": 9,
-       "leido": "2026-10-19"
+       "leido": "2026-10-20"
       }
      ]
     }
@@ -140,7 +130,7 @@
     "A": {
      "contra": "control",
      "diferencia_pp": null,
-     "prob_mejor": 0.96,
+     "prob_mejor": null,
      "veredicto": "faltan datos"
     },
     "B": {
@@ -152,6 +142,11 @@
    },
    "apartados": [],
    "pendientes": [
+    {
+     "id": "MDS-038",
+     "variante": "A",
+     "motivo": "sin ficha de producción todavía"
+    },
     {
      "id": "MDS-042",
      "variante": "A",
