@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-20T18:07:53Z",
+ "actualizado_utc": "2026-10-21T12:24:54Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -45,10 +45,10 @@
     "control": {
      "nombre": "Lo de ahora (C50 + C56-C59), apertura en situación",
      "n": 2,
-     "se_quedaron_media": 8.6,
-     "porcentaje_visto_media": 103.7,
-     "vistas_48h_mediana": 52.0,
-     "me_gusta_por_100": 1.9,
+     "se_quedaron_media": 8.4,
+     "porcentaje_visto_media": 102.2,
+     "vistas_48h_mediana": 106.0,
+     "me_gusta_por_100": 0.94,
      "ceros_de_feed": 0,
      "shorts": [
       {
@@ -59,38 +59,38 @@
        "porcentaje_visto": 165.1,
        "me_gusta": 0,
        "visualizaciones": 21,
-       "leido": "2026-10-20"
+       "leido": "2026-10-21"
       },
       {
        "id": "MDS-041",
        "publicado": "2026-10-17",
-       "se_quedaron_pct": 7.1,
-       "vistas_48h": 84,
-       "porcentaje_visto": 42.2,
+       "se_quedaron_pct": 6.8,
+       "vistas_48h": 192,
+       "porcentaje_visto": 39.3,
        "me_gusta": 2,
-       "visualizaciones": 84,
-       "leido": "2026-10-20"
+       "visualizaciones": 192,
+       "leido": "2026-10-21"
       }
      ]
     },
     "A": {
      "nombre": "Animación a medida en las escenas de mecanismo (C55.2)",
      "n": 1,
-     "se_quedaron_media": 50.0,
-     "porcentaje_visto_media": 81.0,
-     "vistas_48h_mediana": 22,
-     "me_gusta_por_100": 4.55,
-     "ceros_de_feed": 0,
+     "se_quedaron_media": 42.9,
+     "porcentaje_visto_media": 71.3,
+     "vistas_48h_mediana": 7,
+     "me_gusta_por_100": 0.0,
+     "ceros_de_feed": 1,
      "shorts": [
       {
-       "id": "MDS-039",
-       "publicado": "2026-10-15",
-       "se_quedaron_pct": 50.0,
-       "vistas_48h": 22,
-       "porcentaje_visto": 81.0,
-       "me_gusta": 1,
-       "visualizaciones": 22,
-       "leido": "2026-10-20"
+       "id": "MDS-042",
+       "publicado": "2026-10-18",
+       "se_quedaron_pct": 42.9,
+       "vistas_48h": 7,
+       "porcentaje_visto": 71.3,
+       "me_gusta": 0,
+       "visualizaciones": 7,
+       "leido": "2026-10-21"
       }
      ]
     },
@@ -111,7 +111,7 @@
        "porcentaje_visto": 36.7,
        "me_gusta": 6,
        "visualizaciones": 396,
-       "leido": "2026-10-20"
+       "leido": "2026-10-21"
       },
       {
        "id": "MDS-040",
@@ -148,9 +148,9 @@
      "motivo": "sin ficha de producción todavía"
     },
     {
-     "id": "MDS-042",
+     "id": "MDS-039",
      "variante": "A",
-     "motivo": "sin «se quedaron» a 48 h todavía"
+     "motivo": "sin ficha de producción todavía"
     },
     {
      "id": "MDS-043",

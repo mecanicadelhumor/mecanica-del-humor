@@ -1,6 +1,6 @@
 {
  "_nota": "C47: lectura ligera diaria de los vídeos publicados en los últimos 10 días: visualizaciones, vistas_48h y, desde el 05/10/2026 (C60), se_quedaron_48h («Se quedaron viendo» de Studio = engagedViews/views), porcentaje_visto, me_gusta, suscriptores y compartidos. Sin curvas de retención a propósito (ver la cabecera de escribir_metricas_diarias() en 04_agentes/metricas.py). Se SOBRESCRIBE entero cada vez: es una ventana rodante, no una serie histórica. La lectura completa semanal (metricas.json, control_c26) es la que manda y no cambia con este fichero.",
- "actualizado_utc": "2026-10-20T18:07:52Z",
+ "actualizado_utc": "2026-10-21T12:24:54Z",
  "videos": [
   {
    "id": "MDS-036.es",
@@ -65,12 +65,10 @@
   {
    "id": "MDS-040.es",
    "publicado": "2026-10-16",
-   "visualizaciones": 9,
+   "visualizaciones": 10,
    "vistas_48h": 9,
    "se_quedaron_48h": {
-    "vistas": 9,
-    "comprometidas": 2,
-    "pct": 22.2
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-10-16&endDate=2026-10-17&metrics=views%2CengagedViews&filters=video%3D%3DOY5sukUO0Hk&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "porcentaje_visto": 186.9,
    "me_gusta": 0,
@@ -80,14 +78,14 @@
   {
    "id": "MDS-041.es",
    "publicado": "2026-10-17",
-   "visualizaciones": 84,
-   "vistas_48h": 84,
+   "visualizaciones": 192,
+   "vistas_48h": 192,
    "se_quedaron_48h": {
-    "vistas": 84,
-    "comprometidas": 6,
-    "pct": 7.1
+    "vistas": 192,
+    "comprometidas": 13,
+    "pct": 6.8
    },
-   "porcentaje_visto": 42.2,
+   "porcentaje_visto": 39.3,
    "me_gusta": 2,
    "suscriptores": 0,
    "compartidos": 0
@@ -95,14 +93,14 @@
   {
    "id": "MDS-042.es",
    "publicado": "2026-10-18",
-   "visualizaciones": 0,
-   "vistas_48h": 0,
+   "visualizaciones": 7,
+   "vistas_48h": 7,
    "se_quedaron_48h": {
-    "vistas": 0,
-    "comprometidas": 0,
-    "pct": null
+    "vistas": 7,
+    "comprometidas": 3,
+    "pct": 42.9
    },
-   "porcentaje_visto": 0.0,
+   "porcentaje_visto": 71.3,
    "me_gusta": 0,
    "suscriptores": 0,
    "compartidos": 0
@@ -125,6 +123,21 @@
   {
    "id": "MDS-044.es",
    "publicado": "2026-10-20",
+   "visualizaciones": 0,
+   "vistas_48h": 0,
+   "se_quedaron_48h": {
+    "vistas": 0,
+    "comprometidas": 0,
+    "pct": null
+   },
+   "porcentaje_visto": 0.0,
+   "me_gusta": 0,
+   "suscriptores": 0,
+   "compartidos": 0
+  },
+  {
+   "id": "MDS-045.es",
+   "publicado": "2026-10-21",
    "visualizaciones": 0,
    "vistas_48h": 0,
    "se_quedaron_48h": {
