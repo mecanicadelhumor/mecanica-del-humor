@@ -365,6 +365,44 @@
     "pixabay:262637"
    ],
    "marca": true
+  },
+  "4.1": {
+   "excluir": [
+    "pexels:7985891"
+   ],
+   "busqueda": [
+    "group of women watching a comedy movie on a laptop together",
+    "women laughing watching film on sofa"
+   ]
+  }
+ },
+ "MDS-047": {
+  "1.1": {
+   "excluir": [
+    "pexels:9720877"
+   ],
+   "busqueda": [
+    "colleagues in costumes at office halloween party",
+    "office desk decorated for halloween"
+   ]
+  },
+  "1.2": {
+   "excluir": [
+    "pixabay:80862"
+   ],
+   "busqueda": [
+    "person dressed as clown at office party",
+    "clown costume wig red nose"
+   ]
+  },
+  "6.1": {
+   "excluir": [
+    "pexels:4716691"
+   ],
+   "busqueda": [
+    "man writing notes at desk thinking",
+    "hand writing in notebook close up"
+   ]
   }
  }
 }
