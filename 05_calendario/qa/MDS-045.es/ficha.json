@@ -1,0 +1,226 @@
+{
+  "id": "MDS-045.es",
+  "duracion_final_s": 48.4,
+  "tamano_mb": 31.1,
+  "audio": {
+    "lufs": -14.8,
+    "pico_dbtp": -1.37,
+    "rango_lu": 4.5
+  },
+  "silencio_inicial": {
+    "empieza_s": -0.021,
+    "acaba_s": 0.127,
+    "esperado_s": 0.1,
+    "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
+  },
+  "arranque": {
+    "silencios_s": [
+      [
+        0.0,
+        0.127
+      ]
+    ],
+    "fragmento_antes_de_la_narracion": false,
+    "duracion_fragmento_s": null,
+    "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente)."
+  },
+  "fragmentos": {
+    "instantes": [],
+    "cuantos": 0,
+    "_nota": "Cada entrada es un trozo de audio de menos de 0.45 s rodeado de silencio: casi seguro una sílaba suelta que el sintetizador ha metido al empezar una escena. «mmss» es el minuto exacto para ir a escucharlo. Debe estar vacío."
+  },
+  "subtitulos": {
+    "ass_existe": true,
+    "lineas_ass": 0,
+    "srt_existe": true,
+    "quemados": false,
+    "quemados_origen": "leído de montaje.json",
+    "_esperado": {
+      "quemados": false,
+      "lineas_ass": "> 0 con motor edge; puede ser 0 con motor gemini"
+    },
+    "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
+  },
+  "sincronia_voz": {
+    "duracion_calculada_s": 47.48,
+    "duracion_real_voz_mp3_s": 47.26,
+    "desfase_s": 0.22,
+    "_esperado": "desfase_s < 0.5",
+    "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
+  },
+  "musica": {
+    "archivo": "cama_03_haru_lofi_roa.mp3",
+    "sha256": "68fe871bcd427b465aa11f71d2f2fc889de234166af65fac305170c0f5bddd6b"
+  },
+  "guion": {
+    "titulo_trabajo": "¿Por qué todos se ríen de los chistes del jefe?",
+    "idioma": "es",
+    "voz": "Charon",
+    "escenas": 5,
+    "duracion_narracion_s": 47.48,
+    "escenas_por_encima_de_14s": [],
+    "escena_mas_larga_s": 13.534,
+    "motor_voz_pedido": "gemini",
+    "motores_por_escena": {
+      "gemini-3.1-flash-tts-preview": 5
+    },
+    "modelo_voz": "gemini-3.1-flash-tts-preview",
+    "voz_mezclada": false,
+    "origen_voz": [
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada"
+    ],
+    "direccion_voz": [
+      "apertura",
+      "planteamiento",
+      "remate",
+      "contraste",
+      "objecion"
+    ],
+    "escenas_ritmo_fuera_de_rango": [],
+    "voz_fiel": [
+      "10/11 palabras, 0 trozos repetidos",
+      "21/23 palabras, 0 trozos repetidos",
+      "16/15 palabras, 0 trozos repetidos",
+      "23/22 palabras, 0 trozos repetidos",
+      "24/25 palabras, 0 trozos repetidos"
+    ]
+  },
+  "visual": {
+    "planos": [
+      {
+        "escena": 1,
+        "desde_s": 0.0,
+        "hasta_s": 3.87,
+        "fuente": "pexels",
+        "id": 7581230,
+        "pagina": "https://www.pexels.com/video/surprise-birthday-party-at-the-office-7581230/",
+        "autor": "RDNE Stock project",
+        "autor_url": "https://www.pexels.com/@rdne",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 3.87,
+        "hasta_s": 10.7,
+        "fuente": "pexels",
+        "id": 6100901,
+        "pagina": "https://www.pexels.com/video/man-wearing-a-suit-talking-6100901/",
+        "autor": "KATRIN  BOLOVTSOVA",
+        "autor_url": "https://www.pexels.com/@ekaterina-bolovtsova",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 10.7,
+        "hasta_s": 12.0,
+        "fuente": "pexels",
+        "id": 15389923,
+        "pagina": "https://www.pexels.com/video/close-up-of-a-paper-cup-on-a-coffee-shop-table-15389923/",
+        "autor": "Viktorya  Sergeeva 🫂",
+        "autor_url": "https://www.pexels.com/@johndetochka",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 12.0,
+        "hasta_s": 16.37,
+        "fuente": "pexels",
+        "id": 3256852,
+        "pagina": "https://www.pexels.com/video/a-group-of-people-eating-together-in-a-table-3256852/",
+        "autor": "fauxels",
+        "autor_url": "https://www.pexels.com/@fauxels",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 3,
+        "desde_s": 16.37,
+        "hasta_s": 21.83,
+        "fuente": "pexels",
+        "id": 6185418,
+        "pagina": "https://www.pexels.com/video/young-man-with-fedora-hat-sitting-at-table-and-talking-6185418/",
+        "autor": "Yaroslav Shuraev",
+        "autor_url": "https://www.pexels.com/@yaroslav-shuraev",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 3,
+        "desde_s": 21.83,
+        "hasta_s": 24.37,
+        "fuente": "pexels",
+        "id": 9733240,
+        "pagina": "https://www.pexels.com/video/extreme-close-up-of-a-person-painting-on-a-ceramic-plate-9733240/",
+        "autor": "KoolShooters",
+        "autor_url": "https://www.pexels.com/@koolshooters",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 4,
+        "desde_s": 24.37,
+        "hasta_s": 31.93,
+        "fuente": "pixabay",
+        "id": 136284,
+        "pagina": "https://pixabay.com/videos/id-136284/",
+        "autor": "blackmarketmusic",
+        "autor_url": "https://pixabay.com/users/blackmarketmusic-2976878/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 4,
+        "desde_s": 31.93,
+        "hasta_s": 33.97,
+        "fuente": "pexels",
+        "id": 34719386,
+        "pagina": "https://www.pexels.com/video/counting-cash-at-desk-for-financial-planning-34719386/",
+        "autor": "Jakub Zerdzicki",
+        "autor_url": "https://www.pexels.com/@jakubzerdzicki",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 33.97,
+        "hasta_s": 38.8,
+        "fuente": "pexels",
+        "id": 34535720,
+        "pagina": "https://www.pexels.com/video/top-view-of-espresso-cups-on-wooden-table-34535720/",
+        "autor": "peri ✨",
+        "autor_url": "https://www.pexels.com/@peri-2149976252",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 38.8,
+        "hasta_s": 45.3,
+        "fuente": "pixabay",
+        "id": 38048,
+        "pagina": "https://pixabay.com/videos/id-38048/",
+        "autor": "Gam-Ol",
+        "autor_url": "https://pixabay.com/users/Gam-Ol-2829280/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      }
+    ],
+    "sintetico": false
+  },
+  "animacion": null,
+  "fotogramas_s": [
+    2.41,
+    11.46,
+    21.26,
+    30.21,
+    42.17
+  ],
+  "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
+}
