@@ -1,8 +1,8 @@
 {
   "guion": "MDS-046",
   "version": 1,
-  "firma": "cff68f134c106109",
-  "resuelto_utc": "2026-10-20T09:32:39Z",
+  "firma": "f1c9c265fef3477e",
+  "resuelto_utc": "2026-10-21T09:32:26Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -56,7 +56,7 @@
     },
     "2": {
       "narracion_sha": "d633aed43714",
-      "texto_pos": "arriba",
+      "texto_pos": "abajo",
       "planos": [
         {
           "k": 1,
@@ -67,37 +67,43 @@
           ],
           "frase": "Y se le congela la imagen con la boca abierta y un ojo cerrado.",
           "fuente": "pexels",
-          "id": 7644029,
-          "pagina": "https://www.pexels.com/video/a-footage-of-a-man-on-a-video-call-7644029/",
-          "titulo": "a footage of a man on a video call",
-          "autor": "MART  PRODUCTION",
-          "autor_url": "https://www.pexels.com/@mart-production",
+          "id": 8034683,
+          "pagina": "https://www.pexels.com/video/man-is-using-laptop-while-having-video-call-8034683/",
+          "titulo": "man is using laptop while having video call",
+          "autor": "Edmond Dantès",
+          "autor_url": "https://www.pexels.com/@edmond-dantes",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 16.0,
+          "duracion_s": 14.0,
           "ancho": 1080,
-          "alto": 2048,
-          "url": "https://videos.pexels.com/video-files/7644029/7644029-hd_1080_2048_25fps.mp4",
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8034683/8034683-hd_1080_1920_25fps.mp4",
           "tipo": "video",
           "consulta": "man frozen face on video call laptop screen",
-          "relevancia": 0.429,
+          "relevancia": 0.571,
           "inicio_s": 0.4,
-          "movimiento": 0.78,
+          "movimiento": 13.12,
           "encuadre": {
             "x": 0.5,
-            "y": 1
+            "y": 0.5
           },
           "caras": [
             [
-              0.5791,
-              0.4656,
-              0.4091,
-              0.3333
+              0.3528,
+              0.1562,
+              0.4167,
+              0.3281
             ],
             [
-              0.4229,
-              0.48,
-              0.0593,
-              0.04
+              0.1361,
+              0.2422,
+              0.0972,
+              0.0953
+            ],
+            [
+              0.2083,
+              0.2625,
+              0.0972,
+              0.0906
             ]
           ]
         }
@@ -159,31 +165,37 @@
           ],
           "frase": "Unos psicólogos pusieron a ciento ochenta mujeres a ver películas graciosas.",
           "fuente": "pexels",
-          "id": 7985891,
-          "pagina": "https://www.pexels.com/video/woman-eating-popcorn-while-watching-movie-in-cinema-7985891/",
-          "titulo": "woman eating popcorn while watching movie in cinema",
-          "autor": "Tima Miroshnichenko",
-          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "id": 9999543,
+          "pagina": "https://www.pexels.com/video/women-looking-at-the-screen-of-a-laptop-together-9999543/",
+          "titulo": "women looking at the screen of a laptop together",
+          "autor": "Ron Lach",
+          "autor_url": "https://www.pexels.com/@ron-lach",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 28.0,
+          "duracion_s": 52.0,
           "ancho": 1080,
           "alto": 2048,
-          "url": "https://videos.pexels.com/video-files/7985891/7985891-hd_1080_2048_25fps.mp4",
+          "url": "https://videos.pexels.com/video-files/9999543/9999543-hd_1080_2048_25fps.mp4",
           "tipo": "video",
-          "consulta": "women watching screen in dark room",
-          "relevancia": 0.4,
+          "consulta": "group of women watching a comedy movie on a laptop together",
+          "relevancia": 0.429,
           "inicio_s": 0.4,
-          "movimiento": 4.19,
+          "movimiento": 5.03,
           "encuadre": {
             "x": 0.5,
-            "y": 0.292
+            "y": 1
           },
           "caras": [
             [
-              0.5,
-              0.221,
-              0.4204,
-              0.3981
+              0.5316,
+              0.3889,
+              0.1601,
+              0.1311
+            ],
+            [
+              0.3972,
+              0.3356,
+              0.1403,
+              0.1289
             ]
           ]
         },

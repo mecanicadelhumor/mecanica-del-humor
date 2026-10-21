@@ -1,8 +1,8 @@
 {
   "guion": "MDS-047",
   "version": 1,
-  "firma": "56f941905c8eb48a",
-  "resuelto_utc": "2026-10-15T22:33:33Z",
+  "firma": "697afe86fc42babf",
+  "resuelto_utc": "2026-10-21T09:32:44Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -18,37 +18,31 @@
           ],
           "frase": "Fiesta de Halloween en la oficina. Andrés, el de contabilidad,",
           "fuente": "pexels",
-          "id": 9720877,
-          "pagina": "https://www.pexels.com/video/two-children-in-mummy-costumes-during-halloween-9720877/",
-          "titulo": "two children in mummy costumes during halloween",
-          "autor": "Mike Jones",
-          "autor_url": "https://www.pexels.com/@mike-jones",
+          "id": 7612766,
+          "pagina": "https://www.pexels.com/video/people-preparing-for-halloween-party-7612766/",
+          "titulo": "people preparing for halloween party",
+          "autor": "Thirdman",
+          "autor_url": "https://www.pexels.com/@thirdman",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 10.0,
+          "duracion_s": 29.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/9720877/9720877-hd_1080_1920_24fps.mp4",
+          "url": "https://videos.pexels.com/video-files/7612766/7612766-hd_1080_1920_25fps.mp4",
           "tipo": "video",
-          "consulta": "office halloween party costumes",
-          "relevancia": 0.5,
+          "consulta": "colleagues in costumes at office halloween party",
+          "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 26.3,
+          "movimiento": 3.46,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.2528,
-              0.1656,
-              0.2167,
-              0.1406
-            ],
-            [
-              0.8861,
-              0.2391,
-              0.1139,
-              0.0984
+              0.4028,
+              0.0016,
+              0.3639,
+              0.2219
             ]
           ]
         },
@@ -60,32 +54,32 @@
             7.46
           ],
           "frase": "viene disfrazado de payaso.",
-          "fuente": "pixabay",
-          "id": 80862,
-          "pagina": "https://pixabay.com/videos/id-80862/",
-          "titulo": "clown, circus, evil clown, horror, it, halloween, scary, wicked, adult, face painting, comedian, hopeless, loneliness, alone, lonely, mental health, green screen, chroma, joker, creepy, fear, terror id",
-          "autor": "videoplasty",
-          "autor_url": "https://pixabay.com/users/videoplasty-19751245/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 10.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2021/07/09/80862-573481999_large.mp4",
+          "fuente": "pexels",
+          "id": 6519525,
+          "pagina": "https://www.pexels.com/video/a-person-partying-6519525/",
+          "titulo": "a person partying",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 9.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6519525/6519525-hd_1080_1920_24fps.mp4",
           "tipo": "video",
-          "consulta": "adult in clown costume office",
-          "relevancia": 0.5,
+          "consulta": "person dressed as clown at office party",
+          "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 0.58,
+          "movimiento": 23.29,
           "encuadre": {
-            "x": 0.493,
+            "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.3868,
-              0.1639,
-              0.2272,
-              0.1444
+              0.3111,
+              0.1094,
+              0.2528,
+              0.2047
             ]
           ]
         }
@@ -103,15 +97,26 @@
             5.95
           ],
           "frase": "Se te acerca sonriendo y te ofrece un caramelo.",
-          "fuente": "ia",
-          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-          "prompt": "a gloved clown hand holding out a wrapped sweet, close-up",
-          "semilla": 6742181,
-          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-          "ancho": 768,
-          "alto": 1360,
-          "tipo": "imagen",
-          "fichero": "05_calendario/visuales/MDS-047/e2_p1.jpg",
+          "fuente": "pixabay",
+          "id": 129422,
+          "pagina": "https://pixabay.com/videos/id-129422/",
+          "titulo": "hand, help, company partner, modern style, offer friendship, beautiful wallpaper, partnership agreement, peace negotiations, polite reaching, positive, professional respect, society occupation, staff acquaintance, student hire, success arrangement, successful business, support representative, team communication, trust gesture, background, support, kindness id",
+          "autor": "SYG_Anime",
+          "autor_url": "https://pixabay.com/users/SYG_Anime-7158719/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 8.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2022/08/28/129422-744370591_large.mp4",
+          "tipo": "video",
+          "consulta": "hand offering wrapped sweet",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 3.11,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
           "caras": []
         }
       ]
@@ -347,31 +352,31 @@
           ],
           "frase": "Sin la pintura, Andrés solo sería Andrés.",
           "fuente": "pexels",
-          "id": 4716691,
-          "pagina": "https://www.pexels.com/video/a-man-in-a-white-shirt-is-sitting-in-front-of-a-mirror-4716691/",
-          "titulo": "a man in a white shirt is sitting in front of a mirror",
-          "autor": "cottonbro studio",
-          "autor_url": "https://www.pexels.com/@cottonbro",
+          "id": 7653229,
+          "pagina": "https://www.pexels.com/video/a-man-writing-on-a-notebook-7653229/",
+          "titulo": "a man writing on a notebook",
+          "autor": "Thirdman",
+          "autor_url": "https://www.pexels.com/@thirdman",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 49.0,
+          "duracion_s": 10.0,
           "ancho": 1080,
-          "alto": 2048,
-          "url": "https://videos.pexels.com/video-files/4716691/4716691-hd_1080_2048_25fps.mp4",
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7653229/7653229-hd_1080_1920_25fps.mp4",
           "tipo": "video",
-          "consulta": "man removing clown makeup mirror",
-          "relevancia": 0.4,
+          "consulta": "man writing notes at desk thinking",
+          "relevancia": 0.6,
           "inicio_s": 0.4,
-          "movimiento": 16.8,
+          "movimiento": 5.03,
           "encuadre": {
             "x": 0.5,
-            "y": 0.948
+            "y": 0.5
           },
           "caras": [
             [
-              0.1195,
-              0.2347,
-              0.531,
-              0.3706
+              0.4222,
+              0.2656,
+              0.1389,
+              0.1047
             ]
           ]
         },
@@ -408,22 +413,7 @@
       ]
     }
   },
-  "descartes": [
-    {
-      "escena": 1,
-      "plano": 2,
-      "id": "pixabay:27683",
-      "titulo": "clown, circus, fun, 3d, cartoon, entertainment, character, happy, people, performer, man, costume, make-up, hat, bowler, superhero id",
-      "motivo": "quieto (movimiento 0.18)"
-    },
-    {
-      "escena": 2,
-      "plano": 1,
-      "id": "pexels:8670646",
-      "titulo": "person putting assorted candies on white surface",
-      "motivo": "poco relevante (0.25): se prueba la IA"
-    }
-  ],
+  "descartes": [],
   "errores_ia": [],
   "incompleto": false
 }
