@@ -118,17 +118,47 @@ def ficha_de(ident):
     return _json(QA / f"{ident}.es" / "ficha.json", {})
 
 
+# 22/10/2026 (dirección): producir.yml guarda solo las seis fichas más recientes
+# en qa/, y la de un Short desaparece unos seis días después de producirse. Un
+# Short del brazo A que tarda más en tener sus 48 h leídas (o que se lee otra
+# vez la semana siguiente) se quedaba «sin ficha de producción todavía» y salía
+# del marcador: le pasó a MDS-038 y MDS-039 el 20/10. Por eso lo que se lee de
+# una ficha se guarda en resultados.json («fichas_vistas») y se reutiliza
+# cuando la ficha ya no está; y lo que se perdió antes de este arreglo lo
+# escribe la dirección, copiado del historial de git, en «fichas_de_historial»
+# del ciclo (ciclos.json).
+FICHAS_VISTAS = {}
+
+
+def _cargar_fichas_vistas(ciclos):
+    FICHAS_VISTAS.clear()
+    for c in ciclos:
+        for ident, campos in (c.get("fichas_de_historial") or {}).items():
+            if isinstance(campos, dict):            # «_nota» y similares, fuera
+                FICHAS_VISTAS.setdefault(ident, {}).update(campos)
+    for ident, campos in (_json(SALIDA, {}).get("fichas_vistas") or {}).items():
+        FICHAS_VISTAS.setdefault(ident, {}).update(campos)
+
+
+def _campo(d, campo):
+    for parte in campo.split("."):
+        d = d.get(parte) if isinstance(d, dict) else None
+    return d
+
+
 def cumple_ficha(brazo, ident):
     """None si cumple o no se pide nada; si no, el motivo para apartarlo."""
     req = brazo.get("comprobar_en_ficha")
     if not req:
         return None
     f = ficha_de(ident)
-    if not f:
+    if f:
+        valor = _campo(f, req["campo"])
+        FICHAS_VISTAS.setdefault(ident, {})[req["campo"]] = valor
+    elif req["campo"] in FICHAS_VISTAS.get(ident, {}):
+        valor = FICHAS_VISTAS[ident][req["campo"]]
+    else:
         return "sin ficha de producción todavía"
-    valor = f
-    for parte in req["campo"].split("."):
-        valor = valor.get(parte) if isinstance(valor, dict) else None
     try:
         if valor is None or float(valor) < float(req.get("minimo", 1)):
             return f"no salió como se planificó: {req['campo']} = {valor!r}"
@@ -202,6 +232,7 @@ def veredicto(var, ctl, rv, rc):
 def calcular(hoy=None):
     hoy = hoy or datetime.now(timezone.utc).date()
     ciclos = _json(CICLOS, {}).get("ciclos", [])
+    _cargar_fichas_vistas(ciclos)
     lect = lecturas_por_short()
     out = {"_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a "
                     "mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
@@ -289,6 +320,7 @@ def calcular(hoy=None):
             "apartados": apartados,
             "pendientes": pendientes,
         })
+    out["fichas_vistas"] = {k: FICHAS_VISTAS[k] for k in sorted(FICHAS_VISTAS)}
     return out
 
 

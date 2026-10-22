@@ -14,6 +14,29 @@ codirector el 30/09) · repositorio añadido · entorno «Mecánica del Humor».
 
 ---
 
+## Lo que cambia el 22/10/2026 (dirección del jueves) · versión 23 del plan
+
+1. **Manda el feed; la búsqueda desempata.** En los Shorts con volumen el feed trae el 91-100 % de las
+   visualizaciones y la búsqueda no pasa del 3 % (métricas del 20/10). Al elegir los temas de la semana,
+   **primero la situación que cualquiera reconoce sin explicación** (el trabajo, el móvil y los
+   mensajes, la familia, los amigos, la cena, el grupo de WhatsApp: lo que la gente ya ve a diario en
+   el feed), y **después** la demanda medida, que solo desempata entre dos temas igual de reconocibles.
+   Lo de siempre no cambia: la bibliografía decide si se puede responder (regla 3), y humor y atracción
+   sigue prohibido en Shorts (regla 1).
+2. **Los dos primeros segundos, lo mejor del Short.** La escena 1 es la que decide si el feed sigue
+   enseñándolo. En su campo `visual`: **un plano que se entienda sin sonido en un segundo** (una cara
+   reaccionando, una mano con el móvil, un gesto), **tres búsquedas** y siempre su `prompt` de respaldo;
+   ninguna tarjeta de marca en la escena 1 salvo en el brazo B si el dato la pide. Si algún plano del
+   Short tiene que ser flojo, que sea de la penúltima escena, nunca de la primera.
+3. **La semana del 26/10 sigue B1** (siete Shorts, el `orden` desde donde vaya; ver abajo). El 25/10
+   cambia la hora en España: `cola.py` ya hace la cuenta, tú sigues escribiendo `"hora": "19:00"`.
+4. **El largo: el jueves 29, no hoy.** El 29/10 escribirás el primer largo, `MDH-008`, para el **domingo
+   8/11 a las 12:00**, con `04_agentes/prompts/guionista.md` (su bloque del 22/10 manda: «El caso,
+   entero», 7-9 min, tres o cuatro capítulos). **Hoy solo una cosa**: en tu bitácora, propón el Short de
+   partida (de los de más «se quedaron viendo» con más de 50 vistas: `MDS-038`, cosquillas, 933 vistas,
+   es el candidato natural) y di si hay fichas en la bibliografía para tres capítulos. Si no las hay,
+   empieza a buscarlas hoy con las diez fichas de la semana.
+
 ## Lo que cambia el 19/10/2026 (dirección del lunes) · versión 22 del plan
 
 1. **No hay tarjeta de marca a mitad de escena.** Un `{"marca": true, "desde": "…"}` junto a planos de

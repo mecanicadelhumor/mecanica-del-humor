@@ -6392,3 +6392,139 @@ que depende de la voz del largo, no de la mediana.
 ## Lo que NO cambia hoy
 
 - Los brazos, el `orden` y la regla de decisión de B1; los umbrales de C26; las rutinas; lo que se oye.
+
+
+# Versión 23 · 22 de octubre de 2026 — el brazo A perdía sus Shorts, C36 dentro de `voz.py`, el feed primero y B2 con dos brazos
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario, y lo que se anula se dice con su nombre, en la tabla de abajo.
+
+Dirección en diferido (C62), jueves a las 13:25 UTC, sin sesión interactiva hoy. El cuaderno traía
+(20-22/10): **(1) Feed**: qué decide que un vídeo salga en el feed, si conviene tratar temas comunes con
+otra perspectiva, y si hay que priorizar el feed y dejar la búsqueda en segundo plano; **(2)
+Retención**: concentrar el esfuerzo (y la cuota) en los primeros segundos, y Shorts más cortos; **(3)
+Duda**: cuándo sale el primer largo y el primer Short con el personaje VRoid. Y su respuesta a las
+tareas del 19/10: clave de OpenAlex puesta, rama vieja borrada, y la muestra de C36: **«ligeramente
+mejor el dirigido […] el ideal sería el dirigido con pausas más pequeñas entre escenas»**, diferencias
+pequeñas que no deberían bloquear los planes. Tocaba hoy: C36 en `voz.py`, el prompt del guionista
+largo, la trampa 55 y la propuesta de B2.
+
+| Cambio | Estado |
+|---|---|
+| **C60.2 · El brazo A perdía sus Shorts** | **Arreglado.** `producir.yml` guarda solo las seis fichas más recientes en `qa/`; `bucle.py` pedía la de cada Short del brazo A para comprobar que salió animado, y cuando la ficha rotaba el Short pasaba a «sin ficha de producción todavía» y salía del marcador. Le pasó el 20/10 a `MDS-038` (933 visualizaciones, el segundo mejor Short de la historia) y a `MDS-039`. Ahora `bucle.py` guarda lo que lee de cada ficha en `resultados.json` (`fichas_vistas`) y lo reutiliza; lo perdido lo he copiado del historial de git a `ciclos.json` (`fichas_de_historial`, commit `ffb9fae`: 2 escenas animadas cada uno). Con el arreglo, **A pasa de n = 1 a n = 3** (34,6 % de «se quedaron»; control 8,4 % con n = 2; B 26,2 % con n = 3). Sigue sin haber nada que decidir: la regla pide n = 4 |
+| **C36 · Una toma por Short, dentro de `voz.py`** | **Escrito y probado, APAGADO** (`C36_EN_PRODUCCION = False`) hasta que el codirector oiga la muestra hecha con este código (regla 11.2). Abajo, cómo |
+| **El feed primero** (cuaderno, punto 1) | **Decidido**: la planificación elige primero la situación que cualquiera reconoce y la demanda de búsqueda solo desempata (bloque del 22/10 de su prompt). Abajo, por qué |
+| **Los dos primeros segundos** (cuaderno, punto 2a) | **De acuerdo, y decidido**: la escena 1 lleva el mejor plano, tres búsquedas y su respaldo generado; si algo tiene que ser flojo, la penúltima escena. La cuota de voz no se puede repartir así (abajo) |
+| **Shorts más cortos** (cuaderno, punto 2b) | **Es B2** (`H-duracion`): control frente a «35 s como mucho», desde el 5/11. No se cambia antes, a mitad de B1 |
+| **B2 · dos brazos, regla escrita hoy** | **Propuesta** (abajo). Se escribe en `ciclos.json` cuando cierre B1 |
+| **Prompt del guionista largo** | **Hecho**: bloque del 22/10 al principio de `04_agentes/prompts/guionista.md` («El caso, entero», 7-9 min, tres o cuatro capítulos, lectura en frío por capítulo, `visual`). `validar_guion.py`: el largo pasa de 200-400 s a 360-600 s y de 12-45 escenas a 30-80 |
+| **El largo: lo que falta para el 8/11** | **Dicho sin adornos** (abajo): el guion lo escribe la planificación el 29/10, pero la imagen de C50 es solo vertical y la voz de un largo no cabe en la cuota de 3.1 con los Shorts. Son de la dirección el lunes 26 y el jueves 29 |
+| **La voz de los largos** | **Corrige la versión 22**: no con `3.1` (comparte las 10 peticiones diarias con el Short del domingo), sino con **`2.5-flash`** y C36 por tandas (~8 peticiones de las 10 de ese modelo, que solo usa la producción como respaldo) |
+| **Trampa 55** (render no determinista) | **Se cierra sin investigar**, decidido: aplazada cinco veces, no afecta a nada de lo que se publica y la propia trampa ya dice cómo protegerse (comparar contra dos renders de lo de antes). Se abre si alguna vez una decisión depende de que dos renders coincidan |
+| **El personaje VRoid** (cuaderno, punto 3) | **El muestrario no se hizo el 16/10**: el avatar está (`07_pruebas/personaje-2026-10/avatar.vrm`) pero nadie lo ha animado. La dirección lo hace el jueves 29/10; si el codirector lo aprueba, es B3 (desde ~19/11) |
+
+## C36 dentro de `voz.py`: cómo es
+
+- En un Short con una sola voz y sin risa escrita, `voz.py` pide **el Short entero en una llamada**: una
+  línea por escena y, en las notas, la dirección de cada línea (la misma de C33: apertura, remate,
+  cierre honesto…) más «entre una línea y la siguiente, una pausa breve, nunca un silencio largo».
+- `corte_palabras.py` la parte por escenas (Whisper, palabra a palabra). **Cada trozo se recorta de
+  silencio por los dos lados y las pausas entre escenas las vuelve a poner `pausa_despues_s`, como
+  ahora**: es lo que pidió el codirector, la entonación seguida de la toma dirigida sin sus pausas de
+  dos segundos.
+- **Barreras**: la toma entera tiene que decir el guion (C66); cada escena tiene que casar el 70 % de
+  sus palabras; cada trozo tiene que ser plausible y fiel por separado. Si falla cualquiera, **se vuelve
+  a la escalera de siempre** (una llamada por escena, 3.1 → 2.5 → nada): cuesta una petición, no un
+  vídeo. La toma buena se guarda en `cache_voz/`; una mala no.
+- **Probado en el contenedor** con la toma real del 19/10 (Gemini simulado): una llamada, cinco trozos,
+  Whisper casa 10/11, 21/23, 15/15, 22/22 y 26/25; 48,1 s de voz con las pausas del guion. Y lo que
+  tiene que fallar, falla: la toma de `MDS-045` con el guion de `MDS-046` se rechaza («frontera 2-3: sin
+  palabras casadas») y la producción sigue escena a escena sin guardar nada.
+- **Muestra en vivo con este código** (workflow «Prueba de voces», run 39788533738, una petición de
+  `3.1`): el Short de `MDS-045` en una toma de 40,3 s, cuatro cortes en su sitio, Whisper 10/11, 21/23,
+  15/15, 22/22 y 25/25. Con las pausas del guion, **39,3 s frente a 47,3 s de lo publicado**. En
+  `07_pruebas/c36-2026-10-22/` (`ahora.mp3`, `c36.mp3`, `toma_entera.mp3`). **Ojo**: la escena 1 sale a
+  3,9 palabras/s, por encima del techo de 3,2 que vigila la revisión. No se toca el techo con el dato
+  delante: si al codirector le suena bien, se revisa el techo para las tomas únicas antes de encender.
+- **`prueba_voz.py --c36`** (o `c36:` delante del guion en el workflow) hace esta muestra con cualquier
+  guion; instala Whisper y ffmpeg, que ese runner no trae.
+- **Cuota**: un Short pasa de seis peticiones a una. Con eso caben **dos Shorts al día** en las diez de
+  `3.1` y queda margen para un reintento.
+- **Lo que no se puede hacer** (punto 2a del cuaderno): repartir la calidad de voz entre el principio y
+  el final de un mismo Short. Un vídeo tiene una sola voz (C33.1): no se puede hacer el principio con
+  un modelo y el final con otro. Lo que sí: el esfuerzo de imagen.
+
+**Cuándo se enciende**: cuando el codirector diga en su cuaderno que la muestra le vale. Es una línea
+(`C36_EN_PRODUCCION = True`); la enciende la dirección siguiente. **Y con C36 encendido, catorce a la
+semana no empiezan solos**: B1 se diseñó para siete al día desde el 19/10 y va por la mitad. Los
+catorce, si el codirector los sigue queriendo, desde B2 (5/11); la hora del segundo Short se decide entonces.
+
+## El feed: qué lo mueve y qué cambia (punto 1 del cuaderno)
+
+Lo que dice YouTube de primera mano (Todd Sherman, producto de Shorts; `MERCADO_2026-10.md`, 2.1): cada
+Short nuevo se enseña a un grupo pequeño; si **lo ven en vez de deslizar** («se quedaron viendo»), si lo
+repiten y si siguen viendo cosas después, se enseña a un grupo mayor, y si no, se corta. No hay
+duración ni frecuencia que premie: «el público es el algoritmo». **No es la relación con otros vídeos
+de éxito en ese momento**: el feed empareja el vídeo con **lo que a cada espectador ya le interesa**
+(lo que ha visto y no ha deslizado), no con lo que está de moda. La bola de nieve sí existe, pero la
+mueve la prueba, no la originalidad.
+
+**Pero la intuición del codirector tiene media razón, y es la que cambia algo**: un tema que mucha gente
+ya ve a diario (el trabajo, el móvil, la familia) tiene **más gente a la que probarlo** que «la teoría
+de la incongruencia». Nuestros datos lo dicen igual: `MDS-016` (ironía por escrito, 1.200), `MDS-038`
+(cosquillas, 933) y `MDS-036` (392) son situaciones que se reconocen sin explicación; los ceros de feed
+de la semana pasada no. Es exactamente lo que mide la exploración `H-016-tema` (la familia «mensajes»).
+Y **sí: manda el feed** (91-100 % de las visualizaciones en los Shorts con volumen; búsqueda, 3 % como
+mucho). Desde hoy la planificación elige primero por lo reconocible y la demanda de búsqueda solo
+desempata. Lo que no cambia: **no se copia el tema del vídeo de moda**: la pregunta sigue necesitando un
+estudio que la conteste (regla 3), y lo que nos separa del contenido de IA en serie (que YouTube
+castiga desde 2025) es justamente que cada Short es nuestro.
+
+## B2 · la propuesta, con la regla escrita antes de ver un dato
+
+- **Pregunta**: ¿retiene más un Short de 35 s como mucho (una escena menos, la que menos hace avanzar)
+  que el control? Es `H-duracion`, y es lo que preguntó el codirector.
+- **Control**: lo que gane B1 (si gana A, la animación; si ganan A y B, los dos; si nada, lo de ahora).
+- **Dos brazos** (control y corto), siete a la semana, `orden` barajado en bloques de dos con semilla
+  20261105.
+- **La regla**: la de B1 con el cierre a **n = 8** por brazo (no 10): con dos brazos son unos 16 Shorts,
+  dos semanas y media. Temprano n = 4 con ±15 puntos; normal n = 6 con ±8; a n = 8 sin pasar de ±8, SIN
+  EFECTO. Métrica principal, «se quedaron 48 h»; freno, % visto (el corto lo tendrá más alto por
+  aritmética, así que **el freno de % visto no aplica en B2** y se dice ahora, no después).
+- **Si llegan los catorce** (C36 encendido y el codirector lo quiere): el cierre a n = 8 llega en una
+  semana y media.
+
+## El largo: dónde estamos de verdad
+
+| Pieza | Estado | Cuándo |
+|---|---|---|
+| Prompt del guionista | Hecho hoy | — |
+| Guion del piloto 1 (`MDH-008`) | La planificación, jueves 29/10 | 29/10 |
+| Imagen (C50) en horizontal | **No existe**: `visual.py` busca y encuadra solo en vertical | Dirección, lunes 26 |
+| Voz | C36 por tandas con `2.5-flash` (sin probar en tandas largas) | Dirección, lunes 26 (prueba en vivo) |
+| Render de prueba del piloto entero | — | Dirección, lunes 2/11 |
+
+**Si el lunes 2/11 el render de prueba no está bien, el piloto 1 sale el 15/11**, no el 8/11, y se dice
+el lunes. Publicar un largo roto sería repetir agosto.
+
+## Las métricas, sin decisión
+
+`control_c26`: **62** (11 de 20 por encima de 50, 6 por encima de 100). Semana del 16/10: `MDS-041` 192
+a 48 h, `MDS-043` 27, `MDS-040` y `MDS-042` 9. B1 con el arreglo de hoy: control 8,4 % (n = 2), A 34,6 %
+(n = 3), B 26,2 % (n = 3). Ningún brazo llega a n = 4 con su comparación.
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Jueves 22, 22:07 UTC | Planificación: semana del 26/10 (B1), con el feed primero y la escena 1 cuidada |
+| Domingo 25 | Cambio de hora en España (`cola.py` lo cuenta) |
+| **Lunes 26, 13:07 UTC** | Dirección: C36 encendido si el codirector oyó la muestra; imagen horizontal y voz por tandas para el largo |
+| Jueves 29 | Dirección: muestrario VRoid. Planificación: `MDH-008` |
+| Lunes 2/11 | Dirección: render de prueba del largo; decide 8/11 o 15/11 |
+| 4/11 | Fin de B1 |
+| 5/11 | B2 (duración), si B1 se cierra |
+
+## Lo que NO cambia hoy
+
+- Los brazos, el `orden` y la regla de B1; los umbrales de C26; las rutinas; lo que se oye (C36 apagado).

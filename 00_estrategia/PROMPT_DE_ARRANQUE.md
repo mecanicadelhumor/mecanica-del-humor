@@ -758,6 +758,30 @@ vio la rutina de métricas a mano. `bucle.py` ya esperaba; `metricas.py` no.
 → **Cuando una cifra se calcule con datos que maduran, di desde cuándo vale cada dato** y no lo cuentes
 antes, en todos los sitios que la usen.
 
+**61. Un fichero que otro borra a los seis días era la prueba de un dato que se lee a los ocho.**
+`bucle.py` comprobaba en `qa/<ID>.es/ficha.json` que un Short del brazo A salió animado, y `producir.yml`
+guarda solo las seis fichas más recientes. Cuando la de `MDS-038` rotó (20/10), el mejor Short del ciclo
+salió del marcador como «sin ficha todavía», y la rutina de métricas lo vio pero no podía tocar el código.
+→ **Antes de leer un fichero como prueba, mira quién lo borra y cuándo.** Si se borra antes de que se
+use por última vez, guarda lo que hace falta en un sitio que no rote (ahora, `fichas_vistas` en
+`resultados.json`).
+
+## Dónde está el proyecto a 22 de octubre de 2026
+
+**Dirección en diferido (rutina del jueves).** Versión **23** del plan, la que manda.
+
+- **El brazo A vuelve a contar sus Shorts** (trampa 61): `MDS-038` y `MDS-039` estaban fuera del marcador
+  porque su ficha había rotado. A, n = 3 (34,6 %); control, n = 2 (8,4 %); B, n = 3 (26,2 %). Sin decisión.
+- **C36 dentro de `voz.py`, apagado** hasta que el codirector oiga `07_pruebas/c36-2026-10-22/` (una
+  llamada por Short en vez de seis, con vuelta automática a la de siempre si algo falla). Se enciende con
+  `C36_EN_PRODUCCION = True`.
+- **Manda el feed**: la planificación elige primero la situación reconocible y la demanda solo desempata;
+  la escena 1 lleva el mejor plano.
+- **B2 propuesto**: Shorts de 35 s como mucho contra el control, dos brazos, cierre a n = 8, desde el 5/11.
+- **El largo**: prompt hecho; faltan la imagen horizontal y la voz por tandas (`2.5-flash`), lunes 26. El
+  8/11 depende del render de prueba del 2/11; si no, el 15/11.
+- **Trampa 55, cerrada sin investigar** (no afecta a lo publicado). El muestrario VRoid, el jueves 29.
+
 ## Dónde está el proyecto a 19 de octubre de 2026
 
 **Dirección en diferido (rutina del lunes).** Versión **22** del plan, la que manda.

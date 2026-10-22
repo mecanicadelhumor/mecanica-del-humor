@@ -53,6 +53,11 @@
     "control",
     "A"
    ],
+   "fichas_de_historial": {
+    "_nota": "22/10/2026 (dirección): copiado del historial de git (commit ffb9fae, la última versión de cada ficha antes de que producir.yml la rotara). bucle.py lo usa solo cuando qa/<ID>.es/ficha.json ya no existe; desde hoy guarda él mismo lo que lee en resultados.json («fichas_vistas»).",
+    "MDS-038": {"animacion.escenas_animadas": 2},
+    "MDS-039": {"animacion.escenas_animadas": 2}
+   },
    "_orden": "Bloques de tres con los tres brazos barajados (semilla 20261012), para que cada día y cada semana tengan de los tres. Se aplica en orden de emisión (fecha y hora) a partir del primer Short del ciclo, sin saltar ninguno. La planificación elige y ordena los temas de la semana ANTES de mirar qué brazo le toca a cada hueco."
   }
  ]

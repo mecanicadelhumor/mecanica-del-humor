@@ -976,6 +976,184 @@ async def _voz_gemini_completa(items, modelo, estado):
 
 
 # ---------------------------------------------------------------------------
+# C36 (22/10/2026) · Un Short, una toma.
+#
+# Hasta hoy cada escena es una llamada a Gemini: seis por Short, de las diez que
+# da el modelo al día. Eso es lo que impide pasar a dos Shorts al día y lo que
+# deja sin cuota a los largos. C36 pide el Short ENTERO en una sola llamada (una
+# línea por escena, con la dirección de cada línea en las notas) y lo parte por
+# escenas con `corte_palabras.py`: Whisper oye cada palabra con su instante, se
+# casan con el texto de cada escena y se corta en el punto más silencioso del
+# hueco entre una escena y la siguiente. Probado en vivo el 19/10 (`MDS-045`, dos
+# tomas, 8 de 8 cortes en silencio; `07_pruebas/c36-2026-10-19/`).
+#
+# Lo que el codirector dijo al oírlo (sus tareas del 19/10): la dirigida suena
+# algo mejor, «con pausas más pequeñas entre escenas», y para un Short conviene
+# ritmo ágil. Por eso aquí cada trozo se recorta de silencio por los dos lados y
+# las pausas entre escenas las vuelve a poner `pausa_despues_s`, exactamente
+# como ahora: de la toma única se aprovecha la entonación seguida, no sus
+# silencios de dos segundos.
+#
+# Nada de esto puede dejar al canal sin vídeo: si la toma no llega, no dice el
+# guion (C66, sobre la toma entera y sobre cada trozo), no se puede partir o un
+# trozo sale implausible, se vuelve a la escalera de siempre (una llamada por
+# escena). Esa vuelta cuesta una petición del día, no más.
+#
+# No se usa cuando el Short tiene dos voces (escéptico) o una risa escrita: eso
+# lo dirige mejor la llamada por escena, y son casos raros.
+#
+# C36_EN_PRODUCCION: apagado hasta que el codirector oiga la muestra con ESTE
+# código (regla 11.2; `prueba_voz.py --c36`). Se enciende cambiando esta línea.
+# ---------------------------------------------------------------------------
+C36_EN_PRODUCCION = False
+C36_SOLO = False                  # prueba_voz.py --c36: sin vuelta a la escalera
+VERSION_UNA_TOMA = 1
+C36_CASADAS_MIN = 0.7             # de cada escena, Whisper tiene que oír al menos esto
+C36_RECORTE_DB = "-45dB"
+C36_DEJA_S = 0.03                 # lo que se deja de silencio a cada lado del trozo
+
+PREAMBULO_UNA_TOMA = (
+    "Lee en voz alta, en español de España y con voz natural de persona que cuenta "
+    "algo, el texto que va después de la palabra TEXTO. Son las frases de un vídeo "
+    "corto, una por línea, y se dicen seguidas, como una sola historia. Las notas de "
+    "dirección no se leen en voz alta.")
+
+NOTA_ENTRE_LINEAS = ("entre una línea y la siguiente, una pausa breve y clara, de "
+                     "respiración; nunca un silencio largo.")
+
+
+def direccion_una_toma(escenas, items):
+    """(prompt, firma) para decir el Short entero en una llamada."""
+    notas = [f"- Voz: {NOTA_VOZ}"]
+    papeles = []
+    for k, it in enumerate(items, 1):
+        papel = _papel_escena(escenas, it["i"])
+        papeles.append(papel)
+        notas.append(f"- Línea {k}: {DIRECCION_POR_PAPEL[papel]}")
+    notas.append(f"- Entre líneas: {NOTA_ENTRE_LINEAS}")
+    notas.append(f"- Siempre: {NOTA_SIEMPRE}")
+    texto = "\n".join(it["texto"] for it in items)
+    prompt = (f"{PREAMBULO_UNA_TOMA}\n\nNOTAS DE DIRECCIÓN:\n" + "\n".join(notas)
+              + f"\n\nTEXTO:\n{texto}")
+    firma = f"c36v{VERSION_UNA_TOMA}|" + ",".join(papeles)
+    return prompt, firma
+
+
+def c36_aplicable(items):
+    """(sí, motivo) ¿Se puede pedir este vídeo en una sola toma?"""
+    if len(items) < 2:
+        return False, "una sola escena con voz"
+    if any(it["voz_gemini"] != VOZ_GEMINI_NARRADOR for it in items):
+        return False, "tiene dos voces (escéptico)"
+    if any(it["e"].get("risa") for it in items):
+        return False, "tiene una risa escrita"
+    return True, ""
+
+
+def _sin_silencio_a_los_lados(origen, destino):
+    """Copia el trozo quitando el silencio de delante y de detrás (deja C36_DEJA_S)."""
+    quita = (f"silenceremove=start_periods=1:start_threshold={C36_RECORTE_DB}:"
+             f"start_silence={C36_DEJA_S}")
+    subprocess.run(["ffmpeg", "-y", "-i", str(origen),
+                    "-af", f"{quita},areverse,{quita},areverse",
+                    "-c:a", "libmp3lame", "-q:a", "2", str(destino)],
+                   check=True, capture_output=True, stdin=subprocess.DEVNULL)
+
+
+def _trozo(origen, desde, hasta, destino):
+    filtro = f"atrim=start={desde:.3f}" + (f":end={hasta:.3f}" if hasta else "")
+    subprocess.run(["ffmpeg", "-y", "-i", str(origen), "-af", f"{filtro},asetpts=N/SR/TB",
+                    "-c:a", "libmp3lame", "-q:a", "2", str(destino)],
+                   check=True, capture_output=True, stdin=subprocess.DEVNULL)
+
+
+def _partir_toma(toma, items):
+    """Parte la toma entera en los mp3 de cada escena. Lanza RuntimeError si no se puede."""
+    from corte_palabras import cortar
+    modelo = _transcriptor()
+    if modelo is None:
+        raise RuntimeError("sin Whisper no se puede partir la toma")
+    cortes, informe = cortar(toma, [it["texto"] for it in items], modelo)
+    for inf in informe:
+        if inf["casadas"] < max(1, C36_CASADAS_MIN * inf["palabras"]):
+            raise RuntimeError(f"escena {items[inf['escena'] - 1]['i']}: Whisper solo casa "
+                               f"{inf['casadas']} de {inf['palabras']} palabras")
+    limites = [0.0] + cortes + [None]
+    for k, it in enumerate(items):
+        crudo = it["mp3"].with_suffix(".c36.mp3")
+        _trozo(toma, limites[k], limites[k + 1], crudo)
+        _sin_silencio_a_los_lados(crudo, it["mp3"])
+        crudo.unlink(missing_ok=True)
+        dur = duracion_real(it["mp3"])
+        if not _audio_plausible(it["texto"], dur):
+            raise RuntimeError(f"escena {it['i']}: el trozo dura {dur:.1f} s para "
+                               f"{len(it['texto'].split())} palabras")
+        fiel, detalle = _toma_fiel(it["texto"], it["mp3"])
+        if not fiel:
+            raise RuntimeError(f"escena {it['i']}: el trozo no dice su texto ({detalle})")
+        it["fidelidad"] = detalle
+    return cortes
+
+
+async def _voz_una_toma(items, escenas, modelo, estado, salida):
+    """{indice: origen} con el Short entero sacado de UNA toma; None si no sale.
+
+    Una sola petición como mucho. Lo que falle se dice y se devuelve None: quien
+    llama sigue con la escalera de una llamada por escena.
+    """
+    prompt, firma = direccion_una_toma(escenas, items)
+    texto = "\n".join(it["texto"] for it in items)
+    cache = _cache_voz_ruta(texto, modelo, VOZ_GEMINI_NARRADOR, firma)
+    toma = salida / "voz" / "toma_entera.mp3"
+    origen = "una toma (C36, caché)"
+    try:
+        if cache.exists():
+            toma.write_bytes(cache.read_bytes())
+        else:
+            if estado["agotados"].get(modelo):
+                return None
+            if estado["llamadas"].get(modelo, 0) >= LIMITE_DIARIO_POR_MODELO:
+                return None
+            espera = ESPERA_ENTRE_LLAMADAS_GEMINI - (time.monotonic() - estado["ultima"])
+            if estado["ultima"] and espera > 0:
+                await asyncio.sleep(espera)
+            estado["llamadas"][modelo] = estado["llamadas"].get(modelo, 0) + 1
+            try:
+                cli = estado["cliente"] or _gemini_cliente()
+                estado["cliente"] = cli
+                pcm = _gemini_pcm(cli, modelo, prompt, VOZ_GEMINI_NARRADOR)
+            finally:
+                estado["ultima"] = time.monotonic()
+            if not pcm:
+                raise RuntimeError("la respuesta no trae audio")
+            _pcm_a_mp3(pcm, RITMO_GEMINI_HZ, toma)
+            origen = "una toma (C36)"
+        dur = duracion_real(toma)
+        if not _audio_plausible(texto, dur):
+            raise RuntimeError(f"toma entera de {dur:.1f} s para {len(texto.split())} palabras")
+        fiel, detalle = _toma_fiel(texto, toma)
+        if not fiel:
+            raise RuntimeError(f"la toma entera no dice el guion: {detalle}")
+        cortes = _partir_toma(toma, items)
+    except Exception as exc:
+        if clase_de_error(exc) == "dia":
+            estado["agotados"][modelo] = True
+        if origen.endswith("caché)"):      # una toma guardada que ya no vale, fuera
+            cache.unlink(missing_ok=True)
+        print(f"::warning::C36 · {modelo} · la toma única no vale ({str(exc)[:220]!r}); "
+              f"sigue la voz escena a escena.")
+        return None
+    if not cache.exists():
+        CACHE_VOZ_DIR.mkdir(parents=True, exist_ok=True)
+        tmp_cache = cache.with_suffix(".tmp.mp3")
+        tmp_cache.write_bytes(toma.read_bytes())
+        tmp_cache.replace(cache)
+    print(f"  C36 · {modelo} · una toma de {duracion_real(toma):.1f} s, cortes en "
+          + ", ".join(f"{c:.2f}" for c in cortes) + " s")
+    return {it["i"]: origen for it in items}
+
+
+# ---------------------------------------------------------------------------
 # La narración es lo ÚNICO que recibe el sintetizador, y el sintetizador lee lo
 # que le llega, literalmente. El 7 de septiembre de 2026 MDS-011 salió
 # publicado diciendo «guion bajo pensamiento divergente guion bajo» porque el
@@ -1287,7 +1465,19 @@ async def principal(guion_path, salida, voz=None, motor="edge"):
     if motor_pedido == "gemini":
         estado = {"agotados": {}, "llamadas": {}, "rechazos": {}, "seguidos_429": {},
                   "ultima": 0.0, "cliente": None}
-        for modelo in (MODELOS_CORTO if es_corto else MODELOS_LARGO):
+        una_toma, motivo_c36 = c36_aplicable(items) if es_corto else (False, "no es un Short")
+        if (C36_EN_PRODUCCION or C36_SOLO) and una_toma:
+            print(f"Voz: C36, el Short entero en una toma con {MODELO_GEMINI}…")
+            origenes = await _voz_una_toma(items, escenas, MODELO_GEMINI, estado, salida)
+            if origenes is not None:
+                modelo_final = MODELO_GEMINI
+                for it in items:
+                    resultado[it["i"]] = ([], 0, MODELO_GEMINI, origenes[it["i"]])
+            elif C36_SOLO:
+                raise SystemExit("C36: la toma única no ha salido (prueba sin vuelta atrás).")
+        elif C36_SOLO:
+            raise SystemExit(f"C36 no se puede usar con este guion: {motivo_c36}.")
+        for modelo in (() if resultado else (MODELOS_CORTO if es_corto else MODELOS_LARGO)):
             print(f"Voz: intentando el vídeo entero con {modelo}…")
             origenes = await _voz_gemini_completa(items, modelo, estado)
             if origenes is not None:

@@ -177,7 +177,7 @@ EXENTOS_C38 = {
 # deja de rematar y empieza a explicar.
 # ---------------------------------------------------------------------------
 LIMITES = {
-    "largo": {"min_s": 200, "max_s": 400, "min_escenas": 12, "max_escenas": 45},
+    "largo": {"min_s": 360, "max_s": 600, "min_escenas": 30, "max_escenas": 80},   # 22/10/2026: «El caso, entero», 7-9 min (era 200-400 s y 12-45)
     "corto": {"min_s": 18,  "max_s": 55,  "min_escenas": 3,  "max_escenas": 8},
 }
 

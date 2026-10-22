@@ -286,15 +286,45 @@ async def pista_edge(escs, destino):
     destino.write_bytes(b"".join(trozos))
 
 
+def prueba_c36(guion, salida):
+    """22/10/2026 · C36 con el código de producción: `voz.py` pide el Short entero
+    en UNA llamada, lo parte por palabras y le pone las pausas del guion. Gasta
+    una petición. Sin vuelta a la voz escena a escena: si la toma no vale, falla.
+    Deja `c36/voz.mp3` (lo que sonaría en el vídeo) y `c36/voz/toma_entera.mp3`."""
+    import subprocess
+    # voz_prueba.yml solo instala edge-tts y google-genai; Whisper hace falta aquí.
+    subprocess.run([sys.executable, "-m", "pip", "install", "--quiet", "faster-whisper",
+                    "numpy", "av<19"], check=True)
+    # Ni ffmpeg: el runner de este workflow no lo trae (producir.yml lo instala).
+    import shutil
+    if shutil.which("ffmpeg") is None:
+        subprocess.run("sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg",
+                       shell=True, check=True)
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "03_produccion" / "pipeline"))
+    import voz
+    voz.C36_SOLO = True
+    asyncio.run(voz.principal(str(guion), salida / "c36", motor="gemini"))
+    print(f"\nListo: {salida}/c36/voz.mp3 es lo que sonaría en el vídeo.")
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("guion", type=Path)
+    ap.add_argument("--c36", action="store_true",
+                    help="C36 con el código de producción (voz.py): una petición")
+    ap.add_argument("guion", type=Path, help="«c36:<guion>» equivale a --c36 <guion>")
     ap.add_argument("--salida", type=Path, default=Path("prueba_voz"))
     ap.add_argument("--modelo", default=MODELO,
                     help="por defecto %(default)s; "
                          "gemini-2.5-flash-preview-tts tiene su propia cuota")
     args = ap.parse_args()
 
+    # El workflow «Prueba de voces» no tiene casilla para --c36 (y los workflows
+    # no los toca la dirección): escribir «c36:» delante del guion es lo mismo.
+    if str(args.guion).startswith("c36:"):
+        args.c36, args.guion = True, Path(str(args.guion)[4:])
+    if args.c36:
+        args.salida.mkdir(parents=True, exist_ok=True)
+        return prueba_c36(args.guion, args.salida)
     guion = json.loads(args.guion.read_text(encoding="utf-8"))
     escs = escenas(guion)
     if not escs:

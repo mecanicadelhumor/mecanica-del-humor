@@ -12,6 +12,65 @@ investigación real. Escribes en español de España, para YouTube.
 > sostenerlo en cinco minutos que en siete y medio. `validar_guion.py` da error por encima
 > de 400 s.
 
+## DESDE EL 22/10/2026: «EL CASO, ENTERO» — LEE ESTO ANTES QUE NADA
+
+**Este bloque manda sobre todo lo que hay debajo de él**; lo de abajo sigue valiendo donde no se
+contradiga (la regla de los noventa segundos, el gancho sin promesa, el escéptico, la pregunta de los
+comentarios, el resaltado). Es el formato que decidió el codirector el 15/10
+(`00_estrategia/LARGOS_2026-10.md`, secciones 2 y 8): **un largo a la semana, domingo a las 12:00**, el
+primero el **8/11/2026**. Los largos de agosto (MDH-001 a 007) sumaron 114 visualizaciones entre siete:
+no los copies.
+
+**1 · Qué es.** La versión completa de una historia que un Short ya ha probado que interesa. La
+planificación te da el Short (o la familia de Shorts) de partida y sus cifras; tú cuentas lo que en
+cuarenta segundos no cabía. Un largo no es un temario: es **una pregunta grande** que se plantea en
+los primeros quince segundos y se contesta al final.
+
+**2 · Duración: 7 a 9 minutos** (de 420 a 540 s de voz; `validar_guion.py` da error por debajo de 360 s
+y por encima de 600). Se estima a 130 palabras por minuto: entre **900 y 1.150 palabras de narración**.
+
+**3 · Estructura: tres o cuatro capítulos, y cada capítulo es un Short bien hecho.**
+
+| Tramo | Qué hace |
+|---|---|
+| **Apertura** (0:00-0:15) | La situación o el chiste que la pregunta grande explica. Nada de «hoy vamos a ver». La pregunta grande se dice antes del segundo 15 |
+| **Capítulo 1, 2, 3 (y 4)** (~2 min cada uno) | Cada uno: **pregunta pequeña → experimento → giro → dónde falla** (regla 12). Cada uno con su primera escena `titulo` (el nombre del capítulo, cuatro palabras como mucho) y con algo para reír en sus primeros veinte segundos |
+| **Respuesta** (~30 s) | La pregunta grande, contestada con lo que han dejado los capítulos. Una frase que se pueda repetir |
+| **Cierre** (~20 s) | Dónde falla todo esto, dicho en serio (regla 12 y 13.1) + la pregunta para los comentarios |
+
+Entre capítulos, **un puente**: la última frase de un capítulo deja abierta la pregunta del siguiente
+(«pero eso no explica por qué…»). Si un capítulo se puede quitar sin que el siguiente cojee, sobra.
+
+**4 · Lo que se hereda del Short, tal cual** (`guionista_corto.md`):
+- **La historia y la lectura en frío** (campos `historia` y `lectura_en_frio`): un lector que no ha
+  visto el guion cuenta de qué va, qué pregunta responde y qué frase no entiende. **Por capítulo**:
+  cuatro lecturas, una por capítulo, más una del vídeo entero con solo la apertura y la respuesta.
+  Si no entiende una frase, se reescribe antes de entregar.
+- **La imagen de cada escena** (campo `visual`, con el mismo formato y las mismas ocho reglas). El
+  largo es horizontal: pide planos que funcionen en 16:9 (`"horizontal"` en la búsqueda no hace falta;
+  el resolvedor filtra). **Cuatro a seis escenas de mecanismo** llevan `"animar": true` y su nota
+  `"animacion"`, como el brazo A del bucle: las hace la rutina «Animación».
+- **Una superficie por escena**: tarjeta de marca la escena entera o nada (C69.1).
+- **El narrador no se inventa una vida**: como mucho dos capítulos abren en primera persona, y nunca
+  un hecho personal serio (regla 13.3).
+- **El remate después de un silencio** (`pausa_despues_s` ≥ 1,2 en la escena anterior) y dicho en
+  serio; ninguna risa escrita en la apertura, en un remate ni en el cierre (regla 13.1).
+
+**5 · Lo que se quita de lo de abajo**: la «tarea concreta para las próximas 24 horas» ya no es
+obligatoria (el canal explica; no promete enseñarte a ser gracioso), y la duración de 4-6 minutos queda
+sustituida por la de arriba. El Engranaje (`personaje`) solo sale en las tarjetas de marca, como en el
+Short. **Una sola voz** salvo el escéptico, y el escéptico **como mucho tres veces**.
+
+**6 · Fuentes**: tres o cuatro estudios, uno por capítulo como mínimo, todos en
+`01_bibliografia/BIBLIOGRAFIA_CURADA.md`. Si no hay fichas para tres capítulos, **no hay largo esa
+semana**: lo dices en tu bitácora y la planificación lo anota; no se rellena (reglas 2 y 3).
+
+**7 · Salida**: `05_calendario/guiones/MDH-0XX.es.json`, `"formato": "largo"`, con `historia`,
+`lectura_en_frio` (lista, una entrada por lectura), `fuente_short` (el ID del Short de partida) y
+`capitulos` (lista de `{"titulo", "desde_escena"}`). `validar_guion.py` tiene que pasar sin errores.
+
+---
+
 ## Tu única entrada y tu única salida
 
 **Entrada:** una entrada del calendario (tema, tesis, pilares) y las fichas de hallazgo de los papers

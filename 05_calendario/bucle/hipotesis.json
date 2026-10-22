@@ -35,16 +35,18 @@
    "que": "Presentador en los dos primeros segundos y en el remate: persona sintética (C51) frente a personaje animado (C61) frente a sin presentador",
    "metrica": "se quedaron 48 h",
    "depende_de": "C51.3 y C61 aprobados por el codirector mirando su muestrario",
-   "no_antes_de": "2026-10-26",
-   "regla_afectada": "R-IM-01 (añade presentador)"
+   "no_antes_de": "2026-11-19",
+   "regla_afectada": "R-IM-01 (añade presentador)",
+   "nota_22_10": "El muestrario del avatar VRoid no se hizo el 16/10. La dirección lo hace el jueves 29/10; si el codirector lo aprueba, es la hipótesis de B3 (no antes del 19/11, al cerrar B2)."
   },
   {
    "id": "H-duracion",
-   "que": "Short corto (≤ 40 s, una cosa menos) frente al control",
+   "que": "Short corto (35 s como mucho, una escena menos) frente al control",
    "metrica": "% visto y retención a 30 s; se quedaron como freno",
    "depende_de": "nada",
-   "no_antes_de": "2026-10-26",
-   "regla_afectada": "R-GU-03"
+   "no_antes_de": "2026-11-05",
+   "regla_afectada": "R-GU-03",
+   "propuesta_b2": "22/10/2026 (dirección): es la hipótesis de B2, del 5/11 si B1 se cierra el 4/11. La pide también el codirector (cuaderno, 21-22/10: «si los shorts son más cortos, ¿no habrá menor probabilidad de que caiga la retención?»). Dos brazos, no tres (siete Shorts a la semana). Métrica principal: se quedaron 48 h (igual que B1); % visto y retención a 30 s como freno. Regla de B2 escrita antes del primer dato: n = 4 con 15 puntos, n = 6 con 8, cierre a n = 8 por brazo (con dos brazos, unas dos semanas y media)."
   },
   {
    "id": "H-remate",
