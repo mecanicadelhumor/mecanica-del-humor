@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-22T12:25:13Z",
+ "actualizado_utc": "2026-10-22T18:11:13Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -75,13 +75,33 @@
     },
     "A": {
      "nombre": "Animación a medida en las escenas de mecanismo (C55.2)",
-     "n": 1,
-     "se_quedaron_media": 33.3,
-     "porcentaje_visto_media": 71.3,
-     "vistas_48h_mediana": 9,
-     "me_gusta_por_100": 0.0,
+     "n": 3,
+     "se_quedaron_media": 34.6,
+     "porcentaje_visto_media": 66.8,
+     "vistas_48h_mediana": 22,
+     "me_gusta_por_100": 1.03,
      "ceros_de_feed": 1,
      "shorts": [
+      {
+       "id": "MDS-038",
+       "publicado": "2026-10-14",
+       "se_quedaron_pct": 20.6,
+       "vistas_48h": 933,
+       "porcentaje_visto": 48.2,
+       "me_gusta": 9,
+       "visualizaciones": 940,
+       "leido": "2026-10-22"
+      },
+      {
+       "id": "MDS-039",
+       "publicado": "2026-10-15",
+       "se_quedaron_pct": 50.0,
+       "vistas_48h": 22,
+       "porcentaje_visto": 81.0,
+       "me_gusta": 1,
+       "visualizaciones": 22,
+       "leido": "2026-10-22"
+      },
       {
        "id": "MDS-042",
        "publicado": "2026-10-18",
@@ -140,7 +160,7 @@
     "A": {
      "contra": "control",
      "diferencia_pp": null,
-     "prob_mejor": null,
+     "prob_mejor": 1.0,
      "veredicto": "faltan datos"
     },
     "B": {
@@ -152,16 +172,6 @@
    },
    "apartados": [],
    "pendientes": [
-    {
-     "id": "MDS-038",
-     "variante": "A",
-     "motivo": "sin ficha de producción todavía"
-    },
-    {
-     "id": "MDS-039",
-     "variante": "A",
-     "motivo": "sin ficha de producción todavía"
-    },
     {
      "id": "MDS-044",
      "variante": "control",
@@ -194,5 +204,19 @@
     }
    ]
   }
- ]
+ ],
+ "fichas_vistas": {
+  "MDS-038": {
+   "animacion.escenas_animadas": 2
+  },
+  "MDS-039": {
+   "animacion.escenas_animadas": 2
+  },
+  "MDS-042": {
+   "animacion.escenas_animadas": 2
+  },
+  "MDS-046": {
+   "animacion.escenas_animadas": 2
+  }
+ }
 }
