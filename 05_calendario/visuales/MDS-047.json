@@ -1,8 +1,8 @@
 {
   "guion": "MDS-047",
   "version": 1,
-  "firma": "697afe86fc42babf",
-  "resuelto_utc": "2026-10-21T09:32:44Z",
+  "firma": "1c1a880870e628c2",
+  "resuelto_utc": "2026-10-22T09:32:57Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -18,31 +18,55 @@
           ],
           "frase": "Fiesta de Halloween en la oficina. Andrés, el de contabilidad,",
           "fuente": "pexels",
-          "id": 7612766,
-          "pagina": "https://www.pexels.com/video/people-preparing-for-halloween-party-7612766/",
-          "titulo": "people preparing for halloween party",
-          "autor": "Thirdman",
-          "autor_url": "https://www.pexels.com/@thirdman",
+          "id": 9708965,
+          "pagina": "https://www.pexels.com/video/two-little-girls-playing-with-halloween-decorations-in-skeleton-costumes-9708965/",
+          "titulo": "two little girls playing with halloween decorations in skeleton costumes",
+          "autor": "Mike Jones",
+          "autor_url": "https://www.pexels.com/@mike-jones",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 29.0,
+          "duracion_s": 9.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/7612766/7612766-hd_1080_1920_25fps.mp4",
+          "url": "https://videos.pexels.com/video-files/9708965/9708965-hd_1080_1920_24fps.mp4",
           "tipo": "video",
           "consulta": "colleagues in costumes at office halloween party",
           "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 3.46,
+          "movimiento": 11.58,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.4028,
-              0.0016,
-              0.3639,
-              0.2219
+              0.3167,
+              0.5469,
+              0.1167,
+              0.0828
+            ],
+            [
+              0.1417,
+              0.2391,
+              0.1111,
+              0.0797
+            ],
+            [
+              0.5778,
+              0.275,
+              0.1056,
+              0.0734
+            ],
+            [
+              0.4917,
+              0.5328,
+              0.1,
+              0.0641
+            ],
+            [
+              0.4972,
+              0.2844,
+              0.0972,
+              0.0594
             ]
           ]
         },
@@ -55,31 +79,85 @@
           ],
           "frase": "viene disfrazado de payaso.",
           "fuente": "pexels",
-          "id": 6519525,
-          "pagina": "https://www.pexels.com/video/a-person-partying-6519525/",
-          "titulo": "a person partying",
-          "autor": "RDNE Stock project",
-          "autor_url": "https://www.pexels.com/@rdne",
+          "id": 6396070,
+          "pagina": "https://www.pexels.com/video/people-having-a-party-at-the-office-6396070/",
+          "titulo": "people having a party at the office",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 9.0,
+          "duracion_s": 19.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/6519525/6519525-hd_1080_1920_24fps.mp4",
+          "url": "https://videos.pexels.com/video-files/6396070/6396070-hd_1080_1920_25fps.mp4",
           "tipo": "video",
           "consulta": "person dressed as clown at office party",
-          "relevancia": 0.4,
+          "relevancia": 0.6,
           "inicio_s": 0.4,
-          "movimiento": 23.29,
+          "movimiento": 10.87,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.3111,
-              0.1094,
-              0.2528,
-              0.2047
+              0.8667,
+              0.1828,
+              0.0861,
+              0.0625
+            ],
+            [
+              0.1694,
+              0.1766,
+              0.0833,
+              0.0641
+            ],
+            [
+              0.7111,
+              0.1891,
+              0.0806,
+              0.0609
+            ],
+            [
+              0.7917,
+              0.1844,
+              0.0833,
+              0.0563
+            ],
+            [
+              0.425,
+              0.3531,
+              0.0778,
+              0.0563
+            ],
+            [
+              0.025,
+              0.2016,
+              0.0694,
+              0.0516
+            ],
+            [
+              0.5806,
+              0.2188,
+              0.0694,
+              0.0516
+            ],
+            [
+              0.9556,
+              0.1625,
+              0.0444,
+              0.0734
+            ],
+            [
+              0.5278,
+              0.2297,
+              0.0667,
+              0.0484
+            ],
+            [
+              0.1444,
+              0.2437,
+              0.0472,
+              0.0328
             ]
           ]
         }
@@ -100,7 +178,7 @@
           "fuente": "pixabay",
           "id": 129422,
           "pagina": "https://pixabay.com/videos/id-129422/",
-          "titulo": "hand, help, company partner, modern style, offer friendship, beautiful wallpaper, partnership agreement, peace negotiations, polite reaching, positive, professional respect, society occupation, staff acquaintance, student hire, success arrangement, successful business, support representative, team communication, trust gesture, background, support, kindness id",
+          "titulo": "hand, help, company partner, modern style, offer friendship, partnership agreement, beautiful wallpaper, peace negotiations, polite reaching, positive, professional respect, society occupation, staff acquaintance, student hire, success arrangement, successful business, support representative, team communication, trust gesture, background, support, kindness id",
           "autor": "SYG_Anime",
           "autor_url": "https://pixabay.com/users/SYG_Anime-7158719/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
@@ -122,7 +200,7 @@
       ]
     },
     "3": {
-      "narracion_sha": "07af39491b7e",
+      "narracion_sha": "4b579f25bc20",
       "texto_pos": "abajo",
       "planos": [
         {
@@ -130,9 +208,9 @@
           "desde": null,
           "t_estimado": [
             0.0,
-            2.03
+            2.43
           ],
-          "frase": "Y tú das un paso atrás.",
+          "frase": "Y tú das un paso atrás, aunque",
           "fuente": "pexels",
           "id": 8061672,
           "pagina": "https://www.pexels.com/video/a-woman-talking-on-a-cellphone-in-her-office-8061672/",
@@ -148,23 +226,29 @@
           "consulta": "woman stepping back startled office",
           "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 4.86,
+          "movimiento": 4.99,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.5278,
-              0.3422,
-              0.0917,
-              0.0672
+              0.5722,
+              0.3609,
+              0.0944,
+              0.0656
             ],
             [
-              0.5917,
-              0.3609,
-              0.0861,
-              0.0594
+              0.4972,
+              0.3438,
+              0.0917,
+              0.0656
+            ],
+            [
+              0.6417,
+              0.3531,
+              0.075,
+              0.0578
             ]
           ]
         },
@@ -172,26 +256,26 @@
           "k": 2,
           "desde": "Andrés lleva diez años",
           "t_estimado": [
-            2.03,
-            6.54
+            2.43,
+            7.0
           ],
           "frase": "Andrés lleva diez años trayéndote caramelos.",
-          "fuente": "pixabay",
-          "id": 130878,
-          "pagina": "https://pixabay.com/videos/id-130878/",
-          "titulo": "room, desk, vintage, old, candle, window, snow, winter, clock, dark, quiet, office, antique, meditation, soothing, peaceful id",
-          "autor": "Joe_hackney",
-          "autor_url": "https://pixabay.com/users/Joe_hackney-15024843/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 60.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2022/09/11/130878-748595919_large.mp4",
+          "fuente": "pexels",
+          "id": 6340301,
+          "pagina": "https://www.pexels.com/video/close-up-video-of-a-hand-holding-a-christmas-candy-6340301/",
+          "titulo": "close up video of a hand holding a christmas candy",
+          "autor": "Nadezhda Moryak",
+          "autor_url": "https://www.pexels.com/@nadezhda-moryak",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6340301/6340301-hd_1080_1920_30fps.mp4",
           "tipo": "video",
-          "consulta": "jar of candy on office desk",
+          "consulta": "hand holding candy office",
           "relevancia": 0.75,
           "inicio_s": 0.4,
-          "movimiento": 0.69,
+          "movimiento": 3.68,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
@@ -267,7 +351,7 @@
       ]
     },
     "5": {
-      "narracion_sha": "b7e1a39117bc",
+      "narracion_sha": "879fab63d611",
       "texto_pos": "abajo",
       "planos": [
         {
@@ -275,9 +359,9 @@
           "desde": null,
           "t_estimado": [
             0.0,
-            7.2
+            7.67
           ],
-          "frase": "Pesaban no saber si te quieren hacer daño ni qué van a hacer, su cara pintada y",
+          "frase": "Les asustaba no saber si te quieren hacer daño ni qué van a hacer, la cara pintada y",
           "fuente": "pixabay",
           "id": 12004,
           "pagina": "https://pixabay.com/videos/id-12004/",
@@ -311,8 +395,8 @@
           "k": 2,
           "desde": "las películas de payasos",
           "t_estimado": [
-            7.2,
-            11.1
+            7.67,
+            11.57
           ],
           "frase": "las películas de payasos malos.",
           "fuente": "pexels",
@@ -340,7 +424,7 @@
       ]
     },
     "6": {
-      "narracion_sha": "3bc769cf4439",
+      "narracion_sha": "88c62b01302d",
       "texto_pos": "abajo",
       "planos": [
         {
@@ -348,7 +432,7 @@
           "desde": null,
           "t_estimado": [
             0.0,
-            3.8
+            3.73
           ],
           "frase": "Sin la pintura, Andrés solo sería Andrés.",
           "fuente": "pexels",
@@ -384,10 +468,10 @@
           "k": 2,
           "desde": "La pega",
           "t_estimado": [
-            3.8,
-            9.93
+            3.73,
+            9.01
           ],
-          "frase": "La pega: solo preguntaron a gente que ya tenía miedo a los payasos.",
+          "frase": "La pega: solo preguntaron a gente que ya les tenía miedo.",
           "fuente": "pixabay",
           "id": 2340,
           "pagina": "https://pixabay.com/videos/id-2340/",
