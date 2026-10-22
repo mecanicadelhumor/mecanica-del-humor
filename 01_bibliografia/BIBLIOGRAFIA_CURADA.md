@@ -3,7 +3,7 @@
 > Base de conocimiento de **Mecánica del Humor / Humor Mechanics**.
 > Generado desde `data/semillas.json`. No edites este archivo a mano: edita el JSON y vuelve a ejecutar `scripts/generar_md.py`.
 
-**102 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
+**113 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
 
 ## Cómo se ha curado
 
@@ -27,11 +27,11 @@ y fusiona repetidos antes de que nadie los lea. Están marcados y excluidos del 
 - **B. Diferencias individuales, estilos y medicion** — 7 obras
 - **C. Produccion de humor: habilidad, creatividad e inteligencia** — 6 obras
 - **D. Humor, vinculos sociales, atraccion y estatus** — 13 obras
-- **E. Risa: etologia, acustica y contagio** — 12 obras
-- **F. Neurociencia y cognicion del humor** — 13 obras
+- **E. Risa: etologia, acustica y contagio** — 14 obras
+- **F. Neurociencia y cognicion del humor** — 20 obras
 - **G. Humor aplicado: trabajo, aula, salud, persuasion** — 6 obras
 - **H. Entrenabilidad: el humor se puede aprender** — 6 obras
-- **I. Linguistica y estructura del chiste** — 11 obras
+- **I. Linguistica y estructura del chiste** — 13 obras
 - **J. El lado oscuro: gelotofobia, burla, humor que falla** — 7 obras
 - **K. Humor computacional e IA** — 4 obras
 - **L. Oficio: manuales de stand-up, improvisacion y guion** — 8 obras
@@ -229,8 +229,8 @@ El mito del 'payaso triste' con datos. Ojo: requiere matizacion responsable.
 
 ### `D01` ★★★ Risky business: When humor increases and decreases status
 
-**Bitterly, T. B.; Brooks, A. W.; Schweitzer, M. E.** (2017) · *Journal of Personality and Social Psychology*  
-DOI: [`10.1037/pspi0000079`](https://doi.org/10.1037/pspi0000079)  
+**Bitterly, T. B.; Brooks, A. W.; Schweitzer, M. E.** (2017) · *Journal of Personality and Social Psychology, 112(3), 431-455*  
+DOI: [`10.1037/pspi0000079`](https://doi.org/10.1037/pspi0000079) · verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1037/pspi0000079 y en Europe PMC (PMID 27831701)  
 Tipo: articulo
 
 Humor apropiado sube el estatus; el inapropiado lo hunde, pero intentarlo casi siempre sube la competencia percibida. PDF abierto en la web de HBS.
@@ -344,8 +344,8 @@ La risa es 30 veces mas probable en grupo que a solas y casi nunca sigue a un ch
 
 ### `E02` ★★★ Laughter punctuates speech: Linguistic, social and gender contexts of laughter
 
-**Provine, R. R.** (1993) · *Ethology*  
-DOI: [`10.1111/j.1439-0310.1993.tb00478.x`](https://doi.org/10.1111/j.1439-0310.1993.tb00478.x) · verificado el 19/09/2026 contra Wiley Online Library — el título que devuelve es el de la ficha (el DOI anterior, tb00996.x, no correspondía a este artículo)  
+**Provine, R. R.** (1993) · *Ethology, 95(4), 291-298*  
+DOI: [`10.1111/j.1439-0310.1993.tb00478.x`](https://doi.org/10.1111/j.1439-0310.1993.tb00478.x) · verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1111/j.1439-0310.1993.tb00478.x (con resumen)  
 Tipo: articulo
 
 La risa puntua el habla, no la interrumpe. Fundamento de la risa como senal social, no como reaccion comica.
@@ -403,7 +403,7 @@ Duplicado deliberado de D07 para probar la deduplicacion por DOI en el pipeline.
 ### `E06` ★★ “Laughing” rats and the evolutionary antecedents of human joy?
 
 **Panksepp, J.; Burgdorf, J.** (2003) · *Physiology & Behavior, 79(3), 533-547*  
-DOI: [`10.1016/S0031-9384(03)00159-8`](https://doi.org/10.1016/S0031-9384(03)00159-8) · verificado el 15/09/2026 contra el texto del artículo (dirección)  
+DOI: [`10.1016/S0031-9384(03)00159-8`](https://doi.org/10.1016/S0031-9384(03)00159-8) · verificado 22/10/2026: titulo y DOI juntos en api.crossref.org y en Europe PMC (PMID 12954448)  
 Tipo: articulo
 
 Ratas que 'rien' a 50 kHz. Video con enorme potencial viral y ciencia solida.
@@ -433,6 +433,22 @@ DOI: [`10.1177/0956797618778235`](https://doi.org/10.1177/0956797618778235) · v
 Tipo: articulo
 
 Risa de verdad y risa fingida se distinguen en 21 sociedades, por encima del azar pero no mucho. Para «como distinguir una risa falsa de una de verdad» (5,1 M).
+
+### `E13` ★★ Dimorphous Expressions of Positive Emotion: Displays of Both Care and Aggression in Response to Cute Stimuli
+
+**Aragón, O. R.; Clark, M. S.; Dyer, R. L.; Bargh, J. A.** (2015) · *Psychological Science, 26(3), 259-273*  
+DOI: [`10.1177/0956797614561044`](https://doi.org/10.1177/0956797614561044) · verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1177/0956797614561044 y en Europe PMC (PMID 25626441)  
+Tipo: articulo
+
+Llorar de alegria, ganas de apretar a un cachorro: las emociones positivas muy intensas salen con gestos de las negativas, y eso las regula. Apoyo para «¿por que lloramos de risa?».
+
+### `E14` ★★ Signs of appeasement: Evidence for the distinct displays of embarrassment, amusement, and shame
+
+**Keltner, D.** (1995) · *Journal of Personality and Social Psychology, 68(3), 441-454*  
+DOI: [`10.1037/0022-3514.68.3.441`](https://doi.org/10.1037/0022-3514.68.3.441) · verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1037/0022-3514.68.3.441 y en OpenAlex (resumen)  
+Tipo: articulo
+
+La cara de verguenza no es la de la risa: tiene su propio gesto, distinto del de la diversion, y quien mira lo reconoce. Para «¿se nota cuando sonries de verguenza?».
 
 
 ---
@@ -478,6 +494,22 @@ DOI: [`10.1037/0021-843x.106.1.95`](https://doi.org/10.1037/0021-843x.106.1.95) 
 Tipo: articulo
 
 Aguantarse la risa: quien la contiene viendo algo gracioso dice que le ha hecho menos gracia, y su corazon se acelera. Para «si te ries pierdes» y «risa floja».
+
+### `F15` ★★★ Can a machine tickle?
+
+**Harris, C. R.; Christenfeld, N.** (1999) · *Psychonomic Bulletin & Review, 6(3), 504-510*  
+DOI: [`10.3758/bf03210841`](https://doi.org/10.3758/bf03210841) · verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.3758/bf03210841 y en Europe PMC (PMID 12198790)  
+Tipo: articulo
+
+Una maquina de cosquillas hace reir igual que una persona: las cosquillas no necesitan a otro, necesitan que no lo puedas predecir. Capitulo natural del largo que sale de MDS-038.
+
+### `F19` ★★★ Laughter is in the air: involvement of key nodes of the emotional motor system in the anticipation of tickling
+
+**Wattendorf, E.; Westermann, B.; Fiedler, K.; Ritz, S.; Redmann, A.; Pfannmöller, J.; Lotze, M.; Celio, M. R.** (2019) · *Social Cognitive and Affective Neuroscience, 14(8), 837-847*  
+DOI: [`10.1093/scan/nsz056`](https://doi.org/10.1093/scan/nsz056) · verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1093/scan/nsz056 y en Europe PMC (PMID 31393979)  
+Tipo: articulo
+
+La espera de las cosquillas: el cerebro se prepara antes de que lleguen, y cuanto mas se activa en la espera, mas se rie la persona despues. Para «¿por que te ries antes de que te hagan cosquillas?» (MDS-050).
 
 ### `F03` ★★ Two neural networks for laughter: A tractography study
 
@@ -527,6 +559,30 @@ Tipo: articulo
 
 Ante una risa de compromiso el cerebro se pone a averiguar que piensa el otro; ante una de verdad, no. Apoyo para risa falsa y risa real.
 
+### `F14` ★★ Humour, Tickle, and the Darwin-Hecker Hypothesis
+
+**Harris, C. R.; Christenfeld, N.** (1997) · *Cognition & Emotion, 11(1), 103-110*  
+DOI: [`10.1080/026999397380050`](https://doi.org/10.1080/026999397380050) · verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1080/026999397380050 y en OpenAlex (resumen)  
+Tipo: articulo
+
+Cosquillas y humor: quien mas se rie con una comedia tambien se rie mas con cosquillas, pero una cosa no enciende la otra. Para el largo de cosquillas (MDH-008) y la pregunta «¿quien tiene cosquillas se rie de todo?».
+
+### `F16` ★★ Neural correlates of ticklishness in the rat somatosensory cortex
+
+**Ishiyama, S.; Brecht, M.** (2016) · *Science, 354(6313), 757-760*  
+DOI: [`10.1126/science.aah5114`](https://doi.org/10.1126/science.aah5114) · verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1126/science.aah5114 y en Europe PMC (PMID 27846607)  
+Tipo: articulo
+
+Las ratas a las que se hace cosquillas chillan, se acercan y dan saltos de alegria; la ansiedad les quita las cosquillas. Para el largo de cosquillas.
+
+### `F20` ★★ Behavioral and Cortical Correlates of Self-Suppression, Anticipation, and Ambivalence in Rat Tickling
+
+**Ishiyama, S.; Kaufmann, L. V.; Brecht, M.** (2019) · *Current Biology, 29(19), 3153-3164.e3*  
+DOI: [`10.1016/j.cub.2019.07.085`](https://doi.org/10.1016/j.cub.2019.07.085) · verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/j.cub.2019.07.085 y en Europe PMC (PMID 31564493)  
+Tipo: articulo
+
+Tampoco una rata puede hacerse cosquillas: tocarse a si misma apaga la corteza y los chillidos. Y las ratas piden cosquillas y a la vez huyen (el «Nervenkitzel» de los ninos). Para el largo de cosquillas.
+
 ### `F05` ★ Neural correlates of humor detection and appreciation in children
 
 **Neely, M. N. et al.** (2012) · *Cerebral Cortex*  
@@ -542,6 +598,22 @@ DOI: [`10.1016/0301-0511(90)90023-p`](https://doi.org/10.1016/0301-0511(90)90023
 Tipo: articulo
 
 Quien tiene mas cosquillas tambien dice reirse mas: la vieja idea de Darwin de que cosquillas y humor van juntos. Cuestionario, preliminar.
+
+### `F17` ★ Tickle contagion in the rat somatosensory cortex
+
+**Kaufmann, L. V.; Brecht, M.; Ishiyama, S.** (2022) · *iScience, 25(12), 105718*  
+DOI: [`10.1016/j.isci.2022.105718`](https://doi.org/10.1016/j.isci.2022.105718) · verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/j.isci.2022.105718 y en Europe PMC (PMID 36578320)  
+Tipo: articulo
+
+Las cosquillas se contagian en ratas: ver como le hacen cosquillas a otra rata en directo las hace chillar y saltar; un video, casi no. Apoyo para el largo de cosquillas.
+
+### `F18` ★ Rat 50 kHz calls reflect graded tickling-induced positive emotion
+
+**Hinchcliffe, J. K.; Mendl, M.; Robinson, E. S. J.** (2020) · *Current Biology, 30(18), R1034-R1035*  
+DOI: [`10.1016/j.cub.2020.08.038`](https://doi.org/10.1016/j.cub.2020.08.038) · verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/j.cub.2020.08.038 y en Europe PMC (PMID 32961155)  
+Tipo: articulo
+
+Los chillidos de 50 kHz de la rata miden cuanto le gustan las cosquillas; en humanos las cosquillas dan a la vez placer y desagrado, y la risa no distingue uno de otro. Apoyo del largo.
 
 
 ---
@@ -695,6 +767,14 @@ Tipo: articulo
 
 Familia «mensajes». Las mismas palabras, oidas, hacen parecer a quien no piensa como tu mas sensato que leidas: por que una discusion por escrito sale peor.
 
+### `I12` ★★★ Effects of Duration and Laughter on Subjective Happiness Within Different Modes of Communication
+
+**Vlahovic, T. A.; Roberts, S.; Dunbar, R.** (2012) · *Journal of Computer-Mediated Communication, 17(4), 436-450*  
+DOI: [`10.1111/j.1083-6101.2012.01584.x`](https://doi.org/10.1111/j.1083-6101.2012.01584.x) · verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1111/j.1083-6101.2012.01584.x y en OpenAlex (resumen)  
+Tipo: articulo
+
+Familia «mensajes». La risa escrita (el «jaja») se asocia a la felicidad de una conversacion casi igual que la risa de verdad. Diario de 14 dias, 41 personas. Para «¿sirve de algo escribir jajaja sin reirte?» (MDS-051).
+
 ### `I03` ★★ Linguistic Theories of Humor
 
 **Attardo, S.** (1994) · *Mouton de Gruyter*  
@@ -740,6 +820,14 @@ DOI: [`10.1037/xge0000962`](https://doi.org/10.1037/xge0000962) · verificado 15
 Tipo: articulo
 
 Familia «mensajes». Llamar une mas que escribir y no es mas incomodo, aunque esperamos que lo sea: por eso escribimos cuando seria mejor llamar.
+
+### `I13` ★★ R U There? Ostracism by Cell Phone Text Messages
+
+**Smith, A.; Williams, K. D.** (2004) · *Group Dynamics: Theory, Research, and Practice, 8(4), 291-301*  
+DOI: [`10.1037/1089-2699.8.4.291`](https://doi.org/10.1037/1089-2699.8.4.291) · verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1037/1089-2699.8.4.291 y en OpenAlex (resumen)  
+Tipo: articulo
+
+Familia «mensajes». Dejar de recibir mensajes en una conversacion a tres basta para sentirse excluido: peor humor y menos sensacion de pertenecer. Para «¿por que me molesta que me dejen en visto?» (3,5 M).
 
 
 ---

@@ -1,0 +1,191 @@
+{
+ "id": "MDS-051",
+ "formato": "corto",
+ "serie": "Ríete primero, te explico después",
+ "idioma": "es",
+ "titulo_trabajo": "¿Sirve de algo escribir «jajaja» sin reírte?",
+ "tesis": "La risa escrita no es tan mentira: en un diario de dos semanas, la risa iba con conversaciones más felices, y la escrita tenía un efecto parecido a la de verdad.",
+ "pilares": [
+  "I",
+  "E"
+ ],
+ "duracion_objetivo_s": 35,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "A",
+ "familia_tema": "mensajes",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Sirve de algo escribir «jajaja» sin reírte?",
+  "respuesta": "Sí: la risa escrita va con conversaciones más felices casi igual que la risa de verdad.",
+  "puente": "Tu fila de jotas y aes con cara seria es la risa escrita que la gente apuntó en su diario, al lado de la risa de verdad."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — tu amigo manda un meme al grupo y le contestas con una fila de jotas y aes; qué gira — lo escribes con la cara más seria del mundo; cómo acaba — esa fila de jotas sirve: la risa escrita contaba casi como la de verdad, aunque era un diario de cuarenta y una personas.",
+  "FAMILIA «mensajes» (R-TE-03), primera de las dos de la semana.",
+  "BRAZO A (ciclo B1, posición 16): las escenas 4 y 5, las que cuentan qué midió el estudio y qué encontró, llevan «animar» y una línea de animación. Nada más cambia.",
+  "LA VOZ NO DICE «jajaja»: la narración dice «una fila de jotas y aes» (el narrador no se ríe, regla 13.1) y la pantalla enseña las letras. Lo que se ve está sostenido por lo que se oye (regla 14).",
+  "FUENTE: I12 (Vlahovic, Roberts y Dunbar, 2012, Journal of Computer-Mediated Communication, DOI 10.1111/j.1083-6101.2012.01584.x), ficha nueva, verificada el 22/10/2026 en Crossref y OpenAlex. Frases del resumen copiadas literal: «Forty-one participants completed a 14-day contact diary, recording interactions across face-to-face, Skype, telephone, instant messaging, texting, and e-mail/social network sites»; «Laughter positively predicted happiness in all but one of the communication modes, with real and symbolic laughter having similar effects».",
+  "LO QUE NO SE DICE: cuál es el canal en que no funcionaba (el resumen no lo dice), ni que la risa escrita «haga feliz» (es una asociación en un diario).",
+  "LÍMITE (regla 12): cuarenta y una personas y lo apuntaban ellas: un diario, no un experimento.",
+  "LECTURA EN FRÍO (2026-10-22): Vuelta 1: «¿Mentira?» sin decir de qué, el diario confuso, «efecto parecido» (¿a qué?) y el «entonces» que se saltaba un paso. Vuelta 2: «los canales» (no sabía cuáles eran) → no pasa. Vuelta 3: la pregunta es «¿sirve de algo?», los canales se nombran (cara a cara, teléfono o chat) y la risa escrita se compara con la de verdad en voz. Pasa con notas: las tres dudas las resolvió el lector solo."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-bocadillos",
+   "texto": "jajajajajaja",
+   "narracion": "Tu amigo manda un meme al grupo, y le contestas con una fila de jotas y aes.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "hand typing on phone chat close-up",
+      "thumb typing message smartphone",
+      "person texting on phone"
+     ],
+     "prompt": "close-up of a thumb typing a long reply in a chat app on a smartphone, screen glow, no readable text"
+    },
+    {
+     "desde": "y le contestas",
+     "busqueda": [
+      "phone screen chat bubbles close-up",
+      "person sending message phone"
+     ],
+     "prompt": "close-up of a smartphone screen with chat bubbles, blurred, no readable text"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Cara *seria*",
+   "narracion": "Y lo escribes con la cara más seria del mundo.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "man looking at phone supermarket queue",
+      "person waiting in supermarket line with phone",
+      "supermarket checkout queue"
+     ],
+     "prompt": "a man typing on his phone while waiting in a supermarket checkout queue"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "¿Sirve de *algo*?",
+   "narracion": "¿Sirve de algo? Pues sí.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "serious man face close-up looking at phone",
+      "deadpan face man phone"
+     ],
+     "prompt": "close-up of a man with a perfectly deadpan face staring at his phone"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "I12",
+   "animar": true,
+   "animacion": "Una hoja de diario que se va llenando sola de iconos de conversación (cara a cara, teléfono, chat, sobre); en «risa de verdad» y «escrita» a cada icono le salta al lado una carcajada dibujada o un bocadillo con letras.",
+   "a": "Risa de verdad",
+   "et_a": "en persona",
+   "b": "Risa *escrita*",
+   "et_b": "en el chat",
+   "narracion": "Unos psicólogos pidieron a un grupo apuntar dos semanas de charlas, cara a cara, por teléfono o chat, y si hubo risa.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "hand writing in notebook diary desk",
+      "person writing journal table"
+     ],
+     "prompt": "close-up of a hand writing short entries in a paper diary on a desk"
+    },
+    {
+     "desde": "cara a cara",
+     "busqueda": [
+      "notebook pages with checkmarks",
+      "diary open on desk with pen"
+     ],
+     "prompt": "an open notebook with columns of handwritten tick marks, a pen resting on it"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "I12",
+   "personaje": "entiende",
+   "animar": true,
+   "animacion": "Dos barras de «felicidad» que suben a la vez, una con una boca riendo y otra con letras de chat; en «parecido» se paran casi a la misma altura.",
+   "cifra": "Casi igual",
+   "pie": "risa escrita y de *verdad*",
+   "narracion": "Con risa, salían más felices de la charla. Y la risa escrita contaba casi igual que la de verdad.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "friends laughing together cafe",
+      "two people laughing face to face"
+     ],
+     "prompt": "two friends laughing together at a cafe table"
+    },
+    {
+     "desde": "Y la risa escrita",
+     "busqueda": [
+      "woman smiling at phone message",
+      "person smiling reading text"
+     ],
+     "prompt": "a woman smiling warmly while reading a message on her phone"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "I12",
+   "personaje": "piensa",
+   "titulo": "Las jotas *cuentan*",
+   "subtitulo": "Fuente: Vlahovic y otros, 2012",
+   "narracion": "O sea, que tu fila de jotas sirve: cuenta casi como una risa. Lo malo: eran cuarenta y una personas, apuntándolo ellas.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "man smiling slightly at phone supermarket",
+      "person putting phone away in queue"
+     ],
+     "prompt": "a man in a supermarket queue giving a tiny smile at his phone before putting it away"
+    },
+    {
+     "desde": "Lo malo",
+     "busqueda": [
+      "stack of notebooks on desk",
+      "handwritten diary pages close-up"
+     ],
+     "prompt": "a small stack of paper diaries on a desk"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 3, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-22",
+  "de_que_va": "Va de si escribir «jajaja» en el chat cuenta como reírse de verdad. Según un estudio, casi sí.",
+  "pregunta_y_respuesta": "Si sirve de algo mandar una fila de jajajás aunque lo escribas con cara seria. Sí: en el estudio, las charlas con risa dejaban a la gente más contenta, y la risa escrita contaba casi lo mismo que la de verdad. Lo malo es que el estudio era pequeño.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«O sea, que tu fila de jotas sirve: cuenta casi como una risa.» (se queda: devuelve el hallazgo a la fila de jotas del principio, prueba 1, y sin ella el cierre es solo el límite)",
+  "donde_me_iria": "me quedo, «pero por poco» (lo más cerca, la escena 4: «suena a clase»)",
+  "notas": [
+   "«¿Sirve de algo? Pues sí.» — «No sé para qué tendría que servir… No lo entiendo hasta la escena 5»: lo entiende al llegar a la respuesta.",
+   "«Unos psicólogos pidieron a un grupo apuntar dos semanas de charlas…» — «muy apretada. Tuve que pararme a desmontarla.»",
+   "«apuntándolo ellas» — «no lo pillé a la primera. Supongo que quiere decir que lo anotaban ellas mismas y que por eso es poco fiable»: lo entendió.",
+   "«El estudio habla de la risa escrita, no de la risa escrita sin ganas»: cierto, y es lo que el estudio no separa."
+  ],
+  "veredicto": "pasa"
+ }
+}

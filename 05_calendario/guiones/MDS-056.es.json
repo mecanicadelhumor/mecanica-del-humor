@@ -1,0 +1,178 @@
+{
+ "id": "MDS-056",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué hay gente que se ríe de lo que cuenta?",
+ "tesis": "Reírse de lo que uno mismo cuenta es lo normal: quien habla se ríe más que quien escucha, la risa cae al final de las frases y a menudo sigue a cosas que no tienen gracia.",
+ "pilares": [
+  "E"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "control",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué hay gente que se ríe de lo que cuenta?",
+  "respuesta": "Porque es lo normal: en las conversaciones, quien habla se ríe más que quien escucha, y casi siempre al final de una frase, haya gracia o no.",
+  "puente": "Tu tío riéndose al final de cada frase de su historia del banco es lo que un psicólogo apuntó en mil doscientas risas de desconocidos: la risa cae en las pausas y el que habla se ríe más."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — en la comida del domingo tu tío cuenta que fue al banco y había cola; qué gira — se ríe él al final de cada frase y acaba riéndose toda la mesa; cómo acaba — lo de tu tío es de lo más normal, aunque se midió con gente joven en la calle, no en una comida familiar.",
+  "FUENTE: E02 (Provine, 1993, Ethology, DOI 10.1111/j.1439-0310.1993.tb00478.x). Fue central en MDS-002 y MDS-006 (agosto): lleva más de seis semanas libre (C17). Releída el 22/10/2026 en Crossref, con resumen. Frases copiadas literal: «describing the position of naturally occurring laughter in the speech stream of anonymous young adults observed in public places»; «Laughter of both speaker and audience occurred during pauses at the end of phrases or sentences in over 99 % of the sample of 1200 episodes of laughter»; «Laughter followed both statements and questions and material that did not seem humorous outside of the conversational context»; «Speakers ... laughed more than their audiences».",
+  "LO QUE NO SE DICE: la parte de hombres y mujeres del resumen (regla 1: nada que generalice por grupo en cuarenta segundos).",
+  "LÍMITE (regla 12, dentro de la historia): gente joven, en sitios públicos; una comida familiar no la apuntó nadie.",
+  "LECTURA EN FRÍO (2026-10-22): Vuelta 1: el «por eso» de la escena 4 y el esquema de flechas en pantalla; «me dice que pasa, no por qué» → la escena 4 es un dato (1.200 risas), sin «por eso», y el cierre dice «quien cuenta es quien más se ríe». Vuelta 2: pasa. Después de la lectura solo cambió la palabra que abre el límite («Eso sí:» → «La pega:»), para no repetir «Eso sí» en cuatro cierres de la semana (C48.1); el sentido es el mismo."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-bocadillos",
+   "texto": "«Pues voy al *banco*…»",
+   "narracion": "Comida del domingo. Tu tío empieza: «pues voy al banco…», y ya se está riendo.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "older man laughing telling story at family lunch",
+      "man laughing at dinner table family",
+      "family sunday lunch table"
+     ],
+     "prompt": "an older man at a family lunch table laughing while starting to tell a story, plates and bread on the table, daylight"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Había *cola*",
+   "narracion": "Se ríe al final de cada frase. Y lo que cuenta es que había cola.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "queue of people waiting in bank",
+      "people waiting in line bank office"
+     ],
+     "prompt": "a short queue of people waiting in a bank branch"
+    },
+    {
+     "desde": "Y lo que cuenta",
+     "busqueda": [
+      "older man laughing gesturing table",
+      "man telling story with hands"
+     ],
+     "prompt": "an older man gesturing with both hands as he tells a story at the table, laughing"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Y la mesa, *riendo*",
+   "narracion": "Y acaba riéndose toda la mesa. De una cola.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "family laughing together at lunch table",
+      "family laughing dining table"
+     ],
+     "prompt": "a whole family laughing together around a lunch table"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "E02",
+   "cifra": "1.200",
+   "pie": "risas *apuntadas* en la calle",
+   "narracion": "Un psicólogo apuntó mil doscientas risas de desconocidos charlando en la calle. Muchas, sin nada gracioso.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "people talking laughing in park",
+      "young people chatting outdoors cafe"
+     ],
+     "prompt": "groups of young people chatting and laughing in a public square"
+    },
+    {
+     "desde": "mil doscientas",
+     "busqueda": [
+      "notebook tally marks close-up",
+      "hand writing notes on bench"
+     ],
+     "prompt": "close-up of a hand writing tally marks in a small notebook"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "E02",
+   "personaje": "entiende",
+   "cifra": "Quien *habla*",
+   "pie": "se ríe más",
+   "narracion": "Casi todas caían en una pausa, al final de una frase. Y quien hablaba se reía más que quien escuchaba.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "two people talking one laughing",
+      "friends conversation laughing outdoors"
+     ],
+     "prompt": "two young people talking outdoors, one pausing mid-sentence to laugh"
+    },
+    {
+     "desde": "quien hablaba",
+     "busqueda": [
+      "woman talking and laughing friend listening",
+      "person telling story laughing listener smiling"
+     ],
+     "prompt": "a woman laughing at her own story while her friend listens with a small smile"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "E02",
+   "personaje": "piensa",
+   "titulo": "Tu tío, *normal*",
+   "subtitulo": "Fuente: Provine, 1993",
+   "narracion": "Lo de tu tío no es raro: quien cuenta es quien más se ríe. La pega: era gente joven, en la calle.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "older man smiling at family table",
+      "grandfather laughing at lunch"
+     ],
+     "prompt": "an older man at the family table, still smiling after his story"
+    },
+    {
+     "desde": "La pega",
+     "busqueda": [
+      "young people walking city street talking",
+      "busy street people chatting"
+     ],
+     "prompt": "young people walking and chatting on a busy city street"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 2, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-22",
+  "de_que_va": "Va de por qué tu tío se ríe contando algo que no tiene gracia: quien cuenta algo se ríe más que quien lo escucha, haya o no gracia.",
+  "pregunta_y_respuesta": "¿Por qué mi tío se ríe tanto contando algo sin gracia, como que había cola en el banco? Es normal: casi todas las risas en una conversación caen en una pausa al final de una frase, muchas veces sin nada gracioso, y quien habla se ríe más que quien escucha.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Eso sí: era gente joven, en la calle.» (es el cierre honesto, regla 12: se queda)",
+  "donde_me_iria": "me quedo (lo más cerca, la escena 4: «el tono cambia de golpe a dato, pero el ‹1.200 risas› me retiene»)",
+  "notas": [
+   "«Eso sí: era gente joven, en la calle.» — «Lo entiendo, pero no sé qué quiere decir que me lo digan. ¿Que con mi tío… igual no vale?»",
+   "«acaba riéndose toda la mesa… luego no se explica»: el resumen no dice por qué se ríe el que escucha, así que no se dice."
+  ],
+  "veredicto": "pasa"
+ }
+}

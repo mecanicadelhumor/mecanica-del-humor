@@ -565,6 +565,76 @@
    "modo": "automatico",
    "hora": "19:00",
    "nota": "Domingo (cambio de hora: cola.py hace la cuenta). Ciclo B1, brazo B (posición 14), último Short del ciclo. Serie «El experimento»: la cena con los compañeros nuevos, el ex y las palomas. Pregunta: «¿por qué después de reírte cuentas de más?» (va a las semillas). Fuente D13 (Gray, Parkinson y Dunbar, 2015), ficha nueva."
+  },
+  {
+   "fecha": "2026-10-26",
+   "episodio": "MDS-050",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Lunes. Ciclo B1, brazo control (posición 15). DERECHO DE TANTEO (C46) de MDS-038 (cosquillas, 933 vistas a 48 h). Serie «Ríete primero, te explico después»: el dedo que se acerca a tu hermana. Pregunta: «¿por qué te ríes antes de las cosquillas?». Fuente F19 (Wattendorf y otros, 2019), ficha nueva."
+  },
+  {
+   "fecha": "2026-10-27",
+   "episodio": "MDS-051",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Martes. Ciclo B1, brazo A (posición 16): escenas 4 y 5 con animar. Familia «mensajes» (R-TE-03). Serie «Ríete primero»: el «jajaja» escrito con cara seria. Fuente I12 (Vlahovic, Roberts y Dunbar, 2012), ficha nueva. Si la rutina «Animación» no deja la página, sale como el control."
+  },
+  {
+   "fecha": "2026-10-28",
+   "episodio": "MDS-052",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Miércoles. Ciclo B1, brazo B (posición 17): la escena 1 es el dato. Serie «El experimento»: la carcajada de compromiso en la cena. Pregunta: «¿se nota cuando alguien se ríe por compromiso?» (cerca de «se nota una risa falsa», 28.025.319). Fuente E11 (Bryant y otros, 2018), nunca central."
+  },
+  {
+   "fecha": "2026-10-29",
+   "episodio": "MDS-053",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Jueves. Ciclo B1, brazo control (posición 18). Serie «El experimento»: el chiste de la nueva cuando no arranca el proyector. Pregunta: «¿hacer un chiste en una reunión te da puntos?». Fuente D01 (Bitterly, Brooks y Schweitzer, 2017), nunca central en un Short; fue central en el largo MDH-006 (12/09), a más de seis semanas de esta emisión."
+  },
+  {
+   "fecha": "2026-10-30",
+   "episodio": "MDS-054",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Viernes. Ciclo B1, brazo B (posición 19): la escena 1 es el dato. Familia «mensajes» (R-TE-03). Serie «El experimento»: «a ver si quedamos» y la llamada que no coges. Pregunta: «¿por qué escribimos en vez de llamar?» (cerca de «por qué es mejor llamar que escribir», 3.459.601). Fuente I10 (Kumar y Epley, 2021), nunca central."
+  },
+  {
+   "fecha": "2026-10-31",
+   "episodio": "MDS-055",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Sábado. Ciclo B1, brazo A (posición 20): escenas 4 y 5 con animar. Serie «El experimento»: ¿te puede hacer cosquillas una máquina? Segundo Short de la semana que sale del caso de MDS-038 (cosquillas). Fuente F15 (Harris y Christenfeld, 1999), ficha nueva. SUSTITUYE a dos temas que no pasaron la lectura en frío a la tercera vuelta (E10, la risa con amigos; E14, la sonrisa de vergüenza). Sin gancho de Halloween (ver la bitácora del 22/10)."
+  },
+  {
+   "fecha": "2026-11-01",
+   "episodio": "MDS-056",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Domingo. Ciclo B1, brazo control (posición 21). Serie «El experimento»: tu tío, la comida del domingo y la cola del banco. Pregunta: «¿por qué hay gente que se ríe de lo que cuenta?». Fuente E02 (Provine, 1993), libre por la regla de seis semanas (central en agosto)."
   }
  ],
  "_archivadas": {
@@ -605,5 +675,6 @@
  "_cambio_25_septiembre_noche": "Planificación semanal del 25/09/2026 (la tarea del jueves corrió el viernes: el contenedor arrancó el 25). Se añaden las cinco emisiones del lunes 28 de septiembre al viernes 2 de octubre, todas «automatico» y a las 19:00. NADA el sábado 3 ni el domingo 4: el formato largo sigue suspendido (C42) — control_c26.mediana_vistas_48h = 11,0 el 21/09, y hace falta 50. La emisión de red de seguridad de MDS-023 del sábado 26 no se toca; la dirección dijo que se puede borrar el lunes 28, y esa decisión no es de la planificación.",
  "_cambio_01_octubre_noche": "Planificación semanal del jueves 01/10/2026 (primera como rutina de Code; entrega por rama con entregar.py). Se añaden las cinco emisiones del lunes 5 al viernes 9 de octubre, todas «automatico» y a las 19:00. NADA el sábado 10 ni el domingo 11: el formato largo sigue suspendido (C42) — control_c26.mediana_vistas_48h = 24,0 el 29/09, y hace falta 50. Ninguna emisión lleva rehacer_video_id (C54).",
  "_cambio_08_octubre_noche": "Planificación semanal del jueves 08/10/2026. Primera semana del bucle (C60, ciclo B1): SIETE Shorts, del lunes 12 al domingo 18 de octubre, uno al día a las 19:00, todos «automatico». Brazos por el «orden» de ciclos.json desde la posición 1: B, control, A, A, B, control, A. Los temas se eligieron y ordenaron antes de mirar los brazos. Ninguna emisión lleva rehacer_video_id (C54). El largo sigue suspendido (C42).",
- "_cambio_15_octubre_noche": "Planificación semanal del jueves 15/10/2026. Segunda semana del bucle (C60, ciclo B1): SIETE Shorts, del lunes 19 al domingo 25 de octubre, uno al día a las 19:00 (hora de España; el domingo 25 cambia la hora y cola.py hace la cuenta), todos «automatico». Brazos por el «orden» de ciclos.json desde la posición 8: B, control, B, A, control, A, B; MDS-049 cierra el ciclo (posición 14). Los temas se eligieron y ordenaron antes de mirar los brazos; dos (MDS-043 y MDS-047) se sustituyeron por otro tema en su mismo hueco porque el primero no pasó la lectura en frío a la tercera vuelta. Ninguna emisión lleva rehacer_video_id (C54). El largo sigue suspendido (C42)."
+ "_cambio_15_octubre_noche": "Planificación semanal del jueves 15/10/2026. Segunda semana del bucle (C60, ciclo B1): SIETE Shorts, del lunes 19 al domingo 25 de octubre, uno al día a las 19:00 (hora de España; el domingo 25 cambia la hora y cola.py hace la cuenta), todos «automatico». Brazos por el «orden» de ciclos.json desde la posición 8: B, control, B, A, control, A, B; MDS-049 cierra el ciclo (posición 14). Los temas se eligieron y ordenaron antes de mirar los brazos; dos (MDS-043 y MDS-047) se sustituyeron por otro tema en su mismo hueco porque el primero no pasó la lectura en frío a la tercera vuelta. Ninguna emisión lleva rehacer_video_id (C54). El largo sigue suspendido (C42).",
+ "_cambio_22_octubre_noche": "Planificación semanal del jueves 22/10/2026. Tercera semana del bucle (C60, ciclo B1, que sigue hasta el 4/11): SIETE Shorts, del lunes 26 de octubre al domingo 1 de noviembre, uno al día a las 19:00 (hora de España; cola.py hace la cuenta con el horario de invierno), todos «automatico». Brazos por el «orden» de ciclos.json desde la posición 15: control, A, B, control, B, A, control. Los temas se eligieron y ordenaron antes de mirar los brazos, con la situación reconocible primero (versión 23). Ninguna emisión lleva rehacer_video_id (C54). El primer largo (MDH-008, domingo 8/11) se escribe el jueves 29."
 }
