@@ -505,3 +505,28 @@ el `orden` de `bucle/ciclos.json`, posiciones 8 a 14: el domingo cierra el ciclo
 familia `mensajes`** (R-TE-03). **Derecho de tanteo (C46) de `MDS-036`** en `MDS-043`. **Un gancho de
 actualidad** (C52): Halloween en `MDS-047`. `MDS-043` y `MDS-047` sustituyen a dos temas que no
 pasaron la lectura en frío a la tercera vuelta. Detalle en la bitácora del 15/10.
+
+## Semana del 26 de octubre al 1 de noviembre de 2026 · tercera del bucle (C60, ciclo B1)
+
+Escrita la noche del **jueves 22 de octubre**. **Siete Shorts, uno al día a las 19:00** (hora de
+España, ya en horario de invierno: `cola.py` hace la cuenta). Todo en `parrilla.json` con
+`"modo": "automatico"` y `"idiomas": ["es"]`. Cada guion lleva `"ciclo": "B1"`, su `"variante"` (por
+el `orden` de `bucle/ciclos.json`, posiciones 15 a 21; el ciclo sigue hasta el 4/11) y las etiquetas
+`familia_tema` y `chiste`.
+
+| Día | Emisión | Brazo | Serie | Pregunta | Ficha |
+|---|---|---|---|---|---|
+| Lunes 26 | `MDS-050` | control | Ríete primero, te explico después | ¿por qué te ríes antes de las cosquillas? · *tanteo de MDS-038* | `F19` |
+| Martes 27 | `MDS-051` | A | Ríete primero, te explico después | ¿sirve de algo escribir «jajaja» sin reírte? · *mensajes* | `I12` |
+| Miércoles 28 | `MDS-052` | B | El experimento | ¿se nota cuando alguien se ríe por compromiso? | `E11` |
+| Jueves 29 | `MDS-053` | control | El experimento | ¿hacer un chiste en una reunión te da puntos? | `D01` |
+| Viernes 30 | `MDS-054` | B | El experimento | ¿por qué escribimos en vez de llamar? · *mensajes* | `I10` |
+| Sábado 31 | `MDS-055` | A | El experimento | ¿puede hacerte cosquillas una máquina? | `F15` |
+| Domingo 1 | `MDS-056` | control | El experimento | ¿por qué hay gente que se ríe de lo que cuenta? | `E02` |
+
+**Manda el feed** (versión 23): los siete abren con una situación que se reconoce sin sonido (el dedo
+que se acerca, el grupo de WhatsApp, la cena, la reunión, la llamada que dejas sonar, las cosquillas,
+la comida del domingo). **Ninguna fuente central repetida en seis semanas**; cuatro fichas nuevas
+esta noche. **Dos de la familia `mensajes`.** **Derecho de tanteo (C46) de `MDS-038`** en `MDS-050`
+(y `MDS-055` sale del mismo caso). **Ningún gancho de actualidad.** `MDS-055` sustituye a dos temas
+que no pasaron la lectura en frío a la tercera vuelta. Detalle en la bitácora del 22/10.

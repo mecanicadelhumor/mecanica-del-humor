@@ -1,0 +1,192 @@
+{
+ "id": "MDS-054",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué escribimos en vez de llamar?",
+ "tesis": "Escribimos porque creemos que llamar será más incómodo, y nos equivocamos: hablar con un viejo amigo une más que escribirle y no resulta más incómodo.",
+ "pilares": [
+  "I",
+  "D"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "B",
+ "familia_tema": "mensajes",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué escribimos en vez de llamar?",
+  "respuesta": "Porque esperamos que la llamada sea más incómoda, y no lo es: hablar une más que escribir.",
+  "puente": "Ver su nombre en la pantalla y contestar con un mensaje es justo la elección que midieron: retomar el contacto con un viejo amigo por teléfono o por escrito."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — lleváis dos años escribiéndoos «a ver si quedamos» con un amigo de siempre; qué gira — un día te llama, lo dejas sonar y le escribes «¿qué pasa?»; cómo acaba — la llamada habría unido más y no habría sido más incómoda; los audios de WhatsApp no los midió nadie.",
+  "FAMILIA «mensajes» (R-TE-03), segunda de las dos de la semana.",
+  "BRAZO B (ciclo B1, posición 18): la escena 1 es el dato dicho como hecho, en doce palabras («Llamar a un amigo une más que escribirle, y no incomoda más»), con su fuente; la pantalla dice lo mismo. La situación pasa a la escena 2.",
+  "FUENTE: I10 (Kumar y Epley, 2021, Journal of Experimental Psychology: General, DOI 10.1037/xge0000962), nunca central, releída el 22/10/2026 en Crossref y Europe PMC. Frases del resumen copiadas literal: «asking participants in a field experiment to reconnect with an old friend either over the phone or e-mail»; «interactions including voice (phone, video chat, and voice chat) created stronger social bonds and no increase in awkwardness, compared with interactions including text (e-mail, text chat)»; «miscalibrated expectations about awkwardness or connection could lead to suboptimal preferences for text-based media».",
+  "LO QUE NO SE DICE: que llamar «haga feliz»; ni nada de los audios (voz en directo, no notas de voz: es el límite).",
+  "LÍMITE (regla 12, dentro de la historia): voz en directo; los audios de WhatsApp no se midieron.",
+  "LECTURA EN FRÍO (2026-10-22): Vuelta 1: «Esperaban…» (¿quién?), «era la voz en directo» y «suene tu amigo» → «Antes, todos esperaban», «se midió hablando en directo», «te llame tu amigo». Vuelta 2: pasa, con dos dudas de un segundo."
+ ],
+ "escenas": [
+  {
+   "tipo": "comparacion",
+   "fuente": "I10",
+   "a": "Llamar",
+   "et_a": "une más, sin *incomodar*",
+   "b": "Escribir",
+   "et_b": "une menos",
+   "narracion": "Llamar a un amigo une más que escribirle, y no incomoda más.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "woman laughing talking on phone at home",
+      "person smiling on phone call",
+      "woman on phone call sofa"
+     ],
+     "prompt": "a woman laughing out loud while talking on the phone at home, warm afternoon light"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "icono": "i-bocadillos",
+   "texto": "«A ver si *quedamos*»",
+   "narracion": "Con tu amigo de siempre lleváis dos años escribiendo «a ver si quedamos». Un día, te llama.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "scrolling chat messages phone close-up",
+      "thumb scrolling messages smartphone"
+     ],
+     "prompt": "close-up of a thumb scrolling through a long chat on a smartphone, blurred, no readable text"
+    },
+    {
+     "desde": "Un día, te llama",
+     "busqueda": [
+      "phone ringing on table incoming call",
+      "smartphone ringing on desk"
+     ],
+     "prompt": "a smartphone lighting up with an incoming call on a wooden table"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "«¿Qué *pasa*?»",
+   "narracion": "Y tú lo dejas sonar y le escribes: «¿qué pasa?».",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "man staring at ringing phone not answering",
+      "person ignoring phone call"
+     ],
+     "prompt": "a man staring at his ringing phone without answering, thumb hovering"
+    },
+    {
+     "desde": "y le escribes",
+     "busqueda": [
+      "man typing message quickly phone",
+      "thumb typing text message"
+     ],
+     "prompt": "close-up of a thumb quickly typing a short message on a smartphone"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "I10",
+   "texto": "Por *teléfono* o por escrito",
+   "narracion": "Unos psicólogos pidieron a gente que retomara el contacto con un viejo amigo: unos llamando y otros escribiendo.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "man calling old friend on phone",
+      "person making phone call at window"
+     ],
+     "prompt": "a man by a window making a phone call, smiling slightly"
+    },
+    {
+     "desde": "otros escribiendo",
+     "busqueda": [
+      "person writing email laptop",
+      "woman typing on laptop at home"
+     ],
+     "prompt": "a woman typing an email on a laptop at home"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "I10",
+   "personaje": "entiende",
+   "cifra": "Une más",
+   "pie": "y no es más *incómodo*",
+   "narracion": "Antes, todos esperaban que llamar fuera más incómodo. No lo fue. Y los que llamaron se sintieron más unidos.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "nervous man holding phone before call",
+      "person hesitating to call"
+     ],
+     "prompt": "a man hesitating, holding his phone before pressing call"
+    },
+    {
+     "desde": "Y los que llamaron",
+     "busqueda": [
+      "two friends laughing on phone call",
+      "man laughing on phone"
+     ],
+     "prompt": "a man laughing warmly during a phone call"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "I10",
+   "personaje": "duda",
+   "titulo": "Cógelo",
+   "subtitulo": "Fuente: Kumar y Epley, 2021",
+   "narracion": "La próxima vez que te llame tu amigo, cógelo. Eso sí: se midió hablando en directo; los audios de WhatsApp no los midió nadie.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "man answering phone smiling",
+      "person picking up phone call"
+     ],
+     "prompt": "a man picking up a ringing phone and smiling as he answers"
+    },
+    {
+     "desde": "Eso sí",
+     "busqueda": [
+      "phone recording voice message close-up",
+      "holding phone to mouth voice note"
+     ],
+     "prompt": "a person holding a phone close to their mouth recording a voice message"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 2, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-22",
+  "de_que_va": "Que llamar a un amigo une más que escribirle y no resulta más incómodo de lo que crees.",
+  "pregunta_y_respuesta": "Si es mejor llamar o escribir a un amigo con el que has perdido el contacto, y si llamar es más incómodo. Es mejor llamar, porque une más, y no es más incómodo aunque esperes que lo sea.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Llamar a un amigo une más que escribirle, y no incomoda más.» (es la escena 1 del brazo B, el dato delante: es lo que mide el ciclo y no se toca)",
+  "donde_me_iria": "en la escena 4: «ya sé cómo acaba, porque me lo dijeron en la primera frase» (el coste del brazo B, como el 08/10 y el 15/10)",
+  "notas": [
+   "«Antes, todos esperaban que llamar fuera más incómodo.» — «el ‹antes› me sonó a ‹antiguamente›» en la primera escucha; la entendió.",
+   "«Eso sí: se midió hablando en directo» — «tardé un segundo en entender que ‹en directo› quería decir por teléfono, en tiempo real»."
+  ],
+  "veredicto": "pasa"
+ }
+}

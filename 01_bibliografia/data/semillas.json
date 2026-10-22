@@ -8,7 +8,7 @@
       "Prioridad 2 = importante: aporta evidencia concreta para uno o varios videos.",
       "Prioridad 3 = complementario: contexto, replicaciones, aplicaciones."
     ],
-    "actualizado": "2026-10-15"
+    "actualizado": "2026-10-22"
   },
   "pilares": {
     "A": "Teorias fundacionales del humor",
@@ -325,9 +325,11 @@
       "titulo": "Risky business: When humor increases and decreases status",
       "autores": "Bitterly, T. B.; Brooks, A. W.; Schweitzer, M. E.",
       "anio": 2017,
-      "fuente": "Journal of Personality and Social Psychology",
+      "fuente": "Journal of Personality and Social Psychology, 112(3), 431-455",
       "doi": "10.1037/pspi0000079",
-      "por_que": "Humor apropiado sube el estatus; el inapropiado lo hunde, pero intentarlo casi siempre sube la competencia percibida. PDF abierto en la web de HBS."
+      "por_que": "Humor apropiado sube el estatus; el inapropiado lo hunde, pero intentarlo casi siempre sube la competencia percibida. PDF abierto en la web de HBS.",
+      "doi_confianza": "verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1037/pspi0000079 y en Europe PMC (PMID 27831701)",
+      "resumen_verificado": "Literal del resumen leido el 22/10/2026 (Europe PMC): «Across 8 experiments, we demonstrate that humor can influence status, but attempting to use humor is risky»; «The successful use of humor can increase status in both new and existing relationships, but unsuccessful humor attempts (e.g., inappropriate jokes) can harm status»; «telling both appropriate and inappropriate jokes, regardless of the outcome, signals confidence»; «telling inappropriate jokes signals low competence and the combined effect of high confidence and low competence harms status»."
     },
     {
       "id": "D02",
@@ -480,11 +482,12 @@
       "titulo": "Laughter punctuates speech: Linguistic, social and gender contexts of laughter",
       "autores": "Provine, R. R.",
       "anio": 1993,
-      "fuente": "Ethology",
+      "fuente": "Ethology, 95(4), 291-298",
       "doi": "10.1111/j.1439-0310.1993.tb00478.x",
       "por_que": "La risa puntua el habla, no la interrumpe. Fundamento de la risa como senal social, no como reaccion comica.",
-      "doi_confianza": "verificado el 19/09/2026 contra Wiley Online Library — el título que devuelve es el de la ficha (el DOI anterior, tb00996.x, no correspondía a este artículo)",
-      "nota_ampliada": "Tres cifras verificadas el 28/08 contra fuentes secundarias solventes (no se pudo acceder al artículo original, de pago): 1.200 episodios de risa registrados en observación de campo; menos de una cuarta parte de los comentarios previos a la risa eran realmente cómicos (el guion de MDH-004 dice «entre un diez y un veinte por ciento», que cae dentro de ese margen pero no es una cita exacta de una única cifra del artículo); quien habla se ríe más que quien escucha, dirección confirmada, sin multiplicador exacto en las fuentes consultadas."
+      "doi_confianza": "verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1111/j.1439-0310.1993.tb00478.x (con resumen)",
+      "nota_ampliada": "Tres cifras verificadas el 28/08 contra fuentes secundarias solventes (no se pudo acceder al artículo original, de pago): 1.200 episodios de risa registrados en observación de campo; menos de una cuarta parte de los comentarios previos a la risa eran realmente cómicos (el guion de MDH-004 dice «entre un diez y un veinte por ciento», que cae dentro de ese margen pero no es una cita exacta de una única cifra del artículo); quien habla se ríe más que quien escucha, dirección confirmada, sin multiplicador exacto en las fuentes consultadas.",
+      "resumen_verificado": "Literal del resumen leido el 22/10/2026 (Crossref): «describing the position of naturally occurring laughter in the speech stream of anonymous young adults observed in public places»; «Laughter of both speaker and audience occurred during pauses at the end of phrases or sentences in over 99 % of the sample of 1200 episodes of laughter»; «Laughter followed both statements and questions and material that did not seem humorous outside of the conversational context»; «Speakers, especially females, laughed more than their audiences». La parte de generos no se usa en Shorts."
     },
     {
       "id": "E03",
@@ -535,8 +538,9 @@
       "fuente": "Physiology & Behavior, 79(3), 533-547",
       "doi": "10.1016/S0031-9384(03)00159-8",
       "por_que": "Ratas que 'rien' a 50 kHz. Video con enorme potencial viral y ciencia solida.",
-      "doi_confianza": "verificado el 15/09/2026 contra el texto del artículo (dirección)",
-      "nota_ampliada": "*Comprobado el 15/09/2026 (dirección, al reescribir MDS-017), con lo que el artículo dice y lo que no:* las cosquillas provocan en ratas jóvenes chirridos ultrasónicos de ~50 kHz, que los autores comparan con una risa primitiva; las ratas buscan la mano que les hizo cosquillas y «recorren laberintos y aprietan palancas» para que se las hagan (la cosquilla es recompensa); la risa humana rudimentaria aparece a los 2-3 meses y los autores la leen como una herencia antigua, distinta del humor «cognitivo». **Y la cautela, que es la de los propios autores:** no se atan a la interpretación de «risa», porque lo subjetivo no se mide en animales ni en personas, se infiere. El título que figuraba aquí hasta el 15/09 («Tickling and the evolution of laughter») no es el del artículo."
+      "doi_confianza": "verificado 22/10/2026: titulo y DOI juntos en api.crossref.org y en Europe PMC (PMID 12954448)",
+      "nota_ampliada": "*Comprobado el 15/09/2026 (dirección, al reescribir MDS-017), con lo que el artículo dice y lo que no:* las cosquillas provocan en ratas jóvenes chirridos ultrasónicos de ~50 kHz, que los autores comparan con una risa primitiva; las ratas buscan la mano que les hizo cosquillas y «recorren laberintos y aprietan palancas» para que se las hagan (la cosquilla es recompensa); la risa humana rudimentaria aparece a los 2-3 meses y los autores la leen como una herencia antigua, distinta del humor «cognitivo». **Y la cautela, que es la de los propios autores:** no se atan a la interpretación de «risa», porque lo subjetivo no se mide en animales ni en personas, se infiere. El título que figuraba aquí hasta el 15/09 («Tickling and the evolution of laughter») no es el del artículo.",
+      "resumen_verificado": "Literal del resumen leido el 22/10/2026 (Europe PMC): «play- and tickle-induced ultrasonic vocalization patterns ( approximately 50-kHz chirps) in rats may have more than a passing resemblance to primitive human laughter»; «we summarize a dozen reasons for the working hypothesis that such rat vocalizations reflect a type of positive affect». Es una revision con una hipotesis de trabajo, no un experimento."
     },
     {
       "id": "E07",
@@ -1370,6 +1374,160 @@
       "por_que": "La risa se pega por el oido y el bostezo por la vista, incluso a solas; y la risa se gasta con el tiempo y el bostezo no. Para «por que se nos pega la risa de otro» (37,7 M).",
       "doi_confianza": "verificado 15/10/2026: titulo y DOI juntos en api.crossref.org/works/10.3389/fpsyg.2022.780665 y en Europe PMC (PMID 35250722)",
       "resumen_verificado": "Literal del resumen leido el 15/10/2026 (Europe PMC): «Subjects were presented with naturally produced laughter and yawning in three sensory modalities (audio, visual, audio-visual), and we recorded their reaction to these stimuli»; «laughter elicited more contagious responses than yawning, albeit mostly smiling rather than overt laughter»; «laughter was more contagious in the auditory modality, and yawning was more contagious in the visual modality»; «laughter became decreasingly contagious over time, while yawning remained steadily contagious»; «in the absence of a social situation»."
+    },
+    {
+      "id": "F14",
+      "pilar": "F",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "Humour, Tickle, and the Darwin-Hecker Hypothesis",
+      "autores": "Harris, C. R.; Christenfeld, N.",
+      "anio": 1997,
+      "fuente": "Cognition & Emotion, 11(1), 103-110",
+      "doi": "10.1080/026999397380050",
+      "por_que": "Cosquillas y humor: quien mas se rie con una comedia tambien se rie mas con cosquillas, pero una cosa no enciende la otra. Para el largo de cosquillas (MDH-008) y la pregunta «¿quien tiene cosquillas se rie de todo?».",
+      "doi_confianza": "verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1080/026999397380050 y en OpenAlex (resumen)",
+      "resumen_verificado": "Literal del resumen leido el 22/10/2026 (OpenAlex): «Seventy-two undergraduate students participated»; «Subjects were tickled before and after viewing comedy and control videotapes»; «Subjects exhibiting more pronounced laughter to comedy also laughed more vigorously to tickle»; «there was no evidence that comedy-induced laughter increased subsequent laughter to tickle nor that ticklish laughter increased laughter to comedy»."
+    },
+    {
+      "id": "F15",
+      "pilar": "F",
+      "prioridad": 1,
+      "tipo": "articulo",
+      "titulo": "Can a machine tickle?",
+      "autores": "Harris, C. R.; Christenfeld, N.",
+      "anio": 1999,
+      "fuente": "Psychonomic Bulletin & Review, 6(3), 504-510",
+      "doi": "10.3758/bf03210841",
+      "por_que": "Una maquina de cosquillas hace reir igual que una persona: las cosquillas no necesitan a otro, necesitan que no lo puedas predecir. Capitulo natural del largo que sale de MDS-038.",
+      "doi_confianza": "verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.3758/bf03210841 y en Europe PMC (PMID 12198790)",
+      "resumen_verificado": "Literal del resumen leido el 22/10/2026 (Europe PMC): «Thirty-five subjects were tickled twice--once by the experimenter, and once, they believed, by an automated machine»; «subjects smiled, laughed, and wiggled just as often in response to the machine as to the experimenter»; «Ticklish laughter evidently does not require that the stimulation be attributed to another person». La maquina era creida: el resumen dice «they believed»."
+    },
+    {
+      "id": "F16",
+      "pilar": "F",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "Neural correlates of ticklishness in the rat somatosensory cortex",
+      "autores": "Ishiyama, S.; Brecht, M.",
+      "anio": 2016,
+      "fuente": "Science, 354(6313), 757-760",
+      "doi": "10.1126/science.aah5114",
+      "por_que": "Las ratas a las que se hace cosquillas chillan, se acercan y dan saltos de alegria; la ansiedad les quita las cosquillas. Para el largo de cosquillas.",
+      "doi_confianza": "verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1126/science.aah5114 y en Europe PMC (PMID 27846607)",
+      "resumen_verificado": "Literal del resumen leido el 22/10/2026 (Europe PMC): «We confirmed that tickling of rats evoked vocalizations, approach, and unsolicited jumps (Freudensprünge)»; «Tickling responses predicted nontactile neural responses to play behaviors»; «Anxiogenic conditions suppressed tickling-evoked vocalizations and trunk cortex activity»."
+    },
+    {
+      "id": "F17",
+      "pilar": "F",
+      "prioridad": 3,
+      "tipo": "articulo",
+      "titulo": "Tickle contagion in the rat somatosensory cortex",
+      "autores": "Kaufmann, L. V.; Brecht, M.; Ishiyama, S.",
+      "anio": 2022,
+      "fuente": "iScience, 25(12), 105718",
+      "doi": "10.1016/j.isci.2022.105718",
+      "por_que": "Las cosquillas se contagian en ratas: ver como le hacen cosquillas a otra rata en directo las hace chillar y saltar; un video, casi no. Apoyo para el largo de cosquillas.",
+      "doi_confianza": "verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/j.isci.2022.105718 y en Europe PMC (PMID 36578320)",
+      "resumen_verificado": "Literal del resumen leido el 22/10/2026 (Europe PMC): «Observers vocalized and showed \"Freudensprünge\" (\"joy jumps\") during witnessing live tickling, while they showed little behavioral responses to playbacks»; «We conclude that trunk somatosensory cortex might represent ticklishness contagion»."
+    },
+    {
+      "id": "F18",
+      "pilar": "F",
+      "prioridad": 3,
+      "tipo": "articulo",
+      "titulo": "Rat 50 kHz calls reflect graded tickling-induced positive emotion",
+      "autores": "Hinchcliffe, J. K.; Mendl, M.; Robinson, E. S. J.",
+      "anio": 2020,
+      "fuente": "Current Biology, 30(18), R1034-R1035",
+      "doi": "10.1016/j.cub.2020.08.038",
+      "por_que": "Los chillidos de 50 kHz de la rata miden cuanto le gustan las cosquillas; en humanos las cosquillas dan a la vez placer y desagrado, y la risa no distingue uno de otro. Apoyo del largo.",
+      "doi_confianza": "verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/j.cub.2020.08.038 y en Europe PMC (PMID 32961155)",
+      "resumen_verificado": "Literal del resumen leido el 22/10/2026 (Europe PMC): «in humans tickling induces both pleasure and displeasure, and neither an established non-verbal indicator of positive affect, the Duchenne smile, nor laughter detects this variation»; «50 kHz ultrasonic vocalizations provide a quantifiable and graded measure of positive affect»."
+    },
+    {
+      "id": "F19",
+      "pilar": "F",
+      "prioridad": 1,
+      "tipo": "articulo",
+      "titulo": "Laughter is in the air: involvement of key nodes of the emotional motor system in the anticipation of tickling",
+      "autores": "Wattendorf, E.; Westermann, B.; Fiedler, K.; Ritz, S.; Redmann, A.; Pfannmöller, J.; Lotze, M.; Celio, M. R.",
+      "anio": 2019,
+      "fuente": "Social Cognitive and Affective Neuroscience, 14(8), 837-847",
+      "doi": "10.1093/scan/nsz056",
+      "por_que": "La espera de las cosquillas: el cerebro se prepara antes de que lleguen, y cuanto mas se activa en la espera, mas se rie la persona despues. Para «¿por que te ries antes de que te hagan cosquillas?» (MDS-050).",
+      "doi_confianza": "verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1093/scan/nsz056 y en Europe PMC (PMID 31393979)",
+      "resumen_verificado": "Literal del resumen leido el 22/10/2026 (Crossref y Europe PMC): «the anticipation of tickling contributes to the final outburst of ticklish laughter»; «functional magnetic resonance imaging (fMRI) was conducted on 31 healthy volunteers»; «The state of anticipation was simulated by generating an uncertainty respecting the onset of manual foot tickling»; «anticipatory activity in the anterior insula correlated positively with the degree of laughter that was produced during tickling»."
+    },
+    {
+      "id": "F20",
+      "pilar": "F",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "Behavioral and Cortical Correlates of Self-Suppression, Anticipation, and Ambivalence in Rat Tickling",
+      "autores": "Ishiyama, S.; Kaufmann, L. V.; Brecht, M.",
+      "anio": 2019,
+      "fuente": "Current Biology, 29(19), 3153-3164.e3",
+      "doi": "10.1016/j.cub.2019.07.085",
+      "por_que": "Tampoco una rata puede hacerse cosquillas: tocarse a si misma apaga la corteza y los chillidos. Y las ratas piden cosquillas y a la vez huyen (el «Nervenkitzel» de los ninos). Para el largo de cosquillas.",
+      "doi_confianza": "verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1016/j.cub.2019.07.085 y en Europe PMC (PMID 31564493)",
+      "resumen_verificado": "Literal del resumen leido el 22/10/2026 (Europe PMC): «Tickling or its mere anticipation makes us laugh, but not when we self-tickle»; «Self-touch induced wide-ranging inhibition and vocalization suppression»; «Although rats nose poked for tickling, they also showed escaping, freezing, and alarm calls. Such ambivalence (\"Nervenkitzel\") resembles tickle behaviors in children»."
+    },
+    {
+      "id": "I12",
+      "pilar": "I",
+      "prioridad": 1,
+      "tipo": "articulo",
+      "titulo": "Effects of Duration and Laughter on Subjective Happiness Within Different Modes of Communication",
+      "autores": "Vlahovic, T. A.; Roberts, S.; Dunbar, R.",
+      "anio": 2012,
+      "fuente": "Journal of Computer-Mediated Communication, 17(4), 436-450",
+      "doi": "10.1111/j.1083-6101.2012.01584.x",
+      "por_que": "Familia «mensajes». La risa escrita (el «jaja») se asocia a la felicidad de una conversacion casi igual que la risa de verdad. Diario de 14 dias, 41 personas. Para «¿sirve de algo escribir jajaja sin reirte?» (MDS-051).",
+      "doi_confianza": "verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1111/j.1083-6101.2012.01584.x y en OpenAlex (resumen)",
+      "resumen_verificado": "Literal del resumen leido el 22/10/2026 (OpenAlex): «Forty-one participants completed a 14-day contact diary, recording interactions across face-to-face, Skype, telephone, instant messaging, texting, and e-mail/social network sites»; «Laughter positively predicted happiness in all but one of the communication modes, with real and symbolic laughter having similar effects»; «Increases in duration of interaction positively predicted happiness only for face-to-face interactions». El resumen no dice cual es el modo en que no funciona."
+    },
+    {
+      "id": "I13",
+      "pilar": "I",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "R U There? Ostracism by Cell Phone Text Messages",
+      "autores": "Smith, A.; Williams, K. D.",
+      "anio": 2004,
+      "fuente": "Group Dynamics: Theory, Research, and Practice, 8(4), 291-301",
+      "doi": "10.1037/1089-2699.8.4.291",
+      "por_que": "Familia «mensajes». Dejar de recibir mensajes en una conversacion a tres basta para sentirse excluido: peor humor y menos sensacion de pertenecer. Para «¿por que me molesta que me dejen en visto?» (3,5 M).",
+      "doi_confianza": "verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1037/1089-2699.8.4.291 y en OpenAlex (resumen)",
+      "resumen_verificado": "Literal del resumen leido el 22/10/2026 (OpenAlex): «They used a triadic cell phone text-messaging method such that after initial inclusion in a conversation, participants either continued to be included or received no further messages from the others»; «Ostracized participants reported worse mood; reported lower state levels of belonging, control, self-esteem, and meaningful existence; and wrote more provoking messages». No es humor: sirve solo si el Short es de la familia mensajes."
+    },
+    {
+      "id": "E13",
+      "pilar": "E",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "Dimorphous Expressions of Positive Emotion: Displays of Both Care and Aggression in Response to Cute Stimuli",
+      "autores": "Aragón, O. R.; Clark, M. S.; Dyer, R. L.; Bargh, J. A.",
+      "anio": 2015,
+      "fuente": "Psychological Science, 26(3), 259-273",
+      "doi": "10.1177/0956797614561044",
+      "por_que": "Llorar de alegria, ganas de apretar a un cachorro: las emociones positivas muy intensas salen con gestos de las negativas, y eso las regula. Apoyo para «¿por que lloramos de risa?».",
+      "doi_confianza": "verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1177/0956797614561044 y en Europe PMC (PMID 25626441)",
+      "resumen_verificado": "Literal del resumen leido el 22/10/2026 (Crossref y Europe PMC): «Extremely positive experiences ... produce intense positive emotions that often generate both positive expressions (e.g., smiles) and expressions normatively reserved for negative emotions (e.g., tears)»; «preliminary evidence of their function as regulators of emotion». No habla de la risa en concreto: no se usa para decir nada de la risa que no este aqui."
+    },
+    {
+      "id": "E14",
+      "pilar": "E",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "Signs of appeasement: Evidence for the distinct displays of embarrassment, amusement, and shame",
+      "autores": "Keltner, D.",
+      "anio": 1995,
+      "fuente": "Journal of Personality and Social Psychology, 68(3), 441-454",
+      "doi": "10.1037/0022-3514.68.3.441",
+      "por_que": "La cara de verguenza no es la de la risa: tiene su propio gesto, distinto del de la diversion, y quien mira lo reconoce. Para «¿se nota cuando sonries de verguenza?».",
+      "doi_confianza": "verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1037/0022-3514.68.3.441 y en OpenAlex (resumen)",
+      "resumen_verificado": "Literal del resumen leido el 22/10/2026 (OpenAlex): «The nonverbal behavior of embarrassment was distinct from a related emotion (amusement)»; «was accurately identified by observers who judged the spontaneous displays of various emotions». El resto del resumen (estatus, grupos) no se usa."
     }
   ],
   "fuentes_abiertas": [

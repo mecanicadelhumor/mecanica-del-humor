@@ -1,0 +1,189 @@
+{
+ "id": "MDS-053",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Hacer un chiste en una reunión te da puntos?",
+ "tesis": "Un chiste que sale bien sube tu estatus porque te hace parecer seguro y capaz; uno fuera de tono también te hace parecer seguro, pero menos capaz, y baja.",
+ "pilares": [
+  "D",
+  "G"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "control",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Hacer un chiste en una reunión te da puntos?",
+  "respuesta": "Si sale bien, sí: te hace parecer seguro y capaz, y sube tu estatus. Si es fuera de tono, pareces igual de seguro pero menos capaz, y baja.",
+  "puente": "El chiste de la nueva cuando el proyector no arranca es un intento de humor que sale bien, que es lo que compararon en ocho experimentos con chistes que salían bien y chistes fuera de tono."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — primera reunión de la nueva, el proyector no arranca y ella suelta un chiste; qué gira — desde ese día le piden opinión a ella; cómo acaba — su chiste le dio puntos porque salió bien; uno fuera de tono la habría hecho parecer igual de segura pero menos capaz.",
+  "FUENTE: D01 (Bitterly, Brooks y Schweitzer, 2017, Journal of Personality and Social Psychology, DOI 10.1037/pspi0000079), nunca central, verificada el 22/10/2026 en Crossref y Europe PMC. Frases del resumen copiadas literal: «Across 8 experiments, we demonstrate that humor can influence status, but attempting to use humor is risky»; «The successful use of humor signals confidence and competence, which in turn increases the joke teller's status»; «telling both appropriate and inappropriate jokes, regardless of the outcome, signals confidence»; «telling inappropriate jokes signals low competence and the combined effect of high confidence and low competence harms status».",
+  "J06 es un duplicado deliberado de D01 (mismo DOI): se cita D01.",
+  "EL CHISTE: «al menos así no veis mis gráficos» es inofensivo y va contra ella misma; no hay víctima (regla 1). El chiste fuera de tono NO se cuenta: se nombra, para no poner en pantalla uno de verdad.",
+  "LÍMITE (regla 12, dentro de la historia): lo que se rompe es el propio consejo; el mismo gesto con un chiste fuera de tono la habría hundido. Y no dice qué chiste te va a salir bien a ti.",
+  "LECTURA EN FRÍO (2026-10-22): Vuelta 1: «seguro» leído como «seguramente», «Por eso a la nueva le salió bien» (al revés), «habría bajado» (¿qué?) y el rótulo «El chiste apuesta» → la escena 5 solo da el chiste que sale bien, «seguro de sí mismo», el cierre dice «perdido estatus» y el rótulo es «Un chiste es una apuesta». Vuelta 2: pasa."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-publico",
+   "texto": "Primera *reunión*",
+   "narracion": "Primera reunión de la nueva. Y el proyector no arranca.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "woman standing next to projector meeting room",
+      "meeting room projector not working",
+      "colleagues waiting in meeting room"
+     ],
+     "prompt": "a young woman standing at the front of a meeting room next to a blank projector screen, colleagues seated and waiting"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Sin proyector, sin *gráficos*",
+   "narracion": "Y ella dice: «bueno, al menos así no veis mis gráficos».",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "woman joking smiling in meeting",
+      "presenter smiling at audience"
+     ],
+     "prompt": "a young woman at the front of a meeting room smiling and shrugging at her colleagues"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Ahora le piden *opinión*",
+   "narracion": "Se ríen todos. Y desde ese día, le piden opinión a ella.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "colleagues laughing in meeting room",
+      "team laughing at meeting"
+     ],
+     "prompt": "colleagues laughing around a meeting table"
+    },
+    {
+     "desde": "desde ese día",
+     "busqueda": [
+      "colleagues asking woman for advice office",
+      "coworkers gathering at woman's desk"
+     ],
+     "prompt": "two colleagues leaning over a young woman's desk, asking her opinion"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "D01",
+   "a": "Chiste que *sale* bien",
+   "et_a": "sube",
+   "b": "Chiste fuera de tono",
+   "et_b": "baja",
+   "narracion": "¿Fue el chiste? Unos psicólogos hicieron ocho experimentos con chistes que salían bien y chistes fuera de tono.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "people in office reading screen survey",
+      "participants in study room laptops"
+     ],
+     "prompt": "people sitting at laptops in a quiet study room, reading"
+    },
+    {
+     "desde": "chistes que salían bien",
+     "busqueda": [
+      "colleagues laughing office meeting",
+      "coworkers smiling at joke"
+     ],
+     "prompt": "coworkers smiling at a joke in an office"
+    },
+    {
+     "desde": "fuera de tono",
+     "busqueda": [
+      "awkward silence in office meeting",
+      "uncomfortable colleagues meeting"
+     ],
+     "prompt": "colleagues looking down awkwardly in a meeting, silence"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "D01",
+   "personaje": "entiende",
+   "cifra": "Más estatus",
+   "pie": "si el chiste sale *bien*",
+   "narracion": "El chiste que salía bien subía el estatus de quien lo contaba: le hacía parecer seguro de sí mismo, y capaz.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "confident woman presenting office",
+      "businesswoman leading meeting"
+     ],
+     "prompt": "a confident young woman leading a meeting, colleagues listening"
+    },
+    {
+     "desde": "seguro de sí mismo",
+     "busqueda": [
+      "confident woman smiling colleagues listening",
+      "woman speaking confidently team"
+     ],
+     "prompt": "a young woman speaking calmly while colleagues listen and nod"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "D01",
+   "personaje": "duda",
+   "titulo": "Un chiste es una *apuesta*",
+   "subtitulo": "Fuente: Bitterly y otros, 2017",
+   "narracion": "A la nueva le salió bien. Fuera de tono, habría parecido segura, pero menos capaz, y habría perdido estatus.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "woman smiling at desk office",
+      "young woman working confident office"
+     ],
+     "prompt": "a young woman at her desk smiling to herself"
+    },
+    {
+     "desde": "Fuera de tono",
+     "busqueda": [
+      "empty meeting room projector",
+      "empty meeting room chairs"
+     ],
+     "prompt": "an empty meeting room with the projector screen still blank"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 2, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-22",
+  "de_que_va": "Una chica nueva hace un chiste en su primera reunión cuando falla el proyector, y un estudio explica por qué eso hizo que la tomaran más en serio.",
+  "pregunta_y_respuesta": "¿Fue el chiste lo que hizo que le pidieran opinión? Sí: un chiste que sale bien sube tu estatus porque pareces segura y capaz. Si llega a salir mal, habría parecido segura pero menos capaz y habría perdido estatus.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«A la nueva le salió bien.» (se queda: devuelve el cierre a la protagonista, prueba 1; sin ella, «Fuera de tono» empieza sin sujeto)",
+  "donde_me_iria": "en la escena 5: «ya tengo la respuesta a ‹¿fue el chiste?›»",
+  "notas": [
+   "«Fuera de tono, habría parecido segura, pero menos capaz, y habría perdido estatus.» — «Tuve que releerla»; la entendió (la resume bien en la respuesta 2)."
+  ],
+  "veredicto": "pasa"
+ }
+}

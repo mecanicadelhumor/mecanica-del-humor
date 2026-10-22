@@ -345,3 +345,26 @@ por fin el resumen verificado.
   del mismo grupo y diseño que `F09` (vergüenza ajena, 17/10); se escribe la ficha cuando haga falta.
 - **«por qué los memes nos hacen gracia»** (135 M): Europe PMC sigue sin devolver un trabajo de humor
   en memes con resumen.
+
+---
+
+## 22/10/2026 · lo que se desbloquea y lo que sigue pendiente
+
+**Desbloqueadas esta noche** (once fichas nuevas con título y DOI vistos juntos en Crossref y en
+Europe PMC u OpenAlex, la frase del resumen copiada): las cosquillas por dentro y por fuera, para el
+largo `MDH-008` (`F14`-`F20`: la espera, la máquina, las ratas, el contagio, el humor y las
+cosquillas), la risa escrita (`I12`), **«por qué me molesta que me dejen en visto»** (`I13`, Smith y
+Williams, 2004: el silencio en una conversación de mensajes a tres basta para sentirse excluido),
+la sonrisa de vergüenza (`E14`) y llorar de alegría o las ganas de apretar a un cachorro (`E13`).
+
+**Siguen sin ficha:**
+
+- **«por qué me río cuando estoy nervioso»** (8,7 M): `E14` separa la vergüenza de la diversión,
+  pero no habla de la risa nerviosa. Sigue haciendo falta un trabajo sobre risa en estrés social.
+- **«por qué la gente manda audios en vez de escribir»** (4,3 M): `I10` e `I11` miden la voz en
+  directo, no las notas de voz. No hay ficha.
+- **«reírse quita el dolor»** y **«por qué nos reímos en grupo»**: hay fichas (`D06`, `E10`), pero
+  las dos han caído a la tercera lectura en frío (15/10 y 22/10) por el mismo motivo: el diseño (qué
+  se compara con qué) no se entiende en una frase. Hace falta una historia en la que el grupo de
+  control se vea, no otra ficha.
+- **«por qué los memes nos hacen gracia»**: igual que el 15/10.

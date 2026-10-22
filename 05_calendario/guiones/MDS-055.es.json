@@ -1,0 +1,186 @@
+{
+ "id": "MDS-055",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Puede hacerte cosquillas una máquina?",
+ "tesis": "Las cosquillas no necesitan a otra persona: quien cree que se las hace una máquina se ríe igual que con una persona.",
+ "pilares": [
+  "F"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "A",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Puede hacerte cosquillas una máquina?",
+  "respuesta": "Sí: la gente que creía que le hacía cosquillas una máquina se rió y se retorció igual que con una persona.",
+  "puente": "Si tú no puedes hacerte cosquillas y otra persona sí, la duda es si hace falta una persona: eso es lo que probaron haciendo creer a la gente que se las hacía una máquina."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — tú no puedes hacerte cosquillas y otro sí; qué gira — a la gente le dicen que esta vez se las hará una máquina; cómo acaba — se ríen igual, así que las cosquillas no piden a otra persona, aunque la máquina solo la creían.",
+  "SUSTITUYE en su hueco (sábado 31, brazo A, posición 20) a dos temas que no pasaron la lectura en frío a la tercera vuelta: E10 (la risa con amigos: qué se comparaba con «media hora solos») y E14 (la sonrisa de vergüenza: de dónde salían las caras). El brazo es el del hueco.",
+  "BRAZO A (ciclo B1, posición 20): las escenas 4 y 5 llevan «animar» y una línea de animación. Nada más cambia.",
+  "SEGUNDO SHORT DE COSQUILLAS DE LA SEMANA (con MDS-050), y los dos salen del caso de MDS-038: el lunes, la espera; el sábado, quién te las hace. Es también un capítulo del largo MDH-008 (8/11): ver la bitácora.",
+  "FUENTE: F15 (Harris y Christenfeld, 1999, Psychonomic Bulletin & Review, DOI 10.3758/bf03210841), ficha nueva, verificada el 22/10/2026 en Crossref y Europe PMC. Frases del resumen copiadas literal: «Thirty-five subjects were tickled twice--once by the experimenter, and once, they believed, by an automated machine»; «subjects smiled, laughed, and wiggled just as often in response to the machine as to the experimenter»; «Self-reports of ticklishness were also virtually identical in the two conditions»; «The reflex explanation suggests that tickle simply requires an element of unpredictability or uncontrollability»; «Supporting the reflex view».",
+  "LÍMITE (regla 12, dentro de la historia): la máquina solo la creían; el resumen no dice quién o qué les hizo las cosquillas de verdad, y no se dice.",
+  "LECTURA EN FRÍO (2026-10-22): Es el tercer tema del hueco. Primer tema, E10 (la risa con amigos), tres vueltas: «media hora a solas, ¿haciendo qué?» no se resolvió, porque el resumen no lo dice. Segundo tema, E14 (la sonrisa de vergüenza), tres vueltas: «¿ante quién te delató?» y «caras reales, sin actuar: ¿de dónde salían?». Tercer tema, F15 (la máquina): vuelta 1, el cierre metía una idea nueva («no saber qué viene») y «la trampa» no se entendía; vuelta 2, «esta vez», «otra que creían de la máquina» y una conclusión que no se seguía del límite (lo probado es que no hace falta CREER que hay una persona) → cierre corregido; vuelta 3: pasa con notas."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-muelle",
+   "texto": "Tú no; *otro*, sí",
+   "narracion": "Tú no puedes hacerte cosquillas. Pero si te las hace otro, te mueres de risa.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "person tickling friend on couch laughing",
+      "man laughing being tickled sofa",
+      "friends tickling each other laughing"
+     ],
+     "prompt": "a young man on a sofa laughing helplessly while a friend tickles his side, warm living room light"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "¿Y una *máquina*?",
+   "narracion": "¿Hace falta una persona? Unos psicólogos hicieron cosquillas a gente que creía que se las hacía una máquina.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "robot arm in laboratory",
+      "mechanical arm lab close-up"
+     ],
+     "prompt": "a small mechanical arm on a laboratory bench, soft light"
+    },
+    {
+     "desde": "creía que se las hacía una máquina",
+     "busqueda": [
+      "person sitting in lab chair nervous",
+      "volunteer waiting in laboratory"
+     ],
+     "prompt": "a volunteer sitting in a laboratory chair looking warily at a machine beside them"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Se rieron *igual*",
+   "narracion": "Y se rieron igual que con una persona.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "person laughing squirming in chair",
+      "man laughing uncontrollably chair"
+     ],
+     "prompt": "a person squirming and laughing uncontrollably in a chair"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "F15",
+   "animar": true,
+   "animacion": "Dos siluetas de línea sentadas; sobre una baja una mano dibujada, sobre la otra un brazo mecánico; en «dos veces» las dos empiezan a temblar de risa a la vez, con las mismas líneas de movimiento.",
+   "a": "Persona",
+   "et_a": "el investigador",
+   "b": "*Máquina*",
+   "et_b": "o eso creían",
+   "narracion": "Treinta y cinco personas, dos veces cada una: una vez, el investigador; otra, según les dijeron, la máquina.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "hand tickling feet close-up",
+      "researcher tickling person laboratory"
+     ],
+     "prompt": "close-up of a hand tickling the sole of a bare foot in a laboratory"
+    },
+    {
+     "desde": "según les dijeron",
+     "busqueda": [
+      "machine arm moving toward person",
+      "robotic device next to chair"
+     ],
+     "prompt": "a mechanical device with a soft brush tip positioned next to a lab chair"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "F15",
+   "personaje": "entiende",
+   "animar": true,
+   "animacion": "Dos contadores de risa, uno bajo la mano y otro bajo el brazo mecánico, suben a la vez; en «lo mismo» se paran exactamente a la misma altura y se enciende un signo igual entre los dos.",
+   "cifra": "Igual",
+   "pie": "persona o *máquina*",
+   "narracion": "Sonrisas, risas y retorcerse: todo lo mismo. Y dijeron sentirlas igual de fuertes.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "woman laughing ticklish squirming",
+      "person laughing hysterically being tickled"
+     ],
+     "prompt": "a woman laughing and squirming, ticklish"
+    },
+    {
+     "desde": "Y dijeron sentirlas",
+     "busqueda": [
+      "person filling questionnaire laboratory",
+      "volunteer writing on clipboard"
+     ],
+     "prompt": "a volunteer filling in a short questionnaire on a clipboard"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "F15",
+   "personaje": "piensa",
+   "titulo": "No hace falta *otro*",
+   "subtitulo": "Fuente: Harris y Christenfeld, 1999",
+   "narracion": "Las cosquillas, por tanto, no necesitan que creas que hay alguien detrás. Ojo: se probó creyéndolo, no con una máquina de verdad.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "finger about to tickle surprised person",
+      "hand sneaking up tickle"
+     ],
+     "prompt": "a hand sneaking up behind a surprised person about to tickle them"
+    },
+    {
+     "desde": "Ojo",
+     "busqueda": [
+      "empty laboratory chair machine",
+      "empty lab bench device"
+     ],
+     "prompt": "an empty laboratory chair next to a switched-off machine"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 3, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-22",
+  "de_que_va": "De un experimento en el que a la gente le hacían cosquillas creyendo que era una máquina, y se reían igual que con una persona.",
+  "pregunta_y_respuesta": "Si para tener cosquillas hace falta que te las haga una persona, o que creas que hay alguien detrás. No: creyendo que era una máquina se rieron igual y dijeron notarlas igual de fuertes.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Y se rieron igual que con una persona.» (se queda: es el remate tras la pausa, R-GU-02; la escena 5 da el detalle)",
+  "donde_me_iria": "en la escena 4: «en la 3 ya me han dado la respuesta… la 4 empieza con cifras y el procedimiento»",
+  "notas": [
+   "«Ojo: se probó creyéndolo, no con una máquina de verdad.» — «Tuve que releerla… me deja con la sensación de que el resultado tiene trampa»: la entendió (la resume bien en la respuesta 2).",
+   "«Tú no puedes hacerte cosquillas…» — «se entiende, pero me hace esperar que me expliquen por qué uno no puede hacerse cosquillas, y eso no llega» (lo contó MDS-038)."
+  ],
+  "veredicto": "pasa"
+ }
+}

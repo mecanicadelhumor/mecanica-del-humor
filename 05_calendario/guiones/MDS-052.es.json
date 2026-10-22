@@ -1,0 +1,176 @@
+{
+ "id": "MDS-052",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Se nota cuando alguien se ríe por compromiso?",
+ "tesis": "Una risa fingida cuela más de lo que creemos: oyendo risas grabadas, la gente acierta si son de verdad o fingidas solo entre el 56 y el 69 % de las veces.",
+ "pilares": [
+  "E"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "B",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Se nota cuando alguien se ríe por compromiso?",
+  "respuesta": "Menos de lo que crees: distinguir una risa fingida de una de verdad se acierta, como mucho, siete veces de cada diez.",
+  "puente": "La carcajada de compromiso que le sueltas a tu amigo en la cena es una de las risas fingidas que pusieron a escuchar a gente de veintiuna sociedades."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — tu amigo cuenta un chiste malísimo en la cena y le sueltas una carcajada de compromiso; qué gira — se la cree y ahora lo cuenta en todas las cenas; cómo acaba — tu carcajada tiene muchas papeletas de colar, aunque solo se probó con risas grabadas, no en directo.",
+  "BRAZO B (ciclo B1, posición 17): la escena 1 es el dato dicho como hecho, en doce palabras («Risa fingida o real: se acierta, como mucho, siete de cada diez»), con su fuente, y la pantalla dice lo mismo. La situación pasa a la escena 2. «Siete de cada diez» con «como mucho» es la cota de arriba del 56-69 % del resumen (69 % < 70 %), no un dato nuevo; la escena 5 da las dos cifras exactas.",
+  "FUENTE: E11 (Bryant y otros, 2018, Psychological Science, DOI 10.1177/0956797618778235), nunca central, releída el 22/10/2026 en Crossref y Europe PMC. Frases del resumen copiadas literal: «Using a set of 36 recorded laughs produced by female English speakers in tests involving 884 participants from 21 societies across six regions of the world, we asked listeners to determine whether each laugh was real or fake, and listeners differentiated between the two laugh types with an accuracy of 56% to 69%».",
+  "C17: E11 no ha sido nunca fuente central. Aplazada el 15/10 por estar cerca de MDS-032 y MDS-034; tres semanas después, la risa falsa es otra pregunta (se nota o no), y «se nota una risa falsa» mide 28 M.",
+  "LÍMITE (regla 12, dentro de la historia): solo se probó con grabaciones, no con una risa en directo como la de tu cena (y eran de mujeres angloparlantes: va en la descripción).",
+  "LECTURA EN FRÍO (2026-10-22): Vuelta 1: el dato de la escena 1 sin sujeto, «Por eso cuela» (causa y no prueba) y el límite de las mujeres angloparlantes, que no decía qué cambiaba. Vuelta 2: «Lo midieron…» (¿qué es lo?) y «sociedades» → no pasa. Vuelta 3: «Para saber si se nota, pusieron risas grabadas…», «culturas», y el límite dice lo que no se probó (en directo). Pasa. Después de la lectura solo cambió la palabra que abre el límite («Eso sí:» → «Lo único:»), para no repetir «Eso sí» en cuatro cierres de la semana (C48.1); el sentido es el mismo."
+ ],
+ "escenas": [
+  {
+   "tipo": "dato",
+   "fuente": "E11",
+   "icono": "i-balanza",
+   "cifra": "7 de 10",
+   "pie": "¿es *fingida*? Aciertos, como mucho",
+   "narracion": "Adivinar si una risa es fingida: siete aciertos de diez, como mucho.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "man laughing loudly at dinner table",
+      "man forced laugh close-up",
+      "friends laughing at dinner"
+     ],
+     "prompt": "close-up of a man at a dinner table giving a big, slightly exaggerated laugh, warm restaurant light"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "icono": "i-publico",
+   "texto": "Un chiste *malísimo*",
+   "narracion": "Cena con amigos. Uno cuenta un chiste malísimo y le sueltas una carcajada de compromiso.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "friends dinner man telling story",
+      "man telling joke at dinner table"
+     ],
+     "prompt": "a man telling a story with big gestures at a dinner table with friends"
+    },
+    {
+     "desde": "le sueltas una carcajada",
+     "busqueda": [
+      "woman laughing politely dinner",
+      "person fake laughing at table"
+     ],
+     "prompt": "a woman at a dinner table giving a big polite laugh"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Repetido en *cada* cena",
+   "narracion": "Él se lo cree. Y ahora lo cuenta en todas las cenas.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "man proudly telling story at party",
+      "man smiling proud at dinner"
+     ],
+     "prompt": "a man beaming with pride, telling the same story again at another dinner party"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "E11",
+   "a": "De *verdad*",
+   "et_a": "risa espontánea",
+   "b": "Fingida",
+   "et_b": "risa a propósito",
+   "narracion": "Para saber si se nota, pusieron risas grabadas, unas de verdad y otras fingidas, a gente de veintiuna culturas.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person listening with headphones eyes closed",
+      "woman wearing headphones listening"
+     ],
+     "prompt": "a person wearing headphones listening intently, eyes half closed"
+    },
+    {
+     "desde": "veintiuna culturas",
+     "busqueda": [
+      "people different countries wearing headphones",
+      "group of people listening headphones"
+     ],
+     "prompt": "several people of different ages and backgrounds each wearing headphones, listening"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "E11",
+   "personaje": "entiende",
+   "cifra": "56-69 %",
+   "pie": "de aciertos; a suertes, 50 %",
+   "narracion": "Acertaban cuál era cuál entre un cincuenta y seis y un sesenta y nueve por ciento. A suertes, un cincuenta.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "hand flipping coin close-up",
+      "coin toss in air"
+     ],
+     "prompt": "close-up of a coin spinning in the air above an open hand"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "E11",
+   "personaje": "duda",
+   "titulo": "Tu carcajada *cuela*",
+   "subtitulo": "Fuente: Bryant y otros, 2018",
+   "narracion": "Con tu amigo del chiste malo, tranquilo: tu carcajada puede colar. Lo único: solo se probó con grabaciones, no en directo.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "friends laughing at dinner table night",
+      "dinner party laughter"
+     ],
+     "prompt": "friends laughing around a dinner table at night"
+    },
+    {
+     "desde": "Lo único",
+     "busqueda": [
+      "audio recording microphone studio",
+      "microphone close-up studio"
+     ],
+     "prompt": "close-up of a studio microphone with a pop filter"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 3, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-22",
+  "de_que_va": "Va de si la gente sabe distinguir una risa fingida de una de verdad, con el ejemplo de reírle un chiste malo a un amigo.",
+  "pregunta_y_respuesta": "Si se nota cuando finges una risa. Poco: la gente acierta entre un 56 y un 69 % de las veces, cuando al azar acertaría el 50 %. Así que tu carcajada de compromiso probablemente cuela.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "ninguna",
+  "donde_me_iria": "me quedo (el momento más flojo, la escena 4, «cuando pasa a explicar el estudio»)",
+  "notas": [
+   "Pantalla de la escena 1 («7 de 10 · ¿es fingida? Aciertos, como mucho»): «tardé un segundo en juntar ‹7 de 10› con ‹aciertos›. Lo que se oye sí lo entendí a la primera.»",
+   "«la frase hablada de la escena 1 adelanta el resultado y la escena 5 lo repite con cifras»: es el brazo B."
+  ],
+  "veredicto": "pasa"
+ }
+}

@@ -1,177 +1,234 @@
 {
- "generado_utc": "2026-10-15T23:30:00Z",
+ "generado_utc": "2026-10-22T23:59:00Z",
  "_que_es": "El juicio de la planificación sobre demanda_bruta.json: cada pregunta cruzada con la bibliografía. Dueño: la planificación.",
- "_estado_de_la_medicion": "demanda_bruta.json del 2026-10-15T17:14:14Z, veinticuatro consultas, avisos vacío. Séptima medición buena seguida.",
- "_lo_que_ha_mandado_esta_semana": "La bibliografía otra vez: doce fichas nuevas abren el jefe, el emoji, la risa aguantada, los payasos, la voz frente al texto y la risa que hace contar de más. Dos temas cayeron a la tercera lectura en frío (la risa contagiosa con E09 y la risa contra el dolor con D06) y se cambiaron en su hueco. R-TE-01 sigue con la advertencia de la correlación de 0,17.",
- "_actualidad_c52": "Un gancho: Halloween (calendario, sábado 31/10) en MDS-047, el payaso. Descartados en la bitácora.",
+ "_estado_de_la_medicion": "demanda_bruta.json del 2026-10-22T17:26:38Z, veinticuatro consultas, avisos vacío. Octava medición buena seguida.",
+ "_lo_que_ha_mandado_esta_semana": "Versión 23: manda el feed, la demanda solo desempata. Los siete temas salen de situaciones que cualquiera reconoce (el sofá con tu hermana, el grupo de WhatsApp, la cena, la reunión, la llamada que no coges, el saludo equivocado, la comida del domingo) y la demanda medida solo los ha ordenado. Tres de las siete preguntas no tenían número propio y van a las semillas.",
+ "_actualidad_c52": "Ningún gancho esta semana. Halloween ya tuvo el suyo (MDS-047); las tendencias son fútbol, política y los premios Princesa de Asturias. Detalle en la bitácora.",
  "candidatos": [
   {
-   "pregunta": "por que se nos pega la risa de otro",
-   "vistas_top10": 37739550,
+   "pregunta": "se nota una risa falsa",
+   "vistas_top10": 28025319,
    "competencia": "media",
-   "por_que_esa_competencia": "Los cinco primeros son vídeos de risas para contagiar y clips virales; ninguno lo explica con un estudio.",
+   "por_que_esa_competencia": "Clips de risas virales y sonidos de risa; ninguno de los cinco primeros responde con un estudio.",
    "respaldo_bibliografico": [
-    "E12",
-    "E09",
-    "E10"
+    "E11",
+    "F13"
    ],
    "apto": true,
-   "decision": "SE HACE: MDS-043 (lunes 19), con E12 (risa contra bostezo). El primer guion, con E09, cayó a la tercera lectura en frío."
-  },
-  {
-   "pregunta": "que significa el emoji de la sonrisa",
-   "vistas_top10": 4221071,
-   "competencia": "baja",
-   "por_que_esa_competencia": "Diccionarios de emojis genéricos; ninguno habla de que se lea distinto según la edad.",
-   "respaldo_bibliografico": [
-    "I09"
-   ],
-   "apto": true,
-   "decision": "SE HACE: MDS-044 (martes 20), familia «mensajes»."
-  },
-  {
-   "pregunta": "por que todos se rien de los chistes del jefe",
-   "vistas_top10": 285308944,
-   "competencia": "baja",
-   "por_que_esa_competencia": "Los cinco primeros son sketches de «cuando…», fuera de tema: el volumen no es demanda de respuesta (pertinencia 0 de 5).",
-   "respaldo_bibliografico": [
-    "D12"
-   ],
-   "apto": true,
-   "decision": "SE HACE: MDS-045 (miércoles 21), con D12, ficha nueva."
-  },
-  {
-   "pregunta": "por que tengo la risa floja",
-   "vistas_top10": 41058503,
-   "competencia": "baja",
-   "por_que_esa_competencia": "Canciones y clips; nadie lo explica.",
-   "respaldo_bibliografico": [
-    "F12"
-   ],
-   "apto": true,
-   "decision": "Cerca: MDS-046 (jueves 22, aguantarse la risa, F12). La risa floja en sí no tiene ficha."
-  },
-  {
-   "pregunta": "chistes de halloween",
-   "vistas_top10": 16372358,
-   "competencia": "alta",
-   "por_que_esa_competencia": "Recopilatorios de chistes: entretenimiento, no respuesta.",
-   "respaldo_bibliografico": [
-    "J07"
-   ],
-   "apto": true,
-   "decision": "Gancho de actualidad (C52, calendario) de MDS-047 (viernes 23): por qué dan miedo los payasos."
-  },
-  {
-   "pregunta": "por que los mensajes de texto se malinterpretan",
-   "vistas_top10": 529433,
-   "competencia": "baja",
-   "por_que_esa_competencia": "Tutoriales técnicos y un vídeo de malentendidos sin fuente.",
-   "respaldo_bibliografico": [
-    "I11",
-    "I07",
-    "I08"
-   ],
-   "apto": true,
-   "decision": "SE HACE: MDS-048 (sábado 24), con I11, familia «mensajes»."
-  },
-  {
-   "pregunta": "por que la gente manda audios en vez de escribir",
-   "vistas_top10": 3505748,
-   "competencia": "baja",
-   "por_que_esa_competencia": "Tutoriales de WhatsApp; ninguno responde.",
-   "respaldo_bibliografico": [
-    "I10",
-    "I11"
-   ],
-   "apto": true,
-   "decision": "Cerca de MDS-048. I10 (Kumar y Epley, 2021: llamar une más que escribir) queda libre para «mensajes» de la semana del 26."
-  },
-  {
-   "pregunta": "por que me rio cuando estoy nervioso",
-   "vistas_top10": 7344446,
-   "competencia": "baja",
-   "por_que_esa_competencia": "Vídeos de mareos y de «cómo saber si atraes»: fuera de tema.",
-   "respaldo_bibliografico": [],
-   "apto": false,
-   "decision": "No se hace: sigue sin ficha de risa nerviosa (ver pendientes_de_fuente.md)."
-  },
-  {
-   "pregunta": "por que me da la risa en los momentos serios",
-   "vistas_top10": 11222310,
-   "competencia": "media",
-   "por_que_esa_competencia": "Clips de ataques de risa en directo.",
-   "respaldo_bibliografico": [
-    "E08",
-    "F12"
-   ],
-   "apto": true,
-   "decision": "Hecho de lado en MDS-042 (funeral, 18/10) y MDS-046 (aguantarse). Descansa."
+   "decision": "SE HACE: MDS-052 (miércoles 28), con E11."
   },
   {
    "pregunta": "como distinguir una risa falsa de una de verdad",
-   "vistas_top10": 5106880,
+   "vistas_top10": 4978109,
    "competencia": "baja",
-   "por_que_esa_competencia": "Sonrisas y Alastor: fuera de tema.",
+   "por_que_esa_competencia": "Tutoriales de sonrisa y clips de personajes; nada que mida si se acierta.",
    "respaldo_bibliografico": [
     "E11",
-    "F13",
-    "D07"
+    "F13"
    ],
    "apto": true,
-   "decision": "Aplazado: MDS-032 y MDS-034 tocaron la risa fingida hace dos semanas. E11 y F13 quedan libres."
+   "decision": "Cubierta por MDS-052."
+  },
+  {
+   "pregunta": "por que es mejor llamar que escribir",
+   "vistas_top10": 3459601,
+   "competencia": "baja",
+   "por_que_esa_competencia": "Los primeros son de ligar por mensaje y de pensamiento positivo: fuera de tema.",
+   "respaldo_bibliografico": [
+    "I10"
+   ],
+   "apto": true,
+   "decision": "SE HACE: MDS-054 (viernes 30), con I10."
+  },
+  {
+   "pregunta": "por que nos reimos en grupo",
+   "vistas_top10": 189259892,
+   "competencia": "media",
+   "por_que_esa_competencia": "Sketches y memes en grupo; ninguno lo explica.",
+   "respaldo_bibliografico": [
+    "E10",
+    "E01",
+    "D06"
+   ],
+   "apto": true,
+   "decision": "Iba a ser MDS-055 con E10; cayó a la tercera lectura en frío (qué se comparaba con «media hora solos»). Queda para otra semana con otra historia."
+  },
+  {
+   "pregunta": "reirse quita el dolor",
+   "vistas_top10": 239203395,
+   "competencia": "media",
+   "por_que_esa_competencia": "Vídeos de humor sin relación; ninguno cita el umbral de dolor.",
+   "respaldo_bibliografico": [
+    "D06",
+    "E10"
+   ],
+   "apto": true,
+   "decision": "Aplazada: D06 cayó el 15/10 y E10 hoy, las dos a la tercera lectura. Hace falta una historia en la que se vea el dolor."
   },
   {
    "pregunta": "por que me molesta que me dejen en visto",
-   "vistas_top10": 1983771,
+   "vistas_top10": 3551500,
    "competencia": "baja",
-   "por_que_esa_competencia": "Consejos de ligue y de «qué hacer»; nadie lo explica.",
-   "respaldo_bibliografico": [],
-   "apto": false,
-   "decision": "Sin ficha: se busca la semana que viene."
+   "por_que_esa_competencia": "Consejos de autoestima y de ligue; nada con un estudio.",
+   "respaldo_bibliografico": [
+    "I13"
+   ],
+   "apto": true,
+   "decision": "Ficha nueva esta noche (I13, Smith y Williams, 2004). Candidata de la familia mensajes para la semana del 2/11."
   },
   {
-   "pregunta": "como ser divertido por chat",
-   "vistas_top10": 4919075,
+   "pregunta": "por que me rio cuando estoy nervioso",
+   "vistas_top10": 8692408,
    "competencia": "media",
-   "por_que_esa_competencia": "Consejos de seducción: rozan humor y atracción (prohibido en Short).",
+   "por_que_esa_competencia": "Vídeos de mareo, cortisol y lenguaje corporal; nadie responde a la pregunta.",
    "respaldo_bibliografico": [],
    "apto": false,
-   "decision": "No se hace (regla de humor y atracción)."
+   "decision": "E14 (Keltner, 1995) sostiene la vergüenza, no la risa nerviosa. Sin ficha."
   },
   {
    "pregunta": "por que nos reimos de las caidas",
-   "vistas_top10": 4937515,
+   "vistas_top10": 435614,
    "competencia": "media",
-   "por_que_esa_competencia": "Recopilatorios de caídas y un vídeo de 2025 sin fuente.",
-   "respaldo_bibliografico": [],
+   "por_que_esa_competencia": "Hay dos vídeos que responden sin fuente.",
+   "respaldo_bibliografico": [
+    "A03"
+   ],
    "apto": false,
-   "decision": "Sin ficha propia (Paulus y otros, 2018, schadenfreude, localizada; muy cerca de F09). A03 se libera el 18/11."
+   "decision": "A03 fue central en MDS-033 (7/10): en cuarentena hasta el 18/11."
   },
   {
    "pregunta": "como saber si alguien te habla con ironia",
-   "vistas_top10": 1391699,
+   "vistas_top10": 1455550,
    "competencia": "baja",
-   "por_que_esa_competencia": "Lenguaje corporal y mentiras; nadie con estudio.",
+   "por_que_esa_competencia": "Lenguaje corporal y mentiras: fuera de tema.",
    "respaldo_bibliografico": [
-    "I08",
     "I05",
-    "I07"
-   ],
-   "apto": true,
-   "decision": "Para la semana del 26: I08 (emoticonos y sarcasmo) contesta la pregunta que dejó abierta MDS-040."
-  },
-  {
-   "pregunta": "puede una maquina entender un chiste",
-   "vistas_top10": 188366173,
-   "competencia": "baja",
-   "por_que_esa_competencia": "Vídeos de IA hablando entre ellas.",
-   "respaldo_bibliografico": [
-    "K04",
-    "K01"
+    "I07",
+    "I08"
    ],
    "apto": false,
-   "decision": "No se hace: tema hundido (MDS-029)."
+   "decision": "Terreno de MDS-040 (9 vistas a 48 h): tema hundido, no se repite en seis semanas."
+  },
+  {
+   "pregunta": "por que la gente manda audios en vez de escribir",
+   "vistas_top10": 4296513,
+   "competencia": "baja",
+   "por_que_esa_competencia": "Trucos de móvil y Roblox: fuera de tema.",
+   "respaldo_bibliografico": [],
+   "apto": false,
+   "decision": "Sin ficha: I10 e I11 miden la voz en directo, no las notas de voz. A pendientes_de_fuente."
+  },
+  {
+   "pregunta": "por que tengo la risa floja",
+   "vistas_top10": 49627583,
+   "competencia": "alta",
+   "por_que_esa_competencia": "Shorts de humor; ninguno responde.",
+   "respaldo_bibliografico": [
+    "F12"
+   ],
+   "apto": false,
+   "decision": "F12 fue central en MDS-046 (22/10)."
+  },
+  {
+   "pregunta": "por que los memes nos hacen gracia",
+   "vistas_top10": 170869876,
+   "competencia": "alta",
+   "por_que_esa_competencia": "Recopilatorios.",
+   "respaldo_bibliografico": [
+    "A01",
+    "A02"
+   ],
+   "apto": true,
+   "decision": "Sin historia clara todavía; A01 está libre por la regla de seis semanas."
+  },
+  {
+   "pregunta": "chistes del cambio de hora",
+   "vistas_top10": 1955138,
+   "competencia": "baja",
+   "por_que_esa_competencia": "Sketches.",
+   "respaldo_bibliografico": [],
+   "apto": false,
+   "decision": "Pasó el 25/10; sin ficha de mecanismo."
+  },
+  {
+   "pregunta": "chistes de halloween",
+   "vistas_top10": 78602665,
+   "competencia": "alta",
+   "por_que_esa_competencia": "Recopilatorios y bromas.",
+   "respaldo_bibliografico": [],
+   "apto": false,
+   "decision": "Halloween ya tuvo su gancho (MDS-047, payasos). No se repite."
+  },
+  {
+   "pregunta": "por que te ries antes de que te hagan cosquillas",
+   "vistas_top10": null,
+   "competencia": "sin medir",
+   "por_que_esa_competencia": "Sin número propio: va a las semillas para el jueves 29.",
+   "respaldo_bibliografico": [
+    "F19",
+    "F10",
+    "F20"
+   ],
+   "apto": true,
+   "decision": "SE HACE: MDS-050 (lunes 26), derecho de tanteo de MDS-038, con F19."
+  },
+  {
+   "pregunta": "sirve de algo escribir jajaja",
+   "vistas_top10": null,
+   "competencia": "sin medir",
+   "por_que_esa_competencia": "Sin número propio: va a las semillas para el jueves 29.",
+   "respaldo_bibliografico": [
+    "I12"
+   ],
+   "apto": true,
+   "decision": "SE HACE: MDS-051 (martes 27), familia mensajes, con I12."
+  },
+  {
+   "pregunta": "hacer un chiste en una reunion",
+   "vistas_top10": null,
+   "competencia": "sin medir",
+   "por_que_esa_competencia": "Sin número propio: va a las semillas para el jueves 29.",
+   "respaldo_bibliografico": [
+    "D01",
+    "D02"
+   ],
+   "apto": true,
+   "decision": "SE HACE: MDS-053 (jueves 29), con D01."
+  },
+  {
+   "pregunta": "se nota cuando sonries de verguenza",
+   "vistas_top10": null,
+   "competencia": "sin medir",
+   "por_que_esa_competencia": "Sin número propio: va a las semillas para el jueves 29.",
+   "respaldo_bibliografico": [
+    "E14"
+   ],
+   "apto": true,
+   "decision": "Iba a ser MDS-055 con E14; cayó a la tercera lectura en frío («caras reales: ¿de dónde salían?»). Queda para otra semana."
+  },
+  {
+   "pregunta": "por que hay gente que se rie de lo que cuenta",
+   "vistas_top10": null,
+   "competencia": "sin medir",
+   "por_que_esa_competencia": "Sin número propio: va a las semillas para el jueves 29.",
+   "respaldo_bibliografico": [
+    "E02"
+   ],
+   "apto": true,
+   "decision": "SE HACE: MDS-056 (domingo 1/11), con E02."
+  },
+  {
+   "pregunta": "puede una maquina hacerte cosquillas",
+   "vistas_top10": null,
+   "competencia": "sin medir",
+   "por_que_esa_competencia": "Sin número propio: va a las semillas para el jueves 29.",
+   "respaldo_bibliografico": [
+    "F15",
+    "F10",
+    "F20"
+   ],
+   "apto": true,
+   "decision": "SE HACE: MDS-055 (sábado 31), con F15, tercer tema del hueco."
   }
  ]
 }

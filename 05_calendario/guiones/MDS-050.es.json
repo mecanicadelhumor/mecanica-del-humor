@@ -1,0 +1,188 @@
+{
+ "id": "MDS-050",
+ "formato": "corto",
+ "serie": "Ríete primero, te explico después",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué te ríes antes de las cosquillas?",
+ "tesis": "Las cosquillas empiezan antes de que te toquen: el cerebro se prepara durante la espera, y cuanto más se prepara, más risa sale después.",
+ "pilares": [
+  "F"
+ ],
+ "duracion_objetivo_s": 35,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "control",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué te ríes antes de que te hagan cosquillas?",
+  "respuesta": "Porque la espera ya forma parte de las cosquillas: el cerebro se prepara antes de que te toquen, y cuanto más se prepara, más te ríes después.",
+  "puente": "El dedo que se acerca a tu hermana sin tocarla es lo que imitaron en el escáner: hacer esperar a la gente sin saber cuándo llegarían las cosquillas."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — le acercas un dedo a tu hermana, despacio; qué gira — ya se está retorciendo de risa; cómo acaba — el dedo que se acerca ya es parte de las cosquillas, aunque eso se midió en un escáner y en los pies.",
+  "DERECHO DE TANTEO (C46): continúa MDS-038 («¿Por qué no puedes hacerte cosquillas a ti mismo?», 933 vistas a 48 h, el mejor de las últimas cuatro semanas). Mismo asunto, otra pregunta y otra ficha (F10 está en cuarentena hasta el 25/11).",
+  "FUENTE: F19 (Wattendorf y otros, 2019, Social Cognitive and Affective Neuroscience, DOI 10.1093/scan/nsz056), ficha nueva, verificada el 22/10/2026 en Crossref y Europe PMC. Frases del resumen copiadas literal: «the anticipation of tickling contributes to the final outburst of ticklish laughter»; «functional magnetic resonance imaging (fMRI) was conducted on 31 healthy volunteers»; «The state of anticipation was simulated by generating an uncertainty respecting the onset of manual foot tickling»; «anticipatory activity in the anterior insula correlated positively with the degree of laughter that was produced during tickling».",
+  "LO QUE NO SE DICE: que la gente se riera en la espera (el estudio cuenta la risa durante las cosquillas). La voz dice que «una parte de su cerebro se activaba ya en la espera» y que cuanto más, más se reían cuando llegaban. No se nombra la ínsula.",
+  "LÍMITE (regla 12, dentro de la historia): un escáner y los pies; el sofá y tu hermana no los probó nadie.",
+  "LECTURA EN FRÍO (2026-10-22): Vuelta 1: «Por eso unos neurocientíficos…» (el «por eso» parecía una causa), «se ponía en marcha» (vago) y la pantalla «Más espera» (decía otra cosa que la voz); sobraba «sin tocarla» en la escena 1, que se comía el remate → «Para entenderlo», «una parte de su cerebro se activaba», «Más activo», y la escena 1 ya no dice que no la tocas. Vuelta 2: pasa. Después de la lectura solo cambió la palabra que abre el límite («Eso sí:» → «Aunque fue»), para no repetir «Eso sí» en cuatro cierres de la semana (C48.1); el sentido es el mismo."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-pausa",
+   "texto": "Un *dedo*, despacio",
+   "narracion": "Tu hermana, en el sofá. Le acercas un dedo, despacio.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "hand finger slowly approaching woman on sofa",
+      "finger pointing at woman lying on couch",
+      "woman relaxing on sofa living room"
+     ],
+     "prompt": "close-up of a hand slowly reaching one finger toward a young woman lying on a sofa, she is already flinching, warm living room light"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "«¡Para, *para*!»",
+   "narracion": "Y ella se encoge y grita: «¡para, para!».",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "woman curling up laughing on sofa",
+      "woman laughing covering belly couch"
+     ],
+     "prompt": "a young woman curling up on a sofa, laughing and covering her stomach with her arms"
+    },
+    {
+     "desde": "grita",
+     "busqueda": [
+      "woman laughing shouting stop sofa",
+      "woman laughing hysterically couch"
+     ],
+     "prompt": "a young woman laughing and shouting on a sofa, eyes squeezed shut"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Y aún *no* la has tocado",
+   "narracion": "Y todavía no la has tocado.",
+   "pausa_despues_s": 0.6,
+   "visual": [
+    {
+     "busqueda": [
+      "finger hovering above person not touching",
+      "hand frozen in mid air close-up"
+     ],
+     "prompt": "close-up of a finger hovering a few centimetres above a sweater, not touching"
+    }
+   ]
+  },
+  {
+   "tipo": "diagrama",
+   "fuente": "F19",
+   "titulo": "En el *escáner*",
+   "pasos": [
+    {
+     "titulo": "Esperar",
+     "pie": "sin saber cuándo"
+    },
+    {
+     "titulo": "Cosquillas",
+     "pie": "en los pies"
+    }
+   ],
+   "narracion": "Para entenderlo, unos neurocientíficos metieron a treinta y una personas en un escáner a esperar unas cosquillas en los pies, sin saber cuándo.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "mri scanner room patient lying",
+      "person entering mri machine"
+     ],
+     "prompt": "a person lying on the bed of an MRI scanner in a hospital room, calm light"
+    },
+    {
+     "desde": "unas cosquillas en los pies",
+     "busqueda": [
+      "bare feet close-up being tickled",
+      "feet sticking out of mri scanner"
+     ],
+     "prompt": "close-up of bare feet sticking out of an MRI scanner, a gloved hand about to touch the sole"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "F19",
+   "personaje": "entiende",
+   "cifra": "Más *activo*",
+   "pie": "más risa después",
+   "narracion": "Una parte de su cerebro se activaba ya en la espera. Y cuanto más se activaba, más se reían al llegar.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person waiting nervously eyes closed",
+      "nervous anticipation face close-up"
+     ],
+     "prompt": "close-up of a person lying still with eyes closed, bracing, lips pressed together"
+    },
+    {
+     "desde": "más se reían al llegar",
+     "busqueda": [
+      "person laughing lying down",
+      "man laughing uncontrollably lying"
+     ],
+     "prompt": "a person lying on their back laughing uncontrollably"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "F19",
+   "personaje": "piensa",
+   "titulo": "El dedo *cuenta*",
+   "subtitulo": "Fuente: Wattendorf y otros, 2019",
+   "narracion": "Así que ese dedo que se acerca ya es parte de las cosquillas. Aunque fue en un escáner, no en un sofá.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "finger approaching woman on sofa laughing",
+      "siblings tickling on couch"
+     ],
+     "prompt": "a hand with one raised finger approaching a laughing young woman on a sofa"
+    },
+    {
+     "desde": "Aunque fue",
+     "busqueda": [
+      "empty sofa living room evening",
+      "empty couch cushions"
+     ],
+     "prompt": "an empty sofa with rumpled cushions in a living room in the evening"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 2, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-22",
+  "de_que_va": "Va de por qué te dan cosquillas antes de que te toquen siquiera.",
+  "pregunta_y_respuesta": "Pregunta: ¿por qué tu hermana grita «¡para!» si todavía no la has tocado? Respuesta: el cerebro ya se activa mientras espera las cosquillas, y cuanto más se activa, más te ríes cuando llegan. Así que el dedo que se acerca ya forma parte de las cosquillas.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Eso sí: fue en un escáner, no en un sofá.» (es el cierre honesto, obligatorio por la regla 12: se queda)",
+  "donde_me_iria": "me quedo (lo más cerca, la escena 4: «es larga y llena de datos… por un momento parece un vídeo de clase»)",
+  "notas": [
+   "«Una parte de su cerebro se activaba ya en la espera.» — «La entiendo, pero no sé qué parte es… tan vago que casi no dice nada.» (La ínsula no se nombra a propósito.)",
+   "Sobre el cierre: «es honesta, pero en la última escena me corta el remate»."
+  ],
+  "veredicto": "pasa"
+ }
+}
