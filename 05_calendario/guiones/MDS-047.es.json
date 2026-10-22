@@ -78,7 +78,7 @@
    "tipo": "enunciado",
    "personaje": "rie",
    "texto": "Diez años de *caramelos*",
-   "narracion": "Y tú das un paso atrás. Andrés lleva diez años trayéndote caramelos.",
+   "narracion": "Y tú das un paso atrás, aunque Andrés lleva diez años trayéndote caramelos.",
    "pausa_despues_s": 0.5,
    "visual": [
     {
@@ -131,7 +131,7 @@
    "personaje": "entiende",
    "cifra": "No saber",
    "pie": "si te quiere hacer *daño*",
-   "narracion": "Pesaban no saber si te quieren hacer daño ni qué van a hacer, su cara pintada y las películas de payasos malos.",
+   "narracion": "Les asustaba no saber si te quieren hacer daño ni qué van a hacer, la cara pintada y las películas de payasos malos.",
    "pausa_despues_s": 0.45,
    "visual": [
     {
@@ -157,7 +157,7 @@
    "personaje": "duda",
    "titulo": "Solo a quien ya *temía*",
    "subtitulo": "Fuente: Tyson y otros, 2023",
-   "narracion": "Sin la pintura, Andrés solo sería Andrés. La pega: solo preguntaron a gente que ya tenía miedo a los payasos.",
+   "narracion": "Sin la pintura, Andrés solo sería Andrés. La pega: solo preguntaron a gente que ya les tenía miedo.",
    "pausa_despues_s": 0.2,
    "visual": [
     {
@@ -179,17 +179,17 @@
   }
  ],
  "lectura_en_frio": {
-  "lector": "subagente sin contexto (vuelta 2 del tema nuevo; el primer MDS-047 cayó a la tercera)",
-  "fecha": "2026-10-15",
-  "de_que_va": "Va de por qué a la gente le dan miedo los payasos, con el ejemplo de un compañero de oficina disfrazado.",
-  "pregunta_y_respuesta": "¿De dónde viene el miedo a los payasos? Casi nunca de algo malo que te pasara: de no saber qué intenciones tienen ni qué van a hacer, de la cara pintada y de las películas de payasos malos.",
+  "lector": "subagente sin contexto (revisión diaria; vuelta 3 tras reescribir las escenas 3, 5 y 6)",
+  "fecha": "2026-10-22",
+  "de_que_va": "Va de por qué da miedo un payaso (aunque sea tu compañero Andrés disfrazado) y de un estudio de psicólogos, con la pega de que solo preguntaron a gente que ya les tenía miedo.",
+  "pregunta_y_respuesta": "¿Por qué dan miedo los payasos? No suele ser por algo que les pasara, sino por no saber si te quieren hacer daño ni qué van a hacer, la cara pintada y las películas de payasos malos; el estudio solo preguntó a gente que ya tenía miedo.",
   "frases_que_no_se_entienden": [],
-  "frase_que_sobra": "ninguna que quitar (propone juntar la escena 2 con la 3; no se juntan: la pausa antes del remate va entre las dos)",
-  "donde_me_iria": "me quedo",
+  "frase_que_sobra": "propone quitar «Diez años de caramelos»; no se quita: es el contraste que justifica el paso atrás",
+  "donde_me_iria": "escena 4 (cambio de anécdota a estudio sin nombres)",
   "notas": [
-   "«Pesaban no saber si te quieren hacer daño…» — «El ‹Pesaban› al principio me descolocó. Tuve que volver a oírla para entender que eran las causas.»",
-   "«Y no solía ser de algo que les pasara.» — «Se entiende, pero un poco a destiempo»; el rótulo «Lo que salió (otra cosa)» no le dice nada.",
-   "«La pega: solo preguntaron a gente que ya tenía miedo a los payasos.» — «Entiendo lo que dice, pero no sé qué hacer con ello.»"
+   "«Sin la pintura, Andrés solo sería Andrés.» — lo entiende, pero suena a cierre de chiste.",
+   "«La pega: solo preguntaron a gente que ya les tenía miedo.» — entiende la frase; no sabe qué cambia en la conclusión.",
+   "«Unos psicólogos» le parece vago (sin nombres ni cifras)."
   ],
   "veredicto": "pasa"
  }
