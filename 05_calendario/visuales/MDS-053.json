@@ -1,0 +1,544 @@
+{
+  "guion": "MDS-053",
+  "version": 1,
+  "firma": "af295bdb174a9d05",
+  "resuelto_utc": "2026-10-22T22:47:12Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "9860a6bdc522",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.52
+          ],
+          "frase": "Primera reunión de la nueva. Y el proyector no arranca.",
+          "fuente": "pexels",
+          "id": 8141500,
+          "pagina": "https://www.pexels.com/video/coworkers-having-a-meeting-in-the-meeting-room-8141500/",
+          "titulo": "coworkers having a meeting in the meeting room",
+          "autor": "Alena Darmel",
+          "autor_url": "https://www.pexels.com/@a-darmel",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8141500/8141500-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "meeting room projector not working",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 5.42,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3208,
+              0.439,
+              0.0917,
+              0.0657
+            ],
+            [
+              0.7083,
+              0.4366,
+              0.0792,
+              0.0563
+            ],
+            [
+              0.6417,
+              0.439,
+              0.0792,
+              0.0563
+            ],
+            [
+              0.5042,
+              0.4249,
+              0.0667,
+              0.0469
+            ],
+            [
+              0.4542,
+              0.4366,
+              0.0625,
+              0.0446
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "d8aba7bf6d87",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.88
+          ],
+          "frase": "Y ella dice: «bueno, al menos así no veis mis gráficos».",
+          "fuente": "pexels",
+          "id": 9034450,
+          "pagina": "https://www.pexels.com/video/woman-laughing-at-a-meeting-9034450/",
+          "titulo": "woman laughing at a meeting",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/9034450/9034450-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman joking smiling in meeting",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 0.7,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4083,
+              0.3891,
+              0.2083,
+              0.1531
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "1e479f8e84d3",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            1.83
+          ],
+          "frase": "Se ríen todos. Y",
+          "fuente": "pexels",
+          "id": 8141491,
+          "pagina": "https://www.pexels.com/video/coworkers-having-a-meeting-in-the-meeting-room-8141491/",
+          "titulo": "coworkers having a meeting in the meeting room",
+          "autor": "Alena Darmel",
+          "autor_url": "https://www.pexels.com/@a-darmel",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8141491/8141491-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "colleagues laughing in meeting room",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 4.28,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6333,
+              0.4812,
+              0.1083,
+              0.0751
+            ],
+            [
+              0.2625,
+              0.5023,
+              0.0917,
+              0.0657
+            ],
+            [
+              0.3208,
+              0.5117,
+              0.0875,
+              0.0634
+            ],
+            [
+              0.4417,
+              0.4155,
+              0.0875,
+              0.0587
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "desde ese día",
+          "t_estimado": [
+            1.83,
+            6.54
+          ],
+          "frase": "desde ese día, le piden opinión a ella.",
+          "fuente": "pexels",
+          "id": 6565658,
+          "pagina": "https://www.pexels.com/video/colleague-asking-for-advice-6565658/",
+          "titulo": "colleague asking for advice",
+          "autor": "Mikhail Nilov",
+          "autor_url": "https://www.pexels.com/@mikhail-nilov",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 14.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6565658/6565658-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "colleagues asking woman for advice office",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 6.9,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5139,
+              0.3578,
+              0.1528,
+              0.1125
+            ],
+            [
+              0.1972,
+              0.4984,
+              0.1083,
+              0.1016
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "96525d4e4ab0",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.87
+          ],
+          "frase": "¿Fue el chiste? Unos psicólogos hicieron ocho experimentos con",
+          "fuente": "pexels",
+          "id": 8134589,
+          "pagina": "https://www.pexels.com/video/people-working-in-the-office-8134589/",
+          "titulo": "people working in the office",
+          "autor": "https://kaboompics.com/",
+          "autor_url": "https://www.pexels.com/@karola-g",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 21.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8134589/8134589-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "people in office reading screen survey",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 5.19,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.7194,
+              0.0489,
+              0.2668,
+              0.2178
+            ],
+            [
+              0.1522,
+              0.08,
+              0.2628,
+              0.1877
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "chistes que salían bien",
+          "t_estimado": [
+            4.87,
+            7.33
+          ],
+          "frase": "chistes que salían bien y chistes",
+          "fuente": "pexels",
+          "id": 8632480,
+          "pagina": "https://www.pexels.com/video/woman-talking-to-her-colleagues-in-the-office-8632480/",
+          "titulo": "woman talking to her colleagues in the office",
+          "autor": "Kampus Production",
+          "autor_url": "https://www.pexels.com/@kampus",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 7.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8632480/8632480-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "colleagues laughing office meeting",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 10.04,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2,
+              0.3391,
+              0.1,
+              0.0813
+            ],
+            [
+              0.3306,
+              0.3656,
+              0.1,
+              0.075
+            ],
+            [
+              0.0694,
+              0.5062,
+              0.1,
+              0.075
+            ],
+            [
+              0.6139,
+              0.4547,
+              0.0861,
+              0.0844
+            ]
+          ]
+        },
+        {
+          "k": 3,
+          "desde": "fuera de tono",
+          "t_estimado": [
+            7.33,
+            9.26
+          ],
+          "frase": "fuera de tono.",
+          "fuente": "pexels",
+          "id": 39931085,
+          "pagina": "https://www.pexels.com/video/office-team-meeting-in-bright-workspace-39931085/",
+          "titulo": "office team meeting in bright workspace",
+          "autor": "This And No Internet 25",
+          "autor_url": "https://www.pexels.com/@this-and-no-internet-25-288559",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 17.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/39931085/17038127_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "awkward silence in office meeting",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 20.83,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.0472,
+              0.5531,
+              0.175,
+              0.1828
+            ],
+            [
+              0.2639,
+              0.4734,
+              0.1056,
+              0.0969
+            ],
+            [
+              0.7,
+              0.4766,
+              0.0917,
+              0.0688
+            ],
+            [
+              0.4139,
+              0.4906,
+              0.0889,
+              0.0672
+            ],
+            [
+              0.5833,
+              0.4891,
+              0.0806,
+              0.0625
+            ]
+          ]
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "cc203f82f6ad",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.07
+          ],
+          "frase": "El chiste que salía bien subía el estatus de quien lo contaba: le hacía parecer",
+          "fuente": "pexels",
+          "id": 7413800,
+          "pagina": "https://www.pexels.com/video/a-footage-of-a-woman-having-a-presentation-7413800/",
+          "titulo": "a footage of a woman having a presentation",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7413800/7413800-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "confident woman presenting office",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 13.04,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6056,
+              0.0688,
+              0.3278,
+              0.2766
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "seguro de sí mismo",
+          "t_estimado": [
+            7.07,
+            10.64
+          ],
+          "frase": "seguro de sí mismo, y capaz.",
+          "fuente": "pexels",
+          "id": 8524301,
+          "pagina": "https://www.pexels.com/video/a-woman-talking-to-her-colleague-8524301/",
+          "titulo": "a woman talking to her colleague",
+          "autor": "Artem Podrez",
+          "autor_url": "https://www.pexels.com/@artempodrez",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8524301/8524301-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "confident woman smiling colleagues listening",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 4.32,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3375,
+              0.3826,
+              0.2208,
+              0.1408
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "3326724a9ef3",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            2.17
+          ],
+          "frase": "A la nueva le salió bien.",
+          "fuente": "pexels",
+          "id": 10375464,
+          "pagina": "https://www.pexels.com/video/woman-on-her-desk-looking-at-the-camera-and-smiling-10375464/",
+          "titulo": "woman on her desk looking at the camera and smiling",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 8.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/10375464/10375464-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "woman smiling at desk office",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 3.3,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4083,
+              0.3828,
+              0.2667,
+              0.1984
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Fuera de tono",
+          "t_estimado": [
+            2.17,
+            9.47
+          ],
+          "frase": "Fuera de tono, habría parecido segura, pero menos capaz, y habría perdido estatus.",
+          "fuente": "pixabay",
+          "id": 1035,
+          "pagina": "https://pixabay.com/videos/id-1035/",
+          "titulo": "meeting, conference, talk, blur, bokeh, business, people, corporate, group, presentation, business meeting, office, corporate meeting, meeting people, room, discussion, communication, professional, teamwork, office meeting id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 16.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2015/10/16/1035-142621331_large.mp4",
+          "tipo": "video",
+          "consulta": "empty meeting room projector",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 0.99,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

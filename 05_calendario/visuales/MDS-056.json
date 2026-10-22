@@ -1,0 +1,450 @@
+{
+  "guion": "MDS-056",
+  "version": 1,
+  "firma": "9c7331714b1eece1",
+  "resuelto_utc": "2026-10-22T22:48:06Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "1789d8c7c92a",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.82
+          ],
+          "frase": "Comida del domingo. Tu tío empieza: «pues voy al banco…», y ya se está riendo.",
+          "fuente": "pixabay",
+          "id": 7686,
+          "pagina": "https://pixabay.com/videos/id-7686/",
+          "titulo": "man, sahara, desert, adventure, laughed at, storm dune, sand id",
+          "autor": "Espace-Aventures",
+          "autor_url": "https://pixabay.com/users/Espace-Aventures-4213878/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 35.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2017/02/06/7686-202893456_large.mp4",
+          "tipo": "video",
+          "consulta": "older man laughing telling story at family lunch",
+          "relevancia": 0.429,
+          "inicio_s": 0.4,
+          "movimiento": 0.68,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "b4af84a70728",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.47
+          ],
+          "frase": "Se ríe al final de cada frase.",
+          "fuente": "pexels",
+          "id": 36467681,
+          "pagina": "https://www.pexels.com/video/people-waiting-at-bus-stop-in-urban-setting-36467681/",
+          "titulo": "people waiting at bus stop in urban setting",
+          "autor": "Marc Barcelona",
+          "autor_url": "https://www.pexels.com/@marc-barcelona-2573466",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/36467681/15463614_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "queue of people waiting in bank",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 7.72,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Y lo que cuenta",
+          "t_estimado": [
+            3.47,
+            8.72
+          ],
+          "frase": "Y lo que cuenta es que había cola.",
+          "fuente": "pexels",
+          "id": 35405411,
+          "pagina": "https://www.pexels.com/video/elderly-man-sitting-on-bench-outdoors-35405411/",
+          "titulo": "elderly man sitting on bench outdoors",
+          "autor": "SERKAN BOLAT",
+          "autor_url": "https://www.pexels.com/@tctclsrkn",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 72.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/35405411/15000870_1080_2048_60fps.mp4",
+          "tipo": "video",
+          "consulta": "older man laughing gesturing table",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 17.69,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "71f7314ae8dd",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.15
+          ],
+          "frase": "Y acaba riéndose toda la mesa. De una cola.",
+          "fuente": "pixabay",
+          "id": 253997,
+          "pagina": "https://pixabay.com/videos/id-253997/",
+          "titulo": "kiss, love, together, father, family, baby, parent, child, dad, man, people, happy, play, girl, cold, winter, snow, look id",
+          "autor": "iddea_photo",
+          "autor_url": "https://pixabay.com/users/iddea_photo-45788187/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 8.0,
+          "ancho": 2160,
+          "alto": 3840,
+          "url": "https://cdn.pixabay.com/video/2025/01/22/253997_large.mp4",
+          "tipo": "video",
+          "consulta": "family laughing together at lunch table",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 7.35,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5444,
+              0.1812,
+              0.2167,
+              0.1555
+            ],
+            [
+              0.3889,
+              0.1875,
+              0.1458,
+              0.1133
+            ],
+            [
+              0.2819,
+              0.1664,
+              0.1431,
+              0.1055
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "baa21e4815f9",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            1.3
+          ],
+          "frase": "Un psicólogo apuntó",
+          "fuente": "pexels",
+          "id": 13326103,
+          "pagina": "https://www.pexels.com/video/two-men-sitting-on-a-park-bench-talking-and-laughing-13326103/",
+          "titulo": "two men sitting on a park bench talking and laughing",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13326103/13326103-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "people talking laughing in park",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 3.44,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6917,
+              0.3531,
+              0.1472,
+              0.1094
+            ],
+            [
+              0.4611,
+              0.3438,
+              0.1361,
+              0.1094
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "mil doscientas",
+          "t_estimado": [
+            1.3,
+            8.33
+          ],
+          "frase": "mil doscientas risas de desconocidos charlando en la calle. Muchas, sin nada gracioso.",
+          "fuente": "pexels",
+          "id": 5897636,
+          "pagina": "https://www.pexels.com/video/close-up-view-of-child-writing-on-notebook-5897636/",
+          "titulo": "close up view of child writing on notebook",
+          "autor": "Katerina Holmes",
+          "autor_url": "https://www.pexels.com/@katerina-holmes",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5897636/5897636-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "notebook tally marks close-up",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 9.39,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "ab1142ff9c59",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.2
+          ],
+          "frase": "Casi todas caían en una pausa, al final de una frase. Y",
+          "fuente": "pexels",
+          "id": 13326098,
+          "pagina": "https://www.pexels.com/video/a-happy-couple-talking-and-laughing-13326098/",
+          "titulo": "a happy couple talking and laughing",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13326098/13326098-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "two people talking one laughing",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 4.09,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.325,
+              0.2516,
+              0.1333,
+              0.1016
+            ],
+            [
+              0.6083,
+              0.2516,
+              0.1194,
+              0.1
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "quien hablaba",
+          "t_estimado": [
+            5.2,
+            10.18
+          ],
+          "frase": "quien hablaba se reía más que quien escuchaba.",
+          "fuente": "pexels",
+          "id": 13931635,
+          "pagina": "https://www.pexels.com/video/a-man-and-woman-talking-together-13931635/",
+          "titulo": "a man and woman talking together",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13931635/13931635-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman talking and laughing friend listening",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 8.67,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3361,
+              0.3609,
+              0.1611,
+              0.1187
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "fb0d0a1b51ac",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.07
+          ],
+          "frase": "Lo de tu tío no es raro: quien cuenta es quien más se ríe.",
+          "fuente": "pexels",
+          "id": 3198219,
+          "pagina": "https://www.pexels.com/video/a-man-slicing-a-roasted-turkey-served-in-a-family-dinner-3198219/",
+          "titulo": "a man slicing a roasted turkey served in a family dinner",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/3198219/3198219-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "older man smiling at family table",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 16.61,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2722,
+              0.3578,
+              0.1667,
+              0.1219
+            ],
+            [
+              0.4778,
+              0.3719,
+              0.1528,
+              0.1141
+            ],
+            [
+              0.8833,
+              0.5031,
+              0.1167,
+              0.1234
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "La pega",
+          "t_estimado": [
+            6.07,
+            10.85
+          ],
+          "frase": "La pega: era gente joven, en la calle.",
+          "fuente": "pexels",
+          "id": 12879703,
+          "pagina": "https://www.pexels.com/video/group-of-teenagers-walking-on-a-street-and-talking-12879703/",
+          "titulo": "group of teenagers walking on a street and talking",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/12879703/12879703-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "young people walking city street talking",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 21.21,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3306,
+              0.4031,
+              0.1222,
+              0.0797
+            ],
+            [
+              0.4722,
+              0.4391,
+              0.1139,
+              0.0844
+            ],
+            [
+              0.9056,
+              0.3984,
+              0.0889,
+              0.0797
+            ],
+            [
+              0.2306,
+              0.3688,
+              0.0861,
+              0.0641
+            ],
+            [
+              0.75,
+              0.4,
+              0.0833,
+              0.0609
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

@@ -1,0 +1,376 @@
+{
+  "guion": "MDS-051",
+  "version": 1,
+  "firma": "ad16782036a20157",
+  "resuelto_utc": "2026-10-22T22:46:32Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "4e0b48a3f048",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.43
+          ],
+          "frase": "Tu amigo manda un meme al grupo,",
+          "fuente": "pexels",
+          "id": 7392948,
+          "pagina": "https://www.pexels.com/video/close-up-video-of-a-person-using-a-cellphone-7392948/",
+          "titulo": "close up video of a person using a cellphone",
+          "autor": "Ivan S",
+          "autor_url": "https://www.pexels.com/@ivan-s",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 14.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7392948/7392948-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "hand typing on phone chat close-up",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 3.08,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "y le contestas",
+          "t_estimado": [
+            3.43,
+            8.75
+          ],
+          "frase": "y le contestas con una fila de jotas y aes.",
+          "fuente": "pexels",
+          "id": 6586070,
+          "pagina": "https://www.pexels.com/video/close-up-video-of-a-person-using-cellphone-6586070/",
+          "titulo": "close up video of a person using cellphone",
+          "autor": "Artem Podrez",
+          "autor_url": "https://www.pexels.com/@artempodrez",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6586070/6586070-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "phone screen chat bubbles close-up",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 5.08,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "b86f4562c705",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.42
+          ],
+          "frase": "Y lo escribes con la cara más seria del mundo.",
+          "fuente": "pexels",
+          "id": 9558951,
+          "pagina": "https://www.pexels.com/video/a-man-in-a-black-shirt-and-tan-pants-is-looking-at-his-phone-9558951/",
+          "titulo": "a man in a black shirt and tan pants is looking at his phone",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/9558951/9558951-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man looking at phone supermarket queue",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 5.84,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.4735,
+              0.1302,
+              0.2611,
+              0.1953
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "4596c884e3ea",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.31
+          ],
+          "frase": "¿Sirve de algo? Pues sí.",
+          "fuente": "pexels",
+          "id": 5197251,
+          "pagina": "https://www.pexels.com/video/close-up-video-of-a-man-s-face-5197251/",
+          "titulo": "close up video of a man s face",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 19.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5197251/5197251-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "serious man face close-up looking at phone",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 7.25,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.0625,
+              0.2066,
+              0.7625,
+              0.608
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "01dafc7e6952",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.83
+          ],
+          "frase": "Unos psicólogos pidieron a un grupo apuntar dos semanas de charlas,",
+          "fuente": "pexels",
+          "id": 32421244,
+          "pagina": "https://www.pexels.com/video/close-up-of-hand-writing-in-notebook-at-desk-32421244/",
+          "titulo": "close up of hand writing in notebook at desk",
+          "autor": "Jakub Zerdzicki",
+          "autor_url": "https://www.pexels.com/@jakubzerdzicki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 19.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/32421244/13829119_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "hand writing in notebook diary desk",
+          "relevancia": 0.8,
+          "inicio_s": 0.4,
+          "movimiento": 1.5,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "cara a cara",
+          "t_estimado": [
+            5.83,
+            11.1
+          ],
+          "frase": "cara a cara, por teléfono o chat, y si hubo risa.",
+          "fuente": "pexels",
+          "id": 5874501,
+          "pagina": "https://www.pexels.com/video/close-up-video-of-a-person-flipping-page-of-a-notebook-5874501/",
+          "titulo": "close up video of a person flipping page of a notebook",
+          "autor": "Monstera Production",
+          "autor_url": "https://www.pexels.com/@gabby-k",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/5874501/5874501-hd_1080_2048_30fps.mp4",
+          "tipo": "video",
+          "consulta": "notebook pages with checkmarks",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 6.2,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "b2bef35a114b",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.17
+          ],
+          "frase": "Con risa, salían más felices de la charla.",
+          "fuente": "pixabay",
+          "id": 20454,
+          "pagina": "https://pixabay.com/videos/id-20454/",
+          "titulo": "walk, couple, romantic, sky, romance, lovers, retirement, lifestyle, happiness, stroll, friends, together, silhouettes, magical, idyllic, peaceful, peace, hello, love, trust, people, friendship, ocean, sea, tenerife, live wallpaper, welcome id",
+          "autor": "ChristianBodhi",
+          "autor_url": "https://pixabay.com/users/ChristianBodhi-9869182/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 28.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2019/01/04/20454-309694522_large.mp4",
+          "tipo": "video",
+          "consulta": "friends laughing together cafe",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 2.21,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Y la risa escrita",
+          "t_estimado": [
+            4.17,
+            9.72
+          ],
+          "frase": "Y la risa escrita contaba casi igual que la de verdad.",
+          "fuente": "pexels",
+          "id": 13929582,
+          "pagina": "https://www.pexels.com/video/a-woman-smiling-while-using-smartphone-13929582/",
+          "titulo": "a woman smiling while using smartphone",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13929582/13929582-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman smiling at phone message",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 3.28,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3333,
+              0.1719,
+              0.3194,
+              0.2313
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "d6b8b1b34b02",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.33
+          ],
+          "frase": "O sea, que tu fila de jotas sirve: cuenta casi como una risa.",
+          "fuente": "pexels",
+          "id": 12322728,
+          "pagina": "https://www.pexels.com/video/close-up-of-a-smiling-man-using-his-phone-12322728/",
+          "titulo": "close up of a smiling man using his phone",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/12322728/12322728-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "man smiling slightly at phone supermarket",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 6.89,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3417,
+              0.0906,
+              0.2806,
+              0.2281
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Lo malo",
+          "t_estimado": [
+            5.33,
+            10.85
+          ],
+          "frase": "Lo malo: eran cuarenta y una personas, apuntándolo ellas.",
+          "fuente": "pexels",
+          "id": 34214298,
+          "pagina": "https://www.pexels.com/video/calm-writing-in-lined-notebook-on-wooden-desk-34214298/",
+          "titulo": "calm writing in lined notebook on wooden desk",
+          "autor": "Burak Bahadır  Büyükkılınç",
+          "autor_url": "https://www.pexels.com/@bahadirbuyukkilinc",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 22.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/34214298/14501509_1080_1920_60fps.mp4",
+          "tipo": "video",
+          "consulta": "stack of notebooks on desk",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 9.73,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

@@ -1,0 +1,439 @@
+{
+  "guion": "MDS-054",
+  "version": 1,
+  "firma": "09f9d7c620bb4972",
+  "resuelto_utc": "2026-10-22T22:47:30Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "f658d8bfbba1",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.44
+          ],
+          "frase": "Llamar a un amigo une más que escribirle, y no incomoda más.",
+          "fuente": "pexels",
+          "id": 7155064,
+          "pagina": "https://www.pexels.com/video/a-woman-talking-on-the-phone-while-holding-her-baby-bump-7155064/",
+          "titulo": "a woman talking on the phone while holding her baby bump",
+          "autor": "Yan Krukau",
+          "autor_url": "https://www.pexels.com/@yankrukov",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 16.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7155064/7155064-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman laughing talking on phone at home",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 4.2,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6889,
+              0.2016,
+              0.3028,
+              0.2078
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "e0a0f2ef6527",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.3
+          ],
+          "frase": "Con tu amigo de siempre lleváis dos años escribiendo «a ver si quedamos».",
+          "fuente": "pexels",
+          "id": 7279035,
+          "pagina": "https://www.pexels.com/video/a-person-receiving-a-message-on-a-smartphone-7279035/",
+          "titulo": "a person receiving a message on a smartphone",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 26.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7279035/7279035-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "scrolling chat messages phone close-up",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 1.12,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Un día, te llama",
+          "t_estimado": [
+            6.3,
+            9.65
+          ],
+          "frase": "Un día, te llama.",
+          "fuente": "pixabay",
+          "id": 304045,
+          "pagina": "https://pixabay.com/videos/id-304045/",
+          "titulo": "phone, ringing, call, incoming, smartphone, mobile, telephone, ring, notification, alert, communication, device, sound, buzz, vibration, digital, office, message, technology, contact, connection, caller, business, smartphone ringing, ringtone, ai generated id",
+          "autor": "VirtualZero",
+          "autor_url": "https://pixabay.com/users/VirtualZero-34835365/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 8.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2025/09/14/304045_large.mp4",
+          "tipo": "video",
+          "consulta": "phone ringing on table incoming call",
+          "relevancia": 0.8,
+          "inicio_s": 0.4,
+          "movimiento": 1.78,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "18d0d0dd410c",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            1.7
+          ],
+          "frase": "Y tú lo dejas sonar",
+          "fuente": "pexels",
+          "id": 7261927,
+          "pagina": "https://www.pexels.com/video/a-man-using-his-laptop-and-answering-a-phone-call-7261927/",
+          "titulo": "a man using his laptop and answering a phone call",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 59.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7261927/7261927-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man staring at ringing phone not answering",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 3.97,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3,
+              0.2875,
+              0.325,
+              0.2344
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "y le escribes",
+          "t_estimado": [
+            1.7,
+            5.62
+          ],
+          "frase": "y le escribes: «¿qué pasa?».",
+          "fuente": "pexels",
+          "id": 5387568,
+          "pagina": "https://www.pexels.com/video/young-man-text-messaging-with-smartphone-outdoors-5387568/",
+          "titulo": "young man text messaging with smartphone outdoors",
+          "autor": "Monstera Production",
+          "autor_url": "https://www.pexels.com/@gabby-k",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 8.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/5387568/5387568-hd_1080_2048_30fps.mp4",
+          "tipo": "video",
+          "consulta": "man typing message quickly phone",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 0.67,
+          "encuadre": {
+            "x": 0.5,
+            "y": 1
+          },
+          "caras": [
+            [
+              0.5613,
+              0.4277,
+              0.2806,
+              0.1978
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "73202488f70c",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.93
+          ],
+          "frase": "Unos psicólogos pidieron a gente que retomara el contacto con un viejo amigo: unos llamando y",
+          "fuente": "pexels",
+          "id": 5708828,
+          "pagina": "https://www.pexels.com/video/elderly-man-on-a-phone-call-at-home-5708828/",
+          "titulo": "elderly man on a phone call at home",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 28.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5708828/5708828-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man calling old friend on phone",
+          "relevancia": 0.8,
+          "inicio_s": 0.4,
+          "movimiento": 3.66,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3389,
+              0.4297,
+              0.1194,
+              0.0844
+            ],
+            [
+              0.4278,
+              0.4406,
+              0.1111,
+              0.0875
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "otros escribiendo",
+          "t_estimado": [
+            6.93,
+            9.26
+          ],
+          "frase": "otros escribiendo.",
+          "fuente": "pexels",
+          "id": 7652166,
+          "pagina": "https://www.pexels.com/video/person-typing-on-the-laptop-7652166/",
+          "titulo": "person typing on the laptop",
+          "autor": "Kindel Media",
+          "autor_url": "https://www.pexels.com/@kindelmedia",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7652166/7652166-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "person writing email laptop",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 14.87,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "b0e706d80310",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.6
+          ],
+          "frase": "Antes, todos esperaban que llamar fuera más incómodo. No lo fue.",
+          "fuente": "pexels",
+          "id": 5974503,
+          "pagina": "https://www.pexels.com/video/man-holding-a-gift-while-talking-on-the-phone-5974503/",
+          "titulo": "man holding a gift while talking on the phone",
+          "autor": "KATRIN  BOLOVTSOVA",
+          "autor_url": "https://www.pexels.com/@ekaterina-bolovtsova",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 19.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/5974503/5974503-hd_1080_2048_30fps.mp4",
+          "tipo": "video",
+          "consulta": "nervous man holding phone before call",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 14.1,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.2866,
+              0.12,
+              0.4625,
+              0.3311
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Y los que llamaron",
+          "t_estimado": [
+            5.6,
+            9.72
+          ],
+          "frase": "Y los que llamaron se sintieron más unidos.",
+          "fuente": "pexels",
+          "id": 5974678,
+          "pagina": "https://www.pexels.com/video/two-women-having-a-video-call-through-the-smartphone-5974678/",
+          "titulo": "two women having a video call through the smartphone",
+          "autor": "KATRIN  BOLOVTSOVA",
+          "autor_url": "https://www.pexels.com/@ekaterina-bolovtsova",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 20.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/5974678/5974678-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "two friends laughing on phone call",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 3.06,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.5692,
+              0.3255,
+              0.2154,
+              0.1633
+            ],
+            [
+              0.2174,
+              0.3333,
+              0.1996,
+              0.1444
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "5b687d437c72",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.2
+          ],
+          "frase": "La próxima vez que te llame tu amigo, cógelo.",
+          "fuente": "pexels",
+          "id": 7447927,
+          "pagina": "https://www.pexels.com/video/man-talking-on-the-phone-7447927/",
+          "titulo": "man talking on the phone",
+          "autor": "August de Richelieu",
+          "autor_url": "https://www.pexels.com/@august-de-richelieu",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 22.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7447927/7447927-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man answering phone smiling",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 2.05,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2278,
+              0.2609,
+              0.5,
+              0.3984
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Eso sí",
+          "t_estimado": [
+            4.2,
+            11.78
+          ],
+          "frase": "Eso sí: se midió hablando en directo; los audios de WhatsApp no los midió nadie.",
+          "fuente": "pexels",
+          "id": 13929687,
+          "pagina": "https://www.pexels.com/video/close-up-of-a-smartphone-screen-while-filming-a-young-woman-13929687/",
+          "titulo": "close up of a smartphone screen while filming a young woman",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13929687/13929687-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "phone recording voice message close-up",
+          "relevancia": 0.4,
+          "inicio_s": 0.0,
+          "movimiento": 6.23,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

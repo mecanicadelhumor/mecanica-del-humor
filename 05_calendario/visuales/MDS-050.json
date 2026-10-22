@@ -1,0 +1,405 @@
+{
+  "guion": "MDS-050",
+  "version": 1,
+  "firma": "c1177526e90123bb",
+  "resuelto_utc": "2026-10-22T22:46:16Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "ddd676ff4a6a",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.52
+          ],
+          "frase": "Tu hermana, en el sofá. Le acercas un dedo, despacio.",
+          "fuente": "pexels",
+          "id": 8347428,
+          "pagina": "https://www.pexels.com/video/a-woman-lying-down-on-a-couch-8347428/",
+          "titulo": "a woman lying down on a couch",
+          "autor": "ROMAN ODINTSOV",
+          "autor_url": "https://www.pexels.com/@roman-odintsov",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 21.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8347428/8347428-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "finger pointing at woman lying on couch",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 18.93,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "90919a60e7bc",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            1.4
+          ],
+          "frase": "Y ella se encoge y",
+          "fuente": "pexels",
+          "id": 7550859,
+          "pagina": "https://www.pexels.com/video/woman-smiling-while-sitting-on-the-sofa-7550859/",
+          "titulo": "woman smiling while sitting on the sofa",
+          "autor": "Darina Belonogova",
+          "autor_url": "https://www.pexels.com/@darina-belonogova",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 9.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7550859/7550859-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman curling up laughing on sofa",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 4.96,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5639,
+              0.2797,
+              0.2083,
+              0.1281
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "grita",
+          "t_estimado": [
+            1.4,
+            5.49
+          ],
+          "frase": "grita: «¡para, para!».",
+          "fuente": "pexels",
+          "id": 8724226,
+          "pagina": "https://www.pexels.com/video/close-up-video-of-an-angry-woman-shouting-8724226/",
+          "titulo": "close up video of an angry woman shouting",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 30.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8724226/8724226-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman laughing shouting stop sofa",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 5.93,
+          "encuadre": {
+            "x": 0.5,
+            "y": 1
+          },
+          "caras": [
+            [
+              0.1383,
+              0.2089,
+              0.6581,
+              0.5578
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "b98f4380190c",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.87
+          ],
+          "frase": "Y todavía no la has tocado.",
+          "fuente": "pexels",
+          "id": 30197424,
+          "pagina": "https://www.pexels.com/video/close-up-of-a-hand-holding-frosty-drink-30197424/",
+          "titulo": "close up of a hand holding frosty drink",
+          "autor": "Sergei Starostin",
+          "autor_url": "https://www.pexels.com/@sejio402",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 16.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/30197424/12948031_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "hand frozen in mid air close-up",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 10.09,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "04f62b661138",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.17
+          ],
+          "frase": "Para entenderlo, unos neurocientíficos metieron a treinta y una personas en un escáner a esperar",
+          "fuente": "pexels",
+          "id": 7089944,
+          "pagina": "https://www.pexels.com/video/a-female-patient-undergoing-medical-scanning-procedure-7089944/",
+          "titulo": "a female patient undergoing medical scanning procedure",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 20.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7089944/7089944-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "mri scanner room patient lying",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 5.19,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.0056,
+              0.2047,
+              0.1667,
+              0.1781
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "unas cosquillas en los pies",
+          "t_estimado": [
+            7.17,
+            11.57
+          ],
+          "frase": "unas cosquillas en los pies, sin saber cuándo.",
+          "fuente": "pexels",
+          "id": 13770976,
+          "pagina": "https://www.pexels.com/video/close-up-view-of-male-bare-feet-13770976/",
+          "titulo": "close up view of male bare feet",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13770976/13770976-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "bare feet close-up being tickled",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 1.84,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "669c7f71fa6e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.57
+          ],
+          "frase": "Una parte de su cerebro se activaba ya en la espera. Y cuanto más se activaba,",
+          "fuente": "pexels",
+          "id": 8347430,
+          "pagina": "https://www.pexels.com/video/video-of-a-woman-eyes-closed-8347430/",
+          "titulo": "video of a woman eyes closed",
+          "autor": "ROMAN ODINTSOV",
+          "autor_url": "https://www.pexels.com/@roman-odintsov",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 19.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8347430/8347430-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "person waiting nervously eyes closed",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 2.72,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.334,
+              0.0445,
+              0.666,
+              0.5411
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "más se reían al llegar",
+          "t_estimado": [
+            7.57,
+            10.64
+          ],
+          "frase": "más se reían al llegar.",
+          "fuente": "pixabay",
+          "id": 32938,
+          "pagina": "https://pixabay.com/videos/id-32938/",
+          "titulo": "dance, celebrate, fun, celebration, happy, dancing, girl, festive, colorful, laughing, young, people, person id",
+          "autor": "Stuck1",
+          "autor_url": "https://pixabay.com/users/Stuck1-15406262/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 34.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2020/02/27/32938-395456384_large.mp4",
+          "tipo": "video",
+          "consulta": "person laughing lying down",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 18.87,
+          "encuadre": {
+            "x": 0.439,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.1527,
+              0.1542,
+              0.6963,
+              0.5361
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "f486de877574",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.17
+          ],
+          "frase": "Así que ese dedo que se acerca ya es parte de las cosquillas.",
+          "fuente": "pexels",
+          "id": 10373928,
+          "pagina": "https://www.pexels.com/video/a-woman-laughing-while-siting-on-a-sofa-10373928/",
+          "titulo": "a woman laughing while siting on a sofa",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 9.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/10373928/10373928-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "finger approaching woman on sofa laughing",
+          "relevancia": 0.6,
+          "inicio_s": 0.0,
+          "movimiento": 4.76,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5056,
+              0.2031,
+              0.175,
+              0.1437
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Aunque fue",
+          "t_estimado": [
+            6.17,
+            10.85
+          ],
+          "frase": "Aunque fue en un escáner, no en un sofá.",
+          "fuente": "pexels",
+          "id": 37836407,
+          "pagina": "https://www.pexels.com/video/relaxing-evening-with-drink-on-cozy-sofa-37836407/",
+          "titulo": "relaxing evening with drink on cozy sofa",
+          "autor": "Ardina Setiorini",
+          "autor_url": "https://www.pexels.com/@ardinasetiorini",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 7.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/37836407/16049262_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "empty sofa living room evening",
+          "relevancia": 0.4,
+          "inicio_s": 0.0,
+          "movimiento": 3.4,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 5,
+      "plano": 2,
+      "id": "pexels:6787448",
+      "titulo": "a person lying down on a sofa",
+      "motivo": "quieto (movimiento 0.28)"
+    },
+    {
+      "escena": 6,
+      "plano": 2,
+      "id": "pixabay:123441",
+      "titulo": "cat, pet, home, house, comfort, fluffy, soft, sofa, living room, interior, couch, relax, relaxation, lazy, animal id",
+      "motivo": "quieto (movimiento 0.33)"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}

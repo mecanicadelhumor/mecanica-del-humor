@@ -1,0 +1,361 @@
+{
+  "guion": "MDS-055",
+  "version": 1,
+  "firma": "bc81c638ff958851",
+  "resuelto_utc": "2026-10-22T22:47:48Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "a20216bfc5be",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.82
+          ],
+          "frase": "Tú no puedes hacerte cosquillas. Pero si te las hace otro, te mueres de risa.",
+          "fuente": "pixabay",
+          "id": 109611,
+          "pagina": "https://pixabay.com/videos/id-109611/",
+          "titulo": "dog, puppy, pet, canine, friendly, animal, friendship, cute, friend, pedigree, fun, mammal, playful, purebred, training, funny, person, domestic, outdoors id",
+          "autor": "Edward_Everidge",
+          "autor_url": "https://pixabay.com/users/Edward_Everidge-25984616/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 18.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2022/03/04/109611-685086108_large.mp4",
+          "tipo": "video",
+          "consulta": "person tickling friend on couch laughing",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 16.49,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "1de5c1a4f31a",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.73
+          ],
+          "frase": "¿Hace falta una persona? Unos psicólogos hicieron cosquillas a gente que",
+          "fuente": "pixabay",
+          "id": 159021,
+          "pagina": "https://pixabay.com/videos/id-159021/",
+          "titulo": "robot, robotics, manufacturing, tech, technology, robotic arm, artificial intellugence, ai, automation, industrial, heavy industry, automotive industry, production, production line, engineering, high tech, futuristic id",
+          "autor": "Dimitri_K",
+          "autor_url": "https://pixabay.com/users/Dimitri_K-30935610/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 11.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2023/04/15/159021-818026286_large.mp4",
+          "tipo": "video",
+          "consulta": "robot arm in laboratory",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 2.71,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "creía que se las hacía una máquina",
+          "t_estimado": [
+            5.73,
+            10.11
+          ],
+          "frase": "creía que se las hacía una máquina.",
+          "fuente": "pexels",
+          "id": 7730869,
+          "pagina": "https://www.pexels.com/video/a-person-sitting-on-the-floor-wearing-lab-gown-7730869/",
+          "titulo": "a person sitting on the floor wearing lab gown",
+          "autor": "Monstera Production",
+          "autor_url": "https://www.pexels.com/@gabby-k",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 16.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7730869/7730869-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "person sitting in lab chair nervous",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 0.59,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "9e81f1a4bfd1",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.69
+          ],
+          "frase": "Y se rieron igual que con una persona.",
+          "fuente": "pixabay",
+          "id": 432,
+          "pagina": "https://pixabay.com/videos/id-432/",
+          "titulo": "wheel chair, medical, medicine, health, wheelchair, chair, wheel, invalid, transport, vehicle, handicap, handicaped person, seat, disability, armchair, mobility, mobile, invalid chair, disabled persons, disabled, 37136632 id",
+          "autor": "Vimeo-Free-Videos",
+          "autor_url": "https://pixabay.com/users/Vimeo-Free-Videos-1283884/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 21.0,
+          "ancho": 0,
+          "alto": 0,
+          "url": "https://cdn.pixabay.com/video/2015/08/13/432-136185227_medium.mp4",
+          "tipo": "video",
+          "consulta": "person laughing squirming in chair",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 6.96,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "0e7d3545bcde",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.07
+          ],
+          "frase": "Treinta y cinco personas, dos veces cada una: una vez, el investigador; otra,",
+          "fuente": "pexels",
+          "id": 13770893,
+          "pagina": "https://www.pexels.com/video/close-up-of-barefoot-tattooed-feet-13770893/",
+          "titulo": "close up of barefoot tattooed feet",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13770893/13770893-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "hand tickling feet close-up",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 0.89,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "según les dijeron",
+          "t_estimado": [
+            6.07,
+            9.26
+          ],
+          "frase": "según les dijeron, la máquina.",
+          "fuente": "pixabay",
+          "id": 198,
+          "pagina": "https://pixabay.com/videos/id-198/",
+          "titulo": "escalators, moving stairs, moving stairway, moving staircase, shopping center, up, down, automatic, machine, transport id",
+          "autor": "Life-Of-Vids",
+          "autor_url": "https://pixabay.com/users/Life-Of-Vids-1282862/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 15.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2015/08/10/198-135846853_large.mp4",
+          "tipo": "video",
+          "consulta": "machine arm moving toward person",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 27.38,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "032d9d49dae3",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.53
+          ],
+          "frase": "Sonrisas, risas y retorcerse: todo lo mismo.",
+          "fuente": "pexels",
+          "id": 7279477,
+          "pagina": "https://www.pexels.com/video/man-and-woman-laughing-on-the-couch-7279477/",
+          "titulo": "man and woman laughing on the couch",
+          "autor": "Anastasia  Shuraeva",
+          "autor_url": "https://www.pexels.com/@anastasia-shuraeva",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 9.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/7279477/7279477-hd_1080_2048_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman laughing ticklish squirming",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 8.72,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.047
+          },
+          "caras": [
+            [
+              0.6186,
+              0.3769,
+              0.2411,
+              0.1389
+            ],
+            [
+              0.168,
+              0.3113,
+              0.1996,
+              0.1633
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Y dijeron sentirlas",
+          "t_estimado": [
+            3.53,
+            6.95
+          ],
+          "frase": "Y dijeron sentirlas igual de fuertes.",
+          "fuente": "pexels",
+          "id": 7247829,
+          "pagina": "https://www.pexels.com/video/person-filling-up-a-form-7247829/",
+          "titulo": "person filling up a form",
+          "autor": "Leeloo The First",
+          "autor_url": "https://www.pexels.com/@leeloothefirst",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 6.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7247829/7247829-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "person filling questionnaire laboratory",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 12.7,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "cbd4b98df0e2",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.93
+          ],
+          "frase": "Las cosquillas, por tanto, no necesitan que creas que hay alguien detrás.",
+          "fuente": "pexels",
+          "id": 5925285,
+          "pagina": "https://www.pexels.com/video/vertical-video-of-a-person-with-finger-heart-sign-5925285/",
+          "titulo": "vertical video of a person with finger heart sign",
+          "autor": "Sora Shimazaki",
+          "autor_url": "https://www.pexels.com/@sora-shimazaki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5925285/5925285-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "finger about to tickle surprised person",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 1.59,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Ojo",
+          "t_estimado": [
+            5.93,
+            10.85
+          ],
+          "frase": "Ojo: se probó creyéndolo, no con una máquina de verdad.",
+          "fuente": "pexels",
+          "id": 8381258,
+          "pagina": "https://www.pexels.com/video/a-test-tube-rotator-machine-in-the-laboratory-8381258/",
+          "titulo": "a test tube rotator machine in the laboratory",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 9.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8381258/8381258-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "empty laboratory chair machine",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 7.14,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}
