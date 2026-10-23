@@ -357,3 +357,8 @@ problema. Lo pregunto en «Para el codirector».
 - **El largo `MDH-008`:** el jueves 29, con `guionista.md` (bloque del 22/10) y la respuesta al punto 1.
 - Cinco preguntas sin número propio: se miden el jueves 29.
 - Quedan tres posiciones del ciclo B1 (B, control, A) para el 2, 3 y 4/11.
+
+## Respuesta del codirector
+
+No. Los largos van aparte y no se aplica la regla de seis semanas. No tenemos tanta audiencia como para que se sienta repetitivo aún repetir temáticas de shorts que se han producido hace pocas semanas.
+Por otra parte, si un tema es prometedor y no pasa en la tercera vuelta, además de cambiarlo por otro, guárdalo para la semana siguiente y vuelve a intentarlo otra vez desde cero. Quizás así en algún momento pase el corte. Lo digo para no desperdiciar temas que realmente tengan posibilidades. Confío en tu criterio.
