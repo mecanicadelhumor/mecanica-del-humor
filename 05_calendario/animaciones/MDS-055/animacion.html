@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<title>MDS-055 · animación a medida (C55.2)</title>
+<!--
+  MDS-055 · escenas [4, 5] · brazo A del ciclo B1 (C55.2) · fondo crema #FFF4E0.
+  Página autónoma: sin red, sin Math.random ni Date. Todo sale de (n, t); los movimientos se anclan
+  a las palabras de la voz con W(), nunca a segundos escritos a mano. Sin caras: formas, objetos, esquemas.
+-->
+<style>
+html,body{margin:0;padding:0;background:#05080f}
+body{margin:0}
+#lienzo{position:relative;left:0;top:0;width:1080px;height:1920px;overflow:hidden;background:#FFF4E0;
+  font-family:system-ui,"DejaVu Sans",Arial,sans-serif;color:#16213A}
+#dib{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bq{position:absolute;font-weight:900;line-height:1.12;letter-spacing:-.01em}
+.bq .p{display:inline-block;opacity:0;transform-origin:50% 80%}
+</style></head>
+<body><div id="lienzo"></div>
+<script>
+const ESCENAS_LISTA = [4, 5];
+const BG = "#FFF4E0", PUNTO = "#F7E2BC", TX = "#16213A", HL = "#EF476F", SUB = "#5B4A2A", GR = "#A99B7A", PANEL = "#FFFFFF";
+const PAL = ["#EF476F","#4CC9F0","#06D6A0","#9B5DE5","#16213A"];
+// ---------------------------------------------------------------- núcleo común
+const cl = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const tramo = (t, a, b) => cl((t - a) / (b - a));
+const suave = x => x * x * (3 - 2 * x);
+const sal = x => 1 - Math.pow(1 - x, 3);
+const rebote = x => { x = cl(x); const c = 1.70158; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const lerp = (a, b, p) => a + (b - a) * p;
+const $ = id => document.getElementById(id);
+const NS = "http://www.w3.org/2000/svg";
+const AM = "#FFB020", CI = "#4CC9F0", CO = "#EF476F", ME = "#06D6A0", VI = "#9B5DE5";
+function E(tag, at, par) { const e = document.createElementNS(NS, tag); for (const k in at) e.setAttribute(k, at[k]); if (par) par.appendChild(e); return e; }
+function hex(c) { return [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16)); }
+function mezcla(a, b, p) { const A = hex(a), B = hex(b); return "#" + A.map((v, i) => Math.round(lerp(v, B[i], cl(p))).toString(16).padStart(2, "0")).join(""); }
+const op = (el, v) => { el.style.opacity = cl(v); };
+const tf = (el, s) => el.setAttribute("transform", s);
+
+// tiempos de la voz (los pone el render antes de pintar)
+let T = {};
+window.cargarTiempos = d => { T = d || {}; };
+const norm = s => s.normalize("NFD").replace(/[^\p{L}\p{N}]/gu, "").toLowerCase();
+function W(n, pal, vez = 1) {           // instante en que la voz dice `pal` en la escena n
+  let k = 0;
+  for (const [t, w] of (T[n] || {}).palabras || []) if (norm(w) === norm(pal) && ++k === vez) return t;
+  return 0.6;
+}
+const DUR = n => ((T[n] || {}).dur) || 8;
+const S = {};
+
+// ---------------------------------------------------------------- construcción
+let FONDO, PART = [], BLQ = {};
+function construir() {
+  const lienzo = $("lienzo");
+  const svg = E("svg", { id: "dib", viewBox: "0 0 1080 1920", width: 1080, height: 1920 }, lienzo);
+  const defs = E("defs", {}, svg);
+  const pat = E("pattern", { id: "reti", width: 72, height: 72, patternUnits: "userSpaceOnUse" }, defs);
+  E("circle", { cx: 18, cy: 18, r: 5, fill: PUNTO }, pat);
+  E("circle", { cx: 54, cy: 54, r: 5, fill: PUNTO }, pat);
+  FONDO = pat;
+  E("rect", { x: 0, y: 0, width: 1080, height: 1920, fill: "url(#reti)" }, svg);
+  for (let i = 0; i < 22; i++) {
+    const col = PAL[i % PAL.length];
+    const c = i % 2 ? E("circle", { r: 7 + (i % 4) * 3, fill: col, opacity: 0.55 }, svg)
+                    : E("rect", { x: -9, y: -9, width: 18 + (i % 3) * 4, height: 18 + (i % 3) * 4, rx: 5, fill: col, opacity: 0.55 }, svg);
+    c._x = (i * 197) % 1080; c._y = (i * 331) % 1920; c._v = 16 + (i * 7) % 26; c._f = i * 1.3; c._r = i % 2;
+    PART.push(c);
+  }
+  const cam = E("g", { id: "cam" }, svg);
+  E("rect", { id: "prog", x: 0, y: 0, width: 0, height: 12, fill: HL }, svg);
+  for (const n of ESCENAS_LISTA) {
+    const g = E("g", { id: "s" + n }, cam);
+    S[n].build(g, defs);
+    const cont = document.createElement("div"); cont.id = "tx" + n; lienzo.appendChild(cont);
+    BLQ[n] = (S[n].bloques || []).map(b => {
+      const d = document.createElement("div"); d.className = "bq";
+      d.style.cssText = `left:${b.x}px;top:${b.y}px;width:${b.w}px;height:${b.h}px;font-size:${b.size}px;color:${b.col || TX};text-align:${b.al || "left"}`;
+      let am = false; const sp = [];
+      b.txt.split(" ").forEach((tok, i) => {
+        let t = tok;
+        if (t.startsWith("*")) { am = true; t = t.slice(1); }
+        const cierra = t.endsWith("*"); if (cierra) t = t.slice(0, -1);
+        const s = document.createElement("span"); s.className = "p"; s.textContent = t;
+        if (am) s.style.color = HL, s._am = true;
+        if (i) d.appendChild(document.createTextNode(" "));
+        d.appendChild(s); sp.push(s);
+        if (cierra) am = false;
+      });
+      cont.appendChild(d);
+      return { b, d, sp };
+    });
+  }
+}
+
+// ---------------------------------------------------------------- pintar
+window.ESCENAS = ESCENAS_LISTA;
+window.pintarEscena = function (n, t) {
+  if (!FONDO) construir();
+  const dur = DUR(n);
+  for (const m of ESCENAS_LISTA) { $("s" + m).style.display = m === n ? "" : "none"; $("tx" + m).style.display = m === n ? "" : "none"; }
+  FONDO.setAttribute("patternTransform", `translate(${(t * 16) % 72} ${(t * -11) % 72})`);
+  PART.forEach(c => {
+    const y = ((c._y - t * c._v) % 1980 + 1980) % 1980 - 30;
+    const x = c._x + 22 * Math.sin(t * 0.8 + c._f);
+    if (c._r) { c.setAttribute("cx", x); c.setAttribute("cy", y); }
+    else c.setAttribute("transform", `translate(${x} ${y}) rotate(${t * 40 + c._f * 50})`);
+  });
+  const z = 1 + 0.04 * (t / dur);
+  tf($("cam"), `translate(${540 + 7 * Math.sin(t * 0.5)} ${960 - 10 * t / dur * 4}) scale(${z}) translate(-540 -960)`);
+  $("prog").setAttribute("width", 1080 * cl(t / dur));
+  S[n].paint(t, dur);
+  for (const { b, sp } of BLQ[n]) {
+    const t0 = Math.min(b.en(), dur - 0.6);
+    sp.forEach((s, i) => {
+      const a = t0 + i * 0.09, p = sal(tramo(t, a, a + 0.28));
+      const k = s._am ? lerp(1.35, 1, rebote(tramo(t, a, a + 0.45))) : lerp(0.9, 1, p);
+      s.style.opacity = p;
+      s.style.transform = `translateY(${(1 - p) * 40}px) scale(${k})`;
+    });
+  }
+};
+window.comprobarEscena = function (n, t) {
+  window.pintarEscena(n, t);
+  const m = [];
+  for (const { b, sp } of BLQ[n]) {             // se mide sin transformaciones (offset*), no con la animación de entrada
+    const ancho = Math.max(...sp.map(s => s.offsetLeft + s.offsetWidth));
+    const alto = Math.max(...sp.map(s => s.offsetTop + s.offsetHeight));
+    if (ancho > b.w + 1) m.push(`${b.txt}: no cabe a lo ancho`);
+    if (alto > b.h + 1) m.push(`${b.txt}: no cabe en su caja (${alto} > ${b.h})`);
+    if (b.y + Math.max(alto, b.h) > 1650) m.push(`${b.txt}: pasa de la zona segura`);
+    if (b.x < 30 || b.x + b.w > 1050) m.push(`${b.txt}: fuera del ancho`);
+  }
+  return m;
+};
+window.addEventListener("DOMContentLoaded", () => { if (!FONDO) construir(); });
+
+
+function rayos(g, n) { const a = []; for (let k = 0; k < n; k++) a.push(E("line", { stroke: CO, "stroke-width": 12, "stroke-linecap": "round" }, g)); return a; }
+function pintaRayos(ls, cx, cy, t, r0, r1, vis) {
+  ls.forEach((l, k) => {
+    const a = (k * 360 / ls.length + t * 30) * Math.PI / 180, b = r0, c = r0 + (r1 - r0) * (0.6 + 0.4 * Math.sin(t * 7 + k)) * vis;
+    l.setAttribute("x1", cx + b * Math.cos(a)); l.setAttribute("y1", cy + b * Math.sin(a));
+    l.setAttribute("x2", cx + c * Math.cos(a)); l.setAttribute("y2", cy + c * Math.sin(a));
+  });
+}
+const cuerpo = cx => `M${cx - 120} 900 Q${cx - 120} 700 ${cx} 700 Q${cx + 120} 700 ${cx + 120} 900 Z`;
+
+function mano(g) {
+  const m = E("g", {}, g), dedos = [];
+  E("rect", { x: -22, y: -520, width: 44, height: 480, rx: 20, fill: AM, stroke: TX, "stroke-width": 7 }, m);
+  E("rect", { x: -40, y: -50, width: 80, height: 22, rx: 11, fill: CO, stroke: TX, "stroke-width": 7 }, m);
+  E("rect", { x: -40, y: -30, width: 80, height: 70, rx: 28, fill: AM, stroke: TX, "stroke-width": 7 }, m);
+  for (let i = 0; i < 4; i++) { const d = E("rect", { x: -38 + i * 20, y: 20, width: 15, height: 56, rx: 7, fill: AM, stroke: TX, "stroke-width": 6 }, m); d._x = -30 + i * 20; dedos.push(d); }
+  m._d = dedos; return m;
+}
+function brazo(g) {
+  const m = E("g", {}, g), cer = [];
+  E("rect", { x: -16, y: -520, width: 32, height: 330, rx: 14, fill: VI, stroke: TX, "stroke-width": 7 }, m);
+  E("circle", { cx: 0, cy: -190, r: 30, fill: ME, stroke: TX, "stroke-width": 7 }, m);
+  E("rect", { x: -14, y: -190, width: 28, height: 190, rx: 12, fill: VI, stroke: TX, "stroke-width": 7 }, m);
+  E("rect", { x: -26, y: -14, width: 52, height: 30, rx: 12, fill: ME, stroke: TX, "stroke-width": 7 }, m);
+  for (let i = 0; i < 5; i++) { const c = E("line", { x1: -20 + i * 10, y1: 14, x2: -20 + i * 10, y2: 56, stroke: TX, "stroke-width": 6, "stroke-linecap": "round" }, m); c._x = -20 + i * 10; cer.push(c); }
+  m._c = cer; return m;
+}
+function agita(m, t) {
+  (m._d || []).forEach((d, i) => d.setAttribute("transform", `rotate(${14 * Math.sin(t * 14 + i * 1.5)} ${d._x + 7} 20)`));
+  (m._c || []).forEach((c, i) => { c.setAttribute("x2", c._x + 12 * Math.sin(t * 14 + i * 1.5)); });
+}
+
+// ======================= ESCENA 4 · dos sillas, una mano y un brazo mecánico
+S[4] = {
+  bloques: [
+    { x: 70, y: 940, w: 450, h: 110, size: 80, al: "center", txt: "Persona", en: () => W(4, "investigador") - 0.5 },
+    { x: 70, y: 1060, w: 450, h: 60, size: 40, al: "center", col: SUB, txt: "el investigador", en: () => W(4, "investigador") - 0.2 },
+    { x: 560, y: 940, w: 450, h: 110, size: 80, al: "center", txt: "*Máquina*", en: () => W(4, "máquina") - 0.5 },
+    { x: 560, y: 1060, w: 450, h: 60, size: 40, al: "center", col: SUB, txt: "o eso creían", en: () => W(4, "máquina") - 0.2 },
+  ],
+  build(g) {
+    const r = this.r = { ml: [], ling: [] };
+    r.f = [290, 790].map(cx => {
+      const f = E("g", {}, g);
+      E("path", { d: cuerpo(cx), fill: CI, stroke: TX, "stroke-width": 7, "stroke-linejoin": "round" }, f);
+      E("circle", { cx, cy: 600, r: 78, fill: CI, stroke: TX, "stroke-width": 7 }, f);
+      r.ling.push([-1, 1].map(s => [0, 1].map(k => E("path", { d: `M${cx + s * (150 + k * 36)} ${640 - k * 24} q${s * 18} 30 0 60`, fill: "none", stroke: CO, "stroke-width": 11, "stroke-linecap": "round" }, f))).flat());
+      return f;
+    });
+    r.mano = E("g", {}, g); r.mano.appendChild(mano(r.mano));
+    r.m1 = r.mano.lastChild; r.arm = E("g", {}, g); r.arm.appendChild(brazo(r.arm)); r.m2 = r.arm.lastChild;
+    r.ring = [290, 790].map(cx => E("circle", { cx, cy: 760, fill: "none", stroke: AM, "stroke-width": 10 }, g));
+  },
+  paint(t, dur) {
+    const r = this.r, tv = W(4, "veces"), ti = W(4, "investigador"), tm = W(4, "máquina"), tz = Math.max(ti, tm) + 0.5;
+    r.f.forEach((f, i) => {
+      const p = rebote(tramo(t, 0.05 + i * 0.1, 0.7 + i * 0.1));
+      const k = rebote(tramo(t, tv - 0.1, tv + 0.5)) - 1, tr = tramo(t, tz, tz + 0.3) * 6 * Math.sin(t * 38 + i);
+      f.setAttribute("transform", `translate(${tr} ${(1 - p) * 80 - 22 * k * Math.sin(Math.PI * tramo(t, tv - 0.1, tv + 0.5)) + 5 * Math.sin(t * 2 + i)})`); op(f, p);
+      const rg = tramo(t, tv - 0.1, tv + 0.8);
+      r.ring[i].setAttribute("r", 120 + 140 * rg); r.ring[i].style.opacity = rg > 0 && rg < 1 ? 1 - rg : 0;
+      r.ling[i].forEach(l => l.style.opacity = tramo(t, tz, tz + 0.25) * (0.5 + 0.5 * Math.sin(t * 20)));
+    });
+    const ph = rebote(tramo(t, ti - 0.5, ti + 0.2)), pb = rebote(tramo(t, tm - 0.5, tm + 0.2));
+    const tr = k => tramo(t, tz, tz + 0.3) * 5 * Math.sin(t * 38 + k);
+    r.mano.setAttribute("transform", `translate(${440 + tr(0)} ${lerp(-60, 780, ph)})`);
+    r.arm.setAttribute("transform", `translate(${940 + tr(1)} ${lerp(-60, 780, pb)})`);
+    agita(r.m1, t * tramo(t, ti, ti + 0.3)); agita(r.m2, t * tramo(t, tm, tm + 0.3));
+  },
+};
+
+// ======================= ESCENA 5 · dos contadores de risa que acaban a la misma altura
+S[5] = {
+  bloques: [
+    { x: 70, y: 1090, w: 940, h: 200, size: 170, al: "center", txt: "*Igual*", en: () => W(5, "mismo") - 0.3 },
+    { x: 70, y: 1310, w: 940, h: 90, size: 60, al: "center", txt: "persona o *máquina*", en: () => W(5, "dijeron") },
+  ],
+  build(g) {
+    const r = this.r = {};
+    for (const cx of [290, 790]) {
+      E("rect", { x: cx - 90, y: 520, width: 180, height: 500, rx: 40, fill: PANEL, stroke: TX, "stroke-width": 7 }, g);
+      for (let k = 1; k < 5; k++) E("line", { x1: cx - 90, y1: 520 + k * 100, x2: cx - 40, y2: 520 + k * 100, stroke: GR, "stroke-width": 6, "stroke-linecap": "round" }, g);
+    }
+    r.ba = E("rect", { x: 220, width: 140, rx: 30, fill: CO, stroke: TX, "stroke-width": 7 }, g);
+    r.bb = E("rect", { x: 720, width: 140, rx: 30, fill: CO, stroke: TX, "stroke-width": 7 }, g);
+    r.ia = E("g", {}, g); r.ia.appendChild(mano(r.ia)); r.ia.lastChild.setAttribute("transform", "translate(0 -26) scale(.7)");
+    r.ib = E("g", {}, g); r.ib.appendChild(brazo(r.ib)); r.ib.lastChild.setAttribute("transform", "translate(0 -26) scale(.7)");
+    r.ig = E("g", {}, g);
+    E("rect", { x: 462, y: 760, width: 116, height: 20, rx: 10, fill: ME, stroke: TX, "stroke-width": 5 }, r.ig);
+    E("rect", { x: 462, y: 810, width: 116, height: 20, rx: 10, fill: ME, stroke: TX, "stroke-width": 5 }, r.ig);
+  },
+  paint(t, dur) {
+    const r = this.r, t0 = W(5, "sonrisas"), tm = W(5, "mismo"), tf2 = W(5, "fuertes");
+    const base = 1000, H = 430;
+    const q = suave(tramo(t, t0 - 0.1, tm + 0.3)), wob = 1 - tramo(t, tm - 0.5, tm + 0.3);
+    const la = q * 0.8 + 0.07 * wob * Math.sin(t * 7) * q, lb = q * 0.8 + 0.07 * wob * Math.sin(t * 7 + 2.3) * q;
+    const sl = 0.025 * rebote(tramo(t, tf2 - 0.1, tf2 + 0.5)) * Math.sin(t * 9);
+    r.ba.setAttribute("y", base - 20 - H * (la + sl)); r.ba.setAttribute("height", 20 + H * (la + sl));
+    r.bb.setAttribute("y", base - 20 - H * (lb + sl)); r.bb.setAttribute("height", 20 + H * (lb + sl));
+    const pi = rebote(tramo(t, 0.1, 0.7));
+    r.ia.setAttribute("transform", `translate(290 ${400 + 4 * Math.sin(t * 3)}) scale(${pi})`);
+    r.ib.setAttribute("transform", `translate(790 ${400 + 4 * Math.sin(t * 3 + 1)}) scale(${pi})`);
+    agita(r.ia.lastChild, t * tramo(t, t0, t0 + 0.2)); agita(r.ib.lastChild, t * tramo(t, t0, t0 + 0.2));
+    const pe = rebote(tramo(t, tm - 0.2, tm + 0.5));
+    r.ig.setAttribute("transform", `translate(540 795) scale(${pe}) translate(-540 -795) translate(0 ${4 * Math.sin(t * 4)})`);
+    op(r.ig, pe);
+  },
+};
+
+</script></body></html>
