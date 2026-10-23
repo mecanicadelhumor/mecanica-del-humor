@@ -6528,3 +6528,93 @@ a 48 h, `MDS-043` 27, `MDS-040` y `MDS-042` 9. B1 con el arreglo de hoy: control
 ## Lo que NO cambia hoy
 
 - Los brazos, el `orden` y la regla de B1; los umbrales de C26; las rutinas; lo que se oye (C36 apagado).
+
+
+# Versión 24 · 23 de octubre de 2026 — los plazos con dueño, el presentador recuperado y C36 encendido
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario, y lo que se anula se dice con su nombre, en la tabla de abajo.
+
+Dirección extraordinaria, viernes, lanzada como rutina y **con el codirector delante** (contestó en la
+sesión). El cuaderno traía (23/10): **(1) Queja**: él cumplió el plazo de VRoid (avatar subido el 13/10,
+`4f95779`) y el muestrario del 16/10 no se hizo, sin que la revisión diaria lo viera; **(2) velocidad de
+iteración**: cada cambio tarda semanas en probarse; **(3) calidad**: subir el nivel y medirlo contra
+vídeos ajenos. Y su respuesta a las tareas del 22/10: **C36 le vale** («equivalente o ligeramente mejor»)
+con tres notas (la cola final, la pausa de «Cena de empresa», vigilar modelos de voz nuevos), y en la
+bitácora de la planificación: los largos no siguen C17, y los temas prometedores se guardan.
+
+| Cambio | Estado |
+|---|---|
+| **C70 · Los compromisos con fecha tienen dueño** | **Hecho.** Por qué falló, abajo. `05_calendario/compromisos.json` (de la dirección): qué, quién, para cuándo, y los aplazamientos con su porqué. La revisión diaria lo lee cada mañana (paso 0, bloque del 23/10 de su prompt): línea «Plazos vencidos» siempre en el estado, nota al dueño en `08_comunicacion/`, e INCIDENCIA si lleva dos días o toca un vídeo de las 48 h. Trampa 62 |
+| **C61 · muestrario 2D** (caído el 12/10) | **Hecho**: `07_pruebas/personaje-2026-10/muestrario-2d-2026-10-23/`. SVG propio, seis caras, boca por visemas, 0,11 s por fotograma sin GPU. Plano: se lee bien, carisma de pictograma. La variante en la esquina (solo apertura y remate) es la más útil |
+| **C61 · muestrario 3D VRoid** (caído el 16/10) | **Hecho**: `07_pruebas/personaje-2026-10/muestrario-2026-10-23/`. `three-vrm` en Chromium por software, boca por energía del audio, parpadeo fijo. 1,44 s por fotograma a 1080 (36 s por segundo de vídeo); a 540, 0,30 s. Sirve para momentos puntuales, no para un Short entero. La camiseta es del azul del fondo de la marca y se funde |
+| **C51.3 · persona sintética en Kaggle** (caída el 13-15/10) | **Preparada, sin ejecutar** (no hay claves en el contenedor): `caras.py` (8 caras FLUX), cuaderno de Kaggle (Wan 2.2 a 480p con plan B de vaivén + MuseTalk 1.5 con detector S3FD y máscara elíptica, sin piezas no comerciales), `prueba_presentador.py`, `PRUEBA.md`. El workflow lo mueve el codirector (`00_estrategia/tareas/workflows_2026-10-23/presentador_prueba.yml`) |
+| **C36 · encendido** | **Hecho**: `C36_EN_PRODUCCION = True` desde la producción del sábado 24. Una petición de voz por Short |
+| **C36.1 · El rótulo de situación** | **Hecho y probado** con la toma real de `MDS-045`: «Cena de empresa.» llevaba 0,41 s delante y 0,57 detrás y se colaba (Whisper lo oye como «cenadempresa»). Ahora 0,7 y 0,7, garantizados al cortar (Whisper parte el trozo; si no encuentra la frontera, la escena se queda como estaba, probado) y pedidos en la dirección de la línea. Calibrado en las 612 escenas: cinco rótulos, ninguna frase con verbo. Muestra en `07_pruebas/c36-2026-10-23/` |
+| **C36.2 · Techo de ritmo en la toma única** | **4,2 palabras/s** (era 3,2) cuando la voz viene de una toma (`voz.py`, `qa.py`). El codirector: «el ritmo está bien». La repetición la caza Whisper |
+| **La cola final** (nota 1 del codirector) | **Pendiente de su elección** (a/b/c, en sus tareas): no es C36, es el hueco de la tarjeta «Síguenos» que él pidió alargar el 19/10. No se toca con el dato delante sin muestra en vídeo |
+| **Vigilar modelos de voz gratuitos** (nota 3) | **Compromiso recurrente** `tts-vigilancia`: primer informe el 2/11, después el primer lunes de cada mes |
+| **Los largos y C17** | **Decidido por el codirector**: C17 no se aplica a los largos |
+| **Temas en reserva** | **Decidido por el codirector**: un tema prometedor que no pasa a la tercera vuelta se guarda en `05_calendario/temas_en_reserva.md` (de la planificación) y se reintenta desde cero la semana siguiente |
+| **Velocidad de iteración y calidad** (cuaderno 2 y 3) | **Propuestas** al codirector (abajo y en sus tareas). Nada cambia hasta que conteste |
+
+## C70 · Por qué se cayó el muestrario, dicho sin adornos
+
+1. **La fila del calendario no tenía dueño.** La versión 21 ponía «Viernes 16 · Muestrarios del
+   presentador con el avatar VRoid» sin decir quién. Solo podía hacerlo la dirección, que corre lunes y
+   jueves; el viernes no corría nadie con ese encargo.
+2. **La dirección del jueves 15 tenía el avatar y no lo hizo**: la ejecución se fue en C66.1 y C36, y el
+   muestrario no apareció ni en «Sin mirar». **La del lunes 19 tampoco lo nombró**; la del 22 lo reconoció
+   porque el codirector preguntó.
+3. **La revisión diaria no podía verlo**: su prompt vigila lo que se produce, no los compromisos del plan.
+4. **Y con él se cayeron, igual de callados, el muestrario 2D (12/10) y las caras y la prueba de Kaggle
+   (12-15/10).** Del presentador no se había hecho nada desde el 05/10.
+
+La culpa es de la dirección. El arreglo no es «tener más cuidado»: es que **un compromiso sin dueño no
+existe** y que alguien que corre todos los días mire las fechas.
+
+## Velocidad de iteración: lo que propongo (cuaderno, punto 2)
+
+1. **Catorce Shorts a la semana desde B2 (5/11).** C36 baja la voz de seis peticiones a una: caben dos
+   Shorts al día en las diez de `3.1` con margen. Es la idea 3 del codirector y ya no la bloquea la cuota.
+   Duplica la velocidad de cualquier experimento sin cambiar nada más.
+2. **Probar dos cambios a la vez, bien hecho (diseño factorial 2×2).** Es la idea 2 del codirector con la
+   forma que la hace rigurosa: cada Short lleva una combinación de dos cambios (p. ej. corto/largo ×
+   cierre concreto/de siempre), así que **cada Short informa de los dos cambios a la vez**. Con los mismos
+   Shorts se aprenden dos cosas en lugar de una, y además si se potencian entre sí.
+3. **Decidir en cuanto los datos lo digan, no a una n fija**: la probabilidad de que un brazo sea mejor
+   (bayesiana) con un umbral escrito antes (p. ej. 90 %), y retirar pronto lo que claramente pierde.
+4. **Un filtro barato antes de gastar un hueco**: la lectura en frío ya pregunta «¿dónde te irías?»; un
+   panel de lectores sintéticos que puntúe variantes no prueba nada, pero descarta las flojas antes de
+   publicarlas.
+5. **El canal secundario, no por ahora**: un canal nuevo arranca sin historial en el feed, y lo que
+   aprende no se traslada bien al principal; es el trabajo más caro para la señal más dudosa.
+
+Con 1 + 2, B2 aprendería **dos cosas en ~8-9 días** en vez de una en ~18.
+
+## Calidad: lo que propongo (cuaderno, punto 3)
+
+1. **Un patrón de referencia medido**: veinte Shorts de divulgación en español con más de 100.000
+   visualizaciones (datos públicos de la API de YouTube; solo se miden, no se reutiliza nada, regla 9).
+   Lo que se mide, igual en los nuestros: segundos hasta el primer cambio de plano, cortes por cada diez
+   segundos, palabras por segundo, duración, si hay texto en el primer fotograma, si hay cara en los dos
+   primeros segundos, volumen.
+2. **Una ficha de calidad automática** en `qa.py` que compare cada Short nuestro con esos rangos, y que la
+   revisión diaria lo marque cuando se salga de ellos.
+3. **La voz**: es lo que más suena a máquina (nota 3 del codirector). Vigilancia mensual de modelos
+   gratuitos y, con C36, la entonación ya es de frase seguida.
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Sábado 24, ~01:13 UTC | Primer Short con C36 encendido |
+| Sábado 24, 09:28 UTC | Primera revisión diaria con el paso 0 (plazos) |
+| **Lunes 26, 13:07 UTC** | Dirección: la cola final (si el codirector eligió), imagen horizontal y voz por tandas del largo, lo que conteste de iteración y calidad |
+| Jueves 29 | Planificación: `MDH-008`. El codirector: mirar los muestrarios del personaje |
+| Lunes 2/11 | Dirección: render de prueba del largo; primer informe de voces |
+| 4-5/11 | Fin de B1; B2 |
+
+## Lo que NO cambia hoy
+
+- Los brazos, el `orden` y la regla de B1; los umbrales de C26; las rutinas; la cola final.

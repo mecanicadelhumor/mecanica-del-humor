@@ -13,34 +13,56 @@
       "que": "Muestrario del personaje 3D con el avatar VRoid del codirector (07_pruebas/personaje-2026-10/)",
       "dueno": "direccion",
       "fecha": "2026-10-23",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [
-        {"de": "2026-10-16", "a": "2026-10-29", "porque": "No se hizo el 16/10 y no se dijo hasta el 22/10 (fallo de la dirección: la fila del calendario no tenía dueño)"},
-        {"de": "2026-10-29", "a": "2026-10-23", "porque": "Se adelanta a petición del codirector (sesión del 23/10)"}
+        {
+          "de": "2026-10-16",
+          "a": "2026-10-29",
+          "porque": "No se hizo el 16/10 y no se dijo hasta el 22/10 (fallo de la dirección: la fila del calendario no tenía dueño)"
+        },
+        {
+          "de": "2026-10-29",
+          "a": "2026-10-23",
+          "porque": "Se adelanta a petición del codirector (sesión del 23/10)"
+        }
       ],
-      "origen": "Plan v18 (C61), calendario del 05/10"
+      "origen": "Plan v18 (C61), calendario del 05/10",
+      "hecho_el": "2026-10-23",
+      "nota": "07_pruebas/personaje-2026-10/muestrario-2026-10-23/ (retrato y momento puntual). Lo mira el codirector"
     },
     {
       "id": "C61-2d",
       "que": "Muestrario del personaje 2D propio (SVG con la paleta de la marca)",
       "dueno": "direccion",
       "fecha": "2026-10-23",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [
-        {"de": "2026-10-12", "a": "2026-10-23", "porque": "Se cayó en silencio el 12/10; recuperado a petición del codirector el 23/10"}
+        {
+          "de": "2026-10-12",
+          "a": "2026-10-23",
+          "porque": "Se cayó en silencio el 12/10; recuperado a petición del codirector el 23/10"
+        }
       ],
-      "origen": "Plan v18 (C61)"
+      "origen": "Plan v18 (C61)",
+      "hecho_el": "2026-10-23",
+      "nota": "07_pruebas/personaje-2026-10/muestrario-2d-2026-10-23/ (seis caras, completo y en la esquina). Lo mira el codirector"
     },
     {
       "id": "C51.3-caras-kaggle",
       "que": "Persona sintética: caras con FLUX y prueba de sincronía labial en Kaggle (MuseTalk 1.5). Se deja preparada hoy; necesita que el codirector mueva un workflow",
       "dueno": "direccion",
       "fecha": "2026-10-23",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [
-        {"de": "2026-10-15", "a": "2026-10-23", "porque": "Se cayó en silencio (caras previstas el 12/10, prueba el 13-15/10); recuperada a petición del codirector el 23/10"}
+        {
+          "de": "2026-10-15",
+          "a": "2026-10-23",
+          "porque": "Se cayó en silencio (caras previstas el 12/10, prueba el 13-15/10); recuperada a petición del codirector el 23/10"
+        }
       ],
-      "origen": "Plan v18 (C51.3)"
+      "origen": "Plan v18 (C51.3)",
+      "hecho_el": "2026-10-23",
+      "nota": "Preparada: 07_pruebas/presentador-2026-10/PRUEBA.md y el workflow en 00_estrategia/tareas/workflows_2026-10-23/. Sigue en C51.3-workflow y C51.3-kaggle-run"
     },
     {
       "id": "C51.3-workflow",
@@ -65,9 +87,29 @@
       "que": "Encender la voz de una toma (C36_EN_PRODUCCION = True) con la cola final corta y la pausa del titular que pidió el codirector",
       "dueno": "direccion",
       "fecha": "2026-10-23",
+      "estado": "hecho",
+      "aplazamientos": [],
+      "origen": "Respuesta del codirector a las tareas del 22/10",
+      "hecho_el": "2026-10-23",
+      "nota": "voz.py: C36_EN_PRODUCCION = True, rótulo de situación con 0,7 s antes y después, techo de ritmo 4,2 en la toma única. La cola final queda pendiente de la respuesta del codirector (C36-cola)"
+    },
+    {
+      "id": "C61-C51.3-eleccion",
+      "que": "Mirar los dos muestrarios del personaje (2D y VRoid) y decir en el cuaderno cuál sigue, o los dos",
+      "dueno": "codirector",
+      "fecha": "2026-10-29",
       "estado": "pendiente",
       "aplazamientos": [],
-      "origen": "Respuesta del codirector a las tareas del 22/10"
+      "origen": "Tareas del codirector del 23/10"
+    },
+    {
+      "id": "C36-cola",
+      "que": "Cola tras el cierre (≈3 s sin voz, es la tarjeta «Síguenos»): el codirector elige (a) igual, (b) ~1,8 s con tarjeta ~1,3 s, (c) 1,5 s; la dirección lo aplica con muestra en vídeo",
+      "dueno": "direccion",
+      "fecha": "2026-10-26",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Respuesta del codirector a las tareas del 22/10, punto 1"
     },
     {
       "id": "largo-imagen-horizontal",
