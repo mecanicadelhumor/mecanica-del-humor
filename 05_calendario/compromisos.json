@@ -77,12 +77,13 @@
     },
     {
       "id": "C51.3-caras-relanzar",
-      "que": "Volver a lanzar el workflow «Prueba del presentador (C51.3)» con paso = caras (ya con el arreglo de la semilla), mirar 07_pruebas/presentador-2026-10/caras/hoja.jpg y elegir cara (o ninguna)",
+      "que": "Mirar 07_pruebas/presentador-2026-10/caras/hoja.jpg y elegir cara (o ninguna); después, lanzar el workflow con paso = kaggle o decirlo en el cuaderno",
       "dueno": "codirector",
       "fecha": "2026-10-29",
       "estado": "pendiente",
       "aplazamientos": [],
-      "origen": "Dirección 23/10 (ejecución de la mañana, tras el fallo del primer intento)"
+      "origen": "Dirección 23/10 (ejecución de la mañana, tras el fallo del primer intento)",
+      "nota": "El codirector relanzó «caras» el 23/10 (08:41 UTC): ocho caras bien, pero no llegaron al repositorio (git add fallaba porque salida/ no existía). La dirección las copió del artefacto y arregló el paso con salida/.gitignore"
     },
     {
       "id": "C51.3-kaggle-run",

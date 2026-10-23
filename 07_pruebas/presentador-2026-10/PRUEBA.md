@@ -136,3 +136,19 @@ admite semilla** en Workers AI, y el simulador de la prueba de arriba la aceptab
   de antes, el mismo 400 que vio el codirector.
 - Lo mismo estaba roto, sin que se notara, en el **respaldo de producción** (`visual.generar`): schnell
   solo corre si klein falla, y entonces habría fallado también. Quitada la semilla ahí (trampa 63).
+
+## 23/10, 08:41 UTC: las caras salieron, pero no llegaron al repositorio
+
+El segundo intento de `caras` fue bien: ocho caras con FLUX.2 [klein] 4B y sus semillas (101…808), y la
+hoja. **Pero el paso «Dejarlo en el repositorio» no subió nada**: hace `git add -A caras salida`, y como
+`salida/` aún no existía, git rechaza la orden **entera** («pathspec 'salida' did not match any files»);
+el `|| true` del workflow se tragó el error y el paso salió en verde sin commit. Las caras solo quedaron
+en el artefacto. (El enlace al artefacto que imprime el log lleva `***` en lugar del dueño, porque GitHub
+oculta los secretos: ese no abre. El bueno está en la página del run, abajo, «Artifacts».)
+
+- **Las caras, en el repositorio**: copiadas del artefacto (run 39926374698) a `caras/` por la dirección.
+- **El arreglo, sin tocar el workflow**: `salida/.gitignore` (con `!*.mp4`). Hace que `salida/` exista
+  siempre, así que el `git add` ya no falla, y que los `.mp4` del paso `kaggle` sí se suban (el
+  `.gitignore` de la raíz los excluía: el `kaggle` habría tenido el mismo problema). Probado en una copia
+  del repositorio: antes, el mismo «did not match any files» y nada en el índice; después, las caras, el
+  `.gitignore` y un `.mp4` de prueba.

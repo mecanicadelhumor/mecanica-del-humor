@@ -1,0 +1,82 @@
+[
+ {
+  "n": 1,
+  "fichero": "cara_1.jpg",
+  "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+  "prompt": "head and shoulders portrait photo of a fictional woman in her thirties with short dark hair, friendly science communicator, looking straight at the camera, mouth closed, relaxed natural expression, plain dark navy blue studio background, soft even front light, sharp focus on the face, simple dark sweater, no text, no logo, no jewelry, realistic skin, 50mm photo",
+  "semilla": 101,
+  "ancho": 1024,
+  "alto": 1024,
+  "licencia": "Imagen generada con IA (FLUX.2 [klein] 4B, Black Forest Labs, Apache 2.0) en Cloudflare Workers AI. Persona ficticia (regla 7.1)."
+ },
+ {
+  "n": 2,
+  "fichero": "cara_2.jpg",
+  "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+  "prompt": "head and shoulders portrait photo of a fictional man in his thirties with short brown hair and a trimmed beard, friendly science communicator, looking straight at the camera, mouth closed, relaxed natural expression, plain dark navy blue studio background, soft even front light, sharp focus on the face, simple dark sweater, no text, no logo, no jewelry, realistic skin, 50mm photo",
+  "semilla": 202,
+  "ancho": 1024,
+  "alto": 1024,
+  "licencia": "Imagen generada con IA (FLUX.2 [klein] 4B, Black Forest Labs, Apache 2.0) en Cloudflare Workers AI. Persona ficticia (regla 7.1)."
+ },
+ {
+  "n": 3,
+  "fichero": "cara_3.jpg",
+  "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+  "prompt": "head and shoulders portrait photo of a fictional woman in her forties with shoulder-length curly hair, friendly science communicator, looking straight at the camera, mouth closed, relaxed natural expression, plain dark navy blue studio background, soft even front light, sharp focus on the face, simple dark sweater, no text, no logo, no jewelry, realistic skin, 50mm photo",
+  "semilla": 303,
+  "ancho": 1024,
+  "alto": 1024,
+  "licencia": "Imagen generada con IA (FLUX.2 [klein] 4B, Black Forest Labs, Apache 2.0) en Cloudflare Workers AI. Persona ficticia (regla 7.1)."
+ },
+ {
+  "n": 4,
+  "fichero": "cara_4.jpg",
+  "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+  "prompt": "head and shoulders portrait photo of a fictional man in his forties with glasses and greying temples, friendly science communicator, looking straight at the camera, mouth closed, relaxed natural expression, plain dark navy blue studio background, soft even front light, sharp focus on the face, simple dark sweater, no text, no logo, no jewelry, realistic skin, 50mm photo",
+  "semilla": 404,
+  "ancho": 1024,
+  "alto": 1024,
+  "licencia": "Imagen generada con IA (FLUX.2 [klein] 4B, Black Forest Labs, Apache 2.0) en Cloudflare Workers AI. Persona ficticia (regla 7.1)."
+ },
+ {
+  "n": 5,
+  "fichero": "cara_5.jpg",
+  "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+  "prompt": "head and shoulders portrait photo of a fictional woman in her late twenties with straight black hair in a low ponytail, friendly science communicator, looking straight at the camera, mouth closed, relaxed natural expression, plain dark navy blue studio background, soft even front light, sharp focus on the face, simple dark sweater, no text, no logo, no jewelry, realistic skin, 50mm photo",
+  "semilla": 505,
+  "ancho": 1024,
+  "alto": 1024,
+  "licencia": "Imagen generada con IA (FLUX.2 [klein] 4B, Black Forest Labs, Apache 2.0) en Cloudflare Workers AI. Persona ficticia (regla 7.1)."
+ },
+ {
+  "n": 6,
+  "fichero": "cara_6.jpg",
+  "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+  "prompt": "head and shoulders portrait photo of a fictional man in his late twenties with wavy dark hair, clean shaven, friendly science communicator, looking straight at the camera, mouth closed, relaxed natural expression, plain dark navy blue studio background, soft even front light, sharp focus on the face, simple dark sweater, no text, no logo, no jewelry, realistic skin, 50mm photo",
+  "semilla": 606,
+  "ancho": 1024,
+  "alto": 1024,
+  "licencia": "Imagen generada con IA (FLUX.2 [klein] 4B, Black Forest Labs, Apache 2.0) en Cloudflare Workers AI. Persona ficticia (regla 7.1)."
+ },
+ {
+  "n": 7,
+  "fichero": "cara_7.jpg",
+  "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+  "prompt": "head and shoulders portrait photo of a fictional woman in her fifties with short silver hair, friendly science communicator, looking straight at the camera, mouth closed, relaxed natural expression, plain dark navy blue studio background, soft even front light, sharp focus on the face, simple dark sweater, no text, no logo, no jewelry, realistic skin, 50mm photo",
+  "semilla": 707,
+  "ancho": 1024,
+  "alto": 1024,
+  "licencia": "Imagen generada con IA (FLUX.2 [klein] 4B, Black Forest Labs, Apache 2.0) en Cloudflare Workers AI. Persona ficticia (regla 7.1)."
+ },
+ {
+  "n": 8,
+  "fichero": "cara_8.jpg",
+  "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+  "prompt": "head and shoulders portrait photo of a fictional man in his fifties with a short grey beard, friendly science communicator, looking straight at the camera, mouth closed, relaxed natural expression, plain dark navy blue studio background, soft even front light, sharp focus on the face, simple dark sweater, no text, no logo, no jewelry, realistic skin, 50mm photo",
+  "semilla": 808,
+  "ancho": 1024,
+  "alto": 1024,
+  "licencia": "Imagen generada con IA (FLUX.2 [klein] 4B, Black Forest Labs, Apache 2.0) en Cloudflare Workers AI. Persona ficticia (regla 7.1)."
+ }
+]

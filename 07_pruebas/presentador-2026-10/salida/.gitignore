@@ -1,0 +1,4 @@
+# C51.3: los vídeos del paso «kaggle» SÍ se suben (el .gitignore de la raíz excluye
+# los .mp4 de 07_pruebas/). Además, que esta carpeta exista hace que el
+# «git add -A caras salida» del workflow no falle entero (23/10/2026).
+!*.mp4

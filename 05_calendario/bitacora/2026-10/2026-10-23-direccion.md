@@ -68,3 +68,12 @@ Versión **24** del plan.
 - **No he lanzado el workflow**: no puedo (ni Actions ni claves desde aquí). Lo relanza el codirector.
 - La cola (b): el lunes 26, con su muestra, como estaba prometido.
 - La viñeta de compromisos en `tareas/direccion.md` (privado): sigue pedida al codirector.
+
+## Tercera ejecución · 23/10, ~09:00 UTC (con el codirector delante)
+
+- El codirector relanzó `caras`: run verde, ocho caras con klein, **pero ningún commit**. Causa: `git add -A
+  caras salida` falla entero si `salida/` no existe, y el `|| true` lo calla. Las caras, copiadas del
+  artefacto a `07_pruebas/presentador-2026-10/caras/`. Arreglo sin tocar el workflow:
+  `salida/.gitignore` con `!*.mp4` (también deja subir los vídeos de `kaggle`, que el `.gitignore` de la
+  raíz excluía). Probado en una copia del repositorio. Hoja mirada: ocho adultos ficticios, fondo azul
+  marino, sin texto.
