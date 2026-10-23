@@ -1,8 +1,8 @@
 {
   "guion": "MDS-049",
   "version": 1,
-  "firma": "4bc713c6bb04cf40",
-  "resuelto_utc": "2026-10-15T22:34:47Z",
+  "firma": "5c3435bdd1b9ce6a",
+  "resuelto_utc": "2026-10-23T20:02:54Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -17,27 +17,34 @@
             1.47
           ],
           "frase": "Después de reírte,",
-          "fuente": "pixabay",
-          "id": 176024,
-          "pagina": "https://pixabay.com/videos/id-176024/",
-          "titulo": "compass, night, moon, evening, window, table, book, chain, curtains, light, fantasy id",
-          "autor": "Mabelle-Elise",
-          "autor_url": "https://pixabay.com/users/Mabelle-Elise-15751335/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 15.0,
+          "fuente": "pexels",
+          "id": 9588561,
+          "pagina": "https://www.pexels.com/video/women-eating-on-a-table-outdoors-9588561/",
+          "titulo": "women eating on a table outdoors",
+          "autor": "Ron Lach",
+          "autor_url": "https://www.pexels.com/@ron-lach",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 55.0,
           "ancho": 1080,
-          "alto": 1920,
-          "url": "https://cdn.pixabay.com/video/2023/08/14/176024-854496277_large.mp4",
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/9588561/9588561-hd_1080_2048_25fps.mp4",
           "tipo": "video",
-          "consulta": "friends laughing at dinner table night",
+          "consulta": "woman laughing with friends at dinner table",
           "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 1.2,
+          "movimiento": 5.49,
           "encuadre": {
             "x": 0.5,
-            "y": 0.5
+            "y": 0
           },
-          "caras": []
+          "caras": [
+            [
+              0.3496,
+              0.2955,
+              0.2434,
+              0.1853
+            ]
+          ]
         },
         {
           "k": 2,
@@ -243,7 +250,7 @@
     },
     "4": {
       "narracion_sha": "67df44c75565",
-      "texto_pos": "abajo",
+      "texto_pos": "arriba",
       "planos": [
         {
           "k": 1,
@@ -253,46 +260,27 @@
             6.6
           ],
           "frase": "Unos psicólogos pusieron a gente a ver un vídeo, de risa o sin gracia,",
-          "fuente": "pexels",
-          "id": 5359024,
-          "pagina": "https://www.pexels.com/video/people-looking-at-a-laptop-5359024/",
-          "titulo": "people looking at a laptop",
-          "autor": "Pavel Danilyuk",
-          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 31.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/5359024/5359024-hd_1080_1920_30fps.mp4",
+          "fuente": "pixabay",
+          "id": 26537,
+          "pagina": "https://pixabay.com/videos/id-26537/",
+          "titulo": "video, recording, cinema, camera, image, the media, technology, monitoring, production, notebook, monitor, internet, computer, screen, laptop, people, digital, keyboard, pc id",
+          "autor": "ninosouza",
+          "autor_url": "https://pixabay.com/users/ninosouza-8385382/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 18.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2019/09/04/26537-357886155_large.mp4",
           "tipo": "video",
-          "consulta": "people watching laptop laughing",
+          "consulta": "person watching funny video on laptop laughing",
           "relevancia": 0.5,
           "inicio_s": 0.4,
-          "movimiento": 3.96,
+          "movimiento": 3.43,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
-          "caras": [
-            [
-              0.2139,
-              0.3609,
-              0.125,
-              0.0859
-            ],
-            [
-              0.5944,
-              0.4172,
-              0.1194,
-              0.0844
-            ],
-            [
-              0.4028,
-              0.3031,
-              0.1222,
-              0.075
-            ]
-          ]
+          "caras": []
         },
         {
           "k": 2,
