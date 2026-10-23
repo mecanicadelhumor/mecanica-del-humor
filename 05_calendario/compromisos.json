@@ -69,9 +69,20 @@
       "que": "Mover 00_estrategia/tareas/workflows_2026-10-23/presentador_prueba.yml a .github/workflows/ y lanzarlo (paso 'caras')",
       "dueno": "codirector",
       "fecha": "2026-10-26",
+      "estado": "hecho",
+      "aplazamientos": [],
+      "origen": "Tareas del codirector del 23/10",
+      "hecho_el": "2026-10-23",
+      "nota": "El codirector creó el workflow y lanzó «caras» el 23/10: las ocho fallaron con HTTP 400 de Cloudflare («Additional or unevaluated properties '/seed'»: FLUX.1 [schnell] ya no admite semilla). Arreglado el mismo día por la dirección en caras.py (FLUX.2 [klein] 4B, el de producción, que sí la admite). El workflow no cambia. Sigue en C51.3-caras-relanzar"
+    },
+    {
+      "id": "C51.3-caras-relanzar",
+      "que": "Volver a lanzar el workflow «Prueba del presentador (C51.3)» con paso = caras (ya con el arreglo de la semilla), mirar 07_pruebas/presentador-2026-10/caras/hoja.jpg y elegir cara (o ninguna)",
+      "dueno": "codirector",
+      "fecha": "2026-10-29",
       "estado": "pendiente",
       "aplazamientos": [],
-      "origen": "Tareas del codirector del 23/10"
+      "origen": "Dirección 23/10 (ejecución de la mañana, tras el fallo del primer intento)"
     },
     {
       "id": "C51.3-kaggle-run",
@@ -98,9 +109,20 @@
       "que": "Mirar los dos muestrarios del personaje (2D y VRoid) y decir en el cuaderno cuál sigue, o los dos",
       "dueno": "codirector",
       "fecha": "2026-10-29",
+      "estado": "hecho",
+      "aplazamientos": [],
+      "origen": "Tareas del codirector del 23/10",
+      "hecho_el": "2026-10-23",
+      "nota": "«Los dos», mezclados en un solo brazo de momento (si gana, se separan después: esquina frente a completo). Colores: se quedan azul marino y ámbar (los pidió la propia dirección). Pega: el personaje de la esquina tapa a veces lo importante del plano (las manos del apretón): sigue en C61-esquina-libre"
+    },
+    {
+      "id": "C61-esquina-libre",
+      "que": "Que el personaje de la esquina no tape lo importante del plano: elegir la esquina con menos contenido (caras, manos, movimiento) en cada plano, con muestra para el codirector",
+      "dueno": "direccion",
+      "fecha": "2026-11-02",
       "estado": "pendiente",
       "aplazamientos": [],
-      "origen": "Tareas del codirector del 23/10"
+      "origen": "Respuesta del codirector a la tarea 2 del 23/10"
     },
     {
       "id": "C36-cola",
@@ -109,7 +131,8 @@
       "fecha": "2026-10-26",
       "estado": "pendiente",
       "aplazamientos": [],
-      "origen": "Respuesta del codirector a las tareas del 22/10, punto 1"
+      "origen": "Respuesta del codirector a las tareas del 22/10, punto 1",
+      "nota": "El codirector eligió (b) el 23/10: ~1,8 s de cola, tarjeta ~1,3 s. Ajustar para que se lea sin desperdiciar segundos. Se aplica el lunes 26 con vídeo del final (regla 11.2)"
     },
     {
       "id": "largo-imagen-horizontal",
@@ -134,9 +157,65 @@
       "que": "Propuestas al codirector: velocidad de iteración y estándares de calidad (cuaderno del 23/10)",
       "dueno": "direccion",
       "fecha": "2026-10-26",
+      "estado": "hecho",
+      "aplazamientos": [],
+      "origen": "Cuaderno del codirector, 23/10",
+      "hecho_el": "2026-10-23",
+      "nota": "El codirector aprobó todas las propuestas de iteración (1-4; el canal secundario, no) y la medición de calidad. Siguen en iteracion-14, iteracion-factorial, iteracion-bayes, iteracion-filtro y calidad-patron"
+    },
+    {
+      "id": "iteracion-14",
+      "que": "Catorce Shorts a la semana desde B2 (5/11): producción y publicación de un segundo Short al día (13:00 en España, la hora propuesta), planificación con 14 guiones, y el workflow cambiado preparado en 00_estrategia/tareas/workflows_<fecha>/ para que lo mueva el codirector",
+      "dueno": "direccion",
+      "fecha": "2026-10-29",
       "estado": "pendiente",
       "aplazamientos": [],
-      "origen": "Cuaderno del codirector, 23/10"
+      "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
+    },
+    {
+      "id": "iteracion-14-mover",
+      "que": "Mover el workflow del segundo Short diario a .github/workflows/ (lo prepara la dirección en iteracion-14)",
+      "dueno": "codirector",
+      "fecha": "2026-11-03",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
+    },
+    {
+      "id": "iteracion-factorial",
+      "que": "B2 como diseño factorial 2×2 (dos cambios a la vez, combinaciones repartidas por igual) en ciclos.json y bucle.py",
+      "dueno": "direccion",
+      "fecha": "2026-11-02",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
+    },
+    {
+      "id": "iteracion-bayes",
+      "que": "Regla de decisión bayesiana (probabilidad de que un brazo sea mejor, umbral escrito antes: 90 %) en bucle.py para B2; B1 sigue con su regla",
+      "dueno": "direccion",
+      "fecha": "2026-11-02",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
+    },
+    {
+      "id": "iteracion-filtro",
+      "que": "Filtro de lectores sintéticos sobre variantes de guion antes de producir",
+      "dueno": "direccion",
+      "fecha": "2026-11-09",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
+    },
+    {
+      "id": "calidad-patron",
+      "que": "Patrón de calidad medido con veinte Shorts ajenos de divulgación en español (>100.000 vistas) y los nuestros; después, la ficha automática en qa.py",
+      "dueno": "direccion",
+      "fecha": "2026-11-02",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
     },
     {
       "id": "MDH-008-guion",

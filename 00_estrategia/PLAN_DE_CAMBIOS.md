@@ -6618,3 +6618,37 @@ Con 1 + 2, B2 aprendería **dos cosas en ~8-9 días** en vez de una en ~18.
 ## Lo que NO cambia hoy
 
 - Los brazos, el `orden` y la regla de B1; los umbrales de C26; las rutinas; la cola final.
+
+
+---
+
+# Versión 25 · 23 de octubre de 2026 (mañana, en diferido) — el workflow de las caras y las respuestas del codirector
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario.
+
+| Qué | Decisión |
+|---|---|
+| C51.3, paso `caras` | Falló con 400 (`seed` ya no vale en FLUX.1 [schnell]). `caras.py` pasa a **FLUX.2 [klein] 4B** con semilla; schnell sin semilla de respaldo. El workflow no cambia: el codirector lo vuelve a lanzar (`C51.3-caras-relanzar`) |
+| Respaldo de `visual.generar` | Sin `seed` para schnell: estaba roto en silencio (trampa 63). No cambia lo que se ve: solo corre si klein falla |
+| Cola final (`C36-cola`) | El codirector elige **(b)**: ~1,8 s de cola, tarjeta ~1,3 s. Lunes 26 con vídeo del final (regla 11.2) |
+| Personaje | **Los dos** (2D y VRoid), mezclados en un brazo; si gana, se separan después. Colores de la marca, como están. Nuevo: que el de la esquina no tape lo importante (`C61-esquina-libre`, 2/11) |
+| Velocidad de iteración | Aprobadas las cuatro propuestas: **14 Shorts/semana desde B2** (segundo Short a las 13:00 en España), **B2 factorial 2×2**, **decisión bayesiana (90 %)** para B2, **filtro sintético**. Canal secundario, no. B1 sigue con su regla hasta el 4/11 |
+| Calidad | Aprobado: **patrón medido** con veinte Shorts ajenos, la semana que viene (`calidad-patron`, 2/11); después, la ficha en `qa.py` |
+
+Todo con dueño y fecha en `05_calendario/compromisos.json`.
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Cuando pueda | El codirector: relanzar `caras` y elegir cara |
+| Lunes 26 | Dirección: cola (b) con muestra; imagen horizontal y voz por tandas del largo |
+| Jueves 29 | Dirección: el segundo Short diario preparado (código y workflow para mover); prueba de Kaggle si hay cara. Planificación: `MDH-008` |
+| Lunes 2/11 | Dirección: B2 factorial y bayesiano en `bucle.py`; patrón de calidad; esquina libre; render del largo; informe de voces |
+| Martes 3/11 | El codirector: mover el workflow del segundo Short |
+| 4-5/11 | Fin de B1; B2 a 14 por semana |
+
+## Lo que NO cambia hoy
+
+- B1 (brazos, `orden`, regla), los umbrales de C26, las rutinas, la cola final (hasta el lunes).

@@ -775,6 +775,21 @@ del personaje 2D (12/10) y la prueba de Kaggle (13-15/10). Se supo el 22/10 porq
 → **Todo lo que tenga fecha va a `05_calendario/compromisos.json` con dueño el mismo día; la revisión
 diaria mira lo vencido cada mañana; y un aplazamiento se escribe con su nueva fecha, nunca se calla.**
 
+**63. El respaldo que nunca corre está roto y nadie lo sabe.** El 23/10 el codirector lanzó las caras de
+C51.3 y Cloudflare contestó 400 a las ocho: FLUX.1 [schnell] ya no admite `seed`. La prueba se había hecho
+con un Cloudflare simulado que sí la admitía. Y el respaldo de `visual.generar` pedía lo mismo: llevaba
+roto sin saberse desde quién sabe cuándo, porque solo corre si falla klein.
+→ **Un simulador solo prueba lo que el simulador sabe. Antes de pedirle al codirector que lance algo
+contra un servicio, usa lo que ya funciona en producción contra ese servicio (aquí, klein), y de vez en
+cuando haz correr de verdad el camino de respaldo.**
+
+
+## Dónde está el proyecto a 23 de octubre de 2026, mañana (en diferido)
+
+Versión **25** del plan, la que manda. El paso `caras` de C51.3 falló (400: `seed` en schnell); arreglado
+en `caras.py` con FLUX.2 [klein] 4B, falta que el codirector lo vuelva a lanzar. El codirector contestó:
+cola (b), los dos personajes en un brazo, colores como están, sí a 14 Shorts/semana, factorial, bayesiano
+y filtro, y sí al patrón de calidad. Todo con dueño y fecha en `compromisos.json`. Trampa 63.
 
 ## Dónde está el proyecto a 23 de octubre de 2026
 

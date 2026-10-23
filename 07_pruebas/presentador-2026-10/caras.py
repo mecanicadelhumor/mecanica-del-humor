@@ -6,15 +6,22 @@ Dirección, 23/10/2026 (la prueba debía correr el 13-15/10 y se cayó: ver
 PRUEBA.md). Regla 7.1 de 00_estrategia/REGLAS.md: ficticia, que no se parezca
 a nadie real, siempre la misma, declarada, nunca experta ni con biografía.
 
-Qué hace: pide a Cloudflare Workers AI ocho retratos con FLUX.1 [schnell]
-(Apache 2.0, el mismo servicio y las mismas claves que C50), con semillas
-fijas, y deja en caras/:
+Qué hace: pide a Cloudflare Workers AI ocho retratos con FLUX.2 [klein] 4B
+(Apache 2.0, el mismo modelo, servicio y claves que la imagen de los Shorts,
+C50), con semillas fijas, y deja en caras/:
     cara_1.jpg … cara_8.jpg   los retratos (1024 x 1024)
     caras.json                modelo, prompt, semilla y licencia de cada uno
     hoja.jpg                  la hoja de contactos que mira el codirector
 
 Las mismas semillas y el mismo prompt dan la misma cara: si el codirector
 elige la 3, la 3 se puede regenerar idéntica cuando haga falta.
+
+23/10/2026, mañana: la primera versión pedía FLUX.1 [schnell] con «seed» y
+Cloudflare contestó 400 a las ocho («Additional or unevaluated properties
+'/seed'»): ese modelo ya no admite semilla. Por eso klein, que sí la admite (por
+formulario multipart, como en visual.generar). Si klein falla, schnell sin
+semilla: sale la cara, pero no se podría regenerar idéntica (caras.json lo
+dice con "semilla": null).
 
 Claves: CLOUDFLARE_ACCOUNT_ID y CLOUDFLARE_API_TOKEN (secretos de GitHub).
 Sin ellas, sale con código 2 y lo dice.
@@ -34,9 +41,12 @@ RAIZ = AQUI.parents[1]
 sys.path.insert(0, str(RAIZ / "03_produccion" / "pipeline"))
 import visual  # noqa: E402  (pedir_json y los reintentos de C50)
 
-MODELO = "@cf/black-forest-labs/flux-1-schnell"
-LICENCIA = ("Imagen generada con IA (FLUX.1 [schnell], Black Forest Labs, Apache 2.0) en "
+MODELO = visual.MODELO_IA                      # FLUX.2 [klein] 4B: admite semilla
+MODELO_RESPALDO = visual.MODELO_IA_RESPALDO    # FLUX.1 [schnell]: sin semilla
+LADO = 1024
+LICENCIA = ("Imagen generada con IA ({nombre}, Black Forest Labs, Apache 2.0) en "
             "Cloudflare Workers AI. Persona ficticia (regla 7.1).")
+NOMBRES = {MODELO: "FLUX.2 [klein] 4B", MODELO_RESPALDO: "FLUX.1 [schnell]"}
 SALIDA = AQUI / "caras"
 
 # Lo común a las ocho: un presentador de divulgación, no un modelo de anuncio.
@@ -64,19 +74,34 @@ def generar(n, semilla, quien):
     cuenta = os.environ.get("CLOUDFLARE_ACCOUNT_ID")
     token = os.environ.get("CLOUDFLARE_API_TOKEN")
     prompt = BASE.format(quien=quien)
-    url = f"https://api.cloudflare.com/client/v4/accounts/{cuenta}/ai/run/{MODELO}"
-    datos = visual.pedir_json(url, {"Authorization": f"Bearer {token}"},
-                              {"prompt": prompt, "steps": 8, "seed": semilla})
-    imagen = (datos.get("result") or {}).get("image") if isinstance(datos, dict) else None
-    if not imagen:
-        raise RuntimeError(f"cara {n}: respuesta sin imagen: {json.dumps(datos)[:400]}")
-    from PIL import Image
-    im = Image.open(io.BytesIO(base64.b64decode(imagen))).convert("RGB")
-    destino = SALIDA / f"cara_{n}.jpg"
-    im.save(destino, "JPEG", quality=92)
-    return {"n": n, "fichero": destino.name, "modelo": MODELO, "prompt": prompt,
-            "semilla": semilla, "pasos": 8, "ancho": im.width, "alto": im.height,
-            "licencia": LICENCIA}
+    cab = {"Authorization": f"Bearer {token}"}
+    base = f"https://api.cloudflare.com/client/v4/accounts/{cuenta}/ai/run/"
+    errores = []
+    for modelo in (MODELO, MODELO_RESPALDO):
+        try:
+            if modelo == MODELO:
+                cuerpo, tipo = visual._multipart({"prompt": prompt, "width": LADO,
+                                                  "height": LADO, "seed": semilla})
+                datos = json.loads(visual.pedir(base + modelo, cab, cuerpo, tipo, timeout=180))
+                usada = semilla
+            else:
+                datos = visual.pedir_json(base + modelo, cab, {"prompt": prompt, "steps": 8})
+                usada = None
+        except Exception as ex:          # un modelo que falla: se prueba el otro
+            errores.append(f"{modelo}: {type(ex).__name__}: {ex}")
+            continue
+        imagen = (datos.get("result") or {}).get("image") if isinstance(datos, dict) else None
+        if not imagen:
+            errores.append(f"{modelo}: respuesta sin imagen: {json.dumps(datos)[:400]}")
+            continue
+        from PIL import Image
+        im = Image.open(io.BytesIO(base64.b64decode(imagen))).convert("RGB")
+        destino = SALIDA / f"cara_{n}.jpg"
+        im.save(destino, "JPEG", quality=92)
+        return {"n": n, "fichero": destino.name, "modelo": modelo, "prompt": prompt,
+                "semilla": usada, "ancho": im.width, "alto": im.height,
+                "licencia": LICENCIA.format(nombre=NOMBRES[modelo])}
+    raise RuntimeError(" | ".join(errores))
 
 
 def hoja(fichas):
@@ -117,7 +142,7 @@ def main():
             continue
         try:
             fichas.append(generar(n, semilla, quien))
-            print(f"cara {n}: hecha (semilla {semilla})")
+            print(f"cara {n}: hecha con {fichas[-1]['modelo']} (semilla {fichas[-1]['semilla']})")
         except Exception as ex:      # una cara que falla no tira las demás
             fallos.append(f"cara {n}: {type(ex).__name__}: {ex}")
             print(fallos[-1])

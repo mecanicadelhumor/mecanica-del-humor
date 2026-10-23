@@ -336,7 +336,8 @@ def generar(prompt, semilla, destino, ancho=ANCHO_IA, alto=ALTO_IA):
                                            "seed": semilla})
                 datos = json.loads(pedir(url, cab, cuerpo, tipo, timeout=180))
             else:
-                datos = pedir_json(url, cab, {"prompt": texto, "steps": 4, "seed": semilla})
+                # Sin «seed»: schnell la rechaza con un 400 (visto el 23/10/2026, C51.3).
+                datos = pedir_json(url, cab, {"prompt": texto, "steps": 4})
         except Exception as ex:          # cualquier fallo de un modelo: se prueba el otro
             errores.append(f"{modelo}: {type(ex).__name__}: {ex}")
             alguno_pasajero = alguno_pasajero or pasajero(ex)

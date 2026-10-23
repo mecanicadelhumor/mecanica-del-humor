@@ -45,7 +45,8 @@ publicado.
 
 | Pieza | Código | Pesos | Lo que se descarga por dentro | Veredicto |
 |---|---|---|---|---|
-| **FLUX.1 [schnell]** (la cara) | Apache 2.0 | Apache 2.0 | — (lo sirve Cloudflare, como en C50) | ✅ **Sirve.** Ya lo usamos |
+| **FLUX.2 [klein] 4B** (la cara, desde el 23/10: schnell ya no admite semilla) | Apache 2.0 | Apache 2.0 | — (lo sirve Cloudflare, como en C50) | ✅ **Sirve.** Es el de la imagen de los Shorts |
+| **FLUX.1 [schnell]** (respaldo, sin semilla) | Apache 2.0 | Apache 2.0 | — (lo sirve Cloudflare, como en C50) | ✅ **Sirve.** Ya lo usamos |
 | **Wav2Lip** | «solo uso personal, de investigación o no comercial» | ídem | — | ❌ No |
 | **SadTalker** | Apache 2.0 | — | **Basel Face Model**: licencia **no comercial** | ❌ No |
 | **Hallo / Hallo2**, **LivePortrait** | MIT | — | **InsightFace**: modelos «solo para investigación no comercial» | ❌ No |

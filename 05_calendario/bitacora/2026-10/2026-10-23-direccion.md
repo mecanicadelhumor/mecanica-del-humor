@@ -37,3 +37,34 @@ Versión **24** del plan.
 - **La cola final** (≈3 s): pendiente de que el codirector elija (a/b/c). Compromiso `C36-cola`, lunes 26.
 - Imagen horizontal y voz por tandas del largo: lunes 26, como estaba.
 - Propuestas de iteración y calidad: escritas (plan v24 y sus tareas); nada cambia hasta que conteste.
+
+
+---
+
+# Segunda ejecución · 23/10, ~08:30 UTC (en diferido, «Run now» del codirector)
+
+## Leído
+
+- Cuaderno (`29d23d1`): «Revisión extraordinaria. Urgente el workflow de la Tarea 3, que no funciona.»
+  Y sus respuestas en el fichero de tareas del 23/10.
+- Ninguna sesión interactiva nueva hoy (el commit de dirección de las 07:52 es de la propia dirección).
+  El canal publica; B1 sin datos nuevos desde ayer; la revisión diaria de hoy aún no ha corrido (09:28).
+
+## Hecho
+
+1. **Lo roto — el workflow de la tarea 3.** Las ocho caras: HTTP 400, `'/seed' not allowed`. FLUX.1
+   [schnell] ya no admite semilla. `caras.py` pasa a FLUX.2 [klein] 4B (el de producción, con semilla,
+   multipart, 1024×1024), con schnell sin semilla de respaldo. Probado con un Cloudflare simulado que
+   rechaza `seed` en schnell: 8 caras con klein y sus semillas; 8 con schnell (`null`) si klein cae; el
+   código viejo, el mismo 400. El workflow no cambia. `PRUEBA.md` lo cuenta.
+2. **El mismo fallo en producción, latente**: el respaldo de `visual.generar` mandaba `seed` a schnell.
+   Quitado. Solo corre si klein falla: no cambia lo que se ve. Trampa 63.
+3. **Respuestas del codirector** a `compromisos.json` (hechas, nuevas con dueño y fecha) y versión 25 del
+   plan: cola (b) el lunes 26; los dos personajes en un brazo; esquina libre (2/11); 14 por semana,
+   factorial, bayesiano y filtro; patrón de calidad.
+
+## No hecho
+
+- **No he lanzado el workflow**: no puedo (ni Actions ni claves desde aquí). Lo relanza el codirector.
+- La cola (b): el lunes 26, con su muestra, como estaba prometido.
+- La viñeta de compromisos en `tareas/direccion.md` (privado): sigue pedida al codirector.

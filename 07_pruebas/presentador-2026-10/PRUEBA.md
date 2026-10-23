@@ -102,7 +102,7 @@ cabe, la prueba no sale en rojo: se queda solo la versión del vaivén y `tiempo
 - **Probado en el contenedor el 23/10:**
   - la sintaxis de todo, y que el workflow y el JSON son válidos;
   - `caras.py` con Cloudflare simulado: 8 llamadas a `flux-1-schnell`; una cara que falla no tira las
-    demás; la hoja sale con sus números;
+    demás; la hoja sale con sus números (el simulador no sabía que `seed` ya no vale: ver abajo);
   - sin claves, `caras.py` y `prueba_presentador.py` paran con el código 2 y lo dicen;
   - la entrada de Kaggle: 3,0 s de voz mono a 16 kHz, `parametros.json` y el `dataset-metadata.json`
     del dataset privado;
@@ -118,3 +118,21 @@ cabe, la prueba no sale en rojo: se queda solo la versión del vaivén y `tiempo
 
   Es la primera ejecución la que lo dice. Si falla algo de la CLI de Kaggle, el log del workflow trae
   el mensaje exacto.
+
+## 23/10, mañana: el primer intento de «caras» falló, y el arreglo
+
+El codirector creó el workflow y lanzó `paso = caras`. Las ocho caras volvieron con **HTTP 400** de
+Cloudflare: `Additional or unevaluated properties '/seed' at '/' not allowed`. **FLUX.1 [schnell] ya no
+admite semilla** en Workers AI, y el simulador de la prueba de arriba la aceptaba.
+
+- **`caras.py` usa ahora FLUX.2 [klein] 4B** (`visual.MODELO_IA`, el mismo que hace la imagen de los
+  Shorts cada día, Apache 2.0), que sí admite `seed`, por formulario multipart y a 1024×1024. Mismas
+  semillas y mismo prompt: la cara elegida se puede regenerar idéntica.
+- Si klein falla, prueba **schnell sin semilla**: la cara sale, pero `caras.json` lo dice con
+  `"semilla": null` (no se podría regenerar igual).
+- **El workflow no cambia.** Basta con volver a lanzarlo con `paso = caras`.
+- Probado con Cloudflare simulado que **rechaza `seed` en schnell** como el de verdad: con klein, 8 caras
+  con sus semillas (101…808) y hoja; con klein caído, 8 caras con schnell y semilla `null`; con el código
+  de antes, el mismo 400 que vio el codirector.
+- Lo mismo estaba roto, sin que se notara, en el **respaldo de producción** (`visual.generar`): schnell
+  solo corre si klein falla, y entonces habría fallado también. Quitada la semilla ahí (trampa 63).

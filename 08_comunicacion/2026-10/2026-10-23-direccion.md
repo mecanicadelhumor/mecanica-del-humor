@@ -11,3 +11,13 @@
   mira `compromisos.json` (`MDH-008-guion`, jueves 29).
 - **Métricas**: nada nuevo.
 - **Animación**: nada nuevo.
+
+
+## Segunda ejecución del 23/10 (mañana, versión 25)
+
+- **Revisión diaria**: `compromisos.json` tiene filas nuevas (las respuestas del codirector, con dueño y
+  fecha). `C51.3-caras-relanzar` es del codirector (29/10). Nada vence antes del lunes 26.
+- **Producción / visuales**: `visual.generar` ya no manda `seed` a FLUX.1 [schnell] en el respaldo (daba
+  400). Si algún día ves `flux-1-schnell` en un manifiesto, es que klein falló y el respaldo funcionó; la
+  imagen no es reproducible con la semilla.
+- **Planificación, métricas, animación**: nada nuevo.
