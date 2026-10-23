@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-22T18:11:13Z",
+ "actualizado_utc": "2026-10-23T12:06:46Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -44,11 +44,11 @@
    "brazos": {
     "control": {
      "nombre": "Lo de ahora (C50 + C56-C59), apertura en situación",
-     "n": 2,
-     "se_quedaron_media": 8.4,
-     "porcentaje_visto_media": 102.2,
-     "vistas_48h_mediana": 106.0,
-     "me_gusta_por_100": 0.92,
+     "n": 3,
+     "se_quedaron_media": 9.6,
+     "porcentaje_visto_media": 84.0,
+     "vistas_48h_mediana": 92,
+     "me_gusta_por_100": 0.65,
      "ceros_de_feed": 0,
      "shorts": [
       {
@@ -59,7 +59,7 @@
        "porcentaje_visto": 165.1,
        "me_gusta": 0,
        "visualizaciones": 21,
-       "leido": "2026-10-22"
+       "leido": "2026-10-23"
       },
       {
        "id": "MDS-041",
@@ -69,7 +69,17 @@
        "porcentaje_visto": 39.3,
        "me_gusta": 2,
        "visualizaciones": 197,
-       "leido": "2026-10-22"
+       "leido": "2026-10-23"
+      },
+      {
+       "id": "MDS-044",
+       "publicado": "2026-10-20",
+       "se_quedaron_pct": 12.0,
+       "vistas_48h": 92,
+       "porcentaje_visto": 47.5,
+       "me_gusta": 0,
+       "visualizaciones": 92,
+       "leido": "2026-10-23"
       }
      ]
     },
@@ -77,7 +87,7 @@
      "nombre": "Animación a medida en las escenas de mecanismo (C55.2)",
      "n": 3,
      "se_quedaron_media": 34.6,
-     "porcentaje_visto_media": 66.8,
+     "porcentaje_visto_media": 66.3,
      "vistas_48h_mediana": 22,
      "me_gusta_por_100": 1.03,
      "ceros_de_feed": 1,
@@ -89,8 +99,8 @@
        "vistas_48h": 933,
        "porcentaje_visto": 48.2,
        "me_gusta": 9,
-       "visualizaciones": 940,
-       "leido": "2026-10-22"
+       "visualizaciones": 941,
+       "leido": "2026-10-23"
       },
       {
        "id": "MDS-039",
@@ -100,17 +110,17 @@
        "porcentaje_visto": 81.0,
        "me_gusta": 1,
        "visualizaciones": 22,
-       "leido": "2026-10-22"
+       "leido": "2026-10-23"
       },
       {
        "id": "MDS-042",
        "publicado": "2026-10-18",
        "se_quedaron_pct": 33.3,
        "vistas_48h": 9,
-       "porcentaje_visto": 71.3,
+       "porcentaje_visto": 69.6,
        "me_gusta": 0,
-       "visualizaciones": 9,
-       "leido": "2026-10-22"
+       "visualizaciones": 11,
+       "leido": "2026-10-23"
       }
      ]
     },
@@ -131,7 +141,7 @@
        "porcentaje_visto": 36.7,
        "me_gusta": 6,
        "visualizaciones": 396,
-       "leido": "2026-10-22"
+       "leido": "2026-10-20"
       },
       {
        "id": "MDS-040",
@@ -141,7 +151,7 @@
        "porcentaje_visto": 186.9,
        "me_gusta": 0,
        "visualizaciones": 10,
-       "leido": "2026-10-22"
+       "leido": "2026-10-23"
       },
       {
        "id": "MDS-043",
@@ -151,7 +161,7 @@
        "porcentaje_visto": 533.4,
        "me_gusta": 0,
        "visualizaciones": 27,
-       "leido": "2026-10-22"
+       "leido": "2026-10-23"
       }
      ]
     }
@@ -172,11 +182,6 @@
    },
    "apartados": [],
    "pendientes": [
-    {
-     "id": "MDS-044",
-     "variante": "control",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    },
     {
      "id": "MDS-045",
      "variante": "B",
@@ -200,6 +205,41 @@
     {
      "id": "MDS-049",
      "variante": "B",
+     "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-050",
+     "variante": "control",
+     "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-051",
+     "variante": "A",
+     "motivo": "sin ficha de producción todavía"
+    },
+    {
+     "id": "MDS-052",
+     "variante": "B",
+     "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-053",
+     "variante": "control",
+     "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-054",
+     "variante": "B",
+     "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-055",
+     "variante": "A",
+     "motivo": "sin ficha de producción todavía"
+    },
+    {
+     "id": "MDS-056",
+     "variante": "control",
      "motivo": "sin «se quedaron» a 48 h todavía"
     }
    ]
