@@ -413,5 +413,25 @@
     "hand holding candy office"
    ]
   }
+ },
+ "MDS-049": {
+  "1.1": {
+   "excluir": [
+    "pixabay:176024"
+   ],
+   "busqueda": [
+    "woman laughing with friends at dinner table",
+    "friends laughing together at restaurant"
+   ]
+  },
+  "4.1": {
+   "excluir": [
+    "pexels:5359024"
+   ],
+   "busqueda": [
+    "person watching funny video on laptop laughing",
+    "hand holding phone watching video"
+   ]
+  }
  }
 }
