@@ -1,15 +1,17 @@
 {
  "cara": 2,
  "estado_kaggle": "complete",
- "minutos": 2.8,
- "resultado": "sin vídeo con labios",
- "videos": [],
+ "minutos": 8.7,
+ "resultado": "con labios: afin",
+ "videos": [
+  "b_labios_afin.mp4"
+ ],
  "errores": {
-  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}']",
-  "b.2 · MuseTalk sobre «afin»": "RuntimeError: código 1: ['/usr/bin/python3', '-m', 'scripts.inference', '--inference_config', '/tmp/presentador/MuseTalk/tarea_afin.yaml', '--result_dir', '/tmp/presentador/res_afin', '--unet_model_path', 'models/musetalkV15/unet.pth', '--unet_config', 'models/musetalkV15/musetalk.json', '--version', 'v15', '--ffmpeg_path', '/usr/bin', '--use_float16', '--batch_size', '8']"
+  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}']"
  },
  "ficheros": [
   "a_movimiento_afin.mp4",
+  "b_labios_afin.mp4",
   "cara.jpg",
   "presentador-prueba.log",
   "registro.txt",

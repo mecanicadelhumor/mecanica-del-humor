@@ -8,60 +8,53 @@ Tesla T4, 15360 MiB · torch 2.11.0+cu128 · bf16: True
 $ ffmpeg -y -v error -i /tmp/presentador/mov_afin.mp4 -c:v libx264 -pix_fmt yuv420p /kaggle/working/salida/a_movimiento_afin.mp4
 
 === a.2 · Wan 2.2 TI2V-5B ===
-$ pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy
-    ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-    gradio 6.26.0 requires huggingface-hub<2.0,>=1.16.0, but you have huggingface-hub 2.3.0 which is incompatible.
-    gradio 6.26.0 requires pillow<13.0,>=8.0, but you have pillow 13.0.0 which is incompatible.
-    datasets 4.8.5 requires huggingface-hub<2.0,>=0.25.0, but you have huggingface-hub 2.3.0 which is incompatible.
-    transformers 5.16.1 requires huggingface-hub<2.0,>=1.5.0, but you have huggingface-hub 2.3.0 which is incompatible.
-    gradio-client 2.6.1 requires huggingface-hub<2.0,>=0.19.3, but you have huggingface-hub 2.3.0 which is incompatible.
-    tokenizers 0.23.1 requires huggingface-hub<2.0,>=0.16.4, but you have huggingface-hub 2.3.0 which is incompatible.
+$ pip install -q 'diffusers>=0.35' accelerate ftfy 'huggingface_hub>=1.5,<2'
 $ /usr/bin/python3 /tmp/presentador/wan.py {"cara": "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg", "wan_tope_s": 3600, "wan_alto": 480, "wan_ancho": 480, "wan_fotogramas": 73, "wan_pasos": 30, "segundos": 3.0, "voz": "07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s", "salida": "/tmp/presentador/mov_wan_24.mp4"}
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/usr/local/lib/python3.13/dist-packages/accelerate/hooks.py", line 192, in new_forward
+        output = module._old_forward(*args, **kwargs)
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/peft_utils.py", line 323, in wrapper
+        result = forward_fn(self, *args, **kwargs)
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py", line 704, in forward
+        hidden_states = block(hidden_states, encoder_hidden_states, timestep_proj, rotary_emb)
+      File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py", line 489, in forward
+        attn_output = self.attn1(norm_hidden_states, None, None, rotary_emb)
+      File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py", line 281, in forward
+        return self.processor(self, hidden_states, encoder_hidden_states, attention_mask, rotary_emb, **kwargs)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py", line 143, in __call__
+        hidden_states = dispatch_attention_fn(
+            query,
+        ...<7 lines>...
+            parallel_config=(self._parallel_config if encoder_hidden_states is None else None),
         )
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/__init__.py", line 6, in <module>
-        from .unet_2d import UNet2DModel
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d.py", line 23, in <module>
-        from .unet_2d_blocks import UNetMidBlock2D, get_down_block, get_up_block
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d_blocks.py", line 36, in <module>
-        from ..transformers.dual_transformer_2d import DualTransformer2DModel
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/__init__.py", line 5, in <module>
-        from .ace_step_transformer import AceStepTransformer1DModel
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/ace_step_transformer.py", line 24, in <module>
-        from ...loaders import PeftAdapterMixin
-      File "<frozen importlib._bootstrap>", line 1420, in _handle_fromlist
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1015, in __getattr__
-        module = self._get_module(self._class_to_module[name])
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1027, in _get_module
-        raise RuntimeError(
-        ...<2 lines>...
-        ) from e
-    RuntimeError: Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
-    huggingface-hub>=1.5.0,<2.0 is required for a normal functioning of this module, but found huggingface-hub==2.3.0.
-    Try: `pip install transformers -U` or `pip install -e '.[dev]'` if you're working with git main
-    
-    The above exception was the direct cause of the following exception:
-    
-    Traceback (most recent call last):
-      File "/tmp/presentador/wan.py", line 3, in <module>
-        from diffusers import AutoencoderKLWan, WanImageToVideoPipeline
-      File "<frozen importlib._bootstrap>", line 1420, in _handle_fromlist
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1016, in __getattr__
-        value = getattr(module, name)
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1015, in __getattr__
-        module = self._get_module(self._class_to_module[name])
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1027, in _get_module
-        raise RuntimeError(
-        ...<2 lines>...
-        ) from e
-    RuntimeError: Failed to import diffusers.models.autoencoders.autoencoder_kl_wan because of the following error (look up to see its traceback):
-    Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
-    huggingface-hub>=1.5.0,<2.0 is required for a normal functioning of this module, but found huggingface-hub==2.3.0.
-    Try: `pip install transformers -U` or `pip install -e '.[dev]'` if you're working with git main
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/attention_dispatch.py", line 439, in dispatch_attention_fn
+        return backend_fn(**kwargs)
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/attention_dispatch.py", line 3707, in _native_attention
+        out = torch.nn.functional.scaled_dot_product_attention(
+            query=query,
+        ...<6 lines>...
+            enable_gqa=enable_gqa,
+        )
+    torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.63 GiB. GPU 0 has a total capacity of 14.56 GiB of which 1.41 GiB is free. Process 7 has 104.00 MiB memory in use. Including non-PyTorch memory, this process has 13.04 GiB memory in use. Of the allocated memory 12.83 GiB is allocated by PyTorch, and 84.10 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
 Traceback (most recent call last):
-  File "/kaggle/src/script.py", line 208, in <module>
+  File "/kaggle/src/script.py", line 214, in <module>
     sh([sys.executable, str(TRABAJO / "wan.py"), json.dumps(args)], timeout=int(PARAM["wan_tope_s"]))
     ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/kaggle/src/script.py", line 74, in sh
+  File "/kaggle/src/script.py", line 77, in sh
     raise RuntimeError(f"código {r.returncode}: {cmd}")
 RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{"cara": "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg", "wan_tope_s": 3600, "wan_alto": 480, "wan_ancho": 480, "wan_fotogramas": 73, "wan_pasos": 30, "segundos": 3.0, "voz": "07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s", "salida": "/tmp/presentador/mov_wan_24.mp4"}']
 
@@ -69,59 +62,61 @@ RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{"cara
 === b.1 · MuseTalk: código, dependencias y pesos ===
 $ git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk
 $ git checkout -q 0a89dec45a0192b824e3cf4daf96c239440c5ed8
-$ pip install -q omegaconf einops librosa soundfile 'huggingface_hub>=0.30' ffmpeg-python
+$ pip install -q omegaconf einops librosa soundfile 'huggingface_hub>=1.5,<2' ffmpeg-python
 
 === b.2 · MuseTalk sobre «afin» ===
 $ /usr/bin/python3 -m scripts.inference --inference_config /tmp/presentador/MuseTalk/tarea_afin.yaml --result_dir /tmp/presentador/res_afin --unet_model_path models/musetalkV15/unet.pth --unet_config models/musetalkV15/musetalk.json --version v15 --ffmpeg_path /usr/bin --use_float16 --batch_size 8
-    Traceback (most recent call last):
-      File "<frozen runpy>", line 203, in _run_module_as_main
-      File "<frozen runpy>", line 88, in _run_code
-      File "/tmp/presentador/MuseTalk/scripts/inference.py", line 14, in <module>
-        from transformers import WhisperModel
-      File "/usr/local/lib/python3.13/dist-packages/transformers/__init__.py", line 30, in <module>
-        from . import dependency_versions_check
-      File "/usr/local/lib/python3.13/dist-packages/transformers/dependency_versions_check.py", line 56, in <module>
-        require_version_core(deps[pkg])
-        ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
-      File "/usr/local/lib/python3.13/dist-packages/transformers/utils/versions.py", line 116, in require_version_core
-        return require_version(requirement, hint)
-      File "/usr/local/lib/python3.13/dist-packages/transformers/utils/versions.py", line 110, in require_version
-        _compare_versions(op, got_ver, want_ver, requirement, pkg, hint)
-        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      File "/usr/local/lib/python3.13/dist-packages/transformers/utils/versions.py", line 43, in _compare_versions
-        raise ImportError(
-            f"{requirement} is required for a normal functioning of this module, but found {pkg}=={got_ver}.{hint}"
-        )
-    ImportError: huggingface-hub>=1.5.0,<2.0 is required for a normal functioning of this module, but found huggingface-hub==2.3.0.
-    Try: `pip install transformers -U` or `pip install -e '.[dev]'` if you're working with git main
-Traceback (most recent call last):
-  File "/kaggle/src/script.py", line 310, in <module>
-    sh([sys.executable, "-m", "scripts.inference", "--inference_config", str(cfg),
-    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        "--result_dir", str(res), "--unet_model_path", "models/musetalkV15/unet.pth",
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        "--unet_config", "models/musetalkV15/musetalk.json", "--version", "v15",
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        "--ffmpeg_path", "/usr/bin", "--use_float16", "--batch_size", "8"],
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-       cwd=MT, timeout=1800)
-       ^^^^^^^^^^^^^^^^^^^^^
-  File "/kaggle/src/script.py", line 74, in sh
-    raise RuntimeError(f"código {r.returncode}: {cmd}")
-RuntimeError: código 1: ['/usr/bin/python3', '-m', 'scripts.inference', '--inference_config', '/tmp/presentador/MuseTalk/tarea_afin.yaml', '--result_dir', '/tmp/presentador/res_afin', '--unet_model_path', 'models/musetalkV15/unet.pth', '--unet_config', 'models/musetalkV15/musetalk.json', '--version', 'v15', '--ffmpeg_path', '/usr/bin', '--use_float16', '--batch_size', '8']
-
+    caras (S3FD):  83%|████████▎ | 62/75 [00:04<00:00, 19.39it/s]
+    caras (S3FD):  85%|████████▌ | 64/75 [00:04<00:00, 19.24it/s]
+    caras (S3FD):  88%|████████▊ | 66/75 [00:04<00:00, 19.26it/s]
+    caras (S3FD):  91%|█████████ | 68/75 [00:04<00:00, 19.21it/s]
+    caras (S3FD):  93%|█████████▎| 70/75 [00:04<00:00, 19.27it/s]
+    caras (S3FD):  96%|█████████▌| 72/75 [00:05<00:00, 19.18it/s]
+    caras (S3FD):  99%|█████████▊| 74/75 [00:05<00:00, 19.20it/s]
+    caras (S3FD): 100%|██████████| 75/75 [00:05<00:00, 14.32it/s]
+    
+      0%|          | 0/10 [00:00<?, ?it/s]
+     10%|█         | 1/10 [00:05<00:49,  5.49s/it]
+     20%|██        | 2/10 [00:06<00:21,  2.72s/it]
+     30%|███       | 3/10 [00:07<00:12,  1.84s/it]
+     40%|████      | 4/10 [00:07<00:08,  1.42s/it]
+     50%|█████     | 5/10 [00:08<00:05,  1.20s/it]
+     60%|██████    | 6/10 [00:09<00:04,  1.06s/it]
+     70%|███████   | 7/10 [00:10<00:02,  1.02it/s]
+     80%|████████  | 8/10 [00:11<00:01,  1.09it/s]
+     90%|█████████ | 9/10 [00:11<00:00,  1.13it/s]
+    100%|██████████| 10/10 [00:14<00:00,  1.33s/it]
+    100%|██████████| 10/10 [00:14<00:00,  1.42s/it]
+    
+      0%|          | 0/75 [00:00<?, ?it/s]
+      5%|▌         | 4/75 [00:00<00:02, 34.25it/s]
+     12%|█▏        | 9/75 [00:00<00:01, 40.45it/s]
+     19%|█▊        | 14/75 [00:00<00:01, 43.02it/s]
+     25%|██▌       | 19/75 [00:00<00:01, 44.03it/s]
+     32%|███▏      | 24/75 [00:00<00:01, 44.76it/s]
+     39%|███▊      | 29/75 [00:00<00:01, 45.32it/s]
+     45%|████▌     | 34/75 [00:00<00:00, 45.41it/s]
+     52%|█████▏    | 39/75 [00:00<00:00, 43.76it/s]
+     59%|█████▊    | 44/75 [00:01<00:00, 44.55it/s]
+     65%|██████▌   | 49/75 [00:01<00:00, 43.98it/s]
+     72%|███████▏  | 54/75 [00:01<00:00, 44.24it/s]
+     79%|███████▊  | 59/75 [00:01<00:00, 44.92it/s]
+     85%|████████▌ | 64/75 [00:01<00:00, 45.22it/s]
+     92%|█████████▏| 69/75 [00:01<00:00, 45.05it/s]
+     99%|█████████▊| 74/75 [00:01<00:00, 44.87it/s]
+    100%|██████████| 75/75 [00:01<00:00, 44.24it/s]
+    [aist#0:0/pcm_s16le @ 0x5794c0f1b380] Guessed Channel Layout: mono
 
 RESUMEN: {
  "pasos": {
-  "0 · la máquina": 10.1,
+  "0 · la máquina": 10.2,
   "a.1 · plan B: vaivén de la foto": 2.4,
-  "a.2 · Wan 2.2 TI2V-5B": 49.4,
-  "b.1 · MuseTalk: código, dependencias y pesos": 29.3,
-  "b.2 · MuseTalk sobre «afin»": 5.3
+  "a.2 · Wan 2.2 TI2V-5B": 359.8,
+  "b.1 · MuseTalk: código, dependencias y pesos": 29.5,
+  "b.2 · MuseTalk sobre «afin»": 79.0
  },
  "errores": {
-  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}']",
-  "b.2 · MuseTalk sobre «afin»": "RuntimeError: código 1: ['/usr/bin/python3', '-m', 'scripts.inference', '--inference_config', '/tmp/presentador/MuseTalk/tarea_afin.yaml', '--result_dir', '/tmp/presentador/res_afin', '--unet_model_path', 'models/musetalkV15/unet.pth', '--unet_config', 'models/musetalkV15/musetalk.json', '--version', 'v15', '--ffmpeg_path', '/usr/bin', '--use_float16', '--batch_size', '8']"
+  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}']"
  },
  "parametros": {
   "cara": 2,
@@ -151,14 +146,16 @@ RESUMEN: {
   "afin"
  ],
  "versiones": [
+  "diffusers==0.40.0",
   "torch==2.11.0+cu128",
   "transformers==5.16.1"
  ],
  "salida": [
   "a_movimiento_afin.mp4",
+  "b_labios_afin.mp4",
   "cara.jpg",
   "registro.txt",
   "tiempos.json"
  ],
- "resultado": "sin vídeo con labios"
+ "resultado": "con labios: afin"
 }

@@ -1,174 +1,171 @@
-[{"stream_name":"stdout","time":1.567509944,"data":"\n"}
-,{"stream_name":"stdout","time":1.5675558299999999,"data":"=== 0 · la máquina ===\n"}
-,{"stream_name":"stdout","time":1.674240659,"data":"Entrada: /kaggle/input/datasets/mecanicadelhumor/presentador-entrada · en /kaggle/input: ['/kaggle/input/datasets', '/kaggle/input/datasets/mecanicadelhumor', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/audio.wav', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/parametros.json']\n"}
-,{"stream_name":"stdout","time":11.5238653,"data":"GPU: Tesla T4, 15360 MiB\n"}
-,{"stream_name":"stdout","time":11.523901256,"data":"Tesla T4, 15360 MiB · torch 2.11.0+cu128 · bf16: True\n"}
-,{"stream_name":"stdout","time":11.683696967,"data":"\n"}
-,{"stream_name":"stdout","time":11.683723371,"data":"=== a.1 · plan B: vaivén de la foto ===\n"}
-,{"stream_name":"stdout","time":12.706489802,"data":"$ ffmpeg -y -v error -i /tmp/presentador/mov_afin.mp4 -c:v libx264 -pix_fmt yuv420p /kaggle/working/salida/a_movimiento_afin.mp4\n"}
-,{"stream_name":"stdout","time":14.06289774,"data":"\n"}
-,{"stream_name":"stdout","time":14.062927985,"data":"=== a.2 · Wan 2.2 TI2V-5B ===\n"}
-,{"stream_name":"stdout","time":14.063074834,"data":"$ pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy\n"}
-,{"stream_name":"stdout","time":35.410521589,"data":"    ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
-,{"stream_name":"stdout","time":35.410560207,"data":"    gradio 6.26.0 requires huggingface-hub\u003c2.0,\u003e=1.16.0, but you have huggingface-hub 2.3.0 which is incompatible.\n"}
-,{"stream_name":"stdout","time":35.410566664,"data":"    gradio 6.26.0 requires pillow\u003c13.0,\u003e=8.0, but you have pillow 13.0.0 which is incompatible.\n"}
-,{"stream_name":"stdout","time":35.410571865,"data":"    datasets 4.8.5 requires huggingface-hub\u003c2.0,\u003e=0.25.0, but you have huggingface-hub 2.3.0 which is incompatible.\n"}
-,{"stream_name":"stdout","time":35.41057689,"data":"    transformers 5.16.1 requires huggingface-hub\u003c2.0,\u003e=1.5.0, but you have huggingface-hub 2.3.0 which is incompatible.\n"}
-,{"stream_name":"stdout","time":35.410736539,"data":"    gradio-client 2.6.1 requires huggingface-hub\u003c2.0,\u003e=0.19.3, but you have huggingface-hub 2.3.0 which is incompatible.\n"}
-,{"stream_name":"stdout","time":35.41075646,"data":"    tokenizers 0.23.1 requires huggingface-hub\u003c2.0,\u003e=0.16.4, but you have huggingface-hub 2.3.0 which is incompatible.\n"}
-,{"stream_name":"stdout","time":35.410773253,"data":"$ /usr/bin/python3 /tmp/presentador/wan.py {\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}\n"}
-,{"stream_name":"stdout","time":63.492237925,"data":"        )\n"}
-,{"stream_name":"stdout","time":63.492272341,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/__init__.py\", line 6, in \u003cmodule\u003e\n"}
-,{"stream_name":"stdout","time":63.492277746,"data":"        from .unet_2d import UNet2DModel\n"}
-,{"stream_name":"stdout","time":63.492294321,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d.py\", line 23, in \u003cmodule\u003e\n"}
-,{"stream_name":"stdout","time":63.492300174,"data":"        from .unet_2d_blocks import UNetMidBlock2D, get_down_block, get_up_block\n"}
-,{"stream_name":"stdout","time":63.492323925,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d_blocks.py\", line 36, in \u003cmodule\u003e\n"}
-,{"stream_name":"stdout","time":63.492328453,"data":"        from ..transformers.dual_transformer_2d import DualTransformer2DModel\n"}
-,{"stream_name":"stdout","time":63.492331811,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/__init__.py\", line 5, in \u003cmodule\u003e\n"}
-,{"stream_name":"stdout","time":63.492335456,"data":"        from .ace_step_transformer import AceStepTransformer1DModel\n"}
-,{"stream_name":"stdout","time":63.492360104,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/ace_step_transformer.py\", line 24, in \u003cmodule\u003e\n"}
-,{"stream_name":"stdout","time":63.492363333,"data":"        from ...loaders import PeftAdapterMixin\n"}
-,{"stream_name":"stdout","time":63.492365513,"data":"      File \"\u003cfrozen importlib._bootstrap\u003e\", line 1420, in _handle_fromlist\n"}
-,{"stream_name":"stdout","time":63.492367942,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py\", line 1015, in __getattr__\n"}
-,{"stream_name":"stdout","time":63.49237034,"data":"        module = self._get_module(self._class_to_module[name])\n"}
-,{"stream_name":"stdout","time":63.492372615,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py\", line 1027, in _get_module\n"}
-,{"stream_name":"stdout","time":63.492374903,"data":"        raise RuntimeError(\n"}
-,{"stream_name":"stdout","time":63.492398885,"data":"        ...\u003c2 lines\u003e...\n"}
-,{"stream_name":"stdout","time":63.492403752,"data":"        ) from e\n"}
-,{"stream_name":"stdout","time":63.492407771,"data":"    RuntimeError: Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):\n"}
-,{"stream_name":"stdout","time":63.492418995,"data":"    huggingface-hub\u003e=1.5.0,\u003c2.0 is required for a normal functioning of this module, but found huggingface-hub==2.3.0.\n"}
-,{"stream_name":"stdout","time":63.492852174,"data":"    Try: `pip install transformers -U` or `pip install -e '.[dev]'` if you're working with git main\n"}
-,{"stream_name":"stdout","time":63.492880436,"data":"    \n"}
-,{"stream_name":"stdout","time":63.492884592,"data":"    The above exception was the direct cause of the following exception:\n"}
-,{"stream_name":"stdout","time":63.49288819,"data":"    \n"}
-,{"stream_name":"stdout","time":63.492891479,"data":"    Traceback (most recent call last):\n"}
-,{"stream_name":"stdout","time":63.492894967,"data":"      File \"/tmp/presentador/wan.py\", line 3, in \u003cmodule\u003e\n"}
-,{"stream_name":"stdout","time":63.492899044,"data":"        from diffusers import AutoencoderKLWan, WanImageToVideoPipeline\n"}
-,{"stream_name":"stdout","time":63.492904311,"data":"      File \"\u003cfrozen importlib._bootstrap\u003e\", line 1420, in _handle_fromlist\n"}
-,{"stream_name":"stdout","time":63.492911753,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py\", line 1016, in __getattr__\n"}
-,{"stream_name":"stdout","time":63.492914263,"data":"        value = getattr(module, name)\n"}
-,{"stream_name":"stdout","time":63.492916534,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py\", line 1015, in __getattr__\n"}
-,{"stream_name":"stdout","time":63.492918965,"data":"        module = self._get_module(self._class_to_module[name])\n"}
-,{"stream_name":"stdout","time":63.492921619,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py\", line 1027, in _get_module\n"}
-,{"stream_name":"stdout","time":63.492929077,"data":"        raise RuntimeError(\n"}
-,{"stream_name":"stdout","time":63.492931414,"data":"        ...\u003c2 lines\u003e...\n"}
-,{"stream_name":"stdout","time":63.492933755,"data":"        ) from e\n"}
-,{"stream_name":"stdout","time":63.492936134,"data":"    RuntimeError: Failed to import diffusers.models.autoencoders.autoencoder_kl_wan because of the following error (look up to see its traceback):\n"}
-,{"stream_name":"stdout","time":63.492938611,"data":"    Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):\n"}
-,{"stream_name":"stdout","time":63.492940978,"data":"    huggingface-hub\u003e=1.5.0,\u003c2.0 is required for a normal functioning of this module, but found huggingface-hub==2.3.0.\n"}
-,{"stream_name":"stdout","time":63.492943438,"data":"    Try: `pip install transformers -U` or `pip install -e '.[dev]'` if you're working with git main\n"}
-,{"stream_name":"stdout","time":63.494064583,"data":"Traceback (most recent call last):\n"}
-,{"stream_name":"stdout","time":63.494078862,"data":"  File \"/kaggle/src/script.py\", line 208, in \u003cmodule\u003e\n"}
-,{"stream_name":"stdout","time":63.494083267,"data":"    sh([sys.executable, str(TRABAJO / \"wan.py\"), json.dumps(args)], timeout=int(PARAM[\"wan_tope_s\"]))\n"}
-,{"stream_name":"stdout","time":63.494087341,"data":"    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stdout","time":63.494091042,"data":"  File \"/kaggle/src/script.py\", line 74, in sh\n"}
-,{"stream_name":"stdout","time":63.494094656,"data":"    raise RuntimeError(f\"código {r.returncode}: {cmd}\")\n"}
-,{"stream_name":"stdout","time":63.494100775,"data":"RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}']\n"}
-,{"stream_name":"stdout","time":63.4941156,"data":"\n"}
-,{"stream_name":"stdout","time":63.494711608,"data":"\n"}
-,{"stream_name":"stdout","time":63.494725786,"data":"=== b.1 · MuseTalk: código, dependencias y pesos ===\n"}
-,{"stream_name":"stdout","time":63.494795879,"data":"$ git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk\n"}
-,{"stream_name":"stdout","time":64.673268189,"data":"$ git checkout -q 0a89dec45a0192b824e3cf4daf96c239440c5ed8\n"}
-,{"stream_name":"stdout","time":64.756788783,"data":"$ pip install -q omegaconf einops librosa soundfile 'huggingface_hub\u003e=0.30' ffmpeg-python\n"}
-,{"stream_name":"stderr","time":67.255950601,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
-,{"stream_name":"stderr","time":89.363190961,"data":"\rFetching 2 files:   0%|          | 0/2 [00:00\u003c?, ?it/s]\rFetching 2 files:  50%|█████     | 1/2 [00:00\u003c00:00,  7.76it/s]\rFetching 2 files: 100%|██████████| 2/2 [00:01\u003c00:00,  1.66it/s]\rFetching 2 files: 100%|██████████| 2/2 [00:01\u003c00:00,  1.89it/s]\n"}
-,{"stream_name":"stderr","time":91.757248264,"data":"\rFetching 3 files:   0%|          | 0/3 [00:00\u003c?, ?it/s]\rFetching 3 files:  67%|██████▋   | 2/3 [00:00\u003c00:00, 12.30it/s]\rFetching 3 files: 100%|██████████| 3/3 [00:02\u003c00:00,  1.31it/s]\n"}
-,{"stream_name":"stdout","time":92.759505777,"data":"\n"}
-,{"stream_name":"stdout","time":92.759536177,"data":"=== b.2 · MuseTalk sobre «afin» ===\n"}
-,{"stream_name":"stdout","time":92.759715427,"data":"$ /usr/bin/python3 -m scripts.inference --inference_config /tmp/presentador/MuseTalk/tarea_afin.yaml --result_dir /tmp/presentador/res_afin --unet_model_path models/musetalkV15/unet.pth --unet_config models/musetalkV15/musetalk.json --version v15 --ffmpeg_path /usr/bin --use_float16 --batch_size 8\n"}
-,{"stream_name":"stdout","time":98.082019233,"data":"    Traceback (most recent call last):\n"}
-,{"stream_name":"stdout","time":98.082043555,"data":"      File \"\u003cfrozen runpy\u003e\", line 203, in _run_module_as_main\n"}
-,{"stream_name":"stdout","time":98.082048465,"data":"      File \"\u003cfrozen runpy\u003e\", line 88, in _run_code\n"}
-,{"stream_name":"stdout","time":98.082054415,"data":"      File \"/tmp/presentador/MuseTalk/scripts/inference.py\", line 14, in \u003cmodule\u003e\n"}
-,{"stream_name":"stdout","time":98.082058381,"data":"        from transformers import WhisperModel\n"}
-,{"stream_name":"stdout","time":98.082063735,"data":"      File \"/usr/local/lib/python3.13/dist-packages/transformers/__init__.py\", line 30, in \u003cmodule\u003e\n"}
-,{"stream_name":"stdout","time":98.082067351,"data":"        from . import dependency_versions_check\n"}
-,{"stream_name":"stdout","time":98.082071013,"data":"      File \"/usr/local/lib/python3.13/dist-packages/transformers/dependency_versions_check.py\", line 56, in \u003cmodule\u003e\n"}
-,{"stream_name":"stdout","time":98.082075789,"data":"        require_version_core(deps[pkg])\n"}
-,{"stream_name":"stdout","time":98.082079467,"data":"        ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\n"}
-,{"stream_name":"stdout","time":98.082083555,"data":"      File \"/usr/local/lib/python3.13/dist-packages/transformers/utils/versions.py\", line 116, in require_version_core\n"}
-,{"stream_name":"stdout","time":98.082088093,"data":"        return require_version(requirement, hint)\n"}
-,{"stream_name":"stdout","time":98.082092303,"data":"      File \"/usr/local/lib/python3.13/dist-packages/transformers/utils/versions.py\", line 110, in require_version\n"}
-,{"stream_name":"stdout","time":98.08210853,"data":"        _compare_versions(op, got_ver, want_ver, requirement, pkg, hint)\n"}
-,{"stream_name":"stdout","time":98.082113454,"data":"        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stdout","time":98.082117726,"data":"      File \"/usr/local/lib/python3.13/dist-packages/transformers/utils/versions.py\", line 43, in _compare_versions\n"}
-,{"stream_name":"stdout","time":98.082250153,"data":"        raise ImportError(\n"}
-,{"stream_name":"stdout","time":98.082258988,"data":"            f\"{requirement} is required for a normal functioning of this module, but found {pkg}=={got_ver}.{hint}\"\n"}
-,{"stream_name":"stdout","time":98.082263864,"data":"        )\n"}
-,{"stream_name":"stdout","time":98.08226742,"data":"    ImportError: huggingface-hub\u003e=1.5.0,\u003c2.0 is required for a normal functioning of this module, but found huggingface-hub==2.3.0.\n"}
-,{"stream_name":"stdout","time":98.082271647,"data":"    Try: `pip install transformers -U` or `pip install -e '.[dev]'` if you're working with git main\n"}
-,{"stream_name":"stdout","time":98.083715874,"data":"Traceback (most recent call last):\n"}
-,{"stream_name":"stdout","time":98.083742896,"data":"  File \"/kaggle/src/script.py\", line 310, in \u003cmodule\u003e\n"}
-,{"stream_name":"stdout","time":98.083748621,"data":"    sh([sys.executable, \"-m\", \"scripts.inference\", \"--inference_config\", str(cfg),\n"}
-,{"stream_name":"stdout","time":98.083753184,"data":"    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stdout","time":98.083766766,"data":"        \"--result_dir\", str(res), \"--unet_model_path\", \"models/musetalkV15/unet.pth\",\n"}
-,{"stream_name":"stdout","time":98.08377154,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stdout","time":98.083776008,"data":"        \"--unet_config\", \"models/musetalkV15/musetalk.json\", \"--version\", \"v15\",\n"}
-,{"stream_name":"stdout","time":98.083780341,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stdout","time":98.083784326,"data":"        \"--ffmpeg_path\", \"/usr/bin\", \"--use_float16\", \"--batch_size\", \"8\"],\n"}
-,{"stream_name":"stdout","time":98.083789056,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stdout","time":98.08379283,"data":"       cwd=MT, timeout=1800)\n"}
-,{"stream_name":"stdout","time":98.08379758,"data":"       ^^^^^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stdout","time":98.083801404,"data":"  File \"/kaggle/src/script.py\", line 74, in sh\n"}
-,{"stream_name":"stdout","time":98.083805507,"data":"    raise RuntimeError(f\"código {r.returncode}: {cmd}\")\n"}
-,{"stream_name":"stdout","time":98.083810257,"data":"RuntimeError: código 1: ['/usr/bin/python3', '-m', 'scripts.inference', '--inference_config', '/tmp/presentador/MuseTalk/tarea_afin.yaml', '--result_dir', '/tmp/presentador/res_afin', '--unet_model_path', 'models/musetalkV15/unet.pth', '--unet_config', 'models/musetalkV15/musetalk.json', '--version', 'v15', '--ffmpeg_path', '/usr/bin', '--use_float16', '--batch_size', '8']\n"}
-,{"stream_name":"stdout","time":98.083815602,"data":"\n"}
-,{"stream_name":"stdout","time":98.08464627,"data":"\n"}
-,{"stream_name":"stdout","time":98.084658712,"data":"RESUMEN: {\n"}
-,{"stream_name":"stdout","time":98.084663623,"data":" \"pasos\": {\n"}
-,{"stream_name":"stdout","time":98.084667897,"data":"  \"0 · la máquina\": 10.1,\n"}
-,{"stream_name":"stdout","time":98.08467831,"data":"  \"a.1 · plan B: vaivén de la foto\": 2.4,\n"}
-,{"stream_name":"stdout","time":98.084682148,"data":"  \"a.2 · Wan 2.2 TI2V-5B\": 49.4,\n"}
-,{"stream_name":"stdout","time":98.084685794,"data":"  \"b.1 · MuseTalk: código, dependencias y pesos\": 29.3,\n"}
-,{"stream_name":"stdout","time":98.084689452,"data":"  \"b.2 · MuseTalk sobre «afin»\": 5.3\n"}
-,{"stream_name":"stdout","time":98.08469315,"data":" },\n"}
-,{"stream_name":"stdout","time":98.084696584,"data":" \"errores\": {\n"}
-,{"stream_name":"stdout","time":98.084700655,"data":"  \"a.2 · Wan 2.2 TI2V-5B\": \"RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\\\"cara\\\": \\\"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\\\", \\\"wan_tope_s\\\": 3600, \\\"wan_alto\\\": 480, \\\"wan_ancho\\\": 480, \\\"wan_fotogramas\\\": 73, \\\"wan_pasos\\\": 30, \\\"segundos\\\": 3.0, \\\"voz\\\": \\\"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\\\", \\\"salida\\\": \\\"/tmp/presentador/mov_wan_24.mp4\\\"}']\",\n"}
-,{"stream_name":"stdout","time":98.084708826,"data":"  \"b.2 · MuseTalk sobre «afin»\": \"RuntimeError: código 1: ['/usr/bin/python3', '-m', 'scripts.inference', '--inference_config', '/tmp/presentador/MuseTalk/tarea_afin.yaml', '--result_dir', '/tmp/presentador/res_afin', '--unet_model_path', 'models/musetalkV15/unet.pth', '--unet_config', 'models/musetalkV15/musetalk.json', '--version', 'v15', '--ffmpeg_path', '/usr/bin', '--use_float16', '--batch_size', '8']\"\n"}
-,{"stream_name":"stdout","time":98.084713834,"data":" },\n"}
-,{"stream_name":"stdout","time":98.084717202,"data":" \"parametros\": {\n"}
-,{"stream_name":"stdout","time":98.084728272,"data":"  \"cara\": 2,\n"}
-,{"stream_name":"stdout","time":98.08473676,"data":"  \"wan_tope_s\": 3600,\n"}
-,{"stream_name":"stdout","time":98.08473937,"data":"  \"wan_alto\": 480,\n"}
-,{"stream_name":"stdout","time":98.084741668,"data":"  \"wan_ancho\": 480,\n"}
-,{"stream_name":"stdout","time":98.084744005,"data":"  \"wan_fotogramas\": 73,\n"}
-,{"stream_name":"stdout","time":98.084746294,"data":"  \"wan_pasos\": 30,\n"}
-,{"stream_name":"stdout","time":98.084748538,"data":"  \"segundos\": 3.0,\n"}
-,{"stream_name":"stdout","time":98.084750881,"data":"  \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\"\n"}
-,{"stream_name":"stdout","time":98.08475333,"data":" },\n"}
-,{"stream_name":"stdout","time":98.084755504,"data":" \"gpu\": \"Tesla T4, 15360 MiB\\nTesla T4, 15360 MiB\",\n"}
-,{"stream_name":"stdout","time":98.084758025,"data":" \"internet\": true,\n"}
-,{"stream_name":"stdout","time":98.084760433,"data":" \"entrada\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada\",\n"}
-,{"stream_name":"stdout","time":98.084762897,"data":" \"kaggle_input\": [\n"}
-,{"stream_name":"stdout","time":98.084765264,"data":"  \"/kaggle/input/datasets\",\n"}
-,{"stream_name":"stdout","time":98.08476757,"data":"  \"/kaggle/input/datasets/mecanicadelhumor\",\n"}
-,{"stream_name":"stdout","time":98.084770024,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada\",\n"}
-,{"stream_name":"stdout","time":98.084772402,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/audio.wav\",\n"}
-,{"stream_name":"stdout","time":98.084789264,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\",\n"}
-,{"stream_name":"stdout","time":98.084793732,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/parametros.json\"\n"}
-,{"stream_name":"stdout","time":98.084797754,"data":" ],\n"}
-,{"stream_name":"stdout","time":98.084801128,"data":" \"torch\": \"2.11.0+cu128\",\n"}
-,{"stream_name":"stdout","time":98.084805289,"data":" \"cuda\": \"12.8\",\n"}
-,{"stream_name":"stdout","time":98.084809498,"data":" \"bf16_nativo\": true,\n"}
-,{"stream_name":"stdout","time":98.084812988,"data":" \"movimientos\": [\n"}
-,{"stream_name":"stdout","time":98.084816414,"data":"  \"afin\"\n"}
-,{"stream_name":"stdout","time":98.084821457,"data":" ],\n"}
-,{"stream_name":"stdout","time":98.084824773,"data":" \"versiones\": [\n"}
-,{"stream_name":"stdout","time":98.084828182,"data":"  \"torch==2.11.0+cu128\",\n"}
-,{"stream_name":"stdout","time":98.084831732,"data":"  \"transformers==5.16.1\"\n"}
-,{"stream_name":"stdout","time":98.0848353,"data":" ],\n"}
-,{"stream_name":"stdout","time":98.084838599,"data":" \"salida\": [\n"}
-,{"stream_name":"stdout","time":98.084842072,"data":"  \"a_movimiento_afin.mp4\",\n"}
-,{"stream_name":"stdout","time":98.084846563,"data":"  \"cara.jpg\",\n"}
-,{"stream_name":"stdout","time":98.084850031,"data":"  \"registro.txt\",\n"}
-,{"stream_name":"stdout","time":98.084853525,"data":"  \"tiempos.json\"\n"}
-,{"stream_name":"stdout","time":98.084856968,"data":" ],\n"}
-,{"stream_name":"stdout","time":98.084860363,"data":" \"resultado\": \"sin vídeo con labios\"\n"}
-,{"stream_name":"stdout","time":98.084865868,"data":"}\n"}
-,{"stream_name":"stderr","time":100.890509485,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
-,{"stream_name":"stderr","time":100.890557578,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
-,{"stream_name":"stderr","time":101.170082443,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
-,{"stream_name":"stderr","time":101.170122935,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
-,{"stream_name":"stderr","time":101.977225954,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
-,{"stream_name":"stderr","time":103.065107935,"data":"[NbConvertApp] Writing 332754 bytes to __results__.html\n"}
+[{"stream_name":"stdout","time":1.098149484,"data":"\n"}
+,{"stream_name":"stdout","time":1.098318411,"data":"=== 0 · la máquina ===\n"}
+,{"stream_name":"stdout","time":1.2772451710000001,"data":"Entrada: /kaggle/input/datasets/mecanicadelhumor/presentador-entrada · en /kaggle/input: ['/kaggle/input/datasets', '/kaggle/input/datasets/mecanicadelhumor', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/audio.wav', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/parametros.json']\n"}
+,{"stream_name":"stdout","time":11.219715458,"data":"GPU: Tesla T4, 15360 MiB\n"}
+,{"stream_name":"stdout","time":11.219747515,"data":"Tesla T4, 15360 MiB · torch 2.11.0+cu128 · bf16: True\n"}
+,{"stream_name":"stdout","time":11.261176224,"data":"\n"}
+,{"stream_name":"stdout","time":11.26119652,"data":"=== a.1 · plan B: vaivén de la foto ===\n"}
+,{"stream_name":"stdout","time":12.306730636,"data":"$ ffmpeg -y -v error -i /tmp/presentador/mov_afin.mp4 -c:v libx264 -pix_fmt yuv420p /kaggle/working/salida/a_movimiento_afin.mp4\n"}
+,{"stream_name":"stdout","time":13.697224205,"data":"\n"}
+,{"stream_name":"stdout","time":13.697247427,"data":"=== a.2 · Wan 2.2 TI2V-5B ===\n"}
+,{"stream_name":"stdout","time":13.697422554,"data":"$ pip install -q 'diffusers\u003e=0.35' accelerate ftfy 'huggingface_hub\u003e=1.5,\u003c2'\n"}
+,{"stream_name":"stdout","time":17.117283064,"data":"$ /usr/bin/python3 /tmp/presentador/wan.py {\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}\n"}
+,{"stream_name":"stdout","time":373.530577282,"data":"        return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":373.531576964,"data":"               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":373.531600804,"data":"      File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n"}
+,{"stream_name":"stdout","time":373.531607593,"data":"        return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":373.531613429,"data":"      File \"/usr/local/lib/python3.13/dist-packages/accelerate/hooks.py\", line 192, in new_forward\n"}
+,{"stream_name":"stdout","time":373.531619611,"data":"        output = module._old_forward(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":373.531624749,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/utils/peft_utils.py\", line 323, in wrapper\n"}
+,{"stream_name":"stdout","time":373.531629793,"data":"        result = forward_fn(self, *args, **kwargs)\n"}
+,{"stream_name":"stdout","time":373.531634666,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py\", line 704, in forward\n"}
+,{"stream_name":"stdout","time":373.531645695,"data":"        hidden_states = block(hidden_states, encoder_hidden_states, timestep_proj, rotary_emb)\n"}
+,{"stream_name":"stdout","time":373.531652046,"data":"      File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n"}
+,{"stream_name":"stdout","time":373.531657916,"data":"        return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":373.531664543,"data":"               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":373.531670121,"data":"      File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n"}
+,{"stream_name":"stdout","time":373.531693522,"data":"        return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":373.531707047,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py\", line 489, in forward\n"}
+,{"stream_name":"stdout","time":373.531711926,"data":"        attn_output = self.attn1(norm_hidden_states, None, None, rotary_emb)\n"}
+,{"stream_name":"stdout","time":373.531787411,"data":"      File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n"}
+,{"stream_name":"stdout","time":373.531795813,"data":"        return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":373.531800435,"data":"               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":373.531804562,"data":"      File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n"}
+,{"stream_name":"stdout","time":373.531808724,"data":"        return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":373.531813059,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py\", line 281, in forward\n"}
+,{"stream_name":"stdout","time":373.53182016,"data":"        return self.processor(self, hidden_states, encoder_hidden_states, attention_mask, rotary_emb, **kwargs)\n"}
+,{"stream_name":"stdout","time":373.531825142,"data":"               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":373.531829543,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py\", line 143, in __call__\n"}
+,{"stream_name":"stdout","time":373.53183431,"data":"        hidden_states = dispatch_attention_fn(\n"}
+,{"stream_name":"stdout","time":373.531914929,"data":"            query,\n"}
+,{"stream_name":"stdout","time":373.531922476,"data":"        ...\u003c7 lines\u003e...\n"}
+,{"stream_name":"stdout","time":373.531937634,"data":"            parallel_config=(self._parallel_config if encoder_hidden_states is None else None),\n"}
+,{"stream_name":"stdout","time":373.531941535,"data":"        )\n"}
+,{"stream_name":"stdout","time":373.531945187,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/attention_dispatch.py\", line 439, in dispatch_attention_fn\n"}
+,{"stream_name":"stdout","time":373.531961364,"data":"        return backend_fn(**kwargs)\n"}
+,{"stream_name":"stdout","time":373.531965304,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/attention_dispatch.py\", line 3707, in _native_attention\n"}
+,{"stream_name":"stdout","time":373.531969085,"data":"        out = torch.nn.functional.scaled_dot_product_attention(\n"}
+,{"stream_name":"stdout","time":373.531980677,"data":"            query=query,\n"}
+,{"stream_name":"stdout","time":373.531994068,"data":"        ...\u003c6 lines\u003e...\n"}
+,{"stream_name":"stdout","time":373.532004121,"data":"            enable_gqa=enable_gqa,\n"}
+,{"stream_name":"stdout","time":373.532015704,"data":"        )\n"}
+,{"stream_name":"stdout","time":373.532053499,"data":"    torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.63 GiB. GPU 0 has a total capacity of 14.56 GiB of which 1.41 GiB is free. Process 7 has 104.00 MiB memory in use. Including non-PyTorch memory, this process has 13.04 GiB memory in use. Of the allocated memory 12.83 GiB is allocated by PyTorch, and 84.10 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n"}
+,{"stream_name":"stdout","time":373.533411708,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":373.533427884,"data":"  File \"/kaggle/src/script.py\", line 214, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":373.533432969,"data":"    sh([sys.executable, str(TRABAJO / \"wan.py\"), json.dumps(args)], timeout=int(PARAM[\"wan_tope_s\"]))\n"}
+,{"stream_name":"stdout","time":373.533437444,"data":"    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":373.533441866,"data":"  File \"/kaggle/src/script.py\", line 77, in sh\n"}
+,{"stream_name":"stdout","time":373.533445977,"data":"    raise RuntimeError(f\"código {r.returncode}: {cmd}\")\n"}
+,{"stream_name":"stdout","time":373.533451458,"data":"RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}']\n"}
+,{"stream_name":"stdout","time":373.533459434,"data":"\n"}
+,{"stream_name":"stdout","time":373.53404988,"data":"\n"}
+,{"stream_name":"stdout","time":373.534060116,"data":"=== b.1 · MuseTalk: código, dependencias y pesos ===\n"}
+,{"stream_name":"stdout","time":373.535100362,"data":"$ git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk\n"}
+,{"stream_name":"stdout","time":374.971104737,"data":"$ git checkout -q 0a89dec45a0192b824e3cf4daf96c239440c5ed8\n"}
+,{"stream_name":"stdout","time":375.051089188,"data":"$ pip install -q omegaconf einops librosa soundfile 'huggingface_hub\u003e=1.5,\u003c2' ffmpeg-python\n"}
+,{"stream_name":"stderr","time":378.795381973,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":399.421669515,"data":"\rFetching 2 files:   0%|          | 0/2 [00:00\u003c?, ?it/s]\rFetching 2 files:  50%|█████     | 1/2 [00:00\u003c00:00,  5.38it/s]\rFetching 2 files: 100%|██████████| 2/2 [00:09\u003c00:00,  5.65s/it]\rFetching 2 files: 100%|██████████| 2/2 [00:09\u003c00:00,  4.83s/it]\n"}
+,{"stream_name":"stderr","time":401.208877676,"data":"\rFetching 3 files:   0%|          | 0/3 [00:00\u003c?, ?it/s]\rFetching 3 files:  33%|███▎      | 1/3 [00:00\u003c00:00,  7.43it/s]\rFetching 3 files:  67%|██████▋   | 2/3 [00:00\u003c00:00,  8.38it/s]\rFetching 3 files: 100%|██████████| 3/3 [00:01\u003c00:00,  1.43it/s]\rFetching 3 files: 100%|██████████| 3/3 [00:01\u003c00:00,  1.83it/s]\n"}
+,{"stream_name":"stdout","time":403.029389482,"data":"\n"}
+,{"stream_name":"stdout","time":403.02941536,"data":"=== b.2 · MuseTalk sobre «afin» ===\n"}
+,{"stream_name":"stdout","time":403.029603011,"data":"$ /usr/bin/python3 -m scripts.inference --inference_config /tmp/presentador/MuseTalk/tarea_afin.yaml --result_dir /tmp/presentador/res_afin --unet_model_path models/musetalkV15/unet.pth --unet_config models/musetalkV15/musetalk.json --version v15 --ffmpeg_path /usr/bin --use_float16 --batch_size 8\n"}
+,{"stream_name":"stdout","time":481.97935251,"data":"    caras (S3FD):  83%|████████▎ | 62/75 [00:04\u003c00:00, 19.39it/s]\n"}
+,{"stream_name":"stdout","time":481.979397022,"data":"    caras (S3FD):  85%|████████▌ | 64/75 [00:04\u003c00:00, 19.24it/s]\n"}
+,{"stream_name":"stdout","time":481.979418749,"data":"    caras (S3FD):  88%|████████▊ | 66/75 [00:04\u003c00:00, 19.26it/s]\n"}
+,{"stream_name":"stdout","time":481.979423846,"data":"    caras (S3FD):  91%|█████████ | 68/75 [00:04\u003c00:00, 19.21it/s]\n"}
+,{"stream_name":"stdout","time":481.97942839,"data":"    caras (S3FD):  93%|█████████▎| 70/75 [00:04\u003c00:00, 19.27it/s]\n"}
+,{"stream_name":"stdout","time":481.979432222,"data":"    caras (S3FD):  96%|█████████▌| 72/75 [00:05\u003c00:00, 19.18it/s]\n"}
+,{"stream_name":"stdout","time":481.9794366,"data":"    caras (S3FD):  99%|█████████▊| 74/75 [00:05\u003c00:00, 19.20it/s]\n"}
+,{"stream_name":"stdout","time":481.979441566,"data":"    caras (S3FD): 100%|██████████| 75/75 [00:05\u003c00:00, 14.32it/s]\n"}
+,{"stream_name":"stdout","time":481.979450855,"data":"    \n"}
+,{"stream_name":"stdout","time":481.979454949,"data":"      0%|          | 0/10 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":481.979459325,"data":"     10%|█         | 1/10 [00:05\u003c00:49,  5.49s/it]\n"}
+,{"stream_name":"stdout","time":481.979463756,"data":"     20%|██        | 2/10 [00:06\u003c00:21,  2.72s/it]\n"}
+,{"stream_name":"stdout","time":481.97946798,"data":"     30%|███       | 3/10 [00:07\u003c00:12,  1.84s/it]\n"}
+,{"stream_name":"stdout","time":481.979472124,"data":"     40%|████      | 4/10 [00:07\u003c00:08,  1.42s/it]\n"}
+,{"stream_name":"stdout","time":481.979475655,"data":"     50%|█████     | 5/10 [00:08\u003c00:05,  1.20s/it]\n"}
+,{"stream_name":"stdout","time":481.979562183,"data":"     60%|██████    | 6/10 [00:09\u003c00:04,  1.06s/it]\n"}
+,{"stream_name":"stdout","time":481.97957267,"data":"     70%|███████   | 7/10 [00:10\u003c00:02,  1.02it/s]\n"}
+,{"stream_name":"stdout","time":481.979577022,"data":"     80%|████████  | 8/10 [00:11\u003c00:01,  1.09it/s]\n"}
+,{"stream_name":"stdout","time":481.979581232,"data":"     90%|█████████ | 9/10 [00:11\u003c00:00,  1.13it/s]\n"}
+,{"stream_name":"stdout","time":481.979585474,"data":"    100%|██████████| 10/10 [00:14\u003c00:00,  1.33s/it]\n"}
+,{"stream_name":"stdout","time":481.979589312,"data":"    100%|██████████| 10/10 [00:14\u003c00:00,  1.42s/it]\n"}
+,{"stream_name":"stdout","time":481.979594542,"data":"    \n"}
+,{"stream_name":"stdout","time":481.979598569,"data":"      0%|          | 0/75 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":481.979637214,"data":"      5%|▌         | 4/75 [00:00\u003c00:02, 34.25it/s]\n"}
+,{"stream_name":"stdout","time":481.979644682,"data":"     12%|█▏        | 9/75 [00:00\u003c00:01, 40.45it/s]\n"}
+,{"stream_name":"stdout","time":481.979657265,"data":"     19%|█▊        | 14/75 [00:00\u003c00:01, 43.02it/s]\n"}
+,{"stream_name":"stdout","time":481.979732489,"data":"     25%|██▌       | 19/75 [00:00\u003c00:01, 44.03it/s]\n"}
+,{"stream_name":"stdout","time":481.979749558,"data":"     32%|███▏      | 24/75 [00:00\u003c00:01, 44.76it/s]\n"}
+,{"stream_name":"stdout","time":481.979754566,"data":"     39%|███▊      | 29/75 [00:00\u003c00:01, 45.32it/s]\n"}
+,{"stream_name":"stdout","time":481.979759105,"data":"     45%|████▌     | 34/75 [00:00\u003c00:00, 45.41it/s]\n"}
+,{"stream_name":"stdout","time":481.979763618,"data":"     52%|█████▏    | 39/75 [00:00\u003c00:00, 43.76it/s]\n"}
+,{"stream_name":"stdout","time":481.979778386,"data":"     59%|█████▊    | 44/75 [00:01\u003c00:00, 44.55it/s]\n"}
+,{"stream_name":"stdout","time":481.979791871,"data":"     65%|██████▌   | 49/75 [00:01\u003c00:00, 43.98it/s]\n"}
+,{"stream_name":"stdout","time":481.979796478,"data":"     72%|███████▏  | 54/75 [00:01\u003c00:00, 44.24it/s]\n"}
+,{"stream_name":"stdout","time":481.979800938,"data":"     79%|███████▊  | 59/75 [00:01\u003c00:00, 44.92it/s]\n"}
+,{"stream_name":"stdout","time":481.979813853,"data":"     85%|████████▌ | 64/75 [00:01\u003c00:00, 45.22it/s]\n"}
+,{"stream_name":"stdout","time":481.979818787,"data":"     92%|█████████▏| 69/75 [00:01\u003c00:00, 45.05it/s]\n"}
+,{"stream_name":"stdout","time":481.979830858,"data":"     99%|█████████▊| 74/75 [00:01\u003c00:00, 44.87it/s]\n"}
+,{"stream_name":"stdout","time":481.979860005,"data":"    100%|██████████| 75/75 [00:01\u003c00:00, 44.24it/s]\n"}
+,{"stream_name":"stdout","time":481.979872537,"data":"    [aist#0:0/pcm_s16le @ 0x5794c0f1b380] Guessed Channel Layout: mono\n"}
+,{"stream_name":"stdout","time":481.982209169,"data":"\n"}
+,{"stream_name":"stdout","time":481.982225643,"data":"RESUMEN: {\n"}
+,{"stream_name":"stdout","time":481.982229559,"data":" \"pasos\": {\n"}
+,{"stream_name":"stdout","time":481.982232929,"data":"  \"0 · la máquina\": 10.2,\n"}
+,{"stream_name":"stdout","time":481.982236617,"data":"  \"a.1 · plan B: vaivén de la foto\": 2.4,\n"}
+,{"stream_name":"stdout","time":481.982240665,"data":"  \"a.2 · Wan 2.2 TI2V-5B\": 359.8,\n"}
+,{"stream_name":"stdout","time":481.982243944,"data":"  \"b.1 · MuseTalk: código, dependencias y pesos\": 29.5,\n"}
+,{"stream_name":"stdout","time":481.982247466,"data":"  \"b.2 · MuseTalk sobre «afin»\": 79.0\n"}
+,{"stream_name":"stdout","time":481.982251037,"data":" },\n"}
+,{"stream_name":"stdout","time":481.982254901,"data":" \"errores\": {\n"}
+,{"stream_name":"stdout","time":481.982258367,"data":"  \"a.2 · Wan 2.2 TI2V-5B\": \"RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\\\"cara\\\": \\\"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\\\", \\\"wan_tope_s\\\": 3600, \\\"wan_alto\\\": 480, \\\"wan_ancho\\\": 480, \\\"wan_fotogramas\\\": 73, \\\"wan_pasos\\\": 30, \\\"segundos\\\": 3.0, \\\"voz\\\": \\\"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\\\", \\\"salida\\\": \\\"/tmp/presentador/mov_wan_24.mp4\\\"}']\"\n"}
+,{"stream_name":"stdout","time":481.982267301,"data":" },\n"}
+,{"stream_name":"stdout","time":481.982270876,"data":" \"parametros\": {\n"}
+,{"stream_name":"stdout","time":481.982274349,"data":"  \"cara\": 2,\n"}
+,{"stream_name":"stdout","time":481.982278317,"data":"  \"wan_tope_s\": 3600,\n"}
+,{"stream_name":"stdout","time":481.982282078,"data":"  \"wan_alto\": 480,\n"}
+,{"stream_name":"stdout","time":481.982285696,"data":"  \"wan_ancho\": 480,\n"}
+,{"stream_name":"stdout","time":481.982289377,"data":"  \"wan_fotogramas\": 73,\n"}
+,{"stream_name":"stdout","time":481.982292956,"data":"  \"wan_pasos\": 30,\n"}
+,{"stream_name":"stdout","time":481.982296479,"data":"  \"segundos\": 3.0,\n"}
+,{"stream_name":"stdout","time":481.982299849,"data":"  \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\"\n"}
+,{"stream_name":"stdout","time":481.98230343,"data":" },\n"}
+,{"stream_name":"stdout","time":481.982306657,"data":" \"gpu\": \"Tesla T4, 15360 MiB\\nTesla T4, 15360 MiB\",\n"}
+,{"stream_name":"stdout","time":481.98231032,"data":" \"internet\": true,\n"}
+,{"stream_name":"stdout","time":481.982313405,"data":" \"entrada\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada\",\n"}
+,{"stream_name":"stdout","time":481.982316862,"data":" \"kaggle_input\": [\n"}
+,{"stream_name":"stdout","time":481.982328797,"data":"  \"/kaggle/input/datasets\",\n"}
+,{"stream_name":"stdout","time":481.98233275,"data":"  \"/kaggle/input/datasets/mecanicadelhumor\",\n"}
+,{"stream_name":"stdout","time":481.982336851,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada\",\n"}
+,{"stream_name":"stdout","time":481.982340807,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/audio.wav\",\n"}
+,{"stream_name":"stdout","time":481.982344226,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\",\n"}
+,{"stream_name":"stdout","time":481.982347854,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/parametros.json\"\n"}
+,{"stream_name":"stdout","time":481.982351461,"data":" ],\n"}
+,{"stream_name":"stdout","time":481.982354652,"data":" \"torch\": \"2.11.0+cu128\",\n"}
+,{"stream_name":"stdout","time":481.98235826,"data":" \"cuda\": \"12.8\",\n"}
+,{"stream_name":"stdout","time":481.982362303,"data":" \"bf16_nativo\": true,\n"}
+,{"stream_name":"stdout","time":481.982366225,"data":" \"movimientos\": [\n"}
+,{"stream_name":"stdout","time":481.982370273,"data":"  \"afin\"\n"}
+,{"stream_name":"stdout","time":481.982373792,"data":" ],\n"}
+,{"stream_name":"stdout","time":481.98237722,"data":" \"versiones\": [\n"}
+,{"stream_name":"stdout","time":481.982381005,"data":"  \"diffusers==0.40.0\",\n"}
+,{"stream_name":"stdout","time":481.982384592,"data":"  \"torch==2.11.0+cu128\",\n"}
+,{"stream_name":"stdout","time":481.982388501,"data":"  \"transformers==5.16.1\"\n"}
+,{"stream_name":"stdout","time":481.982392265,"data":" ],\n"}
+,{"stream_name":"stdout","time":481.982395496,"data":" \"salida\": [\n"}
+,{"stream_name":"stdout","time":481.982398899,"data":"  \"a_movimiento_afin.mp4\",\n"}
+,{"stream_name":"stdout","time":481.982402272,"data":"  \"b_labios_afin.mp4\",\n"}
+,{"stream_name":"stdout","time":481.982405648,"data":"  \"cara.jpg\",\n"}
+,{"stream_name":"stdout","time":481.982409039,"data":"  \"registro.txt\",\n"}
+,{"stream_name":"stdout","time":481.982433748,"data":"  \"tiempos.json\"\n"}
+,{"stream_name":"stdout","time":481.982437773,"data":" ],\n"}
+,{"stream_name":"stdout","time":481.982441089,"data":" \"resultado\": \"con labios: afin\"\n"}
+,{"stream_name":"stdout","time":481.982444646,"data":"}\n"}
+,{"stream_name":"stderr","time":484.68253846,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":484.682579979,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":484.942101994,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":484.942132181,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":485.727030076,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":486.801199271,"data":"[NbConvertApp] Writing 333625 bytes to __results__.html\n"}
 ]
