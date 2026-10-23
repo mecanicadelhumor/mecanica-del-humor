@@ -273,6 +273,15 @@
       "estado": "pendiente",
       "aplazamientos": [],
       "origen": "Codirector, 23/10 (elección de caras)"
+    },
+    {
+      "id": "C51.3-latentsync",
+      "que": "LatentSync como tercera variante de labios en el cuaderno de Kaggle (detector de MediaPipe en lugar de InsightFace, fp16 en la T4, 1.6 y si no cabe 1.5, entorno virtual propio), probado lo que se pueda sin GPU",
+      "dueno": "direccion",
+      "fecha": "2026-10-26",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Codirector, 23/10 (tras ver b_labios_afin.mp4). Investigación: 07_pruebas/presentador-2026-10/LATENTSYNC.md"
     }
   ]
 }

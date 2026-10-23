@@ -97,3 +97,8 @@ Versión **24** del plan.
   rápida. Es el techo de MuseTalk aquí (boca a 256 px pegada en 512; cada fotograma por separado; voz
   rápida). Wan, sin memoria en la T4: ahora prueba 480 → 384 → 320. Propuesto: comparar con LatentSync
   (boca a 512 y coherente entre fotogramas) antes de dar por buena o mala la persona sintética.
+- **LatentSync, investigado** (`07_pruebas/presentador-2026-10/LATENTSYNC.md`): código Apache 2.0, pesos
+  OpenRAIL++-M (uso comercial sí); el detector InsightFace no (se sustituye por MediaPipe); en la T4
+  correría en fp32 si no se fuerza fp16; dependencias viejas, en entorno virtual propio. Lunes 26
+  (`C51.3-latentsync`). El cuarto «kaggle» (cara 2, Wan con tamaños de respaldo) estaba corriendo a las
+  10:08 UTC: su resultado lo lee la dirección del lunes.
