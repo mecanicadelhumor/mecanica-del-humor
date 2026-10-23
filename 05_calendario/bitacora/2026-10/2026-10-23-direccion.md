@@ -77,3 +77,13 @@ Versión **24** del plan.
   `salida/.gitignore` con `!*.mp4` (también deja subir los vídeos de `kaggle`, que el `.gitignore` de la
   raíz excluía). Probado en una copia del repositorio. Hoja mirada: ocho adultos ficticios, fondo azul
   marino, sin texto.
+
+## Cuarta ejecución · 23/10, ~09:20 UTC (con el codirector delante)
+
+- **Caras elegidas**: la 2 (principal), la 6 (alternativa, brazo 2 frente a 6 más adelante) y la 4
+  (reservada para vídeos muy serios). `caras/eleccion.md` y `compromisos.json`.
+- **Primer «kaggle» (cara 2)**: dos minutos, sin vídeo. Kaggle sin GPU, sin internet y sin encontrar la
+  entrada. La metadata y la CLI piden bien GPU e internet; lo más probable es que la cuenta no tenga el
+  teléfono verificado (se le pide al codirector). Lo nuestro, arreglado: la entrada se busca en todo
+  `/kaggle/input`, el cuaderno para y lo explica si falta GPU o internet, el run sale en rojo sin vídeo, y
+  `salida/.gitignore` ya no se borra. Probado en el contenedor (PRUEBA.md).

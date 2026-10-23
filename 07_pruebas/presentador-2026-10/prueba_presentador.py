@@ -115,9 +115,12 @@ def paso_kaggle(args):
             break
         time.sleep(60)
 
-    if SALIDA.exists():
-        shutil.rmtree(SALIDA)
-    SALIDA.mkdir(parents=True)
+    # Se vacía salida/ menos su .gitignore (el que deja subir los .mp4; el 23/10 el
+    # rmtree se lo llevó en el commit del bot).
+    SALIDA.mkdir(parents=True, exist_ok=True)
+    for viejo in SALIDA.iterdir():
+        if viejo.name != ".gitignore":
+            shutil.rmtree(viejo) if viejo.is_dir() else viejo.unlink()
     sh(["kaggle", "kernels", "output", f"{usuario}/{KERNEL}", "-p", SALIDA], comprobar=False)
     # El cuaderno escribe en /kaggle/working/salida/; la CLI lo baja con esa carpeta delante.
     anidada = SALIDA / "salida"
@@ -125,11 +128,18 @@ def paso_kaggle(args):
         for f in anidada.iterdir():
             shutil.move(str(f), SALIDA / f.name)
         anidada.rmdir()
+    tiempos = {}
+    if (SALIDA / "tiempos.json").exists():
+        tiempos = json.loads((SALIDA / "tiempos.json").read_text("utf-8"))
+    videos = sorted(p.name for p in SALIDA.glob("b_labios_*.mp4"))
     resumen = {"cara": args.cara, "estado_kaggle": final, "minutos": round((time.time() - t0) / 60, 1),
-               "ficheros": sorted(p.name for p in SALIDA.iterdir())}
+               "resultado": tiempos.get("resultado", "sin tiempos.json"), "videos": videos,
+               "errores": tiempos.get("errores", {}),
+               "ficheros": sorted(p.name for p in SALIDA.iterdir() if p.name != ".gitignore")}
     (SALIDA / "estado.json").write_text(json.dumps(resumen, ensure_ascii=False, indent=1), "utf-8")
     print(json.dumps(resumen, ensure_ascii=False, indent=1))
-    return 0 if final == "complete" else 1
+    # En rojo si no hay vídeo con labios: el 23/10 salió en verde sin nada dentro.
+    return 0 if final == "complete" and videos else 1
 
 
 def main():

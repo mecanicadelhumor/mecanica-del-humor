@@ -80,10 +80,20 @@
       "que": "Mirar 07_pruebas/presentador-2026-10/caras/hoja.jpg y elegir cara (o ninguna); después, lanzar el workflow con paso = kaggle o decirlo en el cuaderno",
       "dueno": "codirector",
       "fecha": "2026-10-29",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
       "origen": "Dirección 23/10 (ejecución de la mañana, tras el fallo del primer intento)",
-      "nota": "El codirector relanzó «caras» el 23/10 (08:41 UTC): ocho caras bien, pero no llegaron al repositorio (git add fallaba porque salida/ no existía). La dirección las copió del artefacto y arregló el paso con salida/.gitignore"
+      "nota": "El codirector relanzó «caras» el 23/10 (08:41 UTC): ocho caras bien, pero no llegaron al repositorio (git add fallaba porque salida/ no existía). La dirección las copió del artefacto y arregló el paso con salida/.gitignore. Elegidas: la 2 (principal), la 6 (alternativa para un brazo 2 frente a 6) y la 4 (reservada para vídeos muy serios). caras/eleccion.md",
+      "hecho_el": "2026-10-23"
+    },
+    {
+      "id": "C51.3-kaggle-telefono",
+      "que": "Comprobar en kaggle.com → Settings que la cuenta tiene el teléfono verificado (sin eso Kaggle no da GPU ni internet) y volver a lanzar el workflow con paso = kaggle y cara = 2",
+      "dueno": "codirector",
+      "fecha": "2026-10-29",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Dirección 23/10, tras el primer intento de Kaggle"
     },
     {
       "id": "C51.3-kaggle-run",
@@ -92,7 +102,8 @@
       "fecha": "2026-10-29",
       "estado": "pendiente",
       "aplazamientos": [],
-      "origen": "Dirección 23/10. Depende de C51.3-workflow y de que el codirector elija cara"
+      "origen": "Dirección 23/10. Depende de C51.3-workflow y de que el codirector elija cara",
+      "nota": "Primer intento del codirector el 23/10 con la cara 2: Kaggle sin GPU, sin internet y sin encontrar la entrada; dos minutos, sin vídeo. Arreglado lo nuestro (entrada, aviso, run en rojo). Falta verificar el teléfono en Kaggle (C51.3-kaggle-telefono) y relanzar"
     },
     {
       "id": "C36-encendido",
@@ -253,6 +264,15 @@
       "estado": "pendiente",
       "aplazamientos": [],
       "origen": "Plan v22-v23"
+    },
+    {
+      "id": "C51.3-brazo-caras",
+      "que": "Cuando la persona sintética entre en experimentos: un brazo cara 2 frente a cara 6",
+      "dueno": "direccion",
+      "fecha": "2026-11-16",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Codirector, 23/10 (elección de caras)"
     }
   ]
 }

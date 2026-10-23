@@ -40,7 +40,11 @@ import time
 import traceback
 from pathlib import Path
 
-ENTRADA = next(Path("/kaggle/input").glob("*presentador-entrada*"), Path("/kaggle/input/presentador-entrada"))
+# Dónde monta Kaggle el dataset ha cambiado (/kaggle/input/<nombre>/ o más hondo, p. ej.
+# /kaggle/input/datasets/<usuario>/<nombre>/): se busca la carpeta que tenga cara.jpg.
+# El primer intento (23/10/2026) no la encontró en /kaggle/input/presentador-entrada.
+ENTRADA = next((p.parent for p in sorted(Path("/kaggle/input").rglob("cara.jpg"))),
+               Path("/kaggle/input/presentador-entrada"))
 # Lo pesado (MuseTalk, pesos, fotogramas) va a /tmp: todo lo que quede en
 # /kaggle/working se lo baja después la CLI, y serían varios GB.
 TRABAJO = Path("/tmp/presentador")
@@ -104,6 +108,16 @@ with paso("0 · la máquina"):
     r = subprocess.run("nvidia-smi --query-gpu=name,memory.total --format=csv,noheader",
                        shell=True, capture_output=True, text=True)
     T["gpu"] = r.stdout.strip() or "sin GPU"
+    import socket
+    try:
+        socket.create_connection(("github.com", 443), timeout=10).close()
+        T["internet"] = True
+    except OSError as ex:
+        T["internet"] = False
+        log("Sin internet:", ex)
+    T["entrada"] = str(ENTRADA)
+    T["kaggle_input"] = sorted(str(p) for p in Path("/kaggle/input").rglob("*"))[:40]
+    log("Entrada:", ENTRADA, "· en /kaggle/input:", T["kaggle_input"])
     import torch
     T["torch"] = torch.__version__
     T["cuda"] = torch.version.cuda
@@ -111,6 +125,17 @@ with paso("0 · la máquina"):
     log("GPU:", T["gpu"], "· torch", T["torch"], "· bf16:", T["bf16_nativo"])
     assert CARA.exists() and AUDIO.exists(), f"faltan cara.jpg o audio.wav en {ENTRADA}"
     shutil.copy(CARA, SALIDA / "cara.jpg")
+
+# Sin GPU o sin internet no hay nada que probar: Kaggle los da solo a cuentas con el
+# teléfono verificado (kaggle.com → Settings → Phone verification), y si no, ignora en
+# silencio enable_gpu y enable_internet. Mejor decirlo claro que fallar en cada paso.
+FALTA = [n for n, ok in (("GPU", T["gpu"] != "sin GPU"), ("internet", T.get("internet"))) if not ok]
+if FALTA:
+    T["resultado"] = ("sin vídeo: Kaggle no ha dado " + " ni ".join(FALTA) + ". Casi seguro, la cuenta no "
+                      "tiene el teléfono verificado (kaggle.com → Settings → Phone verification).")
+    guardar()
+    log("\nRESUMEN:", json.dumps(T, ensure_ascii=False, indent=1))
+    sys.exit(0)
 
 # ---------------------------------------------------------------------------
 # (a) Movimiento

@@ -152,3 +152,21 @@ oculta los secretos: ese no abre. El bueno está en la página del run, abajo, �
   `.gitignore` de la raíz los excluía: el `kaggle` habría tenido el mismo problema). Probado en una copia
   del repositorio: antes, el mismo «did not match any files» y nada en el índice; después, las caras, el
   `.gitignore` y un `.mp4` de prueba.
+
+## 23/10, 09:04 UTC: el primer «kaggle» (cara 2) acabó en dos minutos sin vídeo
+
+Kaggle ejecutó el cuaderno, pero **sin GPU** (`torch 2.11.0+cpu`), **sin internet** («Could not resolve host:
+github.com») y **sin encontrar la entrada** en `/kaggle/input/presentador-entrada` (por eso los
+parámetros dicen `cara: 1`, el valor por defecto). Cada paso falló en segundos y el run salió en verde.
+
+- **GPU e internet**: el `kernel-metadata.json` los pide (`enable_gpu`, `enable_internet`) y la CLI 2.2.5 los
+  manda bien (leído su código). Kaggle **solo los da a cuentas con el teléfono verificado** y, si no, los
+  ignora sin avisar. Es lo que tiene que comprobar el codirector (Settings → Phone verification).
+- **La entrada**: Kaggle ya no la monta siempre en `/kaggle/input/<nombre>/`. El cuaderno la busca ahora
+  en cualquier carpeta de `/kaggle/input` que tenga `cara.jpg`, y apunta en `tiempos.json` lo que ve ahí.
+- **Si falta GPU o internet**, el cuaderno para al momento y dice por qué, en `tiempos.json` → `resultado`.
+- **El run sale en rojo si no hay vídeo con labios**, y `estado.json` copia el resultado y los errores.
+- **`salida/.gitignore` ya no se borra** al vaciar la carpeta (el commit del bot de las 09:06 se lo llevó).
+- Probado en el contenedor: el cuaderno con la entrada en `/kaggle/input/datasets/u/presentador-entrada/`
+  y sin GPU la encuentra, lee `cara: 2` y para con el aviso; el lanzador con la CLI simulada da 1 sin
+  vídeo y 0 con vídeo, y conserva el `.gitignore` en los dos casos.
