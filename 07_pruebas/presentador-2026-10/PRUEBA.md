@@ -183,3 +183,17 @@ de Kaggle (5.16.1) exige `>=1.5,<2.0`: dejó de importar, y los dos lo usan.
 - Comprobado en PyPI: diffusers 0.41.0 pide `huggingface-hub<2.0,>=1.32.0`; transformers 5.16.1 pide
   `huggingface-hub<2.0,>=1.5.0`. Lo que no se puede probar aquí (sin GPU): que Wan quepa en una T4 y que
   MuseTalk 1.5 funcione con transformers 5; se verá en el tercer intento.
+
+## 23/10, ~09:52 UTC: tercer «kaggle» (cara 2): primer vídeo con labios
+
+**MuseTalk funciona**: `b_labios_afin.mp4` (512×512, 25 fps, 3 s, con la voz de `MDS-045`). Lo que vio el
+codirector, «un poco pixelado y el movimiento muy rápido, no natural», es el límite de este montaje, no un
+fallo del programa:
+
+- **Pixelado**: MuseTalk rehace solo la boca y la barbilla, a 256×256, y la pega sobre una cara de 512: la
+  zona de la boca sale más blanda que el resto. Además el vídeo es pequeño (512, ~260 kb/s).
+- **Rapidez**: MuseTalk genera cada fotograma por separado, sin suavizado entre uno y otro, y la toma de
+  C36 va a ~3,9 palabras/s. La boca «tiembla» de un fotograma a otro.
+- **Wan falló otra vez, ahora por memoria**: a 480×480 y 73 fotogramas pidió 1,63 GB en la atención con
+  1,41 libres en la T4, tras 6 minutos. Arreglo: si no cabe, prueba 384 y 320 (mismo número de
+  fotogramas), con `expandable_segments`. Se verá en el cuarto intento.

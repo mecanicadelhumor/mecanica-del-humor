@@ -92,3 +92,8 @@ Versión **24** del plan.
   (`a_movimiento_afin.mp4`), pero Wan y MuseTalk caen porque el diffusers de git main subió
   `huggingface_hub` a 2.3.0 y el transformers de Kaggle pide <2.0. Arreglo: diffusers de PyPI y
   `huggingface_hub>=1.5,<2` en los dos `pip install`. Relanza el codirector.
+
+- **Tercer «kaggle» (~09:52 UTC)**: primer `b_labios_afin.mp4`. El codirector: algo pixelado y boca muy
+  rápida. Es el techo de MuseTalk aquí (boca a 256 px pegada en 512; cada fotograma por separado; voz
+  rápida). Wan, sin memoria en la T4: ahora prueba 480 → 384 → 320. Propuesto: comparar con LatentSync
+  (boca a 512 y coherente entre fotogramas) antes de dar por buena o mala la persona sintética.

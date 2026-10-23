@@ -188,15 +188,28 @@ WAN = textwrap.dedent(r'''
     except Exception:
         pass
     print("cargado en", round(time.time() - t0, 1), "s; dtype", dtype, flush=True)
-    img = load_image(p["cara"]).resize((p["wan_ancho"], p["wan_alto"]))
-    out = pipe(image=img,
-               prompt=("a friendly presenter looks at the camera and stays still, calm breathing, "
-                       "subtle natural head movement, blinks once, mouth closed, static camera, "
-                       "plain dark blue background"),
-               negative_prompt="talking, open mouth, camera movement, zoom, text, subtitles, distorted face",
-               height=p["wan_alto"], width=p["wan_ancho"], num_frames=p["wan_fotogramas"],
-               num_inference_steps=p["wan_pasos"], guidance_scale=5.0,
-               generator=torch.Generator("cpu").manual_seed(20261023)).frames[0]
+    # 23/10/2026: a 480x480 y 73 fotogramas no cupo en una T4 (pidió 1,63 GB con 1,41 libres,
+    # en la atención). Se prueba de mayor a menor hasta que quepa; lo que sale lo dice.
+    tamanos = [(p["wan_ancho"], p["wan_alto"], p["wan_fotogramas"]), (384, 384, 73), (320, 320, 73)]
+    out = None
+    for ancho, alto, fotogramas in tamanos:
+        try:
+            img = load_image(p["cara"]).resize((ancho, alto))
+            out = pipe(image=img,
+                       prompt=("a friendly presenter looks at the camera and stays still, calm breathing, "
+                               "subtle natural head movement, blinks once, mouth closed, static camera, "
+                               "plain dark blue background"),
+                       negative_prompt="talking, open mouth, camera movement, zoom, text, subtitles, distorted face",
+                       height=alto, width=ancho, num_frames=fotogramas,
+                       num_inference_steps=p["wan_pasos"], guidance_scale=5.0,
+                       generator=torch.Generator("cpu").manual_seed(20261023)).frames[0]
+            print("Wan a", ancho, "x", alto, "con", fotogramas, "fotogramas", flush=True)
+            break
+        except torch.OutOfMemoryError:
+            print("sin memoria a", ancho, "x", alto, "· se prueba más pequeño", flush=True)
+            torch.cuda.empty_cache()
+    if out is None:
+        raise SystemExit("Wan no cabe en la GPU ni a 320x320")
     export_to_video(out, p["salida"], fps=24)
     print("hecho en", round(time.time() - t0, 1), "s; pico de memoria",
           round(torch.cuda.max_memory_allocated() / 2**30, 1), "GB", flush=True)
@@ -211,7 +224,8 @@ with paso("a.2 · Wan 2.2 TI2V-5B"):
     crudo = TRABAJO / "mov_wan_24.mp4"
     args = dict(PARAM, cara=str(CARA), salida=str(crudo))
     try:
-        sh([sys.executable, str(TRABAJO / "wan.py"), json.dumps(args)], timeout=int(PARAM["wan_tope_s"]))
+        sh([sys.executable, str(TRABAJO / "wan.py"), json.dumps(args)], timeout=int(PARAM["wan_tope_s"]),
+           env=dict(os.environ, PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True"))
     except subprocess.TimeoutExpired:
         raise RuntimeError(f"Wan no terminó en {PARAM['wan_tope_s']} s (tope)")
     destino = TRABAJO / "mov_wan.mp4"
