@@ -1,15 +1,15 @@
 {
-  "id": "MDS-041.es",
-  "duracion_final_s": 43.6,
-  "tamano_mb": 24.0,
+  "id": "MDS-047.es",
+  "duracion_final_s": 53.5,
+  "tamano_mb": 31.8,
   "audio": {
-    "lufs": -14.57,
-    "pico_dbtp": -1.45,
-    "rango_lu": 5.3
+    "lufs": -15.01,
+    "pico_dbtp": -1.42,
+    "rango_lu": 9.7
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.036,
+    "acaba_s": 0.129,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,7 +17,7 @@
     "silencios_s": [
       [
         0.0,
-        0.1
+        0.129
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -42,24 +42,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 42.81,
-    "duracion_real_voz_mp3_s": 42.55,
-    "desfase_s": 0.26,
+    "duracion_calculada_s": 52.73,
+    "duracion_real_voz_mp3_s": 52.44,
+    "desfase_s": 0.29,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_13_embrace_sappheiros.mp3",
-    "sha256": "2ed7b5338cc93932605464610b53237ee1de9fa4e93ac7a88946455443350d43"
+    "archivo": "cama_05_prelude_no_13_chris_zabriskie.mp3",
+    "sha256": "14fc9c6d547249a5250cf2ef09c67e1c9b13bef562c899bc8e6bf5f3d321846b"
   },
   "guion": {
-    "titulo_trabajo": "¿Por qué sentimos vergüenza ajena?",
+    "titulo_trabajo": "¿Por qué dan miedo los payasos?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 42.81,
+    "duracion_narracion_s": 52.73,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 8.778,
+    "escena_mas_larga_s": 14.398,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 6
@@ -78,18 +78,23 @@
       "apertura",
       "planteamiento",
       "remate",
-      "explicacion",
       "contraste",
+      "cifra",
       "objecion"
     ],
-    "escenas_ritmo_fuera_de_rango": [],
+    "escenas_ritmo_fuera_de_rango": [
+      [
+        6,
+        1.57
+      ]
+    ],
     "voz_fiel": [
-      "15/15 palabras, 0 trozos repetidos",
-      "9/9 palabras, 0 trozos repetidos",
-      "19/19 palabras, 0 trozos repetidos",
-      "19/19 palabras, 0 trozos repetidos",
-      "21/22 palabras, 0 trozos repetidos",
-      "17/18 palabras, 0 trozos repetidos"
+      "15/14 palabras, 0 trozos repetidos",
+      "10/9 palabras, 0 trozos repetidos",
+      "14/13 palabras, 0 trozos repetidos",
+      "24/23 palabras, 0 trozos repetidos",
+      "23/23 palabras, 0 trozos repetidos",
+      "18/18 palabras, 0 trozos repetidos"
     ]
   },
   "visual": {
@@ -97,70 +102,106 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 3.83,
+        "hasta_s": 4.73,
         "fuente": "pexels",
-        "id": 7424068,
-        "pagina": "https://www.pexels.com/video/man-with-afro-hair-singing-7424068/",
-        "autor": "Gustavo Fring",
-        "autor_url": "https://www.pexels.com/@gustavo-fring",
+        "id": 9708965,
+        "pagina": "https://www.pexels.com/video/two-little-girls-playing-with-halloween-decorations-in-skeleton-costumes-9708965/",
+        "autor": "Mike Jones",
+        "autor_url": "https://www.pexels.com/@mike-jones",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 1,
-        "desde_s": 3.83,
-        "hasta_s": 5.5,
+        "desde_s": 4.73,
+        "hasta_s": 7.4,
         "fuente": "pexels",
-        "id": 12330884,
-        "pagina": "https://www.pexels.com/video/microphone-in-red-light-12330884/",
-        "autor": "utopia 36",
-        "autor_url": "https://www.pexels.com/@utopia36",
+        "id": 6396070,
+        "pagina": "https://www.pexels.com/video/people-having-a-party-at-the-office-6396070/",
+        "autor": "Pavel Danilyuk",
+        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 5.5,
-        "hasta_s": 10.5,
+        "desde_s": 7.4,
+        "hasta_s": 12.57,
+        "fuente": "pixabay",
+        "id": 129422,
+        "pagina": "https://pixabay.com/videos/id-129422/",
+        "autor": "SYG_Anime",
+        "autor_url": "https://pixabay.com/users/SYG_Anime-7158719/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 3,
+        "desde_s": 12.57,
+        "hasta_s": 15.73,
         "fuente": "pexels",
-        "id": 8117112,
-        "pagina": "https://www.pexels.com/video/a-man-singing-8117112/",
-        "autor": "Ivan S",
-        "autor_url": "https://www.pexels.com/@ivan-s",
+        "id": 8061672,
+        "pagina": "https://www.pexels.com/video/a-woman-talking-on-a-cellphone-in-her-office-8061672/",
+        "autor": "Pavel Danilyuk",
+        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 3,
-        "desde_s": 10.5,
-        "hasta_s": 18.07,
+        "desde_s": 15.73,
+        "hasta_s": 20.4,
         "fuente": "pexels",
-        "id": 6958207,
-        "pagina": "https://www.pexels.com/video/woman-wiping-her-face-with-a-table-napkin-6958207/",
-        "autor": "https://kaboompics.com/",
-        "autor_url": "https://www.pexels.com/@karola-g",
+        "id": 6340301,
+        "pagina": "https://www.pexels.com/video/close-up-video-of-a-hand-holding-a-christmas-candy-6340301/",
+        "autor": "Nadezhda Moryak",
+        "autor_url": "https://www.pexels.com/@nadezhda-moryak",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 4,
-        "desde_s": 18.07,
-        "hasta_s": 26.0,
+        "desde_s": 20.4,
+        "hasta_s": 25.4,
+        "fuente": "pexels",
+        "id": 8480685,
+        "pagina": "https://www.pexels.com/video/close-up-video-of-a-person-using-a-laptop-8480685/",
+        "autor": "ArtHouse Studio",
+        "autor_url": "https://www.pexels.com/@arthousestudio",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 4,
+        "desde_s": 25.4,
+        "hasta_s": 28.73,
         "fuente": "pixabay",
-        "id": 6282,
-        "pagina": "https://pixabay.com/videos/id-6282/",
-        "autor": "sbtlneet",
-        "autor_url": "https://pixabay.com/users/sbtlneet-3591002/",
+        "id": 63749,
+        "pagina": "https://pixabay.com/videos/id-63749/",
+        "autor": "Matthias_Groeneveld",
+        "autor_url": "https://pixabay.com/users/Matthias_Groeneveld-4535957/",
         "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       },
       {
-        "escena": 6,
-        "desde_s": 34.77,
-        "hasta_s": 40.0,
+        "escena": 5,
+        "desde_s": 28.73,
+        "hasta_s": 35.1,
+        "fuente": "pixabay",
+        "id": 12004,
+        "pagina": "https://pixabay.com/videos/id-12004/",
+        "autor": "whitesession",
+        "autor_url": "https://pixabay.com/users/whitesession-4645995/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 35.1,
+        "hasta_s": 38.33,
         "fuente": "pexels",
-        "id": 5813778,
-        "pagina": "https://www.pexels.com/video/close-up-video-of-a-table-5813778/",
+        "id": 7989632,
+        "pagina": "https://www.pexels.com/video/an-empty-movie-theater-7989632/",
         "autor": "Tima Miroshnichenko",
         "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
@@ -168,14 +209,26 @@
       },
       {
         "escena": 6,
-        "desde_s": 40.0,
-        "hasta_s": 41.07,
+        "desde_s": 38.33,
+        "hasta_s": 44.37,
         "fuente": "pexels",
-        "id": 6054228,
-        "pagina": "https://www.pexels.com/video/man-enjoying-and-clapping-with-the-music-at-the-table-6054228/",
-        "autor": "cottonbro studio",
-        "autor_url": "https://www.pexels.com/@cottonbro",
+        "id": 7653229,
+        "pagina": "https://www.pexels.com/video/a-man-writing-on-a-notebook-7653229/",
+        "autor": "Thirdman",
+        "autor_url": "https://www.pexels.com/@thirdman",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 6,
+        "desde_s": 44.37,
+        "hasta_s": 50.53,
+        "fuente": "pixabay",
+        "id": 2340,
+        "pagina": "https://pixabay.com/videos/id-2340/",
+        "autor": "Life-Of-Vids",
+        "autor_url": "https://pixabay.com/users/Life-Of-Vids-1282862/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       }
     ],
@@ -183,12 +236,12 @@
   },
   "animacion": null,
   "fotogramas_s": [
-    3.39,
-    8.59,
-    15.12,
-    22.9,
-    31.35,
-    39.69
+    4.53,
+    10.59,
+    17.36,
+    25.5,
+    34.6,
+    47.07
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
