@@ -852,12 +852,13 @@
       "guion": "05_calendario/guiones/MDS-047.es.json",
       "video_id": "lXrfOJXG1vQ",
       "url": "https://youtu.be/lXrfOJXG1vQ",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-10-23T17:00:00Z",
       "musica": "cama_05_prelude_no_13_chris_zabriskie.mp3",
       "subido_utc": "2026-10-23T06:10:38Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-10-23T20:30:56Z"
     }
   ],
-  "_estado_leido_utc": "2026-10-22T20:36:19Z"
+  "_estado_leido_utc": "2026-10-23T20:30:56Z"
 }
