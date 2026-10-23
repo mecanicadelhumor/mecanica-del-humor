@@ -87,3 +87,8 @@ Versión **24** del plan.
   teléfono verificado (se le pide al codirector). Lo nuestro, arreglado: la entrada se busca en todo
   `/kaggle/input`, el cuaderno para y lo explica si falta GPU o internet, el run sale en rojo sin vídeo, y
   `salida/.gitignore` ya no se borra. Probado en el contenedor (PRUEBA.md).
+
+- **Segundo «kaggle» (~09:33 UTC, con GPU)**: dos T4, internet y entrada bien; sale el vaivén
+  (`a_movimiento_afin.mp4`), pero Wan y MuseTalk caen porque el diffusers de git main subió
+  `huggingface_hub` a 2.3.0 y el transformers de Kaggle pide <2.0. Arreglo: diffusers de PyPI y
+  `huggingface_hub>=1.5,<2` en los dos `pip install`. Relanza el codirector.

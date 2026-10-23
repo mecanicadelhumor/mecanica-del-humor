@@ -52,6 +52,9 @@ TRABAJO.mkdir(parents=True, exist_ok=True)
 SALIDA = Path("/kaggle/working/salida")
 SALIDA.mkdir(parents=True, exist_ok=True)
 MUSETALK_COMMIT = "0a89dec45a0192b824e3cf4daf96c239440c5ed8"   # el que se leyó el 23/10/2026
+# Ningún pip install puede subir huggingface_hub a la 2.x: el transformers de Kaggle
+# (5.16) pide >=1.5,<2.0 y, si no, no importa (Wan y MuseTalk lo usan). 23/10/2026.
+HUB = "'huggingface_hub>=1.5,<2'"
 
 T = {"pasos": {}, "errores": {}}
 REGISTRO = open(SALIDA / "registro.txt", "a", encoding="utf-8")
@@ -201,7 +204,10 @@ WAN = textwrap.dedent(r'''
 
 with paso("a.2 · Wan 2.2 TI2V-5B"):
     (TRABAJO / "wan.py").write_text(WAN, "utf-8")
-    sh("pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy", timeout=1200)
+    # 23/10/2026: diffusers de git main subió huggingface_hub a 2.3.0 y el transformers de
+    # Kaggle (5.16, pide <2.0) dejó de importar: cayeron Wan y MuseTalk. Diffusers de PyPI
+    # (Wan 2.2 desde la 0.35) y huggingface_hub atado a lo que pide transformers.
+    sh(f"pip install -q 'diffusers>=0.35' accelerate ftfy {HUB}", timeout=1200)
     crudo = TRABAJO / "mov_wan_24.mp4"
     args = dict(PARAM, cara=str(CARA), salida=str(crudo))
     try:
@@ -287,7 +293,7 @@ with paso("b.1 · MuseTalk: código, dependencias y pesos"):
         f.unlink()
     (fp / "__init__.py").write_text(MASCARA, "utf-8")
     sh("pip install -q omegaconf einops librosa soundfile "
-       "'huggingface_hub>=0.30' ffmpeg-python", timeout=900)
+       f"{HUB} ffmpeg-python", timeout=900)
     from huggingface_hub import hf_hub_download, snapshot_download
     modelos = MT / "models"
     modelos.mkdir(exist_ok=True)

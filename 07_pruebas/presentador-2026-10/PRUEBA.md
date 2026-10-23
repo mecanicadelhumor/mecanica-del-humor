@@ -170,3 +170,16 @@ parámetros dicen `cara: 1`, el valor por defecto). Cada paso falló en segundos
 - Probado en el contenedor: el cuaderno con la entrada en `/kaggle/input/datasets/u/presentador-entrada/`
   y sin GPU la encuentra, lee `cara: 2` y para con el aviso; el lanzador con la CLI simulada da 1 sin
   vídeo y 0 con vídeo, y conserva el `.gitignore` en los dos casos.
+
+## 23/10, ~09:33 UTC: segundo «kaggle» (cara 2, teléfono ya verificado)
+
+Ya hay **dos Tesla T4**, internet y la entrada (en `/kaggle/input/datasets/<usuario>/presentador-entrada/`).
+Salió el **plan B del movimiento** (`a_movimiento_afin.mp4`), pero **Wan y MuseTalk fallaron por lo mismo**:
+el `pip install` de diffusers **desde git main** subió `huggingface_hub` a **2.3.0**, y el `transformers`
+de Kaggle (5.16.1) exige `>=1.5,<2.0`: dejó de importar, y los dos lo usan.
+
+- **Arreglo**: diffusers **de PyPI** (`>=0.35`; la última, 0.41.0, pide `huggingface-hub>=1.32,<2.0` y trae
+  Wan 2.2) y `huggingface_hub>=1.5,<2` en los dos `pip install` (constante `HUB` en `kaggle/presentador.py`).
+- Comprobado en PyPI: diffusers 0.41.0 pide `huggingface-hub<2.0,>=1.32.0`; transformers 5.16.1 pide
+  `huggingface-hub<2.0,>=1.5.0`. Lo que no se puede probar aquí (sin GPU): que Wan quepa en una T4 y que
+  MuseTalk 1.5 funcione con transformers 5; se verá en el tercer intento.
