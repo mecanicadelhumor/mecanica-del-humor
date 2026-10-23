@@ -1,0 +1,82 @@
+
+=== 0 · la máquina ===
+GPU: sin GPU · torch 2.11.0+cpu · bf16: False
+Traceback (most recent call last):
+  File "/kaggle/src/script.py", line 112, in <module>
+    assert CARA.exists() and AUDIO.exists(), f"faltan cara.jpg o audio.wav en {ENTRADA}"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: faltan cara.jpg o audio.wav en /kaggle/input/presentador-entrada
+
+
+=== a.1 · plan B: vaivén de la foto ===
+Traceback (most recent call last):
+  File "/kaggle/src/script.py", line 124, in <module>
+    h, w = im.shape[:2]
+           ^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'shape'
+
+
+=== a.2 · Wan 2.2 TI2V-5B ===
+$ pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy
+      error: subprocess-exited-with-error
+      
+      × git clone --filter=blob:none --quiet https://github.com/huggingface/diffusers /tmp/pip-req-build-o06pj6ve did not run successfully.
+      │ exit code: 128
+      ╰─> No available output.
+      
+      note: This error originates from a subprocess, and is likely not a problem with pip.
+    ERROR: Failed to build 'git+https://github.com/huggingface/diffusers' when git clone --filter=blob:none --quiet https://github.com/huggingface/diffusers /tmp/pip-req-build-o06pj6ve
+Traceback (most recent call last):
+  File "/kaggle/src/script.py", line 179, in <module>
+    sh("pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy", timeout=1200)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/src/script.py", line 70, in sh
+    raise RuntimeError(f"código {r.returncode}: {cmd}")
+RuntimeError: código 1: pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy
+
+
+=== b.1 · MuseTalk: código, dependencias y pesos ===
+$ git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk
+    fatal: unable to access 'https://github.com/TMElyralab/MuseTalk.git/': Could not resolve host: github.com
+Traceback (most recent call last):
+  File "/kaggle/src/script.py", line 257, in <module>
+    sh(f"git clone -q https://github.com/TMElyralab/MuseTalk.git {MT}")
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/src/script.py", line 70, in sh
+    raise RuntimeError(f"código {r.returncode}: {cmd}")
+RuntimeError: código 128: git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk
+
+
+RESUMEN: {
+ "pasos": {
+  "0 · la máquina": 5.6,
+  "a.1 · plan B: vaivén de la foto": 0.4,
+  "a.2 · Wan 2.2 TI2V-5B": 33.5,
+  "b.1 · MuseTalk: código, dependencias y pesos": 32.0
+ },
+ "errores": {
+  "0 · la máquina": "AssertionError: faltan cara.jpg o audio.wav en /kaggle/input/presentador-entrada",
+  "a.1 · plan B: vaivén de la foto": "AttributeError: 'NoneType' object has no attribute 'shape'",
+  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: código 1: pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy",
+  "b.1 · MuseTalk: código, dependencias y pesos": "RuntimeError: código 128: git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk"
+ },
+ "parametros": {
+  "cara": 1,
+  "wan_tope_s": 3600,
+  "wan_alto": 480,
+  "wan_ancho": 480,
+  "wan_fotogramas": 73,
+  "wan_pasos": 30,
+  "segundos": 3.0
+ },
+ "gpu": "sin GPU",
+ "torch": "2.11.0+cpu",
+ "cuda": null,
+ "bf16_nativo": false,
+ "movimientos": [],
+ "salida": [
+  "registro.txt",
+  "tiempos.json"
+ ],
+ "resultado": "sin vídeo con labios"
+}

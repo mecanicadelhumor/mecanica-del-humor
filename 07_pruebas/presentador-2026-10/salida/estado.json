@@ -1,0 +1,10 @@
+{
+ "cara": 2,
+ "estado_kaggle": "complete",
+ "minutos": 1.9,
+ "ficheros": [
+  "presentador-prueba.log",
+  "registro.txt",
+  "tiempos.json"
+ ]
+}

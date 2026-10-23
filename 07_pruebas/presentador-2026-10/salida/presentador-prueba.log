@@ -1,0 +1,90 @@
+[{"stream_name":"stdout","time":1.031360016,"data":"\n"}
+,{"stream_name":"stdout","time":1.031407999,"data":"=== 0 · la máquina ===\n"}
+,{"stream_name":"stdout","time":6.6704027230000005,"data":"GPU: sin GPU · torch 2.11.0+cpu · bf16: False\n"}
+,{"stream_name":"stdout","time":6.671073187,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":6.671094174,"data":"  File \"/kaggle/src/script.py\", line 112, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":6.671099722,"data":"    assert CARA.exists() and AUDIO.exists(), f\"faltan cara.jpg o audio.wav en {ENTRADA}\"\n"}
+,{"stream_name":"stdout","time":6.671104129,"data":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":6.6711079269999995,"data":"AssertionError: faltan cara.jpg o audio.wav en /kaggle/input/presentador-entrada\n"}
+,{"stream_name":"stdout","time":6.671111889,"data":"\n"}
+,{"stream_name":"stdout","time":6.671308429,"data":"\n"}
+,{"stream_name":"stdout","time":6.671317698,"data":"=== a.1 · plan B: vaivén de la foto ===\n"}
+,{"stream_name":"stderr","time":7.057181785,"data":"[ WARN:0@0.173] global loadsave.cpp:278 findDecoder imread_('/kaggle/input/presentador-entrada/cara.jpg'): can't open/read file: check file path/integrity\n"}
+,{"stream_name":"stdout","time":7.057900692,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":7.057917668,"data":"  File \"/kaggle/src/script.py\", line 124, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":7.05792306,"data":"    h, w = im.shape[:2]\n"}
+,{"stream_name":"stdout","time":7.057926411,"data":"           ^^^^^^^^\n"}
+,{"stream_name":"stdout","time":7.057930137,"data":"AttributeError: 'NoneType' object has no attribute 'shape'\n"}
+,{"stream_name":"stdout","time":7.05793397,"data":"\n"}
+,{"stream_name":"stdout","time":7.058395496,"data":"\n"}
+,{"stream_name":"stdout","time":7.058408119,"data":"=== a.2 · Wan 2.2 TI2V-5B ===\n"}
+,{"stream_name":"stdout","time":7.058614939,"data":"$ pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy\n"}
+,{"stream_name":"stdout","time":40.549241672,"data":"      error: subprocess-exited-with-error\n"}
+,{"stream_name":"stdout","time":40.549271627,"data":"      \n"}
+,{"stream_name":"stdout","time":40.549276697,"data":"      × git clone --filter=blob:none --quiet https://github.com/huggingface/diffusers /tmp/pip-req-build-o06pj6ve did not run successfully.\n"}
+,{"stream_name":"stdout","time":40.549283002,"data":"      │ exit code: 128\n"}
+,{"stream_name":"stdout","time":40.549287594,"data":"      ╰─\u003e No available output.\n"}
+,{"stream_name":"stdout","time":40.549293088,"data":"      \n"}
+,{"stream_name":"stdout","time":40.549297581,"data":"      note: This error originates from a subprocess, and is likely not a problem with pip.\n"}
+,{"stream_name":"stdout","time":40.549302634,"data":"    ERROR: Failed to build 'git+https://github.com/huggingface/diffusers' when git clone --filter=blob:none --quiet https://github.com/huggingface/diffusers /tmp/pip-req-build-o06pj6ve\n"}
+,{"stream_name":"stdout","time":40.550442046,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":40.550470278,"data":"  File \"/kaggle/src/script.py\", line 179, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":40.550477661,"data":"    sh(\"pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy\", timeout=1200)\n"}
+,{"stream_name":"stdout","time":40.550481342,"data":"    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":40.55048461,"data":"  File \"/kaggle/src/script.py\", line 70, in sh\n"}
+,{"stream_name":"stdout","time":40.550501136,"data":"    raise RuntimeError(f\"código {r.returncode}: {cmd}\")\n"}
+,{"stream_name":"stdout","time":40.550510851,"data":"RuntimeError: código 1: pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy\n"}
+,{"stream_name":"stdout","time":40.550513698,"data":"\n"}
+,{"stream_name":"stdout","time":40.550923036,"data":"\n"}
+,{"stream_name":"stdout","time":40.550938244,"data":"=== b.1 · MuseTalk: código, dependencias y pesos ===\n"}
+,{"stream_name":"stdout","time":40.550943097,"data":"$ git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk\n"}
+,{"stream_name":"stdout","time":72.578097777,"data":"    fatal: unable to access 'https://github.com/TMElyralab/MuseTalk.git/': Could not resolve host: github.com\n"}
+,{"stream_name":"stdout","time":72.578977548,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":72.578997117,"data":"  File \"/kaggle/src/script.py\", line 257, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":72.579003121,"data":"    sh(f\"git clone -q https://github.com/TMElyralab/MuseTalk.git {MT}\")\n"}
+,{"stream_name":"stdout","time":72.579007878,"data":"    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":72.579012561,"data":"  File \"/kaggle/src/script.py\", line 70, in sh\n"}
+,{"stream_name":"stdout","time":72.57901689,"data":"    raise RuntimeError(f\"código {r.returncode}: {cmd}\")\n"}
+,{"stream_name":"stdout","time":72.579022306,"data":"RuntimeError: código 128: git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk\n"}
+,{"stream_name":"stdout","time":72.579027063,"data":"\n"}
+,{"stream_name":"stdout","time":72.579693387,"data":"\n"}
+,{"stream_name":"stdout","time":72.579708205,"data":"RESUMEN: {\n"}
+,{"stream_name":"stdout","time":72.579712714,"data":" \"pasos\": {\n"}
+,{"stream_name":"stdout","time":72.579717568,"data":"  \"0 · la máquina\": 5.6,\n"}
+,{"stream_name":"stdout","time":72.579722827,"data":"  \"a.1 · plan B: vaivén de la foto\": 0.4,\n"}
+,{"stream_name":"stdout","time":72.579727095,"data":"  \"a.2 · Wan 2.2 TI2V-5B\": 33.5,\n"}
+,{"stream_name":"stdout","time":72.579731243,"data":"  \"b.1 · MuseTalk: código, dependencias y pesos\": 32.0\n"}
+,{"stream_name":"stdout","time":72.579735517,"data":" },\n"}
+,{"stream_name":"stdout","time":72.579740021,"data":" \"errores\": {\n"}
+,{"stream_name":"stdout","time":72.579744532,"data":"  \"0 · la máquina\": \"AssertionError: faltan cara.jpg o audio.wav en /kaggle/input/presentador-entrada\",\n"}
+,{"stream_name":"stdout","time":72.579749192,"data":"  \"a.1 · plan B: vaivén de la foto\": \"AttributeError: 'NoneType' object has no attribute 'shape'\",\n"}
+,{"stream_name":"stdout","time":72.57975407,"data":"  \"a.2 · Wan 2.2 TI2V-5B\": \"RuntimeError: código 1: pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy\",\n"}
+,{"stream_name":"stdout","time":72.579758787,"data":"  \"b.1 · MuseTalk: código, dependencias y pesos\": \"RuntimeError: código 128: git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk\"\n"}
+,{"stream_name":"stdout","time":72.579763704,"data":" },\n"}
+,{"stream_name":"stdout","time":72.579767893,"data":" \"parametros\": {\n"}
+,{"stream_name":"stdout","time":72.579772411,"data":"  \"cara\": 1,\n"}
+,{"stream_name":"stdout","time":72.579776581,"data":"  \"wan_tope_s\": 3600,\n"}
+,{"stream_name":"stdout","time":72.579780755,"data":"  \"wan_alto\": 480,\n"}
+,{"stream_name":"stdout","time":72.579785035,"data":"  \"wan_ancho\": 480,\n"}
+,{"stream_name":"stdout","time":72.579799189,"data":"  \"wan_fotogramas\": 73,\n"}
+,{"stream_name":"stdout","time":72.579802882,"data":"  \"wan_pasos\": 30,\n"}
+,{"stream_name":"stdout","time":72.579806414,"data":"  \"segundos\": 3.0\n"}
+,{"stream_name":"stdout","time":72.579809773,"data":" },\n"}
+,{"stream_name":"stdout","time":72.579813412,"data":" \"gpu\": \"sin GPU\",\n"}
+,{"stream_name":"stdout","time":72.579877956,"data":" \"torch\": \"2.11.0+cpu\",\n"}
+,{"stream_name":"stdout","time":72.579886051,"data":" \"cuda\": null,\n"}
+,{"stream_name":"stdout","time":72.579890243,"data":" \"bf16_nativo\": false,\n"}
+,{"stream_name":"stdout","time":72.579893639,"data":" \"movimientos\": [],\n"}
+,{"stream_name":"stdout","time":72.579897427,"data":" \"salida\": [\n"}
+,{"stream_name":"stdout","time":72.579900574,"data":"  \"registro.txt\",\n"}
+,{"stream_name":"stdout","time":72.579903848,"data":"  \"tiempos.json\"\n"}
+,{"stream_name":"stdout","time":72.579907073,"data":" ],\n"}
+,{"stream_name":"stdout","time":72.579910329,"data":" \"resultado\": \"sin vídeo con labios\"\n"}
+,{"stream_name":"stdout","time":72.579915159,"data":"}\n"}
+,{"stream_name":"stderr","time":75.69310333,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":75.69313978,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":76.073982537,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":76.074036547,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":76.994056218,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":78.374075699,"data":"[NbConvertApp] Writing 327079 bytes to __results__.html\n"}
+]

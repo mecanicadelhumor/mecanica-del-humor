@@ -1,0 +1,33 @@
+{
+ "pasos": {
+  "0 · la máquina": 5.6,
+  "a.1 · plan B: vaivén de la foto": 0.4,
+  "a.2 · Wan 2.2 TI2V-5B": 33.5,
+  "b.1 · MuseTalk: código, dependencias y pesos": 32.0
+ },
+ "errores": {
+  "0 · la máquina": "AssertionError: faltan cara.jpg o audio.wav en /kaggle/input/presentador-entrada",
+  "a.1 · plan B: vaivén de la foto": "AttributeError: 'NoneType' object has no attribute 'shape'",
+  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: código 1: pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy",
+  "b.1 · MuseTalk: código, dependencias y pesos": "RuntimeError: código 128: git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk"
+ },
+ "parametros": {
+  "cara": 1,
+  "wan_tope_s": 3600,
+  "wan_alto": 480,
+  "wan_ancho": 480,
+  "wan_fotogramas": 73,
+  "wan_pasos": 30,
+  "segundos": 3.0
+ },
+ "gpu": "sin GPU",
+ "torch": "2.11.0+cpu",
+ "cuda": null,
+ "bf16_nativo": false,
+ "movimientos": [],
+ "salida": [
+  "registro.txt",
+  "tiempos.json"
+ ],
+ "resultado": "sin vídeo con labios"
+}
