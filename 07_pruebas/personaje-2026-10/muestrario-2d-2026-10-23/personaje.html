@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Personaje 2D · muestrario C61</title>
+<!--
+  El personaje 2D de Mecánica del Humor (C61, camino 2D). Muestrario del 23/10/2026.
+
+  Todo el movimiento sale de una función del tiempo, setT(t): mismo t, mismo dibujo
+  (regla 11.5). Nada de Math.random(), nada de red (regla 11.6). La pista de
+  interpretación (palabras con su tiempo y energía del audio) la escribe preparar.py
+  en pista.json y render.py la inyecta en window.PISTA.
+
+  Modos (?modo=): completo · esquina · hoja
+-->
+<style>
+  :root{--fondo:#0B1220;--reticula:#16213A;--tinta:#F2F4F8;--am:#FFB020;--ci:#4CC9F0;--tenue:#8A97AE}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:var(--fondo);overflow:hidden}
+  #lienzo{position:relative;width:1080px;height:1920px;overflow:hidden;
+    background-color:var(--fondo);
+    background-image:linear-gradient(var(--reticula) 2px,transparent 2px),linear-gradient(90deg,var(--reticula) 2px,transparent 2px);
+    background-size:60px 60px;background-position:-1px -1px}
+  #foto{position:absolute;inset:0;background-size:cover;background-position:center;display:none}
+  #rotulo{position:absolute;left:90px;right:90px;top:250px;font-family:"Inter","DejaVu Sans",sans-serif;
+    font-weight:800;font-size:76px;line-height:1.18;letter-spacing:-.015em;color:var(--tinta);text-align:center}
+  #rotulo .am{color:var(--am)}
+  #rotulo.sobrefoto{top:180px;text-shadow:0 4px 18px rgba(0,0,0,.85)}
+  #marco{position:absolute;left:0;bottom:-40px;width:1080px;height:1260px}
+  .esquina #marco{left:auto;right:56px;bottom:300px;width:430px;height:430px;border-radius:50%;
+    overflow:hidden;background:var(--fondo);border:8px solid var(--ci);box-shadow:0 10px 40px rgba(0,0,0,.6)}
+  .esquina #marco svg{position:absolute;left:-38px;top:-18px;width:506px;height:607px}
+  #marco svg{width:100%;height:100%}
+  #hoja{display:none;position:absolute;inset:0;padding:60px 40px;grid-template-columns:repeat(3,1fr);gap:20px 10px}
+  #hoja .celda{text-align:center}
+  #hoja .celda svg{width:100%;height:640px}
+  #hoja .et{font-family:"JetBrains Mono","DejaVu Sans Mono",monospace;color:var(--tenue);font-size:30px;letter-spacing:.12em;text-transform:uppercase;margin-top:-10px}
+  #hoja h1{grid-column:1/-1;font-family:"Inter","DejaVu Sans",sans-serif;font-weight:800;font-size:54px;color:var(--tinta);text-align:center;margin-bottom:10px}
+</style>
+</head>
+<body>
+<div id="lienzo">
+  <div id="foto"></div>
+  <div id="rotulo"></div>
+  <div id="marco"></div>
+  <div id="hoja"><h1>Personaje 2D · las seis caras</h1></div>
+</div>
+
+<script>
+// ------------------------------------------------------------------ el dibujo
+// viewBox 0 0 600 720. La cabeza gira sobre el cuello (300,470).
+const PIEL = "#E3A985", PIEL_SOMBRA = "#C98E6B", PELO = "#2B2233";
+let N = 0;
+function svgPersonaje() {
+  const p = "p" + (N++);
+  return `
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg" data-p="${p}">
+  <defs>
+    <clipPath id="${p}-oi"><ellipse cx="240" cy="292" rx="31" ry="34"/></clipPath>
+    <clipPath id="${p}-od"><ellipse cx="360" cy="292" rx="31" ry="34"/></clipPath>
+    <clipPath id="${p}-boca"><path class="bocaclip" d=""/></clipPath>
+  </defs>
+  <!-- cuerpo: chaqueta azul de la marca, camisa hueso, insignia del Engranaje en cian -->
+  <g class="cuerpo">
+    <rect x="262" y="440" width="76" height="130" rx="30" fill="${PIEL_SOMBRA}"/>
+    <path d="M40,720 C52,610 140,566 232,548 L368,548 C460,566 548,610 560,720 Z" fill="#1C2A4A" stroke="#2E4675" stroke-width="6"/>
+    <path d="M246,548 L300,646 L354,548 Z" fill="#F2F4F8"/>
+    <path d="M232,548 L300,656 L250,720 L196,720 L214,600 Z" fill="#16213A"/>
+    <path d="M368,548 L300,656 L350,720 L404,720 L386,600 Z" fill="#16213A"/>
+    <g transform="translate(424,640)">
+      <circle r="17" fill="none" stroke="#4CC9F0" stroke-width="7" stroke-dasharray="6 4.7"/>
+      <circle r="7" fill="#4CC9F0"/>
+    </g>
+  </g>
+  <g class="cabeza">
+    <ellipse cx="152" cy="300" rx="22" ry="36" fill="${PIEL_SOMBRA}"/>
+    <ellipse cx="448" cy="300" rx="22" ry="36" fill="${PIEL_SOMBRA}"/>
+    <path d="M155,250 C155,140 225,112 300,112 C375,112 445,140 445,250 L445,322 C445,412 385,462 300,462 C215,462 155,412 155,322 Z" fill="${PIEL}"/>
+    <ellipse cx="205" cy="362" rx="30" ry="18" fill="#E5735A" opacity=".18"/>
+    <ellipse cx="395" cy="362" rx="30" ry="18" fill="#E5735A" opacity=".18"/>
+    <!-- pelo: masa corta y un remolino alto a la derecha, que es la silueta -->
+    <path d="M148,268 C136,150 206,84 300,84 C402,84 468,142 454,266 C444,214 424,190 394,176 C352,202 282,206 228,178 C198,194 170,226 148,268 Z" fill="${PELO}"/>
+    <path d="M318,96 C340,48 404,40 430,62 C398,62 372,78 352,112 Z" fill="${PELO}"/>
+    <!-- ojos -->
+    <g clip-path="url(#${p}-oi)"><g class="ojo" data-cx="240">
+      <ellipse cx="240" cy="292" rx="31" ry="34" fill="#F7F8FB"/>
+      <g class="iris"><circle cx="240" cy="294" r="15" fill="#16213A"/><circle cx="245" cy="288" r="5" fill="#fff"/></g>
+      <rect class="parpado" x="200" y="250" width="80" height="0" fill="${PIEL}"/>
+      <rect class="inferior" x="200" y="334" width="80" height="0" fill="${PIEL}"/>
+    </g></g>
+    <g clip-path="url(#${p}-od)"><g class="ojo" data-cx="360">
+      <ellipse cx="360" cy="292" rx="31" ry="34" fill="#F7F8FB"/>
+      <g class="iris"><circle cx="360" cy="294" r="15" fill="#16213A"/><circle cx="365" cy="288" r="5" fill="#fff"/></g>
+      <rect class="parpado" x="320" y="250" width="80" height="0" fill="${PIEL}"/>
+      <rect class="inferior" x="320" y="334" width="80" height="0" fill="${PIEL}"/>
+    </g></g>
+    <path class="linea-parpado" d="" stroke="${PELO}" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <!-- gafas: el único detalle ámbar -->
+    <g fill="none" stroke="#FFB020" stroke-width="8" stroke-linecap="round">
+      <circle cx="240" cy="292" r="50"/><circle cx="360" cy="292" r="50"/>
+      <path d="M290,286 Q300,274 310,286"/><path d="M190,284 L158,276"/><path d="M410,284 L442,276"/>
+    </g>
+    <!-- cejas -->
+    <path class="ceja ci" d="M-40,6 Q0,-12 40,6" stroke="${PELO}" stroke-width="15" stroke-linecap="round" fill="none"/>
+    <path class="ceja cd" d="M-40,6 Q0,-12 40,6" stroke="${PELO}" stroke-width="15" stroke-linecap="round" fill="none"/>
+    <!-- nariz -->
+    <path d="M302,300 Q286,346 300,354 Q312,357 318,349" stroke="#B9785A" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <!-- boca -->
+    <g class="bocag">
+      <path class="interior" d="" fill="#4A1E2A"/>
+      <g clip-path="url(#${p}-boca)">
+        <rect class="dientes" x="230" y="0" width="140" height="0" fill="#F7F8FB"/>
+        <ellipse class="lengua" cx="300" cy="0" rx="30" ry="14" fill="#D46A6A"/>
+      </g>
+      <path class="labio" d="" stroke="#8E3B3B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+  </g>
+</svg>`;
+}
+
+// ------------------------------------------------------------------ las caras
+// c: curva de la boca (+ sonríe) · tapa/inf: párpado de arriba/abajo (0-1)
+// mirada en px · giro de cabeza en grados · cejas {dy, r} (r>0 = horario)
+const CARAS = {
+  neutra:   {ci:{dy:0,r:0},    cd:{dy:0,r:0},    c:6,  tapa:.14, inf:0,   mx:0,  my:0,  giro:0,  ladeo:0, abre:0},
+  entiende: {ci:{dy:-7,r:3},   cd:{dy:-7,r:-3},  c:24, tapa:.10, inf:.24, mx:0,  my:0,  giro:-2, ladeo:0, abre:0},
+  piensa:   {ci:{dy:3,r:6},    cd:{dy:-18,r:-6}, c:0,  tapa:.16, inf:.05, mx:9,  my:-10,giro:4,  ladeo:7, abre:0},
+  sorpresa: {ci:{dy:-13,r:0},  cd:{dy:-13,r:0},  c:4,  tapa:0,   inf:0,   mx:0,  my:-2, giro:0,  ladeo:0, abre:22},
+  serio:    {ci:{dy:7,r:-3},   cd:{dy:7,r:3},    c:-1, tapa:.34, inf:.06, mx:0,  my:2,  giro:0,  ladeo:0, abre:0},
+  duda:     {ci:{dy:-6,r:-11}, cd:{dy:-6,r:11},  c:-9, tapa:.12, inf:0,   mx:-7, my:5,  giro:-5, ladeo:-6,abre:0},
+};
+
+// Papel de cada tramo del clip (segundos del clip): el gesto lo decide el guion.
+const PAPELES = [
+  [0.0,  "entiende"],   // apertura cómplice: «te ríes más de los chistes de quien decide tu dinero»
+  [3.2,  "neutra"],     // «cena de empresa, el jefe pregunta»
+  [6.0,  "piensa"],     // la pregunta del chiste
+  [9.0,  "serio"],      // el remate se dice serio y quieto (regla 13.1)
+  [10.4, "sorpresa"],   // «y la mesa entera se parte»
+  [11.2, "entiende"],
+];
+const ROTULOS = [
+  [0.0,  "Te ríes más de los chistes de quien decide tu dinero"],
+  [3.2,  "Cena de empresa"],
+  [6.0,  "¿El café más peligroso del mundo?"],
+  [9.0,  "El <span class='am'>ex-preso</span>"],
+  [10.4, "Y la mesa entera se parte"],
+];
+
+// ------------------------------------------------------------------ visemas
+const VISEMA = {
+  A:{w:94,h:46}, E:{w:106,h:28}, I:{w:110,h:16}, O:{w:64,h:42}, U:{w:50,h:24},
+  M:{w:84,h:0},  F:{w:90,h:8},   C:{w:90,h:14},  R:{w:86,h:0},
+};
+function visemasDe(palabra) {
+  const s = palabra.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-zñ0-9]/g, "");
+  const out = [];
+  for (const ch of s) {
+    let v;
+    if ("aeiou".includes(ch)) v = ch.toUpperCase();
+    else if ("mbp".includes(ch)) v = "M";
+    else if ("fv".includes(ch)) v = "F";
+    else if (ch === "h") continue;
+    else if (/[0-9]/.test(ch)) v = "E";
+    else v = "C";
+    if (v === "C" && out.length && out[out.length - 1] === "C") continue;
+    out.push(v);
+  }
+  return out.length ? out : ["C"];
+}
+
+const lerp = (a, b, k) => a + (b - a) * k;
+const suave = k => k <= 0 ? 0 : k >= 1 ? 1 : k * k * (3 - 2 * k);
+const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+
+function boca(t) {
+  const P = window.PISTA;
+  const env = P.env[clamp(Math.floor(t * P.fps), 0, P.env.length - 1)] || 0;
+  for (let i = 0; i < P.palabras.length; i++) {
+    const w = P.palabras[i];
+    if (t >= w.a && t < w.b) {
+      const vs = visemasDe(w.w), n = vs.length;
+      const x = (t - w.a) / Math.max(w.b - w.a, 1e-3) * n;
+      const j = Math.min(Math.floor(x), n - 1), k = suave(x - j);
+      const a = VISEMA[vs[j]], b = VISEMA[vs[Math.min(j + 1, n - 1)]];
+      let h = lerp(a.h, b.h, k), wd = lerp(a.w, b.w, k);
+      h *= clamp(0.35 + env * 0.9, 0, 1.15);
+      return {w: wd, h};
+    }
+    // hueco corto entre palabras: la boca no se cierra del todo
+    const sig = P.palabras[i + 1];
+    if (sig && t >= w.b && t < sig.a && sig.a - w.b < 0.14) return {w: 90, h: 8 * env};
+  }
+  return {w: VISEMA.R.w, h: 0};
+}
+
+// Parpadeo con calendario fijo: nada al azar.
+function parpadeo(t) {
+  const pasos = [3.1, 2.4, 3.7, 2.9];
+  let x = 0.9, i = 0;
+  while (x < t + 1) {
+    const d = (t - x) / 0.16;
+    if (d >= 0 && d <= 1) return 1 - Math.abs(d * 2 - 1);
+    x += pasos[i++ % pasos.length];
+  }
+  return 0;
+}
+
+function caraEn(t) {
+  let i = 0;
+  while (i + 1 < PAPELES.length && PAPELES[i + 1][0] <= t) i++;
+  const act = CARAS[PAPELES[i][1]];
+  if (i === 0) return {...act, papel: PAPELES[i][1]};
+  const ant = CARAS[PAPELES[i - 1][1]], k = suave((t - PAPELES[i][0]) / 0.28);
+  const m = (a, b) => typeof a === "object" ? {dy: lerp(a.dy, b.dy, k), r: lerp(a.r, b.r, k)} : lerp(a, b, k);
+  const o = {papel: PAPELES[i][1]};
+  for (const key in act) o[key] = m(ant[key], act[key]);
+  return o;
+}
+
+// ------------------------------------------------------------------ aplicar
+function pintar(svg, e, b, cierre, t) {
+  const q = s => svg.querySelector(s), qa = s => svg.querySelectorAll(s);
+  // cabeza: ladeo del papel + un cabeceo con la voz (nunca en el remate: serio y quieto)
+  const P = window.PISTA;
+  const env = P ? (P.env[clamp(Math.floor(t * P.fps), 0, P.env.length - 1)] || 0) : 0;
+  const quieto = e.papel === "serio" ? 0 : 1;
+  const balanceo = Math.sin(t * 1.3) * 1.2 * quieto;
+  const cabeceo = env * 5 * quieto;
+  q(".cabeza").setAttribute("transform",
+    `rotate(${(e.ladeo + balanceo).toFixed(2)} 300 470) translate(${e.giro.toFixed(2)} ${cabeceo.toFixed(2)})`);
+  // cejas
+  const ceja = (el, cx, v) => el.setAttribute("transform", `translate(${cx} ${(214 + v.dy).toFixed(2)}) rotate(${v.r.toFixed(2)})`);
+  ceja(q(".ci"), 240, e.ci); ceja(q(".cd"), 360, e.cd);
+  // ojos
+  const tapa = Math.max(e.tapa, cierre), alto = 68;
+  qa(".parpado").forEach(r => r.setAttribute("height", (tapa * alto + 8).toFixed(2)));
+  qa(".inferior").forEach(r => { const h = e.inf * 30 * (1 - cierre); r.setAttribute("y", (326 - h).toFixed(2)); r.setAttribute("height", (h + 10).toFixed(2)); });
+  qa(".iris").forEach(g => g.setAttribute("transform", `translate(${e.mx.toFixed(2)} ${e.my.toFixed(2)})`));
+  const yl = (258 + tapa * alto).toFixed(1);
+  q(".linea-parpado").setAttribute("d", cierre > 0.85 ? `M212,${yl} Q240,${+yl + 6} 268,${yl} M332,${yl} Q360,${+yl + 6} 388,${yl}` : "");
+  // boca
+  const cx = 300, cy = 404;
+  const hw = (e.abre > 1 ? lerp(b.w, Math.min(b.w, 62), clamp(e.abre / 22, 0, 1)) : b.w) / 2;
+  const h = Math.max(b.h, e.abre), c = e.c, esq = cy - c * 0.5;
+  const ctrlArriba = cy - h * 0.25 - c * 0.1, ctrlAbajo = cy + h * 1.6 + c * 0.55;
+  const L = `${cx - hw},${esq.toFixed(1)}`, R = `${cx + hw},${esq.toFixed(1)}`;
+  if (h < 2) {
+    q(".interior").setAttribute("d", "");
+    q(".labio").setAttribute("d", `M${L} Q${cx},${(cy + c * 0.55).toFixed(1)} ${R}`);
+    q(".bocaclip").setAttribute("d", "");
+  } else {
+    const d = `M${L} Q${cx},${ctrlArriba.toFixed(1)} ${R} Q${cx},${ctrlAbajo.toFixed(1)} ${L} Z`;
+    q(".interior").setAttribute("d", d); q(".labio").setAttribute("d", d); q(".bocaclip").setAttribute("d", d);
+    q(".dientes").setAttribute("y", (ctrlArriba - 4).toFixed(1));
+    q(".dientes").setAttribute("height", h > 12 ? "16" : "0");
+    q(".lengua").setAttribute("cy", ((esq + ctrlAbajo) / 2 + h * 0.35).toFixed(1));
+  }
+}
+
+// ------------------------------------------------------------------ modos
+const modo = new URLSearchParams(location.search).get("modo") || "completo";
+const lienzo = document.getElementById("lienzo");
+let principal;
+if (modo === "hoja") {
+  lienzo.style.width = "1800px"; lienzo.style.height = "1560px";
+  document.getElementById("marco").style.display = "none";
+  document.getElementById("rotulo").style.display = "none";
+  const hoja = document.getElementById("hoja"); hoja.style.display = "grid";
+  for (const nombre of ["neutra", "entiende", "piensa", "sorpresa", "serio", "duda"]) {
+    const d = document.createElement("div"); d.className = "celda";
+    d.innerHTML = svgPersonaje() + `<div class="et">${nombre}${nombre === "serio" ? " · remate" : ""}</div>`;
+    hoja.appendChild(d);
+    pintar(d.querySelector("svg"), {...CARAS[nombre], papel: nombre}, {w: 86, h: 0}, 0, 0);
+  }
+} else {
+  document.getElementById("marco").innerHTML = svgPersonaje();
+  principal = document.querySelector("#marco svg");
+  if (modo === "esquina") {
+    lienzo.classList.add("esquina");
+    const f = document.getElementById("foto");
+    f.style.display = "block"; f.style.backgroundImage = `url(${window.FOTO || ""})`;
+    document.getElementById("rotulo").classList.add("sobrefoto");
+  }
+}
+
+// Momentos puntuales de la variante «esquina»: la apertura y el remate.
+const MOMENTOS = [[0.0, 3.2], [9.0, 12.8]];
+
+window.setT = function (t) {
+  if (modo === "hoja") return;
+  let i = 0;
+  while (i + 1 < ROTULOS.length && ROTULOS[i + 1][0] <= t) i++;
+  document.getElementById("rotulo").innerHTML = ROTULOS[i][1];
+  pintar(principal, caraEn(t), boca(t), parpadeo(t), t);
+  if (modo === "esquina") {
+    const m = document.getElementById("marco");
+    let s = 0;
+    for (const [a, b] of MOMENTOS) if (t >= a - 0.01 && t <= b) s = Math.min(suave((t - a) / 0.25), suave((b - t) / 0.25));
+    if (MOMENTOS[0][0] === 0 && t < 0.25) s = Math.max(s, suave((MOMENTOS[0][1] - t) / 0.25));
+    m.style.transform = `scale(${s.toFixed(3)})`; m.style.transformOrigin = "50% 100%";
+  }
+};
+</script>
+</body>
+</html>
