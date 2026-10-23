@@ -1,10 +1,10 @@
 {
  "pasos": {
-  "0 · la máquina": 10.2,
-  "a.1 · plan B: vaivén de la foto": 2.4,
-  "a.2 · Wan 2.2 TI2V-5B": 359.8,
-  "b.1 · MuseTalk: código, dependencias y pesos": 29.5,
-  "b.2 · MuseTalk sobre «afin»": 79.0
+  "0 · la máquina": 6.6,
+  "a.1 · plan B: vaivén de la foto": 1.8,
+  "a.2 · Wan 2.2 TI2V-5B": 344.9,
+  "b.1 · MuseTalk: código, dependencias y pesos": 35.4,
+  "b.2 · MuseTalk sobre «afin»": 77.9
  },
  "errores": {
   "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}']"

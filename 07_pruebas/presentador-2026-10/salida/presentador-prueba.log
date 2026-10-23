@@ -1,171 +1,173 @@
-[{"stream_name":"stdout","time":1.098149484,"data":"\n"}
-,{"stream_name":"stdout","time":1.098318411,"data":"=== 0 · la máquina ===\n"}
-,{"stream_name":"stdout","time":1.2772451710000001,"data":"Entrada: /kaggle/input/datasets/mecanicadelhumor/presentador-entrada · en /kaggle/input: ['/kaggle/input/datasets', '/kaggle/input/datasets/mecanicadelhumor', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/audio.wav', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/parametros.json']\n"}
-,{"stream_name":"stdout","time":11.219715458,"data":"GPU: Tesla T4, 15360 MiB\n"}
-,{"stream_name":"stdout","time":11.219747515,"data":"Tesla T4, 15360 MiB · torch 2.11.0+cu128 · bf16: True\n"}
-,{"stream_name":"stdout","time":11.261176224,"data":"\n"}
-,{"stream_name":"stdout","time":11.26119652,"data":"=== a.1 · plan B: vaivén de la foto ===\n"}
-,{"stream_name":"stdout","time":12.306730636,"data":"$ ffmpeg -y -v error -i /tmp/presentador/mov_afin.mp4 -c:v libx264 -pix_fmt yuv420p /kaggle/working/salida/a_movimiento_afin.mp4\n"}
-,{"stream_name":"stdout","time":13.697224205,"data":"\n"}
-,{"stream_name":"stdout","time":13.697247427,"data":"=== a.2 · Wan 2.2 TI2V-5B ===\n"}
-,{"stream_name":"stdout","time":13.697422554,"data":"$ pip install -q 'diffusers\u003e=0.35' accelerate ftfy 'huggingface_hub\u003e=1.5,\u003c2'\n"}
-,{"stream_name":"stdout","time":17.117283064,"data":"$ /usr/bin/python3 /tmp/presentador/wan.py {\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}\n"}
-,{"stream_name":"stdout","time":373.530577282,"data":"        return self._call_impl(*args, **kwargs)\n"}
-,{"stream_name":"stdout","time":373.531576964,"data":"               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stdout","time":373.531600804,"data":"      File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n"}
-,{"stream_name":"stdout","time":373.531607593,"data":"        return forward_call(*args, **kwargs)\n"}
-,{"stream_name":"stdout","time":373.531613429,"data":"      File \"/usr/local/lib/python3.13/dist-packages/accelerate/hooks.py\", line 192, in new_forward\n"}
-,{"stream_name":"stdout","time":373.531619611,"data":"        output = module._old_forward(*args, **kwargs)\n"}
-,{"stream_name":"stdout","time":373.531624749,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/utils/peft_utils.py\", line 323, in wrapper\n"}
-,{"stream_name":"stdout","time":373.531629793,"data":"        result = forward_fn(self, *args, **kwargs)\n"}
-,{"stream_name":"stdout","time":373.531634666,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py\", line 704, in forward\n"}
-,{"stream_name":"stdout","time":373.531645695,"data":"        hidden_states = block(hidden_states, encoder_hidden_states, timestep_proj, rotary_emb)\n"}
-,{"stream_name":"stdout","time":373.531652046,"data":"      File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n"}
-,{"stream_name":"stdout","time":373.531657916,"data":"        return self._call_impl(*args, **kwargs)\n"}
-,{"stream_name":"stdout","time":373.531664543,"data":"               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stdout","time":373.531670121,"data":"      File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n"}
-,{"stream_name":"stdout","time":373.531693522,"data":"        return forward_call(*args, **kwargs)\n"}
-,{"stream_name":"stdout","time":373.531707047,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py\", line 489, in forward\n"}
-,{"stream_name":"stdout","time":373.531711926,"data":"        attn_output = self.attn1(norm_hidden_states, None, None, rotary_emb)\n"}
-,{"stream_name":"stdout","time":373.531787411,"data":"      File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n"}
-,{"stream_name":"stdout","time":373.531795813,"data":"        return self._call_impl(*args, **kwargs)\n"}
-,{"stream_name":"stdout","time":373.531800435,"data":"               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stdout","time":373.531804562,"data":"      File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n"}
-,{"stream_name":"stdout","time":373.531808724,"data":"        return forward_call(*args, **kwargs)\n"}
-,{"stream_name":"stdout","time":373.531813059,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py\", line 281, in forward\n"}
-,{"stream_name":"stdout","time":373.53182016,"data":"        return self.processor(self, hidden_states, encoder_hidden_states, attention_mask, rotary_emb, **kwargs)\n"}
-,{"stream_name":"stdout","time":373.531825142,"data":"               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stdout","time":373.531829543,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py\", line 143, in __call__\n"}
-,{"stream_name":"stdout","time":373.53183431,"data":"        hidden_states = dispatch_attention_fn(\n"}
-,{"stream_name":"stdout","time":373.531914929,"data":"            query,\n"}
-,{"stream_name":"stdout","time":373.531922476,"data":"        ...\u003c7 lines\u003e...\n"}
-,{"stream_name":"stdout","time":373.531937634,"data":"            parallel_config=(self._parallel_config if encoder_hidden_states is None else None),\n"}
-,{"stream_name":"stdout","time":373.531941535,"data":"        )\n"}
-,{"stream_name":"stdout","time":373.531945187,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/attention_dispatch.py\", line 439, in dispatch_attention_fn\n"}
-,{"stream_name":"stdout","time":373.531961364,"data":"        return backend_fn(**kwargs)\n"}
-,{"stream_name":"stdout","time":373.531965304,"data":"      File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/attention_dispatch.py\", line 3707, in _native_attention\n"}
-,{"stream_name":"stdout","time":373.531969085,"data":"        out = torch.nn.functional.scaled_dot_product_attention(\n"}
-,{"stream_name":"stdout","time":373.531980677,"data":"            query=query,\n"}
-,{"stream_name":"stdout","time":373.531994068,"data":"        ...\u003c6 lines\u003e...\n"}
-,{"stream_name":"stdout","time":373.532004121,"data":"            enable_gqa=enable_gqa,\n"}
-,{"stream_name":"stdout","time":373.532015704,"data":"        )\n"}
-,{"stream_name":"stdout","time":373.532053499,"data":"    torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.63 GiB. GPU 0 has a total capacity of 14.56 GiB of which 1.41 GiB is free. Process 7 has 104.00 MiB memory in use. Including non-PyTorch memory, this process has 13.04 GiB memory in use. Of the allocated memory 12.83 GiB is allocated by PyTorch, and 84.10 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n"}
-,{"stream_name":"stdout","time":373.533411708,"data":"Traceback (most recent call last):\n"}
-,{"stream_name":"stdout","time":373.533427884,"data":"  File \"/kaggle/src/script.py\", line 214, in \u003cmodule\u003e\n"}
-,{"stream_name":"stdout","time":373.533432969,"data":"    sh([sys.executable, str(TRABAJO / \"wan.py\"), json.dumps(args)], timeout=int(PARAM[\"wan_tope_s\"]))\n"}
-,{"stream_name":"stdout","time":373.533437444,"data":"    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stdout","time":373.533441866,"data":"  File \"/kaggle/src/script.py\", line 77, in sh\n"}
-,{"stream_name":"stdout","time":373.533445977,"data":"    raise RuntimeError(f\"código {r.returncode}: {cmd}\")\n"}
-,{"stream_name":"stdout","time":373.533451458,"data":"RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}']\n"}
-,{"stream_name":"stdout","time":373.533459434,"data":"\n"}
-,{"stream_name":"stdout","time":373.53404988,"data":"\n"}
-,{"stream_name":"stdout","time":373.534060116,"data":"=== b.1 · MuseTalk: código, dependencias y pesos ===\n"}
-,{"stream_name":"stdout","time":373.535100362,"data":"$ git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk\n"}
-,{"stream_name":"stdout","time":374.971104737,"data":"$ git checkout -q 0a89dec45a0192b824e3cf4daf96c239440c5ed8\n"}
-,{"stream_name":"stdout","time":375.051089188,"data":"$ pip install -q omegaconf einops librosa soundfile 'huggingface_hub\u003e=1.5,\u003c2' ffmpeg-python\n"}
-,{"stream_name":"stderr","time":378.795381973,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
-,{"stream_name":"stderr","time":399.421669515,"data":"\rFetching 2 files:   0%|          | 0/2 [00:00\u003c?, ?it/s]\rFetching 2 files:  50%|█████     | 1/2 [00:00\u003c00:00,  5.38it/s]\rFetching 2 files: 100%|██████████| 2/2 [00:09\u003c00:00,  5.65s/it]\rFetching 2 files: 100%|██████████| 2/2 [00:09\u003c00:00,  4.83s/it]\n"}
-,{"stream_name":"stderr","time":401.208877676,"data":"\rFetching 3 files:   0%|          | 0/3 [00:00\u003c?, ?it/s]\rFetching 3 files:  33%|███▎      | 1/3 [00:00\u003c00:00,  7.43it/s]\rFetching 3 files:  67%|██████▋   | 2/3 [00:00\u003c00:00,  8.38it/s]\rFetching 3 files: 100%|██████████| 3/3 [00:01\u003c00:00,  1.43it/s]\rFetching 3 files: 100%|██████████| 3/3 [00:01\u003c00:00,  1.83it/s]\n"}
-,{"stream_name":"stdout","time":403.029389482,"data":"\n"}
-,{"stream_name":"stdout","time":403.02941536,"data":"=== b.2 · MuseTalk sobre «afin» ===\n"}
-,{"stream_name":"stdout","time":403.029603011,"data":"$ /usr/bin/python3 -m scripts.inference --inference_config /tmp/presentador/MuseTalk/tarea_afin.yaml --result_dir /tmp/presentador/res_afin --unet_model_path models/musetalkV15/unet.pth --unet_config models/musetalkV15/musetalk.json --version v15 --ffmpeg_path /usr/bin --use_float16 --batch_size 8\n"}
-,{"stream_name":"stdout","time":481.97935251,"data":"    caras (S3FD):  83%|████████▎ | 62/75 [00:04\u003c00:00, 19.39it/s]\n"}
-,{"stream_name":"stdout","time":481.979397022,"data":"    caras (S3FD):  85%|████████▌ | 64/75 [00:04\u003c00:00, 19.24it/s]\n"}
-,{"stream_name":"stdout","time":481.979418749,"data":"    caras (S3FD):  88%|████████▊ | 66/75 [00:04\u003c00:00, 19.26it/s]\n"}
-,{"stream_name":"stdout","time":481.979423846,"data":"    caras (S3FD):  91%|█████████ | 68/75 [00:04\u003c00:00, 19.21it/s]\n"}
-,{"stream_name":"stdout","time":481.97942839,"data":"    caras (S3FD):  93%|█████████▎| 70/75 [00:04\u003c00:00, 19.27it/s]\n"}
-,{"stream_name":"stdout","time":481.979432222,"data":"    caras (S3FD):  96%|█████████▌| 72/75 [00:05\u003c00:00, 19.18it/s]\n"}
-,{"stream_name":"stdout","time":481.9794366,"data":"    caras (S3FD):  99%|█████████▊| 74/75 [00:05\u003c00:00, 19.20it/s]\n"}
-,{"stream_name":"stdout","time":481.979441566,"data":"    caras (S3FD): 100%|██████████| 75/75 [00:05\u003c00:00, 14.32it/s]\n"}
-,{"stream_name":"stdout","time":481.979450855,"data":"    \n"}
-,{"stream_name":"stdout","time":481.979454949,"data":"      0%|          | 0/10 [00:00\u003c?, ?it/s]\n"}
-,{"stream_name":"stdout","time":481.979459325,"data":"     10%|█         | 1/10 [00:05\u003c00:49,  5.49s/it]\n"}
-,{"stream_name":"stdout","time":481.979463756,"data":"     20%|██        | 2/10 [00:06\u003c00:21,  2.72s/it]\n"}
-,{"stream_name":"stdout","time":481.97946798,"data":"     30%|███       | 3/10 [00:07\u003c00:12,  1.84s/it]\n"}
-,{"stream_name":"stdout","time":481.979472124,"data":"     40%|████      | 4/10 [00:07\u003c00:08,  1.42s/it]\n"}
-,{"stream_name":"stdout","time":481.979475655,"data":"     50%|█████     | 5/10 [00:08\u003c00:05,  1.20s/it]\n"}
-,{"stream_name":"stdout","time":481.979562183,"data":"     60%|██████    | 6/10 [00:09\u003c00:04,  1.06s/it]\n"}
-,{"stream_name":"stdout","time":481.97957267,"data":"     70%|███████   | 7/10 [00:10\u003c00:02,  1.02it/s]\n"}
-,{"stream_name":"stdout","time":481.979577022,"data":"     80%|████████  | 8/10 [00:11\u003c00:01,  1.09it/s]\n"}
-,{"stream_name":"stdout","time":481.979581232,"data":"     90%|█████████ | 9/10 [00:11\u003c00:00,  1.13it/s]\n"}
-,{"stream_name":"stdout","time":481.979585474,"data":"    100%|██████████| 10/10 [00:14\u003c00:00,  1.33s/it]\n"}
-,{"stream_name":"stdout","time":481.979589312,"data":"    100%|██████████| 10/10 [00:14\u003c00:00,  1.42s/it]\n"}
-,{"stream_name":"stdout","time":481.979594542,"data":"    \n"}
-,{"stream_name":"stdout","time":481.979598569,"data":"      0%|          | 0/75 [00:00\u003c?, ?it/s]\n"}
-,{"stream_name":"stdout","time":481.979637214,"data":"      5%|▌         | 4/75 [00:00\u003c00:02, 34.25it/s]\n"}
-,{"stream_name":"stdout","time":481.979644682,"data":"     12%|█▏        | 9/75 [00:00\u003c00:01, 40.45it/s]\n"}
-,{"stream_name":"stdout","time":481.979657265,"data":"     19%|█▊        | 14/75 [00:00\u003c00:01, 43.02it/s]\n"}
-,{"stream_name":"stdout","time":481.979732489,"data":"     25%|██▌       | 19/75 [00:00\u003c00:01, 44.03it/s]\n"}
-,{"stream_name":"stdout","time":481.979749558,"data":"     32%|███▏      | 24/75 [00:00\u003c00:01, 44.76it/s]\n"}
-,{"stream_name":"stdout","time":481.979754566,"data":"     39%|███▊      | 29/75 [00:00\u003c00:01, 45.32it/s]\n"}
-,{"stream_name":"stdout","time":481.979759105,"data":"     45%|████▌     | 34/75 [00:00\u003c00:00, 45.41it/s]\n"}
-,{"stream_name":"stdout","time":481.979763618,"data":"     52%|█████▏    | 39/75 [00:00\u003c00:00, 43.76it/s]\n"}
-,{"stream_name":"stdout","time":481.979778386,"data":"     59%|█████▊    | 44/75 [00:01\u003c00:00, 44.55it/s]\n"}
-,{"stream_name":"stdout","time":481.979791871,"data":"     65%|██████▌   | 49/75 [00:01\u003c00:00, 43.98it/s]\n"}
-,{"stream_name":"stdout","time":481.979796478,"data":"     72%|███████▏  | 54/75 [00:01\u003c00:00, 44.24it/s]\n"}
-,{"stream_name":"stdout","time":481.979800938,"data":"     79%|███████▊  | 59/75 [00:01\u003c00:00, 44.92it/s]\n"}
-,{"stream_name":"stdout","time":481.979813853,"data":"     85%|████████▌ | 64/75 [00:01\u003c00:00, 45.22it/s]\n"}
-,{"stream_name":"stdout","time":481.979818787,"data":"     92%|█████████▏| 69/75 [00:01\u003c00:00, 45.05it/s]\n"}
-,{"stream_name":"stdout","time":481.979830858,"data":"     99%|█████████▊| 74/75 [00:01\u003c00:00, 44.87it/s]\n"}
-,{"stream_name":"stdout","time":481.979860005,"data":"    100%|██████████| 75/75 [00:01\u003c00:00, 44.24it/s]\n"}
-,{"stream_name":"stdout","time":481.979872537,"data":"    [aist#0:0/pcm_s16le @ 0x5794c0f1b380] Guessed Channel Layout: mono\n"}
-,{"stream_name":"stdout","time":481.982209169,"data":"\n"}
-,{"stream_name":"stdout","time":481.982225643,"data":"RESUMEN: {\n"}
-,{"stream_name":"stdout","time":481.982229559,"data":" \"pasos\": {\n"}
-,{"stream_name":"stdout","time":481.982232929,"data":"  \"0 · la máquina\": 10.2,\n"}
-,{"stream_name":"stdout","time":481.982236617,"data":"  \"a.1 · plan B: vaivén de la foto\": 2.4,\n"}
-,{"stream_name":"stdout","time":481.982240665,"data":"  \"a.2 · Wan 2.2 TI2V-5B\": 359.8,\n"}
-,{"stream_name":"stdout","time":481.982243944,"data":"  \"b.1 · MuseTalk: código, dependencias y pesos\": 29.5,\n"}
-,{"stream_name":"stdout","time":481.982247466,"data":"  \"b.2 · MuseTalk sobre «afin»\": 79.0\n"}
-,{"stream_name":"stdout","time":481.982251037,"data":" },\n"}
-,{"stream_name":"stdout","time":481.982254901,"data":" \"errores\": {\n"}
-,{"stream_name":"stdout","time":481.982258367,"data":"  \"a.2 · Wan 2.2 TI2V-5B\": \"RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\\\"cara\\\": \\\"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\\\", \\\"wan_tope_s\\\": 3600, \\\"wan_alto\\\": 480, \\\"wan_ancho\\\": 480, \\\"wan_fotogramas\\\": 73, \\\"wan_pasos\\\": 30, \\\"segundos\\\": 3.0, \\\"voz\\\": \\\"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\\\", \\\"salida\\\": \\\"/tmp/presentador/mov_wan_24.mp4\\\"}']\"\n"}
-,{"stream_name":"stdout","time":481.982267301,"data":" },\n"}
-,{"stream_name":"stdout","time":481.982270876,"data":" \"parametros\": {\n"}
-,{"stream_name":"stdout","time":481.982274349,"data":"  \"cara\": 2,\n"}
-,{"stream_name":"stdout","time":481.982278317,"data":"  \"wan_tope_s\": 3600,\n"}
-,{"stream_name":"stdout","time":481.982282078,"data":"  \"wan_alto\": 480,\n"}
-,{"stream_name":"stdout","time":481.982285696,"data":"  \"wan_ancho\": 480,\n"}
-,{"stream_name":"stdout","time":481.982289377,"data":"  \"wan_fotogramas\": 73,\n"}
-,{"stream_name":"stdout","time":481.982292956,"data":"  \"wan_pasos\": 30,\n"}
-,{"stream_name":"stdout","time":481.982296479,"data":"  \"segundos\": 3.0,\n"}
-,{"stream_name":"stdout","time":481.982299849,"data":"  \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\"\n"}
-,{"stream_name":"stdout","time":481.98230343,"data":" },\n"}
-,{"stream_name":"stdout","time":481.982306657,"data":" \"gpu\": \"Tesla T4, 15360 MiB\\nTesla T4, 15360 MiB\",\n"}
-,{"stream_name":"stdout","time":481.98231032,"data":" \"internet\": true,\n"}
-,{"stream_name":"stdout","time":481.982313405,"data":" \"entrada\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada\",\n"}
-,{"stream_name":"stdout","time":481.982316862,"data":" \"kaggle_input\": [\n"}
-,{"stream_name":"stdout","time":481.982328797,"data":"  \"/kaggle/input/datasets\",\n"}
-,{"stream_name":"stdout","time":481.98233275,"data":"  \"/kaggle/input/datasets/mecanicadelhumor\",\n"}
-,{"stream_name":"stdout","time":481.982336851,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada\",\n"}
-,{"stream_name":"stdout","time":481.982340807,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/audio.wav\",\n"}
-,{"stream_name":"stdout","time":481.982344226,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\",\n"}
-,{"stream_name":"stdout","time":481.982347854,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/parametros.json\"\n"}
-,{"stream_name":"stdout","time":481.982351461,"data":" ],\n"}
-,{"stream_name":"stdout","time":481.982354652,"data":" \"torch\": \"2.11.0+cu128\",\n"}
-,{"stream_name":"stdout","time":481.98235826,"data":" \"cuda\": \"12.8\",\n"}
-,{"stream_name":"stdout","time":481.982362303,"data":" \"bf16_nativo\": true,\n"}
-,{"stream_name":"stdout","time":481.982366225,"data":" \"movimientos\": [\n"}
-,{"stream_name":"stdout","time":481.982370273,"data":"  \"afin\"\n"}
-,{"stream_name":"stdout","time":481.982373792,"data":" ],\n"}
-,{"stream_name":"stdout","time":481.98237722,"data":" \"versiones\": [\n"}
-,{"stream_name":"stdout","time":481.982381005,"data":"  \"diffusers==0.40.0\",\n"}
-,{"stream_name":"stdout","time":481.982384592,"data":"  \"torch==2.11.0+cu128\",\n"}
-,{"stream_name":"stdout","time":481.982388501,"data":"  \"transformers==5.16.1\"\n"}
-,{"stream_name":"stdout","time":481.982392265,"data":" ],\n"}
-,{"stream_name":"stdout","time":481.982395496,"data":" \"salida\": [\n"}
-,{"stream_name":"stdout","time":481.982398899,"data":"  \"a_movimiento_afin.mp4\",\n"}
-,{"stream_name":"stdout","time":481.982402272,"data":"  \"b_labios_afin.mp4\",\n"}
-,{"stream_name":"stdout","time":481.982405648,"data":"  \"cara.jpg\",\n"}
-,{"stream_name":"stdout","time":481.982409039,"data":"  \"registro.txt\",\n"}
-,{"stream_name":"stdout","time":481.982433748,"data":"  \"tiempos.json\"\n"}
-,{"stream_name":"stdout","time":481.982437773,"data":" ],\n"}
-,{"stream_name":"stdout","time":481.982441089,"data":" \"resultado\": \"con labios: afin\"\n"}
-,{"stream_name":"stdout","time":481.982444646,"data":"}\n"}
-,{"stream_name":"stderr","time":484.68253846,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
-,{"stream_name":"stderr","time":484.682579979,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
-,{"stream_name":"stderr","time":484.942101994,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
-,{"stream_name":"stderr","time":484.942132181,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
-,{"stream_name":"stderr","time":485.727030076,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
-,{"stream_name":"stderr","time":486.801199271,"data":"[NbConvertApp] Writing 333625 bytes to __results__.html\n"}
+[{"stream_name":"stdout","time":0.65197255,"data":"\n"}
+,{"stream_name":"stdout","time":0.65201055,"data":"=== 0 · la máquina ===\n"}
+,{"stream_name":"stdout","time":0.765356244,"data":"Entrada: /kaggle/input/datasets/mecanicadelhumor/presentador-entrada · en /kaggle/input: ['/kaggle/input/datasets', '/kaggle/input/datasets/mecanicadelhumor', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/audio.wav', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/parametros.json']\n"}
+,{"stream_name":"stdout","time":7.224818155,"data":"GPU: Tesla T4, 15360 MiB\n"}
+,{"stream_name":"stdout","time":7.224857625,"data":"Tesla T4, 15360 MiB · torch 2.11.0+cu128 · bf16: True\n"}
+,{"stream_name":"stdout","time":7.236507884,"data":"\n"}
+,{"stream_name":"stdout","time":7.236542846,"data":"=== a.1 · plan B: vaivén de la foto ===\n"}
+,{"stream_name":"stdout","time":8.022877711,"data":"$ ffmpeg -y -v error -i /tmp/presentador/mov_afin.mp4 -c:v libx264 -pix_fmt yuv420p /kaggle/working/salida/a_movimiento_afin.mp4\n"}
+,{"stream_name":"stdout","time":9.015970928,"data":"\n"}
+,{"stream_name":"stdout","time":9.015993101,"data":"=== a.2 · Wan 2.2 TI2V-5B ===\n"}
+,{"stream_name":"stdout","time":9.016156444,"data":"$ pip install -q 'diffusers\u003e=0.35' accelerate ftfy 'huggingface_hub\u003e=1.5,\u003c2'\n"}
+,{"stream_name":"stdout","time":12.097508615,"data":"$ /usr/bin/python3 /tmp/presentador/wan.py {\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}\n"}
+,{"stream_name":"stdout","time":353.885077291,"data":"    Fetching 18 files:  67%|██████▋   | 12/18 [00:35\u003c00:40,  6.78s/it]\n"}
+,{"stream_name":"stdout","time":353.885852368,"data":"    Fetching 18 files:  72%|███████▏  | 13/18 [02:00\u003c02:18, 27.68s/it]\n"}
+,{"stream_name":"stdout","time":353.885880412,"data":"    Fetching 18 files:  78%|███████▊  | 14/18 [02:00\u003c01:20, 20.18s/it]\n"}
+,{"stream_name":"stdout","time":353.885887769,"data":"    Fetching 18 files:  83%|████████▎ | 15/18 [02:06\u003c00:48, 16.23s/it]\n"}
+,{"stream_name":"stdout","time":353.885893541,"data":"    Fetching 18 files: 100%|██████████| 18/18 [02:07\u003c00:00,  7.06s/it]\n"}
+,{"stream_name":"stdout","time":353.885899819,"data":"    \n"}
+,{"stream_name":"stdout","time":353.885905663,"data":"    Loading pipeline components...:   0%|          | 0/5 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":353.885934603,"data":"    Loading pipeline components...:  20%|██        | 1/5 [00:13\u003c00:54, 13.71s/it]\n"}
+,{"stream_name":"stdout","time":353.885940365,"data":"    Loading pipeline components...:  60%|██████    | 3/5 [00:15\u003c00:08,  4.34s/it]\n"}
+,{"stream_name":"stdout","time":353.885945679,"data":"    \n"}
+,{"stream_name":"stdout","time":353.885951045,"data":"    Loading checkpoint shards:   0%|          | 0/5 [00:00\u003c?, ?it/s]\u001b[A\n"}
+,{"stream_name":"stdout","time":353.885956991,"data":"    \n"}
+,{"stream_name":"stdout","time":353.885987057,"data":"    Loading checkpoint shards:  20%|██        | 1/5 [00:09\u003c00:38,  9.72s/it]\u001b[A\n"}
+,{"stream_name":"stdout","time":353.885994584,"data":"    \n"}
+,{"stream_name":"stdout","time":353.885999672,"data":"    Loading checkpoint shards:  40%|████      | 2/5 [00:23\u003c00:36, 12.04s/it]\u001b[A\n"}
+,{"stream_name":"stdout","time":353.886023246,"data":"    \n"}
+,{"stream_name":"stdout","time":353.886058381,"data":"    Loading checkpoint shards:  60%|██████    | 3/5 [00:43\u003c00:31, 15.53s/it]\u001b[A\n"}
+,{"stream_name":"stdout","time":353.8860726,"data":"    \n"}
+,{"stream_name":"stdout","time":353.886099382,"data":"    Loading checkpoint shards:  80%|████████  | 4/5 [01:02\u003c00:17, 17.03s/it]\u001b[A\n"}
+,{"stream_name":"stdout","time":353.886109199,"data":"    \n"}
+,{"stream_name":"stdout","time":353.886113322,"data":"    Loading checkpoint shards: 100%|██████████| 5/5 [01:03\u003c00:00, 11.40s/it]\u001b[A\n"}
+,{"stream_name":"stdout","time":353.886117556,"data":"    Loading checkpoint shards: 100%|██████████| 5/5 [01:03\u003c00:00, 12.76s/it]\n"}
+,{"stream_name":"stdout","time":353.886121769,"data":"    \n"}
+,{"stream_name":"stdout","time":353.886129192,"data":"    Loading pipeline components...:  80%|████████  | 4/5 [01:19\u003c00:24, 24.96s/it]\n"}
+,{"stream_name":"stdout","time":353.886198373,"data":"    \n"}
+,{"stream_name":"stdout","time":353.886205193,"data":"    Loading weights:   0%|          | 0/242 [00:00\u003c?, ?it/s]\u001b[A\n"}
+,{"stream_name":"stdout","time":353.886209993,"data":"    \n"}
+,{"stream_name":"stdout","time":353.886213836,"data":"    Loading weights:  30%|███       | 73/242 [00:00\u003c00:00, 715.87it/s]\u001b[A\n"}
+,{"stream_name":"stdout","time":353.886218248,"data":"    \n"}
+,{"stream_name":"stdout","time":353.886222219,"data":"    Loading weights:  60%|█████▉    | 145/242 [00:00\u003c00:00, 665.16it/s]\u001b[A\n"}
+,{"stream_name":"stdout","time":353.886235643,"data":"    \n"}
+,{"stream_name":"stdout","time":353.886240011,"data":"    Loading weights:  88%|████████▊ | 214/242 [00:00\u003c00:00, 652.72it/s]\u001b[A\n"}
+,{"stream_name":"stdout","time":353.886251787,"data":"    Loading weights: 100%|██████████| 242/242 [00:00\u003c00:00, 675.76it/s]\n"}
+,{"stream_name":"stdout","time":353.886268922,"data":"    \n"}
+,{"stream_name":"stdout","time":353.886322552,"data":"    Loading pipeline components...: 100%|██████████| 5/5 [01:20\u003c00:00, 16.89s/it]\n"}
+,{"stream_name":"stdout","time":353.886330764,"data":"    Loading pipeline components...: 100%|██████████| 5/5 [01:20\u003c00:00, 16.07s/it]\n"}
+,{"stream_name":"stdout","time":353.886335695,"data":"    \n"}
+,{"stream_name":"stdout","time":353.886339748,"data":"      0%|          | 0/30 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":353.886357329,"data":"      0%|          | 0/30 [00:13\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":353.886361681,"data":"    Wan no cabe en la GPU ni a 320x320\n"}
+,{"stream_name":"stdout","time":353.888237688,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":353.88825237,"data":"  File \"/kaggle/src/script.py\", line 227, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":353.888256603,"data":"    sh([sys.executable, str(TRABAJO / \"wan.py\"), json.dumps(args)], timeout=int(PARAM[\"wan_tope_s\"]),\n"}
+,{"stream_name":"stdout","time":353.888264722,"data":"    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":353.888267499,"data":"       env=dict(os.environ, PYTORCH_CUDA_ALLOC_CONF=\"expandable_segments:True\"))\n"}
+,{"stream_name":"stdout","time":353.888270083,"data":"       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":353.888272517,"data":"  File \"/kaggle/src/script.py\", line 77, in sh\n"}
+,{"stream_name":"stdout","time":353.888283488,"data":"    raise RuntimeError(f\"código {r.returncode}: {cmd}\")\n"}
+,{"stream_name":"stdout","time":353.888289046,"data":"RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}']\n"}
+,{"stream_name":"stdout","time":353.888293915,"data":"\n"}
+,{"stream_name":"stdout","time":353.888840806,"data":"\n"}
+,{"stream_name":"stdout","time":353.888851316,"data":"=== b.1 · MuseTalk: código, dependencias y pesos ===\n"}
+,{"stream_name":"stdout","time":353.88893276,"data":"$ git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk\n"}
+,{"stream_name":"stdout","time":356.089878276,"data":"$ git checkout -q 0a89dec45a0192b824e3cf4daf96c239440c5ed8\n"}
+,{"stream_name":"stdout","time":356.170876292,"data":"$ pip install -q omegaconf einops librosa soundfile 'huggingface_hub\u003e=1.5,\u003c2' ffmpeg-python\n"}
+,{"stream_name":"stderr","time":359.696323542,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":384.415499334,"data":"\rFetching 2 files:   0%|          | 0/2 [00:00\u003c?, ?it/s]\rFetching 2 files:  50%|█████     | 1/2 [00:04\u003c00:04,  4.79s/it]\rFetching 2 files: 100%|██████████| 2/2 [00:04\u003c00:00,  2.08s/it]\rFetching 2 files: 100%|██████████| 2/2 [00:04\u003c00:00,  2.49s/it]\n"}
+,{"stream_name":"stderr","time":387.634094271,"data":"\rFetching 3 files:   0%|          | 0/3 [00:00\u003c?, ?it/s]\rFetching 3 files:  33%|███▎      | 1/3 [00:00\u003c00:00,  4.74it/s]\rFetching 3 files:  67%|██████▋   | 2/3 [00:01\u003c00:00,  1.21it/s]\rFetching 3 files: 100%|██████████| 3/3 [00:02\u003c00:00,  1.07s/it]\rFetching 3 files: 100%|██████████| 3/3 [00:02\u003c00:00,  1.06it/s]\n"}
+,{"stream_name":"stdout","time":389.336223269,"data":"\n"}
+,{"stream_name":"stdout","time":389.336270553,"data":"=== b.2 · MuseTalk sobre «afin» ===\n"}
+,{"stream_name":"stdout","time":389.336475243,"data":"$ /usr/bin/python3 -m scripts.inference --inference_config /tmp/presentador/MuseTalk/tarea_afin.yaml --result_dir /tmp/presentador/res_afin --unet_model_path models/musetalkV15/unet.pth --unet_config models/musetalkV15/musetalk.json --version v15 --ffmpeg_path /usr/bin --use_float16 --batch_size 8\n"}
+,{"stream_name":"stdout","time":467.257812227,"data":"    caras (S3FD):  73%|███████▎  | 55/75 [00:04\u003c00:01, 19.88it/s]\n"}
+,{"stream_name":"stdout","time":467.257855027,"data":"    caras (S3FD):  77%|███████▋  | 58/75 [00:04\u003c00:00, 20.00it/s]\n"}
+,{"stream_name":"stdout","time":467.257916064,"data":"    caras (S3FD):  81%|████████▏ | 61/75 [00:04\u003c00:00, 20.04it/s]\n"}
+,{"stream_name":"stdout","time":467.257923601,"data":"    caras (S3FD):  85%|████████▌ | 64/75 [00:04\u003c00:00, 20.00it/s]\n"}
+,{"stream_name":"stdout","time":467.257929074,"data":"    caras (S3FD):  89%|████████▉ | 67/75 [00:04\u003c00:00, 20.03it/s]\n"}
+,{"stream_name":"stdout","time":467.257934586,"data":"    caras (S3FD):  93%|█████████▎| 70/75 [00:04\u003c00:00, 19.99it/s]\n"}
+,{"stream_name":"stdout","time":467.257945059,"data":"    caras (S3FD):  97%|█████████▋| 73/75 [00:04\u003c00:00, 19.99it/s]\n"}
+,{"stream_name":"stdout","time":467.257963273,"data":"    caras (S3FD): 100%|██████████| 75/75 [00:05\u003c00:00, 14.83it/s]\n"}
+,{"stream_name":"stdout","time":467.257967354,"data":"    \n"}
+,{"stream_name":"stdout","time":467.257970836,"data":"      0%|          | 0/10 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":467.257974381,"data":"     10%|█         | 1/10 [00:05\u003c00:46,  5.19s/it]\n"}
+,{"stream_name":"stdout","time":467.257978051,"data":"     20%|██        | 2/10 [00:05\u003c00:20,  2.57s/it]\n"}
+,{"stream_name":"stdout","time":467.257981359,"data":"     30%|███       | 3/10 [00:06\u003c00:12,  1.73s/it]\n"}
+,{"stream_name":"stdout","time":467.257984834,"data":"     40%|████      | 4/10 [00:07\u003c00:08,  1.34s/it]\n"}
+,{"stream_name":"stdout","time":467.257988246,"data":"     50%|█████     | 5/10 [00:08\u003c00:05,  1.13s/it]\n"}
+,{"stream_name":"stdout","time":467.257991831,"data":"     60%|██████    | 6/10 [00:08\u003c00:03,  1.00it/s]\n"}
+,{"stream_name":"stdout","time":467.257995218,"data":"     70%|███████   | 7/10 [00:09\u003c00:02,  1.09it/s]\n"}
+,{"stream_name":"stdout","time":467.257998486,"data":"     80%|████████  | 8/10 [00:10\u003c00:01,  1.16it/s]\n"}
+,{"stream_name":"stdout","time":467.258002072,"data":"     90%|█████████ | 9/10 [00:11\u003c00:00,  1.20it/s]\n"}
+,{"stream_name":"stdout","time":467.258005818,"data":"    100%|██████████| 10/10 [00:13\u003c00:00,  1.27s/it]\n"}
+,{"stream_name":"stdout","time":467.258009188,"data":"    100%|██████████| 10/10 [00:13\u003c00:00,  1.34s/it]\n"}
+,{"stream_name":"stdout","time":467.258012716,"data":"    \n"}
+,{"stream_name":"stdout","time":467.258015799,"data":"      0%|          | 0/75 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":467.258019517,"data":"      7%|▋         | 5/75 [00:00\u003c00:01, 42.81it/s]\n"}
+,{"stream_name":"stdout","time":467.258023371,"data":"     13%|█▎        | 10/75 [00:00\u003c00:01, 44.88it/s]\n"}
+,{"stream_name":"stdout","time":467.258027543,"data":"     20%|██        | 15/75 [00:00\u003c00:01, 44.31it/s]\n"}
+,{"stream_name":"stdout","time":467.258030662,"data":"     27%|██▋       | 20/75 [00:00\u003c00:01, 41.22it/s]\n"}
+,{"stream_name":"stdout","time":467.258034131,"data":"     33%|███▎      | 25/75 [00:00\u003c00:01, 42.18it/s]\n"}
+,{"stream_name":"stdout","time":467.25803748,"data":"     40%|████      | 30/75 [00:00\u003c00:01, 43.13it/s]\n"}
+,{"stream_name":"stdout","time":467.258048845,"data":"     47%|████▋     | 35/75 [00:00\u003c00:00, 43.06it/s]\n"}
+,{"stream_name":"stdout","time":467.258052344,"data":"     53%|█████▎    | 40/75 [00:00\u003c00:00, 43.82it/s]\n"}
+,{"stream_name":"stdout","time":467.258055635,"data":"     60%|██████    | 45/75 [00:01\u003c00:00, 44.72it/s]\n"}
+,{"stream_name":"stdout","time":467.258059264,"data":"     67%|██████▋   | 50/75 [00:01\u003c00:00, 44.91it/s]\n"}
+,{"stream_name":"stdout","time":467.258062686,"data":"     73%|███████▎  | 55/75 [00:01\u003c00:00, 45.34it/s]\n"}
+,{"stream_name":"stdout","time":467.258066077,"data":"     80%|████████  | 60/75 [00:01\u003c00:00, 45.63it/s]\n"}
+,{"stream_name":"stdout","time":467.258069487,"data":"     87%|████████▋ | 65/75 [00:01\u003c00:00, 45.48it/s]\n"}
+,{"stream_name":"stdout","time":467.25807355,"data":"     93%|█████████▎| 70/75 [00:01\u003c00:00, 45.62it/s]\n"}
+,{"stream_name":"stdout","time":467.258077201,"data":"    100%|██████████| 75/75 [00:01\u003c00:00, 45.47it/s]\n"}
+,{"stream_name":"stdout","time":467.258085311,"data":"    100%|██████████| 75/75 [00:01\u003c00:00, 44.44it/s]\n"}
+,{"stream_name":"stdout","time":467.258088956,"data":"    [aist#0:0/pcm_s16le @ 0x5969b22d0380] Guessed Channel Layout: mono\n"}
+,{"stream_name":"stdout","time":467.260059515,"data":"\n"}
+,{"stream_name":"stdout","time":467.260078778,"data":"RESUMEN: {\n"}
+,{"stream_name":"stdout","time":467.260083405,"data":" \"pasos\": {\n"}
+,{"stream_name":"stdout","time":467.260087049,"data":"  \"0 · la máquina\": 6.6,\n"}
+,{"stream_name":"stdout","time":467.26009143,"data":"  \"a.1 · plan B: vaivén de la foto\": 1.8,\n"}
+,{"stream_name":"stdout","time":467.260094879,"data":"  \"a.2 · Wan 2.2 TI2V-5B\": 344.9,\n"}
+,{"stream_name":"stdout","time":467.260098164,"data":"  \"b.1 · MuseTalk: código, dependencias y pesos\": 35.4,\n"}
+,{"stream_name":"stdout","time":467.260102003,"data":"  \"b.2 · MuseTalk sobre «afin»\": 77.9\n"}
+,{"stream_name":"stdout","time":467.260106123,"data":" },\n"}
+,{"stream_name":"stdout","time":467.260109817,"data":" \"errores\": {\n"}
+,{"stream_name":"stdout","time":467.26011434,"data":"  \"a.2 · Wan 2.2 TI2V-5B\": \"RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\\\"cara\\\": \\\"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\\\", \\\"wan_tope_s\\\": 3600, \\\"wan_alto\\\": 480, \\\"wan_ancho\\\": 480, \\\"wan_fotogramas\\\": 73, \\\"wan_pasos\\\": 30, \\\"segundos\\\": 3.0, \\\"voz\\\": \\\"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\\\", \\\"salida\\\": \\\"/tmp/presentador/mov_wan_24.mp4\\\"}']\"\n"}
+,{"stream_name":"stdout","time":467.260123441,"data":" },\n"}
+,{"stream_name":"stdout","time":467.260127141,"data":" \"parametros\": {\n"}
+,{"stream_name":"stdout","time":467.260130815,"data":"  \"cara\": 2,\n"}
+,{"stream_name":"stdout","time":467.26013422,"data":"  \"wan_tope_s\": 3600,\n"}
+,{"stream_name":"stdout","time":467.260137618,"data":"  \"wan_alto\": 480,\n"}
+,{"stream_name":"stdout","time":467.260141484,"data":"  \"wan_ancho\": 480,\n"}
+,{"stream_name":"stdout","time":467.260144789,"data":"  \"wan_fotogramas\": 73,\n"}
+,{"stream_name":"stdout","time":467.260148477,"data":"  \"wan_pasos\": 30,\n"}
+,{"stream_name":"stdout","time":467.260151865,"data":"  \"segundos\": 3.0,\n"}
+,{"stream_name":"stdout","time":467.260155571,"data":"  \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\"\n"}
+,{"stream_name":"stdout","time":467.260159291,"data":" },\n"}
+,{"stream_name":"stdout","time":467.260162813,"data":" \"gpu\": \"Tesla T4, 15360 MiB\\nTesla T4, 15360 MiB\",\n"}
+,{"stream_name":"stdout","time":467.260166995,"data":" \"internet\": true,\n"}
+,{"stream_name":"stdout","time":467.260170829,"data":" \"entrada\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada\",\n"}
+,{"stream_name":"stdout","time":467.260174497,"data":" \"kaggle_input\": [\n"}
+,{"stream_name":"stdout","time":467.260178053,"data":"  \"/kaggle/input/datasets\",\n"}
+,{"stream_name":"stdout","time":467.260182097,"data":"  \"/kaggle/input/datasets/mecanicadelhumor\",\n"}
+,{"stream_name":"stdout","time":467.260186562,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada\",\n"}
+,{"stream_name":"stdout","time":467.260190209,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/audio.wav\",\n"}
+,{"stream_name":"stdout","time":467.260193803,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\",\n"}
+,{"stream_name":"stdout","time":467.260197339,"data":"  \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/parametros.json\"\n"}
+,{"stream_name":"stdout","time":467.260209491,"data":" ],\n"}
+,{"stream_name":"stdout","time":467.260213527,"data":" \"torch\": \"2.11.0+cu128\",\n"}
+,{"stream_name":"stdout","time":467.260217762,"data":" \"cuda\": \"12.8\",\n"}
+,{"stream_name":"stdout","time":467.260221421,"data":" \"bf16_nativo\": true,\n"}
+,{"stream_name":"stdout","time":467.260225196,"data":" \"movimientos\": [\n"}
+,{"stream_name":"stdout","time":467.260228799,"data":"  \"afin\"\n"}
+,{"stream_name":"stdout","time":467.260232337,"data":" ],\n"}
+,{"stream_name":"stdout","time":467.260235763,"data":" \"versiones\": [\n"}
+,{"stream_name":"stdout","time":467.260239365,"data":"  \"diffusers==0.40.0\",\n"}
+,{"stream_name":"stdout","time":467.260242924,"data":"  \"torch==2.11.0+cu128\",\n"}
+,{"stream_name":"stdout","time":467.260246433,"data":"  \"transformers==5.16.1\"\n"}
+,{"stream_name":"stdout","time":467.260252154,"data":" ],\n"}
+,{"stream_name":"stdout","time":467.260255543,"data":" \"salida\": [\n"}
+,{"stream_name":"stdout","time":467.260260717,"data":"  \"a_movimiento_afin.mp4\",\n"}
+,{"stream_name":"stdout","time":467.260267393,"data":"  \"b_labios_afin.mp4\",\n"}
+,{"stream_name":"stdout","time":467.260271034,"data":"  \"cara.jpg\",\n"}
+,{"stream_name":"stdout","time":467.260275094,"data":"  \"registro.txt\",\n"}
+,{"stream_name":"stdout","time":467.260279107,"data":"  \"tiempos.json\"\n"}
+,{"stream_name":"stdout","time":467.260283413,"data":" ],\n"}
+,{"stream_name":"stdout","time":467.260287584,"data":" \"resultado\": \"con labios: afin\"\n"}
+,{"stream_name":"stdout","time":467.260291873,"data":"}\n"}
+,{"stream_name":"stderr","time":469.76878632,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":469.768811872,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":469.983690348,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":469.983713436,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":470.742891741,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":471.653981373,"data":"[NbConvertApp] Writing 335041 bytes to __results__.html\n"}
 ]

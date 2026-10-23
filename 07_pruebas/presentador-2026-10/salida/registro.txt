@@ -10,50 +10,52 @@ $ ffmpeg -y -v error -i /tmp/presentador/mov_afin.mp4 -c:v libx264 -pix_fmt yuv4
 === a.2 · Wan 2.2 TI2V-5B ===
 $ pip install -q 'diffusers>=0.35' accelerate ftfy 'huggingface_hub>=1.5,<2'
 $ /usr/bin/python3 /tmp/presentador/wan.py {"cara": "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg", "wan_tope_s": 3600, "wan_alto": 480, "wan_ancho": 480, "wan_fotogramas": 73, "wan_pasos": 30, "segundos": 3.0, "voz": "07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s", "salida": "/tmp/presentador/mov_wan_24.mp4"}
-        return self._call_impl(*args, **kwargs)
-               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-      File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
-        return forward_call(*args, **kwargs)
-      File "/usr/local/lib/python3.13/dist-packages/accelerate/hooks.py", line 192, in new_forward
-        output = module._old_forward(*args, **kwargs)
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/peft_utils.py", line 323, in wrapper
-        result = forward_fn(self, *args, **kwargs)
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py", line 704, in forward
-        hidden_states = block(hidden_states, encoder_hidden_states, timestep_proj, rotary_emb)
-      File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
-        return self._call_impl(*args, **kwargs)
-               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-      File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
-        return forward_call(*args, **kwargs)
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py", line 489, in forward
-        attn_output = self.attn1(norm_hidden_states, None, None, rotary_emb)
-      File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
-        return self._call_impl(*args, **kwargs)
-               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-      File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
-        return forward_call(*args, **kwargs)
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py", line 281, in forward
-        return self.processor(self, hidden_states, encoder_hidden_states, attention_mask, rotary_emb, **kwargs)
-               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py", line 143, in __call__
-        hidden_states = dispatch_attention_fn(
-            query,
-        ...<7 lines>...
-            parallel_config=(self._parallel_config if encoder_hidden_states is None else None),
-        )
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/attention_dispatch.py", line 439, in dispatch_attention_fn
-        return backend_fn(**kwargs)
-      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/attention_dispatch.py", line 3707, in _native_attention
-        out = torch.nn.functional.scaled_dot_product_attention(
-            query=query,
-        ...<6 lines>...
-            enable_gqa=enable_gqa,
-        )
-    torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.63 GiB. GPU 0 has a total capacity of 14.56 GiB of which 1.41 GiB is free. Process 7 has 104.00 MiB memory in use. Including non-PyTorch memory, this process has 13.04 GiB memory in use. Of the allocated memory 12.83 GiB is allocated by PyTorch, and 84.10 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+    Fetching 18 files:  67%|██████▋   | 12/18 [00:35<00:40,  6.78s/it]
+    Fetching 18 files:  72%|███████▏  | 13/18 [02:00<02:18, 27.68s/it]
+    Fetching 18 files:  78%|███████▊  | 14/18 [02:00<01:20, 20.18s/it]
+    Fetching 18 files:  83%|████████▎ | 15/18 [02:06<00:48, 16.23s/it]
+    Fetching 18 files: 100%|██████████| 18/18 [02:07<00:00,  7.06s/it]
+    
+    Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+    Loading pipeline components...:  20%|██        | 1/5 [00:13<00:54, 13.71s/it]
+    Loading pipeline components...:  60%|██████    | 3/5 [00:15<00:08,  4.34s/it]
+    
+    Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s][A
+    
+    Loading checkpoint shards:  20%|██        | 1/5 [00:09<00:38,  9.72s/it][A
+    
+    Loading checkpoint shards:  40%|████      | 2/5 [00:23<00:36, 12.04s/it][A
+    
+    Loading checkpoint shards:  60%|██████    | 3/5 [00:43<00:31, 15.53s/it][A
+    
+    Loading checkpoint shards:  80%|████████  | 4/5 [01:02<00:17, 17.03s/it][A
+    
+    Loading checkpoint shards: 100%|██████████| 5/5 [01:03<00:00, 11.40s/it][A
+    Loading checkpoint shards: 100%|██████████| 5/5 [01:03<00:00, 12.76s/it]
+    
+    Loading pipeline components...:  80%|████████  | 4/5 [01:19<00:24, 24.96s/it]
+    
+    Loading weights:   0%|          | 0/242 [00:00<?, ?it/s][A
+    
+    Loading weights:  30%|███       | 73/242 [00:00<00:00, 715.87it/s][A
+    
+    Loading weights:  60%|█████▉    | 145/242 [00:00<00:00, 665.16it/s][A
+    
+    Loading weights:  88%|████████▊ | 214/242 [00:00<00:00, 652.72it/s][A
+    Loading weights: 100%|██████████| 242/242 [00:00<00:00, 675.76it/s]
+    
+    Loading pipeline components...: 100%|██████████| 5/5 [01:20<00:00, 16.89s/it]
+    Loading pipeline components...: 100%|██████████| 5/5 [01:20<00:00, 16.07s/it]
+    
+      0%|          | 0/30 [00:00<?, ?it/s]
+      0%|          | 0/30 [00:13<?, ?it/s]
+    Wan no cabe en la GPU ni a 320x320
 Traceback (most recent call last):
-  File "/kaggle/src/script.py", line 214, in <module>
-    sh([sys.executable, str(TRABAJO / "wan.py"), json.dumps(args)], timeout=int(PARAM["wan_tope_s"]))
+  File "/kaggle/src/script.py", line 227, in <module>
+    sh([sys.executable, str(TRABAJO / "wan.py"), json.dumps(args)], timeout=int(PARAM["wan_tope_s"]),
     ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       env=dict(os.environ, PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True"))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/kaggle/src/script.py", line 77, in sh
     raise RuntimeError(f"código {r.returncode}: {cmd}")
 RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{"cara": "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg", "wan_tope_s": 3600, "wan_alto": 480, "wan_ancho": 480, "wan_fotogramas": 73, "wan_pasos": 30, "segundos": 3.0, "voz": "07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s", "salida": "/tmp/presentador/mov_wan_24.mp4"}']
@@ -66,54 +68,54 @@ $ pip install -q omegaconf einops librosa soundfile 'huggingface_hub>=1.5,<2' ff
 
 === b.2 · MuseTalk sobre «afin» ===
 $ /usr/bin/python3 -m scripts.inference --inference_config /tmp/presentador/MuseTalk/tarea_afin.yaml --result_dir /tmp/presentador/res_afin --unet_model_path models/musetalkV15/unet.pth --unet_config models/musetalkV15/musetalk.json --version v15 --ffmpeg_path /usr/bin --use_float16 --batch_size 8
-    caras (S3FD):  83%|████████▎ | 62/75 [00:04<00:00, 19.39it/s]
-    caras (S3FD):  85%|████████▌ | 64/75 [00:04<00:00, 19.24it/s]
-    caras (S3FD):  88%|████████▊ | 66/75 [00:04<00:00, 19.26it/s]
-    caras (S3FD):  91%|█████████ | 68/75 [00:04<00:00, 19.21it/s]
-    caras (S3FD):  93%|█████████▎| 70/75 [00:04<00:00, 19.27it/s]
-    caras (S3FD):  96%|█████████▌| 72/75 [00:05<00:00, 19.18it/s]
-    caras (S3FD):  99%|█████████▊| 74/75 [00:05<00:00, 19.20it/s]
-    caras (S3FD): 100%|██████████| 75/75 [00:05<00:00, 14.32it/s]
+    caras (S3FD):  73%|███████▎  | 55/75 [00:04<00:01, 19.88it/s]
+    caras (S3FD):  77%|███████▋  | 58/75 [00:04<00:00, 20.00it/s]
+    caras (S3FD):  81%|████████▏ | 61/75 [00:04<00:00, 20.04it/s]
+    caras (S3FD):  85%|████████▌ | 64/75 [00:04<00:00, 20.00it/s]
+    caras (S3FD):  89%|████████▉ | 67/75 [00:04<00:00, 20.03it/s]
+    caras (S3FD):  93%|█████████▎| 70/75 [00:04<00:00, 19.99it/s]
+    caras (S3FD):  97%|█████████▋| 73/75 [00:04<00:00, 19.99it/s]
+    caras (S3FD): 100%|██████████| 75/75 [00:05<00:00, 14.83it/s]
     
       0%|          | 0/10 [00:00<?, ?it/s]
-     10%|█         | 1/10 [00:05<00:49,  5.49s/it]
-     20%|██        | 2/10 [00:06<00:21,  2.72s/it]
-     30%|███       | 3/10 [00:07<00:12,  1.84s/it]
-     40%|████      | 4/10 [00:07<00:08,  1.42s/it]
-     50%|█████     | 5/10 [00:08<00:05,  1.20s/it]
-     60%|██████    | 6/10 [00:09<00:04,  1.06s/it]
-     70%|███████   | 7/10 [00:10<00:02,  1.02it/s]
-     80%|████████  | 8/10 [00:11<00:01,  1.09it/s]
-     90%|█████████ | 9/10 [00:11<00:00,  1.13it/s]
-    100%|██████████| 10/10 [00:14<00:00,  1.33s/it]
-    100%|██████████| 10/10 [00:14<00:00,  1.42s/it]
+     10%|█         | 1/10 [00:05<00:46,  5.19s/it]
+     20%|██        | 2/10 [00:05<00:20,  2.57s/it]
+     30%|███       | 3/10 [00:06<00:12,  1.73s/it]
+     40%|████      | 4/10 [00:07<00:08,  1.34s/it]
+     50%|█████     | 5/10 [00:08<00:05,  1.13s/it]
+     60%|██████    | 6/10 [00:08<00:03,  1.00it/s]
+     70%|███████   | 7/10 [00:09<00:02,  1.09it/s]
+     80%|████████  | 8/10 [00:10<00:01,  1.16it/s]
+     90%|█████████ | 9/10 [00:11<00:00,  1.20it/s]
+    100%|██████████| 10/10 [00:13<00:00,  1.27s/it]
+    100%|██████████| 10/10 [00:13<00:00,  1.34s/it]
     
       0%|          | 0/75 [00:00<?, ?it/s]
-      5%|▌         | 4/75 [00:00<00:02, 34.25it/s]
-     12%|█▏        | 9/75 [00:00<00:01, 40.45it/s]
-     19%|█▊        | 14/75 [00:00<00:01, 43.02it/s]
-     25%|██▌       | 19/75 [00:00<00:01, 44.03it/s]
-     32%|███▏      | 24/75 [00:00<00:01, 44.76it/s]
-     39%|███▊      | 29/75 [00:00<00:01, 45.32it/s]
-     45%|████▌     | 34/75 [00:00<00:00, 45.41it/s]
-     52%|█████▏    | 39/75 [00:00<00:00, 43.76it/s]
-     59%|█████▊    | 44/75 [00:01<00:00, 44.55it/s]
-     65%|██████▌   | 49/75 [00:01<00:00, 43.98it/s]
-     72%|███████▏  | 54/75 [00:01<00:00, 44.24it/s]
-     79%|███████▊  | 59/75 [00:01<00:00, 44.92it/s]
-     85%|████████▌ | 64/75 [00:01<00:00, 45.22it/s]
-     92%|█████████▏| 69/75 [00:01<00:00, 45.05it/s]
-     99%|█████████▊| 74/75 [00:01<00:00, 44.87it/s]
-    100%|██████████| 75/75 [00:01<00:00, 44.24it/s]
-    [aist#0:0/pcm_s16le @ 0x5794c0f1b380] Guessed Channel Layout: mono
+      7%|▋         | 5/75 [00:00<00:01, 42.81it/s]
+     13%|█▎        | 10/75 [00:00<00:01, 44.88it/s]
+     20%|██        | 15/75 [00:00<00:01, 44.31it/s]
+     27%|██▋       | 20/75 [00:00<00:01, 41.22it/s]
+     33%|███▎      | 25/75 [00:00<00:01, 42.18it/s]
+     40%|████      | 30/75 [00:00<00:01, 43.13it/s]
+     47%|████▋     | 35/75 [00:00<00:00, 43.06it/s]
+     53%|█████▎    | 40/75 [00:00<00:00, 43.82it/s]
+     60%|██████    | 45/75 [00:01<00:00, 44.72it/s]
+     67%|██████▋   | 50/75 [00:01<00:00, 44.91it/s]
+     73%|███████▎  | 55/75 [00:01<00:00, 45.34it/s]
+     80%|████████  | 60/75 [00:01<00:00, 45.63it/s]
+     87%|████████▋ | 65/75 [00:01<00:00, 45.48it/s]
+     93%|█████████▎| 70/75 [00:01<00:00, 45.62it/s]
+    100%|██████████| 75/75 [00:01<00:00, 45.47it/s]
+    100%|██████████| 75/75 [00:01<00:00, 44.44it/s]
+    [aist#0:0/pcm_s16le @ 0x5969b22d0380] Guessed Channel Layout: mono
 
 RESUMEN: {
  "pasos": {
-  "0 · la máquina": 10.2,
-  "a.1 · plan B: vaivén de la foto": 2.4,
-  "a.2 · Wan 2.2 TI2V-5B": 359.8,
-  "b.1 · MuseTalk: código, dependencias y pesos": 29.5,
-  "b.2 · MuseTalk sobre «afin»": 79.0
+  "0 · la máquina": 6.6,
+  "a.1 · plan B: vaivén de la foto": 1.8,
+  "a.2 · Wan 2.2 TI2V-5B": 344.9,
+  "b.1 · MuseTalk: código, dependencias y pesos": 35.4,
+  "b.2 · MuseTalk sobre «afin»": 77.9
  },
  "errores": {
   "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}']"
