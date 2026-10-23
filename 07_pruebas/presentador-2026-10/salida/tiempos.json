@@ -1,31 +1,49 @@
 {
  "pasos": {
-  "0 · la máquina": 5.6,
-  "a.1 · plan B: vaivén de la foto": 0.4,
-  "a.2 · Wan 2.2 TI2V-5B": 33.5,
-  "b.1 · MuseTalk: código, dependencias y pesos": 32.0
+  "0 · la máquina": 10.1,
+  "a.1 · plan B: vaivén de la foto": 2.4,
+  "a.2 · Wan 2.2 TI2V-5B": 49.4,
+  "b.1 · MuseTalk: código, dependencias y pesos": 29.3,
+  "b.2 · MuseTalk sobre «afin»": 5.3
  },
  "errores": {
-  "0 · la máquina": "AssertionError: faltan cara.jpg o audio.wav en /kaggle/input/presentador-entrada",
-  "a.1 · plan B: vaivén de la foto": "AttributeError: 'NoneType' object has no attribute 'shape'",
-  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: código 1: pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy",
-  "b.1 · MuseTalk: código, dependencias y pesos": "RuntimeError: código 128: git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk"
+  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}']",
+  "b.2 · MuseTalk sobre «afin»": "RuntimeError: código 1: ['/usr/bin/python3', '-m', 'scripts.inference', '--inference_config', '/tmp/presentador/MuseTalk/tarea_afin.yaml', '--result_dir', '/tmp/presentador/res_afin', '--unet_model_path', 'models/musetalkV15/unet.pth', '--unet_config', 'models/musetalkV15/musetalk.json', '--version', 'v15', '--ffmpeg_path', '/usr/bin', '--use_float16', '--batch_size', '8']"
  },
  "parametros": {
-  "cara": 1,
+  "cara": 2,
   "wan_tope_s": 3600,
   "wan_alto": 480,
   "wan_ancho": 480,
   "wan_fotogramas": 73,
   "wan_pasos": 30,
-  "segundos": 3.0
+  "segundos": 3.0,
+  "voz": "07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s"
  },
- "gpu": "sin GPU",
- "torch": "2.11.0+cpu",
- "cuda": null,
- "bf16_nativo": false,
- "movimientos": [],
+ "gpu": "Tesla T4, 15360 MiB\nTesla T4, 15360 MiB",
+ "internet": true,
+ "entrada": "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada",
+ "kaggle_input": [
+  "/kaggle/input/datasets",
+  "/kaggle/input/datasets/mecanicadelhumor",
+  "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada",
+  "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/audio.wav",
+  "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg",
+  "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/parametros.json"
+ ],
+ "torch": "2.11.0+cu128",
+ "cuda": "12.8",
+ "bf16_nativo": true,
+ "movimientos": [
+  "afin"
+ ],
+ "versiones": [
+  "torch==2.11.0+cu128",
+  "transformers==5.16.1"
+ ],
  "salida": [
+  "a_movimiento_afin.mp4",
+  "cara.jpg",
   "registro.txt",
   "tiempos.json"
  ],

@@ -1,80 +1,162 @@
 
 === 0 · la máquina ===
-GPU: sin GPU · torch 2.11.0+cpu · bf16: False
-Traceback (most recent call last):
-  File "/kaggle/src/script.py", line 112, in <module>
-    assert CARA.exists() and AUDIO.exists(), f"faltan cara.jpg o audio.wav en {ENTRADA}"
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: faltan cara.jpg o audio.wav en /kaggle/input/presentador-entrada
-
+Entrada: /kaggle/input/datasets/mecanicadelhumor/presentador-entrada · en /kaggle/input: ['/kaggle/input/datasets', '/kaggle/input/datasets/mecanicadelhumor', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/audio.wav', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg', '/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/parametros.json']
+GPU: Tesla T4, 15360 MiB
+Tesla T4, 15360 MiB · torch 2.11.0+cu128 · bf16: True
 
 === a.1 · plan B: vaivén de la foto ===
-Traceback (most recent call last):
-  File "/kaggle/src/script.py", line 124, in <module>
-    h, w = im.shape[:2]
-           ^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'shape'
-
+$ ffmpeg -y -v error -i /tmp/presentador/mov_afin.mp4 -c:v libx264 -pix_fmt yuv420p /kaggle/working/salida/a_movimiento_afin.mp4
 
 === a.2 · Wan 2.2 TI2V-5B ===
 $ pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy
-      error: subprocess-exited-with-error
-      
-      × git clone --filter=blob:none --quiet https://github.com/huggingface/diffusers /tmp/pip-req-build-o06pj6ve did not run successfully.
-      │ exit code: 128
-      ╰─> No available output.
-      
-      note: This error originates from a subprocess, and is likely not a problem with pip.
-    ERROR: Failed to build 'git+https://github.com/huggingface/diffusers' when git clone --filter=blob:none --quiet https://github.com/huggingface/diffusers /tmp/pip-req-build-o06pj6ve
+    ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+    gradio 6.26.0 requires huggingface-hub<2.0,>=1.16.0, but you have huggingface-hub 2.3.0 which is incompatible.
+    gradio 6.26.0 requires pillow<13.0,>=8.0, but you have pillow 13.0.0 which is incompatible.
+    datasets 4.8.5 requires huggingface-hub<2.0,>=0.25.0, but you have huggingface-hub 2.3.0 which is incompatible.
+    transformers 5.16.1 requires huggingface-hub<2.0,>=1.5.0, but you have huggingface-hub 2.3.0 which is incompatible.
+    gradio-client 2.6.1 requires huggingface-hub<2.0,>=0.19.3, but you have huggingface-hub 2.3.0 which is incompatible.
+    tokenizers 0.23.1 requires huggingface-hub<2.0,>=0.16.4, but you have huggingface-hub 2.3.0 which is incompatible.
+$ /usr/bin/python3 /tmp/presentador/wan.py {"cara": "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg", "wan_tope_s": 3600, "wan_alto": 480, "wan_ancho": 480, "wan_fotogramas": 73, "wan_pasos": 30, "segundos": 3.0, "voz": "07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s", "salida": "/tmp/presentador/mov_wan_24.mp4"}
+        )
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/__init__.py", line 6, in <module>
+        from .unet_2d import UNet2DModel
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d.py", line 23, in <module>
+        from .unet_2d_blocks import UNetMidBlock2D, get_down_block, get_up_block
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d_blocks.py", line 36, in <module>
+        from ..transformers.dual_transformer_2d import DualTransformer2DModel
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/__init__.py", line 5, in <module>
+        from .ace_step_transformer import AceStepTransformer1DModel
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/ace_step_transformer.py", line 24, in <module>
+        from ...loaders import PeftAdapterMixin
+      File "<frozen importlib._bootstrap>", line 1420, in _handle_fromlist
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1015, in __getattr__
+        module = self._get_module(self._class_to_module[name])
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1027, in _get_module
+        raise RuntimeError(
+        ...<2 lines>...
+        ) from e
+    RuntimeError: Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
+    huggingface-hub>=1.5.0,<2.0 is required for a normal functioning of this module, but found huggingface-hub==2.3.0.
+    Try: `pip install transformers -U` or `pip install -e '.[dev]'` if you're working with git main
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/tmp/presentador/wan.py", line 3, in <module>
+        from diffusers import AutoencoderKLWan, WanImageToVideoPipeline
+      File "<frozen importlib._bootstrap>", line 1420, in _handle_fromlist
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1016, in __getattr__
+        value = getattr(module, name)
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1015, in __getattr__
+        module = self._get_module(self._class_to_module[name])
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1027, in _get_module
+        raise RuntimeError(
+        ...<2 lines>...
+        ) from e
+    RuntimeError: Failed to import diffusers.models.autoencoders.autoencoder_kl_wan because of the following error (look up to see its traceback):
+    Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
+    huggingface-hub>=1.5.0,<2.0 is required for a normal functioning of this module, but found huggingface-hub==2.3.0.
+    Try: `pip install transformers -U` or `pip install -e '.[dev]'` if you're working with git main
 Traceback (most recent call last):
-  File "/kaggle/src/script.py", line 179, in <module>
-    sh("pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy", timeout=1200)
+  File "/kaggle/src/script.py", line 208, in <module>
+    sh([sys.executable, str(TRABAJO / "wan.py"), json.dumps(args)], timeout=int(PARAM["wan_tope_s"]))
     ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/kaggle/src/script.py", line 70, in sh
+  File "/kaggle/src/script.py", line 74, in sh
     raise RuntimeError(f"código {r.returncode}: {cmd}")
-RuntimeError: código 1: pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy
+RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{"cara": "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg", "wan_tope_s": 3600, "wan_alto": 480, "wan_ancho": 480, "wan_fotogramas": 73, "wan_pasos": 30, "segundos": 3.0, "voz": "07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s", "salida": "/tmp/presentador/mov_wan_24.mp4"}']
 
 
 === b.1 · MuseTalk: código, dependencias y pesos ===
 $ git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk
-    fatal: unable to access 'https://github.com/TMElyralab/MuseTalk.git/': Could not resolve host: github.com
+$ git checkout -q 0a89dec45a0192b824e3cf4daf96c239440c5ed8
+$ pip install -q omegaconf einops librosa soundfile 'huggingface_hub>=0.30' ffmpeg-python
+
+=== b.2 · MuseTalk sobre «afin» ===
+$ /usr/bin/python3 -m scripts.inference --inference_config /tmp/presentador/MuseTalk/tarea_afin.yaml --result_dir /tmp/presentador/res_afin --unet_model_path models/musetalkV15/unet.pth --unet_config models/musetalkV15/musetalk.json --version v15 --ffmpeg_path /usr/bin --use_float16 --batch_size 8
+    Traceback (most recent call last):
+      File "<frozen runpy>", line 203, in _run_module_as_main
+      File "<frozen runpy>", line 88, in _run_code
+      File "/tmp/presentador/MuseTalk/scripts/inference.py", line 14, in <module>
+        from transformers import WhisperModel
+      File "/usr/local/lib/python3.13/dist-packages/transformers/__init__.py", line 30, in <module>
+        from . import dependency_versions_check
+      File "/usr/local/lib/python3.13/dist-packages/transformers/dependency_versions_check.py", line 56, in <module>
+        require_version_core(deps[pkg])
+        ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/transformers/utils/versions.py", line 116, in require_version_core
+        return require_version(requirement, hint)
+      File "/usr/local/lib/python3.13/dist-packages/transformers/utils/versions.py", line 110, in require_version
+        _compare_versions(op, got_ver, want_ver, requirement, pkg, hint)
+        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/transformers/utils/versions.py", line 43, in _compare_versions
+        raise ImportError(
+            f"{requirement} is required for a normal functioning of this module, but found {pkg}=={got_ver}.{hint}"
+        )
+    ImportError: huggingface-hub>=1.5.0,<2.0 is required for a normal functioning of this module, but found huggingface-hub==2.3.0.
+    Try: `pip install transformers -U` or `pip install -e '.[dev]'` if you're working with git main
 Traceback (most recent call last):
-  File "/kaggle/src/script.py", line 257, in <module>
-    sh(f"git clone -q https://github.com/TMElyralab/MuseTalk.git {MT}")
-    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/kaggle/src/script.py", line 70, in sh
+  File "/kaggle/src/script.py", line 310, in <module>
+    sh([sys.executable, "-m", "scripts.inference", "--inference_config", str(cfg),
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "--result_dir", str(res), "--unet_model_path", "models/musetalkV15/unet.pth",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "--unet_config", "models/musetalkV15/musetalk.json", "--version", "v15",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "--ffmpeg_path", "/usr/bin", "--use_float16", "--batch_size", "8"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       cwd=MT, timeout=1800)
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/src/script.py", line 74, in sh
     raise RuntimeError(f"código {r.returncode}: {cmd}")
-RuntimeError: código 128: git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk
+RuntimeError: código 1: ['/usr/bin/python3', '-m', 'scripts.inference', '--inference_config', '/tmp/presentador/MuseTalk/tarea_afin.yaml', '--result_dir', '/tmp/presentador/res_afin', '--unet_model_path', 'models/musetalkV15/unet.pth', '--unet_config', 'models/musetalkV15/musetalk.json', '--version', 'v15', '--ffmpeg_path', '/usr/bin', '--use_float16', '--batch_size', '8']
 
 
 RESUMEN: {
  "pasos": {
-  "0 · la máquina": 5.6,
-  "a.1 · plan B: vaivén de la foto": 0.4,
-  "a.2 · Wan 2.2 TI2V-5B": 33.5,
-  "b.1 · MuseTalk: código, dependencias y pesos": 32.0
+  "0 · la máquina": 10.1,
+  "a.1 · plan B: vaivén de la foto": 2.4,
+  "a.2 · Wan 2.2 TI2V-5B": 49.4,
+  "b.1 · MuseTalk: código, dependencias y pesos": 29.3,
+  "b.2 · MuseTalk sobre «afin»": 5.3
  },
  "errores": {
-  "0 · la máquina": "AssertionError: faltan cara.jpg o audio.wav en /kaggle/input/presentador-entrada",
-  "a.1 · plan B: vaivén de la foto": "AttributeError: 'NoneType' object has no attribute 'shape'",
-  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: código 1: pip install -q 'git+https://github.com/huggingface/diffusers' accelerate ftfy",
-  "b.1 · MuseTalk: código, dependencias y pesos": "RuntimeError: código 128: git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk"
+  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}']",
+  "b.2 · MuseTalk sobre «afin»": "RuntimeError: código 1: ['/usr/bin/python3', '-m', 'scripts.inference', '--inference_config', '/tmp/presentador/MuseTalk/tarea_afin.yaml', '--result_dir', '/tmp/presentador/res_afin', '--unet_model_path', 'models/musetalkV15/unet.pth', '--unet_config', 'models/musetalkV15/musetalk.json', '--version', 'v15', '--ffmpeg_path', '/usr/bin', '--use_float16', '--batch_size', '8']"
  },
  "parametros": {
-  "cara": 1,
+  "cara": 2,
   "wan_tope_s": 3600,
   "wan_alto": 480,
   "wan_ancho": 480,
   "wan_fotogramas": 73,
   "wan_pasos": 30,
-  "segundos": 3.0
+  "segundos": 3.0,
+  "voz": "07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s"
  },
- "gpu": "sin GPU",
- "torch": "2.11.0+cpu",
- "cuda": null,
- "bf16_nativo": false,
- "movimientos": [],
+ "gpu": "Tesla T4, 15360 MiB\nTesla T4, 15360 MiB",
+ "internet": true,
+ "entrada": "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada",
+ "kaggle_input": [
+  "/kaggle/input/datasets",
+  "/kaggle/input/datasets/mecanicadelhumor",
+  "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada",
+  "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/audio.wav",
+  "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg",
+  "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/parametros.json"
+ ],
+ "torch": "2.11.0+cu128",
+ "cuda": "12.8",
+ "bf16_nativo": true,
+ "movimientos": [
+  "afin"
+ ],
+ "versiones": [
+  "torch==2.11.0+cu128",
+  "transformers==5.16.1"
+ ],
  "salida": [
+  "a_movimiento_afin.mp4",
+  "cara.jpg",
   "registro.txt",
   "tiempos.json"
  ],
