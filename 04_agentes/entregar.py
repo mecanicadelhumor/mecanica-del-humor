@@ -118,6 +118,7 @@ PROPIEDAD = {
         r"05_calendario/demanda\.json",
         r"05_calendario/semillas_demanda\.json",
         r"05_calendario/pendientes_de_fuente\.md",
+        r"05_calendario/temas_en_reserva\.md",       # desde el 23/10/2026 (codirector)
         r"01_bibliografia/BIBLIOGRAFIA_CURADA\.md",   # desde el 05/10/2026 (C60)
         r"01_bibliografia/data/semillas\.json",
         r"05_calendario/revisiones/.+",          # aplica las notas y las retira

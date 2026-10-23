@@ -1,0 +1,136 @@
+{
+  "_que_es": "Los compromisos con fecha del proyecto: qué, quién y para cuándo. Nace el 23/10/2026 (C70) porque el muestrario VRoid del 16/10, el del personaje 2D del 12/10 y la prueba de la persona sintética del 13-15/10 se cayeron sin que nadie lo viera: estaban en el calendario del plan, pero sin dueño, y ninguna rutina vigilaba ese calendario.",
+  "_reglas": [
+    "Lo escribe solo la dirección (y el codirector). Las rutinas lo leen.",
+    "Todo lo que el plan ponga con fecha entra aquí el mismo día, con dueño. Una fila sin dueño no vale: si no hay a quién dárselo, el dueño es la dirección.",
+    "Nada se borra. Al hacerse: estado 'hecho' y 'hecho_el'. Si se aplaza: se añade a 'aplazamientos' {de, a, porque} y cambia 'fecha'. Nunca se cae en silencio.",
+    "La revisión diaria lo lee cada mañana (paso 0 de su prompt desde el 23/10): lo 'pendiente' con fecha anterior a hoy es un plazo vencido, va en su fichero de estado y en una nota a su dueño en 08_comunicacion/.",
+    "La dirección empieza cada ejecución por lo vencido, antes que por el cuaderno."
+  ],
+  "compromisos": [
+    {
+      "id": "C61-vroid",
+      "que": "Muestrario del personaje 3D con el avatar VRoid del codirector (07_pruebas/personaje-2026-10/)",
+      "dueno": "direccion",
+      "fecha": "2026-10-23",
+      "estado": "pendiente",
+      "aplazamientos": [
+        {"de": "2026-10-16", "a": "2026-10-29", "porque": "No se hizo el 16/10 y no se dijo hasta el 22/10 (fallo de la dirección: la fila del calendario no tenía dueño)"},
+        {"de": "2026-10-29", "a": "2026-10-23", "porque": "Se adelanta a petición del codirector (sesión del 23/10)"}
+      ],
+      "origen": "Plan v18 (C61), calendario del 05/10"
+    },
+    {
+      "id": "C61-2d",
+      "que": "Muestrario del personaje 2D propio (SVG con la paleta de la marca)",
+      "dueno": "direccion",
+      "fecha": "2026-10-23",
+      "estado": "pendiente",
+      "aplazamientos": [
+        {"de": "2026-10-12", "a": "2026-10-23", "porque": "Se cayó en silencio el 12/10; recuperado a petición del codirector el 23/10"}
+      ],
+      "origen": "Plan v18 (C61)"
+    },
+    {
+      "id": "C51.3-caras-kaggle",
+      "que": "Persona sintética: caras con FLUX y prueba de sincronía labial en Kaggle (MuseTalk 1.5). Se deja preparada hoy; necesita que el codirector mueva un workflow",
+      "dueno": "direccion",
+      "fecha": "2026-10-23",
+      "estado": "pendiente",
+      "aplazamientos": [
+        {"de": "2026-10-15", "a": "2026-10-23", "porque": "Se cayó en silencio (caras previstas el 12/10, prueba el 13-15/10); recuperada a petición del codirector el 23/10"}
+      ],
+      "origen": "Plan v18 (C51.3)"
+    },
+    {
+      "id": "C51.3-workflow",
+      "que": "Mover 00_estrategia/tareas/workflows_2026-10-23/presentador_prueba.yml a .github/workflows/ y lanzarlo (paso 'caras')",
+      "dueno": "codirector",
+      "fecha": "2026-10-26",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Tareas del codirector del 23/10"
+    },
+    {
+      "id": "C51.3-kaggle-run",
+      "que": "Lanzar la prueba de Kaggle con la cara elegida y dejar el resultado en 07_pruebas/presentador-2026-10/salida/",
+      "dueno": "direccion",
+      "fecha": "2026-10-29",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Dirección 23/10. Depende de C51.3-workflow y de que el codirector elija cara"
+    },
+    {
+      "id": "C36-encendido",
+      "que": "Encender la voz de una toma (C36_EN_PRODUCCION = True) con la cola final corta y la pausa del titular que pidió el codirector",
+      "dueno": "direccion",
+      "fecha": "2026-10-23",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Respuesta del codirector a las tareas del 22/10"
+    },
+    {
+      "id": "largo-imagen-horizontal",
+      "que": "visual.py y fondo_visual.py en horizontal para el largo (C50 solo sabe vertical)",
+      "dueno": "direccion",
+      "fecha": "2026-10-26",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Plan v23"
+    },
+    {
+      "id": "largo-voz-tandas",
+      "que": "Voz del largo con 2.5-flash y C36 por tandas, probada en vivo",
+      "dueno": "direccion",
+      "fecha": "2026-10-26",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Plan v23"
+    },
+    {
+      "id": "cuaderno-iteracion-calidad",
+      "que": "Propuestas al codirector: velocidad de iteración y estándares de calidad (cuaderno del 23/10)",
+      "dueno": "direccion",
+      "fecha": "2026-10-26",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Cuaderno del codirector, 23/10"
+    },
+    {
+      "id": "MDH-008-guion",
+      "que": "Guion del primer largo (MDH-008) con el prompt del 22/10",
+      "dueno": "planificacion",
+      "fecha": "2026-10-29",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Plan v23"
+    },
+    {
+      "id": "tts-vigilancia",
+      "que": "Mirar si hay modelos de voz gratuitos nuevos que mejoren la entonación (petición recurrente del codirector). Primer informe; después, el primer lunes de cada mes",
+      "dueno": "direccion",
+      "fecha": "2026-11-02",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Respuesta del codirector a las tareas del 22/10, punto 3"
+    },
+    {
+      "id": "largo-ensayo",
+      "que": "Render de prueba del largo entero; decide 8/11 o 15/11",
+      "dueno": "direccion",
+      "fecha": "2026-11-02",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Plan v23"
+    },
+    {
+      "id": "B1-cierre",
+      "que": "Cerrar B1 con su regla y escribir B2 en ciclos.json",
+      "dueno": "direccion",
+      "fecha": "2026-11-05",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Plan v22-v23"
+    }
+  ]
+}

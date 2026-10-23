@@ -39,7 +39,7 @@ puede es hacer que dos agentes no escriban nunca el mismo fichero.**
 
 | Ruta | Dueño | Los demás |
 |---|---|---|
-| `05_calendario/guiones/` · `parrilla.json` · `publicaciones/` · `CALENDARIO.md` · `demanda.json` · `semillas_demanda.json` | **Planificación** (jueves 22:00) | escriben en `revisiones/`, no aquí |
+| `05_calendario/guiones/` · `parrilla.json` · `publicaciones/` · `CALENDARIO.md` · `demanda.json` · `semillas_demanda.json` · `temas_en_reserva.md` (23/10/2026) | **Planificación** (jueves 22:00) | escriben en `revisiones/`, no aquí |
 | `05_calendario/demanda_bruta.json` | **Workflow `demanda.yml`** (jueves 14:00) | nadie más lo toca |
 | `05_calendario/metricas.json` | **Métricas** (lunes 09:00) | nadie más lo toca |
 | `03_produccion/` · `04_agentes/` (código, prompts, `MEJORA_VISUAL.md`) | **Revisión diaria** | proponen en el resumen |
@@ -51,6 +51,7 @@ puede es hacer que dos agentes no escriban nunca el mismo fichero.**
 | `04_agentes/entregar.py` · `.github/workflows/entregas.yml` (C53, 28/09/2026) | **la dirección** | nadie más: son la tabla de esta página escrita en código |
 | `01_bibliografia/data/semillas.json` · `BIBLIOGRAFIA_CURADA.md` (**desde el 05/10/2026**, C60; antes, la revisión diaria) | **Planificación** | la revisión avisa en `05_calendario/revisiones/bibliografia.md` |
 | `05_calendario/bucle/ciclos.json` · `hipotesis.json` (C60, 05/10/2026) | **la dirección** | la planificación los lee y aplica el `orden`; nadie más los escribe |
+| `05_calendario/compromisos.json` (C70, 23/10/2026) | **la dirección y el codirector** | la revisión diaria lo lee cada mañana y avisa de lo vencido (estado y `08_comunicacion/`); nadie más lo escribe |
 | `05_calendario/bucle/resultados.json` · `05_calendario/metricas_diarias.json` (C60) | **Workflow `metricas.yml`** (`bucle.py`, `metricas.py --diario`) | nadie los edita a mano |
 | `04_agentes/bucle.py` (C60) | **la dirección** | nadie más |
 | `00_estrategia/REGLAS_DE_PRODUCCION.md` (08/10/2026) | **la dirección** | todas las tareas lo leen; las sugerencias, en su bitácora |

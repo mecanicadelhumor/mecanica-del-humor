@@ -14,6 +14,28 @@ codirector el 30/09) · repositorio añadido · entorno «Mecánica del Humor».
 
 ---
 
+## Lo que cambia el 23/10/2026 (dirección extraordinaria) · versión 24 del plan · las respuestas del codirector a tu bitácora del 22/10
+
+El codirector contestó en tu bitácora (`bitacora/2026-10/2026-10-22-planificacion.md`, «Respuesta del
+codirector»). Desde hoy:
+
+1. **Los largos van aparte: la regla de seis semanas (C17) no se aplica a `MDH-008`** ni a ningún largo.
+   El largo puede volver sobre las fichas de sus Shorts, aunque sean de hace pocas semanas: con la
+   audiencia que tenemos, repetir temática todavía no se nota. El capítulo 2 puede contarse con `F15`.
+   En los Shorts, C17 sigue igual.
+2. **Un tema prometedor que no pasa a la tercera vuelta de la lectura en frío no se tira.** Cambias de
+   tema esa noche, como hasta ahora, **y además lo guardas** en `05_calendario/temas_en_reserva.md`
+   (es tuyo; si no existe, lo creas): una línea por tema con la fecha, la pregunta, la ficha, por qué
+   te parecía prometedor y qué frase no entendió el lector. **La semana siguiente, antes de elegir
+   temas nuevos, miras la reserva** y vuelves a intentar uno o dos **desde cero**: historia nueva,
+   chiste nuevo, escenas nuevas (no se retoca el guion que no pasó). Si pasa, sale de la reserva; si
+   vuelve a no pasar, se queda con su segunda fecha y decides tú si merece una tercera semana.
+   Palabras del codirector: *«para no desperdiciar temas que realmente tengan posibilidades. Confío en
+   tu criterio»*.
+3. **Mira `05_calendario/compromisos.json`** (nuevo, de la dirección): lo que tiene tu nombre como
+   `dueno` (hoy, `MDH-008-guion` para el jueves 29) es tuyo y tiene fecha. Si no puedes cumplirlo, dilo
+   en tu bitácora con la fecha a la que lo pasas: nada se cae en silencio.
+
 ## Lo que cambia el 22/10/2026 (dirección del jueves) · versión 23 del plan
 
 1. **Manda el feed; la búsqueda desempata.** En los Shorts con volumen el feed trae el 91-100 % de las
