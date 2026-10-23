@@ -57,3 +57,7 @@ con el Chromium instalado.)
 - El cuello y las orejas se separan un poco del cuerpo en los ladeos grandes (piensa, duda).
 - No está integrado en el pipeline: es una prueba aparte. Integrarlo sería una capa más en
   `escena.html`, como la animación de C55.2.
+
+## Los vídeos en el repositorio
+
+`.gitignore` deja fuera los `.mp4` de `07_pruebas/` por tamaño. Para que el codirector pueda verlo desde GitHub van, como excepción (añadidos con `git add -f`), las copias ligeras `*_540.mp4` (540×960, el mismo contenido con su audio). Los originales a 1080×1920 se regeneran con los scripts de esta carpeta.
