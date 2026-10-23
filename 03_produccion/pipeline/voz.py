@@ -145,6 +145,10 @@ RITMO_GEMINI_HZ = 24000           # Hz que devuelve la API
 ESPERA_ENTRE_LLAMADAS_GEMINI = 31.0   # RPM = 3. Era 25; subido el 15/09 (C33.2): con 25 s
                                       # y los reintentos ocultos de la librería se rozaba el límite.
 RITMO_PAL_S_MIN, RITMO_PAL_S_MAX = 1.6, 3.2
+# 23/10/2026 · En la toma única (C36) la primera frase sale más deprisa (3,9 pal/s en
+# MDS-045) y el codirector lo oyó y dijo «el ritmo está bien». Ahí la repetición y la
+# pista plana ya las caza Whisper trozo a trozo (C66), así que el techo sube.
+RITMO_PAL_S_MAX_UNA_TOMA = 4.2
 
 # Dirección de actor SIN pausas en segundos (la versión 5.1 midió que pedir
 # pausas se toma al pie de la letra y mete silencios de decenas de segundos:
@@ -1005,9 +1009,9 @@ async def _voz_gemini_completa(items, modelo, estado):
 # C36_EN_PRODUCCION: apagado hasta que el codirector oiga la muestra con ESTE
 # código (regla 11.2; `prueba_voz.py --c36`). Se enciende cambiando esta línea.
 # ---------------------------------------------------------------------------
-C36_EN_PRODUCCION = False
+C36_EN_PRODUCCION = True          # encendido el 23/10/2026: «C36 me vale para producción» (codirector, tareas del 22/10)
 C36_SOLO = False                  # prueba_voz.py --c36: sin vuelta a la escalera
-VERSION_UNA_TOMA = 1
+VERSION_UNA_TOMA = 2             # 2: el rótulo de situación (23/10/2026)
 C36_CASADAS_MIN = 0.7             # de cada escena, Whisper tiene que oír al menos esto
 C36_RECORTE_DB = "-45dB"
 C36_DEJA_S = 0.03                 # lo que se deja de silencio a cada lado del trozo
@@ -1021,6 +1025,46 @@ PREAMBULO_UNA_TOMA = (
 NOTA_ENTRE_LINEAS = ("entre una línea y la siguiente, una pausa breve y clara, de "
                      "respiración; nunca un silencio largo.")
 
+# 23/10/2026 · El rótulo de situación (respuesta del codirector a la muestra
+# del 22/10). En la toma única, una escena que empieza con una frase corta que
+# pone el escenario («Cena de empresa.») se colaba entre la frase de antes y la
+# de después, y no se notaba que era el tema del vídeo. Se dice como un título:
+# se le pide así a Gemini y, sobre todo, se garantiza al cortar: el trozo se
+# parte por Whisper en el rótulo y el resto, y entre los dos va PAUSA_ROTULO_S
+# de silencio; delante, la pausa de la escena anterior es al menos
+# PAUSA_ANTES_ROTULO_S. Si Whisper no encuentra la frontera, la escena se
+# queda como estaba (nunca se pierde la toma por esto).
+ROTULO_MAX_PALABRAS = 4
+PAUSA_ROTULO_S = 0.7               # en la muestra del 22/10 ya había 0,57 s y se colaba igual
+PAUSA_ANTES_ROTULO_S = 0.7         # eran 0,41 s
+
+
+ROTULO_ESCENAS = (1, 2)            # el escenario se pone al empezar la historia
+ROTULO_ENLACES = {"de", "del", "con", "en"}
+
+
+def rotulo_inicial(texto, escena):
+    """(rótulo, resto) si la escena empieza poniendo el escenario; si no, None.
+
+    El patrón es el de «Cena de empresa.», «Grupo de la familia.», «Comida del
+    domingo.»: en la escena 1 o 2, una frase de 2 a 4 palabras, sin comas, con
+    un enlace (de, del, con, en) y seguida de más narración. Calibrado el
+    23/10/2026 sobre las 612 escenas de los guiones: marca solo cinco y ninguna
+    frase con verbo («Se rió.», «Los cuatro hacen reír.»).
+    """
+    if escena not in ROTULO_ESCENAS:
+        return None
+    m = re.match(r"\s*([^.!?¿¡,;:]+\.)\s+(\S.*)$", texto or "", re.S)
+    if not m:
+        return None
+    rotulo, resto = m.group(1).strip(), m.group(2).strip()
+    palabras = rotulo.rstrip(".").lower().split()
+    if not (2 <= len(palabras) <= ROTULO_MAX_PALABRAS) or len(resto.split()) < 3:
+        return None
+    if not ROTULO_ENLACES & set(palabras[1:-1]):
+        return None
+    return rotulo, resto
+
 
 def direccion_una_toma(escenas, items):
     """(prompt, firma) para decir el Short entero en una llamada."""
@@ -1029,7 +1073,12 @@ def direccion_una_toma(escenas, items):
     for k, it in enumerate(items, 1):
         papel = _papel_escena(escenas, it["i"])
         papeles.append(papel)
-        notas.append(f"- Línea {k}: {DIRECCION_POR_PAPEL[papel]}")
+        nota = DIRECCION_POR_PAPEL[papel]
+        rot = rotulo_inicial(it["texto"], it["i"])
+        if rot:
+            nota += (f" Empieza con «{rot[0]}»: dilo como el título de la escena, con una "
+                     f"pausa breve antes y otra después, para que se note que es el escenario.")
+        notas.append(f"- Línea {k}: {nota}")
     notas.append(f"- Entre líneas: {NOTA_ENTRE_LINEAS}")
     notas.append(f"- Siempre: {NOTA_SIEMPRE}")
     texto = "\n".join(it["texto"] for it in items)
@@ -1092,7 +1141,45 @@ def _partir_toma(toma, items):
         if not fiel:
             raise RuntimeError(f"escena {it['i']}: el trozo no dice su texto ({detalle})")
         it["fidelidad"] = detalle
+        it["pausa_rotulo"] = _pausa_tras_rotulo(it, modelo)
     return cortes
+
+
+def _pausa_tras_rotulo(it, modelo):
+    """Mete PAUSA_ROTULO_S detrás del rótulo de situación del trozo. True si lo ha hecho."""
+    rot = rotulo_inicial(it["texto"], it["i"])
+    if not rot:
+        return False
+    from corte_palabras import cortar
+    try:
+        (corte,), _ = cortar(it["mp3"], list(rot), modelo)
+    except Exception as exc:          # sin frontera clara: la escena se queda como estaba
+        print(f"  escena {it['i']:>2}  rótulo «{rot[0]}» sin pausa ({str(exc)[:80]})")
+        return False
+    a, b = it["mp3"].with_suffix(".rot_a.mp3"), it["mp3"].with_suffix(".rot_b.mp3")
+    try:
+        _trozo(it["mp3"], 0.0, corte, a)
+        _trozo(it["mp3"], corte, None, b)
+        for t in (a, b):
+            crudo = t.with_suffix(".crudo.mp3")
+            t.replace(crudo)
+            _sin_silencio_a_los_lados(crudo, t)
+            crudo.unlink(missing_ok=True)
+        unido = it["mp3"].with_suffix(".rot.mp3")
+        subprocess.run(["ffmpeg", "-y", "-i", str(a), "-i", str(b), "-filter_complex",
+                        f"[0:a]apad=pad_dur={PAUSA_ROTULO_S}[x];[x][1:a]concat=n=2:v=0:a=1",
+                        "-c:a", "libmp3lame", "-q:a", "2", str(unido)],
+                       check=True, capture_output=True, stdin=subprocess.DEVNULL)
+        fiel, _ = _toma_fiel(it["texto"], unido)
+        if not fiel:
+            unido.unlink(missing_ok=True)
+            return False
+        unido.replace(it["mp3"])
+    finally:
+        a.unlink(missing_ok=True)
+        b.unlink(missing_ok=True)
+    print(f"  escena {it['i']:>2}  rótulo «{rot[0]}» con {PAUSA_ROTULO_S:.2f}s detrás")
+    return True
 
 
 async def _voz_una_toma(items, escenas, modelo, estado, salida):
@@ -1551,6 +1638,11 @@ async def principal(guion_path, salida, voz=None, motor="edge"):
                 print(f"  escena  1  quitados {quita:.2f}s de silencio delante de la voz (C58.1)")
         dur = duracion_real(mp3) or (pal[-1][1] if pal else 3.0)
         cola = e.get("pausa_despues_s", 0.45)      # respiración entre escenas
+        # El rótulo de situación de la escena siguiente (23/10/2026, C36): pausa delante.
+        if (es_corto and origen.startswith("una toma") and i < len(escenas)
+                and rotulo_inicial(hablable((escenas[i].get("narracion") or "").strip()), i + 1)):
+            if float(cola or 0.0) < PAUSA_ANTES_ROTULO_S:
+                cola = e["pausa_despues_s"] = PAUSA_ANTES_ROTULO_S   # en el timed, la de verdad
         if es_corto and i == len(escenas) and e.get("tipo") == "cierre":
             extra = round(max(0.0, COLA_REMATE_S - float(cola or 0.0)), 3)
             if extra:
@@ -1571,9 +1663,10 @@ async def principal(guion_path, salida, voz=None, motor="edge"):
         # en el expediente sin tener que escuchar.
         ritmo = round(len(texto.split()) / dur, 2) if dur else 0.0
         e["ritmo_pal_s"] = ritmo
-        if not (RITMO_PAL_S_MIN <= ritmo <= RITMO_PAL_S_MAX):
+        techo = RITMO_PAL_S_MAX_UNA_TOMA if origen.startswith("una toma") else RITMO_PAL_S_MAX
+        if not (RITMO_PAL_S_MIN <= ritmo <= techo):
             print(f"::warning::escena {i}: ritmo {ritmo} palabras/s fuera de "
-                  f"{RITMO_PAL_S_MIN}-{RITMO_PAL_S_MAX} (motor {motor_usado}).")
+                  f"{RITMO_PAL_S_MIN}-{techo} (motor {motor_usado}).")
         bloques.append((reloj, reloj + dur, texto))
         palabras_todas += [(reloj + a, reloj + b, w) for a, b, w in pal]
         partes.append((mp3, cola))

@@ -365,9 +365,11 @@ def main():
                   for i, e in enumerate(escenas, 1)
                   if e.get("duracion_s", 0) - e.get("cola_remate_s", 0) > 14]
         motores = [e.get("motor_voz") for e in escenas if e.get("motor_voz")]
+        # Techo 4,2 en la toma única (C36, 23/10/2026: ver voz.RITMO_PAL_S_MAX_UNA_TOMA).
         ritmos_fuera = [(i, e.get("ritmo_pal_s")) for i, e in enumerate(escenas, 1)
                         if e.get("ritmo_pal_s") is not None
-                        and not (1.6 <= e["ritmo_pal_s"] <= 3.2)]
+                        and not (1.6 <= e["ritmo_pal_s"] <= (
+                            4.2 if str(e.get("origen_voz", "")).startswith("una toma") else 3.2))]
         guion = {
             "titulo_trabajo": g.get("titulo_trabajo"),
             "idioma": g.get("idioma"),

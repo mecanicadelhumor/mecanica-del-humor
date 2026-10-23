@@ -174,6 +174,7 @@ confundirlas:
 | `03_produccion/pipeline/montaje.py` · C58 (02/10/2026) | **Decisión del codirector en la sesión** | En los **Shorts**, 0,1 s de colchón y ningún fundido de entrada (era 0,6 s y fundido desde negro, del 18/08). En los largos, como siempre. El colchón usado se apunta en `montaje.json` y `qa.py` mide contra él |
 | **C60 · el bucle** (05/10/2026): `05_calendario/bucle/ciclos.json` e `hipotesis.json`, y `04_agentes/bucle.py` | **De la dirección** | La planificación lee `ciclos.json` y aplica su `orden`; `resultados.json` y `metricas_diarias.json` los escribe `metricas.yml`. **Decisión del codirector en la sesión: 7 Shorts a la semana desde el 12/10 y 14 desde el 19/10 (si C36 pasa)** |
 | `01_bibliografia/` (05/10/2026) | **Pasa de la revisión diaria a la planificación** | La revisión avisa en `05_calendario/revisiones/bibliografia.md`. `entregar.py` ya lo aplica |
+| `05_calendario/compromisos.json` (C70, 23/10/2026) | **De la dirección y del codirector** | Los compromisos con fecha y su dueño. La revisión diaria lo lee cada mañana y avisa de lo vencido; nadie más lo escribe |
 | **C62 · la dirección en diferido** (05/10/2026) | **Autorizada por el codirector en la sesión**, con repositorio privado | Rutina «Dirección», Opus 5.5, lunes y jueves 13:07 UTC y «Run now». Instrucciones: `direccion/tareas/direccion.md` (en el privado desde el 09/10; trampa 58). Entrega con `entregar.py --tarea direccion` (todo salvo workflows, el cuaderno, `novedades.md` y lo de Actions). El cuaderno y las tareas, en `mecanicadelhumor/direccion` (privado), clonado en `00_estrategia/privado/` |
 | `.github/workflows/metricas.yml` · versión del 05/10/2026 | **Entregada** en `00_estrategia/tareas/workflows_2026-10-05/`, **la mueve el codirector** | Lectura diaria ligera (C47/C60), `bucle.py` detrás, y despierta a la rutina de métricas por su disparador de API (secreto `RUTINA_METRICAS_TOKEN`) |
 | `03_produccion/pipeline/render.py` · `escena.html` · C59 (02/10/2026) | **Decisión del codirector en la sesión** | El remate de marca dice «Síguenos» y «un mecanismo nuevo de lunes a viernes», **siempre la misma frase y sin voz**. No se convierte en una frase por Short |
@@ -765,6 +766,29 @@ salió del marcador como «sin ficha todavía», y la rutina de métricas lo vio
 → **Antes de leer un fichero como prueba, mira quién lo borra y cuándo.** Si se borra antes de que se
 use por última vez, guarda lo que hace falta en un sitio que no rote (ahora, `fichas_vistas` en
 `resultados.json`).
+
+**62. Una fila del calendario sin dueño no la hace nadie, y nadie la echa de menos.** «Viernes 16 ·
+Muestrarios del presentador con el avatar VRoid» estaba en el calendario de la versión 21 sin decir quién.
+La dirección corre lunes y jueves y el jueves 15 se le fue en otra cosa; la revisión diaria no mira el
+plan. El codirector había cumplido su parte el 13/10. Con el muestrario se cayeron, igual de callados, el
+del personaje 2D (12/10) y la prueba de Kaggle (13-15/10). Se supo el 22/10 porque él preguntó.
+→ **Todo lo que tenga fecha va a `05_calendario/compromisos.json` con dueño el mismo día; la revisión
+diaria mira lo vencido cada mañana; y un aplazamiento se escribe con su nueva fecha, nunca se calla.**
+
+
+## Dónde está el proyecto a 23 de octubre de 2026
+
+**Dirección extraordinaria (viernes, con el codirector delante).** Versión **24** del plan, la que manda.
+
+- **C70 · plazos con dueño**: `05_calendario/compromisos.json`; la revisión diaria lo lee cada mañana y
+  avisa de lo vencido (trampa 62). Nace de la queja del codirector por el muestrario VRoid del 16/10.
+- **El presentador, recuperado**: muestrarios 2D y VRoid hechos (`07_pruebas/personaje-2026-10/`); la
+  prueba de Kaggle, preparada, a falta de que el codirector mueva un workflow.
+- **C36 encendido** desde el 24/10, con pausa de 0,7 s alrededor del rótulo de situación y techo de
+  ritmo 4,2 en la toma única. La cola final, pendiente de que el codirector elija.
+- **Largos fuera de C17; temas prometedores a `temas_en_reserva.md`** (decisiones del codirector).
+- **Propuestas pendientes de respuesta**: 14 a la semana desde B2, B2 factorial 2×2, decisión bayesiana,
+  y un patrón de calidad medido sobre Shorts ajenos.
 
 ## Dónde está el proyecto a 22 de octubre de 2026
 

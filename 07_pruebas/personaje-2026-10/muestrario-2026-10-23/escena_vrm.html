@@ -1,0 +1,85 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#16213A;overflow:hidden}canvas{display:block}</style>
+<script type="importmap">{"imports":{
+ "three":"./node_modules/three/build/three.module.js",
+ "three/addons/":"./node_modules/three/examples/jsm/",
+ "@pixiv/three-vrm":"./node_modules/@pixiv/three-vrm/lib/three-vrm.module.js"}}</script>
+</head><body>
+<script type="module">
+// C61 · camino 3D: el avatar VRoid del codirector, animado sin nadie delante.
+// Determinista: cada fotograma depende solo de su índice (regla 11.5). Nada de Math.random().
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { VRMLoaderPlugin, VRMUtils } from '@pixiv/three-vrm';
+
+const q = new URLSearchParams(location.search);
+const W = +q.get('w') || 540, H = +q.get('h') || 960, modo = q.get('modo') || 'retrato';
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true, alpha: modo === 'puntual' });
+renderer.setSize(W, H); renderer.setPixelRatio(1);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+if (modo === 'puntual') renderer.setClearColor(0x000000, 0); else renderer.setClearColor(0x16213A, 1);
+// Fondo de marca con un halo más claro detrás de la cabeza: la camiseta es del mismo azul que el fondo
+function fondo() {
+  const c = document.createElement('canvas'); c.width = W; c.height = H; const g = c.getContext('2d');
+  g.fillStyle = '#16213A'; g.fillRect(0, 0, W, H);
+  const r = g.createRadialGradient(W / 2, H * 0.42, 0, W / 2, H * 0.42, H * 0.55);
+  r.addColorStop(0, '#2E4A7A'); r.addColorStop(0.55, '#1E2D4E'); r.addColorStop(1, '#16213A');
+  g.fillStyle = r; g.fillRect(0, 0, W, H);
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
+}
+document.body.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+if (modo !== 'puntual') scene.background = fondo();
+const camera = new THREE.PerspectiveCamera(modo === 'puntual' ? 22 : 20, W / H, 0.1, 20);
+scene.add(new THREE.AmbientLight(0xffffff, 1.1));
+const luz = new THREE.DirectionalLight(0xffffff, 1.6); luz.position.set(0.6, 1.5, 2); scene.add(luz);
+const contra = new THREE.DirectionalLight(0x4CC9F0, 0.8); contra.position.set(-1.2, 1.4, -1.5); scene.add(contra);
+
+const boca = await (await fetch('boca.json')).json();
+const loader = new GLTFLoader(); loader.register(p => new VRMLoaderPlugin(p));
+const gltf = await loader.loadAsync('avatar.vrm');
+const vrm = gltf.userData.vrm;
+VRMUtils.rotateVRM0(vrm);
+scene.add(vrm.scene);
+const hum = vrm.humanoid;
+vrm.scene.updateMatrixWorld(true);
+const hp = hum.getRawBoneNode('head').getWorldPosition(new THREE.Vector3());
+// retrato: cabeza y torso, la cabeza en el tercio superior · puntual: medio cuerpo, para ir abajo en pantalla
+if (modo === 'puntual') { camera.position.set(0, hp.y - 0.15, 2.6); camera.lookAt(0, hp.y - 0.22, 0); }
+else { camera.position.set(0, hp.y - 0.08, 2.0); camera.lookAt(0, hp.y - 0.12, 0); }
+
+// Brazos abajo (el VRM llega en T)
+const b = n => hum.getNormalizedBoneNode(n);
+b('leftUpperArm').rotation.z = -1.25; b('rightUpperArm').rotation.z = 1.25;
+b('leftLowerArm').rotation.z = -0.15; b('rightLowerArm').rotation.z = 0.15;
+// Que la ropa (huesos de muelle) se asiente antes del primer fotograma
+for (let k = 0; k < 90; k++) vrm.update(1 / 30);
+
+// Parpadeo con calendario fijo: cada ~3,1-4,3 s según una sucesión fija
+const PARPADEOS = [0.9, 4.0, 7.4, 10.6, 13.9, 17.1, 20.8, 24.0, 27.6, 31.0, 34.5, 38.2];
+const fps = boca.fps, VIS = ['aa', 'ih', 'ou', 'ee', 'oh'];
+const sn = (t, f, ph) => Math.sin(t * f + ph);
+window.frame = (i) => {
+  const t = i / fps, f = boca.frames[Math.min(i, boca.frames.length - 1)] || { a: 0, v: 'aa' };
+  const em = vrm.expressionManager;
+  for (const v of VIS) em.setValue(v, 0);
+  em.setValue(f.v, Math.min(1, f.a * 0.9));
+  if (f.v !== 'aa') em.setValue('aa', f.a * 0.25);
+  let bl = 0; for (const p of PARPADEOS) { const d = (t - p) / 0.14; if (d > -1 && d < 1) bl = Math.max(bl, 1 - Math.abs(d)); }
+  em.setValue('blink', bl);
+  em.setValue('happy', 0.18);
+  // cabeza: balanceo lento + acompaña la energía de la voz (asiente un poco al hablar)
+  const habla = f.a;
+  b('head').rotation.x = 0.04 * sn(t, 1.3, 0) + 0.05 * habla - 0.02;
+  b('head').rotation.y = 0.07 * sn(t, 0.55, 1) ;
+  b('head').rotation.z = 0.03 * sn(t, 0.8, 2);
+  b('neck').rotation.y = 0.03 * sn(t, 0.4, 0.5);
+  b('spine').rotation.z = 0.015 * sn(t, 0.7, 0);
+  b('chest').rotation.x = 0.01 * sn(t, 2.2, 0); // respiración
+  vrm.update(1 / fps);
+  renderer.render(scene, camera);
+  return renderer.domElement.toDataURL('image/png');
+};
+window.listo = true;
+</script></body></html>

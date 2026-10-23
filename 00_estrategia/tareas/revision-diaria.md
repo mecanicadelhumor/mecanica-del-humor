@@ -196,6 +196,31 @@ Versión **11** de `PLAN_DE_CAMBIOS.md`, que es la que manda.
 
 ---
 
+## Lo que cambia el 23/10/2026 (dirección extraordinaria) · versión 24 del plan · los plazos (C70). Va antes que todo lo demás
+
+**Paso 0, todos los días, antes del paso 1: lee `05_calendario/compromisos.json`.** Es la lista de lo
+que alguien se ha comprometido a hacer para una fecha, con su dueño. Nace porque el muestrario VRoid
+del 16/10 (y el del personaje 2D del 12/10, y la prueba de Kaggle del 13-15/10) se cayeron sin que
+nadie lo dijera: estaban en el calendario del plan, sin dueño, y ninguna rutina miraba ese calendario.
+El codirector lo dijo así: *«la revisión diaria debería haber reconocido que esto no estaba hecho y
+haber puesto los medios para solucionarlo o avisar al agente que corresponda de forma urgente»*.
+
+1. **Plazo vencido** = un compromiso con `"estado": "pendiente"` y `fecha` **anterior a hoy**. Antes
+   de darlo por vencido, mira si está hecho de verdad (el fichero o el commit que dice `que`): si está
+   hecho y la fila no se ha actualizado, es una nota para la dirección, no un vencido.
+2. **Cada plazo vencido** va:
+   - en tu fichero de `estado/` del día, en una línea nueva justo debajo de «Pendiente del codirector»:
+     `Plazos vencidos: <id> (<dueño>, <fecha>) · …` — o `Plazos vencidos: ninguno`. **Esa línea está
+     siempre**;
+   - y en una nota a su dueño: `08_comunicacion/AAAA-MM/AAAA-MM-DD-revision-plazos.md`, con el id, qué
+     era, cuántos días lleva vencido y qué falta (lo que hayas podido ver en el repositorio).
+3. **Si el vencido lleva dos días o más, o bloquea lo que sale en un vídeo de las próximas 48 horas,
+   la primera línea del estado es `INCIDENCIA — plazo vencido: <id>`.** Así lo ve el codirector.
+4. **Si es tuyo y cabe en tu ejecución, hazlo** (los medios). Si no es tuyo, no lo hagas: avisa.
+5. **No escribes `compromisos.json`**: es de la dirección. Tú lo lees y avisas.
+6. **Mira también los próximos 2 días**: lo que vence mañana o pasado y no tiene trazas de estar
+   empezándose, nota en la bitácora (no en el estado).
+
 ## Lo que cambia el 19/10/2026 (dirección del lunes) · versión 22 del plan
 
 Desde `MDS-044` (martes 20) entran tres arreglos de lo que el codirector vio en `MDS-040`. Al mirar los
@@ -656,6 +681,7 @@ ESTADO: OK            (o: ESTADO: INCIDENCIA — <una línea, qué pasa>)
 Fecha: AAAA-MM-DD 11:30
 Último vídeo publicado: <ID> (<fecha>) · Próxima emisión: <ID> (<fecha y hora>)
 Pendiente del codirector: nada
+Plazos vencidos: ninguno      (desde el 23/10/2026: ver el paso 0, `compromisos.json`)
 Detalle: 05_calendario/bitacora/AAAA-MM/AAAA-MM-DD-revision.md
 ```
 
