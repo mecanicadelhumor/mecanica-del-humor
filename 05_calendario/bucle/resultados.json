@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-23T17:58:17Z",
+ "actualizado_utc": "2026-10-24T11:37:46Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -45,10 +45,10 @@
     "control": {
      "nombre": "Lo de ahora (C50 + C56-C59), apertura en situación",
      "n": 3,
-     "se_quedaron_media": 9.6,
+     "se_quedaron_media": 10.1,
      "porcentaje_visto_media": 84.0,
-     "vistas_48h_mediana": 92,
-     "me_gusta_por_100": 0.65,
+     "vistas_48h_mediana": 112,
+     "me_gusta_por_100": 0.61,
      "ceros_de_feed": 0,
      "shorts": [
       {
@@ -59,7 +59,7 @@
        "porcentaje_visto": 165.1,
        "me_gusta": 0,
        "visualizaciones": 21,
-       "leido": "2026-10-23"
+       "leido": "2026-10-20"
       },
       {
        "id": "MDS-041",
@@ -69,17 +69,17 @@
        "porcentaje_visto": 39.3,
        "me_gusta": 2,
        "visualizaciones": 196,
-       "leido": "2026-10-23"
+       "leido": "2026-10-24"
       },
       {
        "id": "MDS-044",
        "publicado": "2026-10-20",
-       "se_quedaron_pct": 12.0,
-       "vistas_48h": 92,
-       "porcentaje_visto": 47.5,
+       "se_quedaron_pct": 13.4,
+       "vistas_48h": 112,
+       "porcentaje_visto": 47.7,
        "me_gusta": 0,
-       "visualizaciones": 92,
-       "leido": "2026-10-23"
+       "visualizaciones": 112,
+       "leido": "2026-10-24"
       }
      ]
     },
@@ -100,7 +100,7 @@
        "porcentaje_visto": 48.2,
        "me_gusta": 9,
        "visualizaciones": 941,
-       "leido": "2026-10-23"
+       "leido": "2026-10-24"
       },
       {
        "id": "MDS-039",
@@ -110,7 +110,7 @@
        "porcentaje_visto": 81.0,
        "me_gusta": 1,
        "visualizaciones": 22,
-       "leido": "2026-10-23"
+       "leido": "2026-10-24"
       },
       {
        "id": "MDS-042",
@@ -120,18 +120,18 @@
        "porcentaje_visto": 69.6,
        "me_gusta": 0,
        "visualizaciones": 11,
-       "leido": "2026-10-23"
+       "leido": "2026-10-24"
       }
      ]
     },
     "B": {
      "nombre": "Arranque con el dato",
-     "n": 3,
-     "se_quedaron_media": 26.2,
-     "porcentaje_visto_media": 252.3,
-     "vistas_48h_mediana": 27,
-     "me_gusta_por_100": 1.39,
-     "ceros_de_feed": 1,
+     "n": 4,
+     "se_quedaron_media": 41.9,
+     "porcentaje_visto_media": 195.7,
+     "vistas_48h_mediana": 18.0,
+     "me_gusta_por_100": 1.36,
+     "ceros_de_feed": 2,
      "shorts": [
       {
        "id": "MDS-036",
@@ -151,7 +151,7 @@
        "porcentaje_visto": 186.9,
        "me_gusta": 0,
        "visualizaciones": 10,
-       "leido": "2026-10-23"
+       "leido": "2026-10-24"
       },
       {
        "id": "MDS-043",
@@ -161,7 +161,17 @@
        "porcentaje_visto": 533.4,
        "me_gusta": 0,
        "visualizaciones": 27,
-       "leido": "2026-10-23"
+       "leido": "2026-10-24"
+      },
+      {
+       "id": "MDS-045",
+       "publicado": "2026-10-21",
+       "se_quedaron_pct": 88.9,
+       "vistas_48h": 9,
+       "porcentaje_visto": 25.9,
+       "me_gusta": 0,
+       "visualizaciones": 9,
+       "leido": "2026-10-24"
       }
      ]
     }
@@ -176,17 +186,12 @@
     "B": {
      "contra": "control",
      "diferencia_pp": null,
-     "prob_mejor": 0.99,
+     "prob_mejor": 0.97,
      "veredicto": "faltan datos"
     }
    },
    "apartados": [],
    "pendientes": [
-    {
-     "id": "MDS-045",
-     "variante": "B",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    },
     {
      "id": "MDS-046",
      "variante": "A",
@@ -200,7 +205,7 @@
     {
      "id": "MDS-048",
      "variante": "A",
-     "motivo": "sin ficha de producción todavía"
+     "motivo": "sin «se quedaron» a 48 h todavía"
     },
     {
      "id": "MDS-049",
@@ -256,6 +261,9 @@
    "animacion.escenas_animadas": 2
   },
   "MDS-046": {
+   "animacion.escenas_animadas": 2
+  },
+  "MDS-048": {
    "animacion.escenas_animadas": 2
   }
  }
