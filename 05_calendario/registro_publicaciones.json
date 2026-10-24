@@ -858,6 +858,21 @@
       "subido_utc": "2026-10-23T06:10:38Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-23T20:30:56Z"
+    },
+    {
+      "id": "MDS-048.es",
+      "episodio": "MDS-048",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué discutir por WhatsApp sale peor?",
+      "guion": "05_calendario/guiones/MDS-048.es.json",
+      "video_id": "doK9mYd6JBQ",
+      "url": "https://youtu.be/doK9mYd6JBQ",
+      "estado": "private",
+      "publicar_en": "2026-10-24T17:00:00Z",
+      "musica": "cama_06_prelude_no_20_chris_zabriskie.mp3",
+      "subido_utc": "2026-10-24T05:57:49Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-23T20:30:56Z"
