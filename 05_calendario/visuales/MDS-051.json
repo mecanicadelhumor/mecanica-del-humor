@@ -1,8 +1,8 @@
 {
   "guion": "MDS-051",
   "version": 1,
-  "firma": "ad16782036a20157",
-  "resuelto_utc": "2026-10-22T22:46:32Z",
+  "firma": "2baa34313a2a1b11",
+  "resuelto_utc": "2026-10-25T09:32:40Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -127,31 +127,31 @@
           ],
           "frase": "¿Sirve de algo? Pues sí.",
           "fuente": "pexels",
-          "id": 5197251,
-          "pagina": "https://www.pexels.com/video/close-up-video-of-a-man-s-face-5197251/",
-          "titulo": "close up video of a man s face",
-          "autor": "Tima Miroshnichenko",
-          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "id": 6219559,
+          "pagina": "https://www.pexels.com/video/male-model-with-serious-face-looking-at-camera-6219559/",
+          "titulo": "male model with serious face looking at camera",
+          "autor": "Monstera Production",
+          "autor_url": "https://www.pexels.com/@gabby-k",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
           "duracion_s": 19.0,
           "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/5197251/5197251-hd_1080_1920_25fps.mp4",
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6219559/6219559-hd_1080_2048_30fps.mp4",
           "tipo": "video",
-          "consulta": "serious man face close-up looking at phone",
-          "relevancia": 0.5,
+          "consulta": "man with serious deadpan face looking at camera",
+          "relevancia": 0.667,
           "inicio_s": 0.4,
-          "movimiento": 7.25,
+          "movimiento": 1.69,
           "encuadre": {
             "x": 0.5,
-            "y": 0.5
+            "y": 0
           },
           "caras": [
             [
-              0.0625,
-              0.2066,
-              0.7625,
-              0.608
+              0.2036,
+              0.2123,
+              0.4466,
+              0.3766
             ]
           ]
         }
@@ -238,7 +238,7 @@
           "fuente": "pixabay",
           "id": 20454,
           "pagina": "https://pixabay.com/videos/id-20454/",
-          "titulo": "walk, couple, romantic, sky, romance, lovers, retirement, lifestyle, happiness, stroll, friends, together, silhouettes, magical, idyllic, peaceful, peace, hello, love, trust, people, friendship, ocean, sea, tenerife, live wallpaper, welcome id",
+          "titulo": "walk, couple, romantic, sky, romance, lovers, retirement, lifestyle, happiness, stroll, friends, together, hello, silhouettes, magical, idyllic, peaceful, peace, love, trust, people, friendship, ocean, sea, tenerife, live wallpaper, welcome id",
           "autor": "ChristianBodhi",
           "autor_url": "https://pixabay.com/users/ChristianBodhi-9869182/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",

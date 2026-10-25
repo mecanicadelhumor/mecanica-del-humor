@@ -1,8 +1,8 @@
 {
   "guion": "MDS-050",
   "version": 1,
-  "firma": "c1177526e90123bb",
-  "resuelto_utc": "2026-10-22T22:46:16Z",
+  "firma": "7d489e33518d2a35",
+  "resuelto_utc": "2026-10-25T09:32:21Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -91,31 +91,37 @@
           ],
           "frase": "grita: «¡para, para!».",
           "fuente": "pexels",
-          "id": 8724226,
-          "pagina": "https://www.pexels.com/video/close-up-video-of-an-angry-woman-shouting-8724226/",
-          "titulo": "close up video of an angry woman shouting",
-          "autor": "Tima Miroshnichenko",
-          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "id": 6639475,
+          "pagina": "https://www.pexels.com/video/a-video-of-a-woman-sleeping-on-a-couch-6639475/",
+          "titulo": "a video of a woman sleeping on a couch",
+          "autor": "https://kaboompics.com/",
+          "autor_url": "https://www.pexels.com/@karola-g",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 30.0,
+          "duracion_s": 10.0,
           "ancho": 1080,
           "alto": 2048,
-          "url": "https://videos.pexels.com/video-files/8724226/8724226-hd_1080_2048_25fps.mp4",
+          "url": "https://videos.pexels.com/video-files/6639475/6639475-hd_1080_2048_25fps.mp4",
           "tipo": "video",
-          "consulta": "woman laughing shouting stop sofa",
+          "consulta": "woman laughing out loud curled up on couch",
           "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 5.93,
+          "movimiento": 8.59,
           "encuadre": {
             "x": 0.5,
-            "y": 1
+            "y": 0.436
           },
           "caras": [
             [
-              0.1383,
-              0.2089,
-              0.6581,
-              0.5578
+              0.4881,
+              0.3775,
+              0.2273,
+              0.1411
+            ],
+            [
+              0.9427,
+              -0.0268,
+              0.0573,
+              0.0367
             ]
           ]
         }
@@ -279,32 +285,38 @@
             10.64
           ],
           "frase": "más se reían al llegar.",
-          "fuente": "pixabay",
-          "id": 32938,
-          "pagina": "https://pixabay.com/videos/id-32938/",
-          "titulo": "dance, celebrate, fun, celebration, happy, dancing, girl, festive, colorful, laughing, young, people, person id",
-          "autor": "Stuck1",
-          "autor_url": "https://pixabay.com/users/Stuck1-15406262/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 34.0,
-          "ancho": 3840,
-          "alto": 2160,
-          "url": "https://cdn.pixabay.com/video/2020/02/27/32938-395456384_large.mp4",
+          "fuente": "pexels",
+          "id": 9187880,
+          "pagina": "https://www.pexels.com/video/women-laughing-together-9187880/",
+          "titulo": "women laughing together",
+          "autor": "Darina Belonogova",
+          "autor_url": "https://www.pexels.com/@darina-belonogova",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/9187880/9187880-hd_1080_1920_25fps.mp4",
           "tipo": "video",
-          "consulta": "person laughing lying down",
-          "relevancia": 0.667,
+          "consulta": "friends laughing together on sofa",
+          "relevancia": 0.5,
           "inicio_s": 0.4,
-          "movimiento": 18.87,
+          "movimiento": 12.84,
           "encuadre": {
-            "x": 0.439,
+            "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.1527,
-              0.1542,
-              0.6963,
-              0.5361
+              0.6722,
+              0.2797,
+              0.2556,
+              0.1844
+            ],
+            [
+              0.0583,
+              0.2672,
+              0.225,
+              0.1875
             ]
           ]
         }
@@ -385,13 +397,6 @@
     }
   },
   "descartes": [
-    {
-      "escena": 5,
-      "plano": 2,
-      "id": "pexels:6787448",
-      "titulo": "a person lying down on a sofa",
-      "motivo": "quieto (movimiento 0.28)"
-    },
     {
       "escena": 6,
       "plano": 2,
