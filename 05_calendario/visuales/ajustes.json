@@ -433,5 +433,36 @@
     "hand holding phone watching video"
    ]
   }
+ },
+ "MDS-050": {
+  "2.2": {
+   "excluir": [
+    "pexels:8724226"
+   ],
+   "busqueda": [
+    "woman laughing out loud curled up on couch",
+    "girl laughing shouting on sofa tickling"
+   ]
+  },
+  "5.2": {
+   "excluir": [
+    "pixabay:32938"
+   ],
+   "busqueda": [
+    "friends laughing together on sofa",
+    "woman laughing hard indoors"
+   ]
+  }
+ },
+ "MDS-051": {
+  "3.1": {
+   "excluir": [
+    "pexels:5197251"
+   ],
+   "busqueda": [
+    "man with serious deadpan face looking at camera",
+    "man with neutral expression holding phone"
+   ]
+  }
  }
 }
