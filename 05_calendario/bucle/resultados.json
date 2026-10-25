@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-24T17:01:40Z",
+ "actualizado_utc": "2026-10-25T11:59:17Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -46,9 +46,9 @@
      "nombre": "Lo de ahora (C50 + C56-C59), apertura en situación",
      "n": 3,
      "se_quedaron_media": 10.1,
-     "porcentaje_visto_media": 84.0,
+     "porcentaje_visto_media": 83.1,
      "vistas_48h_mediana": 112,
-     "me_gusta_por_100": 0.61,
+     "me_gusta_por_100": 0.6,
      "ceros_de_feed": 0,
      "shorts": [
       {
@@ -69,28 +69,28 @@
        "porcentaje_visto": 39.3,
        "me_gusta": 2,
        "visualizaciones": 196,
-       "leido": "2026-10-24"
+       "leido": "2026-10-25"
       },
       {
        "id": "MDS-044",
        "publicado": "2026-10-20",
        "se_quedaron_pct": 13.4,
        "vistas_48h": 112,
-       "porcentaje_visto": 47.7,
+       "porcentaje_visto": 45.0,
        "me_gusta": 0,
-       "visualizaciones": 112,
-       "leido": "2026-10-24"
+       "visualizaciones": 118,
+       "leido": "2026-10-25"
       }
      ]
     },
     "A": {
      "nombre": "Animación a medida en las escenas de mecanismo (C55.2)",
-     "n": 3,
-     "se_quedaron_media": 34.6,
-     "porcentaje_visto_media": 66.3,
-     "vistas_48h_mediana": 22,
-     "me_gusta_por_100": 1.03,
-     "ceros_de_feed": 1,
+     "n": 4,
+     "se_quedaron_media": 34.3,
+     "porcentaje_visto_media": 76.8,
+     "vistas_48h_mediana": 15.5,
+     "me_gusta_por_100": 1.13,
+     "ceros_de_feed": 2,
      "shorts": [
       {
        "id": "MDS-038",
@@ -99,8 +99,8 @@
        "vistas_48h": 933,
        "porcentaje_visto": 48.2,
        "me_gusta": 9,
-       "visualizaciones": 941,
-       "leido": "2026-10-24"
+       "visualizaciones": 940,
+       "leido": "2026-10-20"
       },
       {
        "id": "MDS-039",
@@ -110,7 +110,7 @@
        "porcentaje_visto": 81.0,
        "me_gusta": 1,
        "visualizaciones": 22,
-       "leido": "2026-10-24"
+       "leido": "2026-10-25"
       },
       {
        "id": "MDS-042",
@@ -119,19 +119,29 @@
        "vistas_48h": 9,
        "porcentaje_visto": 69.6,
        "me_gusta": 0,
-       "visualizaciones": 11,
-       "leido": "2026-10-24"
+       "visualizaciones": 12,
+       "leido": "2026-10-25"
+      },
+      {
+       "id": "MDS-046",
+       "publicado": "2026-10-22",
+       "se_quedaron_pct": 33.3,
+       "vistas_48h": 3,
+       "porcentaje_visto": 108.2,
+       "me_gusta": 1,
+       "visualizaciones": 3,
+       "leido": "2026-10-25"
       }
      ]
     },
     "B": {
      "nombre": "Arranque con el dato",
      "n": 4,
-     "se_quedaron_media": 41.9,
+     "se_quedaron_media": 39.7,
      "porcentaje_visto_media": 195.7,
-     "vistas_48h_mediana": 18.0,
-     "me_gusta_por_100": 1.36,
-     "ceros_de_feed": 2,
+     "vistas_48h_mediana": 18.5,
+     "me_gusta_por_100": 1.35,
+     "ceros_de_feed": 1,
      "shorts": [
       {
        "id": "MDS-036",
@@ -151,7 +161,7 @@
        "porcentaje_visto": 186.9,
        "me_gusta": 0,
        "visualizaciones": 10,
-       "leido": "2026-10-24"
+       "leido": "2026-10-25"
       },
       {
        "id": "MDS-043",
@@ -161,17 +171,17 @@
        "porcentaje_visto": 533.4,
        "me_gusta": 0,
        "visualizaciones": 27,
-       "leido": "2026-10-24"
+       "leido": "2026-10-25"
       },
       {
        "id": "MDS-045",
        "publicado": "2026-10-21",
-       "se_quedaron_pct": 88.9,
-       "vistas_48h": 9,
+       "se_quedaron_pct": 80.0,
+       "vistas_48h": 10,
        "porcentaje_visto": 25.9,
        "me_gusta": 0,
-       "visualizaciones": 9,
-       "leido": "2026-10-24"
+       "visualizaciones": 10,
+       "leido": "2026-10-25"
       }
      ]
     }
@@ -186,17 +196,12 @@
     "B": {
      "contra": "control",
      "diferencia_pp": null,
-     "prob_mejor": 0.97,
+     "prob_mejor": 0.98,
      "veredicto": "faltan datos"
     }
    },
    "apartados": [],
    "pendientes": [
-    {
-     "id": "MDS-046",
-     "variante": "A",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    },
     {
      "id": "MDS-047",
      "variante": "control",
