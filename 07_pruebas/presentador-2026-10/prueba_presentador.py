@@ -131,7 +131,7 @@ def paso_kaggle(args):
     tiempos = {}
     if (SALIDA / "tiempos.json").exists():
         tiempos = json.loads((SALIDA / "tiempos.json").read_text("utf-8"))
-    videos = sorted(p.name for p in SALIDA.glob("b_labios_*.mp4"))
+    videos = sorted(p.name for p in SALIDA.glob("b_*.mp4"))     # b_latentsync_* y, si va, b_labios_* (MuseTalk)
     resumen = {"cara": args.cara, "estado_kaggle": final, "minutos": round((time.time() - t0) / 60, 1),
                "resultado": tiempos.get("resultado", "sin tiempos.json"), "videos": videos,
                "errores": tiempos.get("errores", {}),
@@ -150,8 +150,9 @@ def main():
     k.add_argument("--cara", type=int, default=1, help="número de la cara (1-8), de la hoja")
     k.add_argument("--desde", type=float, default=0.3, help="segundo de c36.mp3 donde empieza la voz")
     k.add_argument("--segundos", type=float, default=3.0)
-    k.add_argument("--wan-tope-min", type=int, default=60, help="tope para Wan 2.2 dentro de Kaggle")
-    k.add_argument("--tope-min", type=int, default=150, help="cuánto se espera al cuaderno")
+    # 26/10/2026: Wan a 704x1280 y 50 pasos tarda más; el paso «Kaggle» del workflow tiene 165 min.
+    k.add_argument("--wan-tope-min", type=int, default=75, help="tope para Wan 2.2 dentro de Kaggle")
+    k.add_argument("--tope-min", type=int, default=158, help="cuánto se espera al cuaderno")
     args = ap.parse_args()
     return paso_caras(args) if args.paso == "caras" else paso_kaggle(args)
 

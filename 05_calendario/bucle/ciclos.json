@@ -5,7 +5,7 @@
    "id": "B1",
    "desde": "2026-10-12",
    "hasta": "2026-11-04",
-      "_hasta": "19/10/2026 (dirección): era 2026-10-25, pensado para catorce Shorts a la semana desde el 19/10. Con siete (C36 sin pasar), el 25/10 ningún brazo llega a n = 6 y el control, ni a 4. Se alarga hasta que se agota el «orden» de 24 (un Short al día desde el 12/10 llega al 4/11): el orden, los brazos y la regla de decisión no cambian. Si un brazo cumple la regla antes, se decide antes, como siempre.",
+   "_hasta": "19/10/2026 (dirección): era 2026-10-25, pensado para catorce Shorts a la semana desde el 19/10. Con siete (C36 sin pasar), el 25/10 ningún brazo llega a n = 6 y el control, ni a 4. Se alarga hasta que se agota el «orden» de 24 (un Short al día desde el 12/10 llega al 4/11): el orden, los brazos y la regla de decisión no cambian. Si un brazo cumple la regla antes, se decide antes, como siempre.",
    "control": "control",
    "pregunta": "¿Qué retiene más en los dos primeros segundos: lo de ahora, ver el mecanismo animado o abrir con el dato?",
    "metrica_principal": "se_quedaron_48h.pct (Se quedaron viendo, primeras 48 h)",
@@ -55,10 +55,25 @@
    ],
    "fichas_de_historial": {
     "_nota": "22/10/2026 (dirección): copiado del historial de git (commit ffb9fae, la última versión de cada ficha antes de que producir.yml la rotara). bucle.py lo usa solo cuando qa/<ID>.es/ficha.json ya no existe; desde hoy guarda él mismo lo que lee en resultados.json («fichas_vistas»).",
-    "MDS-038": {"animacion.escenas_animadas": 2},
-    "MDS-039": {"animacion.escenas_animadas": 2}
+    "MDS-038": {
+     "animacion.escenas_animadas": 2
+    },
+    "MDS-039": {
+     "animacion.escenas_animadas": 2
+    }
    },
-   "_orden": "Bloques de tres con los tres brazos barajados (semilla 20261012), para que cada día y cada semana tengan de los tres. Se aplica en orden de emisión (fecha y hora) a partir del primer Short del ciclo, sin saltar ninguno. La planificación elige y ordena los temas de la semana ANTES de mirar qué brazo le toca a cada hueco."
+   "_orden": "Bloques de tres con los tres brazos barajados (semilla 20261012), para que cada día y cada semana tengan de los tres. Se aplica en orden de emisión (fecha y hora) a partir del primer Short del ciclo, sin saltar ninguno. La planificación elige y ordena los temas de la semana ANTES de mirar qué brazo le toca a cada hueco.",
+   "decisiones": [
+    {
+     "fecha": "2026-10-26",
+     "brazo": "B",
+     "veredicto": "GANA",
+     "datos": "resultados.json 2026-10-26T11:17:47Z: n = 4 por brazo; «se quedaron» B 39,7 % frente a control 18,1 % (+21,6 pp, umbral temprano 15); % visto B 195,7 frente a 87,2 (sin reparo); ceros de feed 1 frente a 0 (el reparo pide 2 más). prob_mejor 0,90.",
+     "que_se_hace": "B («arranque con el dato») es el control de B2 (5/11). Si A gana antes del 4/11, el control de B2 es la combinación A + B, como dice la regla. B1 sigue hasta el 4/11 con su «orden» y sus brazos sin tocar, solo para resolver A (+14,1 pp, a 0,9 del umbral): los guiones ya escritos no se cambian (regla 11.4) y la planificación no tiene que hacer nada distinto.",
+     "lo_que_no_me_gusta": "Son cuatro Shorts por brazo y casi todos con muy pocas vistas (MDS-045 cuenta un 80 % de 11 vistas). No cambio la regla con los datos delante: B gana. Para B2 (no antes) propongo que un Short con menos de 10 vistas a 48 h no cuente en «se quedaron» (es ruido), además de la regla bayesiana del 90 % ya aprobada. Se escribe en B2 antes de su primer dato.",
+     "quien": "direccion (en diferido)"
+    }
+   ]
   }
  ]
 }

@@ -9,14 +9,33 @@ privado `<usuario>/presentador-entrada` (montado en /kaggle/input/…):
     parametros.json   {"cara": n, "wan_tope_s": 3600, ...}
 
 Hace, y apunta lo que tarda cada paso:
-  (a) MOVIMIENTO · ~3 s de cabeza en reposo a partir de la foto.
-      - Wan 2.2 TI2V-5B (Apache 2.0, ficha de Hugging Face comprobada el 23/10/2026)
-        con Diffusers, a 480p, en un proceso aparte con tope de tiempo: el modelo
-        está pensado para 24 GB y bf16, y en Kaggle hay T4 (16 GB, sin bf16
-        nativo) o P100. Si no cabe, no contesta a tiempo o falla, se dice y se sigue.
+  (a) MOVIMIENTO · ~3 s de cabeza en reposo a partir de la foto, EN VERTICAL a
+      704x1280 (la resolución nativa de Wan 2.2 5B; el Short es 1080x1920).
       - PLAN B, siempre (es barato y sirve de comparación): un vaivén sutil de la
         foto (giro de ±0,8°, escala ±1 %, 4 px), determinista, sin modelo.
-  (b) LABIOS · MuseTalk 1.5 (MIT, código y pesos) sobre cada vídeo de (a), con
+      - Wan 2.2 TI2V-5B (Apache 2.0, ficha de Hugging Face comprobada el 23/10/2026)
+        con Diffusers, en un proceso aparte con tope de tiempo. 26/10/2026: SIN
+        bajar la resolución nunca (lo pidió el codirector: si sale pixelado no vale).
+        Por qué fallaba: en la T4 (Turing) no hay bf16 de verdad, y con bf16 PyTorch
+        no puede usar la atención eficiente en memoria: cae en la «matemática», que
+        guarda la matriz de atención entera (por eso pedía 1,6 GB más incluso a
+        320x320, con la memoria aún ocupada por el intento anterior). Ahora:
+          1. el transformador en fp16 (la T4 lo hace nativo y con atención
+             eficiente), el codificador de texto en bf16 y el VAE en fp32 por
+             trozos; si a los primeros pasos aparece un NaN (fp16 puede
+             desbordar), se para en seco y
+          2. bf16 con la atención calculada en fp32 (también eficiente en T4).
+        Cada intento en un proceso nuevo: la memoria del que falla no se arrastra.
+  (b) LABIOS · LatentSync 1.6 (código Apache 2.0, pesos OpenRAIL++-M: uso
+      comercial permitido) sobre cada vídeo de (a): genera la boca a 512x512 y con
+      capas temporales (no tiembla). En su propio entorno (Python 3.10 y las
+      versiones que pide, con uv), fp16 forzado (su código solo lo usa si la GPU
+      es de capacidad > 7 y la T4 es 7.5), y SIN InsightFace (sus modelos son
+      solo para investigación): los tres puntos que usa para alinear (centro de
+      cada ceja y de la nariz) salen de MediaPipe Face Mesh (Apache 2.0). Si la
+      1.6 no cabe, la 1.5 (boca a 256). LATENTSYNC.md.
+  (b') MuseTalk 1.5, solo si parametros.json trae "musetalk": true (el codirector
+      ya lo vio el 23/10: pixelado; queda para comparar). MIT, con
       DOS cambios por licencia (LICENCIAS.md §3):
       - la máscara de la boca NO usa BiSeNet `79999_iter.pth` (entrenado con
         CelebAMask-HQ, no comercial): es una elipse fija centrada en la cara;
@@ -29,6 +48,8 @@ Hace, y apunta lo que tarda cada paso:
       GPU, las versiones) y `registro.txt`.
 
 Nada de aquí entra en un vídeo sin que el codirector lo mire (C51.2).
+Orden (26/10/2026): vaivén → LatentSync sobre el vaivén → Wan → LatentSync sobre
+Wan → (MuseTalk). Así, aunque Wan se coma el tiempo, ya hay un vídeo bueno.
 """
 import json
 import os
@@ -69,12 +90,15 @@ def log(*a):
 
 def sh(cmd, timeout=None, cwd=None, env=None):
     log("$", cmd if isinstance(cmd, str) else " ".join(cmd))
+    # stderr dentro de stdout: el 23/10 el registro ponía los avisos de Wan (stdout)
+    # después de las barras de progreso (stderr) y no se veía en qué tamaño falló.
     r = subprocess.run(cmd, shell=isinstance(cmd, str), cwd=cwd, env=env, timeout=timeout,
-                       capture_output=True, text=True)
-    for linea in (r.stdout + r.stderr).splitlines()[-40:]:
+                       stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    for linea in r.stdout.replace("\r", "\n").splitlines()[-60:]:
         log("   ", linea)
     if r.returncode != 0:
-        raise RuntimeError(f"código {r.returncode}: {cmd}")
+        cola = " / ".join(l.strip() for l in r.stdout.splitlines()[-4:] if l.strip())
+        raise RuntimeError(f"código {r.returncode}: {cmd if isinstance(cmd, str) else cmd[:3]} · {cola[-500:]}")
     return r
 
 
@@ -98,10 +122,13 @@ def guardar():
     (SALIDA / "tiempos.json").write_text(json.dumps(T, ensure_ascii=False, indent=1), "utf-8")
 
 
-PARAM = {"cara": 1, "wan_tope_s": 3600, "wan_alto": 480, "wan_ancho": 480, "wan_fotogramas": 73,
-         "wan_pasos": 30, "segundos": 3.0}
+# 26/10/2026: 704x1280 vertical (nativa de Wan 2.2 5B) y 50 pasos (los de su ficha).
+# Los tamaños de respaldo (384, 320) se han quitado: más pequeño no vale.
+PARAM = {"cara": 1, "wan_tope_s": 4500, "wan_alto": 1280, "wan_ancho": 704, "wan_fotogramas": 77,
+         "wan_pasos": 50, "segundos": 3.0, "latentsync_pasos": 20, "musetalk": False}
 if (ENTRADA / "parametros.json").exists():
     PARAM.update(json.loads((ENTRADA / "parametros.json").read_text("utf-8")))
+ANCHO, ALTO = int(PARAM["wan_ancho"]), int(PARAM["wan_alto"])
 T["parametros"] = PARAM
 CARA = ENTRADA / "cara.jpg"
 AUDIO = ENTRADA / "audio.wav"
@@ -150,69 +177,241 @@ with paso("a.1 · plan B: vaivén de la foto"):
     import numpy as np
     im = cv2.imread(str(CARA))
     h, w = im.shape[:2]
-    c = min(h, w)                                   # cuadrado central: no se deforma
-    im = im[(h - c) // 2:(h - c) // 2 + c, (w - c) // 2:(w - c) // 2 + c]
-    lado = 512
-    im = cv2.resize(im, (lado, lado), interpolation=cv2.INTER_AREA)
+    # La cara es cuadrada (1024): se recorta en vertical (9:16 centrado, no se deforma)
+    # y se escala a 704x1280. Esta misma imagen es la que recibe Wan.
+    cw = min(w, int(round(h * ANCHO / ALTO)))
+    im = im[:, (w - cw) // 2:(w - cw) // 2 + cw]
+    im = cv2.resize(im, (ANCHO, ALTO), interpolation=cv2.INTER_LANCZOS4)
+    cv2.imwrite(str(TRABAJO / "cara_vertical.png"), im)
     n = int(round(PARAM["segundos"] * 25))
     destino = TRABAJO / "mov_afin.mp4"
-    vw = cv2.VideoWriter(str(destino), cv2.VideoWriter_fourcc(*"mp4v"), 25, (lado, lado))
+    vw = cv2.VideoWriter(str(destino), cv2.VideoWriter_fourcc(*"mp4v"), 25, (ANCHO, ALTO))
     for i in range(n):
         t = i / 25.0
         ang = 0.8 * np.sin(2 * np.pi * t / 3.1)           # grados: un balanceo lento
         esc = 1.0 + 0.01 * np.sin(2 * np.pi * t / 2.3)    # respiración
         dx = 4 * np.sin(2 * np.pi * t / 3.7)
         dy = 2 * np.sin(2 * np.pi * t / 2.9)
-        M = cv2.getRotationMatrix2D((lado / 2, lado * 0.62), ang, esc * 1.03)  # 3 % de zoom: sin bordes
+        M = cv2.getRotationMatrix2D((ANCHO / 2, ALTO * 0.62), ang, esc * 1.03)  # 3 % de zoom: sin bordes
         M[0, 2] += dx
         M[1, 2] += dy
-        vw.write(cv2.warpAffine(im, M, (lado, lado), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REFLECT))
+        vw.write(cv2.warpAffine(im, M, (ANCHO, ALTO), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REFLECT))
     vw.release()
-    sh(["ffmpeg", "-y", "-v", "error", "-i", str(destino), "-c:v", "libx264", "-pix_fmt", "yuv420p",
-        str(SALIDA / "a_movimiento_afin.mp4")])
+    sh(["ffmpeg", "-y", "-v", "error", "-i", str(destino), "-c:v", "libx264", "-crf", "16", "-pix_fmt",
+        "yuv420p", str(SALIDA / "a_movimiento_afin.mp4")])
     MOVIMIENTOS["afin"] = destino
 
-WAN = textwrap.dedent(r'''
-    import json, sys, time, torch
-    from diffusers import AutoencoderKLWan, WanImageToVideoPipeline
-    from diffusers.utils import export_to_video, load_image
-    p = json.loads(sys.argv[1])
-    t0 = time.time()
-    dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
-    mid = "Wan-AI/Wan2.2-TI2V-5B-Diffusers"
-    vae = AutoencoderKLWan.from_pretrained(mid, subfolder="vae", torch_dtype=torch.float32)
-    pipe = WanImageToVideoPipeline.from_pretrained(mid, vae=vae, torch_dtype=dtype)
-    pipe.enable_model_cpu_offload()          # 16 GB: el codificador de texto vive en la CPU
-    try:
-        pipe.vae.enable_tiling()
-    except Exception:
-        pass
-    print("cargado en", round(time.time() - t0, 1), "s; dtype", dtype, flush=True)
-    # 23/10/2026: a 480x480 y 73 fotogramas no cupo en una T4 (pidió 1,63 GB con 1,41 libres,
-    # en la atención). Se prueba de mayor a menor hasta que quepa; lo que sale lo dice.
-    tamanos = [(p["wan_ancho"], p["wan_alto"], p["wan_fotogramas"]), (384, 384, 73), (320, 320, 73)]
-    out = None
-    for ancho, alto, fotogramas in tamanos:
+# ---------------------------------------------------------------------------
+# (b) LatentSync 1.6 (26/10/2026): su propio entorno, fp16, MediaPipe en vez de InsightFace
+# ---------------------------------------------------------------------------
+LS = TRABAJO / "LatentSync"
+LS_VENV = TRABAJO / "lsvenv"
+LS_PY = LS_VENV / "bin" / "python"
+LS_COMMIT = "a229c3948406bc2cf6eaf4873e662e70c6a04746"   # el que se leyó el 23/10/2026
+# Lo que pide su requirements.txt, sin lo que no hace falta para generar: insightface y
+# onnxruntime (sustituidos), gradio (la demo), lpips (entrenar). OpenCV sin ventanas.
+LS_PAQUETES = ("diffusers==0.32.2 transformers==4.48.0 decord==0.6.0 accelerate==0.26.1 einops==0.7.0 "
+               "omegaconf==2.3.0 opencv-python-headless==4.9.0.80 mediapipe==0.10.11 "
+               "python_speech_features==0.6 librosa==0.10.1 scenedetect==0.6.1 ffmpeg-python==0.2.0 "
+               "imageio==2.31.1 imageio-ffmpeg==0.5.1 huggingface-hub==0.30.2 numpy==1.26.4 kornia==0.8.0 "
+               "DeepCache==0.1.1 soundfile")
+LS_VERSIONES = (("1.6", "configs/unet/stage2_512.yaml"), ("1.5", "configs/unet/stage2.yaml"))
+
+DETECTOR = textwrap.dedent(r'''
+    """Sustituye a latentsync/utils/face_detector.py (dirección, 26/10/2026): sin
+    InsightFace (sus modelos son solo para investigación no comercial). Los puntos
+    salen de MediaPipe Face Mesh (Apache 2.0). image_processor.py solo usa de los
+    106 puntos de InsightFace tres medias: el centro de cada ceja (43, 48-51 y
+    101-105) y el centro de la nariz (74, 77, 83, 86); aquí se rellenan esas
+    posiciones con lo mismo medido en la malla de MediaPipe, y la caja sale de la
+    malla. Nariz: 197, 195 y 5 (puente medio), que en la cara 2 dejan la nariz a
+    ~0,5 veces la distancia entre cejas por debajo de ellas, como la plantilla de
+    AlignRestore (20/41). Probado en el contenedor el 26/10 con la cara 2: el
+    recorte de 512 sale como los de LatentSync (cejas arriba, barbilla abajo)."""
+    import mediapipe as mp
+    import numpy as np
+
+    CEJA_IMAGEN_IZQ = [70, 63, 105, 66, 107, 46, 53, 52, 65, 55]          # ceja derecha de la persona
+    CEJA_IMAGEN_DER = [300, 293, 334, 296, 336, 276, 283, 282, 295, 285]  # ceja izquierda de la persona
+    NARIZ = [197, 195, 5]
+
+
+    class FaceDetector:
+        def __init__(self, device="cuda"):
+            self.malla = mp.solutions.face_mesh.FaceMesh(static_image_mode=False, max_num_faces=1,
+                                                         refine_landmarks=False, min_detection_confidence=0.5,
+                                                         min_tracking_confidence=0.5)
+
+        def __call__(self, frame, threshold=0.5):
+            # LatentSync pasa los fotogramas en RGB (read_video_cv2), que es lo que pide MediaPipe.
+            f_h, f_w = frame.shape[:2]
+            r = self.malla.process(np.ascontiguousarray(frame))
+            if not r.multi_face_landmarks:
+                return None, None
+            p = np.array([(l.x * f_w, l.y * f_h) for l in r.multi_face_landmarks[0].landmark])
+            x1, y1 = np.maximum(p.min(0), 0)
+            x2, y2 = np.minimum(p.max(0), (f_w, f_h))
+            if x2 - x1 < 50 or y2 - y1 < 80:
+                return None, None
+            lmk = np.zeros((106, 2))
+            lmk[[43, 48, 49, 50, 51]] = p[CEJA_IMAGEN_IZQ].mean(0)
+            lmk[101:106] = p[CEJA_IMAGEN_DER].mean(0)
+            lmk[[73, 74, 77, 83, 86]] = p[NARIZ].mean(0)
+            return (int(x1), int(y1), int(x2), int(y2)), np.round(lmk).astype(np.int_)
+''')
+
+
+def ls_pesos(version):
+    """Baja (una vez) el UNet de esa versión y el Whisper tiny que usan las dos."""
+    destino = LS / "checkpoints" / version
+    sh([str(LS_PY), "-c",
+        "from huggingface_hub import hf_hub_download as d; "
+        f"d('ByteDance/LatentSync-{version}', 'latentsync_unet.pt', local_dir='{destino}'); "
+        f"d('ByteDance/LatentSync-{version}', 'whisper/tiny.pt', local_dir='checkpoints')"],
+       cwd=LS, timeout=1800)
+    return destino / "latentsync_unet.pt"
+
+
+def latentsync(nombre, mov):
+    """Labios con LatentSync sobre un vídeo de movimiento: 1.6 y, si falla, 1.5."""
+    fallos = []
+    for version, cfg in LS_VERSIONES:
+        destino = SALIDA / f"b_latentsync_{nombre}.mp4"
         try:
-            img = load_image(p["cara"]).resize((ancho, alto))
-            out = pipe(image=img,
-                       prompt=("a friendly presenter looks at the camera and stays still, calm breathing, "
-                               "subtle natural head movement, blinks once, mouth closed, static camera, "
-                               "plain dark blue background"),
-                       negative_prompt="talking, open mouth, camera movement, zoom, text, subtitles, distorted face",
-                       height=alto, width=ancho, num_frames=fotogramas,
-                       num_inference_steps=p["wan_pasos"], guidance_scale=5.0,
-                       generator=torch.Generator("cpu").manual_seed(20261023)).frames[0]
-            print("Wan a", ancho, "x", alto, "con", fotogramas, "fotogramas", flush=True)
-            break
-        except torch.OutOfMemoryError:
-            print("sin memoria a", ancho, "x", alto, "· se prueba más pequeño", flush=True)
-            torch.cuda.empty_cache()
-    if out is None:
-        raise SystemExit("Wan no cabe en la GPU ni a 320x320")
-    export_to_video(out, p["salida"], fps=24)
-    print("hecho en", round(time.time() - t0, 1), "s; pico de memoria",
-          round(torch.cuda.max_memory_allocated() / 2**30, 1), "GB", flush=True)
+            ckpt = ls_pesos(version)
+            sh([str(LS_PY), "-m", "scripts.inference", "--unet_config_path", cfg,
+                "--inference_ckpt_path", str(ckpt), "--inference_steps", str(PARAM["latentsync_pasos"]),
+                "--guidance_scale", "1.5", "--enable_deepcache", "--seed", "1247",
+                "--video_path", str(mov), "--audio_path", str(AUDIO), "--video_out_path", str(destino),
+                "--temp_dir", str(TRABAJO / f"ls_tmp_{nombre}")],
+               cwd=LS, timeout=2400, env=dict(os.environ, CUDA_VISIBLE_DEVICES="0"))
+            if not destino.exists():
+                raise RuntimeError("terminó sin dejar vídeo")
+            T.setdefault("latentsync", {})[nombre] = version
+            if fallos:
+                T["latentsync_fallos_" + nombre] = fallos
+            return version
+        except Exception as ex:
+            fallos.append(f"{version}: {type(ex).__name__}: {str(ex)[-600:]}")
+            log(f"LatentSync {version} sobre «{nombre}» falló; se prueba la siguiente si la hay")
+    raise RuntimeError(" | ".join(fallos))
+
+
+with paso("b.1 · LatentSync: entorno, código y pesos"):
+    if not LS.exists():
+        sh(f"git clone -q https://github.com/bytedance/LatentSync.git {LS}")
+    sh(f"git checkout -q {LS_COMMIT}", cwd=LS)
+    (LS / "latentsync/utils/face_detector.py").write_text(DETECTOR, "utf-8")
+    inferencia = LS / "scripts/inference.py"
+    codigo = inferencia.read_text("utf-8")
+    viejo = "torch.cuda.get_device_capability()[0] > 7"
+    assert viejo in codigo, "scripts/inference.py ha cambiado: revisar el parche de fp16"
+    inferencia.write_text(codigo.replace(viejo, "torch.cuda.get_device_capability()[0] >= 7"), "utf-8")
+    sh(f"{sys.executable} -m pip install -q uv", timeout=600)
+    if not LS_PY.exists():
+        sh(f"{sys.executable} -m uv venv -q -p 3.10 {LS_VENV}", timeout=600)
+    sh(f"{sys.executable} -m uv pip install -q --python {LS_PY} torch==2.5.1 torchvision==0.20.1 "
+       "--index-url https://download.pytorch.org/whl/cu121", timeout=1800)
+    sh(f"{sys.executable} -m uv pip install -q --python {LS_PY} {LS_PAQUETES}", timeout=1800)
+    sh([str(LS_PY), "-c", "import torch, mediapipe, decord, diffusers; "
+        "print('torch', torch.__version__, 'cuda', torch.cuda.is_available(), "
+        "torch.cuda.get_device_name(0) if torch.cuda.is_available() else '-')"], cwd=LS)
+    ls_pesos("1.6")
+
+with paso("b.2 · LatentSync sobre «afin»"):
+    latentsync("afin", MOVIMIENTOS["afin"])
+
+# ---------------------------------------------------------------------------
+# (a.2) Wan 2.2 TI2V-5B, después de tener ya un vídeo con labios
+# ---------------------------------------------------------------------------
+WAN = textwrap.dedent(r'''
+    """Un intento de Wan 2.2 TI2V-5B en la T4 (dirección, 26/10/2026).
+    modo «fp16»: transformador en fp16, atención eficiente nativa de la T4.
+    modo «bf16_atencion_fp32»: si fp16 desborda; bf16 con la atención en fp32.
+    Escribe los fotogramas en PNG (sin pérdida) y un informe JSON con lo que pasó."""
+    import json, sys, time, traceback
+    from pathlib import Path
+    import numpy as np
+    import torch
+    import torch.nn.functional as F
+
+    p = json.loads(sys.argv[1])
+    informe = {"modo": p["modo"]}
+    Path(p["informe"]).write_text(json.dumps(informe), "utf-8")
+    t0 = time.time()
+    try:
+        # ¿Hay atención eficiente en fp16 en esta GPU? (si no, nada de lo demás cabe)
+        from torch.nn.attention import SDPBackend, sdpa_kernel
+        q = torch.randn(1, 24, 4096, 128, device="cuda", dtype=torch.float16)
+        with sdpa_kernel([SDPBackend.EFFICIENT_ATTENTION]):
+            F.scaled_dot_product_attention(q, q, q)
+        informe["atencion_eficiente_fp16"] = True
+        del q
+
+        from diffusers import AutoencoderKLWan, WanImageToVideoPipeline, WanTransformer3DModel
+        from diffusers.utils import load_image
+        from transformers import UMT5EncoderModel
+
+        dt = torch.float16 if p["modo"] == "fp16" else torch.bfloat16
+        if p["modo"] != "fp16":
+            # bf16 en Turing: la atención eficiente no lo acepta y PyTorch caería en la
+            # «matemática» (la matriz entera: lo que no cupo el 23/10). En fp32 sí la acepta.
+            _sdpa = F.scaled_dot_product_attention
+            def sdpa_fp32(q, k, v, *a, **kw):
+                if q.dtype == torch.bfloat16:
+                    return _sdpa(q.float(), k.float(), v.float(), *a, **kw).to(q.dtype)
+                return _sdpa(q, k, v, *a, **kw)
+            F.scaled_dot_product_attention = sdpa_fp32
+
+        mid = "Wan-AI/Wan2.2-TI2V-5B-Diffusers"
+        transformer = WanTransformer3DModel.from_pretrained(mid, subfolder="transformer", torch_dtype=dt)
+        texto = UMT5EncoderModel.from_pretrained(mid, subfolder="text_encoder", torch_dtype=torch.bfloat16)
+        vae = AutoencoderKLWan.from_pretrained(mid, subfolder="vae", torch_dtype=torch.float32)
+        pipe = WanImageToVideoPipeline.from_pretrained(mid, transformer=transformer, text_encoder=texto,
+                                                       vae=vae, torch_dtype=dt)
+        pipe.enable_model_cpu_offload()      # en la GPU, un modelo cada vez (el de texto ocupa 11 GB)
+        pipe.vae.enable_tiling()
+        informe["cargado_s"] = round(time.time() - t0, 1)
+        print("cargado en", informe["cargado_s"], "s; modo", p["modo"], flush=True)
+
+        def vigila(pipe_, i, t, kw):
+            # fp16 puede desbordar: si sale un NaN, se para en el acto, no al final.
+            if not torch.isfinite(kw["latents"]).all():
+                raise FloatingPointError(f"NaN o infinito en los latentes en el paso {i}")
+            if i == 0:
+                informe["primer_paso_s"] = round(time.time() - t0 - informe["cargado_s"], 1)
+                print("primer paso hecho; pico de memoria",
+                      round(torch.cuda.max_memory_allocated() / 2**30, 1), "GB", flush=True)
+            return kw
+
+        img = load_image(p["imagen"])
+        frames = pipe(image=img,
+                      prompt=("a friendly science presenter looks at the camera and stays still, calm breathing, "
+                              "subtle natural head movement, blinks once, mouth closed, static camera, "
+                              "plain dark navy blue background, sharp focus, high detail"),
+                      negative_prompt=("talking, open mouth, camera movement, zoom, text, subtitles, distorted face, "
+                                       "blurry, low quality, pixelated, deformed eyes"),
+                      height=p["wan_alto"], width=p["wan_ancho"], num_frames=p["wan_fotogramas"],
+                      num_inference_steps=p["wan_pasos"], guidance_scale=5.0, output_type="np",
+                      generator=torch.Generator("cpu").manual_seed(20261023),
+                      callback_on_step_end=vigila, callback_on_step_end_tensor_inputs=["latents"]).frames[0]
+        frames = np.asarray(frames)
+        if not np.isfinite(frames).all() or float(frames.std()) < 0.02:
+            raise FloatingPointError(f"vídeo vacío o con NaN (desviación {float(np.nanstd(frames)):.4f})")
+        import cv2
+        carpeta = Path(p["fotos"])
+        for i, f in enumerate(frames):
+            cv2.imwrite(str(carpeta / f"{i:03d}.png"),
+                        cv2.cvtColor((np.clip(f, 0, 1) * 255).round().astype(np.uint8), cv2.COLOR_RGB2BGR))
+        informe.update(ok=True, fotogramas=len(frames), segundos=round(time.time() - t0, 1),
+                       pico_gb=round(torch.cuda.max_memory_allocated() / 2**30, 1))
+    except BaseException as ex:
+        informe.update(ok=False, error=f"{type(ex).__name__}: {ex}"[:800],
+                       pico_gb=round(torch.cuda.max_memory_allocated() / 2**30, 1) if torch.cuda.is_available() else None)
+        traceback.print_exc()
+    Path(p["informe"]).write_text(json.dumps(informe, ensure_ascii=False), "utf-8")
+    print("INFORME", json.dumps(informe, ensure_ascii=False), flush=True)
+    sys.exit(0 if informe.get("ok") else 1)
 ''')
 
 with paso("a.2 · Wan 2.2 TI2V-5B"):
@@ -221,23 +420,53 @@ with paso("a.2 · Wan 2.2 TI2V-5B"):
     # Kaggle (5.16, pide <2.0) dejó de importar: cayeron Wan y MuseTalk. Diffusers de PyPI
     # (Wan 2.2 desde la 0.35) y huggingface_hub atado a lo que pide transformers.
     sh(f"pip install -q 'diffusers>=0.35' accelerate ftfy {HUB}", timeout=1200)
-    crudo = TRABAJO / "mov_wan_24.mp4"
-    args = dict(PARAM, cara=str(CARA), salida=str(crudo))
-    try:
-        sh([sys.executable, str(TRABAJO / "wan.py"), json.dumps(args)], timeout=int(PARAM["wan_tope_s"]),
-           env=dict(os.environ, PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True"))
-    except subprocess.TimeoutExpired:
-        raise RuntimeError(f"Wan no terminó en {PARAM['wan_tope_s']} s (tope)")
+    r = subprocess.run("pip freeze | grep -i -E '^(torch|diffusers|transformers|accelerate)=='",
+                       shell=True, capture_output=True, text=True)
+    T["versiones"] = r.stdout.split()
+    fotos, informe = TRABAJO / "wan_png", TRABAJO / "wan_informe.json"
+    limite = time.time() + int(PARAM["wan_tope_s"])
+    T["wan"] = []
+    for modo in ("fp16", "bf16_atencion_fp32"):
+        resto = int(limite - time.time())
+        if resto < 600:
+            T["wan"].append({"modo": modo, "ok": False, "error": "sin tiempo para intentarlo"})
+            break
+        shutil.rmtree(fotos, ignore_errors=True)
+        fotos.mkdir()
+        args = dict(PARAM, modo=modo, imagen=str(TRABAJO / "cara_vertical.png"), fotos=str(fotos),
+                    informe=str(informe))
+        try:
+            sh([sys.executable, str(TRABAJO / "wan.py"), json.dumps(args)], timeout=resto,
+               env=dict(os.environ, PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True", CUDA_VISIBLE_DEVICES="0"))
+        except subprocess.TimeoutExpired:
+            T["wan"].append({"modo": modo, "ok": False, "error": f"no terminó en {resto} s (tope)"})
+            break
+        except RuntimeError:
+            pass
+        T["wan"].append(json.loads(informe.read_text("utf-8")) if informe.exists() else {"modo": modo, "ok": False})
+        guardar()
+        if T["wan"][-1].get("ok"):
+            break
+        if "NaN" not in T["wan"][-1].get("error", "") and "vacío" not in T["wan"][-1].get("error", ""):
+            break        # bf16 solo arregla un desbordamiento de fp16; otro error se repetiría igual
+    if not (T["wan"] and T["wan"][-1].get("ok")):
+        raise RuntimeError("Wan sin vídeo: " + json.dumps(T["wan"], ensure_ascii=False)[:1500])
+    # Los fotogramas de Wan se ponen a 25 por segundo tal cual (77 a 25 = 3,08 s, un 4 % más
+    # rápido): convertir 24 → 25 repetiría un fotograma cada segundo y se notaría un tirón.
     destino = TRABAJO / "mov_wan.mp4"
-    sh(["ffmpeg", "-y", "-v", "error", "-i", str(crudo), "-vf", "fps=25", "-c:v", "libx264",
-        "-pix_fmt", "yuv420p", str(destino)])
-    shutil.copy(destino, SALIDA / "a_movimiento_wan.mp4")
+    sh(["ffmpeg", "-y", "-v", "error", "-framerate", "25", "-i", str(fotos / "%03d.png"), "-c:v", "libx264",
+        "-crf", "14", "-pix_fmt", "yuv420p", str(destino)])
+    sh(["ffmpeg", "-y", "-v", "error", "-i", str(destino), "-c", "copy", str(SALIDA / "a_movimiento_wan.mp4")])
     MOVIMIENTOS["wan"] = destino
+
+if "wan" in MOVIMIENTOS:
+    with paso("b.3 · LatentSync sobre «wan»"):
+        latentsync("wan", MOVIMIENTOS["wan"])
 
 T["movimientos"] = sorted(MOVIMIENTOS)
 
 # ---------------------------------------------------------------------------
-# (b) MuseTalk 1.5, sin BiSeNet ni DWPose
+# (b') MuseTalk 1.5, sin BiSeNet ni DWPose: solo si parametros.json trae "musetalk": true
 # ---------------------------------------------------------------------------
 MT = TRABAJO / "MuseTalk"
 
@@ -297,7 +526,7 @@ MASCARA = textwrap.dedent(r'''
             return Image.fromarray(m)
 ''')
 
-with paso("b.1 · MuseTalk: código, dependencias y pesos"):
+def musetalk_preparar():
     if not MT.exists():
         sh(f"git clone -q https://github.com/TMElyralab/MuseTalk.git {MT}")
     sh(f"git checkout -q {MUSETALK_COMMIT}", cwd=MT)
@@ -321,27 +550,33 @@ with paso("b.1 · MuseTalk: código, dependencias y pesos"):
                        shell=True, capture_output=True, text=True)
     T["versiones"] = r.stdout.split()
 
-for nombre, mov in list(MOVIMIENTOS.items()):
-    with paso(f"b.2 · MuseTalk sobre «{nombre}»"):
-        cfg = MT / f"tarea_{nombre}.yaml"
-        cfg.write_text(f'tarea:\n  video_path: "{mov}"\n  audio_path: "{AUDIO}"\n'
-                       f'  result_name: "b_{nombre}.mp4"\n', "utf-8")
-        res = TRABAJO / f"res_{nombre}"
-        sh([sys.executable, "-m", "scripts.inference", "--inference_config", str(cfg),
-            "--result_dir", str(res), "--unet_model_path", "models/musetalkV15/unet.pth",
-            "--unet_config", "models/musetalkV15/musetalk.json", "--version", "v15",
-            "--ffmpeg_path", "/usr/bin", "--use_float16", "--batch_size", "8"],
-           cwd=MT, timeout=1800)
-        hecho = next(res.rglob(f"b_{nombre}.mp4"), None)
-        if not hecho:
-            raise RuntimeError("MuseTalk terminó sin dejar vídeo (mira registro.txt)")
-        shutil.copy(hecho, SALIDA / f"b_labios_{nombre}.mp4")
+def musetalk(nombre, mov):
+    cfg = MT / f"tarea_{nombre}.yaml"
+    cfg.write_text(f'tarea:\n  video_path: "{mov}"\n  audio_path: "{AUDIO}"\n'
+                   f'  result_name: "b_{nombre}.mp4"\n', "utf-8")
+    res = TRABAJO / f"res_{nombre}"
+    sh([sys.executable, "-m", "scripts.inference", "--inference_config", str(cfg),
+        "--result_dir", str(res), "--unet_model_path", "models/musetalkV15/unet.pth",
+        "--unet_config", "models/musetalkV15/musetalk.json", "--version", "v15",
+        "--ffmpeg_path", "/usr/bin", "--use_float16", "--batch_size", "8"],
+       cwd=MT, timeout=1800)
+    hecho = next(res.rglob(f"b_{nombre}.mp4"), None)
+    if not hecho:
+        raise RuntimeError("MuseTalk terminó sin dejar vídeo (mira registro.txt)")
+    shutil.copy(hecho, SALIDA / f"b_labios_{nombre}.mp4")
+
+if PARAM.get("musetalk"):
+    with paso("c.1 · MuseTalk: código, dependencias y pesos"):
+        musetalk_preparar()
+    for nombre, mov in list(MOVIMIENTOS.items()):
+        with paso(f"c.2 · MuseTalk sobre «{nombre}»"):
+            musetalk(nombre, mov)
 
 # ---------------------------------------------------------------------------
 # (c) Resumen
 # ---------------------------------------------------------------------------
 T["salida"] = sorted(p.name for p in SALIDA.iterdir())
-T["resultado"] = ("con labios: " + ", ".join(n for n in MOVIMIENTOS if (SALIDA / f"b_labios_{n}.mp4").exists())) \
-    if any((SALIDA / f"b_labios_{n}.mp4").exists() for n in MOVIMIENTOS) else "sin vídeo con labios"
+CON_LABIOS = sorted(p.stem[2:] for p in SALIDA.glob("b_*.mp4"))   # latentsync_afin, labios_afin (MuseTalk)…
+T["resultado"] = ("con labios: " + ", ".join(CON_LABIOS)) if CON_LABIOS else "sin vídeo con labios"
 guardar()
 log("\nRESUMEN:", json.dumps(T, ensure_ascii=False, indent=1))

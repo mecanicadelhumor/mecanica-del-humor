@@ -197,3 +197,49 @@ fallo del programa:
 - **Wan falló otra vez, ahora por memoria**: a 480×480 y 73 fotogramas pidió 1,63 GB en la atención con
   1,41 libres en la T4, tras 6 minutos. Arreglo: si no cabe, prueba 384 y 320 (mismo número de
   fotogramas), con `expandable_segments`. Se verá en el cuarto intento.
+
+## 23/10, ~10:10 UTC: cuarto «kaggle» (cara 2) — Wan no cupo ni a 320×320
+
+Salió otra vez `b_labios_afin.mp4` (MuseTalk); **Wan, «no cabe en la GPU ni a 320×320»**, en el primer paso.
+
+## 26/10 · dirección en diferido: por qué fallaba Wan de verdad, y el cambio de rumbo
+
+El codirector (cuaderno del 26/10, escrito el 23): *«Volvió a fallar lo de WAN con Kaggle. Que funcione esta
+vez. Y antes de bajar la calidad busquemos soluciones alternativas: si va a salir pixelado no merece la
+pena. Queremos algo de verdad creíble.»* Tiene razón, y bajar a 384 y 320 era justo lo contrario.
+
+**La causa** (no era el tamaño): la T4 es de la generación Turing, que **no tiene bf16 de verdad**.
+PyTorch dice que sí (lo emula), así que el script elegía bf16; y con bf16 en Turing **la atención eficiente
+en memoria no existe**, y PyTorch cae en la atención «matemática», que guarda la matriz de atención entera.
+Eso es lo que no cabía. Y a 320 tampoco cabía porque el intento anterior, al fallar dentro de un `try`,
+seguía reteniendo su memoria.
+
+**Lo que cambia en `kaggle/presentador.py`:**
+
+1. **Todo en vertical a 704×1280**, la resolución nativa de Wan 2.2 5B (el Short es 1080×1920: 1,5 veces).
+   La cara (1024×1024) se recorta a 9:16 centrado, sin deformar, y la misma imagen sirve al vaivén y a Wan.
+   **Ya no hay tamaños de respaldo**: si no sale a su resolución, no sale.
+2. **Wan en fp16** (la T4 lo hace nativo y con atención eficiente), con el codificador de texto en bf16
+   (11 GB: va solo a la GPU, uno cada vez) y el VAE en fp32 por trozos. **50 pasos** (los de su ficha) y
+   **77 fotogramas** puestos a 25 por segundo tal cual (3,08 s; convertir de 24 a 25 repetiría un fotograma
+   cada segundo). Los fotogramas se guardan en PNG y se codifican una vez con calidad alta (crf 14).
+3. **Si fp16 desborda** (sale un NaN: se mira en cada paso y se para en el primero), segundo intento en
+   **bf16 con la atención calculada en fp32**, que la T4 sí hace con el algoritmo eficiente. Más lento,
+   misma calidad. Cada intento en un proceso nuevo: la memoria del que falla no se arrastra. Un informe
+   (`tiempos.json` → `wan`) dice qué modo funcionó, el pico de memoria y cuánto tardó el primer paso.
+4. **Labios con LatentSync 1.6 en lugar de MuseTalk** (lo que pidió el codirector tras ver MuseTalk:
+   `LATENTSYNC.md`): boca a 512×512 y con coherencia entre fotogramas. MuseTalk queda apagado (se enciende
+   con `"musetalk": true` en `parametros.json` si se quiere comparar).
+5. **Orden nuevo**: vaivén → LatentSync sobre el vaivén → Wan → LatentSync sobre Wan. Aunque Wan se coma el
+   tiempo, ya hay un vídeo bueno.
+6. El registro mezcla por fin la salida de error en orden (antes las barras de progreso tapaban los
+   avisos) y cada error trae sus últimas líneas.
+
+**Probado en el contenedor (sin GPU)**: el vaivén vertical con la cara 2 (704×1280, 75 fotogramas, sin
+deformar); el entorno de LatentSync con las versiones exactas en Python 3.10; el detector sustituto
+(MediaPipe) sobre la cara 2: el recorte de 512 sale como los de LatentSync; y **LatentSync 1.5 de punta a
+punta en CPU** (2 pasos, 1 s de voz) sobre el vaivén vertical: lee, alinea, genera, pega la boca y escribe el
+vídeo con audio. **No se puede probar aquí**: Wan en la T4 (sin GPU) ni la 1.6 a 512 en la T4.
+
+**Salida nueva** en `salida/`: `a_movimiento_afin.mp4`, `a_movimiento_wan.mp4` (si sale),
+**`b_latentsync_afin.mp4`** y **`b_latentsync_wan.mp4`** (los que hay que ver).

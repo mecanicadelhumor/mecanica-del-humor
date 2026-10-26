@@ -111,3 +111,13 @@ fichero de tareas cuando haya algo que mirar.
   (ficha sin licencia) · https://huggingface.co/lambdalabs/sd-image-variations-diffusers
 - Basel Face Model, licencia no comercial:
   https://faces.dmi.unibas.ch/bfm/content/basel_face_model/downloads/BFM_NonCommercial_License_Agreement.pdf
+
+## 26/10/2026 · lo que entra con LatentSync (C51.3)
+
+| Pieza | Licencia | Uso comercial |
+|---|---|---|
+| LatentSync, código (`bytedance/LatentSync`, commit `a229c39`) | Apache 2.0 | Sí |
+| `ByteDance/LatentSync-1.6` y `-1.5`, pesos | CreativeML OpenRAIL++-M | Sí, con sus restricciones de uso (nada de engañar ni suplantar: persona ficticia y declarada, regla 7.1) |
+| MediaPipe Face Mesh (sustituye a InsightFace) | Apache 2.0 | Sí |
+| InsightFace (sus modelos) | Solo investigación no comercial | **No se usa** |
+| Whisper `tiny.pt`, `sd-vae-ft-mse` | MIT | Sí |
