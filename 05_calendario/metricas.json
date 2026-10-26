@@ -78053,7 +78053,9 @@
     "pct": 33.3
    },
    "se_quedaron_total": {
-    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-08-27&endDate=2026-10-25&metrics=views%2CengagedViews&filters=video%3D%3Dnv8QaZPYsdA&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
+    "vistas": 26,
+    "comprometidas": 10,
+    "pct": 38.5
    },
    "impresiones": null,
    "ctr": null
@@ -78087,7 +78089,9 @@
    },
    "vistas_48h": 11,
    "se_quedaron_48h": {
-    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-08-28&endDate=2026-08-29&metrics=views%2CengagedViews&filters=video%3D%3D14KLEyZ26-0&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
+    "vistas": 11,
+    "comprometidas": 6,
+    "pct": 54.5
    },
    "se_quedaron_total": {
     "vistas": 12,
@@ -80651,7 +80655,9 @@
     "pct": 21.2
    },
    "se_quedaron_total": {
-    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-16&endDate=2026-10-25&metrics=views%2CengagedViews&filters=video%3D%3D6ahST7d-LEs&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
+    "vistas": 115,
+    "comprometidas": 25,
+    "pct": 21.7
    },
    "impresiones": null,
    "ctr": null
@@ -82591,7 +82597,7 @@
     "NOTIFICATION": 2.9,
     "NO_LINK_OTHER": 0.0
    },
-   "vistas_48h": null,
+   "vistas_48h": 62,
    "se_quedaron_48h": {
     "vistas": 62,
     "comprometidas": 11,
@@ -88373,7 +88379,7 @@
   }
  ],
  "miniaturas": [],
- "actualizado_utc": "2026-10-26T15:27:05Z",
+ "actualizado_utc": "2026-10-26T17:16:20Z",
  "control_c26": {
   "mediana_vistas_48h": 24.0,
   "n_videos": 20,
