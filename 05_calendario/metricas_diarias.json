@@ -1,22 +1,7 @@
 {
  "_nota": "C47: lectura ligera diaria de los vídeos publicados en los últimos 10 días: visualizaciones, vistas_48h y, desde el 05/10/2026 (C60), se_quedaron_48h («Se quedaron viendo» de Studio = engagedViews/views), porcentaje_visto, me_gusta, suscriptores y compartidos. Sin curvas de retención a propósito (ver la cabecera de escribir_metricas_diarias() en 04_agentes/metricas.py). Se SOBRESCRIBE entero cada vez: es una ventana rodante, no una serie histórica. La lectura completa semanal (metricas.json, control_c26) es la que manda y no cambia con este fichero.",
- "actualizado_utc": "2026-10-25T17:15:00Z",
+ "actualizado_utc": "2026-10-26T11:17:47Z",
  "videos": [
-  {
-   "id": "MDS-039.es",
-   "publicado": "2026-10-15",
-   "visualizaciones": 22,
-   "vistas_48h": 22,
-   "se_quedaron_48h": {
-    "vistas": 22,
-    "comprometidas": 11,
-    "pct": 50.0
-   },
-   "porcentaje_visto": 81.0,
-   "me_gusta": 1,
-   "suscriptores": 0,
-   "compartidos": 0
-  },
   {
    "id": "MDS-040.es",
    "publicado": "2026-10-16",
@@ -80,7 +65,7 @@
   {
    "id": "MDS-044.es",
    "publicado": "2026-10-20",
-   "visualizaciones": 118,
+   "visualizaciones": 119,
    "vistas_48h": 112,
    "se_quedaron_48h": {
     "vistas": 112,
@@ -95,7 +80,7 @@
   {
    "id": "MDS-045.es",
    "publicado": "2026-10-21",
-   "visualizaciones": 10,
+   "visualizaciones": 11,
    "vistas_48h": 10,
    "se_quedaron_48h": {
     "vistas": 10,
@@ -110,12 +95,12 @@
   {
    "id": "MDS-046.es",
    "publicado": "2026-10-22",
-   "visualizaciones": 3,
-   "vistas_48h": 3,
+   "visualizaciones": 4,
+   "vistas_48h": 4,
    "se_quedaron_48h": {
-    "vistas": 3,
+    "vistas": 4,
     "comprometidas": 1,
-    "pct": 33.3
+    "pct": 25.0
    },
    "porcentaje_visto": 108.2,
    "me_gusta": 1,
@@ -125,14 +110,14 @@
   {
    "id": "MDS-047.es",
    "publicado": "2026-10-23",
-   "visualizaciones": 0,
-   "vistas_48h": 0,
+   "visualizaciones": 26,
+   "vistas_48h": 26,
    "se_quedaron_48h": {
-    "vistas": 0,
-    "comprometidas": 0,
-    "pct": null
+    "vistas": 26,
+    "comprometidas": 11,
+    "pct": 42.3
    },
-   "porcentaje_visto": 0.0,
+   "porcentaje_visto": 99.5,
    "me_gusta": 0,
    "suscriptores": 0,
    "compartidos": 0
@@ -143,6 +128,19 @@
    "visualizaciones": 0,
    "vistas_48h": 0,
    "se_quedaron_48h": {
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-10-24&endDate=2026-10-25&metrics=views%2CengagedViews&filters=video%3D%3DdoK9mYd6JBQ&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
+   },
+   "porcentaje_visto": 0.0,
+   "me_gusta": 0,
+   "suscriptores": 0,
+   "compartidos": 0
+  },
+  {
+   "id": "MDS-049.es",
+   "publicado": "2026-10-25",
+   "visualizaciones": 0,
+   "vistas_48h": 0,
+   "se_quedaron_48h": {
     "vistas": 0,
     "comprometidas": 0,
     "pct": null
@@ -153,8 +151,8 @@
    "compartidos": 0
   },
   {
-   "id": "MDS-049.es",
-   "publicado": "2026-10-25",
+   "id": "MDS-050.es",
+   "publicado": "2026-10-26",
    "visualizaciones": 0,
    "vistas_48h": 0,
    "se_quedaron_48h": {
