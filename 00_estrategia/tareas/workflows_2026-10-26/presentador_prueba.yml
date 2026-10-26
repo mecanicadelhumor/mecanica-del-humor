@@ -1,0 +1,119 @@
+name: Prueba del presentador (C51.3)
+
+# ---------------------------------------------------------------------------
+# C51.3 (PLAN_DE_CAMBIOS.md; 07_pruebas/presentador-2026-10/PRUEBA.md): la
+# persona sintética. NO forma parte de la producción y NO tiene cron: solo
+# corre cuando alguien le da al botón. Lo escribe la dirección el 23/10/2026;
+# como todo lo de .github/workflows/, lo copia aquí el codirector a mano.
+#
+# Dos pasos, uno cada vez (Actions → «Prueba del presentador (C51.3)» →
+# Run workflow):
+#   paso = caras    ocho caras ficticias con FLUX.1 [schnell] en Cloudflare
+#                   (las claves de C50) y su hoja de contactos. ~2 minutos.
+#   paso = kaggle   con la cara elegida (cara = 1-8) y ~3 s de la voz de
+#                   MDS-045: cabeza en reposo (Wan 2.2 y, siempre, un vaivén
+#                   sin modelo) y labios con MuseTalk 1.5, en la GPU gratuita
+#                   de Kaggle. Entre 30 minutos y 2 horas y media.
+#
+# Escribe SOLO en 07_pruebas/presentador-2026-10/ (caras/ y salida/), con un
+# commit del bot, y deja lo mismo como artefacto de 14 días.
+# Secretos: CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN, KAGGLE_USERNAME y
+# KAGGLE_KEY (que la CLI de Kaggle lee como KAGGLE_API_TOKEN: LICENCIAS.md §1).
+# ---------------------------------------------------------------------------
+
+on:
+  workflow_dispatch:
+    inputs:
+      paso:
+        description: "Qué paso: primero «caras»; después de mirar la hoja, «kaggle»"
+        type: choice
+        default: "caras"
+        options:
+          - "caras"
+          - "kaggle"
+      cara:
+        description: "Solo para «kaggle»: el número de la cara elegida en la hoja (1-8)"
+        type: string
+        default: "1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: presentador-prueba
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependencias
+        timeout-minutes: 15
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          # 26/10/2026: dos ejecuciones seguidas (14:35 y 14:47 UTC) murieron aquí: «apt-get update»
+          # se quedó colgado sin escribir nada y el paso agotó sus 10 minutos. Ahora apt tiene
+          # reintentos y tope de tiempo propio, no bloquea el paso si falla, y lo que ya está
+          # instalado en el runner no se vuelve a pedir.
+          sudo rm -f /var/lib/apt/lists/lock /var/cache/apt/archives/lock || true
+          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20"
+          sudo timeout 240 apt-get update -qq $APT || echo "apt-get update falló o tardó demasiado; se sigue"
+          falta=""
+          command -v ffmpeg >/dev/null || falta="$falta ffmpeg"
+          fc-list 2>/dev/null | grep -qi dejavu || falta="$falta fonts-dejavu-core"
+          if [ -n "$falta" ]; then
+            sudo timeout 300 apt-get install -y -qq $APT $falta \
+              || sudo timeout 300 apt-get install -y -qq $APT $falta
+          fi
+          command -v ffmpeg >/dev/null || { echo "::error::sin ffmpeg: el runner no ha podido instalarlo"; exit 1; }
+          pip install --quiet pillow numpy opencv-python-headless "kaggle>=1.7.4"
+
+      - name: Caras
+        if: ${{ inputs.paso == 'caras' }}
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: python3 07_pruebas/presentador-2026-10/prueba_presentador.py caras
+
+      - name: Kaggle
+        if: ${{ inputs.paso == 'kaggle' }}
+        timeout-minutes: 165
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_KEY }}
+          CARA: ${{ inputs.cara }}
+        run: python3 07_pruebas/presentador-2026-10/prueba_presentador.py kaggle --cara "$CARA"
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: presentador-${{ inputs.paso }}
+          path: |
+            07_pruebas/presentador-2026-10/caras/
+            07_pruebas/presentador-2026-10/salida/
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Dejarlo en el repositorio
+        if: ${{ !cancelled() }}
+        run: |
+          git add -A 07_pruebas/presentador-2026-10/caras 07_pruebas/presentador-2026-10/salida 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git config user.name  "Mecánica del Humor (bot)"
+            git config user.email "mecanicadelhumor@users.noreply.github.com"
+            git commit -m "Prueba del presentador (C51.3): ${{ inputs.paso }}"
+            git pull --rebase --autostash origin "$GITHUB_REF_NAME"
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          fi
