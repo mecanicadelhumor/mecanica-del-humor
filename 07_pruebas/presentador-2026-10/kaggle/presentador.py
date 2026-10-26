@@ -379,11 +379,16 @@ WAN = textwrap.dedent(r'''
         # a capa (lo más pequeño que hay, y más lento). El VAE, en la GPU y por trozos.
         grupo = dict(onload_device=torch.device("cuda"), offload_device=torch.device("cpu"),
                      use_stream=True, low_cpu_mem_usage=True)
+        # apply_group_offloading, no enable_group_offload: el codificador de texto es de
+        # transformers, no de diffusers, y no tiene ese método (fallo del primer intento de las 14:06).
+        from diffusers.hooks import apply_group_offloading
         if p["modo"].endswith("hojas"):
-            pipe.transformer.enable_group_offload(offload_type="leaf_level", **grupo)
+            apply_group_offloading(pipe.transformer, offload_type="leaf_level", **grupo)
         else:
-            pipe.transformer.enable_group_offload(offload_type="block_level", num_blocks_per_group=1, **grupo)
-        pipe.text_encoder.enable_group_offload(offload_type="block_level", num_blocks_per_group=1, **grupo)
+            apply_group_offloading(pipe.transformer, offload_type="block_level",
+                                   num_blocks_per_group=1, **grupo)
+        apply_group_offloading(pipe.text_encoder, offload_type="block_level",
+                               num_blocks_per_group=1, **grupo)
         pipe.vae.to("cuda")
         pipe.vae.enable_tiling()
         informe["cargado_s"] = round(time.time() - t0, 1)
@@ -467,6 +472,7 @@ with paso("a.2 · Wan 2.2 TI2V-5B"):
         if T["wan"][-1].get("ok"):
             break
         fallo = T["wan"][-1].get("error", "")
+        T["wan_fallo"] = fallo[:200]
         desborda = "NaN" in fallo or "vacío" in fallo
         sin_memoria = "out of memory" in fallo.lower()
         if not (desborda or sin_memoria):

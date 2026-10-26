@@ -263,3 +263,9 @@ pierde poco tiempo. El codificador de texto, igual. El VAE se queda en la GPU y 
 Si aún faltara memoria, segundo intento **capa a capa** («hojas»), y si fp16 se desborda, bf16 con la
 atención en fp32. Cada modo solo se prueba si el fallo anterior es el suyo (sin memoria → hojas;
 desbordamiento → bf16).
+
+**14:06-14:21, sexto «kaggle»**: el cambio anterior se cayó en una línea mía: `enable_group_offload` es un
+método de los modelos de *diffusers*, y el codificador de texto es de *transformers* (`UMT5EncoderModel`),
+que no lo tiene. Se usa `apply_group_offloading(...)`, la función suelta, que vale para cualquier módulo de
+PyTorch. **Probado en el contenedor** (sin GPU) sobre un UMT5 y un transformador de Wan en miniatura: los
+dos quedan enganchados y el UMT5 sigue dando su salida. LatentSync volvió a salir bien (4,7 min).
