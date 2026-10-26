@@ -1,14 +1,13 @@
 {
  "pasos": {
-  "0 · la máquina": 6.8,
-  "a.1 · plan B: vaivén de la foto": 4.6,
-  "b.1 · LatentSync: entorno, código y pesos": 171.9,
-  "b.2 · LatentSync sobre «afin»": 226.9,
-  "a.2 · Wan 2.2 TI2V-5B": 288.2
+  "0 · la máquina": 8.8,
+  "a.1 · plan B: vaivén de la foto": 5.3,
+  "b.1 · LatentSync: entorno, código y pesos": 103.7,
+  "b.2 · LatentSync sobre «afin»": 241.2,
+  "a.2 · Wan 2.2 TI2V-5B": 3295.2,
+  "b.3 · LatentSync sobre «wan»": 255.4
  },
- "errores": {
-  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: Wan sin vídeo: [{\"modo\": \"fp16_bloques\", \"atencion_eficiente_fp16\": true, \"ok\": false, \"error\": \"AttributeError: 'UMT5EncoderModel' object has no attribute 'enable_group_offload'\", \"pico_gb\": 0.0}]"
- },
+ "errores": {},
  "parametros": {
   "cara": 2,
   "wan_tope_s": 4500,
@@ -36,7 +35,8 @@
  "cuda": "12.8",
  "bf16_nativo": true,
  "latentsync": {
-  "afin": "1.6"
+  "afin": "1.6",
+  "wan": "1.6"
  },
  "versiones": [
   "accelerate==1.14.0",
@@ -48,20 +48,26 @@
   {
    "modo": "fp16_bloques",
    "atencion_eficiente_fp16": true,
-   "ok": false,
-   "error": "AttributeError: 'UMT5EncoderModel' object has no attribute 'enable_group_offload'",
-   "pico_gb": 0.0
+   "cargado_s": 267.6,
+   "primer_paso_s": 117.5,
+   "ok": true,
+   "fotogramas": 77,
+   "segundos": 3276.5,
+   "pico_gb": 13.5
   }
  ],
  "movimientos": [
-  "afin"
+  "afin",
+  "wan"
  ],
  "salida": [
   "a_movimiento_afin.mp4",
+  "a_movimiento_wan.mp4",
   "b_latentsync_afin.mp4",
+  "b_latentsync_wan.mp4",
   "cara.jpg",
   "registro.txt",
   "tiempos.json"
  ],
- "resultado": "con labios: latentsync_afin"
+ "resultado": "con labios: latentsync_afin, latentsync_wan"
 }

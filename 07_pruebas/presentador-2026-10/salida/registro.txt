@@ -23,139 +23,207 @@ $ /tmp/presentador/lsvenv/bin/python -c from huggingface_hub import hf_hub_downl
 === b.2 · LatentSync sobre «afin» ===
 $ /tmp/presentador/lsvenv/bin/python -c from huggingface_hub import hf_hub_download as d; d('ByteDance/LatentSync-1.6', 'latentsync_unet.pt', local_dir='/tmp/presentador/LatentSync/checkpoints/1.6'); d('ByteDance/LatentSync-1.6', 'whisper/tiny.pt', local_dir='checkpoints')
 $ /tmp/presentador/lsvenv/bin/python -m scripts.inference --unet_config_path configs/unet/stage2_512.yaml --inference_ckpt_path /tmp/presentador/LatentSync/checkpoints/1.6/latentsync_unet.pt --inference_steps 20 --guidance_scale 1.5 --enable_deepcache --seed 1247 --video_path /tmp/presentador/mov_afin.mp4 --audio_path /kaggle/input/datasets/mecanicadelhumor/presentador-entrada/audio.wav --video_out_path /kaggle/working/salida/b_latentsync_afin.mp4 --temp_dir /tmp/presentador/ls_tmp_afin
-    Sample frames: 16:   5%|▌         | 1/20 [00:03<01:13,  3.85s/it][A
+    Sample frames: 16:   5%|▌         | 1/20 [00:04<01:18,  4.11s/it][A
     
-    Sample frames: 16:  10%|█         | 2/20 [00:04<00:32,  1.81s/it][A
+    Sample frames: 16:  10%|█         | 2/20 [00:04<00:34,  1.94s/it][A
     
-    Sample frames: 16:  15%|█▌        | 3/20 [00:04<00:19,  1.17s/it][A
+    Sample frames: 16:  15%|█▌        | 3/20 [00:04<00:21,  1.25s/it][A
     
-    Sample frames: 16:  20%|██        | 4/20 [00:07<00:27,  1.71s/it][A
+    Sample frames: 16:  20%|██        | 4/20 [00:07<00:29,  1.83s/it][A
     
-    Sample frames: 16:  25%|██▌       | 5/20 [00:07<00:18,  1.24s/it][A
+    Sample frames: 16:  25%|██▌       | 5/20 [00:08<00:19,  1.32s/it][A
     
-    Sample frames: 16:  30%|███       | 6/20 [00:07<00:13,  1.05it/s][A
+    Sample frames: 16:  30%|███       | 6/20 [00:08<00:14,  1.01s/it][A
     
-    Sample frames: 16:  35%|███▌      | 7/20 [00:10<00:19,  1.47s/it][A
+    Sample frames: 16:  35%|███▌      | 7/20 [00:11<00:20,  1.57s/it][A
     
-    Sample frames: 16:  40%|████      | 8/20 [00:10<00:13,  1.13s/it][A
+    Sample frames: 16:  40%|████      | 8/20 [00:11<00:14,  1.21s/it][A
     
-    Sample frames: 16:  45%|████▌     | 9/20 [00:11<00:09,  1.11it/s][A
+    Sample frames: 16:  45%|████▌     | 9/20 [00:12<00:10,  1.04it/s][A
     
-    Sample frames: 16:  50%|█████     | 10/20 [00:13<00:14,  1.41s/it][A
+    Sample frames: 16:  50%|█████     | 10/20 [00:14<00:15,  1.51s/it][A
     
-    Sample frames: 16:  55%|█████▌    | 11/20 [00:14<00:09,  1.10s/it][A
+    Sample frames: 16:  55%|█████▌    | 11/20 [00:15<00:10,  1.17s/it][A
     
-    Sample frames: 16:  60%|██████    | 12/20 [00:14<00:07,  1.13it/s][A
+    Sample frames: 16:  60%|██████    | 12/20 [00:15<00:07,  1.06it/s][A
     
-    Sample frames: 16:  65%|██████▌   | 13/20 [00:17<00:09,  1.39s/it][A
+    Sample frames: 16:  65%|██████▌   | 13/20 [00:18<00:10,  1.49s/it][A
     
-    Sample frames: 16:  70%|███████   | 14/20 [00:17<00:06,  1.09s/it][A
+    Sample frames: 16:  70%|███████   | 14/20 [00:18<00:07,  1.17s/it][A
     
-    Sample frames: 16:  75%|███████▌  | 15/20 [00:18<00:04,  1.13it/s][A
+    Sample frames: 16:  75%|███████▌  | 15/20 [00:19<00:04,  1.06it/s][A
     
-    Sample frames: 16:  80%|████████  | 16/20 [00:20<00:05,  1.39s/it][A
+    Sample frames: 16:  80%|████████  | 16/20 [00:21<00:05,  1.49s/it][A
     
-    Sample frames: 16:  85%|████████▌ | 17/20 [00:20<00:03,  1.10s/it][A
+    Sample frames: 16:  85%|████████▌ | 17/20 [00:22<00:03,  1.17s/it][A
     
-    Sample frames: 16:  90%|█████████ | 18/20 [00:21<00:01,  1.13it/s][A
+    Sample frames: 16:  90%|█████████ | 18/20 [00:22<00:01,  1.06it/s][A
     
-    Sample frames: 16:  95%|█████████▌| 19/20 [00:23<00:01,  1.39s/it][A
+    Sample frames: 16:  95%|█████████▌| 19/20 [00:25<00:01,  1.49s/it][A
     
-    Sample frames: 16: 100%|██████████| 20/20 [00:24<00:00,  1.10s/it][A
-    Sample frames: 16: 100%|██████████| 20/20 [00:24<00:00,  1.22s/it]
+    Sample frames: 16: 100%|██████████| 20/20 [00:26<00:00,  1.17s/it][A
+    Sample frames: 16: 100%|██████████| 20/20 [00:26<00:00,  1.30s/it]
     
-    Doing inference...: 100%|██████████| 5/5 [02:51<00:00, 33.69s/it]
-    Doing inference...: 100%|██████████| 5/5 [02:51<00:00, 34.35s/it]
+    Doing inference...: 100%|██████████| 5/5 [03:07<00:00, 36.42s/it]
+    Doing inference...: 100%|██████████| 5/5 [03:07<00:00, 37.59s/it]
     Restoring 77 faces...
     
       0%|          | 0/77 [00:00<?, ?it/s]
-      1%|▏         | 1/77 [00:00<00:08,  8.95it/s]
-      9%|▉         | 7/77 [00:00<00:01, 35.24it/s]
-     17%|█▋        | 13/77 [00:00<00:01, 43.97it/s]
-     25%|██▍       | 19/77 [00:00<00:01, 48.39it/s]
-     32%|███▏      | 25/77 [00:00<00:01, 51.49it/s]
-     40%|████      | 31/77 [00:00<00:00, 52.88it/s]
-     48%|████▊     | 37/77 [00:00<00:00, 54.18it/s]
-     56%|█████▌    | 43/77 [00:00<00:00, 54.73it/s]
-     64%|██████▎   | 49/77 [00:00<00:00, 54.61it/s]
-     71%|███████▏  | 55/77 [00:01<00:00, 55.00it/s]
-     79%|███████▉  | 61/77 [00:01<00:00, 54.94it/s]
-     87%|████████▋ | 67/77 [00:01<00:00, 54.49it/s]
-     95%|█████████▍| 73/77 [00:01<00:00, 54.60it/s]
-    100%|██████████| 77/77 [00:01<00:00, 50.95it/s]
+      1%|▏         | 1/77 [00:00<00:09,  7.86it/s]
+      9%|▉         | 7/77 [00:00<00:02, 32.34it/s]
+     17%|█▋        | 13/77 [00:00<00:01, 42.31it/s]
+     25%|██▍       | 19/77 [00:00<00:01, 47.88it/s]
+     31%|███       | 24/77 [00:00<00:01, 45.51it/s]
+     39%|███▉      | 30/77 [00:00<00:00, 48.68it/s]
+     47%|████▋     | 36/77 [00:00<00:00, 50.86it/s]
+     55%|█████▍    | 42/77 [00:00<00:00, 52.27it/s]
+     62%|██████▏   | 48/77 [00:01<00:00, 53.13it/s]
+     70%|███████   | 54/77 [00:01<00:00, 53.61it/s]
+     78%|███████▊  | 60/77 [00:01<00:00, 54.21it/s]
+     86%|████████▌ | 66/77 [00:01<00:00, 55.10it/s]
+     94%|█████████▎| 72/77 [00:01<00:00, 55.60it/s]
+    100%|██████████| 77/77 [00:01<00:00, 50.40it/s]
 
 === a.2 · Wan 2.2 TI2V-5B ===
 $ pip install -q 'diffusers>=0.35' accelerate ftfy 'huggingface_hub>=1.5,<2'
 $ /usr/bin/python3 /tmp/presentador/wan.py {"cara": 2, "wan_tope_s": 4500, "wan_alto": 1280, "wan_ancho": 704, "wan_fotogramas": 77, "wan_pasos": 50, "segundos": 3.0, "latentsync_pasos": 20, "musetalk": false, "voz": "07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s", "modo": "fp16_bloques", "imagen": "/tmp/presentador/cara_vertical.png", "fotos": "/tmp/presentador/wan_png", "informe": "/tmp/presentador/wan_informe.json"}
-    /usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
-      warnings.warn(
-    Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-    WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-    
-    Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]
-    Fetching 5 files:  20%|██        | 1/5 [00:09<00:38,  9.53s/it]
-    Fetching 5 files:  40%|████      | 2/5 [01:28<02:30, 50.29s/it]
-    Fetching 5 files: 100%|██████████| 5/5 [01:28<00:00, 17.68s/it]
-    
-    Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
-    Loading checkpoint shards:  20%|██        | 1/5 [00:10<00:43, 10.78s/it]
-    Loading checkpoint shards:  40%|████      | 2/5 [00:25<00:39, 13.10s/it]
-    Loading checkpoint shards:  60%|██████    | 3/5 [00:45<00:32, 16.06s/it]
-    Loading checkpoint shards:  80%|████████  | 4/5 [01:04<00:17, 17.34s/it]
-    Loading checkpoint shards: 100%|██████████| 5/5 [01:05<00:00, 11.60s/it]
-    Loading checkpoint shards: 100%|██████████| 5/5 [01:05<00:00, 13.16s/it]
-    
-    Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s]
-    Fetching 3 files:  33%|███▎      | 1/3 [00:23<00:46, 23.23s/it]
-    Fetching 3 files:  67%|██████▋   | 2/3 [00:47<00:23, 23.85s/it]
-    Fetching 3 files: 100%|██████████| 3/3 [00:52<00:00, 17.39s/it]
-    
-    Loading weights:   0%|          | 0/242 [00:00<?, ?it/s]
-    Loading weights:  12%|█▏        | 30/242 [00:00<00:00, 293.79it/s]
-    Loading weights:  49%|████▉     | 118/242 [00:00<00:00, 632.76it/s]
-    Loading weights:  77%|███████▋  | 187/242 [00:00<00:00, 658.60it/s]
-    Loading weights: 100%|██████████| 242/242 [00:00<00:00, 628.74it/s]
-    The config attributes {'clip_output': False} were passed to AutoencoderKLWan, but are not expected and will be ignored. Please verify your config.json configuration file.
-    /usr/local/lib/python3.13/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
-      deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
-    
-    Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s]
-    Fetching 6 files:  33%|███▎      | 2/6 [00:00<00:00,  9.19it/s]
-    Fetching 6 files:  83%|████████▎ | 5/6 [00:01<00:00,  3.21it/s]
-    Fetching 6 files: 100%|██████████| 6/6 [00:01<00:00,  3.50it/s]
-    Fetching 6 files: 100%|██████████| 6/6 [00:01<00:00,  3.65it/s]
-    
     Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
-    Loading pipeline components...:  20%|██        | 1/5 [00:01<00:04,  1.09s/it]
-    Loading pipeline components...: 100%|██████████| 5/5 [00:03<00:00,  1.63it/s]
-    Loading pipeline components...: 100%|██████████| 5/5 [00:03<00:00,  1.56it/s]
-    Traceback (most recent call last):
-      File "/tmp/presentador/wan.py", line 58, in <module>
-        pipe.text_encoder.enable_group_offload(offload_type="block_level", num_blocks_per_group=1, **grupo)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1968, in __getattr__
-        raise AttributeError(
-            f"'{type(self).__name__}' object has no attribute '{name}'"
-        )
-    AttributeError: 'UMT5EncoderModel' object has no attribute 'enable_group_offload'
-    INFORME {"modo": "fp16_bloques", "atencion_eficiente_fp16": true, "ok": false, "error": "AttributeError: 'UMT5EncoderModel' object has no attribute 'enable_group_offload'", "pico_gb": 0.0}
-Traceback (most recent call last):
-  File "/kaggle/src/script.py", line 477, in <module>
-    raise RuntimeError("Wan sin vídeo: " + json.dumps(T["wan"], ensure_ascii=False)[:1500])
-RuntimeError: Wan sin vídeo: [{"modo": "fp16_bloques", "atencion_eficiente_fp16": true, "ok": false, "error": "AttributeError: 'UMT5EncoderModel' object has no attribute 'enable_group_offload'", "pico_gb": 0.0}]
+    Loading pipeline components...:  20%|██        | 1/5 [00:02<00:08,  2.09s/it]
+    Loading pipeline components...:  60%|██████    | 3/5 [00:03<00:02,  1.00s/it]
+    Loading pipeline components...: 100%|██████████| 5/5 [00:03<00:00,  1.50it/s]
+    cargado en 267.6 s; modo fp16_bloques
+    
+      0%|          | 0/50 [00:00<?, ?it/s]primer paso hecho; pico de memoria 13.5 GB
+    
+      2%|▏         | 1/50 [00:48<39:26, 48.30s/it]
+      4%|▍         | 2/50 [01:34<37:31, 46.90s/it]
+      6%|▌         | 3/50 [02:20<36:29, 46.59s/it]
+      8%|▊         | 4/50 [03:06<35:30, 46.33s/it]
+     10%|█         | 5/50 [03:52<34:39, 46.21s/it]
+     12%|█▏        | 6/50 [04:38<33:51, 46.16s/it]
+     14%|█▍        | 7/50 [05:24<33:03, 46.12s/it]
+     16%|█▌        | 8/50 [06:10<32:16, 46.10s/it]
+     18%|█▊        | 9/50 [06:56<31:29, 46.10s/it]
+     20%|██        | 10/50 [07:42<30:42, 46.07s/it]
+     22%|██▏       | 11/50 [08:28<29:55, 46.05s/it]
+     24%|██▍       | 12/50 [09:14<29:08, 46.00s/it]
+     26%|██▌       | 13/50 [10:00<28:22, 46.01s/it]
+     28%|██▊       | 14/50 [10:46<27:36, 46.02s/it]
+     30%|███       | 15/50 [11:32<26:50, 46.02s/it]
+     32%|███▏      | 16/50 [12:18<26:04, 46.02s/it]
+     34%|███▍      | 17/50 [13:04<25:18, 46.01s/it]
+     36%|███▌      | 18/50 [13:50<24:31, 45.99s/it]
+     38%|███▊      | 19/50 [14:36<23:44, 45.97s/it]
+     40%|████      | 20/50 [15:22<22:59, 45.97s/it]
+     42%|████▏     | 21/50 [16:08<22:13, 45.97s/it]
+     44%|████▍     | 22/50 [16:54<21:27, 45.98s/it]
+     46%|████▌     | 23/50 [17:40<20:40, 45.94s/it]
+     48%|████▊     | 24/50 [18:26<19:53, 45.90s/it]
+     50%|█████     | 25/50 [19:12<19:07, 45.91s/it]
+     52%|█████▏    | 26/50 [19:58<18:22, 45.93s/it]
+     54%|█████▍    | 27/50 [20:43<17:36, 45.92s/it]
+     56%|█████▌    | 28/50 [21:29<16:50, 45.94s/it]
+     58%|█████▊    | 29/50 [22:15<16:04, 45.91s/it]
+     60%|██████    | 30/50 [23:01<15:18, 45.92s/it]
+     62%|██████▏   | 31/50 [23:47<14:32, 45.95s/it]
+     64%|██████▍   | 32/50 [24:33<13:47, 45.95s/it]
+     66%|██████▌   | 33/50 [25:19<13:01, 45.98s/it]
+     68%|██████▊   | 34/50 [26:05<12:15, 45.99s/it]
+     70%|███████   | 35/50 [26:51<11:29, 45.97s/it]
+     72%|███████▏  | 36/50 [27:37<10:43, 45.95s/it]
+     74%|███████▍  | 37/50 [28:23<09:56, 45.90s/it]
+     76%|███████▌  | 38/50 [29:09<09:10, 45.89s/it]
+     78%|███████▊  | 39/50 [29:55<08:25, 45.91s/it]
+     80%|████████  | 40/50 [30:41<07:39, 45.91s/it]
+     82%|████████▏ | 41/50 [31:27<06:53, 45.95s/it]
+     84%|████████▍ | 42/50 [32:13<06:07, 45.95s/it]
+     86%|████████▌ | 43/50 [32:59<05:21, 45.96s/it]
+     88%|████████▊ | 44/50 [33:44<04:35, 45.93s/it]
+     90%|█████████ | 45/50 [34:30<03:49, 45.92s/it]
+     92%|█████████▏| 46/50 [35:16<03:03, 45.92s/it]
+     94%|█████████▍| 47/50 [36:02<02:17, 45.88s/it]
+     96%|█████████▌| 48/50 [36:48<01:31, 45.90s/it]
+     98%|█████████▊| 49/50 [37:34<00:45, 45.88s/it]
+    100%|██████████| 50/50 [38:20<00:00, 45.91s/it]
+    100%|██████████| 50/50 [38:20<00:00, 46.00s/it]
+    INFORME {"modo": "fp16_bloques", "atencion_eficiente_fp16": true, "cargado_s": 267.6, "primer_paso_s": 117.5, "ok": true, "fotogramas": 77, "segundos": 3276.5, "pico_gb": 13.5}
+$ ffmpeg -y -v error -framerate 25 -i /tmp/presentador/wan_png/%03d.png -c:v libx264 -crf 14 -pix_fmt yuv420p /tmp/presentador/mov_wan.mp4
+$ ffmpeg -y -v error -i /tmp/presentador/mov_wan.mp4 -c copy /kaggle/working/salida/a_movimiento_wan.mp4
 
+=== b.3 · LatentSync sobre «wan» ===
+$ /tmp/presentador/lsvenv/bin/python -c from huggingface_hub import hf_hub_download as d; d('ByteDance/LatentSync-1.6', 'latentsync_unet.pt', local_dir='/tmp/presentador/LatentSync/checkpoints/1.6'); d('ByteDance/LatentSync-1.6', 'whisper/tiny.pt', local_dir='checkpoints')
+$ /tmp/presentador/lsvenv/bin/python -m scripts.inference --unet_config_path configs/unet/stage2_512.yaml --inference_ckpt_path /tmp/presentador/LatentSync/checkpoints/1.6/latentsync_unet.pt --inference_steps 20 --guidance_scale 1.5 --enable_deepcache --seed 1247 --video_path /tmp/presentador/mov_wan.mp4 --audio_path /kaggle/input/datasets/mecanicadelhumor/presentador-entrada/audio.wav --video_out_path /kaggle/working/salida/b_latentsync_wan.mp4 --temp_dir /tmp/presentador/ls_tmp_wan
+    
+    Sample frames: 16:  10%|█         | 2/20 [00:04<00:35,  1.96s/it][A
+    
+    Sample frames: 16:  15%|█▌        | 3/20 [00:05<00:21,  1.26s/it][A
+    
+    Sample frames: 16:  20%|██        | 4/20 [00:07<00:29,  1.85s/it][A
+    
+    Sample frames: 16:  25%|██▌       | 5/20 [00:08<00:20,  1.34s/it][A
+    
+    Sample frames: 16:  30%|███       | 6/20 [00:08<00:14,  1.03s/it][A
+    
+    Sample frames: 16:  35%|███▌      | 7/20 [00:11<00:20,  1.60s/it][A
+    
+    Sample frames: 16:  40%|████      | 8/20 [00:11<00:14,  1.22s/it][A
+    
+    Sample frames: 16:  45%|████▌     | 9/20 [00:12<00:10,  1.02it/s][A
+    
+    Sample frames: 16:  50%|█████     | 10/20 [00:15<00:15,  1.53s/it][A
+    
+    Sample frames: 16:  55%|█████▌    | 11/20 [00:15<00:10,  1.19s/it][A
+    
+    Sample frames: 16:  60%|██████    | 12/20 [00:15<00:07,  1.04it/s][A
+    
+    Sample frames: 16:  65%|██████▌   | 13/20 [00:18<00:10,  1.51s/it][A
+    
+    Sample frames: 16:  70%|███████   | 14/20 [00:19<00:07,  1.18s/it][A
+    
+    Sample frames: 16:  75%|███████▌  | 15/20 [00:19<00:04,  1.05it/s][A
+    
+    Sample frames: 16:  80%|████████  | 16/20 [00:22<00:06,  1.51s/it][A
+    
+    Sample frames: 16:  85%|████████▌ | 17/20 [00:22<00:03,  1.18s/it][A
+    
+    Sample frames: 16:  90%|█████████ | 18/20 [00:23<00:01,  1.04it/s][A
+    
+    Sample frames: 16:  95%|█████████▌| 19/20 [00:25<00:01,  1.51s/it][A
+    
+    Sample frames: 16: 100%|██████████| 20/20 [00:26<00:00,  1.18s/it][A
+    Sample frames: 16: 100%|██████████| 20/20 [00:26<00:00,  1.32s/it]
+    
+    Doing inference...: 100%|██████████| 5/5 [03:09<00:00, 36.55s/it]
+    Doing inference...: 100%|██████████| 5/5 [03:09<00:00, 37.82s/it]
+    Restoring 77 faces...
+    
+      0%|          | 0/77 [00:00<?, ?it/s]
+      1%|▏         | 1/77 [00:00<00:18,  4.00it/s]
+      9%|▉         | 7/77 [00:00<00:03, 23.31it/s]
+     17%|█▋        | 13/77 [00:00<00:01, 34.36it/s]
+     23%|██▎       | 18/77 [00:00<00:01, 38.24it/s]
+     31%|███       | 24/77 [00:00<00:01, 43.48it/s]
+     38%|███▊      | 29/77 [00:00<00:01, 44.98it/s]
+     44%|████▍     | 34/77 [00:00<00:00, 44.21it/s]
+     52%|█████▏    | 40/77 [00:01<00:00, 47.16it/s]
+     60%|█████▉    | 46/77 [00:01<00:00, 49.43it/s]
+     68%|██████▊   | 52/77 [00:01<00:00, 51.07it/s]
+     75%|███████▌  | 58/77 [00:01<00:00, 51.87it/s]
+     83%|████████▎ | 64/77 [00:01<00:00, 52.67it/s]
+     91%|█████████ | 70/77 [00:01<00:00, 53.17it/s]
+     99%|█████████▊| 76/77 [00:01<00:00, 53.65it/s]
+    100%|██████████| 77/77 [00:01<00:00, 45.21it/s]
 
 RESUMEN: {
  "pasos": {
-  "0 · la máquina": 6.8,
-  "a.1 · plan B: vaivén de la foto": 4.6,
-  "b.1 · LatentSync: entorno, código y pesos": 171.9,
-  "b.2 · LatentSync sobre «afin»": 226.9,
-  "a.2 · Wan 2.2 TI2V-5B": 288.2
+  "0 · la máquina": 8.8,
+  "a.1 · plan B: vaivén de la foto": 5.3,
+  "b.1 · LatentSync: entorno, código y pesos": 103.7,
+  "b.2 · LatentSync sobre «afin»": 241.2,
+  "a.2 · Wan 2.2 TI2V-5B": 3295.2,
+  "b.3 · LatentSync sobre «wan»": 255.4
  },
- "errores": {
-  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: Wan sin vídeo: [{\"modo\": \"fp16_bloques\", \"atencion_eficiente_fp16\": true, \"ok\": false, \"error\": \"AttributeError: 'UMT5EncoderModel' object has no attribute 'enable_group_offload'\", \"pico_gb\": 0.0}]"
- },
+ "errores": {},
  "parametros": {
   "cara": 2,
   "wan_tope_s": 4500,
@@ -183,7 +251,8 @@ RESUMEN: {
  "cuda": "12.8",
  "bf16_nativo": true,
  "latentsync": {
-  "afin": "1.6"
+  "afin": "1.6",
+  "wan": "1.6"
  },
  "versiones": [
   "accelerate==1.14.0",
@@ -195,20 +264,26 @@ RESUMEN: {
   {
    "modo": "fp16_bloques",
    "atencion_eficiente_fp16": true,
-   "ok": false,
-   "error": "AttributeError: 'UMT5EncoderModel' object has no attribute 'enable_group_offload'",
-   "pico_gb": 0.0
+   "cargado_s": 267.6,
+   "primer_paso_s": 117.5,
+   "ok": true,
+   "fotogramas": 77,
+   "segundos": 3276.5,
+   "pico_gb": 13.5
   }
  ],
  "movimientos": [
-  "afin"
+  "afin",
+  "wan"
  ],
  "salida": [
   "a_movimiento_afin.mp4",
+  "a_movimiento_wan.mp4",
   "b_latentsync_afin.mp4",
+  "b_latentsync_wan.mp4",
   "cara.jpg",
   "registro.txt",
   "tiempos.json"
  ],
- "resultado": "con labios: latentsync_afin"
+ "resultado": "con labios: latentsync_afin, latentsync_wan"
 }

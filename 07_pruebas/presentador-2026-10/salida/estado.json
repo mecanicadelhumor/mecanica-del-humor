@@ -1,17 +1,18 @@
 {
  "cara": 2,
  "estado_kaggle": "complete",
- "minutos": 12.8,
- "resultado": "con labios: latentsync_afin",
+ "minutos": 66.4,
+ "resultado": "con labios: latentsync_afin, latentsync_wan",
  "videos": [
-  "b_latentsync_afin.mp4"
+  "b_latentsync_afin.mp4",
+  "b_latentsync_wan.mp4"
  ],
- "errores": {
-  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: Wan sin vídeo: [{\"modo\": \"fp16_bloques\", \"atencion_eficiente_fp16\": true, \"ok\": false, \"error\": \"AttributeError: 'UMT5EncoderModel' object has no attribute 'enable_group_offload'\", \"pico_gb\": 0.0}]"
- },
+ "errores": {},
  "ficheros": [
   "a_movimiento_afin.mp4",
+  "a_movimiento_wan.mp4",
   "b_latentsync_afin.mp4",
+  "b_latentsync_wan.mp4",
   "cara.jpg",
   "presentador-prueba.log",
   "registro.txt",
