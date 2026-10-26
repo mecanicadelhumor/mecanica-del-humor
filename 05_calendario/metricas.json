@@ -78053,9 +78053,7 @@
     "pct": 33.3
    },
    "se_quedaron_total": {
-    "vistas": 26,
-    "comprometidas": 10,
-    "pct": 38.5
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-08-27&endDate=2026-10-25&metrics=views%2CengagedViews&filters=video%3D%3Dnv8QaZPYsdA&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "impresiones": null,
    "ctr": null
@@ -78089,9 +78087,7 @@
    },
    "vistas_48h": 11,
    "se_quedaron_48h": {
-    "vistas": 11,
-    "comprometidas": 6,
-    "pct": 54.5
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-08-28&endDate=2026-08-29&metrics=views%2CengagedViews&filters=video%3D%3D14KLEyZ26-0&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "se_quedaron_total": {
     "vistas": 12,
@@ -80655,9 +80651,7 @@
     "pct": 21.2
    },
    "se_quedaron_total": {
-    "vistas": 115,
-    "comprometidas": 25,
-    "pct": 21.7
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-16&endDate=2026-10-25&metrics=views%2CengagedViews&filters=video%3D%3D6ahST7d-LEs&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "impresiones": null,
    "ctr": null
@@ -82597,7 +82591,7 @@
     "NOTIFICATION": 2.9,
     "NO_LINK_OTHER": 0.0
    },
-   "vistas_48h": 62,
+   "vistas_48h": null,
    "se_quedaron_48h": {
     "vistas": 62,
     "comprometidas": 11,
@@ -87347,7 +87341,11 @@
     ]
    },
    "trafico_pct": {
-    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-10-19&endDate=2026-10-25&metrics=views&di"
+    "SHORTS": 92.6,
+    "SUBSCRIBER": 7.4,
+    "NO_LINK_OTHER": 0.0,
+    "YT_CHANNEL": 0.0,
+    "YT_SEARCH": 0.0
    },
    "vistas_48h": 27,
    "se_quedaron_48h": {
@@ -88375,7 +88373,7 @@
   }
  ],
  "miniaturas": [],
- "actualizado_utc": "2026-10-26T11:17:41Z",
+ "actualizado_utc": "2026-10-26T15:27:05Z",
  "control_c26": {
   "mediana_vistas_48h": 24.0,
   "n_videos": 20,
