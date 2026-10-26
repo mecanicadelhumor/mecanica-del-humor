@@ -784,6 +784,22 @@ contra un servicio, usa lo que ya funciona en producción contra ese servicio (a
 cuando haz correr de verdad el camino de respaldo.**
 
 
+**64. Arreglar el síntoma con un tamaño más pequeño.** Wan no cabía en la T4 a 480×480 y la respuesta del
+23/10 fue probar 384 y 320. Tampoco cupo, y además el codirector no quería eso: «si sale pixelado no merece
+la pena». La causa era otra: la T4 no tiene bf16 de verdad (PyTorch dice que sí porque lo emula) y con bf16
+la atención eficiente no existe, así que PyTorch guardaba la matriz de atención entera. Y el intento que
+fallaba dentro de un `try` seguía reteniendo su memoria al probar el siguiente tamaño.
+→ **Cuando algo no cabe, mira primero qué ocupa la memoria y por qué, no cuánto bajar. Comprueba el tipo
+de número que la GPU hace de verdad (no lo que `is_bf16_supported()` dice). Cada intento que puede agotar
+la memoria, en un proceso nuevo. Y bajar la calidad es una decisión del codirector, no un respaldo.**
+
+## Dónde está el proyecto a 26 de octubre de 2026 (en diferido)
+
+Versión **26** del plan, la que manda. Wan de C51.3 rehecho sin bajar calidad (fp16, 704×1280 vertical;
+la causa era bf16 en la T4) y LatentSync 1.6 en lugar de MuseTalk, con MediaPipe; la dirección lanzó
+Kaggle ella misma (run 8, cara 2): el resultado se lee el jueves 29. Cola (b) en muestra, sin aplicar
+(regla 11.2). **B1: B gana** (arranque con el dato es el control de B2). El largo, al jueves 29. Trampa 64.
+
 ## Dónde está el proyecto a 23 de octubre de 2026, mañana (en diferido)
 
 Versión **25** del plan, la que manda. El paso `caras` de C51.3 falló (400: `seed` en schnell); arreglado

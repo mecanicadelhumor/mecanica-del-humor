@@ -243,3 +243,23 @@ vídeo con audio. **No se puede probar aquí**: Wan en la T4 (sin GPU) ni la 1.6
 
 **Salida nueva** en `salida/`: `a_movimiento_afin.mp4`, `a_movimiento_wan.mp4` (si sale),
 **`b_latentsync_afin.mp4`** y **`b_latentsync_wan.mp4`** (los que hay que ver).
+
+## 26/10, 13:48-14:02 UTC: quinto «kaggle» (cara 2), lanzado por la dirección
+
+**LatentSync 1.6 funciona y se ve mucho mejor**: `salida/b_latentsync_afin.mp4` (704×1280 vertical, 77
+fotogramas a 25 fps, 3,08 s, con la voz de `MDS-045`). 4,7 minutos de GPU. Frente a MuseTalk del 23/10:
+la boca y los dientes se leen, y no «tiembla» de un fotograma a otro. Lo tiene que ver el codirector.
+El entorno propio (uv, Python 3.10), el detector de MediaPipe y fp16 forzado: los tres, bien a la primera.
+
+**Wan falló otra vez, pero por lo que faltaba por ver**: la atención eficiente en fp16 **sí existe** en la
+T4 (el cuaderno lo comprueba y lo apunta: `atencion_eficiente_fp16: true`), así que el diagnóstico del
+bf16 era correcto. Lo que no cabe es el modelo: **el transformador en fp16 son unos 10 GB de los 14,5 de la
+tarjeta**, y `enable_model_cpu_offload()` lo deja entero dentro mientras genera. Pico 14,0 GB y pedía
+1,21 GB más, ya en el primer paso.
+
+**Arreglo (sin tocar la resolución)**: **descarga por grupos**. Solo el bloque del transformador que se
+está usando vive en la GPU; el siguiente se trae mientras se calcula el actual (`use_stream`), así que se
+pierde poco tiempo. El codificador de texto, igual. El VAE se queda en la GPU y decodifica por trozos.
+Si aún faltara memoria, segundo intento **capa a capa** («hojas»), y si fp16 se desborda, bf16 con la
+atención en fp32. Cada modo solo se prueba si el fallo anterior es el suyo (sin memoria → hojas;
+desbordamiento → bf16).

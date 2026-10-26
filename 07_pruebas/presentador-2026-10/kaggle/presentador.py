@@ -21,10 +21,12 @@ Hace, y apunta lo que tarda cada paso:
         guarda la matriz de atención entera (por eso pedía 1,6 GB más incluso a
         320x320, con la memoria aún ocupada por el intento anterior). Ahora:
           1. el transformador en fp16 (la T4 lo hace nativo y con atención
-             eficiente), el codificador de texto en bf16 y el VAE en fp32 por
-             trozos; si a los primeros pasos aparece un NaN (fp16 puede
-             desbordar), se para en seco y
-          2. bf16 con la atención calculada en fp32 (también eficiente en T4).
+             eficiente) y **por bloques**: solo el bloque que se está usando vive
+             en la GPU (el modelo entero son 10 GB de los 14,5 de la tarjeta, y
+             con él dentro no caben las activaciones: así falló el primer intento
+             del 26/10). Si aún falta memoria, capa a capa («hojas»);
+          2. si fp16 se desborda (NaN en los primeros pasos, se mira en cada
+             paso), bf16 con la atención calculada en fp32 (también eficiente en T4).
         Cada intento en un proceso nuevo: la memoria del que falla no se arrastra.
   (b) LABIOS · LatentSync 1.6 (código Apache 2.0, pesos OpenRAIL++-M: uso
       comercial permitido) sobre cada vídeo de (a): genera la boca a 512x512 y con
@@ -326,8 +328,9 @@ with paso("b.2 · LatentSync sobre «afin»"):
 # ---------------------------------------------------------------------------
 WAN = textwrap.dedent(r'''
     """Un intento de Wan 2.2 TI2V-5B en la T4 (dirección, 26/10/2026).
-    modo «fp16»: transformador en fp16, atención eficiente nativa de la T4.
-    modo «bf16_atencion_fp32»: si fp16 desborda; bf16 con la atención en fp32.
+    «fp16_bloques»: fp16 (atención eficiente nativa de la T4) y el transformador por bloques,
+       uno cada vez en la GPU. «fp16_hojas»: igual pero capa a capa, si aún falta memoria.
+       «bf16_atencion_fp32_bloques»: si fp16 se desborda; bf16 con la atención en fp32.
     Escribe los fotogramas en PNG (sin pérdida) y un informe JSON con lo que pasó."""
     import json, sys, time, traceback
     from pathlib import Path
@@ -352,8 +355,8 @@ WAN = textwrap.dedent(r'''
         from diffusers.utils import load_image
         from transformers import UMT5EncoderModel
 
-        dt = torch.float16 if p["modo"] == "fp16" else torch.bfloat16
-        if p["modo"] != "fp16":
+        dt = torch.bfloat16 if p["modo"].startswith("bf16") else torch.float16
+        if p["modo"].startswith("bf16"):
             # bf16 en Turing: la atención eficiente no lo acepta y PyTorch caería en la
             # «matemática» (la matriz entera: lo que no cupo el 23/10). En fp32 sí la acepta.
             _sdpa = F.scaled_dot_product_attention
@@ -369,7 +372,19 @@ WAN = textwrap.dedent(r'''
         vae = AutoencoderKLWan.from_pretrained(mid, subfolder="vae", torch_dtype=torch.float32)
         pipe = WanImageToVideoPipeline.from_pretrained(mid, transformer=transformer, text_encoder=texto,
                                                        vae=vae, torch_dtype=dt)
-        pipe.enable_model_cpu_offload()      # en la GPU, un modelo cada vez (el de texto ocupa 11 GB)
+        # 26/10/2026, segundo intento: con el modelo entero en la GPU (enable_model_cpu_offload) el
+        # transformador son 10 GB de 14,5 y las activaciones no cabían (pico 14,0; pedía 1,21 más).
+        # Descarga por grupos: solo los bloques que se están usando viven en la GPU, y el siguiente se
+        # trae mientras se calcula el actual (use_stream). «bloques» = bloque a bloque; «hojas» = capa
+        # a capa (lo más pequeño que hay, y más lento). El VAE, en la GPU y por trozos.
+        grupo = dict(onload_device=torch.device("cuda"), offload_device=torch.device("cpu"),
+                     use_stream=True, low_cpu_mem_usage=True)
+        if p["modo"].endswith("hojas"):
+            pipe.transformer.enable_group_offload(offload_type="leaf_level", **grupo)
+        else:
+            pipe.transformer.enable_group_offload(offload_type="block_level", num_blocks_per_group=1, **grupo)
+        pipe.text_encoder.enable_group_offload(offload_type="block_level", num_blocks_per_group=1, **grupo)
+        pipe.vae.to("cuda")
         pipe.vae.enable_tiling()
         informe["cargado_s"] = round(time.time() - t0, 1)
         print("cargado en", informe["cargado_s"], "s; modo", p["modo"], flush=True)
@@ -426,7 +441,11 @@ with paso("a.2 · Wan 2.2 TI2V-5B"):
     fotos, informe = TRABAJO / "wan_png", TRABAJO / "wan_informe.json"
     limite = time.time() + int(PARAM["wan_tope_s"])
     T["wan"] = []
-    for modo in ("fp16", "bf16_atencion_fp32"):
+    for modo in ("fp16_bloques", "fp16_hojas", "bf16_atencion_fp32_bloques"):
+        if modo.endswith("hojas") and T.get("wan_siguiente") != "hojas":
+            continue
+        if modo.startswith("bf16") and T.get("wan_siguiente") not in (None, "bf16"):
+            continue
         resto = int(limite - time.time())
         if resto < 600:
             T["wan"].append({"modo": modo, "ok": False, "error": "sin tiempo para intentarlo"})
@@ -447,8 +466,13 @@ with paso("a.2 · Wan 2.2 TI2V-5B"):
         guardar()
         if T["wan"][-1].get("ok"):
             break
-        if "NaN" not in T["wan"][-1].get("error", "") and "vacío" not in T["wan"][-1].get("error", ""):
-            break        # bf16 solo arregla un desbordamiento de fp16; otro error se repetiría igual
+        fallo = T["wan"][-1].get("error", "")
+        desborda = "NaN" in fallo or "vacío" in fallo
+        sin_memoria = "out of memory" in fallo.lower()
+        if not (desborda or sin_memoria):
+            break                               # otro error se repetiría igual en los demás modos
+        # fp16_hojas solo tiene sentido si faltó memoria; bf16, solo si fp16 se desbordó.
+        T["wan_siguiente"] = "hojas" if sin_memoria else "bf16"
     if not (T["wan"] and T["wan"][-1].get("ok")):
         raise RuntimeError("Wan sin vídeo: " + json.dumps(T["wan"], ensure_ascii=False)[:1500])
     # Los fotogramas de Wan se ponen a 25 por segundo tal cual (77 a 25 = 3,08 s, un 4 % más

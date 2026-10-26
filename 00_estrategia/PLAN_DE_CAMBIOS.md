@@ -6652,3 +6652,35 @@ Todo con dueño y fecha en `05_calendario/compromisos.json`.
 ## Lo que NO cambia hoy
 
 - B1 (brazos, `orden`, regla), los umbrales de C26, las rutinas, la cola final (hasta el lunes).
+
+---
+
+# Versión 26 · 26 de octubre de 2026 (lunes, en diferido) — Wan sin bajar la calidad, LatentSync, la cola (b) en muestra y B1: B gana
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario.
+
+| Qué | Decisión |
+|---|---|
+| C51.3 · Wan en Kaggle | El codirector: «que funcione esta vez; antes de bajar la calidad, alternativas; si sale pixelado, no vale». **La causa no era el tamaño**: la T4 (Turing) no tiene bf16 real y con bf16 no hay atención eficiente; caía en la matemática (la matriz entera). Ahora **fp16** (y, si desborda, bf16 con la atención en fp32), **704×1280 vertical** (nativa de Wan 2.2 5B), 50 pasos, **sin tamaños de respaldo**. `07_pruebas/presentador-2026-10/PRUEBA.md`, 26/10 |
+| C51.3 · labios | **LatentSync 1.6** (boca a 512, coherente entre fotogramas) sustituye a MuseTalk (que queda apagado, para comparar). InsightFace fuera (no comercial): **MediaPipe**. Entorno propio con uv y Python 3.10. Probado de punta a punta en CPU |
+| C51.3 · quién lanza | La dirección lanzó hoy el workflow (`kaggle`, cara 2): no hace falta el codirector para relanzar. Resultado: lo lee la dirección el jueves 29 (`C51.3-wan-resultado`) |
+| C51.3 · si Wan 5B no basta | `C51.3-alternativas` (2/11): modelos de cara que habla con audio (más grandes) en una GPU grande con créditos gratuitos. No se mete nada que no sea creíble |
+| Cola final (`C36-cola`) | Opción (b) hecha **en muestra** (`07_pruebas/cola-2026-10-26/`): 1,8 s de cola, tarjeta 1,5 s, el texto del cierre se va en 0,3 s al acabar la voz. **Sin aplicar** (regla 11.2) hasta que el codirector la vea; el cambio está en `cola_b.diff` |
+| **B1 · B gana** | Por la regla temprana (n = 4, +21,6 pp ≥ 15, sin reparo). **B (arranque con el dato) es el control de B2**; si A gana antes del 4/11, la combinación. B1 sigue sin tocar hasta el 4/11 solo para resolver A. Escrito en `ciclos.json` («decisiones») |
+| B2 · pocas vistas | Propuesta para B2, antes de su primer dato: un Short con menos de 10 vistas a 48 h no cuenta en «se quedaron» (`B2-regla-pocas-vistas`, 2/11). B1 no cambia |
+| El largo | `largo-imagen-horizontal` y `largo-voz-tandas` pasan al **jueves 29** (hoy, Wan y lo vencido de C51.3); el ensayo del 2/11 no se mueve |
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Cuando pueda | El codirector: ver la cola (b) y los vídeos de LatentSync |
+| Jueves 29 | Dirección: resultado de Kaggle; cola (b) si dice que sí; imagen horizontal y voz por tandas del largo; el segundo Short diario preparado. Planificación: `MDH-008` |
+| Lunes 2/11 | Dirección: B2 factorial y bayesiano (control = B) y la regla de pocas vistas; patrón de calidad; esquina libre; render del largo; informe de voces; alternativas del presentador |
+| Martes 3/11 | El codirector: mover el workflow del segundo Short |
+| 4-5/11 | Fin de B1; B2 a 14 por semana |
+
+## Lo que NO cambia hoy
+
+- Nada de producción: ni la cola, ni la voz, ni el visual. B1 sigue con su orden y su regla. Las rutinas, igual.

@@ -91,9 +91,11 @@
       "que": "Comprobar en kaggle.com → Settings que la cuenta tiene el teléfono verificado (sin eso Kaggle no da GPU ni internet) y volver a lanzar el workflow con paso = kaggle y cara = 2",
       "dueno": "codirector",
       "fecha": "2026-10-29",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Dirección 23/10, tras el primer intento de Kaggle"
+      "origen": "Dirección 23/10, tras el primer intento de Kaggle",
+      "hecho_el": "2026-10-23",
+      "nota": "Hecho de hecho el 23/10: desde el segundo intento Kaggle da dos T4 e internet (lo apunta la dirección el 26/10)."
     },
     {
       "id": "C51.3-kaggle-run",
@@ -103,7 +105,7 @@
       "estado": "pendiente",
       "aplazamientos": [],
       "origen": "Dirección 23/10. Depende de C51.3-workflow y de que el codirector elija cara",
-      "nota": "Primer intento del codirector el 23/10 con la cara 2: Kaggle sin GPU, sin internet y sin encontrar la entrada; dos minutos, sin vídeo. Arreglado lo nuestro (entrada, aviso, run en rojo). Falta verificar el teléfono en Kaggle (C51.3-kaggle-telefono) y relanzar"
+      "nota": "Primer intento del codirector el 23/10 con la cara 2: Kaggle sin GPU, sin internet y sin encontrar la entrada; dos minutos, sin vídeo. Arreglado lo nuestro (entrada, aviso, run en rojo). Falta verificar el teléfono en Kaggle (C51.3-kaggle-telefono) y relanzar · 26/10: la dirección lo lanza ella misma (workflow, paso kaggle, cara 2) con el cuaderno nuevo: Wan en fp16 a 704x1280 y LatentSync 1.6. Resultado en 07_pruebas/presentador-2026-10/salida/."
     },
     {
       "id": "C36-encendido",
@@ -140,9 +142,15 @@
       "id": "C36-cola",
       "que": "Cola tras el cierre (≈3 s sin voz, es la tarjeta «Síguenos»): el codirector elige (a) igual, (b) ~1,8 s con tarjeta ~1,3 s, (c) 1,5 s; la dirección lo aplica con muestra en vídeo",
       "dueno": "direccion",
-      "fecha": "2026-10-26",
+      "fecha": "2026-10-29",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-10-26",
+          "a": "2026-10-29",
+          "porque": "Muestra hecha el 26/10 (07_pruebas/cola-2026-10-26/, cambio en cola_b.diff sin aplicar). Regla 11.2: entra cuando el codirector la vea; la dirección la aplica el jueves 29 si dice que sí"
+        }
+      ],
       "origen": "Respuesta del codirector a las tareas del 22/10, punto 1",
       "nota": "El codirector eligió (b) el 23/10: ~1,8 s de cola, tarjeta ~1,3 s. Ajustar para que se lea sin desperdiciar segundos. Se aplica el lunes 26 con vídeo del final (regla 11.2)"
     },
@@ -150,18 +158,30 @@
       "id": "largo-imagen-horizontal",
       "que": "visual.py y fondo_visual.py en horizontal para el largo (C50 solo sabe vertical)",
       "dueno": "direccion",
-      "fecha": "2026-10-26",
+      "fecha": "2026-10-29",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-10-26",
+          "a": "2026-10-29",
+          "porque": "El 26/10 la ejecución se dedicó a lo que el codirector pidió en el cuaderno (Wan en Kaggle, que funcione y sin bajar calidad) y a lo vencido de C51.3. Llega a tiempo: el ensayo del largo es el 2/11"
+        }
+      ],
       "origen": "Plan v23"
     },
     {
       "id": "largo-voz-tandas",
       "que": "Voz del largo con 2.5-flash y C36 por tandas, probada en vivo",
       "dueno": "direccion",
-      "fecha": "2026-10-26",
+      "fecha": "2026-10-29",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-10-26",
+          "a": "2026-10-29",
+          "porque": "Mismo motivo que largo-imagen-horizontal. Además, probarla en vivo pide el guion de MDH-008, que la planificación entrega el jueves 29"
+        }
+      ],
       "origen": "Plan v23"
     },
     {
@@ -279,9 +299,47 @@
       "que": "LatentSync como tercera variante de labios en el cuaderno de Kaggle (detector de MediaPipe en lugar de InsightFace, fp16 en la T4, 1.6 y si no cabe 1.5, entorno virtual propio), probado lo que se pueda sin GPU",
       "dueno": "direccion",
       "fecha": "2026-10-26",
+      "estado": "hecho",
+      "aplazamientos": [],
+      "origen": "Codirector, 23/10 (tras ver b_labios_afin.mp4). Investigación: 07_pruebas/presentador-2026-10/LATENTSYNC.md",
+      "hecho_el": "2026-10-26",
+      "nota": "Montado en kaggle/presentador.py (b.1-b.3): entorno propio con uv y Python 3.10, MediaPipe en lugar de InsightFace, fp16 forzado, 1.6 y si falla 1.5. Probado de punta a punta en CPU con la 1.5. Primera ejecución en Kaggle lanzada por la dirección el 26/10 (run 8 del workflow)."
+    },
+    {
+      "id": "C51.3-wan-resultado",
+      "que": "Leer el resultado del run de Kaggle del 26/10 (Wan fp16 704x1280 y LatentSync 1.6): si Wan sale, mirarlo fotograma a fotograma; si falla, la causa y el siguiente intento sin bajar resolución; y pedir al codirector que vea b_latentsync_*.mp4",
+      "dueno": "direccion",
+      "fecha": "2026-10-29",
       "estado": "pendiente",
       "aplazamientos": [],
-      "origen": "Codirector, 23/10 (tras ver b_labios_afin.mp4). Investigación: 07_pruebas/presentador-2026-10/LATENTSYNC.md"
+      "origen": "Cuaderno del codirector, 26/10 («que funcione esta vez», sin bajar calidad)"
+    },
+    {
+      "id": "C51.3-alternativas",
+      "que": "Alternativas creíbles si Wan 5B en T4 no da la calidad: modelos de cara que habla con audio (Wan 2.2 S2V 14B, InfiniteTalk…) en una GPU grande con créditos gratuitos; licencias, coste y cuánto tarda un Short. Informe al codirector",
+      "dueno": "direccion",
+      "fecha": "2026-11-02",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Cuaderno del codirector, 26/10 («hay que ser creativos y tener paciencia»)"
+    },
+    {
+      "id": "C36-cola-mirar",
+      "que": "Ver 07_pruebas/cola-2026-10-26/cola_despues.mp4 (y cola_antes.mp4) y decir en el cuaderno sí, no o un ajuste",
+      "dueno": "codirector",
+      "fecha": "2026-10-29",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Dirección 26/10 (regla 11.2)"
+    },
+    {
+      "id": "B2-regla-pocas-vistas",
+      "que": "Escribir en B2, antes de su primer dato, si un Short con menos de 10 vistas a 48 h cuenta o no en «se quedaron» (propuesta de la dirección: no cuenta)",
+      "dueno": "direccion",
+      "fecha": "2026-11-02",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Decisión de B1 del 26/10 (ciclos.json, decisiones)"
     }
   ]
 }
