@@ -5,129 +5,175 @@ GPU: Tesla T4, 15360 MiB
 Tesla T4, 15360 MiB · torch 2.11.0+cu128 · bf16: True
 
 === a.1 · plan B: vaivén de la foto ===
-$ ffmpeg -y -v error -i /tmp/presentador/mov_afin.mp4 -c:v libx264 -pix_fmt yuv420p /kaggle/working/salida/a_movimiento_afin.mp4
+$ ffmpeg -y -v error -i /tmp/presentador/mov_afin.mp4 -c:v libx264 -crf 16 -pix_fmt yuv420p /kaggle/working/salida/a_movimiento_afin.mp4
+
+=== b.1 · LatentSync: entorno, código y pesos ===
+$ git clone -q https://github.com/bytedance/LatentSync.git /tmp/presentador/LatentSync
+$ git checkout -q a229c3948406bc2cf6eaf4873e662e70c6a04746
+$ /usr/bin/python3 -m pip install -q uv
+$ /usr/bin/python3 -m uv venv -q -p 3.10 /tmp/presentador/lsvenv
+$ /usr/bin/python3 -m uv pip install -q --python /tmp/presentador/lsvenv/bin/python torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121
+$ /usr/bin/python3 -m uv pip install -q --python /tmp/presentador/lsvenv/bin/python diffusers==0.32.2 transformers==4.48.0 decord==0.6.0 accelerate==0.26.1 einops==0.7.0 omegaconf==2.3.0 opencv-python-headless==4.9.0.80 mediapipe==0.10.11 python_speech_features==0.6 librosa==0.10.1 scenedetect==0.6.1 ffmpeg-python==0.2.0 imageio==2.31.1 imageio-ffmpeg==0.5.1 huggingface-hub==0.30.2 numpy==1.26.4 kornia==0.8.0 DeepCache==0.1.1 soundfile
+$ /tmp/presentador/lsvenv/bin/python -c import torch, mediapipe, decord, diffusers; print('torch', torch.__version__, 'cuda', torch.cuda.is_available(), torch.cuda.get_device_name(0) if torch.cuda.is_available() else '-')
+    torch 2.5.1+cu121 cuda True Tesla T4
+$ /tmp/presentador/lsvenv/bin/python -c from huggingface_hub import hf_hub_download as d; d('ByteDance/LatentSync-1.6', 'latentsync_unet.pt', local_dir='/tmp/presentador/LatentSync/checkpoints/1.6'); d('ByteDance/LatentSync-1.6', 'whisper/tiny.pt', local_dir='checkpoints')
+    Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+    Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+
+=== b.2 · LatentSync sobre «afin» ===
+$ /tmp/presentador/lsvenv/bin/python -c from huggingface_hub import hf_hub_download as d; d('ByteDance/LatentSync-1.6', 'latentsync_unet.pt', local_dir='/tmp/presentador/LatentSync/checkpoints/1.6'); d('ByteDance/LatentSync-1.6', 'whisper/tiny.pt', local_dir='checkpoints')
+$ /tmp/presentador/lsvenv/bin/python -m scripts.inference --unet_config_path configs/unet/stage2_512.yaml --inference_ckpt_path /tmp/presentador/LatentSync/checkpoints/1.6/latentsync_unet.pt --inference_steps 20 --guidance_scale 1.5 --enable_deepcache --seed 1247 --video_path /tmp/presentador/mov_afin.mp4 --audio_path /kaggle/input/datasets/mecanicadelhumor/presentador-entrada/audio.wav --video_out_path /kaggle/working/salida/b_latentsync_afin.mp4 --temp_dir /tmp/presentador/ls_tmp_afin
+    Sample frames: 16:   5%|▌         | 1/20 [00:04<01:27,  4.58s/it][A
+    
+    Sample frames: 16:  10%|█         | 2/20 [00:05<00:38,  2.16s/it][A
+    
+    Sample frames: 16:  15%|█▌        | 3/20 [00:05<00:23,  1.38s/it][A
+    
+    Sample frames: 16:  20%|██        | 4/20 [00:08<00:32,  2.04s/it][A
+    
+    Sample frames: 16:  25%|██▌       | 5/20 [00:09<00:22,  1.47s/it][A
+    
+    Sample frames: 16:  30%|███       | 6/20 [00:09<00:15,  1.13s/it][A
+    
+    Sample frames: 16:  35%|███▌      | 7/20 [00:12<00:22,  1.76s/it][A
+    
+    Sample frames: 16:  40%|████      | 8/20 [00:13<00:16,  1.35s/it][A
+    
+    Sample frames: 16:  45%|████▌     | 9/20 [00:13<00:11,  1.07s/it][A
+    
+    Sample frames: 16:  50%|█████     | 10/20 [00:16<00:16,  1.69s/it][A
+    
+    Sample frames: 16:  55%|█████▌    | 11/20 [00:17<00:11,  1.32s/it][A
+    
+    Sample frames: 16:  60%|██████    | 12/20 [00:17<00:08,  1.06s/it][A
+    
+    Sample frames: 16:  65%|██████▌   | 13/20 [00:20<00:11,  1.67s/it][A
+    
+    Sample frames: 16:  70%|███████   | 14/20 [00:21<00:07,  1.31s/it][A
+    
+    Sample frames: 16:  75%|███████▌  | 15/20 [00:21<00:05,  1.06s/it][A
+    
+    Sample frames: 16:  80%|████████  | 16/20 [00:24<00:06,  1.68s/it][A
+    
+    Sample frames: 16:  85%|████████▌ | 17/20 [00:25<00:03,  1.32s/it][A
+    
+    Sample frames: 16:  90%|█████████ | 18/20 [00:25<00:02,  1.07s/it][A
+    
+    Sample frames: 16:  95%|█████████▌| 19/20 [00:28<00:01,  1.69s/it][A
+    
+    Sample frames: 16: 100%|██████████| 20/20 [00:29<00:00,  1.33s/it][A
+    Sample frames: 16: 100%|██████████| 20/20 [00:29<00:00,  1.46s/it]
+    
+    Doing inference...: 100%|██████████| 5/5 [03:46<00:00, 42.29s/it]
+    Doing inference...: 100%|██████████| 5/5 [03:46<00:00, 45.30s/it]
+    Restoring 77 faces...
+    
+      0%|          | 0/77 [00:00<?, ?it/s]
+      1%|▏         | 1/77 [00:00<00:11,  6.79it/s]
+      9%|▉         | 7/77 [00:00<00:02, 32.58it/s]
+     17%|█▋        | 13/77 [00:00<00:01, 43.28it/s]
+     25%|██▍       | 19/77 [00:00<00:01, 48.95it/s]
+     32%|███▏      | 25/77 [00:00<00:00, 52.28it/s]
+     40%|████      | 31/77 [00:00<00:00, 54.08it/s]
+     48%|████▊     | 37/77 [00:00<00:00, 55.60it/s]
+     56%|█████▌    | 43/77 [00:00<00:00, 55.99it/s]
+     64%|██████▎   | 49/77 [00:00<00:00, 56.97it/s]
+     71%|███████▏  | 55/77 [00:01<00:00, 57.52it/s]
+     79%|███████▉  | 61/77 [00:01<00:00, 57.77it/s]
+     87%|████████▋ | 67/77 [00:01<00:00, 58.19it/s]
+     95%|█████████▍| 73/77 [00:01<00:00, 58.17it/s]
+    100%|██████████| 77/77 [00:01<00:00, 53.12it/s]
 
 === a.2 · Wan 2.2 TI2V-5B ===
 $ pip install -q 'diffusers>=0.35' accelerate ftfy 'huggingface_hub>=1.5,<2'
-$ /usr/bin/python3 /tmp/presentador/wan.py {"cara": "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg", "wan_tope_s": 3600, "wan_alto": 480, "wan_ancho": 480, "wan_fotogramas": 73, "wan_pasos": 30, "segundos": 3.0, "voz": "07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s", "salida": "/tmp/presentador/mov_wan_24.mp4"}
-    Fetching 18 files:  67%|██████▋   | 12/18 [00:35<00:40,  6.78s/it]
-    Fetching 18 files:  72%|███████▏  | 13/18 [02:00<02:18, 27.68s/it]
-    Fetching 18 files:  78%|███████▊  | 14/18 [02:00<01:20, 20.18s/it]
-    Fetching 18 files:  83%|████████▎ | 15/18 [02:06<00:48, 16.23s/it]
-    Fetching 18 files: 100%|██████████| 18/18 [02:07<00:00,  7.06s/it]
+$ /usr/bin/python3 /tmp/presentador/wan.py {"cara": 2, "wan_tope_s": 4500, "wan_alto": 1280, "wan_ancho": 704, "wan_fotogramas": 77, "wan_pasos": 50, "segundos": 3.0, "latentsync_pasos": 20, "musetalk": false, "voz": "07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s", "modo": "fp16", "imagen": "/tmp/presentador/cara_vertical.png", "fotos": "/tmp/presentador/wan_png", "informe": "/tmp/presentador/wan_informe.json"}
+    /usr/local/lib/python3.13/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+      deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+    
+    Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s]
+    Fetching 6 files:  50%|█████     | 3/6 [00:00<00:00, 22.05it/s]
+    Fetching 6 files: 100%|██████████| 6/6 [00:00<00:00, 14.94it/s]
+    Fetching 6 files: 100%|██████████| 6/6 [00:00<00:00, 15.67it/s]
     
     Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
-    Loading pipeline components...:  20%|██        | 1/5 [00:13<00:54, 13.71s/it]
-    Loading pipeline components...:  60%|██████    | 3/5 [00:15<00:08,  4.34s/it]
+    Loading pipeline components...:  20%|██        | 1/5 [00:01<00:07,  1.97s/it]
+    Loading pipeline components...:  60%|██████    | 3/5 [00:03<00:02,  1.01s/it]
+    Loading pipeline components...: 100%|██████████| 5/5 [00:03<00:00,  1.50it/s]
+    cargado en 263.3 s; modo fp16
     
-    Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s][A
-    
-    Loading checkpoint shards:  20%|██        | 1/5 [00:09<00:38,  9.72s/it][A
-    
-    Loading checkpoint shards:  40%|████      | 2/5 [00:23<00:36, 12.04s/it][A
-    
-    Loading checkpoint shards:  60%|██████    | 3/5 [00:43<00:31, 15.53s/it][A
-    
-    Loading checkpoint shards:  80%|████████  | 4/5 [01:02<00:17, 17.03s/it][A
-    
-    Loading checkpoint shards: 100%|██████████| 5/5 [01:03<00:00, 11.40s/it][A
-    Loading checkpoint shards: 100%|██████████| 5/5 [01:03<00:00, 12.76s/it]
-    
-    Loading pipeline components...:  80%|████████  | 4/5 [01:19<00:24, 24.96s/it]
-    
-    Loading weights:   0%|          | 0/242 [00:00<?, ?it/s][A
-    
-    Loading weights:  30%|███       | 73/242 [00:00<00:00, 715.87it/s][A
-    
-    Loading weights:  60%|█████▉    | 145/242 [00:00<00:00, 665.16it/s][A
-    
-    Loading weights:  88%|████████▊ | 214/242 [00:00<00:00, 652.72it/s][A
-    Loading weights: 100%|██████████| 242/242 [00:00<00:00, 675.76it/s]
-    
-    Loading pipeline components...: 100%|██████████| 5/5 [01:20<00:00, 16.89s/it]
-    Loading pipeline components...: 100%|██████████| 5/5 [01:20<00:00, 16.07s/it]
-    
-      0%|          | 0/30 [00:00<?, ?it/s]
-      0%|          | 0/30 [00:13<?, ?it/s]
-    Wan no cabe en la GPU ni a 320x320
+      0%|          | 0/50 [00:00<?, ?it/s]
+      0%|          | 0/50 [00:13<?, ?it/s]
+    Traceback (most recent call last):
+      File "/tmp/presentador/wan.py", line 62, in <module>
+        frames = pipe(image=img,
+                 ~~~~^^^^^^^^^^^
+                      prompt=("a friendly science presenter looks at the camera and stays still, calm breathing, "
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        ...<6 lines>...
+                      generator=torch.Generator("cpu").manual_seed(20261023),
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                      callback_on_step_end=vigila, callback_on_step_end_tensor_inputs=["latents"]).frames[0]
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/pipelines/wan/pipeline_wan_i2v.py", line 773, in __call__
+        noise_pred = current_model(
+                     ~~~~~~~~~~~~~^
+            hidden_states=latent_model_input,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        ...<4 lines>...
+            return_dict=False,
+            ^^^^^^^^^^^^^^^^^^
+        )[0]
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/usr/local/lib/python3.13/dist-packages/accelerate/hooks.py", line 192, in new_forward
+        output = module._old_forward(*args, **kwargs)
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/peft_utils.py", line 323, in wrapper
+        result = forward_fn(self, *args, **kwargs)
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py", line 704, in forward
+        hidden_states = block(hidden_states, encoder_hidden_states, timestep_proj, rotary_emb)
+      File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py", line 472, in forward
+        self.scale_shift_table.unsqueeze(0) + temb.float()
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+    torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.21 GiB. GPU 0 has a total capacity of 14.56 GiB of which 216.81 MiB is free. Process 8 has 104.00 MiB memory in use. Including non-PyTorch memory, this process has 14.25 GiB memory in use. Of the allocated memory 14.04 GiB is allocated by PyTorch, and 77.11 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+    INFORME {"modo": "fp16", "atencion_eficiente_fp16": true, "cargado_s": 263.3, "ok": false, "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 1.21 GiB. GPU 0 has a total capacity of 14.56 GiB of which 216.81 MiB is free. Process 8 has 104.00 MiB memory in use. Including non-PyTorch memory, this process has 14.25 GiB memory in use. Of the allocated memory 14.04 GiB is allocated by PyTorch, and 77.11 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)", "pico_gb": 14.0}
 Traceback (most recent call last):
-  File "/kaggle/src/script.py", line 227, in <module>
-    sh([sys.executable, str(TRABAJO / "wan.py"), json.dumps(args)], timeout=int(PARAM["wan_tope_s"]),
-    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-       env=dict(os.environ, PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True"))
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/kaggle/src/script.py", line 77, in sh
-    raise RuntimeError(f"código {r.returncode}: {cmd}")
-RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{"cara": "/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg", "wan_tope_s": 3600, "wan_alto": 480, "wan_ancho": 480, "wan_fotogramas": 73, "wan_pasos": 30, "segundos": 3.0, "voz": "07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s", "salida": "/tmp/presentador/mov_wan_24.mp4"}']
+  File "/kaggle/src/script.py", line 453, in <module>
+    raise RuntimeError("Wan sin vídeo: " + json.dumps(T["wan"], ensure_ascii=False)[:1500])
+RuntimeError: Wan sin vídeo: [{"modo": "fp16", "atencion_eficiente_fp16": true, "cargado_s": 263.3, "ok": false, "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 1.21 GiB. GPU 0 has a total capacity of 14.56 GiB of which 216.81 MiB is free. Process 8 has 104.00 MiB memory in use. Including non-PyTorch memory, this process has 14.25 GiB memory in use. Of the allocated memory 14.04 GiB is allocated by PyTorch, and 77.11 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)", "pico_gb": 14.0}]
 
-
-=== b.1 · MuseTalk: código, dependencias y pesos ===
-$ git clone -q https://github.com/TMElyralab/MuseTalk.git /tmp/presentador/MuseTalk
-$ git checkout -q 0a89dec45a0192b824e3cf4daf96c239440c5ed8
-$ pip install -q omegaconf einops librosa soundfile 'huggingface_hub>=1.5,<2' ffmpeg-python
-
-=== b.2 · MuseTalk sobre «afin» ===
-$ /usr/bin/python3 -m scripts.inference --inference_config /tmp/presentador/MuseTalk/tarea_afin.yaml --result_dir /tmp/presentador/res_afin --unet_model_path models/musetalkV15/unet.pth --unet_config models/musetalkV15/musetalk.json --version v15 --ffmpeg_path /usr/bin --use_float16 --batch_size 8
-    caras (S3FD):  73%|███████▎  | 55/75 [00:04<00:01, 19.88it/s]
-    caras (S3FD):  77%|███████▋  | 58/75 [00:04<00:00, 20.00it/s]
-    caras (S3FD):  81%|████████▏ | 61/75 [00:04<00:00, 20.04it/s]
-    caras (S3FD):  85%|████████▌ | 64/75 [00:04<00:00, 20.00it/s]
-    caras (S3FD):  89%|████████▉ | 67/75 [00:04<00:00, 20.03it/s]
-    caras (S3FD):  93%|█████████▎| 70/75 [00:04<00:00, 19.99it/s]
-    caras (S3FD):  97%|█████████▋| 73/75 [00:04<00:00, 19.99it/s]
-    caras (S3FD): 100%|██████████| 75/75 [00:05<00:00, 14.83it/s]
-    
-      0%|          | 0/10 [00:00<?, ?it/s]
-     10%|█         | 1/10 [00:05<00:46,  5.19s/it]
-     20%|██        | 2/10 [00:05<00:20,  2.57s/it]
-     30%|███       | 3/10 [00:06<00:12,  1.73s/it]
-     40%|████      | 4/10 [00:07<00:08,  1.34s/it]
-     50%|█████     | 5/10 [00:08<00:05,  1.13s/it]
-     60%|██████    | 6/10 [00:08<00:03,  1.00it/s]
-     70%|███████   | 7/10 [00:09<00:02,  1.09it/s]
-     80%|████████  | 8/10 [00:10<00:01,  1.16it/s]
-     90%|█████████ | 9/10 [00:11<00:00,  1.20it/s]
-    100%|██████████| 10/10 [00:13<00:00,  1.27s/it]
-    100%|██████████| 10/10 [00:13<00:00,  1.34s/it]
-    
-      0%|          | 0/75 [00:00<?, ?it/s]
-      7%|▋         | 5/75 [00:00<00:01, 42.81it/s]
-     13%|█▎        | 10/75 [00:00<00:01, 44.88it/s]
-     20%|██        | 15/75 [00:00<00:01, 44.31it/s]
-     27%|██▋       | 20/75 [00:00<00:01, 41.22it/s]
-     33%|███▎      | 25/75 [00:00<00:01, 42.18it/s]
-     40%|████      | 30/75 [00:00<00:01, 43.13it/s]
-     47%|████▋     | 35/75 [00:00<00:00, 43.06it/s]
-     53%|█████▎    | 40/75 [00:00<00:00, 43.82it/s]
-     60%|██████    | 45/75 [00:01<00:00, 44.72it/s]
-     67%|██████▋   | 50/75 [00:01<00:00, 44.91it/s]
-     73%|███████▎  | 55/75 [00:01<00:00, 45.34it/s]
-     80%|████████  | 60/75 [00:01<00:00, 45.63it/s]
-     87%|████████▋ | 65/75 [00:01<00:00, 45.48it/s]
-     93%|█████████▎| 70/75 [00:01<00:00, 45.62it/s]
-    100%|██████████| 75/75 [00:01<00:00, 45.47it/s]
-    100%|██████████| 75/75 [00:01<00:00, 44.44it/s]
-    [aist#0:0/pcm_s16le @ 0x5969b22d0380] Guessed Channel Layout: mono
 
 RESUMEN: {
  "pasos": {
-  "0 · la máquina": 6.6,
-  "a.1 · plan B: vaivén de la foto": 1.8,
-  "a.2 · Wan 2.2 TI2V-5B": 344.9,
-  "b.1 · MuseTalk: código, dependencias y pesos": 35.4,
-  "b.2 · MuseTalk sobre «afin»": 77.9
+  "0 · la máquina": 10.1,
+  "a.1 · plan B: vaivén de la foto": 5.3,
+  "b.1 · LatentSync: entorno, código y pesos": 119.3,
+  "b.2 · LatentSync sobre «afin»": 279.6,
+  "a.2 · Wan 2.2 TI2V-5B": 349.3
  },
  "errores": {
-  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}']"
+  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: Wan sin vídeo: [{\"modo\": \"fp16\", \"atencion_eficiente_fp16\": true, \"cargado_s\": 263.3, \"ok\": false, \"error\": \"OutOfMemoryError: CUDA out of memory. Tried to allocate 1.21 GiB. GPU 0 has a total capacity of 14.56 GiB of which 216.81 MiB is free. Process 8 has 104.00 MiB memory in use. Including non-PyTorch memory, this process has 14.25 GiB memory in use. Of the allocated memory 14.04 GiB is allocated by PyTorch, and 77.11 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\", \"pico_gb\": 14.0}]"
  },
  "parametros": {
   "cara": 2,
-  "wan_tope_s": 3600,
-  "wan_alto": 480,
-  "wan_ancho": 480,
-  "wan_fotogramas": 73,
-  "wan_pasos": 30,
+  "wan_tope_s": 4500,
+  "wan_alto": 1280,
+  "wan_ancho": 704,
+  "wan_fotogramas": 77,
+  "wan_pasos": 50,
   "segundos": 3.0,
+  "latentsync_pasos": 20,
+  "musetalk": false,
   "voz": "07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s"
  },
  "gpu": "Tesla T4, 15360 MiB\nTesla T4, 15360 MiB",
@@ -144,20 +190,34 @@ RESUMEN: {
  "torch": "2.11.0+cu128",
  "cuda": "12.8",
  "bf16_nativo": true,
- "movimientos": [
-  "afin"
- ],
+ "latentsync": {
+  "afin": "1.6"
+ },
  "versiones": [
+  "accelerate==1.14.0",
   "diffusers==0.40.0",
   "torch==2.11.0+cu128",
   "transformers==5.16.1"
  ],
+ "wan": [
+  {
+   "modo": "fp16",
+   "atencion_eficiente_fp16": true,
+   "cargado_s": 263.3,
+   "ok": false,
+   "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 1.21 GiB. GPU 0 has a total capacity of 14.56 GiB of which 216.81 MiB is free. Process 8 has 104.00 MiB memory in use. Including non-PyTorch memory, this process has 14.25 GiB memory in use. Of the allocated memory 14.04 GiB is allocated by PyTorch, and 77.11 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)",
+   "pico_gb": 14.0
+  }
+ ],
+ "movimientos": [
+  "afin"
+ ],
  "salida": [
   "a_movimiento_afin.mp4",
-  "b_labios_afin.mp4",
+  "b_latentsync_afin.mp4",
   "cara.jpg",
   "registro.txt",
   "tiempos.json"
  ],
- "resultado": "con labios: afin"
+ "resultado": "con labios: latentsync_afin"
 }

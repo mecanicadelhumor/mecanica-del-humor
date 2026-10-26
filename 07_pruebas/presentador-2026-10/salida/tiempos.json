@@ -1,22 +1,24 @@
 {
  "pasos": {
-  "0 · la máquina": 6.6,
-  "a.1 · plan B: vaivén de la foto": 1.8,
-  "a.2 · Wan 2.2 TI2V-5B": 344.9,
-  "b.1 · MuseTalk: código, dependencias y pesos": 35.4,
-  "b.2 · MuseTalk sobre «afin»": 77.9
+  "0 · la máquina": 10.1,
+  "a.1 · plan B: vaivén de la foto": 5.3,
+  "b.1 · LatentSync: entorno, código y pesos": 119.3,
+  "b.2 · LatentSync sobre «afin»": 279.6,
+  "a.2 · Wan 2.2 TI2V-5B": 349.3
  },
  "errores": {
-  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: código 1: ['/usr/bin/python3', '/tmp/presentador/wan.py', '{\"cara\": \"/kaggle/input/datasets/mecanicadelhumor/presentador-entrada/cara.jpg\", \"wan_tope_s\": 3600, \"wan_alto\": 480, \"wan_ancho\": 480, \"wan_fotogramas\": 73, \"wan_pasos\": 30, \"segundos\": 3.0, \"voz\": \"07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s\", \"salida\": \"/tmp/presentador/mov_wan_24.mp4\"}']"
+  "a.2 · Wan 2.2 TI2V-5B": "RuntimeError: Wan sin vídeo: [{\"modo\": \"fp16\", \"atencion_eficiente_fp16\": true, \"cargado_s\": 263.3, \"ok\": false, \"error\": \"OutOfMemoryError: CUDA out of memory. Tried to allocate 1.21 GiB. GPU 0 has a total capacity of 14.56 GiB of which 216.81 MiB is free. Process 8 has 104.00 MiB memory in use. Including non-PyTorch memory, this process has 14.25 GiB memory in use. Of the allocated memory 14.04 GiB is allocated by PyTorch, and 77.11 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\", \"pico_gb\": 14.0}]"
  },
  "parametros": {
   "cara": 2,
-  "wan_tope_s": 3600,
-  "wan_alto": 480,
-  "wan_ancho": 480,
-  "wan_fotogramas": 73,
-  "wan_pasos": 30,
+  "wan_tope_s": 4500,
+  "wan_alto": 1280,
+  "wan_ancho": 704,
+  "wan_fotogramas": 77,
+  "wan_pasos": 50,
   "segundos": 3.0,
+  "latentsync_pasos": 20,
+  "musetalk": false,
   "voz": "07_pruebas/c36-2026-10-22/c36.mp3 desde 0.3 s"
  },
  "gpu": "Tesla T4, 15360 MiB\nTesla T4, 15360 MiB",
@@ -33,20 +35,34 @@
  "torch": "2.11.0+cu128",
  "cuda": "12.8",
  "bf16_nativo": true,
- "movimientos": [
-  "afin"
- ],
+ "latentsync": {
+  "afin": "1.6"
+ },
  "versiones": [
+  "accelerate==1.14.0",
   "diffusers==0.40.0",
   "torch==2.11.0+cu128",
   "transformers==5.16.1"
  ],
+ "wan": [
+  {
+   "modo": "fp16",
+   "atencion_eficiente_fp16": true,
+   "cargado_s": 263.3,
+   "ok": false,
+   "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 1.21 GiB. GPU 0 has a total capacity of 14.56 GiB of which 216.81 MiB is free. Process 8 has 104.00 MiB memory in use. Including non-PyTorch memory, this process has 14.25 GiB memory in use. Of the allocated memory 14.04 GiB is allocated by PyTorch, and 77.11 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)",
+   "pico_gb": 14.0
+  }
+ ],
+ "movimientos": [
+  "afin"
+ ],
  "salida": [
   "a_movimiento_afin.mp4",
-  "b_labios_afin.mp4",
+  "b_latentsync_afin.mp4",
   "cara.jpg",
   "registro.txt",
   "tiempos.json"
  ],
- "resultado": "con labios: afin"
+ "resultado": "con labios: latentsync_afin"
 }
