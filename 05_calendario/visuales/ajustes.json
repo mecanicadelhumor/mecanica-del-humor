@@ -1,468 +1,471 @@
 {
- "_nota": "Correcciones de la revisión diaria a los planos que eligió «Visuales (C50)». Es de la revisión diaria (regla 10). Una entrada por Short; dentro, «escena.plano» para un plano (excluir, busqueda, fuente: ia, marca: true) o «escena» para mover el texto (texto_pos). Formato completo en 00_estrategia/tareas/revision-diaria.md, sección «La imagen: la hoja de contactos (C50)». Al subir este fichero, «Visuales (C50)» vuelve a elegir los planos de los Shorts que cambien.",
- "MDS-027": {
-  "5.2": {
-   "excluir": [
-    "pexels:6519494"
-   ],
-   "busqueda": [
-    "man not laughing while friends laugh at table",
-    "one person confused among laughing friends dinner",
-    "person puzzled while others laugh restaurant"
-   ]
+  "_nota": "Correcciones de la revisión diaria a los planos que eligió «Visuales (C50)». Es de la revisión diaria (regla 10). Una entrada por Short; dentro, «escena.plano» para un plano (excluir, busqueda, fuente: ia, marca: true) o «escena» para mover el texto (texto_pos). Formato completo en 00_estrategia/tareas/revision-diaria.md, sección «La imagen: la hoja de contactos (C50)». Al subir este fichero, «Visuales (C50)» vuelve a elegir los planos de los Shorts que cambien.",
+  "MDS-027": {
+    "5.2": {
+      "excluir": [
+        "pexels:6519494"
+      ],
+      "busqueda": [
+        "man not laughing while friends laugh at table",
+        "one person confused among laughing friends dinner",
+        "person puzzled while others laugh restaurant"
+      ]
+    }
+  },
+  "MDS-028": {
+    "2.1": {
+      "fuente": "ia"
+    }
+  },
+  "MDS-029": {
+    "1.2": {
+      "fuente": "ia"
+    },
+    "3.2": {
+      "fuente": "ia"
+    }
+  },
+  "MDS-030": {
+    "5.1": {
+      "excluir": [
+        "pexels:8628207"
+      ],
+      "busqueda": [
+        "man frowning annoyed looking at laptop",
+        "annoyed man rolling his eyes at camera"
+      ]
+    }
+  },
+  "MDS-031": {
+    "6.2": {
+      "excluir": [
+        "pexels:10375459"
+      ],
+      "marca": true
+    }
+  },
+  "MDS-032": {
+    "5.2": {
+      "excluir": [
+        "pexels:8817000"
+      ]
+    }
+  },
+  "MDS-033": {
+    "3": {
+      "texto_pos": "abajo"
+    },
+    "6.1": {
+      "excluir": [
+        "pixabay:7686"
+      ],
+      "busqueda": [
+        "puddle on wet street after rain",
+        "raindrops falling in a puddle on the pavement"
+      ]
+    }
+  },
+  "MDS-034": {
+    "3": {
+      "texto_pos": "abajo"
+    },
+    "5.1": {
+      "busqueda": [
+        "neurons glowing abstract brain network"
+      ]
+    },
+    "5.2": {
+      "busqueda": [
+        "brain scan MRI screen doctor"
+      ]
+    }
+  },
+  "MDS-035": {
+    "1": {
+      "texto_pos": "arriba"
+    },
+    "2": {
+      "texto_pos": "arriba"
+    },
+    "3": {
+      "texto_pos": "arriba"
+    }
+  },
+  "MDS-036": {
+    "2.1": {
+      "excluir": [
+        "pexels:6951584",
+        "pexels:12751584"
+      ],
+      "busqueda": [
+        "woman laughing watching sitcom on tv sofa",
+        "people laughing watching television at home"
+      ]
+    },
+    "4": {
+      "texto_pos": "abajo"
+    },
+    "3.1": {
+      "excluir": [
+        "pixabay:172686"
+      ]
+    },
+    "4.1": {
+      "excluir": [
+        "pexels:6688136"
+      ],
+      "marca": true
+    },
+    "4.2": {
+      "excluir": [
+        "pexels:8927997"
+      ],
+      "marca": true
+    },
+    "3.2": {
+      "excluir": [
+        "pexels:34885398"
+      ],
+      "busqueda": [
+        "man looking at camera in silence dinner table candles",
+        "man staring silently across a dinner table"
+      ]
+    }
+  },
+  "MDS-037": {
+    "2": {
+      "texto_pos": "abajo"
+    },
+    "4.1": {
+      "excluir": [
+        "pexels:5426855",
+        "pexels:5676174"
+      ],
+      "busqueda": [
+        "hands holding smartphone reading text message close up",
+        "person reading messages on phone in cafe"
+      ]
+    },
+    "2.2": {
+      "excluir": [
+        "pexels:8052328"
+      ],
+      "busqueda": [
+        "hands typing message on smartphone close up",
+        "person reading text message on phone looking worried"
+      ]
+    },
+    "5.2": {
+      "excluir": [
+        "pixabay:100344"
+      ],
+      "busqueda": [
+        "hand writing a note with pen on paper close up",
+        "handwritten note on paper pen"
+      ]
+    }
+  },
+  "MDS-038": {
+    "2.1": {
+      "excluir": [
+        "pixabay:44637"
+      ],
+      "busqueda": [
+        "young woman startled jumping on couch at home"
+      ]
+    }
+  },
+  "MDS-039": {
+    "3.1": {
+      "excluir": [
+        "pixabay:32938",
+        "pexels:6245501"
+      ],
+      "busqueda": [
+        "two adults laughing together leaving elevator"
+      ]
+    },
+    "4.1": {
+      "excluir": [
+        "pixabay:92480"
+      ],
+      "busqueda": [
+        "two strangers laughing together at table"
+      ]
+    },
+    "4.2": {
+      "excluir": [
+        "pixabay:92480"
+      ],
+      "marca": true
+    }
+  },
+  "MDS-040": {
+    "2.2": {
+      "excluir": [
+        "pexels:8134383"
+      ],
+      "marca": true
+    },
+    "4.2": {
+      "excluir": [
+        "pixabay:171044"
+      ],
+      "marca": true
+    }
+  },
+  "MDS-041": {
+    "6.1": {
+      "excluir": [
+        "pixabay:29337"
+      ],
+      "busqueda": [
+        "folded napkin on table close up",
+        "white napkin on restaurant table"
+      ]
+    }
+  },
+  "MDS-042": {
+    "2.1": {
+      "excluir": [
+        "pixabay:231147"
+      ],
+      "busqueda": [
+        "man in black suit standing alone looking down serious",
+        "mourner in black suit standing church"
+      ]
+    },
+    "3.2": {
+      "excluir": [
+        "pixabay:253997",
+        "pixabay:1309"
+      ],
+      "busqueda": [
+        "adults in black clothes smiling softly together after ceremony",
+        "group of adults in black talking quietly"
+      ]
+    },
+    "4.1": {
+      "excluir": [
+        "pexels:5439075"
+      ],
+      "busqueda": [
+        "psychologist hands holding clipboard notes close up",
+        "therapist writing notes on notepad close up"
+      ]
+    },
+    "4": {
+      "texto_pos": "abajo"
+    }
+  },
+  "MDS-043": {
+    "1": {
+      "texto_pos": "arriba"
+    },
+    "5.2": {
+      "excluir": [
+        "pixabay:123268",
+        "pexels:8724306"
+      ],
+      "busqueda": [
+        "woman yawning tired close up",
+        "person yawning on sofa",
+        "man yawning at desk wide shot"
+      ]
+    },
+    "1.1": {
+      "excluir": [
+        "pexels:7251561"
+      ],
+      "busqueda": [
+        "subway train interior empty seats close up",
+        "empty tram seats and handrails morning"
+      ]
+    },
+    "1.2": {
+      "excluir": [
+        "pexels:31364111"
+      ],
+      "busqueda": [
+        "train window view passing city from inside",
+        "tram handrails and window close up no people"
+      ]
+    }
+  },
+  "MDS-044": {
+    "4.2": {
+      "excluir": [
+        "pexels:11698130"
+      ],
+      "busqueda": [
+        "older person hands holding smartphone no logo",
+        "senior hands typing on phone close up"
+      ]
+    },
+    "5.1": {
+      "excluir": [
+        "pexels:8724460"
+      ],
+      "busqueda": [
+        "older woman smiling looking at phone",
+        "grandmother happy reading smartphone"
+      ]
+    }
+  },
+  "MDS-045": {
+    "5.2": {
+      "excluir": [
+        "pixabay:130645"
+      ],
+      "busqueda": [
+        "coins on table close up",
+        "paying cash hands counter"
+      ]
+    }
+  },
+  "MDS-046": {
+    "2.1": {
+      "excluir": [
+        "pixabay:30438"
+      ],
+      "busqueda": [
+        "man frozen face on video call laptop screen",
+        "person with frozen expression in online meeting"
+      ]
+    },
+    "4.2": {
+      "excluir": [
+        "pexels:4821003"
+      ],
+      "busqueda": [
+        "women watching a funny movie on laptop at home",
+        "woman watching comedy film smiling sofa"
+      ]
+    },
+    "5.1": {
+      "excluir": [
+        "pixabay:61706"
+      ],
+      "busqueda": [
+        "woman watching movie on laptop not laughing",
+        "bored woman watching screen at home"
+      ]
+    },
+    "6.1": {
+      "excluir": [
+        "pixabay:268230"
+      ],
+      "busqueda": [
+        "frozen frame video call meeting laptop",
+        "colleagues watching boss on video call laptop"
+      ]
+    },
+    "6.2": {
+      "excluir": [
+        "pixabay:262637"
+      ],
+      "marca": true
+    },
+    "4.1": {
+      "excluir": [
+        "pexels:7985891"
+      ],
+      "busqueda": [
+        "group of women watching a comedy movie on a laptop together",
+        "women laughing watching film on sofa"
+      ]
+    }
+  },
+  "MDS-047": {
+    "1.1": {
+      "excluir": [
+        "pexels:9720877"
+      ],
+      "busqueda": [
+        "colleagues in costumes at office halloween party",
+        "office desk decorated for halloween"
+      ]
+    },
+    "1.2": {
+      "excluir": [
+        "pixabay:80862"
+      ],
+      "busqueda": [
+        "person dressed as clown at office party",
+        "clown costume wig red nose"
+      ]
+    },
+    "6.1": {
+      "excluir": [
+        "pexels:4716691"
+      ],
+      "busqueda": [
+        "man writing notes at desk thinking",
+        "hand writing in notebook close up"
+      ]
+    },
+    "3.2": {
+      "excluir": [
+        "pixabay:130878"
+      ],
+      "busqueda": [
+        "colleague offering candy bowl office desk",
+        "hand holding candy office"
+      ]
+    }
+  },
+  "MDS-049": {
+    "1.1": {
+      "excluir": [
+        "pixabay:176024"
+      ],
+      "busqueda": [
+        "woman laughing with friends at dinner table",
+        "friends laughing together at restaurant"
+      ]
+    },
+    "4.1": {
+      "excluir": [
+        "pexels:5359024"
+      ],
+      "busqueda": [
+        "person watching funny video on laptop laughing",
+        "hand holding phone watching video"
+      ]
+    }
+  },
+  "MDS-050": {
+    "2.2": {
+      "excluir": [
+        "pexels:8724226"
+      ],
+      "busqueda": [
+        "woman laughing out loud curled up on couch",
+        "girl laughing shouting on sofa tickling"
+      ]
+    },
+    "5.2": {
+      "excluir": [
+        "pixabay:32938"
+      ],
+      "busqueda": [
+        "friends laughing together on sofa",
+        "woman laughing hard indoors"
+      ]
+    }
+  },
+  "MDS-051": {
+    "3.1": {
+      "excluir": [
+        "pexels:5197251"
+      ],
+      "busqueda": [
+        "man with serious deadpan face looking at camera",
+        "man with neutral expression holding phone"
+      ]
+    },
+    "3": {
+      "texto_pos": "arriba"
+    }
   }
- },
- "MDS-028": {
-  "2.1": {
-   "fuente": "ia"
-  }
- },
- "MDS-029": {
-  "1.2": {
-   "fuente": "ia"
-  },
-  "3.2": {
-   "fuente": "ia"
-  }
- },
- "MDS-030": {
-  "5.1": {
-   "excluir": [
-    "pexels:8628207"
-   ],
-   "busqueda": [
-    "man frowning annoyed looking at laptop",
-    "annoyed man rolling his eyes at camera"
-   ]
-  }
- },
- "MDS-031": {
-  "6.2": {
-   "excluir": [
-    "pexels:10375459"
-   ],
-   "marca": true
-  }
- },
- "MDS-032": {
-  "5.2": {
-   "excluir": [
-    "pexels:8817000"
-   ]
-  }
- },
- "MDS-033": {
-  "3": {
-   "texto_pos": "abajo"
-  },
-  "6.1": {
-   "excluir": [
-    "pixabay:7686"
-   ],
-   "busqueda": [
-    "puddle on wet street after rain",
-    "raindrops falling in a puddle on the pavement"
-   ]
-  }
- },
- "MDS-034": {
-  "3": {
-   "texto_pos": "abajo"
-  },
-  "5.1": {
-   "busqueda": [
-    "neurons glowing abstract brain network"
-   ]
-  },
-  "5.2": {
-   "busqueda": [
-    "brain scan MRI screen doctor"
-   ]
-  }
- },
- "MDS-035": {
-  "1": {
-   "texto_pos": "arriba"
-  },
-  "2": {
-   "texto_pos": "arriba"
-  },
-  "3": {
-   "texto_pos": "arriba"
-  }
- },
- "MDS-036": {
-  "2.1": {
-   "excluir": [
-    "pexels:6951584",
-    "pexels:12751584"
-   ],
-   "busqueda": [
-    "woman laughing watching sitcom on tv sofa",
-    "people laughing watching television at home"
-   ]
-  },
-  "4": {
-   "texto_pos": "abajo"
-  },
-  "3.1": {
-   "excluir": [
-    "pixabay:172686"
-   ]
-  },
-  "4.1": {
-   "excluir": [
-    "pexels:6688136"
-   ],
-   "marca": true
-  },
-  "4.2": {
-   "excluir": [
-    "pexels:8927997"
-   ],
-   "marca": true
-  },
-  "3.2": {
-   "excluir": [
-    "pexels:34885398"
-   ],
-   "busqueda": [
-    "man looking at camera in silence dinner table candles",
-    "man staring silently across a dinner table"
-   ]
-  }
- },
- "MDS-037": {
-  "2": {
-   "texto_pos": "abajo"
-  },
-  "4.1": {
-   "excluir": [
-    "pexels:5426855",
-    "pexels:5676174"
-   ],
-   "busqueda": [
-    "hands holding smartphone reading text message close up",
-    "person reading messages on phone in cafe"
-   ]
-  },
-  "2.2": {
-   "excluir": [
-    "pexels:8052328"
-   ],
-   "busqueda": [
-    "hands typing message on smartphone close up",
-    "person reading text message on phone looking worried"
-   ]
-  },
-  "5.2": {
-   "excluir": [
-    "pixabay:100344"
-   ],
-   "busqueda": [
-    "hand writing a note with pen on paper close up",
-    "handwritten note on paper pen"
-   ]
-  }
- },
- "MDS-038": {
-  "2.1": {
-   "excluir": [
-    "pixabay:44637"
-   ],
-   "busqueda": [
-    "young woman startled jumping on couch at home"
-   ]
-  }
- },
- "MDS-039": {
-  "3.1": {
-   "excluir": [
-    "pixabay:32938",
-    "pexels:6245501"
-   ],
-   "busqueda": [
-    "two adults laughing together leaving elevator"
-   ]
-  },
-  "4.1": {
-   "excluir": [
-    "pixabay:92480"
-   ],
-   "busqueda": [
-    "two strangers laughing together at table"
-   ]
-  },
-  "4.2": {
-   "excluir": [
-    "pixabay:92480"
-   ],
-   "marca": true
-  }
- },
- "MDS-040": {
-  "2.2": {
-   "excluir": [
-    "pexels:8134383"
-   ],
-   "marca": true
-  },
-  "4.2": {
-   "excluir": [
-    "pixabay:171044"
-   ],
-   "marca": true
-  }
- },
- "MDS-041": {
-  "6.1": {
-   "excluir": [
-    "pixabay:29337"
-   ],
-   "busqueda": [
-    "folded napkin on table close up",
-    "white napkin on restaurant table"
-   ]
-  }
- },
- "MDS-042": {
-  "2.1": {
-   "excluir": [
-    "pixabay:231147"
-   ],
-   "busqueda": [
-    "man in black suit standing alone looking down serious",
-    "mourner in black suit standing church"
-   ]
-  },
-  "3.2": {
-   "excluir": [
-    "pixabay:253997",
-    "pixabay:1309"
-   ],
-   "busqueda": [
-    "adults in black clothes smiling softly together after ceremony",
-    "group of adults in black talking quietly"
-   ]
-  },
-  "4.1": {
-   "excluir": [
-    "pexels:5439075"
-   ],
-   "busqueda": [
-    "psychologist hands holding clipboard notes close up",
-    "therapist writing notes on notepad close up"
-   ]
-  },
-  "4": {
-   "texto_pos": "abajo"
-  }
- },
- "MDS-043": {
-  "1": {
-   "texto_pos": "arriba"
-  },
-  "5.2": {
-   "excluir": [
-    "pixabay:123268",
-    "pexels:8724306"
-   ],
-   "busqueda": [
-    "woman yawning tired close up",
-    "person yawning on sofa",
-    "man yawning at desk wide shot"
-   ]
-  },
-  "1.1": {
-   "excluir": [
-    "pexels:7251561"
-   ],
-   "busqueda": [
-    "subway train interior empty seats close up",
-    "empty tram seats and handrails morning"
-   ]
-  },
-  "1.2": {
-   "excluir": [
-    "pexels:31364111"
-   ],
-   "busqueda": [
-    "train window view passing city from inside",
-    "tram handrails and window close up no people"
-   ]
-  }
- },
- "MDS-044": {
-  "4.2": {
-   "excluir": [
-    "pexels:11698130"
-   ],
-   "busqueda": [
-    "older person hands holding smartphone no logo",
-    "senior hands typing on phone close up"
-   ]
-  },
-  "5.1": {
-   "excluir": [
-    "pexels:8724460"
-   ],
-   "busqueda": [
-    "older woman smiling looking at phone",
-    "grandmother happy reading smartphone"
-   ]
-  }
- },
- "MDS-045": {
-  "5.2": {
-   "excluir": [
-    "pixabay:130645"
-   ],
-   "busqueda": [
-    "coins on table close up",
-    "paying cash hands counter"
-   ]
-  }
- },
- "MDS-046": {
-  "2.1": {
-   "excluir": [
-    "pixabay:30438"
-   ],
-   "busqueda": [
-    "man frozen face on video call laptop screen",
-    "person with frozen expression in online meeting"
-   ]
-  },
-  "4.2": {
-   "excluir": [
-    "pexels:4821003"
-   ],
-   "busqueda": [
-    "women watching a funny movie on laptop at home",
-    "woman watching comedy film smiling sofa"
-   ]
-  },
-  "5.1": {
-   "excluir": [
-    "pixabay:61706"
-   ],
-   "busqueda": [
-    "woman watching movie on laptop not laughing",
-    "bored woman watching screen at home"
-   ]
-  },
-  "6.1": {
-   "excluir": [
-    "pixabay:268230"
-   ],
-   "busqueda": [
-    "frozen frame video call meeting laptop",
-    "colleagues watching boss on video call laptop"
-   ]
-  },
-  "6.2": {
-   "excluir": [
-    "pixabay:262637"
-   ],
-   "marca": true
-  },
-  "4.1": {
-   "excluir": [
-    "pexels:7985891"
-   ],
-   "busqueda": [
-    "group of women watching a comedy movie on a laptop together",
-    "women laughing watching film on sofa"
-   ]
-  }
- },
- "MDS-047": {
-  "1.1": {
-   "excluir": [
-    "pexels:9720877"
-   ],
-   "busqueda": [
-    "colleagues in costumes at office halloween party",
-    "office desk decorated for halloween"
-   ]
-  },
-  "1.2": {
-   "excluir": [
-    "pixabay:80862"
-   ],
-   "busqueda": [
-    "person dressed as clown at office party",
-    "clown costume wig red nose"
-   ]
-  },
-  "6.1": {
-   "excluir": [
-    "pexels:4716691"
-   ],
-   "busqueda": [
-    "man writing notes at desk thinking",
-    "hand writing in notebook close up"
-   ]
-  },
-  "3.2": {
-   "excluir": [
-    "pixabay:130878"
-   ],
-   "busqueda": [
-    "colleague offering candy bowl office desk",
-    "hand holding candy office"
-   ]
-  }
- },
- "MDS-049": {
-  "1.1": {
-   "excluir": [
-    "pixabay:176024"
-   ],
-   "busqueda": [
-    "woman laughing with friends at dinner table",
-    "friends laughing together at restaurant"
-   ]
-  },
-  "4.1": {
-   "excluir": [
-    "pexels:5359024"
-   ],
-   "busqueda": [
-    "person watching funny video on laptop laughing",
-    "hand holding phone watching video"
-   ]
-  }
- },
- "MDS-050": {
-  "2.2": {
-   "excluir": [
-    "pexels:8724226"
-   ],
-   "busqueda": [
-    "woman laughing out loud curled up on couch",
-    "girl laughing shouting on sofa tickling"
-   ]
-  },
-  "5.2": {
-   "excluir": [
-    "pixabay:32938"
-   ],
-   "busqueda": [
-    "friends laughing together on sofa",
-    "woman laughing hard indoors"
-   ]
-  }
- },
- "MDS-051": {
-  "3.1": {
-   "excluir": [
-    "pexels:5197251"
-   ],
-   "busqueda": [
-    "man with serious deadpan face looking at camera",
-    "man with neutral expression holding phone"
-   ]
-  }
- }
 }
