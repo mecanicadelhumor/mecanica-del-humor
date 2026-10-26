@@ -1,15 +1,15 @@
 {
-  "id": "MDS-044.es",
-  "duracion_final_s": 44.0,
-  "tamano_mb": 23.2,
+  "id": "MDS-050.es",
+  "duracion_final_s": 43.7,
+  "tamano_mb": 22.6,
   "audio": {
-    "lufs": -14.9,
-    "pico_dbtp": -1.36,
-    "rango_lu": 6.0
+    "lufs": -14.12,
+    "pico_dbtp": -1.38,
+    "rango_lu": 14.4
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.129,
+    "acaba_s": 0.127,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,7 +17,7 @@
     "silencios_s": [
       [
         0.0,
-        0.129
+        0.127
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -42,24 +42,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 43.21,
-    "duracion_real_voz_mp3_s": 42.91,
-    "desfase_s": 0.3,
+    "duracion_calculada_s": 42.89,
+    "duracion_real_voz_mp3_s": 42.62,
+    "desfase_s": 0.27,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_02_dusk_next_route.mp3",
-    "sha256": "3f93cfef7318ae5e93a365a3fe16282de13c279e2733dd7c18fcfbe38f530c74"
+    "archivo": "cama_08_divider_chris_zabriskie.mp3",
+    "sha256": "4668b56866e517eb37c34099def2a5f3a07acbdbfd793265eedba1e368fbc328"
   },
   "guion": {
-    "titulo_trabajo": "¿Qué significa el emoji de la sonrisa?",
+    "titulo_trabajo": "¿Por qué te ríes antes de las cosquillas?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 43.21,
+    "duracion_narracion_s": 42.89,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 11.086,
+    "escena_mas_larga_s": 10.726,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 6
@@ -78,22 +78,17 @@
       "apertura",
       "planteamiento",
       "remate",
-      "contraste",
+      "explicacion",
       "cifra",
       "objecion"
     ],
-    "escenas_ritmo_fuera_de_rango": [
-      [
-        1,
-        3.33
-      ]
-    ],
+    "escenas_ritmo_fuera_de_rango": [],
     "voz_fiel": [
-      "11/12 palabras, 0 trozos repetidos",
-      "9/9 palabras, 0 trozos repetidos",
-      "10/11 palabras, 0 trozos repetidos",
-      "20/19 palabras, 0 trozos repetidos",
-      "18/18 palabras, 0 trozos repetidos",
+      "11/10 palabras, 0 trozos repetidos",
+      "9/8 palabras, 0 trozos repetidos",
+      "6/6 palabras, 0 trozos repetidos",
+      "21/23 palabras, 0 trozos repetidos",
+      "21/21 palabras, 0 trozos repetidos",
       "22/22 palabras, 0 trozos repetidos"
     ]
   },
@@ -102,108 +97,120 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 4.1,
+        "hasta_s": 5.93,
         "fuente": "pexels",
-        "id": 5386540,
-        "pagina": "https://www.pexels.com/video/young-man-text-messaging-with-smartphone-outdoors-5386540/",
-        "autor": "Monstera Production",
-        "autor_url": "https://www.pexels.com/@gabby-k",
+        "id": 8347428,
+        "pagina": "https://www.pexels.com/video/a-woman-lying-down-on-a-couch-8347428/",
+        "autor": "ROMAN ODINTSOV",
+        "autor_url": "https://www.pexels.com/@roman-odintsov",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 4.1,
-        "hasta_s": 10.1,
+        "desde_s": 5.93,
+        "hasta_s": 7.33,
         "fuente": "pexels",
-        "id": 7970351,
-        "pagina": "https://www.pexels.com/video/an-elderly-woman-using-a-laptop-and-a-cellphone-7970351/",
-        "autor": "Antoni Shkraba",
-        "autor_url": "https://www.pexels.com/@shkrabaanthony",
+        "id": 7550859,
+        "pagina": "https://www.pexels.com/video/woman-smiling-while-sitting-on-the-sofa-7550859/",
+        "autor": "Darina Belonogova",
+        "autor_url": "https://www.pexels.com/@darina-belonogova",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
-        "escena": 3,
-        "desde_s": 10.1,
-        "hasta_s": 14.23,
+        "escena": 2,
+        "desde_s": 7.33,
+        "hasta_s": 10.87,
         "fuente": "pexels",
-        "id": 13441323,
-        "pagina": "https://www.pexels.com/video/a-young-man-ordering-food-online-while-sitting-on-a-sofa-13441323/",
-        "autor": "Mizuno K",
-        "autor_url": "https://www.pexels.com/@mizunokozuki",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 4,
-        "desde_s": 14.23,
-        "hasta_s": 20.07,
-        "fuente": "pexels",
-        "id": 8546869,
-        "pagina": "https://www.pexels.com/video/a-woman-using-a-mobile-phone-on-a-table-8546869/",
+        "id": 6639475,
+        "pagina": "https://www.pexels.com/video/a-video-of-a-woman-sleeping-on-a-couch-6639475/",
         "autor": "https://kaboompics.com/",
         "autor_url": "https://www.pexels.com/@karola-g",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
+        "escena": 3,
+        "desde_s": 10.87,
+        "hasta_s": 14.03,
+        "fuente": "pexels",
+        "id": 30197424,
+        "pagina": "https://www.pexels.com/video/close-up-of-a-hand-holding-frosty-drink-30197424/",
+        "autor": "Sergei Starostin",
+        "autor_url": "https://www.pexels.com/@sejio402",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
         "escena": 4,
-        "desde_s": 20.07,
-        "hasta_s": 22.3,
+        "desde_s": 14.03,
+        "hasta_s": 20.13,
         "fuente": "pexels",
-        "id": 7417201,
-        "pagina": "https://www.pexels.com/video/person-holding-a-cellphone-7417201/",
-        "autor": "Leeloo The First",
-        "autor_url": "https://www.pexels.com/@leeloothefirst",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 5,
-        "desde_s": 22.3,
-        "hasta_s": 27.6,
-        "fuente": "pexels",
-        "id": 4800108,
-        "pagina": "https://www.pexels.com/video/woman-smiling-while-using-her-smartphone-4800108/",
-        "autor": "Artem Podrez",
-        "autor_url": "https://www.pexels.com/@artempodrez",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 5,
-        "desde_s": 27.6,
-        "hasta_s": 32.13,
-        "fuente": "pexels",
-        "id": 9558741,
-        "pagina": "https://www.pexels.com/video/a-young-man-in-a-pink-shirt-is-holding-his-phone-9558741/",
+        "id": 7089944,
+        "pagina": "https://www.pexels.com/video/a-female-patient-undergoing-medical-scanning-procedure-7089944/",
         "autor": "MART  PRODUCTION",
         "autor_url": "https://www.pexels.com/@mart-production",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
-        "escena": 6,
-        "desde_s": 32.13,
-        "hasta_s": 35.87,
-        "fuente": "pixabay",
-        "id": 2301,
-        "pagina": "https://pixabay.com/videos/id-2301/",
-        "autor": "Coverr-Free-Footage",
-        "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
-        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "escena": 4,
+        "desde_s": 20.13,
+        "hasta_s": 24.0,
+        "fuente": "pexels",
+        "id": 13770976,
+        "pagina": "https://www.pexels.com/video/close-up-view-of-male-bare-feet-13770976/",
+        "autor": "Mizuno K",
+        "autor_url": "https://www.pexels.com/@mizunokozuki",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 24.0,
+        "hasta_s": 29.87,
+        "fuente": "pexels",
+        "id": 8347430,
+        "pagina": "https://www.pexels.com/video/video-of-a-woman-eyes-closed-8347430/",
+        "autor": "ROMAN ODINTSOV",
+        "autor_url": "https://www.pexels.com/@roman-odintsov",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 29.87,
+        "hasta_s": 32.17,
+        "fuente": "pexels",
+        "id": 9187880,
+        "pagina": "https://www.pexels.com/video/women-laughing-together-9187880/",
+        "autor": "Darina Belonogova",
+        "autor_url": "https://www.pexels.com/@darina-belonogova",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 6,
-        "desde_s": 35.87,
-        "hasta_s": 41.03,
+        "desde_s": 32.17,
+        "hasta_s": 36.93,
         "fuente": "pexels",
-        "id": 6278824,
-        "pagina": "https://www.pexels.com/video/person-holding-mobile-phone-while-touching-screen-6278824/",
-        "autor": "Artem Podrez",
-        "autor_url": "https://www.pexels.com/@artempodrez",
+        "id": 10373928,
+        "pagina": "https://www.pexels.com/video/a-woman-laughing-while-siting-on-a-sofa-10373928/",
+        "autor": "RDNE Stock project",
+        "autor_url": "https://www.pexels.com/@rdne",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 6,
+        "desde_s": 36.93,
+        "hasta_s": 40.7,
+        "fuente": "pexels",
+        "id": 37836407,
+        "pagina": "https://www.pexels.com/video/relaxing-evening-with-drink-on-cozy-sofa-37836407/",
+        "autor": "Ardina Setiorini",
+        "autor_url": "https://www.pexels.com/@ardinasetiorini",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       }
@@ -212,12 +219,12 @@
   },
   "animacion": null,
   "fotogramas_s": [
-    2.56,
-    7.8,
-    12.68,
-    19.16,
-    28.29,
-    38.87
+    3.65,
+    8.99,
+    12.87,
+    20.11,
+    29.0,
+    38.7
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }

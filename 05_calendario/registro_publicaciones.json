@@ -890,6 +890,21 @@
       "subido_utc": "2026-10-25T06:12:54Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-25T19:44:42Z"
+    },
+    {
+      "id": "MDS-050.es",
+      "episodio": "MDS-050",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué te ríes antes de las cosquillas?",
+      "guion": "05_calendario/guiones/MDS-050.es.json",
+      "video_id": "O_Q2i9yXqJY",
+      "url": "https://youtu.be/O_Q2i9yXqJY",
+      "estado": "private",
+      "publicar_en": "2026-10-26T18:00:00Z",
+      "musica": "cama_08_divider_chris_zabriskie.mp3",
+      "subido_utc": "2026-10-26T06:21:56Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-25T19:44:42Z"
