@@ -1,8 +1,8 @@
 {
   "guion": "MDS-051",
   "version": 1,
-  "firma": "2baa34313a2a1b11",
-  "resuelto_utc": "2026-10-25T09:32:40Z",
+  "firma": "b5d48ba1e843e830",
+  "resuelto_utc": "2026-10-26T09:32:20Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -116,7 +116,7 @@
     },
     "3": {
       "narracion_sha": "4596c884e3ea",
-      "texto_pos": "abajo",
+      "texto_pos": "arriba",
       "planos": [
         {
           "k": 1,
@@ -238,7 +238,7 @@
           "fuente": "pixabay",
           "id": 20454,
           "pagina": "https://pixabay.com/videos/id-20454/",
-          "titulo": "walk, couple, romantic, sky, romance, lovers, retirement, lifestyle, happiness, stroll, friends, together, hello, silhouettes, magical, idyllic, peaceful, peace, love, trust, people, friendship, ocean, sea, tenerife, live wallpaper, welcome id",
+          "titulo": "walk, couple, romantic, sky, romance, lovers, retirement, lifestyle, happiness, stroll, friends, together, silhouettes, magical, idyllic, peaceful, peace, love, hello, trust, people, friendship, ocean, sea, tenerife, live wallpaper, welcome id",
           "autor": "ChristianBodhi",
           "autor_url": "https://pixabay.com/users/ChristianBodhi-9869182/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
