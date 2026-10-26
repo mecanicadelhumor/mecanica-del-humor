@@ -102,10 +102,11 @@
       "que": "Lanzar la prueba de Kaggle con la cara elegida y dejar el resultado en 07_pruebas/presentador-2026-10/salida/",
       "dueno": "direccion",
       "fecha": "2026-10-29",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
       "origen": "Dirección 23/10. Depende de C51.3-workflow y de que el codirector elija cara",
-      "nota": "Primer intento del codirector el 23/10 con la cara 2: Kaggle sin GPU, sin internet y sin encontrar la entrada; dos minutos, sin vídeo. Arreglado lo nuestro (entrada, aviso, run en rojo). Falta verificar el teléfono en Kaggle (C51.3-kaggle-telefono) y relanzar · 26/10: la dirección lo lanza ella misma (workflow, paso kaggle, cara 2) con el cuaderno nuevo: Wan en fp16 a 704x1280 y LatentSync 1.6. Resultado en 07_pruebas/presentador-2026-10/salida/."
+      "nota": "Primer intento del codirector el 23/10 con la cara 2: Kaggle sin GPU, sin internet y sin encontrar la entrada; dos minutos, sin vídeo. Arreglado lo nuestro (entrada, aviso, run en rojo). Falta verificar el teléfono en Kaggle (C51.3-kaggle-telefono) y relanzar · 26/10: la dirección lo lanza ella misma (workflow, paso kaggle, cara 2) con el cuaderno nuevo: Wan en fp16 a 704x1280 y LatentSync 1.6. Resultado en 07_pruebas/presentador-2026-10/salida/. · 26/10 16:07: HECHO. Wan 2.2 5B sale a 704x1280 con el transformador por bloques (pico 13,5 GB de 14,5), 54,6 min por 3,08 s; LatentSync 1.6 sobre los dos movimientos. salida/b_latentsync_wan.mp4 y PRUEBA.md.",
+      "hecho_el": "2026-10-26"
     },
     {
       "id": "C36-encendido",
@@ -310,9 +311,11 @@
       "que": "Leer el resultado del run de Kaggle del 26/10 (Wan fp16 704x1280 y LatentSync 1.6): si Wan sale, mirarlo fotograma a fotograma; si falla, la causa y el siguiente intento sin bajar resolución; y pedir al codirector que vea b_latentsync_*.mp4",
       "dueno": "direccion",
       "fecha": "2026-10-29",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Cuaderno del codirector, 26/10 («que funcione esta vez», sin bajar calidad)"
+      "origen": "Cuaderno del codirector, 26/10 («que funcione esta vez», sin bajar calidad)",
+      "hecho_el": "2026-10-26",
+      "nota": "Leído el mismo día: Wan funciona y no pixela (nitidez 329 frente a 308 del vaivén), pero se mueve MENOS que el truco barato (0,28 frente a 0,87) y cuesta 18 min de GPU por segundo de vídeo. Sigue en C51.3-wan-gesto."
     },
     {
       "id": "C51.3-alternativas",
@@ -340,6 +343,34 @@
       "estado": "pendiente",
       "aplazamientos": [],
       "origen": "Decisión de B1 del 26/10 (ciclos.json, decisiones)"
+    },
+    {
+      "id": "C51.3-workflow-apt",
+      "que": "Mover 00_estrategia/tareas/workflows_2026-10-26/presentador_prueba.yml a .github/workflows/ (paso «Dependencias» a prueba de cuelgues de apt; el resto, idéntico)",
+      "dueno": "codirector",
+      "fecha": "2026-11-03",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Dirección 26/10: dos ejecuciones seguidas murieron en apt-get update (runner de GitHub)",
+      "nota": "No corre prisa: mientras tanto, relanzar suele bastar. Instrucciones en el LEEME.md de esa carpeta"
+    },
+    {
+      "id": "C51.3-wan-gesto",
+      "que": "Que Wan aporte más que el vaivén: indicación que pida un gesto claro (asentir, mirar a un lado y volver) con la misma semilla, y 30-35 pasos en lugar de 50; comparar nitidez, movimiento y coste, y decidir con el codirector si entra como brazo",
+      "dueno": "direccion",
+      "fecha": "2026-10-29",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Resultado del 26/10 (PRUEBA.md): Wan sale limpio pero demasiado quieto para lo que cuesta"
+    },
+    {
+      "id": "C51.3-ver-videos",
+      "que": "Ver 07_pruebas/presentador-2026-10/salida/b_latentsync_afin.mp4 y b_latentsync_wan.mp4 y decir en el cuaderno si la persona sintética es creíble",
+      "dueno": "codirector",
+      "fecha": "2026-10-29",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Dirección 26/10 (C51.2: nada entra sin que él lo mire)"
     }
   ]
 }

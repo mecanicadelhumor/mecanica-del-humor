@@ -793,12 +793,22 @@ fallaba dentro de un `try` seguía reteniendo su memoria al probar el siguiente 
 de número que la GPU hace de verdad (no lo que `is_bf16_supported()` dice). Cada intento que puede agotar
 la memoria, en un proceso nuevo. Y bajar la calidad es una decisión del codirector, no un respaldo.**
 
+**65. Pedí quietud y medí movimiento.** A Wan se le pidió «mirando a cámara, quieto, respiración
+tranquila» y luego se midió si aportaba más movimiento que el vaivén barato. Hizo lo que se le pidió
+(0,28 de diferencia media entre fotogramas frente a 0,87) y por eso «perdió», después de 54 minutos de GPU.
+→ **La indicación que le das a un modelo y la cifra con la que lo vas a juzgar tienen que decir lo mismo.
+Escribe la medida antes de lanzar, y léela al lado del prompt.**
+
+
 ## Dónde está el proyecto a 26 de octubre de 2026 (en diferido)
 
-Versión **26** del plan, la que manda. Wan de C51.3 rehecho sin bajar calidad (fp16, 704×1280 vertical;
-la causa era bf16 en la T4) y LatentSync 1.6 en lugar de MuseTalk, con MediaPipe; la dirección lanzó
-Kaggle ella misma (run 8, cara 2): el resultado se lee el jueves 29. Cola (b) en muestra, sin aplicar
-(regla 11.2). **B1: B gana** (arranque con el dato es el control de B2). El largo, al jueves 29. Trampa 64.
+Versión **26** del plan (con su apéndice), la que manda. **Wan de C51.3 funciona** en la T4 sin bajar
+resolución (fp16 con el transformador por bloques: pico 13,5 GB; la causa del fallo era primero bf16 y
+luego el modelo entero dentro de la GPU), y **LatentSync 1.6** sustituye a MuseTalk (con MediaPipe en
+lugar de InsightFace). Hay vídeo con cabeza generada y labios: `salida/b_latentsync_wan.mp4`. **No entra
+todavía**: se mueve menos que el vaivén y cuesta 18 min de GPU por segundo (jueves 29, `C51.3-wan-gesto`).
+Cola (b) en muestra, sin aplicar (regla 11.2). **B1: B gana** (arranque con el dato es el control de B2).
+El largo, al jueves 29. Trampas 64 y 65.
 
 ## Dónde está el proyecto a 23 de octubre de 2026, mañana (en diferido)
 

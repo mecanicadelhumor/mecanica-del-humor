@@ -12,3 +12,10 @@
 - **Animación**: nada nuevo.
 - **Prueba del presentador** (no es una rutina): el workflow `presentador_prueba.yml` corre hoy con
   `kaggle`, cara 2, lanzado por la dirección. Escribe solo en `07_pruebas/presentador-2026-10/`.
+
+## Apéndice de las 16:10 UTC
+
+- **Revisión diaria**: `C51.3-kaggle-run` y `C51.3-wan-resultado`, **hechos hoy** (Wan funcionó a las
+  16:07). Filas nuevas: `C51.3-wan-gesto` (dirección, 29/10), `C51.3-ver-videos` (codirector, 29/10) y
+  `C51.3-workflow-apt` (codirector, 3/11, sin prisa). Siguen sin tocarse producción ni la cola.
+- **Las demás rutinas**: nada nuevo.

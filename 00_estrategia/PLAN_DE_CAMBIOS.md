@@ -6684,3 +6684,12 @@ contrario.
 ## Lo que NO cambia hoy
 
 - Nada de producción: ni la cola, ni la voz, ni el visual. B1 sigue con su orden y su regla. Las rutinas, igual.
+
+## Apéndice de la versión 26 (26/10, 16:10 UTC) — Wan funcionó
+
+| Qué | Resultado |
+|---|---|
+| Wan 2.2 5B en la T4 | **Funciona** con el transformador por bloques: 704×1280, 77 fotogramas, pico 13,5 GB de 14,5, 54,6 min. Sin bajar resolución, como pidió el codirector |
+| Calidad | Nitidez 329 (vaivén: 308); nada pixelado. Pero **se mueve menos** que el vaivén (0,28 frente a 0,87): le pedí quietud y me la dio |
+| Decisión | **No entra todavía.** Jueves 29: indicación con un gesto claro y 30-35 pasos (`C51.3-wan-gesto`); después se decide con el codirector. Mientras, los dos vídeos para que los vea (`C51.3-ver-videos`) |
+| Workflow | Dos ejecuciones muertas en `apt-get` del runner: arreglo preparado en `00_estrategia/tareas/workflows_2026-10-26/` (`C51.3-workflow-apt`, sin prisa) |

@@ -269,3 +269,48 @@ método de los modelos de *diffusers*, y el codificador de texto es de *transfor
 que no lo tiene. Se usa `apply_group_offloading(...)`, la función suelta, que vale para cualquier módulo de
 PyTorch. **Probado en el contenedor** (sin GPU) sobre un UMT5 y un transformador de Wan en miniatura: los
 dos quedan enganchados y el UMT5 sigue dando su salida. LatentSync volvió a salir bien (4,7 min).
+
+## 26/10, 14:58-16:07 UTC: **Wan funciona** (séptimo «kaggle», 66 minutos)
+
+Antes, dos ejecuciones (14:35 y 14:47) murieron en el paso «Dependencias» del workflow: `apt-get update`
+se colgó sin escribir nada y agotó sus 10 minutos. No es del cuaderno: es el runner. Queda un workflow
+arreglado en `00_estrategia/tareas/workflows_2026-10-26/` para que lo mueva el codirector; mientras tanto,
+relanzar basta.
+
+**Resultado, con la cara 2, todo a 704×1280 y 77 fotogramas (3,08 s a 25 fps):**
+
+| Paso | Tiempo | Qué salió |
+|---|---|---|
+| Vaivén de la foto | 5 s | `a_movimiento_afin.mp4` |
+| LatentSync 1.6 sobre el vaivén | 4,0 min | `b_latentsync_afin.mp4` |
+| **Wan 2.2 TI2V-5B, `fp16_bloques`** | **54,6 min** (4,5 de carga, 2 el primer paso, 50 pasos) | `a_movimiento_wan.mp4`, **pico de memoria 13,5 GB de 14,5** |
+| LatentSync 1.6 sobre Wan | 4,3 min | **`b_latentsync_wan.mp4`** |
+
+**La memoria, resuelta**: con el transformador por bloques el pico baja de «no cabe» a 13,5 GB y no hubo
+que bajar ni un píxel. Primer modo (`fp16_bloques`), a la primera; no hizo falta ni «hojas» ni bf16.
+
+**La calidad, medida** (`comparacion-2026-10-26.jpg`: tres fotogramas de cada uno):
+
+- **Nitidez** (varianza del laplaciano, misma escala): Wan **329** frente a 308 del vaivén. No hay nada
+  pixelado; la cara aguanta a tamaño de móvil y a pantalla completa.
+- **Movimiento medio entre fotogramas**: Wan **0,28** frente a **0,87** del vaivén. Es decir: **Wan se
+  mueve menos**, no más. Hace lo que se le pidió («mirando a cámara, quieto, respiración tranquila») y lo
+  hace de verdad —parpadeo y gesto propios, no un desplazamiento de la foto entera—, pero es tan sutil
+  que al lado del vaivén cuesta notarlo.
+- Tras LatentSync la nitidez baja a 190 en los dos (la boca se regenera y se vuelve a comprimir): el
+  límite está ahora en LatentSync, no en el movimiento.
+
+**Lo que esto cuesta**: 54,6 minutos de T4 por **3,08 s** de vídeo ≈ **18 minutos de GPU por segundo**. A
+14 Shorts por semana con 3 s de presentador cada uno serían ~12 h de GPU a la semana (Kaggle da 30 h).
+Caro pero posible, siempre fuera de la producción diaria (esto no entra en `producir.yml`).
+
+**Lo que decido yo (dirección), y por qué**: el camino está abierto —resolución completa, sin pixelar y
+con licencia limpia— pero **Wan, tal como está pedido, no aporta todavía lo que cuesta**: un movimiento más
+discreto que el truco barato. Antes de meterlo, el jueves 29:
+
+1. **Pedirle movimiento de verdad**: la indicación actual le pide quietud. Probar una que pida un gesto
+   claro (un ligero asentimiento, mirar un instante a un lado y volver) y comparar con la misma semilla.
+2. **Bajar a 30-35 pasos** y medir si se nota: si no, el coste cae un tercio.
+3. Solo entonces, decidir con el codirector si entra como brazo de un experimento.
+
+Nada de esto entra en un vídeo sin que él lo vea (C51.2 y regla 11.2).

@@ -30,6 +30,21 @@ pendiente del 23/10: hecha).
    Lo que no me gusta (cuatro Shorts con pocas vistas) va como regla para B2, no para B1.
 6. Plan v26, `compromisos.json`, nota a las rutinas, tareas del codirector.
 
-## El resultado de Kaggle
+## El resultado de Kaggle (llegó hoy: cuatro ejecuciones del workflow)
 
-(Se completa abajo si llega antes de cerrar esta ejecución; si no, lo leo el jueves 29.)
+| Hora | Qué pasó |
+|---|---|
+| 14:02 | **LatentSync 1.6 funciona** a la primera (4 min). Wan: sin memoria, pero con el dato que faltaba (`atencion_eficiente_fp16: true`): el modelo entero en fp16 son 10 de los 14,5 GB |
+| 14:21 | Wan por grupos: se cayó en una línea mía (`enable_group_offload` no existe en los modelos de transformers). Corregido y probado aquí sobre los dos modelos en miniatura |
+| 14:45 y 14:57 | Dos ejecuciones muertas en `apt-get update` del runner (10 min sin escribir nada). Workflow arreglado, preparado para que lo mueva el codirector (`workflows_2026-10-26/`) |
+| **16:07** | **Wan funciona**: `fp16_bloques` a la primera, 704×1280, 77 fotogramas, **pico 13,5 GB**, 54,6 min. Y `b_latentsync_wan.mp4`: cabeza generada **y** labios |
+
+**Mi lectura, sin adornos**: el camino está abierto (resolución completa, nada pixelado, licencias
+limpias), pero **Wan tal como se lo pedí se mueve menos que el truco barato** (0,28 frente a 0,87 de
+diferencia media entre fotogramas) y cuesta 18 minutos de GPU por segundo de vídeo. Le pedí quietud y me
+la dio. El jueves 29: indicación con un gesto claro, 30-35 pasos en vez de 50, y entonces se decide
+(`C51.3-wan-gesto`). Lo que el codirector tiene que mirar son los dos vídeos (`C51.3-ver-videos`).
+
+**Trampa que me llevo**: no es solo «mira qué ocupa la memoria» (trampa 64). Es que **pedí quietud y
+medí movimiento**: la indicación y lo que se quiere medir tienen que decir lo mismo, o el experimento
+contesta otra pregunta.
