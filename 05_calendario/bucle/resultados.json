@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-26T19:35:46Z",
+ "actualizado_utc": "2026-10-27T10:37:34Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -59,7 +59,7 @@
        "porcentaje_visto": 165.1,
        "me_gusta": 0,
        "visualizaciones": 22,
-       "leido": "2026-10-26"
+       "leido": "2026-10-27"
       },
       {
        "id": "MDS-041",
@@ -69,7 +69,7 @@
        "porcentaje_visto": 39.3,
        "me_gusta": 2,
        "visualizaciones": 196,
-       "leido": "2026-10-26"
+       "leido": "2026-10-27"
       },
       {
        "id": "MDS-044",
@@ -79,7 +79,7 @@
        "porcentaje_visto": 45.0,
        "me_gusta": 0,
        "visualizaciones": 120,
-       "leido": "2026-10-26"
+       "leido": "2026-10-27"
       },
       {
        "id": "MDS-047",
@@ -89,7 +89,7 @@
        "porcentaje_visto": 86.2,
        "me_gusta": 0,
        "visualizaciones": 35,
-       "leido": "2026-10-26"
+       "leido": "2026-10-27"
       }
      ]
     },
@@ -109,8 +109,8 @@
        "vistas_48h": 933,
        "porcentaje_visto": 48.2,
        "me_gusta": 9,
-       "visualizaciones": 941,
-       "leido": "2026-10-26"
+       "visualizaciones": 942,
+       "leido": "2026-10-27"
       },
       {
        "id": "MDS-039",
@@ -120,7 +120,7 @@
        "porcentaje_visto": 81.0,
        "me_gusta": 1,
        "visualizaciones": 22,
-       "leido": "2026-10-26"
+       "leido": "2026-10-27"
       },
       {
        "id": "MDS-042",
@@ -130,7 +130,7 @@
        "porcentaje_visto": 69.6,
        "me_gusta": 0,
        "visualizaciones": 12,
-       "leido": "2026-10-26"
+       "leido": "2026-10-27"
       },
       {
        "id": "MDS-046",
@@ -140,7 +140,7 @@
        "porcentaje_visto": 108.2,
        "me_gusta": 1,
        "visualizaciones": 4,
-       "leido": "2026-10-26"
+       "leido": "2026-10-27"
       },
       {
        "id": "MDS-048",
@@ -150,7 +150,7 @@
        "porcentaje_visto": 95.0,
        "me_gusta": 0,
        "visualizaciones": 5,
-       "leido": "2026-10-26"
+       "leido": "2026-10-27"
       }
      ]
     },
@@ -171,7 +171,7 @@
        "porcentaje_visto": 36.7,
        "me_gusta": 6,
        "visualizaciones": 396,
-       "leido": "2026-10-26"
+       "leido": "2026-10-27"
       },
       {
        "id": "MDS-040",
@@ -181,7 +181,7 @@
        "porcentaje_visto": 186.9,
        "me_gusta": 0,
        "visualizaciones": 10,
-       "leido": "2026-10-26"
+       "leido": "2026-10-27"
       },
       {
        "id": "MDS-043",
@@ -191,7 +191,7 @@
        "porcentaje_visto": 489.0,
        "me_gusta": 0,
        "visualizaciones": 28,
-       "leido": "2026-10-26"
+       "leido": "2026-10-27"
       },
       {
        "id": "MDS-045",
@@ -201,7 +201,7 @@
        "porcentaje_visto": 25.9,
        "me_gusta": 0,
        "visualizaciones": 11,
-       "leido": "2026-10-26"
+       "leido": "2026-10-27"
       }
      ]
     }
@@ -235,7 +235,7 @@
     {
      "id": "MDS-051",
      "variante": "A",
-     "motivo": "sin ficha de producción todavía"
+     "motivo": "sin «se quedaron» a 48 h todavía"
     },
     {
      "id": "MDS-052",
@@ -279,6 +279,9 @@
    "animacion.escenas_animadas": 2
   },
   "MDS-048": {
+   "animacion.escenas_animadas": 2
+  },
+  "MDS-051": {
    "animacion.escenas_animadas": 2
   }
  }
