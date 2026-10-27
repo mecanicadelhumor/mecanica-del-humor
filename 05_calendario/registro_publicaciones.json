@@ -906,6 +906,21 @@
       "subido_utc": "2026-10-26T06:21:56Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-26T21:40:21Z"
+    },
+    {
+      "id": "MDS-051.es",
+      "episodio": "MDS-051",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Sirve de algo escribir «jajaja» sin reírte?",
+      "guion": "05_calendario/guiones/MDS-051.es.json",
+      "video_id": "YxXT5LiVGy4",
+      "url": "https://youtu.be/YxXT5LiVGy4",
+      "estado": "private",
+      "publicar_en": "2026-10-27T18:00:00Z",
+      "musica": "cama_09_first_light_galaxytones.mp3",
+      "subido_utc": "2026-10-27T06:26:10Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-26T21:40:21Z"
