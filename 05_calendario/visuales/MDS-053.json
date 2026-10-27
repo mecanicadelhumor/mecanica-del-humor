@@ -1,8 +1,8 @@
 {
   "guion": "MDS-053",
   "version": 1,
-  "firma": "af295bdb174a9d05",
-  "resuelto_utc": "2026-10-22T22:47:12Z",
+  "firma": "7be810e2adee20a6",
+  "resuelto_utc": "2026-10-27T09:33:32Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -74,7 +74,7 @@
     },
     "2": {
       "narracion_sha": "d8aba7bf6d87",
-      "texto_pos": "abajo",
+      "texto_pos": "arriba",
       "planos": [
         {
           "k": 1,
@@ -466,7 +466,7 @@
     },
     "6": {
       "narracion_sha": "3326724a9ef3",
-      "texto_pos": "abajo",
+      "texto_pos": "arriba",
       "planos": [
         {
           "k": 1,

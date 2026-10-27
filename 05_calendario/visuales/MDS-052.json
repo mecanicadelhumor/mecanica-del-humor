@@ -1,8 +1,8 @@
 {
   "guion": "MDS-052",
   "version": 1,
-  "firma": "3022e9ffb49009fc",
-  "resuelto_utc": "2026-10-22T22:46:53Z",
+  "firma": "30ac26ff8c5b15dd",
+  "resuelto_utc": "2026-10-27T09:33:14Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -184,31 +184,37 @@
           ],
           "frase": "Para saber si se nota, pusieron risas grabadas, unas de verdad y otras fingidas, a gente de",
           "fuente": "pexels",
-          "id": 6700173,
-          "pagina": "https://www.pexels.com/video/video-of-a-man-listening-to-music-using-a-wireless-headphones-6700173/",
-          "titulo": "video of a man listening to music using a wireless headphones",
-          "autor": "cottonbro studio",
-          "autor_url": "https://www.pexels.com/@cottonbro",
+          "id": 35332008,
+          "pagina": "https://www.pexels.com/video/relaxed-man-listening-to-music-at-home-desk-35332008/",
+          "titulo": "relaxed man listening to music at home desk",
+          "autor": "Tom Shutkin",
+          "autor_url": "https://www.pexels.com/@shootkin",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 37.0,
+          "duracion_s": 12.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/6700173/6700173-hd_1080_1920_25fps.mp4",
+          "url": "https://videos.pexels.com/video-files/35332008/14970235_1080_1920_25fps.mp4",
           "tipo": "video",
-          "consulta": "person listening with headphones eyes closed",
+          "consulta": "headphones on a desk listening to audio recording",
           "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 9.32,
+          "movimiento": 11.88,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.1306,
-              0.1203,
-              0.6139,
-              0.4313
+              0.3833,
+              0.2391,
+              0.2028,
+              0.1688
+            ],
+            [
+              0.5111,
+              0.2406,
+              0.2028,
+              0.1531
             ]
           ]
         },
@@ -311,38 +317,38 @@
             5.47
           ],
           "frase": "Con tu amigo del chiste malo, tranquilo: tu carcajada puede colar.",
-          "fuente": "pixabay",
-          "id": 172686,
-          "pagina": "https://pixabay.com/videos/id-172686/",
-          "titulo": "dining table, table, eat, dinner, family, family dinner id",
-          "autor": "Eaktas06",
-          "autor_url": "https://pixabay.com/users/Eaktas06-19261019/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 12.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2023/07/21/172686-849651729_large.mp4",
+          "fuente": "pexels",
+          "id": 5961378,
+          "pagina": "https://www.pexels.com/video/elderly-friends-eating-dinner-outdoors-while-celebrating-an-event-5961378/",
+          "titulo": "elderly friends eating dinner outdoors while celebrating an event",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 17.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/5961378/5961378-hd_1080_2048_25fps.mp4",
           "tipo": "video",
-          "consulta": "friends laughing at dinner table night",
+          "consulta": "adults laughing at dinner table friends",
           "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 18.9,
+          "movimiento": 10.53,
           "encuadre": {
-            "x": 0.369,
-            "y": 0.5
+            "x": 0.5,
+            "y": 0
           },
           "caras": [
             [
-              0.0226,
-              0.2722,
-              0.316,
-              0.2944
+              0.8103,
+              0.3399,
+              0.1858,
+              0.1867
             ],
             [
-              0.3535,
-              0.2694,
-              0.311,
-              0.2972
+              0.3913,
+              0.3311,
+              0.1383,
+              0.1034
             ]
           ]
         },
@@ -401,11 +407,11 @@
       "motivo": "quieto (movimiento 0.35)"
     },
     {
-      "escena": 6,
+      "escena": 4,
       "plano": 1,
-      "id": "pixabay:237504",
-      "titulo": "cup, drink, biscuits, breakfast, food, coffee, healthy, fruits, restaurant, cereal, table, sheet, bread, cappuccino, dinner, plate, waffles, berries, bowl, grapes, nutrition id",
-      "motivo": "quieto (movimiento 0.32)"
+      "id": "pixabay:112468",
+      "titulo": "podcast, microphone, radio, audio, recording, music, sound, headphones, technology, studio, voice, mp3, entertainment, broadcast, digital, media, customers, listeners, frequency, business, project, work id",
+      "motivo": "quieto (movimiento 0.45)"
     }
   ],
   "errores_ia": [],
