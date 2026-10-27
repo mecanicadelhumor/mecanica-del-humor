@@ -467,5 +467,33 @@
     "3": {
       "texto_pos": "arriba"
     }
+  },
+  "MDS-052": {
+    "4.1": {
+      "excluir": [
+        "pexels:6700173"
+      ],
+      "busqueda": [
+        "headphones on a desk listening to audio recording",
+        "sound waveform on laptop screen audio editing"
+      ]
+    },
+    "6.1": {
+      "excluir": [
+        "pixabay:172686"
+      ],
+      "busqueda": [
+        "adults laughing at dinner table friends",
+        "friends laughing together restaurant"
+      ]
+    }
+  },
+  "MDS-053": {
+    "2": {
+      "texto_pos": "arriba"
+    },
+    "6": {
+      "texto_pos": "arriba"
+    }
   }
 }
