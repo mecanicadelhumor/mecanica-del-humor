@@ -494,6 +494,32 @@
     },
     "6": {
       "texto_pos": "arriba"
+    },
+    "4.2": {
+      "excluir": [
+        "pexels:8632480"
+      ],
+      "busqueda": [
+        "laptop screen with online meeting video call close up"
+      ]
+    },
+    "4.3": {
+      "excluir": [
+        "pexels:39931085"
+      ],
+      "busqueda": [
+        "hands typing on laptop in office meeting room"
+      ]
+    }
+  },
+  "MDS-054": {
+    "6.1": {
+      "excluir": [
+        "pexels:7447927"
+      ],
+      "busqueda": [
+        "smartphone voice message recording close up hands"
+      ]
     }
   }
 }
