@@ -922,6 +922,21 @@
       "subido_utc": "2026-10-27T06:26:10Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-27T21:23:24Z"
+    },
+    {
+      "id": "MDS-052.es",
+      "episodio": "MDS-052",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Se nota cuando alguien se ríe por compromiso?",
+      "guion": "05_calendario/guiones/MDS-052.es.json",
+      "video_id": "3snhPlbXdzU",
+      "url": "https://youtu.be/3snhPlbXdzU",
+      "estado": "private",
+      "publicar_en": "2026-10-28T18:00:00Z",
+      "musica": "cama_10_farewell_galaxytones.mp3",
+      "subido_utc": "2026-10-28T07:01:41Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-27T21:23:24Z"
