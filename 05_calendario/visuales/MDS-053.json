@@ -1,8 +1,8 @@
 {
   "guion": "MDS-053",
   "version": 1,
-  "firma": "7be810e2adee20a6",
-  "resuelto_utc": "2026-10-27T09:33:32Z",
+  "firma": "bb762e775eb54f50",
+  "resuelto_utc": "2026-10-28T09:34:24Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -274,50 +274,45 @@
             7.33
           ],
           "frase": "chistes que salían bien y chistes",
-          "fuente": "pexels",
-          "id": 8632480,
-          "pagina": "https://www.pexels.com/video/woman-talking-to-her-colleagues-in-the-office-8632480/",
-          "titulo": "woman talking to her colleagues in the office",
-          "autor": "Kampus Production",
-          "autor_url": "https://www.pexels.com/@kampus",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 7.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/8632480/8632480-hd_1080_1920_25fps.mp4",
-          "tipo": "video",
-          "consulta": "colleagues laughing office meeting",
-          "relevancia": 0.5,
-          "inicio_s": 0.4,
-          "movimiento": 10.04,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "coworkers smiling at a joke in an office",
+          "semilla": 5929503,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-053/e4_p2.jpg",
           "caras": [
             [
-              0.2,
-              0.3391,
-              0.1,
-              0.0813
+              0.7526,
+              0.4574,
+              0.0729,
+              0.0691
             ],
             [
-              0.3306,
-              0.3656,
-              0.1,
-              0.075
+              0.6849,
+              0.4243,
+              0.0768,
+              0.0654
             ],
             [
-              0.0694,
-              0.5062,
-              0.1,
-              0.075
+              0.1888,
+              0.4471,
+              0.0729,
+              0.0669
             ],
             [
-              0.6139,
-              0.4547,
-              0.0861,
-              0.0844
+              0.319,
+              0.3956,
+              0.0768,
+              0.0625
+            ],
+            [
+              0.526,
+              0.4074,
+              0.0755,
+              0.0559
             ]
           ]
         },
@@ -330,57 +325,26 @@
           ],
           "frase": "fuera de tono.",
           "fuente": "pexels",
-          "id": 39931085,
-          "pagina": "https://www.pexels.com/video/office-team-meeting-in-bright-workspace-39931085/",
-          "titulo": "office team meeting in bright workspace",
-          "autor": "This And No Internet 25",
-          "autor_url": "https://www.pexels.com/@this-and-no-internet-25-288559",
+          "id": 5742406,
+          "pagina": "https://www.pexels.com/video/hands-typing-in-a-laptop-5742406/",
+          "titulo": "hands typing in a laptop",
+          "autor": "https://kaboompics.com/",
+          "autor_url": "https://www.pexels.com/@karola-g",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 17.0,
+          "duracion_s": 14.0,
           "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/39931085/17038127_1080_1920_30fps.mp4",
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/5742406/5742406-hd_1080_2048_25fps.mp4",
           "tipo": "video",
-          "consulta": "awkward silence in office meeting",
+          "consulta": "hands typing on laptop in office meeting room",
           "relevancia": 0.5,
           "inicio_s": 0.4,
-          "movimiento": 20.83,
+          "movimiento": 3.63,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
-          "caras": [
-            [
-              0.0472,
-              0.5531,
-              0.175,
-              0.1828
-            ],
-            [
-              0.2639,
-              0.4734,
-              0.1056,
-              0.0969
-            ],
-            [
-              0.7,
-              0.4766,
-              0.0917,
-              0.0688
-            ],
-            [
-              0.4139,
-              0.4906,
-              0.0889,
-              0.0672
-            ],
-            [
-              0.5833,
-              0.4891,
-              0.0806,
-              0.0625
-            ]
-          ]
+          "caras": []
         }
       ]
     },
@@ -411,7 +375,7 @@
           "consulta": "confident woman presenting office",
           "relevancia": 0.5,
           "inicio_s": 0.0,
-          "movimiento": 13.04,
+          "movimiento": 13.05,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
@@ -538,7 +502,15 @@
       ]
     }
   },
-  "descartes": [],
+  "descartes": [
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pexels:8522975",
+      "titulo": "a person at a video call",
+      "motivo": "poco relevante (0.286): se prueba la IA"
+    }
+  ],
   "errores_ia": [],
   "incompleto": false
 }

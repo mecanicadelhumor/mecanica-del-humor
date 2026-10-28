@@ -1,8 +1,8 @@
 {
   "guion": "MDS-054",
   "version": 1,
-  "firma": "09f9d7c620bb4972",
-  "resuelto_utc": "2026-10-22T22:47:30Z",
+  "firma": "0fb0ea71c7e8220c",
+  "resuelto_utc": "2026-10-28T09:34:41Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -371,34 +371,27 @@
             4.2
           ],
           "frase": "La próxima vez que te llame tu amigo, cógelo.",
-          "fuente": "pexels",
-          "id": 7447927,
-          "pagina": "https://www.pexels.com/video/man-talking-on-the-phone-7447927/",
-          "titulo": "man talking on the phone",
-          "autor": "August de Richelieu",
-          "autor_url": "https://www.pexels.com/@august-de-richelieu",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 22.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/7447927/7447927-hd_1080_1920_25fps.mp4",
+          "fuente": "pixabay",
+          "id": 47743,
+          "pagina": "https://pixabay.com/videos/id-47743/",
+          "titulo": "phone, hands, screen touch, smart phone, message id",
+          "autor": "crew_jak",
+          "autor_url": "https://pixabay.com/users/crew_jak-17988967/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 7.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2020/08/21/47743-452143732_large.mp4",
           "tipo": "video",
-          "consulta": "man answering phone smiling",
+          "consulta": "smartphone voice message recording close up hands",
           "relevancia": 0.5,
           "inicio_s": 0.4,
-          "movimiento": 2.05,
+          "movimiento": 9.55,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
-          "caras": [
-            [
-              0.2278,
-              0.2609,
-              0.5,
-              0.3984
-            ]
-          ]
+          "caras": []
         },
         {
           "k": 2,
@@ -423,7 +416,7 @@
           "consulta": "phone recording voice message close-up",
           "relevancia": 0.4,
           "inicio_s": 0.0,
-          "movimiento": 6.23,
+          "movimiento": 6.33,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
