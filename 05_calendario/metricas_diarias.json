@@ -1,18 +1,18 @@
 {
  "_nota": "C47: lectura ligera diaria de los vídeos publicados en los últimos 10 días: visualizaciones, vistas_48h y, desde el 05/10/2026 (C60), se_quedaron_48h («Se quedaron viendo» de Studio = engagedViews/views), porcentaje_visto, me_gusta, suscriptores y compartidos. Sin curvas de retención a propósito (ver la cabecera de escribir_metricas_diarias() en 04_agentes/metricas.py). Se SOBRESCRIBE entero cada vez: es una ventana rodante, no una serie histórica. La lectura completa semanal (metricas.json, control_c26) es la que manda y no cambia con este fichero.",
- "actualizado_utc": "2026-10-28T13:31:55Z",
+ "actualizado_utc": "2026-10-28T19:08:55Z",
  "videos": [
   {
    "id": "MDS-042.es",
    "publicado": "2026-10-18",
-   "visualizaciones": 13,
+   "visualizaciones": 15,
    "vistas_48h": 9,
    "se_quedaron_48h": {
     "vistas": 9,
     "comprometidas": 3,
     "pct": 33.3
    },
-   "porcentaje_visto": 56.1,
+   "porcentaje_visto": 41.5,
    "me_gusta": 0,
    "suscriptores": 0,
    "compartidos": 0
@@ -95,14 +95,14 @@
   {
    "id": "MDS-048.es",
    "publicado": "2026-10-24",
-   "visualizaciones": 5,
+   "visualizaciones": 6,
    "vistas_48h": 5,
    "se_quedaron_48h": {
     "vistas": 5,
     "comprometidas": 1,
     "pct": 20.0
    },
-   "porcentaje_visto": 95.0,
+   "porcentaje_visto": 96.5,
    "me_gusta": 0,
    "suscriptores": 0,
    "compartidos": 0
@@ -110,14 +110,14 @@
   {
    "id": "MDS-049.es",
    "publicado": "2026-10-25",
-   "visualizaciones": 69,
-   "vistas_48h": 69,
+   "visualizaciones": 70,
+   "vistas_48h": 70,
    "se_quedaron_48h": {
-    "vistas": 69,
-    "comprometidas": 17,
-    "pct": 24.6
+    "vistas": 70,
+    "comprometidas": 18,
+    "pct": 25.7
    },
-   "porcentaje_visto": 59.3,
+   "porcentaje_visto": 61.4,
    "me_gusta": 0,
    "suscriptores": 0,
    "compartidos": 0
@@ -125,15 +125,15 @@
   {
    "id": "MDS-050.es",
    "publicado": "2026-10-26",
-   "visualizaciones": 0,
-   "vistas_48h": 0,
+   "visualizaciones": 423,
+   "vistas_48h": 423,
    "se_quedaron_48h": {
-    "vistas": 0,
-    "comprometidas": 0,
-    "pct": null
+    "vistas": 423,
+    "comprometidas": 72,
+    "pct": 17.0
    },
-   "porcentaje_visto": 0.0,
-   "me_gusta": 0,
+   "porcentaje_visto": 39.9,
+   "me_gusta": 2,
    "suscriptores": 0,
    "compartidos": 0
   },
