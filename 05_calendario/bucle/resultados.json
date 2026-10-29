@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-28T19:08:55Z",
+ "actualizado_utc": "2026-10-29T13:43:22Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -79,7 +79,7 @@
        "porcentaje_visto": 45.0,
        "me_gusta": 0,
        "visualizaciones": 120,
-       "leido": "2026-10-28"
+       "leido": "2026-10-29"
       },
       {
        "id": "MDS-047",
@@ -89,7 +89,7 @@
        "porcentaje_visto": 86.2,
        "me_gusta": 0,
        "visualizaciones": 35,
-       "leido": "2026-10-28"
+       "leido": "2026-10-29"
       },
       {
        "id": "MDS-050",
@@ -99,7 +99,7 @@
        "porcentaje_visto": 39.9,
        "me_gusta": 2,
        "visualizaciones": 423,
-       "leido": "2026-10-28"
+       "leido": "2026-10-29"
       }
      ]
     },
@@ -107,9 +107,9 @@
      "nombre": "Animación a medida en las escenas de mecanismo (C55.2)",
      "n": 5,
      "se_quedaron_media": 29.8,
-     "porcentaje_visto_media": 75.1,
+     "porcentaje_visto_media": 80.7,
      "vistas_48h_mediana": 9,
-     "me_gusta_por_100": 1.11,
+     "me_gusta_por_100": 1.12,
      "ceros_de_feed": 3,
      "shorts": [
       {
@@ -137,10 +137,10 @@
        "publicado": "2026-10-18",
        "se_quedaron_pct": 33.3,
        "vistas_48h": 9,
-       "porcentaje_visto": 41.5,
+       "porcentaje_visto": 69.6,
        "me_gusta": 0,
-       "visualizaciones": 15,
-       "leido": "2026-10-28"
+       "visualizaciones": 12,
+       "leido": "2026-10-27"
       },
       {
        "id": "MDS-046",
@@ -150,7 +150,7 @@
        "porcentaje_visto": 108.2,
        "me_gusta": 1,
        "visualizaciones": 4,
-       "leido": "2026-10-28"
+       "leido": "2026-10-29"
       },
       {
        "id": "MDS-048",
@@ -160,7 +160,7 @@
        "porcentaje_visto": 96.5,
        "me_gusta": 0,
        "visualizaciones": 6,
-       "leido": "2026-10-28"
+       "leido": "2026-10-29"
       }
      ]
     },
@@ -201,7 +201,7 @@
        "porcentaje_visto": 489.0,
        "me_gusta": 0,
        "visualizaciones": 29,
-       "leido": "2026-10-28"
+       "leido": "2026-10-29"
       },
       {
        "id": "MDS-045",
@@ -211,7 +211,7 @@
        "porcentaje_visto": 25.9,
        "me_gusta": 0,
        "visualizaciones": 11,
-       "leido": "2026-10-28"
+       "leido": "2026-10-29"
       },
       {
        "id": "MDS-049",
@@ -221,7 +221,7 @@
        "porcentaje_visto": 61.4,
        "me_gusta": 0,
        "visualizaciones": 70,
-       "leido": "2026-10-28"
+       "leido": "2026-10-29"
       }
      ]
     }
