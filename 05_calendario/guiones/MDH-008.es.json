@@ -1,338 +1,958 @@
 {
-  "id": "MDH-008",
-  "formato": "largo",
-  "serie": "Mecanismos",
-  "idioma": "es",
-  "titulo_trabajo": "Cómo se construye un chiste, pieza a pieza",
-  "tesis": "Casi todos los chistes tienen la misma arquitectura: una historia que crees estar oyendo, un punto de contacto ambiguo, y una segunda historia que encajaba desde el principio.",
-  "pilares": [
-    "I",
-    "L",
-    "A"
-  ],
-  "duracion_objetivo_s": 310,
-  "bloqueos": [],
-  "notas_humor": [
-    "ADAPTADO AL FORMATO NUEVO el 17/09/2026 para el sábado 26, aplicando la nota de revisiones/MDH-008.md, que pedía la misma reescritura completa que MDH-004. Antes: 27 escenas, sin «formato», sin personaje, sin escéptico, 48 % de «enunciado», rótulo de portada por delante y doce escenas por encima de 14 s.",
-    "El gancho ya no es un rótulo: el episodio abre con el chiste del trastero y la primera risa cae sobre el segundo ocho.",
-    "UN SOLO CHISTE SOSTIENE EL EPISODIO. El del trastero entra en la escena 1, se desmonta en la 12 y vuelve en la 26 a demostrar la regla de la última palabra, con su premisa dicha otra vez en la misma frase —«el de la pareja que pedía espacio»—, que es lo que pide la regla 13 para un callback a más de noventa segundos. En la versión anterior el chiste aparecía en la escena 8 y no volvía nunca.",
-    "Risas repartidas por distancia y no por cuenta (REGLAS.md, regla 13, corregida el 12/09): segundo 8 (el trastero), ~95 s (el aviso de que el chiste se va a morir, y mi pareja tampoco se ríe), ~170 s (versionar es girar mandos: menos bonito y mejor), ~205 s (el remate huérfano buscando una historia que lo adopte) y ~285 s (ocho episodios sin reírme). Ningún tramo de noventa segundos se queda sin un intento.",
-    "SE HA QUITADO UNA CIFRA SIN FUENTE: la escena 18 de la versión anterior decía que «el noventa por ciento del trabajo» está en el tercer paso. Ese número no está en L01 ni en ninguna ficha, y asignarle una fuente a un número ya escrito es justo lo que prohíbe la regla 2. Queda «ahí está casi todo el trabajo», sin número. Misma decisión que con los «quince intentos» de MDH-006 el 10/09.",
-    "La escena «cita» que señalaba la revisión —el chiste dicho Y escrito entero— se resuelve partiéndola en dos: el planteamiento con su pausa de 1,4 s y el remate en la escena siguiente. En pantalla van tres palabras y no la frase entera, así que el ojo y el oído dejan de recibir lo mismo y la pausa vuelve a ser el chiste.",
-    "El escéptico interviene dos veces, las dos por debajo de doce palabras y las dos antes de que el narrador resuelva la objeción: «¿todos los chistes son el mismo?» (escena 14) y «¿y si está perfecto y sigue sin hacer gracia?» (escena 28), que es la que abre el bloque del límite.",
-    "CUENTA DE ESCENAS, y es una decisión de esta noche, no un descuido: 34, no las cuarenta y tantas de MDH-007. Con una petición de voz por escena y diez al día (C33.2), MDH-007 se quedó sin voz con 41 escenas y hubo que moverlo al domingo. Treinta y cuatro caben en el precacheo de martes a viernes (cuarenta peticiones) con margen para los rechazos, y dejan la cuota del sábado de reserva. Cuando entre C36 —una llamada por vídeo— esta restricción desaparece y el episodio siguiente puede partirse más fino. Ninguna escena pasa de once segundos y ninguna lleva dos ideas.",
-    "C17, dicho aquí porque el validador va a avisar tres veces: las cuatro fuentes (I01, L01, A05, A01) son las que este guion ya tenía desde que se escribió, no una elección de esta semana. L01 sostuvo MDS-005 (28/08) y MDS-008 (02/09), A05 sostuvo MDS-010 (04/09) y A01 está en cuatro piezas del corpus. No se cambian: reescribir las fuentes de un episodio ya escrito para esquivar un aviso sería elegir la bibliografía por el calendario. Lo que sí se ha cuidado es que ninguna sostenga aquí lo mismo que allí: en los Shorts L01 daba el método para construir un chiste concreto, y aquí da la dirección de escritura y la regla de la última palabra."
-  ],
-  "escenas": [
+ "id": "MDH-008",
+ "formato": "largo",
+ "serie": "El caso, entero",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué no puedes hacerte cosquillas? El caso entero",
+ "tesis": "Las cosquillas necesitan algo que tu cerebro no pueda predecir —no hace falta que sea una persona— y la risa que sacan es muy antigua: la tienen las ratas, se contagia y se corta con el miedo; va junto al humor, pero no es el mismo interruptor.",
+ "pilares": [
+  "F",
+  "E"
+ ],
+ "duracion_objetivo_s": 480,
+ "bloqueos": [],
+ "fuente_short": "MDS-038",
+ "capitulos": [
+  {
+   "titulo": "Tu cerebro, aguafiestas",
+   "desde_escena": 4
+  },
+  {
+   "titulo": "¿Hace falta otro?",
+   "desde_escena": 13
+  },
+  {
+   "titulo": "Las ratas que ríen",
+   "desde_escena": 23
+  },
+  {
+   "titulo": "¿Cosquillas o chistes?",
+   "desde_escena": 35
+  }
+ ],
+ "historia": {
+  "pregunta": "¿Por qué no puedes hacerte cosquillas a ti mismo, y por qué las cosquillas dan risa?",
+  "respuesta": "Porque tu cerebro predice tu propio movimiento y le baja el volumen: las cosquillas necesitan algo que no puedas predecir, aunque sea una máquina; y su risa es muy antigua, la tienen las ratas, va junto al humor pero no es el mismo interruptor.",
+  "puente": "El dedo de tu hermano que te hace encogerte antes de tocarte vuelve en cada capítulo: el cerebelo lo explica (1), la máquina creída y la espera lo afinan (2), las ratas enseñan que esa risa es vieja y se corta con el miedo (3), y la amiga de la risa floja cierra con el humor (4)."
+ },
+ "notas_humor": [
+  "FORMATO: «El caso, entero» (guionista.md, bloque del 22/10). Short de partida: MDS-038 (933 vistas a 48 h) y su familia: MDS-050 (916), MDS-055 y MDS-057. C17 no se aplica a los largos (codirector, 23/10): por eso vuelven F10, F15, F19 y F14.",
+  "RISAS, con su segundo aproximado: s. 10 (aún no te ha tocado), s. 70 (spoiler / rascarte la espalda), s. 85 (escéptico: ¿vergüenza?), s. 150 (la máquina era de mentira), s. 215 (medio trabajo hecho), s. 260 (Freudensprünge), s. 300 (el dentista), s. 345 («¡para!» y vuelve), s. 375 (hasta colorados), s. 410 (un chiste antes no le da más). Ningún hueco de más de 90 s.",
+  "ESCÉPTICO: tres veces (escenas 9, 18 y 30), menos de doce palabras.",
+  "ANIMACIÓN: seis escenas de mecanismo con animar (6, 7, 11, 20, 26 y 38), como el brazo A.",
+  "FUENTES (resúmenes leídos y copiados en sus fichas de semillas.json): F10 «A self-produced tactile stimulus is perceived as less ticklish than the same stimulus generated externally»; «More activity was found in somatosensory cortex when the stimulus was externally produced»; «the cerebellum is involved in predicting the specific sensory consequences of movements». F20 «Self-touch induced wide-ranging inhibition and vocalization suppression»; «Although rats nose poked for tickling, they also showed escaping, freezing, and alarm calls». F15 «Thirty-five subjects were tickled twice--once by the experimenter, and once, they believed, by an automated machine»; «subjects smiled, laughed, and wiggled just as often in response to the machine as to the experimenter». F19 «fMRI was conducted on 31 healthy volunteers»; «anticipatory activity in the anterior insula correlated positively with the degree of laughter». E06 «approximately 50-kHz chirps»; «the working hypothesis that such rat vocalizations reflect a type of positive affect». F16 «tickling of rats evoked vocalizations, approach, and unsolicited jumps (Freudensprünge)»; «Anxiogenic conditions suppressed tickling-evoked vocalizations and trunk cortex activity». F17 «Observers vocalized and showed \"Freudensprünge\" during witnessing live tickling, while they showed little behavioral responses to playbacks». F18 «in humans tickling induces both pleasure and displeasure, and neither ... the Duchenne smile, nor laughter detects this variation»; «50 kHz ultrasonic vocalizations provide a quantifiable and graded measure of positive affect». F11 «100 college students»; «Ticklishness was related to propensities to: (a) giggle, (b) laugh, (c) smile, (d) piloerect, (e) blush, and (f) cry». F14 «Seventy-two undergraduate students»; «Subjects exhibiting more pronounced laughter to comedy also laughed more vigorously to tickle»; «no evidence that comedy-induced laughter increased subsequent laughter to tickle nor that ticklish laughter increased laughter to comedy».",
+  "LO QUE NO SE DICE: «en la palma» o «en la barriga» (los resúmenes no dicen dónde), «alto y con mucha luz» (no dice qué condición daba miedo), la «máquina de verdad» (era creída), y ningún nombre de ciudad o universidad.",
+  "LA ESCENA 28 (el dentista) es un chiste, no un dato: dice «lo mismo que intentar», no que se haya medido en personas.",
+  "PARRILLA: NO se programa. El estreno se pasó al 15/11 y el ensayo al 9/11 (dirección, 29/10), y la imagen horizontal y la voz por tandas siguen pendientes (compromisos del 5/11). Fecha y emisión las pone la dirección.",
+  "LECTURA EN FRÍO (29/10): tres vueltas de cinco lectores cada una (un capítulo cada uno y el vídeo entero), quince lectores nuevos. Las tres terminan en «me quedo» o «seguiría viendo». Tras la tercera quedaban frases sueltas por capítulo; están corregidas, pero NO se han vuelto a leer: el guion no está cerrado. Hay margen (estreno el 15/11, ensayo el 9/11): la planificación del 5/11 lo relee antes de que empiece la voz por tandas. Historial de las vueltas 1 y 2 en la bitácora del 29/10."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-muelle",
+   "texto": "Hazte *cosquillas*",
+   "narracion": "Prueba a hacerte cosquillas en la planta del pie. Con ganas. Nada, ¿verdad?",
+   "pausa_despues_s": 0.5,
+   "visual": [
     {
-      "tipo": "cita",
-      "icono": "i-bocadillos",
-      "texto": "Necesitaba *espacio*.",
-      "autor": "Un chiste, a punto de ser desarmado",
-      "narracion": "Empezamos por un chiste. Mi pareja me dijo que necesitaba espacio.",
-      "pausa_despues_s": 1.4
-    },
-    {
-      "tipo": "enunciado",
-      "texto": "En el *trastero*.",
-      "narracion": "Ahora duermo en el trastero.",
-      "personaje": "rie",
-      "pausa_despues_s": 0.8
-    },
-    {
-      "tipo": "enunciado",
-      "icono": "i-bisagra",
-      "texto": "Y eso tiene *plano de montaje*",
-      "narracion": "Ese chiste tiene un plano de montaje: piezas con nombre que encajan siempre igual. Hoy lo desarmamos entero.",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "titulo",
-      "etiqueta": "Parte 1",
-      "titulo": "Las tres *piezas*",
-      "narracion": "Primero, la estructura mínima. La lingüística del humor y el oficio del stand-up llegaron a ella por caminos distintos.",
-      "pausa_despues_s": 0.4
-    },
-    {
-      "tipo": "diagrama",
-      "pasos": [
-        {
-          "titulo": "Historia 1",
-          "pie": "la que crees oír"
-        },
-        {
-          "titulo": "Conector",
-          "pie": "encaja en las dos"
-        },
-        {
-          "titulo": "Historia 2",
-          "pie": "estaba ahí desde el principio"
-        }
-      ],
-      "narracion": "Un chiste es una historia que crees oír, un elemento ambiguo que encaja en dos, y una segunda que ya estaba.",
-      "fuente": "I01",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "comparacion",
-      "a": "Lo que crees que hace el *remate*",
-      "b": "Lo que hace de verdad",
-      "et_a": "añadir información nueva",
-      "et_b": "obligarte a releer lo anterior",
-      "narracion": "Y fíjate en un detalle importante: el remate no añade información nueva. Solo te obliga a releer lo que acabas de oír.",
-      "fuente": "I01",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "dato",
-      "cifra": "Ya estaba",
-      "pie": "la respuesta *no aparece*: se enseña",
-      "narracion": "Por eso un buen chiste da la sensación de que la respuesta estaba ahí todo el rato. Es que estaba.",
-      "fuente": "I01",
-      "personaje": "entiende",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "diagrama",
-      "pasos": [
-        {
-          "titulo": "Algo *no encaja*",
-          "pie": "lo detectas"
-        },
-        {
-          "titulo": "Y de pronto encaja",
-          "pie": "lo resuelves"
-        }
-      ],
-      "narracion": "Es el modelo de dos fases del episodio dos: primero detectas que algo no encaja y luego lo encajas.",
-      "fuente": "A05",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "enunciado",
-      "icono": "i-muelle",
-      "texto": "Una *máquina* de dos tiempos",
-      "narracion": "Un chiste es una máquina para provocar esas dos cosas, en ese orden.",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "titulo",
-      "etiqueta": "Parte 2",
-      "titulo": "El *desmontaje*",
-      "narracion": "Volvamos al trastero.",
-      "pausa_despues_s": 0.4
-    },
-    {
-      "tipo": "enunciado",
-      "icono": "i-ruptura",
-      "texto": "Aviso: deja de tener *gracia*",
-      "narracion": "Aviso: a partir de aquí el chiste del trastero ya no hace gracia. Mi pareja, que nunca dijo eso, tampoco se ríe.",
-      "personaje": "rie",
-      "pausa_despues_s": 0.5
-    },
-    {
-      "tipo": "lista",
-      "titulo": "Las piezas de ese chiste",
-      "puntos": [
-        "*Historia 1*: quiere un poco de distancia",
-        "Conector: «espacio», que vale para las dos",
-        "Historia 2: la distancia se midió en metros"
-      ],
-      "narracion": "La historia que crees oír es que alguien pide distancia. El conector es espacio. Y la segunda se mide en metros.",
-      "fuente": "I01",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "dato",
-      "cifra": "El esqueleto",
-      "pie": "y lo tienen *casi todos*",
-      "narracion": "Ese es el esqueleto. Y la mala noticia para el romanticismo: casi todos los chistes que has oído tienen esa forma.",
-      "fuente": "I01",
-      "personaje": "entiende",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "enunciado",
-      "voz": "esceptico",
-      "texto": "«¿Todos el *mismo*?»",
-      "narracion": "¿Me estás diciendo que todos los chistes son el mismo?",
-      "pausa_despues_s": 0.35
-    },
-    {
-      "tipo": "enunciado",
-      "texto": "Cuatro patas, todas las *sillas*",
-      "narracion": "No. El mismo plano, no el mismo chiste. Con cuatro patas caben todas las sillas que se te ocurran.",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "titulo",
-      "etiqueta": "Parte 3",
-      "titulo": "Los *seis mandos*",
-      "narracion": "La lingüística va un paso más allá: desglosa un chiste en seis recursos que se pueden mover por separado.",
-      "pausa_despues_s": 0.4
-    },
-    {
-      "tipo": "lista",
-      "titulo": "Los que más te sirven",
-      "puntos": [
-        "*Oposición* de guiones: las dos historias",
-        "Mecanismo lógico: cómo saltas de una a otra",
-        "Objetivo: sobre quién o qué va"
-      ],
-      "narracion": "Son seis, pero para escribir sirven tres: qué historias se oponen, cómo saltas de una a otra, y sobre qué va.",
-      "fuente": "I01",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "comparacion",
-      "a": "El chiste *original*",
-      "b": "Con un mando movido",
-      "et_a": "el mismo esqueleto",
-      "et_b": "otro chiste distinto",
-      "narracion": "Y eso es una herramienta enorme: coges un chiste que funciona, mueves un mando y sale otro. Mueves dos y cambia.",
-      "fuente": "I01",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "enunciado",
-      "texto": "Eso es *versionar*",
-      "narracion": "Es lo que hacen los equipos de guion cuando dicen que están versionando. No se inspiran: giran mandos. Menos bonito y mejor.",
-      "personaje": "rie",
-      "pausa_despues_s": 0.5
-    },
-    {
-      "tipo": "titulo",
-      "etiqueta": "Parte 4",
-      "titulo": "Cómo se escribe uno *desde cero*",
-      "narracion": "Y ahora el método, que es lo que te llevas a casa. Va justo del revés de como se intenta.",
-      "pausa_despues_s": 0.4
-    },
-    {
-      "tipo": "comparacion",
-      "titulo": "El error de dirección",
-      "a": "Pensar un remate y ponerle una historia delante.",
-      "b": "Buscar una *ambigüedad* real y construir hacia atrás.",
-      "et_a": "Lo que casi todos hacen",
-      "et_b": "Lo que funciona",
-      "narracion": "Casi todos intentan pensar un remate gracioso y montarle una historia delante. Sale un remate huérfano buscando una historia que lo adopte.",
-      "fuente": "L01",
-      "personaje": "rie",
-      "pausa_despues_s": 0.5
-    },
-    {
-      "tipo": "enunciado",
-      "icono": "i-bisagra",
-      "texto": "Se construye hacia *atrás*",
-      "narracion": "Lo que funciona es lo contrario: buscas primero una ambigüedad real, algo que pueda significar dos cosas, y construyes hacia atrás.",
-      "fuente": "L01",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "lista",
-      "titulo": "El método, en tres pasos",
-      "puntos": [
-        "Escribe una observación *tuya* y verdadera",
-        "Busca la segunda lectura que también encaja",
-        "Reescribe el principio para que no se vea venir"
-      ],
-      "narracion": "Tres pasos. Uno: una observación tuya y verdadera, no una idea graciosa. Dos: la segunda lectura que también encajaría con ella.",
-      "fuente": "L01",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "enunciado",
-      "icono": "i-pausa",
-      "texto": "El trabajo está en el paso *tres*",
-      "narracion": "Y tres, el que casi nadie hace: esconder la pista sin hacer trampa. Escribir el remate es lo fácil.",
-      "fuente": "L01",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "enunciado",
-      "texto": "El giro, lo *último*",
-      "narracion": "Y una regla técnica que vale más que muchos consejos: la palabra que gira va al final de la frase.",
-      "fuente": "L01",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "comparacion",
-      "a": "«Duermo en el *trastero* ahora»",
-      "b": "«Ahora duermo en el trastero»",
-      "et_a": "lo resuelves antes de acabar",
-      "et_b": "lo resuelves al terminar",
-      "narracion": "Míralo con el nuestro, el de la pareja que pedía espacio. Duermo en el trastero ahora se resuelve demasiado pronto.",
-      "fuente": "L01",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "enunciado",
-      "texto": "Misma información, otro *orden*",
-      "narracion": "Ahora duermo en el trastero se resuelve al final. Es la misma información y solo cambia el orden.",
-      "fuente": "L01",
-      "personaje": "entiende",
-      "pausa_despues_s": 0.5
-    },
-    {
-      "tipo": "enunciado",
-      "voz": "esceptico",
-      "texto": "«¿Y si sigue sin hacer *gracia*?»",
-      "narracion": "¿Y si está perfecto y sigue sin hacer gracia?",
-      "pausa_despues_s": 0.35
-    },
-    {
-      "tipo": "titulo",
-      "etiqueta": "El límite",
-      "titulo": "Lo que la estructura *no* te da",
-      "narracion": "Esa es la última parte, y es la que cierra la temporada entera.",
-      "pausa_despues_s": 0.4
-    },
-    {
-      "tipo": "comparacion",
-      "a": "*Necesaria*",
-      "b": "Suficiente",
-      "et_a": "la estructura lo es",
-      "et_b": "no lo es, ni de lejos",
-      "narracion": "Puedes construir un chiste estructuralmente perfecto que no haga ninguna gracia. La estructura es condición necesaria, no suficiente.",
-      "fuente": "I01",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "lista",
-      "titulo": "Lo que falta, y ya lo sabes",
-      "puntos": [
-        "Que sea *benigno* para quien escucha",
-        "Que la distancia esté bien calculada",
-        "Que apunte donde no haga daño"
-      ],
-      "narracion": "Falta todo lo demás que hemos visto: que resulte benigno para quien escucha, que la distancia esté calculada, que no deje factura.",
-      "fuente": "A01",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "comparacion",
-      "a": "La *técnica*",
-      "b": "Lo demás",
-      "et_a": "la escribes tú en tu casa",
-      "et_b": "se decide en la cabeza del otro",
-      "narracion": "La estructura la escribes tú en tu casa. Lo demás se decide en la cabeza de quien te escucha.",
-      "personaje": "piensa",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "enunciado",
-      "icono": "i-publico",
-      "texto": "Dímelo en *comentarios*",
-      "narracion": "Coge un chiste que te sepas y dime en comentarios en qué palabra está el giro. Esa palabra es la máquina.",
-      "pausa_despues_s": 0.45
-    },
-    {
-      "tipo": "cierre",
-      "icono": "i-grieta",
-      "titulo": "Y falla aquí: el plano no *garantiza* nada",
-      "subtitulo": "Escribe uno esta semana. Uno malo también cuenta.",
-      "narracion": "Aquí falla todo: se puede montar un chiste perfecto y silencioso. Y yo llevo ocho episodios de humor sin reírme: tú llevas ventaja.",
-      "personaje": "no",
-      "pausa_despues_s": 0.2
+     "busqueda": [
+      "person tickling own bare foot sofa",
+      "hand touching sole of foot",
+      "bare feet on sofa close-up"
+     ],
+     "prompt": "a person sitting on a sofa trying to tickle the sole of their own bare foot, unimpressed"
     }
-  ]
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Y aún no te ha *tocado*",
+   "narracion": "Ahora imagina que es tu hermano quien se acerca, con el mismo dedo y muy despacio. Ya te estás encogiendo. Y todavía no te ha tocado.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "man slowly approaching finger sofa",
+      "finger approaching person playful"
+     ],
+     "prompt": "a grinning man slowly reaching one finger towards someone on a sofa"
+    },
+    {
+     "desde": "Ya te estás encogiendo",
+     "busqueda": [
+      "woman curling up laughing anticipation",
+      "person flinching laughing on couch"
+     ],
+     "prompt": "a woman curling up on a sofa, already laughing, before being touched"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "piensa",
+   "texto": "¿Por qué de fuera? ¿Por qué *risa*?",
+   "narracion": "Tu propio dedo no te hace nada; el suyo te tira del sofá. Así que hay dos preguntas: por qué las cosquillas solo funcionan si vienen de fuera, y por qué dan risa.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person laughing falling off sofa",
+      "friends tickling laughing couch"
+     ],
+     "prompt": "a person laughing so hard they slide off a sofa while a friend tickles them"
+    },
+    {
+     "desde": "Así que hay dos preguntas",
+     "busqueda": [
+      "question mark hand drawn",
+      "thinking person window"
+     ],
+     "prompt": "a person sitting quietly by a window, thinking"
+    }
+   ]
+  },
+  {
+   "tipo": "titulo",
+   "titulo": "Tu cerebro, aguafiestas",
+   "narracion": "Empecemos por tu dedo, el que no hace nada.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "hand finger close-up dark background",
+      "index finger close-up"
+     ],
+     "prompt": "a close-up of an index finger against a dark background"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "F10",
+   "texto": "La misma *caricia*",
+   "narracion": "A finales de los noventa, la neurocientífica Sarah-Jayne Blakemore metió a gente en un escáner con una misma caricia: unas veces la producían ellos mismos, y otras venía de fuera, sin que ellos se movieran.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "mri scanner patient lying",
+      "brain scanner hospital"
+     ],
+     "prompt": "a volunteer lying in an MRI scanner in a quiet hospital room"
+    },
+    {
+     "desde": "la misma caricia",
+     "busqueda": [
+      "soft brush touching palm close-up",
+      "feather touching hand"
+     ],
+     "prompt": "close-up of a soft brush stroking the palm of a hand"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "F10",
+   "cifra": "Menos *cosquillas*",
+   "pie": "si la produces tú",
+   "narracion": "La misma caricia hacía menos cosquillas si la producía uno mismo. Y en el escáner, la zona del tacto se encendía más cuando venía de fuera.",
+   "pausa_despues_s": 0.45,
+   "animar": true,
+   "animacion": "Dos manos dibujadas acarician la misma palma; la de la propia persona deja un rastro tenue, la de fuera uno brillante, y en «se encendía más» una silueta de cerebro se ilumina solo con la segunda.",
+   "visual": [
+    {
+     "busqueda": [
+      "brain scan image screen",
+      "doctor looking at brain scan"
+     ],
+     "prompt": "a doctor looking at colourful brain scan images on a monitor"
+    }
+   ]
+  },
+  {
+   "tipo": "diagrama",
+   "fuente": "F10",
+   "pasos": [
+    {
+     "titulo": "Te mueves"
+    },
+    {
+     "titulo": "El cerebelo *predice*"
+    },
+    {
+     "titulo": "Baja el volumen"
+    }
+   ],
+   "narracion": "La razón está en el cerebelo. Cada vez que te mueves, predice lo que vas a sentir y le baja el volumen a esa sensación.",
+   "pausa_despues_s": 1.3,
+   "animar": true,
+   "animacion": "Tres cajas que se encienden en orden; en «predice» sale de la segunda una flecha que se adelanta a la mano, y en «le baja el volumen» un deslizador de volumen baja hasta casi cero.",
+   "visual": [
+    {
+     "busqueda": [
+      "hand moving slowly close-up",
+      "person moving hand slowly"
+     ],
+     "prompt": "a hand moving slowly through the air against a plain background"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Un *spoiler*",
+   "narracion": "Tu cerebro te hace un spoiler de tus propias cosquillas. Y menos mal: si no, no podrías ni rascarte la espalda sin partirte de risa.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "man scratching back laughing",
+      "person scratching back with hand"
+     ],
+     "prompt": "a man scratching his back with a wooden back scratcher, smiling"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "¿Vergüenza?",
+   "narracion": "¿Y no será que te da vergüenza reírte solo?",
+   "pausa_despues_s": 0.45,
+   "voz": "esceptico",
+   "visual": [
+    {
+     "busqueda": [
+      "person alone room looking embarrassed",
+      "man alone smiling shyly"
+     ],
+     "prompt": "a man alone in a room smiling shyly at nothing"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "F20",
+   "texto": "Las *ratas*, también",
+   "narracion": "Buena pregunta, y la contestaron unas ratas. Las ratas tienen cosquillas: chillan cuando se las haces.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "pet rat in hand close-up",
+      "white rat sniffing"
+     ],
+     "prompt": "a white pet rat sitting in an open hand, sniffing the air"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "F20",
+   "cifra": "Se *apaga*",
+   "pie": "tocarse a sí misma",
+   "narracion": "Pero cuando una rata se toca a sí misma, la parte de su cerebro que siente el tacto se apaga, y no chilla. Y una rata no tiene pinta de pasar vergüenza: su cerebro también lo ve venir.",
+   "pausa_despues_s": 0.45,
+   "animar": true,
+   "animacion": "Una rata de línea; una pata se toca el costado y un indicador de chillidos baja a cero, mientras una mano que entra desde fuera lo hace subir.",
+   "visual": [
+    {
+     "busqueda": [
+      "rat grooming itself",
+      "rat cleaning paws"
+     ],
+     "prompt": "a rat grooming itself with its paws on a wooden surface"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "¿Hace falta una *persona*?",
+   "narracion": "Esto explica por qué tu dedo no hace nada. Lo que no explica es por qué el de tu hermano te da risa, ni si hace falta que sea una persona.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "brother tickling sister sofa laughing",
+      "adult siblings laughing sofa"
+     ],
+     "prompt": "two adult siblings on a sofa, one tickling the other who laughs"
+    }
+   ]
+  },
+  {
+   "tipo": "titulo",
+   "titulo": "¿Hace falta otro?",
+   "narracion": "Si tu dedo no vale y el de tu hermano sí, la pregunta es qué tiene tu hermano que no tengas tú.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "two hands reaching each other",
+      "hand reaching towards another hand"
+     ],
+     "prompt": "two hands reaching towards each other against a plain background"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "F15",
+   "texto": "Persona o *máquina*",
+   "narracion": "Dos psicólogos, Christine Harris y Nicholas Christenfeld, hicieron cosquillas a treinta y cinco personas dos veces: una vez, el investigador; otra, según les dijeron, una máquina de cosquillas.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "researcher lab coat volunteer chair",
+      "scientist with volunteer laboratory"
+     ],
+     "prompt": "a researcher in a lab coat standing next to a seated volunteer"
+    },
+    {
+     "desde": "una máquina de cosquillas",
+     "busqueda": [
+      "mechanical arm robot lab",
+      "robotic machine laboratory"
+     ],
+     "prompt": "a small mechanical arm on a laboratory bench"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "F15",
+   "personaje": "rie",
+   "texto": "Era de *mentira*",
+   "narracion": "La máquina era de mentira: las dos veces les hacía cosquillas el investigador, a escondidas.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "hand hidden behind curtain",
+      "hand reaching behind screen"
+     ],
+     "prompt": "a hand reaching from behind a white screen in a lab"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "F15",
+   "cifra": "*Igual*",
+   "pie": "persona o máquina",
+   "narracion": "Y cuando creían que era la máquina, se rieron, sonrieron y se retorcieron igual que con la persona.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person laughing being tickled chair",
+      "woman laughing wriggling"
+     ],
+     "prompt": "a woman laughing and wriggling in a chair"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "F15",
+   "texto": "Que no seas *tú*",
+   "narracion": "Así que no hace falta que sea una persona. Lo que hace falta es que no seas tú.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "surprised person close-up",
+      "woman startled laughing"
+     ],
+     "prompt": "a woman startled and laughing, eyes wide"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "¿Y la *espera*?",
+   "narracion": "¿Y la espera? ¿También cuenta?",
+   "pausa_despues_s": 0.45,
+   "voz": "esceptico",
+   "visual": [
+    {
+     "busqueda": [
+      "person waiting nervously",
+      "woman bracing herself"
+     ],
+     "prompt": "a woman bracing herself, eyes half closed, waiting"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "F19",
+   "texto": "Esperando las *cosquillas*",
+   "narracion": "Cuenta, y mucho. Otro equipo metió a treinta y una personas en un escáner a esperar unas cosquillas en los pies, sin saber cuándo iban a llegar.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "feet inside mri scanner",
+      "mri scanner feet"
+     ],
+     "prompt": "the bare feet of a volunteer sticking out of an MRI scanner"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "F19",
+   "cifra": "*Antes*",
+   "pie": "la risa empieza en la espera",
+   "narracion": "Su cerebro empezaba a preparar la risa en la espera. Y cuanto más se activaba durante la espera, más se reían después.",
+   "pausa_despues_s": 1.3,
+   "animar": true,
+   "animacion": "Una línea de tiempo con un reloj de arena; durante la espera una barra de actividad sube poco a poco, y en «más se reían después» la carcajada sale más grande cuanto más alta llegó la barra.",
+   "visual": [
+    {
+     "busqueda": [
+      "person laughing hard close-up",
+      "man laughing eyes closed"
+     ],
+     "prompt": "a man laughing hard with his eyes closed"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Medio trabajo *hecho*",
+   "narracion": "Así que tu hermano, acercando el dedo despacio, ya tiene medio trabajo hecho antes de tocarte.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "finger slowly approaching ribs",
+      "playful finger approaching"
+     ],
+     "prompt": "a finger slowly approaching someone's ribs, the person already laughing"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Una máquina de *mentira*",
+   "narracion": "La pega: este estudio no probó si una máquina real haría reír igual. Y para saber de dónde sale esa risa, hubo que irse a las ratas.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "empty laboratory room",
+      "laboratory bench equipment"
+     ],
+     "prompt": "an empty laboratory with equipment on a bench"
+    }
+   ]
+  },
+  {
+   "tipo": "titulo",
+   "titulo": "Las ratas que ríen",
+   "narracion": "Y aquí entran las ratas.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "two rats playing",
+      "pet rats close-up"
+     ],
+     "prompt": "two pet rats playing together in a clean cage"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "E06",
+   "texto": "Un chillido que no *oyes*",
+   "narracion": "Si le haces cosquillas a una rata, chilla. No lo oyes: es un chillido de unos cincuenta kilohercios, demasiado agudo para el oído humano.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "hand tickling pet rat",
+      "person petting rat belly"
+     ],
+     "prompt": "a hand gently tickling a pet rat lying on its back"
+    },
+    {
+     "desde": "es un chillido",
+     "busqueda": [
+      "sound wave visualization",
+      "audio waveform screen"
+     ],
+     "prompt": "an audio waveform on a dark screen"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "F16",
+   "personaje": "rie",
+   "texto": "Saltos de *alegría*",
+   "narracion": "Y además se acerca a pedir más y da saltos. Los investigadores les pusieron un nombre en alemán: Freudensprünge, saltos de alegría.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "rat jumping",
+      "pet rat hopping"
+     ],
+     "prompt": "a pet rat hopping playfully across a table"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "F18",
+   "cifra": "50 kHz",
+   "pie": "más gusto, más chillido",
+   "narracion": "Y cuanto más le gustan las cosquillas, más chilla.",
+   "pausa_despues_s": 0.45,
+   "animar": true,
+   "animacion": "Una mano hace cosquillas a una rata de línea; un medidor graduado sube un escalón con cada cosquilla que le gusta y baja cuando se aparta.",
+   "visual": [
+    {
+     "busqueda": [
+      "rat close-up face",
+      "rat whiskers close-up"
+     ],
+     "prompt": "a close-up of a rat's face and whiskers"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "F16",
+   "a": "Tranquila",
+   "et_a": "chilla y salta",
+   "b": "Con *miedo*",
+   "et_b": "ni un chillido",
+   "narracion": "Pero si pones a la rata en un sitio que le da miedo, se acabaron las cosquillas: ni chilla, ni se le activa la parte del cerebro que siente el tacto.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "rat hiding corner",
+      "rat frozen scared"
+     ],
+     "prompt": "a rat pressed into a corner, frozen and alert"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "El *dentista*",
+   "narracion": "Lo mismo que intentar hacerle cosquillas a alguien en la sala de espera del dentista. Mejor ni lo pruebes.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "dentist waiting room nervous",
+      "nervous person waiting room"
+     ],
+     "prompt": "a nervous person in a dentist's waiting room clutching a magazine"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "F17",
+   "a": "En *directo*",
+   "et_a": "chilla y salta",
+   "b": "En vídeo",
+   "et_b": "casi nada",
+   "narracion": "Y las cosquillas se contagian: una rata que ve en directo cómo le hacen cosquillas a otra también chilla y salta. Si lo ve en un vídeo, casi nada.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "two rats watching each other",
+      "rats side by side cage"
+     ],
+     "prompt": "two rats in neighbouring compartments watching each other"
+    },
+    {
+     "desde": "Si lo ve en un vídeo",
+     "busqueda": [
+      "screen video small animal",
+      "tablet screen in lab"
+     ],
+     "prompt": "a small screen playing a video in a laboratory"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "¿Risa o *ruido*?",
+   "narracion": "¿Y eso es reírse, o solo hacer ruido?",
+   "pausa_despues_s": 0.45,
+   "voz": "esceptico",
+   "visual": [
+    {
+     "busqueda": [
+      "rat looking at camera",
+      "curious rat"
+     ],
+     "prompt": "a curious rat looking straight at the camera"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "E06",
+   "texto": "Una *hipótesis*",
+   "narracion": "Esa es la duda honesta. Los que estudian estos chillidos los llaman risa como hipótesis de trabajo, no como hecho demostrado.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "scientist taking notes lab",
+      "researcher writing notebook"
+     ],
+     "prompt": "a scientist writing notes in a notebook in a lab"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "F18",
+   "texto": "Gustar y *molestar*",
+   "narracion": "Y no solo en las ratas es confuso: en las personas, las cosquillas pueden gustar y molestar a la vez, y te ríes igual en los dos casos.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person laughing pushing away hand",
+      "laughing woman saying stop"
+     ],
+     "prompt": "a laughing woman pushing a tickling hand away"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "F20",
+   "a": "Piden",
+   "et_a": "hocico en el agujero",
+   "b": "*Huyen*",
+   "et_b": "y vuelven",
+   "narracion": "Las ratas, igual: en el laboratorio podían pedir cosquillas metiendo el hocico por un agujero, y luego huían de la mano.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "rat nose poking hole",
+      "rat sniffing hole"
+     ],
+     "prompt": "a rat poking its nose through a small round hole"
+    },
+    {
+     "desde": "y luego huyen",
+     "busqueda": [
+      "rat running away",
+      "rat scurrying"
+     ],
+     "prompt": "a rat scurrying away across a floor"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Una señal de *juego*",
+   "narracion": "Pedir y huir a la vez, como quien grita «¡para!» y vuelve a por más: eso es jugar. Por eso esa risa parece, sobre todo, una señal de juego.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "friends play fighting laughing",
+      "people playing chase laughing park"
+     ],
+     "prompt": "two adult friends play-chasing each other in a park, laughing"
+    }
+   ]
+  },
+  {
+   "tipo": "titulo",
+   "titulo": "¿Cosquillas o chistes?",
+   "narracion": "Última pregunta: esa risa de las cosquillas, ¿es la misma que la de un chiste?",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "friends laughing at joke table",
+      "people laughing at dinner"
+     ],
+     "prompt": "friends laughing at a joke around a dinner table"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "fuente": "F11",
+   "puntos": [
+    "Más cosquillas",
+    "Más risa",
+    "Hasta *colorados*"
+   ],
+   "narracion": "En los noventa preguntaron a cien estudiantes. Los que decían tener más cosquillas decían también reírse más, sonreír más, y hasta ponerse colorados con más facilidad.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "students filling questionnaire",
+      "student writing survey"
+     ],
+     "prompt": "university students filling in paper questionnaires"
+    },
+    {
+     "desde": "ponerse colorados",
+     "busqueda": [
+      "person blushing laughing",
+      "woman blushing covering face"
+     ],
+     "prompt": "a woman blushing and laughing, covering half her face"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "F14",
+   "texto": "Medido, no *preguntado*",
+   "narracion": "Pero eso era lo que decían ellos. Otros lo midieron: a setenta y dos estudiantes les hicieron cosquillas antes de ver una comedia, y otra vez después.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "students watching comedy",
+      "people watching film laughing"
+     ],
+     "prompt": "students watching a comedy on a screen, some laughing"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "F14",
+   "cifra": "*Juntas*",
+   "pie": "en la misma persona",
+   "narracion": "Los que más se reían con la comedia, más se reían con las cosquillas.",
+   "pausa_despues_s": 1.3,
+   "animar": true,
+   "animacion": "Dos termómetros, «comedia» y «cosquillas», suben juntos persona a persona; en «no les daba más cosquillas» se calienta el de la comedia y el de las cosquillas no se mueve.",
+   "visual": [
+    {
+     "busqueda": [
+      "woman laughing at screen",
+      "person laughing watching tv"
+     ],
+     "prompt": "a woman laughing at a screen in a dim room"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Ninguna *provoca* la otra",
+   "narracion": "Pero ver la comedia no les hacía reírse más con las cosquillas de después. ¿La misma risa, entonces? No del todo: van juntas, pero ninguna provoca la otra.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "woman laughing at tv",
+      "person laughing watching comedy"
+     ],
+     "prompt": "a woman laughing at a comedy on TV"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "entiende",
+   "texto": "No es *casualidad*",
+   "narracion": "Si tienes una amiga que se parte con todo y tiene cosquillas en todo, no es casualidad. Pero un chiste antes no la va a dejar más sensible.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "woman laughing friends sofa",
+      "woman with contagious laugh"
+     ],
+     "prompt": "a woman laughing loudly among friends on a sofa"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Que no seas *tú*",
+   "narracion": "Así que, las dos preguntas del principio. Las cosquillas necesitan que no seas tú: tu cerebro te ve venir.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person trying to tickle own foot",
+      "hand touching own sole"
+     ],
+     "prompt": "a person on a sofa trying to tickle their own foot, unimpressed"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Tu hermano, *sí*",
+   "narracion": "Por eso tu dedo no vale y el de tu hermano sí; y hasta una máquina, si crees que es la máquina quien te las hace.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "brother tickling sibling sofa",
+      "siblings laughing tickle"
+     ],
+     "prompt": "an adult brother tickling his sister on a sofa, both laughing"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Muy *antigua*",
+   "narracion": "Y la risa que sale es muy antigua: se parece a los chillidos de las ratas, se contagia y se corta con el miedo. Va junto al humor, pero no es lo mismo: un chiste no te da más cosquillas.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "rat and human hand",
+      "hand holding rat gently"
+     ],
+     "prompt": "a human hand gently holding a pet rat"
+    },
+    {
+     "desde": "un chiste no te da",
+     "busqueda": [
+      "light switch close-up",
+      "two switches wall"
+     ],
+     "prompt": "two light switches side by side on a wall"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "duda",
+   "texto": "Lo que no se *sabe*",
+   "narracion": "Los límites de todo esto: los experimentos con personas eran de unas decenas de voluntarios en un laboratorio, y que las ratas se rían es una hipótesis. Por qué las cosquillas dan risa, del todo, no lo sabe nadie todavía.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "laboratory empty evening",
+      "lab window evening"
+     ],
+     "prompt": "an empty laboratory at dusk"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "F10",
+   "personaje": "piensa",
+   "titulo": "¿Y tú, *dónde*?",
+   "subtitulo": "Fuentes: Blakemore y otros, 1998; Ishiyama y otros, 2016-2022; Harris y Christenfeld, 1997 y 1999; Wattendorf y otros, 2019",
+   "narracion": "Y ahora te toca: ¿dónde tienes tú más cosquillas, y quién de tu casa lo descubrió primero?",
+   "pausa_despues_s": 0.3,
+   "visual": [
+    {
+     "busqueda": [
+      "family laughing living room",
+      "friends laughing together sofa"
+     ],
+     "prompt": "a family laughing together on a sofa in the evening"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": [
+  {
+   "lector": "subagente sin contexto, uno nuevo en cada vuelta",
+   "fecha": "2026-10-29",
+   "tramo": "capítulo 1 (escenas 4-12)",
+   "vuelta": 3,
+   "de_que_va": "Por qué no puedes hacerte cosquillas a ti mismo: el cerebelo predice lo que vas a sentir con tu propio movimiento y le baja el volumen.",
+   "pregunta_y_respuesta": "Por qué las cosquillas solo funcionan si vienen de fuera: cuando el movimiento es tuyo, el cerebelo lo anticipa y lo atenúa; no es vergüenza, en las ratas pasa lo mismo. Lo de la risa queda para después.",
+   "frases_que_no_se_entienden": [
+    "«metió a gente en un escáner con una misma caricia: unas veces la producían ellos mismos, y otras venía de fuera» (¿quién la hace desde fuera?) — corregida después: «sin que ellos se movieran»",
+    "«Pero cuando una rata se toca a sí misma» (¿cómo?)",
+    "«Y una rata no tiene pinta de pasar vergüenza: su cerebro también lo ve venir» (tuvo que reconstruir el «lo»)"
+   ],
+   "frase_que_sobra": "«Tu cerebro te hace un spoiler de tus propias cosquillas.» (se queda: es la risa del capítulo; el propio lector dice que es la frase más memorable)",
+   "donde_me_iria": "me quedo",
+   "veredicto": "no pasa todavía: corregido tras la vuelta 3, sin releer"
+  },
+  {
+   "lector": "subagente sin contexto, uno nuevo en cada vuelta",
+   "fecha": "2026-10-29",
+   "tramo": "capítulo 2 (escenas 13-22)",
+   "vuelta": 3,
+   "de_que_va": "Para que las cosquillas te hagan reír basta con que no te las hagas tú, aunque creas que es una máquina, y la espera ya pone en marcha la risa.",
+   "pregunta_y_respuesta": "¿Qué tiene tu hermano que no tengas tú? Nada especial: que no eres tú. Y la espera cuenta: cuanto más se activa el cerebro esperando, más te ríes después.",
+   "frases_que_no_se_entienden": [
+    "«Si una máquina de verdad haría reír igual, este estudio no lo probó.» (condicional raro) — corregida: «este estudio no probó si una máquina real haría reír igual»",
+    "«¿Y la espera? ¿También cuenta?» (la voz nueva sale de la nada)",
+    "«Por eso tu hermano no necesita ni tocarte…» (el «por eso» le parecía de más) — corregida: «Así que tu hermano, acercando el dedo despacio…»"
+   ],
+   "frase_que_sobra": "«La pega: la máquina nunca existió.» (quitada)",
+   "donde_me_iria": "me quedo",
+   "veredicto": "no pasa todavía: corregido tras la vuelta 3, sin releer"
+  },
+  {
+   "lector": "subagente sin contexto, uno nuevo en cada vuelta",
+   "fecha": "2026-10-29",
+   "tramo": "capítulo 3 (escenas 23-34)",
+   "vuelta": 3,
+   "de_que_va": "Las ratas chillan en ultrasonidos y dan saltos cuando les haces cosquillas; parece risa, aunque no está demostrado.",
+   "pregunta_y_respuesta": "¿Las ratas se ríen? Chillan a unos 50 kHz, más cuanto más les gusta, nada si tienen miedo, y se contagia en directo; llamarlo risa es una hipótesis, y parece sobre todo una señal de juego.",
+   "frases_que_no_se_entienden": [
+    "«…que los investigadores estaban mirando» (quitado)",
+    "«y aun así luego huían» (¿de qué?) — corregida: «y luego huían de la mano»",
+    "«Por eso esa risa parece, sobre todo, una señal de juego» (salto) — corregida: escena nueva, «Pedir y huir a la vez… eso es jugar»"
+   ],
+   "frase_que_sobra": "«Mejor ni lo pruebes.» (se queda: remata el chiste del dentista)",
+   "donde_me_iria": "me quedo",
+   "veredicto": "no pasa todavía: corregido tras la vuelta 3, sin releer"
+  },
+  {
+   "lector": "subagente sin contexto, uno nuevo en cada vuelta",
+   "fecha": "2026-10-29",
+   "tramo": "capítulo 4 (escenas 35-40)",
+   "vuelta": 3,
+   "de_que_va": "Si la risa de las cosquillas y la de un chiste son la misma: suelen darse en la misma persona, pero una no provoca la otra.",
+   "pregunta_y_respuesta": "¿Es la misma risa? No del todo: quien se ríe mucho con una se ríe mucho con la otra, pero ver una comedia no te deja con más cosquillas.",
+   "frases_que_no_se_entienden": [
+    "«Pero ver la comedia no les hacía reírse más con las cosquillas de después.» (releída: no tenía claro que las de antes eran la referencia) — corregida la escena anterior: «antes de ver una comedia, y otra vez después»",
+    "Pantalla «Juntas / en la misma persona» (críptica)"
+   ],
+   "frase_que_sobra": "«y hasta ponerse colorados con más facilidad» (se queda: es la risa del capítulo)",
+   "donde_me_iria": "me quedo",
+   "veredicto": "no pasa todavía: corregido tras la vuelta 3, sin releer"
+  },
+  {
+   "lector": "subagente sin contexto, uno nuevo en cada vuelta",
+   "fecha": "2026-10-29",
+   "tramo": "vídeo entero (apertura y respuesta, escenas 1-3 y 41-45)",
+   "vuelta": 3,
+   "de_que_va": "Por qué no puedes hacerte cosquillas a ti mismo y por qué las cosquillas dan risa.",
+   "pregunta_y_respuesta": "Las dos preguntas: hace falta que no seas tú, porque tu cerebro te ve venir; y la risa es muy antigua, se parece a la de las ratas, se contagia y se corta con el miedo, aunque nadie sabe del todo por qué.",
+   "frases_que_no_se_entienden": [
+    "«y hasta el de una máquina, si crees que es una máquina de verdad» — corregida: «si crees que es la máquina quien te las hace»",
+    "«se contagia y se corta con el miedo» (¿la risa o los chillidos?) — corregida: «se parece a los chillidos de las ratas, se contagia…»",
+    "«un chiste no te da más cosquillas» (sin el capítulo 4 no sabe de dónde sale)"
+   ],
+   "frase_que_sobra": "«Por eso tu dedo no vale y el de tu hermano sí» (se queda: es la respuesta dicha con el sujeto de la apertura)",
+   "donde_me_iria": "seguiría viendo: «el principio me hace probarlo con mi propio pie… deja planteadas dos preguntas claras»",
+   "veredicto": "no pasa todavía: corregido tras la vuelta 3, sin releer"
+  }
+ ]
 }

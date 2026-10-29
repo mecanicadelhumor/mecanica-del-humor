@@ -1,0 +1,178 @@
+{
+ "id": "MDS-063",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Qué le pasa a tu cerebro al reírte con amigos?",
+ "tesis": "Reírte con tus amigos te da placer y hace que tu cerebro suelte opioides propios, los calmantes que fabrica el cuerpo; medido en doce hombres con un escáner.",
+ "pilares": [
+  "E",
+  "D"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B2",
+ "variante": "control",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Qué le pasa a tu cerebro al reírte con amigos?",
+  "respuesta": "Suelta sus propios calmantes, los opioides que fabrica el cuerpo, y lo notas como placer.",
+  "puente": "La sobremesa de tres horas riéndote con tus amigos es lo que midieron: hombres viendo comedias media hora con sus amigos íntimos y, después, su cerebro en un escáner."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — sobremesa de domingo, tres horas riéndoos de la misma anécdota; qué gira — nadie se acuerda ya de cómo empezaba; cómo acaba — esa risa hizo que vuestro cerebro soltara sus propios calmantes, aunque se midió en doce hombres y un escáner.",
+  "RESERVA (bloque del 23/10): E10 cayó el 22/10 a la tercera lectura («media hora solos en una sala: ¿haciendo qué?»). Se intenta desde cero, con historia, chiste y escenas nuevos: ahora el resumen dice qué hacían («comedy clips with their close friends for 30 min») y se cuenta así. TERCER TEMA del domingo: los dos primeros (G09, el humor y vivir más; D08, la pareja) no pasaron a la tercera vuelta (reserva).",
+  "CICLO: B2 (control = B, decidido el 26/10). Si la dirección le asigna otro brazo, la escena que se quitaría para un brazo corto es la 3.",
+  "TERRENO: no es el de MDS-032 (si se nota en la risa que dos personas son amigas, D07): aquí es qué le pasa a tu cerebro.",
+  "FUENTE: E10 (Manninen y otros, 2017, Journal of Neuroscience, DOI 10.1523/jneurosci.0688-16.2017), nunca central. Resumen leído el 15/10/2026 en Europe PMC, frases literales: «to quantify laughter-induced endogenous opioid release in 12 healthy males»; «the subjects watched laughter-inducing comedy clips with their close friends for 30 min»; «Social laughter increased pleasurable sensations and triggered endogenous opioid release in thalamus, caudate nucleus, and anterior insula».",
+  "«LOS CALMANTES QUE FABRICA EL CUERPO» es como se dice «opioides endógenos». No se dice «endorfinas» ni «morfina».",
+  "LÍMITE (regla 12): doce hombres, en un escáner; una sobremesa de verdad no la ha medido nadie.",
+  "LECTURA EN FRÍO (2026-10-29), criterio del 29/10. Tercer tema del domingo (G09 y D08, a la reserva) y reintento desde cero de E10 (reserva del 22/10). Vuelta 1: «Y nadie se acuerda ya de cómo empezaba» (¿qué pinta?), «también era química», «me iría en la 4» → remate nuevo («nadie quiere irse»), «¿Cómo se ve eso?» en la 4. Vuelta 2: «¿Cómo se ve eso?» (lo leyó como «qué pinta tiene») → «¿Cómo se sabe?». Vuelta 3: pasa."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "E10",
+   "icono": "i-publico",
+   "texto": "Sus propios *calmantes*",
+   "narracion": "Reírte con tus amigos hace que tu cerebro suelte sus propios calmantes.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "friends laughing together table close-up",
+      "group of friends laughing hard",
+      "friends laughing at lunch"
+     ],
+     "prompt": "a group of friends laughing hard together around a lunch table, warm afternoon light"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "La misma *anécdota*",
+   "narracion": "Domingo, sobremesa con tus amigos de siempre. Lleváis tres horas riéndoos de la misma anécdota.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "friends long lunch laughing coffee",
+      "after lunch friends talking table"
+     ],
+     "prompt": "friends lingering over coffee after a long lunch, laughing"
+    },
+    {
+     "desde": "riéndoos de la misma anécdota",
+     "busqueda": [
+      "friends crying with laughter table",
+      "people laughing tears table"
+     ],
+     "prompt": "a friend wiping tears of laughter at the table"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Nadie quiere *irse*",
+   "narracion": "Os duele la tripa de reír, y nadie quiere irse.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "friends laughing confused shrug",
+      "people laughing looking at each other"
+     ],
+     "prompt": "friends laughing and looking at each other, shrugging"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "fuente": "E10",
+   "puntos": [
+    "12 hombres",
+    "Comedias con *amigos*",
+    "Y un escáner"
+   ],
+   "narracion": "¿Cómo se sabe? Doce hombres vieron comedias con sus mejores amigos, y luego les miraron el cerebro con un escáner.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "friends watching comedy laughing sofa",
+      "men watching tv laughing"
+     ],
+     "prompt": "a few male friends on a sofa laughing at a comedy on TV"
+    },
+    {
+     "desde": "con un escáner",
+     "busqueda": [
+      "pet scanner hospital",
+      "medical scanner room"
+     ],
+     "prompt": "a medical scanner in a quiet hospital room"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "E10",
+   "personaje": "entiende",
+   "cifra": "Calmantes",
+   "pie": "los que fabrica el *cuerpo*",
+   "narracion": "Reírse juntos les dio placer, y su cerebro soltó opioides: los calmantes que fabrica el propio cuerpo.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "brain scan colorful screen",
+      "doctor looking at brain images"
+     ],
+     "prompt": "a doctor looking at colourful brain scan images"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "E10",
+   "personaje": "piensa",
+   "titulo": "Nadie quiere *irse*",
+   "subtitulo": "Fuente: Manninen y otros, 2017",
+   "narracion": "Quizá por eso nadie quería irse. La pega: eran doce hombres en un escáner; una sobremesa de verdad no la ha medido nadie.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "friends hugging goodbye street",
+      "friends leaving restaurant laughing"
+     ],
+     "prompt": "friends hugging goodbye outside a restaurant, still laughing"
+    },
+    {
+     "desde": "eran doce hombres",
+     "busqueda": [
+      "empty scanner room",
+      "hospital scanner empty"
+     ],
+     "prompt": "an empty scanner room"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 3 del tercer tema del hueco, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-29",
+  "de_que_va": "Que reírte con tus amigos hace que el cerebro suelte opioides, unos calmantes que fabrica el propio cuerpo.",
+  "pregunta_y_respuesta": "¿Qué le pasa a tu cerebro cuando te ríes con tus amigos? Suelta opioides, calmantes naturales que dan placer; se vio escaneando el cerebro a doce hombres que habían visto comedias con amigos. En una sobremesa de verdad no se ha medido.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Reírse juntos les dio placer» (se queda: es lo que dice el resumen y une con «nadie quiere irse»)",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "«Opioides» — «me frenó un segundo, pero la misma frase lo explica justo después».",
+   "«Donde más cerca estuve de deslizar fue en las escenas 2 y 3… pero ‹¿Cómo se sabe?› me volvió a enganchar.»"
+  ],
+  "veredicto": "pasa"
+ }
+}

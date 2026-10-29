@@ -530,3 +530,25 @@ la comida del domingo). **Ninguna fuente central repetida en seis semanas**; cua
 esta noche. **Dos de la familia `mensajes`.** **Derecho de tanteo (C46) de `MDS-038`** en `MDS-050`
 (y `MDS-055` sale del mismo caso). **Ningún gancho de actualidad.** `MDS-055` sustituye a dos temas
 que no pasaron la lectura en frío a la tercera vuelta. Detalle en la bitácora del 22/10.
+
+## Semana del 2 al 8 de noviembre de 2026 · final de B1 y principio de B2
+
+Escrita la noche del **jueves 29 de octubre**. **Seis Shorts, no siete: el viernes 6 no hay emisión**
+(tres temas cayeron a la tercera lectura en frío con el criterio nuevo del 29/10; ver la bitácora).
+Uno al día a las 19:00 (hora de España), todos `"modo": "automatico"` y `"idiomas": ["es"]`.
+
+| Día | Emisión | Ciclo · brazo | Serie | Pregunta | Ficha |
+|---|---|---|---|---|---|
+| Lunes 2 | `MDS-057` | B1 · B (22) | El experimento | ¿los gorilas tienen cosquillas? · *tanteo de cosquillas* | `E03` |
+| Martes 3 | `MDS-058` | B1 · control (23) | Ríete primero, te explico después | ¿por qué duele que dejen de contestarte? · *mensajes* | `I13` |
+| Miércoles 4 | `MDS-059` | B1 · A (24) | Ríete primero, te explico después | ¿reírse adelgaza? | `G10` |
+| Jueves 5 | `MDS-060` | B2 · control (receta B) | El experimento | ¿queda mal un emoji en un correo de trabajo? · *mensajes* | `I15`, `I14` |
+| Viernes 6 | — | — | — | **sin emisión** (`MDS-061` libre) | — |
+| Sábado 7 | `MDS-062` | B2 · control (receta B) | El experimento | ¿por qué casi no te ríes cuando estás solo? | `E16` |
+| Domingo 8 | `MDS-063` | B2 · control (receta B) | El experimento | ¿qué le pasa a tu cerebro al reírte con amigos? | `E10` |
+
+**B1 termina el miércoles 4** con la posición 24. **Del 5 al 8, B2**, que la dirección escribe el lunes
+2: los cuatro van con la receta B, que es el control de B2 según `ciclos.json` («decisiones», 26/10), y
+cada guion dice qué escena se quitaría si le tocara un brazo corto. **El largo `MDH-008`** (las
+cosquillas, el caso entero, 8 min 34 s) está escrito y **no se programa**: estreno el 15/11, cuando la
+dirección tenga la imagen horizontal y la voz por tandas.

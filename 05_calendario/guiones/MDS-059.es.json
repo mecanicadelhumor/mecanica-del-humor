@@ -1,0 +1,179 @@
+{
+ "id": "MDS-059",
+ "formato": "corto",
+ "serie": "Ríete primero, te explico después",
+ "idioma": "es",
+ "titulo_trabajo": "¿Reírse adelgaza?",
+ "tesis": "Reírse de verdad gasta algo más que estar quieto, pero muy poco: diez o quince minutos de risa al día son entre dos y diez calorías.",
+ "pilares": [
+  "G",
+  "E"
+ ],
+ "duracion_objetivo_s": 35,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "A",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Reírse adelgaza?",
+  "respuesta": "Casi nada: reírse gasta algo más que estar quieto, pero diez o quince minutos al día son entre dos y diez calorías.",
+  "puente": "La cena en la que tu amiga dice que reírse adelgaza es lo que midieron: parejas de amigos riéndose con vídeos dentro de una habitación que mide las calorías que gastas."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — en la cena, tu amiga dice «reírse adelgaza» con la tercera croqueta; qué gira — y pide el postre; cómo acaba — reírse gasta, pero diez minutos son entre dos y diez calorías: la croqueta gana.",
+  "SUSTITUYE al primer MDS-059 (G07, «¿reírse quita el dolor?»), que no pasó la lectura en frío a la tercera vuelta (reserva).",
+  "BRAZO A (ciclo B1, posición 24): las escenas 4 y 5 llevan animar y su línea de animación.",
+  "FUENTE: G10 (Buchowski y otros, 2007, International Journal of Obesity, DOI 10.1038/sj.ijo.0803353, con la corrección de 2014), ficha nueva. Resumen leído el 29/10/2026 en Europe PMC, frases literales: «viewing film clips in four cycles either intended to evoke laughter (humorous -10 min) or unlikely to elicit laughter (not humorous -5 min) under strictly controlled conditions of a whole-room indirect calorimeter»; «Forty five adult friend dyads»; «Genuine voiced laughter causes a 10–20% increase in EE and HR above resting values, which means that 10–15 minutes of laughter per day could increase total EE by 10–40 kJ (2–10 kcal) [corrected]».",
+  "«CALORÍAS» en la voz son kilocalorías, como se dice en la calle. No se compara con ningún alimento concreto (eso sería una cuenta nuestra).",
+  "LÍMITE (regla 12): se midió en una habitación de laboratorio con vídeos; una cena entera no la ha medido nadie.",
+  "LECTURA EN FRÍO (2026-10-29), criterio del 29/10. Vuelta 1: pantalla «Sin gracia — quietos» y «una cena entera riéndote no la ha medido nadie» (echó cuentas con las dos horas) → «toda la noche», «sin risa», cierre nuevo. Vuelta 2: «Reírse gastaba algo más que estar quieto» (¿quieto es el vídeo sin gracia?) → «un poco más que no reírse». Vuelta 3: pasa."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-publico",
+   "texto": "Toda la noche de *risa*",
+   "narracion": "Cena con amigos. Lleváis toda la noche llorando de risa.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "friends laughing at dinner table",
+      "group laughing restaurant night",
+      "friends crying with laughter dinner"
+     ],
+     "prompt": "a group of friends crying with laughter around a restaurant dinner table at night"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "«Reírse *adelgaza*»",
+   "narracion": "Y tu amiga, con la tercera croqueta en la mano, dice: «tranquilos, que reírse adelgaza».",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "woman eating croquette laughing",
+      "woman holding fried snack smiling"
+     ],
+     "prompt": "a woman laughing with a fried croquette in her hand at a dinner table"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Y el *postre*",
+   "narracion": "Y pide el postre.",
+   "pausa_despues_s": 0.6,
+   "visual": [
+    {
+     "busqueda": [
+      "waiter bringing dessert table",
+      "chocolate cake served restaurant"
+     ],
+     "prompt": "a waiter placing a slice of chocolate cake on a restaurant table"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "G10",
+   "a": "Vídeo *gracioso*",
+   "et_a": "risas",
+   "b": "Sin gracia",
+   "et_b": "sin reír",
+   "narracion": "Unos investigadores metieron a parejas de amigos en una sala que mide las calorías que gastas, con vídeos graciosos y vídeos sin gracia.",
+   "pausa_despues_s": 0.45,
+   "animar": true,
+   "animacion": "Una habitación de línea con dos figuras sentadas; un contador de calorías en la pared que corre más deprisa cuando las figuras se ríen con el vídeo gracioso y casi se para con el vídeo sin gracia.",
+   "visual": [
+    {
+     "busqueda": [
+      "two friends watching video laughing",
+      "friends laughing at laptop"
+     ],
+     "prompt": "two friends sitting together laughing at a video on a laptop"
+    },
+    {
+     "desde": "vídeos sin gracia",
+     "busqueda": [
+      "two people bored watching screen",
+      "friends watching tv bored"
+     ],
+     "prompt": "the same two friends watching a screen with bored faces"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "G10",
+   "personaje": "entiende",
+   "cifra": "2-10 *calorías*",
+   "pie": "con 10-15 minutos al día",
+   "narracion": "Reírse gastaba un poco más que no reírse. Pero diez o quince minutos de risa al día son entre dos y diez calorías.",
+   "pausa_despues_s": 0.45,
+   "animar": true,
+   "animacion": "El contador de la pared sube despacio hasta un número pequeño; al lado aparece una croqueta dibujada y una balanza que se inclina del todo hacia la croqueta.",
+   "visual": [
+    {
+     "busqueda": [
+      "calorie counter close-up",
+      "digital display numbers"
+     ],
+     "prompt": "a digital display slowly counting up small numbers"
+    },
+    {
+     "desde": "entre dos y diez calorías",
+     "busqueda": [
+      "one croquette on plate",
+      "small snack on plate close-up"
+     ],
+     "prompt": "a single croquette on a white plate"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "G10",
+   "personaje": "duda",
+   "titulo": "Gana la *croqueta*",
+   "subtitulo": "Fuente: Buchowski y otros, 2007",
+   "narracion": "Gana la croqueta, de calle. Eso sí: se midió en un laboratorio, viendo vídeos, no en una cena de verdad.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "friends laughing dessert table",
+      "woman laughing eating cake"
+     ],
+     "prompt": "friends laughing while sharing dessert"
+    },
+    {
+     "desde": "en un laboratorio",
+     "busqueda": [
+      "empty laboratory room chairs",
+      "small lab room"
+     ],
+     "prompt": "a small empty laboratory room with two chairs"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 3 del segundo tema del hueco, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-29",
+  "de_que_va": "De si reírse adelgaza de verdad: sí, pero tan poco que no compensa ni una croqueta.",
+  "pregunta_y_respuesta": "¿Reírse adelgaza? Casi nada: reírse gasta un poco más que no reírse, pero 10-15 minutos de risa al día son solo entre 2 y 10 calorías. La croqueta gana con diferencia.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Eso sí: se midió en un laboratorio, viendo vídeos, no en una cena de verdad.» (se queda: es el cierre honesto, regla 12)",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "«Gana la croqueta, de calle.» — «lo entiendo al momento, pero nadie dice cuántas calorías tiene una croqueta»: no se dice a propósito (sería una cuenta nuestra, no del estudio).",
+   "«Donde más cerca he estado de irme es la escena 4: esa frase es larga» (dice «me quedo»)."
+  ],
+  "veredicto": "pasa"
+ }
+}

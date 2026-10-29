@@ -1,0 +1,185 @@
+{
+ "id": "MDS-058",
+ "formato": "corto",
+ "serie": "Ríete primero, te explico después",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué duele que dejen de contestarte?",
+ "tesis": "Basta con que en una conversación de tres por el móvil dejen de escribirte para que te sientas fuera: peor humor, menos parte del grupo, peor contigo mismo, y más borde al escribir.",
+ "pilares": [
+  "I",
+  "D"
+ ],
+ "duracion_objetivo_s": 35,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "control",
+ "familia_tema": "mensajes",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué duele que dejen de contestarte?",
+  "respuesta": "Porque con solo dejar de recibir mensajes ya te sientes fuera del grupo, de peor humor y peor contigo mismo, y empiezas a escribir más borde.",
+  "puente": "El chat de tres en el que de golpe nadie te contesta es exactamente lo que montaron unos psicólogos: una conversación de tres por el móvil en la que a la mitad dejaron de escribirles."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — en el chat de tres para el cumpleaños propones un sitio; qué gira — nadie te contesta y a la hora estás repasando qué dijiste mal; cómo acaba — eso es lo que midieron: callarse basta para que te sientas fuera, y tu «¿hola?» borde tiene explicación.",
+  "FAMILIA «mensajes» (R-TE-03), primera de las dos de la semana.",
+  "BRAZO control (ciclo B1, posición 23): la escena 1 es la situación.",
+  "FUENTE: I13 (Smith y Williams, 2004, Group Dynamics, DOI 10.1037/1089-2699.8.4.291), nunca central. Resumen leído el 22/10/2026 en OpenAlex, frases literales: «They used a triadic cell phone text-messaging method such that after initial inclusion in a conversation, participants either continued to be included or received no further messages from the others»; «Ostracized participants reported worse mood; reported lower state levels of belonging, control, self-esteem, and meaningful existence; and wrote more provoking messages».",
+  "LO QUE NO SE DICE: «el visto» ni el doble check (no se midió; es el límite). No digo si eran amigos o desconocidos: el resumen no lo dice.",
+  "LÍMITE (regla 12): conversación preparada con SMS de 2004; el grupo de verdad, con su doble check, nadie lo ha medido.",
+  "ESCENA PRESCINDIBLE si hiciera falta un brazo corto: la 2.",
+  "LECTURA EN FRÍO (2026-10-29), criterio del 29/10. Vuelta 1: «y a la mitad dejaron de escribirle» (¿mitad de la conversación?), «Unos psicólogos montaron ese chat de tres» (¿qué chat?), «tu doble check no lo midió nadie» → reescritas. Vuelta 2: «Lo malo: eran SMS…» (¿lo malo de qué?) y la frase de la mitad de los participantes, larga → «A unos les seguían escribiendo; a otros, de repente, nadie» y «el estudio usó SMS de dos mil cuatro, no WhatsApp»; fuera «Pasa una hora». Vuelta 3: pasa (dudas de un instante, resueltas en la misma frase: van a notas)."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "icono": "i-bocadillos",
+   "texto": "Tú propones el *sitio*",
+   "narracion": "Tres amigos en un chat, organizando un cumpleaños. Tú propones sitio.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "woman typing on phone smiling",
+      "hand typing message smartphone close-up",
+      "woman texting on couch"
+     ],
+     "prompt": "close-up of a woman's hands typing a message on a smartphone, smiling, cosy evening light"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Nadie *contesta*",
+   "narracion": "Y, de repente, nadie te contesta.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "woman staring at phone waiting",
+      "person waiting for message phone"
+     ],
+     "prompt": "a woman staring at her silent phone on the kitchen table, waiting"
+    },
+    {
+     "desde": "nadie te contesta",
+     "busqueda": [
+      "clock ticking wall close-up",
+      "kitchen wall clock"
+     ],
+     "prompt": "close-up of a kitchen wall clock, the minute hand moving"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "¿Qué dije *mal*?",
+   "narracion": "Y tú ya estás repasando qué dijiste mal en dos mil catorce.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "woman scrolling old messages worried",
+      "person scrolling phone at night worried"
+     ],
+     "prompt": "a woman in bed at night scrolling far back through old messages, worried face lit by the phone"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "I13",
+   "a": "Incluidos",
+   "et_a": "les siguen escribiendo",
+   "b": "*Fuera*",
+   "et_b": "nadie les escribe",
+   "narracion": "Unos psicólogos lo probaron con chats de tres por el móvil. A unos les seguían escribiendo; a otros, de repente, nadie.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "three phones on table messages",
+      "group of people texting"
+     ],
+     "prompt": "three smartphones lying side by side on a table, screens lit with chat bubbles, no readable text"
+    },
+    {
+     "desde": "a otros, de repente",
+     "busqueda": [
+      "phone screen empty no messages",
+      "person looking at quiet phone"
+     ],
+     "prompt": "a single smartphone on a table with a dark, silent screen"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "I13",
+   "personaje": "entiende",
+   "cifra": "Fuera",
+   "pie": "y más *borde*",
+   "narracion": "Eso bastó para que se sintieran fuera, de peor humor y peor consigo mismos. Y empezaron a escribir más borde.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "sad man sitting alone with phone",
+      "person alone on bench with phone"
+     ],
+     "prompt": "a man sitting alone on a bench looking at his phone, slumped shoulders"
+    },
+    {
+     "desde": "Y empezaron a escribir",
+     "busqueda": [
+      "man typing angrily on phone",
+      "person typing fast frustrated phone"
+     ],
+     "prompt": "a man typing angrily on his phone with a frown"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "I13",
+   "personaje": "duda",
+   "titulo": "¿*Hola*?",
+   "subtitulo": "Fuente: Smith y Williams, 2004",
+   "narracion": "Si te sale un «¿hola?» borde, es normal. Eso sí, el estudio usó SMS de dos mil cuatro, no WhatsApp.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "woman sending message phone close-up",
+      "thumb pressing send on phone"
+     ],
+     "prompt": "close-up of a thumb pressing send on a short message"
+    },
+    {
+     "desde": "el estudio usó SMS",
+     "busqueda": [
+      "old mobile phone keypad sms",
+      "vintage cell phone on table"
+     ],
+     "prompt": "an old keypad mobile phone from the early 2000s lying on a table"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 3, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-29",
+  "de_que_va": "De lo mal que sienta que te dejen sin contestar en un chat de grupo, y de que un estudio dice que eso te pone de mal humor y te vuelve más borde.",
+  "pregunta_y_respuesta": "¿Por qué me siento tan mal, y contesto mal, cuando en el grupo nadie me responde? Basta con que dejen de escribirte para que te sientas excluido, de peor humor y peor contigo mismo, y para que empieces a escribir más borde. Así que es normal.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "ninguna («la que menos aporta es la del estudio con SMS, pero da un dato que no está en otra parte»)",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "«Y tú ya estás repasando qué dijiste mal en dos mil catorce.» — «pillo que es una exageración, pero tardé un segundo, y luego me lió un poco con el ‹dos mil cuatro› del final»: entendida en la misma frase. Para la revisión: si se quiere evitar el cruce de años, «desde el instituto» en vez de «en dos mil catorce» (no lo cambio: es lo que leyó el lector).",
+   "«Si te sale un «¿hola?» borde, es normal.» — «me costó un instante ver que se refiere a ti mandando ‹¿hola?› al grupo»: entendida en la misma frase.",
+   "El cierre «se queda un poco plano» (cierre honesto, regla 12)."
+  ],
+  "veredicto": "pasa"
+ }
+}

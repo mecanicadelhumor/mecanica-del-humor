@@ -1,0 +1,186 @@
+{
+ "id": "MDS-057",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Los gorilas tienen cosquillas?",
+ "tesis": "Las crías de los grandes simios se ríen con las cosquillas, y su risa se parece más a la nuestra cuanto más parientes somos: es la misma risa, heredada de un antepasado común.",
+ "pilares": [
+  "E",
+  "F"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B1",
+ "variante": "B",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Los gorilas tienen cosquillas?",
+  "respuesta": "Sí: sus crías se ríen con las cosquillas, y es la misma risa que la nuestra, heredada de un antepasado común.",
+  "puente": "La cría de gorila que se ríe en el zoo es lo que grabaron: crías de cuatro especies de simios y bebés humanos riéndose con cosquillas, para comparar sus risas."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — un cuidador le hace cosquillas a una cría de gorila; qué gira — la cría se ríe entre jadeos, como tú; cómo acaba — es la misma risa, heredada, aunque solo se comparó la risa de cosquillas.",
+  "DERECHO DE TANTEO (C46): cosquillas (MDS-038, 933; MDS-050, 916). TERCER TEMA del lunes: los dos primeros (F14, la risa floja; F16, las ratas) no pasaron la lectura a la tercera vuelta (reserva).",
+  "BRAZO B (ciclo B1, posición 22): la escena 1 es el hallazgo, en once palabras, con su fuente.",
+  "FUENTE: E03 (Davila-Ross, Owren y Zimmermann, 2009, Current Biology, DOI 10.1016/j.cub.2009.05.028). Central en MDS-015 el 11/09: libre por C17 desde el 23/10. Título de la ficha corregido hoy. Resumen leído el 29/10/2026 en Europe PMC, frases literales: «the acoustics of tickle-induced vocalizations from infant and juvenile orangutans, gorillas, chimpanzees, and bonobos, as well as tickle-induced laughter produced by human infants»; «phylogenetic trees reconstructed from the acoustic data matched the well-established trees based on comparative genetics»; «tickling-induced laughter is homologous in great apes and humans».",
+  "«CUANTO MÁS PARIENTES, MÁS SE PARECE SU RISA» es como se dice en voz que el árbol hecho con las risas coincide con el de los genes. «Heredada de un antepasado común» es «homologous». El zoo y la barriga son la situación, no el estudio.",
+  "IMAGEN: ni niños ni bebés (regla 6): los bebés humanos se nombran, no se enseñan.",
+  "LÍMITE (regla 12): solo se comparó la risa de cosquillas, no la de un chiste.",
+  "LECTURA EN FRÍO (2026-10-29), criterio del 29/10. Tercer tema del lunes (F14 y F16, a la reserva). Vuelta 1: «Y cuanto más parientes eran dos especies…» (¿en qué se parecía?) → reescrita. Vuelta 2: «su risa sonaba más parecida cuanto más cerca estaban en la familia» (¿familia?) y «heredada» (¿de quién?) → «cuanto más emparentadas estaban dos especies…», «heredada de un antepasado común»; cierre nuevo. Vuelta 3: pasa."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "E03",
+   "icono": "i-muelle",
+   "texto": "Gorilas con *cosquillas*",
+   "narracion": "Las crías de gorila también se ríen cuando les haces cosquillas.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "baby gorilla playing",
+      "young gorilla rolling playful",
+      "gorilla laughing zoo"
+     ],
+     "prompt": "a young gorilla rolling on its back in the grass, mouth open in a playful laugh"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Un *cuidador*",
+   "narracion": "En el zoo, un cuidador le hace cosquillas a una cría de gorila.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "zookeeper with baby gorilla",
+      "keeper playing with young ape"
+     ],
+     "prompt": "a zookeeper kneeling and gently tickling a baby gorilla's belly"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Como *tú*",
+   "narracion": "Y la cría se ríe entre jadeos, como tú cuando ya no puedes más.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "young chimpanzee laughing",
+      "ape open mouth play face"
+     ],
+     "prompt": "a young chimpanzee with a wide open-mouthed play face, panting"
+    },
+    {
+     "desde": "como tú",
+     "busqueda": [
+      "woman laughing breathless sofa",
+      "person laughing can't breathe"
+     ],
+     "prompt": "a woman on a sofa laughing so hard she can barely breathe"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "fuente": "E03",
+   "puntos": [
+    "Orangután · Gorila",
+    "Chimpancé · Bonobo",
+    "Y bebés *humanos*"
+   ],
+   "narracion": "¿Es risa de verdad? Unos investigadores grabaron la risa de crías de cuatro simios con cosquillas, y la de bebés humanos.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "orangutan young close-up",
+      "baby orangutan"
+     ],
+     "prompt": "a young orangutan looking at the camera"
+    },
+    {
+     "desde": "crías de cuatro simios",
+     "busqueda": [
+      "bonobo young playing",
+      "young chimpanzee playing"
+     ],
+     "prompt": "two young bonobos playing together"
+    },
+    {
+     "desde": "y la de bebés humanos",
+     "busqueda": [
+      "audio recorder microphone",
+      "recording equipment close-up"
+     ],
+     "prompt": "a small audio recorder with a microphone on a wooden table"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "E03",
+   "personaje": "entiende",
+   "cifra": "La misma *risa*",
+   "pie": "heredada",
+   "narracion": "Y cuanto más emparentadas estaban dos especies, más se parecían sus risas. Es la misma risa, heredada de un antepasado común.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "chimpanzee and human hand",
+      "ape hand touching human hand"
+     ],
+     "prompt": "a chimpanzee's hand resting on a human hand"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "E03",
+   "personaje": "piensa",
+   "titulo": "Una risa *heredada*",
+   "subtitulo": "Fuente: Davila-Ross y otros, 2009",
+   "narracion": "Cuando te ríes con cosquillas, usas una risa que ya tenían nuestros antepasados. Eso sí: solo compararon esa risa, no la de un chiste.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "friends laughing tickling sofa",
+      "person laughing tickled"
+     ],
+     "prompt": "two friends tickling each other on a sofa, laughing"
+    },
+    {
+     "desde": "Eso sí",
+     "busqueda": [
+      "gorilla sitting thoughtful",
+      "gorilla looking calm"
+     ],
+     "prompt": "an adult gorilla sitting calmly, looking thoughtful"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 3 del tercer tema del hueco, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-29",
+  "de_que_va": "Las crías de gorila y de otros simios se ríen con las cosquillas igual que nosotros, porque esa risa viene de un antepasado común.",
+  "pregunta_y_respuesta": "¿Es risa de verdad lo que hace la cría de gorila cuando le hacen cosquillas? Sí: al comparar las risas de cuatro simios y de bebés humanos, las especies más emparentadas se reían de forma más parecida. Es la misma risa, heredada de un antepasado común.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Cuando te ríes con cosquillas, usas una risa que ya tenían nuestros antepasados.» (se queda: es el cierre, con el límite honesto detrás, regla 12)",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "«Es la misma risa», justo después de «más se parecían sus risas»: «si se parecen más o menos, no termino de ver que sea ‹la misma›. Aun así la entendí.»",
+   "«Lo único que se me hizo algo lento fue la escena 4, con la lista de especies.»"
+  ],
+  "veredicto": "pasa"
+ }
+}

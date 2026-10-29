@@ -8,7 +8,7 @@
       "Prioridad 2 = importante: aporta evidencia concreta para uno o varios videos.",
       "Prioridad 3 = complementario: contexto, replicaciones, aplicaciones."
     ],
-    "actualizado": "2026-10-22"
+    "actualizado": "2026-10-29"
   },
   "pilares": {
     "A": "Teorias fundacionales del humor",
@@ -420,7 +420,8 @@
       "fuente": "Personal Relationships",
       "doi": "10.1111/pere.12183",
       "por_que": "Metaanalisis: que tipo de humor predice satisfaccion de pareja.",
-      "doi_confianza": "por verificar automaticamente"
+      "doi_confianza": "verificado 29/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1111/pere.12183 y en OpenAlex (resumen)",
+      "resumen_verificado": "Literal del resumen leido el 29/10/2026 (OpenAlex): «combining 43 distinct samples from 39 manuscripts and including 15,177 participants»; «All 6 positive types of humor were positively associated with relationship satisfaction, and 4 of 5 negative types of humor were negatively associated with relationship satisfaction»; «self‐reported humor showed small associations with satisfaction, while partner‐perceived and relational humor showed medium and large effect sizes, respectively». Correlacional: no dice que el humor cause la satisfaccion. Es satisfaccion de pareja, no atraccion (regla de Shorts)."
     },
     {
       "id": "D09",
@@ -494,13 +495,14 @@
       "pilar": "E",
       "prioridad": 1,
       "tipo": "articulo",
-      "titulo": "The evolution of laughter in great apes and humans",
+      "titulo": "Reconstructing the evolution of laughter in great apes and humans",
       "autores": "Davila-Ross, M.; Owren, M. J.; Zimmermann, E.",
       "anio": 2009,
-      "fuente": "Current Biology / Communicative & Integrative Biology",
+      "fuente": "Current Biology, 19(13), 1106-1111",
       "doi": "10.1016/j.cub.2009.05.028",
       "por_que": "Filogenia de la risa: 10-16 millones de anios. Gancho narrativo potentisimo.",
-      "doi_confianza": "por verificar automaticamente"
+      "doi_confianza": "verificado 29/10/2026: titulo y DOI juntos en Europe PMC y OpenAlex (el titulo de la ficha estaba mal: era «The evolution of laughter in great apes and humans»)",
+      "resumen_verificado": "Literal del resumen leido el 29/10/2026 (Europe PMC): «the current work examined the acoustics of tickle-induced vocalizations from infant and juvenile orangutans, gorillas, chimpanzees, and bonobos, as well as tickle-induced laughter produced by human infants»; «phylogenetic trees reconstructed from the acoustic data matched the well-established trees based on comparative genetics»; «the results provide strong evidence that tickling-induced laughter is homologous in great apes and humans»."
     },
     {
       "id": "E04",
@@ -761,10 +763,10 @@
       "titulo": "How do positive psychology interventions work? A short-term placebo-controlled humor-based study",
       "autores": "Wellenzohn, S.; Proyer, R. T.; Ruch, W.",
       "anio": 2016,
-      "fuente": "Personality and Individual Differences",
-      "doi": "10.1016/j.paid.2016.01.043",
+      "fuente": "Personality and Individual Differences, 96, 1-6",
+      "doi": "10.1016/j.paid.2016.02.056",
       "por_que": "Mecanismo de accion de los ejercicios de humor.",
-      "doi_confianza": "por verificar automaticamente"
+      "doi_confianza": "corregido 29/10/2026: el DOI anterior (10.1016/j.paid.2016.01.043) es de un articulo sobre rasgos psicopaticos en adolescentes; titulo y DOI nuevos vistos juntos en api.crossref.org y OpenAlex. Sin resumen accesible: no sirve como fuente central"
     },
     {
       "id": "H05",
@@ -1528,6 +1530,174 @@
       "por_que": "La cara de verguenza no es la de la risa: tiene su propio gesto, distinto del de la diversion, y quien mira lo reconoce. Para «¿se nota cuando sonries de verguenza?».",
       "doi_confianza": "verificado 22/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1037/0022-3514.68.3.441 y en OpenAlex (resumen)",
       "resumen_verificado": "Literal del resumen leido el 22/10/2026 (OpenAlex): «The nonverbal behavior of embarrassment was distinct from a related emotion (amusement)»; «was accurately identified by observers who judged the spontaneous displays of various emotions». El resto del resumen (estatus, grupos) no se usa."
+    },
+    {
+      "id": "I14",
+      "pilar": "I",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "The Dark Side of a Smiley: Effects of Smiling Emoticons on Virtual First Impressions",
+      "autores": "Glikson, E.; Cheshin, A.; van Kleef, G. A.",
+      "anio": 2018,
+      "fuente": "Social Psychological and Personality Science, 9(5), 614-625",
+      "doi": "10.1177/1948550617720269",
+      "por_que": "Familia «mensajes». Poner un smiley en un primer correo de trabajo no te hace parecer mas cercano y si menos competente. Tres experimentos. Leer siempre con I15 (la replica de 2023).",
+      "doi_confianza": "verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)",
+      "resumen_verificado": "Literal del resumen leido el 29/10/2026 (OpenAlex): «We conducted three experiments to examine the impact of smiley use on virtual first impressions in work-related contexts»; «contrary to actual smiles, smileys do not increase perceptions of warmth and actually decrease perceptions of competence»; «The adverse effects of smiley use are moderated by the formality of the social context». La parte de la calidez y la de la formalidad NO se replicaron (ver I15)."
+    },
+    {
+      "id": "I15",
+      "pilar": "I",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "The Dark Versus Bright Side of a Smiley: A Preregistered Replication of Experiment 3 in Glikson et al. (2018) “The Dark Side of a Smiley”",
+      "autores": "Lai, L. M. H.; Mayiwar, L.",
+      "anio": 2023,
+      "fuente": "Collabra: Psychology, 9(1)",
+      "doi": "10.1525/collabra.90195",
+      "por_que": "Familia «mensajes». Replica preregistrada de I14 con 847 personas (el original, 85): el smiley sigue restando competencia, pero suma calidez, sea el correo formal o no. Lo que queda en pie de I14.",
+      "doi_confianza": "verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)",
+      "resumen_verificado": "Literal del resumen leido el 29/10/2026 (OpenAlex): «an independent and better powered (N = 847 vs. N = 85) replication of Experiment 3 in Glikson et al. (2018)»; «smileys produce a negative effect on perceptions of competence and a positive effect on perceptions of warmth, regardless of the level of formality»."
+    },
+    {
+      "id": "I16",
+      "pilar": "I",
+      "prioridad": 3,
+      "tipo": "articulo",
+      "titulo": "Online Pauses and Silence: Chronemic Expectancy Violations in Written Computer-Mediated Communication",
+      "autores": "Kalman, Y. M.; Rafaeli, S.",
+      "anio": 2011,
+      "fuente": "Communication Research, 38(1), 54-69",
+      "doi": "10.1177/0093650210378229",
+      "por_que": "Familia «mensajes». Tardar en contestar un correo (un dia, dos semanas o mas de un mes de silencio) cambia como te evaluan, y el efecto depende de quien seas. Para «¿queda mal tardar en contestar?».",
+      "doi_confianza": "verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)",
+      "resumen_verificado": "Literal del resumen leido el 29/10/2026 (OpenAlex): «Managers evaluate job candidates who varied in their response latency to an e-mail (1 day, 2 weeks, and silence for more than a month) and in their reward valence»; «candidate reward valence moderates the effect of response latency on variables such as applicant evaluation, credibility, and attractiveness». El resumen no dice en que direccion: no se cuenta un resultado concreto sin leer el articulo."
+    },
+    {
+      "id": "G07",
+      "pilar": "G",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "Effects of laughter and relaxation on discomfort thresholds",
+      "autores": "Cogan, R.; Cogan, D.; Waltz, W.; McCue, M.",
+      "anio": 1987,
+      "fuente": "Journal of Behavioral Medicine, 10(2), 139-144",
+      "doi": "10.1007/bf00846422",
+      "por_que": "Reirse sube el umbral de dolor, y no por distraerte: una cinta de risa frente a una de relajacion, una narracion aburrida, una interesante, hacer multiplicaciones o nada. Para «¿reirse quita el dolor?» (225 M en el top 10, cero respondiendo).",
+      "doi_confianza": "verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en Europe PMC (resumen) y OpenAlex",
+      "resumen_verificado": "Literal del resumen leido el 29/10/2026 (Europe PMC): «thresholds for pressure-induced discomfort of 20 male and 20 female subjects were measured after each subject listened to a 20-min-long laughter-inducing, relaxation-inducing, or dull-narrative audio tape or no tape»; «Discomfort thresholds were higher for subjects in the laughter- and the relaxation-inducing conditions»; «In Experiment II, 40 female subjects ... listened to a laughter-inducing, interesting narrative, or uninteresting narrative audio tape, completed a multiplication task, or experienced no intervention. Discomfort thresholds increased for subjects in the laughter-inducing condition»; «Laughter, and not simply distraction, reduces discomfort sensitivity». Molestia por presion, no dolor clinico."
+    },
+    {
+      "id": "G08",
+      "pilar": "G",
+      "prioridad": 3,
+      "tipo": "articulo",
+      "titulo": "The Effects of Laughter on Discomfort Thresholds: Does Expectation Become Reality?",
+      "autores": "Mahony, D. L.; Burroughs, W. J.; Hieatt, A. C.",
+      "anio": 2001,
+      "fuente": "The Journal of General Psychology, 128(2), 217-226",
+      "doi": "10.1080/00221300109598909",
+      "por_que": "La letra pequena de G07: un video de humor y uno de relajacion suben los dos el umbral de molestia, y los dos mas si te han dicho que va a funcionar. Apoyo para el cierre honesto de «¿reirse quita el dolor?».",
+      "doi_confianza": "verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)",
+      "resumen_verificado": "Literal del resumen leido el 29/10/2026 (OpenAlex): «Discomfort thresholds for a blood pressure cuff at the upper dominant arm were recorded immediately before and after exposure to either a humorous or a relaxation video»; «Humor and relaxation videos raised discomfort thresholds, and the effect of both video types was enhanced by expectations»; «The larger issue of whether mirthful laughter has any unique benefit for pain or discomfort control beyond the effects of relaxation, distraction, or expectation is discussed»."
+    },
+    {
+      "id": "G09",
+      "pilar": "G",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "A 15-Year Follow-Up Study of Sense of Humor and Causes of Mortality: The Nord-Trøndelag Health Study",
+      "autores": "Romundstad, S.; Svebak, S.; Holen, A.; Holmen, J.",
+      "anio": 2016,
+      "fuente": "Psychosomatic Medicine, 78(3), 345-353",
+      "doi": "10.1097/psy.0000000000000275",
+      "por_que": "El sentido del humor y la supervivencia, quince anios despues, en 53.556 noruegos: la parte cognitiva del humor (verle la gracia a las cosas) va con menos mortalidad en mujeres y con menos muertes por infecciones en los dos sexos. Correlacion, no causa.",
+      "doi_confianza": "verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)",
+      "resumen_verificado": "Literal del resumen leido el 29/10/2026 (OpenAlex): «We conducted a 15-year follow-up study of 53,556 participants in the population-based Nord-Trøndelag Health Study, Norway»; «high scores on the cognitive component of the sense of humor were significantly associated with lower all-cause mortality in women (HR = 0.52 ...), but not in men (HR = 0.88 ...)»; «mortality due to infections both in men (HR = 0.26 ...) and women (HR = 0.17 ...)»; «The social and affective components of the sense of humor were not associated with mortality»."
+    },
+    {
+      "id": "E15",
+      "pilar": "E",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "“It’s so Cute I Could Crush It!”: Understanding Neural Mechanisms of Cute Aggression",
+      "autores": "Stavropoulos, K. K. M.; Alba, L. A.",
+      "anio": 2018,
+      "fuente": "Frontiers in Behavioral Neuroscience, 12, 300",
+      "doi": "10.3389/fnbeh.2018.00300",
+      "por_que": "Las ganas de apretar a un cachorro (la «agresion tierna»): van con sentirse desbordado por lo bonito y con las ganas de cuidarlo, no con querer hacer dano. 54 personas mirando fotos. Para «¿por que te dan ganas de apretar a un cachorro?», con E13.",
+      "doi_confianza": "verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex y Europe PMC (resumen)",
+      "resumen_verificado": "Literal del resumen leido el 29/10/2026 (Europe PMC): «The urge people get to squeeze or bite cute things, albeit without desire to cause harm, is known as \"cute aggression.\"»; «Participants aged 18-40 years (n = 54) saw four sets of images: cute babies, less cute babies, cute (baby) animals, and less cute (adult) animals»; «participants rated more cute animals significantly higher than less cute animals»; «For both animals and babies, the relationship between appraisal and cute aggression was significantly mediated by feeling overwhelmed»; «feelings of cute aggression relate to feeling overwhelmed and feelings of caretaking»."
+    },
+    {
+      "id": "E16",
+      "pilar": "E",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "Laughing, Smiling, and Talking: Relation to Sleeping and Social Context in Humans",
+      "autores": "Provine, R. R.; Fischer, K. R.",
+      "anio": 1989,
+      "fuente": "Ethology, 83(4), 295-305",
+      "doi": "10.1111/j.1439-0310.1989.tb00536.x",
+      "por_que": "Un diario de una semana: reirse, como hablar, pasa sobre todo con gente delante, y casi nada recien levantado o antes de dormir. Fuente del «casi nunca te ries solo». Para «¿por que nos reimos en grupo?» (188 M en el top 10, cero respondiendo).",
+      "doi_confianza": "verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)",
+      "resumen_verificado": "Literal del resumen leido el 29/10/2026 (OpenAlex): «by having undergraduate college students record their performance of these activities in a log book during a one-week period»; «All three activities were least likely to occur during the hours immediately before bedtime and after waking and were most frequent in social situations»; «Smiles and laughs, like talking, were performed primarily during social encounters and were often part of verbal and nonverbal conversations». La cifra de «treinta veces» es del libro de Provine (E01), no de este resumen."
+    },
+    {
+      "id": "E17",
+      "pilar": "E",
+      "prioridad": 3,
+      "tipo": "articulo",
+      "titulo": "Antiphonal laughter between friends and strangers",
+      "autores": "Smoski, M. J.; Bachorowski, J.-A.",
+      "anio": 2003,
+      "fuente": "Cognition and Emotion, 17(2), 327-340",
+      "doi": "10.1080/02699930302296",
+      "por_que": "Reirse justo cuando se rie el otro (risa «antifonal») pasa mucho mas entre amigos que entre desconocidos: 148 personas grabadas jugando por parejas. Apoyo; ojo con C17 y el terreno de MDS-032 hasta el 17/11.",
+      "doi_confianza": "verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)",
+      "resumen_verificado": "Literal del resumen leido el 29/10/2026 (OpenAlex): «participants (n = 148) were tested as part of either same- or mixed-sex friend or stranger dyads, and were audiorecorded while they played brief games intended to facilitate laugh production»; «Significantly more antiphonal laughter was produced in friend than in stranger dyads»."
+    },
+    {
+      "id": "D14",
+      "pilar": "D",
+      "prioridad": 3,
+      "tipo": "articulo",
+      "titulo": "The encryption theory of humor: A knowledge-based mechanism of honest signaling",
+      "autores": "Flamson, T. J.; Barrett, H. C.",
+      "anio": 2008,
+      "fuente": "Journal of Evolutionary Psychology, 6(4), 261-281",
+      "doi": "10.1556/jep.6.2008.4.2",
+      "por_que": "Los chistes internos: lo que hace gracia no esta en lo que se dice sino en lo que los dos sabeis y no se dice, y por eso reirse juntos demuestra que compartis algo. Teoria con dos experimentos; el resumen no da cifras: solo como marco.",
+      "doi_confianza": "verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)",
+      "resumen_verificado": "Literal del resumen leido el 29/10/2026 (OpenAlex): «humorous utterances and acts are encrypted in the sense that what makes the joke funny is not merely its surface content, but a relationship between the surface content and one or more unstated implicatures which are known by both the sender and the receiver»; «rendering humor a means of assessing shared underlying knowledge, attitudes, and preferences»; «We present evidence from two experimental studies of humor evaluation in support of the encryption theory». Sin resultados concretos en el resumen."
+    },
+    {
+      "id": "G10",
+      "pilar": "G",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "Energy expenditure of genuine laughter",
+      "autores": "Buchowski, M. S.; Majchrzak, K. M.; Blomquist, K.; Chen, K. Y.; Byrne, D. W.; Bachorowski, J.-A.",
+      "anio": 2007,
+      "fuente": "International Journal of Obesity, 31(1), 131-137",
+      "doi": "10.1038/sj.ijo.0803353",
+      "por_que": "¿Reirse adelgaza? Casi nada: reirse de verdad gasta un 10-20 % mas que estar quieto, y diez o quince minutos de risa al dia suman entre 2 y 10 kcal. Medido en una habitacion-calorimetro con parejas de amigos viendo videos. Ojo: la cifra lleva una correccion publicada en 2014.",
+      "doi_confianza": "verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en Europe PMC (resumen) y OpenAlex",
+      "resumen_verificado": "Literal del resumen leido el 29/10/2026 (Europe PMC, version corregida): «Experimental trial of viewing film clips in four cycles either intended to evoke laughter (humorous -10 min) or unlikely to elicit laughter (not humorous -5 min) under strictly controlled conditions of a whole-room indirect calorimeter»; «Forty five adult friend dyads»; «Genuine voiced laughter causes a 10–20% increase in EE and HR above resting values, which means that 10–15 minutes of laughter per day could increase total EE by 10–40 kJ (2–10 kcal) [corrected]». Fe de erratas: 10.1038/ijo.2014.149."
+    },
+    {
+      "id": "E18",
+      "pilar": "E",
+      "prioridad": 2,
+      "tipo": "articulo",
+      "titulo": "A multi-lab test of the facial feedback hypothesis by the Many Smiles Collaboration",
+      "autores": "Coles, N. A.; March, D. S.; Marmolejo-Ramos, F.; Larsen, J. T.; y otros (Many Smiles Collaboration)",
+      "anio": 2022,
+      "fuente": "Nature Human Behaviour, 6(12), 1731-1742",
+      "doi": "10.1038/s41562-022-01458-9",
+      "por_que": "¿Sonreir a la fuerza te alegra? Con 3.878 personas de 19 paises, preregistrado y con escepticos dentro: poner cara de sonrisa a proposito o imitar una sonrisa alegra; el truco del lapiz en la boca (sonreir sin saberlo) no quedo claro.",
+      "doi_confianza": "verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex y Europe PMC (resumen)",
+      "resumen_verificado": "Literal del resumen leido el 29/10/2026 (Europe PMC y OpenAlex): «Data from n = 3,878 participants spanning 19 countries indicated that a facial mimicry and voluntary facial action task could both amplify and initiate feelings of happiness»; «evidence of facial feedback effects was less conclusive when facial feedback was manipulated unobtrusively via a pen-in-mouth task». El resumen no da el tamano del efecto: no se dice «mucho»."
     }
   ],
   "fuentes_abiertas": [

@@ -3,7 +3,7 @@
 > Base de conocimiento de **Mecánica del Humor / Humor Mechanics**.
 > Generado desde `data/semillas.json`. No edites este archivo a mano: edita el JSON y vuelve a ejecutar `scripts/generar_md.py`.
 
-**113 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
+**125 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
 
 ## Cómo se ha curado
 
@@ -26,12 +26,12 @@ y fusiona repetidos antes de que nadie los lea. Están marcados y excluidos del 
 - **A. Teorias fundacionales del humor** — 9 obras
 - **B. Diferencias individuales, estilos y medicion** — 7 obras
 - **C. Produccion de humor: habilidad, creatividad e inteligencia** — 6 obras
-- **D. Humor, vinculos sociales, atraccion y estatus** — 13 obras
-- **E. Risa: etologia, acustica y contagio** — 14 obras
+- **D. Humor, vinculos sociales, atraccion y estatus** — 14 obras
+- **E. Risa: etologia, acustica y contagio** — 18 obras
 - **F. Neurociencia y cognicion del humor** — 20 obras
-- **G. Humor aplicado: trabajo, aula, salud, persuasion** — 6 obras
+- **G. Humor aplicado: trabajo, aula, salud, persuasion** — 10 obras
 - **H. Entrenabilidad: el humor se puede aprender** — 6 obras
-- **I. Linguistica y estructura del chiste** — 13 obras
+- **I. Linguistica y estructura del chiste** — 16 obras
 - **J. El lado oscuro: gelotofobia, burla, humor que falla** — 7 obras
 - **K. Humor computacional e IA** — 4 obras
 - **L. Oficio: manuales de stand-up, improvisacion y guion** — 8 obras
@@ -294,7 +294,7 @@ Oyendo un segundo de dos personas riendose a la vez, oyentes de 24 sociedades di
 ### `D08` ★★ Humor in romantic relationships: A meta-analysis
 
 **Hall, J. A.** (2017) · *Personal Relationships*  
-DOI: [`10.1111/pere.12183`](https://doi.org/10.1111/pere.12183) ⚠️ por verificar  
+DOI: [`10.1111/pere.12183`](https://doi.org/10.1111/pere.12183) · verificado 29/10/2026: titulo y DOI juntos en api.crossref.org/works/10.1111/pere.12183 y en OpenAlex (resumen)  
 Tipo: articulo
 
 Metaanalisis: que tipo de humor predice satisfaccion de pareja.
@@ -330,6 +330,14 @@ Tipo: articulo
 
 Despues de reirse, la gente cuenta cosas mas intimas de si misma, y no se da cuenta. Contraintuitivo y de la vida diaria.
 
+### `D14` ★ The encryption theory of humor: A knowledge-based mechanism of honest signaling
+
+**Flamson, T. J.; Barrett, H. C.** (2008) · *Journal of Evolutionary Psychology, 6(4), 261-281*  
+DOI: [`10.1556/jep.6.2008.4.2`](https://doi.org/10.1556/jep.6.2008.4.2) · verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)  
+Tipo: articulo
+
+Los chistes internos: lo que hace gracia no esta en lo que se dice sino en lo que los dos sabeis y no se dice, y por eso reirse juntos demuestra que compartis algo. Teoria con dos experimentos; el resumen no da cifras: solo como marco.
+
 
 ---
 
@@ -352,10 +360,10 @@ La risa puntua el habla, no la interrumpe. Fundamento de la risa como senal soci
 
 Tres cifras verificadas el 28/08 contra fuentes secundarias solventes (no se pudo acceder al artículo original, de pago): 1.200 episodios de risa registrados en observación de campo; menos de una cuarta parte de los comentarios previos a la risa eran realmente cómicos (el guion de MDH-004 dice «entre un diez y un veinte por ciento», que cae dentro de ese margen pero no es una cita exacta de una única cifra del artículo); quien habla se ríe más que quien escucha, dirección confirmada, sin multiplicador exacto en las fuentes consultadas.
 
-### `E03` ★★★ The evolution of laughter in great apes and humans
+### `E03` ★★★ Reconstructing the evolution of laughter in great apes and humans
 
-**Davila-Ross, M.; Owren, M. J.; Zimmermann, E.** (2009) · *Current Biology / Communicative & Integrative Biology*  
-DOI: [`10.1016/j.cub.2009.05.028`](https://doi.org/10.1016/j.cub.2009.05.028) ⚠️ por verificar  
+**Davila-Ross, M.; Owren, M. J.; Zimmermann, E.** (2009) · *Current Biology, 19(13), 1106-1111*  
+DOI: [`10.1016/j.cub.2009.05.028`](https://doi.org/10.1016/j.cub.2009.05.028) · verificado 29/10/2026: titulo y DOI juntos en Europe PMC y OpenAlex (el titulo de la ficha estaba mal: era «The evolution of laughter in great apes and humans»)  
 Tipo: articulo
 
 Filogenia de la risa: 10-16 millones de anios. Gancho narrativo potentisimo.
@@ -449,6 +457,38 @@ DOI: [`10.1037/0022-3514.68.3.441`](https://doi.org/10.1037/0022-3514.68.3.441) 
 Tipo: articulo
 
 La cara de verguenza no es la de la risa: tiene su propio gesto, distinto del de la diversion, y quien mira lo reconoce. Para «¿se nota cuando sonries de verguenza?».
+
+### `E15` ★★ “It’s so Cute I Could Crush It!”: Understanding Neural Mechanisms of Cute Aggression
+
+**Stavropoulos, K. K. M.; Alba, L. A.** (2018) · *Frontiers in Behavioral Neuroscience, 12, 300*  
+DOI: [`10.3389/fnbeh.2018.00300`](https://doi.org/10.3389/fnbeh.2018.00300) · verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex y Europe PMC (resumen)  
+Tipo: articulo
+
+Las ganas de apretar a un cachorro (la «agresion tierna»): van con sentirse desbordado por lo bonito y con las ganas de cuidarlo, no con querer hacer dano. 54 personas mirando fotos. Para «¿por que te dan ganas de apretar a un cachorro?», con E13.
+
+### `E16` ★★ Laughing, Smiling, and Talking: Relation to Sleeping and Social Context in Humans
+
+**Provine, R. R.; Fischer, K. R.** (1989) · *Ethology, 83(4), 295-305*  
+DOI: [`10.1111/j.1439-0310.1989.tb00536.x`](https://doi.org/10.1111/j.1439-0310.1989.tb00536.x) · verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)  
+Tipo: articulo
+
+Un diario de una semana: reirse, como hablar, pasa sobre todo con gente delante, y casi nada recien levantado o antes de dormir. Fuente del «casi nunca te ries solo». Para «¿por que nos reimos en grupo?» (188 M en el top 10, cero respondiendo).
+
+### `E18` ★★ A multi-lab test of the facial feedback hypothesis by the Many Smiles Collaboration
+
+**Coles, N. A.; March, D. S.; Marmolejo-Ramos, F.; Larsen, J. T.; y otros (Many Smiles Collaboration)** (2022) · *Nature Human Behaviour, 6(12), 1731-1742*  
+DOI: [`10.1038/s41562-022-01458-9`](https://doi.org/10.1038/s41562-022-01458-9) · verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex y Europe PMC (resumen)  
+Tipo: articulo
+
+¿Sonreir a la fuerza te alegra? Con 3.878 personas de 19 paises, preregistrado y con escepticos dentro: poner cara de sonrisa a proposito o imitar una sonrisa alegra; el truco del lapiz en la boca (sonreir sin saberlo) no quedo claro.
+
+### `E17` ★ Antiphonal laughter between friends and strangers
+
+**Smoski, M. J.; Bachorowski, J.-A.** (2003) · *Cognition and Emotion, 17(2), 327-340*  
+DOI: [`10.1080/02699930302296`](https://doi.org/10.1080/02699930302296) · verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)  
+Tipo: articulo
+
+Reirse justo cuando se rie el otro (risa «antifonal») pasa mucho mas entre amigos que entre desconocidos: 148 personas grabadas jugando por parejas. Apoyo; ojo con C17 y el terreno de MDS-032 hasta el 17/11.
 
 
 ---
@@ -670,6 +710,38 @@ El humor y el aprendizaje: solo funciona si es relevante al contenido. Meta del 
 
 *Corregida el 15/09/2026 (dirección, al reescribir MDS-018).* **Es una revisión, no un metaanálisis**: el título que figuraba aquí no es el del artículo. Recoge cuatro décadas de estudios sobre humor en clase, con énfasis en explicar por qué los resultados no coinciden. La literatura de ese campo apunta a que el humor relacionado con el contenido mejora el recuerdo de ese contenido (Kaplan y Pascoe, 1977) y a que el humor no relacionado no guarda relación con el aprendizaje (Wanzer, Frymier e Irwin, 2010, que miden aprendizaje **autodeclarado**). **Ojo:** esas dos citas se comprobaron el 15/09 en una fuente secundaria (la guía de recursos de Segrist para la Society for the Teaching of Psychology), no en el texto completo de Banas, que no se pudo abrir. Si alguien lo abre, que confirme que las recoge. No citar como «metaanálisis» ni atribuirle cifras que no se hayan leído en el texto.
 
+### `G07` ★★ Effects of laughter and relaxation on discomfort thresholds
+
+**Cogan, R.; Cogan, D.; Waltz, W.; McCue, M.** (1987) · *Journal of Behavioral Medicine, 10(2), 139-144*  
+DOI: [`10.1007/bf00846422`](https://doi.org/10.1007/bf00846422) · verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en Europe PMC (resumen) y OpenAlex  
+Tipo: articulo
+
+Reirse sube el umbral de dolor, y no por distraerte: una cinta de risa frente a una de relajacion, una narracion aburrida, una interesante, hacer multiplicaciones o nada. Para «¿reirse quita el dolor?» (225 M en el top 10, cero respondiendo).
+
+### `G09` ★★ A 15-Year Follow-Up Study of Sense of Humor and Causes of Mortality: The Nord-Trøndelag Health Study
+
+**Romundstad, S.; Svebak, S.; Holen, A.; Holmen, J.** (2016) · *Psychosomatic Medicine, 78(3), 345-353*  
+DOI: [`10.1097/psy.0000000000000275`](https://doi.org/10.1097/psy.0000000000000275) · verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)  
+Tipo: articulo
+
+El sentido del humor y la supervivencia, quince anios despues, en 53.556 noruegos: la parte cognitiva del humor (verle la gracia a las cosas) va con menos mortalidad en mujeres y con menos muertes por infecciones en los dos sexos. Correlacion, no causa.
+
+### `G10` ★★ Energy expenditure of genuine laughter
+
+**Buchowski, M. S.; Majchrzak, K. M.; Blomquist, K.; Chen, K. Y.; Byrne, D. W.; Bachorowski, J.-A.** (2007) · *International Journal of Obesity, 31(1), 131-137*  
+DOI: [`10.1038/sj.ijo.0803353`](https://doi.org/10.1038/sj.ijo.0803353) · verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en Europe PMC (resumen) y OpenAlex  
+Tipo: articulo
+
+¿Reirse adelgaza? Casi nada: reirse de verdad gasta un 10-20 % mas que estar quieto, y diez o quince minutos de risa al dia suman entre 2 y 10 kcal. Medido en una habitacion-calorimetro con parejas de amigos viendo videos. Ojo: la cifra lleva una correccion publicada en 2014.
+
+### `G08` ★ The Effects of Laughter on Discomfort Thresholds: Does Expectation Become Reality?
+
+**Mahony, D. L.; Burroughs, W. J.; Hieatt, A. C.** (2001) · *The Journal of General Psychology, 128(2), 217-226*  
+DOI: [`10.1080/00221300109598909`](https://doi.org/10.1080/00221300109598909) · verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)  
+Tipo: articulo
+
+La letra pequena de G07: un video de humor y uno de relajacion suben los dos el umbral de molestia, y los dos mas si te han dicho que va a funcionar. Apoyo para el cierre honesto de «¿reirse quita el dolor?».
+
 
 ---
 
@@ -700,8 +772,8 @@ Ejercicios concretos ('tres cosas divertidas') con efecto medido a 6 meses. Cada
 
 ### `H04` ★★ How do positive psychology interventions work? A short-term placebo-controlled humor-based study
 
-**Wellenzohn, S.; Proyer, R. T.; Ruch, W.** (2016) · *Personality and Individual Differences*  
-DOI: [`10.1016/j.paid.2016.01.043`](https://doi.org/10.1016/j.paid.2016.01.043) ⚠️ por verificar  
+**Wellenzohn, S.; Proyer, R. T.; Ruch, W.** (2016) · *Personality and Individual Differences, 96, 1-6*  
+DOI: [`10.1016/j.paid.2016.02.056`](https://doi.org/10.1016/j.paid.2016.02.056) · corregido 29/10/2026: el DOI anterior (10.1016/j.paid.2016.01.043) es de un articulo sobre rasgos psicopaticos en adolescentes; titulo y DOI nuevos vistos juntos en api.crossref.org y OpenAlex. Sin resumen accesible: no sirve como fuente central  
 Tipo: articulo
 
 Mecanismo de accion de los ejercicios de humor.
@@ -828,6 +900,30 @@ DOI: [`10.1037/1089-2699.8.4.291`](https://doi.org/10.1037/1089-2699.8.4.291) ·
 Tipo: articulo
 
 Familia «mensajes». Dejar de recibir mensajes en una conversacion a tres basta para sentirse excluido: peor humor y menos sensacion de pertenecer. Para «¿por que me molesta que me dejen en visto?» (3,5 M).
+
+### `I14` ★★ The Dark Side of a Smiley: Effects of Smiling Emoticons on Virtual First Impressions
+
+**Glikson, E.; Cheshin, A.; van Kleef, G. A.** (2018) · *Social Psychological and Personality Science, 9(5), 614-625*  
+DOI: [`10.1177/1948550617720269`](https://doi.org/10.1177/1948550617720269) · verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)  
+Tipo: articulo
+
+Familia «mensajes». Poner un smiley en un primer correo de trabajo no te hace parecer mas cercano y si menos competente. Tres experimentos. Leer siempre con I15 (la replica de 2023).
+
+### `I15` ★★ The Dark Versus Bright Side of a Smiley: A Preregistered Replication of Experiment 3 in Glikson et al. (2018) “The Dark Side of a Smiley”
+
+**Lai, L. M. H.; Mayiwar, L.** (2023) · *Collabra: Psychology, 9(1)*  
+DOI: [`10.1525/collabra.90195`](https://doi.org/10.1525/collabra.90195) · verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)  
+Tipo: articulo
+
+Familia «mensajes». Replica preregistrada de I14 con 847 personas (el original, 85): el smiley sigue restando competencia, pero suma calidez, sea el correo formal o no. Lo que queda en pie de I14.
+
+### `I16` ★ Online Pauses and Silence: Chronemic Expectancy Violations in Written Computer-Mediated Communication
+
+**Kalman, Y. M.; Rafaeli, S.** (2011) · *Communication Research, 38(1), 54-69*  
+DOI: [`10.1177/0093650210378229`](https://doi.org/10.1177/0093650210378229) · verificado 29/10/2026: titulo y DOI juntos en api.crossref.org (busqueda bibliografica) y en OpenAlex (resumen)  
+Tipo: articulo
+
+Familia «mensajes». Tardar en contestar un correo (un dia, dos semanas o mas de un mes de silencio) cambia como te evaluan, y el efecto depende de quien seas. Para «¿queda mal tardar en contestar?».
 
 
 ---

@@ -1,0 +1,186 @@
+{
+ "id": "MDS-060",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Queda mal un emoji en un correo de trabajo?",
+ "tesis": "Una carita en un correo de trabajo te hace parecer más cercano pero menos competente, según una réplica con más de ochocientas personas.",
+ "pilares": [
+  "I",
+  "G"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B2",
+ "variante": "control",
+ "familia_tema": "mensajes",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Queda mal un emoji en un correo de trabajo?",
+  "respuesta": "Un poco: con una carita pareces más cercano, pero menos competente.",
+  "puente": "El primer correo al cliente con su carita al final es lo que midieron: el mismo correo de trabajo, con carita o sin ella, leído por gente que no conocía a quien lo escribía."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — escribes el primer correo al cliente nuevo y le pones una carita para no sonar seco; qué gira — el cliente decide que eres simpático y que no sabes hacer tu trabajo; cómo acaba — eso midieron con el mismo correo con y sin carita: más cercano, menos competente; con el compañero de siempre no se midió.",
+  "FAMILIA «mensajes» (R-TE-03), segunda de las dos de la semana.",
+  "CICLO: B2 empieza el 5/11 y la dirección lo escribe el 2/11. Lo que ya está decidido (ciclos.json, «decisiones», 26/10): el control de B2 es B, «arranque con el dato». Así que va escrito como B y etiquetado «B2 / control». Si la dirección le asigna otro brazo, la escena que se quitaría para un brazo corto es la 3.",
+  "BRAZO B (receta): la escena 1 es el hallazgo, en doce palabras, con su fuente; la pantalla dice lo mismo.",
+  "FUENTES: I15 (Lai y Mayiwar, 2023, Collabra: Psychology, DOI 10.1525/collabra.90195), réplica preregistrada, ficha nueva; I14 (Glikson, Cheshin y van Kleef, 2018, DOI 10.1177/1948550617720269), el original, ficha nueva. Resúmenes leídos el 29/10/2026 en OpenAlex, frases literales. I15: «an independent and better powered (N = 847 vs. N = 85) replication of Experiment 3 in Glikson et al. (2018)»; «smileys produce a negative effect on perceptions of competence and a positive effect on perceptions of warmth, regardless of the level of formality». I14: «three experiments to examine the impact of smiley use on virtual first impressions in work-related contexts»; «smileys do not increase perceptions of warmth and actually decrease perceptions of competence».",
+  "POR QUÉ LA RÉPLICA ES LA CENTRAL: es la que tiene más gente (847 frente a 85) y la que se repitió; el original decía que la carita ni siquiera te hacía más cercano, y eso no se sostuvo. Lo que se cuenta es solo lo que dicen los dos: menos competente.",
+  "LÍMITE (regla 12): primeras impresiones de alguien que no te conocía; con el compañero de siempre, nadie lo ha medido.",
+  "LECTURA EN FRÍO (2026-10-29), criterio del 29/10. Vuelta 1: «Lo de llevarle las cuentas, ya no tanto» (¿qué cuentas?) → «Que sepas hacer tu trabajo, ya no tanto». Vuelta 2: «La carita, mejor para el segundo correo» (un consejo que no sale del estudio) y «me iría en la 4» (ya sabía cómo acaba) → escena 3 nueva (las facturas con pegatinas), escena 4 con la mitad y la mitad, cierre «Con el cliente nuevo, guárdate la carita». Vuelta 3: pasa."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "I15",
+   "icono": "i-balanza",
+   "texto": "Emoji: menos *competente*",
+   "narracion": "Un emoji en un correo de trabajo te hace parecer menos competente.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "man reading email laptop frowning",
+      "office worker reading email skeptical",
+      "businessman reading laptop raised eyebrow"
+     ],
+     "prompt": "a businessman in an office reading an email on his laptop with one eyebrow raised"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Y una *carita*",
+   "narracion": "Primer correo al cliente nuevo. Para que no suene seco, le pones una carita al final.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "woman writing email laptop office",
+      "person typing email at desk"
+     ],
+     "prompt": "a young woman at an office desk carefully typing an email on a laptop"
+    },
+    {
+     "desde": "le pones una carita",
+     "busqueda": [
+      "finger hovering over keyboard enter",
+      "hand about to press key laptop"
+     ],
+     "prompt": "close-up of a finger hovering over a laptop key, about to type"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "¿Facturas con *pegatinas*?",
+   "narracion": "El cliente sonríe. Y luego se pregunta si le vas a mandar las facturas con pegatinas.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "businessman smiling reading laptop",
+      "man smiling at email"
+     ],
+     "prompt": "a businessman smiling at his laptop screen"
+    },
+    {
+     "desde": "las facturas con pegatinas",
+     "busqueda": [
+      "businessman frowning thinking at desk",
+      "man doubtful at computer"
+     ],
+     "prompt": "the same businessman leaning back with a doubtful frown"
+    }
+   ]
+  },
+  {
+   "tipo": "comparacion",
+   "fuente": "I15",
+   "a": "Sin carita",
+   "et_a": "el mismo correo",
+   "b": "Con *carita*",
+   "et_b": "el mismo correo",
+   "narracion": "Unos psicólogos enseñaron a más de ochocientas personas un correo así: a la mitad, con carita; a la otra, sin ella.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "two laptops side by side email",
+      "people reading emails in office"
+     ],
+     "prompt": "two laptops side by side on a desk showing almost identical emails, no readable text"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "I15",
+   "personaje": "entiende",
+   "cifra": "Menos *capaz*",
+   "pie": "aunque más cercano",
+   "narracion": "Con carita, quien lo escribía parecía más cercano. Pero también menos competente.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "friendly colleague waving office",
+      "smiling woman office warm"
+     ],
+     "prompt": "a friendly woman in an office waving warmly"
+    },
+    {
+     "desde": "Pero también menos competente",
+     "busqueda": [
+      "manager crossing arms skeptical office",
+      "boss doubtful expression office"
+     ],
+     "prompt": "a manager in an office crossing her arms with a skeptical look"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "I15",
+   "personaje": "duda",
+   "titulo": "Guárdate la *carita*",
+   "subtitulo": "Fuente: Lai y Mayiwar, 2023; Glikson y otros, 2018",
+   "narracion": "Con el cliente nuevo, guárdate la carita. Eso sí: era el primer correo a un desconocido; con tu compañero, nadie lo ha medido.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "woman closing laptop smiling office",
+      "person sending email office"
+     ],
+     "prompt": "a woman in an office closing her laptop with a small smile"
+    },
+    {
+     "desde": "con tu compañero",
+     "busqueda": [
+      "two coworkers laughing at desk",
+      "colleagues chatting at desks"
+     ],
+     "prompt": "two coworkers laughing together at neighbouring desks"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 3, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-29",
+  "de_que_va": "Que poner una carita en un correo de trabajo, sobre todo en el primero a un cliente nuevo, hace que parezcas más cercano pero menos competente.",
+  "pregunta_y_respuesta": "¿Pongo una carita en un correo de trabajo para que no suene seco? Con un cliente nuevo, mejor no: el mismo correo con carita hacía parecer al que lo escribía más cercano pero menos competente. Con compañeros no se sabe.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "ninguna («como mucho, la conclusión se dice dos veces, escena 1 y escena 5, pero la primera es el gancho»)",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "«Unos psicólogos enseñaron a más de ochocientas personas un correo así» — «¿qué es ‹así›? Supongo que un primer correo a un cliente»: dudó un momento y lo resolvió en la frase.",
+   "«Eso sí: era el primer correo a un desconocido» — «al principio pensé que ‹era› hablaba de mi correo; luego entendí que del experimento»: dudó un momento.",
+   "«La escena 1 ya me da la respuesta entera. Si fuera con prisa, podría irme ahí mismo» (el coste del brazo B; dice «me quedo»)."
+  ],
+  "veredicto": "pasa"
+ }
+}

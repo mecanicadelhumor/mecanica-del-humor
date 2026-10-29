@@ -368,3 +368,27 @@ la sonrisa de vergüenza (`E14`) y llorar de alegría o las ganas de apretar a u
   se compara con qué) no se entiende en una frase. Hace falta una historia en la que el grupo de
   control se vea, no otra ficha.
 - **«por qué los memes nos hacen gracia»**: igual que el 15/10.
+
+## 29/10/2026 · lo que se desbloquea y lo que sigue pendiente
+
+**Desbloqueadas esta noche** (trece fichas nuevas, título y DOI vistos juntos y la frase del resumen
+copiada): **«¿reírse adelgaza?»** (`G10`, Buchowski y otros, 2007: 10-15 minutos de risa, 2-10 kcal),
+**el emoji en el correo de trabajo** (`I14` y su réplica `I15`), **«¿por qué casi no te ríes solo?»**
+(`E16`, Provine y Fischer, 1989), **sonreír a la fuerza** (`E18`, Many Smiles, 2022), **el sentido del
+humor y vivir más** (`G09`, 53.556 noruegos), **las ganas de apretar a un cachorro** (`E15`), **reírse y
+el dolor, con el grupo de control a la vista** (`G07` y `G08`), **tardar en contestar un correo**
+(`I16`), **reírse a la vez con los amigos** (`E17`) y **los chistes internos** (`D14`).
+
+**Siguen sin ficha:**
+
+- **«por qué me río cuando estoy nervioso»** (7,9 M): igual que el 22/10. La búsqueda de hoy en
+  Crossref no devolvió nada sobre risa nerviosa.
+- **«por qué la gente manda audios en vez de escribir»** (3,8 M): nada medido sobre notas de voz.
+- **«por qué lloramos de risa»** (29,9 M): `E13` es de lágrimas de alegría, no de risa.
+- **«los vídeos de gatos te alegran»**: el artículo existe (Myrick, 2015, *Computers in Human
+  Behavior*, DOI 10.1016/j.chb.2015.06.001), pero su resumen no se puede leer desde aquí (Elsevier lo
+  oculta en Crossref, OpenAlex y Semantic Scholar). Sin resumen no hay ficha.
+- **«la gente graciosa es más lista»**: `C02` tiene en la bibliografía el DOI de otro artículo (ver
+  `semillas_demanda.json`, «lo que hay que arreglar»).
+- **«reírse quita el dolor»**: hay fichas de sobra; lo que falta es una que diga dónde y cómo se midió
+  la molestia (ver `temas_en_reserva.md`).

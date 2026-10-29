@@ -1,0 +1,183 @@
+{
+ "id": "MDS-062",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué casi no te ríes cuando estás solo?",
+ "tesis": "La risa pasa casi siempre con alguien delante, en mitad de una conversación, y casi nunca nada más despertarse: reírse es algo que se hace con otros.",
+ "pilares": [
+  "E"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B2",
+ "variante": "control",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué casi no te ríes cuando estás solo?",
+  "respuesta": "Porque la risa es sobre todo algo que se hace con otros: casi siempre te ríes con alguien delante.",
+  "puente": "La comedia que solo te hace gracia con tus amigos es lo que midieron: gente que apuntó durante una semana cada vez que se reía, y con quién estaba."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — ves una comedia sola y no mueves un músculo; qué gira — la ves con tus amigos y te tienen que parar la película; cómo acaba — casi toda la risa pasa con alguien delante, aunque se apuntó a mano.",
+  "CICLO: B2 (control = B, decidido el 26/10). Si la dirección le asigna otro brazo, la escena que se quitaría para un brazo corto es la 3.",
+  "FUENTE: E16 (Provine y Fischer, 1989, Ethology, DOI 10.1111/j.1439-0310.1989.tb00536.x), ficha nueva. Resumen leído el 29/10/2026 en OpenAlex, frases literales: «by having undergraduate college students record their performance of these activities in a log book during a one-week period»; «All three activities were least likely to occur during the hours immediately before bedtime and after waking and were most frequent in social situations»; «Smiles and laughs, like talking, were performed primarily during social encounters and were often part of verbal and nonverbal conversations».",
+  "LO QUE NO SE DICE: «treinta veces más» (es del libro de Provine, E01, no de este resumen).",
+  "LÍMITE (regla 12): lo apuntaban ellos mismos; las risas que no notas no se apuntan.",
+  "LECTURA EN FRÍO (2026-10-29), criterio del 29/10. Vuelta 1: «La letra pequeña: lo apuntaban ellos…» (releída) y «Y casi nunca nada más despertarse» (¿a qué viene?), «me iría en la 5» → escena 5 nueva («reírse funciona como hablar»), cierre reescrito. Vuelta 2: «Ojo: cada uno apuntaba sus risas…» (a la segunda) → «Una pega del estudio: cada uno apuntaba sus propias risas, y alguna se le pudo escapar». Vuelta 3: pasa."
+ ],
+ "escenas": [
+  {
+   "tipo": "comparacion",
+   "fuente": "E16",
+   "icono": "i-publico",
+   "a": "Con *gente*",
+   "et_a": "casi toda la risa",
+   "b": "Solo",
+   "et_b": "casi nada",
+   "narracion": "Casi toda la risa del día pasa cuando hay alguien delante.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "group of friends laughing together at table",
+      "friends laughing at dinner",
+      "people laughing together close-up"
+     ],
+     "prompt": "a group of friends bursting out laughing together around a kitchen table at night"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Sola, ni una *sonrisa*",
+   "narracion": "La comedia que viste sola, sin mover un músculo, hoy la ves con tus amigos.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "woman watching tv alone straight face",
+      "person alone on sofa watching tv bored"
+     ],
+     "prompt": "a woman alone on a sofa watching television with a completely straight face"
+    },
+    {
+     "desde": "hoy la ves con tus amigos",
+     "busqueda": [
+      "friends on sofa watching movie",
+      "group watching tv together popcorn"
+     ],
+     "prompt": "four friends squeezed on a sofa watching a film with popcorn"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Pausa la *peli*",
+   "narracion": "Y te ríes tanto que tienen que parar la película.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "friends laughing hysterically on sofa",
+      "woman crying laughing with friends"
+     ],
+     "prompt": "a woman crying with laughter on a sofa among friends, one of them pausing the film with the remote"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "E16",
+   "texto": "Una semana, una *libreta*",
+   "narracion": "Unos psicólogos pidieron a unos estudiantes que apuntaran en una libreta, durante una semana, cada vez que se reían.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "student writing in notebook",
+      "hand writing in small notebook"
+     ],
+     "prompt": "a student writing a short note in a small notebook on a desk"
+    },
+    {
+     "desde": "cada vez que se reían",
+     "busqueda": [
+      "notebook pages handwritten",
+      "open notebook with notes"
+     ],
+     "prompt": "an open small notebook with handwritten lines, no readable text"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "E16",
+   "personaje": "entiende",
+   "cifra": "Como *hablar*",
+   "pie": "sale con alguien delante",
+   "narracion": "Y resultó que reírse funciona como hablar: sale casi siempre con alguien delante, en mitad de una charla.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "friends talking and laughing in cafe",
+      "two people laughing conversation"
+     ],
+     "prompt": "two friends talking and laughing across a cafe table"
+    },
+    {
+     "desde": "en mitad de una charla",
+     "busqueda": [
+      "person waking up bed alarm",
+      "woman waking up grumpy"
+     ],
+     "prompt": "a sleepy woman sitting up in bed, rubbing her eyes, unamused"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "E16",
+   "personaje": "piensa",
+   "titulo": "Le faltaba *compañía*",
+   "subtitulo": "Fuente: Provine y Fischer, 1989",
+   "narracion": "A esa comedia le faltaba compañía, no gracia. Una pega del estudio: cada uno apuntaba sus propias risas, y alguna se le pudo escapar.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "woman alone sofa remote",
+      "person alone watching screen night"
+     ],
+     "prompt": "a woman alone on a sofa at night, holding the remote"
+    },
+    {
+     "desde": "cada uno apuntaba",
+     "busqueda": [
+      "pen writing in notebook close-up",
+      "hand closing notebook"
+     ],
+     "prompt": "close-up of a hand closing a small notebook with a pen on top"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (vuelta 3, lector nuevo en cada vuelta)",
+  "fecha": "2026-10-29",
+  "de_que_va": "Que nos reímos casi siempre porque estamos con alguien, no tanto porque algo tenga gracia.",
+  "pregunta_y_respuesta": "¿Por qué una comedia que viste sola no te hizo ni sonreír y con amigos te partes de risa? Porque la risa funciona como hablar: sale casi siempre cuando hay alguien delante. A esa peli no le faltaba gracia, le faltaba compañía.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Una pega del estudio: cada uno apuntaba sus propias risas, y alguna se le pudo escapar.» (se queda: es el cierre honesto, regla 12); también «un poco la escena 1, porque dice lo mismo que la 5» (es la escena del brazo B, el dato delante: lo que mide el control de B2)",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "«La comedia que viste sola, sin mover un músculo, hoy la ves con tus amigos.» — «me pregunté de qué comedia hablaba, porque parece que la conozco. Además, el ‹sola› me habla en femenino»: la entendió (la resume bien en la respuesta 2). El femenino genérico queda anotado para la dirección.",
+   "«Y te ríes tanto que tienen que parar la película.» — «se entiende, pero me pregunté por qué tienen que pararla».",
+   "Casi desliza en la escena 4 («pasa de algo mío a explicar un estudio»), pero se queda."
+  ],
+  "veredicto": "pasa"
+ }
+}
