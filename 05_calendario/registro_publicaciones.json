@@ -948,12 +948,13 @@
       "guion": "05_calendario/guiones/MDS-053.es.json",
       "video_id": "AUZhdfYSsyk",
       "url": "https://youtu.be/AUZhdfYSsyk",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-10-29T18:00:00Z",
       "musica": "cama_11_watching_anime_piano_version_sakura_hz.mp3",
       "subido_utc": "2026-10-29T07:14:08Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-10-29T21:51:49Z"
     }
   ],
-  "_estado_leido_utc": "2026-10-28T21:43:37Z"
+  "_estado_leido_utc": "2026-10-29T21:51:49Z"
 }
