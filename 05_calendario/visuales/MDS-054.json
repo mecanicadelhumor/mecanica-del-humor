@@ -1,8 +1,8 @@
 {
   "guion": "MDS-054",
   "version": 1,
-  "firma": "0fb0ea71c7e8220c",
-  "resuelto_utc": "2026-10-28T09:34:41Z",
+  "firma": "e41900b6a321a7a4",
+  "resuelto_utc": "2026-10-29T09:32:11Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -18,31 +18,31 @@
           ],
           "frase": "Llamar a un amigo une más que escribirle, y no incomoda más.",
           "fuente": "pexels",
-          "id": 7155064,
-          "pagina": "https://www.pexels.com/video/a-woman-talking-on-the-phone-while-holding-her-baby-bump-7155064/",
-          "titulo": "a woman talking on the phone while holding her baby bump",
-          "autor": "Yan Krukau",
-          "autor_url": "https://www.pexels.com/@yankrukov",
+          "id": 7592049,
+          "pagina": "https://www.pexels.com/video/a-woman-smiling-while-talking-on-the-phone-7592049/",
+          "titulo": "a woman smiling while talking on the phone",
+          "autor": "ROMAN ODINTSOV",
+          "autor_url": "https://www.pexels.com/@roman-odintsov",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 16.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/7155064/7155064-hd_1080_1920_25fps.mp4",
+          "duracion_s": 33.0,
+          "ancho": 1440,
+          "alto": 2496,
+          "url": "https://videos.pexels.com/video-files/7592049/7592049-uhd_1440_2496_30fps.mp4",
           "tipo": "video",
-          "consulta": "woman laughing talking on phone at home",
-          "relevancia": 0.6,
+          "consulta": "woman talking on phone call smiling at home",
+          "relevancia": 0.667,
           "inicio_s": 0.4,
-          "movimiento": 4.2,
+          "movimiento": 7.18,
           "encuadre": {
-            "x": 0.5,
+            "x": 1,
             "y": 0.5
           },
           "caras": [
             [
-              0.6889,
-              0.2016,
-              0.3028,
-              0.2078
+              0.3817,
+              0.0288,
+              0.2934,
+              0.2821
             ]
           ]
         }
@@ -90,22 +90,22 @@
             9.65
           ],
           "frase": "Un día, te llama.",
-          "fuente": "pixabay",
-          "id": 304045,
-          "pagina": "https://pixabay.com/videos/id-304045/",
-          "titulo": "phone, ringing, call, incoming, smartphone, mobile, telephone, ring, notification, alert, communication, device, sound, buzz, vibration, digital, office, message, technology, contact, connection, caller, business, smartphone ringing, ringtone, ai generated id",
-          "autor": "VirtualZero",
-          "autor_url": "https://pixabay.com/users/VirtualZero-34835365/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 8.0,
-          "ancho": 3840,
-          "alto": 2160,
-          "url": "https://cdn.pixabay.com/video/2025/09/14/304045_large.mp4",
+          "fuente": "pexels",
+          "id": 8060394,
+          "pagina": "https://www.pexels.com/video/close-up-footage-of-a-cellphone-ringing-8060394/",
+          "titulo": "close up footage of a cellphone ringing",
+          "autor": "Ron Lach",
+          "autor_url": "https://www.pexels.com/@ron-lach",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 28.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8060394/8060394-hd_1080_2048_25fps.mp4",
           "tipo": "video",
-          "consulta": "phone ringing on table incoming call",
-          "relevancia": 0.8,
+          "consulta": "phone ringing incoming call on table",
+          "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 1.78,
+          "movimiento": 1.02,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
@@ -164,33 +164,26 @@
           ],
           "frase": "y le escribes: «¿qué pasa?».",
           "fuente": "pexels",
-          "id": 5387568,
-          "pagina": "https://www.pexels.com/video/young-man-text-messaging-with-smartphone-outdoors-5387568/",
-          "titulo": "young man text messaging with smartphone outdoors",
-          "autor": "Monstera Production",
-          "autor_url": "https://www.pexels.com/@gabby-k",
+          "id": 15689201,
+          "pagina": "https://www.pexels.com/video/close-up-view-of-a-person-using-a-smartphone-15689201/",
+          "titulo": "close up view of a person using a smartphone",
+          "autor": "Ali  Alcántara",
+          "autor_url": "https://www.pexels.com/@alialcantara",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
           "duracion_s": 8.0,
           "ancho": 1080,
-          "alto": 2048,
-          "url": "https://videos.pexels.com/video-files/5387568/5387568-hd_1080_2048_30fps.mp4",
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/15689201/15689201-hd_1080_1920_24fps.mp4",
           "tipo": "video",
-          "consulta": "man typing message quickly phone",
-          "relevancia": 0.6,
+          "consulta": "hands typing message on smartphone close up",
+          "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 0.67,
+          "movimiento": 8.93,
           "encuadre": {
             "x": 0.5,
-            "y": 1
+            "y": 0.5
           },
-          "caras": [
-            [
-              0.5613,
-              0.4277,
-              0.2806,
-              0.1978
-            ]
-          ]
+          "caras": []
         }
       ]
     },
