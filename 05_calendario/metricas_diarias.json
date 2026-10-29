@@ -1,6 +1,6 @@
 {
  "_nota": "C47: lectura ligera diaria de los vídeos publicados en los últimos 10 días: visualizaciones, vistas_48h y, desde el 05/10/2026 (C60), se_quedaron_48h («Se quedaron viendo» de Studio = engagedViews/views), porcentaje_visto, me_gusta, suscriptores y compartidos. Sin curvas de retención a propósito (ver la cabecera de escribir_metricas_diarias() en 04_agentes/metricas.py). Se SOBRESCRIBE entero cada vez: es una ventana rodante, no una serie histórica. La lectura completa semanal (metricas.json, control_c26) es la que manda y no cambia con este fichero.",
- "actualizado_utc": "2026-10-29T13:43:22Z",
+ "actualizado_utc": "2026-10-29T19:17:15Z",
  "videos": [
   {
    "id": "MDS-043.es",
@@ -110,30 +110,30 @@
   {
    "id": "MDS-050.es",
    "publicado": "2026-10-26",
-   "visualizaciones": 423,
-   "vistas_48h": 423,
+   "visualizaciones": 916,
+   "vistas_48h": 916,
    "se_quedaron_48h": {
-    "vistas": 423,
-    "comprometidas": 72,
-    "pct": 17.0
+    "vistas": 916,
+    "comprometidas": 145,
+    "pct": 15.8
    },
-   "porcentaje_visto": 39.9,
-   "me_gusta": 2,
+   "porcentaje_visto": 35.2,
+   "me_gusta": 9,
    "suscriptores": 0,
    "compartidos": 0
   },
   {
    "id": "MDS-051.es",
    "publicado": "2026-10-27",
-   "visualizaciones": 0,
-   "vistas_48h": 0,
+   "visualizaciones": 28,
+   "vistas_48h": 28,
    "se_quedaron_48h": {
-    "vistas": 0,
-    "comprometidas": 0,
-    "pct": null
+    "vistas": 28,
+    "comprometidas": 8,
+    "pct": 28.6
    },
-   "porcentaje_visto": 0.0,
-   "me_gusta": 0,
+   "porcentaje_visto": 56.8,
+   "me_gusta": 1,
    "suscriptores": 0,
    "compartidos": 0
   },

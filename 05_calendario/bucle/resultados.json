@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-29T13:43:22Z",
+ "actualizado_utc": "2026-10-29T19:17:15Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -45,10 +45,10 @@
     "control": {
      "nombre": "Lo de ahora (C50 + C56-C59), apertura en situación",
      "n": 5,
-     "se_quedaron_media": 16.9,
-     "porcentaje_visto_media": 75.1,
+     "se_quedaron_media": 16.6,
+     "porcentaje_visto_media": 74.2,
      "vistas_48h_mediana": 112,
-     "me_gusta_por_100": 0.5,
+     "me_gusta_por_100": 0.85,
      "ceros_de_feed": 0,
      "shorts": [
       {
@@ -94,22 +94,22 @@
       {
        "id": "MDS-050",
        "publicado": "2026-10-26",
-       "se_quedaron_pct": 17.0,
-       "vistas_48h": 423,
-       "porcentaje_visto": 39.9,
-       "me_gusta": 2,
-       "visualizaciones": 423,
+       "se_quedaron_pct": 15.8,
+       "vistas_48h": 916,
+       "porcentaje_visto": 35.2,
+       "me_gusta": 9,
+       "visualizaciones": 916,
        "leido": "2026-10-29"
       }
      ]
     },
     "A": {
      "nombre": "Animación a medida en las escenas de mecanismo (C55.2)",
-     "n": 5,
-     "se_quedaron_media": 29.8,
-     "porcentaje_visto_media": 80.7,
-     "vistas_48h_mediana": 9,
-     "me_gusta_por_100": 1.12,
+     "n": 6,
+     "se_quedaron_media": 29.6,
+     "porcentaje_visto_media": 76.7,
+     "vistas_48h_mediana": 15.5,
+     "me_gusta_por_100": 1.18,
      "ceros_de_feed": 3,
      "shorts": [
       {
@@ -160,6 +160,16 @@
        "porcentaje_visto": 96.5,
        "me_gusta": 0,
        "visualizaciones": 6,
+       "leido": "2026-10-29"
+      },
+      {
+       "id": "MDS-051",
+       "publicado": "2026-10-27",
+       "se_quedaron_pct": 28.6,
+       "vistas_48h": 28,
+       "porcentaje_visto": 56.8,
+       "me_gusta": 1,
+       "visualizaciones": 28,
        "leido": "2026-10-29"
       }
      ]
@@ -229,24 +239,19 @@
    "comparaciones": {
     "A": {
      "contra": "control",
-     "diferencia_pp": 12.9,
-     "prob_mejor": 0.95,
+     "diferencia_pp": 13.0,
+     "prob_mejor": 0.97,
      "veredicto": "sigue midiendo"
     },
     "B": {
      "contra": "control",
-     "diferencia_pp": 20.0,
+     "diferencia_pp": 20.3,
      "prob_mejor": 0.94,
      "veredicto": "GANA"
     }
    },
    "apartados": [],
    "pendientes": [
-    {
-     "id": "MDS-051",
-     "variante": "A",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    },
     {
      "id": "MDS-052",
      "variante": "B",
