@@ -1,15 +1,15 @@
 {
-  "id": "MDS-047.es",
-  "duracion_final_s": 53.5,
-  "tamano_mb": 31.8,
+  "id": "MDS-053.es",
+  "duracion_final_s": 45.47,
+  "tamano_mb": 20.9,
   "audio": {
-    "lufs": -15.01,
-    "pico_dbtp": -1.42,
-    "rango_lu": 9.7
+    "lufs": -14.78,
+    "pico_dbtp": -1.34,
+    "rango_lu": 4.1
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.129,
+    "acaba_s": 0.176,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,7 +17,7 @@
     "silencios_s": [
       [
         0.0,
-        0.129
+        0.176
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -42,24 +42,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 52.73,
-    "duracion_real_voz_mp3_s": 52.44,
-    "desfase_s": 0.29,
+    "duracion_calculada_s": 44.37,
+    "duracion_real_voz_mp3_s": 44.37,
+    "desfase_s": 0.0,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_05_prelude_no_13_chris_zabriskie.mp3",
-    "sha256": "14fc9c6d547249a5250cf2ef09c67e1c9b13bef562c899bc8e6bf5f3d321846b"
+    "archivo": "cama_11_watching_anime_piano_version_sakura_hz.mp3",
+    "sha256": "68c5a0968524d6fecfc53aa5c0bd1f97e63248b2c7f667f60e073b4e72f8ac43"
   },
   "guion": {
-    "titulo_trabajo": "¿Por qué dan miedo los payasos?",
+    "titulo_trabajo": "¿Hacer un chiste en una reunión te da puntos?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 52.73,
+    "duracion_narracion_s": 44.37,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 14.398,
+    "escena_mas_larga_s": 11.63,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 6
@@ -82,19 +82,14 @@
       "cifra",
       "objecion"
     ],
-    "escenas_ritmo_fuera_de_rango": [
-      [
-        6,
-        1.57
-      ]
-    ],
+    "escenas_ritmo_fuera_de_rango": [],
     "voz_fiel": [
-      "15/14 palabras, 0 trozos repetidos",
-      "10/9 palabras, 0 trozos repetidos",
-      "14/13 palabras, 0 trozos repetidos",
-      "24/23 palabras, 0 trozos repetidos",
-      "23/23 palabras, 0 trozos repetidos",
-      "18/18 palabras, 0 trozos repetidos"
+      "10/10 palabras, 0 trozos repetidos",
+      "11/11 palabras, 0 trozos repetidos",
+      "11/12 palabras, 0 trozos repetidos",
+      "18/18 palabras, 0 trozos repetidos",
+      "21/21 palabras, 0 trozos repetidos",
+      "20/19 palabras, 0 trozos repetidos"
     ]
   },
   "visual": {
@@ -102,146 +97,144 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 4.73,
+        "hasta_s": 4.57,
         "fuente": "pexels",
-        "id": 9708965,
-        "pagina": "https://www.pexels.com/video/two-little-girls-playing-with-halloween-decorations-in-skeleton-costumes-9708965/",
-        "autor": "Mike Jones",
-        "autor_url": "https://www.pexels.com/@mike-jones",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 1,
-        "desde_s": 4.73,
-        "hasta_s": 7.4,
-        "fuente": "pexels",
-        "id": 6396070,
-        "pagina": "https://www.pexels.com/video/people-having-a-party-at-the-office-6396070/",
-        "autor": "Pavel Danilyuk",
-        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+        "id": 8141500,
+        "pagina": "https://www.pexels.com/video/coworkers-having-a-meeting-in-the-meeting-room-8141500/",
+        "autor": "Alena Darmel",
+        "autor_url": "https://www.pexels.com/@a-darmel",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 7.4,
-        "hasta_s": 12.57,
-        "fuente": "pixabay",
-        "id": 129422,
-        "pagina": "https://pixabay.com/videos/id-129422/",
-        "autor": "SYG_Anime",
-        "autor_url": "https://pixabay.com/users/SYG_Anime-7158719/",
-        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 3,
-        "desde_s": 12.57,
-        "hasta_s": 15.73,
+        "desde_s": 4.57,
+        "hasta_s": 10.7,
         "fuente": "pexels",
-        "id": 8061672,
-        "pagina": "https://www.pexels.com/video/a-woman-talking-on-a-cellphone-in-her-office-8061672/",
-        "autor": "Pavel Danilyuk",
-        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+        "id": 9034450,
+        "pagina": "https://www.pexels.com/video/woman-laughing-at-a-meeting-9034450/",
+        "autor": "RDNE Stock project",
+        "autor_url": "https://www.pexels.com/@rdne",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 3,
-        "desde_s": 15.73,
-        "hasta_s": 20.4,
+        "desde_s": 10.7,
+        "hasta_s": 12.6,
         "fuente": "pexels",
-        "id": 6340301,
-        "pagina": "https://www.pexels.com/video/close-up-video-of-a-hand-holding-a-christmas-candy-6340301/",
-        "autor": "Nadezhda Moryak",
-        "autor_url": "https://www.pexels.com/@nadezhda-moryak",
+        "id": 8141491,
+        "pagina": "https://www.pexels.com/video/coworkers-having-a-meeting-in-the-meeting-room-8141491/",
+        "autor": "Alena Darmel",
+        "autor_url": "https://www.pexels.com/@a-darmel",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 3,
+        "desde_s": 12.6,
+        "hasta_s": 16.4,
+        "fuente": "pexels",
+        "id": 6565658,
+        "pagina": "https://www.pexels.com/video/colleague-asking-for-advice-6565658/",
+        "autor": "Mikhail Nilov",
+        "autor_url": "https://www.pexels.com/@mikhail-nilov",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 4,
-        "desde_s": 20.4,
-        "hasta_s": 25.4,
+        "desde_s": 16.4,
+        "hasta_s": 21.17,
         "fuente": "pexels",
-        "id": 8480685,
-        "pagina": "https://www.pexels.com/video/close-up-video-of-a-person-using-a-laptop-8480685/",
-        "autor": "ArtHouse Studio",
-        "autor_url": "https://www.pexels.com/@arthousestudio",
+        "id": 8134589,
+        "pagina": "https://www.pexels.com/video/people-working-in-the-office-8134589/",
+        "autor": "https://kaboompics.com/",
+        "autor_url": "https://www.pexels.com/@karola-g",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 4,
-        "desde_s": 25.4,
-        "hasta_s": 28.73,
-        "fuente": "pixabay",
-        "id": 63749,
-        "pagina": "https://pixabay.com/videos/id-63749/",
-        "autor": "Matthias_Groeneveld",
-        "autor_url": "https://pixabay.com/users/Matthias_Groeneveld-4535957/",
-        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-        "tipo": "video"
+        "desde_s": 21.17,
+        "hasta_s": 23.33,
+        "fuente": "ia",
+        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+        "prompt": "coworkers smiling at a joke in an office",
+        "tipo": "imagen"
       },
       {
-        "escena": 5,
-        "desde_s": 28.73,
-        "hasta_s": 35.1,
-        "fuente": "pixabay",
-        "id": 12004,
-        "pagina": "https://pixabay.com/videos/id-12004/",
-        "autor": "whitesession",
-        "autor_url": "https://pixabay.com/users/whitesession-4645995/",
-        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 5,
-        "desde_s": 35.1,
-        "hasta_s": 38.33,
+        "escena": 4,
+        "desde_s": 23.33,
+        "hasta_s": 25.0,
         "fuente": "pexels",
-        "id": 7989632,
-        "pagina": "https://www.pexels.com/video/an-empty-movie-theater-7989632/",
-        "autor": "Tima Miroshnichenko",
-        "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+        "id": 5742406,
+        "pagina": "https://www.pexels.com/video/hands-typing-in-a-laptop-5742406/",
+        "autor": "https://kaboompics.com/",
+        "autor_url": "https://www.pexels.com/@karola-g",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 25.0,
+        "hasta_s": 30.03,
+        "fuente": "pexels",
+        "id": 7413800,
+        "pagina": "https://www.pexels.com/video/a-footage-of-a-woman-having-a-presentation-7413800/",
+        "autor": "RDNE Stock project",
+        "autor_url": "https://www.pexels.com/@rdne",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 30.03,
+        "hasta_s": 32.73,
+        "fuente": "pexels",
+        "id": 8524301,
+        "pagina": "https://www.pexels.com/video/a-woman-talking-to-her-colleague-8524301/",
+        "autor": "Artem Podrez",
+        "autor_url": "https://www.pexels.com/@artempodrez",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 6,
-        "desde_s": 38.33,
-        "hasta_s": 44.37,
+        "desde_s": 32.73,
+        "hasta_s": 34.97,
         "fuente": "pexels",
-        "id": 7653229,
-        "pagina": "https://www.pexels.com/video/a-man-writing-on-a-notebook-7653229/",
-        "autor": "Thirdman",
-        "autor_url": "https://www.pexels.com/@thirdman",
+        "id": 10375464,
+        "pagina": "https://www.pexels.com/video/woman-on-her-desk-looking-at-the-camera-and-smiling-10375464/",
+        "autor": "RDNE Stock project",
+        "autor_url": "https://www.pexels.com/@rdne",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 6,
-        "desde_s": 44.37,
-        "hasta_s": 50.53,
+        "desde_s": 34.97,
+        "hasta_s": 42.17,
         "fuente": "pixabay",
-        "id": 2340,
-        "pagina": "https://pixabay.com/videos/id-2340/",
-        "autor": "Life-Of-Vids",
-        "autor_url": "https://pixabay.com/users/Life-Of-Vids-1282862/",
+        "id": 1035,
+        "pagina": "https://pixabay.com/videos/id-1035/",
+        "autor": "Coverr-Free-Footage",
+        "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
         "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       }
     ],
-    "sintetico": false
+    "sintetico": true
   },
   "animacion": null,
   "fotogramas_s": [
-    4.53,
-    10.59,
-    17.36,
-    25.5,
-    34.6,
-    47.07
+    2.84,
+    8.34,
+    14.22,
+    21.67,
+    29.75,
+    39.82
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
