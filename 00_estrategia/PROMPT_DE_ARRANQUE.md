@@ -800,6 +800,23 @@ tranquila» y luego se midió si aportaba más movimiento que el vaivén barato.
 Escribe la medida antes de lanzar, y léela al lado del prompt.**
 
 
+**66. El aviso estaba escrito en la nota que nadie leía como aviso.** `MDS-051` («¿Sirve de algo escribir
+«jajaja» sin reírte?») pasó la lectura en frío con tres avisos copiados en su propio guion: «no lo entiendo
+hasta la escena 5», «el estudio habla de la risa escrita, no de la risa escrita sin ganas» y «me quedo, pero
+por poco». La regla del 28/09 mandaba lo que «se entiende pero no se sabe por qué» a `notas`, y por ahí se
+coló lo que no se entendía. Salió con 28 vistas y el codirector no lo entendió. **Un campo que no bloquea
+acaba recogiendo lo que debería bloquear: cada cierto tiempo, lee las `notas` como si fueran errores y mira
+cuántas lo eran.**
+
+## Dónde está el proyecto a 29 de octubre de 2026 (en diferido)
+
+Versión **27** del plan, la que manda. **La cola (b) está en producción** desde `MDS-054` (1,8 s; el
+codirector dijo sí). **El personaje acaba alegre**, en muestra (`07_pruebas/cara-final-2026-10-29/`), sin
+aplicar hasta que el codirector la vea. **La lectura en frío bloquea tres cosas más** (lo entendido tarde,
+un estudio que no contesta el título, «me iría en la escena N»): nace de `MDS-051`. **Wan + LatentSync se
+para**: el codirector no lo ve creíble (la boca); siguen las alternativas el 2/11. El largo se estrena el
+15/11. Trampa 66.
+
 ## Dónde está el proyecto a 26 de octubre de 2026 (en diferido)
 
 Versión **26** del plan (con su apéndice), la que manda. **Wan de C51.3 funciona** en la T4 sin bajar

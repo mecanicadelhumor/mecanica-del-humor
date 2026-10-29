@@ -1381,7 +1381,11 @@ SILENCIO_DELANTERO_MAX_S = 1.0     # más que esto no es un silencio de arranque
 # caía ENCIMA de las últimas palabras. Ahora la pausa tras el cierre de un Short
 # es como mínimo esta: la voz termina, el texto se queda 0,3 s, se va, y el
 # remate se lee entero. Alarga cada Short unos 2,7 s, de música sola.
-COLA_REMATE_S = 2.2 + 0.45 + 0.3
+#
+# 26/10/2026 (C36-cola): 2,95 s sin voz se hacían largos («con un segundo o uno y medio
+# sería suficiente», el codirector). Opción (b): la tarjeta dura 1,5 s y el texto del cierre
+# se va en 0,3 s nada más acabar la voz. Cada Short, 1,15 s más corto que con 2,95.
+COLA_REMATE_S = 1.5 + 0.3
 
 
 def silencio_delantero(mp3):

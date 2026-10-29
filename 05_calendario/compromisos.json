@@ -134,9 +134,15 @@
       "id": "C61-esquina-libre",
       "que": "Que el personaje de la esquina no tape lo importante del plano: elegir la esquina con menos contenido (caras, manos, movimiento) en cada plano, con muestra para el codirector",
       "dueno": "direccion",
-      "fecha": "2026-11-02",
+      "fecha": "2026-11-09",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-11-02",
+          "a": "2026-11-09",
+          "porque": "El personaje de la esquina todavía no está en producción (entra como brazo cuando lo diga B2): no corre prisa antes"
+        }
+      ],
       "origen": "Respuesta del codirector a la tarea 2 del 23/10"
     },
     {
@@ -144,7 +150,7 @@
       "que": "Cola tras el cierre (≈3 s sin voz, es la tarjeta «Síguenos»): el codirector elige (a) igual, (b) ~1,8 s con tarjeta ~1,3 s, (c) 1,5 s; la dirección lo aplica con muestra en vídeo",
       "dueno": "direccion",
       "fecha": "2026-10-29",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [
         {
           "de": "2026-10-26",
@@ -153,19 +159,25 @@
         }
       ],
       "origen": "Respuesta del codirector a las tareas del 22/10, punto 1",
-      "nota": "El codirector eligió (b) el 23/10: ~1,8 s de cola, tarjeta ~1,3 s. Ajustar para que se lea sin desperdiciar segundos. Se aplica el lunes 26 con vídeo del final (regla 11.2)"
+      "nota": "El codirector eligió (b) el 23/10: ~1,8 s de cola, tarjeta ~1,3 s. Ajustar para que se lea sin desperdiciar segundos. Se aplica el lunes 26 con vídeo del final (regla 11.2)",
+      "hecho": "29/10/2026, dirección: aplicado tal cual cola_b.diff (voz.py, escena.html, fondo_visual.py) después del «sí» del codirector. Entra en MDS-054 (viernes 30)"
     },
     {
       "id": "largo-imagen-horizontal",
       "que": "visual.py y fondo_visual.py en horizontal para el largo (C50 solo sabe vertical)",
       "dueno": "direccion",
-      "fecha": "2026-10-29",
+      "fecha": "2026-11-05",
       "estado": "pendiente",
       "aplazamientos": [
         {
           "de": "2026-10-26",
           "a": "2026-10-29",
           "porque": "El 26/10 la ejecución se dedicó a lo que el codirector pidió en el cuaderno (Wan en Kaggle, que funcione y sin bajar calidad) y a lo vencido de C51.3. Llega a tiempo: el ensayo del largo es el 2/11"
+        },
+        {
+          "de": "2026-10-29",
+          "a": "2026-11-05",
+          "porque": "Segundo aplazamiento. El 29/10 fue para lo que el codirector pidió y la cola; el 2/11 va lleno de lo que B2 necesita para empezar el 5/11 (factorial, bayesiano, pocas vistas, segundo Short diario). Consecuencia: el ensayo del largo pasa al 9/11 y el estreno, al 15/11 (la otra fecha que ya preveía largo-ensayo)"
         }
       ],
       "origen": "Plan v23"
@@ -174,13 +186,18 @@
       "id": "largo-voz-tandas",
       "que": "Voz del largo con 2.5-flash y C36 por tandas, probada en vivo",
       "dueno": "direccion",
-      "fecha": "2026-10-29",
+      "fecha": "2026-11-05",
       "estado": "pendiente",
       "aplazamientos": [
         {
           "de": "2026-10-26",
           "a": "2026-10-29",
           "porque": "Mismo motivo que largo-imagen-horizontal. Además, probarla en vivo pide el guion de MDH-008, que la planificación entrega el jueves 29"
+        },
+        {
+          "de": "2026-10-29",
+          "a": "2026-11-05",
+          "porque": "Mismo motivo que largo-imagen-horizontal; además, el guion de MDH-008 lo entrega la planificación esta noche"
         }
       ],
       "origen": "Plan v23"
@@ -200,18 +217,30 @@
       "id": "iteracion-14",
       "que": "Catorce Shorts a la semana desde B2 (5/11): producción y publicación de un segundo Short al día (13:00 en España, la hora propuesta), planificación con 14 guiones, y el workflow cambiado preparado en 00_estrategia/tareas/workflows_<fecha>/ para que lo mueva el codirector",
       "dueno": "direccion",
-      "fecha": "2026-10-29",
+      "fecha": "2026-11-02",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-10-29",
+          "a": "2026-11-02",
+          "porque": "El 29/10 la ejecución se dedicó a la cola (b) aprobada, a lo que el codirector escribió en el cuaderno (la cara del final y por qué MDS-051 no se entendía) y a cerrar Wan. Llega a tiempo: B2 empieza el 5/11 y el codirector tiene el workflow el lunes 2 por la tarde"
+        }
+      ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
     },
     {
       "id": "iteracion-14-mover",
       "que": "Mover el workflow del segundo Short diario a .github/workflows/ (lo prepara la dirección en iteracion-14)",
       "dueno": "codirector",
-      "fecha": "2026-11-03",
+      "fecha": "2026-11-04",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-11-03",
+          "a": "2026-11-04",
+          "porque": "Porque iteracion-14 pasa al 2/11; el segundo Short diario empieza con B2 el 5/11, así que moverlo el 3 o el 4 basta"
+        }
+      ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
     },
     {
@@ -245,9 +274,15 @@
       "id": "calidad-patron",
       "que": "Patrón de calidad medido con veinte Shorts ajenos de divulgación en español (>100.000 vistas) y los nuestros; después, la ficha automática en qa.py",
       "dueno": "direccion",
-      "fecha": "2026-11-02",
+      "fecha": "2026-11-09",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-11-02",
+          "a": "2026-11-09",
+          "porque": "El 2/11 se reserva para lo que B2 necesita para empezar el 5/11. El patrón no bloquea nada de B2"
+        }
+      ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
     },
     {
@@ -272,9 +307,15 @@
       "id": "largo-ensayo",
       "que": "Render de prueba del largo entero; decide 8/11 o 15/11",
       "dueno": "direccion",
-      "fecha": "2026-11-02",
+      "fecha": "2026-11-09",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-11-02",
+          "a": "2026-11-09",
+          "porque": "Imagen horizontal y voz por tandas pasan al 5/11. Estreno del largo: 15/11 (no el 8/11)"
+        }
+      ],
       "origen": "Plan v23"
     },
     {
@@ -319,7 +360,7 @@
     },
     {
       "id": "C51.3-alternativas",
-      "que": "Alternativas creíbles si Wan 5B en T4 no da la calidad: modelos de cara que habla con audio (Wan 2.2 S2V 14B, InfiniteTalk…) en una GPU grande con créditos gratuitos; licencias, coste y cuánto tarda un Short. Informe al codirector",
+      "que": "Alternativas creíbles si Wan 5B en T4 no da la calidad: modelos de cara que habla con audio (Wan 2.2 S2V 14B, InfiniteTalk…) en una GPU grande con créditos gratuitos; licencias, coste y cuánto tarda un Short. Informe al codirector. Desde el 29/10 tiene que resolver la boca: el codirector descartó LatentSync («boca cosida»); el criterio es el suyo, ¿es creíble?",
       "dueno": "direccion",
       "fecha": "2026-11-02",
       "estado": "pendiente",
@@ -331,9 +372,10 @@
       "que": "Ver 07_pruebas/cola-2026-10-26/cola_despues.mp4 (y cola_antes.mp4) y decir en el cuaderno sí, no o un ajuste",
       "dueno": "codirector",
       "fecha": "2026-10-29",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Dirección 26/10 (regla 11.2)"
+      "origen": "Dirección 26/10 (regla 11.2)",
+      "hecho": "Contestado en tareas_codirector_2026-10-26.md: «sí, me gusta más el resultado de después; es un cierre más preciso en timing»"
     },
     {
       "id": "B2-regla-pocas-vistas",
@@ -359,18 +401,58 @@
       "que": "Que Wan aporte más que el vaivén: indicación que pida un gesto claro (asentir, mirar a un lado y volver) con la misma semilla, y 30-35 pasos en lugar de 50; comparar nitidez, movimiento y coste, y decidir con el codirector si entra como brazo",
       "dueno": "direccion",
       "fecha": "2026-10-29",
-      "estado": "pendiente",
+      "estado": "sustituido",
       "aplazamientos": [],
-      "origen": "Resultado del 26/10 (PRUEBA.md): Wan sale limpio pero demasiado quieto para lo que cuesta"
+      "origen": "Resultado del 26/10 (PRUEBA.md): Wan sale limpio pero demasiado quieto para lo que cuesta",
+      "sustituido_por": "C51.3-alternativas",
+      "porque": "29/10/2026: el codirector vio los vídeos y lo que no es creíble es la boca (LatentSync, «boca cosida»), no la cabeza. Un gesto de Wan no lo arregla, y cuesta 54 min de GPU por 3 s. Wan 5B + LatentSync se para; lo siguiente son modelos que hacen cara y boca a la vez a partir de la voz (C51.3-alternativas)"
     },
     {
       "id": "C51.3-ver-videos",
       "que": "Ver 07_pruebas/presentador-2026-10/salida/b_latentsync_afin.mp4 y b_latentsync_wan.mp4 y decir en el cuaderno si la persona sintética es creíble",
       "dueno": "codirector",
       "fecha": "2026-10-29",
+      "estado": "hecho",
+      "aplazamientos": [],
+      "origen": "Dirección 26/10 (C51.2: nada entra sin que él lo mire)",
+      "hecho": "Contestado en tareas_codirector_2026-10-26.md: ninguno es creíble («como si tuvieran la boca cosida e intentaran gritar»); a_movimiento_wan no se mueve"
+    },
+    {
+      "id": "cara-final-mirar",
+      "que": "Ver 07_pruebas/cara-final-2026-10-29/final_risa.mp4 (y final_ahora.mp4) y decir en el cuaderno sí, no o un ajuste: el personaje pasa de la cara de «duda» a «rie» al entrar la tarjeta, sin cambiar el timing",
+      "dueno": "codirector",
+      "fecha": "2026-11-02",
       "estado": "pendiente",
       "aplazamientos": [],
-      "origen": "Dirección 26/10 (C51.2: nada entra sin que él lo mire)"
+      "origen": "Cuaderno del codirector (después del 26/10): «que acabe con cara alegre»"
+    },
+    {
+      "id": "cara-final-aplicar",
+      "que": "Aplicar 07_pruebas/cara-final-2026-10-29/cara_final.diff (solo escena.html) si el codirector dice que sí, en la primera ejecución después de su respuesta",
+      "dueno": "direccion",
+      "fecha": "2026-11-02",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Cuaderno del codirector (después del 26/10); regla 11.2"
+    },
+    {
+      "id": "C51.3-cara-fija",
+      "que": "La opción menor del codirector si no hay labios creíbles: la cara 2 fija, sin mover los labios, como imagen del canal en algunos Shorts. Muestra en vídeo para el codirector y, si dice que sí, un brazo con las pruebas habituales",
+      "dueno": "direccion",
+      "fecha": "2026-11-09",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Respuesta del codirector a la tarea 2 del 26/10",
+      "nota": "Después de C51.3-alternativas (2/11): es el plan B, no el A"
+    },
+    {
+      "id": "lectura-frio-29-10",
+      "que": "Comprobar que los guiones escritos el 29/10 por la noche llevan la lectura en frío con el criterio nuevo (tres bloqueos más, guionista_corto.md) y contar cuántos temas fueron a la reserva por él",
+      "dueno": "direccion",
+      "fecha": "2026-11-02",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Diagnóstico de MDS-051 (dirección 29/10)"
     }
   ]
 }

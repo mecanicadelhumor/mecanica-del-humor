@@ -179,6 +179,30 @@ nada. Desde `MDS-026`, `validar_guion.py` da ERROR si falta, y el Short no se pr
      bitácora.
    - **No se lo adelantes al lector.** El encargo de arriba va literal, sin avisarle de qué no
      cuenta: un lector avisado deja de ser un lector en frío.
+   **Precisión de la dirección del 29/10/2026 (después de `MDS-051`, «¿Sirve de algo escribir
+   «jajaja» sin reírte?»: 28 vistas, y el codirector: *«cuesta trabajo entender el argumento y no
+   termina de encajar con el final»*).** Ese guion pasó con tres avisos que estaban escritos en su
+   propia lectura y que el criterio de arriba dejaba pasar. Desde hoy **tres cosas más bloquean**
+   (`veredicto: "no pasa"`), igual para todos los brazos:
+   - **Lo que el lector entendió solo más tarde.** La pregunta 3 dice «a la primera». «No lo
+     entiendo hasta la escena 5» es una frase que no se entendió a la primera: va a
+     `frases_que_no_se_entienden`, no a `notas`. En `MDS-051` fue «¿Sirve de algo? Pues sí.»: la
+     respuesta llegaba antes de que se supiera para qué tenía que servir.
+   - **El estudio no contesta lo que promete el título o la apertura** (regla 5 de la historia). Si
+     el lector dice, con sus palabras, que el estudio habla de otra cosa («el estudio habla de la risa
+     escrita, no de la risa escrita sin ganas»), no es una nota: **se cambia el título y la apertura**
+     hasta que pregunten lo que el estudio contesta. En `MDS-051` el giro era «con la cara más seria
+     del mundo», y el estudio no dice nada de la cara: por eso el final no encajaba. Las dos lecturas
+     (la tuya y la de la revisión) lo marcaron, y la de la revisión quitaba esa escena entera.
+   - **«Me iría en la escena N».** Si la respuesta a la pregunta 5 nombra una escena en la que se
+     iría (no «me quedo, casi en…», sino «me iría»), esa escena se reescribe. En quince lecturas de
+     B1, la escena que nombran es casi siempre **la 4, la del método** («suena a clase», «cambia el
+     tono», «se vuelve seco»): cuéntalo con el sujeto del Short y en una frase que se diga de un
+     tirón («Unos psicólogos pidieron a un grupo apuntar dos semanas de charlas, cara a cara, por
+     teléfono o chat, y si hubo risa» no se dice de un tirón; el lector tuvo que «pararse a
+     desmontarla»).
+   «Pasa con notas: las dudas las resolvió el lector solo» ya no es un veredicto: si el lector tuvo
+   que resolverlo solo, quien desliza no lo resuelve, desliza.
 
 5. **Si no pasa, reescribe y vuelve a leer con un subagente NUEVO**: el anterior ya conoce la
    historia y no sirve. Tres vueltas como mucho; si la tercera no pasa, ese Short no se escribe

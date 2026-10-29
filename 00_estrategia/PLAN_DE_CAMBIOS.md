@@ -6693,3 +6693,36 @@ contrario.
 | Calidad | Nitidez 329 (vaivén: 308); nada pixelado. Pero **se mueve menos** que el vaivén (0,28 frente a 0,87): le pedí quietud y me la dio |
 | Decisión | **No entra todavía.** Jueves 29: indicación con un gesto claro y 30-35 pasos (`C51.3-wan-gesto`); después se decide con el codirector. Mientras, los dos vídeos para que los vea (`C51.3-ver-videos`) |
 | Workflow | Dos ejecuciones muertas en `apt-get` del runner: arreglo preparado en `00_estrategia/tareas/workflows_2026-10-26/` (`C51.3-workflow-apt`, sin prisa) |
+
+---
+
+# Versión 27 · 29 de octubre de 2026 (jueves, en diferido) — la cola (b) entra, el personaje acaba alegre (en muestra), por qué `MDS-051` no se entendía, y Wan + LatentSync se para
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario.
+
+| Qué | Decisión |
+|---|---|
+| Cola final (`C36-cola`) | El codirector dijo **sí** a la muestra (b). **Aplicada** tal cual `cola_b.diff`: 1,8 s de cola (era 2,95), tarjeta 1,5 s, el texto del cierre se va en 0,3 s al acabar la voz. Entra en `MDS-054` (viernes 30) |
+| El personaje acaba alegre | Nota del cuaderno: el Short terminaba con la cara triste. **22 de los últimos 27 cierres** llevan «duda» (boca hacia abajo) y el personaje es lo único que queda con la tarjeta. Propuesta: pasa a «rie» en 0,35 s al entrar la tarjeta, **sin cambiar el timing**. **En muestra** (`07_pruebas/cara-final-2026-10-29/`, regla 11.2), sin aplicar: `cara-final-mirar` (codirector) y `cara-final-aplicar` (dirección), 2/11 |
+| Por qué `MDS-051` no se entendía | Las tres cosas, en este orden: **las pautas** dejaban pasar como «nota» lo que el lector no entendió a la primera, que el estudio no contestaba lo que prometía el título («sin reírte»: el estudio no dice nada de la cara seria) y un «me iría en la escena 4»; **la planificación** lo aplicó así («las dudas las resolvió el lector solo»); y **la revisión** lo vio (quitaría la escena 2) pero su regla solo le dejaba anotarlo. Desde hoy esas tres cosas **bloquean** (`guionista_corto.md`, precisión del 29/10), igual para los tres brazos: B1 no cambia. Solo para lecturas del 29/10 en adelante |
+| La escena 4 | En las quince lecturas de B1, la escena donde el lector se iría es casi siempre **la 4, la del método** («suena a clase»). Va en el criterio nuevo y es candidata a factor de B2 (se decide el 2/11 con el diseño factorial) |
+| C51.3 · Wan + LatentSync | El codirector: **ninguno es creíble** («boca cosida»). El problema es la boca, no la cabeza: `C51.3-wan-gesto` queda **sustituido** por `C51.3-alternativas` (2/11), que ahora tiene que resolver la boca. Plan B del codirector, la cara fija sin labios en algunos Shorts: `C51.3-cara-fija` (9/11), con muestra y brazo |
+| Aplazados | `iteracion-14` al 2/11 (el codirector lo mueve el 3 o el 4; B2 empieza el 5/11). El largo: imagen horizontal y voz por tandas al **5/11** (segundo aplazamiento), ensayo al 9/11, **estreno el 15/11** (no el 8/11). Patrón de calidad y esquina libre, al 9/11. Todo con su porqué en `compromisos.json` |
+| B1 | Sin cambios. A: +12,9 pp con n = 5 (la regla normal pide n = 6 y +8): se resuelve con `MDS-051` |
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Viernes 30 | Primer Short con la cola (b) (`MDS-054`) |
+| Jueves 29, 22:07 UTC | Planificación con el criterio nuevo de la lectura en frío; `MDH-008` |
+| Lunes 2/11 | Dirección: B2 (factorial, bayesiano, pocas vistas, control = B); el segundo Short diario; alternativas del presentador; informe de voces; la cara del final si el codirector dijo sí; cómo fue la lectura en frío nueva |
+| 3-4/11 | El codirector: mover el workflow del segundo Short |
+| Jueves 5/11 | Dirección: imagen horizontal y voz por tandas del largo. B2 empieza |
+| Lunes 9/11 | Ensayo del largo; patrón de calidad; esquina libre; la cara fija (si hace falta) |
+| Domingo 15/11 | Estreno del largo |
+
+## Lo que NO cambia hoy
+
+- B1 (brazos, `orden`, regla), los guiones ya escritos (regla 11.4), las rutinas, los umbrales de C26.

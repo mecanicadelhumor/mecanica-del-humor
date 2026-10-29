@@ -14,6 +14,21 @@ codirector el 30/09) · repositorio añadido · entorno «Mecánica del Humor».
 
 ---
 
+## Lo que cambia el 29/10/2026 (dirección del jueves, en diferido) · versión 27 del plan · va antes que todo lo demás
+
+1. **La lectura en frío bloquea tres cosas más** (`04_agentes/prompts/guionista_corto.md`, «Precisión de
+   la dirección del 29/10/2026», en el punto 4 de la lectura en frío). Nace de `MDS-051` («¿Sirve de algo
+   escribir «jajaja» sin reírte?», 28 vistas), que el codirector no entendió: **no pasa** si (a) el lector
+   entendió una frase solo más tarde («no lo entiendo hasta la escena 5»: no se entendió a la primera),
+   (b) dice que el estudio no contesta lo que promete el título o la apertura (se cambian el título y la
+   apertura, nunca el estudio), o (c) contesta «me iría en la escena N» (esa escena se reescribe; casi
+   siempre es la 4, la del método: una frase que se diga de un tirón y con el sujeto del Short). «Pasa con
+   notas: las dudas las resolvió el lector solo» ya no es un veredicto. Es igual para los tres brazos, así
+   que **B1 no cambia**: ni el `orden` ni los brazos.
+2. Lo que no se toca: los guiones ya escritos (regla 11.4). Se aplica a los de esta noche en adelante.
+3. Si por este criterio un tema no pasa a la tercera vuelta, va a `temas_en_reserva.md`, como dice el
+   punto 2 de la sección del 23/10.
+
 ## Lo que cambia el 23/10/2026 (dirección extraordinaria) · versión 24 del plan · las respuestas del codirector a tu bitácora del 22/10
 
 El codirector contestó en tu bitácora (`bitacora/2026-10/2026-10-22-planificacion.md`, «Respuesta del

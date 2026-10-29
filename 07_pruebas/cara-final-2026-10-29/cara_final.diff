@@ -1,0 +1,55 @@
+diff --git a/03_produccion/pipeline/escena.html b/03_produccion/pipeline/escena.html
+index 70b8be6..a99d930 100644
+--- a/03_produccion/pipeline/escena.html
++++ b/03_produccion/pipeline/escena.html
+@@ -569,6 +569,7 @@ let PALABRAS = [];      // unidades de revelado, en orden de lectura
+ let VERTICAL = false;
+ let T0 = 0, TOTAL = 0;  // posicion de la escena dentro del video entero
+ let REMATE = false;
++let EXPRESION = null;    // la expresión con la que el guion pide el personaje en la escena
+ // 19/10/2026: lo que dura la tarjeta de marca del final (C15.5). Era 1,75 s, con el
+ // remate entrando a 1,25 s del final y el texto del cierre saliendo encima de la
+ // voz: «aparece y desaparece y no se lee si no pausas el short» (el codirector, de
+@@ -580,6 +581,11 @@ let REMATE = false;
+ // al acabar la voz, sin cruzarse con la tarjeta: 1,8 s de cola en total (voz.COLA_REMATE_S).
+ const REMATE_S = 1.5;
+ const SALIDA_ANTES_DEL_REMATE_S = 0.3;
++// 29/10/2026 · el codirector: el Short terminaba con el personaje triste («duda», la boca
++// torcida hacia abajo, en 22 de los últimos 27 cierres), y es la imagen del canal. Al entrar
++// la tarjeta de marca el personaje pasa a «rie»: la boca cambia de una a otra en este
++// tiempo, con un pequeño salto. La duración del Short no cambia.
++const A_RISA_S = 0.35;
+ 
+ // Reparte cada palabra de una unidad de texto en su propio <span class="p">,
+ // sin romper los <span class="amb"> que pone rico(): se recorren los nodos de
+@@ -998,6 +1004,7 @@ function cargar(d){
+   const cara = document.getElementById("personaje");
+   document.body.classList.toggle("con-personaje", !!d.personaje);
+   if (d.personaje) cara.setAttribute("class", "u mdh-cara ex-" + d.personaje);
++  EXPRESION = d.personaje || null;
+   const f = PLANTILLAS[d.tipo] || PLANTILLAS.enunciado;
+   document.getElementById("escena").innerHTML = f(d);
+   document.getElementById("ref").textContent = d.ref || "";
+@@ -1237,6 +1244,22 @@ function pintar(t){
+       rem.style.opacity = q.toFixed(4);
+       rem.style.transform = `translateY(${((1-q)*20).toFixed(2)}px)`;
+     }
++    // El personaje acaba alegre (ver A_RISA_S): la boca de antes se apaga mientras la
++    // sonrisa se enciende, y las cejas cambian a mitad del paso.
++    const cara = document.getElementById("personaje");
++    if (EXPRESION && EXPRESION !== "rie" && document.body.classList.contains("con-personaje")){
++      const g = Math.max(0, Math.min(1, (t - (DUR - REMATE_S)) / A_RISA_S));
++      cara.setAttribute("class", "u mdh-cara ex-" + (g >= 0.5 ? "rie" : EXPRESION));
++      cara.querySelectorAll(".boca").forEach(b => { b.style.display = ""; b.style.opacity = ""; });
++      if (g > 0 && g < 1){
++        const vieja = cara.querySelector(g >= 0.5 ? ".b-" + ({duda:"torcida", no:"plana", entiende:"o"}[EXPRESION] || "recta") : ".b-risa");
++        const risa = cara.querySelector(".b-risa");
++        if (g < 0.5){ risa.style.display = "block"; risa.style.opacity = (g*2).toFixed(3); }
++        else { vieja.style.display = "block"; vieja.style.opacity = ((1-g)*2).toFixed(3); }
++      }
++      const salto = 1 + 0.07*Math.sin(Math.PI*g);
++      if (g > 0) cara.style.transform += ` scale(${salto.toFixed(4)})`;
++    }
+   }
+ }
+ 

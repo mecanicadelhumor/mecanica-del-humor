@@ -31,7 +31,7 @@ from pathlib import Path
 PAUSA_POR_DEFECTO = 0.45   # la misma que voz.py cuando la escena no dice otra
 ANTICIPO_S = 0.12          # la imagen entra un pelo antes que la palabra: así se ve a la vez que se oye
 MIN_PLANO_S = 1.0          # un plano de menos de un segundo no se ve: es un parpadeo
-REMATE_S = 2.2             # los últimos 2,2 s del cierre: la firma de marca (C15.5, igual que escena.html; era 1,75 hasta el 19/10/2026)
+REMATE_S = 1.5             # los últimos 1,5 s del cierre: la firma de marca (C15.5, igual que escena.html; 1,75 hasta el 19/10/2026, 2,2 hasta el 26/10/2026)
 SILENCIO_DB = -38          # umbral de silencio para medir la voz de cada escena
 SILENCIO_S = 0.14          # un silencio más corto que esto no es una pausa, es una consonante
 

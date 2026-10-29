@@ -196,6 +196,19 @@ Versión **11** de `PLAN_DE_CAMBIOS.md`, que es la que manda.
 
 ---
 
+## Lo que cambia el 29/10/2026 (dirección del jueves, en diferido) · versión 27 del plan
+
+1. **La lectura en frío bloquea tres cosas más** (`04_agentes/prompts/guionista_corto.md`, «Precisión de
+   la dirección del 29/10/2026»): una frase que el lector entendió solo más tarde, un estudio que no
+   contesta lo que promete el título o la apertura, y un «me iría en la escena N». Nace de `MDS-051`, que
+   el codirector no entendió y que tu lectura del 26/10 ya había marcado («quitaría la escena 2», «me
+   habría ido en la escena 4»).
+2. **Solo para guiones cuya `lectura_en_frio.fecha` sea del 29/10/2026 o posterior.** Los escritos antes
+   se juzgan con el criterio con el que se escribieron: lo nuevo que veas en ellos va a `revisiones/` y a
+   tu bitácora como nota, no como `INCIDENCIA` (regla 11.4: no se reescriben).
+3. **El final del Short**: la cola dura 1,8 s desde el Short del viernes 30 (tarjeta 1,5 s; antes 2,95 s
+   y 2,2 s). No es un defecto: lo eligió el codirector.
+
 ## Lo que cambia el 23/10/2026 (dirección extraordinaria) · versión 24 del plan · los plazos (C70). Va antes que todo lo demás
 
 **Paso 0, todos los días, antes del paso 1: lee `05_calendario/compromisos.json`.** Es la lista de lo

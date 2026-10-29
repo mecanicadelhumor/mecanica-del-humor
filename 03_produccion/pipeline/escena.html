@@ -575,7 +575,11 @@ let REMATE = false;
 // MDS-040). Ahora el texto del cierre se va ANTES de la tarjeta y el remate se lee
 // casi dos segundos. Es el mismo número que fondo_visual.REMATE_S, y voz.py alarga
 // la pausa tras el cierre para que la voz haya terminado (COLA_REMATE_S).
-const REMATE_S = 2.2;
+// 26/10/2026 (C36-cola, opción (b) del codirector): 2,95 s de cola eran demasiados sin voz.
+// Ahora 1,5 s de tarjeta (se lee entera ~1,3 s) y el texto del cierre se va en 0,3 s justo
+// al acabar la voz, sin cruzarse con la tarjeta: 1,8 s de cola en total (voz.COLA_REMATE_S).
+const REMATE_S = 1.5;
+const SALIDA_ANTES_DEL_REMATE_S = 0.3;
 
 // Reparte cada palabra de una unidad de texto en su propio <span class="p">,
 // sin romper los <span class="amb"> que pone rico(): se recorren los nodos de
@@ -1117,8 +1121,9 @@ function pintar(t){
   const entrada    = 0.55;              // lo que tarda cada unidad en entrar
   // En la escena de cierre el texto se retira ANTES para dejar sitio al remate
   // de marca: si se cruzan, el final se lee como una mancha.
-  const salida_ini = Math.max(DUR - (REMATE ? REMATE_S + 0.45 : 0.45), entrada);
-  const fuera_g    = t > salida_ini ? suave((t - salida_ini)/0.45) : 0;
+  const dur_sal    = REMATE ? SALIDA_ANTES_DEL_REMATE_S : 0.45;
+  const salida_ini = Math.max(DUR - (REMATE ? REMATE_S + dur_sal : 0.45), entrada);
+  const fuera_g    = t > salida_ini ? suave((t - salida_ini)/dur_sal) : 0;
 
   // ---------- Unidades ----------
   UNIDADES.forEach((el,i)=>{
