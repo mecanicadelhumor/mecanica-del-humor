@@ -1,0 +1,422 @@
+{
+  "guion": "MDS-062",
+  "version": 1,
+  "firma": "b23c8cd14abf06f1",
+  "resuelto_utc": "2026-10-29T22:58:29Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "81a14d522efd",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.98
+          ],
+          "frase": "Casi toda la risa del día pasa cuando hay alguien delante.",
+          "fuente": "pexels",
+          "id": 9579110,
+          "pagina": "https://www.pexels.com/video/friends-sitting-at-the-table-9579110/",
+          "titulo": "friends sitting at the table",
+          "autor": "Ron Lach",
+          "autor_url": "https://www.pexels.com/@ron-lach",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 35.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/9579110/9579110-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "group of friends laughing together at table",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 12.77,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "62ce1345d99f",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.6
+          ],
+          "frase": "La comedia que viste sola, sin mover un músculo,",
+          "fuente": "pexels",
+          "id": 6574525,
+          "pagina": "https://www.pexels.com/video/woman-watching-tv-inside-the-house-6574525/",
+          "titulo": "woman watching tv inside the house",
+          "autor": "Andres  Ayrton",
+          "autor_url": "https://www.pexels.com/@andres-ayrton",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6574525/6574525-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman watching tv alone straight face",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 3.27,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4611,
+              0.2844,
+              0.1278,
+              0.1203
+            ],
+            [
+              0.2139,
+              0.3109,
+              0.125,
+              0.1078
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "hoy la ves con tus amigos",
+          "t_estimado": [
+            4.6,
+            8.72
+          ],
+          "frase": "hoy la ves con tus amigos.",
+          "fuente": "pexels",
+          "id": 7719823,
+          "pagina": "https://www.pexels.com/video/couple-laughing-while-watching-movie-7719823/",
+          "titulo": "couple laughing while watching movie",
+          "autor": "Mikhail Nilov",
+          "autor_url": "https://www.pexels.com/@mikhail-nilov",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 16.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7719823/7719823-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "friends on sofa watching movie",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 8.43,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5056,
+              0.3141,
+              0.3083,
+              0.2281
+            ],
+            [
+              0.125,
+              0.3047,
+              0.2778,
+              0.2078
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "fcad199383fa",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.62
+          ],
+          "frase": "Y te ríes tanto que tienen que parar la película.",
+          "fuente": "pexels",
+          "id": 6382088,
+          "pagina": "https://www.pexels.com/video/young-woman-crying-on-the-shoulders-of-her-friend-6382088/",
+          "titulo": "young woman crying on the shoulders of her friend",
+          "autor": "Liza Summer",
+          "autor_url": "https://www.pexels.com/@liza-summer",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6382088/6382088-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman crying laughing with friends",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 2.03,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2028,
+              0.4,
+              0.525,
+              0.3391
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "e372644859d7",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.23
+          ],
+          "frase": "Unos psicólogos pidieron a unos estudiantes que apuntaran en una libreta, durante una semana,",
+          "fuente": "pexels",
+          "id": 5301816,
+          "pagina": "https://www.pexels.com/video/a-student-writing-a-mathematical-equation-on-a-notebook-5301816/",
+          "titulo": "a student writing a mathematical equation on a notebook",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 8.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5301816/5301816-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "student writing in notebook",
+          "relevancia": 1.0,
+          "inicio_s": 0.0,
+          "movimiento": 3.97,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.0167,
+              0.3266,
+              0.5278,
+              0.4391
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "cada vez que se reían",
+          "t_estimado": [
+            7.23,
+            9.72
+          ],
+          "frase": "cada vez que se reían.",
+          "fuente": "pexels",
+          "id": 36641402,
+          "pagina": "https://www.pexels.com/video/close-up-of-handwriting-in-a-notebook-36641402/",
+          "titulo": "close up of handwriting in a notebook",
+          "autor": "Santiago Peña Bossano",
+          "autor_url": "https://www.pexels.com/@santiago-pena-bossano-2159998940",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 22.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/36641402/15534071_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "notebook pages handwritten",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 1.22,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "304bbd59efd1",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.57
+          ],
+          "frase": "Y resultó que reírse funciona como hablar: sale casi siempre con alguien delante,",
+          "fuente": "pexels",
+          "id": 8522984,
+          "pagina": "https://www.pexels.com/video/man-talking-to-his-friend-8522984/",
+          "titulo": "man talking to his friend",
+          "autor": "Jeff Vinluan",
+          "autor_url": "https://www.pexels.com/@jeff-vinluan-20921030",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 25.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8522984/8522984-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "friends talking and laughing in cafe",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 1.82,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.1139,
+              0.5359,
+              0.1111,
+              0.0781
+            ],
+            [
+              0.7028,
+              0.5375,
+              0.0972,
+              0.0813
+            ],
+            [
+              0.7667,
+              0.5328,
+              0.0917,
+              0.0813
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "en mitad de una charla",
+          "t_estimado": [
+            6.57,
+            9.26
+          ],
+          "frase": "en mitad de una charla.",
+          "fuente": "pixabay",
+          "id": 729,
+          "pagina": "https://pixabay.com/videos/id-729/",
+          "titulo": "sleeping, man, person, alarm, clock, morning, wakeup, male, adult, sleep, bed, bedroom, home, lying, pillow, resting, comfortable, head, 136919573 id",
+          "autor": "Vimeo-Free-Videos",
+          "autor_url": "https://pixabay.com/users/Vimeo-Free-Videos-1283884/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 9.0,
+          "ancho": 0,
+          "alto": 0,
+          "url": "https://cdn.pixabay.com/video/2015/09/08/729-138678099_medium.mp4",
+          "tipo": "video",
+          "consulta": "person waking up bed alarm",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 3.07,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "52fc78a707f3",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.87
+          ],
+          "frase": "A esa comedia le faltaba compañía, no gracia. Una pega del estudio:",
+          "fuente": "pexels",
+          "id": 8057934,
+          "pagina": "https://www.pexels.com/video/sad-woman-sitting-on-the-sofa-8057934/",
+          "titulo": "sad woman sitting on the sofa",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8057934/8057934-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman alone sofa remote",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 3.11,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2972,
+              0.125,
+              0.25,
+              0.2141
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "cada uno apuntaba",
+          "t_estimado": [
+            5.87,
+            11.78
+          ],
+          "frase": "cada uno apuntaba sus propias risas, y alguna se le pudo escapar.",
+          "fuente": "pexels",
+          "id": 7612013,
+          "pagina": "https://www.pexels.com/video/man-writing-down-on-a-notebook-using-a-fountain-pen-7612013/",
+          "titulo": "man writing down on a notebook using a fountain pen",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 37.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/7612013/7612013-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "pen writing in notebook close-up",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 6.33,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pixabay:9085",
+      "titulo": "date, notebook, agenda, book, day, week, month, hand, to write, feather, ballpoint, business, leaf, page, annotate, organizer id",
+      "motivo": "quieto (movimiento 0.25)"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}

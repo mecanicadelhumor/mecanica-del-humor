@@ -1,0 +1,348 @@
+{
+  "guion": "MDS-063",
+  "version": 1,
+  "firma": "9e2de3dab5048e7c",
+  "resuelto_utc": "2026-10-29T22:58:52Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "eab06f34bee3",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.44
+          ],
+          "frase": "Reírte con tus amigos hace que tu cerebro suelte sus propios calmantes.",
+          "fuente": "pixabay",
+          "id": 210511,
+          "pagina": "https://pixabay.com/videos/id-210511/",
+          "titulo": "cat, kitty, pet, park, cute, woman, owner, animal, together, close-up, meow, friends, friendship id",
+          "autor": "blackmarketmusic",
+          "autor_url": "https://pixabay.com/users/blackmarketmusic-2976878/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 16.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2024/05/03/210511_large.mp4",
+          "tipo": "video",
+          "consulta": "friends laughing together table close-up",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 9.21,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "0f343fe7f41f",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.9
+          ],
+          "frase": "Domingo, sobremesa con tus amigos de siempre. Lleváis tres horas",
+          "fuente": "pexels",
+          "id": 5359021,
+          "pagina": "https://www.pexels.com/video/man-at-a-coffee-bar-talking-to-his-friend-5359021/",
+          "titulo": "man at a coffee bar talking to his friend",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 9.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5359021/5359021-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "friends long lunch laughing coffee",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 8.97,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.275,
+              0.2981,
+              0.1708,
+              0.1362
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "riéndoos de la misma anécdota",
+          "t_estimado": [
+            4.9,
+            8.72
+          ],
+          "frase": "riéndoos de la misma anécdota.",
+          "fuente": "pixabay",
+          "id": 10024,
+          "pagina": "https://pixabay.com/videos/id-10024/",
+          "titulo": "table football, game, fun, play, entertainment, football player, table, ball, red, free time, amici, games room, friends, people, video games, soccer id",
+          "autor": "Alessandro89",
+          "autor_url": "https://pixabay.com/users/Alessandro89-817526/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 8.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2017/06/17/10024-222013925_large.mp4",
+          "tipo": "video",
+          "consulta": "friends crying with laughter table",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 15.7,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "29b32ca386c2",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.62
+          ],
+          "frase": "Os duele la tripa de reír, y nadie quiere irse.",
+          "fuente": "pexels",
+          "id": 13929702,
+          "pagina": "https://www.pexels.com/video/two-friends-talking-and-laughing-while-looking-at-a-smartphone-screen-13929702/",
+          "titulo": "two friends talking and laughing while looking at a smartphone screen",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13929702/13929702-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "friends laughing confused shrug",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 7.15,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6028,
+              0.3297,
+              0.1917,
+              0.1641
+            ],
+            [
+              0.2444,
+              0.1469,
+              0.1944,
+              0.1547
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "c5365f9e9865",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.07
+          ],
+          "frase": "¿Cómo se sabe? Doce hombres vieron comedias con sus mejores amigos, y luego les miraron el cerebro",
+          "fuente": "pexels",
+          "id": 6646796,
+          "pagina": "https://www.pexels.com/video/friends-watching-on-laptop-6646796/",
+          "titulo": "friends watching on laptop",
+          "autor": "Polina Tankilevitch",
+          "autor_url": "https://www.pexels.com/@polina-tankilevitch",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 4.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6646796/6646796-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "friends watching comedy laughing sofa",
+          "relevancia": 0.4,
+          "inicio_s": 0.0,
+          "movimiento": 5.45,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2611,
+              0.4266,
+              0.1583,
+              0.1234
+            ],
+            [
+              0.6028,
+              0.3906,
+              0.1583,
+              0.1187
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "con un escáner",
+          "t_estimado": [
+            8.07,
+            10.18
+          ],
+          "frase": "con un escáner.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a medical scanner in a quiet hospital room",
+          "semilla": 13900692,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-063/e4_p2.jpg",
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "a95bcc74c9c6",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.8
+          ],
+          "frase": "Reírse juntos les dio placer, y su cerebro soltó opioides: los calmantes que fabrica el propio cuerpo.",
+          "fuente": "pixabay",
+          "id": 105391,
+          "pagina": "https://pixabay.com/videos/id-105391/",
+          "titulo": "balloons, holiday, green, screen, colorful, beautiful wallpaper, multicolored, ball, flight, movement, background id",
+          "autor": "Evgeniy_Z",
+          "autor_url": "https://pixabay.com/users/Evgeniy_Z-13538513/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 15.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2022/01/23/105391-670487178_large.mp4",
+          "tipo": "video",
+          "consulta": "brain scan colorful screen",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 6.0,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "7abb70846c49",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.93
+          ],
+          "frase": "Quizá por eso nadie quería irse. La pega:",
+          "fuente": "pexels",
+          "id": 7413803,
+          "pagina": "https://www.pexels.com/video/friends-hugging-and-jumping-around-7413803/",
+          "titulo": "friends hugging and jumping around",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7413803/7413803-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "friends hugging goodbye street",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 24.21,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "eran doce hombres",
+          "t_estimado": [
+            3.93,
+            11.32
+          ],
+          "frase": "eran doce hombres en un escáner; una sobremesa de verdad no la ha medido nadie.",
+          "fuente": "pixabay",
+          "id": 55528,
+          "pagina": "https://pixabay.com/videos/id-55528/",
+          "titulo": "interior, modern, room, design, 3d, wall, architecture, hall, light, window, house, furniture, floor, empty, apartment, home, frame, business, perspective, art, inside id",
+          "autor": "tommyvideo",
+          "autor_url": "https://pixabay.com/users/tommyvideo-3092371/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 13.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2020/11/07/55528-501275361_large.mp4",
+          "tipo": "video",
+          "consulta": "empty scanner room",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 9.99,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pexels:7089950",
+      "titulo": "modern machines used for human body scanning",
+      "motivo": "poco relevante (0.333): se prueba la IA"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}

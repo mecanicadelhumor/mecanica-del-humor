@@ -1,0 +1,421 @@
+{
+  "guion": "MDS-057",
+  "version": 1,
+  "firma": "d3e7c60ff88d40b7",
+  "resuelto_utc": "2026-10-29T22:56:59Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "20dbdd1064a7",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.98
+          ],
+          "frase": "Las crías de gorila también se ríen cuando les haces cosquillas.",
+          "fuente": "pixabay",
+          "id": 253998,
+          "pagina": "https://pixabay.com/videos/id-253998/",
+          "titulo": "tenderness, cute, fondness, father, family, baby, parent, child, love, dad, man, people, happy, play, girl, cold, winter, snow id",
+          "autor": "iddea_photo",
+          "autor_url": "https://pixabay.com/users/iddea_photo-45788187/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 9.0,
+          "ancho": 2160,
+          "alto": 3840,
+          "url": "https://cdn.pixabay.com/video/2025/01/22/253998_large.mp4",
+          "tipo": "video",
+          "consulta": "baby gorilla playing",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 3.37,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5681,
+              0.4227,
+              0.1708,
+              0.1359
+            ],
+            [
+              0.1986,
+              0.3883,
+              0.1667,
+              0.1062
+            ],
+            [
+              0.4139,
+              0.3844,
+              0.1278,
+              0.0945
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "fa8ff9108fbd",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.8
+          ],
+          "frase": "En el zoo, un cuidador le hace cosquillas a una cría de gorila.",
+          "fuente": "pixabay",
+          "id": 81268,
+          "pagina": "https://pixabay.com/videos/id-81268/",
+          "titulo": "lemur, ape, couple, log, playful, mammals, young, animals, play, curious, madagascar id",
+          "autor": "RoyBuri",
+          "autor_url": "https://pixabay.com/users/RoyBuri-3128024/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 16.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2021/07/12/81268-575216303_large.mp4",
+          "tipo": "video",
+          "consulta": "keeper playing with young ape",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 5.62,
+          "encuadre": {
+            "x": 0.713,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2892,
+              0.2681,
+              0.3334,
+              0.2208
+            ],
+            [
+              0.4918,
+              0.1417,
+              0.2197,
+              0.1458
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "541f30eaf023",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.17
+          ],
+          "frase": "Y la cría se ríe entre jadeos,",
+          "fuente": "pixabay",
+          "id": 45283,
+          "pagina": "https://pixabay.com/videos/id-45283/",
+          "titulo": "portrait, beautiful wallpaper, woman, smile, girl, beautiful, pose, model, expression, mimic, beauty, white, background, insulating, face, young, make-up, eyes, laugh, happy, happiness, teeth, mouth, cosmetics id",
+          "autor": "Engin_Akyurt",
+          "autor_url": "https://pixabay.com/users/Engin_Akyurt-3656355/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 11.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2020/07/22/45283-442643054_large.mp4",
+          "tipo": "video",
+          "consulta": "young chimpanzee laughing",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 0.5,
+          "encuadre": {
+            "x": 0.515,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.1244,
+              0.1042,
+              0.7531,
+              0.5569
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "como tú",
+          "t_estimado": [
+            3.17,
+            7.46
+          ],
+          "frase": "como tú cuando ya no puedes más.",
+          "fuente": "pexels",
+          "id": 6966125,
+          "pagina": "https://www.pexels.com/video/woman-sitting-on-a-sofa-chair-6966125/",
+          "titulo": "woman sitting on a sofa chair",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 35.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6966125/6966125-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman laughing breathless sofa",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 10.55,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.2846,
+              0.2378,
+              0.4328,
+              0.28
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "d2114e1a17e0",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.87
+          ],
+          "frase": "¿Es risa de verdad? Unos investigadores grabaron la risa de",
+          "fuente": "pixabay",
+          "id": 174008,
+          "pagina": "https://pixabay.com/videos/id-174008/",
+          "titulo": "woman, smile, communication, gesture, expression, asian, close up, young, university id",
+          "autor": "Amorn_mimi",
+          "autor_url": "https://pixabay.com/users/Amorn_mimi-27759397/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 12.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2023/07/31/174008-850361316_large.mp4",
+          "tipo": "video",
+          "consulta": "orangutan young close-up",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 2.3,
+          "encuadre": {
+            "x": 0.535,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2392,
+              0.1903,
+              0.5208,
+              0.375
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "crías de cuatro simios",
+          "t_estimado": [
+            4.87,
+            8.03
+          ],
+          "frase": "crías de cuatro simios con cosquillas,",
+          "fuente": "pixabay",
+          "id": 1651,
+          "pagina": "https://pixabay.com/videos/id-1651/",
+          "titulo": "guitarist, music, playing, guitar player, room, studio, musician, life performance, guitar, musical, instrument, play, electric, person, man, young, acoustic, entertainment, musical instrument, player, acoustic guitar, rock music id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 15.0,
+          "ancho": 0,
+          "alto": 0,
+          "url": "https://cdn.pixabay.com/video/2015/12/11/1651-148614472_medium.mp4",
+          "tipo": "video",
+          "consulta": "bonobo young playing",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 2.67,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 3,
+          "desde": "y la de bebés humanos",
+          "t_estimado": [
+            8.03,
+            10.64
+          ],
+          "frase": "y la de bebés humanos.",
+          "fuente": "pixabay",
+          "id": 121114,
+          "pagina": "https://pixabay.com/videos/id-121114/",
+          "titulo": "sound recording, microphone, studio recording, music studio, audio mixing id",
+          "autor": "blackmarketmusic",
+          "autor_url": "https://pixabay.com/users/blackmarketmusic-2976878/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 5.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2022/06/20/121114-724685801_large.mp4",
+          "tipo": "video",
+          "consulta": "audio recorder microphone",
+          "relevancia": 1.0,
+          "inicio_s": 0.4,
+          "movimiento": 9.64,
+          "encuadre": {
+            "x": 0.526,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.276,
+              0.1486,
+              0.61,
+              0.4514
+            ],
+            [
+              0.7943,
+              0.0583,
+              0.4791,
+              0.5222
+            ]
+          ]
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "8e6b803e580c",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            10.64
+          ],
+          "frase": "Y cuanto más emparentadas estaban dos especies, más se parecían sus risas. Es la misma risa, heredada de un antepasado común.",
+          "fuente": "pixabay",
+          "id": 48969,
+          "pagina": "https://pixabay.com/videos/id-48969/",
+          "titulo": "young, dryer, lifestyle, hand, human hand, man, males, lifestyles, people, skill, work, barbershop, beauty, care, hair, cutting, hairstyle, stylist, hairdresser, barber, barber shop, slow id",
+          "autor": "aghyadnajjar",
+          "autor_url": "https://pixabay.com/users/aghyadnajjar-14736497/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 14.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2020/09/03/48969-459186305_large.mp4",
+          "tipo": "video",
+          "consulta": "chimpanzee and human hand",
+          "relevancia": 0.667,
+          "inicio_s": 0.0,
+          "movimiento": 24.25,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "249d66b3ea26",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.77
+          ],
+          "frase": "Cuando te ríes con cosquillas, usas una risa que ya tenían nuestros antepasados.",
+          "fuente": "pixabay",
+          "id": 33631,
+          "pagina": "https://pixabay.com/videos/id-33631/",
+          "titulo": "child, child smiling, baby, kid, happy, smile, childhood, person, little, children, cheerful, girl, happiness, female, cute, family, smiling, laugh, playing id",
+          "autor": "nassimohmd",
+          "autor_url": "https://pixabay.com/users/nassimohmd-15586680/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 30.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2020/03/13/33631-398856295_large.mp4",
+          "tipo": "video",
+          "consulta": "person laughing tickled",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 9.85,
+          "encuadre": {
+            "x": 0.556,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              -0.0654,
+              0.2333,
+              1.1308,
+              0.7667
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Eso sí",
+          "t_estimado": [
+            6.77,
+            11.78
+          ],
+          "frase": "Eso sí: solo compararon esa risa, no la de un chiste.",
+          "fuente": "pixabay",
+          "id": 85379,
+          "pagina": "https://pixabay.com/videos/id-85379/",
+          "titulo": "gorilla, ape, silverback, furry, powerful, zoo, animal, thoughtful id",
+          "autor": "NickyPe",
+          "autor_url": "https://pixabay.com/users/NickyPe-10327513/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 23.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2021/08/17/85379-588675425_large.mp4",
+          "tipo": "video",
+          "consulta": "gorilla sitting thoughtful",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 1.16,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

@@ -1,0 +1,397 @@
+{
+  "guion": "MDS-058",
+  "version": 1,
+  "firma": "815a6239e535a4eb",
+  "resuelto_utc": "2026-10-29T22:57:19Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "b0f55de42a39",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.98
+          ],
+          "frase": "Tres amigos en un chat, organizando un cumpleaños. Tú propones sitio.",
+          "fuente": "pexels",
+          "id": 4076741,
+          "pagina": "https://www.pexels.com/video/a-woman-texting-with-her-smartphone-4076741/",
+          "titulo": "a woman texting with her smartphone",
+          "autor": "KATRIN  BOLOVTSOVA",
+          "autor_url": "https://www.pexels.com/@ekaterina-bolovtsova",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 23.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/4076741/4076741-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman typing on phone smiling",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 2.74,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3292,
+              0.3122,
+              0.2875,
+              0.1667
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "65ed81ad11e9",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            1.37
+          ],
+          "frase": "Y, de repente,",
+          "fuente": "pexels",
+          "id": 6964003,
+          "pagina": "https://www.pexels.com/video/a-woman-checking-her-phone-while-staring-blankly-6964003/",
+          "titulo": "a woman checking her phone while staring blankly",
+          "autor": "Mikhail Nilov",
+          "autor_url": "https://www.pexels.com/@mikhail-nilov",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6964003/6964003-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman staring at phone waiting",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 2.36,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3917,
+              0.2078,
+              0.2528,
+              0.1953
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "nadie te contesta",
+          "t_estimado": [
+            1.37,
+            4.57
+          ],
+          "frase": "nadie te contesta.",
+          "fuente": "pexels",
+          "id": 31423053,
+          "pagina": "https://www.pexels.com/video/close-up-of-a-modern-wall-clock-31423053/",
+          "titulo": "close up of a modern wall clock",
+          "autor": "Cheng Shi Song",
+          "autor_url": "https://www.pexels.com/@cheng-shi-song-427082720",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/31423053/13404325_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "clock ticking wall close-up",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 1.02,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "2fa44ae2d7b3",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.54
+          ],
+          "frase": "Y tú ya estás repasando qué dijiste mal en dos mil catorce.",
+          "fuente": "pexels",
+          "id": 6872628,
+          "pagina": "https://www.pexels.com/video/elderly-woman-having-a-hard-time-6872628/",
+          "titulo": "elderly woman having a hard time",
+          "autor": "Teona Swift",
+          "autor_url": "https://www.pexels.com/@teona-swift",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6872628/6872628-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman scrolling old messages worried",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 4.0,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3583,
+              0.2203,
+              0.4472,
+              0.3516
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "d8373c3a3485",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.37
+          ],
+          "frase": "Unos psicólogos lo probaron con chats de tres por el móvil. A unos les seguían escribiendo;",
+          "fuente": "pixabay",
+          "id": 168343,
+          "pagina": "https://pixabay.com/videos/id-168343/",
+          "titulo": "message, smartphone, mobile, lifestyle, technology, phone, communication, connection, gadget id",
+          "autor": "Amorn_mimi",
+          "autor_url": "https://pixabay.com/users/Amorn_mimi-27759397/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 11.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2023/06/22/168343-838892838_large.mp4",
+          "tipo": "video",
+          "consulta": "three phones on table messages",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 1.01,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "a otros, de repente",
+          "t_estimado": [
+            7.37,
+            10.64
+          ],
+          "frase": "a otros, de repente, nadie.",
+          "fuente": "pixabay",
+          "id": 1360,
+          "pagina": "https://pixabay.com/videos/id-1360/",
+          "titulo": "social media, smart phone, mobile, internet, technology, media, business, network, communication, social, social media icons, telephone, screen, social media icons vector, phone, people, social media business, global, social media background, wireless, design, connection, social media people, web, smart, icon, set, group, symbol, information, messaging, social media icon set, email id",
+          "autor": "Activedia",
+          "autor_url": "https://pixabay.com/users/Activedia-665768/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 20.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2015/11/25/1360-147055409_large.mp4",
+          "tipo": "video",
+          "consulta": "phone screen empty no messages",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 5.15,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "6f9ddf6326c2",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.53
+          ],
+          "frase": "Eso bastó para que se sintieran fuera, de peor humor y peor consigo mismos.",
+          "fuente": "pexels",
+          "id": 8458634,
+          "pagina": "https://www.pexels.com/video/man-sitting-alone-in-a-room-and-feeling-anxious-8458634/",
+          "titulo": "man sitting alone in a room and feeling anxious",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 23.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8458634/8458634-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "sad man sitting alone with phone",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 12.61,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.208
+          },
+          "caras": [
+            [
+              0.3834,
+              0.3172,
+              0.2984,
+              0.2055
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Y empezaron a escribir",
+          "t_estimado": [
+            6.53,
+            10.18
+          ],
+          "frase": "Y empezaron a escribir más borde.",
+          "fuente": "pexels",
+          "id": 7652957,
+          "pagina": "https://www.pexels.com/video/adult-man-typing-on-phone-7652957/",
+          "titulo": "adult man typing on phone",
+          "autor": "Thirdman",
+          "autor_url": "https://www.pexels.com/@thirdman",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 14.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7652957/7652957-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man typing angrily on phone",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 1.93,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2639,
+              0.2453,
+              0.1833,
+              0.1172
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "61dcfed43a27",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.83
+          ],
+          "frase": "Si te sale un «¿hola?» borde, es normal. Eso sí,",
+          "fuente": "pexels",
+          "id": 15711939,
+          "pagina": "https://www.pexels.com/video/close-up-of-a-young-woman-using-her-phone-15711939/",
+          "titulo": "close up of a young woman using her phone",
+          "autor": "Yusuf Çelik",
+          "autor_url": "https://www.pexels.com/@zandatsu",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/15711939/15711939-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman sending message phone close-up",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 14.64,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4306,
+              0.1625,
+              0.3861,
+              0.2812
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "el estudio usó SMS",
+          "t_estimado": [
+            4.83,
+            9.93
+          ],
+          "frase": "el estudio usó SMS de dos mil cuatro, no WhatsApp.",
+          "fuente": "pexels",
+          "id": 36717013,
+          "pagina": "https://www.pexels.com/video/elderly-man-engaged-with-mobile-phone-outdoors-36717013/",
+          "titulo": "elderly man engaged with mobile phone outdoors",
+          "autor": "Mahadi Hassan Molla",
+          "autor_url": "https://www.pexels.com/@mahadi01",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/36717013/15561777_1080_1920_60fps.mp4",
+          "tipo": "video",
+          "consulta": "old mobile phone keypad sms",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 12.67,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.1333,
+              0.2234,
+              0.475,
+              0.275
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

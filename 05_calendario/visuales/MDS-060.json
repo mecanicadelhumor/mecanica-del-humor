@@ -1,0 +1,425 @@
+{
+  "guion": "MDS-060",
+  "version": 1,
+  "firma": "9205dcb64cd1f727",
+  "resuelto_utc": "2026-10-29T22:58:07Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "83e875ef8083",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.44
+          ],
+          "frase": "Un emoji en un correo de trabajo te hace parecer menos competente.",
+          "fuente": "pexels",
+          "id": 4064861,
+          "pagina": "https://www.pexels.com/video/man-coffee-desk-laptop-4064861/",
+          "titulo": "man coffee desk laptop",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 23.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/4064861/4064861-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man reading email laptop frowning",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 3.76,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.103
+          },
+          "caras": [
+            [
+              0.4912,
+              0.3386,
+              0.2212,
+              0.1628
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "3fed40de17a7",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.03
+          ],
+          "frase": "Primer correo al cliente nuevo. Para que no suene seco,",
+          "fuente": "pexels",
+          "id": 6931572,
+          "pagina": "https://www.pexels.com/video/woman-working-on-her-laptop-and-writing-notes-6931572/",
+          "titulo": "woman working on her laptop and writing notes",
+          "autor": "Mikhail Nilov",
+          "autor_url": "https://www.pexels.com/@mikhail-nilov",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 20.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6931572/6931572-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman writing email laptop office",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 7.62,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3667,
+              0.1094,
+              0.3806,
+              0.2984
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "le pones una carita",
+          "t_estimado": [
+            5.03,
+            9.18
+          ],
+          "frase": "le pones una carita al final.",
+          "fuente": "pexels",
+          "id": 5647324,
+          "pagina": "https://www.pexels.com/video/close-up-view-of-a-person-s-fingers-using-an-apple-keyboard-for-typing-5647324/",
+          "titulo": "close up view of a person s fingers using an apple keyboard for typing",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 26.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5647324/5647324-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "finger hovering over keyboard enter",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 17.74,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "c9e5d92a3e6b",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.03
+          ],
+          "frase": "El cliente sonríe. Y luego se pregunta si le vas a mandar",
+          "fuente": "pexels",
+          "id": 7953596,
+          "pagina": "https://www.pexels.com/video/businessman-typing-on-a-laptop-7953596/",
+          "titulo": "businessman typing on a laptop",
+          "autor": "Felicity Tai",
+          "autor_url": "https://www.pexels.com/@felicity-tai",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7953596/7953596-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "businessman smiling reading laptop",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 3.32,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3722,
+              0.2406,
+              0.3667,
+              0.2406
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "las facturas con pegatinas",
+          "t_estimado": [
+            5.03,
+            8.38
+          ],
+          "frase": "las facturas con pegatinas.",
+          "fuente": "pixabay",
+          "id": 80314,
+          "pagina": "https://pixabay.com/videos/id-80314/",
+          "titulo": "office, desk, team work, insurance, writing, facts, thinking id",
+          "autor": "Kathanhero",
+          "autor_url": "https://pixabay.com/users/Kathanhero-22233009/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 10.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2021/07/05/80314-572395729_large.mp4",
+          "tipo": "video",
+          "consulta": "businessman frowning thinking at desk",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 3.69,
+          "encuadre": {
+            "x": 0.567,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              -0.2225,
+              0.3194,
+              0.2569,
+              0.2083
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "cbb772b51efd",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            10.64
+          ],
+          "frase": "Unos psicólogos enseñaron a más de ochocientas personas un correo así: a la mitad, con carita; a la otra, sin ella.",
+          "fuente": "pexels",
+          "id": 6974127,
+          "pagina": "https://www.pexels.com/video/side-view-of-man-typing-on-laptop-6974127/",
+          "titulo": "side view of man typing on laptop",
+          "autor": "SHVETS production",
+          "autor_url": "https://www.pexels.com/@shvets-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 7.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6974127/6974127-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "two laptops side by side email",
+          "relevancia": 0.667,
+          "inicio_s": 0.0,
+          "movimiento": 7.4,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "5e4db4e6eecc",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.63
+          ],
+          "frase": "Con carita, quien lo escribía parecía más cercano.",
+          "fuente": "pexels",
+          "id": 34292213,
+          "pagina": "https://www.pexels.com/video/friendly-encounter-in-modern-office-setting-34292213/",
+          "titulo": "friendly encounter in modern office setting",
+          "autor": "Max Medyk",
+          "autor_url": "https://www.pexels.com/@maxmedyk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/34292213/14527428_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "friendly colleague waving office",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 18.39,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3,
+              0.0938,
+              0.2083,
+              0.1531
+            ],
+            [
+              0.5028,
+              0.2641,
+              0.1972,
+              0.1437
+            ],
+            [
+              0.7194,
+              0.1938,
+              0.1833,
+              0.1422
+            ],
+            [
+              0.075,
+              0.0875,
+              0.1611,
+              0.125
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Pero también menos competente",
+          "t_estimado": [
+            3.63,
+            6.49
+          ],
+          "frase": "Pero también menos competente.",
+          "fuente": "pexels",
+          "id": 8546653,
+          "pagina": "https://www.pexels.com/video/a-woman-in-corporate-attire-posing-with-arms-crossed-8546653/",
+          "titulo": "a woman in corporate attire posing with arms crossed",
+          "autor": "https://kaboompics.com/",
+          "autor_url": "https://www.pexels.com/@karola-g",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8546653/8546653-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "manager crossing arms skeptical office",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 3.71,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.326
+          },
+          "caras": [
+            [
+              0.4921,
+              0.3216,
+              0.249,
+              0.1967
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "7e3454fe33ff",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.6
+          ],
+          "frase": "Con el cliente nuevo, guárdate la carita. Eso sí: era el primer correo a un desconocido;",
+          "fuente": "pexels",
+          "id": 12692031,
+          "pagina": "https://www.pexels.com/video/a-smiling-young-woman-holding-a-laptop-and-a-cup-of-coffee-12692031/",
+          "titulo": "a smiling young woman holding a laptop and a cup of coffee",
+          "autor": "Anna Shvets",
+          "autor_url": "https://www.pexels.com/@shvetsa",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/12692031/12692031-hd_1080_1920_60fps.mp4",
+          "tipo": "video",
+          "consulta": "woman closing laptop smiling office",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 1.64,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4417,
+              0.3239,
+              0.1792,
+              0.1385
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "con tu compañero",
+          "t_estimado": [
+            7.6,
+            11.32
+          ],
+          "frase": "con tu compañero, nadie lo ha medido.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "two coworkers laughing together at neighbouring desks",
+          "semilla": 7486171,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-060/e6_p2.jpg",
+          "caras": [
+            [
+              0.3581,
+              0.3919,
+              0.082,
+              0.0654
+            ],
+            [
+              0.6536,
+              0.3875,
+              0.0742,
+              0.0632
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 6,
+      "plano": 2,
+      "id": "pexels:6535052",
+      "titulo": "a woman talking and laughing at an office",
+      "motivo": "poco relevante (0.333): se prueba la IA"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}
