@@ -520,6 +520,48 @@
       "busqueda": [
         "smartphone voice message recording close up hands"
       ]
+    },
+    "1.1": {
+      "excluir": [
+        "pexels:7155064"
+      ],
+      "busqueda": [
+        "woman talking on phone call smiling at home"
+      ]
+    },
+    "2.2": {
+      "excluir": [
+        "pixabay:304045"
+      ],
+      "busqueda": [
+        "phone ringing incoming call on table"
+      ]
+    },
+    "3.2": {
+      "excluir": [
+        "pexels:5387568"
+      ],
+      "busqueda": [
+        "hands typing message on smartphone close up"
+      ]
+    }
+  },
+  "MDS-055": {
+    "3.1": {
+      "excluir": [
+        "pixabay:432"
+      ],
+      "busqueda": [
+        "two people laughing out loud together"
+      ]
+    },
+    "4.2": {
+      "excluir": [
+        "pixabay:198"
+      ],
+      "busqueda": [
+        "robot arm machine close up"
+      ]
     }
   }
 }
