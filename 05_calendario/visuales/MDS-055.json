@@ -1,8 +1,8 @@
 {
   "guion": "MDS-055",
   "version": 1,
-  "firma": "60b66b5df809fec4",
-  "resuelto_utc": "2026-10-29T09:32:26Z",
+  "firma": "4f7af3d2db558dba",
+  "resuelto_utc": "2026-10-30T09:32:04Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -17,32 +17,44 @@
             7.82
           ],
           "frase": "Tú no puedes hacerte cosquillas. Pero si te las hace otro, te mueres de risa.",
-          "fuente": "pixabay",
-          "id": 32938,
-          "pagina": "https://pixabay.com/videos/id-32938/",
-          "titulo": "dance, celebrate, fun, celebration, happy, dancing, girl, festive, colorful, laughing, young, people, person id",
-          "autor": "Stuck1",
-          "autor_url": "https://pixabay.com/users/Stuck1-15406262/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 34.0,
-          "ancho": 3840,
-          "alto": 2160,
-          "url": "https://cdn.pixabay.com/video/2020/02/27/32938-395456384_large.mp4",
+          "fuente": "pexels",
+          "id": 8502594,
+          "pagina": "https://www.pexels.com/video/woman-tickling-a-boy-8502594/",
+          "titulo": "woman tickling a boy",
+          "autor": "Ivan S",
+          "autor_url": "https://www.pexels.com/@ivan-s",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8502594/8502594-hd_1080_1920_25fps.mp4",
           "tipo": "video",
-          "consulta": "person tickling friend on couch laughing",
-          "relevancia": 0.4,
-          "inicio_s": 0.4,
-          "movimiento": 19.01,
+          "consulta": "woman laughing while being tickled",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 20.37,
           "encuadre": {
-            "x": 0.439,
+            "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.1527,
-              0.1542,
-              0.6963,
-              0.5361
+              0.3278,
+              0.2672,
+              0.2194,
+              0.1641
+            ],
+            [
+              0.4694,
+              0.3641,
+              0.2167,
+              0.1547
+            ],
+            [
+              0.7111,
+              0.35,
+              0.1528,
+              0.1125
             ]
           ]
         }
@@ -205,22 +217,22 @@
             9.26
           ],
           "frase": "según les dijeron, la máquina.",
-          "fuente": "pixabay",
-          "id": 12567,
-          "pagina": "https://pixabay.com/videos/id-12567/",
-          "titulo": "robot, poor, move, rendering, simulation, production, workshop, programming, machine, cybernetics, technology, steering, robotic arm, electronics, to play, project id",
-          "autor": "PIRO4D",
-          "autor_url": "https://pixabay.com/users/PIRO4D-2707530/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 13.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2017/10/22/12567-240358894_large.mp4",
+          "fuente": "pexels",
+          "id": 8328149,
+          "pagina": "https://www.pexels.com/video/close-up-video-of-a-machine-massaging-a-person-s-back-8328149/",
+          "titulo": "close up video of a machine massaging a person s back",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 16.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8328149/8328149-hd_1080_1920_25fps.mp4",
           "tipo": "video",
-          "consulta": "robot arm machine close up",
-          "relevancia": 0.75,
+          "consulta": "futuristic machine with blinking lights close up",
+          "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 5.88,
+          "movimiento": 2.9,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
