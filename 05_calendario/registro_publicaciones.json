@@ -954,6 +954,21 @@
       "subido_utc": "2026-10-29T07:14:08Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-29T21:51:49Z"
+    },
+    {
+      "id": "MDS-054.es",
+      "episodio": "MDS-054",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué escribimos en vez de llamar?",
+      "guion": "05_calendario/guiones/MDS-054.es.json",
+      "video_id": "kl4xTFn1CG8",
+      "url": "https://youtu.be/kl4xTFn1CG8",
+      "estado": "private",
+      "publicar_en": "2026-10-30T18:00:00Z",
+      "musica": "cama_12_lights_sappheiros.mp3",
+      "subido_utc": "2026-10-30T07:10:46Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-29T21:51:49Z"
