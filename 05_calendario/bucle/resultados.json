@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-10-29T19:17:15Z",
+ "actualizado_utc": "2026-10-30T13:34:23Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -79,7 +79,7 @@
        "porcentaje_visto": 45.0,
        "me_gusta": 0,
        "visualizaciones": 120,
-       "leido": "2026-10-29"
+       "leido": "2026-10-30"
       },
       {
        "id": "MDS-047",
@@ -89,7 +89,7 @@
        "porcentaje_visto": 86.2,
        "me_gusta": 0,
        "visualizaciones": 35,
-       "leido": "2026-10-29"
+       "leido": "2026-10-30"
       },
       {
        "id": "MDS-050",
@@ -99,7 +99,7 @@
        "porcentaje_visto": 35.2,
        "me_gusta": 9,
        "visualizaciones": 916,
-       "leido": "2026-10-29"
+       "leido": "2026-10-30"
       }
      ]
     },
@@ -150,7 +150,7 @@
        "porcentaje_visto": 108.2,
        "me_gusta": 1,
        "visualizaciones": 4,
-       "leido": "2026-10-29"
+       "leido": "2026-10-30"
       },
       {
        "id": "MDS-048",
@@ -160,7 +160,7 @@
        "porcentaje_visto": 96.5,
        "me_gusta": 0,
        "visualizaciones": 6,
-       "leido": "2026-10-29"
+       "leido": "2026-10-30"
       },
       {
        "id": "MDS-051",
@@ -170,7 +170,7 @@
        "porcentaje_visto": 56.8,
        "me_gusta": 1,
        "visualizaciones": 28,
-       "leido": "2026-10-29"
+       "leido": "2026-10-30"
       }
      ]
     },
@@ -180,7 +180,7 @@
      "se_quedaron_media": 36.9,
      "porcentaje_visto_media": 160.0,
      "vistas_48h_mediana": 27,
-     "me_gusta_por_100": 1.16,
+     "me_gusta_por_100": 1.17,
      "ceros_de_feed": 1,
      "shorts": [
       {
@@ -210,8 +210,8 @@
        "vistas_48h": 27,
        "porcentaje_visto": 489.0,
        "me_gusta": 0,
-       "visualizaciones": 29,
-       "leido": "2026-10-29"
+       "visualizaciones": 28,
+       "leido": "2026-10-27"
       },
       {
        "id": "MDS-045",
@@ -221,7 +221,7 @@
        "porcentaje_visto": 25.9,
        "me_gusta": 0,
        "visualizaciones": 11,
-       "leido": "2026-10-29"
+       "leido": "2026-10-30"
       },
       {
        "id": "MDS-049",
@@ -231,7 +231,7 @@
        "porcentaje_visto": 61.4,
        "me_gusta": 0,
        "visualizaciones": 70,
-       "leido": "2026-10-29"
+       "leido": "2026-10-30"
       }
      ]
     }
@@ -276,6 +276,21 @@
      "id": "MDS-056",
      "variante": "control",
      "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-057",
+     "variante": "B",
+     "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-058",
+     "variante": "control",
+     "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-059",
+     "variante": "A",
+     "motivo": "sin ficha de producción todavía"
     }
    ]
   }
