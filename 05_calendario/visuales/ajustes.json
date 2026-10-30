@@ -557,10 +557,19 @@
     },
     "4.2": {
       "excluir": [
-        "pixabay:198"
+        "pixabay:198",
+        "pixabay:12567"
       ],
       "busqueda": [
-        "robot arm machine close up"
+        "futuristic machine with blinking lights close up"
+      ]
+    },
+    "1.1": {
+      "excluir": [
+        "pixabay:32938"
+      ],
+      "busqueda": [
+        "woman laughing while being tickled"
       ]
     }
   }
