@@ -1,26 +1,11 @@
 {
  "_nota": "C47: lectura ligera diaria de los vídeos publicados en los últimos 10 días: visualizaciones, vistas_48h y, desde el 05/10/2026 (C60), se_quedaron_48h («Se quedaron viendo» de Studio = engagedViews/views), porcentaje_visto, me_gusta, suscriptores y compartidos. Sin curvas de retención a propósito (ver la cabecera de escribir_metricas_diarias() en 04_agentes/metricas.py). Se SOBRESCRIBE entero cada vez: es una ventana rodante, no una serie histórica. La lectura completa semanal (metricas.json, control_c26) es la que manda y no cambia con este fichero.",
- "actualizado_utc": "2026-10-30T18:54:43Z",
+ "actualizado_utc": "2026-10-31T13:03:57Z",
  "videos": [
-  {
-   "id": "MDS-044.es",
-   "publicado": "2026-10-20",
-   "visualizaciones": 120,
-   "vistas_48h": 112,
-   "se_quedaron_48h": {
-    "vistas": 112,
-    "comprometidas": 15,
-    "pct": 13.4
-   },
-   "porcentaje_visto": 45.0,
-   "me_gusta": 0,
-   "suscriptores": 0,
-   "compartidos": 0
-  },
   {
    "id": "MDS-045.es",
    "publicado": "2026-10-21",
-   "visualizaciones": 11,
+   "visualizaciones": 13,
    "vistas_48h": 10,
    "se_quedaron_48h": {
     "vistas": 10,
@@ -95,29 +80,29 @@
   {
    "id": "MDS-050.es",
    "publicado": "2026-10-26",
-   "visualizaciones": 916,
-   "vistas_48h": 916,
+   "visualizaciones": 957,
+   "vistas_48h": 914,
    "se_quedaron_48h": {
-    "vistas": 916,
-    "comprometidas": 145,
-    "pct": 15.8
+    "vistas": 914,
+    "comprometidas": 143,
+    "pct": 15.6
    },
-   "porcentaje_visto": 35.2,
-   "me_gusta": 9,
+   "porcentaje_visto": 35.4,
+   "me_gusta": 12,
    "suscriptores": 0,
    "compartidos": 0
   },
   {
    "id": "MDS-051.es",
    "publicado": "2026-10-27",
-   "visualizaciones": 28,
-   "vistas_48h": 28,
+   "visualizaciones": 32,
+   "vistas_48h": 32,
    "se_quedaron_48h": {
-    "vistas": 28,
-    "comprometidas": 8,
-    "pct": 28.6
+    "vistas": 32,
+    "comprometidas": 10,
+    "pct": 31.2
    },
-   "porcentaje_visto": 56.8,
+   "porcentaje_visto": 74.0,
    "me_gusta": 1,
    "suscriptores": 0,
    "compartidos": 0
@@ -125,14 +110,14 @@
   {
    "id": "MDS-052.es",
    "publicado": "2026-10-28",
-   "visualizaciones": 0,
-   "vistas_48h": 0,
+   "visualizaciones": 7,
+   "vistas_48h": 7,
    "se_quedaron_48h": {
-    "vistas": 0,
-    "comprometidas": 0,
-    "pct": null
+    "vistas": 7,
+    "comprometidas": 4,
+    "pct": 57.1
    },
-   "porcentaje_visto": 0.0,
+   "porcentaje_visto": 65.5,
    "me_gusta": 0,
    "suscriptores": 0,
    "compartidos": 0
@@ -155,6 +140,21 @@
   {
    "id": "MDS-054.es",
    "publicado": "2026-10-30",
+   "visualizaciones": 0,
+   "vistas_48h": 0,
+   "se_quedaron_48h": {
+    "vistas": 0,
+    "comprometidas": 0,
+    "pct": null
+   },
+   "porcentaje_visto": 0.0,
+   "me_gusta": 0,
+   "suscriptores": 0,
+   "compartidos": 0
+  },
+  {
+   "id": "MDS-055.es",
+   "publicado": "2026-10-31",
    "visualizaciones": 0,
    "vistas_48h": 0,
    "se_quedaron_48h": {
