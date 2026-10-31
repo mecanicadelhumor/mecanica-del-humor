@@ -572,5 +572,23 @@
         "woman laughing while being tickled"
       ]
     }
+  },
+  "MDS-056": {
+    "1.1": {
+      "excluir": [
+        "pixabay:7686"
+      ],
+      "busqueda": [
+        "older man telling story at family dinner table laughing"
+      ]
+    },
+    "3.1": {
+      "excluir": [
+        "pixabay:253997"
+      ],
+      "busqueda": [
+        "family laughing together around dinner table"
+      ]
+    }
   }
 }
