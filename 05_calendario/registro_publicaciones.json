@@ -980,12 +980,13 @@
       "guion": "05_calendario/guiones/MDS-055.es.json",
       "video_id": "cKYQJudl-Bs",
       "url": "https://youtu.be/cKYQJudl-Bs",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-10-31T18:00:00Z",
       "musica": "cama_13_embrace_sappheiros.mp3",
       "subido_utc": "2026-10-31T07:05:46Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-10-31T20:29:20Z"
     }
   ],
-  "_estado_leido_utc": "2026-10-30T21:35:46Z"
+  "_estado_leido_utc": "2026-10-31T20:29:20Z"
 }
