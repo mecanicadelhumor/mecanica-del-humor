@@ -970,6 +970,21 @@
       "subido_utc": "2026-10-30T07:10:46Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-30T21:35:46Z"
+    },
+    {
+      "id": "MDS-055.es",
+      "episodio": "MDS-055",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Puede hacerte cosquillas una máquina?",
+      "guion": "05_calendario/guiones/MDS-055.es.json",
+      "video_id": "cKYQJudl-Bs",
+      "url": "https://youtu.be/cKYQJudl-Bs",
+      "estado": "private",
+      "publicar_en": "2026-10-31T18:00:00Z",
+      "musica": "cama_13_embrace_sappheiros.mp3",
+      "subido_utc": "2026-10-31T07:05:46Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-30T21:35:46Z"

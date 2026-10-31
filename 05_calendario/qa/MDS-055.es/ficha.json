@@ -1,15 +1,15 @@
 {
-  "id": "MDS-049.es",
-  "duracion_final_s": 41.8,
-  "tamano_mb": 24.6,
+  "id": "MDS-055.es",
+  "duracion_final_s": 40.23,
+  "tamano_mb": 14.9,
   "audio": {
-    "lufs": -14.76,
-    "pico_dbtp": -1.34,
-    "rango_lu": 2.3
+    "lufs": -14.55,
+    "pico_dbtp": -1.31,
+    "rango_lu": 2.8
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.124,
+    "acaba_s": 0.125,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,7 +17,7 @@
     "silencios_s": [
       [
         0.0,
-        0.124
+        0.125
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -42,24 +42,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 40.99,
-    "duracion_real_voz_mp3_s": 40.68,
-    "desfase_s": 0.31,
+    "duracion_calculada_s": 39.13,
+    "duracion_real_voz_mp3_s": 39.13,
+    "desfase_s": 0.0,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_07_cylinder_one_chris_zabriskie.mp3",
-    "sha256": "ea941f18640ca2829b748a0017662ecb299ea2bf742cf2ea166640b7a32e4edb"
+    "archivo": "cama_13_embrace_sappheiros.mp3",
+    "sha256": "2ed7b5338cc93932605464610b53237ee1de9fa4e93ac7a88946455443350d43"
   },
   "guion": {
-    "titulo_trabajo": "¿Por qué después de reírte cuentas de más?",
+    "titulo_trabajo": "¿Puede hacerte cosquillas una máquina?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 40.99,
+    "duracion_narracion_s": 39.13,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 10.102,
+    "escena_mas_larga_s": 9.624,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 6
@@ -84,12 +84,12 @@
     ],
     "escenas_ritmo_fuera_de_rango": [],
     "voz_fiel": [
-      "11/10 palabras, 0 trozos repetidos",
-      "14/14 palabras, 0 trozos repetidos",
-      "16/16 palabras, 0 trozos repetidos",
-      "20/21 palabras, 0 trozos repetidos",
+      "16/15 palabras, 0 trozos repetidos",
       "18/18 palabras, 0 trozos repetidos",
-      "23/23 palabras, 0 trozos repetidos"
+      "8/8 palabras, 0 trozos repetidos",
+      "16/18 palabras, 0 trozos repetidos",
+      "14/13 palabras, 0 trozos repetidos",
+      "22/22 palabras, 0 trozos repetidos"
     ]
   },
   "visual": {
@@ -97,146 +97,97 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 4.37,
+        "hasta_s": 5.43,
         "fuente": "pexels",
-        "id": 9588561,
-        "pagina": "https://www.pexels.com/video/women-eating-on-a-table-outdoors-9588561/",
-        "autor": "Ron Lach",
-        "autor_url": "https://www.pexels.com/@ron-lach",
+        "id": 8502594,
+        "pagina": "https://www.pexels.com/video/woman-tickling-a-boy-8502594/",
+        "autor": "Ivan S",
+        "autor_url": "https://www.pexels.com/@ivan-s",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 4.37,
-        "hasta_s": 6.7,
+        "desde_s": 5.43,
+        "hasta_s": 9.73,
         "fuente": "pixabay",
-        "id": 227128,
-        "pagina": "https://pixabay.com/videos/id-227128/",
-        "autor": "kurt_BID",
-        "autor_url": "https://pixabay.com/users/kurt_BID-45319899/",
+        "id": 159021,
+        "pagina": "https://pixabay.com/videos/id-159021/",
+        "autor": "Dimitri_K",
+        "autor_url": "https://pixabay.com/users/Dimitri_K-30935610/",
         "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 6.7,
-        "hasta_s": 10.67,
+        "desde_s": 9.73,
+        "hasta_s": 12.77,
         "fuente": "pexels",
-        "id": 10582083,
-        "pagina": "https://www.pexels.com/video/man-and-woman-on-dinner-at-restaurant-10582083/",
-        "autor": "Nadin Sh",
-        "autor_url": "https://www.pexels.com/@nadin-sh-78971847",
+        "id": 7730869,
+        "pagina": "https://www.pexels.com/video/a-person-sitting-on-the-floor-wearing-lab-gown-7730869/",
+        "autor": "Monstera Production",
+        "autor_url": "https://www.pexels.com/@gabby-k",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 3,
-        "desde_s": 10.67,
-        "hasta_s": 13.9,
-        "fuente": "pexels",
-        "id": 5791526,
-        "pagina": "https://www.pexels.com/video/woman-having-dinner-and-talking-to-other-members-5791526/",
-        "autor": "cottonbro studio",
-        "autor_url": "https://www.pexels.com/@cottonbro",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 3,
-        "desde_s": 13.9,
-        "hasta_s": 15.9,
-        "fuente": "pexels",
-        "id": 29398627,
-        "pagina": "https://www.pexels.com/video/pigeons-pecking-on-city-street-with-people-29398627/",
-        "autor": "Ebahir",
-        "autor_url": "https://www.pexels.com/@ebahir",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 4,
-        "desde_s": 15.9,
-        "hasta_s": 20.5,
+        "desde_s": 12.77,
+        "hasta_s": 15.33,
         "fuente": "pixabay",
-        "id": 26537,
-        "pagina": "https://pixabay.com/videos/id-26537/",
-        "autor": "ninosouza",
-        "autor_url": "https://pixabay.com/users/ninosouza-8385382/",
+        "id": 205216,
+        "pagina": "https://pixabay.com/videos/id-205216/",
+        "autor": "Aryan821102",
+        "autor_url": "https://pixabay.com/users/Aryan821102-26261415/",
         "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       },
       {
-        "escena": 4,
-        "desde_s": 20.5,
-        "hasta_s": 23.03,
+        "escena": 6,
+        "desde_s": 29.5,
+        "hasta_s": 33.87,
         "fuente": "pexels",
-        "id": 20413321,
-        "pagina": "https://www.pexels.com/video/a-person-writing-on-a-piece-of-paper-with-a-pen-20413321/",
-        "autor": "Orhan Pergel",
-        "autor_url": "https://www.pexels.com/@skylake",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 5,
-        "desde_s": 23.03,
-        "hasta_s": 28.87,
-        "fuente": "pexels",
-        "id": 6857721,
-        "pagina": "https://www.pexels.com/video/a-man-reading-a-document-and-writing-notes-6857721/",
-        "autor": "cottonbro studio",
-        "autor_url": "https://www.pexels.com/@cottonbro",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 5,
-        "desde_s": 28.87,
-        "hasta_s": 30.9,
-        "fuente": "pexels",
-        "id": 9710751,
-        "pagina": "https://www.pexels.com/video/man-with-white-shirt-smiling-at-the-camera-9710751/",
-        "autor": "SHVETS production",
-        "autor_url": "https://www.pexels.com/@shvets-production",
+        "id": 5925285,
+        "pagina": "https://www.pexels.com/video/vertical-video-of-a-person-with-finger-heart-sign-5925285/",
+        "autor": "Sora Shimazaki",
+        "autor_url": "https://www.pexels.com/@sora-shimazaki",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 6,
-        "desde_s": 30.9,
-        "hasta_s": 34.8,
+        "desde_s": 33.87,
+        "hasta_s": 37.63,
         "fuente": "pexels",
-        "id": 29323727,
-        "pagina": "https://www.pexels.com/video/pigeons-on-a-cobblestone-street-29323727/",
-        "autor": "m.emre_celik",
-        "autor_url": "https://www.pexels.com/@m-emre_celik-2054744248",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 6,
-        "desde_s": 34.8,
-        "hasta_s": 38.8,
-        "fuente": "pexels",
-        "id": 37883389,
-        "pagina": "https://www.pexels.com/video/empty-classroom-with-desks-and-whiteboard-37883389/",
-        "autor": "Belén Montero",
-        "autor_url": "https://www.pexels.com/@belenmontero",
+        "id": 8381258,
+        "pagina": "https://www.pexels.com/video/a-test-tube-rotator-machine-in-the-laboratory-8381258/",
+        "autor": "Pavel Danilyuk",
+        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       }
     ],
     "sintetico": false
   },
-  "animacion": null,
+  "animacion": {
+    "escenas_animadas": 2,
+    "escenas": [
+      4,
+      5
+    ],
+    "pedidas": [
+      4,
+      5
+    ],
+    "descartadas": {},
+    "pagina": "05_calendario/animaciones/MDS-055/animacion.html"
+  },
   "fotogramas_s": [
-    2.72,
-    8.24,
-    13.89,
-    20.27,
-    27.85,
-    37.05
+    3.36,
+    9.94,
+    20.01,
+    26.98,
+    35.38
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
