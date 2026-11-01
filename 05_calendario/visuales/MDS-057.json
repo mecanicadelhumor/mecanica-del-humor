@@ -1,8 +1,8 @@
 {
   "guion": "MDS-057",
   "version": 1,
-  "firma": "d3e7c60ff88d40b7",
-  "resuelto_utc": "2026-10-29T22:56:59Z",
+  "firma": "34df479b1c1f0453",
+  "resuelto_utc": "2026-11-01T09:33:44Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -17,46 +17,27 @@
             5.98
           ],
           "frase": "Las crías de gorila también se ríen cuando les haces cosquillas.",
-          "fuente": "pixabay",
-          "id": 253998,
-          "pagina": "https://pixabay.com/videos/id-253998/",
-          "titulo": "tenderness, cute, fondness, father, family, baby, parent, child, love, dad, man, people, happy, play, girl, cold, winter, snow id",
-          "autor": "iddea_photo",
-          "autor_url": "https://pixabay.com/users/iddea_photo-45788187/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 9.0,
-          "ancho": 2160,
-          "alto": 3840,
-          "url": "https://cdn.pixabay.com/video/2025/01/22/253998_large.mp4",
+          "fuente": "pexels",
+          "id": 31337933,
+          "pagina": "https://www.pexels.com/video/playful-baby-elephant-in-australian-zoo-31337933/",
+          "titulo": "playful baby elephant in australian zoo",
+          "autor": "Joolsmagools  ®️",
+          "autor_url": "https://www.pexels.com/@joolsmagools",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 50.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/31337933/13375803_1080_1920_60fps.mp4",
           "tipo": "video",
-          "consulta": "baby gorilla playing",
-          "relevancia": 0.667,
+          "consulta": "baby gorilla playing zoo",
+          "relevancia": 0.75,
           "inicio_s": 0.4,
-          "movimiento": 3.37,
+          "movimiento": 5.53,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
-          "caras": [
-            [
-              0.5681,
-              0.4227,
-              0.1708,
-              0.1359
-            ],
-            [
-              0.1986,
-              0.3883,
-              0.1667,
-              0.1062
-            ],
-            [
-              0.4139,
-              0.3844,
-              0.1278,
-              0.0945
-            ]
-          ]
+          "caras": []
         }
       ]
     },
@@ -72,40 +53,27 @@
             7.8
           ],
           "frase": "En el zoo, un cuidador le hace cosquillas a una cría de gorila.",
-          "fuente": "pixabay",
-          "id": 81268,
-          "pagina": "https://pixabay.com/videos/id-81268/",
-          "titulo": "lemur, ape, couple, log, playful, mammals, young, animals, play, curious, madagascar id",
-          "autor": "RoyBuri",
-          "autor_url": "https://pixabay.com/users/RoyBuri-3128024/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 16.0,
-          "ancho": 3840,
-          "alto": 2160,
-          "url": "https://cdn.pixabay.com/video/2021/07/12/81268-575216303_large.mp4",
+          "fuente": "pexels",
+          "id": 40581220,
+          "pagina": "https://www.pexels.com/video/majestic-gorilla-eating-leaves-in-zoo-enclosure-40581220/",
+          "titulo": "majestic gorilla eating leaves in zoo enclosure",
+          "autor": "Richard Lathrop",
+          "autor_url": "https://www.pexels.com/@richardlathrop",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 17.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/40581220/17341434_1080_1920_30fps.mp4",
           "tipo": "video",
-          "consulta": "keeper playing with young ape",
-          "relevancia": 0.75,
+          "consulta": "gorilla zoo keeper",
+          "relevancia": 0.667,
           "inicio_s": 0.4,
-          "movimiento": 5.62,
+          "movimiento": 1.97,
           "encuadre": {
-            "x": 0.713,
+            "x": 0.5,
             "y": 0.5
           },
-          "caras": [
-            [
-              0.2892,
-              0.2681,
-              0.3334,
-              0.2208
-            ],
-            [
-              0.4918,
-              0.1417,
-              0.2197,
-              0.1458
-            ]
-          ]
+          "caras": []
         }
       ]
     },
@@ -122,31 +90,31 @@
           ],
           "frase": "Y la cría se ríe entre jadeos,",
           "fuente": "pixabay",
-          "id": 45283,
-          "pagina": "https://pixabay.com/videos/id-45283/",
-          "titulo": "portrait, beautiful wallpaper, woman, smile, girl, beautiful, pose, model, expression, mimic, beauty, white, background, insulating, face, young, make-up, eyes, laugh, happy, happiness, teeth, mouth, cosmetics id",
+          "id": 44647,
+          "pagina": "https://pixabay.com/videos/id-44647/",
+          "titulo": "yawn, woman, sleep, night, fatigue, depression, sleepy, face, mouth, open, person, morning, expression, portrait, cute, tired, wake, loose, rest, young, comfortable id",
           "autor": "Engin_Akyurt",
           "autor_url": "https://pixabay.com/users/Engin_Akyurt-3656355/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 11.0,
+          "duracion_s": 8.0,
           "ancho": 3840,
           "alto": 2160,
-          "url": "https://cdn.pixabay.com/video/2020/07/22/45283-442643054_large.mp4",
+          "url": "https://cdn.pixabay.com/video/2020/07/14/44647-439940300_large.mp4",
           "tipo": "video",
-          "consulta": "young chimpanzee laughing",
-          "relevancia": 0.667,
+          "consulta": "young gorilla open mouth",
+          "relevancia": 0.75,
           "inicio_s": 0.4,
-          "movimiento": 0.5,
+          "movimiento": 1.89,
           "encuadre": {
-            "x": 0.515,
+            "x": 0.417,
             "y": 0.5
           },
           "caras": [
             [
-              0.1244,
-              0.1042,
-              0.7531,
-              0.5569
+              0.1585,
+              0.1653,
+              0.6839,
+              0.5639
             ]
           ]
         },
@@ -159,31 +127,31 @@
           ],
           "frase": "como tú cuando ya no puedes más.",
           "fuente": "pexels",
-          "id": 6966125,
-          "pagina": "https://www.pexels.com/video/woman-sitting-on-a-sofa-chair-6966125/",
-          "titulo": "woman sitting on a sofa chair",
-          "autor": "cottonbro studio",
-          "autor_url": "https://www.pexels.com/@cottonbro",
+          "id": 6446149,
+          "pagina": "https://www.pexels.com/video/a-woman-lying-down-on-a-sofa-6446149/",
+          "titulo": "a woman lying down on a sofa",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 35.0,
+          "duracion_s": 12.0,
           "ancho": 1080,
-          "alto": 2048,
-          "url": "https://videos.pexels.com/video-files/6966125/6966125-hd_1080_2048_25fps.mp4",
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6446149/6446149-hd_1080_1920_25fps.mp4",
           "tipo": "video",
           "consulta": "woman laughing breathless sofa",
           "relevancia": 0.5,
           "inicio_s": 0.4,
-          "movimiento": 10.55,
+          "movimiento": 2.22,
           "encuadre": {
             "x": 0.5,
-            "y": 0
+            "y": 0.5
           },
           "caras": [
             [
-              0.2846,
-              0.2378,
-              0.4328,
-              0.28
+              0.7083,
+              0.5094,
+              0.1722,
+              0.1156
             ]
           ]
         }
@@ -268,40 +236,27 @@
             10.64
           ],
           "frase": "y la de bebés humanos.",
-          "fuente": "pixabay",
-          "id": 121114,
-          "pagina": "https://pixabay.com/videos/id-121114/",
-          "titulo": "sound recording, microphone, studio recording, music studio, audio mixing id",
-          "autor": "blackmarketmusic",
-          "autor_url": "https://pixabay.com/users/blackmarketmusic-2976878/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 5.0,
-          "ancho": 3840,
-          "alto": 2160,
-          "url": "https://cdn.pixabay.com/video/2022/06/20/121114-724685801_large.mp4",
+          "fuente": "pexels",
+          "id": 35289157,
+          "pagina": "https://www.pexels.com/video/hands-adjusting-microphone-for-podcast-setup-35289157/",
+          "titulo": "hands adjusting microphone for podcast setup",
+          "autor": "Cis14_04 09",
+          "autor_url": "https://www.pexels.com/@cis14_04-09-2156191398",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 8.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/35289157/14950498_1080_1920_60fps.mp4",
           "tipo": "video",
-          "consulta": "audio recorder microphone",
-          "relevancia": 1.0,
+          "consulta": "baby hands microphone recording",
+          "relevancia": 0.5,
           "inicio_s": 0.4,
-          "movimiento": 9.64,
+          "movimiento": 0.64,
           "encuadre": {
-            "x": 0.526,
+            "x": 0.5,
             "y": 0.5
           },
-          "caras": [
-            [
-              0.276,
-              0.1486,
-              0.61,
-              0.4514
-            ],
-            [
-              0.7943,
-              0.0583,
-              0.4791,
-              0.5222
-            ]
-          ]
+          "caras": []
         }
       ]
     },
@@ -354,43 +309,6 @@
           ],
           "frase": "Cuando te ríes con cosquillas, usas una risa que ya tenían nuestros antepasados.",
           "fuente": "pixabay",
-          "id": 33631,
-          "pagina": "https://pixabay.com/videos/id-33631/",
-          "titulo": "child, child smiling, baby, kid, happy, smile, childhood, person, little, children, cheerful, girl, happiness, female, cute, family, smiling, laugh, playing id",
-          "autor": "nassimohmd",
-          "autor_url": "https://pixabay.com/users/nassimohmd-15586680/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 30.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2020/03/13/33631-398856295_large.mp4",
-          "tipo": "video",
-          "consulta": "person laughing tickled",
-          "relevancia": 0.667,
-          "inicio_s": 0.4,
-          "movimiento": 9.85,
-          "encuadre": {
-            "x": 0.556,
-            "y": 0.5
-          },
-          "caras": [
-            [
-              -0.0654,
-              0.2333,
-              1.1308,
-              0.7667
-            ]
-          ]
-        },
-        {
-          "k": 2,
-          "desde": "Eso sí",
-          "t_estimado": [
-            6.77,
-            11.78
-          ],
-          "frase": "Eso sí: solo compararon esa risa, no la de un chiste.",
-          "fuente": "pixabay",
           "id": 85379,
           "pagina": "https://pixabay.com/videos/id-85379/",
           "titulo": "gorilla, ape, silverback, furry, powerful, zoo, animal, thoughtful id",
@@ -402,8 +320,8 @@
           "alto": 2160,
           "url": "https://cdn.pixabay.com/video/2021/08/17/85379-588675425_large.mp4",
           "tipo": "video",
-          "consulta": "gorilla sitting thoughtful",
-          "relevancia": 0.667,
+          "consulta": "adult gorilla sitting thoughtful",
+          "relevancia": 0.5,
           "inicio_s": 0.4,
           "movimiento": 1.16,
           "encuadre": {
@@ -411,6 +329,43 @@
             "y": 0.5
           },
           "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Eso sí",
+          "t_estimado": [
+            6.77,
+            11.78
+          ],
+          "frase": "Eso sí: solo compararon esa risa, no la de un chiste.",
+          "fuente": "pixabay",
+          "id": 15305,
+          "pagina": "https://pixabay.com/videos/id-15305/",
+          "titulo": "dog, pet, animal, small, furry, cute, fur, brown, looking, look, posing, adorable, portrait, tense, calm id",
+          "autor": "moshehar",
+          "autor_url": "https://pixabay.com/users/moshehar-7046690/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 15.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2018/03/31/15305-262921865_large.mp4",
+          "tipo": "video",
+          "consulta": "gorilla looking calm",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 0.94,
+          "encuadre": {
+            "x": 0.676,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              -0.1716,
+              0.1667,
+              1.3432,
+              0.8333
+            ]
+          ]
         }
       ]
     }
