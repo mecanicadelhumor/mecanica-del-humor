@@ -590,5 +590,49 @@
         "family laughing together around dinner table"
       ]
     }
+  },
+  "MDS-057": {
+    "1.1": {
+      "excluir": [
+        "pixabay:253998"
+      ],
+      "busqueda": [
+        "baby gorilla playing zoo"
+      ]
+    },
+    "2.1": {
+      "excluir": [
+        "pixabay:81268"
+      ],
+      "busqueda": [
+        "gorilla zoo keeper",
+        "young gorilla playing zoo"
+      ]
+    },
+    "3.1": {
+      "excluir": [
+        "pixabay:45283"
+      ],
+      "busqueda": [
+        "young gorilla open mouth",
+        "ape laughing play face"
+      ]
+    },
+    "4.3": {
+      "excluir": [
+        "pixabay:121114"
+      ],
+      "busqueda": [
+        "baby hands microphone recording"
+      ]
+    },
+    "6.1": {
+      "excluir": [
+        "pixabay:33631"
+      ],
+      "busqueda": [
+        "adult gorilla sitting thoughtful"
+      ]
+    }
   }
 }
