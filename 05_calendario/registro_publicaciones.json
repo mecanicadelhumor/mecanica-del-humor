@@ -986,6 +986,21 @@
       "subido_utc": "2026-10-31T07:05:46Z",
       "revisado": false,
       "pregunta_publicada": "2026-10-31T20:29:20Z"
+    },
+    {
+      "id": "MDS-056.es",
+      "episodio": "MDS-056",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué hay gente que se ríe de lo que cuenta?",
+      "guion": "05_calendario/guiones/MDS-056.es.json",
+      "video_id": "s21JJcmlug4",
+      "url": "https://youtu.be/s21JJcmlug4",
+      "estado": "private",
+      "publicar_en": "2026-11-01T18:00:00Z",
+      "musica": "cama_14_alone_two_days_ago_artificial_music.mp3",
+      "subido_utc": "2026-11-01T07:34:58Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-10-31T20:29:20Z"
