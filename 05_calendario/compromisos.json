@@ -217,13 +217,18 @@
       "id": "iteracion-14",
       "que": "Catorce Shorts a la semana desde B2 (5/11): producción y publicación de un segundo Short al día (13:00 en España, la hora propuesta), planificación con 14 guiones, y el workflow cambiado preparado en 00_estrategia/tareas/workflows_<fecha>/ para que lo mueva el codirector",
       "dueno": "direccion",
-      "fecha": "2026-11-02",
+      "fecha": "2026-11-16",
       "estado": "pendiente",
       "aplazamientos": [
         {
           "de": "2026-10-29",
           "a": "2026-11-02",
           "porque": "El 29/10 la ejecución se dedicó a la cola (b) aprobada, a lo que el codirector escribió en el cuaderno (la cara del final y por qué MDS-051 no se entendía) y a cerrar Wan. Llega a tiempo: B2 empieza el 5/11 y el codirector tiene el workflow el lunes 2 por la tarde"
+        },
+        {
+          "de": "2026-11-02",
+          "a": "2026-11-16",
+          "porque": "Con el criterio de la lectura en frío del 29/10 pasaron 6 de 14 temas: no hay guiones ni para siete Shorts a la semana. Catorce sin guiones sería producir lo que no pasa. Antes, el banco y los tres lectores (versión 28). El 16/11 se mira si el banco aguanta; el workflow del segundo Short sigue preparado en workflows_2026-10-23 (iteracion-14-mover, que también se aplaza)."
         }
       ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
@@ -232,13 +237,18 @@
       "id": "iteracion-14-mover",
       "que": "Mover el workflow del segundo Short diario a .github/workflows/ (lo prepara la dirección en iteracion-14)",
       "dueno": "codirector",
-      "fecha": "2026-11-04",
+      "fecha": "2026-11-17",
       "estado": "pendiente",
       "aplazamientos": [
         {
           "de": "2026-11-03",
           "a": "2026-11-04",
           "porque": "Porque iteracion-14 pasa al 2/11; el segundo Short diario empieza con B2 el 5/11, así que moverlo el 3 o el 4 basta"
+        },
+        {
+          "de": "2026-11-04",
+          "a": "2026-11-17",
+          "porque": "Va detrás de iteracion-14 (dirección, 16/11): mover el workflow del segundo Short no sirve sin guiones para catorce."
         }
       ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
@@ -248,18 +258,22 @@
       "que": "B2 como diseño factorial 2×2 (dos cambios a la vez, combinaciones repartidas por igual) en ciclos.json y bucle.py",
       "dueno": "direccion",
       "fecha": "2026-11-02",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
+      "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)",
+      "hecho_el": "2026-11-02",
+      "nota_hecho": "B2 en ciclos.json: 2×2 (animación × corto), orden en bloques de 4, semilla 20261102, posiciones por día de emisión. bucle.py calcula los dos factores."
     },
     {
       "id": "iteracion-bayes",
       "que": "Regla de decisión bayesiana (probabilidad de que un brazo sea mejor, umbral escrito antes: 90 %) en bucle.py para B2; B1 sigue con su regla",
       "dueno": "direccion",
       "fecha": "2026-11-02",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
+      "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)",
+      "hecho_el": "2026-11-02",
+      "nota_hecho": "bucle.py: regla «bayes» por ciclo (P ≥ 0,90 con 6 por lado gana; ≤ 0,10 pierde; 12 por lado y en medio, sin efecto; frenos de siempre). B1 sigue con la suya. Probado con datos inventados en el contenedor (cinco casos)."
     },
     {
       "id": "iteracion-filtro",
@@ -290,18 +304,22 @@
       "que": "Guion del primer largo (MDH-008) con el prompt del 22/10",
       "dueno": "planificacion",
       "fecha": "2026-10-29",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Plan v23"
+      "origen": "Plan v23",
+      "hecho_el": "2026-11-02",
+      "nota_hecho": "El guion existe (la planificación del 29/10). Marcado por la dirección el 02/11, como pedía la revisión diaria."
     },
     {
       "id": "tts-vigilancia",
       "que": "Mirar si hay modelos de voz gratuitos nuevos que mejoren la entonación (petición recurrente del codirector). Primer informe; después, el primer lunes de cada mes",
       "dueno": "direccion",
       "fecha": "2026-11-02",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Respuesta del codirector a las tareas del 22/10, punto 3"
+      "origen": "Respuesta del codirector a las tareas del 22/10, punto 3",
+      "hecho_el": "2026-11-02",
+      "nota_hecho": "Primer informe: 07_pruebas/prueba-de-voces/VIGILANCIA_TTS_2026-11.md. Lo urgente: Google apaga gemini-3.1-flash-tts-preview y gemini-2.5-flash-preview-tts el 17/11/2026 (comprobado en ai.google.dev/gemini-api/docs/deprecations); sustitutos gemini-3.8-flash-tts y -lite. Ver voz-3.8-*. El siguiente informe, el primer lunes de diciembre (tts-vigilancia-12)."
     },
     {
       "id": "largo-ensayo",
@@ -363,9 +381,11 @@
       "que": "Alternativas creíbles si Wan 5B en T4 no da la calidad: modelos de cara que habla con audio (Wan 2.2 S2V 14B, InfiniteTalk…) en una GPU grande con créditos gratuitos; licencias, coste y cuánto tarda un Short. Informe al codirector. Desde el 29/10 tiene que resolver la boca: el codirector descartó LatentSync («boca cosida»); el criterio es el suyo, ¿es creíble?",
       "dueno": "direccion",
       "fecha": "2026-11-02",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Cuaderno del codirector, 26/10 («hay que ser creativos y tener paciencia»)"
+      "origen": "Cuaderno del codirector, 26/10 («hay que ser creativos y tener paciencia»)",
+      "hecho_el": "2026-11-02",
+      "nota_hecho": "Informe: 07_pruebas/presentador-2026-10/ALTERNATIVAS_INFORME_2026-11-02.md (licencias y memorias de terceros, sin medir). Candidatos: LongCat-Video-Avatar 1.5 (MIT) en Hugging Face ZeroGPU y EchoMimic V3-Flash (Apache-2.0) en la T4 de Kaggle. Prueba: C51.3-prueba."
     },
     {
       "id": "C36-cola-mirar",
@@ -382,9 +402,11 @@
       "que": "Escribir en B2, antes de su primer dato, si un Short con menos de 10 vistas a 48 h cuenta o no en «se quedaron» (propuesta de la dirección: no cuenta)",
       "dueno": "direccion",
       "fecha": "2026-11-02",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Decisión de B1 del 26/10 (ciclos.json, decisiones)"
+      "origen": "Decisión de B1 del 26/10 (ciclos.json, decisiones)",
+      "hecho_el": "2026-11-02",
+      "nota_hecho": "Escrito en B2 antes de su primer dato: menos de 10 vistas a 48 h no cuenta en «se quedaron» y cuenta como cero de feed (minimo_vistas_48h)."
     },
     {
       "id": "C51.3-workflow-apt",
@@ -422,18 +444,22 @@
       "que": "Ver 07_pruebas/cara-final-2026-10-29/final_risa.mp4 (y final_ahora.mp4) y decir en el cuaderno sí, no o un ajuste: el personaje pasa de la cara de «duda» a «rie» al entrar la tarjeta, sin cambiar el timing",
       "dueno": "codirector",
       "fecha": "2026-11-02",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Cuaderno del codirector (después del 26/10): «que acabe con cara alegre»"
+      "origen": "Cuaderno del codirector (después del 26/10): «que acabe con cara alegre»",
+      "hecho_el": "2026-11-02",
+      "nota_hecho": "El codirector contestó el 02/11: «sí, pero que cambie antes»; con permiso para aplicarlo directamente."
     },
     {
       "id": "cara-final-aplicar",
       "que": "Aplicar 07_pruebas/cara-final-2026-10-29/cara_final.diff (solo escena.html) si el codirector dice que sí, en la primera ejecución después de su respuesta",
       "dueno": "direccion",
       "fecha": "2026-11-02",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Cuaderno del codirector (después del 26/10); regla 11.2"
+      "origen": "Cuaderno del codirector (después del 26/10); regla 11.2",
+      "hecho_el": "2026-11-02",
+      "nota_hecho": "Aplicado en escena.html con el cambio adelantado (A_RISA_ANTES_S = 1,1 s: empieza a 2,6 s del final). Muestra en 07_pruebas/cara-final-2026-11-02/. Entra en MDS-059 (miércoles 4/11; esta noche se produce MDS-058 con lo que haya en main a las 01:13 UTC)."
     },
     {
       "id": "C51.3-cara-fija",
@@ -450,9 +476,74 @@
       "que": "Comprobar que los guiones escritos el 29/10 por la noche llevan la lectura en frío con el criterio nuevo (tres bloqueos más, guionista_corto.md) y contar cuántos temas fueron a la reserva por él",
       "dueno": "direccion",
       "fecha": "2026-11-02",
+      "estado": "hecho",
+      "aplazamientos": [],
+      "origen": "Diagnóstico de MDS-051 (dirección 29/10)",
+      "hecho_el": "2026-11-02",
+      "nota_hecho": "La planificación del 29/10 la aplicó: 6 de 14 temas pasaron (bitácora 2026-10-29-planificacion, apartado 6); el viernes 6/11 se quedó sin Short. El 02/11 la dirección vio que un solo lector es ruido (MDS-058: 1 «me quedo» y 4 «me iría en la 4») y cambió a tres lectores con mayoría (guionista_corto.md, precisión del 02/11)."
+    },
+    {
+      "id": "voz-3.8-mover",
+      "que": "Mover 00_estrategia/tareas/workflows_2026-11-02/voz_prueba.yml a .github/workflows/ (añade gemini-3.8-flash-tts y -lite al desplegable de la prueba de voces)",
+      "dueno": "codirector",
+      "fecha": "2026-11-04",
       "estado": "pendiente",
       "aplazamientos": [],
-      "origen": "Diagnóstico de MDS-051 (dirección 29/10)"
+      "origen": "Retirada de los modelos TTS de Gemini el 17/11/2026 (dirección 02/11)"
+    },
+    {
+      "id": "voz-3.8-prueba",
+      "que": "Lanzar la prueba de voces con gemini-3.8-flash-tts y -lite sobre el mismo guion (y grabar la voz actual de referencia antes del 17/11); voz.py con el modelo en una constante y la caché aparte; muestra para el codirector",
+      "dueno": "direccion",
+      "fecha": "2026-11-05",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Retirada de los modelos TTS de Gemini el 17/11/2026"
+    },
+    {
+      "id": "voz-3.8-cambio",
+      "que": "Cambiar MODELO_GEMINI y MODELO_GEMINI_LARGO a los modelos 3.8 en producción, después de que el codirector oiga la muestra (regla 11.2)",
+      "dueno": "direccion",
+      "fecha": "2026-11-12",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Retirada de los modelos TTS de Gemini el 17/11/2026; margen de cinco días"
+    },
+    {
+      "id": "MDS-061-jueves",
+      "que": "Cuarta vuelta de la lectura en frío de MDS-061 (07_pruebas/MDS-061-2026-11-02/, con tres lectores), su animación (escenas 3 y 4) y, si pasa, a guiones/ y a la parrilla del viernes 6/11 antes de las 01:13 UTC",
+      "dueno": "direccion",
+      "fecha": "2026-11-05",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Cuaderno del codirector, 02/11 («el próximo jueves no habrá vídeo… soluciónalo si es posible»)"
+    },
+    {
+      "id": "C51.3-prueba",
+      "que": "Probar EchoMimic V3-Flash en la T4 de Kaggle (workflow del presentador) y preparar LongCat-Video-Avatar en un Space de ZeroGPU: misma cara 2, 3 s de voz, semilla fija; medir tiempo y memoria; vídeo para el codirector",
+      "dueno": "direccion",
+      "fecha": "2026-11-09",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Informe C51.3-alternativas del 02/11"
+    },
+    {
+      "id": "banco-guiones",
+      "que": "Comprobar que la planificación del 5/11 aplica los tres lectores y el banco (versión 28) y contar aprobados, banco y reserva",
+      "dueno": "direccion",
+      "fecha": "2026-11-09",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Cuaderno del codirector, 02/11 (vídeo del viernes y cantidad de guiones)"
+    },
+    {
+      "id": "tts-vigilancia-12",
+      "que": "Segundo informe de voces gratuitas (el primer lunes de cada mes)",
+      "dueno": "direccion",
+      "fecha": "2026-12-07",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "tts-vigilancia"
     }
   ]
 }

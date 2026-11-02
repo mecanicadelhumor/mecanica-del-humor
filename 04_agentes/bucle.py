@@ -52,6 +52,23 @@ control, tampoco gana sola.
 `prob_mejor` es la probabilidad aproximada (normal, con la dispersión entre
 Shorts) de que la variante esté de verdad por encima del control. Es una ayuda
 para leer, no parte de la regla.
+
+LA REGLA DE B2 (escrita el 02/11/2026, antes del primer dato de B2)
+
+Un ciclo con `"regla": {"tipo": "bayes", ...}` en ciclos.json (B2 en adelante)
+se decide de otra manera; B1 sigue con la de arriba hasta el final:
+
+  - **Pocas vistas fuera.** Un Short con menos de `minimo_vistas_48h` (10)
+    vistas a 48 h no entra en «se quedaron» (con 4 vistas, un 75 % es ruido):
+    se aparta con su motivo y se cuenta como «cero de feed» de su brazo.
+  - **Factorial.** Si el ciclo trae `factores`, cada factor se decide juntando
+    los brazos que lo llevan («si») frente a los que no («no»): con un 2×2,
+    cada factor se mide con la mitad de los Shorts en cada lado.
+  - **Bayes.** `prob_mejor` (posterior normal con previa plana, la misma cuenta
+    de arriba) con al menos `n_min` Shorts por lado: ≥ `umbral_prob` (0,90) →
+    GANA; ≤ 1 − umbral → PIERDE; con `n_cierre` por lado y en medio → SIN
+    EFECTO. Los frenos (% visto 5 puntos más bajo, dos ceros de feed más) siguen
+    siendo GANA CON REPARO y los decide la dirección.
 """
 import argparse
 import json
@@ -229,6 +246,32 @@ def veredicto(var, ctl, rv, rc):
     return "sigue midiendo", d
 
 
+def veredicto_bayes(si, no, rs, rn, regla):
+    """La regla de B2 (02/11/2026): probabilidad posterior de que «si» sea mejor que «no»."""
+    n_min = regla.get("n_min", 6)
+    n_cierre = regla.get("n_cierre", 12)
+    umbral = regla.get("umbral_prob", 0.90)
+    n = min(rs["n"], rn["n"])
+    if n < n_min or rs["se_quedaron_media"] is None or rn["se_quedaron_media"] is None:
+        return "faltan datos", None, None
+    d = round(rs["se_quedaron_media"] - rn["se_quedaron_media"], 1)
+    p = prob_mejor([x["se_quedaron_pct"] for x in si], [x["se_quedaron_pct"] for x in no])
+    if p is None:
+        return "faltan datos", d, None
+    if p >= umbral:
+        if (rs["porcentaje_visto_media"] is not None and rn["porcentaje_visto_media"] is not None
+                and rs["porcentaje_visto_media"] < rn["porcentaje_visto_media"] - REGLA["reparo_visto_pp"]):
+            return "gana con reparo (% visto más bajo): decide la dirección", d, p
+        if rs["ceros_de_feed"] >= rn["ceros_de_feed"] + 2:
+            return "gana con reparo (más ceros de feed): decide la dirección", d, p
+        return "GANA", d, p
+    if p <= 1 - umbral:
+        return "PIERDE", d, p
+    if n >= n_cierre:
+        return "SIN EFECTO: se queda el control", d, p
+    return "sigue midiendo", d, p
+
+
 def calcular(hoy=None):
     hoy = hoy or datetime.now(timezone.utc).date()
     ciclos = _json(CICLOS, {}).get("ciclos", [])
@@ -267,6 +310,13 @@ def calcular(hoy=None):
             if pub and (hoy - pub).days < 2:
                 pendientes.append({"id": ident, "variante": var, "motivo": "menos de 48 h"})
                 continue
+            minimo = (c.get("regla") or {}).get("minimo_vistas_48h")
+            if minimo is not None and (x.get("vistas_48h") or 0) < minimo:
+                apartados.append({"id": ident, "variante": var, "cero_de_feed": True,
+                                  "vistas_48h": x.get("vistas_48h"),
+                                  "motivo": f"pocas vistas: {x.get('vistas_48h')} a 48 h "
+                                            f"(menos de {minimo}); no cuenta en «se quedaron»"})
+                continue
             por_brazo[var].append({
                 "id": ident,
                 "publicado": x.get("publicado"),
@@ -278,10 +328,21 @@ def calcular(hoy=None):
                 "leido": x.get("leido"),
             })
         res = {k: resumen_brazo(v) for k, v in por_brazo.items()}
+        regla_c = c.get("regla") or {}
+        bayes = regla_c.get("tipo") == "bayes"
+        if bayes:                    # los apartados por pocas vistas son ceros de feed de su brazo
+            for a in apartados:
+                if a.get("cero_de_feed") and a["variante"] in res:
+                    res[a["variante"]]["ceros_de_feed"] += 1
         ctl = c.get("control", "control")
         comparaciones = {}
         for k in brazos:
             if k == ctl or ctl not in res:
+                continue
+            if bayes:
+                ver, dif, p = veredicto_bayes(por_brazo[k], por_brazo[ctl], res[k], res[ctl], regla_c)
+                comparaciones[k] = {"contra": ctl, "diferencia_pp": dif, "prob_mejor": p,
+                                    "veredicto": ver}
                 continue
             ver, dif = veredicto(k, ctl, res[k], res[ctl])
             comparaciones[k] = {
@@ -291,6 +352,22 @@ def calcular(hoy=None):
                                          [s["se_quedaron_pct"] for s in por_brazo[ctl]]),
                 "veredicto": ver,
             }
+        factores = {}
+        for nombre, f in (c.get("factores") or {}).items():
+            if not isinstance(f, dict) or "si" not in f:
+                continue
+            si = [s_ for b in f["si"] for s_ in por_brazo.get(b, [])]
+            no = [s_ for b in f["no"] for s_ in por_brazo.get(b, [])]
+            rs, rn = resumen_brazo(si), resumen_brazo(no)
+            for a in apartados:
+                if a.get("cero_de_feed"):
+                    if a["variante"] in f["si"]:
+                        rs["ceros_de_feed"] += 1
+                    elif a["variante"] in f["no"]:
+                        rn["ceros_de_feed"] += 1
+            ver, dif, p = veredicto_bayes(si, no, rs, rn, regla_c)
+            factores[nombre] = {"que": f.get("que"), "si": rs, "no": rn,
+                                "diferencia_pp": dif, "prob_mejor": p, "veredicto": ver}
         # Referencia, no regla: los Shorts de los 14 días anteriores al ciclo.
         referencia = []
         try:
@@ -317,6 +394,8 @@ def calcular(hoy=None):
             "brazos": {k: {"nombre": brazos[k].get("nombre"), **res[k],
                            "shorts": por_brazo[k]} for k in brazos},
             "comparaciones": comparaciones,
+            **({"factores": factores} if factores else {}),
+            **({"regla": regla_c} if regla_c else {}),
             "apartados": apartados,
             "pendientes": pendientes,
         })
@@ -333,6 +412,10 @@ def imprimir(out):
                   f"{b['vistas_48h_mediana']} · ceros {b['ceros_de_feed']}  ({b['nombre']})")
         for k, v in c["comparaciones"].items():
             print(f"  {k} contra {v['contra']}: {v['diferencia_pp']} pp · "
+                  f"P(mejor) {v['prob_mejor']} → {v['veredicto']}")
+        for k, v in (c.get("factores") or {}).items():
+            print(f"  factor {k}: sí n={v['si']['n']} {v['si']['se_quedaron_media']} % · "
+                  f"no n={v['no']['n']} {v['no']['se_quedaron_media']} % · {v['diferencia_pp']} pp · "
                   f"P(mejor) {v['prob_mejor']} → {v['veredicto']}")
         for a in c["apartados"]:
             print(f"  apartado {a['id']} ({a['variante']}): {a['motivo']}")

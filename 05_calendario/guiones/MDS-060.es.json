@@ -9,10 +9,10 @@
   "I",
   "G"
  ],
- "duracion_objetivo_s": 45,
+ "duracion_objetivo_s": 40,
  "bloqueos": [],
  "ciclo": "B2",
- "variante": "control",
+ "variante": "D",
  "familia_tema": "mensajes",
  "chiste": "otro",
  "historia": {
@@ -28,7 +28,8 @@
   "FUENTES: I15 (Lai y Mayiwar, 2023, Collabra: Psychology, DOI 10.1525/collabra.90195), réplica preregistrada, ficha nueva; I14 (Glikson, Cheshin y van Kleef, 2018, DOI 10.1177/1948550617720269), el original, ficha nueva. Resúmenes leídos el 29/10/2026 en OpenAlex, frases literales. I15: «an independent and better powered (N = 847 vs. N = 85) replication of Experiment 3 in Glikson et al. (2018)»; «smileys produce a negative effect on perceptions of competence and a positive effect on perceptions of warmth, regardless of the level of formality». I14: «three experiments to examine the impact of smiley use on virtual first impressions in work-related contexts»; «smileys do not increase perceptions of warmth and actually decrease perceptions of competence».",
   "POR QUÉ LA RÉPLICA ES LA CENTRAL: es la que tiene más gente (847 frente a 85) y la que se repitió; el original decía que la carita ni siquiera te hacía más cercano, y eso no se sostuvo. Lo que se cuenta es solo lo que dicen los dos: menos competente.",
   "LÍMITE (regla 12): primeras impresiones de alguien que no te conocía; con el compañero de siempre, nadie lo ha medido.",
-  "LECTURA EN FRÍO (2026-10-29), criterio del 29/10. Vuelta 1: «Lo de llevarle las cuentas, ya no tanto» (¿qué cuentas?) → «Que sepas hacer tu trabajo, ya no tanto». Vuelta 2: «La carita, mejor para el segundo correo» (un consejo que no sale del estudio) y «me iría en la 4» (ya sabía cómo acaba) → escena 3 nueva (las facturas con pegatinas), escena 4 con la mitad y la mitad, cierre «Con el cliente nuevo, guárdate la carita». Vuelta 3: pasa."
+  "LECTURA EN FRÍO (2026-10-29), criterio del 29/10. Vuelta 1: «Lo de llevarle las cuentas, ya no tanto» (¿qué cuentas?) → «Que sepas hacer tu trabajo, ya no tanto». Vuelta 2: «La carita, mejor para el segundo correo» (un consejo que no sale del estudio) y «me iría en la 4» (ya sabía cómo acaba) → escena 3 nueva (las facturas con pegatinas), escena 4 con la mitad y la mitad, cierre «Con el cliente nuevo, guárdate la carita». Vuelta 3: pasa.",
+  "02/11/2026 (dirección): B2 es un factorial 2×2 (ciclos.json) y el orden (semilla 20261102) da a la posición 1 el brazo D, «B corto: una escena menos». Quitada la escena 3, la que la planificación señaló («El cliente sonríe. Y luego se pregunta si le vas a mandar las facturas con pegatinas.»). La lectura en frío se ha repetido sobre la versión corta."
  ],
  "escenas": [
   {
@@ -69,30 +70,6 @@
       "hand about to press key laptop"
      ],
      "prompt": "close-up of a finger hovering over a laptop key, about to type"
-    }
-   ]
-  },
-  {
-   "tipo": "enunciado",
-   "personaje": "rie",
-   "texto": "¿Facturas con *pegatinas*?",
-   "narracion": "El cliente sonríe. Y luego se pregunta si le vas a mandar las facturas con pegatinas.",
-   "pausa_despues_s": 0.5,
-   "visual": [
-    {
-     "busqueda": [
-      "businessman smiling reading laptop",
-      "man smiling at email"
-     ],
-     "prompt": "a businessman smiling at his laptop screen"
-    },
-    {
-     "desde": "las facturas con pegatinas",
-     "busqueda": [
-      "businessman frowning thinking at desk",
-      "man doubtful at computer"
-     ],
-     "prompt": "the same businessman leaning back with a doubtful frown"
     }
    ]
   },
@@ -169,6 +146,20 @@
   }
  ],
  "lectura_en_frio": {
+  "lector": "subagente sin contexto (dirección, 02/11, versión corta del brazo D; lector nuevo)",
+  "fecha": "2026-11-02",
+  "de_que_va": "Que poner una carita al final del primer correo a un cliente nuevo te hace parecer más cercano pero menos competente, según un estudio.",
+  "pregunta_y_respuesta": "«¿Debo poner un emoji en un correo de trabajo?» Con un cliente nuevo, mejor no: la carita te hace parecer más simpático pero menos capaz. Con un compañero, nadie lo ha medido.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Primer correo al cliente nuevo. Para que no suene seco, le pones una carita al final.» (se queda: es la situación de la escena 2 de la receta B; sin ella el Short no tiene historia, solo el dato)",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "«Fuente: Lai y Mayiwar, 2023; Glikson y otros, 2018» — «No sé quiénes son, aunque entiendo que son los estudios» (la firma de la fuente: no bloquea, criterio del 28/09).",
+   "Escena 3: «suena a dato de estudio y puede ser algo plana (no dice qué midieron hasta la 4). Pero no me habría ido.»"
+  ],
+  "veredicto": "pasa"
+ },
+ "lectura_en_frio_29_10_version_larga": {
   "lector": "subagente sin contexto (vuelta 3, lector nuevo en cada vuelta)",
   "fecha": "2026-10-29",
   "de_que_va": "Que poner una carita en un correo de trabajo, sobre todo en el primero a un cliente nuevo, hace que parezcas más cercano pero menos competente.",

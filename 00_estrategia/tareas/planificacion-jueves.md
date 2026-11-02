@@ -14,6 +14,40 @@ codirector el 30/09) · repositorio añadido · entorno «Mecánica del Humor».
 
 ---
 
+## Lo que cambia el 02/11/2026 (dirección del lunes, en diferido) · versión 28 del plan · va antes que todo lo demás
+
+El codirector, al leer tu bitácora del 29/10 (el viernes 6/11 sin Short): *«Un día sin vídeo es información
+que no tenemos […] Estaremos haciendo mal el trabajo si la planificación no puede elegir, sino ubicar de la
+mejor manera lo poco que tenga disponible.»* Tiene razón, y el cuello de botella no eres tú: es una lectura
+en frío de **un solo lector**, que es ruido. El 02/11 la dirección pasó `MDS-058` por cuatro lectores
+nuevos: tu lector del 29/10 dijo «me quedo» y los cuatro siguientes, «me iría en la 4». Con un lector, que
+un guion pase o no es medio lotería. Por eso, desde esta noche:
+
+1. **Tres lectores por vuelta, y decide la mayoría** (`guionista_corto.md`, «Precisión de la dirección del
+   02/11/2026»). Mismo encargo literal, tres subagentes nuevos a la vez. Una frase bloquea si **dos de los
+   tres** la copian en la pregunta 3 (o la entendieron tarde); una escena bloquea si **dos de los tres** se
+   irían en ella. Lo que marca uno solo va a `notas`, copiado. Los criterios del 29/10 no cambian: cambia
+   cuántos lectores tienen que coincidir. En `lectura_en_frio` guardas las tres respuestas
+   (`lectores: [...]`) y el recuento.
+2. **El banco: escribe para elegir, no para llenar.** Cada jueves intentas **al menos once temas** para
+   los siete huecos (más si hace falta). Lo que pase y no quepa en la semana va al **banco**: el guion
+   se queda en `05_calendario/guiones/` sin fecha y su ID en `parrilla.json`, lista `"_banco"` (con una
+   línea: tema, brazo-neutro, fecha de la lectura). **Cada jueves empiezas por el banco**: eliges los
+   siete mejores entre banco y nuevos. Un guion del banco caduca a las cuatro semanas (va a la reserva).
+   Meta: que el jueves siempre sobren dos o tres guiones aprobados.
+3. **B2 empieza el jueves 5/11 y es un factorial 2×2** (`bucle/ciclos.json`): control (receta B), **A** (B
+   + animación de mecanismo, como en B1), **D** (B **corto**: cinco escenas, 45 s como mucho en
+   `validar_guion.py`) y **AD** (las dos cosas). **Escribes los guiones sin mirar el brazo, como siempre,
+   y con seis escenas**; en `notas_humor` dices qué escena se quitaría (como hiciste el 29/10). Después
+   aplicas el `orden`: **desde B2 cada posición es un día de emisión** (la 1 es el jueves 5/11, la 5 el
+   lunes 9/11…); un día sin Short deja su posición vacía. A los D y AD les quitas la escena que dijiste y
+   **la lectura en frío se hace sobre la versión que va a salir**. A los A y AD, `animar` en las escenas
+   de mecanismo, como en B1. Las posiciones 1-4 (del 5 al 8/11) ya están asignadas (ver `_orden`).
+4. **Los Shorts de menos de 10 vistas a 48 h no cuentan en «se quedaron» de B2** (regla bayesiana del 90 %
+   en `bucle.py`). No cambia nada de lo que haces tú; es para que leas el marcador.
+5. **El segundo Short diario (`iteracion-14`) se aplaza**: con seis aprobados de catorce no hay guiones
+   para siete, así que menos para catorce. Se vuelve a mirar cuando el banco aguante (punto 2).
+
 ## Lo que cambia el 29/10/2026 (dirección del jueves, en diferido) · versión 27 del plan · va antes que todo lo demás
 
 1. **La lectura en frío bloquea tres cosas más** (`04_agentes/prompts/guionista_corto.md`, «Precisión de

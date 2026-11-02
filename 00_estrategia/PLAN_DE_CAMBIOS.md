@@ -6726,3 +6726,41 @@ contrario.
 ## Lo que NO cambia hoy
 
 - B1 (brazos, `orden`, regla), los guiones ya escritos (regla 11.4), las rutinas, los umbrales de C26.
+
+---
+
+# Versión 28 · 2 de noviembre de 2026 (lunes, en diferido) — la voz caduca el 17/11, el personaje sonríe antes, B2 escrito y que siempre sobren guiones
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario.
+
+| Qué | Decisión |
+|---|---|
+| **La voz caduca el 17/11** | Google apaga `gemini-3.1-flash-tts-preview` (Shorts) y `gemini-2.5-flash-preview-tts` (largo) el **17/11/2026** (comprobado en `ai.google.dev/gemini-api/docs/deprecations`); sustitutos `gemini-3.8-flash-tts` y `-lite`. `voz.py` y `prueba_voz.py` aceptan ya WAV o PCM (`_solo_pcm`; con los modelos de hoy no cambia nada). Workflow de la prueba con los 3.8 preparado para el codirector (`workflows_2026-11-02/`, 4/11); prueba el 5/11 (`voz-3.8-prueba`), cambio el 12/11 con su muestra (`voz-3.8-cambio`) |
+| El personaje acaba alegre | El codirector: «sí, pero que cambie antes», con permiso para aplicarlo. **En producción**: el paso a «rie» empieza 1,1 s antes de la tarjeta (a 2,6 s del final) y sonríe ~2,2 s. Muestra en `07_pruebas/cara-final-2026-11-02/`. Entra desde la producción de esta noche si llega a `main` antes de las 01:13 UTC |
+| **B1 · A** | «Gana con reparo» (+9,9 pp, n = 6, tres ceros de feed frente a cero). **Decido: no entra en el control de B2**; pasa a B2 como factor. Sin sus tres Shorts de <10 vistas, A tiene n = 3. Escrito en `ciclos.json` |
+| **B2** | Factorial 2×2: **animación** (sí/no) × **corto** (cinco escenas, 45 s como mucho; H-duracion). Control = B. Brazos control, A, D, AD; `orden` en bloques de cuatro, semilla 20261102; **cada posición es un día de emisión**. Regla **bayesiana** (P ≥ 0,90 con 6 por lado gana, ≤ 0,10 pierde, 12 por lado sin efecto; frenos de siempre) y **<10 vistas a 48 h no cuenta**. `bucle.py` calcula los factores. 5/11 → 28/11 |
+| Los guiones del 5 al 8 | `MDS-060` → D (quitada la escena 3, lectura repetida: pasa). `MDS-062` → A (escenas 4 y 5 animadas). `MDS-063` control. Viernes 6: `MDS-061` (AD, `E18`) escrito por la dirección, **no pasa todavía** (tres vueltas); borrador en `07_pruebas/MDS-061-2026-11-02/`, lo termina la dirección del jueves 5 |
+| `MDS-057` y `MDS-058` | `057` sale hoy (no se retira: retirar es tocar YouTube a mano y perder un dato de B1). `058` sale mañana **como lo escribió la planificación**: tres reescrituras de la dirección con lectores nuevos tampoco pasaron (todas «me iría en la 4»), y la versión de la planificación es la que pasó su lectura oficial. Lo honesto es medirlo, no cambiarlo por otro que tampoco pasa |
+| **Que siempre sobren guiones** (cuaderno) | El cuello de botella es la lectura en frío de **un** lector (trampa 67). Desde el jueves 5: **tres lectores, decide la mayoría** (`guionista_corto.md`) y la planificación escribe para un **banco** (≥ 11 temas por semana; lo que sobre queda en `parrilla.json`, `_banco`, cuatro semanas) |
+| `iteracion-14` | **Aplazado al 16/11**: con 6 de 14 temas aprobados no hay guiones ni para siete |
+| Títulos (cuaderno) | `H-titulo-afirmacion` a la cola de hipótesis, prioridad baja en Shorts; candidata para el largo |
+| C51.3 | Informe: LongCat-Video-Avatar 1.5 (MIT) en ZeroGPU y EchoMimic V3-Flash (Apache-2.0) en la T4. Prueba el 9/11 (`C51.3-prueba`) |
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Hoy 18:00Z | `MDS-057`. Esta noche se produce `MDS-058` (ya con la sonrisa adelantada) |
+| 3-4/11 | El codirector: mover `voz_prueba.yml` (4/11) |
+| Miércoles 4/11 | Fin de B1 (`MDS-059`, A) |
+| Jueves 5/11 | B2 empieza (`MDS-060`, D). Dirección: prueba de voces 3.8, `MDS-061` (vuelta 4 + animación), imagen horizontal y voz por tandas del largo, cierre de B1. Planificación: tres lectores y banco |
+| Lunes 9/11 | Dirección: `C51.3-prueba`, ensayo del largo, patrón de calidad, esquina libre, cara fija si hace falta, cómo fue el banco |
+| Jueves 12/11 | Voz 3.8 en producción (si el codirector la oyó) |
+| Domingo 15/11 | Estreno del largo; punto de control de C26 |
+| Lunes 16/11 | ¿Aguanta el banco catorce a la semana? (`iteracion-14`) |
+| Martes 17/11 | Google apaga los modelos de voz de hoy |
+
+## Lo que NO cambia hoy
+
+- B1 (brazos, `orden`, regla) hasta el 4/11; los guiones ya producidos (regla 11.4); las rutinas; los umbrales de C26.

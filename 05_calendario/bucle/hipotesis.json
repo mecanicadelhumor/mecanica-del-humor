@@ -1,8 +1,9 @@
 {
  "_nota": "C60 · La cola de hipótesis del bucle: lo que se probará cuando un ciclo se cierre, por orden. La escribe la dirección; el codirector puede añadir en su cuaderno y la dirección la pasa aquí. Cada hipótesis cambia UNA cosa respecto al control vigente. Desde el 08/10/2026 cada hipótesis dice qué regla de 00_estrategia/REGLAS_DE_PRODUCCION.md toca (regla_afectada); cuando el bucle la da por buena, esa regla cambia allí y se anota en su registro.",
  "en_curso": [
-  "A · animación de mecanismo (B1) · sustituye R-IM-04",
-  "B · arranque con el dato (B1) · sustituye R-GU-01",
+  "A · animación de mecanismo · B1: gana con reparo (02/11) → sigue como factor «animacion» de B2 · sustituye R-IM-04 si gana",
+  "B · arranque con el dato (B1) · GANA (26/10) → control de B2 · R-GU-01 cambia al cerrar B1",
+  "H-duracion · factor «corto» de B2 (desde el 5/11) · R-GU-03",
   "H-016-tema · exploración de tema (no es un brazo), desde la semana del 12/10"
  ],
  "cola": [
@@ -46,7 +47,8 @@
    "depende_de": "nada",
    "no_antes_de": "2026-11-05",
    "regla_afectada": "R-GU-03",
-   "propuesta_b2": "22/10/2026 (dirección): es la hipótesis de B2, del 5/11 si B1 se cierra el 4/11. La pide también el codirector (cuaderno, 21-22/10: «si los shorts son más cortos, ¿no habrá menor probabilidad de que caiga la retención?»). Dos brazos, no tres (siete Shorts a la semana). Métrica principal: se quedaron 48 h (igual que B1); % visto y retención a 30 s como freno. Regla de B2 escrita antes del primer dato: n = 4 con 15 puntos, n = 6 con 8, cierre a n = 8 por brazo (con dos brazos, unas dos semanas y media)."
+   "propuesta_b2": "22/10/2026 (dirección): es la hipótesis de B2, del 5/11 si B1 se cierra el 4/11. La pide también el codirector (cuaderno, 21-22/10: «si los shorts son más cortos, ¿no habrá menor probabilidad de que caiga la retención?»). Dos brazos, no tres (siete Shorts a la semana). Métrica principal: se quedaron 48 h (igual que B1); % visto y retención a 30 s como freno. Regla de B2 escrita antes del primer dato: n = 4 con 15 puntos, n = 6 con 8, cierre a n = 8 por brazo (con dos brazos, unas dos semanas y media).",
+   "estado": "02/11/2026: en curso como factor «corto» del factorial de B2 (ciclos.json)"
   },
   {
    "id": "H-remate",
@@ -113,6 +115,15 @@
    "regla_afectada": "R-IM-01",
    "origen": "REFERENTES_2026-10-08.md (PsychToons, Kurzgesagt)",
    "no_antes_de": "ciclo B3"
+  },
+  {
+   "id": "H-titulo-afirmacion",
+   "que": "Títulos que no son preguntas: una afirmación («Sonreír a la fuerza funciona, un poco») o una pregunta indirecta («Lo que pasa cuando nadie te contesta») frente a la pregunta explícita de C56",
+   "metrica": "vistas 48 h fuera del feed (búsqueda, canal, sugeridos) y CTR de impresiones; se quedaron como freno",
+   "depende_de": "nada; mejor cuando haya un largo o suficientes vistas de búsqueda, porque en el feed de Shorts el título casi no se ve",
+   "regla_afectada": "R-GU-05 / C56 (título = la pregunta)",
+   "origen": "Cuaderno del codirector, 02/11/2026 («los títulos de los shorts siempre son preguntas explícitas […] entiendo que no es importante en los shorts porque se suelen ver desde el feed»)",
+   "nota": "Prioridad baja para Shorts (lo dice el propio codirector, y es así: C56 se eligió por la búsqueda, no por el feed). Candidata natural para el largo y para un brazo de B3 si las vistas de búsqueda crecen."
   }
  ]
 }

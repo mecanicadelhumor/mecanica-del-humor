@@ -1,0 +1,2 @@
+# Los vídeos de esta muestra SÍ se suben (el .gitignore de la raíz excluye los .mp4 de 07_pruebas/).
+!*.mp4

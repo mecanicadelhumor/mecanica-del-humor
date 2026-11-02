@@ -72,8 +72,113 @@
      "que_se_hace": "B («arranque con el dato») es el control de B2 (5/11). Si A gana antes del 4/11, el control de B2 es la combinación A + B, como dice la regla. B1 sigue hasta el 4/11 con su «orden» y sus brazos sin tocar, solo para resolver A (+14,1 pp, a 0,9 del umbral): los guiones ya escritos no se cambian (regla 11.4) y la planificación no tiene que hacer nada distinto.",
      "lo_que_no_me_gusta": "Son cuatro Shorts por brazo y casi todos con muy pocas vistas (MDS-045 cuenta un 80 % de 11 vistas). No cambio la regla con los datos delante: B gana. Para B2 (no antes) propongo que un Short con menos de 10 vistas a 48 h no cuente en «se quedaron» (es ruido), además de la regla bayesiana del 90 % ya aprobada. Se escribe en B2 antes de su primer dato.",
      "quien": "direccion (en diferido)"
+    },
+    {
+     "fecha": "2026-11-02",
+     "brazo": "A",
+     "veredicto": "gana con reparo → no pasa al control; sigue como factor en B2",
+     "datos": "resultados.json 2026-11-01T18:36:48Z: n = 6 por brazo; «se quedaron» A 30,0 % frente a control 20,1 % (+9,9 pp, umbral normal 8); % visto 79,6 frente a 73,4 (sin reparo); ceros de feed 3 frente a 0 (el freno pide 2 más: salta). prob_mejor 0,92.",
+     "que_se_hace": "El reparo lo decido así: A NO se suma al control de B2 (el control sigue siendo B solo). Pasa a B2 como uno de los dos factores del 2×2 (animación sí/no), donde se mide con la mitad de los Shorts del ciclo en cada lado y con la regla nueva, que aparta los Shorts de menos de 10 vistas. Si en B2 la animación gana sin reparo, entra en el control de B3.",
+     "porque": "La mitad de los Shorts de A (MDS-042, 046 y 048: 9, 4 y 5 vistas) no los repartió el feed. Su «se quedaron» sale de 4 a 9 personas. Sin esos tres, A tiene n = 3: no es evidencia suficiente para cambiar lo que sale todos los días, y además cuesta una rutina (Animación) cada Short. Medirlo otra vez dentro del factorial no cuesta ni un Short más. La regla no la cambio con los datos delante: el freno dice «decide la dirección», y decido no adoptarlo todavía.",
+     "quien": "direccion (en diferido)"
     }
    ]
+  },
+  {
+   "id": "B2",
+   "desde": "2026-11-05",
+   "hasta": "2026-11-28",
+   "_hasta": "Veinticuatro Shorts a uno por día (5/11 → 28/11). Con el factorial, cada factor tiene doce Shorts por lado al terminar. Si los catorce a la semana llegan antes, el orden se agota antes y el ciclo se cierra antes.",
+   "control": "control",
+   "pregunta": "¿Retiene más un Short más corto (una escena menos) y/o con el mecanismo animado, partiendo del arranque con el dato (B)?",
+   "metrica_principal": "se_quedaron_48h.pct (Se quedaron viendo, primeras 48 h), sin los Shorts de menos de 10 vistas a 48 h; % visto como freno (y, para el factor «corto», como segunda lectura: se espera que suba solo por durar menos)",
+   "diseno": "Factorial 2×2 (escrito el 02/11/2026, compromiso iteracion-factorial): dos factores a la vez, las cuatro combinaciones repartidas por igual en bloques de cuatro.",
+   "brazos": {
+    "control": {
+     "nombre": "B (arranque con el dato), duración normal, sin animación",
+     "receta": "La receta B de B1: la escena 1 abre con lo que encontró el estudio, como hecho que sorprende, en 12 palabras como mucho y con su «fuente»; la situación va en la escena 2. Seis escenas, 45-55 s. Título = la pregunta (C56). Cierre honesto y lectura en frío como siempre (criterio del 29/10)."
+    },
+    "A": {
+     "nombre": "B + animación de mecanismo",
+     "receta": "Como el control, y las una o dos escenas que explican el mecanismo (las de tipo diagrama, comparacion o dato que cuentan qué midió el estudio) llevan \"animar\": true y una nota \"animacion\" de una línea con la idea visual (la receta A de B1). Si la animación no llega, el Short se aparta.",
+     "comprobar_en_ficha": {
+      "campo": "animacion.escenas_animadas",
+      "minimo": 1
+     }
+    },
+    "D": {
+     "nombre": "B corto: una escena menos",
+     "receta": "Como el control, con cinco escenas en vez de seis y 45 s como mucho en validar_guion.py (H-duracion, R-GU-03; el control dura 48-55 s). Se quita la escena que menos falta le hace a la historia (la planificación lo dice en notas_humor), nunca el dato del arranque ni el cierre honesto. La lectura en frío se hace sobre la versión corta."
+    },
+    "AD": {
+     "nombre": "B corto + animación",
+     "receta": "Las dos cosas: cinco escenas, 45 s como mucho, y el mecanismo animado.",
+     "comprobar_en_ficha": {
+      "campo": "animacion.escenas_animadas",
+      "minimo": 1
+     }
+    }
+   },
+   "factores": {
+    "animacion": {
+     "que": "Animación a medida en las escenas de mecanismo (viene de A de B1, que ganó con reparo)",
+     "si": [
+      "A",
+      "AD"
+     ],
+     "no": [
+      "control",
+      "D"
+     ]
+    },
+    "corto": {
+     "que": "Una escena menos (cinco), 45 s como mucho (H-duracion)",
+     "si": [
+      "D",
+      "AD"
+     ],
+     "no": [
+      "control",
+      "A"
+     ]
+    }
+   },
+   "regla": {
+    "tipo": "bayes",
+    "umbral_prob": 0.9,
+    "n_min": 6,
+    "n_cierre": 12,
+    "minimo_vistas_48h": 10,
+    "_nota": "Escrita el 02/11/2026, antes del primer dato de B2 (compromisos iteracion-bayes y B2-regla-pocas-vistas). Cada factor: P(mejor) ≥ 0,90 con al menos 6 Shorts por lado → GANA; ≤ 0,10 → PIERDE; con 12 por lado y en medio → SIN EFECTO. Los Shorts con menos de 10 vistas a 48 h no cuentan en «se quedaron» y se cuentan como ceros de feed. Frenos de siempre (% visto −5, dos ceros de feed más): GANA CON REPARO, decide la dirección. Si ganan los dos factores, el control de B3 es AD; si gana uno, ese."
+   },
+   "orden": [
+    "D",
+    "AD",
+    "A",
+    "control",
+    "D",
+    "AD",
+    "A",
+    "control",
+    "control",
+    "D",
+    "AD",
+    "A",
+    "AD",
+    "control",
+    "D",
+    "A",
+    "control",
+    "A",
+    "D",
+    "AD",
+    "A",
+    "AD",
+    "control",
+    "D"
+   ],
+   "_orden": "Bloques de cuatro con los cuatro brazos barajados (random.Random(20261102).shuffle en cada bloque; semilla = la fecha en que se escribió). DESDE B2 LAS POSICIONES VAN POR DÍA DE EMISIÓN (escrito el 02/11, antes del primer dato): la posición 1 es el jueves 5/11, la 2 el viernes 6, y así; un día sin Short deja su posición vacía y nadie corre un puesto. Si hay dos Shorts en un día (iteracion-14), el día ocupa dos posiciones seguidas, en orden de hora. Así un hueco de la parrilla no cambia el brazo de los Shorts ya escritos. Las cuatro primeras posiciones ya tenían tema (escritos el 29/10 como «B2 / control» antes de saber su brazo) y la dirección los ajustó el 02/11: MDS-060 jueves 5 (D, quitada la escena 3), viernes 6 (AD: MDS-061, borrador en 07_pruebas/MDS-061-2026-11-02/, solo si pasa la lectura en frío el jueves 5), MDS-062 sábado 7 (A, escenas 4 y 5 animadas), MDS-063 domingo 8 (control).",
+   "decisiones": []
   }
  ]
 }

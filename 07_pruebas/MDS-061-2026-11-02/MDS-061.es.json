@@ -1,0 +1,145 @@
+{
+ "id": "MDS-061",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Sonreír a la fuerza te pone contento?",
+ "tesis": "Poner cara de sonrisa a propósito, aunque no tengas ganas, te pone un poco más contento: lo probaron a la vez casi cuatro mil personas de diecinueve países; el famoso truco del lápiz en la boca no quedó claro.",
+ "pilares": [
+  "E"
+ ],
+ "duracion_objetivo_s": 40,
+ "bloqueos": [],
+ "ciclo": "B2",
+ "variante": "AD",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Sonreír a la fuerza te pone contento?",
+  "respuesta": "Un poco sí: poner cara de sonrisa a propósito alegra algo; con el truco del lápiz no quedó claro.",
+  "puente": "El «sonríe, que es gratis» del ascensor es justo lo que se discutía desde hacía años con el truco del lápiz entre los dientes, y lo que comprobaron a la vez en diecinueve países."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (mismo sujeto): qué pasa — un lunes en el ascensor alguien te suelta «sonríe, que es gratis»; qué gira — eso se llevaba años discutiendo en psicología, porque el truco del lápiz unas veces salía y otras no; cómo acaba — casi cuatro mil personas lo probaron a la vez: sonreír a propósito alegra un poco, el lápiz no quedó claro.",
+  "02/11/2026 (dirección): escrito por la dirección para llenar el viernes 6/11, que la planificación del 29/10 dejó sin emisión (E18 no pasó a la tercera vuelta: «el truco del lápiz sale de la nada» y «me iría en la 4» dos veces). Lo que cambia, como proponía la reserva: el lápiz se cuenta en la escena 3 como la duda que el estudio viene a resolver, con su propia pregunta («¿Funciona de verdad?»), no como método suelto.",
+  "CICLO: B2, posición 2 del orden (semilla 20261102): brazo AD, «B corto + animación». Cinco escenas, 45 s como mucho; escenas 3 y 4 con «animar». La rutina «Animación» corre el viernes a las 09:07 UTC, después de producirse este Short: la página la escribe la dirección del jueves 5 (compromiso MDS-061-animacion). Si no llega, sale como D y el marcador lo aparta.",
+  "Cierre honesto (regla 12) con la palabra «estudio» dentro (H-cierre-concreto): lo que no se midió es un lunes de verdad, fuera del laboratorio."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "E18",
+   "texto": "Sonreír *a propósito* alegra",
+   "narracion": "Sonreír a propósito, sin ganas, te pone un poco más contento.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "woman forcing smile mirror",
+      "person practicing smile mirror bathroom"
+     ],
+     "prompt": "a young woman in front of a bathroom mirror forcing a wide smile"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "«Sonríe, que es *gratis*»",
+   "narracion": "Lunes, ascensor, cara de sueño. Y alguien te suelta: «Sonríe, que es gratis».",
+   "pausa_despues_s": 1.2,
+   "visual": [
+    {
+     "busqueda": [
+      "tired man in elevator morning",
+      "sleepy office worker elevator"
+     ],
+     "prompt": "a sleepy man in a suit standing in an office elevator in the morning"
+    },
+    {
+     "desde": "Y alguien te suelta",
+     "busqueda": [
+      "cheerful woman talking elevator",
+      "smiling coworker elevator"
+     ],
+     "prompt": "a cheerful woman in an elevator smiling and talking to a colleague"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "E18",
+   "personaje": "duda",
+   "texto": "El truco del *lápiz*",
+   "narracion": "¿Y funciona? Se probó años con un lápiz entre los dientes, que estira la boca en sonrisa. Unas veces alegraba; otras, no.",
+   "pausa_despues_s": 0.45,
+   "animar": true,
+   "animacion": "Una cara de línea muerde un lápiz de lado y la boca se le estira en sonrisa sin querer; al lado, una balanza con «sí» y «no» que se inclina a un lado y al otro, sin pararse.",
+   "visual": [
+    {
+     "busqueda": [
+      "person holding pencil between teeth",
+      "pen in mouth smiling close-up"
+     ],
+     "prompt": "close-up of a person holding a pencil horizontally between their teeth"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "E18",
+   "personaje": "entiende",
+   "cifra": "3.878 *personas*",
+   "pie": "19 países",
+   "narracion": "Así que lo comprobaron casi cuatro mil personas de diecinueve países. Sonreír a propósito alegraba un poco. El lápiz, ni sí ni no.",
+   "pausa_despues_s": 0.45,
+   "animar": true,
+   "animacion": "Un mapa del mundo de línea en el que se encienden diecinueve puntos a la vez; de cada punto sale una carita que pasa de seria a sonriente, y al final el lápiz aparece con un signo de interrogación encima.",
+   "visual": [
+    {
+     "busqueda": [
+      "many people smiling at camera montage",
+      "diverse people smiling portraits"
+     ],
+     "prompt": "a grid of diverse people from different countries smiling at the camera"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "E18",
+   "personaje": "duda",
+   "titulo": "Algo de *razón*",
+   "subtitulo": "Fuente: Coles y otros (Many Smiles), 2022",
+   "narracion": "Así que el «sonríe, que es gratis» tenía algo de razón. Eso sí, se midió en un laboratorio, no un lunes de verdad.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "man smiling leaving elevator office",
+      "office worker smiling walking corridor"
+     ],
+     "prompt": "a man in a suit stepping out of an elevator with a small smile"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "subagente sin contexto (dirección, 02/11, vuelta 3, lector nuevo en cada vuelta)",
+  "fecha": "2026-11-02",
+  "de_que_va": "Si sonreír a propósito, aunque no tengas ganas, te alegra un poco, y de un estudio grande que dice que sí, algo.",
+  "pregunta_y_respuesta": "Si el «sonríe, que es gratis» funciona de verdad: sí, un poco; lo del lápiz no quedó claro; y se midió en laboratorio, no en un lunes real.",
+  "frases_que_no_se_entienden": [
+   "«Se probó años con un lápiz entre los dientes, que estira la boca en sonrisa.» — «al principio no sabía por qué salía un lápiz; luego lo entiendo, pero tarda»",
+   "«Así que lo comprobaron casi cuatro mil personas de diecinueve países.» — «el ‹Así que› no cuadra: no sé qué se comprobaba; ‹lo comprobaron› queda vago»",
+   "«El lápiz, ni sí ni no.» — «no sé si no funcionó, si no se pudo saber o si dio resultados mezclados»"
+  ],
+  "frase_que_sobra": "«Lunes, ascensor, cara de sueño.»",
+  "donde_me_iria": "me quedo (si me hubiera ido, en la 3, con el lápiz)",
+  "notas": [
+   "«Many Smiles»: no sabe qué es (firma de la fuente, no bloquea).",
+   "Vuelta 1 (lector nuevo): no entendió quién «lo probó», qué comparaba el lápiz ni «el del ascensor» (cuatro escenas atrás); se iba en la 3 («suena a clase»). Vuelta 2: «me quedo», pero «lo repitieron» sin sujeto y «con el lápiz, no quedó claro» le confundía."
+  ],
+  "veredicto": "no pasa",
+  "pendiente": "La dirección del jueves 5/11 (13:07 UTC) hace la vuelta 4 (sujeto en la escena 4: «Un equipo de diecinueve países lo comprobó con casi cuatro mil personas»; el lápiz dicho como resultado: «Con el lápiz, en cambio, el efecto no apareció claro»), escribe la animación de las escenas 3 y 4 y, si pasa, lo pone en la parrilla del viernes 6 (19:00). Si no pasa, el viernes se queda sin Short y MDS-061 va a la reserva."
+ }
+}

@@ -11,7 +11,7 @@
  "duracion_objetivo_s": 45,
  "bloqueos": [],
  "ciclo": "B2",
- "variante": "control",
+ "variante": "A",
  "familia_tema": "ciencia_del_chiste",
  "chiste": "otro",
  "historia": {
@@ -25,7 +25,8 @@
   "FUENTE: E16 (Provine y Fischer, 1989, Ethology, DOI 10.1111/j.1439-0310.1989.tb00536.x), ficha nueva. Resumen leído el 29/10/2026 en OpenAlex, frases literales: «by having undergraduate college students record their performance of these activities in a log book during a one-week period»; «All three activities were least likely to occur during the hours immediately before bedtime and after waking and were most frequent in social situations»; «Smiles and laughs, like talking, were performed primarily during social encounters and were often part of verbal and nonverbal conversations».",
   "LO QUE NO SE DICE: «treinta veces más» (es del libro de Provine, E01, no de este resumen).",
   "LÍMITE (regla 12): lo apuntaban ellos mismos; las risas que no notas no se apuntan.",
-  "LECTURA EN FRÍO (2026-10-29), criterio del 29/10. Vuelta 1: «La letra pequeña: lo apuntaban ellos…» (releída) y «Y casi nunca nada más despertarse» (¿a qué viene?), «me iría en la 5» → escena 5 nueva («reírse funciona como hablar»), cierre reescrito. Vuelta 2: «Ojo: cada uno apuntaba sus risas…» (a la segunda) → «Una pega del estudio: cada uno apuntaba sus propias risas, y alguna se le pudo escapar». Vuelta 3: pasa."
+  "LECTURA EN FRÍO (2026-10-29), criterio del 29/10. Vuelta 1: «La letra pequeña: lo apuntaban ellos…» (releída) y «Y casi nunca nada más despertarse» (¿a qué viene?), «me iría en la 5» → escena 5 nueva («reírse funciona como hablar»), cierre reescrito. Vuelta 2: «Ojo: cada uno apuntaba sus risas…» (a la segunda) → «Una pega del estudio: cada uno apuntaba sus propias risas, y alguna se le pudo escapar». Vuelta 3: pasa.",
+  "02/11/2026 (dirección): B2 es un factorial 2×2 (ciclos.json) y el orden da a la posición 3 el brazo A, «B + animación de mecanismo». Escenas 4 y 5 con «animar» (la libreta del método y el dato). El texto no cambia: la lectura en frío del 29/10 vale. La página la escribe la rutina «Animación» el viernes 6 (sale el sábado 7)."
  ],
  "escenas": [
   {
@@ -110,7 +111,9 @@
      ],
      "prompt": "an open small notebook with handwritten lines, no readable text"
     }
-   ]
+   ],
+   "animar": true,
+   "animacion": "Una libreta de línea que se abre sola: a lo largo de una semana (lunes a domingo arriba) van cayendo rayitas cada vez que alguien se ríe; casi todas caen en las páginas donde hay dos figuras charlando y casi ninguna en la de una figura sola."
   },
   {
    "tipo": "dato",
@@ -136,7 +139,9 @@
      ],
      "prompt": "a sleepy woman sitting up in bed, rubbing her eyes, unamused"
     }
-   ]
+   ],
+   "animar": true,
+   "animacion": "Dos bocadillos de conversación entre dos figuras: las risas («ja») salen dentro de los bocadillos, en mitad de la charla, como palabras; la figura sola del lado tiene el bocadillo vacío."
   },
   {
    "tipo": "cierre",

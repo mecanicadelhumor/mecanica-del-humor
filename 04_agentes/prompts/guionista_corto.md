@@ -179,6 +179,15 @@ nada. Desde `MDS-026`, `validar_guion.py` da ERROR si falta, y el Short no se pr
      bitácora.
    - **No se lo adelantes al lector.** El encargo de arriba va literal, sin avisarle de qué no
      cuenta: un lector avisado deja de ser un lector en frío.
+   **Precisión de la dirección del 02/11/2026: tres lectores, y decide la mayoría.** Un solo lector es
+   ruido: el 02/11 `MDS-058` tuvo un «me quedo» (el lector de la planificación) y cuatro «me iría en la 4»
+   (los de la revisión y la dirección), con el mismo texto. Desde hoy la lectura en frío son **tres
+   subagentes nuevos a la vez**, cada uno con el encargo literal de arriba. **Bloquea lo que marcan dos de
+   los tres**: una frase que dos copian en la pregunta 3 (o que dos entendieron tarde), una escena en la que
+   dos se irían, o que dos digan que el estudio no contesta el título. Lo que marca uno solo va a `notas`,
+   copiado, y **no** bloquea. Los tres criterios del 29/10 siguen igual; lo que cambia es cuántos lectores
+   tienen que coincidir. En el guion: `"lectores": [ {las cinco respuestas}, {…}, {…} ]` dentro de
+   `lectura_en_frio`, y en `frases_que_no_se_entienden` y `donde_me_iria` solo lo que tiene mayoría.
    **Precisión de la dirección del 29/10/2026 (después de `MDS-051`, «¿Sirve de algo escribir
    «jajaja» sin reírte?»: 28 vistas, y el codirector: *«cuesta trabajo entender el argumento y no
    termina de encajar con el final»*).** Ese guion pasó con tres avisos que estaban escritos en su

@@ -808,6 +808,32 @@ coló lo que no se entendía. Salió con 28 vistas y el codirector no lo entendi
 acaba recogiendo lo que debería bloquear: cada cierto tiempo, lee las `notas` como si fueran errores y mira
 cuántas lo eran.**
 
+**67. Un lector es una moneda al aire.** El 29/10 la lectura en frío pasó a bloquear más cosas, pero
+seguía siendo de **un** lector. `MDS-058` tuvo «me quedo» con el lector de la planificación y «me iría en la
+4» con los cuatro siguientes (revisión y dirección), sobre el mismo texto; y tres reescrituras de la
+dirección tampoco pasaron. Con un lector, apretar el criterio no sube la calidad: sube la lotería, y la
+semana se queda con seis Shorts de catorce temas. → **Antes de endurecer un filtro, mide cuánto discrepan
+dos lecturas del mismo texto. Si discrepan, el remedio es más lectores, no más reglas** (tres y mayoría,
+desde el 02/11).
+
+**68. La fecha de caducidad estaba en la página de otro.** Los dos modelos de voz del canal
+(`gemini-3.1-flash-tts-preview` y `gemini-2.5-flash-preview-tts`) se apagan el **17/11/2026**, y estaba
+publicado en la página de retiradas de Google desde hace semanas. Se supo el 02/11 por el informe mensual de
+voces, no porque nadie lo vigilara. → **Todo modelo «preview» del que dependa la producción tiene una fecha
+de apagado: mírala en la página de retiradas en cada informe mensual y apúntala en `compromisos.json`.**
+
+## Dónde está el proyecto a 2 de noviembre de 2026 (en diferido)
+
+Versión **28** del plan, la que manda. **La voz caduca el 17/11** (Google retira los dos modelos TTS):
+prueba de los 3.8 el 5/11 (el codirector mueve antes `voz_prueba.yml`), cambio el 12/11 tras su muestra;
+`voz.py` ya acepta WAV o PCM. **El personaje acaba alegre** en producción, con el cambio adelantado que
+pidió el codirector (a 2,6 s del final). **B2 está escrito**: factorial 2×2 (animación × corto), control B,
+regla bayesiana del 90 %, menos de 10 vistas no cuenta, posiciones por día de emisión; A de B1 ganó con
+reparo y no entra en el control: sigue como factor. **La lectura en frío pasa a tres lectores con mayoría**
+y la planificación escribe para un **banco** (al menos once temas para siete huecos). `iteracion-14` se
+aplaza al 16/11. El viernes 6/11, `MDS-061` en borrador (lo termina la dirección del jueves). Informes de
+voces y de cara que habla, hechos. Trampas 67 y 68.
+
 ## Dónde está el proyecto a 29 de octubre de 2026 (en diferido)
 
 Versión **27** del plan, la que manda. **La cola (b) está en producción** desde `MDS-054` (1,8 s; el

@@ -568,6 +568,23 @@ def _gemini_cliente(httpx_client=None):
     return genai.Client(http_options=types.HttpOptions(**opciones))
 
 
+def _solo_pcm(datos):
+    """02/11/2026 · los modelos TTS de Gemini 3.8 (los que sustituyen a los de hoy, que Google
+    apaga el 17/11/2026) pueden devolver WAV con cabecera en vez de PCM crudo. Si llega un WAV,
+    se le quita la cabecera; si no es mono, 16 bits y 24 kHz, se para (mejor un error que una
+    voz a otra velocidad). Si llega PCM, sale tal cual: con los modelos de hoy no cambia nada."""
+    if isinstance(datos, str):
+        datos = base64.b64decode(datos)
+    if not (len(datos) > 12 and datos[:4] == b"RIFF" and datos[8:12] == b"WAVE"):
+        return datos
+    import io
+    with wave.open(io.BytesIO(datos), "rb") as w:
+        forma = (w.getnchannels(), w.getsampwidth(), w.getframerate())
+        if forma != (1, 2, 24000):
+            raise RuntimeError(f"Gemini devolvió un WAV {forma} (canales, bytes, Hz); se esperaba (1, 2, 24000).")
+        return w.readframes(w.getnframes())
+
+
 def _gemini_pcm(cli, modelo, texto_dirigido, voz_gemini):
     """Una sola llamada, una sola voz (cada escena tiene un único hablante).
 
@@ -581,7 +598,7 @@ def _gemini_pcm(cli, modelo, texto_dirigido, voz_gemini):
             model=modelo, input=texto_dirigido,
             response_format={"type": "audio"},
             generation_config={"speech_config": [{"voice": voz_gemini}]})
-        return base64.b64decode(inter.output_audio.data)
+        return _solo_pcm(base64.b64decode(inter.output_audio.data))
 
     from google.genai import types
     cfg = types.SpeechConfig(voice_config=types.VoiceConfig(
@@ -590,7 +607,7 @@ def _gemini_pcm(cli, modelo, texto_dirigido, voz_gemini):
         model=modelo, contents=texto_dirigido,
         config=types.GenerateContentConfig(response_modalities=["AUDIO"],
                                             speech_config=cfg))
-    return r.candidates[0].content.parts[0].inline_data.data
+    return _solo_pcm(r.candidates[0].content.parts[0].inline_data.data)
 
 
 def _pcm_a_mp3(pcm, hz, destino):
