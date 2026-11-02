@@ -106009,9 +106009,7 @@
    },
    "vistas_48h": 122,
    "se_quedaron_48h": {
-    "vistas": 122,
-    "comprometidas": 32,
-    "pct": 26.2
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-21&endDate=2026-09-22&metrics=views%2CengagedViews&filters=video%3D%3DbhWdbKtg1os&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "se_quedaron_total": {
     "vistas": 147,
@@ -114710,7 +114708,7 @@
   }
  ],
  "miniaturas": [],
- "actualizado_utc": "2026-11-02T13:40:21Z",
+ "actualizado_utc": "2026-11-02T18:48:05Z",
  "control_c26": {
   "mediana_vistas_48h": 27.5,
   "n_videos": 20,
