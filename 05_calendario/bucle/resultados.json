@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-01T18:36:48Z",
+ "actualizado_utc": "2026-11-02T13:40:27Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -48,7 +48,7 @@
      "se_quedaron_media": 20.1,
      "porcentaje_visto_media": 73.4,
      "vistas_48h_mediana": 73.5,
-     "me_gusta_por_100": 0.96,
+     "me_gusta_por_100": 1.03,
      "ceros_de_feed": 0,
      "shorts": [
       {
@@ -59,7 +59,7 @@
        "porcentaje_visto": 165.1,
        "me_gusta": 0,
        "visualizaciones": 22,
-       "leido": "2026-10-27"
+       "leido": "2026-11-02"
       },
       {
        "id": "MDS-041",
@@ -69,7 +69,7 @@
        "porcentaje_visto": 39.3,
        "me_gusta": 2,
        "visualizaciones": 196,
-       "leido": "2026-10-27"
+       "leido": "2026-11-02"
       },
       {
        "id": "MDS-044",
@@ -78,8 +78,8 @@
        "vistas_48h": 112,
        "porcentaje_visto": 45.0,
        "me_gusta": 0,
-       "visualizaciones": 120,
-       "leido": "2026-10-27"
+       "visualizaciones": 122,
+       "leido": "2026-11-02"
       },
       {
        "id": "MDS-047",
@@ -89,17 +89,17 @@
        "porcentaje_visto": 86.2,
        "me_gusta": 0,
        "visualizaciones": 35,
-       "leido": "2026-11-01"
+       "leido": "2026-11-02"
       },
       {
        "id": "MDS-050",
        "publicado": "2026-10-26",
        "se_quedaron_pct": 15.7,
        "vistas_48h": 913,
-       "porcentaje_visto": 35.3,
-       "me_gusta": 11,
-       "visualizaciones": 959,
-       "leido": "2026-11-01"
+       "porcentaje_visto": 35.6,
+       "me_gusta": 12,
+       "visualizaciones": 965,
+       "leido": "2026-11-02"
       },
       {
        "id": "MDS-053",
@@ -109,7 +109,7 @@
        "porcentaje_visto": 69.2,
        "me_gusta": 0,
        "visualizaciones": 16,
-       "leido": "2026-11-01"
+       "leido": "2026-11-02"
       }
      ]
     },
@@ -117,9 +117,9 @@
      "nombre": "Animación a medida en las escenas de mecanismo (C55.2)",
      "n": 6,
      "se_quedaron_media": 30.0,
-     "porcentaje_visto_media": 79.6,
+     "porcentaje_visto_media": 74.9,
      "vistas_48h_mediana": 15.5,
-     "me_gusta_por_100": 1.18,
+     "me_gusta_por_100": 1.17,
      "ceros_de_feed": 3,
      "shorts": [
       {
@@ -130,7 +130,7 @@
        "porcentaje_visto": 48.2,
        "me_gusta": 9,
        "visualizaciones": 942,
-       "leido": "2026-10-27"
+       "leido": "2026-11-02"
       },
       {
        "id": "MDS-039",
@@ -140,17 +140,17 @@
        "porcentaje_visto": 81.0,
        "me_gusta": 1,
        "visualizaciones": 22,
-       "leido": "2026-10-27"
+       "leido": "2026-11-02"
       },
       {
        "id": "MDS-042",
        "publicado": "2026-10-18",
        "se_quedaron_pct": 33.3,
        "vistas_48h": 9,
-       "porcentaje_visto": 69.6,
+       "porcentaje_visto": 41.5,
        "me_gusta": 0,
-       "visualizaciones": 12,
-       "leido": "2026-10-27"
+       "visualizaciones": 16,
+       "leido": "2026-11-02"
       },
       {
        "id": "MDS-046",
@@ -160,7 +160,7 @@
        "porcentaje_visto": 108.2,
        "me_gusta": 1,
        "visualizaciones": 4,
-       "leido": "2026-11-01"
+       "leido": "2026-11-02"
       },
       {
        "id": "MDS-048",
@@ -170,7 +170,7 @@
        "porcentaje_visto": 96.5,
        "me_gusta": 0,
        "visualizaciones": 6,
-       "leido": "2026-11-01"
+       "leido": "2026-11-02"
       },
       {
        "id": "MDS-051",
@@ -180,17 +180,17 @@
        "porcentaje_visto": 74.0,
        "me_gusta": 1,
        "visualizaciones": 33,
-       "leido": "2026-11-01"
+       "leido": "2026-11-02"
       }
      ]
     },
     "B": {
      "nombre": "Arranque con el dato",
-     "n": 6,
-     "se_quedaron_media": 36.8,
-     "porcentaje_visto_media": 144.2,
-     "vistas_48h_mediana": 19.0,
-     "me_gusta_por_100": 1.14,
+     "n": 7,
+     "se_quedaron_media": 37.2,
+     "porcentaje_visto_media": 129.6,
+     "vistas_48h_mediana": 27,
+     "me_gusta_por_100": 1.08,
      "ceros_de_feed": 1,
      "shorts": [
       {
@@ -201,7 +201,7 @@
        "porcentaje_visto": 36.7,
        "me_gusta": 6,
        "visualizaciones": 396,
-       "leido": "2026-10-27"
+       "leido": "2026-11-02"
       },
       {
        "id": "MDS-040",
@@ -211,7 +211,7 @@
        "porcentaje_visto": 186.9,
        "me_gusta": 0,
        "visualizaciones": 10,
-       "leido": "2026-10-27"
+       "leido": "2026-11-02"
       },
       {
        "id": "MDS-043",
@@ -220,8 +220,8 @@
        "vistas_48h": 27,
        "porcentaje_visto": 489.0,
        "me_gusta": 0,
-       "visualizaciones": 28,
-       "leido": "2026-10-27"
+       "visualizaciones": 29,
+       "leido": "2026-11-02"
       },
       {
        "id": "MDS-045",
@@ -230,8 +230,8 @@
        "vistas_48h": 10,
        "porcentaje_visto": 25.9,
        "me_gusta": 0,
-       "visualizaciones": 11,
-       "leido": "2026-10-27"
+       "visualizaciones": 13,
+       "leido": "2026-11-02"
       },
       {
        "id": "MDS-049",
@@ -241,7 +241,7 @@
        "porcentaje_visto": 61.4,
        "me_gusta": 0,
        "visualizaciones": 70,
-       "leido": "2026-11-01"
+       "leido": "2026-11-02"
       },
       {
        "id": "MDS-052",
@@ -251,7 +251,17 @@
        "porcentaje_visto": 65.5,
        "me_gusta": 0,
        "visualizaciones": 11,
-       "leido": "2026-11-01"
+       "leido": "2026-11-02"
+      },
+      {
+       "id": "MDS-054",
+       "publicado": "2026-10-30",
+       "se_quedaron_pct": 39.3,
+       "vistas_48h": 28,
+       "porcentaje_visto": 41.9,
+       "me_gusta": 0,
+       "visualizaciones": 28,
+       "leido": "2026-11-02"
       }
      ]
     }
@@ -265,18 +275,13 @@
     },
     "B": {
      "contra": "control",
-     "diferencia_pp": 16.7,
-     "prob_mejor": 0.94,
+     "diferencia_pp": 17.1,
+     "prob_mejor": 0.96,
      "veredicto": "GANA"
     }
    },
    "apartados": [],
    "pendientes": [
-    {
-     "id": "MDS-054",
-     "variante": "B",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    },
     {
      "id": "MDS-055",
      "variante": "A",
