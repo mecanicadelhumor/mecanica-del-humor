@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-02T18:48:10Z",
+ "actualizado_utc": "2026-11-02T20:44:18Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -98,7 +98,7 @@
        "vistas_48h": 913,
        "porcentaje_visto": 35.6,
        "me_gusta": 12,
-       "visualizaciones": 965,
+       "visualizaciones": 969,
        "leido": "2026-11-02"
       },
       {
@@ -108,18 +108,18 @@
        "vistas_48h": 16,
        "porcentaje_visto": 69.2,
        "me_gusta": 0,
-       "visualizaciones": 16,
+       "visualizaciones": 17,
        "leido": "2026-11-02"
       }
      ]
     },
     "A": {
      "nombre": "Animación a medida en las escenas de mecanismo (C55.2)",
-     "n": 6,
-     "se_quedaron_media": 30.0,
-     "porcentaje_visto_media": 74.9,
-     "vistas_48h_mediana": 15.5,
-     "me_gusta_por_100": 1.17,
+     "n": 7,
+     "se_quedaron_media": 29.1,
+     "porcentaje_visto_media": 69.5,
+     "vistas_48h_mediana": 22,
+     "me_gusta_por_100": 1.12,
      "ceros_de_feed": 3,
      "shorts": [
       {
@@ -181,16 +181,26 @@
        "me_gusta": 1,
        "visualizaciones": 33,
        "leido": "2026-11-02"
+      },
+      {
+       "id": "MDS-055",
+       "publicado": "2026-10-31",
+       "se_quedaron_pct": 23.7,
+       "vistas_48h": 498,
+       "porcentaje_visto": 36.9,
+       "me_gusta": 5,
+       "visualizaciones": 498,
+       "leido": "2026-11-02"
       }
      ]
     },
     "B": {
      "nombre": "Arranque con el dato",
      "n": 7,
-     "se_quedaron_media": 37.2,
-     "porcentaje_visto_media": 129.6,
+     "se_quedaron_media": 36.8,
+     "porcentaje_visto_media": 129.3,
      "vistas_48h_mediana": 27,
-     "me_gusta_por_100": 1.08,
+     "me_gusta_por_100": 1.07,
      "ceros_de_feed": 1,
      "shorts": [
       {
@@ -228,9 +238,9 @@
        "publicado": "2026-10-21",
        "se_quedaron_pct": 80.0,
        "vistas_48h": 10,
-       "porcentaje_visto": 25.9,
+       "porcentaje_visto": 23.6,
        "me_gusta": 0,
-       "visualizaciones": 13,
+       "visualizaciones": 16,
        "leido": "2026-11-02"
       },
       {
@@ -256,11 +266,11 @@
       {
        "id": "MDS-054",
        "publicado": "2026-10-30",
-       "se_quedaron_pct": 39.3,
-       "vistas_48h": 28,
+       "se_quedaron_pct": 36.7,
+       "vistas_48h": 30,
        "porcentaje_visto": 41.9,
        "me_gusta": 0,
-       "visualizaciones": 28,
+       "visualizaciones": 30,
        "leido": "2026-11-02"
       }
      ]
@@ -269,24 +279,19 @@
    "comparaciones": {
     "A": {
      "contra": "control",
-     "diferencia_pp": 9.9,
-     "prob_mejor": 0.92,
+     "diferencia_pp": 9.0,
+     "prob_mejor": 0.91,
      "veredicto": "gana con reparo (más ceros de feed): decide la dirección"
     },
     "B": {
      "contra": "control",
-     "diferencia_pp": 17.1,
+     "diferencia_pp": 16.7,
      "prob_mejor": 0.96,
      "veredicto": "GANA"
     }
    },
    "apartados": [],
    "pendientes": [
-    {
-     "id": "MDS-055",
-     "variante": "A",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    },
     {
      "id": "MDS-056",
      "variante": "control",
@@ -314,11 +319,11 @@
    "desde": "2026-11-05",
    "hasta": "2026-11-28",
    "referencia_anterior": {
-    "n": 9,
-    "se_quedaron_media": 29.8,
-    "porcentaje_visto_media": 70.9,
-    "vistas_48h_mediana": 28,
-    "me_gusta_por_100": 1.2,
+    "n": 10,
+    "se_quedaron_media": 28.9,
+    "porcentaje_visto_media": 67.5,
+    "vistas_48h_mediana": 31.0,
+    "me_gusta_por_100": 1.14,
     "ceros_de_feed": 2,
     "ids": [
      "MDS-046",
@@ -329,7 +334,8 @@
      "MDS-051",
      "MDS-052",
      "MDS-053",
-     "MDS-054"
+     "MDS-054",
+     "MDS-055"
     ]
    },
    "brazos": {

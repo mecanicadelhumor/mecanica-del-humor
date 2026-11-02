@@ -101967,9 +101967,9 @@
    "privacidad": "public",
    "dias_publicado": 69,
    "duracion_s": 53.0,
-   "visualizaciones": 21,
-   "duracion_media_s": 59.0,
-   "porcentaje_visto": 112.9,
+   "visualizaciones": 22,
+   "duracion_media_s": 54.0,
+   "porcentaje_visto": 102.6,
    "minutos_vistos": 7.0,
    "suscriptores": 0,
    "me_gusta": 1,
@@ -101979,10 +101979,10 @@
     "puntos": 0
    },
    "trafico_pct": {
-    "YT_SEARCH": 66.7,
-    "NO_LINK_OTHER": 14.3,
-    "YT_CHANNEL": 14.3,
-    "SHORTS": 4.8
+    "YT_SEARCH": 68.2,
+    "NO_LINK_OTHER": 13.6,
+    "YT_CHANNEL": 13.6,
+    "SHORTS": 4.5
    },
    "vistas_48h": 11,
    "se_quedaron_48h": {
@@ -101991,9 +101991,9 @@
     "pct": 36.4
    },
    "se_quedaron_total": {
-    "vistas": 21,
-    "comprometidas": 7,
-    "pct": 33.3
+    "vistas": 22,
+    "comprometidas": 8,
+    "pct": 36.4
    },
    "impresiones": null,
    "ctr": null
@@ -106009,7 +106009,9 @@
    },
    "vistas_48h": 122,
    "se_quedaron_48h": {
-    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-21&endDate=2026-09-22&metrics=views%2CengagedViews&filters=video%3D%3DbhWdbKtg1os&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
+    "vistas": 122,
+    "comprometidas": 32,
+    "pct": 26.2
    },
    "se_quedaron_total": {
     "vistas": 147,
@@ -112250,9 +112252,9 @@
    "privacidad": "public",
    "dias_publicado": 12,
    "duracion_s": 49.0,
-   "visualizaciones": 13,
-   "duracion_media_s": 12.0,
-   "porcentaje_visto": 25.9,
+   "visualizaciones": 16,
+   "duracion_media_s": 11.0,
+   "porcentaje_visto": 23.6,
    "minutos_vistos": 1.0,
    "suscriptores": 0,
    "me_gusta": 0,
@@ -112262,8 +112264,8 @@
     "puntos": 0
    },
    "trafico_pct": {
-    "SHORTS": 61.5,
-    "YT_SEARCH": 38.5
+    "YT_SEARCH": 50.0,
+    "SHORTS": 50.0
    },
    "vistas_48h": 10,
    "se_quedaron_48h": {
@@ -112272,9 +112274,9 @@
     "pct": 80.0
    },
    "se_quedaron_total": {
-    "vistas": 13,
-    "comprometidas": 8,
-    "pct": 61.5
+    "vistas": 16,
+    "comprometidas": 9,
+    "pct": 56.2
    },
    "impresiones": null,
    "ctr": null
@@ -113263,7 +113265,7 @@
    "privacidad": "public",
    "dias_publicado": 7,
    "duracion_s": 44.0,
-   "visualizaciones": 965,
+   "visualizaciones": 969,
    "duracion_media_s": 15.0,
    "porcentaje_visto": 35.6,
    "minutos_vistos": 56.0,
@@ -113679,8 +113681,8 @@
     ]
    },
    "trafico_pct": {
-    "SHORTS": 91.2,
-    "YT_SEARCH": 8.5,
+    "SHORTS": 90.8,
+    "YT_SEARCH": 8.9,
     "SUBSCRIBER": 0.3,
     "NO_LINK_OTHER": 0.0
    },
@@ -113691,9 +113693,9 @@
     "pct": 15.7
    },
    "se_quedaron_total": {
-    "vistas": 965,
+    "vistas": 969,
     "comprometidas": 161,
-    "pct": 16.7
+    "pct": 16.6
    },
    "impresiones": null,
    "ctr": null
@@ -114196,7 +114198,7 @@
    "privacidad": "public",
    "dias_publicado": 4,
    "duracion_s": 46.0,
-   "visualizaciones": 16,
+   "visualizaciones": 17,
    "duracion_media_s": 31.0,
    "porcentaje_visto": 69.2,
    "minutos_vistos": 3.0,
@@ -114208,8 +114210,8 @@
     "puntos": 0
    },
    "trafico_pct": {
-    "SHORTS": 87.5,
-    "SUBSCRIBER": 12.5,
+    "SHORTS": 88.2,
+    "SUBSCRIBER": 11.8,
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 16,
@@ -114219,9 +114221,9 @@
     "pct": 37.5
    },
    "se_quedaron_total": {
-    "vistas": 16,
+    "vistas": 17,
     "comprometidas": 6,
-    "pct": 37.5
+    "pct": 35.3
    },
    "impresiones": null,
    "ctr": null
@@ -114237,7 +114239,7 @@
    "privacidad": "public",
    "dias_publicado": 3,
    "duracion_s": 40.0,
-   "visualizaciones": 28,
+   "visualizaciones": 30,
    "duracion_media_s": 16.0,
    "porcentaje_visto": 41.9,
    "minutos_vistos": 3.0,
@@ -114653,18 +114655,19 @@
     ]
    },
    "trafico_pct": {
-    "SHORTS": 100.0
+    "SHORTS": 96.7,
+    "YT_SEARCH": 3.3
    },
-   "vistas_48h": 28,
+   "vistas_48h": 30,
    "se_quedaron_48h": {
-    "vistas": 28,
+    "vistas": 30,
     "comprometidas": 11,
-    "pct": 39.3
+    "pct": 36.7
    },
    "se_quedaron_total": {
-    "vistas": 28,
+    "vistas": 30,
     "comprometidas": 11,
-    "pct": 39.3
+    "pct": 36.7
    },
    "impresiones": null,
    "ctr": null
@@ -114680,37 +114683,446 @@
    "privacidad": "public",
    "dias_publicado": 2,
    "duracion_s": 41.0,
-   "visualizaciones": 0,
-   "duracion_media_s": 0.0,
-   "porcentaje_visto": 0.0,
-   "minutos_vistos": 0.0,
+   "visualizaciones": 498,
+   "duracion_media_s": 15.0,
+   "porcentaje_visto": 36.9,
+   "minutos_vistos": 38.0,
    "suscriptores": 0,
-   "me_gusta": 0,
+   "me_gusta": 5,
    "comentarios": 0,
    "compartidos": 0,
    "retencion": {
-    "puntos": 0
+    "puntos": 100,
+    "a_30s_pct": 14.4,
+    "caida_primer_10_pct": 7.6,
+    "curva": [
+     {
+      "t": 0.4,
+      "ratio": 1.0593
+     },
+     {
+      "t": 0.8,
+      "ratio": 1.0508
+     },
+     {
+      "t": 1.2,
+      "ratio": 1.0508
+     },
+     {
+      "t": 1.6,
+      "ratio": 1.0424
+     },
+     {
+      "t": 2.1,
+      "ratio": 1.0424
+     },
+     {
+      "t": 2.5,
+      "ratio": 1.0424
+     },
+     {
+      "t": 2.9,
+      "ratio": 1.0254
+     },
+     {
+      "t": 3.3,
+      "ratio": 1.0169
+     },
+     {
+      "t": 3.7,
+      "ratio": 1.0085
+     },
+     {
+      "t": 4.1,
+      "ratio": 1.0085
+     },
+     {
+      "t": 4.5,
+      "ratio": 0.9831
+     },
+     {
+      "t": 4.9,
+      "ratio": 0.9492
+     },
+     {
+      "t": 5.3,
+      "ratio": 0.9237
+     },
+     {
+      "t": 5.7,
+      "ratio": 0.8983
+     },
+     {
+      "t": 6.1,
+      "ratio": 0.8644
+     },
+     {
+      "t": 6.6,
+      "ratio": 0.8305
+     },
+     {
+      "t": 7.0,
+      "ratio": 0.7712
+     },
+     {
+      "t": 7.4,
+      "ratio": 0.7458
+     },
+     {
+      "t": 7.8,
+      "ratio": 0.7288
+     },
+     {
+      "t": 8.2,
+      "ratio": 0.678
+     },
+     {
+      "t": 8.6,
+      "ratio": 0.6271
+     },
+     {
+      "t": 9.0,
+      "ratio": 0.6017
+     },
+     {
+      "t": 9.4,
+      "ratio": 0.5678
+     },
+     {
+      "t": 9.8,
+      "ratio": 0.5424
+     },
+     {
+      "t": 10.2,
+      "ratio": 0.4915
+     },
+     {
+      "t": 10.7,
+      "ratio": 0.4831
+     },
+     {
+      "t": 11.1,
+      "ratio": 0.4746
+     },
+     {
+      "t": 11.5,
+      "ratio": 0.4661
+     },
+     {
+      "t": 11.9,
+      "ratio": 0.4492
+     },
+     {
+      "t": 12.3,
+      "ratio": 0.4492
+     },
+     {
+      "t": 12.7,
+      "ratio": 0.4322
+     },
+     {
+      "t": 13.1,
+      "ratio": 0.4153
+     },
+     {
+      "t": 13.5,
+      "ratio": 0.4153
+     },
+     {
+      "t": 13.9,
+      "ratio": 0.3983
+     },
+     {
+      "t": 14.3,
+      "ratio": 0.3814
+     },
+     {
+      "t": 14.8,
+      "ratio": 0.3644
+     },
+     {
+      "t": 15.2,
+      "ratio": 0.3559
+     },
+     {
+      "t": 15.6,
+      "ratio": 0.339
+     },
+     {
+      "t": 16.0,
+      "ratio": 0.3051
+     },
+     {
+      "t": 16.4,
+      "ratio": 0.3051
+     },
+     {
+      "t": 16.8,
+      "ratio": 0.2881
+     },
+     {
+      "t": 17.2,
+      "ratio": 0.2881
+     },
+     {
+      "t": 17.6,
+      "ratio": 0.2881
+     },
+     {
+      "t": 18.0,
+      "ratio": 0.2797
+     },
+     {
+      "t": 18.4,
+      "ratio": 0.2797
+     },
+     {
+      "t": 18.9,
+      "ratio": 0.2627
+     },
+     {
+      "t": 19.3,
+      "ratio": 0.2542
+     },
+     {
+      "t": 19.7,
+      "ratio": 0.2458
+     },
+     {
+      "t": 20.1,
+      "ratio": 0.2458
+     },
+     {
+      "t": 20.5,
+      "ratio": 0.2373
+     },
+     {
+      "t": 20.9,
+      "ratio": 0.2373
+     },
+     {
+      "t": 21.3,
+      "ratio": 0.2373
+     },
+     {
+      "t": 21.7,
+      "ratio": 0.2288
+     },
+     {
+      "t": 22.1,
+      "ratio": 0.2288
+     },
+     {
+      "t": 22.6,
+      "ratio": 0.2288
+     },
+     {
+      "t": 23.0,
+      "ratio": 0.2288
+     },
+     {
+      "t": 23.4,
+      "ratio": 0.2203
+     },
+     {
+      "t": 23.8,
+      "ratio": 0.2203
+     },
+     {
+      "t": 24.2,
+      "ratio": 0.2119
+     },
+     {
+      "t": 24.6,
+      "ratio": 0.1949
+     },
+     {
+      "t": 25.0,
+      "ratio": 0.1864
+     },
+     {
+      "t": 25.4,
+      "ratio": 0.1864
+     },
+     {
+      "t": 25.8,
+      "ratio": 0.1695
+     },
+     {
+      "t": 26.2,
+      "ratio": 0.1695
+     },
+     {
+      "t": 26.7,
+      "ratio": 0.161
+     },
+     {
+      "t": 27.1,
+      "ratio": 0.161
+     },
+     {
+      "t": 27.5,
+      "ratio": 0.161
+     },
+     {
+      "t": 27.9,
+      "ratio": 0.1525
+     },
+     {
+      "t": 28.3,
+      "ratio": 0.1441
+     },
+     {
+      "t": 28.7,
+      "ratio": 0.1441
+     },
+     {
+      "t": 29.1,
+      "ratio": 0.1441
+     },
+     {
+      "t": 29.5,
+      "ratio": 0.1441
+     },
+     {
+      "t": 29.9,
+      "ratio": 0.1441
+     },
+     {
+      "t": 30.3,
+      "ratio": 0.1525
+     },
+     {
+      "t": 30.8,
+      "ratio": 0.1525
+     },
+     {
+      "t": 31.2,
+      "ratio": 0.1525
+     },
+     {
+      "t": 31.6,
+      "ratio": 0.1525
+     },
+     {
+      "t": 32.0,
+      "ratio": 0.1525
+     },
+     {
+      "t": 32.4,
+      "ratio": 0.1525
+     },
+     {
+      "t": 32.8,
+      "ratio": 0.1441
+     },
+     {
+      "t": 33.2,
+      "ratio": 0.1441
+     },
+     {
+      "t": 33.6,
+      "ratio": 0.1441
+     },
+     {
+      "t": 34.0,
+      "ratio": 0.1356
+     },
+     {
+      "t": 34.4,
+      "ratio": 0.1102
+     },
+     {
+      "t": 34.9,
+      "ratio": 0.1102
+     },
+     {
+      "t": 35.3,
+      "ratio": 0.1102
+     },
+     {
+      "t": 35.7,
+      "ratio": 0.1102
+     },
+     {
+      "t": 36.1,
+      "ratio": 0.1102
+     },
+     {
+      "t": 36.5,
+      "ratio": 0.1102
+     },
+     {
+      "t": 36.9,
+      "ratio": 0.1017
+     },
+     {
+      "t": 37.3,
+      "ratio": 0.0932
+     },
+     {
+      "t": 37.7,
+      "ratio": 0.0932
+     },
+     {
+      "t": 38.1,
+      "ratio": 0.0932
+     },
+     {
+      "t": 38.5,
+      "ratio": 0.0847
+     },
+     {
+      "t": 38.9,
+      "ratio": 0.0847
+     },
+     {
+      "t": 39.4,
+      "ratio": 0.0847
+     },
+     {
+      "t": 39.8,
+      "ratio": 0.0678
+     },
+     {
+      "t": 40.2,
+      "ratio": 0.0593
+     },
+     {
+      "t": 40.6,
+      "ratio": 0.0508
+     },
+     {
+      "t": 41.0,
+      "ratio": 0.0508
+     }
+    ]
    },
-   "trafico_pct": {},
-   "vistas_48h": 0,
+   "trafico_pct": {
+    "SHORTS": 94.0,
+    "YT_SEARCH": 6.0,
+    "NO_LINK_OTHER": 0.0,
+    "EXT_URL": 0.0
+   },
+   "vistas_48h": 498,
    "se_quedaron_48h": {
-    "vistas": 0,
-    "comprometidas": 0,
-    "pct": null
+    "vistas": 498,
+    "comprometidas": 118,
+    "pct": 23.7
    },
    "se_quedaron_total": {
-    "vistas": 0,
-    "comprometidas": 0,
-    "pct": null
+    "vistas": 498,
+    "comprometidas": 118,
+    "pct": 23.7
    },
    "impresiones": null,
    "ctr": null
   }
  ],
  "miniaturas": [],
- "actualizado_utc": "2026-11-02T18:48:05Z",
+ "actualizado_utc": "2026-11-02T20:44:12Z",
  "control_c26": {
-  "mediana_vistas_48h": 27.5,
+  "mediana_vistas_48h": 28.5,
   "n_videos": 20,
   "sobre_100_vistas": 6,
   "sobre_50_vistas": 7,
