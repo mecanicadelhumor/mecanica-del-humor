@@ -59,12 +59,25 @@ jobs:
           python-version: "3.12"
 
       - name: Dependencias
-        timeout-minutes: 10
+        timeout-minutes: 15
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+          # 26/10/2026: dos ejecuciones seguidas (14:35 y 14:47 UTC) murieron aquí: «apt-get update»
+          # se quedó colgado sin escribir nada y el paso agotó sus 10 minutos. Ahora apt tiene
+          # reintentos y tope de tiempo propio, no bloquea el paso si falla, y lo que ya está
+          # instalado en el runner no se vuelve a pedir.
+          sudo rm -f /var/lib/apt/lists/lock /var/cache/apt/archives/lock || true
+          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20"
+          sudo timeout 240 apt-get update -qq $APT || echo "apt-get update falló o tardó demasiado; se sigue"
+          falta=""
+          command -v ffmpeg >/dev/null || falta="$falta ffmpeg"
+          fc-list 2>/dev/null | grep -qi dejavu || falta="$falta fonts-dejavu-core"
+          if [ -n "$falta" ]; then
+            sudo timeout 300 apt-get install -y -qq $APT $falta \
+              || sudo timeout 300 apt-get install -y -qq $APT $falta
+          fi
+          command -v ffmpeg >/dev/null || { echo "::error::sin ffmpeg: el runner no ha podido instalarlo"; exit 1; }
           pip install --quiet pillow numpy opencv-python-headless "kaggle>=1.7.4"
 
       - name: Caras
