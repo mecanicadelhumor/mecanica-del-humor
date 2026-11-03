@@ -1028,12 +1028,13 @@
       "guion": "05_calendario/guiones/MDS-058.es.json",
       "video_id": "W_Hwzc3mrEk",
       "url": "https://youtu.be/W_Hwzc3mrEk",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-11-03T18:00:00Z",
       "musica": "cama_02_dusk_next_route.mp3",
       "subido_utc": "2026-11-03T08:05:42Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-11-03T22:22:03Z"
     }
   ],
-  "_estado_leido_utc": "2026-11-02T18:46:55Z"
+  "_estado_leido_utc": "2026-11-03T22:22:03Z"
 }
