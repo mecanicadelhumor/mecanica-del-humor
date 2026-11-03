@@ -634,5 +634,19 @@
         "adult gorilla sitting thoughtful"
       ]
     }
+  },
+  "MDS-059": {
+    "4.2": {
+      "excluir": [
+        "pixabay:124058"
+      ],
+      "busqueda": [
+        "person laughing watching funny video on laptop",
+        "friends bored watching a dull video on tv"
+      ]
+    },
+    "4": {
+      "texto_pos": "abajo"
+    }
   }
 }
