@@ -1,8 +1,8 @@
 {
   "guion": "MDS-059",
   "version": 1,
-  "firma": "c08a51c49b28b18a",
-  "resuelto_utc": "2026-10-29T22:57:42Z",
+  "firma": "bc510b943172342e",
+  "resuelto_utc": "2026-11-03T10:31:30Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -194,27 +194,29 @@
             11.57
           ],
           "frase": "vídeos sin gracia.",
-          "fuente": "pixabay",
-          "id": 124058,
-          "pagina": "https://pixabay.com/videos/id-124058/",
-          "titulo": "like, thanks for watching, thanks, comment, share, subscribe, end, youtube end screen, end screen, youtube, title, digital title, typography id",
-          "autor": "Kashif_Hussain",
-          "autor_url": "https://pixabay.com/users/Kashif_Hussain-17404579/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 19.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2022/07/13/124058-729835793_large.mp4",
-          "tipo": "video",
-          "consulta": "two people bored watching screen",
-          "relevancia": 0.5,
-          "inicio_s": 0.4,
-          "movimiento": 2.58,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
-          "caras": []
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "the same two friends watching a screen with bored faces",
+          "semilla": 4402084,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-059/e4_p2.jpg",
+          "caras": [
+            [
+              0.6224,
+              0.3662,
+              0.1862,
+              0.1324
+            ],
+            [
+              0.2747,
+              0.3816,
+              0.1693,
+              0.1176
+            ]
+          ]
         }
       ]
     },
@@ -383,6 +385,13 @@
       "id": "pixabay:237504",
       "titulo": "cup, drink, biscuits, breakfast, food, coffee, healthy, fruits, restaurant, cereal, table, sheet, bread, cappuccino, dinner, plate, waffles, berries, bowl, grapes, nutrition id",
       "motivo": "quieto (movimiento 0.37)"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pexels:7981374",
+      "titulo": "family watching tv",
+      "motivo": "poco relevante (0.333): se prueba la IA"
     },
     {
       "escena": 6,
