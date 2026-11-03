@@ -1018,6 +1018,21 @@
       "subido_utc": "2026-11-02T07:46:13Z",
       "revisado": false,
       "pregunta_publicada": "2026-11-02T18:51:54Z"
+    },
+    {
+      "id": "MDS-058.es",
+      "episodio": "MDS-058",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué duele que dejen de contestarte?",
+      "guion": "05_calendario/guiones/MDS-058.es.json",
+      "video_id": "W_Hwzc3mrEk",
+      "url": "https://youtu.be/W_Hwzc3mrEk",
+      "estado": "private",
+      "publicar_en": "2026-11-03T18:00:00Z",
+      "musica": "cama_02_dusk_next_route.mp3",
+      "subido_utc": "2026-11-03T08:05:42Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-11-02T18:46:55Z"

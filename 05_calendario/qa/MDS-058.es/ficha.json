@@ -1,15 +1,15 @@
 {
-  "id": "MDS-052.es",
-  "duracion_final_s": 51.73,
-  "tamano_mb": 26.2,
+  "id": "MDS-058.es",
+  "duracion_final_s": 48.8,
+  "tamano_mb": 34.2,
   "audio": {
-    "lufs": -15.2,
-    "pico_dbtp": -1.41,
-    "rango_lu": 8.3
+    "lufs": -14.47,
+    "pico_dbtp": -1.31,
+    "rango_lu": 6.0
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.128,
+    "acaba_s": 0.129,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,7 +17,7 @@
     "silencios_s": [
       [
         0.0,
-        0.128
+        0.129
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -42,24 +42,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 50.62,
-    "duracion_real_voz_mp3_s": 50.62,
+    "duracion_calculada_s": 47.68,
+    "duracion_real_voz_mp3_s": 47.68,
     "desfase_s": 0.0,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_10_farewell_galaxytones.mp3",
-    "sha256": "69dcf8f36cf5cd76332baaa29681a990c569856a97b4c0334e86a27e906c01dc"
+    "archivo": "cama_02_dusk_next_route.mp3",
+    "sha256": "3f93cfef7318ae5e93a365a3fe16282de13c279e2733dd7c18fcfbe38f530c74"
   },
   "guion": {
-    "titulo_trabajo": "¿Se nota cuando alguien se ríe por compromiso?",
+    "titulo_trabajo": "¿Por qué duele que dejen de contestarte?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 50.62,
+    "duracion_narracion_s": 47.68,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 13.15,
+    "escena_mas_larga_s": 11.6,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 6
@@ -69,7 +69,7 @@
     "origen_voz": [
       "llamada",
       "llamada",
-      "llamada (dirección mínima)",
+      "llamada",
       "llamada",
       "llamada",
       "llamada"
@@ -84,12 +84,12 @@
     ],
     "escenas_ritmo_fuera_de_rango": [],
     "voz_fiel": [
-      "14/12 palabras, 0 trozos repetidos",
-      "17/15 palabras, 0 trozos repetidos",
-      "12/12 palabras, 0 trozos repetidos",
-      "18/19 palabras, 0 trozos repetidos",
-      "17/20 palabras, 0 trozos repetidos",
-      "20/21 palabras, 0 trozos repetidos"
+      "11/11 palabras, 0 trozos repetidos",
+      "6/6 palabras, 0 trozos repetidos",
+      "10/12 palabras, 0 trozos repetidos",
+      "24/21 palabras, 0 trozos repetidos",
+      "20/20 palabras, 0 trozos repetidos",
+      "18/20 palabras, 0 trozos repetidos"
     ]
   },
   "visual": {
@@ -97,109 +97,121 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 5.3,
+        "hasta_s": 5.47,
         "fuente": "pexels",
-        "id": 5791522,
-        "pagina": "https://www.pexels.com/video/man-having-dinner-with-family-and-talking-5791522/",
-        "autor": "cottonbro studio",
-        "autor_url": "https://www.pexels.com/@cottonbro",
+        "id": 4076741,
+        "pagina": "https://www.pexels.com/video/a-woman-texting-with-her-smartphone-4076741/",
+        "autor": "KATRIN  BOLOVTSOVA",
+        "autor_url": "https://www.pexels.com/@ekaterina-bolovtsova",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 5.3,
-        "hasta_s": 9.07,
+        "desde_s": 5.47,
+        "hasta_s": 6.93,
         "fuente": "pexels",
-        "id": 4878062,
-        "pagina": "https://www.pexels.com/video/a-man-sitting-at-a-table-with-wine-glasses-4878062/",
-        "autor": "cottonbro studio",
-        "autor_url": "https://www.pexels.com/@cottonbro",
+        "id": 6964003,
+        "pagina": "https://www.pexels.com/video/a-woman-checking-her-phone-while-staring-blankly-6964003/",
+        "autor": "Mikhail Nilov",
+        "autor_url": "https://www.pexels.com/@mikhail-nilov",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 9.07,
-        "hasta_s": 14.37,
+        "desde_s": 6.93,
+        "hasta_s": 10.53,
         "fuente": "pexels",
-        "id": 7334527,
-        "pagina": "https://www.pexels.com/video/people-talking-and-laughing-7334527/",
-        "autor": "Pavel Danilyuk",
-        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+        "id": 31423053,
+        "pagina": "https://www.pexels.com/video/close-up-of-a-modern-wall-clock-31423053/",
+        "autor": "Cheng Shi Song",
+        "autor_url": "https://www.pexels.com/@cheng-shi-song-427082720",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 3,
-        "desde_s": 14.37,
-        "hasta_s": 19.07,
+        "desde_s": 10.53,
+        "hasta_s": 16.2,
         "fuente": "pexels",
-        "id": 8426120,
-        "pagina": "https://www.pexels.com/video/a-man-lighting-up-a-blunt-at-a-party-8426120/",
-        "autor": "Pavel Danilyuk",
-        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+        "id": 6872628,
+        "pagina": "https://www.pexels.com/video/elderly-woman-having-a-hard-time-6872628/",
+        "autor": "Teona Swift",
+        "autor_url": "https://www.pexels.com/@teona-swift",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 4,
-        "desde_s": 19.07,
-        "hasta_s": 26.17,
-        "fuente": "pexels",
-        "id": 35332008,
-        "pagina": "https://www.pexels.com/video/relaxed-man-listening-to-music-at-home-desk-35332008/",
-        "autor": "Tom Shutkin",
-        "autor_url": "https://www.pexels.com/@shootkin",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "desde_s": 16.2,
+        "hasta_s": 24.0,
+        "fuente": "pixabay",
+        "id": 168343,
+        "pagina": "https://pixabay.com/videos/id-168343/",
+        "autor": "Amorn_mimi",
+        "autor_url": "https://pixabay.com/users/Amorn_mimi-27759397/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       },
       {
         "escena": 4,
-        "desde_s": 26.17,
-        "hasta_s": 28.4,
+        "desde_s": 24.0,
+        "hasta_s": 27.5,
+        "fuente": "pixabay",
+        "id": 1360,
+        "pagina": "https://pixabay.com/videos/id-1360/",
+        "autor": "Activedia",
+        "autor_url": "https://pixabay.com/users/Activedia-665768/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 27.5,
+        "hasta_s": 33.33,
         "fuente": "pexels",
-        "id": 5703805,
-        "pagina": "https://www.pexels.com/video/man-wearing-headset-dancing-5703805/",
-        "autor": "Tima Miroshnichenko",
-        "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+        "id": 8458634,
+        "pagina": "https://www.pexels.com/video/man-sitting-alone-in-a-room-and-feeling-anxious-8458634/",
+        "autor": "MART  PRODUCTION",
+        "autor_url": "https://www.pexels.com/@mart-production",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 5,
-        "desde_s": 28.4,
-        "hasta_s": 37.5,
+        "desde_s": 33.33,
+        "hasta_s": 36.1,
         "fuente": "pexels",
-        "id": 8817000,
-        "pagina": "https://www.pexels.com/video/hand-flipping-a-coin-8817000/",
-        "autor": "cottonbro CG studio",
-        "autor_url": "https://www.pexels.com/@cottonbro-cg-studio",
+        "id": 7652957,
+        "pagina": "https://www.pexels.com/video/adult-man-typing-on-phone-7652957/",
+        "autor": "Thirdman",
+        "autor_url": "https://www.pexels.com/@thirdman",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 6,
-        "desde_s": 37.5,
-        "hasta_s": 42.8,
+        "desde_s": 36.1,
+        "hasta_s": 41.7,
         "fuente": "pexels",
-        "id": 5961378,
-        "pagina": "https://www.pexels.com/video/elderly-friends-eating-dinner-outdoors-while-celebrating-an-event-5961378/",
-        "autor": "cottonbro studio",
-        "autor_url": "https://www.pexels.com/@cottonbro",
+        "id": 15711939,
+        "pagina": "https://www.pexels.com/video/close-up-of-a-young-woman-using-her-phone-15711939/",
+        "autor": "Yusuf Çelik",
+        "autor_url": "https://www.pexels.com/@zandatsu",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 6,
-        "desde_s": 42.8,
-        "hasta_s": 48.43,
-        "fuente": "pixabay",
-        "id": 121113,
-        "pagina": "https://pixabay.com/videos/id-121113/",
-        "autor": "blackmarketmusic",
-        "autor_url": "https://pixabay.com/users/blackmarketmusic-2976878/",
-        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "desde_s": 41.7,
+        "hasta_s": 46.2,
+        "fuente": "pexels",
+        "id": 36717013,
+        "pagina": "https://www.pexels.com/video/elderly-man-engaged-with-mobile-phone-outdoors-36717013/",
+        "autor": "Mahadi Hassan Molla",
+        "autor_url": "https://www.pexels.com/@mahadi01",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       }
     ],
@@ -207,12 +219,12 @@
   },
   "animacion": null,
   "fotogramas_s": [
-    3.27,
-    10.83,
-    17.27,
-    24.75,
-    33.93,
-    45.46
+    3.37,
+    8.59,
+    14.01,
+    23.05,
+    32.73,
+    43.14
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
