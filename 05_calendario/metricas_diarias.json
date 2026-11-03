@@ -1,6 +1,6 @@
 {
  "_nota": "C47: lectura ligera diaria de los vídeos publicados en los últimos 10 días: visualizaciones, vistas_48h y, desde el 05/10/2026 (C60), se_quedaron_48h («Se quedaron viendo» de Studio = engagedViews/views), porcentaje_visto, me_gusta, suscriptores y compartidos. Sin curvas de retención a propósito (ver la cabecera de escribir_metricas_diarias() en 04_agentes/metricas.py). Se SOBRESCRIBE entero cada vez: es una ventana rodante, no una serie histórica. La lectura completa semanal (metricas.json, control_c26) es la que manda y no cambia con este fichero.",
- "actualizado_utc": "2026-11-03T14:39:32Z",
+ "actualizado_utc": "2026-11-03T20:18:19Z",
  "videos": [
   {
    "id": "MDS-048.es",
@@ -35,7 +35,7 @@
   {
    "id": "MDS-050.es",
    "publicado": "2026-10-26",
-   "visualizaciones": 969,
+   "visualizaciones": 976,
    "vistas_48h": 913,
    "se_quedaron_48h": {
     "vistas": 913,
@@ -50,7 +50,7 @@
   {
    "id": "MDS-051.es",
    "publicado": "2026-10-27",
-   "visualizaciones": 33,
+   "visualizaciones": 34,
    "vistas_48h": 32,
    "se_quedaron_48h": {
     "vistas": 32,
@@ -80,7 +80,7 @@
   {
    "id": "MDS-053.es",
    "publicado": "2026-10-29",
-   "visualizaciones": 17,
+   "visualizaciones": 18,
    "vistas_48h": 16,
    "se_quedaron_48h": {
     "vistas": 16,
@@ -95,7 +95,7 @@
   {
    "id": "MDS-054.es",
    "publicado": "2026-10-30",
-   "visualizaciones": 30,
+   "visualizaciones": 31,
    "vistas_48h": 30,
    "se_quedaron_48h": {
     "vistas": 30,
@@ -110,29 +110,29 @@
   {
    "id": "MDS-055.es",
    "publicado": "2026-10-31",
-   "visualizaciones": 498,
-   "vistas_48h": 498,
+   "visualizaciones": 700,
+   "vistas_48h": 700,
    "se_quedaron_48h": {
-    "vistas": 498,
-    "comprometidas": 118,
-    "pct": 23.7
+    "vistas": 700,
+    "comprometidas": 178,
+    "pct": 25.4
    },
-   "porcentaje_visto": 36.9,
-   "me_gusta": 5,
+   "porcentaje_visto": 35.5,
+   "me_gusta": 6,
    "suscriptores": 0,
    "compartidos": 0
   },
   {
    "id": "MDS-056.es",
    "publicado": "2026-11-01",
-   "visualizaciones": 0,
-   "vistas_48h": 0,
+   "visualizaciones": 10,
+   "vistas_48h": 10,
    "se_quedaron_48h": {
-    "vistas": 0,
-    "comprometidas": 0,
-    "pct": null
+    "vistas": 10,
+    "comprometidas": 2,
+    "pct": 20.0
    },
-   "porcentaje_visto": 0.0,
+   "porcentaje_visto": 17.4,
    "me_gusta": 0,
    "suscriptores": 0,
    "compartidos": 0
