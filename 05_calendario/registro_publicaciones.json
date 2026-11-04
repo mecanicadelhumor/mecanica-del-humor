@@ -1044,12 +1044,13 @@
       "guion": "05_calendario/guiones/MDS-059.es.json",
       "video_id": "hPHVJTT0nWA",
       "url": "https://youtu.be/hPHVJTT0nWA",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-11-04T18:00:00Z",
       "musica": "cama_03_haru_lofi_roa.mp3",
       "subido_utc": "2026-11-04T07:37:39Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-11-04T22:41:14Z"
     }
   ],
-  "_estado_leido_utc": "2026-11-03T22:22:03Z"
+  "_estado_leido_utc": "2026-11-04T22:41:14Z"
 }
