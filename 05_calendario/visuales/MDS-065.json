@@ -1,0 +1,307 @@
+{
+  "guion": "MDS-065",
+  "version": 2,
+  "firma": "ed39e0cf1c452175",
+  "resuelto_utc": "2026-11-05T22:54:38Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "fd6abdf4ecd1",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.98
+          ],
+          "frase": "Si alguien llora de alegría, lo que te sale es calmarlo.",
+          "fuente": "pexels",
+          "id": 6382088,
+          "pagina": "https://www.pexels.com/video/young-woman-crying-on-the-shoulders-of-her-friend-6382088/",
+          "titulo": "young woman crying on the shoulders of her friend",
+          "autor": "Liza Summer",
+          "autor_url": "https://www.pexels.com/@liza-summer",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6382088/6382088-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman crying with joy friend hugging",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 2.03,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2028,
+              0.4,
+              0.525,
+              0.3391
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "fb151485593e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.65
+          ],
+          "frase": "A tu amiga le acaban de dar el trabajo de su vida, y se echa a llorar.",
+          "fuente": "pexels",
+          "id": 7191511,
+          "pagina": "https://www.pexels.com/video/woman-unboxing-new-phone-7191511/",
+          "titulo": "woman unboxing new phone",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 20.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7191511/7191511-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman reading good news phone crying",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 5.38,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5458,
+              0.277,
+              0.1917,
+              0.1338
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "beaae8affccf",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.46
+          ],
+          "frase": "Y tú, sin pensarlo, le das palmaditas en la espalda: «ya está, ya está».",
+          "fuente": "pexels",
+          "id": 6381021,
+          "pagina": "https://www.pexels.com/video/a-woman-comforting-her-friend-6381021/",
+          "titulo": "a woman comforting her friend",
+          "autor": "Liza Summer",
+          "autor_url": "https://www.pexels.com/@liza-summer",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6381021/6381021-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "friend patting back comforting",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 2.43,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5167,
+              0.0634,
+              0.3375,
+              0.2441
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "09bd0557e396",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.23
+          ],
+          "frase": "¿Por qué, si está feliz? Unos psicólogos enseñaron fotos y vídeos de gente feliz: unos sonriendo, y otros",
+          "fuente": "pixabay",
+          "id": 279397,
+          "pagina": "https://pixabay.com/videos/id-279397/",
+          "titulo": "ai generated, woman, model, pose, posing, face, modeling, female, smile, happy, smiling, cute, portrait, black, african id",
+          "autor": "fbartondavis",
+          "autor_url": "https://pixabay.com/users/fbartondavis-32369/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 5.0,
+          "ancho": 1080,
+          "alto": 1468,
+          "url": "https://cdn.pixabay.com/video/2025/05/15/279397_large.mp4",
+          "tipo": "video",
+          "consulta": "smiling happy woman portrait",
+          "relevancia": 1.0,
+          "inicio_s": 0.0,
+          "movimiento": 9.45,
+          "encuadre": {
+            "x": 0.783,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2058,
+              0.168,
+              0.5886,
+              0.459
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "llorando de alegría",
+          "t_estimado": [
+            8.23,
+            10.64
+          ],
+          "frase": "llorando de alegría.",
+          "fuente": "pexels",
+          "id": 8724225,
+          "pagina": "https://www.pexels.com/video/a-woman-crying-while-wiping-her-tears-8724225/",
+          "titulo": "a woman crying while wiping her tears",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 35.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8724225/8724225-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman crying happy tears portrait",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 3.97,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.933
+          },
+          "caras": [
+            [
+              0.2826,
+              0.24,
+              0.4605,
+              0.36
+            ]
+          ]
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "28d55a545351",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            10.18
+          ],
+          "frase": "Ante una sonrisa, los que miraban querían sumarse a la alegría. Ante las lágrimas, querían calmarlas, aunque fueran de alegría.",
+          "fuente": "pixabay",
+          "id": 228129,
+          "pagina": "https://pixabay.com/videos/id-228129/",
+          "titulo": "celebration, drink, picnic, christmas, family, wedding, kids, new years eve, festival id",
+          "autor": "xBriantcx",
+          "autor_url": "https://pixabay.com/users/xBriantcx-36275440/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 17.0,
+          "ancho": 2160,
+          "alto": 4096,
+          "url": "https://cdn.pixabay.com/video/2024/08/24/228129_large.mp4",
+          "tipo": "video",
+          "consulta": "friends celebrating good news",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 2.95,
+          "encuadre": {
+            "x": 0.5,
+            "y": 1
+          },
+          "caras": [
+            [
+              0.3875,
+              0.7772,
+              0.0694,
+              0.0477
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "e4dbba9cee30",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            10.39
+          ],
+          "frase": "Tu «ya está» no era raro: las lágrimas piden calma. Eso sí, respondían ante fotos y vídeos, no ante una amiga.",
+          "fuente": "pexels",
+          "id": 9787350,
+          "pagina": "https://www.pexels.com/video/friends-hugging-each-other-9787350/",
+          "titulo": "friends hugging each other",
+          "autor": "Marcus Aurelius",
+          "autor_url": "https://www.pexels.com/@marcus-aurelius",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/9787350/9787350-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "two friends hugging smiling",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 19.89,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4056,
+              0.2234,
+              0.2083,
+              0.1844
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

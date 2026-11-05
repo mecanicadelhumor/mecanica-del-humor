@@ -1,0 +1,350 @@
+{
+  "guion": "MDS-064",
+  "version": 2,
+  "firma": "324e1cf23569b834",
+  "resuelto_utc": "2026-11-05T22:54:24Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "13633124c969",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.05
+          ],
+          "frase": "Oír a alguien reír hace más gracioso cualquier chiste.",
+          "fuente": "pexels",
+          "id": 8627759,
+          "pagina": "https://www.pexels.com/video/a-woman-laughing-while-looking-at-the-camera-8627759/",
+          "titulo": "a woman laughing while looking at the camera",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8627759/8627759-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman laughing loudly",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 4.76,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3722,
+              0.1547,
+              0.275,
+              0.2219
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "fb21a0cfa541",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.27
+          ],
+          "frase": "Cena familiar. Tu primo cuenta un chiste malísimo, y la mesa",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a young man telling a joke at a family dinner table",
+          "semilla": 7899431,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-064/e2_p1.jpg",
+          "caras": [
+            [
+              0.3867,
+              0.2735,
+              0.168,
+              0.1412
+            ],
+            [
+              0.0,
+              0.3404,
+              0.0951,
+              0.1375
+            ],
+            [
+              0.9297,
+              0.3559,
+              0.0703,
+              0.1066
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "se queda en silencio",
+          "t_estimado": [
+            5.27,
+            8.72
+          ],
+          "frase": "se queda en silencio.",
+          "fuente": "pexels",
+          "id": 5791511,
+          "pagina": "https://www.pexels.com/video/a-family-dinner-5791511/",
+          "titulo": "a family dinner",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 14.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/5791511/5791511-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "family dinner awkward silence",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 10.38,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.7257,
+              0.3105,
+              0.2566,
+              0.2028
+            ],
+            [
+              0.1106,
+              0.323,
+              0.2566,
+              0.1828
+            ],
+            [
+              0.0,
+              0.333,
+              0.1814,
+              0.1853
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "7ac5309c272d",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.08
+          ],
+          "frase": "Hasta que tu tía suelta una carcajada, y acabáis todos riéndoos.",
+          "fuente": "pexels",
+          "id": 5814437,
+          "pagina": "https://www.pexels.com/video/family-having-video-call-during-christmas-dinner-5814437/",
+          "titulo": "family having video call during christmas dinner",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 18.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5814437/5814437-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "family laughing together at dinner",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 8.59,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2556,
+              0.45,
+              0.1694,
+              0.1172
+            ],
+            [
+              0.4083,
+              0.4516,
+              0.1611,
+              0.1109
+            ],
+            [
+              0.7722,
+              0.4422,
+              0.1278,
+              0.0969
+            ],
+            [
+              0.6111,
+              0.4547,
+              0.1278,
+              0.0938
+            ],
+            [
+              0.6333,
+              0.5547,
+              0.1111,
+              0.1031
+            ],
+            [
+              0.775,
+              0.5531,
+              0.1111,
+              0.0969
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "514de10f0eb8",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            10.64
+          ],
+          "frase": "¿Por qué pasa? Unos investigadores pusieron a adultos chistes, eructos y caídas, unas veces con risas añadidas y otras sin ellas.",
+          "fuente": "pixabay",
+          "id": 342901,
+          "pagina": "https://pixabay.com/videos/id-342901/",
+          "titulo": "headphones, computer, person, typing, home, window, screen, headset, vintage, lifestyle, old computer, cozy room, digital immersion, interior space, listening music, personal tech, anime, ai created id",
+          "autor": "Hideaki_AnimeTH",
+          "autor_url": "https://pixabay.com/users/Hideaki_AnimeTH-29800360/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 10.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2026/03/27/342901_large.mp4",
+          "tipo": "video",
+          "consulta": "person with headphones listening laptop",
+          "relevancia": 0.75,
+          "inicio_s": 0.0,
+          "movimiento": 2.47,
+          "encuadre": {
+            "x": 0.616,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.353,
+              0.2028,
+              0.2939,
+              0.2375
+            ]
+          ]
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "6472a7a790d6",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.26
+          ],
+          "frase": "Con risas, todo parecía más gracioso. Y más aún si la risa era de verdad, y no fingida.",
+          "fuente": "pexels",
+          "id": 9130472,
+          "pagina": "https://www.pexels.com/video/woman-wearing-headphones-laughing-9130472/",
+          "titulo": "woman wearing headphones laughing",
+          "autor": "Dario Fernandez Ruz",
+          "autor_url": "https://www.pexels.com/@dario-fernandez-ruz",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 16.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/9130472/9130472-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "person laughing at laptop headphones",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 3.76,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3972,
+              0.3047,
+              0.35,
+              0.3172
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "c68e6c549e1f",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            11.32
+          ],
+          "frase": "Así que el chiste de tu primo lo salvó tu tía. Eso sí: eran risas añadidas a grabaciones, no una cena de verdad.",
+          "fuente": "pexels",
+          "id": 5726317,
+          "pagina": "https://www.pexels.com/video/woman-drinking-rose-wine-in-a-dinner-5726317/",
+          "titulo": "woman drinking rose wine in a dinner",
+          "autor": "https://kaboompics.com/",
+          "autor_url": "https://www.pexels.com/@karola-g",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 28.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/5726317/5726317-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "older woman smiling at dinner",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 2.43,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.2688,
+              0.0589,
+              0.2767,
+              0.2189
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

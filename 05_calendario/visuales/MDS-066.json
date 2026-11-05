@@ -1,0 +1,458 @@
+{
+  "guion": "MDS-066",
+  "version": 2,
+  "firma": "0524c07720713dfc",
+  "resuelto_utc": "2026-11-05T22:55:05Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "5f3e1a344136",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.44
+          ],
+          "frase": "Cuando oyes reír a alguien, tu cerebro prepara tu cara para responder.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a man on a city bus laughing out loud at his phone, other passengers around",
+          "semilla": 15137490,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-066/e1_p1.jpg",
+          "caras": [
+            [
+              0.3125,
+              0.4103,
+              0.1667,
+              0.1353
+            ],
+            [
+              0.0182,
+              0.4566,
+              0.0977,
+              0.0765
+            ],
+            [
+              0.7656,
+              0.4765,
+              0.099,
+              0.0654
+            ],
+            [
+              0.7331,
+              0.4346,
+              0.0664,
+              0.0471
+            ],
+            [
+              0.5859,
+              0.4559,
+              0.0664,
+              0.0456
+            ],
+            [
+              0.4779,
+              0.45,
+              0.0612,
+              0.0478
+            ],
+            [
+              0.638,
+              0.4346,
+              0.0391,
+              0.0301
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "2ff11c726572",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.57
+          ],
+          "frase": "En el autobús, un desconocido se ríe solo mirando el móvil.",
+          "fuente": "pexels",
+          "id": 7251030,
+          "pagina": "https://www.pexels.com/video/man-sitting-at-bus-stop-7251030/",
+          "titulo": "man sitting at bus stop",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7251030/7251030-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "bus passengers sitting",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 1.65,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5556,
+              0.5031,
+              0.1,
+              0.0719
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "No sabes de qué",
+          "t_estimado": [
+            5.57,
+            8.72
+          ],
+          "frase": "No sabes de qué.",
+          "fuente": "pexels",
+          "id": 6686339,
+          "pagina": "https://www.pexels.com/video/a-woman-riding-a-bus-while-listening-to-music-6686339/",
+          "titulo": "a woman riding a bus while listening to music",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 23.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6686339/6686339-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman on bus glancing curious",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 15.3,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3778,
+              0.3609,
+              0.2667,
+              0.1781
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "e4dcda481497",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.0
+          ],
+          "frase": "Y a la tercera carcajada, sin saber de qué, ya estás sonriendo tú.",
+          "fuente": "pexels",
+          "id": 6686343,
+          "pagina": "https://www.pexels.com/video/woman-listening-to-music-while-riding-a-bus-6686343/",
+          "titulo": "woman listening to music while riding a bus",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 24.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6686343/6686343-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman smiling on bus looking down",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 13.57,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6222,
+              0.0484,
+              0.3667,
+              0.2344
+            ],
+            [
+              0.3417,
+              0.3906,
+              0.1944,
+              0.1375
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "b4e5c6fa88cb",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.3
+          ],
+          "frase": "¿Cómo se sabe? Unos neurocientíficos metieron a gente en un escáner",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a modern MRI scanner in a hospital room",
+          "semilla": 9957734,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-066/e4_p1.jpg",
+          "caras": [
+            [
+              0.6849,
+              0.4404,
+              0.026,
+              0.0213
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "a oír sonidos",
+          "t_estimado": [
+            5.3,
+            9.26
+          ],
+          "frase": "a oír sonidos sin palabras, como risas.",
+          "fuente": "pexels",
+          "id": 8005689,
+          "pagina": "https://www.pexels.com/video/close-up-of-a-wireless-headphones-8005689/",
+          "titulo": "close up of a wireless headphones",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 32.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8005689/8005689-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "headphones close-up",
+          "relevancia": 1.0,
+          "inicio_s": 0.4,
+          "movimiento": 1.33,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "c42629c1bcad",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.67
+          ],
+          "frase": "Al oírlos, se activaban las zonas del cerebro que mueven la cara. Sobre todo con los sonidos alegres,",
+          "fuente": "pexels",
+          "id": 6010753,
+          "pagina": "https://www.pexels.com/video/doctor-showing-scans-to-the-patient-6010753/",
+          "titulo": "doctor showing scans to the patient",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 14.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6010753/6010753-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "doctor looking at brain scan screen",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 2.97,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6333,
+              0.3078,
+              0.2222,
+              0.2078
+            ],
+            [
+              0.4694,
+              0.3219,
+              0.25,
+              0.1703
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "como la risa",
+          "t_estimado": [
+            8.67,
+            10.64
+          ],
+          "frase": "como la risa.",
+          "fuente": "pixabay",
+          "id": 352660,
+          "pagina": "https://pixabay.com/videos/id-352660/",
+          "titulo": "ai generated, woman, girl, female, person, human, portrait, face, style, outdoors, anime, fantasy, character, manga, closeup, smiling, happy, fashion, model, young id",
+          "autor": "flutie8211",
+          "autor_url": "https://pixabay.com/users/flutie8211-17475707/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 5.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://cdn.pixabay.com/video/2026/05/14/352660_large.mp4",
+          "tipo": "video",
+          "consulta": "woman smiling close-up face",
+          "relevancia": 1.0,
+          "inicio_s": 0.4,
+          "movimiento": 4.21,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2056,
+              0.1641,
+              0.5917,
+              0.4156
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "75f3e424615c",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.0
+          ],
+          "frase": "Por eso acabaste sonriendo con el del autobús. Aunque no comprobaron si la gente sonreía:",
+          "fuente": "pexels",
+          "id": 6686353,
+          "pagina": "https://www.pexels.com/video/a-woman-riding-bus-while-listening-to-music-6686353/",
+          "titulo": "a woman riding bus while listening to music",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 39.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6686353/6686353-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman smiling on bus window",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 18.72,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4,
+              0.3594,
+              0.2778,
+              0.2141
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "solo miraron su cerebro",
+          "t_estimado": [
+            7.0,
+            9.47
+          ],
+          "frase": "solo miraron su cerebro.",
+          "fuente": "pexels",
+          "id": 6998336,
+          "pagina": "https://www.pexels.com/video/a-doctor-doing-ultrasound-scan-6998336/",
+          "titulo": "a doctor doing ultrasound scan",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 18.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6998336/6998336-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "hospital scanner",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 3.16,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3306,
+              0.1906,
+              0.2722,
+              0.2188
+            ],
+            [
+              0.8972,
+              0.2562,
+              0.1028,
+              0.1266
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 1,
+      "plano": 1,
+      "id": "pexels:7640108",
+      "titulo": "man talking on the cellphone",
+      "motivo": "poco relevante (0.4): se prueba la IA"
+    },
+    {
+      "escena": 4,
+      "plano": 1,
+      "id": "pexels:6998336",
+      "titulo": "a doctor doing ultrasound scan",
+      "motivo": "poco relevante (0.333): se prueba la IA"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}
