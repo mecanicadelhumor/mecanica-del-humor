@@ -1,8 +1,8 @@
 {
   "guion": "MDS-063",
-  "version": 1,
-  "firma": "9e2de3dab5048e7c",
-  "resuelto_utc": "2026-10-29T22:58:52Z",
+  "version": 2,
+  "firma": "298fb8e059f2bf5f",
+  "resuelto_utc": "2026-11-05T22:15:48Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -17,27 +17,41 @@
             6.44
           ],
           "frase": "Reírte con tus amigos hace que tu cerebro suelte sus propios calmantes.",
-          "fuente": "pixabay",
-          "id": 210511,
-          "pagina": "https://pixabay.com/videos/id-210511/",
-          "titulo": "cat, kitty, pet, park, cute, woman, owner, animal, together, close-up, meow, friends, friendship id",
-          "autor": "blackmarketmusic",
-          "autor_url": "https://pixabay.com/users/blackmarketmusic-2976878/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 16.0,
-          "ancho": 3840,
-          "alto": 2160,
-          "url": "https://cdn.pixabay.com/video/2024/05/03/210511_large.mp4",
-          "tipo": "video",
-          "consulta": "friends laughing together table close-up",
-          "relevancia": 0.6,
-          "inicio_s": 0.4,
-          "movimiento": 9.21,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
-          "caras": []
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a group of friends laughing hard together around a lunch table, warm afternoon light",
+          "semilla": 7602669,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-063/e1_p1.jpg",
+          "caras": [
+            [
+              0.1576,
+              0.4007,
+              0.1029,
+              0.0846
+            ],
+            [
+              0.8385,
+              0.3985,
+              0.0859,
+              0.0912
+            ],
+            [
+              0.3711,
+              0.361,
+              0.0964,
+              0.075
+            ],
+            [
+              0.6576,
+              0.3515,
+              0.0911,
+              0.0757
+            ]
+          ]
         }
       ]
     },
@@ -53,32 +67,33 @@
             4.9
           ],
           "frase": "Domingo, sobremesa con tus amigos de siempre. Lleváis tres horas",
-          "fuente": "pexels",
-          "id": 5359021,
-          "pagina": "https://www.pexels.com/video/man-at-a-coffee-bar-talking-to-his-friend-5359021/",
-          "titulo": "man at a coffee bar talking to his friend",
-          "autor": "Pavel Danilyuk",
-          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 9.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/5359021/5359021-hd_1080_1920_30fps.mp4",
-          "tipo": "video",
-          "consulta": "friends long lunch laughing coffee",
-          "relevancia": 0.4,
-          "inicio_s": 0.4,
-          "movimiento": 8.97,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "friends lingering over coffee after a long lunch, laughing",
+          "semilla": 1286206,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-063/e2_p1.jpg",
           "caras": [
             [
-              0.275,
-              0.2981,
-              0.1708,
-              0.1362
+              0.138,
+              0.2772,
+              0.1888,
+              0.1566
+            ],
+            [
+              0.6784,
+              0.2868,
+              0.1771,
+              0.1574
+            ],
+            [
+              0.556,
+              0.5926,
+              0.2005,
+              0.1154
             ]
           ]
         },
@@ -91,21 +106,21 @@
           ],
           "frase": "riéndoos de la misma anécdota.",
           "fuente": "pixabay",
-          "id": 10024,
-          "pagina": "https://pixabay.com/videos/id-10024/",
-          "titulo": "table football, game, fun, play, entertainment, football player, table, ball, red, free time, amici, games room, friends, people, video games, soccer id",
-          "autor": "Alessandro89",
-          "autor_url": "https://pixabay.com/users/Alessandro89-817526/",
+          "id": 41,
+          "pagina": "https://pixabay.com/videos/id-41/",
+          "titulo": "fun fair, boys, ride, amusement park, girls, roller coaster, rollercoaster, fun, people, laughing, screaming, state fair, america, usa, women, happy id",
+          "autor": "DistillVideos",
+          "autor_url": "https://pixabay.com/users/DistillVideos-1280814/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 8.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2017/06/17/10024-222013925_large.mp4",
+          "duracion_s": 32.0,
+          "ancho": 0,
+          "alto": 0,
+          "url": "https://cdn.pixabay.com/video/2015/08/08/41-135715735_medium.mp4",
           "tipo": "video",
-          "consulta": "friends crying with laughter table",
+          "consulta": "people laughing tears table",
           "relevancia": 0.5,
           "inicio_s": 0.4,
-          "movimiento": 15.7,
+          "movimiento": 13.13,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
@@ -218,16 +233,40 @@
             10.18
           ],
           "frase": "con un escáner.",
-          "fuente": "ia",
-          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-          "prompt": "a medical scanner in a quiet hospital room",
-          "semilla": 13900692,
-          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-          "ancho": 768,
-          "alto": 1360,
-          "tipo": "imagen",
-          "fichero": "05_calendario/visuales/MDS-063/e4_p2.jpg",
-          "caras": []
+          "fuente": "pexels",
+          "id": 7089607,
+          "pagina": "https://www.pexels.com/video/a-mae-patient-undergoing-medical-scanning-test-7089607/",
+          "titulo": "a mae patient undergoing medical scanning test",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 19.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7089607/7089607-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "medical scanner room",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 2.44,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.0444,
+              0.3609,
+              0.0972,
+              0.075
+            ],
+            [
+              0.1444,
+              0.35,
+              0.0833,
+              0.0719
+            ]
+          ]
         }
       ]
     },
@@ -246,7 +285,7 @@
           "fuente": "pixabay",
           "id": 105391,
           "pagina": "https://pixabay.com/videos/id-105391/",
-          "titulo": "balloons, holiday, green, screen, colorful, beautiful wallpaper, multicolored, ball, flight, movement, background id",
+          "titulo": "balloons, beautiful wallpaper, holiday, green, screen, colorful, multicolored, ball, flight, movement, background id",
           "autor": "Evgeniy_Z",
           "autor_url": "https://pixabay.com/users/Evgeniy_Z-13538513/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
@@ -336,11 +375,11 @@
   },
   "descartes": [
     {
-      "escena": 4,
-      "plano": 2,
-      "id": "pexels:7089950",
-      "titulo": "modern machines used for human body scanning",
-      "motivo": "poco relevante (0.333): se prueba la IA"
+      "escena": 1,
+      "plano": 1,
+      "id": "pexels:9579110",
+      "titulo": "friends sitting at the table",
+      "motivo": "poco relevante (0.4): se prueba la IA"
     }
   ],
   "errores_ia": [],

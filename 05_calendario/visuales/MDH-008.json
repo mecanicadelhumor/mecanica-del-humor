@@ -1,0 +1,2114 @@
+{
+  "guion": "MDH-008",
+  "version": 2,
+  "firma": "d7158dce10e7cd6e",
+  "resuelto_utc": "2026-11-05T22:15:05Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "558e5c774cf2",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.0
+          ],
+          "frase": "Prueba a hacerte cosquillas en la planta del pie. Con ganas. Nada, ¿verdad?",
+          "fuente": "pixabay",
+          "id": 4722,
+          "pagina": "https://pixabay.com/videos/id-4722/",
+          "titulo": "beach, feet, sand, walking, vacation, holidays, summer, foot, travel, sea, water, tropical, barefoot, relaxation, relax, ocean, people, nature, leisure, coast, person, coastline, lifestyle, outdoor, legs, walk, seaside, footprint, seashore, landscape, surf id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 12.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2016/08/22/4722-179738614_large.mp4",
+          "tipo": "video",
+          "consulta": "person tickling own bare foot sofa",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 6.11,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "897ab5ce8aae",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.4
+          ],
+          "frase": "Ahora imagina que es tu hermano quien se acerca, con el mismo dedo y muy despacio.",
+          "fuente": "pexels",
+          "id": 6957477,
+          "pagina": "https://www.pexels.com/video/close-up-view-of-a-person-painting-using-fingers-6957477/",
+          "titulo": "close up view of a person painting using fingers",
+          "autor": "https://kaboompics.com/",
+          "autor_url": "https://www.pexels.com/@karola-g",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 17.0,
+          "ancho": 2048,
+          "alto": 1080,
+          "url": "https://videos.pexels.com/video-files/6957477/6957477-hd_2048_1080_25fps.mp4",
+          "tipo": "video",
+          "consulta": "finger approaching person playful",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 11.03,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Ya te estás encogiendo",
+          "t_estimado": [
+            7.4,
+            13.8
+          ],
+          "frase": "Ya te estás encogiendo. Y todavía no te ha tocado.",
+          "fuente": "pexels",
+          "id": 4588235,
+          "pagina": "https://www.pexels.com/video/a-woman-laughing-4588235/",
+          "titulo": "a woman laughing",
+          "autor": "Ketut Subiyanto",
+          "autor_url": "https://www.pexels.com/@ketut-subiyanto",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://videos.pexels.com/video-files/4588235/4588235-hd_1920_1080_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman curling up laughing anticipation",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 3.65,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4469,
+              0.1528,
+              0.1562,
+              0.3833
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "85d621121a99",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.57
+          ],
+          "frase": "Tu propio dedo no te hace nada; el suyo te tira del sofá.",
+          "fuente": "pixabay",
+          "id": 32938,
+          "pagina": "https://pixabay.com/videos/id-32938/",
+          "titulo": "dance, celebrate, fun, celebration, happy, dancing, girl, festive, colorful, laughing, young, people, person id",
+          "autor": "Stuck1",
+          "autor_url": "https://pixabay.com/users/Stuck1-15406262/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 34.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2020/02/27/32938-395456384_large.mp4",
+          "tipo": "video",
+          "consulta": "person laughing falling off sofa",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 19.01,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3484,
+              0.1542,
+              0.2203,
+              0.5361
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Así que hay dos preguntas",
+          "t_estimado": [
+            5.57,
+            16.18
+          ],
+          "frase": "Así que hay dos preguntas: por qué las cosquillas solo funcionan si vienen de fuera, y por qué dan risa.",
+          "fuente": "pixabay",
+          "id": 241200,
+          "pagina": "https://pixabay.com/videos/id-241200/",
+          "titulo": "mark, question, black, hand, drawn, design, unknown, dribble, doodle, animated, search, think, why, ask, doubt, problem, query, quiz, shape, sign, icon, symbol id",
+          "autor": "BeezeeStock",
+          "autor_url": "https://pixabay.com/users/BeezeeStock-13337584/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 5.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2024/11/13/241200_large.mp4",
+          "tipo": "video",
+          "consulta": "question mark hand drawn",
+          "relevancia": 1.0,
+          "inicio_s": 0.0,
+          "movimiento": 1.27,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "3dcf553bf72e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.05
+          ],
+          "frase": "Empecemos por tu dedo, el que no hace nada.",
+          "fuente": "pixabay",
+          "id": 28860,
+          "pagina": "https://pixabay.com/videos/id-28860/",
+          "titulo": "night, city, city lights, lights, blurry, blur, background, backdrop, colorful, traffic, cars, beautiful wallpaper, red, close up, macro, detail, outside, bokeh, circles, road, midnight, black, cinematic, dark id",
+          "autor": "FreeCreativeStuff",
+          "autor_url": "https://pixabay.com/users/FreeCreativeStuff-6346290/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 14.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2019/11/08/28860-372055467_large.mp4",
+          "tipo": "video",
+          "consulta": "hand finger close-up dark background",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 1.88,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "d7b45c962a1c",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.57
+          ],
+          "frase": "A finales de los noventa, la neurocientífica Sarah-Jayne Blakemore metió a gente en un escáner con una misma",
+          "fuente": "pexels",
+          "id": 7088467,
+          "pagina": "https://www.pexels.com/video/a-doctor-preparing-a-patient-for-a-mri-test-7088467/",
+          "titulo": "a doctor preparing a patient for a mri test",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 40.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://videos.pexels.com/video-files/7088467/7088467-hd_1920_1080_25fps.mp4",
+          "tipo": "video",
+          "consulta": "mri scanner patient lying",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 1.51,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3156,
+              0.3861,
+              0.0609,
+              0.1583
+            ],
+            [
+              0.2906,
+              0.2944,
+              0.0469,
+              0.1333
+            ],
+            [
+              0.4797,
+              0.5167,
+              0.0406,
+              0.0861
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "la misma caricia",
+          "t_estimado": [
+            8.57,
+            17.1
+          ],
+          "frase": "caricia: unas veces la producían ellos mismos, y otras venía de fuera, sin que ellos se movieran.",
+          "fuente": "pexels",
+          "id": 8955761,
+          "pagina": "https://www.pexels.com/video/a-woman-touching-makeup-brush-on-her-body-8955761/",
+          "titulo": "a woman touching makeup brush on her body",
+          "autor": "KoolShooters",
+          "autor_url": "https://www.pexels.com/@koolshooters",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 78.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://videos.pexels.com/video-files/8955761/8955761-hd_1920_1080_24fps.mp4",
+          "tipo": "video",
+          "consulta": "soft brush touching palm close-up",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 4.26,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4366,
+              0.0125,
+              0.2582,
+              0.575
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "122a725c2f27",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            12.95
+          ],
+          "frase": "La misma caricia hacía menos cosquillas si la producía uno mismo. Y en el escáner, la zona del tacto se encendía más cuando venía de fuera.",
+          "fuente": "pexels",
+          "id": 6010766,
+          "pagina": "https://www.pexels.com/video/a-brain-magnetic-resonance-imaging-result-6010766/",
+          "titulo": "a brain magnetic resonance imaging result",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 17.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://videos.pexels.com/video-files/6010766/6010766-hd_1920_1080_25fps.mp4",
+          "tipo": "video",
+          "consulta": "brain scan image screen",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 9.18,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "7": {
+      "narracion_sha": "c1f68d72ba62",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            13.34
+          ],
+          "frase": "La razón está en el cerebelo. Cada vez que te mueves, predice lo que vas a sentir y le baja el volumen a esa sensación.",
+          "fuente": "pixabay",
+          "id": 3012,
+          "pagina": "https://pixabay.com/videos/id-3012/",
+          "titulo": "snail, mollusc, nature, animals, brown, shell, wildlife, exoskeleton, hardshell, life, macro, arthropod, moving, rock, small, movement, slow, slowly, yellow id",
+          "autor": "InspiredImages",
+          "autor_url": "https://pixabay.com/users/InspiredImages-57296/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 23.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2016/05/04/3012-165457856_large.mp4",
+          "tipo": "video",
+          "consulta": "hand moving slowly close-up",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 10.5,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "8": {
+      "narracion_sha": "c0e38f893029",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            12.49
+          ],
+          "frase": "Tu cerebro te hace un spoiler de tus propias cosquillas. Y menos mal: si no, no podrías ni rascarte la espalda sin partirte de risa.",
+          "fuente": "pixabay",
+          "id": 7686,
+          "pagina": "https://pixabay.com/videos/id-7686/",
+          "titulo": "man, sahara, desert, adventure, laughed at, storm dune, sand id",
+          "autor": "Espace-Aventures",
+          "autor_url": "https://pixabay.com/users/Espace-Aventures-4213878/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 35.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2017/02/06/7686-202893456_large.mp4",
+          "tipo": "video",
+          "consulta": "man scratching back laughing",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 0.68,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "9": {
+      "narracion_sha": "39a062f749d2",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.1
+          ],
+          "frase": "¿Y no será que te da vergüenza reírte solo?",
+          "fuente": "pixabay",
+          "id": 43633,
+          "pagina": "https://pixabay.com/videos/id-43633/",
+          "titulo": "hair, wind, girl, woman, people, person, model, young, dream, human, sunlight, passion, alone, aesthetics id",
+          "autor": "GreenCardShow",
+          "autor_url": "https://pixabay.com/users/GreenCardShow-3867243/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 17.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2020/07/02/43633-436237650_large.mp4",
+          "tipo": "video",
+          "consulta": "person alone room looking embarrassed",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 10.45,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "10": {
+      "narracion_sha": "90239d82f8c2",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.33
+          ],
+          "frase": "Buena pregunta, y la contestaron unas ratas. Las ratas tienen cosquillas: chillan cuando se las haces.",
+          "fuente": "pixabay",
+          "id": 6281,
+          "pagina": "https://pixabay.com/videos/id-6281/",
+          "titulo": "rat, rodent, meal, feed, food, cute, clever, small, baby rat, husky rat, nose, cub, fur, close up, googly eyes, gray-white, button eyes, animal, attentive, ears, rats id",
+          "autor": "kirahoffmann",
+          "autor_url": "https://pixabay.com/users/kirahoffmann-1855684/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 26.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2016/11/06/6281-190550987_large.mp4",
+          "tipo": "video",
+          "consulta": "pet rat in hand close-up",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 6.42,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "11": {
+      "narracion_sha": "eaf9f66e6b0e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            18.49
+          ],
+          "frase": "Pero cuando una rata se toca a sí misma, la parte de su cerebro que siente el tacto se apaga, y no chilla. Y una rata no tiene pinta de pasar vergüenza: su cerebro también lo ve venir.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a rat grooming itself with its paws on a wooden surface",
+          "semilla": 7656348,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 1360,
+          "alto": 768,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDH-008/e11_p1.jpg",
+          "caras": []
+        }
+      ]
+    },
+    "12": {
+      "narracion_sha": "4b1b9c35364f",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            15.26
+          ],
+          "frase": "Esto explica por qué tu dedo no hace nada. Lo que no explica es por qué el de tu hermano te da risa, ni si hace falta que sea una persona.",
+          "fuente": "pixabay",
+          "id": 147470,
+          "pagina": "https://pixabay.com/videos/id-147470/",
+          "titulo": "kids, children, happy, brother, sister, friends, smiling kids, 2d character id",
+          "autor": "GreenScreenFX",
+          "autor_url": "https://pixabay.com/users/GreenScreenFX-22748071/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 27.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2023/01/22/147470-791696705_large.mp4",
+          "tipo": "video",
+          "consulta": "brother tickling sister sofa laughing",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 2.61,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5172,
+              0.1139,
+              0.1031,
+              0.2389
+            ]
+          ]
+        }
+      ]
+    },
+    "13": {
+      "narracion_sha": "84c33e149581",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            11.05
+          ],
+          "frase": "Si tu dedo no vale y el de tu hermano sí, la pregunta es qué tiene tu hermano que no tengas tú.",
+          "fuente": "pexels",
+          "id": 11951047,
+          "pagina": "https://www.pexels.com/video/close-up-of-two-people-with-paint-on-their-hands-caressing-each-other-11951047/",
+          "titulo": "close up of two people with paint on their hands caressing each other",
+          "autor": "Alex Moisieiev",
+          "autor_url": "https://www.pexels.com/@alexmay",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://videos.pexels.com/video-files/11951047/11951047-hd_1920_1080_25fps.mp4",
+          "tipo": "video",
+          "consulta": "two hands reaching each other",
+          "relevancia": 0.75,
+          "inicio_s": 0.0,
+          "movimiento": 10.69,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "14": {
+      "narracion_sha": "e108a88fdb8f",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            11.33
+          ],
+          "frase": "Dos psicólogos, Christine Harris y Nicholas Christenfeld, hicieron cosquillas a treinta y cinco personas dos veces: una vez, el investigador; otra, según les dijeron,",
+          "fuente": "pixabay",
+          "id": 151771,
+          "pagina": "https://pixabay.com/videos/id-151771/",
+          "titulo": "man, doctor, glass, wine, medical, hospital, treatment, diagnosis, patient, clinic, prescription, health, doctor-patient relationship, stethoscope, lab coat, surgery, medical research, medicine, examination, bordeaux, blood test, physical exam, 3d, cartoon id",
+          "autor": "julientromeur",
+          "autor_url": "https://pixabay.com/users/julientromeur-3630051/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 6.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2023/02/22/151771-801433070_large.mp4",
+          "tipo": "video",
+          "consulta": "researcher lab coat volunteer chair",
+          "relevancia": 0.6,
+          "inicio_s": 0.0,
+          "movimiento": 1.91,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4891,
+              0.1361,
+              0.0938,
+              0.2278
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "una máquina de cosquillas",
+          "t_estimado": [
+            11.33,
+            14.72
+          ],
+          "frase": "una máquina de cosquillas.",
+          "fuente": "pixabay",
+          "id": 166273,
+          "pagina": "https://pixabay.com/videos/id-166273/",
+          "titulo": "robot, broom, automation, cleaning, robotic arm, artificial intelligence, smart home, floor cleaning, efficiency, vacuuming, robotics, sweep, industrial automation, autonomous, technology, mechanized, sensors, productivity, maintenance, self-cleaning, smart appliances, robotics revolution, 3d, cyborg, cleaning lady id",
+          "autor": "julientromeur",
+          "autor_url": "https://pixabay.com/users/julientromeur-3630051/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 11.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2023/06/08/166273-834580695_large.mp4",
+          "tipo": "video",
+          "consulta": "mechanical arm robot lab",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 5.75,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "15": {
+      "narracion_sha": "dc3a8e17d146",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.87
+          ],
+          "frase": "La máquina era de mentira: las dos veces les hacía cosquillas el investigador, a escondidas.",
+          "fuente": "pexels",
+          "id": 10508126,
+          "pagina": "https://www.pexels.com/video/a-man-doing-hand-gestures-behind-a-curtain-10508126/",
+          "titulo": "a man doing hand gestures behind a curtain",
+          "autor": "Ron Lach",
+          "autor_url": "https://www.pexels.com/@ron-lach",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 35.0,
+          "ancho": 2048,
+          "alto": 1080,
+          "url": "https://videos.pexels.com/video-files/10508126/10508126-hd_2048_1080_25fps.mp4",
+          "tipo": "video",
+          "consulta": "hand hidden behind curtain",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 7.95,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "16": {
+      "narracion_sha": "967328e9f42c",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.26
+          ],
+          "frase": "Y cuando creían que era la máquina, se rieron, sonrieron y se retorcieron igual que con la persona.",
+          "fuente": "pixabay",
+          "id": 33631,
+          "pagina": "https://pixabay.com/videos/id-33631/",
+          "titulo": "child, child smiling, baby, kid, happy, smile, childhood, person, little, children, cheerful, girl, happiness, female, cute, family, smiling, laugh, playing id",
+          "autor": "nassimohmd",
+          "autor_url": "https://pixabay.com/users/nassimohmd-15586680/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 30.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2020/03/13/33631-398856295_large.mp4",
+          "tipo": "video",
+          "consulta": "person laughing being tickled chair",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 9.85,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3594,
+              0.2333,
+              0.3578,
+              0.7667
+            ]
+          ]
+        }
+      ]
+    },
+    "17": {
+      "narracion_sha": "5973c3d2f95e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.26
+          ],
+          "frase": "Así que no hace falta que sea una persona. Lo que hace falta es que no seas tú.",
+          "fuente": "pixabay",
+          "id": 37799,
+          "pagina": "https://pixabay.com/videos/id-37799/",
+          "titulo": "woman, person, emotions, red, sweater, girl, young, beauty, beautiful wallpaper, model, beautiful, look forward, surprised, background, black id",
+          "autor": "8682001",
+          "autor_url": "https://pixabay.com/users/8682001-8682001/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 21.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2020/05/01/37799-415200696_large.mp4",
+          "tipo": "video",
+          "consulta": "surprised person close-up",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 0.68,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6367,
+              0.1319,
+              0.0781,
+              0.1875
+            ]
+          ]
+        }
+      ]
+    },
+    "18": {
+      "narracion_sha": "77e92edc40fe",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.26
+          ],
+          "frase": "¿Y la espera? ¿También cuenta?",
+          "fuente": "pixabay",
+          "id": 1383,
+          "pagina": "https://pixabay.com/videos/id-1383/",
+          "titulo": "airport, slide, slider, passengers, plane, gate, waiting, sitting, glass, reflection, walking, people, route, journey, trip, vacation, i waiting area id",
+          "autor": "Activedia",
+          "autor_url": "https://pixabay.com/users/Activedia-665768/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 7.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2015/11/26/1383-147055496_large.mp4",
+          "tipo": "video",
+          "consulta": "person waiting nervously",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 20.49,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "19": {
+      "narracion_sha": "b78f3f92a4b5",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            13.41
+          ],
+          "frase": "Cuenta, y mucho. Otro equipo metió a treinta y una personas en un escáner a esperar unas cosquillas en los pies, sin saber cuándo iban a llegar.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "the bare feet of a volunteer sticking out of an MRI scanner",
+          "semilla": 5358704,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 1360,
+          "alto": 768,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDH-008/e19_p1.jpg",
+          "caras": []
+        }
+      ]
+    },
+    "20": {
+      "narracion_sha": "5bb69109899e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            11.95
+          ],
+          "frase": "Su cerebro empezaba a preparar la risa en la espera. Y cuanto más se activaba durante la espera, más se reían después.",
+          "fuente": "pexels",
+          "id": 19212505,
+          "pagina": "https://www.pexels.com/video/a-man-is-looking-at-the-camera-with-his-eyes-closed-19212505/",
+          "titulo": "a man is looking at the camera with his eyes closed",
+          "autor": "K",
+          "autor_url": "https://www.pexels.com/@kelly",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 53.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://videos.pexels.com/video-files/19212505/19212505-hd_1920_1080_24fps.mp4",
+          "tipo": "video",
+          "consulta": "man laughing eyes closed",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 4.1,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "21": {
+      "narracion_sha": "292135a34215",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.33
+          ],
+          "frase": "Así que tu hermano, acercando el dedo despacio, ya tiene medio trabajo hecho antes de tocarte.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a finger slowly approaching someone's ribs, the person already laughing",
+          "semilla": 14320796,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 1360,
+          "alto": 768,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDH-008/e21_p1.jpg",
+          "caras": [
+            [
+              0.5103,
+              0.0039,
+              0.3375,
+              0.5078
+            ]
+          ]
+        }
+      ]
+    },
+    "22": {
+      "narracion_sha": "65997216c39a",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            13.41
+          ],
+          "frase": "La pega: este estudio no probó si una máquina real haría reír igual. Y para saber de dónde sale esa risa, hubo que irse a las ratas.",
+          "fuente": "pixabay",
+          "id": 1307,
+          "pagina": "https://pixabay.com/videos/id-1307/",
+          "titulo": "photography, laboratory, studio, shooting, woman, chemistry, equipment, chemical, glass, bottle, flask, glassware, people, women, vintage, retro, processing, artist, creative, professional, fashion id",
+          "autor": "Vimeo-Free-Videos",
+          "autor_url": "https://pixabay.com/users/Vimeo-Free-Videos-1283884/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 66.0,
+          "ancho": 0,
+          "alto": 0,
+          "url": "https://cdn.pixabay.com/video/2015/11/10/1307-145340154_medium.mp4",
+          "tipo": "video",
+          "consulta": "laboratory bench equipment",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 16.07,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "23": {
+      "narracion_sha": "a7c77c74567e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.21
+          ],
+          "frase": "Y aquí entran las ratas.",
+          "fuente": "pexels",
+          "id": 11347984,
+          "pagina": "https://www.pexels.com/video/rat-in-metal-cage-11347984/",
+          "titulo": "rat in metal cage",
+          "autor": "khanhhoangminh",
+          "autor_url": "https://www.pexels.com/@khanhhoangminh",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 38.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://videos.pexels.com/video-files/11347984/11347984-hd_1920_1080_25fps.mp4",
+          "tipo": "video",
+          "consulta": "two rats playing",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 25.5,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "24": {
+      "narracion_sha": "e1ed0c9791af",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.67
+          ],
+          "frase": "Si le haces cosquillas a una rata, chilla. No lo oyes:",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a hand gently tickling a pet rat lying on its back",
+          "semilla": 7342355,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 1360,
+          "alto": 768,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDH-008/e24_p1.jpg",
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "es un chillido",
+          "t_estimado": [
+            4.67,
+            12.03
+          ],
+          "frase": "es un chillido de unos cincuenta kilohercios, demasiado agudo para el oído humano.",
+          "fuente": "pixabay",
+          "id": 150654,
+          "pagina": "https://pixabay.com/videos/id-150654/",
+          "titulo": "waves, beat, sound, audio effect, music visualiser, audio visualiser, visualization, black screen, chroma key id",
+          "autor": "VFS_World",
+          "autor_url": "https://pixabay.com/users/VFS_World-29690699/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 10.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2023/02/14/150654-798877249_large.mp4",
+          "tipo": "video",
+          "consulta": "sound wave visualization",
+          "relevancia": 1.0,
+          "inicio_s": 0.0,
+          "movimiento": 3.49,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "25": {
+      "narracion_sha": "d3a6211ec735",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            11.1
+          ],
+          "frase": "Y además se acerca a pedir más y da saltos. Los investigadores les pusieron un nombre en alemán: Freudensprünge, saltos de alegría.",
+          "fuente": "pixabay",
+          "id": 139660,
+          "pagina": "https://pixabay.com/videos/id-139660/",
+          "titulo": "mouse, rat, rodent, mammal, food, animal id",
+          "autor": "federicomaderno",
+          "autor_url": "https://pixabay.com/users/federicomaderno-10880779/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 27.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2022/11/19/139660-773418010_large.mp4",
+          "tipo": "video",
+          "consulta": "rat jumping",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 7.33,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "26": {
+      "narracion_sha": "650001c2fa37",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.1
+          ],
+          "frase": "Y cuanto más le gustan las cosquillas, más chilla.",
+          "fuente": "pixabay",
+          "id": 1288,
+          "pagina": "https://pixabay.com/videos/id-1288/",
+          "titulo": "rodent, rat, animal, mouse, mammal, fur, pest, tail, small, brown, nature, gray, young, mice, whisker, wildlife, control id",
+          "autor": "InspiredImages",
+          "autor_url": "https://pixabay.com/users/InspiredImages-57296/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 21.0,
+          "ancho": 2560,
+          "alto": 1440,
+          "url": "https://cdn.pixabay.com/video/2015/11/09/1288-145117189_large.mp4",
+          "tipo": "video",
+          "consulta": "rat whiskers close-up",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 22.21,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "27": {
+      "narracion_sha": "8706b68c5298",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            16.11
+          ],
+          "frase": "Pero si pones a la rata en un sitio que le da miedo, se acabaron las cosquillas: ni chilla, ni se le activa la parte del cerebro que siente el tacto.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a rat pressed into a corner, frozen and alert",
+          "semilla": 2208136,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 1360,
+          "alto": 768,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDH-008/e27_p1.jpg",
+          "caras": []
+        }
+      ]
+    },
+    "28": {
+      "narracion_sha": "bf71d9e76dc9",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.72
+          ],
+          "frase": "Lo mismo que intentar hacerle cosquillas a alguien en la sala de espera del dentista. Mejor ni lo pruebes.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a nervous person in a dentist's waiting room clutching a magazine",
+          "semilla": 6943603,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 1360,
+          "alto": 768,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDH-008/e28_p1.jpg",
+          "caras": [
+            [
+              0.5338,
+              0.1849,
+              0.0919,
+              0.2214
+            ]
+          ]
+        }
+      ]
+    },
+    "29": {
+      "narracion_sha": "c886208274c4",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            10.47
+          ],
+          "frase": "Y las cosquillas se contagian: una rata que ve en directo cómo le hacen cosquillas a otra también chilla y salta.",
+          "fuente": "pixabay",
+          "id": 40347,
+          "pagina": "https://pixabay.com/videos/id-40347/",
+          "titulo": "geese, goose family, young geese, swim, lake, behind each other, spring, may, waterfowl, chick id",
+          "autor": "AnniesPlanet",
+          "autor_url": "https://pixabay.com/users/AnniesPlanet-11372476/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 25.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2020/05/27/40347-425442433_large.mp4",
+          "tipo": "video",
+          "consulta": "two rats watching each other",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 26.12,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4672,
+              0.775,
+              0.0555,
+              0.1278
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Si lo ve en un vídeo",
+          "t_estimado": [
+            10.47,
+            14.33
+          ],
+          "frase": "Si lo ve en un vídeo, casi nada.",
+          "fuente": "pixabay",
+          "id": 88883,
+          "pagina": "https://pixabay.com/videos/id-88883/",
+          "titulo": "green, screen, door opening, door, green screen door opening, chroma key, opening, green scren, green screen door, green screen, green screen intro, green screen shot, green screen door open, green screen door opening video, green screen door opening intro, copyright free, door opening green screen video, door opening animation, door opening chroma key, green screen door open video, green screen curtain opening, door open green screen, green screen effect, door opening green screen effect, door opening green screen free id",
+          "autor": "Videos_Investors",
+          "autor_url": "https://pixabay.com/users/Videos_Investors-23431897/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 6.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2021/09/17/88883-608445873_large.mp4",
+          "tipo": "video",
+          "consulta": "screen video small animal",
+          "relevancia": 0.75,
+          "inicio_s": 0.0,
+          "movimiento": 2.77,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "30": {
+      "narracion_sha": "181db2ef4b57",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.64
+          ],
+          "frase": "¿Y eso es reírse, o solo hacer ruido?",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a curious rat looking straight at the camera",
+          "semilla": 2217448,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 1360,
+          "alto": 768,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDH-008/e30_p1.jpg",
+          "caras": [
+            [
+              0.2934,
+              0.1667,
+              0.1044,
+              0.2917
+            ]
+          ]
+        }
+      ]
+    },
+    "31": {
+      "narracion_sha": "7b01061e92dd",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            10.64
+          ],
+          "frase": "Esa es la duda honesta. Los que estudian estos chillidos los llaman risa como hipótesis de trabajo, no como hecho demostrado.",
+          "fuente": "pexels",
+          "id": 8531300,
+          "pagina": "https://www.pexels.com/video/a-female-scientist-looking-through-a-microscope-and-taking-down-notes-8531300/",
+          "titulo": "a female scientist looking through a microscope and taking down notes",
+          "autor": "olia danilevich",
+          "autor_url": "https://www.pexels.com/@olia-danilevich",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 16.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://videos.pexels.com/video-files/8531300/8531300-hd_1920_1080_25fps.mp4",
+          "tipo": "video",
+          "consulta": "scientist taking notes lab",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 1.5,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4266,
+              0.1556,
+              0.1453,
+              0.2944
+            ]
+          ]
+        }
+      ]
+    },
+    "32": {
+      "narracion_sha": "eff91a05345e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            13.87
+          ],
+          "frase": "Y no solo en las ratas es confuso: en las personas, las cosquillas pueden gustar y molestar a la vez, y te ríes igual en los dos casos.",
+          "fuente": "pixabay",
+          "id": 45711,
+          "pagina": "https://pixabay.com/videos/id-45711/",
+          "titulo": "run, field, man, person, run away, wind id",
+          "autor": "sergo75-75",
+          "autor_url": "https://pixabay.com/users/sergo75-75-14395311/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 9.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2020/07/27/45711-446485467_large.mp4",
+          "tipo": "video",
+          "consulta": "person laughing pushing away hand",
+          "relevancia": 0.4,
+          "inicio_s": 0.0,
+          "movimiento": 2.9,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3094,
+              0.1847,
+              0.0164,
+              0.0431
+            ]
+          ]
+        }
+      ]
+    },
+    "33": {
+      "narracion_sha": "b7e2d26c8dfb",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.33
+          ],
+          "frase": "Las ratas, igual: en el laboratorio podían pedir cosquillas",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a rat poking its nose through a small round hole",
+          "semilla": 5379050,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 1360,
+          "alto": 768,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDH-008/e33_p1.jpg",
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "y luego huyen",
+          "t_estimado": [
+            5.33,
+            10.64
+          ],
+          "frase": "metiendo el hocico por un agujero, y luego huían de la mano.",
+          "fuente": "pixabay",
+          "id": 280056,
+          "pagina": "https://pixabay.com/videos/id-280056/",
+          "titulo": "beaver, nature, rodent, animal, mammal, muskrat, wool, water, nutria, tail, river, stream, forest, canada, rat, wet, pond id",
+          "autor": "Moviemacker",
+          "autor_url": "https://pixabay.com/users/Moviemacker-40481190/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 17.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2025/05/19/280056_large.mp4",
+          "tipo": "video",
+          "consulta": "rat scurrying",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 9.25,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "34": {
+      "narracion_sha": "e6cca8ac049a",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            14.33
+          ],
+          "frase": "Pedir y huir a la vez, como quien grita «¡para!» y vuelve a por más: eso es jugar. Por eso esa risa parece, sobre todo, una señal de juego.",
+          "fuente": "pixabay",
+          "id": 42695,
+          "pagina": "https://pixabay.com/videos/id-42695/",
+          "titulo": "kids, grass, park, play, people, baby, girl, games, happiness, mom, joy, happy, young, entertainment, laughter id",
+          "autor": "AlexKopeykin",
+          "autor_url": "https://pixabay.com/users/AlexKopeykin-6178059/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 44.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2020/06/20/42695-432087099_large.mp4",
+          "tipo": "video",
+          "consulta": "people playing chase laughing park",
+          "relevancia": 0.8,
+          "inicio_s": 0.4,
+          "movimiento": 1.8,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.1656,
+              0.3833,
+              0.0406,
+              0.1083
+            ],
+            [
+              0.2703,
+              0.4361,
+              0.0453,
+              0.0917
+            ],
+            [
+              0.6937,
+              0.5417,
+              0.0312,
+              0.075
+            ]
+          ]
+        }
+      ]
+    },
+    "35": {
+      "narracion_sha": "5a0500e8ad76",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.82
+          ],
+          "frase": "Última pregunta: esa risa de las cosquillas, ¿es la misma que la de un chiste?",
+          "fuente": "pixabay",
+          "id": 10878,
+          "pagina": "https://pixabay.com/videos/id-10878/",
+          "titulo": "discussion, restaurant, people, talk, communication, lunch, dinner, together id",
+          "autor": "Life-Of-Vids",
+          "autor_url": "https://pixabay.com/users/Life-Of-Vids-1282862/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 20.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2017/07/23/10878-226635359_large.mp4",
+          "tipo": "video",
+          "consulta": "people laughing at dinner",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 1.55,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5,
+              0.1944,
+              0.1047,
+              0.2333
+            ],
+            [
+              0.1516,
+              0.1889,
+              0.0828,
+              0.25
+            ]
+          ]
+        }
+      ]
+    },
+    "36": {
+      "narracion_sha": "d8b67536827c",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.5
+          ],
+          "frase": "En los noventa preguntaron a cien estudiantes. Los que decían tener más cosquillas decían también reírse más, sonreír más, y hasta",
+          "fuente": "pixabay",
+          "id": 131990,
+          "pagina": "https://pixabay.com/videos/id-131990/",
+          "titulo": "student, to write, to study, work, task, issue, question, study id",
+          "autor": "Dx21",
+          "autor_url": "https://pixabay.com/users/Dx21-24119034/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 24.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2022/09/20/131990-751915304_large.mp4",
+          "tipo": "video",
+          "consulta": "students filling questionnaire",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 7.3,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "ponerse colorados",
+          "t_estimado": [
+            9.5,
+            12.95
+          ],
+          "frase": "ponerse colorados con más facilidad.",
+          "fuente": "pixabay",
+          "id": 40,
+          "pagina": "https://pixabay.com/videos/id-40/",
+          "titulo": "fun fair, amusement park, girls, roller coaster, rollercoaster, fun, people, laughing, screaming, state fair, america, usa, women, happy, hair id",
+          "autor": "DistillVideos",
+          "autor_url": "https://pixabay.com/users/DistillVideos-1280814/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 30.0,
+          "ancho": 0,
+          "alto": 0,
+          "url": "https://cdn.pixabay.com/video/2015/08/08/40-135715695_medium.mp4",
+          "tipo": "video",
+          "consulta": "person blushing laughing",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 20.53,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "37": {
+      "narracion_sha": "274eeea3f422",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            13.41
+          ],
+          "frase": "Pero eso era lo que decían ellos. Otros lo midieron: a setenta y dos estudiantes les hicieron cosquillas antes de ver una comedia, y otra vez después.",
+          "fuente": "pexels",
+          "id": 7985886,
+          "pagina": "https://www.pexels.com/video/people-watching-in-theater-while-eating-popcorn-7985886/",
+          "titulo": "people watching in theater while eating popcorn",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 27.0,
+          "ancho": 2048,
+          "alto": 1080,
+          "url": "https://videos.pexels.com/video-files/7985886/7985886-hd_2048_1080_25fps.mp4",
+          "tipo": "video",
+          "consulta": "people watching film laughing",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 2.07,
+          "encuadre": {
+            "x": 0,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.1744,
+              0.5059,
+              0.0978,
+              0.2451
+            ],
+            [
+              0.4656,
+              0.502,
+              0.0734,
+              0.168
+            ],
+            [
+              0.5856,
+              0.4486,
+              0.0667,
+              0.1482
+            ],
+            [
+              0.5001,
+              0.3597,
+              0.0489,
+              0.1186
+            ],
+            [
+              0.7011,
+              0.3241,
+              0.04,
+              0.0949
+            ],
+            [
+              0.79,
+              0.3221,
+              0.0389,
+              0.0909
+            ],
+            [
+              0.9189,
+              0.3103,
+              0.0345,
+              0.083
+            ]
+          ]
+        }
+      ]
+    },
+    "38": {
+      "narracion_sha": "710bc4aabd07",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.26
+          ],
+          "frase": "Los que más se reían con la comedia, más se reían con las cosquillas.",
+          "fuente": "pexels",
+          "id": 7196109,
+          "pagina": "https://www.pexels.com/video/women-looking-at-the-screen-of-a-tablet-together-7196109/",
+          "titulo": "women looking at the screen of a tablet together",
+          "autor": "SHVETS production",
+          "autor_url": "https://www.pexels.com/@shvets-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://videos.pexels.com/video-files/7196109/7196109-hd_1920_1080_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman laughing at screen",
+          "relevancia": 0.667,
+          "inicio_s": 0.0,
+          "movimiento": 18.34,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.1562,
+              0.2611,
+              0.2562,
+              0.5806
+            ],
+            [
+              0.6828,
+              0.0139,
+              0.2203,
+              0.5417
+            ],
+            [
+              0.0,
+              0.0694,
+              0.1344,
+              0.5
+            ]
+          ]
+        }
+      ]
+    },
+    "39": {
+      "narracion_sha": "647433477b86",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            13.87
+          ],
+          "frase": "Pero ver la comedia no les hacía reírse más con las cosquillas de después. ¿La misma risa, entonces? No del todo: van juntas, pero ninguna provoca la otra.",
+          "fuente": "pexels",
+          "id": 36469981,
+          "pagina": "https://www.pexels.com/video/indoor-scene-of-a-woman-watching-tv-36469981/",
+          "titulo": "indoor scene of a woman watching tv",
+          "autor": "dp singh Bhullar",
+          "autor_url": "https://www.pexels.com/@dpsinghbhullar",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 80.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://videos.pexels.com/video-files/36469981/15464640_1920_1080_60fps.mp4",
+          "tipo": "video",
+          "consulta": "woman laughing at tv",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 2.13,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4141,
+              0.1889,
+              0.1297,
+              0.3
+            ]
+          ]
+        }
+      ]
+    },
+    "40": {
+      "narracion_sha": "4aed2676b688",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            13.87
+          ],
+          "frase": "Si tienes una amiga que se parte con todo y tiene cosquillas en todo, no es casualidad. Pero un chiste antes no la va a dejar más sensible.",
+          "fuente": "pexels",
+          "id": 8888817,
+          "pagina": "https://www.pexels.com/video/a-man-and-a-woman-laughing-while-sitting-on-a-couch-8888817/",
+          "titulo": "a man and a woman laughing while sitting on a couch",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 2048,
+          "alto": 1080,
+          "url": "https://videos.pexels.com/video-files/8888817/8888817-hd_2048_1080_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman laughing friends sofa",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 14.23,
+          "encuadre": {
+            "x": 0.144,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3726,
+              0.2352,
+              0.1034,
+              0.2628
+            ],
+            [
+              0.637,
+              0.2964,
+              0.1034,
+              0.2609
+            ],
+            [
+              0.2326,
+              0.2747,
+              0.0989,
+              0.2451
+            ],
+            [
+              0.5482,
+              0.3498,
+              0.0989,
+              0.2332
+            ]
+          ]
+        }
+      ]
+    },
+    "41": {
+      "narracion_sha": "3a88a76fe98a",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.72
+          ],
+          "frase": "Así que, las dos preguntas del principio. Las cosquillas necesitan que no seas tú: tu cerebro te ve venir.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a person on a sofa trying to tickle their own foot, unimpressed",
+          "semilla": 2460112,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 1360,
+          "alto": 768,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDH-008/e41_p1.jpg",
+          "caras": [
+            [
+              0.5265,
+              0.1667,
+              0.0721,
+              0.1589
+            ]
+          ]
+        }
+      ]
+    },
+    "42": {
+      "narracion_sha": "0a6cb3bb81c2",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            12.95
+          ],
+          "frase": "Por eso tu dedo no vale y el de tu hermano sí; y hasta una máquina, si crees que es la máquina quien te las hace.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "an adult brother tickling his sister on a sofa, both laughing",
+          "semilla": 14959040,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 1360,
+          "alto": 768,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDH-008/e42_p1.jpg",
+          "caras": [
+            [
+              0.3676,
+              0.1589,
+              0.0993,
+              0.2435
+            ],
+            [
+              0.3169,
+              0.4922,
+              0.1015,
+              0.2083
+            ],
+            [
+              0.6544,
+              0.5495,
+              0.1037,
+              0.1771
+            ],
+            [
+              0.9846,
+              0.2656,
+              0.0154,
+              0.0417
+            ],
+            [
+              0.9426,
+              0.2852,
+              0.0132,
+              0.0312
+            ],
+            [
+              0.9772,
+              0.3398,
+              0.0132,
+              0.0299
+            ],
+            [
+              0.9206,
+              0.3385,
+              0.0096,
+              0.0234
+            ],
+            [
+              0.8529,
+              0.2878,
+              0.0081,
+              0.0182
+            ],
+            [
+              0.8963,
+              0.3346,
+              0.0074,
+              0.0156
+            ],
+            [
+              0.939,
+              0.3503,
+              0.0074,
+              0.0156
+            ]
+          ]
+        }
+      ]
+    },
+    "43": {
+      "narracion_sha": "7c46d9ffe5ec",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            15.17
+          ],
+          "frase": "Y la risa que sale es muy antigua: se parece a los chillidos de las ratas, se contagia y se corta con el miedo. Va junto al humor, pero no es lo mismo:",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a human hand gently holding a pet rat",
+          "semilla": 12745018,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 1360,
+          "alto": 768,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDH-008/e43_p1.jpg",
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "un chiste no te da",
+          "t_estimado": [
+            15.17,
+            19.41
+          ],
+          "frase": "un chiste no te da más cosquillas.",
+          "fuente": "pixabay",
+          "id": 4975,
+          "pagina": "https://pixabay.com/videos/id-4975/",
+          "titulo": "power socket, electricity, fork, wire, turn on, switch off, button, extension, close-up, hands id",
+          "autor": "klimkin",
+          "autor_url": "https://pixabay.com/users/klimkin-1298145/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 13.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2016/09/06/4975-181688501_large.mp4",
+          "tipo": "video",
+          "consulta": "light switch close-up",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 3.31,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3391,
+              0.0,
+              0.1203,
+              0.2167
+            ]
+          ]
+        }
+      ]
+    },
+    "44": {
+      "narracion_sha": "182422710841",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            19.41
+          ],
+          "frase": "Los límites de todo esto: los experimentos con personas eran de unas decenas de voluntarios en un laboratorio, y que las ratas se rían es una hipótesis. Por qué las cosquillas dan risa, del todo, no lo sabe nadie todavía.",
+          "fuente": "pixabay",
+          "id": 63970,
+          "pagina": "https://pixabay.com/videos/id-63970/",
+          "titulo": "snow, cold, winter, dark, night, 4k, evening, snowing, city, urban, shops, street, empty, quiet, peaceful id",
+          "autor": "Matthias_Groeneveld",
+          "autor_url": "https://pixabay.com/users/Matthias_Groeneveld-4535957/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 31.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2021/02/03/63970-509068415_large.mp4",
+          "tipo": "video",
+          "consulta": "laboratory empty evening",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 5.62,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "45": {
+      "narracion_sha": "5aa9141127a7",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.65
+          ],
+          "frase": "Y ahora te toca: ¿dónde tienes tú más cosquillas, y quién de tu casa lo descubrió primero?",
+          "fuente": "pixabay",
+          "id": 186537,
+          "pagina": "https://pixabay.com/videos/id-186537/",
+          "titulo": "gift, happy, joy, celebration, celebrating, christmas, december, decoration, eve, family, fun, holiday, home, lifestyle, living room, beautiful wallpaper, merry, background id",
+          "autor": "Amorn_mimi",
+          "autor_url": "https://pixabay.com/users/Amorn_mimi-27759397/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 19.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2023/10/26/186537-878842341_large.mp4",
+          "tipo": "video",
+          "consulta": "family laughing living room",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 3.81,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3438,
+              0.1458,
+              0.118,
+              0.3111
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 19,
+      "plano": 1,
+      "id": "pexels:7088469",
+      "titulo": "a sonographer supervising a patient mri test",
+      "motivo": "poco relevante (0.25): se prueba la IA"
+    },
+    {
+      "escena": 30,
+      "plano": 1,
+      "id": "pexels:11347993",
+      "titulo": "rat in metal cage",
+      "motivo": "poco relevante (0.333): se prueba la IA"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}
