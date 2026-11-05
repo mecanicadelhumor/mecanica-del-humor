@@ -648,5 +648,25 @@
     "4": {
       "texto_pos": "abajo"
     }
+  },
+  "MDS-062": {
+    "3.1": {
+      "excluir": [
+        "pexels:6382088"
+      ],
+      "busqueda": [
+        "friends laughing watching a movie on the couch",
+        "group of friends laughing together in living room"
+      ]
+    },
+    "5.2": {
+      "excluir": [
+        "pixabay:729"
+      ],
+      "busqueda": [
+        "friends talking and laughing at a cafe table",
+        "two friends chatting laughing outdoors"
+      ]
+    }
   }
 }
