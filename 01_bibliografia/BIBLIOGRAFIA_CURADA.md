@@ -3,7 +3,7 @@
 > Base de conocimiento de **Mecánica del Humor / Humor Mechanics**.
 > Generado desde `data/semillas.json`. No edites este archivo a mano: edita el JSON y vuelve a ejecutar `scripts/generar_md.py`.
 
-**125 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
+**136 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
 
 ## Cómo se ha curado
 
@@ -27,12 +27,12 @@ y fusiona repetidos antes de que nadie los lea. Están marcados y excluidos del 
 - **B. Diferencias individuales, estilos y medicion** — 7 obras
 - **C. Produccion de humor: habilidad, creatividad e inteligencia** — 6 obras
 - **D. Humor, vinculos sociales, atraccion y estatus** — 14 obras
-- **E. Risa: etologia, acustica y contagio** — 18 obras
+- **E. Risa: etologia, acustica y contagio** — 22 obras
 - **F. Neurociencia y cognicion del humor** — 20 obras
 - **G. Humor aplicado: trabajo, aula, salud, persuasion** — 10 obras
 - **H. Entrenabilidad: el humor se puede aprender** — 6 obras
-- **I. Linguistica y estructura del chiste** — 16 obras
-- **J. El lado oscuro: gelotofobia, burla, humor que falla** — 7 obras
+- **I. Linguistica y estructura del chiste** — 22 obras
+- **J. El lado oscuro: gelotofobia, burla, humor que falla** — 8 obras
 - **K. Humor computacional e IA** — 4 obras
 - **L. Oficio: manuales de stand-up, improvisacion y guion** — 8 obras
 
@@ -209,7 +209,7 @@ Como se mide objetivamente 'ser gracioso' (tarea de pies de foto puntuada por ju
 ### `C05` ★★ Personality traits, intelligence, humor styles, and humor production ability of professional stand-up comedians compared to college students
 
 **Greengross, G.; Martin, R. A.; Miller, G.** (2012) · *Psychology of Aesthetics, Creativity, and the Arts, 6(1), 74-82*  
-DOI: [`10.1037/a0025774`](https://doi.org/10.1037/a0025774) · corregido el 18/09/2026 (el título y el DOI de la ficha eran de otro artículo) y verificado contra la página de la Aberystwyth University y el resumen de Ovid  
+DOI: [`10.1037/a0025774`](https://doi.org/10.1037/a0025774) · verificado 05/11/2026 en api.openalex.org (titulo y DOI juntos; OpenAlex fecha el articulo en 2011, en linea)  
 Tipo: articulo
 
 Perfil psicologico del comico profesional. Video de gran atractivo.
@@ -482,6 +482,22 @@ Tipo: articulo
 
 ¿Sonreir a la fuerza te alegra? Con 3.878 personas de 19 paises, preregistrado y con escepticos dentro: poner cara de sonrisa a proposito o imitar una sonrisa alegra; el truco del lapiz en la boca (sonreir sin saberlo) no quedo claro.
 
+### `E19` ★★ Play vocalisations and human laughter: a comparative review
+
+**Winkler, S. L.; Bryant, G. A.** (2021) · *Bioacoustics, 30(5)*  
+DOI: [`10.1080/09524622.2021.1905065`](https://doi.org/10.1080/09524622.2021.1905065) · verificado 05/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Marco para «los animales se rien»: muchas especies hacen sonidos al jugar, y la risa humana se parece a ellos, sobre todo a los de los grandes simios; jadeos de juego. No nombra perros en el resumen.
+
+### `E22` ★★ Does laughter make everything funnier? Implicit laughter processing in autistic and non-autistic adults
+
+**Cai, Q.; White, S. J.; Wang, B.; Samuel, E.; et al.** (2026) · *Royal Society Open Science*  
+DOI: [`10.1098/rsos.251348`](https://doi.org/10.1098/rsos.251348) · verificado 05/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Continuacion de E07: anadir risas hace mas graciosos chistes, eructos y caidas, y la risa autentica mas que la fingida (en adultos no autistas; en autistas, menos). Apoyo para las risas enlatadas.
+
 ### `E17` ★ Antiphonal laughter between friends and strangers
 
 **Smoski, M. J.; Bachorowski, J.-A.** (2003) · *Cognition and Emotion, 17(2), 327-340*  
@@ -489,6 +505,22 @@ DOI: [`10.1080/02699930302296`](https://doi.org/10.1080/02699930302296) · verif
 Tipo: articulo
 
 Reirse justo cuando se rie el otro (risa «antifonal») pasa mucho mas entre amigos que entre desconocidos: 148 personas grabadas jugando por parejas. Apoyo; ojo con C17 y el terreno de MDS-032 hasta el 17/11.
+
+### `E20` ★ “Tears of joy” & “smiles of joy” prompt distinct patterns of interpersonal emotion regulation
+
+**Aragón, O. R.; Clark, M. S.** (2017) · *Cognition and Emotion, 32(5)*  
+DOI: [`10.1080/02699931.2017.1360253`](https://doi.org/10.1080/02699931.2017.1360253) · verificado 05/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Llorar de alegria: quien te ve llorar de felicidad intenta calmarte, aunque sepa que estas contento; quien te ve sonreir intenta alargarlo. Apoyo de E13 (lagrimas de alegria).
+
+### `E21` ★ Form follows function in human nonverbal vocalisations
+
+**Pisanski, K.; Bryant, G. A.; Cornec, C.; Anikin, A.** (2022) · *Ethology Ecology & Evolution, 34(3)*  
+DOI: [`10.1080/03949370.2022.2026482`](https://doi.org/10.1080/03949370.2022.2026482) · verificado 05/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Revision: risas, gritos y gemidos humanos se parecen a las llamadas de otros mamiferos; y los humanos, a diferencia de casi todos, podemos fingirlos (la risa de conversacion). Marco.
 
 
 ---
@@ -917,6 +949,46 @@ Tipo: articulo
 
 Familia «mensajes». Replica preregistrada de I14 con 847 personas (el original, 85): el smiley sigue restando competencia, pero suma calidez, sea el correo formal o no. Lo que queda en pie de I14.
 
+### `I17` ★★ Imperfectly Human: The Humanizing Potential of (Corrected) Errors in Text-Based Communication
+
+**Bluvstein Netter, S.; Zhao, X.; Barasch, A.; Schroeder, J.** (2023) · *Journal of the Association for Consumer Research*  
+DOI: [`10.1086/728412`](https://doi.org/10.1086/728412) · verificado 05/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Familia «mensajes». Una errata corregida en un chat de atencion al cliente hace parecer mas humano (y mas util) a quien escribe. Fuente central posible: ¿una errata te hace parecer mas humano?
+
+### `I18` ★★ The iPhone Effect: The Quality of In-Person Social Interactions in the Presence of Mobile Devices
+
+**Misra, S.; Cheng, L.; Genevie, J.; Yuan, M.** (2014) · *Environment and Behavior, 48(2)*  
+DOI: [`10.1177/0013916514539755`](https://doi.org/10.1177/0013916514539755) · verificado 05/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Familia «mensajes» (el movil). Experimento de campo: 100 parejas charlando diez minutos; con un movil en la mesa o en la mano, la conversacion se valora peor y hay menos empatia. Fuente central posible: ¿el movil en la mesa estropea la conversacion?
+
+### `I19` ★★ The effect of mobile messaging during a conversation on impression formation and interaction quality
+
+**Vanden Abeele, M. M. P.; Antheunis, M. L.; Schouten, A. P.** (2016) · *Computers in Human Behavior, 62*  
+DOI: [`10.1016/j.chb.2016.04.005`](https://doi.org/10.1016/j.chb.2016.04.005) · verificado 05/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Familia «mensajes». Contestar mensajes en mitad de una conversacion te hace parecer menos educado y menos atento, sobre todo si lo coges sin que haya sonado. Fuente central posible: ¿queda mal mirar el movil mientras te hablan?
+
+### `I20` ★★ “You phubbed me for that?” Reason given for phubbing and perceptions of interactional quality and exclusion
+
+**McDaniel, B. T.; Wesselmann, E. D.** (2021) · *Human Behavior and Emerging Technologies, 3(3)*  
+DOI: [`10.1002/hbe2.255`](https://doi.org/10.1002/hbe2.255) · verificado 05/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Familia «mensajes». Experimento con un compinche que saca el movil a los dos minutos: te sientes mas excluido y menos cerca, de la razon que sea; con una razon importante, algo menos. Apoyo o central para el «phubbing».
+
+### `I21` ★★ Can you connect with me now? How the presence of mobile communication technology influences face-to-face conversation quality
+
+**Przybylski, A. K.; Weinstein, N.** (2012) · *Journal of Social and Personal Relationships, 30(3)*  
+DOI: [`10.1177/0265407512453827`](https://doi.org/10.1177/0265407512453827) · verificado 05/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Familia «mensajes». La mera presencia de un movil en la mesa resta cercania y calidad a una conversacion, sobre todo si se habla de algo importante. Apoyo de I18.
+
 ### `I16` ★ Online Pauses and Silence: Chronemic Expectancy Violations in Written Computer-Mediated Communication
 
 **Kalman, Y. M.; Rafaeli, S.** (2011) · *Communication Research, 38(1), 54-69*  
@@ -924,6 +996,14 @@ DOI: [`10.1177/0093650210378229`](https://doi.org/10.1177/0093650210378229) · v
 Tipo: articulo
 
 Familia «mensajes». Tardar en contestar un correo (un dia, dos semanas o mas de un mes de silencio) cambia como te evaluan, y el efecto depende de quien seas. Para «¿queda mal tardar en contestar?».
+
+### `I22` ★ Evaluating the Adequacy of Emoji Use in Positive and Negative Messages from Close and Distant Senders
+
+**Cavalheiro, B. P.; Prada, M.; Rodrigues, D. L.; Lopes, D.** (2022) · *Cyberpsychology, Behavior, and Social Networking, 25(3)*  
+DOI: [`10.1089/cyber.2021.0157`](https://doi.org/10.1089/cyber.2021.0157) · verificado 05/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Familia «mensajes». Un emoji se ve menos adecuado si te lo manda alguien lejano (el director del banco) que alguien cercano, y en un mensaje malo que en uno bueno. Fuente central posible: ¿queda mal un emoji del banco?
 
 
 ---
@@ -985,6 +1065,14 @@ DOI: [`10.3389/fpsyg.2023.1109466`](https://doi.org/10.3389/fpsyg.2023.1109466) 
 Tipo: articulo
 
 Por que dan miedo los payasos: no saber si quieren hacerte dano, lo impredecible y la cara pintada. Gancho de Halloween (31/10), para la semana del 26/10.
+
+### `J08` ★★ The fear of being laughed at: Individual and group differences in Gelotophobia
+
+**Ruch, W.; Proyer, R. T.** (2008) · *Humor: International Journal of Humor Research, 21(1)*  
+DOI: [`10.1515/HUMOR.2008.002`](https://doi.org/10.1515/HUMOR.2008.002) · verificado 05/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Gelotofobia medida en 863 personas: se distingue de otros miedos de verguenza y varia muchisimo entre adultos. Distinto de J02 (misma pareja de autores, otra revista).
 
 
 ---

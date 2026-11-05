@@ -552,3 +552,24 @@ Uno al día a las 19:00 (hora de España), todos `"modo": "automatico"` y `"idio
 cada guion dice qué escena se quitaría si le tocara un brazo corto. **El largo `MDH-008`** (las
 cosquillas, el caso entero, 8 min 34 s) está escrito y **no se programa**: estreno el 15/11, cuando la
 dirección tenga la imagen horizontal y la voz por tandas.
+
+## Semana del 9 al 15 de noviembre de 2026 · B2, posiciones 5 a 11
+
+Escrita la noche del **jueves 5 de noviembre**. **Tres Shorts, no siete**: con tres lectores por vuelta
+y mayoría (versión 28) se intentaron catorce temas y pasaron tres. Lunes, martes, sábado y domingo se
+quedan sin emisión y sus posiciones de B2 (5, 6, 10 y 11) quedan vacías, como dice `ciclos.json`. Uno al
+día a las 19:00 (hora de España), `"modo": "automatico"`, `"idiomas": ["es"]`.
+
+| Día | Emisión | B2 · brazo (posición) | Serie | Pregunta | Ficha |
+|---|---|---|---|---|---|
+| Lunes 9 | — | D (5) | — | **sin emisión** | — |
+| Martes 10 | — | AD (6) | — | **sin emisión** | — |
+| Miércoles 11 | `MDS-064` | A (7), escenas 4 y 5 animadas | El experimento | ¿por qué un chiste malo hace gracia si alguien se ríe? | `E22` |
+| Jueves 12 | `MDS-065` | control (8) | El experimento | ¿por qué consuelas a quien llora de alegría? | `E20` |
+| Viernes 13 | `MDS-066` | control (9) | El experimento | ¿por qué se te pega la risa de otro? | `E09` |
+| Sábado 14 | — | D (10) | — | **sin emisión** | — |
+| Domingo 15 | — | AD (11) | — | **sin emisión** | — |
+
+**Ninguno es de la familia `mensajes`** (los cinco temas de mensajes cayeron; ver la bitácora). **El
+tanteo de cosquillas se intentó tres veces y no pasó.** **Banco vacío**: no sobró ningún aprobado.
+Fichas nuevas: once (`I17`-`I22`, `E19`-`E22`, `J08`). Detalle en la bitácora del 05/11.

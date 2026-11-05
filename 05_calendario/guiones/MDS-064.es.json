@@ -1,0 +1,198 @@
+{
+ "id": "MDS-064",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué un chiste malo hace gracia si alguien se ríe?",
+ "tesis": "Oír reír hace que un chiste, un eructo o una caída parezcan más graciosos, y más si la risa es de verdad que si es fingida.",
+ "pilares": [
+  "E"
+ ],
+ "duracion_objetivo_s": 45,
+ "bloqueos": [],
+ "ciclo": "B2",
+ "variante": "A",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué un chiste malo hace gracia si alguien se ríe?",
+  "respuesta": "Porque oír reír hace que un chiste parezca más gracioso, sobre todo si la risa es de verdad.",
+  "puente": "El chiste malo del primo que salva la carcajada de tu tía es lo que probaron: chistes con risas añadidas, de verdad o fingidas, y sin ellas."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — tu primo cuenta un chiste malísimo y la mesa se queda en silencio; qué gira — tu tía suelta una carcajada y acabáis todos riéndoos; cómo acaba — oír reír hace más gracioso el chiste, y más con risa de verdad, aunque eran grabaciones.",
+  "POSICIÓN B2 7 (miércoles 11/11): brazo A. Escrito con seis escenas antes de saber qué día salía; en la noche se trabajó con la referencia de trabajo MDS-076 y se renumeró al cerrar la semana (los temas que no pasaron no ocupan número).",
+  "CICLO B2, brazo A. Si le tocara un brazo corto (D o AD), la escena que se quitaría es la 4.",
+  "BRAZO B (receta del control de B2): la escena 1 es el hallazgo, en doce palabras como mucho, con su fuente; la pantalla dice lo mismo. La situación va en la 2 y el remate en la 3.",
+  "FUENTE: E22 (Cai, White, Wang, Samuel y otros, 2026, Royal Society Open Science, DOI 10.1098/rsos.251348), ficha nueva. Resumen leído el 05/11/2026 en OpenAlex, frases literales: «we added genuine or posed laughter to various forms of comedic stimuli»; «In non-autistic adults, adding laughter increased the perceived funniness of humorous stimuli, including jokes, burps and slapstick videos, with genuine laughter leading to funnier ratings than posed laughter». El Short no habla del autismo (el resumen compara los dos grupos; la ficha lo dice). Apoyo: E07 (Cai y otros, 2019).",
+  "LÍMITE (regla 12): risas añadidas a grabaciones, no una cena real."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "E22",
+   "icono": "i-publico",
+   "texto": "Oír reír lo hace más *gracioso*",
+   "narracion": "Oír a alguien reír hace más gracioso cualquier chiste.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "older woman laughing out loud at dinner table",
+      "woman laughing hard at family dinner",
+      "woman laughing loudly"
+     ],
+     "prompt": "an older woman laughing out loud at a family dinner table, warm light"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Un chiste *malísimo*",
+   "narracion": "Cena familiar. Tu primo cuenta un chiste malísimo, y la mesa se queda en silencio.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "young man telling joke at family dinner",
+      "man talking at dinner table family"
+     ],
+     "prompt": "a young man telling a joke at a family dinner table"
+    },
+    {
+     "desde": "se queda en silencio",
+     "busqueda": [
+      "family dinner awkward silence",
+      "people at table looking at each other silent"
+     ],
+     "prompt": "a family at the dinner table in awkward silence"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "La carcajada de tu *tía*",
+   "narracion": "Hasta que tu tía suelta una carcajada, y acabáis todos riéndoos.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "family laughing together at dinner",
+      "whole family laughing table"
+     ],
+     "prompt": "a whole family laughing together at the dinner table"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "fuente": "E22",
+   "puntos": [
+    "Chistes, eructos y *caídas*",
+    "Con risas",
+    "Sin risas"
+   ],
+   "narracion": "¿Por qué pasa? Unos investigadores pusieron a adultos chistes, eructos y caídas, unas veces con risas añadidas y otras sin ellas.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person with headphones listening laptop",
+      "man wearing headphones at computer"
+     ],
+     "prompt": "a person wearing headphones listening to clips on a laptop"
+    }
+   ],
+   "animar": true,
+   "animacion": "Tres viñetas de línea que caen una tras otra en «chistes, eructos y caídas» (un bocadillo, una burbuja de eructo, una figura resbalando); sobre la mitad de ellas se encienden unas ondas de «ja ja» en «risas añadidas» y la otra mitad se queda en silencio."
+  },
+  {
+   "tipo": "dato",
+   "fuente": "E22",
+   "personaje": "entiende",
+   "cifra": "Más *gracioso*",
+   "pie": "y más con risa de verdad",
+   "narracion": "Con risas, todo parecía más gracioso. Y más aún si la risa era de verdad, y no fingida.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person laughing at laptop headphones",
+      "man laughing at screen"
+     ],
+     "prompt": "a person laughing at a laptop while wearing headphones"
+    }
+   ],
+   "animar": true,
+   "animacion": "Un medidor de gracia junto a cada viñeta: sube más en las que tienen ondas de risa, y aún más cuando las ondas cambian a un «JA» grande de risa de verdad frente a uno pequeño y rígido de risa fingida, en «si la risa era de verdad»."
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "E22",
+   "personaje": "piensa",
+   "titulo": "Lo salvó tu *tía*",
+   "subtitulo": "Fuente: Cai y otros, 2026",
+   "narracion": "Así que el chiste de tu primo lo salvó tu tía. Eso sí: eran risas añadidas a grabaciones, no una cena de verdad.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "older woman smiling at dinner",
+      "aunt laughing family"
+     ],
+     "prompt": "an older woman smiling at the family dinner table"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "tres subagentes sin contexto, decide la mayoría (precisión del 02/11/2026); vuelta 1",
+  "fecha": "2026-11-05",
+  "vuelta": 1,
+  "lectores": [
+   {
+    "de_que_va": "Oír a alguien reírse hace que un chiste (o una caída, un eructo) nos parezca más gracioso, según un estudio.",
+    "pregunta_y_respuesta": "Por qué un chiste malo se salva cuando alguien se ríe: las risas, sobre todo las de verdad, hacen que las cosas parezcan más graciosas, aunque eran risas añadidas a grabaciones, no una cena real.",
+    "frases_que_no_se_entienden": [
+     "«Con risas, todo parecía más gracioso.» (no queda claro si «con risas» son risas de fondo o de la gente que lo veía; lo deduzco después)",
+     "«Unos investigadores pusieron a adultos chistes, eructos y caídas, unas veces con risas añadidas y otras sin ellas.» (la lista me descoloca un momento y «risas añadidas» tarda en entenderse)",
+     "«Eso sí: eran risas añadidas a grabaciones, no una cena de verdad.» (no sé a qué grabaciones se refiere)",
+     "«Fuente: Cai y otros, 2026» (no sé quién es Cai)"
+    ],
+    "frase_que_sobra": "«Oír a alguien reír hace más gracioso cualquier chiste.»",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Oír a alguien reírse hace que un chiste (o una caída, un eructo) nos parezca más gracioso, según un estudio.",
+    "pregunta_y_respuesta": "Por qué un chiste malo se vuelve gracioso cuando alguien se ríe: con risas añadidas todo parecía más gracioso, y más si la risa era real. Pero eran risas añadidas a grabaciones, no una cena de verdad.",
+    "frases_que_no_se_entienden": [
+     "«Cai y otros, 2026» (no sé quién es; «Con risas · Sin risas» en pantalla algo seco sin la voz)"
+    ],
+    "frase_que_sobra": "«Eso sí: eran risas añadidas a grabaciones, no una cena de verdad.»",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Oír a alguien reírse hace que un chiste, aunque sea malo, te parezca más gracioso, según un estudio.",
+    "pregunta_y_respuesta": "Por qué un chiste malo se salva cuando alguien se ríe: las risas añadidas hacen que chistes, eructos y caídas parezcan más graciosos, y más si la risa es de verdad. Eran risas puestas sobre grabaciones, no una cena real.",
+    "frases_que_no_se_entienden": [
+     "«Cai y otros, 2026» (deduzco que es la fuente). Lo demás lo entendí a la primera."
+    ],
+    "frase_que_sobra": "«Eso sí: eran risas añadidas a grabaciones, no una cena de verdad.»",
+    "donde_me_iria": "me quedo"
+   }
+  ],
+  "recuento": "Ninguna frase la marcan dos lectores salvo la firma (nota). Los tres: «me quedo». De qué va: los tres, la misma idea que la historia.",
+  "de_que_va": "Oír a alguien reírse hace que un chiste, aunque sea malo, te parezca más gracioso.",
+  "pregunta_y_respuesta": "¿Por qué un chiste malo hace gracia si alguien se ríe? Las risas añadidas hacen todo más gracioso, y más si son de verdad; eran grabaciones, no una cena.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "Dos quitarían la salvedad final («Eso sí: eran risas añadidas a grabaciones…»). Se queda: es el cierre honesto (regla 12), y ninguno dijo no entenderla salvo uno.",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "Firma «Fuente: Cai y otros, 2026»: los tres no saben quién es (no bloquea, criterio del 28/09).",
+   "Un lector: «Con risas, todo parecía más gracioso» lo dedujo después; «risas añadidas» tardó en entenderlo; «¿qué grabaciones?» en el cierre.",
+   "Un lector: «Con risas · Sin risas» en pantalla, algo seco sin la voz."
+  ],
+  "veredicto": "pasa"
+ }
+}
