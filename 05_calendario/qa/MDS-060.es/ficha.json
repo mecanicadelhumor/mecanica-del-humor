@@ -1,15 +1,15 @@
 {
-  "id": "MDS-054.es",
-  "duracion_final_s": 39.83,
-  "tamano_mb": 18.5,
+  "id": "MDS-060.es",
+  "duracion_final_s": 37.47,
+  "tamano_mb": 18.7,
   "audio": {
-    "lufs": -14.66,
+    "lufs": -14.92,
     "pico_dbtp": -1.41,
-    "rango_lu": 4.4
+    "rango_lu": 3.4
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.126,
+    "acaba_s": 0.123,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,7 +17,7 @@
     "silencios_s": [
       [
         0.0,
-        0.126
+        0.123
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -42,32 +42,31 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 38.78,
-    "duracion_real_voz_mp3_s": 38.78,
+    "duracion_calculada_s": 36.37,
+    "duracion_real_voz_mp3_s": 36.37,
     "desfase_s": 0.0,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_12_lights_sappheiros.mp3",
-    "sha256": "ec8432272d68db1bf39afb8df8546f0783eca7ee54f486c9963e8e7dad1bab23"
+    "archivo": "cama_04_reverie_piano_version_ft_adarsh_lucjo.mp3",
+    "sha256": "f5686d0d74fbcfca353106bf734605cf404103b3e58e38c4e48e29e8bb2904f0"
   },
   "guion": {
-    "titulo_trabajo": "¿Por qué escribimos en vez de llamar?",
+    "titulo_trabajo": "¿Queda mal un emoji en un correo de trabajo?",
     "idioma": "es",
     "voz": "Charon",
-    "escenas": 6,
-    "duracion_narracion_s": 38.78,
+    "escenas": 5,
+    "duracion_narracion_s": 36.37,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 9.55,
+    "escena_mas_larga_s": 10.674,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
-      "gemini-3.1-flash-tts-preview": 6
+      "gemini-3.1-flash-tts-preview": 5
     },
     "modelo_voz": "gemini-3.1-flash-tts-preview",
     "voz_mezclada": false,
     "origen_voz": [
-      "una toma (C36)",
       "una toma (C36)",
       "una toma (C36)",
       "una toma (C36)",
@@ -78,18 +77,16 @@
       "apertura",
       "planteamiento",
       "remate",
-      "planteamiento",
       "cifra",
       "objecion"
     ],
     "escenas_ritmo_fuera_de_rango": [],
     "voz_fiel": [
-      "11/12 palabras, 0 trozos repetidos",
-      "17/17 palabras, 0 trozos repetidos",
-      "9/10 palabras, 0 trozos repetidos",
-      "18/18 palabras, 0 trozos repetidos",
-      "19/19 palabras, 0 trozos repetidos",
-      "24/24 palabras, 0 trozos repetidos"
+      "12/12 palabras, 0 trozos repetidos",
+      "15/16 palabras, 0 trozos repetidos",
+      "21/21 palabras, 0 trozos repetidos",
+      "12/12 palabras, 0 trozos repetidos",
+      "23/23 palabras, 0 trozos repetidos"
     ]
   },
   "visual": {
@@ -97,146 +94,107 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 4.17,
+        "hasta_s": 4.57,
         "fuente": "pexels",
-        "id": 7592049,
-        "pagina": "https://www.pexels.com/video/a-woman-smiling-while-talking-on-the-phone-7592049/",
-        "autor": "ROMAN ODINTSOV",
-        "autor_url": "https://www.pexels.com/@roman-odintsov",
+        "id": 4064861,
+        "pagina": "https://www.pexels.com/video/man-coffee-desk-laptop-4064861/",
+        "autor": "cottonbro studio",
+        "autor_url": "https://www.pexels.com/@cottonbro",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 4.17,
-        "hasta_s": 8.97,
+        "desde_s": 4.57,
+        "hasta_s": 8.2,
         "fuente": "pexels",
-        "id": 7279035,
-        "pagina": "https://www.pexels.com/video/a-person-receiving-a-message-on-a-smartphone-7279035/",
-        "autor": "MART  PRODUCTION",
-        "autor_url": "https://www.pexels.com/@mart-production",
+        "id": 6931572,
+        "pagina": "https://www.pexels.com/video/woman-working-on-her-laptop-and-writing-notes-6931572/",
+        "autor": "Mikhail Nilov",
+        "autor_url": "https://www.pexels.com/@mikhail-nilov",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 8.97,
-        "hasta_s": 11.57,
+        "desde_s": 8.2,
+        "hasta_s": 11.1,
         "fuente": "pexels",
-        "id": 8060394,
-        "pagina": "https://www.pexels.com/video/close-up-footage-of-a-cellphone-ringing-8060394/",
-        "autor": "Ron Lach",
-        "autor_url": "https://www.pexels.com/@ron-lach",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 3,
-        "desde_s": 11.57,
-        "hasta_s": 12.83,
-        "fuente": "pexels",
-        "id": 7261927,
-        "pagina": "https://www.pexels.com/video/a-man-using-his-laptop-and-answering-a-phone-call-7261927/",
-        "autor": "MART  PRODUCTION",
-        "autor_url": "https://www.pexels.com/@mart-production",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 3,
-        "desde_s": 12.83,
-        "hasta_s": 15.03,
-        "fuente": "pexels",
-        "id": 15689201,
-        "pagina": "https://www.pexels.com/video/close-up-view-of-a-person-using-a-smartphone-15689201/",
-        "autor": "Ali  Alcántara",
-        "autor_url": "https://www.pexels.com/@alialcantara",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 4,
-        "desde_s": 15.03,
-        "hasta_s": 20.17,
-        "fuente": "pexels",
-        "id": 5708828,
-        "pagina": "https://www.pexels.com/video/elderly-man-on-a-phone-call-at-home-5708828/",
+        "id": 5647324,
+        "pagina": "https://www.pexels.com/video/close-up-view-of-a-person-s-fingers-using-an-apple-keyboard-for-typing-5647324/",
         "autor": "Tima Miroshnichenko",
         "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
+        "escena": 3,
+        "desde_s": 11.1,
+        "hasta_s": 19.23,
+        "fuente": "pexels",
+        "id": 6974127,
+        "pagina": "https://www.pexels.com/video/side-view-of-man-typing-on-laptop-6974127/",
+        "autor": "SHVETS production",
+        "autor_url": "https://www.pexels.com/@shvets-production",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
         "escena": 4,
-        "desde_s": 20.17,
-        "hasta_s": 21.77,
+        "desde_s": 19.23,
+        "hasta_s": 23.17,
         "fuente": "pexels",
-        "id": 7652166,
-        "pagina": "https://www.pexels.com/video/person-typing-on-the-laptop-7652166/",
-        "autor": "Kindel Media",
-        "autor_url": "https://www.pexels.com/@kindelmedia",
+        "id": 34292213,
+        "pagina": "https://www.pexels.com/video/friendly-encounter-in-modern-office-setting-34292213/",
+        "autor": "Max Medyk",
+        "autor_url": "https://www.pexels.com/@maxmedyk",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 4,
+        "desde_s": 23.17,
+        "hasta_s": 25.7,
+        "fuente": "pexels",
+        "id": 8546653,
+        "pagina": "https://www.pexels.com/video/a-woman-in-corporate-attire-posing-with-arms-crossed-8546653/",
+        "autor": "https://kaboompics.com/",
+        "autor_url": "https://www.pexels.com/@karola-g",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 5,
-        "desde_s": 21.77,
-        "hasta_s": 26.33,
+        "desde_s": 25.7,
+        "hasta_s": 32.53,
         "fuente": "pexels",
-        "id": 5974503,
-        "pagina": "https://www.pexels.com/video/man-holding-a-gift-while-talking-on-the-phone-5974503/",
-        "autor": "KATRIN  BOLOVTSOVA",
-        "autor_url": "https://www.pexels.com/@ekaterina-bolovtsova",
+        "id": 12692031,
+        "pagina": "https://www.pexels.com/video/a-smiling-young-woman-holding-a-laptop-and-a-cup-of-coffee-12692031/",
+        "autor": "Anna Shvets",
+        "autor_url": "https://www.pexels.com/@shvetsa",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 5,
-        "desde_s": 26.33,
-        "hasta_s": 29.2,
-        "fuente": "pexels",
-        "id": 5974678,
-        "pagina": "https://www.pexels.com/video/two-women-having-a-video-call-through-the-smartphone-5974678/",
-        "autor": "KATRIN  BOLOVTSOVA",
-        "autor_url": "https://www.pexels.com/@ekaterina-bolovtsova",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 6,
-        "desde_s": 29.2,
-        "hasta_s": 32.1,
-        "fuente": "pixabay",
-        "id": 47743,
-        "pagina": "https://pixabay.com/videos/id-47743/",
-        "autor": "crew_jak",
-        "autor_url": "https://pixabay.com/users/crew_jak-17988967/",
-        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 6,
-        "desde_s": 32.1,
-        "hasta_s": 37.23,
-        "fuente": "pexels",
-        "id": 13929687,
-        "pagina": "https://www.pexels.com/video/close-up-of-a-smartphone-screen-while-filming-a-young-woman-13929687/",
-        "autor": "Mizuno K",
-        "autor_url": "https://www.pexels.com/@mizunokozuki",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
+        "desde_s": 32.53,
+        "hasta_s": 34.87,
+        "fuente": "ia",
+        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+        "prompt": "two coworkers laughing together at neighbouring desks",
+        "tipo": "imagen"
       }
     ],
-    "sintetico": false
+    "sintetico": true
   },
   "animacion": null,
   "fotogramas_s": [
-    2.6,
-    8.72,
-    13.76,
-    19.2,
-    26.36,
-    35.06
+    2.85,
+    8.59,
+    16.09,
+    23.22,
+    32.2
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }

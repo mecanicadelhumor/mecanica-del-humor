@@ -1050,6 +1050,21 @@
       "subido_utc": "2026-11-04T07:37:39Z",
       "revisado": false,
       "pregunta_publicada": "2026-11-04T22:41:14Z"
+    },
+    {
+      "id": "MDS-060.es",
+      "episodio": "MDS-060",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Queda mal un emoji en un correo de trabajo?",
+      "guion": "05_calendario/guiones/MDS-060.es.json",
+      "video_id": "olUA7EhrGzs",
+      "url": "https://youtu.be/olUA7EhrGzs",
+      "estado": "private",
+      "publicar_en": "2026-11-05T18:00:00Z",
+      "musica": "cama_04_reverie_piano_version_ft_adarsh_lucjo.mp3",
+      "subido_utc": "2026-11-05T08:00:40Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-11-04T22:41:14Z"
