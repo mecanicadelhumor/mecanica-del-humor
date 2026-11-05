@@ -9,3 +9,4 @@
 - **Limpieza** (cuaderno): workflows aplicados borrados en las dos carpetas; `c` y `Claude outputs/` fuera de la raíz; `LEEME.md` en las dos carpetas «tareas».
 - `compromisos.json`: hechos `C51.3-workflow-apt`, `voz-3.8-mover` (03/11, codirector), `B1-cierre`, `largo-imagen-horizontal`, `MDS-061-jueves`; aplazados `largo-voz-tandas` y `largo-ensayo` al 12/11; nuevos `visual-relevancia-nucleo` (9/11) y `voz-3.8-oir` (codirector, 11/11).
 - Plan: versión 29.
+- **Cierre de la prueba de voces** (13:28 UTC): `-lite` relanzado, **bien** (run 42035553638). Referencia `3.1` (run 42035770003): `400 'safety' — The audio stream could not be completed` en la llamada dirigida (pasajero, según el propio mensaje). **No se repite** para no gastar la cuota diaria del modelo de producción; la referencia para el codirector es el `MDS-060` publicado hoy, que lleva esa voz y ese guion.
