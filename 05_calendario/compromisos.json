@@ -167,7 +167,7 @@
       "que": "visual.py y fondo_visual.py en horizontal para el largo (C50 solo sabe vertical)",
       "dueno": "direccion",
       "fecha": "2026-11-05",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [
         {
           "de": "2026-10-26",
@@ -180,13 +180,15 @@
           "porque": "Segundo aplazamiento. El 29/10 fue para lo que el codirector pidió y la cola; el 2/11 va lleno de lo que B2 necesita para empezar el 5/11 (factorial, bayesiano, pocas vistas, segundo Short diario). Consecuencia: el ensayo del largo pasa al 9/11 y el estreno, al 15/11 (la otra fecha que ya preveía largo-ensayo)"
         }
       ],
-      "origen": "Plan v23"
+      "origen": "Plan v23",
+      "hecho_el": "2026-11-05",
+      "nota": "visual.py: poner_formato() por guion; MDH-* es horizontal (Pexels landscape, IA 1360x768 «horizontal 16:9», caras y recorte con 16:9, hoja de contactos apaisada) y entra en «pendientes». Probado con búsquedas simuladas y con recortes reales de ffmpeg a 1920x1080 (fondo_visual ya era genérico). La prueba con las APIs de verdad, en el ensayo del 9/11"
     },
     {
       "id": "largo-voz-tandas",
-      "que": "Voz del largo con 2.5-flash y C36 por tandas, probada en vivo",
+      "que": "Voz del largo con el modelo 3.8 elegido y C36 por tandas, probada en vivo (era con 2.5-flash: caduca el 17/11)",
       "dueno": "direccion",
-      "fecha": "2026-11-05",
+      "fecha": "2026-11-12",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -198,6 +200,11 @@
           "de": "2026-10-29",
           "a": "2026-11-05",
           "porque": "Mismo motivo que largo-imagen-horizontal; además, el guion de MDH-008 lo entrega la planificación esta noche"
+        },
+        {
+          "de": "2026-11-05",
+          "a": "2026-11-12",
+          "porque": "Hacerla con gemini-2.5-flash ya no tiene sentido: Google lo apaga el 17/11, dos días después del estreno. Se hace con el modelo 3.8 que elija el codirector el mismo día del cambio (voz-3.8-cambio, 12/11); el dato que la reabre es su respuesta a la muestra de hoy"
         }
       ],
       "origen": "Plan v23"
@@ -325,13 +332,18 @@
       "id": "largo-ensayo",
       "que": "Render de prueba del largo entero; decide 8/11 o 15/11",
       "dueno": "direccion",
-      "fecha": "2026-11-09",
+      "fecha": "2026-11-12",
       "estado": "pendiente",
       "aplazamientos": [
         {
           "de": "2026-11-02",
           "a": "2026-11-09",
           "porque": "Imagen horizontal y voz por tandas pasan al 5/11. Estreno del largo: 15/11 (no el 8/11)"
+        },
+        {
+          "de": "2026-11-09",
+          "a": "2026-11-12",
+          "porque": "Necesita la voz por tandas (12/11). El estreno pasa a decidirse el 12/11: 15/11 si el ensayo sale, si no 22/11"
         }
       ],
       "origen": "Plan v23"
@@ -341,9 +353,11 @@
       "que": "Cerrar B1 con su regla y escribir B2 en ciclos.json",
       "dueno": "direccion",
       "fecha": "2026-11-05",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Plan v22-v23"
+      "origen": "Plan v22-v23",
+      "hecho_el": "2026-11-05",
+      "nota": "B1 cerrado en ciclos.json («estado»: «cerrado», decisión del 05/11): B gana y es el control de B2; A con reparo, factor de B2. B2 ya estaba escrito desde el 02/11"
     },
     {
       "id": "C51.3-brazo-caras",
@@ -413,10 +427,11 @@
       "que": "Mover 00_estrategia/tareas/workflows_2026-10-26/presentador_prueba.yml a .github/workflows/ (paso «Dependencias» a prueba de cuelgues de apt; el resto, idéntico)",
       "dueno": "codirector",
       "fecha": "2026-11-03",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
       "origen": "Dirección 26/10: dos ejecuciones seguidas murieron en apt-get update (runner de GitHub)",
-      "nota": "No corre prisa: mientras tanto, relanzar suele bastar. Instrucciones en el LEEME.md de esa carpeta"
+      "nota": "No corre prisa: mientras tanto, relanzar suele bastar. Instrucciones en el LEEME.md de esa carpeta · Movido por el codirector (respuesta del 03/11 en su fichero de tareas); el fichero de .github/workflows/ es idéntico al preparado. Carpeta workflows_2026-10-26/ borrada el 05/11",
+      "hecho_el": "2026-11-03"
     },
     {
       "id": "C51.3-wan-gesto",
@@ -487,9 +502,11 @@
       "que": "Mover 00_estrategia/tareas/workflows_2026-11-02/voz_prueba.yml a .github/workflows/ (añade gemini-3.8-flash-tts y -lite al desplegable de la prueba de voces)",
       "dueno": "codirector",
       "fecha": "2026-11-04",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Retirada de los modelos TTS de Gemini el 17/11/2026 (dirección 02/11)"
+      "origen": "Retirada de los modelos TTS de Gemini el 17/11/2026 (dirección 02/11)",
+      "hecho_el": "2026-11-03",
+      "nota": "Movido por el codirector el 03/11 (tarea 1 del 02/11). Carpeta workflows_2026-11-02/ borrada el 05/11"
     },
     {
       "id": "voz-3.8-prueba",
@@ -514,9 +531,11 @@
       "que": "Cuarta vuelta de la lectura en frío de MDS-061 (07_pruebas/MDS-061-2026-11-02/, con tres lectores), su animación (escenas 3 y 4) y, si pasa, a guiones/ y a la parrilla del viernes 6/11 antes de las 01:13 UTC",
       "dueno": "direccion",
       "fecha": "2026-11-05",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Cuaderno del codirector, 02/11 («el próximo jueves no habrá vídeo… soluciónalo si es posible»)"
+      "origen": "Cuaderno del codirector, 02/11 («el próximo jueves no habrá vídeo… soluciónalo si es posible»)",
+      "hecho_el": "2026-11-05",
+      "nota": "Vueltas 4, 5 y 6 con tres lectores nuevos cada una: NO PASA (no se distingue «sonreír a propósito» del lápiz). El viernes 6/11 se queda sin Short; E18 a temas_en_reserva.md como tema de seis escenas, no del brazo corto"
     },
     {
       "id": "C51.3-prueba",
@@ -544,6 +563,24 @@
       "estado": "pendiente",
       "aplazamientos": [],
       "origen": "tts-vigilancia"
+    },
+    {
+      "id": "visual-relevancia-nucleo",
+      "que": "C50: un clip de archivo solo vale si su título trae el núcleo de la búsqueda (la mitad, y todos los animales que se nombran), y el primer plano del Short pide 0,5 o va la imagen generada. Medir en las hojas de contactos de MDS-062 a MDS-070 cuántos planos ya no pegan",
+      "dueno": "direccion",
+      "fecha": "2026-11-09",
+      "estado": "pendiente",
+      "origen": "Cuaderno del codirector (03/11): el elefante de MDS-057. Plan v29",
+      "nota": "Aplicado el 05/11 en visual.py (VERSION 2: todo lo pendiente se vuelve a elegir en la siguiente ejecución de Visuales)"
+    },
+    {
+      "id": "voz-3.8-oir",
+      "que": "Oír las muestras de voz 3.8 (flash y lite) frente a la de hoy, y decir cuál",
+      "dueno": "codirector",
+      "fecha": "2026-11-11",
+      "estado": "pendiente",
+      "origen": "Plan v29, tarea 1 del 05/11",
+      "nota": "Artefactos de «Prueba de voces» del 05/11 (caducan el 19/11)"
     }
   ]
 }

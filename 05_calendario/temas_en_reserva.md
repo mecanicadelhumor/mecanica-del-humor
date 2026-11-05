@@ -37,6 +37,12 @@ el lector a la tercera vuelta.
   gratis» del ascensor · «el famoso truco del lápiz» (sale de la nada) y «me iría en la 4» dos veces
   (el dato delante del brazo B le quita la intriga al estudio). *Reintentar con el lápiz contado en la
   escena 4, como la duda que el estudio viene a resolver.*
+  **05/11 (dirección), reintentado como `MDS-061` (brazo AD, cinco escenas) en seis vueltas y doce lectores:
+  no pasa.** Lo que bloquea al final es siempre lo mismo: no se distingue «sonreír a propósito» del lápiz
+  («¿el lápiz no era una forma de sonreír a propósito?»), que es la diferencia que mide el estudio.
+  *Reintentar solo con seis escenas (no en un brazo corto): una para el lápiz —sonreír sin saber que
+  sonríes— y otra para la sonrisa a propósito, antes del resultado.* Texto de la vuelta 6 en
+  `07_pruebas/MDS-061-2026-11-02/`.
 - **29/10** · ¿Si te ríes con las cosquillas, es que te gustan? · `F18` (Hinchcliffe y otros, 2020) ·
   el «pero si te estás riendo» de la pareja · el límite («lo dan por sabido; su experimento fue con
   ratas») no se entendió en ninguna de las tres versiones. *La frase de las personas es el punto de

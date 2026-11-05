@@ -822,6 +822,24 @@ publicado en la página de retiradas de Google desde hace semanas. Se supo el 02
 voces, no porque nadie lo vigilara. → **Todo modelo «preview» del que dependa la producción tiene una fecha
 de apagado: mírala en la página de retiradas en cada informe mensual y apúntala en `compromisos.json`.**
 
+**69. La relevancia contaba palabras, no lo que se ve.** Desde el 23/09 `visual.py` daba por bueno un clip si
+su título compartía un tercio de las palabras de la búsqueda. «baby gorilla playing zoo» y «playful baby elephant
+in australian zoo» comparten tres de cuatro: el primer segundo de `MDS-057` fue un elefante, y la mujer que
+bosteza («young gorilla **open mouth**») y la mano en un secador («chimpanzee and human **hand**») salieron igual.
+Al medirlo el 05/11, el 26 % de los planos de archivo desde septiembre tenían ese defecto; la revisión diaria
+los iba corrigiendo de uno en uno con `ajustes.json` sin que nadie viera la causa. Lo vio el codirector.
+→ **Una medida de parecido tiene que pesar lo que identifica (el sujeto, la acción) y no lo que acompaña (la
+edad, el sitio, el encuadre). Y cuando un arreglo a mano se repite todos los días, la causa está en el código.**
+
+## Dónde está el proyecto a 5 de noviembre de 2026 (en diferido)
+
+Versión **29** del plan, la que manda. **Las imágenes que no pegaban eran un fallo de `visual.py`** (trampa 69):
+desde hoy un clip necesita el núcleo de la búsqueda y todos los animales, y el primer plano del Short no se
+relaja; lo que no pase, imagen generada. **Voz 3.8**: responde; muestras para el codirector, cambio el 12/11.
+**`MDS-061` no pasa** (nueve lectores): el viernes 6 sin Short. **B1 cerrado.** El largo: imagen horizontal
+hecha, voz por tandas y ensayo el 12/11 con la voz 3.8, estreno decidido ese día. **Workflows solo en
+`00_estrategia/tareas/`**; lo ya aplicado, borrado.
+
 ## Dónde está el proyecto a 2 de noviembre de 2026 (en diferido)
 
 Versión **28** del plan, la que manda. **La voz caduca el 17/11** (Google retira los dos modelos TTS):

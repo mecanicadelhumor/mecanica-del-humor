@@ -81,8 +81,17 @@
      "que_se_hace": "El reparo lo decido así: A NO se suma al control de B2 (el control sigue siendo B solo). Pasa a B2 como uno de los dos factores del 2×2 (animación sí/no), donde se mide con la mitad de los Shorts del ciclo en cada lado y con la regla nueva, que aparta los Shorts de menos de 10 vistas. Si en B2 la animación gana sin reparo, entra en el control de B3.",
      "porque": "La mitad de los Shorts de A (MDS-042, 046 y 048: 9, 4 y 5 vistas) no los repartió el feed. Su «se quedaron» sale de 4 a 9 personas. Sin esos tres, A tiene n = 3: no es evidencia suficiente para cambiar lo que sale todos los días, y además cuesta una rutina (Animación) cada Short. Medirlo otra vez dentro del factorial no cuesta ni un Short más. La regla no la cambio con los datos delante: el freno dice «decide la dirección», y decido no adoptarlo todavía.",
      "quien": "direccion (en diferido)"
+    },
+    {
+     "fecha": "2026-11-05",
+     "brazo": "cierre",
+     "veredicto": "B1 cerrado: B GANA (es el control de B2); A, gana con reparo → factor «animación» de B2",
+     "datos": "resultados.json 2026-11-04T20:34:08Z: control n = 7 (19,6 %), A n = 7 (29,4 %; +9,8 pp; P = 0,94; ceros de feed 3 frente a 0), B n = 8 (37,6 %; +18,0 pp; P = 0,98). Pendientes de su lectura a 48 h: MDS-058 (control) y MDS-059 (A).",
+     "que_se_hace": "Nada nuevo: lo decidido el 26/10 (B) y el 02/11 (A) se mantiene y B2 ya corre desde hoy con su orden. MDS-058 y MDS-059 entran en resultados.json cuando tengan sus 48 h, pero no reabren la decisión: el ciclo se cerraba el 4/11 y ni con los dos a favor del control A deja de llevar el freno de los ceros de feed.",
+     "quien": "direccion (en diferido)"
     }
-   ]
+   ],
+   "estado": "cerrado"
   },
   {
    "id": "B2",

@@ -6764,3 +6764,39 @@ contrario.
 ## Lo que NO cambia hoy
 
 - B1 (brazos, `orden`, regla) hasta el 4/11; los guiones ya producidos (regla 11.4); las rutinas; los umbrales de C26.
+
+---
+
+# Versión 29 · 5 de noviembre de 2026 (jueves, en diferido) — el elefante del primer segundo, la voz 3.8 en muestra, el viernes sin Short y las dos carpetas «tareas»
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario.
+
+| Qué | Decisión |
+|---|---|
+| **Las imágenes que no pegan** (cuaderno, 03/11: el elefante del primer segundo de `MDS-057`, la mujer que bosteza en «jadeos», el cepillado de pelo en «risa heredada») | **Era un fallo de `visual.py`, no mala suerte.** La relevancia contaba qué parte de las palabras de la búsqueda salía en el título del clip, sin distinguir *qué se ve* de *cómo es*: «baby gorilla playing zoo» y «playful baby elephant in australian zoo» comparten tres de cuatro (0,75). En `MDS-057`, **7 de los 10 planos** tenían ese defecto; en los manifiestos de `MDS-024` a `MDS-063`, **81 de 308** planos de archivo (26 %). **Arreglado hoy** (trampa 69): un clip solo vale si trae **la mitad del núcleo** de la búsqueda (las palabras que no son edad, tamaño, encuadre, sitio o parte del cuerpo) y **todos los animales** que se nombran; si no, no se usa nunca y va la imagen generada (que sí sigue el `prompt` del guion) o la tarjeta de marca. **El primer plano del Short** pide además 0,5 y no admite «flojos» (lo que pidió el codirector: el primer segundo no se relaja). `VERSION = 2`: la ejecución de «Visuales» de hoy vuelve a elegir todo lo no publicado (`MDS-062` en adelante). `MDS-060` ya se subió: no se toca (regla 11.4) |
+| ¿Aparcar el vídeo de archivo? (la pregunta del codirector) | **Todavía no.** Con el arreglo, lo que no pegaba se sustituye por la imagen generada; el lunes 9 cuento en las hojas de `MDS-062` en adelante cuántos planos siguen sin pegar (`visual-relevancia-nucleo`). Si pasan de uno por Short, propongo que el archivo quede solo para personas y sitios, y la IA para todo lo demás (animales, objetos, laboratorios). Con las novedades del codirector («producción con imágenes y vídeos generados por IA») esto es el puente, no el destino |
+| Muestra (regla 11.2) | Este cambio no cambia el aspecto del vídeo: cambia qué clips se rechazan. Va sin muestra previa, como los `ajustes.json` diarios de la revisión. La muestra son las hojas de contactos nuevas (`05_calendario/visuales/MDS-062.jpg`…), que se pide mirar en las tareas del codirector |
+| **Voz 3.8** | Prueba lanzada hoy en «Prueba de voces» sobre `MDS-060`: `gemini-3.8-flash-tts` **responde** (30 s sin dirección, 58 s con dirección; el audio acaba donde acaba el guion), y `-lite` y la referencia `3.1` se lanzan detrás. **Muestra para el codirector** (artefactos, caducan el 19/11). El 12/11 cambio `MODELO_GEMINI` y `MODELO_GEMINI_LARGO` al que elija. `voz.py` ya tiene el modelo en constante y la caché ya va por modelo (la clave lleva el motor): no hacía falta tocarlo |
+| **`MDS-061`** | Vueltas 4, 5 y 6, **nueve lectores**: no pasa. Tres de tres no distinguen «sonreír a propósito» del lápiz, que es justo lo que mide el estudio. **El viernes 6/11 se queda sin Short.** E18 vuelve a la reserva como tema de **seis escenas** (no cabe en el brazo corto). Lección: tres vueltas con mayoría sobre el mismo texto ya dicen lo que tienen que decir; no se insiste una cuarta en la misma sesión |
+| B1 | **Cerrado** en `ciclos.json`: B gana (control de B2), A con reparo (factor de B2). `MDS-058` y `MDS-059` entran en el marcador al cumplir 48 h, sin reabrir nada |
+| El largo | **Imagen horizontal hecha** (`visual.py`: `poner_formato()`, `MDH-*` apaisado). **La voz por tandas se hace con el modelo 3.8 el 12/11**, no con `2.5-flash`, que caduca el 17/11. Ensayo al 12/11; el estreno se decide ese día: 15/11 si sale, si no 22/11 |
+| Las dos carpetas «tareas» (cuaderno) | **Siguen separadas y con su nombre** (las rutas están en los arranques de las rutinas: trampas 47 y 58), pero **los workflows solo viven en la pública**. Borrado lo ya aplicado: `workflows_2026-10-26/` y `workflows_2026-11-02/` (públicas), `workflows_2026-09-28/` y `workflows_2026-10-05/` (privadas), y en la raíz `c` (una salida de `git log` de septiembre) y `Claude outputs/` (muestras de agosto-septiembre, 20 MB). Un `LEEME.md` en cada carpeta dice qué es cada una. Bitácoras, estados, comunicación y `07_pruebas/` no se tocan |
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Hoy 16:37Z | «Visuales» vuelve a elegir los planos de `MDS-062` en adelante con la relevancia nueva |
+| Hoy 18:00Z | `MDS-060` (B2, D) |
+| Hoy 22:07Z | Planificación: tres lectores y banco (versión 28) |
+| Viernes 6 | Sin Short |
+| Lunes 9/11 | Dirección: `C51.3-prueba`, patrón de calidad, esquina libre, cara fija si hace falta, banco; contar planos que no pegan (`visual-relevancia-nucleo`) |
+| Hasta el 11/11 | El codirector oye las voces 3.8 |
+| Jueves 12/11 | Voz 3.8 en producción; voz por tandas y ensayo del largo; se decide el estreno |
+| Lunes 16/11 | `iteracion-14` |
+| Martes 17/11 | Google apaga los modelos de voz de hoy |
+
+## Lo que NO cambia hoy
+
+- B2 (brazos, `orden`, regla), los guiones ya producidos (regla 11.4), las rutinas, los umbrales de C26.

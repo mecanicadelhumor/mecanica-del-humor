@@ -80,7 +80,7 @@ AJUSTES = VISUALES / "ajustes.json"
 APAGADO = VISUALES / "APAGADO"
 CACHE = RAIZ / "03_produccion" / "cache_visual"     # en .gitignore: solo copias ligeras para analizar
 
-VERSION = 1           # subirla obliga a volver a resolver todo lo pendiente
+VERSION = 2           # 2: relevancia con núcleo y primer plano estricto (05/11/2026). Subirla obliga a volver a resolver todo lo pendiente
 AGENTE = "MecanicaDelHumor-C50/1.0 (+https://github.com/mecanicadelhumor/mecanica-del-humor)"
 FPS = 30
 PALABRAS_MIN = 130    # la misma estimación de ritmo que validar_guion.py
@@ -88,6 +88,7 @@ PALABRAS_MIN = 130    # la misma estimación de ritmo que validar_guion.py
 MOV_MIN = 0.5         # por debajo, el plano se ve quieto (medido sobre 96x96 a 5 fps; ver movimiento())
 RELEVANCIA_MIN = 0.34 # al menos un tercio de las palabras de la búsqueda en el título del clip
 RELEVANCIA_FLOJA = 0.2  # por debajo, el clip no tiene nada que ver: antes la tarjeta de marca
+RELEVANCIA_PRIMER_PLANO = 0.5  # el primer plano del Short: la mitad de la búsqueda y su núcleo (03/11/2026)
 CANDIDATOS_A_MIRAR = 4
 DIAS_DE_HOJAS = 14    # las hojas y las imágenes generadas de lo ya publicado se borran pasado esto
 TRAER_MAX_S = 480     # lo más que puede tardar `traer` en producción, con la red como esté
@@ -106,6 +107,29 @@ ANCHO_IA, ALTO_IA = 768, 1360   # múltiplos de 16; ~104-156 neuronas por imagen
 # Bandas donde va el texto en modo archivo, en fracción del alto (escena.html).
 BANDAS = {"abajo": (960 / 1920, 1490 / 1920), "arriba": (250 / 1920, 920 / 1920)}
 RELACION = 1080 / 1920
+ORIENTACION = "portrait"
+
+# El largo (MDH-*) es horizontal, 1920x1080 (compromiso largo-imagen-horizontal,
+# 05/11/2026). Todo lo que depende de la forma del cuadro se cambia aquí, con
+# poner_formato(ident), antes de resolver cada guion. Los Shorts no cambian.
+_FORMATOS = {
+    "corto": {"RELACION": 1080 / 1920, "ORIENTACION": "portrait", "ANCHO_IA": 768, "ALTO_IA": 1360,
+              "ESTILO_IA": ESTILO_IA},
+    "largo": {"RELACION": 1920 / 1080, "ORIENTACION": "landscape", "ANCHO_IA": 1360, "ALTO_IA": 768,
+              "ESTILO_IA": ESTILO_IA.replace("vertical 9:16", "horizontal 16:9")},
+}
+
+
+def formato_de(ident):
+    return "largo" if str(ident).startswith("MDH-") else "corto"
+
+
+def poner_formato(ident):
+    """Deja las constantes del cuadro como las pide el guion (corto o largo)."""
+    g = globals()
+    for k, v in _FORMATOS[formato_de(ident)].items():
+        g[k] = v
+    return formato_de(ident)
 
 
 # ---------------------------------------------------------------------------
@@ -215,12 +239,53 @@ def _palabras(texto):
             if w not in _VACIAS and len(w) > 1]
 
 
+# Las palabras que acompañan pero no dicen QUÉ se ve (edad, tamaño, encuadre,
+# sitio, parte del cuerpo, adverbios). Un clip que solo comparte estas con la
+# búsqueda no es de lo que se busca: «baby gorilla playing zoo» y «playful baby
+# elephant in australian zoo» comparten tres de cuatro y es un elefante (MDS-057,
+# 01/11/2026; cuaderno del codirector, 03/11). Ver núcleo() y relevancia().
+_GENERICAS = set("""young baby little small big large tiny cute adorable happy sad calm
+playful play playing fun funny close closeup shot portrait view slow motion background
+open mouth face eye eyes hand hands finger fingers head arm arms feet leg legs body hair
+home house room zoo park street city outdoor outdoors indoor indoors inside outside
+garden grass nature tree trees wall window floor table sofa couch chair desk bed kitchen
+studio office lab laboratory interior wooden white black dark light lights sunlight
+night morning evening day sunny together alone looking look sitting sitting standing
+lying holding thoughtful serious slightly softly loudly happily nervously animatedly
+proudly side back front top behind before after while new real""".split())
+_ANIMALES = set("""gorilla chimpanzee chimp ape apes monkey orangutan bonobo baboon primate
+elephant dog puppy cat kitten rat mouse mice bird pigeon parrot horse cow sheep goat pig
+dolphin whale fish lion tiger bear wolf fox rabbit squirrel""".split())
+
+
+def nucleo(consulta):
+    """Las palabras de la búsqueda que dicen qué se ve (sujeto, acción, objeto)."""
+    return {_raiz(w) for w in _palabras(consulta) if w not in _GENERICAS}
+
+
 def relevancia(consulta, titulo):
-    q = {_raiz(w) for w in _palabras(consulta)}
+    """Fracción de palabras de la búsqueda en el título del clip, con dos
+    condiciones (03/11/2026, tras MDS-057): que esté al menos la mitad del
+    núcleo (redondeando hacia arriba) y que estén TODOS los animales que se
+    nombran. Si no, la relevancia se queda por debajo de RELEVANCIA_FLOJA y el
+    clip no se usa nunca: antes que un plano que no pega, la imagen generada
+    o la tarjeta de marca."""
+    palabras = _palabras(consulta)
+    q = {_raiz(w) for w in palabras}
     if not q:
         return 0.0
     t = {_raiz(w) for w in _palabras(titulo)}
-    return round(len(q & t) / len(q), 3)
+    bruta = round(len(q & t) / len(q), 3)
+    nuc = nucleo(consulta)
+    animales = {_raiz(w) for w in palabras if w in _ANIMALES}
+    # Un «ape» o un «primate» vale por cualquier simio concreto, y al revés no.
+    simios = {_raiz(w) for w in ("gorilla", "chimpanzee", "chimp", "orangutan", "bonobo", "baboon",
+                                  "monkey", "ape", "primate")}
+    faltan = {a for a in animales if a not in t
+              and not (a in {_raiz("ape"), _raiz("primate")} and t & simios)}
+    if faltan or (nuc and len(nuc & t) * 2 < len(nuc)):
+        return min(bruta, round(RELEVANCIA_FLOJA - 0.01, 3))
+    return bruta
 
 
 # ---------------------------------------------------------------------------
@@ -241,13 +306,14 @@ def _pexels_candidato(v):
                 and f.get("link") and f.get("width") and f.get("height")]
     if not ficheros:
         return None
-    vertical = [f for f in ficheros if f["height"] > f["width"]]
+    vertical = [f for f in ficheros if (f["height"] > f["width"]) == (ORIENTACION == "portrait")]
     grupo = vertical or ficheros
     # Para el render: el más pequeño que llegue a 1920 de alto (o a 1080 de
     # ancho si es horizontal); si no hay, el mayor.
     # Un horizontal se recorta a 9:16 y se amplía: para que no quede blando,
     # también se le pide que llegue a 1920 de alto (en la práctica, el 4K).
-    buenos = sorted((f for f in grupo if f["height"] >= 1920), key=lambda f: f["width"] * f["height"])
+    lado = (lambda f: f["height"]) if ORIENTACION == "portrait" else (lambda f: f["width"])
+    buenos = sorted((f for f in grupo if lado(f) >= 1920), key=lambda f: f["width"] * f["height"])
     hd = buenos[0] if buenos else max(grupo, key=lambda f: f["width"] * f["height"])
     # Para analizar: el más pequeño que tenga al menos 360 px en el lado corto.
     ligeros = sorted((f for f in ficheros if min(f["width"], f["height"]) >= 360),
@@ -265,10 +331,10 @@ def buscar_pexels(consulta):
     clave = os.environ.get("PEXELS_API_KEY")
     if not clave:
         return []
-    k = ("pexels", consulta)
+    k = ("pexels", consulta, ORIENTACION)
     if k not in _CACHE_BUSQUEDAS:
         url = "https://api.pexels.com/videos/search?" + urllib.parse.urlencode(
-            {"query": consulta, "orientation": "portrait", "size": "medium", "per_page": 20})
+            {"query": consulta, "orientation": ORIENTACION, "size": "medium", "per_page": 20})
         datos = pedir_json(url, {"Authorization": clave})
         _CACHE_BUSQUEDAS[k] = [c for c in (_pexels_candidato(v) for v in datos.get("videos", [])) if c]
     return [dict(c) for c in _CACHE_BUSQUEDAS[k]]
@@ -293,7 +359,7 @@ def buscar_pixabay(consulta):
     clave = os.environ.get("PIXABAY_API_KEY")
     if not clave:
         return []
-    k = ("pixabay", consulta)
+    k = ("pixabay", consulta, ORIENTACION)
     if k not in _CACHE_BUSQUEDAS:
         url = "https://pixabay.com/api/videos/?" + urllib.parse.urlencode(
             {"key": clave, "q": consulta[:100], "per_page": 20, "safesearch": "true"})
@@ -317,7 +383,7 @@ def clip_fijado(ref):
     return None
 
 
-def generar(prompt, semilla, destino, ancho=ANCHO_IA, alto=ALTO_IA):
+def generar(prompt, semilla, destino, ancho=None, alto=None):
     """Imagen generada con Cloudflare Workers AI. Primero FLUX.2 [klein] 4B en
     vertical; si ese falla, FLUX.1 [schnell] (cuadrada, se recorta). Lanza
     RuntimeError con TODO lo que contestó el servicio si ninguno sale."""
@@ -325,6 +391,7 @@ def generar(prompt, semilla, destino, ancho=ANCHO_IA, alto=ALTO_IA):
     token = os.environ.get("CLOUDFLARE_API_TOKEN")
     if not (cuenta and token):
         raise ErrorIA("faltan CLOUDFLARE_ACCOUNT_ID o CLOUDFLARE_API_TOKEN", False)
+    ancho, alto = ancho or ANCHO_IA, alto or ALTO_IA
     texto = (prompt.strip().rstrip(".") + ESTILO_IA)[:2000]
     cab = {"Authorization": f"Bearer {token}"}
     errores, alguno_pasajero = [], False
@@ -738,7 +805,7 @@ def _elegir_archivo(plano, necesita_s, prohibidos, tmp, descartes, n, k, fallos_
                 vistos.add(clave)
                 c["consulta"] = q
                 c["relevancia"] = relevancia(q, c["titulo"])
-                vertical = (c.get("alto") or 0) > (c.get("ancho") or 0)
+                vertical = ((c.get("alto") or 0) > (c.get("ancho") or 0)) == (ORIENTACION == "portrait")
                 c["_nota"] = (c["relevancia"]
                               + (0.25 if vertical else 0.0)
                               + (0.10 if c["duracion_s"] >= necesita_s else 0.0)
@@ -772,6 +839,7 @@ def _elegir_archivo(plano, necesita_s, prohibidos, tmp, descartes, n, k, fallos_
 
 
 def resolver_guion(ident, forzar=False):
+    poner_formato(ident)
     ruta = GUIONES / f"{ident}.es.json"
     guion = json.loads(ruta.read_text(encoding="utf-8"))
     espec = especificacion(guion, ajustes_de(ident))
@@ -821,6 +889,7 @@ def resolver_guion(ident, forzar=False):
             base = {"k": k, "desde": p.get("desde"), "t_estimado": [round(tiempos[j], 2), round(t1, 2)],
                     "frase": frases[j] if j < len(frases) else ""}
             elegido = flojo = None
+            primero = (n == 1 and j == 0)
             excluir = p.get("excluir") or []
             excluir = {excluir} if isinstance(excluir, str) else set(excluir)
             if p.get("marca"):
@@ -828,8 +897,12 @@ def resolver_guion(ident, forzar=False):
             elif p.get("fuente") != "ia" and (p.get("busqueda") or p.get("fijar")):
                 c = _elegir_archivo(p, necesita, prohibidos | excluir, tmp, descartes, n, k,
                                     fallos_api)
-                if c and (c["relevancia"] >= RELEVANCIA_MIN or not p.get("prompt")
-                          or p.get("fuente") == "archivo"):
+                # El primer plano del Short (lo que se ve en el primer segundo)
+                # no se relaja nunca (cuaderno del codirector, 03/11/2026): pide
+                # RELEVANCIA_PRIMER_PLANO y, si no llega, va antes la imagen generada.
+                minimo = RELEVANCIA_PRIMER_PLANO if primero else RELEVANCIA_MIN
+                if c and (c["relevancia"] >= minimo or (not p.get("prompt") and not primero)
+                          or (p.get("fuente") == "archivo" and not primero)):
                     elegido = c
                 elif c:
                     # Hay clip, pero su título apenas se parece a lo que se
@@ -851,7 +924,7 @@ def resolver_guion(ident, forzar=False):
                     if pasajero(ex):
                         fallos_api.append(str(ex))
                     descartes.append({"escena": n, "plano": k, "motivo": f"IA: {ex}"[:600]})
-            if not elegido and flojo:
+            if not elegido and flojo and not (primero and flojo["relevancia"] < RELEVANCIA_MIN):
                 elegido = flojo
             if not elegido:
                 elegido = {"fuente": "sin_imagen", "tipo": "ninguno",
@@ -957,7 +1030,7 @@ def hoja_de_contactos(guion, manifiesto, destino):
     suena durante ese plano y de dónde sale. Es lo que mira la revisión
     diaria: ¿la imagen cuenta lo mismo que la frase, justo cuando se dice?"""
     from PIL import Image, ImageDraw
-    cw, ch, pie = 216, 384, 150
+    cw, ch, pie = (216, 384, 150) if ORIENTACION == "portrait" else (384, 216, 150)
     planos = []
     for n, e in enumerate(guion["escenas"], 1):
         esc = manifiesto["escenas"].get(str(n))
@@ -1057,7 +1130,7 @@ def hoja_de_contactos(guion, manifiesto, destino):
 def pendientes():
     ya = publicados()
     salida = []
-    for g in sorted(GUIONES.glob("MDS-*.es.json")):
+    for g in sorted(list(GUIONES.glob("MDS-*.es.json")) + list(GUIONES.glob("MDH-*.es.json"))):
         ident = g.name.split(".")[0]
         if ident in ya:
             continue
