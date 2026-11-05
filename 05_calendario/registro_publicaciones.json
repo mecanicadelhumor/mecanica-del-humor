@@ -1060,12 +1060,13 @@
       "guion": "05_calendario/guiones/MDS-060.es.json",
       "video_id": "olUA7EhrGzs",
       "url": "https://youtu.be/olUA7EhrGzs",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-11-05T18:00:00Z",
       "musica": "cama_04_reverie_piano_version_ft_adarsh_lucjo.mp3",
       "subido_utc": "2026-11-05T08:00:40Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-11-05T22:42:56Z"
     }
   ],
-  "_estado_leido_utc": "2026-11-04T22:41:14Z"
+  "_estado_leido_utc": "2026-11-05T22:42:56Z"
 }
