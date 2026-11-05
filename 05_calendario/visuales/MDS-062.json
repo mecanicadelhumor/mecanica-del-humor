@@ -1,8 +1,8 @@
 {
   "guion": "MDS-062",
   "version": 1,
-  "firma": "b23c8cd14abf06f1",
-  "resuelto_utc": "2026-10-29T22:58:29Z",
+  "firma": "aace15acf5608a16",
+  "resuelto_utc": "2026-11-05T10:31:45Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -135,7 +135,7 @@
     },
     "3": {
       "narracion_sha": "fcad199383fa",
-      "texto_pos": "arriba",
+      "texto_pos": "abajo",
       "planos": [
         {
           "k": 1,
@@ -146,31 +146,55 @@
           ],
           "frase": "Y te ríes tanto que tienen que parar la película.",
           "fuente": "pexels",
-          "id": 6382088,
-          "pagina": "https://www.pexels.com/video/young-woman-crying-on-the-shoulders-of-her-friend-6382088/",
-          "titulo": "young woman crying on the shoulders of her friend",
-          "autor": "Liza Summer",
-          "autor_url": "https://www.pexels.com/@liza-summer",
+          "id": 7233645,
+          "pagina": "https://www.pexels.com/video/couple-watching-movie-at-the-cinema-7233645/",
+          "titulo": "couple watching movie at the cinema",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 10.0,
+          "duracion_s": 18.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/6382088/6382088-hd_1080_1920_24fps.mp4",
+          "url": "https://videos.pexels.com/video-files/7233645/7233645-hd_1080_1920_25fps.mp4",
           "tipo": "video",
-          "consulta": "woman crying laughing with friends",
-          "relevancia": 0.75,
+          "consulta": "friends laughing watching a movie on the couch",
+          "relevancia": 0.4,
           "inicio_s": 0.4,
-          "movimiento": 2.03,
+          "movimiento": 4.18,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.2028,
-              0.4,
-              0.525,
-              0.3391
+              0.7833,
+              0.3891,
+              0.1389,
+              0.1031
+            ],
+            [
+              0.5611,
+              0.3469,
+              0.1389,
+              0.1031
+            ],
+            [
+              0.1917,
+              0.3109,
+              0.0778,
+              0.0719
+            ],
+            [
+              0.3361,
+              0.2859,
+              0.0833,
+              0.0594
+            ],
+            [
+              0.9139,
+              0.2734,
+              0.0806,
+              0.0578
             ]
           ]
         }
@@ -311,21 +335,21 @@
           ],
           "frase": "en mitad de una charla.",
           "fuente": "pixabay",
-          "id": 729,
-          "pagina": "https://pixabay.com/videos/id-729/",
-          "titulo": "sleeping, man, person, alarm, clock, morning, wakeup, male, adult, sleep, bed, bedroom, home, lying, pillow, resting, comfortable, head, 136919573 id",
-          "autor": "Vimeo-Free-Videos",
-          "autor_url": "https://pixabay.com/users/Vimeo-Free-Videos-1283884/",
+          "id": 1623,
+          "pagina": "https://pixabay.com/videos/id-1623/",
+          "titulo": "cafe, restaurant, talking, talk, people, sitting, chatting, menu, coffee, dinner, table, bar, drink, interior, cafe interior, restaurant interior id",
+          "autor": "Life-Of-Vids",
+          "autor_url": "https://pixabay.com/users/Life-Of-Vids-1282862/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 9.0,
+          "duracion_s": 19.0,
           "ancho": 0,
           "alto": 0,
-          "url": "https://cdn.pixabay.com/video/2015/09/08/729-138678099_medium.mp4",
+          "url": "https://cdn.pixabay.com/video/2015/12/11/1623-148613540_medium.mp4",
           "tipo": "video",
-          "consulta": "person waking up bed alarm",
-          "relevancia": 0.75,
+          "consulta": "friends talking and laughing at a cafe table",
+          "relevancia": 0.6,
           "inicio_s": 0.4,
-          "movimiento": 3.07,
+          "movimiento": 2.97,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
