@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-04T20:34:08Z",
+ "actualizado_utc": "2026-11-05T14:58:27Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -99,7 +99,7 @@
        "porcentaje_visto": 35.6,
        "me_gusta": 12,
        "visualizaciones": 979,
-       "leido": "2026-11-04"
+       "leido": "2026-11-05"
       },
       {
        "id": "MDS-053",
@@ -109,7 +109,7 @@
        "porcentaje_visto": 69.2,
        "me_gusta": 0,
        "visualizaciones": 18,
-       "leido": "2026-11-04"
+       "leido": "2026-11-05"
       },
       {
        "id": "MDS-056",
@@ -119,7 +119,7 @@
        "porcentaje_visto": 17.4,
        "me_gusta": 0,
        "visualizaciones": 12,
-       "leido": "2026-11-04"
+       "leido": "2026-11-05"
       }
      ]
     },
@@ -190,7 +190,7 @@
        "porcentaje_visto": 74.0,
        "me_gusta": 1,
        "visualizaciones": 34,
-       "leido": "2026-11-04"
+       "leido": "2026-11-05"
       },
       {
        "id": "MDS-055",
@@ -200,7 +200,7 @@
        "porcentaje_visto": 35.5,
        "me_gusta": 6,
        "visualizaciones": 704,
-       "leido": "2026-11-04"
+       "leido": "2026-11-05"
       }
      ]
     },
@@ -261,7 +261,7 @@
        "porcentaje_visto": 61.4,
        "me_gusta": 0,
        "visualizaciones": 70,
-       "leido": "2026-11-04"
+       "leido": "2026-11-03"
       },
       {
        "id": "MDS-052",
@@ -271,7 +271,7 @@
        "porcentaje_visto": 65.5,
        "me_gusta": 0,
        "visualizaciones": 11,
-       "leido": "2026-11-04"
+       "leido": "2026-11-05"
       },
       {
        "id": "MDS-054",
@@ -281,7 +281,7 @@
        "porcentaje_visto": 41.9,
        "me_gusta": 0,
        "visualizaciones": 31,
-       "leido": "2026-11-04"
+       "leido": "2026-11-05"
       },
       {
        "id": "MDS-057",
@@ -291,7 +291,7 @@
        "porcentaje_visto": 46.9,
        "me_gusta": 9,
        "visualizaciones": 416,
-       "leido": "2026-11-04"
+       "leido": "2026-11-05"
       }
      ]
     }
