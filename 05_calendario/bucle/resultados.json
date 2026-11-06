@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-06T14:36:52Z",
+ "actualizado_utc": "2026-11-06T20:06:30Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -45,11 +45,11 @@
     "control": {
      "nombre": "Lo de ahora (C50 + C56-C59), apertura en situación",
      "n": 8,
-     "se_quedaron_media": 24.1,
-     "porcentaje_visto_media": 71.9,
+     "se_quedaron_media": 24.6,
+     "porcentaje_visto_media": 70.7,
      "vistas_48h_mediana": 27.5,
      "me_gusta_por_100": 1.01,
-     "ceros_de_feed": 1,
+     "ceros_de_feed": 0,
      "shorts": [
       {
        "id": "MDS-037",
@@ -108,7 +108,7 @@
        "vistas_48h": 16,
        "porcentaje_visto": 69.2,
        "me_gusta": 0,
-       "visualizaciones": 18,
+       "visualizaciones": 19,
        "leido": "2026-11-06"
       },
       {
@@ -116,31 +116,31 @@
        "publicado": "2026-11-01",
        "se_quedaron_pct": 16.7,
        "vistas_48h": 12,
-       "porcentaje_visto": 44.3,
+       "porcentaje_visto": 33.7,
        "me_gusta": 0,
-       "visualizaciones": 13,
+       "visualizaciones": 14,
        "leido": "2026-11-06"
       },
       {
        "id": "MDS-058",
        "publicado": "2026-11-03",
-       "se_quedaron_pct": 55.6,
-       "vistas_48h": 9,
-       "porcentaje_visto": 90.2,
+       "se_quedaron_pct": 60.0,
+       "vistas_48h": 10,
+       "porcentaje_visto": 91.7,
        "me_gusta": 0,
-       "visualizaciones": 9,
+       "visualizaciones": 10,
        "leido": "2026-11-06"
       }
      ]
     },
     "A": {
      "nombre": "Animación a medida en las escenas de mecanismo (C55.2)",
-     "n": 7,
-     "se_quedaron_media": 29.4,
-     "porcentaje_visto_media": 69.3,
-     "vistas_48h_mediana": 22,
+     "n": 8,
+     "se_quedaron_media": 29.9,
+     "porcentaje_visto_media": 72.9,
+     "vistas_48h_mediana": 15.5,
      "me_gusta_por_100": 1.04,
-     "ceros_de_feed": 3,
+     "ceros_de_feed": 4,
      "shorts": [
       {
        "id": "MDS-038",
@@ -211,6 +211,16 @@
        "me_gusta": 6,
        "visualizaciones": 700,
        "leido": "2026-11-06"
+      },
+      {
+       "id": "MDS-059",
+       "publicado": "2026-11-04",
+       "se_quedaron_pct": 33.3,
+       "vistas_48h": 3,
+       "porcentaje_visto": 97.9,
+       "me_gusta": 0,
+       "visualizaciones": 3,
+       "leido": "2026-11-06"
       }
      ]
     },
@@ -218,7 +228,7 @@
      "nombre": "Arranque con el dato",
      "n": 8,
      "se_quedaron_media": 37.6,
-     "porcentaje_visto_media": 119.6,
+     "porcentaje_visto_media": 119.0,
      "vistas_48h_mediana": 28.5,
      "me_gusta_por_100": 1.51,
      "ceros_de_feed": 1,
@@ -288,10 +298,10 @@
        "publicado": "2026-10-30",
        "se_quedaron_pct": 36.7,
        "vistas_48h": 30,
-       "porcentaje_visto": 46.5,
+       "porcentaje_visto": 41.9,
        "me_gusta": 0,
-       "visualizaciones": 32,
-       "leido": "2026-11-06"
+       "visualizaciones": 30,
+       "leido": "2026-11-03"
       },
       {
        "id": "MDS-057",
@@ -310,34 +320,28 @@
     "A": {
      "contra": "control",
      "diferencia_pp": 5.3,
-     "prob_mejor": 0.77,
+     "prob_mejor": 0.76,
      "veredicto": "sigue midiendo"
     },
     "B": {
      "contra": "control",
-     "diferencia_pp": 13.5,
-     "prob_mejor": 0.93,
+     "diferencia_pp": 13.0,
+     "prob_mejor": 0.91,
      "veredicto": "GANA"
     }
    },
    "apartados": [],
-   "pendientes": [
-    {
-     "id": "MDS-059",
-     "variante": "A",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    }
-   ]
+   "pendientes": []
   },
   {
    "id": "B2",
    "desde": "2026-11-05",
    "hasta": "2026-11-28",
    "referencia_anterior": {
-    "n": 13,
-    "se_quedaron_media": 31.3,
-    "porcentaje_visto_media": 66.2,
-    "vistas_48h_mediana": 30,
+    "n": 14,
+    "se_quedaron_media": 31.7,
+    "porcentaje_visto_media": 67.5,
+    "vistas_48h_mediana": 23.0,
     "me_gusta_por_100": 1.24,
     "ceros_de_feed": 3,
     "ids": [
@@ -353,7 +357,8 @@
      "MDS-055",
      "MDS-056",
      "MDS-057",
-     "MDS-058"
+     "MDS-058",
+     "MDS-059"
     ]
    },
    "brazos": {
