@@ -1,8 +1,8 @@
 {
   "guion": "MDS-062",
   "version": 2,
-  "firma": "05cb690dde9fbb4b",
-  "resuelto_utc": "2026-11-05T22:15:19Z",
+  "firma": "064c81012e1fc3cb",
+  "resuelto_utc": "2026-11-06T10:32:29Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -17,27 +17,59 @@
             5.98
           ],
           "frase": "Casi toda la risa del día pasa cuando hay alguien delante.",
-          "fuente": "pixabay",
-          "id": 106038,
-          "pagina": "https://pixabay.com/videos/id-106038/",
-          "titulo": "team, hands, group, together, togetherness, cohesion, teamwork, hello, handshake, partner, business, people cartoon, children, friendship, pact, contract, connection id",
-          "autor": "Alexandra_Koch",
-          "autor_url": "https://pixabay.com/users/Alexandra_Koch-621802/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 12.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2022/01/29/106038-671593535_large.mp4",
-          "tipo": "video",
-          "consulta": "group of friends laughing together at table",
-          "relevancia": 0.6,
-          "inicio_s": 0.4,
-          "movimiento": 7.17,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
-          "caras": []
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a group of friends bursting out laughing together around a kitchen table at night, warm light, candid",
+          "semilla": 15640747,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-062/e1_p1.jpg",
+          "caras": [
+            [
+              0.8034,
+              0.4662,
+              0.1172,
+              0.0824
+            ],
+            [
+              0.1536,
+              0.3809,
+              0.0846,
+              0.075
+            ],
+            [
+              0.2695,
+              0.3919,
+              0.0768,
+              0.0596
+            ],
+            [
+              0.806,
+              0.4074,
+              0.0742,
+              0.0581
+            ],
+            [
+              0.6927,
+              0.4,
+              0.0742,
+              0.0566
+            ],
+            [
+              0.5078,
+              0.375,
+              0.0716,
+              0.0551
+            ],
+            [
+              0.7214,
+              0.6632,
+              0.0703,
+              0.05
+            ]
+          ]
         }
       ]
     },
@@ -334,27 +366,35 @@
             9.26
           ],
           "frase": "en mitad de una charla.",
-          "fuente": "pixabay",
-          "id": 1623,
-          "pagina": "https://pixabay.com/videos/id-1623/",
-          "titulo": "cafe, restaurant, talking, talk, people, sitting, chatting, menu, coffee, dinner, table, bar, drink, interior, cafe interior, restaurant interior id",
-          "autor": "Life-Of-Vids",
-          "autor_url": "https://pixabay.com/users/Life-Of-Vids-1282862/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 19.0,
-          "ancho": 0,
-          "alto": 0,
-          "url": "https://cdn.pixabay.com/video/2015/12/11/1623-148613540_medium.mp4",
-          "tipo": "video",
-          "consulta": "friends talking and laughing at a cafe table",
-          "relevancia": 0.6,
-          "inicio_s": 0.4,
-          "movimiento": 2.97,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
-          "caras": []
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "two friends talking and laughing across a cafe table, close and relaxed",
+          "semilla": 724311,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-062/e5_p2.jpg",
+          "caras": [
+            [
+              0.6549,
+              0.3632,
+              0.1302,
+              0.1309
+            ],
+            [
+              0.2656,
+              0.3757,
+              0.1289,
+              0.1162
+            ],
+            [
+              0.9557,
+              0.3522,
+              0.0443,
+              0.0412
+            ]
+          ]
         }
       ]
     },

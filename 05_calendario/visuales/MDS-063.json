@@ -1,8 +1,8 @@
 {
   "guion": "MDS-063",
   "version": 2,
-  "firma": "298fb8e059f2bf5f",
-  "resuelto_utc": "2026-11-05T22:15:48Z",
+  "firma": "13e1870f604452e3",
+  "resuelto_utc": "2026-11-06T10:33:27Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -28,28 +28,70 @@
           "fichero": "05_calendario/visuales/MDS-063/e1_p1.jpg",
           "caras": [
             [
-              0.1576,
-              0.4007,
-              0.1029,
+              0.0273,
+              0.3669,
+              0.1237,
+              0.0993
+            ],
+            [
+              0.2148,
+              0.3221,
+              0.1003,
+              0.0809
+            ],
+            [
+              0.875,
+              0.3926,
+              0.0859,
               0.0846
             ],
             [
-              0.8385,
-              0.3985,
-              0.0859,
-              0.0912
-            ],
-            [
-              0.3711,
-              0.361,
-              0.0964,
-              0.075
-            ],
-            [
-              0.6576,
-              0.3515,
+              0.6523,
+              0.3206,
               0.0911,
-              0.0757
+              0.0735
+            ],
+            [
+              0.8242,
+              0.3551,
+              0.0833,
+              0.0801
+            ],
+            [
+              0.3503,
+              0.2831,
+              0.0768,
+              0.0662
+            ],
+            [
+              0.4766,
+              0.2544,
+              0.0404,
+              0.0375
+            ],
+            [
+              0.6901,
+              0.1971,
+              0.0352,
+              0.0294
+            ],
+            [
+              0.6419,
+              0.2316,
+              0.0352,
+              0.0272
+            ],
+            [
+              0.8828,
+              0.1574,
+              0.0378,
+              0.0243
+            ],
+            [
+              0.7148,
+              0.1632,
+              0.0299,
+              0.0228
             ]
           ]
         }
@@ -78,22 +120,58 @@
           "fichero": "05_calendario/visuales/MDS-063/e2_p1.jpg",
           "caras": [
             [
-              0.138,
-              0.2772,
-              0.1888,
-              0.1566
+              0.7083,
+              0.3485,
+              0.1615,
+              0.1294
             ],
             [
-              0.6784,
-              0.2868,
-              0.1771,
-              0.1574
+              0.1458,
+              0.3456,
+              0.1549,
+              0.125
             ],
             [
-              0.556,
-              0.5926,
-              0.2005,
-              0.1154
+              0.543,
+              0.3257,
+              0.1068,
+              0.0831
+            ],
+            [
+              0.5195,
+              0.2743,
+              0.0924,
+              0.0566
+            ],
+            [
+              0.3099,
+              0.3324,
+              0.0716,
+              0.0566
+            ],
+            [
+              0.4701,
+              0.2838,
+              0.0664,
+              0.0559
+            ],
+            [
+              0.3255,
+              0.2485,
+              0.0612,
+              0.0537
+            ],
+            [
+              0.151,
+              0.2625,
+              0.0638,
+              0.0434
+            ],
+            [
+              0.0117,
+              0.2728,
+              0.0469,
+              0.0478
             ]
           ]
         },
@@ -105,27 +183,41 @@
             8.72
           ],
           "frase": "riéndoos de la misma anécdota.",
-          "fuente": "pixabay",
-          "id": 41,
-          "pagina": "https://pixabay.com/videos/id-41/",
-          "titulo": "fun fair, boys, ride, amusement park, girls, roller coaster, rollercoaster, fun, people, laughing, screaming, state fair, america, usa, women, happy id",
-          "autor": "DistillVideos",
-          "autor_url": "https://pixabay.com/users/DistillVideos-1280814/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 32.0,
-          "ancho": 0,
-          "alto": 0,
-          "url": "https://cdn.pixabay.com/video/2015/08/08/41-135715735_medium.mp4",
-          "tipo": "video",
-          "consulta": "people laughing tears table",
-          "relevancia": 0.5,
-          "inicio_s": 0.4,
-          "movimiento": 13.13,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
-          "caras": []
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "close group of friends around a table laughing hard together at an old shared story, warm afternoon light",
+          "semilla": 12494272,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-063/e2_p2.jpg",
+          "caras": [
+            [
+              0.1458,
+              0.3441,
+              0.1953,
+              0.1434
+            ],
+            [
+              0.3138,
+              0.3081,
+              0.1576,
+              0.1412
+            ],
+            [
+              0.6094,
+              0.3404,
+              0.1654,
+              0.1309
+            ],
+            [
+              0.8099,
+              0.3537,
+              0.1146,
+              0.1257
+            ]
+          ]
         }
       ]
     },
@@ -190,38 +282,63 @@
             8.07
           ],
           "frase": "¿Cómo se sabe? Doce hombres vieron comedias con sus mejores amigos, y luego les miraron el cerebro",
-          "fuente": "pexels",
-          "id": 6646796,
-          "pagina": "https://www.pexels.com/video/friends-watching-on-laptop-6646796/",
-          "titulo": "friends watching on laptop",
-          "autor": "Polina Tankilevitch",
-          "autor_url": "https://www.pexels.com/@polina-tankilevitch",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 4.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/6646796/6646796-hd_1080_1920_30fps.mp4",
-          "tipo": "video",
-          "consulta": "friends watching comedy laughing sofa",
-          "relevancia": 0.4,
-          "inicio_s": 0.0,
-          "movimiento": 5.45,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a group of men sitting together on a sofa watching a comedy and laughing, living room",
+          "semilla": 14608986,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-063/e4_p1.jpg",
           "caras": [
             [
-              0.2611,
-              0.4266,
-              0.1583,
-              0.1234
+              0.8581,
+              0.5919,
+              0.1419,
+              0.1338
             ],
             [
-              0.6028,
-              0.3906,
-              0.1583,
-              0.1187
+              0.2552,
+              0.3551,
+              0.0898,
+              0.0765
+            ],
+            [
+              0.3802,
+              0.35,
+              0.0846,
+              0.0794
+            ],
+            [
+              0.4596,
+              0.3419,
+              0.0859,
+              0.0706
+            ],
+            [
+              0.1901,
+              0.3757,
+              0.082,
+              0.0728
+            ],
+            [
+              0.5898,
+              0.3684,
+              0.0794,
+              0.0632
+            ],
+            [
+              0.8854,
+              0.3897,
+              0.0352,
+              0.0257
+            ],
+            [
+              0.9805,
+              0.3941,
+              0.0195,
+              0.0206
             ]
           ]
         },
@@ -233,40 +350,16 @@
             10.18
           ],
           "frase": "con un escáner.",
-          "fuente": "pexels",
-          "id": 7089607,
-          "pagina": "https://www.pexels.com/video/a-mae-patient-undergoing-medical-scanning-test-7089607/",
-          "titulo": "a mae patient undergoing medical scanning test",
-          "autor": "MART  PRODUCTION",
-          "autor_url": "https://www.pexels.com/@mart-production",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 19.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/7089607/7089607-hd_1080_1920_25fps.mp4",
-          "tipo": "video",
-          "consulta": "medical scanner room",
-          "relevancia": 0.667,
-          "inicio_s": 0.4,
-          "movimiento": 2.44,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
-          "caras": [
-            [
-              0.0444,
-              0.3609,
-              0.0972,
-              0.075
-            ],
-            [
-              0.1444,
-              0.35,
-              0.0833,
-              0.0719
-            ]
-          ]
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a medical scanner in a quiet hospital room",
+          "semilla": 13900692,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-063/e4_p2.jpg",
+          "caras": []
         }
       ]
     },
@@ -282,27 +375,23 @@
             8.8
           ],
           "frase": "Reírse juntos les dio placer, y su cerebro soltó opioides: los calmantes que fabrica el propio cuerpo.",
-          "fuente": "pixabay",
-          "id": 105391,
-          "pagina": "https://pixabay.com/videos/id-105391/",
-          "titulo": "balloons, beautiful wallpaper, holiday, green, screen, colorful, multicolored, ball, flight, movement, background id",
-          "autor": "Evgeniy_Z",
-          "autor_url": "https://pixabay.com/users/Evgeniy_Z-13538513/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 15.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2022/01/23/105391-670487178_large.mp4",
-          "tipo": "video",
-          "consulta": "brain scan colorful screen",
-          "relevancia": 0.5,
-          "inicio_s": 0.4,
-          "movimiento": 6.0,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
-          "caras": []
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "abstract glowing molecules floating inside a stylised human brain, soft warm amber and blue light, no text",
+          "semilla": 12556170,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-063/e5_p1.jpg",
+          "caras": [
+            [
+              0.7904,
+              0.2779,
+              0.0352,
+              0.0309
+            ]
+          ]
         }
       ]
     },
@@ -318,27 +407,47 @@
             3.93
           ],
           "frase": "Quizá por eso nadie quería irse. La pega:",
-          "fuente": "pexels",
-          "id": 7413803,
-          "pagina": "https://www.pexels.com/video/friends-hugging-and-jumping-around-7413803/",
-          "titulo": "friends hugging and jumping around",
-          "autor": "RDNE Stock project",
-          "autor_url": "https://www.pexels.com/@rdne",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 10.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/7413803/7413803-hd_1080_1920_24fps.mp4",
-          "tipo": "video",
-          "consulta": "friends hugging goodbye street",
-          "relevancia": 0.5,
-          "inicio_s": 0.4,
-          "movimiento": 24.21,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
-          "caras": []
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "friends still sitting around a table after a long meal, nobody getting up, warm evening light",
+          "semilla": 1402589,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-063/e6_p1.jpg",
+          "caras": [
+            [
+              0.2266,
+              0.4449,
+              0.0833,
+              0.0647
+            ],
+            [
+              0.6406,
+              0.4338,
+              0.0781,
+              0.0684
+            ],
+            [
+              0.7786,
+              0.4765,
+              0.0729,
+              0.0691
+            ],
+            [
+              0.1471,
+              0.4735,
+              0.0677,
+              0.064
+            ],
+            [
+              0.4427,
+              0.4375,
+              0.0729,
+              0.0559
+            ]
+          ]
         },
         {
           "k": 2,
@@ -348,26 +457,15 @@
             11.32
           ],
           "frase": "eran doce hombres en un escáner; una sobremesa de verdad no la ha medido nadie.",
-          "fuente": "pixabay",
-          "id": 55528,
-          "pagina": "https://pixabay.com/videos/id-55528/",
-          "titulo": "interior, modern, room, design, 3d, wall, architecture, hall, light, window, house, furniture, floor, empty, apartment, home, frame, business, perspective, art, inside id",
-          "autor": "tommyvideo",
-          "autor_url": "https://pixabay.com/users/tommyvideo-3092371/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 13.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2020/11/07/55528-501275361_large.mp4",
-          "tipo": "video",
-          "consulta": "empty scanner room",
-          "relevancia": 0.667,
-          "inicio_s": 0.4,
-          "movimiento": 9.99,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a brain scanner MRI machine in a quiet hospital room, seen from the side, no people",
+          "semilla": 4656919,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-063/e6_p2.jpg",
           "caras": []
         }
       ]
@@ -380,6 +478,27 @@
       "id": "pexels:9579110",
       "titulo": "friends sitting at the table",
       "motivo": "poco relevante (0.4): se prueba la IA"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pixabay:8449",
+      "titulo": "heart, heartbeat, slow heart, cardiology, beat, electrocardiogram, red, cardiogram, line, cardio, ecg, health, medical, pulse, wave id",
+      "motivo": "quieto (movimiento 0.37)"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pixabay:32264",
+      "titulo": "heart, medical treatment, ecg, health, medicine, blood pressure, love, hospital, body, anatomy, mind, red, medical id",
+      "motivo": "quieto (movimiento 0.22)"
+    },
+    {
+      "escena": 4,
+      "plano": 2,
+      "id": "pixabay:63241",
+      "titulo": "woman, mask, healthcare, young, epidemic, virus, pandemic, face, health, protection, medical, quarantine, coronavirus, concept, care, protective, person, sick, happiness, young adult, protect, covid-19 id",
+      "motivo": "poco relevante (0.333): se prueba la IA"
     }
   ],
   "errores_ia": [],
