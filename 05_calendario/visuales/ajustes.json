@@ -661,12 +661,51 @@
     },
     "5.2": {
       "excluir": [
-        "pixabay:729"
+        "pixabay:1623"
       ],
-      "busqueda": [
-        "friends talking and laughing at a cafe table",
-        "two friends chatting laughing outdoors"
-      ]
+      "fuente": "ia",
+      "prompt": "two friends talking and laughing across a cafe table, close and relaxed"
+    },
+    "1.1": {
+      "fuente": "ia",
+      "prompt": "a group of friends bursting out laughing together around a kitchen table at night, warm light, candid"
+    }
+  },
+  "MDS-063": {
+    "2.2": {
+      "excluir": [
+        "pixabay:41"
+      ],
+      "fuente": "ia",
+      "prompt": "close group of friends around a table laughing hard together at an old shared story, warm afternoon light"
+    },
+    "4.1": {
+      "excluir": [
+        "pexels:6646796"
+      ],
+      "fuente": "ia",
+      "prompt": "a group of men sitting together on a sofa watching a comedy and laughing, living room"
+    },
+    "5.1": {
+      "excluir": [
+        "pixabay:105391"
+      ],
+      "fuente": "ia",
+      "prompt": "abstract glowing molecules floating inside a stylised human brain, soft warm amber and blue light, no text"
+    },
+    "6.1": {
+      "excluir": [
+        "pexels:7413803"
+      ],
+      "fuente": "ia",
+      "prompt": "friends still sitting around a table after a long meal, nobody getting up, warm evening light"
+    },
+    "6.2": {
+      "excluir": [
+        "pixabay:55528"
+      ],
+      "fuente": "ia",
+      "prompt": "a brain scanner MRI machine in a quiet hospital room, seen from the side, no people"
     }
   }
 }
