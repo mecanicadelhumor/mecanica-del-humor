@@ -1,0 +1,344 @@
+{
+  "guion": "MDS-067",
+  "version": 2,
+  "firma": "c64d7cd8879a515f",
+  "resuelto_utc": "2026-11-07T22:29:42Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "d3a4b9c68582",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.44
+          ],
+          "frase": "La ironía escrita se marca con la lengua fuera o el guiño.",
+          "fuente": "pexels",
+          "id": 5496954,
+          "pagina": "https://www.pexels.com/video/a-woman-busy-using-her-cellphone-5496954/",
+          "titulo": "a woman busy using her cellphone",
+          "autor": "Anna Shvets",
+          "autor_url": "https://www.pexels.com/@shvetsa",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 19.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5496954/5496954-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "woman typing on phone smirking",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 1.83,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.125,
+              0.0578,
+              0.5694,
+              0.4297
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "0c75f9eea730",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.03
+          ],
+          "frase": "Tu amiga llega tarde otra vez. Le escribes «Qué puntual», y",
+          "fuente": "pexels",
+          "id": 8532807,
+          "pagina": "https://www.pexels.com/video/an-elderly-woman-looking-at-the-watch-she-is-holding-8532807/",
+          "titulo": "an elderly woman looking at the watch she is holding",
+          "autor": "https://kaboompics.com/",
+          "autor_url": "https://www.pexels.com/@karola-g",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 34.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8532807/8532807-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman waiting looking at watch cafe",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 2.63,
+          "encuadre": {
+            "x": 0.5,
+            "y": 1
+          },
+          "caras": [
+            [
+              0.2708,
+              0.3278,
+              0.3458,
+              0.2422
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "dudas qué poner detrás",
+          "t_estimado": [
+            5.03,
+            8.72
+          ],
+          "frase": "dudas qué poner detrás.",
+          "fuente": "pexels",
+          "id": 6446139,
+          "pagina": "https://www.pexels.com/video/woman-typing-on-mobile-phone-6446139/",
+          "titulo": "woman typing on mobile phone",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6446139/6446139-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman hesitating typing phone",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 2.64,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4361,
+              0.1609,
+              0.15,
+              0.1078
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "59b5dbe3e81e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            10.18
+          ],
+          "frase": "Unos psicólogos dieron a gente frases como ese «Qué puntual» y les pidieron hacerlas irónicas solo con caritas o signos.",
+          "fuente": "pexels",
+          "id": 8657325,
+          "pagina": "https://www.pexels.com/video/man-on-a-phone-call-while-typing-on-a-laptop-8657325/",
+          "titulo": "man on a phone call while typing on a laptop",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 36.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8657325/8657325-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "people typing on phones in lab",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 8.34,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.2648,
+              0.25,
+              0.2431,
+              0.1744
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "781a452ada61",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.1
+          ],
+          "frase": "Lo más elegido fue la carita de la lengua y la del guiño.",
+          "fuente": "pexels",
+          "id": 6708674,
+          "pagina": "https://www.pexels.com/video/woman-in-blue-long-sleeve-shirt-winking-6708674/",
+          "titulo": "woman in blue long sleeve shirt winking",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 14.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6708674/6708674-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "woman winking playful",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 6.45,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4028,
+              0.1344,
+              0.3056,
+              0.2156
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Los puntos suspensivos",
+          "t_estimado": [
+            5.1,
+            9.72
+          ],
+          "frase": "Los puntos suspensivos, más de reproche.",
+          "fuente": "pexels",
+          "id": 7597955,
+          "pagina": "https://www.pexels.com/video/woman-using-a-smartphone-7597955/",
+          "titulo": "woman using a smartphone",
+          "autor": "Miriam Alonso",
+          "autor_url": "https://www.pexels.com/@miriam-alonso",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7597955/7597955-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman frowning reading phone",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 1.59,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3722,
+              0.2812,
+              0.1917,
+              0.1578
+            ]
+          ]
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "62b9178f7564",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.6
+          ],
+          "frase": "A tu amiga, entonces, guiño y no puntos. Eso sí: vieron qué ponemos,",
+          "fuente": "pixabay",
+          "id": 6409,
+          "pagina": "https://pixabay.com/videos/id-6409/",
+          "titulo": "restaurant, couple, bokeh, blur, background, talking, relaxed, cafe, bar, meeting, people, relaxation, beautiful wallpaper, lifestyle, cafeteria id",
+          "autor": "Life-Of-Vids",
+          "autor_url": "https://pixabay.com/users/Life-Of-Vids-1282862/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 20.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2016/11/15/6409-191717380_large.mp4",
+          "tipo": "video",
+          "consulta": "friends laughing at cafe meeting",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 0.89,
+          "encuadre": {
+            "x": 0.489,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.904,
+              0.3889,
+              0.153,
+              0.1222
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "no si tu amiga pillará la broma",
+          "t_estimado": [
+            6.6,
+            9.93
+          ],
+          "frase": "no si tu amiga pillará la broma.",
+          "fuente": "pixabay",
+          "id": 263961,
+          "pagina": "https://pixabay.com/videos/id-263961/",
+          "titulo": "woman, muslim, quran, read, book reading, quranic verse, verses, truth, islamic, religion, mosque, forgiveness, islam, quran reading, woman reading quran id",
+          "autor": "AbdulWahab_092",
+          "autor_url": "https://pixabay.com/users/AbdulWahab_092-42320648/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://cdn.pixabay.com/video/2025/03/11/263961_large.mp4",
+          "tipo": "video",
+          "consulta": "woman reading message confused",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 2.1,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6556,
+              0.1859,
+              0.1917,
+              0.1656
+            ],
+            [
+              0.3333,
+              0.2062,
+              0.1833,
+              0.1328
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}
