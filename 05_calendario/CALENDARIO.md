@@ -562,7 +562,7 @@ día a las 19:00 (hora de España), `"modo": "automatico"`, `"idiomas": ["es"]`.
 
 | Día | Emisión | B2 · brazo (posición) | Serie | Pregunta | Ficha |
 |---|---|---|---|---|---|
-| Lunes 9 | — | D (5) | — | **sin emisión** | — |
+| Lunes 9 | `MDS-067` | D (5), cinco escenas | El experimento | ¿cómo se nota la ironía en un WhatsApp? · *mensajes* | `I08` |
 | Martes 10 | — | AD (6) | — | **sin emisión** | — |
 | Miércoles 11 | `MDS-064` | A (7), escenas 4 y 5 animadas | El experimento | ¿por qué un chiste malo hace gracia si alguien se ríe? | `E22` |
 | Jueves 12 | `MDS-065` | control (8) | El experimento | ¿por qué consuelas a quien llora de alegría? | `E20` |
@@ -573,3 +573,8 @@ día a las 19:00 (hora de España), `"modo": "automatico"`, `"idiomas": ["es"]`.
 **Ninguno es de la familia `mensajes`** (los cinco temas de mensajes cayeron; ver la bitácora). **El
 tanteo de cosquillas se intentó tres veces y no pasó.** **Banco vacío**: no sobró ningún aprobado.
 Fichas nuevas: once (`I17`-`I22`, `E19`-`E22`, `J08`). Detalle en la bitácora del 05/11.
+
+**Sábado 7/11 (reintento de la planificación):** se intentaron siete temas más para los cuatro días vacíos,
+todos con cinco escenas (los cuatro huecos son brazos cortos). **Pasó uno, `MDS-067`, el lunes 9** (posición
+5, D; familia `mensajes`). Martes 10, sábado 14 y domingo 15 siguen sin emisión (posiciones 6, 10 y 11
+vacías). Detalle en la bitácora del 07/11.

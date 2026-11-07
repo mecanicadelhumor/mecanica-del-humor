@@ -1,0 +1,194 @@
+{
+ "id": "MDS-067",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Cómo se nota la ironía en un WhatsApp?",
+ "tesis": "Para dejar clara la ironía por escrito, la gente usa sobre todo la carita que saca la lengua y la del guiño; los puntos suspensivos se asocian más a la crítica que a la ironía.",
+ "pilares": [
+  "I",
+  "B"
+ ],
+ "duracion_objetivo_s": 40,
+ "bloqueos": [],
+ "ciclo": "B2",
+ "variante": "D",
+ "familia_tema": "mensajes",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Cómo se nota la ironía en un WhatsApp?",
+  "respuesta": "Con la carita que saca la lengua o la del guiño; los puntos suspensivos suenan más a reproche que a broma.",
+  "puente": "El «Qué puntual» a la amiga que llega tarde, y la duda de qué ponerle detrás, es lo que pidieron en el estudio: hacer irónica una frase sin cambiar sus palabras, solo con signos o caritas."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — tu amiga llega tarde por tercera vez y le escribes «Qué puntual»; qué gira — dudas qué poner detrás para que no suene a bronca; cómo acaba — la gente marca la ironía con la lengua o el guiño y los puntos suspensivos suenan a reproche, aunque no se midió si el otro lo pilla.",
+  "POSICIÓN B2 5 (lunes 09/11): brazo D. Escrito el sábado 7/11 (reintento de la planificación) para un hueco que el jueves 5 dejó vacío. Escrito con cinco escenas porque el hueco es corto; la lectura en frío se hizo sobre esta versión, la que sale.",
+  "CICLO B2, brazo D. Escena quitada respecto a una versión de seis: Con seis escenas habría una entre la 2 y la 3 con la respuesta de la amiga, que se lo toma mal; en D se quita.",
+  "BRAZO B (receta del control de B2): la escena 1 es el hallazgo, en doce palabras como mucho, con su fuente; la pantalla dice lo mismo. La situación y el remate van en la 2.",
+  "FUENTE: I08 (Thompson y Filik, 2016, Journal of Computer-Mediated Communication, DOI 10.1111/jcc4.12156), nunca central. Resumen releído hoy (07/11/2026) en OpenAlex, título y DOI en el mismo registro, frases literales: «In the first, they clarified the meaning of existing sentences without altering the wording; in the second, they produced their own sentences»; «Results provided clear evidence that tongue and wink emoticons are the principal indicators of sarcastic intent, and that ellipsis is associated more with criticism, rather than with sarcasm».",
+  "LÍMITE (regla 12): mide qué pone quien escribe para marcar la ironía, no si el que lee la entiende.",
+  "FRASE QUE SOBRA (lectura en frío): cada lector nombra una distinta y ninguna tiene mayoría; se quedan las tres (el dato del arranque es la receta del brazo B, la 2 es la situación y la 3 el método).",
+  "REINTENTO DEL SÁBADO 7/11: tema nuevo de la noche, el sexto. Antes cayeron a la tercera vuelta I22, F14, I19, C05 (2 vueltas y cambiado), E17 y D10; ver temas_en_reserva.md y la bitácora del 07/11."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "I08",
+   "icono": "i-bocadillos",
+   "texto": "La ironía escrita lleva *guiño* o lengua",
+   "narracion": "La ironía escrita se marca con la lengua fuera o el guiño.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "woman typing on phone smirking",
+      "woman texting with a smirk",
+      "person texting smiling sideways"
+     ],
+     "prompt": "a woman typing on her phone with an ironic smirk, close-up, no readable text"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "«Qué puntual»… ¿y qué le *pones*?",
+   "narracion": "Tu amiga llega tarde otra vez. Le escribes «Qué puntual», y dudas qué poner detrás.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "woman waiting looking at watch cafe",
+      "woman checking time waiting"
+     ],
+     "prompt": "a woman waiting at a cafe, checking her watch"
+    },
+    {
+     "desde": "dudas qué poner detrás",
+     "busqueda": [
+      "woman hesitating typing phone",
+      "thumb hovering over phone keyboard"
+     ],
+     "prompt": "a thumb hovering over a phone keyboard, hesitating"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "I08",
+   "narracion": "Unos psicólogos dieron a gente frases como ese «Qué puntual» y les pidieron hacerlas irónicas solo con caritas o signos.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "people typing on phones in lab",
+      "students using smartphones at table"
+     ],
+     "prompt": "people sitting at a table typing on their phones"
+    }
+   ],
+   "texto": "Solo podían añadir *caritas* o signos"
+  },
+  {
+   "tipo": "dato",
+   "fuente": "I08",
+   "personaje": "entiende",
+   "cifra": "La lengua y el guiño, lo más *elegido*",
+   "pie": "los puntos suspensivos suenan a reproche",
+   "narracion": "Lo más elegido fue la carita de la lengua y la del guiño. Los puntos suspensivos, más de reproche.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "woman winking playful",
+      "man sticking tongue out playful"
+     ],
+     "prompt": "a young woman winking playfully at the camera"
+    },
+    {
+     "desde": "Los puntos suspensivos",
+     "busqueda": [
+      "woman frowning reading phone",
+      "annoyed woman reading message"
+     ],
+     "prompt": "a woman frowning at a message on her phone"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "I08",
+   "personaje": "piensa",
+   "titulo": "Con guiño, no con *puntos*",
+   "subtitulo": "Fuente: Thompson y Filik, 2016",
+   "narracion": "A tu amiga, entonces, guiño y no puntos. Eso sí: vieron qué ponemos, no si tu amiga pillará la broma.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "friends laughing at cafe meeting",
+      "two friends hugging cafe"
+     ],
+     "prompt": "two friends laughing as they meet at a cafe"
+    },
+    {
+     "desde": "no si tu amiga pillará la broma",
+     "busqueda": [
+      "woman reading message confused",
+      "woman looking at phone puzzled"
+     ],
+     "prompt": "a woman reading a message, slightly puzzled"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "tres subagentes sin contexto por vuelta, decide la mayoría (precisión del 02/11/2026); vuelta 3, lectores nuevos en cada vuelta",
+  "fecha": "2026-11-07",
+  "vuelta": 3,
+  "lectores": [
+   {
+    "de_que_va": "Va de cómo marcar la ironía en un mensaje escrito: según un estudio, la gente usa sobre todo la carita de la lengua o la del guiño, y los puntos suspensivos suenan más a reproche.",
+    "pregunta_y_respuesta": "¿Qué pongo detrás de un «Qué puntual» irónico para que se entienda que es broma? Lo más usado es el guiño o la lengua fuera; los puntos suspensivos se leen como queja. El estudio vio lo que la gente elige poner, no si el otro entiende la broma.",
+    "frases_que_no_se_entienden": "Ninguna. Solo una duda menor: «Fuente: Thompson y Filik, 2016» no me dice nada, pero es una cita y no me estorba.",
+    "frase_que_sobra": "«La ironía escrita lleva guiño o lengua» (adelanta la conclusión); también podría sobrar «Solo podían añadir caritas o signos», porque la frase hablada ya lo dice.",
+    "donde_me_iria": "Me quedo. La escena 3 es la más abstracta, pero no me habría ido."
+   },
+   {
+    "de_que_va": "Va de cómo marcar la ironía en mensajes escritos: según un estudio, la gente usa sobre todo la carita de la lengua o el guiño, y no los puntos suspensivos.",
+    "pregunta_y_respuesta": "Qué poner detrás de un «Qué puntual» irónico para que se note la broma: un guiño o una lengua fuera, no puntos suspensivos, que suenan más a reproche. Salvedad: mide lo que la gente elige poner, no si el otro lo entiende.",
+    "frases_que_no_se_entienden": "Ninguna. Lo único que me chirría un poco es «Fuente: Thompson y Filik, 2016», porque no sé quiénes son, pero se entiende que es la cita del estudio.",
+    "frase_que_sobra": "«Unos psicólogos dieron a gente frases como ese «Qué puntual» y les pidieron hacerlas irónicas solo con caritas o signos» (o acortarla), aunque entonces la escena 4 quedaría sin contexto.",
+    "donde_me_iria": "Me quedo. Si me hubiera ido, en la escena 3, por el tono de «unos psicólogos hicieron un estudio»."
+   },
+   {
+    "de_que_va": "Va de cómo marcar la ironía en un mensaje escrito: según un estudio, la gente usa sobre todo la carita con la lengua fuera o el guiño, y no los puntos suspensivos.",
+    "pregunta_y_respuesta": "¿Cómo pongo que algo es irónico en un mensaje? Lo más elegido es la lengua o el guiño; los puntos suspensivos suenan más a reproche. El estudio mide lo que la gente pone, no si el otro entiende la broma.",
+    "frases_que_no_se_entienden": [
+     "«Solo podían añadir caritas o signos» (no me quedó claro qué signos eran, aunque luego se entiende que son los puntos suspensivos)",
+     "«Los puntos suspensivos suenan a reproche» (lo entiendo, pero «suenan a» en algo escrito me chocó un poco)",
+     "«Fuente: Thompson y Filik, 2016» (lo tomo como la cita del estudio)"
+    ],
+    "frase_que_sobra": "«Tu amiga llega tarde otra vez. Le escribes «Qué puntual», y dudas qué poner detrás.»",
+    "donde_me_iria": "Me quedo. La escena 3 me enfrió un poco, pero duró poco."
+   }
+  ],
+  "recuento": "Ninguna frase la marcan dos lectores salvo la firma de la fuente (nota, criterio del 28/09). Los tres: «me quedo». De qué va: los tres, la misma idea que la historia. La frase que sobra la nombra cada uno distinta (escena 1, escena 3, escena 2): ninguna con mayoría.",
+  "de_que_va": "Cómo marcar la ironía en un mensaje escrito: la gente usa sobre todo la carita de la lengua o la del guiño, y los puntos suspensivos suenan más a reproche.",
+  "pregunta_y_respuesta": "¿Qué pongo detrás de un «Qué puntual» irónico para que se note? Un guiño o la lengua fuera, no puntos suspensivos; el estudio mide lo que pone quien escribe, no si el otro lo entiende.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "Cada lector nombra una distinta (el rótulo de la escena 1, la escena 3, la escena 2); ninguna con mayoría. Se quedan: la 1 es el dato del brazo B (control de B2), la 2 es la situación y la 3 es el método.",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "Firma «Fuente: Thompson y Filik, 2016»: los tres no saben quiénes son (no bloquea, criterio del 28/09).",
+   "Un lector: «Solo podían añadir caritas o signos», no sabía qué signos eran hasta la escena 4.",
+   "Un lector: «suenan a» reproche, en algo escrito, le chocó un poco.",
+   "Dos lectores: la escena 3 es la más abstracta («unos psicólogos»), pero no se irían."
+  ],
+  "historial": [
+   "Vuelta 1 (07/11, tres lectores): no pasa. El cierre «Eso sí: miraron qué pone quien escribe, no si el otro lo pilla» (3/3: ¿qué consecuencia tiene?), el rótulo «La misma frase · Sin cambiar palabras · Solo signos o caritas» (3/3), «Ganan la lengua y el guiño» (2/3: ¿qué se midió?) y la frase del método (2/3, entendida tarde). Se reescriben la escena 3 (frases como ese «Qué puntual»), la 4 («lo más elegido») y el cierre («no si tu amiga pillará la broma»).",
+   "Vuelta 2 (07/11, tres lectores nuevos): no pasa por un rótulo. «Sin tocar las palabras» (2/3, entendido tarde). Los tres: «me quedo». La escena 3 pasa de lista a enunciado con el rótulo «Solo podían añadir caritas o signos», y el rótulo del dato lleva verbo.",
+   "Vuelta 3 (07/11, tres lectores nuevos): pasa."
+  ],
+  "veredicto": "pasa"
+ }
+}
