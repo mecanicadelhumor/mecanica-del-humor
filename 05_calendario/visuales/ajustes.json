@@ -707,5 +707,15 @@
       "fuente": "ia",
       "prompt": "a brain scanner MRI machine in a quiet hospital room, seen from the side, no people"
     }
+  },
+  "MDS-067": {
+    "5.2": {
+      "excluir": [
+        "pixabay:263961"
+      ],
+      "busqueda": [
+        "friends laughing looking at phone together"
+      ]
+    }
   }
 }
