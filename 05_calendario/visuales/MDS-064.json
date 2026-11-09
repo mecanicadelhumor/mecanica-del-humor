@@ -1,8 +1,8 @@
 {
   "guion": "MDS-064",
   "version": 2,
-  "firma": "324e1cf23569b834",
-  "resuelto_utc": "2026-11-05T22:54:24Z",
+  "firma": "ecce97df30f4703b",
+  "resuelto_utc": "2026-11-09T10:32:51Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -60,35 +60,27 @@
             5.27
           ],
           "frase": "Cena familiar. Tu primo cuenta un chiste malísimo, y la mesa",
-          "fuente": "ia",
-          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-          "prompt": "a young man telling a joke at a family dinner table",
-          "semilla": 7899431,
-          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-          "ancho": 768,
-          "alto": 1360,
-          "tipo": "imagen",
-          "fichero": "05_calendario/visuales/MDS-064/e2_p1.jpg",
-          "caras": [
-            [
-              0.3867,
-              0.2735,
-              0.168,
-              0.1412
-            ],
-            [
-              0.0,
-              0.3404,
-              0.0951,
-              0.1375
-            ],
-            [
-              0.9297,
-              0.3559,
-              0.0703,
-              0.1066
-            ]
-          ]
+          "fuente": "pixabay",
+          "id": 1623,
+          "pagina": "https://pixabay.com/videos/id-1623/",
+          "titulo": "cafe, restaurant, talking, talk, people, sitting, chatting, menu, coffee, dinner, table, bar, drink, interior, cafe interior, restaurant interior id",
+          "autor": "Life-Of-Vids",
+          "autor_url": "https://pixabay.com/users/Life-Of-Vids-1282862/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 19.0,
+          "ancho": 0,
+          "alto": 0,
+          "url": "https://cdn.pixabay.com/video/2015/12/11/1623-148613540_medium.mp4",
+          "tipo": "video",
+          "consulta": "man talking at dinner table family",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 3.2,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
         },
         {
           "k": 2,
@@ -98,6 +90,98 @@
             8.72
           ],
           "frase": "se queda en silencio.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a family dinner table where everyone sits silent and awkward after a bad joke, a man at the head of the table looking sheepish, no one smiling, warm indoor light",
+          "semilla": 15736057,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-064/e2_p2.jpg",
+          "caras": [
+            [
+              0.4635,
+              0.3735,
+              0.082,
+              0.0603
+            ],
+            [
+              0.832,
+              0.4051,
+              0.0781,
+              0.0603
+            ],
+            [
+              0.7383,
+              0.3875,
+              0.0729,
+              0.0522
+            ],
+            [
+              0.1979,
+              0.3897,
+              0.0703,
+              0.0522
+            ],
+            [
+              0.1263,
+              0.4029,
+              0.0599,
+              0.0529
+            ],
+            [
+              0.8958,
+              0.4507,
+              0.056,
+              0.0507
+            ],
+            [
+              0.069,
+              0.4529,
+              0.0495,
+              0.0515
+            ],
+            [
+              0.1419,
+              0.2279,
+              0.0221,
+              0.0154
+            ],
+            [
+              0.819,
+              0.2279,
+              0.0182,
+              0.0118
+            ],
+            [
+              0.1458,
+              0.3037,
+              0.0143,
+              0.0088
+            ],
+            [
+              0.9375,
+              0.2949,
+              0.013,
+              0.0096
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "7ac5309c272d",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.08
+          ],
+          "frase": "Hasta que tu tía suelta una carcajada, y acabáis todos riéndoos.",
           "fuente": "pexels",
           "id": 5791511,
           "pagina": "https://www.pexels.com/video/a-family-dinner-5791511/",
@@ -110,7 +194,7 @@
           "alto": 2048,
           "url": "https://videos.pexels.com/video-files/5791511/5791511-hd_1080_2048_25fps.mp4",
           "tipo": "video",
-          "consulta": "family dinner awkward silence",
+          "consulta": "family laughing together at dinner",
           "relevancia": 0.5,
           "inicio_s": 0.4,
           "movimiento": 10.38,
@@ -141,79 +225,6 @@
         }
       ]
     },
-    "3": {
-      "narracion_sha": "7ac5309c272d",
-      "texto_pos": "arriba",
-      "planos": [
-        {
-          "k": 1,
-          "desde": null,
-          "t_estimado": [
-            0.0,
-            6.08
-          ],
-          "frase": "Hasta que tu tía suelta una carcajada, y acabáis todos riéndoos.",
-          "fuente": "pexels",
-          "id": 5814437,
-          "pagina": "https://www.pexels.com/video/family-having-video-call-during-christmas-dinner-5814437/",
-          "titulo": "family having video call during christmas dinner",
-          "autor": "Tima Miroshnichenko",
-          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 18.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/5814437/5814437-hd_1080_1920_25fps.mp4",
-          "tipo": "video",
-          "consulta": "family laughing together at dinner",
-          "relevancia": 0.5,
-          "inicio_s": 0.4,
-          "movimiento": 8.59,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
-          "caras": [
-            [
-              0.2556,
-              0.45,
-              0.1694,
-              0.1172
-            ],
-            [
-              0.4083,
-              0.4516,
-              0.1611,
-              0.1109
-            ],
-            [
-              0.7722,
-              0.4422,
-              0.1278,
-              0.0969
-            ],
-            [
-              0.6111,
-              0.4547,
-              0.1278,
-              0.0938
-            ],
-            [
-              0.6333,
-              0.5547,
-              0.1111,
-              0.1031
-            ],
-            [
-              0.775,
-              0.5531,
-              0.1111,
-              0.0969
-            ]
-          ]
-        }
-      ]
-    },
     "4": {
       "narracion_sha": "514de10f0eb8",
       "texto_pos": "abajo",
@@ -226,32 +237,39 @@
             10.64
           ],
           "frase": "¿Por qué pasa? Unos investigadores pusieron a adultos chistes, eructos y caídas, unas veces con risas añadidas y otras sin ellas.",
-          "fuente": "pixabay",
-          "id": 342901,
-          "pagina": "https://pixabay.com/videos/id-342901/",
-          "titulo": "headphones, computer, person, typing, home, window, screen, headset, vintage, lifestyle, old computer, cozy room, digital immersion, interior space, listening music, personal tech, anime, ai created id",
-          "autor": "Hideaki_AnimeTH",
-          "autor_url": "https://pixabay.com/users/Hideaki_AnimeTH-29800360/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 10.0,
-          "ancho": 3840,
-          "alto": 2160,
-          "url": "https://cdn.pixabay.com/video/2026/03/27/342901_large.mp4",
-          "tipo": "video",
-          "consulta": "person with headphones listening laptop",
-          "relevancia": 0.75,
-          "inicio_s": 0.0,
-          "movimiento": 2.47,
-          "encuadre": {
-            "x": 0.616,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "researchers in white coats watching a volunteer through a glass window in a small lab, a laptop and headphones on the desk, neutral light, no text",
+          "semilla": 2808026,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-064/e4_p1.jpg",
           "caras": [
             [
-              0.353,
-              0.2028,
-              0.2939,
-              0.2375
+              0.1237,
+              0.3132,
+              0.1068,
+              0.0868
+            ],
+            [
+              0.3099,
+              0.3309,
+              0.1055,
+              0.0779
+            ],
+            [
+              0.8359,
+              0.3081,
+              0.0872,
+              0.0846
+            ],
+            [
+              0.7122,
+              0.3713,
+              0.0951,
+              0.075
             ]
           ]
         }
