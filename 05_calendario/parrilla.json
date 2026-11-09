@@ -677,24 +677,24 @@
    "nota": "Jueves. Primer Short de B2. Escrito con la receta B («arranque con el dato»), que es el control de B2 (ciclos.json, «decisiones», 26/10); etiquetado ciclo B2 / variante control a la espera de que la dirección escriba B2 el 2/11 (en el guion, la escena que se quitaría para un brazo corto). Familia «mensajes». Serie «El experimento»: la carita en el primer correo al cliente. Pregunta: «¿queda mal un emoji en un correo de trabajo?». Fuentes I15 (Lai y Mayiwar, 2023, réplica preregistrada) e I14 (Glikson y otros, 2018), fichas nuevas. · 02/11 (dirección): B2 posición 1 = brazo D (corto): quitada la escena 3; lectura en frío repetida, pasa."
   },
   {
-   "fecha": "2026-11-07",
+   "fecha": "2026-11-10",
    "episodio": "MDS-062",
    "idiomas": [
     "es"
    ],
    "modo": "automatico",
    "hora": "19:00",
-   "nota": "Sábado. B2, receta B (control de B2; ver la nota del jueves 5). Serie «El experimento»: la comedia que sola no te hace gracia y con amigos sí. Pregunta: «¿por qué casi no te ríes cuando estás solo?» (cerca de «por qué nos reímos en grupo», 187.909.617, sin nadie respondiendo). Fuente E16 (Provine y Fischer, 1989), ficha nueva. · 02/11 (dirección): B2 posición 3 = brazo A: escenas 4 y 5 con animar (rutina Animación, viernes 6)."
+   "nota": "Sábado. B2, receta B (control de B2; ver la nota del jueves 5). Serie «El experimento»: la comedia que sola no te hace gracia y con amigos sí. Pregunta: «¿por qué casi no te ríes cuando estás solo?» (cerca de «por qué nos reímos en grupo», 187.909.617, sin nadie respondiendo). Fuente E16 (Provine y Fischer, 1989), ficha nueva. · 02/11 (dirección): B2 posición 3 = brazo A: escenas 4 y 5 con animar (rutina Animación, viernes 6). · 09/11 (dirección): NO SALIÓ el 07/11 (sin voz del 07 al 09/11: google-genai 3.0.0 llamaba a la API v1 y todos los modelos TTS daban 404). Guion aprobado y nunca subido (no es resubir, C54): se recoloca al martes 10/11, que estaba vacío. Mismo brazo y ciclo."
   },
   {
-   "fecha": "2026-11-08",
+   "fecha": "2026-11-14",
    "episodio": "MDS-063",
    "idiomas": [
     "es"
    ],
    "modo": "automatico",
    "hora": "19:00",
-   "nota": "Domingo. B2, receta B (control de B2). Serie «El experimento»: la sobremesa de tres horas. Pregunta: «¿qué le pasa a tu cerebro al reírte con amigos?». Fuente E10 (Manninen y otros, 2017), nunca central: reintento desde cero de un tema de la reserva (cayó el 22/10). TERCER TEMA del hueco: G09 (el humor y vivir más) y D08 (la pareja) no pasaron a la tercera vuelta (reserva). · 02/11 (dirección): B2 posición 4 = control. Sin cambios."
+   "nota": "Domingo. B2, receta B (control de B2). Serie «El experimento»: la sobremesa de tres horas. Pregunta: «¿qué le pasa a tu cerebro al reírte con amigos?». Fuente E10 (Manninen y otros, 2017), nunca central: reintento desde cero de un tema de la reserva (cayó el 22/10). TERCER TEMA del hueco: G09 (el humor y vivir más) y D08 (la pareja) no pasaron a la tercera vuelta (reserva). · 02/11 (dirección): B2 posición 4 = control. Sin cambios. · 09/11 (dirección): NO SALIÓ el 08/11 (sin voz del 07 al 09/11: google-genai 3.0.0 llamaba a la API v1 y todos los modelos TTS daban 404). Guion aprobado y nunca subido (no es resubir, C54): se recoloca al sábado 14/11, que estaba vacío. Mismo brazo y ciclo."
   },
   {
    "fecha": "2026-11-09",

@@ -831,6 +831,26 @@ los iba corrigiendo de uno en uno con `ajustes.json` sin que nadie viera la caus
 → **Una medida de parecido tiene que pesar lo que identifica (el sujeto, la acción) y no lo que acompaña (la
 edad, el sitio, el encuadre). Y cuando un arreglo a mano se repite todos los días, la causa está en el código.**
 
+**70. El error decía «modelo», pero lo que cambió fue la librería.** Del 07 al 09/11 el canal no publicó
+nada: cada producción daba 404 «Model not found» con todos los modelos de voz. La revisión del 08/11 leyó el
+mensaje al pie de la letra («Google ha retirado los modelos antes de tiempo») y subió la escalera a los 3.8,
+que dieron el mismo 404. La causa era otra: el 06/11 a las 02:29 UTC salió `google-genai` **3.0.0**, que
+`requirements.txt` instalaba sin tope, y que llama a `/v1/interactions` en vez de `/v1beta/interactions`;
+los modelos TTS son «preview» y en `v1` no existe ninguno. La prueba del 05/11 funcionó porque instaló la
+2.34.0. → **Cuando algo que funcionaba falla de golpe con todas sus variantes a la vez, busca primero qué
+dependencia cambió de versión ese día (PyPI dice la fecha de cada una), y no fíes nada de lo que produce
+el canal a una librería sin tope de versión mayor.** Desde el 09/11 `voz.py` fija `api_version="v1beta"` y
+`requirements.txt` pide `google-genai>=2.34,<3`.
+
+## Dónde está el proyecto a 9 de noviembre de 2026 (en diferido)
+
+Versión **30** del plan, la que manda. **El canal vuelve a tener voz** (trampa 70): sin vídeo del 06 al
+09/11 por `google-genai` 3.0.0; arreglado, y `MDS-067` relanzado a mano y ya subido (19:00, con la voz de siempre). Los dos Shorts que no
+salieron (`MDS-062`, `MDS-063`) van al martes 10 y al sábado 14, que estaban vacíos. **Voz**: el codirector
+se queda con 3.1/2.5 hasta el apagado del 17/11; muestra 3.8 corregida (acento, instrucciones) el 12/11,
+cambio el 16/11. **El 15/11 se decide si el canal sigue** (C26). Lo de C51.3, esquina, cara fija y filtro de
+lectores, al 16/11.
+
 ## Dónde está el proyecto a 5 de noviembre de 2026 (en diferido)
 
 Versión **29** del plan, la que manda. **Las imágenes que no pegaban eran un fallo de `visual.py`** (trampa 69):

@@ -6800,3 +6800,36 @@ contrario.
 ## Lo que NO cambia hoy
 
 - B2 (brazos, `orden`, regla), los guiones ya producidos (regla 11.4), las rutinas, los umbrales de C26.
+
+---
+
+# Versión 30 · 9 de noviembre de 2026 (lunes, en diferido) — el canal sin voz tres días era una librería, los dos Shorts perdidos a los huecos, y la voz que caduca se queda hasta el 17/11
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario.
+
+| Qué | Decisión |
+|---|---|
+| **Producción parada del 06 al 09/11** (cuaderno: «el canal lleva sin publicar desde el 5») | **Causa encontrada y arreglada.** No era Google retirando modelos: el 06/11 02:29 UTC salió `google-genai` 3.0.0, que `requirements.txt` instalaba sin tope y que llama a la API `v1` en vez de `v1beta`, donde viven los modelos TTS. Medido en el contenedor con un transporte simulado: 2.34.0 → `/v1beta/interactions`, 3.0.0 → `/v1/interactions`. Por eso daban 404 todos, también los 3.8 que la revisión puso el 08/11. Arreglo: `voz.py` y `prueba_voz.py` fijan `api_version="v1beta"` (`API_GEMINI`), y `requirements.txt` pide `google-genai>=2.34,<3` (las dos redes; trampa 70). Entregado a las 13:18 UTC y «Producir vídeo» relanzado a mano: `MDS-067` subido a las 13:25 UTC con `gemini-3.1-flash-tts-preview`, sale a las 19:00 de hoy |
+| **La voz** (cuaderno) | **Se vuelve a los modelos de antes del 08/11** (`gemini-3.1-flash-tts-preview` en Shorts, `gemini-2.5-flash-preview-tts` en el largo), como pide el codirector: «seguir con el modelo que caduca el 17 hasta que nos obliguen». La voz que se publica no cambia y la caché vuelve a servir. Lo que dijo de los 3.8 (rebaja de calidad, el dirigido lee las instrucciones, acento latino) se ataca antes de que sean obligatorios: el 12/11 una muestra 3.8 sin leer instrucciones y con acento peninsular (`voz-3.8-acento`), que el codirector oye antes del 15/11, y el **lunes 16/11** el cambio (`voz-3.8-cambio`), para que la producción de las 01:13 UTC del 17/11 ya no dependa de un modelo apagado |
+| **Los Shorts que no salieron** | `MDS-062` (brazo A) y `MDS-063` (control) tienen guion aprobado y nunca se subieron (no es resubir, C54; no se reescriben, regla 11.4). Van a **martes 10/11** y **sábado 14/11**, dos de los tres días vacíos. Mismo brazo y ciclo: en B2 el brazo lo lleva el guion, así que el reparto del factorial no se rompe; solo cambia el día. El domingo 15 sigue vacío salvo que la planificación del jueves 12 lo llene |
+| **El punto de control del 15/11** (cuaderno: «se decide si se corta o se continúa») | Llega con tres días perdidos: de los veinte Shorts de la mediana, los de esta semana serán `MDS-067`, `062`, `064`, `065`, `066` y `063`. Mediana de vistas a 48 h hoy: **28,5** (6 de 20 por encima de 100). La dirección del jueves 12 prepara el informe de C26 para que el codirector decida el 15/11 con los números delante, incluido cuánto ha costado la parada |
+| B2 | Sin datos que decidan (solo `MDS-060` publicado). Nada que aplicar del bucle |
+| Lo vencido del 09/11 | `banco-guiones`, `visual-relevancia-nucleo`, `voz-3.8-prueba` y `voz-3.8-oir`, **hechos**. `calidad-patron` al 12/11. `C51.3-prueba`, `C51.3-cara-fija`, `C61-esquina-libre` e `iteracion-filtro` al **16/11**: hoy la sesión fue para la producción parada, y ninguno mueve las vistas antes del 15/11 (y lo que se decida ese día puede dejarlos sin objeto). `largo-voz-tandas` y `largo-ensayo` siguen el 12/11, con la voz 2.5 |
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Hoy 19:00 (España) | `MDS-067` (D), si la producción relanzada termina bien |
+| Martes 10/11 | `MDS-062` (A) |
+| Miércoles 11 – viernes 13 | `MDS-064`, `MDS-065`, `MDS-066` |
+| Jueves 12/11 | Dirección: muestra 3.8 con acento, recuento de planos que no pegan, voz por tandas y ensayo del largo (se decide el estreno), patrón de calidad, informe C26 |
+| Sábado 14/11 | `MDS-063` (control) |
+| Domingo 15/11 | **Punto de control C26**: el codirector decide si el canal sigue |
+| Lunes 16/11 | Dirección: voz 3.8 en producción; C51.3, cara fija, esquina, filtro |
+| Martes 17/11 | Google apaga los modelos de voz de hoy |
+
+## Lo que NO cambia hoy
+
+- B2 (brazos, `orden`, regla), los guiones ya escritos (regla 11.4), las rutinas, los umbrales de C26.

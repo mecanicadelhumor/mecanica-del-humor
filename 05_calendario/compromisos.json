@@ -134,13 +134,18 @@
       "id": "C61-esquina-libre",
       "que": "Que el personaje de la esquina no tape lo importante del plano: elegir la esquina con menos contenido (caras, manos, movimiento) en cada plano, con muestra para el codirector",
       "dueno": "direccion",
-      "fecha": "2026-11-09",
+      "fecha": "2026-11-16",
       "estado": "pendiente",
       "aplazamientos": [
         {
           "de": "2026-11-02",
           "a": "2026-11-09",
           "porque": "El personaje de la esquina todavía no está en producción (entra como brazo cuando lo diga B2): no corre prisa antes"
+        },
+        {
+          "de": "2026-11-09",
+          "a": "2026-11-16",
+          "porque": "El 09/11 la dirección se dedicó entera a la producción parada (sin vídeo del 06 al 09/11; la causa era google-genai 3.0.0) a seis días del punto de control del 15/11. Esto no mueve las vistas de aquí al 15/11; y lo que se decida el 15/11 (C26) puede dejarlo sin objeto"
         }
       ],
       "origen": "Respuesta del codirector a la tarea 2 del 23/10"
@@ -207,7 +212,8 @@
           "porque": "Hacerla con gemini-2.5-flash ya no tiene sentido: Google lo apaga el 17/11, dos días después del estreno. Se hace con el modelo 3.8 que elija el codirector el mismo día del cambio (voz-3.8-cambio, 12/11); el dato que la reabre es su respuesta a la muestra de hoy"
         }
       ],
-      "origen": "Plan v23"
+      "origen": "Plan v23",
+      "nota": "09/11: sin cambio de fecha, pero con gemini-2.5-flash-preview-tts (el codirector prefiere el modelo que caduca; el estreno, 15/11, es antes del apagado). Si el largo se va al 22/11, la voz tendrá que ser la 3.8"
     },
     {
       "id": "cuaderno-iteracion-calidad",
@@ -286,22 +292,33 @@
       "id": "iteracion-filtro",
       "que": "Filtro de lectores sintéticos sobre variantes de guion antes de producir",
       "dueno": "direccion",
-      "fecha": "2026-11-09",
+      "fecha": "2026-11-16",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-11-09",
+          "a": "2026-11-16",
+          "porque": "El 09/11 la dirección se dedicó entera a la producción parada (sin vídeo del 06 al 09/11; la causa era google-genai 3.0.0) a seis días del punto de control del 15/11. Esto no mueve las vistas de aquí al 15/11; y lo que se decida el 15/11 (C26) puede dejarlo sin objeto"
+        }
+      ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
     },
     {
       "id": "calidad-patron",
       "que": "Patrón de calidad medido con veinte Shorts ajenos de divulgación en español (>100.000 vistas) y los nuestros; después, la ficha automática en qa.py",
       "dueno": "direccion",
-      "fecha": "2026-11-09",
+      "fecha": "2026-11-12",
       "estado": "pendiente",
       "aplazamientos": [
         {
           "de": "2026-11-02",
           "a": "2026-11-09",
           "porque": "El 2/11 se reserva para lo que B2 necesita para empezar el 5/11. El patrón no bloquea nada de B2"
+        },
+        {
+          "de": "2026-11-09",
+          "a": "2026-11-12",
+          "porque": "El 09/11 la dirección se dedicó entera a la producción parada (sin vídeo del 06 al 09/11; la causa era google-genai 3.0.0) a seis días del punto de control del 15/11. Esto no mueve las vistas de aquí al 15/11"
         }
       ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
@@ -480,9 +497,15 @@
       "id": "C51.3-cara-fija",
       "que": "La opción menor del codirector si no hay labios creíbles: la cara 2 fija, sin mover los labios, como imagen del canal en algunos Shorts. Muestra en vídeo para el codirector y, si dice que sí, un brazo con las pruebas habituales",
       "dueno": "direccion",
-      "fecha": "2026-11-09",
+      "fecha": "2026-11-16",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-11-09",
+          "a": "2026-11-16",
+          "porque": "El 09/11 la dirección se dedicó entera a la producción parada (sin vídeo del 06 al 09/11; la causa era google-genai 3.0.0) a seis días del punto de control del 15/11. Esto no mueve las vistas de aquí al 15/11; y lo que se decida el 15/11 (C26) puede dejarlo sin objeto"
+        }
+      ],
       "origen": "Respuesta del codirector a la tarea 2 del 26/10",
       "nota": "Después de C51.3-alternativas (2/11): es el plan B, no el A"
     },
@@ -513,17 +536,25 @@
       "que": "Lanzar la prueba de voces con gemini-3.8-flash-tts y -lite sobre el mismo guion (y grabar la voz actual de referencia antes del 17/11); voz.py con el modelo en una constante y la caché aparte; muestra para el codirector",
       "dueno": "direccion",
       "fecha": "2026-11-05",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Retirada de los modelos TTS de Gemini el 17/11/2026"
+      "origen": "Retirada de los modelos TTS de Gemini el 17/11/2026",
+      "hecho_el": "2026-11-05",
+      "nota": "Runs 42034577185 y 42035553638 de «Prueba de voces» (05/11). Se marca el 09/11: estaba hecho y seguía «pendiente»"
     },
     {
       "id": "voz-3.8-cambio",
       "que": "Cambiar MODELO_GEMINI y MODELO_GEMINI_LARGO a los modelos 3.8 en producción, después de que el codirector oiga la muestra (regla 11.2)",
       "dueno": "direccion",
-      "fecha": "2026-11-12",
+      "fecha": "2026-11-16",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-11-12",
+          "a": "2026-11-16",
+          "porque": "El codirector (09/11) quiere seguir con 3.1/2.5 hasta que Google los apague (17/11). El cambio se hace en la última ejecución de la dirección antes del apagado (lunes 16/11), para que la producción de las 01:13 UTC del 17/11 ya salga con 3.8; antes, el 12/11, una muestra que corrija el acento y la lectura de instrucciones (voz-3.8-acento)"
+        }
+      ],
       "origen": "Retirada de los modelos TTS de Gemini el 17/11/2026; margen de cinco días"
     },
     {
@@ -541,9 +572,15 @@
       "id": "C51.3-prueba",
       "que": "Probar EchoMimic V3-Flash en la T4 de Kaggle (workflow del presentador) y preparar LongCat-Video-Avatar en un Space de ZeroGPU: misma cara 2, 3 s de voz, semilla fija; medir tiempo y memoria; vídeo para el codirector",
       "dueno": "direccion",
-      "fecha": "2026-11-09",
+      "fecha": "2026-11-16",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-11-09",
+          "a": "2026-11-16",
+          "porque": "El 09/11 la dirección se dedicó entera a la producción parada (sin vídeo del 06 al 09/11; la causa era google-genai 3.0.0) a seis días del punto de control del 15/11. Esto no mueve las vistas de aquí al 15/11; y lo que se decida el 15/11 (C26) puede dejarlo sin objeto"
+        }
+      ],
       "origen": "Informe C51.3-alternativas del 02/11"
     },
     {
@@ -551,9 +588,11 @@
       "que": "Comprobar que la planificación del 5/11 aplica los tres lectores y el banco (versión 28) y contar aprobados, banco y reserva",
       "dueno": "direccion",
       "fecha": "2026-11-09",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [],
-      "origen": "Cuaderno del codirector, 02/11 (vídeo del viernes y cantidad de guiones)"
+      "origen": "Cuaderno del codirector, 02/11 (vídeo del viernes y cantidad de guiones)",
+      "hecho_el": "2026-11-09",
+      "nota": "La planificación aplica los tres lectores (05/11 y reintento del 07/11). El 07/11: siete temas, 60 lecturas, UN aprobado (MDS-067). El banco no existe: parrilla._banco está vacío y quedaban huecos el 10, 14 y 15/11. El 09/11 la dirección llena el 10 y el 14 con MDS-062 y MDS-063 (aprobados, nunca subidos por el fallo de la voz)"
     },
     {
       "id": "tts-vigilancia-12",
@@ -569,18 +608,55 @@
       "que": "C50: un clip de archivo solo vale si su título trae el núcleo de la búsqueda (la mitad, y todos los animales que se nombran), y el primer plano del Short pide 0,5 o va la imagen generada. Medir en las hojas de contactos de MDS-062 a MDS-070 cuántos planos ya no pegan",
       "dueno": "direccion",
       "fecha": "2026-11-09",
-      "estado": "pendiente",
+      "estado": "hecho",
       "origen": "Cuaderno del codirector (03/11): el elefante de MDS-057. Plan v29",
-      "nota": "Aplicado el 05/11 en visual.py (VERSION 2: todo lo pendiente se vuelve a elegir en la siguiente ejecución de Visuales)"
+      "nota": "Aplicado el 05/11 en visual.py (VERSION 2: todo lo pendiente se vuelve a elegir en la siguiente ejecución de Visuales) · visual.py VERSION 2 entregado el 05/11. Recuento: la revisión del 09/11 vio en la hoja de MDS-064 dos planos que no pegan (2.2 y 4.1), es decir, más de uno; con un solo Short no se decide: recuento de MDS-064 a MDS-067 el 12/11 (visual-recuento)",
+      "hecho_el": "2026-11-05"
     },
     {
       "id": "voz-3.8-oir",
       "que": "Oír las muestras de voz 3.8 (flash y lite) frente a la de hoy, y decir cuál",
       "dueno": "codirector",
       "fecha": "2026-11-11",
-      "estado": "pendiente",
+      "estado": "hecho",
       "origen": "Plan v29, tarea 1 del 05/11",
-      "nota": "Artefactos de «Prueba de voces» del 05/11 (caducan el 19/11)"
+      "nota": "Artefactos de «Prueba de voces» del 05/11 (caducan el 19/11) · Contestado en el cuaderno el 09/11: los 3.8 son una rebaja de calidad, el dirigido leyó las instrucciones en voz alta y el acento sonó latino, no peninsular. Decide: seguir con el modelo que caduca el 17/11 hasta que no quede más remedio",
+      "hecho_el": "2026-11-09"
+    },
+    {
+      "id": "voz-3.8-acento",
+      "que": "Muestra de gemini-3.8-flash-tts que no lea las instrucciones y suene a castellano de España (sin dirección de actor o con una indicación de idioma y acento; misma voz Charon y otra peninsular si la hay), sobre MDS-060, para que el codirector la oiga antes del 16/11",
+      "dueno": "direccion",
+      "fecha": "2026-11-12",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Cuaderno del codirector, 09/11 («el dirigido leyó las instrucciones; el acento era latino»)"
+    },
+    {
+      "id": "voz-3.8-oir-2",
+      "que": "Oír la muestra corregida de voz 3.8 (voz-3.8-acento) y decir si vale para el 17/11",
+      "dueno": "codirector",
+      "fecha": "2026-11-15",
+      "estado": "pendiente",
+      "origen": "Plan v30 (09/11)"
+    },
+    {
+      "id": "visual-recuento",
+      "que": "Contar en las hojas de contactos de MDS-064 a MDS-067 los planos que no pegan con visual.py VERSION 2; si pasan de uno por Short, proponer archivo solo para personas y sitios",
+      "dueno": "direccion",
+      "fecha": "2026-11-12",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Plan v29 (05/11), visual-relevancia-nucleo"
+    },
+    {
+      "id": "voz-sdk-3",
+      "que": "Probar google-genai 3.x con «Prueba de voces» (api_version v1beta ya fijada) antes de subir el tope <3 de requirements.txt",
+      "dueno": "direccion",
+      "fecha": "2026-11-23",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Incidencia 07-09/11 (plan v30)"
     }
   ]
 }
