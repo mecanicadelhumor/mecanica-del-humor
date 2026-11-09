@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-08T18:31:58Z",
+ "actualizado_utc": "2026-11-09T14:02:58Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -46,9 +46,9 @@
      "nombre": "Lo de ahora (C50 + C56-C59), apertura en situación",
      "n": 8,
      "se_quedaron_media": 24.6,
-     "porcentaje_visto_media": 70.7,
+     "porcentaje_visto_media": 70.8,
      "vistas_48h_mediana": 27.5,
-     "me_gusta_por_100": 1.01,
+     "me_gusta_por_100": 1.0,
      "ceros_de_feed": 0,
      "shorts": [
       {
@@ -59,7 +59,7 @@
        "porcentaje_visto": 165.1,
        "me_gusta": 0,
        "visualizaciones": 22,
-       "leido": "2026-11-02"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-041",
@@ -69,7 +69,7 @@
        "porcentaje_visto": 39.3,
        "me_gusta": 2,
        "visualizaciones": 196,
-       "leido": "2026-11-03"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-044",
@@ -78,8 +78,8 @@
        "vistas_48h": 112,
        "porcentaje_visto": 45.0,
        "me_gusta": 0,
-       "visualizaciones": 122,
-       "leido": "2026-11-03"
+       "visualizaciones": 124,
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-047",
@@ -89,17 +89,17 @@
        "porcentaje_visto": 86.2,
        "me_gusta": 0,
        "visualizaciones": 35,
-       "leido": "2026-11-03"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-050",
        "publicado": "2026-10-26",
        "se_quedaron_pct": 15.7,
        "vistas_48h": 913,
-       "porcentaje_visto": 35.6,
+       "porcentaje_visto": 36.0,
        "me_gusta": 12,
-       "visualizaciones": 969,
-       "leido": "2026-11-03"
+       "visualizaciones": 981,
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-053",
@@ -109,7 +109,7 @@
        "porcentaje_visto": 69.2,
        "me_gusta": 0,
        "visualizaciones": 19,
-       "leido": "2026-11-08"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-056",
@@ -119,7 +119,7 @@
        "porcentaje_visto": 33.7,
        "me_gusta": 0,
        "visualizaciones": 14,
-       "leido": "2026-11-08"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-058",
@@ -129,7 +129,7 @@
        "porcentaje_visto": 91.7,
        "me_gusta": 0,
        "visualizaciones": 10,
-       "leido": "2026-11-08"
+       "leido": "2026-11-09"
       }
      ]
     },
@@ -150,7 +150,7 @@
        "porcentaje_visto": 48.2,
        "me_gusta": 9,
        "visualizaciones": 942,
-       "leido": "2026-11-03"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-039",
@@ -160,7 +160,7 @@
        "porcentaje_visto": 81.0,
        "me_gusta": 1,
        "visualizaciones": 22,
-       "leido": "2026-11-03"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-042",
@@ -170,7 +170,7 @@
        "porcentaje_visto": 41.5,
        "me_gusta": 0,
        "visualizaciones": 16,
-       "leido": "2026-11-03"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-046",
@@ -180,7 +180,7 @@
        "porcentaje_visto": 108.2,
        "me_gusta": 1,
        "visualizaciones": 4,
-       "leido": "2026-11-03"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-048",
@@ -190,7 +190,7 @@
        "porcentaje_visto": 96.5,
        "me_gusta": 0,
        "visualizaciones": 6,
-       "leido": "2026-11-03"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-051",
@@ -199,8 +199,8 @@
        "vistas_48h": 32,
        "porcentaje_visto": 74.0,
        "me_gusta": 1,
-       "visualizaciones": 33,
-       "leido": "2026-11-03"
+       "visualizaciones": 34,
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-055",
@@ -209,8 +209,8 @@
        "vistas_48h": 695,
        "porcentaje_visto": 36.2,
        "me_gusta": 6,
-       "visualizaciones": 703,
-       "leido": "2026-11-08"
+       "visualizaciones": 704,
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-059",
@@ -220,7 +220,7 @@
        "porcentaje_visto": 96.7,
        "me_gusta": 0,
        "visualizaciones": 4,
-       "leido": "2026-11-08"
+       "leido": "2026-11-09"
       }
      ]
     },
@@ -228,7 +228,7 @@
      "nombre": "Arranque con el dato",
      "n": 8,
      "se_quedaron_media": 37.6,
-     "porcentaje_visto_media": 119.6,
+     "porcentaje_visto_media": 119.3,
      "vistas_48h_mediana": 28.5,
      "me_gusta_por_100": 1.51,
      "ceros_de_feed": 1,
@@ -241,7 +241,7 @@
        "porcentaje_visto": 36.7,
        "me_gusta": 6,
        "visualizaciones": 396,
-       "leido": "2026-11-03"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-040",
@@ -251,7 +251,7 @@
        "porcentaje_visto": 186.9,
        "me_gusta": 0,
        "visualizaciones": 10,
-       "leido": "2026-11-03"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-043",
@@ -261,17 +261,17 @@
        "porcentaje_visto": 489.0,
        "me_gusta": 0,
        "visualizaciones": 29,
-       "leido": "2026-11-03"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-045",
        "publicado": "2026-10-21",
        "se_quedaron_pct": 80.0,
        "vistas_48h": 10,
-       "porcentaje_visto": 23.6,
+       "porcentaje_visto": 21.3,
        "me_gusta": 0,
-       "visualizaciones": 16,
-       "leido": "2026-11-03"
+       "visualizaciones": 17,
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-049",
@@ -281,7 +281,7 @@
        "porcentaje_visto": 61.4,
        "me_gusta": 0,
        "visualizaciones": 70,
-       "leido": "2026-11-03"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-052",
@@ -291,7 +291,7 @@
        "porcentaje_visto": 65.5,
        "me_gusta": 0,
        "visualizaciones": 11,
-       "leido": "2026-11-03"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-054",
@@ -301,7 +301,7 @@
        "porcentaje_visto": 46.5,
        "me_gusta": 0,
        "visualizaciones": 32,
-       "leido": "2026-11-08"
+       "leido": "2026-11-09"
       },
       {
        "id": "MDS-057",
@@ -311,7 +311,7 @@
        "porcentaje_visto": 47.1,
        "me_gusta": 9,
        "visualizaciones": 429,
-       "leido": "2026-11-08"
+       "leido": "2026-11-09"
       }
      ]
     }
@@ -342,7 +342,7 @@
     "se_quedaron_media": 32.9,
     "porcentaje_visto_media": 67.8,
     "vistas_48h_mediana": 23.0,
-    "me_gusta_por_100": 1.24,
+    "me_gusta_por_100": 1.23,
     "ceros_de_feed": 3,
     "ids": [
      "MDS-046",
@@ -385,21 +385,21 @@
     "D": {
      "nombre": "B corto: una escena menos",
      "n": 1,
-     "se_quedaron_media": 50.0,
+     "se_quedaron_media": 25.9,
      "porcentaje_visto_media": 64.5,
-     "vistas_48h_mediana": 14,
+     "vistas_48h_mediana": 27,
      "me_gusta_por_100": 0.0,
      "ceros_de_feed": 0,
      "shorts": [
       {
        "id": "MDS-060",
        "publicado": "2026-11-05",
-       "se_quedaron_pct": 50.0,
-       "vistas_48h": 14,
+       "se_quedaron_pct": 25.9,
+       "vistas_48h": 27,
        "porcentaje_visto": 64.5,
        "me_gusta": 0,
-       "visualizaciones": 14,
-       "leido": "2026-11-08"
+       "visualizaciones": 27,
+       "leido": "2026-11-09"
       }
      ]
     },
@@ -447,9 +447,9 @@
      },
      "no": {
       "n": 1,
-      "se_quedaron_media": 50.0,
+      "se_quedaron_media": 25.9,
       "porcentaje_visto_media": 64.5,
-      "vistas_48h_mediana": 14,
+      "vistas_48h_mediana": 27,
       "me_gusta_por_100": 0.0,
       "ceros_de_feed": 0
      },
@@ -461,9 +461,9 @@
      "que": "Una escena menos (cinco), 45 s como mucho (H-duracion)",
      "si": {
       "n": 1,
-      "se_quedaron_media": 50.0,
+      "se_quedaron_media": 25.9,
       "porcentaje_visto_media": 64.5,
-      "vistas_48h_mediana": 14,
+      "vistas_48h_mediana": 27,
       "me_gusta_por_100": 0.0,
       "ceros_de_feed": 0
      },
