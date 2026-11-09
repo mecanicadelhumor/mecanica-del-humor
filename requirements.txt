@@ -17,7 +17,10 @@ google-auth-oauthlib
 # producciones que siguen en edge-tts. Falta además, y eso NO se arregla
 # aquí, que producir.yml exponga el secreto GEMINI_API_KEY al paso de voz.py
 # (fichero de workflows, protegido: lo añade el codirector antes del 14/09).
-google-genai
+# 09/11/2026 (dirección): con tope. La 3.0.0 (06/11) cambió la versión de la API por defecto a v1
+# y dejó el canal sin voz del 07 al 09/11 (404 en todos los modelos TTS). voz.py ya fija v1beta;
+# el tope es la segunda red, como el de edge-tts. Subirlo solo tras una «Prueba de voces» con la 3.x.
+google-genai>=2.34,<3
 
 # C50 (visual.py, caras() — detección de caras con Haar de OpenCV, 23/09/2026).
 # «headless»: corre en GitHub Actions, sin entorno gráfico; la variante normal

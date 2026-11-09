@@ -134,15 +134,21 @@ TONO = "+0Hz"
 # escenas que cambiaron. La caché es SOLO de Gemini: edge-tts no tiene cuota
 # que ahorrar y cachearlo perdería las marcas de palabra que sí necesita.
 CACHE_VOZ_DIR = Path(__file__).resolve().parent.parent / "cache_voz"
-# 08/11/2026 · INCIDENCIA: Google ya devuelve 404 («model not found») para gemini-3.1-flash-tts-preview
-# y gemini-2.5-flash-preview-tts (producciones del 07/11 y 08/11 sin voz, ni un vídeo). Antes del
-# 17/11 anunciado. Se sube la escalera a los 3.8 (el flash ya salió bien en «Prueba de voces» del
-# 05/11; el lite es el segundo escalón, con cuota propia). Sin cambiar nada más.
-MODELO_GEMINI = "gemini-3.8-flash-tts"
+# 09/11/2026 · INCIDENCIA del 07-09/11 (dirección): los 404 «model not found» NO eran Google retirando
+# modelos. El 06/11 02:29 UTC salió google-genai 3.0.0, y desde esa versión `interactions.create`
+# llama a /v1/interactions en vez de /v1beta/interactions (medido en el contenedor con un transporte
+# simulado: 2.34.0 → v1beta, 3.0.0 → v1). Los modelos TTS son «preview» y solo existen en v1beta,
+# así que en v1 TODOS dan 404: el 3.1, el 2.5 y también los 3.8 que el 08/11 se pusieron aquí.
+# «Prueba de voces» del 05/11 funcionó porque instaló la 2.34.0. Arreglo: la versión de la API va
+# fija en el cliente (`API_GEMINI`) y requirements.txt pide google-genai <3. Y se vuelve a los
+# modelos de antes del 08/11, que es lo que pidió el codirector el 09/11 («seguir con el modelo que
+# caduca el 17 hasta que nos obliguen»): la voz que se publica no cambia.
+API_GEMINI = "v1beta"
+MODELO_GEMINI = "gemini-3.1-flash-tts-preview"
 # El episodio largo usa OTRO modelo, con cuota diaria propia, para no comerse la
 # de los cinco Shorts de la semana. Tiene que ser exactamente el mismo literal
 # que usa voz_precache.py o el precacheo de toda la semana no se encuentra.
-MODELO_GEMINI_LARGO = "gemini-3.8-flash-lite-tts"
+MODELO_GEMINI_LARGO = "gemini-2.5-flash-preview-tts"
 VOZ_GEMINI_NARRADOR = "Charon"    # grave, tranquila. El que explica.
 VOZ_GEMINI_ESCEPTICO = "Puck"     # más alta y viva. El que interrumpe.
 RITMO_GEMINI_HZ = 24000           # Hz que devuelve la API
@@ -566,7 +572,8 @@ def _gemini_cliente(httpx_client=None):
         raise RuntimeError("Falta GEMINI_API_KEY en el entorno.")
     from google import genai
     from google.genai import types
-    opciones = {"retry_options": types.HttpRetryOptions(attempts=0, http_status_codes=[599])}
+    opciones = {"api_version": API_GEMINI,   # 09/11/2026: sin esto, google-genai 3.x va a v1 y da 404
+                "retry_options": types.HttpRetryOptions(attempts=0, http_status_codes=[599])}
     if httpx_client is not None:
         opciones["httpx_client"] = httpx_client
     return genai.Client(http_options=types.HttpOptions(**opciones))

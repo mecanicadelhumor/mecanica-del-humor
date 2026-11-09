@@ -95,7 +95,9 @@ def cliente():
     # sin respuesta y el workflow la canceló sin dejar nada. Cuatro minutos por
     # llamada sobran (una toma de un Short tarda menos de uno) y, si se pasa, el
     # error dice qué modelo no contestó en vez de perder la ejecución entera.
-    return genai.Client(http_options=types.HttpOptions(timeout=240_000))
+    # 09/11/2026: la versión de la API, fija. google-genai 3.0.0 (06/11) cambió el valor por defecto a
+    # «v1», donde los modelos TTS (preview) no existen: 404 «model not found» con todos.
+    return genai.Client(http_options=types.HttpOptions(api_version="v1beta", timeout=240_000))
 
 
 def _solo_pcm(datos):
