@@ -129826,6 +129826,48 @@
   },
   {
    "leido": "2026-11-09",
+   "id": "MDS-001.es",
+   "video_id": "GxnBQcR85KE",
+   "titulo": "¿Por qué te has reído de esto? El chiste, desmontado en cuarenta segundos",
+   "formato": "corto",
+   "serie": "",
+   "publicado": "2026-08-24",
+   "privacidad": "public",
+   "dias_publicado": 77,
+   "duracion_s": 43.0,
+   "visualizaciones": 8,
+   "duracion_media_s": 0.0,
+   "porcentaje_visto": 0.0,
+   "minutos_vistos": 0.0,
+   "suscriptores": 0,
+   "me_gusta": 1,
+   "comentarios": 0,
+   "compartidos": 0,
+   "retencion": {
+    "puntos": 0
+   },
+   "trafico_pct": {
+    "SHORTS": 75.0,
+    "YT_CHANNEL": 12.5,
+    "YT_SEARCH": 12.5,
+    "NO_LINK_OTHER": 0.0
+   },
+   "vistas_48h": 6,
+   "se_quedaron_48h": {
+    "vistas": 6,
+    "comprometidas": 0,
+    "pct": 0.0
+   },
+   "se_quedaron_total": {
+    "vistas": 8,
+    "comprometidas": 0,
+    "pct": 0.0
+   },
+   "impresiones": null,
+   "ctr": null
+  },
+  {
+   "leido": "2026-11-09",
    "id": "MDH-001.es",
    "video_id": "nmADYAksYoo",
    "titulo": "Nadie nace gracioso — lo que 50 años de investigación han medido de verdad",
@@ -131243,9 +131285,7 @@
     "pct": 50.0
    },
    "se_quedaron_total": {
-    "vistas": 9,
-    "comprometidas": 4,
-    "pct": 44.4
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-05&endDate=2026-11-08&metrics=views%2CengagedViews&filters=video%3D%3D5mFwVWLIOzo&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "impresiones": null,
    "ctr": null
@@ -131317,7 +131357,7 @@
     "SUBSCRIBER": 83.3,
     "YT_SEARCH": 16.7
    },
-   "vistas_48h": 3,
+   "vistas_48h": null,
    "se_quedaron_48h": {
     "vistas": 3,
     "comprometidas": 1,
@@ -131327,48 +131367,6 @@
     "vistas": 6,
     "comprometidas": 1,
     "pct": 16.7
-   },
-   "impresiones": null,
-   "ctr": null
-  },
-  {
-   "leido": "2026-11-09",
-   "id": "MDS-001.es",
-   "video_id": "GxnBQcR85KE",
-   "titulo": "¿Por qué te has reído de esto? El chiste, desmontado en cuarenta segundos",
-   "formato": "corto",
-   "serie": "",
-   "publicado": "2026-08-24",
-   "privacidad": "public",
-   "dias_publicado": 77,
-   "duracion_s": 43.0,
-   "visualizaciones": 8,
-   "duracion_media_s": 0.0,
-   "porcentaje_visto": 0.0,
-   "minutos_vistos": 0.0,
-   "suscriptores": 0,
-   "me_gusta": 1,
-   "comentarios": 0,
-   "compartidos": 0,
-   "retencion": {
-    "puntos": 0
-   },
-   "trafico_pct": {
-    "SHORTS": 75.0,
-    "YT_CHANNEL": 12.5,
-    "YT_SEARCH": 12.5,
-    "NO_LINK_OTHER": 0.0
-   },
-   "vistas_48h": 6,
-   "se_quedaron_48h": {
-    "vistas": 6,
-    "comprometidas": 0,
-    "pct": 0.0
-   },
-   "se_quedaron_total": {
-    "vistas": 8,
-    "comprometidas": 0,
-    "pct": 0.0
    },
    "impresiones": null,
    "ctr": null
@@ -131438,11 +131436,7 @@
     "puntos": 0
    },
    "trafico_pct": {
-    "YT_SEARCH": 50.0,
-    "SHORTS": 18.8,
-    "NO_LINK_OTHER": 12.5,
-    "NOTIFICATION": 12.5,
-    "YT_CHANNEL": 6.2
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-08-26&endDate=2026-11-08&metrics=views&di"
    },
    "vistas_48h": 10,
    "se_quedaron_48h": {
@@ -131927,9 +131921,7 @@
     "puntos": 0
    },
    "trafico_pct": {
-    "SHORTS": 83.3,
-    "NO_LINK_OTHER": 8.3,
-    "YT_CHANNEL": 8.3
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-08-28&endDate=2026-11-08&metrics=views&di"
    },
    "vistas_48h": 11,
    "se_quedaron_48h": {
@@ -132420,9 +132412,7 @@
    },
    "vistas_48h": 35,
    "se_quedaron_48h": {
-    "vistas": 35,
-    "comprometidas": 8,
-    "pct": 22.9
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-01&endDate=2026-09-02&metrics=views%2CengagedViews&filters=video%3D%3Dxi5Xs0dibMM&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "se_quedaron_total": {
     "vistas": 47,
@@ -134978,7 +134968,7 @@
     "SUBSCRIBER": 4.9,
     "YT_SEARCH": 4.9
    },
-   "vistas_48h": 37,
+   "vistas_48h": null,
    "se_quedaron_48h": {
     "vistas": 37,
     "comprometidas": 7,
@@ -135953,9 +135943,7 @@
    },
    "vistas_48h": 4,
    "se_quedaron_48h": {
-    "vistas": 4,
-    "comprometidas": 3,
-    "pct": 75.0
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-24&endDate=2026-09-25&metrics=views%2CengagedViews&filters=video%3D%3DN2qUpGcAy2Y&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "se_quedaron_total": {
     "vistas": 4,
@@ -136926,10 +136914,7 @@
     "puntos": 0
    },
    "trafico_pct": {
-    "YT_SEARCH": 60.0,
-    "SUBSCRIBER": 20.0,
-    "YT_OTHER_PAGE": 10.0,
-    "SHORTS": 10.0
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-30&endDate=2026-11-08&metrics=views&di"
    },
    "vistas_48h": 5,
    "se_quedaron_48h": {
@@ -140289,9 +140274,9 @@
    "privacidad": "public",
    "dias_publicado": 23,
    "duracion_s": 44.0,
-   "visualizaciones": 196,
+   "visualizaciones": 197,
    "duracion_media_s": 17.0,
-   "porcentaje_visto": 39.3,
+   "porcentaje_visto": 38.7,
    "minutos_vistos": 7.0,
    "suscriptores": 0,
    "me_gusta": 2,
@@ -140299,36 +140284,36 @@
    "compartidos": 0,
    "retencion": {
     "puntos": 100,
-    "a_30s_pct": 23.1,
-    "caida_primer_10_pct": 38.5,
+    "a_30s_pct": 21.4,
+    "caida_primer_10_pct": 35.7,
     "curva": [
      {
       "t": 0.4,
-      "ratio": 1.2308
+      "ratio": 1.2143
      },
      {
       "t": 0.9,
-      "ratio": 1.2308
+      "ratio": 1.2143
      },
      {
       "t": 1.3,
-      "ratio": 1.2308
+      "ratio": 1.2143
      },
      {
       "t": 1.8,
-      "ratio": 1.0769
+      "ratio": 1.0714
      },
      {
       "t": 2.2,
-      "ratio": 1.0769
+      "ratio": 1.0714
      },
      {
       "t": 2.6,
-      "ratio": 1.0769
+      "ratio": 1.0714
      },
      {
       "t": 3.1,
-      "ratio": 1.0769
+      "ratio": 1.0714
      },
      {
       "t": 3.5,
@@ -140344,369 +140329,369 @@
      },
      {
       "t": 4.8,
-      "ratio": 0.8462
+      "ratio": 0.8571
      },
      {
       "t": 5.3,
-      "ratio": 0.6923
+      "ratio": 0.7143
      },
      {
       "t": 5.7,
-      "ratio": 0.6154
+      "ratio": 0.6429
      },
      {
       "t": 6.2,
-      "ratio": 0.6154
+      "ratio": 0.6429
      },
      {
       "t": 6.6,
-      "ratio": 0.6154
+      "ratio": 0.6429
      },
      {
       "t": 7.0,
-      "ratio": 0.6154
+      "ratio": 0.6429
      },
      {
       "t": 7.5,
-      "ratio": 0.6154
+      "ratio": 0.6429
      },
      {
       "t": 7.9,
-      "ratio": 0.4615
+      "ratio": 0.5
      },
      {
       "t": 8.4,
-      "ratio": 0.3846
+      "ratio": 0.4286
      },
      {
       "t": 8.8,
-      "ratio": 0.3846
+      "ratio": 0.4286
      },
      {
       "t": 9.2,
-      "ratio": 0.3846
+      "ratio": 0.4286
      },
      {
       "t": 9.7,
-      "ratio": 0.3846
+      "ratio": 0.4286
      },
      {
       "t": 10.1,
-      "ratio": 0.3846
+      "ratio": 0.4286
      },
      {
       "t": 10.6,
-      "ratio": 0.3846
+      "ratio": 0.4286
      },
      {
       "t": 11.0,
-      "ratio": 0.3846
+      "ratio": 0.4286
      },
      {
       "t": 11.4,
-      "ratio": 0.3846
+      "ratio": 0.4286
      },
      {
       "t": 11.9,
-      "ratio": 0.3846
+      "ratio": 0.4286
      },
      {
       "t": 12.3,
-      "ratio": 0.3846
+      "ratio": 0.4286
      },
      {
       "t": 12.8,
-      "ratio": 0.3846
+      "ratio": 0.4286
      },
      {
       "t": 13.2,
-      "ratio": 0.3846
+      "ratio": 0.4286
      },
      {
       "t": 13.6,
-      "ratio": 0.3846
+      "ratio": 0.4286
      },
      {
       "t": 14.1,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 14.5,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 15.0,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 15.4,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 15.8,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 16.3,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 16.7,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 17.2,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 17.6,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 18.0,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 18.5,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 18.9,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 19.4,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 19.8,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 20.2,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 20.7,
-      "ratio": 0.3846
+      "ratio": 0.3571
      },
      {
       "t": 21.1,
-      "ratio": 0.3077
+      "ratio": 0.2857
      },
      {
       "t": 21.6,
-      "ratio": 0.3077
+      "ratio": 0.2857
      },
      {
       "t": 22.0,
-      "ratio": 0.3077
+      "ratio": 0.2857
      },
      {
       "t": 22.4,
-      "ratio": 0.3077
+      "ratio": 0.2857
      },
      {
       "t": 22.9,
-      "ratio": 0.3077
+      "ratio": 0.2857
      },
      {
       "t": 23.3,
-      "ratio": 0.3077
+      "ratio": 0.2857
      },
      {
       "t": 23.8,
-      "ratio": 0.3077
+      "ratio": 0.2857
      },
      {
       "t": 24.2,
-      "ratio": 0.3077
+      "ratio": 0.2857
      },
      {
       "t": 24.6,
-      "ratio": 0.3077
+      "ratio": 0.2857
      },
      {
       "t": 25.1,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 25.5,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 26.0,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 26.4,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 26.8,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 27.3,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 27.7,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 28.2,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 28.6,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 29.0,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 29.5,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 29.9,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 30.4,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 30.8,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 31.2,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 31.7,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 32.1,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 32.6,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 33.0,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 33.4,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 33.9,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 34.3,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 34.8,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 35.2,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 35.6,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 36.1,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 36.5,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 37.0,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 37.4,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 37.8,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 38.3,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 38.7,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 39.2,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 39.6,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 40.0,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 40.5,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 40.9,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 41.4,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 41.8,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 42.2,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 42.7,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 43.1,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 43.6,
-      "ratio": 0.2308
+      "ratio": 0.2143
      },
      {
       "t": 44.0,
-      "ratio": 0.2308
+      "ratio": 0.2143
      }
     ]
    },
    "trafico_pct": {
-    "SHORTS": 96.9,
-    "YT_SEARCH": 2.0,
+    "SHORTS": 96.4,
+    "YT_SEARCH": 2.5,
     "YT_CHANNEL": 1.0,
     "NO_LINK_OTHER": 0.0
    },
@@ -140717,9 +140702,9 @@
     "pct": 6.8
    },
    "se_quedaron_total": {
-    "vistas": 196,
-    "comprometidas": 13,
-    "pct": 6.6
+    "vistas": 197,
+    "comprometidas": 14,
+    "pct": 7.1
    },
    "impresiones": null,
    "ctr": null
@@ -143128,7 +143113,7 @@
    "privacidad": "public",
    "dias_publicado": 13,
    "duracion_s": 45.0,
-   "visualizaciones": 34,
+   "visualizaciones": 35,
    "duracion_media_s": 33.0,
    "porcentaje_visto": 74.0,
    "minutos_vistos": 5.0,
@@ -143544,9 +143529,9 @@
     ]
    },
    "trafico_pct": {
-    "SHORTS": 70.6,
-    "YT_SEARCH": 23.5,
-    "SUBSCRIBER": 5.9,
+    "SHORTS": 68.6,
+    "YT_SEARCH": 25.7,
+    "SUBSCRIBER": 5.7,
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 32,
@@ -143556,9 +143541,9 @@
     "pct": 31.2
    },
    "se_quedaron_total": {
-    "vistas": 34,
+    "vistas": 35,
     "comprometidas": 10,
-    "pct": 29.4
+    "pct": 28.6
    },
    "impresiones": null,
    "ctr": null
@@ -144102,7 +144087,7 @@
    "privacidad": "public",
    "dias_publicado": 9,
    "duracion_s": 41.0,
-   "visualizaciones": 704,
+   "visualizaciones": 705,
    "duracion_media_s": 14.0,
    "porcentaje_visto": 36.2,
    "minutos_vistos": 56.0,
@@ -144518,8 +144503,8 @@
     ]
    },
    "trafico_pct": {
-    "SHORTS": 92.9,
-    "YT_SEARCH": 7.0,
+    "SHORTS": 92.8,
+    "YT_SEARCH": 7.1,
     "PLAYLIST": 0.1,
     "NO_LINK_OTHER": 0.0,
     "EXT_URL": 0.0
@@ -144531,7 +144516,7 @@
     "pct": 25.5
    },
    "se_quedaron_total": {
-    "vistas": 704,
+    "vistas": 705,
     "comprometidas": 179,
     "pct": 25.4
    },
@@ -145120,7 +145105,7 @@
    "privacidad": "public",
    "dias_publicado": 4,
    "duracion_s": 38.0,
-   "visualizaciones": 27,
+   "visualizaciones": 28,
    "duracion_media_s": 24.0,
    "porcentaje_visto": 64.5,
    "minutos_vistos": 3.0,
@@ -145132,8 +145117,8 @@
     "puntos": 0
    },
    "trafico_pct": {
-    "SHORTS": 92.6,
-    "SUBSCRIBER": 7.4
+    "SHORTS": 92.9,
+    "SUBSCRIBER": 7.1
    },
    "vistas_48h": 27,
    "se_quedaron_48h": {
@@ -145142,16 +145127,16 @@
     "pct": 25.9
    },
    "se_quedaron_total": {
-    "vistas": 27,
+    "vistas": 28,
     "comprometidas": 7,
-    "pct": 25.9
+    "pct": 25.0
    },
    "impresiones": null,
    "ctr": null
   }
  ],
  "miniaturas": [],
- "actualizado_utc": "2026-11-09T19:05:11Z",
+ "actualizado_utc": "2026-11-09T21:24:34Z",
  "control_c26": {
   "mediana_vistas_48h": 27.0,
   "n_videos": 20,

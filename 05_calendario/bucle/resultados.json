@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-09T19:05:14Z",
+ "actualizado_utc": "2026-11-09T21:24:38Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -46,7 +46,7 @@
      "nombre": "Lo de ahora (C50 + C56-C59), apertura en situación",
      "n": 8,
      "se_quedaron_media": 24.6,
-     "porcentaje_visto_media": 70.8,
+     "porcentaje_visto_media": 70.7,
      "vistas_48h_mediana": 27.5,
      "me_gusta_por_100": 1.0,
      "ceros_de_feed": 0,
@@ -66,9 +66,9 @@
        "publicado": "2026-10-17",
        "se_quedaron_pct": 6.8,
        "vistas_48h": 191,
-       "porcentaje_visto": 39.3,
+       "porcentaje_visto": 38.7,
        "me_gusta": 2,
-       "visualizaciones": 196,
+       "visualizaciones": 197,
        "leido": "2026-11-09"
       },
       {
@@ -199,7 +199,7 @@
        "vistas_48h": 32,
        "porcentaje_visto": 74.0,
        "me_gusta": 1,
-       "visualizaciones": 34,
+       "visualizaciones": 35,
        "leido": "2026-11-09"
       },
       {
@@ -209,7 +209,7 @@
        "vistas_48h": 695,
        "porcentaje_visto": 36.2,
        "me_gusta": 6,
-       "visualizaciones": 704,
+       "visualizaciones": 705,
        "leido": "2026-11-09"
       },
       {
@@ -398,7 +398,7 @@
        "vistas_48h": 27,
        "porcentaje_visto": 64.5,
        "me_gusta": 0,
-       "visualizaciones": 27,
+       "visualizaciones": 28,
        "leido": "2026-11-09"
       }
      ]
