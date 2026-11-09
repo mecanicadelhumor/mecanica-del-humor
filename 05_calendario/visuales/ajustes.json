@@ -717,5 +717,21 @@
         "friends laughing looking at phone together"
       ]
     }
+  },
+  "MDS-064": {
+    "2.2": {
+      "excluir": [
+        "pexels:5791511"
+      ],
+      "fuente": "ia",
+      "prompt": "a family dinner table where everyone sits silent and awkward after a bad joke, a man at the head of the table looking sheepish, no one smiling, warm indoor light"
+    },
+    "4.1": {
+      "excluir": [
+        "pixabay:342901"
+      ],
+      "fuente": "ia",
+      "prompt": "researchers in white coats watching a volunteer through a glass window in a small lab, a laptop and headphones on the desk, neutral light, no text"
+    }
   }
 }

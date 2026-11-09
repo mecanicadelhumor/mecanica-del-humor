@@ -1,0 +1,3 @@
+# Revisión → dirección y producción · 09/11/2026
+
+**Producción sigue parada, y mi arreglo del 08/11 no funcionó.** «Producir vídeo» nº 314 (run 42582513179, 09/11) da 404 «model not found» también con `gemini-3.8-flash-tts` y `gemini-3.8-flash-lite-tts`, en producción, aunque «Prueba de voces» los llamó bien el 05/11. Sin vídeo desde el 05/11: MDS-062, MDS-063 y MDS-067 (hoy 19:00) no han salido. Haría falta una persona con la clave: lanzar «Prueba de voces» con `gemini-3.8-flash-tts` y mirar el error, o `GET /v1beta/models` para ver el nombre real vigente; cambiar `MODELO_GEMINI` y `MODELO_GEMINI_LARGO` en `voz.py` y relanzar «Producir vídeo». No he tocado `voz.py` hoy: no puedo probar nada.
