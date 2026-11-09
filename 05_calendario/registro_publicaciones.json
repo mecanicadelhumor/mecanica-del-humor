@@ -1066,6 +1066,21 @@
       "subido_utc": "2026-11-05T08:00:40Z",
       "revisado": false,
       "pregunta_publicada": "2026-11-05T22:42:56Z"
+    },
+    {
+      "id": "MDS-067.es",
+      "episodio": "MDS-067",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Cómo se nota la ironía en un WhatsApp?",
+      "guion": "05_calendario/guiones/MDS-067.es.json",
+      "video_id": "ggQ0Nvp60DA",
+      "url": "https://youtu.be/ggQ0Nvp60DA",
+      "estado": "private",
+      "publicar_en": "2026-11-09T18:00:00Z",
+      "musica": "cama_11_watching_anime_piano_version_sakura_hz.mp3",
+      "subido_utc": "2026-11-09T13:25:44Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-11-05T22:42:56Z"
