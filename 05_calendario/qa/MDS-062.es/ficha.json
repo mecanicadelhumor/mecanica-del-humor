@@ -1,15 +1,15 @@
 {
-  "id": "MDS-056.es",
-  "duracion_final_s": 41.6,
-  "tamano_mb": 31.6,
+  "id": "MDS-062.es",
+  "duracion_final_s": 39.13,
+  "tamano_mb": 19.6,
   "audio": {
-    "lufs": -14.84,
-    "pico_dbtp": -1.42,
-    "rango_lu": 4.3
+    "lufs": -14.35,
+    "pico_dbtp": -1.2,
+    "rango_lu": 3.8
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.124,
+    "acaba_s": 0.128,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,16 +17,44 @@
     "silencios_s": [
       [
         0.0,
-        0.124
+        0.128
+      ],
+      [
+        0.462,
+        0.622
+      ],
+      [
+        1.82,
+        1.985
+      ],
+      [
+        3.846,
+        4.0
       ]
     ],
-    "fragmento_antes_de_la_narracion": false,
-    "duracion_fragmento_s": null,
+    "fragmento_antes_de_la_narracion": true,
+    "duracion_fragmento_s": 0.334,
     "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente)."
   },
   "fragmentos": {
-    "instantes": [],
-    "cuantos": 0,
+    "instantes": [
+      {
+        "s": 0.128,
+        "mmss": "0:00.1",
+        "dura_s": 0.334
+      },
+      {
+        "s": 30.606,
+        "mmss": "0:30.6",
+        "dura_s": 0.107
+      },
+      {
+        "s": 37.807,
+        "mmss": "0:37.8",
+        "dura_s": 0.018
+      }
+    ],
+    "cuantos": 3,
     "_nota": "Cada entrada es un trozo de audio de menos de 0.45 s rodeado de silencio: casi seguro una sílaba suelta que el sintetizador ha metido al empezar una escena. «mmss» es el minuto exacto para ir a escucharlo. Debe estar vacío."
   },
   "subtitulos": {
@@ -42,24 +70,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 40.47,
-    "duracion_real_voz_mp3_s": 40.47,
+    "duracion_calculada_s": 38.01,
+    "duracion_real_voz_mp3_s": 38.01,
     "desfase_s": 0.0,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_14_alone_two_days_ago_artificial_music.mp3",
-    "sha256": "406c1a0a6684bb038da74a0e5cd18824ab6a4d85f8ea4f0cf668170cdf56e99e"
+    "archivo": "cama_06_prelude_no_20_chris_zabriskie.mp3",
+    "sha256": "82f9edf6eab772e453e740b5415a54b892c9ac85c58c28d8318ac9011360def1"
   },
   "guion": {
-    "titulo_trabajo": "¿Por qué hay gente que se ríe de lo que cuenta?",
+    "titulo_trabajo": "¿Por qué casi no te ríes cuando estás solo?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 40.47,
+    "duracion_narracion_s": 38.01,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 9.392,
+    "escena_mas_larga_s": 10.654,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 6
@@ -78,18 +106,18 @@
       "apertura",
       "planteamiento",
       "remate",
-      "cifra",
+      "planteamiento",
       "cifra",
       "objecion"
     ],
     "escenas_ritmo_fuera_de_rango": [],
     "voz_fiel": [
+      "12/11 palabras, 0 trozos repetidos",
       "15/15 palabras, 0 trozos repetidos",
-      "15/15 palabras, 0 trozos repetidos",
-      "9/9 palabras, 0 trozos repetidos",
-      "18/16 palabras, 0 trozos repetidos",
-      "20/20 palabras, 0 trozos repetidos",
-      "20/22 palabras, 0 trozos repetidos"
+      "10/10 palabras, 0 trozos repetidos",
+      "19/19 palabras, 0 trozos repetidos",
+      "18/18 palabras, 0 trozos repetidos",
+      "24/24 palabras, 0 trozos repetidos"
     ]
   },
   "visual": {
@@ -97,132 +125,96 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 6.73,
+        "hasta_s": 4.13,
+        "fuente": "ia",
+        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+        "prompt": "a group of friends bursting out laughing together around a kitchen table at night, warm light, candid",
+        "tipo": "imagen"
+      },
+      {
+        "escena": 2,
+        "desde_s": 4.13,
+        "hasta_s": 7.27,
         "fuente": "pexels",
-        "id": 5962051,
-        "pagina": "https://www.pexels.com/video/a-senior-man-sitting-at-a-table-feeding-a-dog-5962051/",
-        "autor": "cottonbro studio",
-        "autor_url": "https://www.pexels.com/@cottonbro",
+        "id": 6574525,
+        "pagina": "https://www.pexels.com/video/woman-watching-tv-inside-the-house-6574525/",
+        "autor": "Andres  Ayrton",
+        "autor_url": "https://www.pexels.com/@andres-ayrton",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 6.73,
-        "hasta_s": 9.27,
+        "desde_s": 7.27,
+        "hasta_s": 10.07,
         "fuente": "pexels",
-        "id": 36467681,
-        "pagina": "https://www.pexels.com/video/people-waiting-at-bus-stop-in-urban-setting-36467681/",
-        "autor": "Marc Barcelona",
-        "autor_url": "https://www.pexels.com/@marc-barcelona-2573466",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 2,
-        "desde_s": 9.27,
-        "hasta_s": 12.5,
-        "fuente": "pexels",
-        "id": 35405411,
-        "pagina": "https://www.pexels.com/video/elderly-man-sitting-on-bench-outdoors-35405411/",
-        "autor": "SERKAN BOLAT",
-        "autor_url": "https://www.pexels.com/@tctclsrkn",
+        "id": 7719823,
+        "pagina": "https://www.pexels.com/video/couple-laughing-while-watching-movie-7719823/",
+        "autor": "Mikhail Nilov",
+        "autor_url": "https://www.pexels.com/@mikhail-nilov",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 3,
-        "desde_s": 12.5,
-        "hasta_s": 16.57,
-        "fuente": "ia",
-        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "a whole family laughing together around a lunch table",
-        "tipo": "imagen"
-      },
-      {
-        "escena": 4,
-        "desde_s": 16.57,
-        "hasta_s": 17.63,
+        "desde_s": 10.07,
+        "hasta_s": 13.83,
         "fuente": "pexels",
-        "id": 13326103,
-        "pagina": "https://www.pexels.com/video/two-men-sitting-on-a-park-bench-talking-and-laughing-13326103/",
-        "autor": "Mizuno K",
-        "autor_url": "https://www.pexels.com/@mizunokozuki",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 4,
-        "desde_s": 17.63,
-        "hasta_s": 24.17,
-        "fuente": "pexels",
-        "id": 5897636,
-        "pagina": "https://www.pexels.com/video/close-up-view-of-child-writing-on-notebook-5897636/",
-        "autor": "Katerina Holmes",
-        "autor_url": "https://www.pexels.com/@katerina-holmes",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 5,
-        "desde_s": 24.17,
-        "hasta_s": 27.7,
-        "fuente": "pexels",
-        "id": 13326098,
-        "pagina": "https://www.pexels.com/video/a-happy-couple-talking-and-laughing-13326098/",
-        "autor": "Mizuno K",
-        "autor_url": "https://www.pexels.com/@mizunokozuki",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 5,
-        "desde_s": 27.7,
-        "hasta_s": 31.1,
-        "fuente": "pexels",
-        "id": 7534407,
-        "pagina": "https://www.pexels.com/video/woman-talking-to-friend-7534407/",
-        "autor": "MART  PRODUCTION",
-        "autor_url": "https://www.pexels.com/@mart-production",
+        "id": 7233645,
+        "pagina": "https://www.pexels.com/video/couple-watching-movie-at-the-cinema-7233645/",
+        "autor": "Pavel Danilyuk",
+        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 6,
-        "desde_s": 31.1,
-        "hasta_s": 35.7,
+        "desde_s": 27.37,
+        "hasta_s": 32.4,
         "fuente": "pexels",
-        "id": 3198219,
-        "pagina": "https://www.pexels.com/video/a-man-slicing-a-roasted-turkey-served-in-a-family-dinner-3198219/",
+        "id": 8057934,
+        "pagina": "https://www.pexels.com/video/sad-woman-sitting-on-the-sofa-8057934/",
+        "autor": "Pavel Danilyuk",
+        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 6,
+        "desde_s": 32.4,
+        "hasta_s": 36.53,
+        "fuente": "pexels",
+        "id": 7612013,
+        "pagina": "https://www.pexels.com/video/man-writing-down-on-a-notebook-using-a-fountain-pen-7612013/",
         "autor": "cottonbro studio",
         "autor_url": "https://www.pexels.com/@cottonbro",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 6,
-        "desde_s": 35.7,
-        "hasta_s": 39.0,
-        "fuente": "pexels",
-        "id": 12879703,
-        "pagina": "https://www.pexels.com/video/group-of-teenagers-walking-on-a-street-and-talking-12879703/",
-        "autor": "Mizuno K",
-        "autor_url": "https://www.pexels.com/@mizunokozuki",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       }
     ],
     "sintetico": true
   },
-  "animacion": null,
+  "animacion": {
+    "escenas_animadas": 2,
+    "escenas": [
+      4,
+      5
+    ],
+    "pedidas": [
+      4,
+      5
+    ],
+    "descartadas": {},
+    "pagina": "05_calendario/animaciones/MDS-062/animacion.html"
+  },
   "fotogramas_s": [
-    4.13,
-    10.29,
-    15.04,
-    21.22,
-    28.41,
-    36.81
+    2.59,
+    7.8,
+    12.43,
+    17.83,
+    24.64,
+    33.84
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }

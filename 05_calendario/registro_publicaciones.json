@@ -1068,6 +1068,21 @@
       "pregunta_publicada": "2026-11-05T22:42:56Z"
     },
     {
+      "id": "MDS-062.es",
+      "episodio": "MDS-062",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué casi no te ríes cuando estás solo?",
+      "guion": "05_calendario/guiones/MDS-062.es.json",
+      "video_id": "p1l8PNoFG5A",
+      "url": "https://youtu.be/p1l8PNoFG5A",
+      "estado": "private",
+      "publicar_en": "2026-11-10T18:00:00Z",
+      "musica": "cama_06_prelude_no_20_chris_zabriskie.mp3",
+      "subido_utc": "2026-11-10T08:29:23Z",
+      "revisado": false
+    },
+    {
       "id": "MDS-067.es",
       "episodio": "MDS-067",
       "idioma": "es",
