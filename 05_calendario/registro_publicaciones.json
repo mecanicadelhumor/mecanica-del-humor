@@ -1084,6 +1084,21 @@
       "pregunta_publicada": "2026-11-10T22:25:57Z"
     },
     {
+      "id": "MDS-064.es",
+      "episodio": "MDS-064",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué un chiste malo hace gracia si alguien se ríe?",
+      "guion": "05_calendario/guiones/MDS-064.es.json",
+      "video_id": "VA3dezB4t8c",
+      "url": "https://youtu.be/VA3dezB4t8c",
+      "estado": "private",
+      "publicar_en": "2026-11-11T18:00:00Z",
+      "musica": "cama_08_divider_chris_zabriskie.mp3",
+      "subido_utc": "2026-11-11T07:51:07Z",
+      "revisado": false
+    },
+    {
       "id": "MDS-067.es",
       "episodio": "MDS-067",
       "idioma": "es",
