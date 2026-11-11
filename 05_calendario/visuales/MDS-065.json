@@ -1,8 +1,8 @@
 {
   "guion": "MDS-065",
   "version": 2,
-  "firma": "ed39e0cf1c452175",
-  "resuelto_utc": "2026-11-05T22:54:38Z",
+  "firma": "a2bcb10b825550de",
+  "resuelto_utc": "2026-11-11T10:32:09Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
