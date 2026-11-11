@@ -733,5 +733,10 @@
       "fuente": "ia",
       "prompt": "researchers in white coats watching a volunteer through a glass window in a small lab, a laptop and headphones on the desk, neutral light, no text"
     }
+  },
+  "MDS-065": {
+    "4": {
+      "texto_pos": "abajo"
+    }
   }
 }
