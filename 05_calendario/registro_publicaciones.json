@@ -1092,11 +1092,12 @@
       "guion": "05_calendario/guiones/MDS-064.es.json",
       "video_id": "VA3dezB4t8c",
       "url": "https://youtu.be/VA3dezB4t8c",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-11-11T18:00:00Z",
       "musica": "cama_08_divider_chris_zabriskie.mp3",
       "subido_utc": "2026-11-11T07:51:07Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-11-11T23:30:13Z"
     },
     {
       "id": "MDS-067.es",
@@ -1115,5 +1116,5 @@
       "pregunta_publicada": "2026-11-09T19:12:49Z"
     }
   ],
-  "_estado_leido_utc": "2026-11-10T22:25:57Z"
+  "_estado_leido_utc": "2026-11-11T23:30:13Z"
 }
