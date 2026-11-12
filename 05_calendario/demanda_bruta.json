@@ -1,5 +1,5 @@
 {
- "generado_utc": "2026-11-05T20:10:38Z",
+ "generado_utc": "2026-11-12T20:14:25Z",
  "_nota": "Medición en bruto. NO decide nada: no sabe si la bibliografía respalda una pregunta ni si el enfoque es aceptable. Eso lo juzga la tarea de planificación de los jueves, que escribe 05_calendario/demanda.json a partir de este fichero.",
  "autocompletar": {
   "cómo ser gracioso": [
@@ -129,7 +129,6 @@
    "el sentido del humor turno",
    "el sentido gusto",
    "que es el sentido del humor",
-   "sentido del humor",
    "sentido del humor atletas de la risa",
    "sentido del humor cano",
    "sentido del humor carlita",
@@ -152,6 +151,7 @@
    "sentido del humor la wilo",
    "sentido del humor lucho jara",
    "sentido del humor mundial",
+   "sentido del humor niño poeta",
    "sentido del humor paloma salas",
    "sentido del humor pancho melo",
    "sentido del humor pastor rocha",
@@ -171,6 +171,7 @@
    "cancion para hacer reir bebes",
    "como hacer reir a la niña de pokemon esmeralda",
    "como hacer reir a tu novia",
+   "como hacer reir a tu pareja",
    "como hacer reir a una mujer",
    "como hacer reir ala gente",
    "como hacer reir aun bebe",
@@ -198,7 +199,6 @@
    "hacer reir a pasty",
    "hacer reir a peluca",
    "hacer reir a rickyedit",
-   "hacer reir a ruben tuesta",
    "hacer reir a un guardia real",
    "hacer reir a una chica",
    "hacer reir a una mujer",
@@ -253,8 +253,8 @@
   ],
   "humor negro": [
    "humor negro",
-   "humor negro 1",
    "humor negro alanecuatro",
+   "humor negro colombiano",
    "humor negro jordi",
    "humor negro kekudoo",
    "humor negro monologo",
@@ -310,7 +310,6 @@
    "conversación interesante con una mujer"
   ],
   "risa nerviosa": [
-   "claudia sheinbaum risa nerviosa",
    "esa risa nerviosa shakira",
    "risa nerviosa",
    "risa nerviosa de una mujer",
@@ -321,357 +320,161 @@
   ]
  },
  "youtube": {
-  "los gorilas tienen cosquillas": {
-   "vistas_top10": 1598605515,
-   "mediana_vistas": 3695,
-   "resultados": 10,
-   "top5_publicados": [
-    "2013-09-18",
-    "2025-04-09",
-    "2026-02-16",
-    "2025-03-26",
-    "2024-04-30"
-   ],
-   "top5": [
-    {
-     "titulo": "CantaJuego - El Baile del Gorila",
-     "canal": "CantaJuegoVEVO",
-     "publicado": "2013-09-18",
-     "vistas": 1570004149,
-     "duracion": "PT3M12S"
-    },
-    {
-     "titulo": "❗🐒 El nuevo vídeo viral que muestra la 'persecución' de un mono de Gibraltar a una joven.",
-     "canal": "Área Campo de Gibraltar",
-     "publicado": "2025-04-09",
-     "vistas": 25469764,
-     "duracion": "PT8S"
-    },
-    {
-     "titulo": "🐵💃🏻 CantaJuego 🎵 Baile del Gorila 🙉 PLAYLIST 31 MIN 🥁 Música y Canciones infantiles",
-     "canal": "CantaJuegoVEVO",
-     "publicado": "2026-02-16",
-     "vistas": 3108504,
-     "duracion": "PT31M10S"
-    },
-    {
-     "titulo": "😂 ¡Gorilas que se ríen con cosquillas! 🦍",
-     "canal": "randomshort",
-     "publicado": "2025-03-26",
-     "vistas": 17436,
-     "duracion": "PT10S"
-    },
-    {
-     "titulo": "Mamá gorila le hace cosquillas a su hijo | Telemundo 39",
-     "canal": "Telemundo 39",
-     "publicado": "2024-04-30",
-     "vistas": 3695,
-     "duracion": "PT15S"
-    }
-   ]
-  },
-  "reirse adelgaza": {
-   "vistas_top10": 4512455,
-   "mediana_vistas": 16695,
-   "resultados": 10,
-   "top5_publicados": [
-    "2017-04-17",
-    "2024-08-13",
-    "2020-06-24",
-    "2016-10-27",
-    "2026-08-10"
-   ],
-   "top5": [
-    {
-     "titulo": "Episodio #1158 Técnicas Avanzadas Para Bajar De Peso con Frank Suarez",
-     "canal": "MetabolismoTV",
-     "publicado": "2017-04-17",
-     "vistas": 4322953,
-     "duracion": "PT10M19S"
-    },
-    {
-     "titulo": "6 pasos para adelgazar sin esfuerzo.",
-     "canal": "Frank Suárez",
-     "publicado": "2024-08-13",
-     "vistas": 73842,
-     "duracion": "PT47S"
-    },
-    {
-     "titulo": "Episodio #1962 La Cura De Ejercicio Y Risa",
-     "canal": "MetabolismoTV",
-     "publicado": "2020-06-24",
-     "vistas": 49803,
-     "duracion": "PT7M9S"
-    },
-    {
-     "titulo": "Episodio #1070 La risa te adelgaza",
-     "canal": "MetabolismoTV",
-     "publicado": "2016-10-27",
-     "vistas": 28293,
-     "duracion": "PT5M23S"
-    },
-    {
-     "titulo": "Cuando una persona se ríe, adelgaza mas, la mari #reirse #risacontagiosa #risas #adelgazar #lamari",
-     "canal": "Facundo Conex Digital",
-     "publicado": "2026-08-10",
-     "vistas": 16695,
-     "duracion": "PT16S"
-    }
-   ]
-  },
-  "queda mal poner emojis en un correo de trabajo": {
-   "vistas_top10": 165042705,
-   "mediana_vistas": 11025971,
-   "resultados": 10,
-   "top5_publicados": [
-    "2023-10-18",
-    "2023-10-06",
-    "2023-02-14",
-    "2023-12-03",
-    "2021-12-15"
-   ],
-   "top5": [
-    {
-     "titulo": "las coreos de mis amigas",
-     "canal": "Natupuboldi",
-     "publicado": "2023-10-18",
-     "vistas": 56103597,
-     "duracion": "PT36S"
-    },
-    {
-     "titulo": "Adivina el falso ❤️ #arte #dibujo #art",
-     "canal": "Jesús Restrepo",
-     "publicado": "2023-10-06",
-     "vistas": 47585819,
-     "duracion": "PT16S"
-    },
-    {
-     "titulo": "El Logo Perfecto de Youtube",
-     "canal": "ChuyMineVt",
-     "publicado": "2023-02-14",
-     "vistas": 25072296,
-     "duracion": "PT17S"
-    },
-    {
-     "titulo": "Ella es una fresa 🍓 #shorts",
-     "canal": "Soy Marie Oficial ",
-     "publicado": "2023-12-03",
-     "vistas": 13120986,
-     "duracion": "PT11S"
-    },
-    {
-     "titulo": "Trucos de Google #shorts",
-     "canal": "Alcala Creativo",
-     "publicado": "2021-12-15",
-     "vistas": 11025971,
-     "duracion": "PT19S"
-    }
-   ]
-  },
   "sonreir a la fuerza te hace feliz": {
-   "vistas_top10": 124840615,
-   "mediana_vistas": 700451,
+   "vistas_top10": 144163664,
+   "mediana_vistas": 2808216,
    "resultados": 10,
    "top5_publicados": [
     "2025-07-10",
     "2014-10-04",
-    "2026-03-28",
-    "2024-01-03",
-    "2026-05-23"
+    "2026-08-20",
+    "2024-09-09",
+    "2024-09-06"
    ],
    "top5": [
     {
      "titulo": "DY - Sonríele (Video Oficial)",
      "canal": "Daddy Yankee",
      "publicado": "2025-07-10",
-     "vistas": 106247521,
+     "vistas": 107447721,
      "duracion": "PT3M11S"
     },
     {
      "titulo": "TENGO GANAS DE SONREIR | ZARCORT Y TOWN",
      "canal": "ZarcortGame",
      "publicado": "2014-10-04",
-     "vistas": 14846323,
+     "vistas": 14850077,
      "duracion": "PT2M46S"
     },
     {
-     "titulo": "¿Y SI HOY ELIJO SONREIR?",
-     "canal": "Vibra Eterna - Topic",
-     "publicado": "2026-03-28",
-     "vistas": 1545157,
-     "duracion": "PT1M45S"
+     "titulo": "Myke Towers - CARITA FELIZ (Official Music Video)",
+     "canal": "Myke Towers",
+     "publicado": "2026-08-20",
+     "vistas": 11138768,
+     "duracion": "PT4M33S"
     },
     {
-     "titulo": "TIPS para sonreír BONITO ✨",
-     "canal": "Linda Félix",
-     "publicado": "2024-01-03",
-     "vistas": 974883,
-     "duracion": "PT32S"
+     "titulo": "Las únicas tres cosas que te darán felicidad (consejos) #felicidad #crecimientopersonal #consejos",
+     "canal": "Jordi Segués | Negocios · Desarrollo Personal",
+     "publicado": "2024-09-09",
+     "vistas": 5133347,
+     "duracion": "PT56S"
     },
     {
-     "titulo": "🌞El Día me Sonríe🌞 y Hoy la Vida También se pone de mi lado",
-     "canal": "Vibra Eterna",
-     "publicado": "2026-05-23",
-     "vistas": 700451,
-     "duracion": "PT3M41S"
-    }
-   ]
-  },
-  "que pasa en el cerebro cuando te ries con amigos": {
-   "vistas_top10": 15253,
-   "mediana_vistas": 171,
-   "resultados": 10,
-   "top5_publicados": [
-    "2024-10-30",
-    "2026-10-15",
-    "2025-09-23",
-    "2026-04-05",
-    "2026-10-05"
-   ],
-   "top5": [
-    {
-     "titulo": "¿Qué pasa en tu cerebro cuando te ríes? (Curiosidad científica)",
-     "canal": "Curiosomax ",
-     "publicado": "2024-10-30",
-     "vistas": 11846,
-     "duracion": "PT24S"
-    },
-    {
-     "titulo": "¿Por qué te ríes cuando estás nervioso? 😬🧠",
-     "canal": "Más Mental",
-     "publicado": "2026-10-15",
-     "vistas": 1364,
-     "duracion": "PT31S"
-    },
-    {
-     "titulo": "👉 “¿Qué pasa en tu cerebro cuando te RÍES? 😂 | Neurociencia en corto”",
-     "canal": "hilos emocionales que sanan",
-     "publicado": "2025-09-23",
-     "vistas": 1340,
-     "duracion": "PT36S"
-    },
-    {
-     "titulo": "¿Por Qué Te Ríes Cuando No Debes? La Psicología Lo Explica",
-     "canal": "Tu Psicologia Cotidiana",
-     "publicado": "2026-04-05",
-     "vistas": 239,
-     "duracion": "PT5M15S"
-    },
-    {
-     "titulo": "¿Qué le pasa a tu cerebro cuando te ríes?",
-     "canal": "Mecánica del Humor",
-     "publicado": "2026-10-05",
-     "vistas": 171,
-     "duracion": "PT46S"
+     "titulo": "Nahuel Pennisi - Tu Sonrisa (Official Video)",
+     "canal": "NAHUELPENNISIVEVO",
+     "publicado": "2024-09-06",
+     "vistas": 2808216,
+     "duracion": "PT3M40S"
     }
    ]
   },
   "las ratas tienen cosquillas": {
-   "vistas_top10": 6158710,
-   "mediana_vistas": 16406,
+   "vistas_top10": 6154761,
+   "mediana_vistas": 3095,
    "resultados": 10,
    "top5_publicados": [
     "2016-11-21",
     "2024-12-18",
     "2016-11-09",
     "2025-10-08",
-    "2025-06-12"
+    "2025-03-26"
    ],
    "top5": [
     {
      "titulo": "Eavesdrop on Ultrasonic Rat Giggles",
      "canal": "Scientific American",
      "publicado": "2016-11-21",
-     "vistas": 5729567,
+     "vistas": 5741389,
      "duracion": "PT1M37S"
     },
     {
      "titulo": "¿Las Ratas Tienen Miedo de que les Hagan Cosquillas?",
      "canal": "Conoce a Arnold",
      "publicado": "2024-12-18",
-     "vistas": 288664,
+     "vistas": 288725,
      "duracion": "PT50S"
     },
     {
      "titulo": "Risa por cosquillas en una rata",
      "canal": "Pedro Paredes Ramos",
      "publicado": "2016-11-09",
-     "vistas": 84166,
+     "vistas": 84308,
      "duracion": "PT1M6S"
     },
     {
      "titulo": "Las ratas pueden reírse cuando se les hace cosquillas!",
      "canal": "IMAGINA ESTO",
      "publicado": "2025-10-08",
-     "vistas": 34519,
+     "vistas": 34596,
      "duracion": "PT30S"
     },
     {
-     "titulo": "Las ratas tambien tienen cosquillas #animales #curiosidades #cientificos #ratas #cute #datocurioso",
-     "canal": "CuriosoTok",
-     "publicado": "2025-06-12",
-     "vistas": 16406,
-     "duracion": "PT33S"
+     "titulo": "¡Las ratas pueden reír cuando las hacen cosquillas! #datosasombrosos",
+     "canal": "Inova Explora",
+     "publicado": "2025-03-26",
+     "vistas": 3095,
+     "duracion": "PT34S"
     }
    ]
   },
   "si te ries con las cosquillas es que te gustan": {
-   "vistas_top10": 52938544,
-   "mediana_vistas": 864735,
+   "vistas_top10": 53949143,
+   "mediana_vistas": 1569457,
    "resultados": 10,
    "top5_publicados": [
     "2024-06-27",
     "2021-04-10",
     "2025-04-19",
     "2021-12-02",
-    "2026-10-24"
+    "2023-06-26"
    ],
    "top5": [
     {
      "titulo": "El que me haga reír 🥳GANA🎉 Reto con @LosMeniquesDeLaCasa y @yilued",
      "canal": "Saritah Bebé",
      "publicado": "2024-06-27",
-     "vistas": 33379311,
+     "vistas": 33461649,
      "duracion": "PT48S"
     },
     {
      "titulo": "EL QUE CUENTA EL MEJOR CHISTE GANA! *si te ríes like*",
      "canal": "Fede Vigevani",
      "publicado": "2021-04-10",
-     "vistas": 7683843,
+     "vistas": 7700962,
      "duracion": "PT15M46S"
     },
     {
      "titulo": "JAJAJAJA, LLEVO 1 HORA RIÉNDOME DE ESTO #barbie#humor#viralshorts#risas#barbiemovie#memes#series",
      "canal": "𝑬𝒍𝒔𝒊𝒕𝒂𝒈𝒂𝒎𝒆𝒓𝒀𝑻",
      "publicado": "2025-04-19",
-     "vistas": 7043421,
+     "vistas": 7054528,
      "duracion": "PT18S"
     },
     {
      "titulo": "N0 ME GUSTAN LAS COSQUILLAS XD",
      "canal": "Susy Mouriz",
      "publicado": "2021-12-02",
-     "vistas": 2924123,
+     "vistas": 2924815,
      "duracion": "PT10S"
     },
     {
-     "titulo": "“¡CHÓCALAS QUE GANAMOS!” AGUANTARON LAS COSQUILLAS PERO OLVIDARON QUE SOSTENÍAN EL AGUA 🌊😂 #humor",
-     "canal": "NiuBi666",
-     "publicado": "2026-10-24",
-     "vistas": 864735,
-     "duracion": "PT16S"
+     "titulo": "Cosquillas en la pata  I WhatsupBeanie Español Latino Práctica Doblaje",
+     "canal": "Vanjo Kitsune",
+     "publicado": "2023-06-26",
+     "vistas": 1569457,
+     "duracion": "PT10S"
     }
    ]
   },
   "las parejas que se rien juntas son mas felices": {
-   "vistas_top10": 101933966,
-   "mediana_vistas": 443031,
+   "vistas_top10": 112489848,
+   "mediana_vistas": 443652,
    "resultados": 10,
    "top5_publicados": [
     "2025-06-21",
     "2023-01-18",
-    "2025-02-12",
+    "2025-11-25",
     "2022-12-17",
     "2023-05-21"
    ],
@@ -680,630 +483,581 @@
      "titulo": "primer mes de novios vs dos años de novios 🥲🤣 #humor #comicolucky #comedia #humorlatino #comedy",
      "canal": "Nayeli y Francisco",
      "publicado": "2025-06-21",
-     "vistas": 60259123,
+     "vistas": 60276596,
      "duracion": "PT18S"
     },
     {
      "titulo": "Que Risa 😂 #shorts #youtubeshorts #humor #comedia #pareja",
      "canal": "Mariona Serra",
      "publicado": "2023-01-18",
-     "vistas": 39602999,
+     "vistas": 39612231,
      "duracion": "PT22S"
     },
     {
-     "titulo": "Un experto en el amor: Cupido, romance, cómo conquistar y más de Hassam",
-     "canal": "Sábados Felices",
-     "publicado": "2025-02-12",
-     "vistas": 1038244,
-     "duracion": "PT23M59S"
+     "titulo": "LA PUSE A PRUEBA 😬🤣 #parati #viral #parejas #humor #comedia #risas #amigos #novia #foryoupageシ",
+     "canal": "FranyerJesus",
+     "publicado": "2025-11-25",
+     "vistas": 11565647,
+     "duracion": "PT16S"
     },
     {
      "titulo": "La #pareja perfecta si existe#reflexiones",
      "canal": "Pensar En Grande",
      "publicado": "2022-12-17",
-     "vistas": 588787,
+     "vistas": 589938,
      "duracion": "PT24S"
     },
     {
      "titulo": "10 señales de qué eres una buena pareja #BuenaPareja #RelacionesSanas #CreciendoJuntos",
      "canal": "Andres Vernazza - Emprendedor Moderno",
      "publicado": "2023-05-21",
-     "vistas": 443031,
+     "vistas": 443652,
      "duracion": "PT1M1S"
     }
    ]
   },
   "la gente con sentido del humor vive mas": {
-   "vistas_top10": 68217394,
-   "mediana_vistas": 1667033,
+   "vistas_top10": 8640197,
+   "mediana_vistas": 115500,
    "resultados": 10,
    "top5_publicados": [
-    "2025-07-16",
-    "2015-10-25",
     "2023-03-27",
-    "2025-07-13",
-    "2024-07-15"
+    "2025-02-19",
+    "2024-07-15",
+    "2026-10-17",
+    "2025-03-18"
    ],
    "top5": [
-    {
-     "titulo": "NO LE GUSTAN LAS ALTURAS 😂 #HUMOR #RISA #ABUELA",
-     "canal": "66SIGILO66",
-     "publicado": "2025-07-16",
-     "vistas": 50674552,
-     "duracion": "PT8S"
-    },
-    {
-     "titulo": "Coco Legrand - Humor - Festival de la Canción de Viña del Mar 2010",
-     "canal": "FESTIVALDEVINACHILE",
-     "publicado": "2015-10-25",
-     "vistas": 8186858,
-     "duracion": "PT1H4M19S"
-    },
     {
      "titulo": "¿Qué da sentido a tu vida? | Pilar Sordo, psicóloga y escritora",
      "canal": "AprendemosJuntos",
      "publicado": "2023-03-27",
-     "vistas": 3321758,
+     "vistas": 3328433,
      "duracion": "PT1H20M43S"
     },
     {
-     "titulo": "EL DÍA que YAYO CONOCIÓ el HUMOR del BANANERO",
-     "canal": "OLGA",
-     "publicado": "2025-07-13",
-     "vistas": 2920196,
-     "duracion": "PT13M49S"
+     "titulo": "La importancia de cuidar el ánimo, nuestro principal recurso. Victor Küppers",
+     "canal": "AprendemosJuntos",
+     "publicado": "2025-02-19",
+     "vistas": 2516277,
+     "duracion": "PT20M5S"
     },
     {
      "titulo": "V. Completa. \"El humor es una cuestión de necesidad y supervivencia\". Luciano Mellera, comediante",
      "canal": "AprendemosJuntos",
      "publicado": "2024-07-15",
-     "vistas": 1667033,
+     "vistas": 1691693,
      "duracion": "PT1H14M1S"
+    },
+    {
+     "titulo": "Entre Broma y Broma | Los Atletas de La Risa",
+     "canal": "El Sentido del Humor Producciones",
+     "publicado": "2026-10-17",
+     "vistas": 902759,
+     "duracion": "PT1H7M55S"
+    },
+    {
+     "titulo": "Hábitos Para Ser Más Feliz: 3 Estrategias Científicas que Transformarán tu Bienestar Emocional",
+     "canal": "Tiene Sentido Pódcast",
+     "publicado": "2025-03-18",
+     "vistas": 115500,
+     "duracion": "PT1H16M16S"
     }
    ]
   },
   "por que te dan ganas de apretar a un cachorro": {
-   "vistas_top10": 149459,
-   "mediana_vistas": 1370,
+   "vistas_top10": 150876,
+   "mediana_vistas": 1371,
    "resultados": 10,
    "top5_publicados": [
     "2026-10-20",
     "2026-10-17",
     "2026-02-16",
     "2026-09-28",
-    "2026-06-08"
+    "2026-11-08"
    ],
    "top5": [
     {
      "titulo": "Por que fofura dá vontade de apertar 🥹🐶",
      "canal": "ZukiFunBR",
      "publicado": "2026-10-20",
-     "vistas": 137334,
+     "vistas": 137391,
      "duracion": "PT39S"
     },
     {
      "titulo": "¿Por qué te dan ganas de apretar las cosas tiernas? 🤭 #shorts",
      "canal": "Doña Carmen ",
      "publicado": "2026-10-17",
-     "vistas": 7321,
+     "vistas": 7324,
      "duracion": "PT41S"
     },
     {
      "titulo": "Por qué quieres APLASTAR lo tierno 🐈",
      "canal": "Mente Criptica",
      "publicado": "2026-02-16",
-     "vistas": 1658,
+     "vistas": 1661,
      "duracion": "PT17S"
     },
     {
      "titulo": "por qué quieres morder o apretar algo que te parece extremadamente tierno",
      "canal": "Yordano y La Gente ",
      "publicado": "2026-09-28",
-     "vistas": 1432,
+     "vistas": 1458,
      "duracion": "PT26S"
     },
     {
-     "titulo": "Cute agression e porque você quer espremer seu cachorro",
-     "canal": "Loki ExpliCat",
-     "publicado": "2026-06-08",
-     "vistas": 1370,
-     "duracion": "PT58S"
+     "titulo": "¿Por qué te dan ganas de morder o apretar lo que te da ternura?",
+     "canal": "La lupa humana",
+     "publicado": "2026-11-08",
+     "vistas": 1371,
+     "duracion": "PT56S"
     }
    ]
   },
   "por que tengo la risa floja": {
-   "vistas_top10": 117657738,
-   "mediana_vistas": 2289135,
+   "vistas_top10": 32207052,
+   "mediana_vistas": 1141653,
    "resultados": 10,
    "top5_publicados": [
-    "2025-10-10",
     "2025-09-02",
-    "2025-07-30",
     "2024-09-03",
-    "2025-10-02"
+    "2025-10-02",
+    "2023-05-12",
+    "2026-05-04"
    ],
    "top5": [
-    {
-     "titulo": "Siempre lo tiene cargado jaja 😩 #humor #mamá #telefono #bateria",
-     "canal": "Yodabeibi",
-     "publicado": "2025-10-10",
-     "vistas": 72980634,
-     "duracion": "PT16S"
-    },
     {
      "titulo": "La canción de las rimas 🥰 #humor #chiste #musica #trabalenguas #rap",
      "canal": "Fran Romguer",
      "publicado": "2025-09-02",
-     "vistas": 21722994,
+     "vistas": 21757880,
      "duracion": "PT23S"
-    },
-    {
-     "titulo": "Tenía que hacer este video JAJJAJA #humor #shorts",
-     "canal": "Anddysito ",
-     "publicado": "2025-07-30",
-     "vistas": 14759849,
-     "duracion": "PT9S"
     },
     {
      "titulo": "La importancia de una buena explicación 🤣 #shorts #comedia #humor #funny #familia #challenge #reto",
      "canal": "LA FAMILIA LATORRE",
      "publicado": "2024-09-03",
-     "vistas": 4690645,
+     "vistas": 4733766,
      "duracion": "PT16S"
     },
     {
      "titulo": "Mi hermana me Ofendió 🤣😬 #humor #comedia #risas",
      "canal": "Mia Plumones",
      "publicado": "2025-10-02",
-     "vistas": 2289135,
+     "vistas": 2305463,
      "duracion": "PT6S"
+    },
+    {
+     "titulo": "Presentadoras de Noticias Caracol tuvieron un ataque de risa al aire: \"¡No podemos!\"",
+     "canal": "Noticias Caracol",
+     "publicado": "2023-05-12",
+     "vistas": 1769720,
+     "duracion": "PT45S"
+    },
+    {
+     "titulo": "¿Bruta, impaciente o floja? #parati #humor #risas #paratiiiii #comedias",
+     "canal": "Ismael Lemais",
+     "publicado": "2026-05-04",
+     "vistas": 1141653,
+     "duracion": "PT59S"
     }
    ]
   },
   "reirse quita el dolor": {
-   "vistas_top10": 235619097,
-   "mediana_vistas": 12100140,
+   "vistas_top10": 296807971,
+   "mediana_vistas": 35467814,
    "resultados": 10,
    "top5_publicados": [
     "2022-10-31",
-    "2024-12-28",
+    "2022-11-27",
     "2025-05-27",
-    "2024-09-10",
-    "2014-11-13"
+    "2025-08-08",
+    "2025-05-18"
    ],
    "top5": [
     {
      "titulo": "Siempre se salen con la suya 😅 No pude aguantar la risa",
      "canal": "4plusone",
      "publicado": "2022-10-31",
-     "vistas": 74670572,
+     "vistas": 74737442,
      "duracion": "PT9S"
     },
     {
-     "titulo": "Mis traumas, mis chistes 🥲🤣 #shorts #humor #tiktokvideo #latina #comedia #funny #peru #fyp",
-     "canal": "Gabriela Flores Villar",
-     "publicado": "2024-12-28",
-     "vistas": 66194510,
+     "titulo": "Primero la higiene 😂🐥",
+     "canal": "Rubén Tuesta oficial",
+     "publicado": "2022-11-27",
+     "vistas": 59575068,
      "duracion": "PT36S"
     },
     {
      "titulo": "Así Inicia La Vida 🍼 Agarras Señal 🛜 | Juipink  #humor #comedia #memes #meme",
      "canal": "Juipink",
      "publicado": "2025-05-27",
-     "vistas": 51993619,
+     "vistas": 52116076,
      "duracion": "PT11S"
     },
     {
-     "titulo": "EL CHISTE DE LA VIEJITA SORDA",
-     "canal": "Padre Walter Malca ",
-     "publicado": "2024-09-10",
-     "vistas": 12886085,
-     "duracion": "PT58S"
+     "titulo": "GATITO SIN HUEVITOS",
+     "canal": "Escardi Fandubs",
+     "publicado": "2025-08-08",
+     "vistas": 45662294,
+     "duracion": "PT10S"
     },
     {
-     "titulo": "Hector Lavoe - Vamos A Reir Un Poco",
-     "canal": "Fania Records",
-     "publicado": "2014-11-13",
-     "vistas": 12100140,
-     "duracion": "PT7M48S"
+     "titulo": "Broma sale mal ☠️😱🤣 #viralshorts #bromas #shorts",
+     "canal": "Kike y su familia",
+     "publicado": "2025-05-18",
+     "vistas": 35467814,
+     "duracion": "PT17S"
     }
    ]
   },
   "por que me rio cuando estoy nervioso": {
-   "vistas_top10": 4578203,
-   "mediana_vistas": 162984,
+   "vistas_top10": 4522827,
+   "mediana_vistas": 127752,
    "resultados": 10,
    "top5_publicados": [
     "2024-06-22",
     "2024-02-21",
     "2025-05-21",
     "2023-07-26",
-    "2025-09-11"
+    "2023-01-05"
    ],
    "top5": [
     {
      "titulo": "¿CÓMO SABER SI ATRAES A ALGUIEN? | #ComportamientoHumano #comunicación #podcast",
      "canal": "Elite Podcast",
      "publicado": "2024-06-22",
-     "vistas": 2186937,
+     "vistas": 2200871,
      "duracion": "PT42S"
     },
     {
      "titulo": "¿Cómo reducir el nerviosismo y dejar la timidez de lado? I Consejos de Vida I Mario Alonso Puig",
      "canal": "Inspira Mente",
      "publicado": "2024-02-21",
-     "vistas": 898762,
+     "vistas": 900257,
      "duracion": "PT1M"
     },
     {
      "titulo": "¿Sabes que así se puede ver la ansiedad?@atida_mifarma",
      "canal": "Atida Mifarma",
      "publicado": "2025-05-21",
-     "vistas": 699966,
+     "vistas": 704479,
      "duracion": "PT8S"
     },
     {
      "titulo": "¿Por qué nos REÍMOS ante situaciones INCÓMODAS?😂😅",
      "canal": "La Hiperactina",
      "publicado": "2023-07-26",
-     "vistas": 378098,
+     "vistas": 378307,
      "duracion": "PT1M"
     },
     {
-     "titulo": "Síntomas físicos raros de la ansiedad como el hormigueo titnitus, diarrea, ganas de orinar...",
-     "canal": "Aroa Granados Psicología",
-     "publicado": "2025-09-11",
-     "vistas": 162984,
-     "duracion": "PT1M27S"
+     "titulo": "Así pones nerviosa a la persona que te gusta!",
+     "canal": "JORGE ESPINOSA",
+     "publicado": "2023-01-05",
+     "vistas": 127752,
+     "duracion": "PT26S"
     }
    ]
   },
   "por que la gente manda audios en vez de escribir": {
-   "vistas_top10": 4720218,
-   "mediana_vistas": 480051,
-   "resultados": 8,
+   "vistas_top10": 4059671,
+   "mediana_vistas": 371289,
+   "resultados": 9,
    "top5_publicados": [
-    "2023-02-18",
-    "2023-10-18",
+    "2026-01-08",
     "2022-02-22",
-    "2025-04-10",
-    "2025-11-29"
+    "2023-05-01",
+    "2025-11-29",
+    "2023-02-12"
    ],
    "top5": [
     {
-     "titulo": "Nueva Función en tu Teclado GBoard #yenianferreira #tips #hacks #telefono",
-     "canal": "Yenian Ferreira",
-     "publicado": "2023-02-18",
-     "vistas": 1274923,
-     "duracion": "PT21S"
-    },
-    {
-     "titulo": "como activar notas de video en whatsapp  #trucosdewhatsapp",
-     "canal": "tecnotips",
-     "publicado": "2023-10-18",
-     "vistas": 911807,
-     "duracion": "PT23S"
+     "titulo": "¡RECUPERA EL CHAT EN ROBLOX! 🙀 #roblox #robloxfyp #tutorial #chatroblox",
+     "canal": "Skyy",
+     "publicado": "2026-01-08",
+     "vistas": 1158993,
+     "duracion": "PT16S"
     },
     {
      "titulo": "Configurar GRUPO de WHATSAPP para que SOLO los ADMINISTRADORES envíen MENSAJES al grupo 🔔",
-     "canal": "solvetic.com",
+     "canal": "Solvetic",
      "publicado": "2022-02-22",
-     "vistas": 594839,
+     "vistas": 596815,
      "duracion": "PT54S"
     },
     {
-     "titulo": "Nuevo Ajuste en los Audios de WhatsApp #yenianferreira #hacks #trucosytips #whatsapp",
-     "canal": "Yenian Ferreira",
-     "publicado": "2025-04-10",
-     "vistas": 480051,
-     "duracion": "PT41S"
+     "titulo": "Whatsapp - Convertir audio notas de voz a texto",
+     "canal": "JuliTecno",
+     "publicado": "2023-05-01",
+     "vistas": 493929,
+     "duracion": "PT28S"
     },
     {
      "titulo": "​👆 Solución los Audios de WhatsApp NO se Escuchan",
      "canal": "Ricksmart",
      "publicado": "2025-11-29",
-     "vistas": 474168,
+     "vistas": 491840,
      "duracion": "PT35S"
+    },
+    {
+     "titulo": "Cómo activar o desactivar el Corrector ortográfico en Android 14 Pixel",
+     "canal": "Cómo",
+     "publicado": "2023-02-12",
+     "vistas": 371289,
+     "duracion": "PT26S"
     }
    ]
   },
   "por que lloramos de risa": {
-   "vistas_top10": 2691015,
-   "mediana_vistas": 1896,
+   "vistas_top10": 159117966,
+   "mediana_vistas": 152843,
    "resultados": 10,
    "top5_publicados": [
-    "2018-10-25",
-    "2017-09-18",
-    "2023-07-26",
-    "2019-03-12",
-    "2017-12-29"
+    "2009-10-25",
+    "2023-06-16",
+    "2026-11-12",
+    "2026-08-11",
+    "2026-11-12"
    ],
    "top5": [
     {
-     "titulo": "El día que LLORAMOS de risa escribiendo gilipolleces",
-     "canal": "LMDShow",
-     "publicado": "2018-10-25",
-     "vistas": 1357524,
-     "duracion": "PT14M14S"
+     "titulo": "Cristian Castro - Lloran las Rosas",
+     "canal": "CristianCastroVEVO",
+     "publicado": "2009-10-25",
+     "vistas": 95319742,
+     "duracion": "PT4M17S"
     },
     {
-     "titulo": "LLORAMOS DE RISA POR ESTE FAIL | RETO PARKOUR",
-     "canal": "BraxXter",
-     "publicado": "2017-09-18",
-     "vistas": 943705,
-     "duracion": "PT22M20S"
+     "titulo": "ESTO ME HIZO LLORAR",
+     "canal": "Alfredo Larin",
+     "publicado": "2023-06-16",
+     "vistas": 63097294,
+     "duracion": "PT42S"
     },
     {
-     "titulo": "¿Por qué nos REÍMOS ante situaciones INCÓMODAS?😂😅",
-     "canal": "La Hiperactina",
-     "publicado": "2023-07-26",
-     "vistas": 378094,
-     "duracion": "PT1M"
+     "titulo": "This Makes Me Cry LAUGHING! #shorts #viral #trending #youtubeshorts #funny #pov #fishward232 #usa",
+     "canal": "Fishward",
+     "publicado": "2026-11-12",
+     "vistas": 218190,
+     "duracion": "PT23S"
     },
     {
-     "titulo": "De la Risa al Llanto - ¿Por qué lloramos de la risa? - Explicación",
-     "canal": "Sin Verba",
-     "publicado": "2019-03-12",
-     "vistas": 8062,
-     "duracion": "PT5M48S"
+     "titulo": "Lloramos De La Risa",
+     "canal": "zEkO",
+     "publicado": "2026-08-11",
+     "vistas": 160611,
+     "duracion": "PT36M5S"
     },
     {
-     "titulo": "¿Por qué lloramos de la risa? (1 de 2) - Todo tiene un porqué",
-     "canal": "Canal Siete",
-     "publicado": "2017-12-29",
-     "vistas": 1896,
-     "duracion": "PT21M9S"
-    }
-   ]
-  },
-  "por que nos reimos en grupo": {
-   "vistas_top10": 279978547,
-   "mediana_vistas": 29919566,
-   "resultados": 10,
-   "top5_publicados": [
-    "2023-06-15",
-    "2025-06-25",
-    "2025-02-06",
-    "2022-11-08",
-    "2026-05-26"
-   ],
-   "top5": [
-    {
-     "titulo": "MOLESTAMOS A MAMÁ! 🙈",
-     "canal": "Familia Megadivertida",
-     "publicado": "2023-06-15",
-     "vistas": 56951622,
-     "duracion": "PT6S"
-    },
-    {
-     "titulo": "Colegas del Barrio #humor #comedia #memes #entretenimiento #peliculas #fyp #viralshorts",
-     "canal": "PelisClips",
-     "publicado": "2025-06-25",
-     "vistas": 49988440,
-     "duracion": "PT43S"
-    },
-    {
-     "titulo": "Quien creéis que le ha salido mejor?? #tatianakaer #apoloribera #alvaritobarras",
-     "canal": "Tatiana Kaer",
-     "publicado": "2025-02-06",
-     "vistas": 40405769,
-     "duracion": "PT21S"
-    },
-    {
-     "titulo": "Intenta No Reírte Nivel Dios😱😱😱😱😱😱",
-     "canal": "RAFADELCRAFT_YT",
-     "publicado": "2022-11-08",
-     "vistas": 39467471,
-     "duracion": "PT10S"
-    },
-    {
-     "titulo": "Riendo sin sonreír 😳 | Bastian Delfin •",
-     "canal": "Bastian Delfin",
-     "publicado": "2026-05-26",
-     "vistas": 29919566,
-     "duracion": "PT1M5S"
+     "titulo": "Papa crying😭 for lollipop 🍭 #funny #funny #comedy #cutebaby #trendingshorts #viralvideo",
+     "canal": "Rockstar Sudha",
+     "publicado": "2026-11-12",
+     "vistas": 152843,
+     "duracion": "PT4S"
     }
    ]
   },
   "por que me molesta que me dejen en visto": {
-   "vistas_top10": 5314337,
-   "mediana_vistas": 494684,
+   "vistas_top10": 16033336,
+   "mediana_vistas": 181673,
    "resultados": 10,
    "top5_publicados": [
-    "2025-09-20",
+    "2025-10-11",
     "2021-07-30",
-    "2024-12-09",
-    "2022-11-30",
-    "2024-10-18"
+    "2024-10-18",
+    "2023-07-31",
+    "2023-10-21"
    ],
    "top5": [
     {
-     "titulo": "Cuando un hombre NO te llama ni te escribe durante días, significa ESTO… | Marian Rojas Estapé",
-     "canal": "Mujer Exitosa",
-     "publicado": "2025-09-20",
-     "vistas": 1378816,
-     "duracion": "PT1M37S"
+     "titulo": "POV: Cuando No Me Dejan Salir En Un Video 😂🚀 Paul Ferrer #short",
+     "canal": "Paul Ferrer Z",
+     "publicado": "2025-10-11",
+     "vistas": 13801535,
+     "duracion": "PT10S"
     },
     {
      "titulo": "Si te dejó en visto👀 haz lo siguiente👇🏻 #Shorts",
      "canal": "Regina Carrot",
      "publicado": "2021-07-30",
-     "vistas": 1129975,
+     "vistas": 1131520,
      "duracion": "PT31S"
-    },
-    {
-     "titulo": "La gente sin AUTOESTIMA siempre hace esto (Supera las críticas) #desarrollopersonal #psicologia",
-     "canal": "Jordi Segués | Negocios · Desarrollo Personal",
-     "publicado": "2024-12-09",
-     "vistas": 949618,
-     "duracion": "PT38S"
-    },
-    {
-     "titulo": "Cómo lidiar con las críticas y personas difíciles de tratar 😳 #reflexion #crecimientopersonal",
-     "canal": "Mindset al 100%",
-     "publicado": "2022-11-30",
-     "vistas": 848939,
-     "duracion": "PT27S"
     },
     {
      "titulo": "Te Dejaron en Visto | #DOBLAO",
      "canal": "Doblao",
      "publicado": "2024-10-18",
-     "vistas": 494684,
+     "vistas": 496340,
      "duracion": "PT31S"
+    },
+    {
+     "titulo": "Haz esto si no te contesta los mensajes.📲💔 #desamor #amor #parejas #consejos #psicologia",
+     "canal": "Erick Rodríguez",
+     "publicado": "2023-07-31",
+     "vistas": 408057,
+     "duracion": "PT53S"
+    },
+    {
+     "titulo": "Te deja en visto, tarda en contestar tus mensajes o ya no te contesta?! #reflexion #amor #sabiasque",
+     "canal": "Shynita 🦦",
+     "publicado": "2023-10-21",
+     "vistas": 181673,
+     "duracion": "PT37S"
     }
    ]
   },
   "por que tarda tanto en contestar los mensajes": {
-   "vistas_top10": 273894,
-   "mediana_vistas": 7200,
+   "vistas_top10": 369462,
+   "mediana_vistas": 30766,
    "resultados": 10,
    "top5_publicados": [
     "2022-05-02",
+    "2022-08-31",
     "2021-11-23",
     "2023-02-24",
-    "2025-08-12",
-    "2026-04-27"
+    "2025-08-12"
    ],
    "top5": [
     {
      "titulo": "\"3 RAZONES DE POR QUÉ TARDA EN RESPONDER TUS MENSAJES\"",
      "canal": "Andres Vernazza - Emprendedor Moderno",
      "publicado": "2022-05-02",
-     "vistas": 122269,
+     "vistas": 122411,
      "duracion": "PT1M56S"
+    },
+    {
+     "titulo": "Si un hombre tarda en responder tus mensajes... #gustavomoses #consejosdeamor #consejosparamujeres",
+     "canal": "Gustavo Moses",
+     "publicado": "2022-08-31",
+     "vistas": 94761,
+     "duracion": "PT36S"
     },
     {
      "titulo": "Porque Una MUJER Tarda En Contestar Tú Mensajes de WhAtsApp - Que Hago?",
      "canal": "RAYMOND",
      "publicado": "2021-11-23",
-     "vistas": 75060,
+     "vistas": 75201,
      "duracion": "PT4M20S"
     },
     {
      "titulo": "¿Por qué tarda mucho en contestar los mensajes?",
      "canal": "farmaceuticofernandez",
      "publicado": "2023-02-24",
-     "vistas": 36870,
+     "vistas": 36950,
      "duracion": "PT10S"
     },
     {
      "titulo": "CHICA CON LA QUE HABLAS SE TARDA EN CONTESTAR LOS MENSAJES NO LE GUSTAS Consejos MOTIVACIÓN",
      "canal": "MODO GUERRERO",
      "publicado": "2025-08-12",
-     "vistas": 30166,
+     "vistas": 30766,
      "duracion": "PT56S"
-    },
-    {
-     "titulo": "Si un hombre tarda en responder tus mensajes haz esto… #consejosdeamor #gustavomoses",
-     "canal": "Gustavo Moses",
-     "publicado": "2026-04-27",
-     "vistas": 7200,
-     "duracion": "PT42S"
     }
    ]
   },
   "la gente graciosa es mas inteligente": {
-   "vistas_top10": 28674555,
-   "mediana_vistas": 1667033,
+   "vistas_top10": 64050804,
+   "mediana_vistas": 1573597,
    "resultados": 10,
    "top5_publicados": [
-    "2024-12-14",
-    "2025-03-11",
+    "2025-05-27",
     "2023-10-23",
     "2026-02-28",
-    "2024-07-15"
+    "2024-07-15",
+    "2026-03-12"
    ],
    "top5": [
     {
-     "titulo": "Crees que eres inteligente? 😂",
-     "canal": "Alan",
-     "publicado": "2024-12-14",
-     "vistas": 10450819,
-     "duracion": "PT15S"
-    },
-    {
-     "titulo": "la inteligente del salón XD",
-     "canal": "Natupuboldi",
-     "publicado": "2025-03-11",
-     "vistas": 6835915,
-     "duracion": "PT59S"
+     "titulo": "Así Inicia La Vida 🍼 Agarras Señal 🛜 | Juipink  #humor #comedia #memes #meme",
+     "canal": "Juipink",
+     "publicado": "2025-05-27",
+     "vistas": 52116076,
+     "duracion": "PT11S"
     },
     {
      "titulo": "El CHISTE MAS GRACIOSO DEL MUNDO😁 #comedia #humor #chistes",
      "canal": "Sambucha En Español",
      "publicado": "2023-10-23",
-     "vistas": 3547953,
+     "vistas": 3554752,
      "duracion": "PT45S"
     },
     {
      "titulo": "La respuesta más divertida sobre mamá y papá 😂👶",
      "canal": "Smile Kids",
      "publicado": "2026-02-28",
-     "vistas": 1818542,
+     "vistas": 1828710,
      "duracion": "PT11S"
     },
     {
      "titulo": "V. Completa. \"El humor es una cuestión de necesidad y supervivencia\". Luciano Mellera, comediante",
      "canal": "AprendemosJuntos",
      "publicado": "2024-07-15",
-     "vistas": 1667033,
+     "vistas": 1691693,
      "duracion": "PT1H14M1S"
+    },
+    {
+     "titulo": "¡La respuesta de este niño sobre su mamá se hace viral! 😂 | Entrevista Graciosa",
+     "canal": "Sonrisas Virales",
+     "publicado": "2026-03-12",
+     "vistas": 1573597,
+     "duracion": "PT16S"
     }
    ]
   },
   "por que hacen gracia los chistes internos": {
-   "vistas_top10": 5602441,
-   "mediana_vistas": 213020,
+   "vistas_top10": 3517029,
+   "mediana_vistas": 112978,
    "resultados": 10,
    "top5_publicados": [
     "2025-11-23",
-    "2018-03-28",
-    "2026-06-10",
-    "2026-10-16",
-    "2024-11-03"
+    "2025-01-19",
+    "2024-11-03",
+    "2025-10-19",
+    "2025-01-05"
    ],
    "top5": [
     {
      "titulo": "Petite Lorena reivindica \"la tetita caída\" #futuroimperfecto",
      "canal": "RTVE Play",
      "publicado": "2025-11-23",
-     "vistas": 2555863,
+     "vistas": 2604531,
      "duracion": "PT2M53S"
     },
     {
-     "titulo": "Chistes Internos | QUEPARIÓ! SHORE 9 | QueParió!",
-     "canal": "QueParió!",
-     "publicado": "2018-03-28",
-     "vistas": 1476253,
-     "duracion": "PT12M26S"
-    },
-    {
-     "titulo": "‼️ELLOS NO SE PREOCUPAN COMO NOSOTRAS‼️#petitelorena #humor #españa #standupcomedy",
-     "canal": "MAYPLANETAROT",
-     "publicado": "2026-06-10",
-     "vistas": 656708,
-     "duracion": "PT1M23S"
-    },
-    {
-     "titulo": "Episodio 150 - Nacho Redondo",
+     "titulo": "Episodio 63 - Carlos Rodríguez (Rafucho)",
      "canal": "Chiste Interno ",
-     "publicado": "2026-10-16",
-     "vistas": 351243,
-     "duracion": "PT1H12M20S"
+     "publicado": "2025-01-19",
+     "vistas": 269369,
+     "duracion": "PT1H27M39S"
     },
     {
      "titulo": "Episodio 54 - George Harris",
      "canal": "Chiste Interno ",
      "publicado": "2024-11-03",
-     "vistas": 213020,
+     "vistas": 213128,
      "duracion": "PT1H57M46S"
+    },
+    {
+     "titulo": "Episodio 102 - Alexandro Noguera (Charly Mata)",
+     "canal": "Chiste Interno ",
+     "publicado": "2025-10-19",
+     "vistas": 122041,
+     "duracion": "PT1H24M50S"
+    },
+    {
+     "titulo": "Episodio 61 - Verónica Gómez",
+     "canal": "Chiste Interno ",
+     "publicado": "2025-01-05",
+     "vistas": 112978,
+     "duracion": "PT1H39M4S"
     }
    ]
   },
   "un profesor gracioso enseña mejor": {
-   "vistas_top10": 122987109,
-   "mediana_vistas": 4202331,
+   "vistas_top10": 124180937,
+   "mediana_vistas": 4213035,
    "resultados": 10,
    "top5_publicados": [
     "2025-02-04",
@@ -1317,192 +1071,486 @@
      "titulo": "La profesora de Matemáticas ☺️💕 #shorts #humor #tiktokvideo #latina #comedia #funny #peru #fyp",
      "canal": "Gabriela Flores Villar",
      "publicado": "2025-02-04",
-     "vistas": 38791758,
+     "vistas": 40024472,
      "duracion": "PT22S"
     },
     {
      "titulo": "El Dr. House tiene una forma increíble de enseñar😳😕",
      "canal": "Soldier House",
      "publicado": "2025-10-19",
-     "vistas": 36729958,
+     "vistas": 36730602,
      "duracion": "PT1M"
     },
     {
      "titulo": "ESTUDIANTE VS.  PROFESOR 🔥",
      "canal": "El Benja Real",
      "publicado": "2025-05-19",
-     "vistas": 33501360,
+     "vistas": 34038083,
      "duracion": "PT37S"
     },
     {
      "titulo": "Un profesor encontró una forma increíble de enseñar inglés con una canción",
      "canal": "Jon Sinache",
      "publicado": "2026-09-17",
-     "vistas": 6170992,
+     "vistas": 6790476,
      "duracion": "PT24S"
     },
     {
      "titulo": "Penny le enseña a los chicos a ser hombre 🤣 #shorts",
      "canal": "DailyTBBT",
      "publicado": "2025-07-02",
-     "vistas": 4202331,
+     "vistas": 4213035,
      "duracion": "PT1M"
     }
    ]
   },
   "por que nos reimos a la vez con los amigos": {
-   "vistas_top10": 140816740,
-   "mediana_vistas": 3548012,
+   "vistas_top10": 85536695,
+   "mediana_vistas": 2108930,
    "resultados": 10,
    "top5_publicados": [
     "2025-06-25",
-    "2022-11-08",
-    "2023-05-19",
     "2021-01-31",
-    "2023-10-23"
+    "2025-04-17",
+    "2026-10-07",
+    "2022-09-23"
    ],
    "top5": [
     {
      "titulo": "Colegas del Barrio #humor #comedia #memes #entretenimiento #peliculas #fyp #viralshorts",
      "canal": "PelisClips",
      "publicado": "2025-06-25",
-     "vistas": 49988440,
+     "vistas": 50005101,
      "duracion": "PT43S"
-    },
-    {
-     "titulo": "Intenta No Reírte Nivel Dios😱😱😱😱😱😱",
-     "canal": "RAFADELCRAFT_YT",
-     "publicado": "2022-11-08",
-     "vistas": 39467471,
-     "duracion": "PT10S"
-    },
-    {
-     "titulo": "El que se ría pierde #4plusone",
-     "canal": "4plusone",
-     "publicado": "2023-05-19",
-     "vistas": 25674391,
-     "duracion": "PT26S"
     },
     {
      "titulo": "Como paso esto! 🤣 | Videos de Risa *Si te Ríes Pierdes* #Shorts",
      "canal": "Omar Zeeger #Shorts",
      "publicado": "2021-01-31",
-     "vistas": 16327251,
+     "vistas": 16361732,
      "duracion": "PT7S"
     },
     {
-     "titulo": "El CHISTE MAS GRACIOSO DEL MUNDO😁 #comedia #humor #chistes",
-     "canal": "Sambucha En Español",
-     "publicado": "2023-10-23",
-     "vistas": 3548012,
-     "duracion": "PT45S"
+     "titulo": "perdón es de otra persona pero me provocó risa #yosoydelos7mil #apoyo #elpersonajedelasemana JAJAJAA",
+     "canal": "Ambi 👀",
+     "publicado": "2025-04-17",
+     "vistas": 10810249,
+     "duracion": "PT10S"
+    },
+    {
+     "titulo": "Nunca nos Reímos TANTO | Mimic Party",
+     "canal": "RobleisIUTU",
+     "publicado": "2026-10-07",
+     "vistas": 3547764,
+     "duracion": "PT55M15S"
+    },
+    {
+     "titulo": "Que miedo 😱y que risa🤣",
+     "canal": "leodo ",
+     "publicado": "2022-09-23",
+     "vistas": 2108930,
+     "duracion": "PT12S"
     }
    ]
   },
   "los perros se rien": {
-   "vistas_top10": 165478644,
-   "mediana_vistas": 1746265,
-   "resultados": 10,
+   "vistas_top10": 29398630,
+   "mediana_vistas": 1498465,
+   "resultados": 9,
    "top5_publicados": [
-    "2024-02-06",
+    "2024-08-11",
     "2025-05-07",
-    "2025-08-04",
-    "2025-10-14",
-    "2023-10-06"
+    "2019-09-10",
+    "2024-01-10",
+    "2023-09-30"
    ],
    "top5": [
     {
-     "titulo": "Husky 😱que habla pide albóndigas y jamón🤣",
+     "titulo": "Quien diga “I love you” se lo doy 😂",
      "canal": "Max The Husky",
-     "publicado": "2024-02-06",
-     "vistas": 146800345,
-     "duracion": "PT14S"
+     "publicado": "2024-08-11",
+     "vistas": 15791057,
+     "duracion": "PT9S"
     },
     {
      "titulo": "🤣🤣🤣 ahora va chuti #guzmancitos #pug #humor #dogshorts #dog",
      "canal": "Guzmancitos",
      "publicado": "2025-05-07",
-     "vistas": 5875954,
+     "vistas": 5923297,
      "duracion": "PT6S"
     },
     {
-     "titulo": "Mejores Momentos graciosos de Perros",
-     "canal": "Guauflix",
-     "publicado": "2025-08-04",
-     "vistas": 4612046,
-     "duracion": "PT17S"
+     "titulo": "Risa Perro Patan",
+     "canal": "Fabian Huenchunao",
+     "publicado": "2019-09-10",
+     "vistas": 1865043,
+     "duracion": "PT11S"
     },
     {
-     "titulo": "¡PERROS MÁS GRACIOSOS DE INTERNET! 🐶😂                                                      #perros",
-     "canal": "Daily Dogs Laughs",
-     "publicado": "2025-10-14",
-     "vistas": 3378917,
-     "duracion": "PT14S"
+     "titulo": "perro riendose 😆😆",
+     "canal": "Pablillo",
+     "publicado": "2024-01-10",
+     "vistas": 1771325,
+     "duracion": "PT11S"
     },
     {
-     "titulo": "🤣 Si te RÍES PIERDES [MUY DIFICIL] 😹🐶 Perros y Gatos que te Harán Morir de la Risa",
-     "canal": "Videos de Animales Graciosos",
-     "publicado": "2023-10-06",
-     "vistas": 1746265,
-     "duracion": "PT9M35S"
+     "titulo": "Perro Riendo xd #shorts #meme #humor",
+     "canal": "xSrJuan",
+     "publicado": "2023-09-30",
+     "vistas": 1498465,
+     "duracion": "PT6S"
     }
    ]
   },
   "por que me pongo roja cuando me rio": {
-   "vistas_top10": 13143374,
-   "mediana_vistas": 1412341,
+   "vistas_top10": 9888246,
+   "mediana_vistas": 725340,
    "resultados": 10,
    "top5_publicados": [
-    "2024-05-24",
     "2024-05-10",
     "2024-03-10",
     "2023-11-01",
-    "2025-10-17"
+    "2025-10-17",
+    "2022-10-31"
    ],
    "top5": [
-    {
-     "titulo": "Síntomas de alerta de cáncer de esófago | Dr. William Guerrero. #medicina #shorts",
-     "canal": "DR. WILLIAM GUERRERO",
-     "publicado": "2024-05-24",
-     "vistas": 3699981,
-     "duracion": "PT47S"
-    },
     {
      "titulo": "¡Alerta! Parálisis facial, todo lo que debes saber | Dr. William Guerrero. #medicina #shorts",
      "canal": "DR. WILLIAM GUERRERO",
      "publicado": "2024-05-10",
-     "vistas": 2192496,
+     "vistas": 2202615,
      "duracion": "PT56S"
     },
     {
      "titulo": "Señales de que estás sufriendo un derrame cerebral | Dr. William Guerrero. #medicina #shorts",
      "canal": "DR. WILLIAM GUERRERO",
      "publicado": "2024-03-10",
-     "vistas": 2143727,
+     "vistas": 2153332,
      "duracion": "PT1M1S"
     },
     {
      "titulo": "PELIGRO FLEMA En La Garganta #shorts",
      "canal": "Oswaldo Restrepo RSC",
      "publicado": "2023-11-01",
-     "vistas": 1743957,
+     "vistas": 1758341,
      "duracion": "PT56S"
     },
     {
      "titulo": "Cómo rejuvenecer tu piel después de los 60: el secreto mejor guardado 💧",
      "canal": "Esther Gaya | Skincare y Dermocosmetica",
      "publicado": "2025-10-17",
-     "vistas": 1412341,
+     "vistas": 1418565,
      "duracion": "PT2M18S"
+    },
+    {
+     "titulo": "SE ME SALE LA ORINA CUANDO ME RIO / INCONTINENCIA URINARIA",
+     "canal": "Dr. David Campos",
+     "publicado": "2022-10-31",
+     "vistas": 725340,
+     "duracion": "PT30S"
+    }
+   ]
+  },
+  "por que un chiste malo hace gracia si alguien se rie": {
+   "vistas_top10": 112488157,
+   "mediana_vistas": 10319546,
+   "resultados": 10,
+   "top5_publicados": [
+    "2025-01-27",
+    "2024-07-18",
+    "2025-09-02",
+    "2021-06-05",
+    "2026-10-05"
+   ],
+   "top5": [
+    {
+     "titulo": "CHISTES MUUUY MALOS #shorts",
+     "canal": "Meowrld",
+     "publicado": "2025-01-27",
+     "vistas": 24725932,
+     "duracion": "PT25S"
+    },
+    {
+     "titulo": "¡El Chiste De La Puerta Que Hizo Reír A Todos!",
+     "canal": "PANDA",
+     "publicado": "2024-07-18",
+     "vistas": 23286444,
+     "duracion": "PT16S"
+    },
+    {
+     "titulo": "La canción de las rimas 🥰 #humor #chiste #musica #trabalenguas #rap",
+     "canal": "Fran Romguer",
+     "publicado": "2025-09-02",
+     "vistas": 21757880,
+     "duracion": "PT23S"
+    },
+    {
+     "titulo": "EL QUE CUENTA EL MEJOR CHISTE MALO GANA *piculincito llora*",
+     "canal": "Fede Vigevani",
+     "publicado": "2021-06-05",
+     "vistas": 12356040,
+     "duracion": "PT15M37S"
+    },
+    {
+     "titulo": "El que se ríe PIERDE 🫨🤣",
+     "canal": "ZachJaq Shorts",
+     "publicado": "2026-10-05",
+     "vistas": 10319546,
+     "duracion": "PT1M12S"
+    }
+   ]
+  },
+  "por que lloramos de alegria": {
+   "vistas_top10": 4481,
+   "mediana_vistas": 123,
+   "resultados": 10,
+   "top5_publicados": [
+    "2026-02-01",
+    "2018-01-03",
+    "2026-09-02",
+    "2019-09-14",
+    "2026-09-28"
+   ],
+   "top5": [
+    {
+     "titulo": "¿Por qué lloramos de alegría? 🥹",
+     "canal": "Cuerpo Asombroso ",
+     "publicado": "2026-02-01",
+     "vistas": 1793,
+     "duracion": "PT13S"
+    },
+    {
+     "titulo": "¿Por qué lloramos de alegría? La emoción detrás de las lágrimas | Entrevista",
+     "canal": "Nicolás Apelt",
+     "publicado": "2018-01-03",
+     "vistas": 1255,
+     "duracion": "PT25M52S"
+    },
+    {
+     "titulo": "¿Por qué lloramos cuando estamos felices? 😭❤️ #curiosidades #psicologia",
+     "canal": "Mente oculta oficial",
+     "publicado": "2026-09-02",
+     "vistas": 1037,
+     "duracion": "PT1M5S"
+    },
+    {
+     "titulo": "Dr. Jorge Carvajal - ¿Por Qué Lloramos De Alegria?",
+     "canal": "Unalma",
+     "publicado": "2019-09-14",
+     "vistas": 178,
+     "duracion": "PT1M15S"
+    },
+    {
+     "titulo": "Porque lloramos de alegría",
+     "canal": "Jaimelohace",
+     "publicado": "2026-09-28",
+     "vistas": 123,
+     "duracion": "PT1M28S"
+    }
+   ]
+  },
+  "por que se contagia la risa": {
+   "vistas_top10": 2067496,
+   "mediana_vistas": 1708,
+   "resultados": 10,
+   "top5_publicados": [
+    "2023-05-12",
+    "2016-11-07",
+    "2026-11-06",
+    "2022-06-28",
+    "2023-04-20"
+   ],
+   "top5": [
+    {
+     "titulo": "Presentadoras de Noticias Caracol tuvieron un ataque de risa al aire: \"¡No podemos!\"",
+     "canal": "Noticias Caracol",
+     "publicado": "2023-05-12",
+     "vistas": 1769709,
+     "duracion": "PT45S"
+    },
+    {
+     "titulo": "La risa se contagia",
+     "canal": "exitootixe tenissinet",
+     "publicado": "2016-11-07",
+     "vistas": 198433,
+     "duracion": "PT1M29S"
+    },
+    {
+     "titulo": "¿Risa contagiosa?",
+     "canal": "CuriosaMente",
+     "publicado": "2026-11-06",
+     "vistas": 84361,
+     "duracion": "PT1M51S"
+    },
+    {
+     "titulo": "¿POR QUÉ se CONTAGIA la RISA?",
+     "canal": "Doctor Daniel González",
+     "publicado": "2022-06-28",
+     "vistas": 10244,
+     "duracion": "PT3M49S"
+    },
+    {
+     "titulo": "¿Por qué la risa es contagiosa?",
+     "canal": "Nacho Informa",
+     "publicado": "2023-04-20",
+     "vistas": 1708,
+     "duracion": "PT26S"
+    }
+   ]
+  },
+  "una errata te hace parecer mas humano": {
+   "vistas_top10": 52154741,
+   "mediana_vistas": 17496,
+   "resultados": 10,
+   "top5_publicados": [
+    "2013-12-28",
+    "2024-04-26",
+    "2010-05-25",
+    "2026-11-05",
+    "2026-03-16"
+   ],
+   "top5": [
+    {
+     "titulo": "Lil Supa' - Fe de Errata (Vídeo Oficial)",
+     "canal": "Lil Supa'",
+     "publicado": "2013-12-28",
+     "vistas": 27205313,
+     "duracion": "PT3M7S"
+    },
+    {
+     "titulo": "Akapellah, Lil Supa, Canserbero - La Sabia Escuela (Prod. by GBEC & Afromak)(Official Video)",
+     "canal": "Akapellah",
+     "publicado": "2024-04-26",
+     "vistas": 21151995,
+     "duracion": "PT4M36S"
+    },
+    {
+     "titulo": "LiL Supa' - Tiemblas",
+     "canal": "Joelzcd",
+     "publicado": "2010-05-25",
+     "vistas": 3636106,
+     "duracion": "PT4M10S"
+    },
+    {
+     "titulo": "No existes",
+     "canal": "Homo Deus",
+     "publicado": "2026-11-05",
+     "vistas": 110510,
+     "duracion": "PT1H21M1S"
+    },
+    {
+     "titulo": "The Aliens Killed the Dinosaurs?! 👽🦖 | Scary Movie 4#movie #shorts #foryou",
+     "canal": "Behind The Scene Code ",
+     "publicado": "2026-03-16",
+     "vistas": 17496,
+     "duracion": "PT40S"
+    }
+   ]
+  },
+  "queda mal mirar el movil mientras te hablan": {
+   "vistas_top10": 82182400,
+   "mediana_vistas": 2101028,
+   "resultados": 10,
+   "top5_publicados": [
+    "2026-09-07",
+    "2024-12-16",
+    "2025-07-25",
+    "2025-04-25",
+    "2023-08-16"
+   ],
+   "top5": [
+    {
+     "titulo": "Ese Amigo que Habla Cuando Está Dormido 😱😴",
+     "canal": "Alex Crashers",
+     "publicado": "2026-09-07",
+     "vistas": 64267268,
+     "duracion": "PT46S"
+    },
+    {
+     "titulo": "Si te llaman, contestas y cuelgan #tipsdetecnologia #tecnologia #tipsandroid #tipscelulares",
+     "canal": "SoyHappyTech ",
+     "publicado": "2024-12-16",
+     "vistas": 6246182,
+     "duracion": "PT1M27S"
+    },
+    {
+     "titulo": "¿Y si estornudas con los ojos abiertos?",
+     "canal": "CdeCiencia",
+     "publicado": "2025-07-25",
+     "vistas": 2853332,
+     "duracion": "PT22S"
+    },
+    {
+     "titulo": "NO SEAS AMABLE con CHATGPT!!!",
+     "canal": "Tecnonauta",
+     "publicado": "2025-04-25",
+     "vistas": 2826845,
+     "duracion": "PT55S"
+    },
+    {
+     "titulo": "Usar el celular todo el día causa problemas en tus ojos  #miopia #estrabismo #saludvisual #ojoseco",
+     "canal": "CODET Vision Institute",
+     "publicado": "2023-08-16",
+     "vistas": 2101028,
+     "duracion": "PT35S"
+    }
+   ]
+  },
+  "el movil en la mesa estropea la conversacion": {
+   "vistas_top10": 10172783,
+   "mediana_vistas": 416350,
+   "resultados": 10,
+   "top5_publicados": [
+    "2021-04-11",
+    "2023-09-20",
+    "2026-09-30",
+    "2015-05-17",
+    "2022-05-25"
+   ],
+   "top5": [
+    {
+     "titulo": "Con Ánimo de Ofender : Cap #90 - Así Lo Querí",
+     "canal": "Con Ánimo De Ofender",
+     "publicado": "2021-04-11",
+     "vistas": 5528860,
+     "duracion": "PT25M47S"
+    },
+    {
+     "titulo": "El beso viral a Leo Messi por parte de un entrevistador | Inter Miami",
+     "canal": "Goal en español",
+     "publicado": "2023-09-20",
+     "vistas": 2050595,
+     "duracion": "PT10S"
+    },
+    {
+     "titulo": "Nunca preguntes eso a chat gpt 😭 #humor",
+     "canal": "Larissa Kimberlly",
+     "publicado": "2026-09-30",
+     "vistas": 1384503,
+     "duracion": "PT30S"
+    },
+    {
+     "titulo": "REFLEXION: PASAME LA SAL...Area7 Comunicaciones",
+     "canal": "MFC Paraíso Area7 Comunicaciones",
+     "publicado": "2015-05-17",
+     "vistas": 522902,
+     "duracion": "PT1M44S"
+    },
+    {
+     "titulo": "La adicción de las pantallas | Marian Rojas Estapé",
+     "canal": "MENTES EXPERTAS",
+     "publicado": "2022-05-25",
+     "vistas": 416350,
+     "duracion": "PT2M38S"
     }
    ]
   }
  },
  "wikipedia": {
   "Humor": {
-   "media_diaria": 92.4,
+   "media_diaria": 91.7,
    "por_mes": {
-    "202511": 3093,
+    "202511": 2223,
     "202512": 4593,
     "202601": 5938,
     "202602": 2918,
@@ -1514,13 +1562,13 @@
     "202608": 1750,
     "202609": 2286,
     "202610": 2461,
-    "202611": 283
+    "202611": 896
    }
   },
   "Risa": {
-   "media_diaria": 65.9,
+   "media_diaria": 66.3,
    "por_mes": {
-    "202511": 1532,
+    "202511": 1088,
     "202512": 1734,
     "202601": 1901,
     "202602": 1730,
@@ -1532,13 +1580,13 @@
     "202608": 1458,
     "202609": 1431,
     "202610": 3306,
-    "202611": 285
+    "202611": 885
    }
   },
   "Comedia": {
-   "media_diaria": 143.4,
+   "media_diaria": 142.6,
    "por_mes": {
-    "202511": 3343,
+    "202511": 2324,
     "202512": 5821,
     "202601": 9689,
     "202602": 3242,
@@ -1550,13 +1598,13 @@
     "202608": 3748,
     "202609": 4448,
     "202610": 3880,
-    "202611": 535
+    "202611": 1281
    }
   },
   "Chiste": {
-   "media_diaria": 103.1,
+   "media_diaria": 100.2,
    "por_mes": {
-    "202511": 2529,
+    "202511": 1175,
     "202512": 2290,
     "202601": 2335,
     "202602": 1609,
@@ -1568,13 +1616,13 @@
     "202608": 1067,
     "202609": 1091,
     "202610": 1442,
-    "202611": 202
+    "202611": 495
    }
   },
   "Ironía": {
-   "media_diaria": 61.7,
+   "media_diaria": 61.1,
    "por_mes": {
-    "202511": 1986,
+    "202511": 1432,
     "202512": 1760,
     "202601": 1773,
     "202602": 2306,
@@ -1586,13 +1634,13 @@
     "202608": 1655,
     "202609": 1866,
     "202610": 1636,
-    "202611": 205
+    "202611": 548
    }
   },
   "Sátira": {
-   "media_diaria": 115.2,
+   "media_diaria": 114.3,
    "por_mes": {
-    "202511": 3544,
+    "202511": 2525,
     "202512": 2920,
     "202601": 3231,
     "202602": 3251,
@@ -1604,353 +1652,271 @@
     "202608": 2996,
     "202609": 4099,
     "202610": 3838,
-    "202611": 412
+    "202611": 1068
    }
   }
  },
  "avisos": [],
- "cuota_gastada": 2424,
+ "cuota_gastada": 2525,
  "actualidad": {
   "_nota": "C52 · Qué está pasando en España esta semana. Es un GANCHO posible, no un tema: el Short sigue explicando un mecanismo con su ficha (reglas 2 y 3), nunca a costa de nadie real (regla 1) y nunca con tragedias, política o sucesos. Lo juzga la planificación.",
   "google_tendencias": {
    "tendencias": [
     {
-     "busqueda": "tenerife",
+     "busqueda": "betis",
      "noticias": [
-      "Dolor, lágrimas y un silencio helador en Navahermosa para despedir a Jesús de Miguel",
-      "El fútbol español despide al delantero Jesús de Miguel con un duelo unánime en Navahermosa"
+      "Navalcarnero - Real Betis, en directo: Copa del Rey, hoy en vivo",
+      "Convocatoria del Real Betis para el encuentro ante el CDA Navalcarnero"
+     ],
+     "trafico": "10000+",
+     "fecha": "Thu, 12 Nov 2026 12:00:00 -0800"
+    },
+    {
+     "busqueda": "rtve",
+     "noticias": [
+      "Vox denuncia a Silvia Intxaurrondo ante la Junta Electoral: RTVE la ha elegido para entrevistar a los candidatos",
+      "Vox bombardea a la Junta Electoral Central con denuncias contra RTVE por manipulación"
      ],
      "trafico": "5000+",
-     "fecha": "Thu, 5 Nov 2026 12:00:00 -0800"
+     "fecha": "Thu, 12 Nov 2026 12:00:00 -0800"
     },
     {
-     "busqueda": "iker casillas",
+     "busqueda": "tve",
      "noticias": [
-      "Martín y Lucas Casillas saldrán del Madrid",
-      "Sara Carbonero, en 2025, sobre sus propiedades: “He comprado una casa del centro de mi pueblo, y la he puesto a mi gusto para volver siempre que puedo”"
-     ],
-     "trafico": "200+",
-     "fecha": "Thu, 5 Nov 2026 12:00:00 -0800"
-    },
-    {
-     "busqueda": "periodista",
-     "noticias": [
-      "Detienen a la periodista Yoani Sánchez en La Habana",
-      "La periodista cubana Yoani Sánchez, detenida por la Policía en La Habana"
-     ],
-     "trafico": "200+",
-     "fecha": "Thu, 5 Nov 2026 12:00:00 -0800"
-    },
-    {
-     "busqueda": "uefa europa league",
-     "noticias": [
-      "Real Sociedad vs Olympique Lyonnais: UEFA Europa League stats & head-to-head",
-      "Real Sociedad - O. Lyon LIVE. UEFA Europa League latest updates"
+      "Muere Elisa Ramírez a los 82 años, la actriz que convirtió el teatro en televisión",
+      "Muere Elisa Ramírez, actriz destacada del mítico 'Estudio 1' de TVE, a los 82 años"
      ],
      "trafico": "1000+",
-     "fecha": "Thu, 5 Nov 2026 11:50:00 -0800"
+     "fecha": "Thu, 12 Nov 2026 12:00:00 -0800"
     },
     {
-     "busqueda": "carlos alcaraz paris",
+     "busqueda": "classificació de fc barcelona femeni - arsenal women football club",
      "noticias": [
-      "Alcaraz escapa de la criba de La Défense: todos caen, él sigue en pie",
-      "A qué hora es el Alcaraz - Fritz: horario y dónde ver en TV los cuartos del Masters 1000 de París"
-     ],
-     "trafico": "1000+",
-     "fecha": "Thu, 5 Nov 2026 11:50:00 -0800"
-    },
-    {
-     "busqueda": "leverkusen – marseille",
-     "noticias": [
-      "La composition de l'OM sur la pelouse du Bayer Leverkusen en Ligue Europa : Paixao et Gouiri titulaires",
-      "Suivez Bayer Leverkusen - Olympique de Marseille En direct - Ligue Europa - 4e journée"
+      "Barcelona 1-1 Arsenal: Gunners get gutsy draw at Camp Nou",
+      "Barcelona 1-1 Arsenal: Women’s Champions League – live"
      ],
      "trafico": "200+",
-     "fecha": "Thu, 5 Nov 2026 11:50:00 -0800"
+     "fecha": "Thu, 12 Nov 2026 12:00:00 -0800"
     },
     {
-     "busqueda": "real sociedad",
+     "busqueda": "iñaki lópez",
      "noticias": [
-      "Real Sociedad 1 - 1 Olympique Lyon: resumen, resultado y goles",
-      "Premio extra para la Real Sociedad por el empate contra el Olympique de Lyon"
+      "Broncano está de luto y Colau no es humorista: el día después del ‘abascalazo’ en ‘La revuelta’",
+      "El mensaje de Silvia Intxaurrondo a la Junta Electoral Central tras sus palabras sobre Vox y 'La Revuelta': \"Papel y boli\""
      ],
      "trafico": "5000+",
-     "fecha": "Thu, 5 Nov 2026 11:40:00 -0800"
+     "fecha": "Thu, 12 Nov 2026 12:00:00 -0800"
     },
     {
-     "busqueda": "cb canarias - cluj-napoca",
+     "busqueda": "pau cubarsí",
      "noticias": [
-      "La Laguna Tenerife vs UB-T Cluj-Napoca | El conjunto canarista defiende el liderato en EuroCup",
-      "El CB Canarias vuelve a la acción europea"
-     ],
-     "trafico": "500+",
-     "fecha": "Thu, 5 Nov 2026 11:40:00 -0800"
-    },
-    {
-     "busqueda": "getafe - brighton & hove albion",
-     "noticias": [
-      "Europa League: Build-up as Crystal Palace and Bournemouth in early action",
-      "Brighton's XI at Getafe predicted: A huge Pascal Gross decision for Fabian Hurzeler"
-     ],
-     "trafico": "500+",
-     "fecha": "Thu, 5 Nov 2026 11:40:00 -0800"
-    },
-    {
-     "busqueda": "mónaco - nordsjælland",
-     "noticias": [
-      "Monaco - Nordsjælland en directo",
-      "AS Monaco vs FC Nordsjælland | Pronóstico y cuotas 05.11.2026"
+      "Pau Cubarsí, de la frustración de la gala del Balón de Oro a la alegría por el reconocimiento como Golden Boy",
+      "Cubarsí y las cosas que normalizamos"
      ],
      "trafico": "200+",
-     "fecha": "Thu, 5 Nov 2026 11:40:00 -0800"
+     "fecha": "Thu, 12 Nov 2026 12:00:00 -0800"
+    },
+    {
+     "busqueda": "francia italia",
+     "noticias": [
+      "El comité mixto de Frutas y Hortalizas Francia-España-Italia-Portugal analiza la futura PAC",
+      "El Comité mixto de frutas y hortalizas analiza el futuro del sector con la reforma de la PAC post 2027"
+     ],
+     "trafico": "200+",
+     "fecha": "Thu, 12 Nov 2026 12:00:00 -0800"
+    },
+    {
+     "busqueda": "entradas españa inglaterra",
+     "noticias": [
+      "Compra las últimas entradas para ver el España vs Inglaterra del Metropolitano",
+      "Tres leones, dos estrellas e innumerables asuntos pendientes"
+     ],
+     "trafico": "200+",
+     "fecha": "Thu, 12 Nov 2026 12:00:00 -0800"
+    },
+    {
+     "busqueda": "la 1",
+     "noticias": [
+      "RTVE toma medidas con ‘La Revuelta’ este jueves",
+      "TVE cancela hoy la emisión de 'La revuelta', el programa de David Broncano en La 1 (jueves 12 de noviembre de 2026)"
+     ],
+     "trafico": "2000+",
+     "fecha": "Thu, 12 Nov 2026 11:50:00 -0800"
+    },
+    {
+     "busqueda": "encuestas cis elecciones generales",
+     "noticias": [
+      "El CIS se desmarca del resto de encuestas: sitúa al PSOE como ganador y deja al PP y Vox sin mayoría absoluta",
+      "El CIS deja a PP y Vox sin opciones de gobernar, al inicio de la campaña"
+     ],
+     "trafico": "2000+",
+     "fecha": "Thu, 12 Nov 2026 11:50:00 -0800"
     }
    ]
   },
   "wikipedia_top": {
-   "2026-11-04": [
+   "2026-11-11": [
     {
-     "articulo": "Gina Hinojosa",
-     "vistas": 92588
+     "articulo": "León XIV",
+     "vistas": 72103
     },
     {
-     "articulo": "Donald Trump",
-     "vistas": 80688
+     "articulo": "Jordi Wild",
+     "vistas": 51466
     },
     {
-     "articulo": "Partido Demócrata (Estados Unidos)",
-     "vistas": 75661
+     "articulo": "Santiago Abascal",
+     "vistas": 34774
     },
     {
-     "articulo": "Jesús de Miguel Alameda",
-     "vistas": 67167
+     "articulo": "Alberto Núñez Feijóo",
+     "vistas": 25585
     },
     {
-     "articulo": "Carlos Cuerpo",
-     "vistas": 63841
+     "articulo": "Francisco (papa)",
+     "vistas": 23124
     },
     {
-     "articulo": "Bobby Pulido",
-     "vistas": 59567
+     "articulo": "Ada Colau",
+     "vistas": 22158
     },
     {
-     "articulo": "Óscar Puente",
-     "vistas": 41442
+     "articulo": "Isabel Medina Peralta",
+     "vistas": 17185
     },
     {
-     "articulo": "Jesús Owono",
-     "vistas": 40371
+     "articulo": "David Broncano",
+     "vistas": 16983
     },
     {
-     "articulo": "James Talarico",
-     "vistas": 38422
+     "articulo": "Samantha Hudson",
+     "vistas": 16307
     },
     {
-     "articulo": "Elecciones a la Cámara de Representantes de los Estados Unidos de 2026",
-     "vistas": 35557
+     "articulo": "Carlos Babington",
+     "vistas": 16209
     },
     {
-     "articulo": "Partido Republicano (Estados Unidos)",
-     "vistas": 35336
+     "articulo": "Jensen Huang",
+     "vistas": 15373
     },
     {
-     "articulo": "Xavier Becerra",
-     "vistas": 33476
+     "articulo": "Stacy Keach",
+     "vistas": 14921
     },
     {
-     "articulo": "Elecciones intermedias en los Estados Unidos",
-     "vistas": 30474
+     "articulo": "Juan Pablo II",
+     "vistas": 13413
     },
     {
-     "articulo": "Senado de los Estados Unidos",
-     "vistas": 23403
+     "articulo": "Frente Amplio (España)",
+     "vistas": 12693
     },
     {
-     "articulo": "WhatsApp",
-     "vistas": 22697
+     "articulo": "Huelgas generales en España",
+     "vistas": 12268
     },
     {
-     "articulo": "Abdul El-Sayed",
-     "vistas": 21560
+     "articulo": "La Séptima",
+     "vistas": 12132
     },
     {
-     "articulo": "Carlos Albert Llorente",
-     "vistas": 20166
+     "articulo": "Maggie Cullen",
+     "vistas": 11838
     },
     {
-     "articulo": "Elecciones al Senado de los Estados Unidos de 2026",
-     "vistas": 19903
-    },
-    {
-     "articulo": "Luis Pedro Marco de la Peña",
-     "vistas": 17166
-    },
-    {
-     "articulo": "Mckenna Grace",
-     "vistas": 15448
-    }
-   ],
-   "2026-11-03": [
-    {
-     "articulo": "Jesús de Miguel Alameda",
-     "vistas": 367049
-    },
-    {
-     "articulo": "Jesús Owono",
-     "vistas": 161880
-    },
-    {
-     "articulo": "Óscar Puente",
-     "vistas": 48148
-    },
-    {
-     "articulo": "Almudena Ariza",
-     "vistas": 21384
-    },
-    {
-     "articulo": "Donald Trump",
-     "vistas": 20156
-    },
-    {
-     "articulo": "WhatsApp",
-     "vistas": 19457
-    },
-    {
-     "articulo": "Elecciones intermedias en los Estados Unidos",
-     "vistas": 18620
-    },
-    {
-     "articulo": "Brian Fariñas Pérez",
-     "vistas": 18324
-    },
-    {
-     "articulo": "Elecciones a la Cámara de Representantes de los Estados Unidos de 2026",
-     "vistas": 18103
-    },
-    {
-     "articulo": "ChatGPT",
-     "vistas": 14335
-    },
-    {
-     "articulo": "Partido Demócrata (Estados Unidos)",
-     "vistas": 13340
-    },
-    {
-     "articulo": "Martín de Porres",
-     "vistas": 12745
-    },
-    {
-     "articulo": "Club Deportivo Tenerife",
-     "vistas": 12181
-    },
-    {
-     "articulo": "Antonio Navarro Wolff",
+     "articulo": "Montserrat Domínguez",
      "vistas": 11705
     },
     {
-     "articulo": "Inés Gómez Mont",
-     "vistas": 11549
+     "articulo": "Elecciones generales de España de 2026",
+     "vistas": 11559
     },
     {
-     "articulo": "Aston Villa Football Club",
-     "vistas": 11536
+     "articulo": "Benedicto XVI",
+     "vistas": 11230
+    }
+   ],
+   "2026-11-09": [
+    {
+     "articulo": "León XIV",
+     "vistas": 67085
     },
     {
-     "articulo": "Partido Republicano (Estados Unidos)",
-     "vistas": 11166
+     "articulo": "Santiago Abascal",
+     "vistas": 38928
+    },
+    {
+     "articulo": "Russell Brand",
+     "vistas": 38664
+    },
+    {
+     "articulo": "Jensen Huang",
+     "vistas": 24491
+    },
+    {
+     "articulo": "La Séptima",
+     "vistas": 24118
+    },
+    {
+     "articulo": "Francisco (papa)",
+     "vistas": 23234
+    },
+    {
+     "articulo": "Luis Orione",
+     "vistas": 19756
+    },
+    {
+     "articulo": "Sebastián Lelio",
+     "vistas": 18216
+    },
+    {
+     "articulo": "David Broncano",
+     "vistas": 17749
+    },
+    {
+     "articulo": "Santiago Peña",
+     "vistas": 16833
+    },
+    {
+     "articulo": "Toma del Palacio de Justicia",
+     "vistas": 14100
+    },
+    {
+     "articulo": "Juan Pablo II",
+     "vistas": 12943
+    },
+    {
+     "articulo": "Liga1 2026 (Perú)",
+     "vistas": 11580
+    },
+    {
+     "articulo": "Macarena Gómez",
+     "vistas": 10948
+    },
+    {
+     "articulo": "Raúl González Blanco",
+     "vistas": 10825
+    },
+    {
+     "articulo": "Benedicto XVI",
+     "vistas": 9822
+    },
+    {
+     "articulo": "Isabel Medina Peralta",
+     "vistas": 9760
+    },
+    {
+     "articulo": "Tabla periódica de los elementos",
+     "vistas": 9502
     },
     {
      "articulo": "Arroba (símbolo)",
-     "vistas": 11002
+     "vistas": 9499
     },
     {
-     "articulo": "Romina Ricci",
-     "vistas": 10822
-    },
-    {
-     "articulo": "Futbol Club Andorra",
-     "vistas": 10483
-    }
-   ],
-   "2026-11-02": [
-    {
-     "articulo": "Antonio Navarro Wolff",
-     "vistas": 40304
-    },
-    {
-     "articulo": "Andrea Kimi Antonelli",
-     "vistas": 34397
-    },
-    {
-     "articulo": "Accidente ferroviario de Urda",
-     "vistas": 29898
-    },
-    {
-     "articulo": "Día de Muertos",
-     "vistas": 19498
-    },
-    {
-     "articulo": "Gonzalo Miró",
-     "vistas": 19495
-    },
-    {
-     "articulo": "Lucas Martínez Quarta",
-     "vistas": 19246
-    },
-    {
-     "articulo": "Jesús de Miguel Alameda",
-     "vistas": 16249
-    },
-    {
-     "articulo": "Pilar Miró",
-     "vistas": 12473
-    },
-    {
-     "articulo": "Día de los Fieles Difuntos",
-     "vistas": 12377
-    },
-    {
-     "articulo": "WhatsApp",
-     "vistas": 11686
-    },
-    {
-     "articulo": "Learjet 60",
-     "vistas": 11603
-    },
-    {
-     "articulo": "Accidente ferroviario de Santiago de Compostela",
-     "vistas": 11086
-    },
-    {
-     "articulo": "Inés Gómez Mont",
-     "vistas": 10832
-    },
-    {
-     "articulo": "Temporada 2026 de Fórmula 1",
-     "vistas": 10822
-    },
-    {
-     "articulo": "ChatGPT",
-     "vistas": 10443
-    },
-    {
-     "articulo": "Buscador de Yandex",
-     "vistas": 10313
-    },
-    {
-     "articulo": "The Legend of Zelda: Ocarina of Time",
-     "vistas": 9713
-    },
-    {
-     "articulo": "Pedro Rosemblat",
-     "vistas": 9590
-    },
-    {
-     "articulo": "Matthew Perry (actor)",
-     "vistas": 9227
-    },
-    {
-     "articulo": "Halloween",
-     "vistas": 9034
+     "articulo": "NVIDIA",
+     "vistas": 9276
     }
    ]
   },
@@ -1959,8 +1925,8 @@
     "meme song",
     "meme souls",
     "meme sound",
+    "memecoins",
     "memento",
-    "memento mori",
     "memes",
     "memes de baki",
     "memes españa",
@@ -1988,9 +1954,9 @@
    "broma": [
     "broma a kappah",
     "broma auron jordi",
+    "broma auronplay",
     "broma la chelcha",
     "bromas aparte dama y vagabundo",
-    "bromas auronplay",
     "bromas divertidas de pareja",
     "bromas en la calle",
     "bromas telefonicas",
@@ -2013,256 +1979,256 @@
   "youtube_populares": {
    "general": [
     {
-     "titulo": "C. Tangana, Agorazein - Milko Freestyle (Video Oficial)",
-     "canal": "CTanganaVEVO",
-     "vistas": 905053
+     "titulo": "24KEEFY X FERNANDOCOSTA - PARANOIA (VIDEO OFICIAL) Prod.Nawehigh",
+     "canal": "24Keefy",
+     "vistas": 24961
     },
     {
-     "titulo": "EN NOMBRE DE OTRO | Avance Oficial | Netflix España",
-     "canal": "Netflix España",
-     "vistas": 20004
+     "titulo": "Grand Theft Auto VI - Features Trailer | PS5 Games",
+     "canal": "PlayStation",
+     "vistas": 5547265
     },
     {
-     "titulo": "Lo del TOKEN PIRATA es SALVAJE (0.001%)",
+     "titulo": "LIMPIÉ LA LUNA CON UN CEPILLO DE DIENTES 💀",
      "canal": "Rubius Z",
-     "vistas": 2325608
+     "vistas": 2413082
     },
     {
-     "titulo": "DONDE ESTAN? cap. 11 - YOLAMASCARA FT 50 CENT",
-     "canal": "YOLAMASCARA",
-     "vistas": 204398
+     "titulo": "W Sound 11 “ÚLTIMAMENTE” - De La Rose, Westcol, Ovy On The Drums",
+     "canal": "W Sound",
+     "vistas": 492809
     },
     {
-     "titulo": "Lords of War - Official Teaser Trailer (2027) Nicholas Cage, Bill Skarsgård, Laura Harrier",
-     "canal": "IGN",
-     "vistas": 1295102
+     "titulo": "GANAMOS trailer final con regreso WANDA y Doctor Doom robó su profecía, escena explicación completa",
+     "canal": "Pelicomic",
+     "vistas": 523073
     },
     {
-     "titulo": "ESTAFÉ A FAMOSOS PARA HACERME MILLONARIO",
-     "canal": "Auron",
-     "vistas": 2218166
-    },
-    {
-     "titulo": "Sudaca",
-     "canal": "Duki - Topic",
-     "vistas": 383533
-    },
-    {
-     "titulo": "AVENGERS 5: DOOMSDAY Official “Gambit Meets Herbie\" Promo Clip (2026)",
-     "canal": "KinoCheck.com",
-     "vistas": 1154029
-    },
-    {
-     "titulo": "LA PISCINA MALDITA | Pool Loops",
-     "canal": "Iker Unzu",
-     "vistas": 1023934
-    },
-    {
-     "titulo": "Gonzy, Sech - Conquistador",
-     "canal": "Gonzy",
-     "vistas": 128247
-    },
-    {
-     "titulo": "Character Trailer - \"Mitya: Everything's in Order\" | Genshin Impact #Mitya #GenshinSnezhnaya",
-     "canal": "Genshin Impact",
-     "vistas": 938701
-    },
-    {
-     "titulo": "Pokémon Super L Ep.5 - NUNCA EN MIS 15 AÑOS ME HABIA PASADO ALGO ASÍ.",
-     "canal": "Folagor03",
-     "vistas": 243762
-    },
-    {
-     "titulo": "FOYONE, DELAOSSA - LA SILLA, EL ARBOL, LA SOGA",
-     "canal": "FOYONE",
-     "vistas": 37025
-    },
-    {
-     "titulo": "Stellar Blade - Live Action Launch Trailer - Nintendo Switch 2",
-     "canal": "SHIFT UP Official Channel",
-     "vistas": 434567
-    },
-    {
-     "titulo": "Melodie at the beach! (Brawl Vice Season)",
-     "canal": "Brawl Stars",
-     "vistas": 1488802
-    },
-    {
-     "titulo": "MARINA X MONCHO CHAVEA - Promesas (Videoclip Oficial)",
-     "canal": "MARINA ",
-     "vistas": 24526
-    },
-    {
-     "titulo": "LAS NUEVAS DESVENTURAS DE CLIFF BOOTH Tráiler Oficial Español (2026) Brad Pitt",
-     "canal": "Trailers In Spanish",
-     "vistas": 13413
-    },
-    {
-     "titulo": "JUGUÉ EL NUEVO WII SPORTS RESORT CON PACHE 🎾",
-     "canal": "AGUSTIN51 WORLD",
-     "vistas": 146000
-    },
-    {
-     "titulo": "ASI CANTA JEREZ EN NAVIDA - QUE PASA? - (Video Oficial) #asicantajerezennavidad",
-     "canal": "LUIS DE PERIKIN",
-     "vistas": 16103
-    },
-    {
-     "titulo": "BTS WORLD TOUR 'ARIRANG' LIVE VIEWING FROM KAOHSIUNG & JAKARTA - Official Trailer",
-     "canal": "BANGTANTV",
-     "vistas": 275807
-    },
-    {
-     "titulo": "Explorando Miami días antes de GTA VI 🗺️ - Miami Stories #1",
+     "titulo": "EL ÚLTIMO ADIÓS A LOS SANTOS 🚔 - Grand Theft Auto V Enhanced #1",
      "canal": "IlloJuan",
-     "vistas": 2910052
+     "vistas": 939939
     },
     {
-     "titulo": "PARADIXE (REMIX)",
-     "canal": "Feid - Topic",
-     "vistas": 265037
+     "titulo": "Los Meconios - PERO NO TANTO (Videoclip Oficial)",
+     "canal": "Los Meconios",
+     "vistas": 69666
     },
     {
-     "titulo": "XBOX SERIES X-BITE | Sweepstakes Trailer",
-     "canal": "XBOX",
-     "vistas": 1002522
+     "titulo": "Dandy's World 1.0 Cinematic Trailer - Play Nov. 20th, 2026! (Flash Warning)",
+     "canal": "BlushCrunch Studio",
+     "vistas": 1577806
     },
     {
-     "titulo": "Bethesda nos da migajas de Elder Scrolls VI",
-     "canal": "BaityLive",
-     "vistas": 445641
+     "titulo": "Grand Theft Auto VI: Pre-Load Now",
+     "canal": "Rockstar Games",
+     "vistas": 10796036
     },
     {
-     "titulo": "Camela - Cosas del amor (Videoclip Oficial)",
-     "canal": "Camela",
-     "vistas": 37422
+     "titulo": "Thiago Navarro Music - Bonito, Bonito (Letra/Lyrics)",
+     "canal": "Lyrical Genius",
+     "vistas": 31017
+    },
+    {
+     "titulo": "TODO lo que NO VISTE del ÚLTIMO TRAILER de GTA 6!",
+     "canal": "Guffi",
+     "vistas": 102642
+    },
+    {
+     "titulo": "Pokémon Super L Ep.12 - EL DIOS DEL LOCKE QUE TODO EL MUNDO ESPERABA",
+     "canal": "Folagor03",
+     "vistas": 226023
+    },
+    {
+     "titulo": "Maki, María Artés - Mil y Una Noches (Lyrics/Letra) \"mil y una noche tu y yo\"",
+     "canal": "BangersOnly",
+     "vistas": 367031
+    },
+    {
+     "titulo": "Emily en París: Temporada final | Avance oficial | Netflix",
+     "canal": "Netflix Latinoamérica",
+     "vistas": 51341
+    },
+    {
+     "titulo": "Probando el Minecraft Dentro de GTA 5 por Primera Vez!",
+     "canal": "BagBoyz Two",
+     "vistas": 287851
+    },
+    {
+     "titulo": "POLI Y BITCHES - El Americano 4KT, Jaime El King (Video Oficial)",
+     "canal": "El Americano 4KT",
+     "vistas": 335536
+    },
+    {
+     "titulo": "Análisis del Nuevo Trailer de GTA 6 y TODA la info para Descargar GTA 6 YA",
+     "canal": "KerstHD",
+     "vistas": 122339
+    },
+    {
+     "titulo": "en este juego tienes que estafar a clientes de verdad - scam with your friends",
+     "canal": "rickyedit",
+     "vistas": 674757
+    },
+    {
+     "titulo": "Dame Hombro - Bulin 47 & Kevin Wai",
+     "canal": "Mexi Music",
+     "vistas": 40728
+    },
+    {
+     "titulo": "Maxton Hall - Temporada 3 | Tráiler Oficial | Prime Video",
+     "canal": "Amazon Prime Video España",
+     "vistas": 88333
+    },
+    {
+     "titulo": "VUELTA A CLASE con Willy y Fargan 😂 | FINALS WEEK",
+     "canal": "VEGETTA777",
+     "vistas": 346965
+    },
+    {
+     "titulo": "Prince Royce - Rechazame (Lyrics)",
+     "canal": "Golden Network",
+     "vistas": 72289
+    },
+    {
+     "titulo": "Rockstar suelta el último tráiler y DATOS de GTA 6",
+     "canal": "AlexWhite",
+     "vistas": 107438
+    },
+    {
+     "titulo": "ASÍ SE COPIA EN LOS EXAMENES | Finals Week c/ Vegetta y Willy",
+     "canal": "xFaRgAnx YT",
+     "vistas": 200151
+    },
+    {
+     "titulo": "Romeo Santos, Prince Royce - Dardos (Letra)",
+     "canal": "sweetblue.",
+     "vistas": 137095
     }
    ],
    "comedia": [
     {
-     "titulo": "Le traen la cuarta cerveza y su mujer protesta… y la solución del camarero es de traca 🍺😂 #shorts",
-     "canal": "Chistes de Uniforme",
-     "vistas": 1179636
+     "titulo": "Booooom!!!!!",
+     "canal": "J_V_MADRID Desconocido",
+     "vistas": 1158861
     },
     {
-     "titulo": "Empezó diciendo que tenía 23 y se le descuadraron las cuentas 😂",
-     "canal": "Juan Dávila",
-     "vistas": 823297
+     "titulo": "Debería estar en el cine… parte 7",
+     "canal": "Onlyvier ",
+     "vistas": 2340618
     },
     {
-     "titulo": "Serie: Southland | ¿Se puede educar sin recurrir al castigo? 🫢🤔 #ciudadsion",
-     "canal": "Ciudad Sion",
-     "vistas": 13168759
+     "titulo": "Esto pasa una vez al año y hay que disfrutarlo ♥️ #pareja #comedia #risa #meme #invierno",
+     "canal": "Ismael Lemais",
+     "vistas": 1578118
     },
     {
-     "titulo": "Llegamos a 400K?",
-     "canal": "TheLucasG",
-     "vistas": 1554285
-    },
-    {
-     "titulo": "Así me gusta despertar a mis hijos 😴🤣 #shorts",
-     "canal": "Nachter",
-     "vistas": 3212946
-    },
-    {
-     "titulo": "Este es el dulce que todos querían recibir en Halloween 😂",
-     "canal": "FerRelatos",
-     "vistas": 19128877
-    },
-    {
-     "titulo": "El señor del anillo \\#Humor #Chistes #Ancianos #HumorDeAncianos #Timos #Estafas #Joyeria #Anillos",
-     "canal": "GagMania",
-     "vistas": 7770475
-    },
-    {
-     "titulo": "⁠Te visita cuando menos te lo esperas ☠️ @DanteCaro @mariavalero22",
-     "canal": "Pablo Meixe cómico",
-     "vistas": 680300
-    },
-    {
-     "titulo": "✅Ayer se duchó en mi casa la amiga de mi mujer 🤩🤩🤩 #humor #marianoypunto #comedia #chistes",
+     "titulo": "Esta mujer se enfada por todo🤣 #humor #marianoypunto #risas #parejas",
      "canal": "Mariano y punto",
-     "vistas": 1519517
+     "vistas": 749280
     },
     {
-     "titulo": "Cuando ensucias la casa con fluido No Newtoniano",
-     "canal": "Ivan Santonick",
-     "vistas": 3149531
+     "titulo": "Se encontraron en el show y resultó que hacían las prácticas juntas 😂💥",
+     "canal": "Juan Dávila",
+     "vistas": 1050086
     },
     {
-     "titulo": "Son así?",
-     "canal": "Adriamarcor",
-     "vistas": 1388687
+     "titulo": "Película: The cobbler | Cada par lo convertía en alguien diferente 🤯🫢 #ciudadsion",
+     "canal": "Ciudad Sion",
+     "vistas": 3049386
     },
     {
-     "titulo": "Deseo TU Libertad...👀💀",
-     "canal": "Deîak Clips",
-     "vistas": 4889507
+     "titulo": "💥 Santiago Abascal DESTROZA a David Broncano y le muestra la puerta de salida",
+     "canal": "Patri Today",
+     "vistas": 763930
     },
     {
      "titulo": "CUANDO VAS A COMPRAR A MERCADONA 😂🛒 #humor #comedia",
      "canal": "Delacruzphto",
-     "vistas": 310728
+     "vistas": 1722593
     },
     {
-     "titulo": "Mi hijo eso no lo hace",
-     "canal": "La iaia Visenta",
-     "vistas": 619616
+     "titulo": "ABASCAL | La entrevista a Santiago Abascal en 'La Revuelta' en cinco momentos | EL PAÍS",
+     "canal": "EL PAÍS",
+     "vistas": 727311
     },
     {
-     "titulo": "Tipos De Personas Pidiendo Dulces en Halloween🤣⚠️#comedia",
-     "canal": "YERRIKILLERXD",
-     "vistas": 7641069
+     "titulo": "ZASCA FINAL de Abascal a Broncano por no desearle SUERTE 🔥",
+     "canal": "Divergente Digital",
+     "vistas": 888439
     },
     {
-     "titulo": "ENTONCES PARA QUE SE HA HECHO LA CIRUGÍA?🇪🇸#viral #madrid #barcelona #canarias #españa #murcia",
-     "canal": "Adictos Al Trap",
-     "vistas": 748659
+     "titulo": "LA HEMEROTECA RETRATA A DAVID BRONCANO \"HACE AÑOS DIJO QUE NO ENTREVISTARIA A ABASCAL NUNCA Y…",
+     "canal": "El Punto Blanco",
+     "vistas": 501891
     },
     {
-     "titulo": "MI CRUSH ES MI FAN? 🤔",
-     "canal": "Custerk Blox",
-     "vistas": 9109628
+     "titulo": "El yayo Timoteo en el banco #elyayotimoteo #yayotimoteo #humor #chistes #comedia #picaresca #porsche",
+     "canal": "GagMania",
+     "vistas": 1016626
     },
     {
-     "titulo": "La suerte",
-     "canal": "Enel Cruz",
-     "vistas": 3959762
+     "titulo": "Engañan a los \"Expertos de Arte\" con esto 🎨 #humor #fail",
+     "canal": "Saúl Tijeras",
+     "vistas": 1330026
     },
     {
-     "titulo": "TÉCNICA MILENARIA 🐉 #comedia #humor #monologo #standup #standupcomedy",
-     "canal": "Galder Varas",
-     "vistas": 517917
+     "titulo": "La monja tenía hipo y acabó liándola en el campanario 😱⛪ #shorts",
+     "canal": "Chistes de Uniforme",
+     "vistas": 753983
     },
     {
-     "titulo": "Mejores amigos😭",
-     "canal": "Alessandrorizzz Official",
-     "vistas": 1565259
-    },
-    {
-     "titulo": "Noelle (2019) | No se hablar lenguaje de señas 😓 #shorts #triste #cinema #pelicula",
-     "canal": "Lil Resumen",
-     "vistas": 14081432
-    },
-    {
-     "titulo": "El arte de la retirada a tiempo🙄",
-     "canal": "José Mota",
-     "vistas": 1277660
-    },
-    {
-     "titulo": "Tipos de Personas En Halloween🤣⚠️#comedia",
-     "canal": "Rossi",
-     "vistas": 7318645
-    },
-    {
-     "titulo": "🥔😂 ¿SE PUEDE HACER REÍR A ALGUIEN CON UN CHISTE SOBRE PATATAS?",
-     "canal": "Torreznos Podcast ",
-     "vistas": 208501
-    },
-    {
-     "titulo": "Final inesperado 😂 | Iker Unzu",
+     "titulo": "Ese juguete que nadie compra 😂 | Iker Unzu",
      "canal": "Iker Unzu",
-     "vistas": 1094649
+     "vistas": 1342264
+    },
+    {
+     "titulo": "ME DA UN REGALITO #shorts #tobbaliink",
+     "canal": "TOBBAL SHORTS",
+     "vistas": 1579702
+    },
+    {
+     "titulo": "#real #humor #meme #comedia",
+     "canal": "MashaAlessan",
+     "vistas": 549638
+    },
+    {
+     "titulo": "The Replacements (2000) | Recibieron su merecido por abusivos #shorts #edit",
+     "canal": "Eyser",
+     "vistas": 5284280
+    },
+    {
+     "titulo": "Llegamos a 400K?",
+     "canal": "TheLucasG",
+     "vistas": 1172541
+    },
+    {
+     "titulo": "Sorprendiendo a seguidores en el supermercado.",
+     "canal": "Ibai",
+     "vistas": 3187875
+    },
+    {
+     "titulo": "mama he conocido a… 😭 #shorts #humor #comedia #tiktok #trend #novia",
+     "canal": "iiVii10",
+     "vistas": 1425247
+    },
+    {
+     "titulo": "ESE STREAM FUE EL MEJOR JAAJAJA😂😂 #robleis #shorts #viral #parati",
+     "canal": "bautifv!",
+     "vistas": 8753788
+    },
+    {
+     "titulo": "El significado de los emojis - Sergio Encinas",
+     "canal": "Sergio Encinas Oficial",
+     "vistas": 1078216
+    },
+    {
+     "titulo": "😂 ¡Quiso pasarse de lista y la atraparon en cámara!",
+     "canal": "El Markito TV",
+     "vistas": 3517055
+    },
+    {
+     "titulo": "Dejas que tu mujer reserve los vuelos 🙄 #shorts",
+     "canal": "Nachter",
+     "vistas": 2313869
     }
    ]
   }
