@@ -1,15 +1,15 @@
 {
-  "id": "MDS-058.es",
-  "duracion_final_s": 48.8,
-  "tamano_mb": 34.2,
+  "id": "MDS-065.es",
+  "duracion_final_s": 45.93,
+  "tamano_mb": 26.7,
   "audio": {
-    "lufs": -14.47,
-    "pico_dbtp": -1.31,
-    "rango_lu": 6.0
+    "lufs": -15.5,
+    "pico_dbtp": -1.36,
+    "rango_lu": 5.2
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.129,
+    "acaba_s": 0.127,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,7 +17,7 @@
     "silencios_s": [
       [
         0.0,
-        0.129
+        0.127
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -42,24 +42,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 47.68,
-    "duracion_real_voz_mp3_s": 47.68,
+    "duracion_calculada_s": 44.8,
+    "duracion_real_voz_mp3_s": 44.8,
     "desfase_s": 0.0,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_02_dusk_next_route.mp3",
-    "sha256": "3f93cfef7318ae5e93a365a3fe16282de13c279e2733dd7c18fcfbe38f530c74"
+    "archivo": "cama_09_first_light_galaxytones.mp3",
+    "sha256": "bcdb6043e26b73b7232483c4fe70115da065594d8cdc3735981adabdedd27f94"
   },
   "guion": {
-    "titulo_trabajo": "¿Por qué duele que dejen de contestarte?",
+    "titulo_trabajo": "¿Por qué consuelas a quien llora de alegría?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 47.68,
+    "duracion_narracion_s": 44.8,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 11.6,
+    "escena_mas_larga_s": 11.19,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 6
@@ -67,12 +67,12 @@
     "modelo_voz": "gemini-3.1-flash-tts-preview",
     "voz_mezclada": false,
     "origen_voz": [
-      "llamada",
-      "llamada",
-      "llamada",
-      "llamada",
-      "llamada",
-      "llamada"
+      "una toma (C36)",
+      "una toma (C36)",
+      "una toma (C36)",
+      "una toma (C36)",
+      "una toma (C36)",
+      "una toma (C36)"
     ],
     "direccion_voz": [
       "apertura",
@@ -82,14 +82,19 @@
       "cifra",
       "objecion"
     ],
-    "escenas_ritmo_fuera_de_rango": [],
+    "escenas_ritmo_fuera_de_rango": [
+      [
+        2,
+        4.56
+      ]
+    ],
     "voz_fiel": [
       "11/11 palabras, 0 trozos repetidos",
-      "6/6 palabras, 0 trozos repetidos",
-      "10/12 palabras, 0 trozos repetidos",
-      "24/21 palabras, 0 trozos repetidos",
+      "17/17 palabras, 0 trozos repetidos",
+      "15/14 palabras, 0 trozos repetidos",
+      "22/21 palabras, 0 trozos repetidos",
       "20/20 palabras, 0 trozos repetidos",
-      "18/20 palabras, 0 trozos repetidos"
+      "21/21 palabras, 0 trozos repetidos"
     ]
   },
   "visual": {
@@ -97,120 +102,84 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 5.47,
+        "hasta_s": 4.07,
         "fuente": "pexels",
-        "id": 4076741,
-        "pagina": "https://www.pexels.com/video/a-woman-texting-with-her-smartphone-4076741/",
-        "autor": "KATRIN  BOLOVTSOVA",
-        "autor_url": "https://www.pexels.com/@ekaterina-bolovtsova",
+        "id": 6382088,
+        "pagina": "https://www.pexels.com/video/young-woman-crying-on-the-shoulders-of-her-friend-6382088/",
+        "autor": "Liza Summer",
+        "autor_url": "https://www.pexels.com/@liza-summer",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 5.47,
-        "hasta_s": 6.93,
+        "desde_s": 4.07,
+        "hasta_s": 9.1,
         "fuente": "pexels",
-        "id": 6964003,
-        "pagina": "https://www.pexels.com/video/a-woman-checking-her-phone-while-staring-blankly-6964003/",
-        "autor": "Mikhail Nilov",
-        "autor_url": "https://www.pexels.com/@mikhail-nilov",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 2,
-        "desde_s": 6.93,
-        "hasta_s": 10.53,
-        "fuente": "pexels",
-        "id": 31423053,
-        "pagina": "https://www.pexels.com/video/close-up-of-a-modern-wall-clock-31423053/",
-        "autor": "Cheng Shi Song",
-        "autor_url": "https://www.pexels.com/@cheng-shi-song-427082720",
+        "id": 7191511,
+        "pagina": "https://www.pexels.com/video/woman-unboxing-new-phone-7191511/",
+        "autor": "Pavel Danilyuk",
+        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 3,
-        "desde_s": 10.53,
-        "hasta_s": 16.2,
+        "desde_s": 9.1,
+        "hasta_s": 14.43,
         "fuente": "pexels",
-        "id": 6872628,
-        "pagina": "https://www.pexels.com/video/elderly-woman-having-a-hard-time-6872628/",
-        "autor": "Teona Swift",
-        "autor_url": "https://www.pexels.com/@teona-swift",
+        "id": 6381021,
+        "pagina": "https://www.pexels.com/video/a-woman-comforting-her-friend-6381021/",
+        "autor": "Liza Summer",
+        "autor_url": "https://www.pexels.com/@liza-summer",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 4,
-        "desde_s": 16.2,
-        "hasta_s": 24.0,
+        "desde_s": 14.43,
+        "hasta_s": 22.9,
         "fuente": "pixabay",
-        "id": 168343,
-        "pagina": "https://pixabay.com/videos/id-168343/",
-        "autor": "Amorn_mimi",
-        "autor_url": "https://pixabay.com/users/Amorn_mimi-27759397/",
+        "id": 279397,
+        "pagina": "https://pixabay.com/videos/id-279397/",
+        "autor": "fbartondavis",
+        "autor_url": "https://pixabay.com/users/fbartondavis-32369/",
         "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       },
       {
         "escena": 4,
-        "desde_s": 24.0,
-        "hasta_s": 27.5,
+        "desde_s": 22.9,
+        "hasta_s": 24.63,
+        "fuente": "pexels",
+        "id": 8724225,
+        "pagina": "https://www.pexels.com/video/a-woman-crying-while-wiping-her-tears-8724225/",
+        "autor": "Tima Miroshnichenko",
+        "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 24.63,
+        "hasta_s": 33.63,
         "fuente": "pixabay",
-        "id": 1360,
-        "pagina": "https://pixabay.com/videos/id-1360/",
-        "autor": "Activedia",
-        "autor_url": "https://pixabay.com/users/Activedia-665768/",
+        "id": 228129,
+        "pagina": "https://pixabay.com/videos/id-228129/",
+        "autor": "xBriantcx",
+        "autor_url": "https://pixabay.com/users/xBriantcx-36275440/",
         "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       },
       {
-        "escena": 5,
-        "desde_s": 27.5,
-        "hasta_s": 33.33,
-        "fuente": "pexels",
-        "id": 8458634,
-        "pagina": "https://www.pexels.com/video/man-sitting-alone-in-a-room-and-feeling-anxious-8458634/",
-        "autor": "MART  PRODUCTION",
-        "autor_url": "https://www.pexels.com/@mart-production",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 5,
-        "desde_s": 33.33,
-        "hasta_s": 36.1,
-        "fuente": "pexels",
-        "id": 7652957,
-        "pagina": "https://www.pexels.com/video/adult-man-typing-on-phone-7652957/",
-        "autor": "Thirdman",
-        "autor_url": "https://www.pexels.com/@thirdman",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
         "escena": 6,
-        "desde_s": 36.1,
-        "hasta_s": 41.7,
+        "desde_s": 33.63,
+        "hasta_s": 43.33,
         "fuente": "pexels",
-        "id": 15711939,
-        "pagina": "https://www.pexels.com/video/close-up-of-a-young-woman-using-her-phone-15711939/",
-        "autor": "Yusuf Çelik",
-        "autor_url": "https://www.pexels.com/@zandatsu",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 6,
-        "desde_s": 41.7,
-        "hasta_s": 46.2,
-        "fuente": "pexels",
-        "id": 36717013,
-        "pagina": "https://www.pexels.com/video/elderly-man-engaged-with-mobile-phone-outdoors-36717013/",
-        "autor": "Mahadi Hassan Molla",
-        "autor_url": "https://www.pexels.com/@mahadi01",
+        "id": 9787350,
+        "pagina": "https://www.pexels.com/video/friends-hugging-each-other-9787350/",
+        "autor": "Marcus Aurelius",
+        "autor_url": "https://www.pexels.com/@marcus-aurelius",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       }
@@ -219,12 +188,12 @@
   },
   "animacion": null,
   "fotogramas_s": [
-    3.37,
-    8.59,
-    14.01,
-    23.05,
-    32.73,
-    43.14
+    2.54,
+    7.17,
+    12.38,
+    20.63,
+    30.11,
+    40.43
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }

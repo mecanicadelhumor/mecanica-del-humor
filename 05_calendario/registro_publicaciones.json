@@ -1100,6 +1100,21 @@
       "pregunta_publicada": "2026-11-11T23:30:13Z"
     },
     {
+      "id": "MDS-065.es",
+      "episodio": "MDS-065",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué consuelas a quien llora de alegría?",
+      "guion": "05_calendario/guiones/MDS-065.es.json",
+      "video_id": "ihj0wF-WHiQ",
+      "url": "https://youtu.be/ihj0wF-WHiQ",
+      "estado": "private",
+      "publicar_en": "2026-11-12T18:00:00Z",
+      "musica": "cama_09_first_light_galaxytones.mp3",
+      "subido_utc": "2026-11-12T08:25:43Z",
+      "revisado": false
+    },
+    {
       "id": "MDS-067.es",
       "episodio": "MDS-067",
       "idioma": "es",
