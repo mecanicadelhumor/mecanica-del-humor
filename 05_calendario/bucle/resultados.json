@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-11T14:42:46Z",
+ "actualizado_utc": "2026-11-12T15:35:56Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -119,7 +119,7 @@
        "porcentaje_visto": 33.7,
        "me_gusta": 0,
        "visualizaciones": 14,
-       "leido": "2026-11-11"
+       "leido": "2026-11-10"
       },
       {
        "id": "MDS-058",
@@ -129,7 +129,7 @@
        "porcentaje_visto": 91.7,
        "me_gusta": 0,
        "visualizaciones": 10,
-       "leido": "2026-11-11"
+       "leido": "2026-11-12"
       }
      ]
     },
@@ -137,7 +137,7 @@
      "nombre": "Animación a medida en las escenas de mecanismo (C55.2)",
      "n": 8,
      "se_quedaron_media": 31.9,
-     "porcentaje_visto_media": 72.8,
+     "porcentaje_visto_media": 68.8,
      "vistas_48h_mediana": 15.5,
      "me_gusta_por_100": 1.04,
      "ceros_de_feed": 4,
@@ -217,10 +217,10 @@
        "publicado": "2026-11-04",
        "se_quedaron_pct": 50.0,
        "vistas_48h": 4,
-       "porcentaje_visto": 96.7,
+       "porcentaje_visto": 64.5,
        "me_gusta": 0,
-       "visualizaciones": 4,
-       "leido": "2026-11-11"
+       "visualizaciones": 6,
+       "leido": "2026-11-12"
       }
      ]
     },
@@ -311,7 +311,7 @@
        "porcentaje_visto": 47.5,
        "me_gusta": 9,
        "visualizaciones": 430,
-       "leido": "2026-11-11"
+       "leido": "2026-11-12"
       }
      ]
     }
@@ -340,7 +340,7 @@
    "referencia_anterior": {
     "n": 14,
     "se_quedaron_media": 32.9,
-    "porcentaje_visto_media": 67.8,
+    "porcentaje_visto_media": 65.5,
     "vistas_48h_mediana": 23.0,
     "me_gusta_por_100": 1.23,
     "ceros_de_feed": 3,
@@ -389,7 +389,7 @@
      "porcentaje_visto_media": 64.5,
      "vistas_48h_mediana": 27,
      "me_gusta_por_100": 0.0,
-     "ceros_de_feed": 0,
+     "ceros_de_feed": 1,
      "shorts": [
       {
        "id": "MDS-060",
@@ -399,7 +399,7 @@
        "porcentaje_visto": 64.5,
        "me_gusta": 0,
        "visualizaciones": 28,
-       "leido": "2026-11-11"
+       "leido": "2026-11-12"
       }
      ]
     },
@@ -451,7 +451,7 @@
       "porcentaje_visto_media": 64.5,
       "vistas_48h_mediana": 27,
       "me_gusta_por_100": 0.0,
-      "ceros_de_feed": 0
+      "ceros_de_feed": 1
      },
      "diferencia_pp": null,
      "prob_mejor": null,
@@ -465,7 +465,7 @@
       "porcentaje_visto_media": 64.5,
       "vistas_48h_mediana": 27,
       "me_gusta_por_100": 0.0,
-      "ceros_de_feed": 0
+      "ceros_de_feed": 1
      },
      "no": {
       "n": 0,
@@ -488,7 +488,15 @@
     "minimo_vistas_48h": 10,
     "_nota": "Escrita el 02/11/2026, antes del primer dato de B2 (compromisos iteracion-bayes y B2-regla-pocas-vistas). Cada factor: P(mejor) ≥ 0,90 con al menos 6 Shorts por lado → GANA; ≤ 0,10 → PIERDE; con 12 por lado y en medio → SIN EFECTO. Los Shorts con menos de 10 vistas a 48 h no cuentan en «se quedaron» y se cuentan como ceros de feed. Frenos de siempre (% visto −5, dos ceros de feed más): GANA CON REPARO, decide la dirección. Si ganan los dos factores, el control de B3 es AD; si gana uno, ese."
    },
-   "apartados": [],
+   "apartados": [
+    {
+     "id": "MDS-067",
+     "variante": "D",
+     "cero_de_feed": true,
+     "vistas_48h": 3,
+     "motivo": "pocas vistas: 3 a 48 h (menos de 10); no cuenta en «se quedaron»"
+    }
+   ],
    "pendientes": [
     {
      "id": "MDS-062",
@@ -513,11 +521,6 @@
     {
      "id": "MDS-066",
      "variante": "control",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    },
-    {
-     "id": "MDS-067",
-     "variante": "D",
      "motivo": "sin «se quedaron» a 48 h todavía"
     }
    ]
