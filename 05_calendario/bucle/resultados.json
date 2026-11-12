@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-12T15:35:56Z",
+ "actualizado_utc": "2026-11-12T21:08:38Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -374,13 +374,24 @@
     },
     "A": {
      "nombre": "B + animación de mecanismo",
-     "n": 0,
-     "se_quedaron_media": null,
-     "porcentaje_visto_media": null,
-     "vistas_48h_mediana": null,
-     "me_gusta_por_100": null,
+     "n": 1,
+     "se_quedaron_media": 18.2,
+     "porcentaje_visto_media": 38.9,
+     "vistas_48h_mediana": 280,
+     "me_gusta_por_100": 0.36,
      "ceros_de_feed": 0,
-     "shorts": []
+     "shorts": [
+      {
+       "id": "MDS-062",
+       "publicado": "2026-11-10",
+       "se_quedaron_pct": 18.2,
+       "vistas_48h": 280,
+       "porcentaje_visto": 38.9,
+       "me_gusta": 1,
+       "visualizaciones": 280,
+       "leido": "2026-11-12"
+      }
+     ]
     },
     "D": {
      "nombre": "B corto: una escena menos",
@@ -438,11 +449,11 @@
     "animacion": {
      "que": "Animación a medida en las escenas de mecanismo (viene de A de B1, que ganó con reparo)",
      "si": {
-      "n": 0,
-      "se_quedaron_media": null,
-      "porcentaje_visto_media": null,
-      "vistas_48h_mediana": null,
-      "me_gusta_por_100": null,
+      "n": 1,
+      "se_quedaron_media": 18.2,
+      "porcentaje_visto_media": 38.9,
+      "vistas_48h_mediana": 280,
+      "me_gusta_por_100": 0.36,
       "ceros_de_feed": 0
      },
      "no": {
@@ -468,11 +479,11 @@
       "ceros_de_feed": 1
      },
      "no": {
-      "n": 0,
-      "se_quedaron_media": null,
-      "porcentaje_visto_media": null,
-      "vistas_48h_mediana": null,
-      "me_gusta_por_100": null,
+      "n": 1,
+      "se_quedaron_media": 18.2,
+      "porcentaje_visto_media": 38.9,
+      "vistas_48h_mediana": 280,
+      "me_gusta_por_100": 0.36,
       "ceros_de_feed": 0
      },
      "diferencia_pp": null,
@@ -498,11 +509,6 @@
     }
    ],
    "pendientes": [
-    {
-     "id": "MDS-062",
-     "variante": "A",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    },
     {
      "id": "MDS-063",
      "variante": "control",
