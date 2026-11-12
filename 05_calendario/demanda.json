@@ -1,9 +1,9 @@
 {
- "generado_utc": "2026-11-05T23:59:00Z",
+ "generado_utc": "2026-11-12T23:59:00Z",
  "_que_es": "El juicio de la planificación sobre demanda_bruta.json: cada pregunta cruzada con la bibliografía. Dueño: la planificación.",
- "_estado_de_la_medicion": "demanda_bruta.json del 2026-11-05T20:10:38Z, 24 consultas, avisos vacío. Décima medición buena.",
- "_lo_que_ha_mandado_esta_semana": "Esta semana no ha mandado la demanda sino la lectura en frío: con tres lectores y mayoría pasaron 3 de 14 temas. Los tres aprobados salen de preguntas que la gente reconoce sin explicación (el chiste malo salvado por una carcajada, llorar de alegría, la risa que se pega en el autobús). Ver bitacora/2026-11/2026-11-05-planificacion.md.",
- "_actualidad_c52": "Ningún gancho: las tendencias de Google son fútbol, una muerte, tenis y una detención; Wikipedia, sucesos. Nada cumple C52.",
+ "_estado_de_la_medicion": "demanda_bruta.json del 2026-11-12T20:14:25Z, 25 consultas, avisos vacío. Undécima medición buena.",
+ "_lo_que_ha_mandado_esta_semana": "Ha mandado la lectura en frío, y después las métricas: el tanteo de cosquillas (MDS-050, 913; MDS-055, 695; MDS-057, 428) pesó más que la demanda. De los cuatro aprobados, tres salen de preguntas medidas aquí (las ratas y las cosquillas, sonreír a la fuerza, los perros se ríen) y uno de una situación que cualquiera reconoce (el «Qué bien» sin emoji). Ver bitacora/2026-11/2026-11-12-planificacion.md.",
+ "_actualidad_c52": "Ningún gancho: las tendencias de Google son fútbol, una muerte, política y un programa de televisión con polémica electoral; nada cumple C52 (ni sucesos, ni política, ni personas reales).",
  "candidatos": [
   {
    "pregunta": "los gorilas tienen cosquillas",
@@ -49,7 +49,7 @@
     "E18"
    ],
    "apto": false,
-   "decision": "En reserva (cayó dos semanas)."
+   "decision": "HECHO: MDS-069 (17/11), E18, sin el lápiz."
   },
   {
    "pregunta": "que pasa en el cerebro cuando te ries con amigos",
@@ -72,8 +72,8 @@
     "F17",
     "F20"
    ],
-   "apto": true,
-   "decision": "Intentado esta noche con F20 y F17: los dos cayeron (reserva)."
+   "apto": false,
+   "decision": "HECHO (cerca): MDS-068 (16/11), «¿las ratas se ríen con las cosquillas?», E06. F20 y F17 volvieron a caer (reserva)."
   },
   {
    "pregunta": "si te ries con las cosquillas es que te gustan",
@@ -85,7 +85,7 @@
     "F20"
    ],
    "apto": true,
-   "decision": "F20 (pedir cosquillas y huir) cayó esta noche; a la reserva."
+   "decision": "F20 cayó por segunda semana; F18 sigue sin historia que cosa humanos y ratas."
   },
   {
    "pregunta": "las parejas que se rien juntas son mas felices",
@@ -129,7 +129,7 @@
     "F14"
    ],
    "apto": true,
-   "decision": "Segunda semana en la reserva (cayó esta noche, cerca de pasar)."
+   "decision": "F11 intentado (cosquillas y risa por cuestionario): cayó. F14, tres semanas: no se reintenta."
   },
   {
    "pregunta": "reirse quita el dolor",
@@ -142,7 +142,7 @@
     "D06"
    ],
    "apto": true,
-   "decision": "Tercera semana en la reserva: no se reintenta sin una ficha que diga dónde y cómo se midió la molestia."
+   "decision": "G08 (el manguito) intentado: cayó por la escena 1 del brazo B (reserva, cuarta semana del tema)."
   },
   {
    "pregunta": "por que me rio cuando estoy nervioso",
@@ -204,10 +204,11 @@
    "competencia": "baja",
    "por_que_esa_competencia": "Consejos de ligue.",
    "respaldo_bibliografico": [
+    "I23",
     "I16"
    ],
-   "apto": false,
-   "decision": "I16: el resumen no da la dirección del efecto; no se cuenta sin leer el artículo."
+   "apto": true,
+   "decision": "I23 (ficha nueva) intentado: cayó por el método (reserva)."
   },
   {
    "pregunta": "la gente graciosa es mas inteligente",
@@ -251,8 +252,8 @@
     "E17",
     "E05"
    ],
-   "apto": false,
-   "decision": "Terreno de MDS-032 hasta el 17/11; E17 libre desde entonces."
+   "apto": true,
+   "decision": "E17 libre desde el 17/11; intentado esta noche y cayó (los juegos del método)."
   },
   {
    "pregunta": "los perros se rien",
@@ -260,10 +261,10 @@
    "competencia": "alta (fuera de tema)",
    "por_que_esa_competencia": "Perros graciosos.",
    "respaldo_bibliografico": [
-    "E19"
+    "E25"
    ],
    "apto": false,
-   "decision": "E19 (Winkler y Bryant, 2021) no nombra perros en el resumen: no se contesta sin inventar."
+   "decision": "HECHO: MDS-071 (20/11), con E25 (ficha nueva: el jadeo de juego). E19 cayó a la primera."
   },
   {
    "pregunta": "por que me pongo roja cuando me rio",
@@ -272,7 +273,7 @@
    "por_que_esa_competencia": "Vídeos médicos.",
    "respaldo_bibliografico": [],
    "apto": false,
-   "decision": "SIN FICHA; y es terreno médico."
+   "decision": "Fichas nuevas sobre ruborizarse (F25, D15), pero ninguna sobre la risa: sigue sin fuente para esta pregunta."
   }
  ]
 }

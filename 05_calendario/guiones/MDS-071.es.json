@@ -1,0 +1,209 @@
+{
+ "id": "MDS-071",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Los perros se ríen?",
+ "tesis": "Los perros tienen un «jadeo de juego» propio: sale al jugar, con cosquillas y mimos, y casi nunca al entrenar o descansar (16 perros, primer estudio).",
+ "pilares": [
+  "E"
+ ],
+ "duracion_objetivo_s": 48,
+ "bloqueos": [],
+ "ciclo": "B2",
+ "variante": "A",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Los perros se ríen?",
+  "respuesta": "Tienen un jadeo especial que solo sale al jugar (y con cosquillas y mimos): lo más parecido a una risa.",
+  "puente": "El perro serio mientras le enseñas a sentarse y jadeando en cuanto sacas la pelota es lo que grabaron: perros con micrófono entrenando, jugando y descansando."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — le enseñas a tu perro a sentarse y está serio; qué gira — sacas la pelota y empieza a jadear como si se riera; cómo acaba — ese jadeo solo sale al jugar, aunque eran dieciséis perros.",
+  "POSICIÓN B2 16 (viernes 20/11): brazo A. Escenas 4 y 5 con «animar» (rutina Animación); si no llega la página, sale sin animación. Escrito con seis escenas antes de saber qué día salía; en la noche se trabajó con la referencia de trabajo MDS-111 y se renumeró al cerrar la semana (los temas que no pasaron no ocupan número).",
+  "BRAZO B (receta del control de B2): la escena 1 es el hallazgo, en doce palabras como mucho, con su fuente; la pantalla dice lo mismo. La situación va en la 2 y el remate en la 3.",
+  "FUENTE: E25 (Volsche y otros, 2023, International Journal of Comparative Psychology, DOI 10.46867/ijcp.2023.35.5620), ficha nueva de hoy. Resumen leído el 12/11/2026 en OpenAlex, frases literales: «Sixteen human and dog dyads participated in a session that included all three interactions in the same order: training, play, rest. During these sessions, each partner wore wireless microphones»; «dogs do perform a domain-specific \"play pant,\" which was almost completely absent during training and rest. These vocalizations mostly co-occurred with play behaviors (e.g., play bow) or tickling and cuddling». Pregunta con demanda: «los perros se ríen» (29,4 M en el top 10, ninguno responde). Sustituye a MDS-108 (E19), que no pasó la vuelta 1 y no tiene perros en el resumen.",
+  "LÍMITE (regla 12): estudio piloto de dieciséis perros, siempre en el mismo orden; que sea «risa» no lo dicen ellos: dicen jadeo de juego."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "E25",
+   "icono": "i-publico",
+   "texto": "Un jadeo solo para *jugar*",
+   "narracion": "Los perros tienen un jadeo especial que solo les sale cuando juegan.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "dog panting happy playing",
+      "happy dog open mouth"
+     ],
+     "prompt": "a happy dog panting with its mouth open during play"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Serio y *atento*",
+   "narracion": "Le enseñas a tu perro a sentarse. Está serio, atento, sin hacer ni un ruido.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "dog training sit command",
+      "man training dog sit"
+     ],
+     "prompt": "a man training his dog to sit in a living room, dog attentive"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Sacas la *pelota*",
+   "narracion": "Sacas la pelota, y de repente empieza a jadear como si se partiera de risa.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "man holding ball dog excited",
+      "dog excited ball"
+     ],
+     "prompt": "a man holding up a tennis ball, his dog excited and panting"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "fuente": "E25",
+   "puntos": [
+    "Micrófono al *perro*",
+    "Entrenar · jugar · descansar"
+   ],
+   "narracion": "Unos investigadores pusieron micrófonos a dieciséis perros y a sus dueños mientras entrenaban, jugaban y descansaban.",
+   "pausa_despues_s": 0.45,
+   "animacion": "Un perro y una persona dibujados en línea, cada uno con un micrófono pequeño; pasan tres carteles, «entrenar», «jugar» y «descansar», y bajo cada uno una onda de sonido.",
+   "visual": [
+    {
+     "busqueda": [
+      "dog with collar close-up",
+      "dog wearing harness"
+     ],
+     "prompt": "close-up of a dog wearing a harness with a small device clipped on"
+    },
+    {
+     "desde": "mientras entrenaban",
+     "busqueda": [
+      "dog owner playing tug of war",
+      "dog playing with owner"
+     ],
+     "prompt": "a dog playing tug of war with its owner"
+    }
+   ],
+   "animar": true
+  },
+  {
+   "tipo": "dato",
+   "fuente": "E25",
+   "personaje": "entiende",
+   "cifra": "Solo al *jugar*",
+   "pie": "y con cosquillas y mimos",
+   "narracion": "Ese jadeo casi no salía al entrenar ni al descansar. Salía al jugar, y también con cosquillas y mimos.",
+   "pausa_despues_s": 0.45,
+   "animacion": "Tres barras, una por fase: la de entrenar y la de descansar casi vacías, la de jugar llena en «Salía al jugar»; aparece una mano haciendo cosquillas en «con cosquillas y mimos».",
+   "visual": [
+    {
+     "busqueda": [
+      "person tickling dog belly",
+      "dog belly rub"
+     ],
+     "prompt": "a person rubbing a happy dog's belly"
+    }
+   ],
+   "animar": true
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "E25",
+   "personaje": "piensa",
+   "titulo": "Su risa es un *jadeo*",
+   "subtitulo": "Fuente: Volsche y otros, 2023",
+   "narracion": "Así que con la pelota tu perro hace el ruido más parecido a una risa. Ojo: eran solo dieciséis perros, una primera prueba.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "dog running with ball park",
+      "dog fetching ball"
+     ],
+     "prompt": "a dog running with a ball in a park"
+    },
+    {
+     "desde": "eran solo dieciséis perros",
+     "busqueda": [
+      "several dogs sitting",
+      "group of dogs"
+     ],
+     "prompt": "a small group of different dogs sitting together"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "tres subagentes sin contexto por vuelta, decide la mayoría (precisión del 02/11/2026); lectores nuevos en cada vuelta",
+  "fecha": "2026-11-12",
+  "vuelta": 1,
+  "lectores": [
+   {
+    "de_que_va": "Los perros tienen un jadeo especial que solo les sale cuando juegan, y se parece a una risa.",
+    "pregunta_y_respuesta": "¿Se ríen los perros? En cierto modo: un estudio con micrófonos a dieciséis perros encontró que ese jadeo casi solo aparece al jugar (y con cosquillas y mimos); son pocos perros.",
+    "frases_que_no_se_entienden": [
+     "«Sienta… quieto» (texto de pantalla de la escena 2: no se dice en el audio)",
+     "«Fuente: Volsche y otros, 2023»",
+     "«Ojo: eran solo dieciséis perros, una primera prueba» («primera prueba» me suena vago)",
+     "«Su risa es un jadeo» (¿afirmación o simplificación?)"
+    ],
+    "frase_que_sobra": "la escena 2",
+    "donde_me_iria": "me quedo (la 4 es donde más dudaría)"
+   },
+   {
+    "de_que_va": "Los perros tienen un jadeo especial, parecido a una risa, que solo hacen cuando juegan.",
+    "pregunta_y_respuesta": "¿Los perros se ríen? Más o menos: ese jadeo casi solo sale al jugar, no al entrenar ni al descansar; la muestra es pequeña.",
+    "frases_que_no_se_entienden": [
+     "«Sienta… quieto» (no sé si es lo que dice el dueño o un título; lo entiendo por el contexto)",
+     "«Fuente: Volsche y otros, 2023»"
+    ],
+    "frase_que_sobra": "«Ojo: eran solo dieciséis perros, una primera prueba» (repite la cifra)",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Los perros tienen un jadeo propio que solo sueltan cuando juegan, y viene a ser su forma de reírse.",
+    "pregunta_y_respuesta": "¿Se ríen los perros? Más o menos: ese jadeo salía casi solo al jugar (y con cosquillas y mimos); eran pocos perros.",
+    "frases_que_no_se_entienden": [
+     "«Ese jadeo casi no salía al entrenar ni al descansar» (tuve que atar cabos)",
+     "«Así que con la pelota tu perro hace el ruido más parecido a una risa» (¿a la risa de quién?)",
+     "«Fuente: Volsche y otros, 2023»"
+    ],
+    "frase_que_sobra": "la escena 2",
+    "donde_me_iria": "me quedo"
+   }
+  ],
+  "recuento": "Ninguna frase con mayoría de «no entendida»: «Sienta… quieto» la nombran dos, pero uno la entiende por el contexto (nota); aun así se cambia ese rótulo por «Serio y atento», que sí dice la voz (regla 14: la pantalla no dice lo que la voz no dice). Firma de la fuente, a notas. Los tres: «me quedo». De qué va: los tres, la misma idea que la historia.",
+  "de_que_va": "Los perros tienen un jadeo propio que sale al jugar, lo más parecido a una risa.",
+  "pregunta_y_respuesta": "¿Los perros se ríen? Tienen un jadeo de juego que casi solo sale al jugar (y con cosquillas y mimos), aunque eran dieciséis perros.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "Dos lectores quitarían la escena 2 (el perro serio entrenando); se queda en esta versión de seis: es el contraste que prepara el remate de la pelota. (En la versión corta se quitó, y no pasó a la tercera vuelta: ver la bitácora.)",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "Rótulo de la escena 2 cambiado de «Sienta… quieto» a «Serio y atento» después de la lectura (dos lectores; regla 14).",
+   "Un lector: «primera prueba» suena vago; otro: «el ruido más parecido a una risa», ¿a la de quién?",
+   "Firma de la fuente: los tres (no bloquea)."
+  ],
+  "historial": [
+   "Vuelta 1: pasa (sustituye a MDS-108, con la ficha E19, que no pasó la vuelta 1: «Creen que nació de ese jadeo» 3/3)."
+  ],
+  "veredicto": "pasa"
+ }
+}

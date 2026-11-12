@@ -735,6 +735,46 @@
    "modo": "automatico",
    "hora": "19:00",
    "nota": "Viernes. B2, posición 9: control (receta B). Serie «El experimento»: el desconocido del autobús que se ríe con el móvil. Pregunta: «¿por qué se te pega la risa de otro?». Fuente E09 (Warren y otros, 2006), nunca central. Lectura en frío: pasa a la tercera vuelta."
+  },
+  {
+   "fecha": "2026-11-16",
+   "episodio": "MDS-068",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Lunes. B2, posición 12: brazo A (receta B + escenas 4 y 5 con animar; rutina Animación). Tanteo de cosquillas (C46: MDS-050, 913; MDS-055, 695). Serie «El experimento»: le haces cosquillas a una rata y no se oye nada, hasta que enciendes un detector de ultrasonidos. Pregunta: «¿las ratas se ríen con las cosquillas?» (cerca de «las ratas tienen cosquillas», 6,2 M). Fuente E06 (Panksepp y Burgdorf, 2003), libre por C17 desde el 31/10 (MDS-017 no cuenta como tema hundido: su cero fue de voz). Lectura en frío: pasa a la tercera vuelta (tres lectores). Si la rutina Animación no deja la página, sale como el control."
+  },
+  {
+   "fecha": "2026-11-17",
+   "episodio": "MDS-069",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Martes. B2, posición 13: brazo AD (cinco escenas, 42,7 s; escenas 3 y 4 con animar). Serie «El experimento»: el «sonríe, que es gratis» del vecino en el ascensor. Pregunta: «¿sonreír a la fuerza te pone contento?» (144,2 M en el top 10, nadie responde). Fuente E18 (Many Smiles, 2022), nunca central: reintento desde cero de la reserva (29/10 y 05/11), esta vez sin el lápiz. Lectura en frío: la versión de seis pasa a la tercera vuelta y la de cinco (la que sale) también a la tercera."
+  },
+  {
+   "fecha": "2026-11-18",
+   "episodio": "MDS-070",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Miércoles. B2, posición 14: control (receta B). Familia «mensajes». Serie «El experimento»: le cuentas a tu amigo que te han dado el trabajo y te contesta «Qué bien», sin más. Pregunta: «¿por qué un «Qué bien» sin emoji suena frío?». Fuente D10 (Huh, 2025), nunca central; método leído en el texto completo (PLOS ONE, acceso abierto). Reintento de la reserva del 07/11. Lectura en frío: pasa a la segunda vuelta."
+  },
+  {
+   "fecha": "2026-11-20",
+   "episodio": "MDS-071",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Viernes. B2, posición 16: brazo A (escenas 4 y 5 con animar; rutina Animación). Serie «El experimento»: el perro serio al entrenar que jadea «de risa» en cuanto sacas la pelota. Pregunta: «¿los perros se ríen?» (29,4 M en el top 10, ninguno responde). Fuente E25 (Volsche y otros, 2023), ficha nueva de hoy. Lectura en frío: pasa a la primera vuelta. El jueves 19 (posición 15, D) queda vacío: la versión corta de este mismo guion no pasó a la tercera vuelta. Si la rutina Animación no deja la página, sale como el control."
   }
  ],
  "_archivadas": {
@@ -779,5 +819,6 @@
  "_cambio_22_octubre_noche": "Planificación semanal del jueves 22/10/2026. Tercera semana del bucle (C60, ciclo B1, que sigue hasta el 4/11): SIETE Shorts, del lunes 26 de octubre al domingo 1 de noviembre, uno al día a las 19:00 (hora de España; cola.py hace la cuenta con el horario de invierno), todos «automatico». Brazos por el «orden» de ciclos.json desde la posición 15: control, A, B, control, B, A, control. Los temas se eligieron y ordenaron antes de mirar los brazos, con la situación reconocible primero (versión 23). Ninguna emisión lleva rehacer_video_id (C54). El primer largo (MDH-008, domingo 8/11) se escribe el jueves 29.",
  "_cambio_29_octubre_noche": "Planificación semanal del jueves 29/10/2026. Semana del 2 al 8 de noviembre: SEIS Shorts, no siete. El VIERNES 6/11 NO HAY EMISIÓN: tres temas (E15, el cachorro; E18, la sonrisa forzada; F18, reírte con las cosquillas) no pasaron la lectura en frío a la tercera vuelta con el criterio nuevo del 29/10, y la cuarta ficha candidata (C02) tiene en la bibliografía el DOI de otro artículo. MDS-061 queda libre para ese hueco si la dirección quiere llenarlo. Brazos: B1 posiciones 22-24 (B, control, A) del 2 al 4/11, que cierran el ciclo; del 5 al 8/11, B2, escrito con la receta B, que es su control según «decisiones» (26/10), etiquetado «B2 / control» hasta que la dirección escriba B2 el 2/11. El largo MDH-008 (las cosquillas, el caso entero) está escrito pero NO se programa aquí: el estreno pasó al 15/11 y la imagen horizontal y la voz por tandas siguen pendientes (dirección, 5/11). La emisión antigua de MDH-008 sigue en _emisiones_suspendidas: es otro guion, ya sustituido. Ninguna emisión lleva rehacer_video_id (C54).",
  "_banco": [],
- "_cambio_05_noviembre_noche": "Planificación del 05/11/2026 (semana del 9 al 15/11, B2 posiciones 5-11). Tres lectores por vuelta y decide la mayoría (versión 28). Se intentaron catorce temas en 108 lecturas; pasan tres: MDS-064 (miércoles 11, A), MDS-065 (jueves 12, control) y MDS-066 (viernes 13, control). Lunes 9 (D), martes 10 (AD), sábado 14 (D) y domingo 15 (AD) se quedan sin Short: sus posiciones quedan vacías (ciclos.json, «_orden»). Ningún aprobado sobra, así que el banco está vacío. Los once temas que no pasaron, a temas_en_reserva.md. Detalle en bitacora/2026-11/2026-11-05-planificacion.md."
+ "_cambio_05_noviembre_noche": "Planificación del 05/11/2026 (semana del 9 al 15/11, B2 posiciones 5-11). Tres lectores por vuelta y decide la mayoría (versión 28). Se intentaron catorce temas en 108 lecturas; pasan tres: MDS-064 (miércoles 11, A), MDS-065 (jueves 12, control) y MDS-066 (viernes 13, control). Lunes 9 (D), martes 10 (AD), sábado 14 (D) y domingo 15 (AD) se quedan sin Short: sus posiciones quedan vacías (ciclos.json, «_orden»). Ningún aprobado sobra, así que el banco está vacío. Los once temas que no pasaron, a temas_en_reserva.md. Detalle en bitacora/2026-11/2026-11-05-planificacion.md.",
+ "_cambio_12_noviembre_noche": "Planificación del 12/11/2026 (semana del 16 al 22/11, B2 posiciones 12-18). Tres lectores por vuelta y decide la mayoría. Se intentaron catorce temas (más dos versiones cortas) en 42 vueltas de tres lectores; pasan cuatro: MDS-068 (lunes 16, A), MDS-069 (martes 17, AD), MDS-070 (miércoles 18, control) y MDS-071 (viernes 20, A). Jueves 19 (D), sábado 21 (control) y domingo 22 (A) se quedan sin Short y sus posiciones quedan vacías (ciclos.json, «_orden»); el domingo 15 (posición 11) sigue vacío. Ningún aprobado sobra: banco vacío. Los temas que no pasaron, a temas_en_reserva.md. Ninguna emisión lleva rehacer_video_id (C54). Detalle en bitacora/2026-11/2026-11-12-planificacion.md."
 }

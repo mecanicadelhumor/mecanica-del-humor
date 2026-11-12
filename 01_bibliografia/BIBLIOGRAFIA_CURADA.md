@@ -3,7 +3,7 @@
 > Base de conocimiento de **Mecánica del Humor / Humor Mechanics**.
 > Generado desde `data/semillas.json`. No edites este archivo a mano: edita el JSON y vuelve a ejecutar `scripts/generar_md.py`.
 
-**136 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
+**148 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
 
 ## Cómo se ha curado
 
@@ -26,12 +26,12 @@ y fusiona repetidos antes de que nadie los lea. Están marcados y excluidos del 
 - **A. Teorias fundacionales del humor** — 9 obras
 - **B. Diferencias individuales, estilos y medicion** — 7 obras
 - **C. Produccion de humor: habilidad, creatividad e inteligencia** — 6 obras
-- **D. Humor, vinculos sociales, atraccion y estatus** — 14 obras
-- **E. Risa: etologia, acustica y contagio** — 22 obras
-- **F. Neurociencia y cognicion del humor** — 20 obras
+- **D. Humor, vinculos sociales, atraccion y estatus** — 15 obras
+- **E. Risa: etologia, acustica y contagio** — 26 obras
+- **F. Neurociencia y cognicion del humor** — 25 obras
 - **G. Humor aplicado: trabajo, aula, salud, persuasion** — 10 obras
 - **H. Entrenabilidad: el humor se puede aprender** — 6 obras
-- **I. Linguistica y estructura del chiste** — 22 obras
+- **I. Linguistica y estructura del chiste** — 24 obras
 - **J. El lado oscuro: gelotofobia, burla, humor que falla** — 8 obras
 - **K. Humor computacional e IA** — 4 obras
 - **L. Oficio: manuales de stand-up, improvisacion y guion** — 8 obras
@@ -338,6 +338,14 @@ Tipo: articulo
 
 Los chistes internos: lo que hace gracia no esta en lo que se dice sino en lo que los dos sabeis y no se dice, y por eso reirse juntos demuestra que compartis algo. Teoria con dos experimentos; el resumen no da cifras: solo como marco.
 
+### `D15` ★ The remedial value of blushing in the context of transgressions and mishaps.
+
+**Dijk, C.; de Jong, P. J.; Peters, M. L.** (2009) · *Emotion, 9(2), 287-291*  
+DOI: [`10.1037/a0015081`](https://doi.org/10.1037/a0015081) · verificado 12/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Ponerse colorado ayuda: tras una metedura de pata o una falta, quien se sonroja cae mejor y parece mas de fiar que quien no. Para «¿sirve para algo ponerse rojo?». Metodo: unas 130 personas leyeron una historia de una falta o un percance y despues vieron fotos de caras con o sin rubor y las puntuaron en simpatia, confianza, etc.
+
 
 ---
 
@@ -498,6 +506,22 @@ Tipo: articulo
 
 Continuacion de E07: anadir risas hace mas graciosos chistes, eructos y caidas, y la risa autentica mas que la fingida (en adultos no autistas; en autistas, menos). Apoyo para las risas enlatadas.
 
+### `E23` ★★ Tickling induces a unique type of spontaneous laughter
+
+**Kamiloglu, R. G.; Sun, R.; Bos, P.; Huber, F.; Attema, J. J.; Sauter, D. A.** (2024) · *Biology Letters, 20(11), 20240543*  
+DOI: [`10.1098/rsbl.2024.0543`](https://doi.org/10.1098/rsbl.2024.0543) · verificado 12/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Cosquillas. La risa de las cosquillas suena distinta a la de un chiste o un video gracioso, la gente la reconoce de oido y es la que menos se controla. Para el largo de cosquillas: «tu risa de cosquillas no es tu risa normal». Metodo: 887 risas espontaneas grabadas en situaciones reales analizadas con aprendizaje automatico; despues unas 200 personas escucharon risas y dijeron cuales eran de cosquillas, y otras 210 puntuaron cuanto control vocal tenian.
+
+### `E24` ★★ Tackling Hominin Tickling: Bonobos Share the Social Features and Developmental Dynamics of Play Tickling With Humans
+
+**Demuru, E.; Montello, I.; Guéry, J.-P.; Pellegrino, F.; Levréro, F.; Norscia, I.** (2025) · *American Journal of Primatology, 87(1), e23723*  
+DOI: [`10.1002/ajp.23723`](https://doi.org/10.1002/ajp.23723) · verificado 12/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Cosquillas en simios. Los bonobos tambien se hacen cosquillas como nosotros: los mayores a los pequenos, sobre todo madres a crias y entre amigos intimos; cuanto mas mayor, mas cosquillas das y menos recibes. Metodo: videos de las sesiones de juego de un solo grupo de bonobos de un zoo frances (abril-junio 2018), codificando quien hacia cosquillas a quien.
+
 ### `E17` ★ Antiphonal laughter between friends and strangers
 
 **Smoski, M. J.; Bachorowski, J.-A.** (2003) · *Cognition and Emotion, 17(2), 327-340*  
@@ -521,6 +545,22 @@ DOI: [`10.1080/03949370.2022.2026482`](https://doi.org/10.1080/03949370.2022.202
 Tipo: articulo
 
 Revision: risas, gritos y gemidos humanos se parecen a las llamadas de otros mamiferos; y los humanos, a diferencia de casi todos, podemos fingirlos (la risa de conversacion). Marco.
+
+### `E25` ★ Dogs produce distinctive play pants: Confirming Simonet
+
+**Volsche, S.; Brown, C.; Gunnip, H.; Kiperash, M.; Root-Gutteridge, H.; Horowitz, A.** (2023) · *International Journal of Comparative Psychology, 35(1)*  
+DOI: [`10.46867/ijcp.2023.35.5620`](https://doi.org/10.46867/ijcp.2023.35.5620) · verificado 12/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+¿Los perros se rien? Hay un «jadeo de juego» propio que aparece al jugar (y con cosquillas y mimos) y casi nunca al entrenar o descansar. Para «¿se rie tu perro?». Metodo: 16 parejas persona-perro pasaron por entrenamiento, juego y descanso, con microfonos inalambricos en ambos y una camara grabando; se contaron los jadeos en cada fase.
+
+### `E26` ★ Rapid facial mimicry in orangutan play
+
+**Davila-Ross, M.; Menzler, S.; Zimmermann, E.** (2007) · *Biology Letters, 4(1), 27-30*  
+DOI: [`10.1098/rsbl.2007.0535`](https://doi.org/10.1098/rsbl.2007.0535) · verificado 12/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+La cara de juego (la «risa» de los simios) se contagia: un orangutan copia la boca abierta de su companero de juego en un segundo o menos. Apoyo para contagio de la risa y para E03. Metodo: observacion de 25 orangutanes jugando por parejas en su dia a dia, midiendo si devolvian la cara de boca abierta y en cuanto tiempo.
 
 
 ---
@@ -655,6 +695,38 @@ Tipo: articulo
 
 Tampoco una rata puede hacerse cosquillas: tocarse a si misma apaga la corteza y los chillidos. Y las ratas piden cosquillas y a la vez huyen (el «Nervenkitzel» de los ninos). Para el largo de cosquillas.
 
+### `F21` ★★ The human tickle response and mechanisms of self-tickle suppression
+
+**Proelss, S.; Ishiyama, S.; Maier, E.; Schultze-Kraft, M.; Brecht, M.** (2022) · *Philosophical Transactions of the Royal Society B, 377(1863), 20210185*  
+DOI: [`10.1098/rstb.2021.0185`](https://doi.org/10.1098/rstb.2021.0185) · verificado 12/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Cosquillas. La reaccion llega en 0,3 segundos (pecho y cara) y la risa 0,2 s despues; cuanto mas rapido, fuerte y agudo te ries, mas cosquillas dices sentir. Y si te tocas a la vez que te las hacen, sientes menos. Metodo: a voluntarios les hacian cosquillas mientras se media el torax, se grababa la cara y la voz, y ellos puntuaban cuantas cosquillas sentian; en otra condicion se hacian cosquillas a si mismos a la vez.
+
+### `F22` ★★ Exploration of the Neural Correlates of Ticklish Laughter by Functional Magnetic Resonance Imaging
+
+**Wattendorf, E.; Westermann, B.; Fiedler, K.; Kaza, E.; Lotze, M.; Celio, M. R.** (2012) · *Cerebral Cortex, 23(6), 1280-1289*  
+DOI: [`10.1093/cercor/bhs094`](https://doi.org/10.1093/cercor/bhs094) · verificado 12/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Cosquillas. La risa de cosquillas enciende el hipotalamo (zona de reacciones innatas) mas que aguantarse la risa o reirse a proposito: parte de una zona primitiva del cerebro. Para «¿por que te ries aunque no te guste?». Metodo: dentro de un escaner, a voluntarios sanos les hacian cosquillas en la planta del pie dejandoles reir, luego pidiendoles que se aguantaran la risa, y aparte se les pedia reir a voluntad.
+
+### `F23` ★★ Laughing Rats Are Optimistic
+
+**Rygula, R.; Pluta, H.; Popik, P.** (2012) · *PLoS ONE, 7(12), e51959*  
+DOI: [`10.1371/journal.pone.0051959`](https://doi.org/10.1371/journal.pone.0051959) · verificado 12/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Cosquillas en ratas. Las ratas a las que se les hace cosquillas (y «se rien» a 50 kHz) despues interpretan una senal ambigua de forma mas optimista. Metodo: ratas entrenadas a pulsar una palanca con un tono (comida) y otra con otro tono (evitar descarga); tras recibir cosquillas o solo manipulacion, oian un tono intermedio y se miraba que palanca elegian.
+
+### `F24` ★★ Odour conditioning of positive affective states: Rats can learn to associate an odour with being tickled
+
+**Bombail, V.; Jérôme, N.; Lam, H.; Muszlak, S.; Meddle, S.; Lawrence, A. B.; Nielsen, B. L.** (2019) · *PLoS ONE, 14(6), e0212829*  
+DOI: [`10.1371/journal.pone.0212829`](https://doi.org/10.1371/journal.pone.0212829) · verificado 12/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Cosquillas en ratas. Las ratas aprenden a asociar un olor con las cosquillas: al olerlo de nuevo «se rien» mas y prefieren el brazo del laberinto que huele asi. Metodo: 24 ratas jovenes; a unas se les hacian cosquillas siempre con el olor A, a otras con el B y otras nunca; despues se median sus chillidos ultrasonicos ante cada olor y el tiempo que pasaban en cada brazo de un laberinto en T.
+
 ### `F05` ★ Neural correlates of humor detection and appreciation in children
 
 **Neely, M. N. et al.** (2012) · *Cerebral Cortex*  
@@ -686,6 +758,14 @@ DOI: [`10.1016/j.cub.2020.08.038`](https://doi.org/10.1016/j.cub.2020.08.038) ·
 Tipo: articulo
 
 Los chillidos de 50 kHz de la rata miden cuanto le gustan las cosquillas; en humanos las cosquillas dan a la vez placer y desagrado, y la risa no distingue uno de otro. Apoyo del largo.
+
+### `F25` ★ The blushing brain: neural substrates of cheek temperature increase in response to self-observation
+
+**Nikolić, M.; Di Plinio, S.; Sauter, D. A.; Keysers, C.; Gazzola, V.** (2024) · *Proceedings of the Royal Society B, 291(2027), 20240958*  
+DOI: [`10.1098/rspb.2024.0958`](https://doi.org/10.1098/rspb.2024.0958) · verificado 12/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Ponerse colorado. Verte a ti mismo cantando karaoke te pone mas rojo que ver a otros, y el sonrojo va con zonas de activacion emocional, no de «pensar en uno mismo». Para «¿por que te pones rojo?». Metodo: 40 jovenes de 16-20 anos vieron en un escaner videos de si mismos (o de otros) cantando karaoke mientras se media la temperatura de sus mejillas y su actividad cerebral.
 
 
 ---
@@ -1004,6 +1084,22 @@ DOI: [`10.1089/cyber.2021.0157`](https://doi.org/10.1089/cyber.2021.0157) · ver
 Tipo: articulo
 
 Familia «mensajes». Un emoji se ve menos adecuado si te lo manda alguien lejano (el director del banco) que alguien cercano, y en un mensaje malo que en uno bueno. Fuente central posible: ¿queda mal un emoji del banco?
+
+### `I23` ★ When Delayed in a Hurry: Interpretations of Response Delays in Time-Sensitive Instant Messaging
+
+**Hwang, S. Y.; Khojasteh, N.; Fussell, S. R.** (2019) · *Proceedings of the ACM on Human-Computer Interaction, 3(GROUP), 1-20*  
+DOI: [`10.1145/3361115`](https://doi.org/10.1145/3361115) · verificado 12/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Familia «mensajes». Cuando la otra persona tarda en contestar en el chat, cae peor, frustra mas y parece menos implicada, y ver «escribiendo...» no lo arregla. Para «¿por que molesta tanto que tarden en contestar?». Metodo: en laboratorio, participantes hacian una tarea con prisa chateando con un complice que respondia sin retraso, con retraso o con retraso mostrando «escribiendo...»; despues revisaban la conversacion y puntuaban al companero.
+
+### `I24` ★ Interactions between text content and emoji types determine perceptions of both messages and senders
+
+**Hand, C. J.; Burd, K.; Oliver, A.; Robus, C. M.** (2022) · *Computers in Human Behavior Reports, 8, 100242*  
+DOI: [`10.1016/j.chbr.2022.100242`](https://doi.org/10.1016/j.chbr.2022.100242) · verificado 12/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Familia «mensajes». Un emoji que no pega con el texto hace el mensaje menos claro que no poner ninguno; uno que pega amplifica la emocion y lo calido que parece quien escribe. Metodo: 60 personas leyeron online 60 mensajes (negativos, neutros o positivos, sin emoji o con cara triste, neutra, alegre o un objeto) y puntuaron el tono, la claridad y lo calido y el estado de animo del remitente.
 
 
 ---

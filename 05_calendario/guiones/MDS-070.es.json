@@ -1,0 +1,204 @@
+{
+ "id": "MDS-070",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué un «Qué bien» sin emoji suena frío?",
+ "tesis": "La misma respuesta de un amigo parece más atenta con un emoji que sin él, y quien parece más atento parece también más cercano.",
+ "pilares": [
+  "I",
+  "D"
+ ],
+ "duracion_objetivo_s": 48,
+ "bloqueos": [],
+ "ciclo": "B2",
+ "variante": "control",
+ "familia_tema": "mensajes",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué un «Qué bien» sin emoji suena frío?",
+  "respuesta": "Porque la misma respuesta, con emoji, parece más atenta; y quien parece atento, parece más cercano.",
+  "puente": "El «Qué bien» a secas de tu amigo cuando le cuentas una buena noticia es lo que probaron: la misma respuesta, con emoji o sin él."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — le cuentas a tu amigo que te han dado el trabajo; qué gira — te contesta «Qué bien», sin nada más, y te pasas la tarde pensando; cómo acaba — la misma respuesta con emoji parece más atenta, aunque la gente imaginaba que se lo decía un amigo.",
+  "POSICIÓN B2 14 (miércoles 18/11): brazo control. Escrito con seis escenas antes de saber qué día salía; en la noche se trabajó con la referencia de trabajo MDS-107 y se renumeró al cerrar la semana (los temas que no pasaron no ocupan número).",
+  "BRAZO B (receta del control de B2): la escena 1 es el hallazgo, en doce palabras como mucho, con su fuente; la pantalla dice lo mismo. La situación va en la 2 y el remate en la 3.",
+  "FUENTE: D10 (Huh, 2025, PLOS ONE, DOI 10.1371/journal.pone.0326189), nunca central. Resumen completo releído el 12/11/2026 en Europe PMC (PMC12221085), y el método en el texto completo (PLOS, acceso abierto), frases literales: «A sample of 260 participants viewed 15 text-based conversations in which they assumed that they received responses from their friends»; «exchanges that varied only in the presence or absence of emojis while maintaining identical textual content»; «messages containing emojis were perceived as more responsive than text-only messages. Perceived responsiveness, in turn, significantly predicted higher ratings of closeness and relationship satisfaction». Temas de las conversaciones según el artículo: «making plans, offering support, sharing news». Reintento de la reserva del 07/11 («¿cada persona leía las dos versiones?»): el método se cuenta ahora como lo dice el artículo, la misma respuesta con o sin emoji.",
+  "LÍMITE (regla 12): eran conversaciones que la gente imaginaba con un amigo, no chats suyos de verdad."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "D10",
+   "icono": "i-bocadillos",
+   "texto": "Con emoji, la respuesta parece más *atenta*",
+   "narracion": "La misma respuesta, con un emoji, parece más atenta que sin él.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "woman smiling reading text message",
+      "woman reading phone smiling"
+     ],
+     "prompt": "a woman smiling while reading a text message on her phone"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Tu gran noticia… y su «Qué *bien*»",
+   "narracion": "Le escribes a tu amigo: «¡Me han dado el trabajo!». Y te contesta: «Qué bien».",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "young man typing excited on phone",
+      "man texting happily"
+     ],
+     "prompt": "a young man typing an excited message on his phone"
+    },
+    {
+     "desde": "Y te contesta",
+     "busqueda": [
+      "phone screen new message close-up",
+      "hand holding phone message notification"
+     ],
+     "prompt": "a hand holding a phone, a new short message arriving"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Ni una *carita*",
+   "narracion": "Ni una carita. Y te pasas la tarde pensando qué le has hecho.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "man staring at phone on sofa thinking",
+      "man looking at phone confused"
+     ],
+     "prompt": "a young man lying on a sofa staring at his phone, puzzled"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "fuente": "D10",
+   "narracion": "Unos psicólogos enseñaron a gente chats inventados y les pidieron imaginar que quien contestaba era un amigo.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "two phones side by side messages",
+      "chat bubbles on phone screen"
+     ],
+     "prompt": "two phones side by side showing the same short chat message"
+    }
+   ],
+   "puntos": [
+    "Chats *inventados*",
+    "Contesta «un amigo»"
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "D10",
+   "personaje": "entiende",
+   "cifra": "Con carita, más *atento*",
+   "pie": "y más cercano",
+   "narracion": "Si la respuesta llevaba emoji, ese amigo parecía más atento y más cercano que con la misma frase sin él.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "friends hugging smiling",
+      "two friends warm greeting"
+     ],
+     "prompt": "two friends hugging warmly"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "D10",
+   "personaje": "piensa",
+   "titulo": "A tu «Qué bien» le faltaba *algo*",
+   "subtitulo": "Fuente: Huh, 2025",
+   "narracion": "A tu amigo, quizá, solo le faltó una carita. Eso sí, era gente imaginando chats; con tu amigo de verdad no se ha probado.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "man smiling at phone",
+      "young man relieved reading phone"
+     ],
+     "prompt": "a young man smiling with relief at his phone"
+    },
+    {
+     "desde": "con tu amigo de verdad",
+     "busqueda": [
+      "friends texting each other",
+      "two people texting"
+     ],
+     "prompt": "two friends in different places texting each other"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "tres subagentes sin contexto por vuelta, decide la mayoría (precisión del 02/11/2026); lectores nuevos en cada vuelta",
+  "fecha": "2026-11-12",
+  "vuelta": 2,
+  "lectores": [
+   {
+    "de_que_va": "Según un estudio, una respuesta con emoji hace que un amigo parezca más atento y cercano que la misma frase sin él, aunque se probó con chats imaginados.",
+    "pregunta_y_respuesta": "¿Por qué un «Qué bien» seco te sienta mal? Porque con carita la respuesta parece más atenta y cercana; pero era gente imaginando chats.",
+    "frases_que_no_se_entienden": [
+     "«Unos psicólogos enseñaron a gente chats inventados…» (lo entiendo a medias: ¿cada persona veía las dos versiones?)",
+     "«Fuente: Huh, 2025»",
+     "«Eso sí, era gente imaginando chats…» (se entiende, pero llega de golpe)"
+    ],
+    "frase_que_sobra": "«Sin nada más. Ni una carita.»",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Una respuesta con emoji parece más atenta y cercana que la misma frase sin él, según un estudio con chats inventados.",
+    "pregunta_y_respuesta": "¿Por qué te da mala espina un «Qué bien» seco? Con emoji, el amigo parecía más atento y cercano; solo se probó con chats imaginados.",
+    "frases_que_no_se_entienden": [
+     "«Chats inventados · Contesta «un amigo»» (en pantalla; lo explica la voz)",
+     "«Fuente: Huh, 2025»",
+     "«A tu «Qué bien» le faltaba algo» (vago)",
+     "«Eso sí, era gente imaginando chats» (se entiende, pero «eso sí» llega de golpe)"
+    ],
+    "frase_que_sobra": "la escena 3",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Una respuesta con emoji parece más atenta y cercana que la misma sin él, aunque solo se probó con chats inventados.",
+    "pregunta_y_respuesta": "¿Por qué un «Qué bien» seco te deja dándole vueltas? Quizá le faltaba una carita; con chats imaginados, no con amigos reales.",
+    "frases_que_no_se_entienden": [],
+    "frase_que_sobra": "la escena 3",
+    "donde_me_iria": "me quedo"
+   }
+  ],
+  "recuento": "Ninguna frase la marcan dos lectores como no entendida: la salvedad del cierre la nombran los tres, pero los tres dicen que la entienden («llega de golpe»), así que va a notas; la frase del método, solo uno. Los tres: «me quedo». De qué va: los tres, la misma idea que la historia.",
+  "de_que_va": "La misma respuesta con emoji parece más atenta y cercana que sin él, aunque se probó con chats imaginados.",
+  "pregunta_y_respuesta": "¿Por qué un «Qué bien» sin emoji suena frío? Porque con emoji la respuesta parece más atenta y cercana; a tu amigo quizá solo le faltó una carita.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "Dos lectores quitarían la escena 3, uno en concreto «Sin nada más. Ni una carita.»: se quita «Sin nada más» (criterio c del punto 4) y se queda el resto, que es el remate del planteamiento.",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "Los tres: la salvedad «Eso sí, era gente imaginando chats» se entiende pero llega de golpe (no bloquea; la dirección puede mirarlo).",
+   "Un lector: ¿cada persona veía las dos versiones? (el artículo: «randomly assigned to one of two conditions … for each conversation»).",
+   "Firma de la fuente: los tres (no bloquea)."
+  ],
+  "historial": [
+   "Vuelta 1 (2 lectores; el tercero no llegó a lanzarse por el límite de subagentes): la escena del método («enseñaron chats así a doscientas sesenta personas, como si les contestara un amigo») 2/2 y «Y quien parecía más atento…» 2/2; los dos se irían en la 4 → método reescrito como lo dice el artículo y resultado en una frase.",
+   "Vuelta 2: pasa."
+  ],
+  "veredicto": "pasa"
+ }
+}

@@ -1,11 +1,10 @@
 {
  "_que_es": "Lo que la planificación de los jueves le pide a explorador_de_demanda.py que mida la semana siguiente. Lo lee .github/workflows/demanda.yml los jueves a las 12:00 UTC y deja los números en demanda_bruta.json. Dueño de este fichero: la planificación. Dueño de demanda_bruta.json: el workflow.",
- "_generado_utc": "2026-11-05T23:59:00Z",
- "_por_que_esta_lista": "Décima medición buena: el método no se toca. Salen las preguntas ya contestadas (gorilas, reírse adelgaza, el emoji en el correo, reírse con amigos, reírse en grupo). Entran las de los tres Shorts de la semana (el chiste malo salvado por una risa, llorar de alegría, la risa que se pega) y las de los temas de la reserva de esta noche (la errata, el móvil en la mesa y mientras te hablan, el emoji del banco, pedir más cosquillas, cosquillas contagiosas).",
+ "_generado_utc": "2026-11-12T23:59:00Z",
+ "_por_que_esta_lista": "Undécima medición buena: el método no se toca. Salen las ya contestadas (sonreír a la fuerza, MDS-069; los perros se ríen, MDS-071). Entran las de los Shorts de la semana (las ratas que se ríen, el «Qué bien» sin emoji) y las de las fichas nuevas de cosquillas y mensajes (aguantar las cosquillas, F21; tardar en contestar, I23; los animales que se ríen, E19/E25; ponerse rojo, F25/D15).",
  "_las_fichas_libres_hoy": "Trece fichas nuevas esta noche (I14, I15, I16, G07, G08, G09, G10, E15, E16, E17, E18, D14) y D08 y E03 con resumen verificado; E03 con el título corregido y H04 con el DOI corregido. Pasan a centrales esta semana E03, I13, G10, I15, E16 y E10. Libres con hallazgo y nunca centrales tras esta semana: D08, D10, D14, E09, E13, E14, E15, E17, E18, F11, F13, F14, F16, F17, F18, F20, G07, G08, G09, I08, I14, I16.",
  "_lo_que_hay_que_arreglar_en_la_bibliografia": "C02 (Greengross, Silvia y Nusbaum, meta-análisis de la producción de humor): el DOI de la ficha (10.1037/aca0000158) es de un artículo sobre aptitud musical y alexitimia. Hay que buscar el bueno con título y DOI juntos; esta noche Crossref devolvió 429 y no se pudo. Mientras, C02 no vale como fuente central.",
  "preguntas": [
-  "sonreir a la fuerza te hace feliz",
   "las ratas tienen cosquillas",
   "si te ries con las cosquillas es que te gustan",
   "las parejas que se rien juntas son mas felices",
@@ -22,7 +21,6 @@
   "por que hacen gracia los chistes internos",
   "un profesor gracioso enseña mejor",
   "por que nos reimos a la vez con los amigos",
-  "los perros se rien",
   "por que me pongo roja cuando me rio",
   "por que un chiste malo hace gracia si alguien se rie",
   "por que lloramos de alegria",
@@ -32,8 +30,15 @@
   "el movil en la mesa estropea la conversacion",
   "queda mal un emoji del banco",
   "por que pedimos mas cosquillas aunque digamos para",
-  "se contagian las cosquillas"
+  "se contagian las cosquillas",
+  "por que las ratas se rien",
+  "por que te ries cuando te hacen cosquillas",
+  "como aguantar las cosquillas",
+  "por que molesta que tarden en contestar",
+  "que significa responder sin emoji",
+  "por que me pongo rojo al reirme",
+  "los animales se rien"
  ],
- "_de_donde_sale_cada_pregunta_nueva": "De los catorce temas intentados el 05/11 (bitácora del 05/11, apartado 3).",
- "_lo_que_se_retira": "Las hechas esta semana o la anterior y las sin ficha que llevan semanas sin cambiar (ver _por_que_esta_lista)."
+ "_de_donde_sale_cada_pregunta_nueva": "12/11: «por qué las ratas se ríen» (MDS-068), «por qué te ríes cuando te hacen cosquillas» y «cómo aguantar las cosquillas» (F21, E23), «por qué molesta que tarden en contestar» (I23), «qué significa responder sin emoji» (MDS-070, D10, I24), «por qué me pongo rojo al reírme» (F25, D15), «los animales se ríen» (E19, E25).",
+ "_lo_que_se_retira": "12/11: «sonreír a la fuerza te hace feliz» (hecho, MDS-069) y «los perros se ríen» (hecho, MDS-071)."
 }

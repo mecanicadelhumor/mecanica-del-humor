@@ -1,0 +1,226 @@
+{
+ "id": "MDS-068",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Las ratas se ríen con las cosquillas?",
+ "tesis": "Con cosquillas, las ratas sueltan unos chillidos tan agudos que no se oyen; quienes los estudian dan una docena de razones para pensar que son una especie de risa.",
+ "pilares": [
+  "E",
+  "F"
+ ],
+ "duracion_objetivo_s": 48,
+ "bloqueos": [],
+ "ciclo": "B2",
+ "variante": "A",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Las ratas se ríen con las cosquillas?",
+  "respuesta": "A su manera: con cosquillas chillan tan agudo que no las oímos, y esos chillidos se parecen a una risa muy primitiva.",
+  "puente": "Le haces cosquillas a una rata y parece que no hace nada; con un detector de ultrasonidos, la rata está chillando. Eso es lo que grabaron los neurocientíficos."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — le haces cosquillas a una rata y no se oye nada; qué gira — con un detector, la rata está chillando; cómo acaba — esos chillidos se parecen a una risa primitiva, aunque a la rata no se le puede preguntar.",
+  "POSICIÓN B2 12 (lunes 16/11): brazo A. Escenas 4 y 5 con «animar» (rutina Animación); si no llega la página, sale sin animación. Escrito con seis escenas antes de saber qué día salía; en la noche se trabajó con la referencia de trabajo MDS-101 y se renumeró al cerrar la semana (los temas que no pasaron no ocupan número).",
+  "BRAZO B (receta del control de B2): la escena 1 es el hallazgo, en doce palabras como mucho, con su fuente; la pantalla dice lo mismo. La situación va en la 2 y el remate en la 3.",
+  "FUENTE: E06 (Panksepp y Burgdorf, 2003, Physiology & Behavior, DOI 10.1016/S0031-9384(03)00159-8), central en MDS-017 (19/09): libre por C17 desde el 31/10, y MDS-017 no cuenta como tema hundido (su cero fue de voz). Resumen leído el 22/10/2026 en Europe PMC (ficha), frases literales: «play- and tickle-induced ultrasonic vocalization patterns ( approximately 50-kHz chirps) in rats may have more than a passing resemblance to primitive human laughter»; «we summarize a dozen reasons for the working hypothesis that such rat vocalizations reflect a type of positive affect».",
+  "LÍMITE (regla 12): es una revisión con una hipótesis de trabajo, no un experimento nuevo; que a la rata le guste es lo que proponen, no algo que se le pueda preguntar."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "E06",
+   "icono": "i-publico",
+   "texto": "Chillan tan agudo que no las *oyes*",
+   "narracion": "Con cosquillas, las ratas chillan tan agudo que tú no las oyes.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "pet rat being tickled hand",
+      "hand petting white rat",
+      "pet rat in hand"
+     ],
+     "prompt": "a hand gently tickling the belly of a white pet rat, close-up, soft light"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "Ni un *ruido*",
+   "narracion": "Le haces cosquillas en la barriga a una rata de laboratorio. Y ni un ruido.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "laboratory rat on table",
+      "white rat sniffing table"
+     ],
+     "prompt": "a white laboratory rat on a lab table, quiet room"
+    },
+    {
+     "desde": "Y ni un ruido",
+     "busqueda": [
+      "rat looking at camera close-up",
+      "white rat face close-up"
+     ],
+     "prompt": "close-up of a white rat looking straight at the camera"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "En el detector, está *chillando*",
+   "narracion": "Hasta que enciendes un detector de ultrasonidos, y resulta que la rata está chillando.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "audio spectrogram on laptop screen",
+      "sound waves on computer screen"
+     ],
+     "prompt": "a laptop screen showing a bright audio spectrogram with many short chirps, dark lab"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "fuente": "E06",
+   "narracion": "Unos neurocientíficos grabaron esos chillidos: las ratas los soltaban con las cosquillas y al jugar entre ellas.",
+   "pausa_despues_s": 0.45,
+   "animacion": "Una rata dibujada en línea; al llegar a «al hacerles cosquillas» una mano le roza la barriga y salen ondas de chillido; en «cuando jugaban entre ellas» entra una segunda rata y las ondas se duplican.",
+   "visual": [
+    {
+     "busqueda": [
+      "two rats playing together",
+      "pet rats playing"
+     ],
+     "prompt": "two young rats playfully wrestling on soft bedding"
+    },
+    {
+     "desde": "al jugar entre ellas",
+     "busqueda": [
+      "rats chasing each other",
+      "two rats playing cage"
+     ],
+     "prompt": "two rats chasing each other in a large clean cage"
+    }
+   ],
+   "puntos": [
+    "Con *cosquillas*",
+    "Jugando entre ellas"
+   ],
+   "animar": true
+  },
+  {
+   "tipo": "dato",
+   "fuente": "E06",
+   "personaje": "entiende",
+   "cifra": "La risa de las *ratas*",
+   "pie": "eso proponen",
+   "narracion": "Y proponen que esos chillidos son alegría: algo así como la risa de las ratas.",
+   "pausa_despues_s": 0.45,
+   "animacion": "Una onda de chillido de rata se transforma poco a poco en la onda de una carcajada humana en «parecida a la nuestra»; a la vez se encienden doce puntos, uno tras otro, en «una docena de razones».",
+   "visual": [
+    {
+     "busqueda": [
+      "happy white rat close-up",
+      "rat on shoulder of person"
+     ],
+     "prompt": "a happy white rat sitting on a person's shoulder"
+    },
+    {
+     "desde": "la risa de las ratas",
+     "busqueda": [
+      "woman laughing out loud close-up",
+      "person laughing close-up"
+     ],
+     "prompt": "a woman laughing out loud, close-up, warm light"
+    }
+   ],
+   "animar": true
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "E06",
+   "personaje": "piensa",
+   "titulo": "Se ríe, pero no la *oyes*",
+   "subtitulo": "Fuente: Panksepp y Burgdorf, 2003",
+   "narracion": "Esa rata quizá se esté riendo sin que te enteres. Aunque eso lo proponen los científicos: a una rata no se le pregunta.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "pet rat in hands",
+      "person holding pet rat"
+     ],
+     "prompt": "a person holding a pet rat in both hands, smiling"
+    },
+    {
+     "desde": "a una rata no se le pregunta",
+     "busqueda": [
+      "white rat looking up",
+      "rat sniffing close-up"
+     ],
+     "prompt": "a white rat looking up curiously, shallow depth of field"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "tres subagentes sin contexto por vuelta, decide la mayoría (precisión del 02/11/2026); lectores nuevos en cada vuelta",
+  "fecha": "2026-11-12",
+  "vuelta": 3,
+  "lectores": [
+   {
+    "de_que_va": "Las ratas chillan en ultrasonidos cuando les haces cosquillas, y unos científicos creen que es como una risa que no oímos.",
+    "pregunta_y_respuesta": "¿Se ríen las ratas? Puede que sí, pero no se oye porque el chillido es demasiado agudo; es una propuesta de los científicos.",
+    "frases_que_no_se_entienden": [
+     "«Fuente: Panksepp y Burgdorf, 2003» (no sé quiénes son, pero se entiende que es la fuente)"
+    ],
+    "frase_que_sobra": "«Aunque eso lo proponen los científicos» (ya lo dijo la escena 5)",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Las ratas chillan con las cosquillas a un tono que no oímos, y unos científicos creen que es su forma de reírse.",
+    "pregunta_y_respuesta": "¿Las ratas se ríen? Probablemente sí, aunque es una propuesta: sus chillidos ultrasónicos con cosquillas y al jugar serían una especie de risa.",
+    "frases_que_no_se_entienden": [
+     "«Hasta que enciendes un detector de ultrasonidos…» (no sabía a qué detector te referías hasta ese momento; se deduce)",
+     "«Unos neurocientíficos grabaron esos chillidos…» (me costó un momento atarlo con el detector)",
+     "«Fuente: Panksepp y Burgdorf, 2003»"
+    ],
+    "frase_que_sobra": "«Le haces cosquillas en la barriga a una rata de laboratorio. Y ni un ruido.»",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Las ratas chillan con las cosquillas, pero a un volumen que no se oye, y los científicos creen que es como una risa.",
+    "pregunta_y_respuesta": "¿Las ratas se ríen? Quizá sí: chillidos agudos de alegría que el oído humano no capta; lo proponen los científicos, no está confirmado.",
+    "frases_que_no_se_entienden": [
+     "«Hasta que enciendes un detector de ultrasonidos…» (se entiende; lo deduzco por el contexto)",
+     "«Fuente: Panksepp y Burgdorf, 2003»",
+     "«Unos neurocientíficos grabaron esos chillidos» (se entiende de pasada)"
+    ],
+    "frase_que_sobra": "«Y ni un ruido» (escena 2) o la 5",
+    "donde_me_iria": "me quedo"
+   }
+  ],
+  "recuento": "Ninguna frase la marcan dos lectores como no entendida: el «detector de ultrasonidos» lo nombran dos, pero los dos dicen que lo entendieron en ese momento por el contexto (nota); la firma de la fuente, a notas (criterio del 28/09). Los tres: «me quedo». De qué va: los tres, la misma idea que la historia.",
+  "de_que_va": "Las ratas chillan con las cosquillas tan agudo que no las oímos, y los científicos proponen que es una especie de risa.",
+  "pregunta_y_respuesta": "¿Se ríen las ratas con las cosquillas? Quizá sí: chillan en ultrasonidos y los científicos creen que es una forma de risa, aunque a una rata no se le puede preguntar.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "Dos lectores quitarían «Y ni un ruido» (escena 2), uno la frase de «lo proponen los científicos»; ninguna con mayoría. Se quedan: la escena 2 es el planteamiento del remate y la salvedad es el cierre honesto.",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "Dos lectores: «detector de ultrasonidos» llega de golpe, aunque se entiende por el contexto.",
+   "Firma de la fuente: los tres no saben quiénes son (no bloquea)."
+  ],
+  "historial": [
+   "Vuelta 1 (3 lectores): «Y dan una docena de razones…» 3/3 (¿cuáles?) y «Aunque eso lo proponen ellos» 2/3 (¿quiénes?) → escena 5 sin la docena y cierre con «los científicos».",
+   "Vuelta 2 (3 lectores): «una risa muy antigua» 2/3 (¿antigua en qué sentido?) → «algo así como la risa de las ratas»; «Tu rata» (1/3) → «Esa rata».",
+   "Vuelta 3: pasa."
+  ],
+  "veredicto": "pasa"
+ }
+}

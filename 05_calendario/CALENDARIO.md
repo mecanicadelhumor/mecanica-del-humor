@@ -578,3 +578,26 @@ Fichas nuevas: once (`I17`-`I22`, `E19`-`E22`, `J08`). Detalle en la bitácora d
 todos con cinco escenas (los cuatro huecos son brazos cortos). **Pasó uno, `MDS-067`, el lunes 9** (posición
 5, D; familia `mensajes`). Martes 10, sábado 14 y domingo 15 siguen sin emisión (posiciones 6, 10 y 11
 vacías). Detalle en la bitácora del 07/11.
+
+**Corrección del 12/11 (planificación):** la dirección recolocó el 09/11 `MDS-062` al **martes 10** y `MDS-063`
+al **sábado 14** (no salieron el 7 y el 8 por la caída de la voz). La tabla de arriba es la del 05/11.
+
+## Semana del 16 al 22 de noviembre de 2026 · B2, posiciones 12 a 18
+
+Escrita la noche del **jueves 12 de noviembre**. **Cuatro Shorts, no siete**: con tres lectores por vuelta
+y mayoría se intentaron catorce temas (y dos versiones cortas) en 42 vueltas; pasaron cuatro. Uno al día a
+las 19:00 (hora de España), `"modo": "automatico"`, `"idiomas": ["es"]`. El domingo 15 sigue vacío (posición 11).
+
+| Día | Emisión | B2 · brazo (posición) | Serie | Pregunta | Ficha |
+|---|---|---|---|---|---|
+| Lunes 16 | `MDS-068` | A (12), escenas 4 y 5 animadas | El experimento | ¿las ratas se ríen con las cosquillas? | `E06` |
+| Martes 17 | `MDS-069` | AD (13), cinco escenas, 3 y 4 animadas | El experimento | ¿sonreír a la fuerza te pone contento? | `E18` |
+| Miércoles 18 | `MDS-070` | control (14) | El experimento | ¿por qué un «Qué bien» sin emoji suena frío? · *mensajes* | `D10` |
+| Jueves 19 | — | D (15) | — | **sin emisión** | — |
+| Viernes 20 | `MDS-071` | A (16), escenas 4 y 5 animadas | El experimento | ¿los perros se ríen? | `E25` (nueva) |
+| Sábado 21 | — | control (17) | — | **sin emisión** | — |
+| Domingo 22 | — | A (18) | — | **sin emisión** | — |
+
+**Tanteo de cosquillas (C46):** `MDS-068` (risa de las ratas con cosquillas). **Familia `mensajes`: uno**
+(`MDS-070`); la regla pide dos y los otros tres temas de mensajes cayeron. **Banco vacío.** Fichas nuevas:
+doce (`E23`-`E26`, `F21`-`F25`, `D15`, `I23`, `I24`). Detalle en `bitacora/2026-11/2026-11-12-planificacion.md`.
