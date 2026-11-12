@@ -422,7 +422,14 @@ def _whisper(ruta):
         return f"(sin transcripción: {e})"
 
 
-def prueba_breve(guion_ruta, salida, modelo):
+# 12/11/2026, tercera muestra. La segunda dejó claro que 3.8 lee en voz alta
+# cualquier indicación, también una sola línea («Con acento de España.»): con 3.8
+# solo vale el texto desnudo, y el acento no se puede pedir. Lo único que queda
+# para que suene a España es la voz: «voces:» locuta el texto solo con otras voces.
+VOCES_SOLO_TEXTO = ("Orus", "Iapetus", "Algenib", "Schedar")
+
+
+def prueba_breve(guion_ruta, salida, modelo, variantes=None):
     guion = json.loads(guion_ruta.read_text(encoding="utf-8"))
     escs = escenas(guion)
     texto = "\n".join(n for n, _, _ in escs)
@@ -431,10 +438,10 @@ def prueba_breve(guion_ruta, salida, modelo):
     cli = cliente()
     lineas = [f"Muestra voz-3.8 sin dirección · {guion.get('id')} · modelo {modelo} · "
               f"{n_pal} palabras", ""]
-    for i, (nombre, voz_nombre, prefijo) in enumerate(VARIANTES_BREVE):
+    for i, (nombre, voz_nombre, prefijo) in enumerate(variantes or VARIANTES_BREVE):
         if i:
             time.sleep(ESPERA_ENTRE_PETICIONES)
-        print(f"{i + 1}/{len(VARIANTES_BREVE)} {nombre}...", flush=True)
+        print(f"{i + 1}. {nombre}...", flush=True)
         try:
             pcm = pcm_de(cli, modelo, prefijo + texto, [("Narrador", voz_nombre)])
         except BaseException as e:
@@ -471,6 +478,10 @@ def main():
     # no los toca la dirección): escribir «c36:» delante del guion es lo mismo.
     if str(args.guion).startswith("c36:"):
         args.c36, args.guion = True, Path(str(args.guion)[4:])
+    if str(args.guion).startswith("voces:"):
+        args.salida.mkdir(parents=True, exist_ok=True)
+        return prueba_breve(Path(str(args.guion)[6:]), args.salida, args.modelo,
+                            [(f"solo_texto_{v.lower()}", v, "") for v in VOCES_SOLO_TEXTO])
     if str(args.guion).startswith("breve:"):
         args.salida.mkdir(parents=True, exist_ok=True)
         return prueba_breve(Path(str(args.guion)[6:]), args.salida, args.modelo)
