@@ -397,6 +397,65 @@ def prueba_acento(guion_ruta, salida, modelo):
     print("\n".join(lineas))
 
 
+# 12/11/2026, segunda muestra. La primera («acento:») demostró que gemini-3.8-flash-tts
+# lee en voz alta TODO el encabezado y las notas de dirección de voz.py (C36): 128 s
+# (Charon) y 211 s (Orus, dos veces) para 84 palabras; la producción la rechazó por
+# duración. Así que con 3.8 la dirección no puede ir dentro del texto. Esta prueba
+# pide el guion sin nada (solo las frases) y con UNA línea de idioma delante, al
+# estilo que documenta Google para los modelos TTS («Say cheerfully: …»).
+LINEA_ACENTO = "Con acento de España: "
+VARIANTES_BREVE = (("solo_texto_charon", "Charon", ""),
+                   ("acento_charon", "Charon", LINEA_ACENTO),
+                   ("acento_orus", "Orus", LINEA_ACENTO))
+
+
+def _whisper(ruta):
+    import subprocess
+    subprocess.run([sys.executable, "-m", "pip", "install", "--quiet", "faster-whisper"],
+                   check=False)
+    try:
+        from faster_whisper import WhisperModel
+        m = WhisperModel("small", device="cpu", compute_type="int8")
+        trozos, _ = m.transcribe(str(ruta), language="es", beam_size=1)
+        return " ".join(t.text.strip() for t in trozos)
+    except Exception as e:
+        return f"(sin transcripción: {e})"
+
+
+def prueba_breve(guion_ruta, salida, modelo):
+    guion = json.loads(guion_ruta.read_text(encoding="utf-8"))
+    escs = escenas(guion)
+    texto = "\n".join(n for n, _, _ in escs)
+    del_guion = set(_palabras(texto))
+    n_pal = len(_palabras(texto))
+    cli = cliente()
+    lineas = [f"Muestra voz-3.8 sin dirección · {guion.get('id')} · modelo {modelo} · "
+              f"{n_pal} palabras", ""]
+    for i, (nombre, voz_nombre, prefijo) in enumerate(VARIANTES_BREVE):
+        if i:
+            time.sleep(ESPERA_ENTRE_PETICIONES)
+        print(f"{i + 1}/{len(VARIANTES_BREVE)} {nombre}...", flush=True)
+        try:
+            pcm = pcm_de(cli, modelo, prefijo + texto, [("Narrador", voz_nombre)])
+        except BaseException as e:
+            lineas += [f"--- {nombre}: NO SALIÓ ({e})", ""]
+            continue
+        wav = salida / f"{nombre}.wav"
+        escribir_wav(pcm, wav)
+        dur = len(pcm) / 2 / RITMO
+        oido = _whisper(wav)
+        sobran = [w for w in _palabras(oido) if w not in del_guion]
+        leidas = sorted(set(sobran) & PALABRAS_DE_INSTRUCCION)
+        lineas += [f"--- {nombre} ({voz_nombre}{', con «' + prefijo.strip() + '»' if prefijo else ', solo el texto'})",
+                   f"duración {dur:.1f} s · {n_pal / dur * 60 if dur else 0:.0f} palabras/min",
+                   f"palabras oídas que no están en el guion: {len(sobran)} {sorted(set(sobran))[:20]}",
+                   ("⚠️ PARECE QUE LEE INSTRUCCIONES: " + ", ".join(leidas)) if leidas
+                   else "✅ no se oyen palabras de las instrucciones",
+                   f"transcripción: {oido}", ""]
+    (salida / "informe_breve.txt").write_text("\n".join(lineas) + "\n", encoding="utf-8")
+    print("\n".join(lineas))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--c36", action="store_true",
@@ -412,6 +471,9 @@ def main():
     # no los toca la dirección): escribir «c36:» delante del guion es lo mismo.
     if str(args.guion).startswith("c36:"):
         args.c36, args.guion = True, Path(str(args.guion)[4:])
+    if str(args.guion).startswith("breve:"):
+        args.salida.mkdir(parents=True, exist_ok=True)
+        return prueba_breve(Path(str(args.guion)[6:]), args.salida, args.modelo)
     if str(args.guion).startswith("acento:"):
         args.salida.mkdir(parents=True, exist_ok=True)
         return prueba_acento(Path(str(args.guion)[7:]), args.salida, args.modelo)
