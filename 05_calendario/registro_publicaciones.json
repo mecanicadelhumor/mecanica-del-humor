@@ -1108,11 +1108,12 @@
       "guion": "05_calendario/guiones/MDS-065.es.json",
       "video_id": "ihj0wF-WHiQ",
       "url": "https://youtu.be/ihj0wF-WHiQ",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-11-12T18:00:00Z",
       "musica": "cama_09_first_light_galaxytones.mp3",
       "subido_utc": "2026-11-12T08:25:43Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-11-12T22:46:18Z"
     },
     {
       "id": "MDS-067.es",
@@ -1131,5 +1132,5 @@
       "pregunta_publicada": "2026-11-09T19:12:49Z"
     }
   ],
-  "_estado_leido_utc": "2026-11-11T23:30:13Z"
+  "_estado_leido_utc": "2026-11-12T22:46:18Z"
 }
