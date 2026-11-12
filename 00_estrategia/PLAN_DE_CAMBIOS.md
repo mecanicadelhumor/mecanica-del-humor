@@ -6833,3 +6833,34 @@ contrario.
 ## Lo que NO cambia hoy
 
 - B2 (brazos, `orden`, regla), los guiones ya escritos (regla 11.4), las rutinas, los umbrales de C26.
+
+---
+
+# Versión 31 · 12 de noviembre de 2026 (jueves, en diferido) — el Short doble del 9/11, la muestra 3.8 con el código de producción, y el informe del 15/11
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario.
+
+| Qué | Decisión |
+|---|---|
+| **¿Doble publicación el 9/11?** (cuaderno) | **Sí: `MDS-067` se subió dos veces.** La producción relanzada a mano (nº 315, 13:19 UTC) subió `ggQ0Nvp60DA`. Una programada (nº 316, disparada a las 13:24 UTC) esperó en la cola de concurrencia `produccion`, pero hizo su checkout del commit que la disparó (`bd6e946`), **anterior** al commit del registro de la 315. `cola.py` leyó un registro sin `MDS-067`, produjo y subió **`40Ao-mOfuIg`**; al guardar su registro chocó con el de la 315 y falló, así que el registro no sabe de esa copia. **Arreglo** (entregado, `886b3f7`): `cola.py` suma el registro de `origin/main` al del árbol, y `publicar.py`, justo antes de subir, hace `git fetch` y no sube si `origin/main` ya tiene ese id con un `video_id` que el árbol no tenía (una resubida deliberada no se ve afectada). Probado en el contenedor con el caso del 9/11. **El codirector borra `40Ao-mOfuIg` en Studio** (`doble-subida-borrar`); yo no toco YouTube. Trampa 71 |
+| **Muestra 3.8** (`voz-3.8-acento`) | **Hallazgo que cambia el 16/11: `gemini-3.8-flash-tts` lee en voz alta cualquier indicación que vaya en el texto.** Tres pruebas sobre `MDS-060` (84 palabras), con un control nuevo (Whisper transcribe y busca palabras que no son del guion): (1) el código de producción, `voz.py` C36, con su preámbulo y notas de dirección → **128 s con Charon y 211 s con Orus**, leyendo el preámbulo y todas las notas («Línea uno es la primera frase…»; Orus, dos veces); `voz.py` rechazó las dos tomas por duración (run 43225788928). (2) Solo el texto → **29,9 s, 0 palabras de más** (Charon). (3) Una sola línea delante, «Con acento de España:» → la lee (Charon y Orus, run 43227268751). **Conclusión: con 3.8 el acento no se puede pedir; solo se puede elegir la voz.** Cuarta prueba: solo el texto con Orus, Iapetus, Algenib y Schedar, para que el codirector elija por oído. El cambio del 16/11 (`voz-3.8-cambio`) manda a 3.8 **el texto desnudo**, sin preámbulo ni notas, en la toma única y en la escalera, y se prueba con una producción completa antes de las 01:13 UTC del 17/11. Trampa 72. De paso: `google-genai` 3.x con `v1beta` fijada funciona (primera prueba de `voz-sdk-3`) |
+| **Recuento de planos** (`visual-recuento`) | 7 planos que no pegan en 4 Shorts (`MDS-064` 1, `065` 2, `066` 2, `067` 2): **1,75 por Short**, más de uno. Casi todos son frases de concepto o de estudio («unos psicólogos dieron frases», «la carita del guiño», «sumarse a la alegría») ilustradas con una persona cualquiera. Propuesta (`visual-archivo-personas`, 16/11, con hoja de muestra): el archivo solo para personas y sitios; lo demás, imagen generada o texto |
+| **Informe C26** | En el fichero de tareas del codirector del 12/11. Lo esencial: mediana de vistas a 48 h de los últimos veinte Shorts = **27** (`control_c26`, lectura del 10/11), **5 de 20** por encima de 100, ninguno por encima de 1.000; 4 suscriptores en los Shorts. Por bloques de diez: 62 → 60,5 → 31 → **21,5**. La tabla de C26 dice **< 50 → se para**. La tercera puerta («algún Short por encima de 1.000») se cumple al pie de la letra con `MDS-016` (1.115 a 48 h, 14/09), fuera de los veinte; la propuesta de cambiarla nunca se contestó, así que **sigue escrita como estaba** (cláusula 1: hoy ya no se cambia). Decide el codirector |
+| Lo vencido hoy | `voz-3.8-acento`, `visual-recuento` e informe C26, **hechos**. `largo-voz-tandas`, `largo-ensayo` y `calidad-patron` al **16/11**: no mueven las vistas antes del 15/11, y lo que se decida ese día puede dejarlos sin objeto. El largo no se estrena el 15/11 (no hay ensayo): el 22/11 como pronto, y con voz 3.8 |
+| B2 | Sin veredictos (solo `MDS-060` con datos de «se quedaron»). Nada que aplicar |
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Hoy 19:00 (España) | `MDS-065` (control) |
+| Viernes 13 · sábado 14 | `MDS-066` · `MDS-063` |
+| Hasta el domingo 15 | Codirector: oír la muestra 3.8 y borrar `40Ao-mOfuIg` |
+| Domingo 15/11 | **Punto de control C26**: el codirector decide si el canal sigue |
+| Lunes 16/11 | Dirección: voz 3.8 en producción (con la elegida, o la de mejor control automático); lo que diga C26; si sigue: C51.3, cara fija, esquina, filtro, archivo solo para personas, voz del largo y ensayo, patrón de calidad |
+| Martes 17/11 | Google apaga los modelos de voz de hoy |
+
+## Lo que NO cambia hoy
+
+- B2 (brazos, `orden`, regla), los guiones ya escritos (regla 11.4), las rutinas, los umbrales de C26.

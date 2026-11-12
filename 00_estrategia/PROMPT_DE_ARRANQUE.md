@@ -842,6 +842,27 @@ dependencia cambió de versión ese día (PyPI dice la fecha de cada una), y no 
 el canal a una librería sin tope de versión mayor.** Desde el 09/11 `voz.py` fija `api_version="v1beta"` y
 `requirements.txt` pide `google-genai>=2.34,<3`.
 
+**71. Una cola de concurrencia no es una cola de lectura.** El 09/11 `MDS-067` se subió dos veces: la
+producción manual y una programada coincidieron; `concurrency: produccion` puso la segunda a esperar, pero
+su checkout era el commit que la disparó, anterior al registro que escribió la primera. Leyó «no subido» y
+subió otra copia (`40Ao-mOfuIg`). → **Lo que decide «ya está hecho» se lee de `origin/main` en el momento de
+hacerlo, no del árbol de trabajo.** Desde el 12/11 `cola.py` y `publicar.py` lo hacen.
+
+**72. El modelo nuevo de voz no distingue instrucciones de texto.** El 12/11 `gemini-3.8-flash-tts` leyó en voz
+alta el preámbulo y todas las notas de dirección de `voz.py` (128 y 211 s para 84 palabras), y también una sola
+línea («Con acento de España:»). Los modelos 3.1/2.5 obedecían esas notas; el 3.8 las locuta. → **Con 3.8, a la
+voz solo se le manda el texto que tiene que decir.** Lo que no se pueda conseguir eligiendo la voz no se pide en
+el texto. Y cualquier cambio de modelo se prueba con el código de producción, no con una variante de prueba:
+la muestra del 05/11 («plano»/«dirigido») no era lo que habría sonado.
+
+## Dónde está el proyecto a 12 de noviembre de 2026 (en diferido)
+
+Versión **31** del plan, la que manda. El Short doble del 9/11 era `MDS-067` subido dos veces (trampa 71):
+arreglado en `cola.py`/`publicar.py`; el codirector borra `40Ao-mOfuIg`. Con 3.8 la voz lee en voz alta
+cualquier indicación (trampa 72): el 16/11 se le manda solo el texto; el codirector elige voz por oído. 1,75 planos que no pegan por Short: propuesta de
+archivo solo para personas y sitios (16/11). Informe C26 entregado: mediana 27 (< 50); el 15/11 decide el
+codirector. Largo, voz por tandas y patrón de calidad, al 16/11.
+
 ## Dónde está el proyecto a 9 de noviembre de 2026 (en diferido)
 
 Versión **30** del plan, la que manda. **El canal vuelve a tener voz** (trampa 70): sin vídeo del 06 al
