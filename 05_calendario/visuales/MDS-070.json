@@ -1,0 +1,341 @@
+{
+  "guion": "MDS-070",
+  "version": 2,
+  "firma": "99e237ea64038562",
+  "resuelto_utc": "2026-11-12T22:45:56Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "f3f6cfd24001",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.44
+          ],
+          "frase": "La misma respuesta, con un emoji, parece más atenta que sin él.",
+          "fuente": "pixabay",
+          "id": 204526,
+          "pagina": "https://pixabay.com/videos/id-204526/",
+          "titulo": "smartphone, cellphone, text, message, woman, discuss, technology id",
+          "autor": "conte_public",
+          "autor_url": "https://pixabay.com/users/conte_public-41658361/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 9.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2024/03/17/204526-924780709_large.mp4",
+          "tipo": "video",
+          "consulta": "woman smiling reading text message",
+          "relevancia": 0.6,
+          "inicio_s": 0.0,
+          "movimiento": 1.21,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "eb595ae75ef6",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.8
+          ],
+          "frase": "Le escribes a tu amigo: «¡Me han dado el trabajo!».",
+          "fuente": "pexels",
+          "id": 6585414,
+          "pagina": "https://www.pexels.com/video/adult-man-typing-on-phone-6585414/",
+          "titulo": "adult man typing on phone",
+          "autor": "Artem Podrez",
+          "autor_url": "https://www.pexels.com/@artempodrez",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 8.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6585414/6585414-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "young man typing excited on phone",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 1.65,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.375,
+              0.3063,
+              0.3944,
+              0.2656
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Y te contesta",
+          "t_estimado": [
+            4.8,
+            8.72
+          ],
+          "frase": "Y te contesta: «Qué bien».",
+          "fuente": "pexels",
+          "id": 8165693,
+          "pagina": "https://www.pexels.com/video/a-person-using-a-smartphone-with-a-blank-screen-8165693/",
+          "titulo": "a person using a smartphone with a blank screen",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8165693/8165693-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "phone screen new message close-up",
+          "relevancia": 0.4,
+          "inicio_s": 0.4,
+          "movimiento": 1.34,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "9c0041983983",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.0
+          ],
+          "frase": "Ni una carita. Y te pasas la tarde pensando qué le has hecho.",
+          "fuente": "pexels",
+          "id": 7226924,
+          "pagina": "https://www.pexels.com/video/man-using-smartphone-and-headset-while-lying-on-sofa-7226924/",
+          "titulo": "man using smartphone and headset while lying on sofa",
+          "autor": "Thirdman",
+          "autor_url": "https://www.pexels.com/@thirdman",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 29.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7226924/7226924-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man staring at phone on sofa thinking",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 3.28,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3833,
+              0.5625,
+              0.2,
+              0.1594
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "5437e0927a75",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.8
+          ],
+          "frase": "Unos psicólogos enseñaron a gente chats inventados y les pidieron imaginar que quien contestaba era un amigo.",
+          "fuente": "pexels",
+          "id": 30718267,
+          "pagina": "https://www.pexels.com/video/smartphone-with-chatgpt-on-wooden-desk-30718267/",
+          "titulo": "smartphone with chatgpt on wooden desk",
+          "autor": "Airam Dato-on",
+          "autor_url": "https://www.pexels.com/@airamdphoto",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 5.0,
+          "ancho": 1440,
+          "alto": 2160,
+          "url": "https://videos.pexels.com/video-files/30718267/13141944_1440_2160_30fps.mp4",
+          "tipo": "video",
+          "consulta": "chat bubbles on phone screen",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 3.56,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "b28517a521c9",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            10.18
+          ],
+          "frase": "Si la respuesta llevaba emoji, ese amigo parecía más atento y más cercano que con la misma frase sin él.",
+          "fuente": "pexels",
+          "id": 6919216,
+          "pagina": "https://www.pexels.com/video/women-smiling-while-hugging-each-other-6919216/",
+          "titulo": "women smiling while hugging each other",
+          "autor": "KATRIN  BOLOVTSOVA",
+          "autor_url": "https://www.pexels.com/@ekaterina-bolovtsova",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 30.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6919216/6919216-hd_1080_2048_30fps.mp4",
+          "tipo": "video",
+          "consulta": "friends hugging smiling",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 9.8,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.2589,
+              0.2611,
+              0.3004,
+              0.2277
+            ],
+            [
+              0.8538,
+              0.1867,
+              0.1462,
+              0.2033
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "321c501401f3",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.77
+          ],
+          "frase": "A tu amigo, quizá, solo le faltó una carita. Eso sí, era gente imaginando chats;",
+          "fuente": "pexels",
+          "id": 7447927,
+          "pagina": "https://www.pexels.com/video/man-talking-on-the-phone-7447927/",
+          "titulo": "man talking on the phone",
+          "autor": "August de Richelieu",
+          "autor_url": "https://www.pexels.com/@august-de-richelieu",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 22.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7447927/7447927-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man smiling at phone",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 2.05,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2278,
+              0.2609,
+              0.5,
+              0.3984
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "con tu amigo de verdad",
+          "t_estimado": [
+            7.77,
+            11.78
+          ],
+          "frase": "con tu amigo de verdad no se ha probado.",
+          "fuente": "pixabay",
+          "id": 697,
+          "pagina": "https://pixabay.com/videos/id-697/",
+          "titulo": "system, web, news, people, characters, network, connection, connected, with each other, together, agreement, action, allies, work, asia, effort, reviews, relationship, bookmarks, brotherhood, for this, democratization, service, digital, outdoors, i, you, an equal, impression, impressions, recommendations, relaxation, experience, recovery, facebook, free, friends, friendly, friendship, peace, community, community work, cooperative, global, globalization, group, information, interaction, internet, collaboration, collegial, comments, communication, consumer, cooperate, coorparative, team, mass media, media, opinion, opinions, work with, networks, users, organization, in partnership, person, platform, project, social, game, teamwork, twitter, compatible, united, promise, diversity, wiki, wikis, weather, knowledge, www id",
+          "autor": "geralt",
+          "autor_url": "https://pixabay.com/users/geralt-9301/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 23.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2015/09/06/697-138443977_large.mp4",
+          "tipo": "video",
+          "consulta": "friends texting each other",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 4.45,
+          "encuadre": {
+            "x": 0.559,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6753,
+              0.0444,
+              0.1318,
+              0.0963
+            ],
+            [
+              0.5701,
+              0.3444,
+              0.1252,
+              0.0852
+            ],
+            [
+              0.4844,
+              0.437,
+              0.1185,
+              0.0778
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

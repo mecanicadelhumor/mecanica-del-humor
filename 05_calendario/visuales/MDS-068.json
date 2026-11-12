@@ -1,0 +1,318 @@
+{
+  "guion": "MDS-068",
+  "version": 2,
+  "firma": "65a2836f759031a8",
+  "resuelto_utc": "2026-11-12T22:45:31Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "45e2db763fa0",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.44
+          ],
+          "frase": "Con cosquillas, las ratas chillan tan agudo que tú no las oyes.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a hand gently tickling the belly of a white pet rat, close-up, soft light",
+          "semilla": 9141205,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-068/e1_p1.jpg",
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "454cfeb12608",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.7
+          ],
+          "frase": "Le haces cosquillas en la barriga a una rata de laboratorio.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a white laboratory rat on a lab table, quiet room",
+          "semilla": 11583174,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-068/e2_p1.jpg",
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Y ni un ruido",
+          "t_estimado": [
+            5.7,
+            8.72
+          ],
+          "frase": "Y ni un ruido.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "close-up of a white rat looking straight at the camera",
+          "semilla": 15518377,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-068/e2_p2.jpg",
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "8e5fab3b51b4",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.46
+          ],
+          "frase": "Hasta que enciendes un detector de ultrasonidos, y resulta que la rata está chillando.",
+          "fuente": "pexels",
+          "id": 35235434,
+          "pagina": "https://www.pexels.com/video/modern-dj-software-on-laptop-screen-in-studio-35235434/",
+          "titulo": "modern dj software on laptop screen in studio",
+          "autor": "Wolf  Art",
+          "autor_url": "https://www.pexels.com/@wolfart",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 8.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/35235434/14927487_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "audio spectrogram on laptop screen",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 10.04,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "a65fdc5310a4",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.43
+          ],
+          "frase": "Unos neurocientíficos grabaron esos chillidos: las ratas los soltaban con las cosquillas y",
+          "fuente": "pixabay",
+          "id": 24541,
+          "pagina": "https://pixabay.com/videos/id-24541/",
+          "titulo": "summer, beach, sea, ocean, pet, water, vacation, animal, sand, nature, coast, relax, travel, holidays, journey, seascape, sunny, shore, playing, dog, waves, outdoor, people id",
+          "autor": "FreeCreativeStuff",
+          "autor_url": "https://pixabay.com/users/FreeCreativeStuff-6346290/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 37.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2019/06/19/24541-343454486_large.mp4",
+          "tipo": "video",
+          "consulta": "pet rats playing",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 4.34,
+          "encuadre": {
+            "x": 0,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4494,
+              0.5611,
+              0.074,
+              0.0583
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "al jugar entre ellas",
+          "t_estimado": [
+            6.43,
+            8.8
+          ],
+          "frase": "al jugar entre ellas.",
+          "fuente": "pexels",
+          "id": 8943167,
+          "pagina": "https://www.pexels.com/video/models-looking-at-each-other-8943167/",
+          "titulo": "models looking at each other",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 29.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8943167/8943167-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "rats chasing each other",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 1.11,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "8c58f4ddc60a",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.1
+          ],
+          "frase": "Y proponen que esos chillidos son alegría: algo así como",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a happy white rat sitting on a person's shoulder",
+          "semilla": 5221897,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-068/e5_p1.jpg",
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "la risa de las ratas",
+          "t_estimado": [
+            5.1,
+            7.87
+          ],
+          "frase": "la risa de las ratas.",
+          "fuente": "pexels",
+          "id": 8724299,
+          "pagina": "https://www.pexels.com/video/close-up-of-a-woman-laughing-8724299/",
+          "titulo": "close up of a woman laughing",
+          "autor": "Tima Miroshnichenko",
+          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 28.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8724299/8724299-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman laughing out loud close-up",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 14.49,
+          "encuadre": {
+            "x": 0.5,
+            "y": 1
+          },
+          "caras": [
+            [
+              0.1739,
+              0.1933,
+              0.668,
+              0.5289
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "d1bce56c7192",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.2
+          ],
+          "frase": "Esa rata quizá se esté riendo sin que te enteres. Aunque eso lo proponen los científicos:",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a person holding a pet rat in both hands, smiling",
+          "semilla": 14679165,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-068/e6_p1.jpg",
+          "caras": [
+            [
+              0.3789,
+              0.014,
+              0.4922,
+              0.3816
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "a una rata no se le pregunta",
+          "t_estimado": [
+            8.2,
+            11.32
+          ],
+          "frase": "a una rata no se le pregunta.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a white rat looking up curiously, shallow depth of field",
+          "semilla": 10002056,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-068/e6_p2.jpg",
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 5,
+      "plano": 1,
+      "id": "pexels:8369976",
+      "titulo": "putting gold coins inside a rat figurine",
+      "motivo": "poco relevante (0.25): se prueba la IA"
+    },
+    {
+      "escena": 6,
+      "plano": 2,
+      "id": "pexels:35143678",
+      "titulo": "rats drinking milk at urban setting",
+      "motivo": "poco relevante (0.333): se prueba la IA"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}

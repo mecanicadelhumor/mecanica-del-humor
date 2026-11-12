@@ -1,0 +1,348 @@
+{
+  "guion": "MDS-071",
+  "version": 2,
+  "firma": "3054143f487c5a0c",
+  "resuelto_utc": "2026-11-12T22:46:09Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "218dfa538143",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.44
+          ],
+          "frase": "Los perros tienen un jadeo especial que solo les sale cuando juegan.",
+          "fuente": "pixabay",
+          "id": 180135,
+          "pagina": "https://pixabay.com/videos/id-180135/",
+          "titulo": "ai generated, dog, golden retriever, pet, happy, retriever, panting, animal id",
+          "autor": "jodywhiteley",
+          "autor_url": "https://pixabay.com/users/jodywhiteley-7660204/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 25.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2023/09/11/180135-863401828_large.mp4",
+          "tipo": "video",
+          "consulta": "dog panting happy playing",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 0.83,
+          "encuadre": {
+            "x": 0.189,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.0806,
+              0.1111,
+              0.8394,
+              0.6389
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "aad0b2939477",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.72
+          ],
+          "frase": "Le enseñas a tu perro a sentarse. Está serio, atento, sin hacer ni un ruido.",
+          "fuente": "pexels",
+          "id": 7199252,
+          "pagina": "https://www.pexels.com/video/woman-training-a-dog-7199252/",
+          "titulo": "woman training a dog",
+          "autor": "Blue Bird",
+          "autor_url": "https://www.pexels.com/@blue-bird",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7199252/7199252-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "dog training sit command",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 5.56,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.625,
+              0.1125,
+              0.0972,
+              0.0781
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "0de6400d48a1",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.92
+          ],
+          "frase": "Sacas la pelota, y de repente empieza a jadear como si se partiera de risa.",
+          "fuente": "pexels",
+          "id": 20242966,
+          "pagina": "https://www.pexels.com/video/a-man-holding-a-dog-in-front-of-a-bubble-20242966/",
+          "titulo": "a man holding a dog in front of a bubble",
+          "autor": "K",
+          "autor_url": "https://www.pexels.com/@kelly",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 38.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/20242966/20242966-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "man holding ball dog excited",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 11.47,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3306,
+              0.1437,
+              0.3278,
+              0.2687
+            ],
+            [
+              0.1361,
+              0.1578,
+              0.2444,
+              0.1641
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "584af390893a",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.57
+          ],
+          "frase": "Unos investigadores pusieron micrófonos a dieciséis perros y a sus dueños",
+          "fuente": "pexels",
+          "id": 37132254,
+          "pagina": "https://www.pexels.com/video/adorable-shih-tzu-dog-portrait-close-up-37132254/",
+          "titulo": "adorable shih tzu dog portrait close up",
+          "autor": "Damir K",
+          "autor_url": "https://www.pexels.com/@damir",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/37132254/15730563_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "dog with collar close-up",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 5.68,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.1694,
+              0.3516,
+              0.5056,
+              0.3297
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "mientras entrenaban",
+          "t_estimado": [
+            4.57,
+            8.33
+          ],
+          "frase": "mientras entrenaban, jugaban y descansaban.",
+          "fuente": "pexels",
+          "id": 6879291,
+          "pagina": "https://www.pexels.com/video/woman-playing-with-her-dog-6879291/",
+          "titulo": "woman playing with her dog",
+          "autor": "Dario Fernandez Ruz",
+          "autor_url": "https://www.pexels.com/@dario-fernandez-ruz",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 14.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6879291/6879291-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "dog playing with owner",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 6.64,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "14f695cae52a",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.72
+          ],
+          "frase": "Ese jadeo casi no salía al entrenar ni al descansar. Salía al jugar, y también con cosquillas y mimos.",
+          "fuente": "pexels",
+          "id": 8473404,
+          "pagina": "https://www.pexels.com/video/a-person-tickling-a-dog-8473404/",
+          "titulo": "a person tickling a dog",
+          "autor": "Cup of  Couple",
+          "autor_url": "https://www.pexels.com/@cup-of-couple",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 9.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8473404/8473404-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "person tickling dog belly",
+          "relevancia": 0.75,
+          "inicio_s": 0.0,
+          "movimiento": 8.1,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "e06bf1ffd311",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.47
+          ],
+          "frase": "Así que con la pelota tu perro hace el ruido más parecido a una risa. Ojo:",
+          "fuente": "pexels",
+          "id": 37676969,
+          "pagina": "https://www.pexels.com/video/playful-dog-fetching-ball-in-sunny-park-37676969/",
+          "titulo": "playful dog fetching ball in sunny park",
+          "autor": "Maicon Marcelino",
+          "autor_url": "https://www.pexels.com/@maicon-marcelino-2159017504",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 31.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/37676969/15973285_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "dog running with ball park",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 8.21,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4528,
+              0.4594,
+              0.0472,
+              0.0344
+            ],
+            [
+              0.45,
+              0.4156,
+              0.0417,
+              0.0297
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "eran solo dieciséis perros",
+          "t_estimado": [
+            6.47,
+            11.32
+          ],
+          "frase": "eran solo dieciséis perros, una primera prueba.",
+          "fuente": "pexels",
+          "id": 19059257,
+          "pagina": "https://www.pexels.com/video/two-dogs-sitting-in-the-woods-with-a-sign-that-says-we-are-the-best-dogs-19059257/",
+          "titulo": "two dogs sitting in the woods with a sign that says we are the best dogs",
+          "autor": "Andreas Schnabl",
+          "autor_url": "https://www.pexels.com/@andreas-schnabl-1775843",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/19059257/19059257-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "several dogs sitting",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 6.01,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.7667,
+              0.4094,
+              0.0639,
+              0.0531
+            ],
+            [
+              0.3222,
+              0.4062,
+              0.0667,
+              0.0453
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

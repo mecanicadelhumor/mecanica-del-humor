@@ -1,0 +1,337 @@
+{
+  "guion": "MDS-069",
+  "version": 2,
+  "firma": "455949a6d67fd4a7",
+  "resuelto_utc": "2026-11-12T22:45:43Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "c2200f916bf7",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.44
+          ],
+          "frase": "Sonreír a propósito te pone algo más contento, aunque no tengas ganas.",
+          "fuente": "pexels",
+          "id": 5937444,
+          "pagina": "https://www.pexels.com/video/woman-using-floss-toothpick-in-front-of-mirror-5937444/",
+          "titulo": "woman using floss toothpick in front of mirror",
+          "autor": "Sora Shimazaki",
+          "autor_url": "https://www.pexels.com/@sora-shimazaki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5937444/5937444-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman forcing smile mirror",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 1.59,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.0222,
+              0.3578,
+              0.3028,
+              0.2391
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "0aea78985dec",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            2.63
+          ],
+          "frase": "Ascensor, ocho de la mañana.",
+          "fuente": "pixabay",
+          "id": 27268,
+          "pagina": "https://pixabay.com/videos/id-27268/",
+          "titulo": "cycling, do exercise, exercise, bike, morning, street, people id",
+          "autor": "loilamtan",
+          "autor_url": "https://pixabay.com/users/loilamtan-4659988/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 30.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2019/09/27/27268-363287559_large.mp4",
+          "tipo": "video",
+          "consulta": "two people in elevator morning",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 6.47,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Tu vecino te dice",
+          "t_estimado": [
+            2.63,
+            7.8
+          ],
+          "frase": "Tu vecino te dice: «Sonríe, que es gratis».",
+          "fuente": "pexels",
+          "id": 7599305,
+          "pagina": "https://www.pexels.com/video/man-in-black-suit-walking-to-the-elevator-7599305/",
+          "titulo": "man in black suit walking to the elevator",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 36.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/7599305/7599305-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man smiling in elevator",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 11.89,
+          "encuadre": {
+            "x": 0.5,
+            "y": 1
+          },
+          "caras": [
+            [
+              0.2016,
+              0.3589,
+              0.3597,
+              0.3122
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "956ab80dbe8e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.97
+          ],
+          "frase": "Para comprobarlo, unos psicólogos pidieron a casi cuatro mil personas que sonrieran a propósito,",
+          "fuente": "pixabay",
+          "id": 76888,
+          "pagina": "https://pixabay.com/videos/id-76888/",
+          "titulo": "man, smiling, farmer, happy, young, culture, senior, woman, girl, happiness, lifestyle, people, portrait id",
+          "autor": "FnBTV",
+          "autor_url": "https://pixabay.com/users/FnBTV-14057698/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 13.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2021/06/08/76888-560684391_large.mp4",
+          "tipo": "video",
+          "consulta": "people smiling at camera portraits",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 1.85,
+          "encuadre": {
+            "x": 0.542,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2661,
+              0.1444,
+              0.469,
+              0.3222
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "y luego les preguntaron",
+          "t_estimado": [
+            6.97,
+            10.64
+          ],
+          "frase": "y luego les preguntaron cómo se sentían.",
+          "fuente": "pexels",
+          "id": 7011558,
+          "pagina": "https://www.pexels.com/video/woman-looking-at-printed-photos-7011558/",
+          "titulo": "woman looking at printed photos",
+          "autor": "George Milton",
+          "autor_url": "https://www.pexels.com/@george-milton",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7011558/7011558-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman looking at photo smiling",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 9.45,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2778,
+              0.0953,
+              0.3278,
+              0.2266
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "c95c534f8709",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.87
+          ],
+          "frase": "Y al acabar, se sentían más contentas. Incluso las que habían empezado sin ninguna alegría.",
+          "fuente": "pexels",
+          "id": 7049300,
+          "pagina": "https://www.pexels.com/video/woman-smiling-for-the-camera-7049300/",
+          "titulo": "woman smiling for the camera",
+          "autor": "Artem Podrez",
+          "autor_url": "https://www.pexels.com/@artempodrez",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7049300/7049300-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "woman smiling genuinely",
+          "relevancia": 0.667,
+          "inicio_s": 0.0,
+          "movimiento": 2.55,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3028,
+              0.2422,
+              0.3361,
+              0.2281
+            ]
+          ]
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "55c9a320709e",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.47
+          ],
+          "frase": "¿Y cuánto más contento? Eso el estudio no lo dice. Así que tu vecino tiene razón,",
+          "fuente": "pexels",
+          "id": 5999655,
+          "pagina": "https://www.pexels.com/video/woman-smiling-at-the-camera-5999655/",
+          "titulo": "woman smiling at the camera",
+          "autor": "Ono  Kosuki",
+          "autor_url": "https://www.pexels.com/@ono-kosuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/5999655/5999655-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman leaving elevator smiling",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 11.46,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3778,
+              0.275,
+              0.3889,
+              0.2859
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "pero solo un poquito",
+          "t_estimado": [
+            7.47,
+            9.93
+          ],
+          "frase": "pero solo un poquito.",
+          "fuente": "pexels",
+          "id": 6565429,
+          "pagina": "https://www.pexels.com/video/a-woman-walking-on-the-street-6565429/",
+          "titulo": "a woman walking on the street",
+          "autor": "Tim Douglas",
+          "autor_url": "https://www.pexels.com/@tim-douglas",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 8.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6565429/6565429-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman small smile walking street",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 10.88,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6222,
+              0.3703,
+              0.075,
+              0.0563
+            ],
+            [
+              0.7194,
+              0.3891,
+              0.0667,
+              0.0531
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}
