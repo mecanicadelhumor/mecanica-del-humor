@@ -326,6 +326,77 @@ def prueba_c36(guion, salida):
     print(f"\nListo: {salida}/c36/voz.mp3 es lo que sonaría en el vídeo.")
 
 
+# 12/11/2026 · voz-3.8-acento. La muestra 3.8 del 05/11 se hizo con las dos
+# variantes de esta prueba (plano: el guion sin nada; dirigido: la dirección
+# larga de arriba). El codirector oyó que la dirigida leía las instrucciones y
+# que el acento era latino. Ninguna de las dos es lo que haría la producción:
+# voz.py (C36) pide el Short entero con un preámbulo corto que dice «en español
+# de España» y marca el texto con «TEXTO:» (la receta de Google). Esta prueba es
+# eso, con el modelo nuevo, y con dos voces: Charon (la de siempre) y otra
+# grave. Se lanza escribiendo «acento:» delante del guion en «Prueba de voces».
+VOCES_ACENTO = ("Charon", "Orus")
+PALABRAS_DE_INSTRUCCION = {"lee", "voz", "alta", "texto", "notas", "dirección",
+                           "direccion", "españa", "acento", "narrador", "pausa",
+                           "instrucciones", "línea", "linea"}
+
+
+def _palabras(s):
+    import re
+    return re.findall(r"[a-záéíóúüñ]+", (s or "").lower())
+
+
+def prueba_acento(guion_ruta, salida, modelo):
+    import shutil
+    import subprocess
+    guion = json.loads(guion_ruta.read_text(encoding="utf-8"))
+    del_guion = set(_palabras(" ".join(n for n, _, _ in escenas(guion))))
+    lineas = [f"Muestra voz-3.8-acento · {guion.get('id')} · modelo {modelo}",
+              "Código de producción (voz.py, C36: una toma con el preámbulo «Lee en voz alta, "
+              "en español de España…»).", ""]
+    for i, voz_nombre in enumerate(VOCES_ACENTO):
+        if i:
+            print(f"\n   esperando {ESPERA_ENTRE_PETICIONES:.0f} s (3 peticiones por minuto)...",
+                  flush=True)
+            time.sleep(ESPERA_ENTRE_PETICIONES)
+        destino = salida / f"c36_{voz_nombre.lower()}"
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "03_produccion" / "pipeline"))
+        if i == 0:
+            subprocess.run([sys.executable, "-m", "pip", "install", "--quiet", "faster-whisper",
+                            "numpy", "av<19"], check=True)
+            if shutil.which("ffmpeg") is None:
+                subprocess.run("sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg",
+                               shell=True, check=True)
+        import voz
+        voz.C36_SOLO = True
+        voz.MODELO_GEMINI = modelo
+        voz.VOZ_GEMINI_NARRADOR = voz_nombre
+        print(f"{i + 1}/{len(VOCES_ACENTO)} C36 con {modelo}, voz {voz_nombre}...", flush=True)
+        try:
+            asyncio.run(voz.principal(str(guion_ruta), destino, motor="gemini"))
+        except BaseException as e:          # SystemExit incluido: que la otra voz salga igual
+            lineas.append(f"--- {voz_nombre}: NO SALIÓ ({e})")
+            continue
+        toma = destino / "voz" / "toma_entera.mp3"
+        oido = ""
+        try:
+            from faster_whisper import WhisperModel
+            m = WhisperModel("small", device="cpu", compute_type="int8")
+            trozos, _ = m.transcribe(str(toma), language="es", beam_size=1)
+            oido = " ".join(t.text.strip() for t in trozos)
+        except Exception as e:
+            oido = f"(sin transcripción: {e})"
+        sobran = [w for w in _palabras(oido) if w not in del_guion]
+        leidas = sorted(set(sobran) & PALABRAS_DE_INSTRUCCION)
+        lineas += [f"--- {voz_nombre}: {destino.name}/voz.mp3 (lo que sonaría en el vídeo)",
+                   f"palabras oídas que no están en el guion: {len(sobran)} "
+                   f"{sorted(set(sobran))[:20]}",
+                   ("⚠️ PARECE QUE LEE INSTRUCCIONES: " + ", ".join(leidas)) if leidas
+                   else "✅ no se oyen palabras de las instrucciones",
+                   f"transcripción: {oido}", ""]
+    (salida / "informe_acento.txt").write_text("\n".join(lineas) + "\n", encoding="utf-8")
+    print("\n".join(lineas))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--c36", action="store_true",
@@ -341,6 +412,9 @@ def main():
     # no los toca la dirección): escribir «c36:» delante del guion es lo mismo.
     if str(args.guion).startswith("c36:"):
         args.c36, args.guion = True, Path(str(args.guion)[4:])
+    if str(args.guion).startswith("acento:"):
+        args.salida.mkdir(parents=True, exist_ok=True)
+        return prueba_acento(Path(str(args.guion)[7:]), args.salida, args.modelo)
     if args.c36:
         args.salida.mkdir(parents=True, exist_ok=True)
         return prueba_c36(args.guion, args.salida)

@@ -185,14 +185,47 @@ def ya_subidos():
     return set(videos_subidos())
 
 
-def videos_subidos():
-    """{id: video_id} de lo que el registro da por subido."""
+def _ids_de(texto):
     try:
-        datos = json.loads(REGISTRO.read_text(encoding="utf-8"))
+        datos = json.loads(texto)
     except Exception:
         return {}
     return {e.get("id"): e.get("video_id")
             for e in datos.get("publicaciones", []) if e.get("video_id")}
+
+
+def videos_en_main(traer=False):
+    """{id: video_id} del registro tal como está AHORA en origin/main.
+
+    Incidencia del 09/11/2026 (MDS-067 subido dos veces): la producción manual
+    (nº 315) y una programada (nº 316) coincidieron. La concurrencia del
+    workflow puso la segunda en cola, pero su checkout es el commit que la
+    disparó, ANTERIOR al commit del registro que hizo la primera al acabar. El
+    árbol de trabajo no veía MDS-067 y lo subió otra vez (40Ao-mOfuIg). Por eso
+    se mira también origin/main: `traer=True` hace antes un `git fetch` (lo usa
+    publicar.py justo antes de subir). Si git falla, {} y manda el árbol.
+    """
+    import subprocess
+    try:
+        if traer:
+            subprocess.run(["git", "-C", str(RAIZ), "fetch", "-q", "origin", "main"],
+                           check=True, capture_output=True, timeout=60)
+        r = subprocess.run(["git", "-C", str(RAIZ), "show",
+                            "origin/main:05_calendario/registro_publicaciones.json"],
+                           check=True, capture_output=True, timeout=30)
+    except Exception:
+        return {}
+    return _ids_de(r.stdout.decode("utf-8"))
+
+
+def videos_subidos():
+    """{id: video_id} de lo que el registro da por subido: el del árbol de
+    trabajo y, por encima, el de origin/main (ver videos_en_main)."""
+    try:
+        locales = _ids_de(REGISTRO.read_text(encoding="utf-8"))
+    except Exception:
+        locales = {}
+    return {**locales, **videos_en_main()}
 
 
 def subido_de_verdad(ident, emision, subidos):
