@@ -246,10 +246,45 @@ def primer_comentario(guion, meta):
     return guion.get("pregunta_comentarios") or None
 
 
+def subido_por_otra_ejecucion(ident):
+    """El video_id con el que otra ejecución subió `ident` DESPUÉS de que esta
+    hiciera su checkout, o None.
+
+    Incidencia del 09/11/2026: MDS-067 salió dos veces (ggQ0Nvp60DA y
+    40Ao-mOfuIg) porque dos producciones coincidieron y la segunda leía un
+    registro anterior al commit de la primera. Justo antes de subir se mira
+    origin/main recién traído: si allí `ident` tiene un video_id que el registro
+    de este árbol no tenía, lo subió otra ejecución mientras esta producía, y no
+    se sube. Una resubida deliberada (rehacer_video_id, o una manual sobre algo
+    ya registrado) no se ve afectada: ese video_id ya estaba en el árbol.
+    """
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import cola
+    try:
+        locales = cola._ids_de(cola.REGISTRO.read_text(encoding="utf-8"))
+    except Exception:
+        locales = {}
+    remoto = cola.videos_en_main(traer=True).get(ident)
+    if remoto and remoto != locales.get(ident):
+        return remoto
+    return None
+
+
 def publicar(carpeta, estado="private", publicar_en=None):
     carpeta = Path(carpeta)
     guion = json.loads((carpeta / "guion.timed.json").read_text(encoding="utf-8"))
     raiz = Path(__file__).resolve().parents[2]
+
+    otro = subido_por_otra_ejecucion(carpeta.name)
+    if otro:
+        print(f"::warning::{carpeta.name} ya lo subió otra ejecución mientras esta "
+              f"producía (https://youtu.be/{otro}, en origin/main). No se sube otra vez.")
+        # Sin final.mp4 el expediente de calidad no se rehace sobre el de la otra.
+        mp4 = carpeta / "final.mp4"
+        if mp4.exists():
+            mp4.rename(carpeta / "final.no_subido.mp4")
+        return None
 
     # Título, descripción y etiquetas los escribe el agente Empaquetador, y su
     # sitio canónico es el repositorio (queda versionado y revisable antes de
