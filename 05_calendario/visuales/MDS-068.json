@@ -1,8 +1,8 @@
 {
   "guion": "MDS-068",
   "version": 2,
-  "firma": "65a2836f759031a8",
-  "resuelto_utc": "2026-11-12T22:45:31Z",
+  "firma": "4490bfe07c76415a",
+  "resuelto_utc": "2026-11-13T10:32:53Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -112,7 +112,7 @@
     },
     "4": {
       "narracion_sha": "a65fdc5310a4",
-      "texto_pos": "arriba",
+      "texto_pos": "abajo",
       "planos": [
         {
           "k": 1,
@@ -122,34 +122,16 @@
             6.43
           ],
           "frase": "Unos neurocientíficos grabaron esos chillidos: las ratas los soltaban con las cosquillas y",
-          "fuente": "pixabay",
-          "id": 24541,
-          "pagina": "https://pixabay.com/videos/id-24541/",
-          "titulo": "summer, beach, sea, ocean, pet, water, vacation, animal, sand, nature, coast, relax, travel, holidays, journey, seascape, sunny, shore, playing, dog, waves, outdoor, people id",
-          "autor": "FreeCreativeStuff",
-          "autor_url": "https://pixabay.com/users/FreeCreativeStuff-6346290/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 37.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2019/06/19/24541-343454486_large.mp4",
-          "tipo": "video",
-          "consulta": "pet rats playing",
-          "relevancia": 0.667,
-          "inicio_s": 0.4,
-          "movimiento": 4.34,
-          "encuadre": {
-            "x": 0,
-            "y": 0.5
-          },
-          "caras": [
-            [
-              0.4494,
-              0.5611,
-              0.074,
-              0.0583
-            ]
-          ]
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "two young rats playfully wrestling on soft bedding",
+          "semilla": 4074493,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-068/e4_p1.jpg",
+          "caras": []
         },
         {
           "k": 2,
@@ -159,26 +141,15 @@
             8.8
           ],
           "frase": "al jugar entre ellas.",
-          "fuente": "pexels",
-          "id": 8943167,
-          "pagina": "https://www.pexels.com/video/models-looking-at-each-other-8943167/",
-          "titulo": "models looking at each other",
-          "autor": "MART  PRODUCTION",
-          "autor_url": "https://www.pexels.com/@mart-production",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 29.0,
-          "ancho": 1080,
-          "alto": 2048,
-          "url": "https://videos.pexels.com/video-files/8943167/8943167-hd_1080_2048_25fps.mp4",
-          "tipo": "video",
-          "consulta": "rats chasing each other",
-          "relevancia": 0.5,
-          "inicio_s": 0.4,
-          "movimiento": 1.11,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "two rats chasing each other in a large clean cage",
+          "semilla": 11846076,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-068/e4_p2.jpg",
           "caras": []
         }
       ]
@@ -214,32 +185,21 @@
             7.87
           ],
           "frase": "la risa de las ratas.",
-          "fuente": "pexels",
-          "id": 8724299,
-          "pagina": "https://www.pexels.com/video/close-up-of-a-woman-laughing-8724299/",
-          "titulo": "close up of a woman laughing",
-          "autor": "Tima Miroshnichenko",
-          "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 28.0,
-          "ancho": 1080,
-          "alto": 2048,
-          "url": "https://videos.pexels.com/video-files/8724299/8724299-hd_1080_2048_25fps.mp4",
-          "tipo": "video",
-          "consulta": "woman laughing out loud close-up",
-          "relevancia": 0.75,
-          "inicio_s": 0.4,
-          "movimiento": 14.49,
-          "encuadre": {
-            "x": 0.5,
-            "y": 1
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a woman laughing out loud, close-up, warm light",
+          "semilla": 16009538,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-068/e5_p2.jpg",
           "caras": [
             [
-              0.1739,
-              0.1933,
-              0.668,
-              0.5289
+              0.1576,
+              0.1971,
+              0.6328,
+              0.4485
             ]
           ]
         }
@@ -268,10 +228,10 @@
           "fichero": "05_calendario/visuales/MDS-068/e6_p1.jpg",
           "caras": [
             [
-              0.3789,
-              0.014,
-              0.4922,
-              0.3816
+              0.3841,
+              0.1434,
+              0.3685,
+              0.2824
             ]
           ]
         },
@@ -292,7 +252,14 @@
           "alto": 1360,
           "tipo": "imagen",
           "fichero": "05_calendario/visuales/MDS-068/e6_p2.jpg",
-          "caras": []
+          "caras": [
+            [
+              0.6836,
+              0.3434,
+              0.1367,
+              0.0831
+            ]
+          ]
         }
       ]
     }
