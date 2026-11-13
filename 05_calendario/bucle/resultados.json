@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-12T21:08:38Z",
+ "actualizado_utc": "2026-11-13T14:54:31Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -129,7 +129,7 @@
        "porcentaje_visto": 91.7,
        "me_gusta": 0,
        "visualizaciones": 10,
-       "leido": "2026-11-12"
+       "leido": "2026-11-13"
       }
      ]
     },
@@ -138,7 +138,7 @@
      "n": 8,
      "se_quedaron_media": 31.9,
      "porcentaje_visto_media": 68.8,
-     "vistas_48h_mediana": 15.5,
+     "vistas_48h_mediana": 22,
      "me_gusta_por_100": 1.04,
      "ceros_de_feed": 4,
      "shorts": [
@@ -216,11 +216,11 @@
        "id": "MDS-059",
        "publicado": "2026-11-04",
        "se_quedaron_pct": 50.0,
-       "vistas_48h": 4,
+       "vistas_48h": null,
        "porcentaje_visto": 64.5,
        "me_gusta": 0,
        "visualizaciones": 6,
-       "leido": "2026-11-12"
+       "leido": "2026-11-13"
       }
      ]
     },
@@ -310,8 +310,8 @@
        "vistas_48h": 428,
        "porcentaje_visto": 47.5,
        "me_gusta": 9,
-       "visualizaciones": 430,
-       "leido": "2026-11-12"
+       "visualizaciones": 429,
+       "leido": "2026-11-10"
       }
      ]
     }
@@ -341,7 +341,7 @@
     "n": 14,
     "se_quedaron_media": 32.9,
     "porcentaje_visto_media": 65.5,
-    "vistas_48h_mediana": 23.0,
+    "vistas_48h_mediana": 30,
     "me_gusta_por_100": 1.23,
     "ceros_de_feed": 3,
     "ids": [
@@ -389,7 +389,7 @@
        "porcentaje_visto": 38.9,
        "me_gusta": 1,
        "visualizaciones": 280,
-       "leido": "2026-11-12"
+       "leido": "2026-11-13"
       }
      ]
     },
@@ -410,7 +410,7 @@
        "porcentaje_visto": 64.5,
        "me_gusta": 0,
        "visualizaciones": 28,
-       "leido": "2026-11-12"
+       "leido": "2026-11-13"
       }
      ]
     },
@@ -528,6 +528,26 @@
      "id": "MDS-066",
      "variante": "control",
      "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-068",
+     "variante": "A",
+     "motivo": "sin ficha de producción todavía"
+    },
+    {
+     "id": "MDS-069",
+     "variante": "AD",
+     "motivo": "sin ficha de producción todavía"
+    },
+    {
+     "id": "MDS-070",
+     "variante": "control",
+     "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-071",
+     "variante": "A",
+     "motivo": "sin ficha de producción todavía"
     }
    ]
   }
