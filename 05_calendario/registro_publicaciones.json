@@ -1124,11 +1124,12 @@
       "guion": "05_calendario/guiones/MDS-066.es.json",
       "video_id": "n6VcjsxD4hE",
       "url": "https://youtu.be/n6VcjsxD4hE",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-11-13T18:00:00Z",
       "musica": "cama_10_farewell_galaxytones.mp3",
       "subido_utc": "2026-11-13T08:01:59Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-11-13T22:42:41Z"
     },
     {
       "id": "MDS-067.es",
@@ -1147,5 +1148,5 @@
       "pregunta_publicada": "2026-11-09T19:12:49Z"
     }
   ],
-  "_estado_leido_utc": "2026-11-12T22:46:18Z"
+  "_estado_leido_utc": "2026-11-13T22:42:41Z"
 }
