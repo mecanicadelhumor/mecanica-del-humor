@@ -1116,6 +1116,21 @@
       "pregunta_publicada": "2026-11-12T22:46:18Z"
     },
     {
+      "id": "MDS-066.es",
+      "episodio": "MDS-066",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué se te pega la risa de otro?",
+      "guion": "05_calendario/guiones/MDS-066.es.json",
+      "video_id": "n6VcjsxD4hE",
+      "url": "https://youtu.be/n6VcjsxD4hE",
+      "estado": "private",
+      "publicar_en": "2026-11-13T18:00:00Z",
+      "musica": "cama_10_farewell_galaxytones.mp3",
+      "subido_utc": "2026-11-13T08:01:59Z",
+      "revisado": false
+    },
+    {
       "id": "MDS-067.es",
       "episodio": "MDS-067",
       "idioma": "es",
