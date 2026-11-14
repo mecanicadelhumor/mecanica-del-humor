@@ -748,6 +748,9 @@
     },
     "5.2": {
       "fuente": "ia"
+    },
+    "5": {
+      "texto_pos": "arriba"
     }
   }
 }
