@@ -1,8 +1,8 @@
 {
   "guion": "MDS-068",
   "version": 2,
-  "firma": "4490bfe07c76415a",
-  "resuelto_utc": "2026-11-13T10:32:53Z",
+  "firma": "b26b247d61a4ab10",
+  "resuelto_utc": "2026-11-14T10:32:43Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -156,7 +156,7 @@
     },
     "5": {
       "narracion_sha": "8c58f4ddc60a",
-      "texto_pos": "abajo",
+      "texto_pos": "arriba",
       "planos": [
         {
           "k": 1,
@@ -175,7 +175,14 @@
           "alto": 1360,
           "tipo": "imagen",
           "fichero": "05_calendario/visuales/MDS-068/e5_p1.jpg",
-          "caras": []
+          "caras": [
+            [
+              0.5169,
+              0.0324,
+              0.4831,
+              0.4199
+            ]
+          ]
         },
         {
           "k": 2,
@@ -196,10 +203,10 @@
           "fichero": "05_calendario/visuales/MDS-068/e5_p2.jpg",
           "caras": [
             [
-              0.1576,
-              0.1971,
-              0.6328,
-              0.4485
+              0.056,
+              0.2066,
+              0.7357,
+              0.4529
             ]
           ]
         }
@@ -228,10 +235,10 @@
           "fichero": "05_calendario/visuales/MDS-068/e6_p1.jpg",
           "caras": [
             [
-              0.3841,
-              0.1434,
-              0.3685,
-              0.2824
+              0.401,
+              0.1647,
+              0.3815,
+              0.2904
             ]
           ]
         },
@@ -252,14 +259,7 @@
           "alto": 1360,
           "tipo": "imagen",
           "fichero": "05_calendario/visuales/MDS-068/e6_p2.jpg",
-          "caras": [
-            [
-              0.6836,
-              0.3434,
-              0.1367,
-              0.0831
-            ]
-          ]
+          "caras": []
         }
       ]
     }
