@@ -747,10 +747,21 @@
       "fuente": "ia"
     },
     "5.2": {
+      "marca": true
+    },
+    "5.1": {
+      "marca": true
+    }
+  },
+  "MDS-069": {
+    "1.1": {
       "fuente": "ia"
     },
-    "5": {
-      "texto_pos": "arriba"
+    "3.1": {
+      "fuente": "ia"
+    },
+    "5.1": {
+      "fuente": "ia"
     }
   }
 }
