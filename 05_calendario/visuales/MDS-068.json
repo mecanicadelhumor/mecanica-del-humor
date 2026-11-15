@@ -1,8 +1,8 @@
 {
   "guion": "MDS-068",
   "version": 2,
-  "firma": "b26b247d61a4ab10",
-  "resuelto_utc": "2026-11-14T10:32:43Z",
+  "firma": "3dec72a178310c12",
+  "resuelto_utc": "2026-11-15T10:31:42Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -150,13 +150,20 @@
           "alto": 1360,
           "tipo": "imagen",
           "fichero": "05_calendario/visuales/MDS-068/e4_p2.jpg",
-          "caras": []
+          "caras": [
+            [
+              0.6107,
+              0.4596,
+              0.0547,
+              0.039
+            ]
+          ]
         }
       ]
     },
     "5": {
       "narracion_sha": "8c58f4ddc60a",
-      "texto_pos": "arriba",
+      "texto_pos": "abajo",
       "planos": [
         {
           "k": 1,
@@ -166,23 +173,8 @@
             5.1
           ],
           "frase": "Y proponen que esos chillidos son alegría: algo así como",
-          "fuente": "ia",
-          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-          "prompt": "a happy white rat sitting on a person's shoulder",
-          "semilla": 5221897,
-          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-          "ancho": 768,
-          "alto": 1360,
-          "tipo": "imagen",
-          "fichero": "05_calendario/visuales/MDS-068/e5_p1.jpg",
-          "caras": [
-            [
-              0.5169,
-              0.0324,
-              0.4831,
-              0.4199
-            ]
-          ]
+          "fuente": "marca",
+          "tipo": "marca"
         },
         {
           "k": 2,
@@ -192,23 +184,8 @@
             7.87
           ],
           "frase": "la risa de las ratas.",
-          "fuente": "ia",
-          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-          "prompt": "a woman laughing out loud, close-up, warm light",
-          "semilla": 16009538,
-          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-          "ancho": 768,
-          "alto": 1360,
-          "tipo": "imagen",
-          "fichero": "05_calendario/visuales/MDS-068/e5_p2.jpg",
-          "caras": [
-            [
-              0.056,
-              0.2066,
-              0.7357,
-              0.4529
-            ]
-          ]
+          "fuente": "marca",
+          "tipo": "marca"
         }
       ]
     },
@@ -235,10 +212,10 @@
           "fichero": "05_calendario/visuales/MDS-068/e6_p1.jpg",
           "caras": [
             [
-              0.401,
-              0.1647,
-              0.3815,
-              0.2904
+              0.2773,
+              0.0691,
+              0.487,
+              0.3507
             ]
           ]
         },
@@ -265,13 +242,6 @@
     }
   },
   "descartes": [
-    {
-      "escena": 5,
-      "plano": 1,
-      "id": "pexels:8369976",
-      "titulo": "putting gold coins inside a rat figurine",
-      "motivo": "poco relevante (0.25): se prueba la IA"
-    },
     {
       "escena": 6,
       "plano": 2,

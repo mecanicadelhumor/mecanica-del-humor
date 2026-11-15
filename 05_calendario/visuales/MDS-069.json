@@ -1,8 +1,8 @@
 {
   "guion": "MDS-069",
   "version": 2,
-  "firma": "455949a6d67fd4a7",
-  "resuelto_utc": "2026-11-12T22:45:43Z",
+  "firma": "df6891e07501dd31",
+  "resuelto_utc": "2026-11-15T10:32:07Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -17,32 +17,27 @@
             6.44
           ],
           "frase": "Sonreír a propósito te pone algo más contento, aunque no tengas ganas.",
-          "fuente": "pexels",
-          "id": 5937444,
-          "pagina": "https://www.pexels.com/video/woman-using-floss-toothpick-in-front-of-mirror-5937444/",
-          "titulo": "woman using floss toothpick in front of mirror",
-          "autor": "Sora Shimazaki",
-          "autor_url": "https://www.pexels.com/@sora-shimazaki",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 10.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/5937444/5937444-hd_1080_1920_24fps.mp4",
-          "tipo": "video",
-          "consulta": "woman forcing smile mirror",
-          "relevancia": 0.5,
-          "inicio_s": 0.4,
-          "movimiento": 1.59,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a woman forcing a big smile in front of a bathroom mirror",
+          "semilla": 2731439,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-069/e1_p1.jpg",
           "caras": [
             [
-              0.0222,
-              0.3578,
-              0.3028,
-              0.2391
+              0.5716,
+              0.2456,
+              0.2279,
+              0.2537
+            ],
+            [
+              0.0859,
+              0.3588,
+              0.1888,
+              0.1456
             ]
           ]
         }
@@ -133,32 +128,225 @@
             6.97
           ],
           "frase": "Para comprobarlo, unos psicólogos pidieron a casi cuatro mil personas que sonrieran a propósito,",
-          "fuente": "pixabay",
-          "id": 76888,
-          "pagina": "https://pixabay.com/videos/id-76888/",
-          "titulo": "man, smiling, farmer, happy, young, culture, senior, woman, girl, happiness, lifestyle, people, portrait id",
-          "autor": "FnBTV",
-          "autor_url": "https://pixabay.com/users/FnBTV-14057698/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 13.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2021/06/08/76888-560684391_large.mp4",
-          "tipo": "video",
-          "consulta": "people smiling at camera portraits",
-          "relevancia": 0.75,
-          "inicio_s": 0.4,
-          "movimiento": 1.85,
-          "encuadre": {
-            "x": 0.542,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a grid of diverse adults smiling at the camera",
+          "semilla": 12535936,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-069/e3_p1.jpg",
           "caras": [
             [
-              0.2661,
-              0.1444,
-              0.469,
-              0.3222
+              0.8372,
+              0.7037,
+              0.1081,
+              0.0809
+            ],
+            [
+              0.0651,
+              0.4074,
+              0.1094,
+              0.0787
+            ],
+            [
+              0.8346,
+              0.5581,
+              0.1042,
+              0.0816
+            ],
+            [
+              0.0664,
+              0.5544,
+              0.1068,
+              0.0787
+            ],
+            [
+              0.8385,
+              0.8551,
+              0.1029,
+              0.0787
+            ],
+            [
+              0.2969,
+              0.6985,
+              0.0977,
+              0.0779
+            ],
+            [
+              0.4505,
+              0.5581,
+              0.1003,
+              0.075
+            ],
+            [
+              0.0651,
+              0.8581,
+              0.1016,
+              0.0735
+            ],
+            [
+              0.8359,
+              0.4118,
+              0.099,
+              0.0728
+            ],
+            [
+              0.0664,
+              0.0221,
+              0.0977,
+              0.0728
+            ],
+            [
+              0.0755,
+              0.7059,
+              0.0951,
+              0.0743
+            ],
+            [
+              0.4531,
+              0.7044,
+              0.0964,
+              0.0728
+            ],
+            [
+              0.2982,
+              0.8559,
+              0.0964,
+              0.0706
+            ],
+            [
+              0.3008,
+              0.4147,
+              0.0964,
+              0.0706
+            ],
+            [
+              0.0664,
+              0.1456,
+              0.0977,
+              0.0691
+            ],
+            [
+              0.6146,
+              0.8618,
+              0.0977,
+              0.0691
+            ],
+            [
+              0.4635,
+              0.4096,
+              0.0911,
+              0.0735
+            ],
+            [
+              0.2917,
+              0.0147,
+              0.0924,
+              0.0721
+            ],
+            [
+              0.0677,
+              0.2743,
+              0.0924,
+              0.0721
+            ],
+            [
+              0.457,
+              0.1478,
+              0.0951,
+              0.0699
+            ],
+            [
+              0.4609,
+              0.8581,
+              0.0924,
+              0.0713
+            ],
+            [
+              0.4596,
+              0.0221,
+              0.0924,
+              0.0713
+            ],
+            [
+              0.8359,
+              0.2721,
+              0.0911,
+              0.0721
+            ],
+            [
+              0.8424,
+              0.0206,
+              0.0924,
+              0.0706
+            ],
+            [
+              0.8411,
+              0.1471,
+              0.0911,
+              0.0699
+            ],
+            [
+              0.6289,
+              0.711,
+              0.0938,
+              0.0676
+            ],
+            [
+              0.2982,
+              0.2699,
+              0.0885,
+              0.0713
+            ],
+            [
+              0.4583,
+              0.2757,
+              0.0911,
+              0.0684
+            ],
+            [
+              0.6289,
+              0.414,
+              0.0898,
+              0.0684
+            ],
+            [
+              0.293,
+              0.1419,
+              0.0885,
+              0.0684
+            ],
+            [
+              0.6302,
+              0.1441,
+              0.0885,
+              0.0662
+            ],
+            [
+              0.6328,
+              0.0184,
+              0.0859,
+              0.0662
+            ],
+            [
+              0.6328,
+              0.2735,
+              0.0859,
+              0.0662
+            ],
+            [
+              0.6354,
+              0.5632,
+              0.0911,
+              0.061
+            ],
+            [
+              0.2956,
+              0.5574,
+              0.0846,
+              0.0654
             ]
           ]
         },
@@ -256,32 +444,21 @@
             7.47
           ],
           "frase": "¿Y cuánto más contento? Eso el estudio no lo dice. Así que tu vecino tiene razón,",
-          "fuente": "pexels",
-          "id": 5999655,
-          "pagina": "https://www.pexels.com/video/woman-smiling-at-the-camera-5999655/",
-          "titulo": "woman smiling at the camera",
-          "autor": "Ono  Kosuki",
-          "autor_url": "https://www.pexels.com/@ono-kosuki",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 10.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/5999655/5999655-hd_1080_1920_24fps.mp4",
-          "tipo": "video",
-          "consulta": "woman leaving elevator smiling",
-          "relevancia": 0.5,
-          "inicio_s": 0.0,
-          "movimiento": 11.46,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a woman walking out of an elevator with a small smile",
+          "semilla": 8687921,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-069/e5_p1.jpg",
           "caras": [
             [
-              0.3778,
-              0.275,
-              0.3889,
-              0.2859
+              0.4544,
+              0.2257,
+              0.1146,
+              0.0809
             ]
           ]
         },
