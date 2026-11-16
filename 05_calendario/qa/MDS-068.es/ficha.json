@@ -1,11 +1,11 @@
 {
-  "id": "MDS-062.es",
-  "duracion_final_s": 39.13,
-  "tamano_mb": 19.6,
+  "id": "MDS-068.es",
+  "duracion_final_s": 38.3,
+  "tamano_mb": 15.4,
   "audio": {
-    "lufs": -14.35,
-    "pico_dbtp": -1.2,
-    "rango_lu": 3.8
+    "lufs": -14.63,
+    "pico_dbtp": -1.41,
+    "rango_lu": 3.3
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
@@ -18,43 +18,15 @@
       [
         0.0,
         0.128
-      ],
-      [
-        0.462,
-        0.622
-      ],
-      [
-        1.82,
-        1.985
-      ],
-      [
-        3.846,
-        4.0
       ]
     ],
-    "fragmento_antes_de_la_narracion": true,
-    "duracion_fragmento_s": 0.334,
+    "fragmento_antes_de_la_narracion": false,
+    "duracion_fragmento_s": null,
     "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente)."
   },
   "fragmentos": {
-    "instantes": [
-      {
-        "s": 0.128,
-        "mmss": "0:00.1",
-        "dura_s": 0.334
-      },
-      {
-        "s": 30.606,
-        "mmss": "0:30.6",
-        "dura_s": 0.107
-      },
-      {
-        "s": 37.807,
-        "mmss": "0:37.8",
-        "dura_s": 0.018
-      }
-    ],
-    "cuantos": 3,
+    "instantes": [],
+    "cuantos": 0,
     "_nota": "Cada entrada es un trozo de audio de menos de 0.45 s rodeado de silencio: casi seguro una sílaba suelta que el sintetizador ha metido al empezar una escena. «mmss» es el minuto exacto para ir a escucharlo. Debe estar vacío."
   },
   "subtitulos": {
@@ -70,24 +42,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 38.01,
-    "duracion_real_voz_mp3_s": 38.01,
+    "duracion_calculada_s": 37.22,
+    "duracion_real_voz_mp3_s": 37.22,
     "desfase_s": 0.0,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_06_prelude_no_20_chris_zabriskie.mp3",
-    "sha256": "82f9edf6eab772e453e740b5415a54b892c9ac85c58c28d8318ac9011360def1"
+    "archivo": "cama_12_lights_sappheiros.mp3",
+    "sha256": "ec8432272d68db1bf39afb8df8546f0783eca7ee54f486c9963e8e7dad1bab23"
   },
   "guion": {
-    "titulo_trabajo": "¿Por qué casi no te ríes cuando estás solo?",
+    "titulo_trabajo": "¿Las ratas se ríen con las cosquillas?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 38.01,
+    "duracion_narracion_s": 37.22,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 10.654,
+    "escena_mas_larga_s": 8.509,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.1-flash-tts-preview": 6
@@ -106,18 +78,18 @@
       "apertura",
       "planteamiento",
       "remate",
-      "planteamiento",
+      "enumeracion",
       "cifra",
       "objecion"
     ],
     "escenas_ritmo_fuera_de_rango": [],
     "voz_fiel": [
-      "12/11 palabras, 0 trozos repetidos",
+      "12/12 palabras, 0 trozos repetidos",
+      "18/15 palabras, 0 trozos repetidos",
+      "15/14 palabras, 0 trozos repetidos",
+      "17/17 palabras, 0 trozos repetidos",
       "15/15 palabras, 0 trozos repetidos",
-      "10/10 palabras, 0 trozos repetidos",
-      "19/19 palabras, 0 trozos repetidos",
-      "18/18 palabras, 0 trozos repetidos",
-      "24/24 palabras, 0 trozos repetidos"
+      "21/23 palabras, 0 trozos repetidos"
     ]
   },
   "visual": {
@@ -125,72 +97,64 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 4.13,
+        "hasta_s": 4.57,
         "fuente": "ia",
         "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
         "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "a group of friends bursting out laughing together around a kitchen table at night, warm light, candid",
+        "prompt": "a hand gently tickling the belly of a white pet rat, close-up, soft light",
         "tipo": "imagen"
       },
       {
         "escena": 2,
-        "desde_s": 4.13,
-        "hasta_s": 7.27,
-        "fuente": "pexels",
-        "id": 6574525,
-        "pagina": "https://www.pexels.com/video/woman-watching-tv-inside-the-house-6574525/",
-        "autor": "Andres  Ayrton",
-        "autor_url": "https://www.pexels.com/@andres-ayrton",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
+        "desde_s": 4.57,
+        "hasta_s": 8.0,
+        "fuente": "ia",
+        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+        "prompt": "a white laboratory rat on a lab table, quiet room",
+        "tipo": "imagen"
       },
       {
         "escena": 2,
-        "desde_s": 7.27,
-        "hasta_s": 10.07,
-        "fuente": "pexels",
-        "id": 7719823,
-        "pagina": "https://www.pexels.com/video/couple-laughing-while-watching-movie-7719823/",
-        "autor": "Mikhail Nilov",
-        "autor_url": "https://www.pexels.com/@mikhail-nilov",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
+        "desde_s": 8.0,
+        "hasta_s": 10.2,
+        "fuente": "ia",
+        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+        "prompt": "close-up of a white rat looking straight at the camera",
+        "tipo": "imagen"
       },
       {
         "escena": 3,
-        "desde_s": 10.07,
-        "hasta_s": 13.83,
+        "desde_s": 10.2,
+        "hasta_s": 15.93,
         "fuente": "pexels",
-        "id": 7233645,
-        "pagina": "https://www.pexels.com/video/couple-watching-movie-at-the-cinema-7233645/",
-        "autor": "Pavel Danilyuk",
-        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+        "id": 35235434,
+        "pagina": "https://www.pexels.com/video/modern-dj-software-on-laptop-screen-in-studio-35235434/",
+        "autor": "Wolf  Art",
+        "autor_url": "https://www.pexels.com/@wolfart",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 6,
-        "desde_s": 27.37,
-        "hasta_s": 32.4,
-        "fuente": "pexels",
-        "id": 8057934,
-        "pagina": "https://www.pexels.com/video/sad-woman-sitting-on-the-sofa-8057934/",
-        "autor": "Pavel Danilyuk",
-        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
+        "desde_s": 28.7,
+        "hasta_s": 33.87,
+        "fuente": "ia",
+        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+        "prompt": "a person holding a pet rat in both hands, smiling",
+        "tipo": "imagen"
       },
       {
         "escena": 6,
-        "desde_s": 32.4,
-        "hasta_s": 36.53,
-        "fuente": "pexels",
-        "id": 7612013,
-        "pagina": "https://www.pexels.com/video/man-writing-down-on-a-notebook-using-a-fountain-pen-7612013/",
-        "autor": "cottonbro studio",
-        "autor_url": "https://www.pexels.com/@cottonbro",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
+        "desde_s": 33.87,
+        "hasta_s": 35.7,
+        "fuente": "ia",
+        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+        "prompt": "a white rat looking up curiously, shallow depth of field",
+        "tipo": "imagen"
       }
     ],
     "sintetico": true
@@ -206,15 +170,15 @@
       5
     ],
     "descartadas": {},
-    "pagina": "05_calendario/animaciones/MDS-062/animacion.html"
+    "pagina": "05_calendario/animaciones/MDS-068/animacion.html"
   },
   "fotogramas_s": [
-    2.59,
-    7.8,
-    12.43,
-    17.83,
-    24.64,
-    33.84
+    2.84,
+    8.06,
+    13.75,
+    20.16,
+    26.44,
+    33.91
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }

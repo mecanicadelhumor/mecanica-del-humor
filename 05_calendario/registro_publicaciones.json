@@ -1162,6 +1162,21 @@
       "subido_utc": "2026-11-09T13:25:44Z",
       "revisado": false,
       "pregunta_publicada": "2026-11-09T19:12:49Z"
+    },
+    {
+      "id": "MDS-068.es",
+      "episodio": "MDS-068",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Las ratas se ríen con las cosquillas?",
+      "guion": "05_calendario/guiones/MDS-068.es.json",
+      "video_id": "I4n9KKE7hOw",
+      "url": "https://youtu.be/I4n9KKE7hOw",
+      "estado": "private",
+      "publicar_en": "2026-11-16T18:00:00Z",
+      "musica": "cama_12_lights_sappheiros.mp3",
+      "subido_utc": "2026-11-16T08:03:31Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-11-14T21:34:34Z"
