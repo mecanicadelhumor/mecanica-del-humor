@@ -22,8 +22,8 @@ a mano cuando quiera encenderlo.
 
 Dos cosas que este script decide y que NO hay que tocar sin pensarlo:
 
-1. **Modelo `gemini-2.5-flash-preview-tts` (MODELO_GEMINI_LARGO), nunca
-   `gemini-3.1-flash-tts-preview` (MODELO_GEMINI, el de los Shorts, C7).**
+1. **Modelo MODELO_GEMINI_LARGO (`gemini-3.8-flash-lite-tts` desde el 16/11/2026; antes
+   `gemini-2.5-flash-preview-tts`), nunca MODELO_GEMINI (el de los Shorts, C7).**
    Son cuotas diarias independientes. Si el largo compitiera por el modelo
    de los Shorts, un episodio de 40 escenas se comería la cuota que
    necesitan los cinco Shorts de la semana.
@@ -72,6 +72,7 @@ from voz import (  # noqa: E402  (el sys.path.insert de arriba tiene que ir ante
     MODELO_GEMINI_LARGO,
     VOZ_GEMINI_ESCEPTICO,
     VOZ_GEMINI_NARRADOR,
+    FIRMA_TEXTO_DESNUDO,
     CuotaDiariaAgotada,
     _cache_voz_ruta,
     _direccion_v1,
@@ -79,6 +80,7 @@ from voz import (  # noqa: E402  (el sys.path.insert de arriba tiene que ir ante
     clase_de_error,
     direccion_escena,
     hablable,
+    texto_desnudo,
 )
 
 # Ver el punto 1 de arriba: cuota propia, nunca la de los Shorts (C7).
@@ -121,8 +123,11 @@ def escenas_pendientes(guion):
         voz_gemini = _voz_de(e)
         dirigido, _papel, firma = direccion_escena(escenas, i, texto)
         dirigido_v1, _ = _direccion_v1(escenas, i, texto)
-        claves = (_cache_voz_ruta(texto, MODELO_GEMINI_LARGO, voz_gemini, firma),
-                  _cache_voz_ruta(texto, MODELO_GEMINI_LARGO, voz_gemini, dirigido_v1))
+        if texto_desnudo(MODELO_GEMINI_LARGO):    # 16/11/2026: la clave de voz.py con los 3.8
+            claves = (_cache_voz_ruta(texto, MODELO_GEMINI_LARGO, voz_gemini, FIRMA_TEXTO_DESNUDO),)
+        else:
+            claves = (_cache_voz_ruta(texto, MODELO_GEMINI_LARGO, voz_gemini, firma),
+                      _cache_voz_ruta(texto, MODELO_GEMINI_LARGO, voz_gemini, dirigido_v1))
         if not any(c.exists() for c in claves):
             pendientes.append({"i": i, "texto": texto, "dirigido": dirigido,
                                "firma": firma, "dirigido_v1": dirigido_v1,

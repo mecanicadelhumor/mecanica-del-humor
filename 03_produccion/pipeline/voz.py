@@ -144,11 +144,28 @@ CACHE_VOZ_DIR = Path(__file__).resolve().parent.parent / "cache_voz"
 # modelos de antes del 08/11, que es lo que pidió el codirector el 09/11 («seguir con el modelo que
 # caduca el 17 hasta que nos obliguen»): la voz que se publica no cambia.
 API_GEMINI = "v1beta"
-MODELO_GEMINI = "gemini-3.1-flash-tts-preview"
+# 16/11/2026 · voz-3.8-cambio (dirección, plan v32). Google apaga el 17/11 los modelos de hasta
+# hoy (3.1 y 2.5). Sus sustitutos son los 3.8, y los 3.8 LEEN EN VOZ ALTA cualquier indicación
+# que vaya en el texto (trampa 72; pruebas del 12/11, runs 43225788928, 43227268751 y
+# 43227759601): el preámbulo, las notas de dirección y hasta una sola línea «Con acento de
+# España:». Por eso a los modelos de MODELOS_TEXTO_DESNUDO se les manda SOLO el guion, sin
+# preámbulo ni notas, en la toma única (C36) y en la escalera. Lo que se pierde es la dirección
+# por frase; las pausas entre escenas y el rótulo las sigue poniendo el canal al cortar.
+# Voz: Charon (la de siempre); el codirector no eligió otra antes del 16/11.
+MODELO_GEMINI = "gemini-3.8-flash-tts"
 # El episodio largo usa OTRO modelo, con cuota diaria propia, para no comerse la
 # de los cinco Shorts de la semana. Tiene que ser exactamente el mismo literal
 # que usa voz_precache.py o el precacheo de toda la semana no se encuentra.
-MODELO_GEMINI_LARGO = "gemini-2.5-flash-preview-tts"
+# (Era gemini-2.5-flash-preview-tts hasta el 16/11/2026; el ligero salió bien en la prueba
+# del 05/11, run 42035553638.)
+MODELO_GEMINI_LARGO = "gemini-3.8-flash-lite-tts"
+MODELOS_TEXTO_DESNUDO = {"gemini-3.8-flash-tts", "gemini-3.8-flash-lite-tts"}
+FIRMA_TEXTO_DESNUDO = "texto-desnudo"
+
+
+def texto_desnudo(modelo):
+    """¿Este modelo lee en voz alta las indicaciones? Entonces solo recibe el guion."""
+    return modelo in MODELOS_TEXTO_DESNUDO
 VOZ_GEMINI_NARRADOR = "Charon"    # grave, tranquila. El que explica.
 VOZ_GEMINI_ESCEPTICO = "Puck"     # más alta y viva. El que interrumpe.
 RITMO_GEMINI_HZ = 24000           # Hz que devuelve la API
@@ -904,9 +921,15 @@ async def _gemini_escena(it, modelo, estado):
     Y un tope: nunca más de LIMITE_DIARIO_POR_MODELO peticiones por modelo en
     una producción, porque la número once no puede salir.
     """
-    nueva = _cache_voz_ruta(it["texto"], modelo, it["voz_gemini"], it["firma"])
-    vieja = _cache_voz_ruta(it["texto"], modelo, it["voz_gemini"], it["dirigido_v1"])
-    for cache in (nueva, vieja):
+    desnudo = texto_desnudo(modelo)
+    if desnudo:    # 16/11/2026: los 3.8 leen cualquier indicación; solo el guion
+        nueva = _cache_voz_ruta(it["texto"], modelo, it["voz_gemini"], FIRMA_TEXTO_DESNUDO)
+        cajas = (nueva,)
+    else:
+        nueva = _cache_voz_ruta(it["texto"], modelo, it["voz_gemini"], it["firma"])
+        vieja = _cache_voz_ruta(it["texto"], modelo, it["voz_gemini"], it["dirigido_v1"])
+        cajas = (nueva, vieja)
+    for cache in cajas:
         if cache.exists():
             # C66: una toma de la caché se comprueba igual que una nueva; si no
             # es fiel, se borra y se pide otra.
@@ -926,7 +949,10 @@ async def _gemini_escena(it, modelo, estado):
         ultimo = intento == INTENTOS_POR_ESCENA
         minima = (ultimo or it.get("rechazada")
                   or estado["rechazos"].get(modelo, 0) >= RECHAZOS_PARA_MINIMA)
-        prompt = (DIRECCION_MINIMA + it["texto"]) if minima else it["dirigido"]
+        if desnudo:
+            minima, prompt = False, it["texto"]
+        else:
+            prompt = (DIRECCION_MINIMA + it["texto"]) if minima else it["dirigido"]
         if estado["llamadas"].get(modelo, 0) >= LIMITE_DIARIO_POR_MODELO:
             estado["agotados"][modelo] = True
             raise CuotaDiariaAgotada(modelo)
@@ -1218,6 +1244,8 @@ async def _voz_una_toma(items, escenas, modelo, estado, salida):
     """
     prompt, firma = direccion_una_toma(escenas, items)
     texto = "\n".join(it["texto"] for it in items)
+    if texto_desnudo(modelo):    # 16/11/2026: el Short entero, sin preámbulo ni notas
+        prompt, firma = texto, f"c36v{VERSION_UNA_TOMA}|{FIRMA_TEXTO_DESNUDO}"
     cache = _cache_voz_ruta(texto, modelo, VOZ_GEMINI_NARRADOR, firma)
     toma = salida / "voz" / "toma_entera.mp3"
     origen = "una toma (C36, caché)"
@@ -1807,7 +1835,7 @@ if __name__ == "__main__":
     # esta línea.
     ap.add_argument("--motor", choices=["edge", "gemini"], default="gemini",
                      help="gemini por defecto desde el 14/09. Desde el 15/09 (C33.1 y "
-                          "C33.2), una sola voz por vídeo: 3.1 → 2.5 → si no, no se sube "
+                          "C33.2), una sola voz por vídeo: 3.8 → 3.8-lite (16/11/2026) → si no, no se sube "
                           "nada. edge-tts solo si se pide con --motor edge")
     a = ap.parse_args()
     asyncio.run(principal(a.guion, a.salida, a.voz, a.motor))
