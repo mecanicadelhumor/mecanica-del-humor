@@ -134,7 +134,7 @@
       "id": "C61-esquina-libre",
       "que": "Que el personaje de la esquina no tape lo importante del plano: elegir la esquina con menos contenido (caras, manos, movimiento) en cada plano, con muestra para el codirector",
       "dueno": "direccion",
-      "fecha": "2026-11-16",
+      "fecha": "2026-11-19",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -146,6 +146,11 @@
           "de": "2026-11-09",
           "a": "2026-11-16",
           "porque": "El 09/11 la dirección se dedicó entera a la producción parada (sin vídeo del 06 al 09/11; la causa era google-genai 3.0.0) a seis días del punto de control del 15/11. Esto no mueve las vistas de aquí al 15/11; y lo que se decida el 15/11 (C26) puede dejarlo sin objeto"
+        },
+        {
+          "de": "2026-11-16",
+          "a": "2026-11-19",
+          "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
         }
       ],
       "origen": "Respuesta del codirector a la tarea 2 del 23/10"
@@ -193,7 +198,7 @@
       "id": "largo-voz-tandas",
       "que": "Voz del largo con el modelo 3.8 elegido y C36 por tandas, probada en vivo (era con 2.5-flash: caduca el 17/11)",
       "dueno": "direccion",
-      "fecha": "2026-11-16",
+      "fecha": "2026-11-19",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -215,6 +220,11 @@
           "de": "2026-11-12",
           "a": "2026-11-16",
           "porque": "El 12/11 la dirección se dedicó a lo roto (el doble Short del 09/11: MDS-067 subido dos veces, causa y arreglo), a la muestra 3.8 que el codirector tiene que oír antes del 16/11 y al informe del punto de control del 15/11. Esto no mueve las vistas antes del 15/11, y lo que el codirector decida ese día (C26) puede dejarlo sin objeto. Además, el modelo del largo (2.5) se apaga el 17/11: la voz por tandas se hace directamente con el 3.8 que se elija el 16/11"
+        },
+        {
+          "de": "2026-11-16",
+          "a": "2026-11-19",
+          "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
         }
       ],
       "origen": "Plan v23",
@@ -235,7 +245,7 @@
       "id": "iteracion-14",
       "que": "Catorce Shorts a la semana desde B2 (5/11): producción y publicación de un segundo Short al día (13:00 en España, la hora propuesta), planificación con 14 guiones, y el workflow cambiado preparado en 00_estrategia/tareas/workflows_<fecha>/ para que lo mueva el codirector",
       "dueno": "direccion",
-      "fecha": "2026-11-16",
+      "fecha": "2026-11-19",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -247,6 +257,11 @@
           "de": "2026-11-02",
           "a": "2026-11-16",
           "porque": "Con el criterio de la lectura en frío del 29/10 pasaron 6 de 14 temas: no hay guiones ni para siete Shorts a la semana. Catorce sin guiones sería producir lo que no pasa. Antes, el banco y los tres lectores (versión 28). El 16/11 se mira si el banco aguanta; el workflow del segundo Short sigue preparado en workflows_2026-10-23 (iteracion-14-mover, que también se aplaza)."
+        },
+        {
+          "de": "2026-11-16",
+          "a": "2026-11-19",
+          "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
         }
       ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
@@ -297,13 +312,18 @@
       "id": "iteracion-filtro",
       "que": "Filtro de lectores sintéticos sobre variantes de guion antes de producir",
       "dueno": "direccion",
-      "fecha": "2026-11-16",
+      "fecha": "2026-11-19",
       "estado": "pendiente",
       "aplazamientos": [
         {
           "de": "2026-11-09",
           "a": "2026-11-16",
           "porque": "El 09/11 la dirección se dedicó entera a la producción parada (sin vídeo del 06 al 09/11; la causa era google-genai 3.0.0) a seis días del punto de control del 15/11. Esto no mueve las vistas de aquí al 15/11; y lo que se decida el 15/11 (C26) puede dejarlo sin objeto"
+        },
+        {
+          "de": "2026-11-16",
+          "a": "2026-11-19",
+          "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
         }
       ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
@@ -312,7 +332,7 @@
       "id": "calidad-patron",
       "que": "Patrón de calidad medido con veinte Shorts ajenos de divulgación en español (>100.000 vistas) y los nuestros; después, la ficha automática en qa.py",
       "dueno": "direccion",
-      "fecha": "2026-11-16",
+      "fecha": "2026-11-19",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -329,6 +349,11 @@
           "de": "2026-11-12",
           "a": "2026-11-16",
           "porque": "El 12/11 la dirección se dedicó a lo roto (el doble Short del 09/11: MDS-067 subido dos veces, causa y arreglo), a la muestra 3.8 que el codirector tiene que oír antes del 16/11 y al informe del punto de control del 15/11. Esto no mueve las vistas antes del 15/11, y lo que el codirector decida ese día (C26) puede dejarlo sin objeto"
+        },
+        {
+          "de": "2026-11-16",
+          "a": "2026-11-19",
+          "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
         }
       ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
@@ -359,7 +384,7 @@
       "id": "largo-ensayo",
       "que": "Render de prueba del largo entero; decide 8/11 o 15/11",
       "dueno": "direccion",
-      "fecha": "2026-11-16",
+      "fecha": "2026-11-19",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -376,6 +401,11 @@
           "de": "2026-11-12",
           "a": "2026-11-16",
           "porque": "El 12/11 la dirección se dedicó a lo roto (el doble Short del 09/11: MDS-067 subido dos veces, causa y arreglo), a la muestra 3.8 que el codirector tiene que oír antes del 16/11 y al informe del punto de control del 15/11. Esto no mueve las vistas antes del 15/11, y lo que el codirector decida ese día (C26) puede dejarlo sin objeto. El estreno del largo pasa del 15/11 al 22/11 como mínimo (la regla del 09/11: 15/11 solo si el ensayo salía el 12/11)"
+        },
+        {
+          "de": "2026-11-16",
+          "a": "2026-11-19",
+          "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
         }
       ],
       "origen": "Plan v23"
@@ -395,9 +425,15 @@
       "id": "C51.3-brazo-caras",
       "que": "Cuando la persona sintética entre en experimentos: un brazo cara 2 frente a cara 6",
       "dueno": "direccion",
-      "fecha": "2026-11-16",
+      "fecha": "2026-11-19",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-11-16",
+          "a": "2026-11-19",
+          "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
+        }
+      ],
       "origen": "Codirector, 23/10 (elección de caras)"
     },
     {
@@ -512,13 +548,18 @@
       "id": "C51.3-cara-fija",
       "que": "La opción menor del codirector si no hay labios creíbles: la cara 2 fija, sin mover los labios, como imagen del canal en algunos Shorts. Muestra en vídeo para el codirector y, si dice que sí, un brazo con las pruebas habituales",
       "dueno": "direccion",
-      "fecha": "2026-11-16",
+      "fecha": "2026-11-19",
       "estado": "pendiente",
       "aplazamientos": [
         {
           "de": "2026-11-09",
           "a": "2026-11-16",
           "porque": "El 09/11 la dirección se dedicó entera a la producción parada (sin vídeo del 06 al 09/11; la causa era google-genai 3.0.0) a seis días del punto de control del 15/11. Esto no mueve las vistas de aquí al 15/11; y lo que se decida el 15/11 (C26) puede dejarlo sin objeto"
+        },
+        {
+          "de": "2026-11-16",
+          "a": "2026-11-19",
+          "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
         }
       ],
       "origen": "Respuesta del codirector a la tarea 2 del 26/10",
@@ -562,7 +603,7 @@
       "que": "Cambiar MODELO_GEMINI y MODELO_GEMINI_LARGO a los modelos 3.8 en producción, después de que el codirector oiga la muestra (regla 11.2)",
       "dueno": "direccion",
       "fecha": "2026-11-16",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [
         {
           "de": "2026-11-12",
@@ -571,7 +612,8 @@
         }
       ],
       "origen": "Retirada de los modelos TTS de Gemini el 17/11/2026; margen de cinco días",
-      "nota": "12/11: con gemini-3.8-flash-tts, la toma de producción (C36) LEE EN VOZ ALTA el preámbulo y todas las notas de dirección («Leniá uno es la primera frase…»): 128 s con Charon y 211 s con Orus (dos veces) para 84 palabras; voz.py la rechazó por duración. La escalera escena a escena usa el mismo tipo de dirección. El cambio del 16/11 tiene que mandar a 3.8 el texto SIN dirección (lo que diga la muestra «breve:» del 12/11), y probarse con una producción completa antes del 17/11"
+      "nota": "Sin muestra elegida por el codirector (no contestó): Charon con solo el texto, lo anunciado el 12/11. Shorts: gemini-3.8-flash-tts → gemini-3.8-flash-lite-tts; largo: 3.8-flash-lite. Prueba en vivo con el código de producción sobre MDS-069 («Prueba de voces» nº 16, run 43874350354). Plan v32",
+      "hecho_el": "2026-11-16"
     },
     {
       "id": "MDS-061-jueves",
@@ -588,13 +630,18 @@
       "id": "C51.3-prueba",
       "que": "Probar EchoMimic V3-Flash en la T4 de Kaggle (workflow del presentador) y preparar LongCat-Video-Avatar en un Space de ZeroGPU: misma cara 2, 3 s de voz, semilla fija; medir tiempo y memoria; vídeo para el codirector",
       "dueno": "direccion",
-      "fecha": "2026-11-16",
+      "fecha": "2026-11-19",
       "estado": "pendiente",
       "aplazamientos": [
         {
           "de": "2026-11-09",
           "a": "2026-11-16",
           "porque": "El 09/11 la dirección se dedicó entera a la producción parada (sin vídeo del 06 al 09/11; la causa era google-genai 3.0.0) a seis días del punto de control del 15/11. Esto no mueve las vistas de aquí al 15/11; y lo que se decida el 15/11 (C26) puede dejarlo sin objeto"
+        },
+        {
+          "de": "2026-11-16",
+          "a": "2026-11-19",
+          "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
         }
       ],
       "origen": "Informe C51.3-alternativas del 02/11"
@@ -683,9 +730,15 @@
       "id": "visual-archivo-personas",
       "que": "Archivo (Pexels/Pixabay) solo para planos de personas y sitios; las frases de concepto, dato o estudio («unos psicólogos…», «la carita del guiño») van con imagen generada o con texto/animación. Cambio en visual.py con hoja de contactos de muestra para el codirector (regla 11.2)",
       "dueno": "direccion",
-      "fecha": "2026-11-16",
+      "fecha": "2026-11-19",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-11-16",
+          "a": "2026-11-19",
+          "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
+        }
+      ],
       "origen": "visual-recuento del 12/11 (1,75 planos que no pegan por Short)"
     },
     {
@@ -725,6 +778,15 @@
       "estado": "pendiente",
       "aplazamientos": [],
       "origen": "C26 (plan v6)"
+    },
+    {
+      "id": "voz-3.8-vigilar",
+      "que": "Mirar la voz de los tres primeros Shorts con 3.8 (MDS-069, 070, 071): duración, ficha de calidad y lo que diga la revisión diaria; si una producción no sale, por qué",
+      "dueno": "direccion",
+      "fecha": "2026-11-19",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Plan v32 (16/11)"
     }
   ]
 }

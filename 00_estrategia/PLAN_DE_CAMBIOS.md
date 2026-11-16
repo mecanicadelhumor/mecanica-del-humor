@@ -6864,3 +6864,30 @@ contrario.
 ## Lo que NO cambia hoy
 
 - B2 (brazos, `orden`, regla), los guiones ya escritos (regla 11.4), las rutinas, los umbrales de C26.
+
+---
+
+# Versión 32 · 16 de noviembre de 2026 (lunes, en diferido) — la voz pasa a 3.8 con solo el texto; C26 sin decidir
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario.
+
+| Qué | Decisión |
+|---|---|
+| **Voz 3.8 en producción** (`voz-3.8-cambio`) | **Hecho y en `main` (`970942d`).** Google apaga 3.1 y 2.5 el 17/11. `MODELO_GEMINI = gemini-3.8-flash-tts`, `MODELO_GEMINI_LARGO = gemini-3.8-flash-lite-tts` (escalera del Short: 3.8 → 3.8-lite; largo: 3.8-lite). A los modelos de `MODELOS_TEXTO_DESNUDO` se les manda **solo el guion**, sin preámbulo ni notas, en la toma única (C36) y en la escalera; la caché usa la firma `texto-desnudo` (y `voz_precache.py` busca la misma clave). Voz: **Charon**: el codirector no eligió otra (`voz-3.8-oir-2` sin contestar), y era lo anunciado el 12/11 para ese caso. **Probado**: en el contenedor con Gemini simulado (C36 y escalera reciben el texto desnudo; con indicaciones, la toma se rechaza por duración y no se sube nada, salida 3) y **en vivo** con el código de producción sobre `MDS-069`, el Short del 17/11 («Prueba de voces» nº 16, run 43874350354): una llamada, toma única de 33,5 s, Whisper la da por fiel, cortes en 6,57 / 12,04 / 20,44 / 26,21 s, narración de 34,3 s. Lo que se pierde: la dirección por frase. La regla 11.2 pide muestra mirada: no la hay porque el codirector no contestó y la alternativa era quedarse sin voz el 17/11; la muestra queda en el artefacto de la nº 16 y la oye cuando pueda. Se vigila en `voz-3.8-vigilar` (19/11) |
+| **C26** | **Sin decisión del codirector** (`C26-decision`, vencido el 15/11). No es mía: la regla dice «< 50 → se para» y la puerta de los 1.000 se puede leer de dos maneras (informe del 12/11). Mientras no decida, **el canal sigue publicando como hasta hoy** —parar exige que él cambie el workflow, y seguir publicando no cierra ninguna puerta—, pero **no empiezo trabajo de mejora** que sobraría si se para |
+| Lo vencido hoy | `voz-3.8-cambio` **hecho**. `largo-voz-tandas`, `largo-ensayo`, `calidad-patron`, `iteracion-14`, `iteracion-filtro`, `visual-archivo-personas`, `C51.3-*`, `C61-esquina-libre` al **19/11**, por lo mismo: dependen de C26 |
+| B2 | Sin veredictos (`resultados.json` del 15/11: «faltan datos» en A y D). Nada que aplicar |
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Hoy 19:00 (España) | `MDS-068` (ya subido) |
+| Martes 17, 01:13 UTC | Primera producción con 3.8 (`MDS-069`) |
+| Cuando pueda | Codirector: «sigue» o «se para» (C26); oír la muestra nº 16; borrar `40Ao-mOfuIg` |
+| Jueves 19/11 | Dirección: mirar las tres primeras voces 3.8; lo que diga C26 |
+
+## Lo que NO cambia hoy
+
+- B2 (brazos, `orden`, regla), los guiones ya escritos (regla 11.4), las rutinas, los umbrales de C26.

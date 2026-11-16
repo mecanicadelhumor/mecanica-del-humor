@@ -855,6 +855,13 @@ voz solo se le manda el texto que tiene que decir.** Lo que no se pueda consegui
 el texto. Y cualquier cambio de modelo se prueba con el código de producción, no con una variante de prueba:
 la muestra del 05/11 («plano»/«dirigido») no era lo que habría sonado.
 
+## Dónde está el proyecto a 16 de noviembre de 2026 (en diferido)
+
+Versión **32** del plan, la que manda. **La voz pasa a `gemini-3.8-flash-tts` con solo el texto** (trampa 72),
+Charon, desde la producción del 17/11; probada en vivo con `MDS-069` (run 43874350354). El codirector no ha
+contestado a C26 ni a la elección de voz: el canal sigue publicando y lo demás (C51.3, esquina, cara fija,
+filtro, archivo solo para personas, largo, patrón de calidad) espera al 19/11.
+
 ## Dónde está el proyecto a 12 de noviembre de 2026 (en diferido)
 
 Versión **31** del plan, la que manda. El Short doble del 9/11 era `MDS-067` subido dos veces (trampa 71):
