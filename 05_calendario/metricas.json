@@ -160461,491 +160461,447 @@
   },
   {
    "leido": "2026-11-16",
-   "id": "MDS-012.es",
-   "video_id": "hfw7TQf6sMw",
-   "titulo": "Cómo contar un chiste bien: el mismo chiste contado dos veces",
+   "id": "MDS-055.es",
+   "video_id": "cKYQJudl-Bs",
+   "titulo": "¿Puede hacerte cosquillas una máquina?",
    "formato": "corto",
    "serie": "",
-   "publicado": "2026-09-08",
+   "publicado": "2026-10-31",
    "privacidad": "public",
-   "dias_publicado": 69,
-   "duracion_s": 52.0,
-   "visualizaciones": 16,
-   "duracion_media_s": 18.0,
-   "porcentaje_visto": 34.9,
-   "minutos_vistos": 1.0,
+   "dias_publicado": 16,
+   "duracion_s": 41.0,
+   "visualizaciones": 705,
+   "duracion_media_s": 14.0,
+   "porcentaje_visto": 36.2,
+   "minutos_vistos": 56.0,
    "suscriptores": 0,
-   "me_gusta": 0,
+   "me_gusta": 6,
    "comentarios": 0,
    "compartidos": 0,
    "retencion": {
-    "puntos": 0
-   },
-   "trafico_pct": {
-    "YT_SEARCH": 50.0,
-    "SHORTS": 37.5,
-    "SUBSCRIBER": 12.5,
-    "NO_LINK_OTHER": 0.0
-   },
-   "vistas_48h": 9,
-   "se_quedaron_48h": {
-    "vistas": 9,
-    "comprometidas": 2,
-    "pct": 22.2
-   },
-   "se_quedaron_total": {
-    "vistas": 16,
-    "comprometidas": 4,
-    "pct": 25.0
-   },
-   "impresiones": null,
-   "ctr": null
-  },
-  {
-   "leido": "2026-11-16",
-   "id": "MDS-057.es",
-   "video_id": "o1UmmSFC7us",
-   "titulo": "¿Los gorilas tienen cosquillas?",
-   "formato": "corto",
-   "serie": "",
-   "publicado": "2026-11-02",
-   "privacidad": "public",
-   "dias_publicado": 14,
-   "duracion_s": 41.0,
-   "visualizaciones": 430,
-   "duracion_media_s": 19.0,
-   "porcentaje_visto": 47.5,
-   "minutos_vistos": 65.0,
-   "suscriptores": 0,
-   "me_gusta": 9,
-   "comentarios": 1,
-   "compartidos": 0,
-   "retencion": {
     "puntos": 100,
-    "a_30s_pct": 30.1,
-    "caida_primer_10_pct": 5.4,
+    "a_30s_pct": 15.6,
+    "caida_primer_10_pct": 7.3,
     "curva": [
      {
       "t": 0.4,
-      "ratio": 1.1505
+      "ratio": 1.0559
      },
      {
       "t": 0.8,
-      "ratio": 1.1398
+      "ratio": 1.0503
      },
      {
       "t": 1.2,
-      "ratio": 1.1398
+      "ratio": 1.0559
      },
      {
       "t": 1.6,
-      "ratio": 1.1344
+      "ratio": 1.0503
      },
      {
       "t": 2.1,
-      "ratio": 1.129
+      "ratio": 1.0391
      },
      {
       "t": 2.5,
-      "ratio": 1.1183
+      "ratio": 1.0279
      },
      {
       "t": 2.9,
-      "ratio": 1.1129
+      "ratio": 1.0112
      },
      {
       "t": 3.3,
-      "ratio": 1.1075
+      "ratio": 1.0112
      },
      {
       "t": 3.7,
-      "ratio": 1.1075
+      "ratio": 1.0056
      },
      {
       "t": 4.1,
-      "ratio": 1.1075
+      "ratio": 1.0056
      },
      {
       "t": 4.5,
-      "ratio": 1.0968
+      "ratio": 0.9832
      },
      {
       "t": 4.9,
-      "ratio": 1.0484
+      "ratio": 0.9441
      },
      {
       "t": 5.3,
-      "ratio": 0.9355
+      "ratio": 0.9106
      },
      {
       "t": 5.7,
-      "ratio": 0.8065
+      "ratio": 0.8827
      },
      {
       "t": 6.1,
-      "ratio": 0.7742
+      "ratio": 0.8492
      },
      {
       "t": 6.6,
-      "ratio": 0.7527
+      "ratio": 0.8212
      },
      {
       "t": 7.0,
-      "ratio": 0.7473
+      "ratio": 0.7542
      },
      {
       "t": 7.4,
-      "ratio": 0.7151
+      "ratio": 0.7095
      },
      {
       "t": 7.8,
-      "ratio": 0.6989
+      "ratio": 0.676
      },
      {
       "t": 8.2,
-      "ratio": 0.6882
+      "ratio": 0.6313
      },
      {
       "t": 8.6,
-      "ratio": 0.6774
+      "ratio": 0.581
      },
      {
       "t": 9.0,
-      "ratio": 0.672
+      "ratio": 0.5531
      },
      {
       "t": 9.4,
-      "ratio": 0.6559
+      "ratio": 0.514
      },
      {
       "t": 9.8,
-      "ratio": 0.6344
+      "ratio": 0.4972
      },
      {
       "t": 10.2,
-      "ratio": 0.629
+      "ratio": 0.4637
      },
      {
       "t": 10.7,
-      "ratio": 0.629
+      "ratio": 0.4525
      },
      {
       "t": 11.1,
-      "ratio": 0.5968
+      "ratio": 0.4469
      },
      {
       "t": 11.5,
-      "ratio": 0.5753
+      "ratio": 0.4413
      },
      {
       "t": 11.9,
-      "ratio": 0.5538
+      "ratio": 0.4246
      },
      {
       "t": 12.3,
-      "ratio": 0.5323
+      "ratio": 0.4246
      },
      {
       "t": 12.7,
-      "ratio": 0.5161
+      "ratio": 0.4134
      },
      {
       "t": 13.1,
-      "ratio": 0.5108
+      "ratio": 0.3911
      },
      {
       "t": 13.5,
-      "ratio": 0.5054
+      "ratio": 0.3855
      },
      {
       "t": 13.9,
-      "ratio": 0.4839
+      "ratio": 0.3743
      },
      {
       "t": 14.3,
-      "ratio": 0.4785
+      "ratio": 0.3575
      },
      {
       "t": 14.8,
-      "ratio": 0.4731
+      "ratio": 0.3408
      },
      {
       "t": 15.2,
-      "ratio": 0.457
+      "ratio": 0.3352
      },
      {
       "t": 15.6,
-      "ratio": 0.4409
+      "ratio": 0.324
      },
      {
       "t": 16.0,
-      "ratio": 0.4301
+      "ratio": 0.3017
      },
      {
       "t": 16.4,
-      "ratio": 0.4247
+      "ratio": 0.2905
      },
      {
       "t": 16.8,
-      "ratio": 0.4194
+      "ratio": 0.2793
      },
      {
       "t": 17.2,
-      "ratio": 0.4194
+      "ratio": 0.2793
      },
      {
       "t": 17.6,
-      "ratio": 0.4086
+      "ratio": 0.2793
      },
      {
       "t": 18.0,
-      "ratio": 0.4086
+      "ratio": 0.2682
      },
      {
       "t": 18.4,
-      "ratio": 0.4032
+      "ratio": 0.2626
      },
      {
       "t": 18.9,
-      "ratio": 0.3978
+      "ratio": 0.2514
      },
      {
       "t": 19.3,
-      "ratio": 0.3978
+      "ratio": 0.2458
      },
      {
       "t": 19.7,
-      "ratio": 0.3925
+      "ratio": 0.2402
      },
      {
       "t": 20.1,
-      "ratio": 0.3871
+      "ratio": 0.2402
      },
      {
       "t": 20.5,
-      "ratio": 0.3871
+      "ratio": 0.2346
      },
      {
       "t": 20.9,
-      "ratio": 0.3817
+      "ratio": 0.2346
      },
      {
       "t": 21.3,
-      "ratio": 0.3817
+      "ratio": 0.2346
      },
      {
       "t": 21.7,
-      "ratio": 0.3817
+      "ratio": 0.2235
      },
      {
       "t": 22.1,
-      "ratio": 0.3763
+      "ratio": 0.2235
      },
      {
       "t": 22.6,
-      "ratio": 0.371
+      "ratio": 0.2235
      },
      {
       "t": 23.0,
-      "ratio": 0.371
+      "ratio": 0.2235
      },
      {
       "t": 23.4,
-      "ratio": 0.371
+      "ratio": 0.2179
      },
      {
       "t": 23.8,
-      "ratio": 0.3656
+      "ratio": 0.2179
      },
      {
       "t": 24.2,
-      "ratio": 0.3602
+      "ratio": 0.2123
      },
      {
       "t": 24.6,
-      "ratio": 0.3441
+      "ratio": 0.2011
      },
      {
       "t": 25.0,
-      "ratio": 0.3441
+      "ratio": 0.1955
      },
      {
       "t": 25.4,
-      "ratio": 0.3441
+      "ratio": 0.1955
      },
      {
       "t": 25.8,
-      "ratio": 0.3441
+      "ratio": 0.1844
      },
      {
       "t": 26.2,
-      "ratio": 0.3441
+      "ratio": 0.1844
      },
      {
       "t": 26.7,
-      "ratio": 0.3226
+      "ratio": 0.1732
      },
      {
       "t": 27.1,
-      "ratio": 0.3172
+      "ratio": 0.1676
      },
      {
       "t": 27.5,
-      "ratio": 0.3172
+      "ratio": 0.1676
      },
      {
       "t": 27.9,
-      "ratio": 0.3172
+      "ratio": 0.162
      },
      {
       "t": 28.3,
-      "ratio": 0.3172
+      "ratio": 0.1564
      },
      {
       "t": 28.7,
-      "ratio": 0.3118
+      "ratio": 0.1564
      },
      {
       "t": 29.1,
-      "ratio": 0.3065
+      "ratio": 0.1564
      },
      {
       "t": 29.5,
-      "ratio": 0.3065
+      "ratio": 0.1564
      },
      {
       "t": 29.9,
-      "ratio": 0.3011
+      "ratio": 0.1564
      },
      {
       "t": 30.3,
-      "ratio": 0.2903
+      "ratio": 0.1564
      },
      {
       "t": 30.8,
-      "ratio": 0.2903
+      "ratio": 0.1564
      },
      {
       "t": 31.2,
-      "ratio": 0.2742
+      "ratio": 0.1564
      },
      {
       "t": 31.6,
-      "ratio": 0.2688
+      "ratio": 0.1564
      },
      {
       "t": 32.0,
-      "ratio": 0.2634
+      "ratio": 0.1564
      },
      {
       "t": 32.4,
-      "ratio": 0.2634
+      "ratio": 0.1508
      },
      {
       "t": 32.8,
-      "ratio": 0.2634
+      "ratio": 0.1453
      },
      {
       "t": 33.2,
-      "ratio": 0.2634
+      "ratio": 0.1453
      },
      {
       "t": 33.6,
-      "ratio": 0.2634
+      "ratio": 0.1453
      },
      {
       "t": 34.0,
-      "ratio": 0.2581
+      "ratio": 0.1341
      },
      {
       "t": 34.4,
-      "ratio": 0.2581
+      "ratio": 0.1173
      },
      {
       "t": 34.9,
-      "ratio": 0.2473
+      "ratio": 0.1173
      },
      {
       "t": 35.3,
-      "ratio": 0.2366
+      "ratio": 0.1229
      },
      {
       "t": 35.7,
-      "ratio": 0.2312
+      "ratio": 0.1229
      },
      {
       "t": 36.1,
-      "ratio": 0.2312
+      "ratio": 0.1229
      },
      {
       "t": 36.5,
-      "ratio": 0.2258
+      "ratio": 0.1173
      },
      {
       "t": 36.9,
-      "ratio": 0.2258
+      "ratio": 0.1117
      },
      {
       "t": 37.3,
-      "ratio": 0.2204
+      "ratio": 0.1061
      },
      {
       "t": 37.7,
-      "ratio": 0.2204
+      "ratio": 0.1006
      },
      {
       "t": 38.1,
-      "ratio": 0.2204
+      "ratio": 0.1006
      },
      {
       "t": 38.5,
-      "ratio": 0.2151
+      "ratio": 0.0894
      },
      {
       "t": 38.9,
-      "ratio": 0.2043
+      "ratio": 0.0894
      },
      {
       "t": 39.4,
-      "ratio": 0.2043
+      "ratio": 0.0894
      },
      {
       "t": 39.8,
-      "ratio": 0.1989
+      "ratio": 0.0726
      },
      {
       "t": 40.2,
-      "ratio": 0.1828
+      "ratio": 0.0615
      },
      {
       "t": 40.6,
-      "ratio": 0.1774
+      "ratio": 0.0559
      },
      {
       "t": 41.0,
-      "ratio": 0.1667
+      "ratio": 0.0559
      }
     ]
    },
    "trafico_pct": {
-    "SHORTS": 94.7,
-    "YT_SEARCH": 4.0,
-    "PLAYLIST": 0.7,
-    "SUBSCRIBER": 0.5,
-    "EXT_URL": 0.2,
+    "SHORTS": 92.8,
+    "YT_SEARCH": 7.1,
+    "PLAYLIST": 0.1,
     "NO_LINK_OTHER": 0.0,
-    "YT_OTHER_PAGE": 0.0
+    "EXT_URL": 0.0
    },
-   "vistas_48h": 428,
+   "vistas_48h": 695,
    "se_quedaron_48h": {
-    "vistas": 428,
-    "comprometidas": 186,
-    "pct": 43.5
+    "vistas": 695,
+    "comprometidas": 177,
+    "pct": 25.5
    },
    "se_quedaron_total": {
-    "vistas": 430,
-    "comprometidas": 187,
-    "pct": 43.5
+    "vistas": 705,
+    "comprometidas": 179,
+    "pct": 25.4
    },
    "impresiones": null,
    "ctr": null
@@ -162314,7 +162270,10 @@
     "puntos": 0
    },
    "trafico_pct": {
-    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-08-29&endDate=2026-11-15&metrics=views&di"
+    "YT_SEARCH": 81.2,
+    "YT_CHANNEL": 12.5,
+    "SUBSCRIBER": 6.2,
+    "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 0,
    "se_quedaron_48h": {
@@ -162323,9 +162282,7 @@
     "pct": null
    },
    "se_quedaron_total": {
-    "vistas": 16,
-    "comprometidas": 6,
-    "pct": 37.5
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-08-29&endDate=2026-11-15&metrics=views%2CengagedViews&filters=video%3D%3D3CdrynMlHrc&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "impresiones": null,
    "ctr": null
@@ -164126,6 +164083,48 @@
   },
   {
    "leido": "2026-11-16",
+   "id": "MDS-012.es",
+   "video_id": "hfw7TQf6sMw",
+   "titulo": "Cómo contar un chiste bien: el mismo chiste contado dos veces",
+   "formato": "corto",
+   "serie": "",
+   "publicado": "2026-09-08",
+   "privacidad": "public",
+   "dias_publicado": 69,
+   "duracion_s": 52.0,
+   "visualizaciones": 16,
+   "duracion_media_s": 18.0,
+   "porcentaje_visto": 34.9,
+   "minutos_vistos": 1.0,
+   "suscriptores": 0,
+   "me_gusta": 0,
+   "comentarios": 0,
+   "compartidos": 0,
+   "retencion": {
+    "puntos": 0
+   },
+   "trafico_pct": {
+    "YT_SEARCH": 50.0,
+    "SHORTS": 37.5,
+    "SUBSCRIBER": 12.5,
+    "NO_LINK_OTHER": 0.0
+   },
+   "vistas_48h": 9,
+   "se_quedaron_48h": {
+    "vistas": 9,
+    "comprometidas": 2,
+    "pct": 22.2
+   },
+   "se_quedaron_total": {
+    "vistas": 16,
+    "comprometidas": 4,
+    "pct": 25.0
+   },
+   "impresiones": null,
+   "ctr": null
+  },
+  {
+   "leido": "2026-11-16",
    "id": "MDS-013.es",
    "video_id": "VsfYvMU4UTU",
    "titulo": "Miedo a que se rían de ti: cuándo es broma y cuándo es burla",
@@ -165088,9 +165087,7 @@
    },
    "vistas_48h": 1115,
    "se_quedaron_48h": {
-    "vistas": 1115,
-    "comprometidas": 138,
-    "pct": 12.4
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-14&endDate=2026-09-15&metrics=views%2CengagedViews&filters=video%3D%3DmgEEefP6zkw&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "se_quedaron_total": {
     "vistas": 1204,
@@ -166539,411 +166536,7 @@
    "comentarios": 0,
    "compartidos": 0,
    "retencion": {
-    "puntos": 100,
-    "a_30s_pct": 67.4,
-    "caida_primer_10_pct": 15.2,
-    "curva": [
-     {
-      "t": 0.4,
-      "ratio": 1.413
-     },
-     {
-      "t": 0.8,
-      "ratio": 1.413
-     },
-     {
-      "t": 1.2,
-      "ratio": 1.3913
-     },
-     {
-      "t": 1.6,
-      "ratio": 1.3261
-     },
-     {
-      "t": 2.1,
-      "ratio": 1.2826
-     },
-     {
-      "t": 2.5,
-      "ratio": 1.2826
-     },
-     {
-      "t": 2.9,
-      "ratio": 1.2609
-     },
-     {
-      "t": 3.3,
-      "ratio": 1.2609
-     },
-     {
-      "t": 3.7,
-      "ratio": 1.2609
-     },
-     {
-      "t": 4.1,
-      "ratio": 1.2609
-     },
-     {
-      "t": 4.5,
-      "ratio": 1.2609
-     },
-     {
-      "t": 4.9,
-      "ratio": 1.2391
-     },
-     {
-      "t": 5.3,
-      "ratio": 1.1522
-     },
-     {
-      "t": 5.7,
-      "ratio": 1.0652
-     },
-     {
-      "t": 6.1,
-      "ratio": 1.0435
-     },
-     {
-      "t": 6.6,
-      "ratio": 1.0435
-     },
-     {
-      "t": 7.0,
-      "ratio": 1.0217
-     },
-     {
-      "t": 7.4,
-      "ratio": 1
-     },
-     {
-      "t": 7.8,
-      "ratio": 1
-     },
-     {
-      "t": 8.2,
-      "ratio": 0.9783
-     },
-     {
-      "t": 8.6,
-      "ratio": 0.9348
-     },
-     {
-      "t": 9.0,
-      "ratio": 0.9348
-     },
-     {
-      "t": 9.4,
-      "ratio": 0.913
-     },
-     {
-      "t": 9.8,
-      "ratio": 0.913
-     },
-     {
-      "t": 10.2,
-      "ratio": 0.8913
-     },
-     {
-      "t": 10.7,
-      "ratio": 0.8696
-     },
-     {
-      "t": 11.1,
-      "ratio": 0.8478
-     },
-     {
-      "t": 11.5,
-      "ratio": 0.8478
-     },
-     {
-      "t": 11.9,
-      "ratio": 0.8478
-     },
-     {
-      "t": 12.3,
-      "ratio": 0.8478
-     },
-     {
-      "t": 12.7,
-      "ratio": 0.8478
-     },
-     {
-      "t": 13.1,
-      "ratio": 0.8478
-     },
-     {
-      "t": 13.5,
-      "ratio": 0.8043
-     },
-     {
-      "t": 13.9,
-      "ratio": 0.8043
-     },
-     {
-      "t": 14.3,
-      "ratio": 0.8043
-     },
-     {
-      "t": 14.8,
-      "ratio": 0.8043
-     },
-     {
-      "t": 15.2,
-      "ratio": 0.8043
-     },
-     {
-      "t": 15.6,
-      "ratio": 0.8043
-     },
-     {
-      "t": 16.0,
-      "ratio": 0.8043
-     },
-     {
-      "t": 16.4,
-      "ratio": 0.8043
-     },
-     {
-      "t": 16.8,
-      "ratio": 0.8261
-     },
-     {
-      "t": 17.2,
-      "ratio": 0.8261
-     },
-     {
-      "t": 17.6,
-      "ratio": 0.8261
-     },
-     {
-      "t": 18.0,
-      "ratio": 0.8261
-     },
-     {
-      "t": 18.4,
-      "ratio": 0.8261
-     },
-     {
-      "t": 18.9,
-      "ratio": 0.8261
-     },
-     {
-      "t": 19.3,
-      "ratio": 0.8261
-     },
-     {
-      "t": 19.7,
-      "ratio": 0.8261
-     },
-     {
-      "t": 20.1,
-      "ratio": 0.8261
-     },
-     {
-      "t": 20.5,
-      "ratio": 0.8043
-     },
-     {
-      "t": 20.9,
-      "ratio": 0.8043
-     },
-     {
-      "t": 21.3,
-      "ratio": 0.8043
-     },
-     {
-      "t": 21.7,
-      "ratio": 0.8043
-     },
-     {
-      "t": 22.1,
-      "ratio": 0.8043
-     },
-     {
-      "t": 22.6,
-      "ratio": 0.7391
-     },
-     {
-      "t": 23.0,
-      "ratio": 0.7391
-     },
-     {
-      "t": 23.4,
-      "ratio": 0.7174
-     },
-     {
-      "t": 23.8,
-      "ratio": 0.7174
-     },
-     {
-      "t": 24.2,
-      "ratio": 0.7174
-     },
-     {
-      "t": 24.6,
-      "ratio": 0.6957
-     },
-     {
-      "t": 25.0,
-      "ratio": 0.6957
-     },
-     {
-      "t": 25.4,
-      "ratio": 0.6957
-     },
-     {
-      "t": 25.8,
-      "ratio": 0.6957
-     },
-     {
-      "t": 26.2,
-      "ratio": 0.6957
-     },
-     {
-      "t": 26.7,
-      "ratio": 0.6957
-     },
-     {
-      "t": 27.1,
-      "ratio": 0.6957
-     },
-     {
-      "t": 27.5,
-      "ratio": 0.6957
-     },
-     {
-      "t": 27.9,
-      "ratio": 0.6739
-     },
-     {
-      "t": 28.3,
-      "ratio": 0.6739
-     },
-     {
-      "t": 28.7,
-      "ratio": 0.6739
-     },
-     {
-      "t": 29.1,
-      "ratio": 0.6739
-     },
-     {
-      "t": 29.5,
-      "ratio": 0.6739
-     },
-     {
-      "t": 29.9,
-      "ratio": 0.6739
-     },
-     {
-      "t": 30.3,
-      "ratio": 0.6739
-     },
-     {
-      "t": 30.8,
-      "ratio": 0.6087
-     },
-     {
-      "t": 31.2,
-      "ratio": 0.6087
-     },
-     {
-      "t": 31.6,
-      "ratio": 0.587
-     },
-     {
-      "t": 32.0,
-      "ratio": 0.587
-     },
-     {
-      "t": 32.4,
-      "ratio": 0.587
-     },
-     {
-      "t": 32.8,
-      "ratio": 0.587
-     },
-     {
-      "t": 33.2,
-      "ratio": 0.587
-     },
-     {
-      "t": 33.6,
-      "ratio": 0.587
-     },
-     {
-      "t": 34.0,
-      "ratio": 0.587
-     },
-     {
-      "t": 34.4,
-      "ratio": 0.587
-     },
-     {
-      "t": 34.9,
-      "ratio": 0.5652
-     },
-     {
-      "t": 35.3,
-      "ratio": 0.5652
-     },
-     {
-      "t": 35.7,
-      "ratio": 0.5652
-     },
-     {
-      "t": 36.1,
-      "ratio": 0.5435
-     },
-     {
-      "t": 36.5,
-      "ratio": 0.5435
-     },
-     {
-      "t": 36.9,
-      "ratio": 0.5435
-     },
-     {
-      "t": 37.3,
-      "ratio": 0.5435
-     },
-     {
-      "t": 37.7,
-      "ratio": 0.5217
-     },
-     {
-      "t": 38.1,
-      "ratio": 0.5
-     },
-     {
-      "t": 38.5,
-      "ratio": 0.4783
-     },
-     {
-      "t": 38.9,
-      "ratio": 0.4783
-     },
-     {
-      "t": 39.4,
-      "ratio": 0.4783
-     },
-     {
-      "t": 39.8,
-      "ratio": 0.4783
-     },
-     {
-      "t": 40.2,
-      "ratio": 0.4565
-     },
-     {
-      "t": 40.6,
-      "ratio": 0.4348
-     },
-     {
-      "t": 41.0,
-      "ratio": 0.4348
-     }
-    ]
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-22&endDate=2026-11-15&metrics=audience"
    },
    "trafico_pct": {
     "SHORTS": 91.0,
@@ -167977,7 +167570,9 @@
     "pct": 32.3
    },
    "se_quedaron_total": {
-    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-29&endDate=2026-11-15&metrics=views%2CengagedViews&filters=video%3D%3DqlvJWEGc8hM&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
+    "vistas": 74,
+    "comprometidas": 25,
+    "pct": 33.8
    },
    "impresiones": null,
    "ctr": null
@@ -168017,7 +167612,9 @@
     "pct": 40.0
    },
    "se_quedaron_total": {
-    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-30&endDate=2026-11-15&metrics=views%2CengagedViews&filters=video%3D%3DU1UDw-UP3bM&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
+    "vistas": 10,
+    "comprometidas": 3,
+    "pct": 30.0
    },
    "impresiones": null,
    "ctr": null
@@ -168074,66 +167671,66 @@
    "privacidad": "public",
    "dias_publicado": 45,
    "duracion_s": 35.0,
-   "visualizaciones": 168,
+   "visualizaciones": 169,
    "duracion_media_s": 24.0,
-   "porcentaje_visto": 69.9,
-   "minutos_vistos": 28.0,
+   "porcentaje_visto": 70.3,
+   "minutos_vistos": 29.0,
    "suscriptores": 0,
    "me_gusta": 2,
    "comentarios": 0,
    "compartidos": 0,
    "retencion": {
     "puntos": 100,
-    "a_30s_pct": 46.1,
-    "caida_primer_10_pct": 15.4,
+    "a_30s_pct": 47.0,
+    "caida_primer_10_pct": 15.1,
     "curva": [
      {
       "t": 0.4,
-      "ratio": 1.2154
+      "ratio": 1.2121
      },
      {
       "t": 0.7,
-      "ratio": 1.1692
+      "ratio": 1.1667
      },
      {
       "t": 1.1,
-      "ratio": 1.1692
+      "ratio": 1.1667
      },
      {
       "t": 1.4,
-      "ratio": 1.1385
+      "ratio": 1.1364
      },
      {
       "t": 1.8,
-      "ratio": 1.1077
+      "ratio": 1.1061
      },
      {
       "t": 2.1,
-      "ratio": 1.1077
+      "ratio": 1.1061
      },
      {
       "t": 2.5,
-      "ratio": 1.0923
+      "ratio": 1.0909
      },
      {
       "t": 2.8,
-      "ratio": 1.0923
+      "ratio": 1.0909
      },
      {
       "t": 3.1,
-      "ratio": 1.0923
+      "ratio": 1.0909
      },
      {
       "t": 3.5,
-      "ratio": 1.0615
+      "ratio": 1.0606
      },
      {
       "t": 3.9,
-      "ratio": 1.0615
+      "ratio": 1.0606
      },
      {
       "t": 4.2,
-      "ratio": 1.0615
+      "ratio": 1.0606
      },
      {
       "t": 4.5,
@@ -168141,357 +167738,357 @@
      },
      {
       "t": 4.9,
-      "ratio": 0.9692
+      "ratio": 0.9697
      },
      {
       "t": 5.2,
-      "ratio": 0.9538
+      "ratio": 0.9545
      },
      {
       "t": 5.6,
-      "ratio": 0.9231
+      "ratio": 0.9242
      },
      {
       "t": 6.0,
-      "ratio": 0.9231
+      "ratio": 0.9242
      },
      {
       "t": 6.3,
-      "ratio": 0.9231
+      "ratio": 0.9242
      },
      {
       "t": 6.7,
-      "ratio": 0.9077
+      "ratio": 0.9091
      },
      {
       "t": 7.0,
-      "ratio": 0.9077
+      "ratio": 0.9091
      },
      {
       "t": 7.3,
-      "ratio": 0.8923
+      "ratio": 0.8939
      },
      {
       "t": 7.7,
-      "ratio": 0.8769
+      "ratio": 0.8788
      },
      {
       "t": 8.1,
-      "ratio": 0.8769
+      "ratio": 0.8788
      },
      {
       "t": 8.4,
-      "ratio": 0.8462
+      "ratio": 0.8485
      },
      {
       "t": 8.8,
-      "ratio": 0.8308
+      "ratio": 0.8333
      },
      {
       "t": 9.1,
-      "ratio": 0.8308
+      "ratio": 0.8333
      },
      {
       "t": 9.5,
-      "ratio": 0.8308
+      "ratio": 0.8333
      },
      {
       "t": 9.8,
-      "ratio": 0.8308
+      "ratio": 0.8333
      },
      {
       "t": 10.1,
-      "ratio": 0.8308
+      "ratio": 0.8333
      },
      {
       "t": 10.5,
-      "ratio": 0.8154
+      "ratio": 0.8182
      },
      {
       "t": 10.8,
-      "ratio": 0.8
+      "ratio": 0.803
      },
      {
       "t": 11.2,
-      "ratio": 0.8
+      "ratio": 0.803
      },
      {
       "t": 11.6,
-      "ratio": 0.8
+      "ratio": 0.803
      },
      {
       "t": 11.9,
-      "ratio": 0.8
+      "ratio": 0.803
      },
      {
       "t": 12.2,
-      "ratio": 0.8
+      "ratio": 0.803
      },
      {
       "t": 12.6,
-      "ratio": 0.8
+      "ratio": 0.803
      },
      {
       "t": 12.9,
-      "ratio": 0.8
+      "ratio": 0.803
      },
      {
       "t": 13.3,
-      "ratio": 0.8
+      "ratio": 0.803
      },
      {
       "t": 13.7,
-      "ratio": 0.7846
+      "ratio": 0.7879
      },
      {
       "t": 14.0,
-      "ratio": 0.7846
+      "ratio": 0.7879
      },
      {
       "t": 14.3,
-      "ratio": 0.7846
+      "ratio": 0.7879
      },
      {
       "t": 14.7,
-      "ratio": 0.7846
+      "ratio": 0.7879
      },
      {
       "t": 15.0,
-      "ratio": 0.7846
+      "ratio": 0.7879
      },
      {
       "t": 15.4,
-      "ratio": 0.7846
+      "ratio": 0.7879
      },
      {
       "t": 15.8,
-      "ratio": 0.7692
+      "ratio": 0.7727
      },
      {
       "t": 16.1,
-      "ratio": 0.7692
+      "ratio": 0.7727
      },
      {
       "t": 16.4,
-      "ratio": 0.7538
+      "ratio": 0.7576
      },
      {
       "t": 16.8,
-      "ratio": 0.7385
+      "ratio": 0.7424
      },
      {
       "t": 17.1,
-      "ratio": 0.7385
+      "ratio": 0.7424
      },
      {
       "t": 17.5,
-      "ratio": 0.7231
+      "ratio": 0.7273
      },
      {
       "t": 17.9,
-      "ratio": 0.7231
+      "ratio": 0.7273
      },
      {
       "t": 18.2,
-      "ratio": 0.7231
+      "ratio": 0.7273
      },
      {
       "t": 18.6,
-      "ratio": 0.7077
+      "ratio": 0.7121
      },
      {
       "t": 18.9,
-      "ratio": 0.7077
+      "ratio": 0.7121
      },
      {
       "t": 19.2,
-      "ratio": 0.6923
+      "ratio": 0.697
      },
      {
       "t": 19.6,
-      "ratio": 0.6769
+      "ratio": 0.6818
      },
      {
       "t": 19.9,
-      "ratio": 0.6462
+      "ratio": 0.6515
      },
      {
       "t": 20.3,
-      "ratio": 0.6462
+      "ratio": 0.6515
      },
      {
       "t": 20.6,
-      "ratio": 0.6154
+      "ratio": 0.6212
      },
      {
       "t": 21.0,
-      "ratio": 0.5846
+      "ratio": 0.5909
      },
      {
       "t": 21.3,
-      "ratio": 0.5846
+      "ratio": 0.5909
      },
      {
       "t": 21.7,
-      "ratio": 0.5692
+      "ratio": 0.5758
      },
      {
       "t": 22.1,
-      "ratio": 0.5692
+      "ratio": 0.5758
      },
      {
       "t": 22.4,
-      "ratio": 0.5538
+      "ratio": 0.5606
      },
      {
       "t": 22.8,
-      "ratio": 0.5538
+      "ratio": 0.5606
      },
      {
       "t": 23.1,
-      "ratio": 0.5538
+      "ratio": 0.5606
      },
      {
       "t": 23.5,
-      "ratio": 0.5538
+      "ratio": 0.5606
      },
      {
       "t": 23.8,
-      "ratio": 0.5538
+      "ratio": 0.5606
      },
      {
       "t": 24.1,
-      "ratio": 0.5538
+      "ratio": 0.5606
      },
      {
       "t": 24.5,
-      "ratio": 0.5538
+      "ratio": 0.5606
      },
      {
       "t": 24.8,
-      "ratio": 0.5538
+      "ratio": 0.5606
      },
      {
       "t": 25.2,
-      "ratio": 0.5538
+      "ratio": 0.5606
      },
      {
       "t": 25.6,
-      "ratio": 0.5538
+      "ratio": 0.5606
      },
      {
       "t": 25.9,
-      "ratio": 0.5538
+      "ratio": 0.5606
      },
      {
       "t": 26.2,
-      "ratio": 0.5538
+      "ratio": 0.5606
      },
      {
       "t": 26.6,
-      "ratio": 0.5385
+      "ratio": 0.5455
      },
      {
       "t": 26.9,
-      "ratio": 0.5231
+      "ratio": 0.5303
      },
      {
       "t": 27.3,
-      "ratio": 0.5231
+      "ratio": 0.5303
      },
      {
       "t": 27.7,
-      "ratio": 0.5231
+      "ratio": 0.5303
      },
      {
       "t": 28.0,
-      "ratio": 0.4923
+      "ratio": 0.5
      },
      {
       "t": 28.4,
-      "ratio": 0.4923
+      "ratio": 0.5
      },
      {
       "t": 28.7,
-      "ratio": 0.4769
+      "ratio": 0.4848
      },
      {
       "t": 29.0,
-      "ratio": 0.4769
+      "ratio": 0.4848
      },
      {
       "t": 29.4,
-      "ratio": 0.4615
+      "ratio": 0.4697
      },
      {
       "t": 29.8,
-      "ratio": 0.4615
+      "ratio": 0.4697
      },
      {
       "t": 30.1,
-      "ratio": 0.4615
+      "ratio": 0.4697
      },
      {
       "t": 30.4,
-      "ratio": 0.4615
+      "ratio": 0.4697
      },
      {
       "t": 30.8,
-      "ratio": 0.4462
+      "ratio": 0.4545
      },
      {
       "t": 31.2,
-      "ratio": 0.4462
+      "ratio": 0.4545
      },
      {
       "t": 31.5,
-      "ratio": 0.4462
+      "ratio": 0.4545
      },
      {
       "t": 31.9,
-      "ratio": 0.4308
+      "ratio": 0.4394
      },
      {
       "t": 32.2,
-      "ratio": 0.4154
+      "ratio": 0.4242
      },
      {
       "t": 32.6,
-      "ratio": 0.3846
+      "ratio": 0.3939
      },
      {
       "t": 32.9,
-      "ratio": 0.3846
+      "ratio": 0.3939
      },
      {
       "t": 33.2,
-      "ratio": 0.3846
+      "ratio": 0.3939
      },
      {
       "t": 33.6,
-      "ratio": 0.3692
+      "ratio": 0.3636
      },
      {
       "t": 33.9,
-      "ratio": 0.3385
+      "ratio": 0.3333
      },
      {
       "t": 34.3,
-      "ratio": 0.3077
+      "ratio": 0.303
      },
      {
       "t": 34.6,
-      "ratio": 0.3077
+      "ratio": 0.303
      },
      {
       "t": 35.0,
-      "ratio": 0.3077
+      "ratio": 0.303
      }
     ]
    },
    "trafico_pct": {
-    "SHORTS": 95.8,
-    "YT_SEARCH": 2.4,
+    "SHORTS": 95.3,
+    "YT_SEARCH": 3.0,
     "YT_OTHER_PAGE": 1.2,
     "SUBSCRIBER": 0.6,
     "NO_LINK_OTHER": 0.0
@@ -168503,9 +168100,9 @@
     "pct": 37.8
    },
    "se_quedaron_total": {
-    "vistas": 168,
-    "comprometidas": 65,
-    "pct": 38.7
+    "vistas": 169,
+    "comprometidas": 66,
+    "pct": 39.1
    },
    "impresiones": null,
    "ctr": null
@@ -171349,9 +170946,7 @@
     "pct": 22.2
    },
    "se_quedaron_total": {
-    "vistas": 11,
-    "comprometidas": 2,
-    "pct": 18.2
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-10-16&endDate=2026-11-15&metrics=views%2CengagedViews&filters=video%3D%3DOY5sukUO0Hk&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "impresiones": null,
    "ctr": null
@@ -172300,7 +171895,7 @@
    "privacidad": "public",
    "dias_publicado": 27,
    "duracion_s": 45.0,
-   "visualizaciones": 126,
+   "visualizaciones": 127,
    "duracion_media_s": 21.0,
    "porcentaje_visto": 48.4,
    "minutos_vistos": 7.0,
@@ -172716,8 +172311,8 @@
     ]
    },
    "trafico_pct": {
-    "SHORTS": 53.2,
-    "YT_SEARCH": 44.4,
+    "SHORTS": 52.8,
+    "YT_SEARCH": 44.9,
     "SUBSCRIBER": 2.4,
     "NO_LINK_OTHER": 0.0,
     "YT_CHANNEL": 0.0
@@ -172729,9 +172324,9 @@
     "pct": 13.4
    },
    "se_quedaron_total": {
-    "vistas": 126,
+    "vistas": 127,
     "comprometidas": 17,
-    "pct": 13.5
+    "pct": 13.4
    },
    "impresiones": null,
    "ctr": null
@@ -173760,9 +173355,9 @@
    "privacidad": "public",
    "dias_publicado": 21,
    "duracion_s": 44.0,
-   "visualizaciones": 985,
+   "visualizaciones": 986,
    "duracion_media_s": 15.0,
-   "porcentaje_visto": 36.0,
+   "porcentaje_visto": 35.8,
    "minutos_vistos": 58.0,
    "suscriptores": 0,
    "me_gusta": 12,
@@ -173770,413 +173365,413 @@
    "compartidos": 0,
    "retencion": {
     "puntos": 100,
-    "a_30s_pct": 16.7,
-    "caida_primer_10_pct": 9.3,
+    "a_30s_pct": 16.6,
+    "caida_primer_10_pct": 9.8,
     "curva": [
      {
       "t": 0.4,
-      "ratio": 1.0309
+      "ratio": 1.0307
      },
      {
       "t": 0.9,
-      "ratio": 1.0432
+      "ratio": 1.0429
      },
      {
       "t": 1.3,
-      "ratio": 1.0432
+      "ratio": 1.0429
      },
      {
       "t": 1.8,
-      "ratio": 1.037
+      "ratio": 1.0368
      },
      {
       "t": 2.2,
-      "ratio": 1.0247
+      "ratio": 1.0245
      },
      {
       "t": 2.6,
-      "ratio": 1.0123
+      "ratio": 1.0061
      },
      {
       "t": 3.1,
-      "ratio": 1.0123
+      "ratio": 1.0061
      },
      {
       "t": 3.5,
-      "ratio": 1.0123
+      "ratio": 1.0061
      },
      {
       "t": 4.0,
-      "ratio": 1.0062
+      "ratio": 1
      },
      {
       "t": 4.4,
-      "ratio": 1.0062
+      "ratio": 1
      },
      {
       "t": 4.8,
-      "ratio": 0.9383
+      "ratio": 0.9325
      },
      {
       "t": 5.3,
-      "ratio": 0.8951
+      "ratio": 0.8896
      },
      {
       "t": 5.7,
-      "ratio": 0.8519
+      "ratio": 0.8466
      },
      {
       "t": 6.2,
-      "ratio": 0.7963
+      "ratio": 0.7914
      },
      {
       "t": 6.6,
-      "ratio": 0.7469
+      "ratio": 0.7423
      },
      {
       "t": 7.0,
-      "ratio": 0.7037
+      "ratio": 0.6994
      },
      {
       "t": 7.5,
-      "ratio": 0.6543
+      "ratio": 0.6503
      },
      {
       "t": 7.9,
-      "ratio": 0.6481
+      "ratio": 0.6442
      },
      {
       "t": 8.4,
-      "ratio": 0.6235
+      "ratio": 0.6196
      },
      {
       "t": 8.8,
-      "ratio": 0.6049
+      "ratio": 0.6012
      },
      {
       "t": 9.2,
-      "ratio": 0.5741
+      "ratio": 0.5706
      },
      {
       "t": 9.7,
-      "ratio": 0.5556
+      "ratio": 0.5521
      },
      {
       "t": 10.1,
-      "ratio": 0.5247
+      "ratio": 0.5215
      },
      {
       "t": 10.6,
-      "ratio": 0.5062
+      "ratio": 0.5031
      },
      {
       "t": 11.0,
-      "ratio": 0.5
+      "ratio": 0.4969
      },
      {
       "t": 11.4,
-      "ratio": 0.4877
+      "ratio": 0.4847
      },
      {
       "t": 11.9,
-      "ratio": 0.4568
+      "ratio": 0.454
      },
      {
       "t": 12.3,
-      "ratio": 0.4383
+      "ratio": 0.4356
      },
      {
       "t": 12.8,
-      "ratio": 0.4259
+      "ratio": 0.4233
      },
      {
       "t": 13.2,
-      "ratio": 0.4198
+      "ratio": 0.4172
      },
      {
       "t": 13.6,
-      "ratio": 0.3951
+      "ratio": 0.3926
      },
      {
       "t": 14.1,
-      "ratio": 0.3951
+      "ratio": 0.3926
      },
      {
       "t": 14.5,
-      "ratio": 0.3951
+      "ratio": 0.3926
      },
      {
       "t": 15.0,
-      "ratio": 0.3889
+      "ratio": 0.3865
      },
      {
       "t": 15.4,
-      "ratio": 0.3889
+      "ratio": 0.3865
      },
      {
       "t": 15.8,
-      "ratio": 0.3704
+      "ratio": 0.3681
      },
      {
       "t": 16.3,
-      "ratio": 0.3457
+      "ratio": 0.3436
      },
      {
       "t": 16.7,
-      "ratio": 0.3272
+      "ratio": 0.3252
      },
      {
       "t": 17.2,
-      "ratio": 0.3086
+      "ratio": 0.3067
      },
      {
       "t": 17.6,
-      "ratio": 0.3086
+      "ratio": 0.3067
      },
      {
       "t": 18.0,
-      "ratio": 0.2963
+      "ratio": 0.2945
      },
      {
       "t": 18.5,
-      "ratio": 0.2901
+      "ratio": 0.2883
      },
      {
       "t": 18.9,
-      "ratio": 0.284
+      "ratio": 0.2822
      },
      {
       "t": 19.4,
-      "ratio": 0.2716
+      "ratio": 0.2699
      },
      {
       "t": 19.8,
-      "ratio": 0.2593
+      "ratio": 0.2577
      },
      {
       "t": 20.2,
-      "ratio": 0.2469
+      "ratio": 0.2454
      },
      {
       "t": 20.7,
-      "ratio": 0.2469
+      "ratio": 0.2454
      },
      {
       "t": 21.1,
-      "ratio": 0.2469
+      "ratio": 0.2454
      },
      {
       "t": 21.6,
-      "ratio": 0.2407
+      "ratio": 0.2393
      },
      {
       "t": 22.0,
-      "ratio": 0.2407
+      "ratio": 0.2393
      },
      {
       "t": 22.4,
-      "ratio": 0.2346
+      "ratio": 0.2331
      },
      {
       "t": 22.9,
-      "ratio": 0.2284
+      "ratio": 0.227
      },
      {
       "t": 23.3,
-      "ratio": 0.2222
+      "ratio": 0.2209
      },
      {
       "t": 23.8,
-      "ratio": 0.216
+      "ratio": 0.2147
      },
      {
       "t": 24.2,
-      "ratio": 0.216
+      "ratio": 0.2147
      },
      {
       "t": 24.6,
-      "ratio": 0.2037
+      "ratio": 0.2025
      },
      {
       "t": 25.1,
-      "ratio": 0.1975
+      "ratio": 0.1963
      },
      {
       "t": 25.5,
-      "ratio": 0.1975
+      "ratio": 0.1963
      },
      {
       "t": 26.0,
-      "ratio": 0.1914
+      "ratio": 0.1902
      },
      {
       "t": 26.4,
-      "ratio": 0.1914
+      "ratio": 0.1902
      },
      {
       "t": 26.8,
-      "ratio": 0.1852
+      "ratio": 0.184
      },
      {
       "t": 27.3,
-      "ratio": 0.1852
+      "ratio": 0.184
      },
      {
       "t": 27.7,
-      "ratio": 0.1852
+      "ratio": 0.184
      },
      {
       "t": 28.2,
-      "ratio": 0.179
+      "ratio": 0.1779
      },
      {
       "t": 28.6,
-      "ratio": 0.179
+      "ratio": 0.1779
      },
      {
       "t": 29.0,
-      "ratio": 0.179
+      "ratio": 0.1779
      },
      {
       "t": 29.5,
-      "ratio": 0.1728
+      "ratio": 0.1718
      },
      {
       "t": 29.9,
-      "ratio": 0.1667
+      "ratio": 0.1656
      },
      {
       "t": 30.4,
-      "ratio": 0.1667
+      "ratio": 0.1656
      },
      {
       "t": 30.8,
-      "ratio": 0.1667
+      "ratio": 0.1656
      },
      {
       "t": 31.2,
-      "ratio": 0.1667
+      "ratio": 0.1656
      },
      {
       "t": 31.7,
-      "ratio": 0.1667
+      "ratio": 0.1656
      },
      {
       "t": 32.1,
-      "ratio": 0.1667
+      "ratio": 0.1656
      },
      {
       "t": 32.6,
-      "ratio": 0.1667
+      "ratio": 0.1656
      },
      {
       "t": 33.0,
-      "ratio": 0.1667
+      "ratio": 0.1656
      },
      {
       "t": 33.4,
-      "ratio": 0.1605
+      "ratio": 0.1595
      },
      {
       "t": 33.9,
-      "ratio": 0.1605
+      "ratio": 0.1595
      },
      {
       "t": 34.3,
-      "ratio": 0.1605
+      "ratio": 0.1595
      },
      {
       "t": 34.8,
-      "ratio": 0.1605
+      "ratio": 0.1595
      },
      {
       "t": 35.2,
-      "ratio": 0.1605
+      "ratio": 0.1595
      },
      {
       "t": 35.6,
-      "ratio": 0.1605
+      "ratio": 0.1595
      },
      {
       "t": 36.1,
-      "ratio": 0.1605
+      "ratio": 0.1595
      },
      {
       "t": 36.5,
-      "ratio": 0.1605
+      "ratio": 0.1595
      },
      {
       "t": 37.0,
-      "ratio": 0.1605
+      "ratio": 0.1595
      },
      {
       "t": 37.4,
-      "ratio": 0.1605
+      "ratio": 0.1595
      },
      {
       "t": 37.8,
-      "ratio": 0.1481
+      "ratio": 0.1472
      },
      {
       "t": 38.3,
-      "ratio": 0.1481
+      "ratio": 0.1472
      },
      {
       "t": 38.7,
-      "ratio": 0.1481
+      "ratio": 0.1472
      },
      {
       "t": 39.2,
-      "ratio": 0.1481
+      "ratio": 0.1472
      },
      {
       "t": 39.6,
-      "ratio": 0.142
+      "ratio": 0.1411
      },
      {
       "t": 40.0,
-      "ratio": 0.1358
+      "ratio": 0.135
      },
      {
       "t": 40.5,
-      "ratio": 0.1296
+      "ratio": 0.1288
      },
      {
       "t": 40.9,
-      "ratio": 0.1296
+      "ratio": 0.1288
      },
      {
       "t": 41.4,
-      "ratio": 0.1296
+      "ratio": 0.1288
      },
      {
       "t": 41.8,
-      "ratio": 0.1296
+      "ratio": 0.1288
      },
      {
       "t": 42.2,
-      "ratio": 0.1235
+      "ratio": 0.1227
      },
      {
       "t": 42.7,
-      "ratio": 0.0988
+      "ratio": 0.0982
      },
      {
       "t": 43.1,
-      "ratio": 0.0864
+      "ratio": 0.0859
      },
      {
       "t": 43.6,
-      "ratio": 0.0802
+      "ratio": 0.0798
      },
      {
       "t": 44.0,
-      "ratio": 0.0802
+      "ratio": 0.0798
      }
     ]
    },
    "trafico_pct": {
-    "SHORTS": 89.3,
+    "SHORTS": 89.2,
     "YT_SEARCH": 10.3,
     "SUBSCRIBER": 0.4,
     "NO_LINK_OTHER": 0.0
@@ -174188,9 +173783,9 @@
     "pct": 15.7
    },
    "se_quedaron_total": {
-    "vistas": 985,
-    "comprometidas": 163,
-    "pct": 16.5
+    "vistas": 986,
+    "comprometidas": 164,
+    "pct": 16.6
    },
    "impresiones": null,
    "ctr": null
@@ -175171,453 +174766,6 @@
   },
   {
    "leido": "2026-11-16",
-   "id": "MDS-055.es",
-   "video_id": "cKYQJudl-Bs",
-   "titulo": "¿Puede hacerte cosquillas una máquina?",
-   "formato": "corto",
-   "serie": "",
-   "publicado": "2026-10-31",
-   "privacidad": "public",
-   "dias_publicado": 16,
-   "duracion_s": 41.0,
-   "visualizaciones": 705,
-   "duracion_media_s": 14.0,
-   "porcentaje_visto": 36.2,
-   "minutos_vistos": 56.0,
-   "suscriptores": 0,
-   "me_gusta": 6,
-   "comentarios": 0,
-   "compartidos": 0,
-   "retencion": {
-    "puntos": 100,
-    "a_30s_pct": 15.6,
-    "caida_primer_10_pct": 7.3,
-    "curva": [
-     {
-      "t": 0.4,
-      "ratio": 1.0559
-     },
-     {
-      "t": 0.8,
-      "ratio": 1.0503
-     },
-     {
-      "t": 1.2,
-      "ratio": 1.0559
-     },
-     {
-      "t": 1.6,
-      "ratio": 1.0503
-     },
-     {
-      "t": 2.1,
-      "ratio": 1.0391
-     },
-     {
-      "t": 2.5,
-      "ratio": 1.0279
-     },
-     {
-      "t": 2.9,
-      "ratio": 1.0112
-     },
-     {
-      "t": 3.3,
-      "ratio": 1.0112
-     },
-     {
-      "t": 3.7,
-      "ratio": 1.0056
-     },
-     {
-      "t": 4.1,
-      "ratio": 1.0056
-     },
-     {
-      "t": 4.5,
-      "ratio": 0.9832
-     },
-     {
-      "t": 4.9,
-      "ratio": 0.9441
-     },
-     {
-      "t": 5.3,
-      "ratio": 0.9106
-     },
-     {
-      "t": 5.7,
-      "ratio": 0.8827
-     },
-     {
-      "t": 6.1,
-      "ratio": 0.8492
-     },
-     {
-      "t": 6.6,
-      "ratio": 0.8212
-     },
-     {
-      "t": 7.0,
-      "ratio": 0.7542
-     },
-     {
-      "t": 7.4,
-      "ratio": 0.7095
-     },
-     {
-      "t": 7.8,
-      "ratio": 0.676
-     },
-     {
-      "t": 8.2,
-      "ratio": 0.6313
-     },
-     {
-      "t": 8.6,
-      "ratio": 0.581
-     },
-     {
-      "t": 9.0,
-      "ratio": 0.5531
-     },
-     {
-      "t": 9.4,
-      "ratio": 0.514
-     },
-     {
-      "t": 9.8,
-      "ratio": 0.4972
-     },
-     {
-      "t": 10.2,
-      "ratio": 0.4637
-     },
-     {
-      "t": 10.7,
-      "ratio": 0.4525
-     },
-     {
-      "t": 11.1,
-      "ratio": 0.4469
-     },
-     {
-      "t": 11.5,
-      "ratio": 0.4413
-     },
-     {
-      "t": 11.9,
-      "ratio": 0.4246
-     },
-     {
-      "t": 12.3,
-      "ratio": 0.4246
-     },
-     {
-      "t": 12.7,
-      "ratio": 0.4134
-     },
-     {
-      "t": 13.1,
-      "ratio": 0.3911
-     },
-     {
-      "t": 13.5,
-      "ratio": 0.3855
-     },
-     {
-      "t": 13.9,
-      "ratio": 0.3743
-     },
-     {
-      "t": 14.3,
-      "ratio": 0.3575
-     },
-     {
-      "t": 14.8,
-      "ratio": 0.3408
-     },
-     {
-      "t": 15.2,
-      "ratio": 0.3352
-     },
-     {
-      "t": 15.6,
-      "ratio": 0.324
-     },
-     {
-      "t": 16.0,
-      "ratio": 0.3017
-     },
-     {
-      "t": 16.4,
-      "ratio": 0.2905
-     },
-     {
-      "t": 16.8,
-      "ratio": 0.2793
-     },
-     {
-      "t": 17.2,
-      "ratio": 0.2793
-     },
-     {
-      "t": 17.6,
-      "ratio": 0.2793
-     },
-     {
-      "t": 18.0,
-      "ratio": 0.2682
-     },
-     {
-      "t": 18.4,
-      "ratio": 0.2626
-     },
-     {
-      "t": 18.9,
-      "ratio": 0.2514
-     },
-     {
-      "t": 19.3,
-      "ratio": 0.2458
-     },
-     {
-      "t": 19.7,
-      "ratio": 0.2402
-     },
-     {
-      "t": 20.1,
-      "ratio": 0.2402
-     },
-     {
-      "t": 20.5,
-      "ratio": 0.2346
-     },
-     {
-      "t": 20.9,
-      "ratio": 0.2346
-     },
-     {
-      "t": 21.3,
-      "ratio": 0.2346
-     },
-     {
-      "t": 21.7,
-      "ratio": 0.2235
-     },
-     {
-      "t": 22.1,
-      "ratio": 0.2235
-     },
-     {
-      "t": 22.6,
-      "ratio": 0.2235
-     },
-     {
-      "t": 23.0,
-      "ratio": 0.2235
-     },
-     {
-      "t": 23.4,
-      "ratio": 0.2179
-     },
-     {
-      "t": 23.8,
-      "ratio": 0.2179
-     },
-     {
-      "t": 24.2,
-      "ratio": 0.2123
-     },
-     {
-      "t": 24.6,
-      "ratio": 0.2011
-     },
-     {
-      "t": 25.0,
-      "ratio": 0.1955
-     },
-     {
-      "t": 25.4,
-      "ratio": 0.1955
-     },
-     {
-      "t": 25.8,
-      "ratio": 0.1844
-     },
-     {
-      "t": 26.2,
-      "ratio": 0.1844
-     },
-     {
-      "t": 26.7,
-      "ratio": 0.1732
-     },
-     {
-      "t": 27.1,
-      "ratio": 0.1676
-     },
-     {
-      "t": 27.5,
-      "ratio": 0.1676
-     },
-     {
-      "t": 27.9,
-      "ratio": 0.162
-     },
-     {
-      "t": 28.3,
-      "ratio": 0.1564
-     },
-     {
-      "t": 28.7,
-      "ratio": 0.1564
-     },
-     {
-      "t": 29.1,
-      "ratio": 0.1564
-     },
-     {
-      "t": 29.5,
-      "ratio": 0.1564
-     },
-     {
-      "t": 29.9,
-      "ratio": 0.1564
-     },
-     {
-      "t": 30.3,
-      "ratio": 0.1564
-     },
-     {
-      "t": 30.8,
-      "ratio": 0.1564
-     },
-     {
-      "t": 31.2,
-      "ratio": 0.1564
-     },
-     {
-      "t": 31.6,
-      "ratio": 0.1564
-     },
-     {
-      "t": 32.0,
-      "ratio": 0.1564
-     },
-     {
-      "t": 32.4,
-      "ratio": 0.1508
-     },
-     {
-      "t": 32.8,
-      "ratio": 0.1453
-     },
-     {
-      "t": 33.2,
-      "ratio": 0.1453
-     },
-     {
-      "t": 33.6,
-      "ratio": 0.1453
-     },
-     {
-      "t": 34.0,
-      "ratio": 0.1341
-     },
-     {
-      "t": 34.4,
-      "ratio": 0.1173
-     },
-     {
-      "t": 34.9,
-      "ratio": 0.1173
-     },
-     {
-      "t": 35.3,
-      "ratio": 0.1229
-     },
-     {
-      "t": 35.7,
-      "ratio": 0.1229
-     },
-     {
-      "t": 36.1,
-      "ratio": 0.1229
-     },
-     {
-      "t": 36.5,
-      "ratio": 0.1173
-     },
-     {
-      "t": 36.9,
-      "ratio": 0.1117
-     },
-     {
-      "t": 37.3,
-      "ratio": 0.1061
-     },
-     {
-      "t": 37.7,
-      "ratio": 0.1006
-     },
-     {
-      "t": 38.1,
-      "ratio": 0.1006
-     },
-     {
-      "t": 38.5,
-      "ratio": 0.0894
-     },
-     {
-      "t": 38.9,
-      "ratio": 0.0894
-     },
-     {
-      "t": 39.4,
-      "ratio": 0.0894
-     },
-     {
-      "t": 39.8,
-      "ratio": 0.0726
-     },
-     {
-      "t": 40.2,
-      "ratio": 0.0615
-     },
-     {
-      "t": 40.6,
-      "ratio": 0.0559
-     },
-     {
-      "t": 41.0,
-      "ratio": 0.0559
-     }
-    ]
-   },
-   "trafico_pct": {
-    "SHORTS": 92.8,
-    "YT_SEARCH": 7.1,
-    "PLAYLIST": 0.1,
-    "NO_LINK_OTHER": 0.0,
-    "EXT_URL": 0.0
-   },
-   "vistas_48h": 695,
-   "se_quedaron_48h": {
-    "vistas": 695,
-    "comprometidas": 177,
-    "pct": 25.5
-   },
-   "se_quedaron_total": {
-    "vistas": 705,
-    "comprometidas": 179,
-    "pct": 25.4
-   },
-   "impresiones": null,
-   "ctr": null
-  },
-  {
-   "leido": "2026-11-16",
    "id": "MDS-056.es",
    "video_id": "s21JJcmlug4",
    "titulo": "¿Por qué hay gente que se ríe de lo que cuenta?",
@@ -175653,6 +174801,455 @@
     "vistas": 15,
     "comprometidas": 4,
     "pct": 26.7
+   },
+   "impresiones": null,
+   "ctr": null
+  },
+  {
+   "leido": "2026-11-16",
+   "id": "MDS-057.es",
+   "video_id": "o1UmmSFC7us",
+   "titulo": "¿Los gorilas tienen cosquillas?",
+   "formato": "corto",
+   "serie": "",
+   "publicado": "2026-11-02",
+   "privacidad": "public",
+   "dias_publicado": 14,
+   "duracion_s": 41.0,
+   "visualizaciones": 430,
+   "duracion_media_s": 19.0,
+   "porcentaje_visto": 47.5,
+   "minutos_vistos": 65.0,
+   "suscriptores": 0,
+   "me_gusta": 9,
+   "comentarios": 1,
+   "compartidos": 0,
+   "retencion": {
+    "puntos": 100,
+    "a_30s_pct": 30.1,
+    "caida_primer_10_pct": 5.4,
+    "curva": [
+     {
+      "t": 0.4,
+      "ratio": 1.1505
+     },
+     {
+      "t": 0.8,
+      "ratio": 1.1398
+     },
+     {
+      "t": 1.2,
+      "ratio": 1.1398
+     },
+     {
+      "t": 1.6,
+      "ratio": 1.1344
+     },
+     {
+      "t": 2.1,
+      "ratio": 1.129
+     },
+     {
+      "t": 2.5,
+      "ratio": 1.1183
+     },
+     {
+      "t": 2.9,
+      "ratio": 1.1129
+     },
+     {
+      "t": 3.3,
+      "ratio": 1.1075
+     },
+     {
+      "t": 3.7,
+      "ratio": 1.1075
+     },
+     {
+      "t": 4.1,
+      "ratio": 1.1075
+     },
+     {
+      "t": 4.5,
+      "ratio": 1.0968
+     },
+     {
+      "t": 4.9,
+      "ratio": 1.0484
+     },
+     {
+      "t": 5.3,
+      "ratio": 0.9355
+     },
+     {
+      "t": 5.7,
+      "ratio": 0.8065
+     },
+     {
+      "t": 6.1,
+      "ratio": 0.7742
+     },
+     {
+      "t": 6.6,
+      "ratio": 0.7527
+     },
+     {
+      "t": 7.0,
+      "ratio": 0.7473
+     },
+     {
+      "t": 7.4,
+      "ratio": 0.7151
+     },
+     {
+      "t": 7.8,
+      "ratio": 0.6989
+     },
+     {
+      "t": 8.2,
+      "ratio": 0.6882
+     },
+     {
+      "t": 8.6,
+      "ratio": 0.6774
+     },
+     {
+      "t": 9.0,
+      "ratio": 0.672
+     },
+     {
+      "t": 9.4,
+      "ratio": 0.6559
+     },
+     {
+      "t": 9.8,
+      "ratio": 0.6344
+     },
+     {
+      "t": 10.2,
+      "ratio": 0.629
+     },
+     {
+      "t": 10.7,
+      "ratio": 0.629
+     },
+     {
+      "t": 11.1,
+      "ratio": 0.5968
+     },
+     {
+      "t": 11.5,
+      "ratio": 0.5753
+     },
+     {
+      "t": 11.9,
+      "ratio": 0.5538
+     },
+     {
+      "t": 12.3,
+      "ratio": 0.5323
+     },
+     {
+      "t": 12.7,
+      "ratio": 0.5161
+     },
+     {
+      "t": 13.1,
+      "ratio": 0.5108
+     },
+     {
+      "t": 13.5,
+      "ratio": 0.5054
+     },
+     {
+      "t": 13.9,
+      "ratio": 0.4839
+     },
+     {
+      "t": 14.3,
+      "ratio": 0.4785
+     },
+     {
+      "t": 14.8,
+      "ratio": 0.4731
+     },
+     {
+      "t": 15.2,
+      "ratio": 0.457
+     },
+     {
+      "t": 15.6,
+      "ratio": 0.4409
+     },
+     {
+      "t": 16.0,
+      "ratio": 0.4301
+     },
+     {
+      "t": 16.4,
+      "ratio": 0.4247
+     },
+     {
+      "t": 16.8,
+      "ratio": 0.4194
+     },
+     {
+      "t": 17.2,
+      "ratio": 0.4194
+     },
+     {
+      "t": 17.6,
+      "ratio": 0.4086
+     },
+     {
+      "t": 18.0,
+      "ratio": 0.4086
+     },
+     {
+      "t": 18.4,
+      "ratio": 0.4032
+     },
+     {
+      "t": 18.9,
+      "ratio": 0.3978
+     },
+     {
+      "t": 19.3,
+      "ratio": 0.3978
+     },
+     {
+      "t": 19.7,
+      "ratio": 0.3925
+     },
+     {
+      "t": 20.1,
+      "ratio": 0.3871
+     },
+     {
+      "t": 20.5,
+      "ratio": 0.3871
+     },
+     {
+      "t": 20.9,
+      "ratio": 0.3817
+     },
+     {
+      "t": 21.3,
+      "ratio": 0.3817
+     },
+     {
+      "t": 21.7,
+      "ratio": 0.3817
+     },
+     {
+      "t": 22.1,
+      "ratio": 0.3763
+     },
+     {
+      "t": 22.6,
+      "ratio": 0.371
+     },
+     {
+      "t": 23.0,
+      "ratio": 0.371
+     },
+     {
+      "t": 23.4,
+      "ratio": 0.371
+     },
+     {
+      "t": 23.8,
+      "ratio": 0.3656
+     },
+     {
+      "t": 24.2,
+      "ratio": 0.3602
+     },
+     {
+      "t": 24.6,
+      "ratio": 0.3441
+     },
+     {
+      "t": 25.0,
+      "ratio": 0.3441
+     },
+     {
+      "t": 25.4,
+      "ratio": 0.3441
+     },
+     {
+      "t": 25.8,
+      "ratio": 0.3441
+     },
+     {
+      "t": 26.2,
+      "ratio": 0.3441
+     },
+     {
+      "t": 26.7,
+      "ratio": 0.3226
+     },
+     {
+      "t": 27.1,
+      "ratio": 0.3172
+     },
+     {
+      "t": 27.5,
+      "ratio": 0.3172
+     },
+     {
+      "t": 27.9,
+      "ratio": 0.3172
+     },
+     {
+      "t": 28.3,
+      "ratio": 0.3172
+     },
+     {
+      "t": 28.7,
+      "ratio": 0.3118
+     },
+     {
+      "t": 29.1,
+      "ratio": 0.3065
+     },
+     {
+      "t": 29.5,
+      "ratio": 0.3065
+     },
+     {
+      "t": 29.9,
+      "ratio": 0.3011
+     },
+     {
+      "t": 30.3,
+      "ratio": 0.2903
+     },
+     {
+      "t": 30.8,
+      "ratio": 0.2903
+     },
+     {
+      "t": 31.2,
+      "ratio": 0.2742
+     },
+     {
+      "t": 31.6,
+      "ratio": 0.2688
+     },
+     {
+      "t": 32.0,
+      "ratio": 0.2634
+     },
+     {
+      "t": 32.4,
+      "ratio": 0.2634
+     },
+     {
+      "t": 32.8,
+      "ratio": 0.2634
+     },
+     {
+      "t": 33.2,
+      "ratio": 0.2634
+     },
+     {
+      "t": 33.6,
+      "ratio": 0.2634
+     },
+     {
+      "t": 34.0,
+      "ratio": 0.2581
+     },
+     {
+      "t": 34.4,
+      "ratio": 0.2581
+     },
+     {
+      "t": 34.9,
+      "ratio": 0.2473
+     },
+     {
+      "t": 35.3,
+      "ratio": 0.2366
+     },
+     {
+      "t": 35.7,
+      "ratio": 0.2312
+     },
+     {
+      "t": 36.1,
+      "ratio": 0.2312
+     },
+     {
+      "t": 36.5,
+      "ratio": 0.2258
+     },
+     {
+      "t": 36.9,
+      "ratio": 0.2258
+     },
+     {
+      "t": 37.3,
+      "ratio": 0.2204
+     },
+     {
+      "t": 37.7,
+      "ratio": 0.2204
+     },
+     {
+      "t": 38.1,
+      "ratio": 0.2204
+     },
+     {
+      "t": 38.5,
+      "ratio": 0.2151
+     },
+     {
+      "t": 38.9,
+      "ratio": 0.2043
+     },
+     {
+      "t": 39.4,
+      "ratio": 0.2043
+     },
+     {
+      "t": 39.8,
+      "ratio": 0.1989
+     },
+     {
+      "t": 40.2,
+      "ratio": 0.1828
+     },
+     {
+      "t": 40.6,
+      "ratio": 0.1774
+     },
+     {
+      "t": 41.0,
+      "ratio": 0.1667
+     }
+    ]
+   },
+   "trafico_pct": {
+    "SHORTS": 94.7,
+    "YT_SEARCH": 4.0,
+    "PLAYLIST": 0.7,
+    "SUBSCRIBER": 0.5,
+    "EXT_URL": 0.2,
+    "NO_LINK_OTHER": 0.0,
+    "YT_OTHER_PAGE": 0.0
+   },
+   "vistas_48h": 428,
+   "se_quedaron_48h": {
+    "vistas": 428,
+    "comprometidas": 186,
+    "pct": 43.5
+   },
+   "se_quedaron_total": {
+    "vistas": 430,
+    "comprometidas": 187,
+    "pct": 43.5
    },
    "impresiones": null,
    "ctr": null
@@ -176238,9 +175835,9 @@
    "privacidad": "public",
    "dias_publicado": 2,
    "duracion_s": 42.0,
-   "visualizaciones": 0,
-   "duracion_media_s": 0.0,
-   "porcentaje_visto": 0.0,
+   "visualizaciones": 2,
+   "duracion_media_s": 37.0,
+   "porcentaje_visto": 90.2,
    "minutos_vistos": 0.0,
    "suscriptores": 0,
    "me_gusta": 0,
@@ -176249,17 +175846,20 @@
    "retencion": {
     "puntos": 0
    },
-   "trafico_pct": {},
-   "vistas_48h": 0,
+   "trafico_pct": {
+    "YT_SEARCH": 50.0,
+    "SHORTS": 50.0
+   },
+   "vistas_48h": 2,
    "se_quedaron_48h": {
-    "vistas": 0,
-    "comprometidas": 0,
-    "pct": null
+    "vistas": 2,
+    "comprometidas": 1,
+    "pct": 50.0
    },
    "se_quedaron_total": {
-    "vistas": 0,
-    "comprometidas": 0,
-    "pct": null
+    "vistas": 2,
+    "comprometidas": 1,
+    "pct": 50.0
    },
    "impresiones": null,
    "ctr": null
@@ -176275,7 +175875,7 @@
    "privacidad": "public",
    "dias_publicado": 5,
    "duracion_s": 41.0,
-   "visualizaciones": 19,
+   "visualizaciones": 21,
    "duracion_media_s": 32.0,
    "porcentaje_visto": 78.5,
    "minutos_vistos": 1.0,
@@ -176287,8 +175887,8 @@
     "puntos": 0
    },
    "trafico_pct": {
-    "YT_SEARCH": 78.9,
-    "SHORTS": 21.1,
+    "YT_SEARCH": 81.0,
+    "SHORTS": 19.0,
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 14,
@@ -176298,9 +175898,9 @@
     "pct": 21.4
    },
    "se_quedaron_total": {
-    "vistas": 19,
+    "vistas": 21,
     "comprometidas": 3,
-    "pct": 15.8
+    "pct": 14.3
    },
    "impresiones": null,
    "ctr": null
@@ -176316,7 +175916,7 @@
    "privacidad": "public",
    "dias_publicado": 4,
    "duracion_s": 46.0,
-   "visualizaciones": 28,
+   "visualizaciones": 34,
    "duracion_media_s": 12.0,
    "porcentaje_visto": 27.8,
    "minutos_vistos": 2.0,
@@ -176328,8 +175928,8 @@
     "puntos": 0
    },
    "trafico_pct": {
-    "SHORTS": 89.3,
-    "YT_SEARCH": 10.7,
+    "SHORTS": 91.2,
+    "YT_SEARCH": 8.8,
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 28,
@@ -176339,9 +175939,9 @@
     "pct": 28.6
    },
    "se_quedaron_total": {
-    "vistas": 28,
+    "vistas": 34,
     "comprometidas": 8,
-    "pct": 28.6
+    "pct": 23.5
    },
    "impresiones": null,
    "ctr": null
@@ -176428,7 +176028,7 @@
   }
  ],
  "miniaturas": [],
- "actualizado_utc": "2026-11-16T18:51:53Z",
+ "actualizado_utc": "2026-11-16T20:55:21Z",
  "control_c26": {
   "mediana_vistas_48h": 21.5,
   "n_videos": 20,

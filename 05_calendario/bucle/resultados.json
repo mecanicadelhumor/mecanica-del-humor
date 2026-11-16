@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-16T18:51:56Z",
+ "actualizado_utc": "2026-11-16T20:55:24Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -24,7 +24,7 @@
    "referencia_anterior": {
     "n": 10,
     "se_quedaron_media": 34.3,
-    "porcentaje_visto_media": 57.3,
+    "porcentaje_visto_media": 57.4,
     "vistas_48h_mediana": 62.0,
     "me_gusta_por_100": 0.67,
     "ceros_de_feed": 2,
@@ -78,7 +78,7 @@
        "vistas_48h": 112,
        "porcentaje_visto": 48.4,
        "me_gusta": 0,
-       "visualizaciones": 126,
+       "visualizaciones": 127,
        "leido": "2026-11-16"
       },
       {
@@ -96,9 +96,9 @@
        "publicado": "2026-10-26",
        "se_quedaron_pct": 15.7,
        "vistas_48h": 913,
-       "porcentaje_visto": 36.0,
+       "porcentaje_visto": 35.8,
        "me_gusta": 12,
-       "visualizaciones": 985,
+       "visualizaciones": 986,
        "leido": "2026-11-16"
       },
       {
@@ -368,8 +368,8 @@
      "se_quedaron_media": 28.6,
      "porcentaje_visto_media": 27.8,
      "vistas_48h_mediana": 28,
-     "me_gusta_por_100": 3.57,
-     "ceros_de_feed": 1,
+     "me_gusta_por_100": 2.94,
+     "ceros_de_feed": 2,
      "shorts": [
       {
        "id": "MDS-065",
@@ -378,7 +378,7 @@
        "vistas_48h": 28,
        "porcentaje_visto": 27.8,
        "me_gusta": 1,
-       "visualizaciones": 28,
+       "visualizaciones": 34,
        "leido": "2026-11-16"
       }
      ]
@@ -409,7 +409,7 @@
        "vistas_48h": 14,
        "porcentaje_visto": 78.5,
        "me_gusta": 0,
-       "visualizaciones": 19,
+       "visualizaciones": 21,
        "leido": "2026-11-16"
       }
      ]
@@ -482,8 +482,8 @@
       "se_quedaron_media": 27.2,
       "porcentaje_visto_media": 46.1,
       "vistas_48h_mediana": 27.5,
-      "me_gusta_por_100": 1.75,
-      "ceros_de_feed": 2
+      "me_gusta_por_100": 1.59,
+      "ceros_de_feed": 3
      },
      "diferencia_pp": null,
      "prob_mejor": null,
@@ -504,8 +504,8 @@
       "se_quedaron_media": 22.3,
       "porcentaje_visto_media": 48.9,
       "vistas_48h_mediana": 28,
-      "me_gusta_por_100": 0.46,
-      "ceros_de_feed": 1
+      "me_gusta_por_100": 0.45,
+      "ceros_de_feed": 2
      },
      "diferencia_pp": null,
      "prob_mejor": null,
@@ -522,6 +522,13 @@
    },
    "apartados": [
     {
+     "id": "MDS-063",
+     "variante": "control",
+     "cero_de_feed": true,
+     "vistas_48h": 2,
+     "motivo": "pocas vistas: 2 a 48 h (menos de 10); no cuenta en «se quedaron»"
+    },
+    {
      "id": "MDS-066",
      "variante": "control",
      "cero_de_feed": true,
@@ -537,11 +544,6 @@
     }
    ],
    "pendientes": [
-    {
-     "id": "MDS-063",
-     "variante": "control",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    },
     {
      "id": "MDS-068",
      "variante": "A",
