@@ -1,8 +1,8 @@
 {
   "guion": "MDS-070",
   "version": 2,
-  "firma": "99e237ea64038562",
-  "resuelto_utc": "2026-11-12T22:45:56Z",
+  "firma": "6462bffaa3c2d645",
+  "resuelto_utc": "2026-11-16T10:33:18Z",
   "detector_caras": "ok: YuNet, OpenCV 5.0.0",
   "escenas": {
     "1": {
@@ -53,32 +53,27 @@
             4.8
           ],
           "frase": "Le escribes a tu amigo: «¡Me han dado el trabajo!».",
-          "fuente": "pexels",
-          "id": 6585414,
-          "pagina": "https://www.pexels.com/video/adult-man-typing-on-phone-6585414/",
-          "titulo": "adult man typing on phone",
-          "autor": "Artem Podrez",
-          "autor_url": "https://www.pexels.com/@artempodrez",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 8.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/6585414/6585414-hd_1080_1920_30fps.mp4",
-          "tipo": "video",
-          "consulta": "young man typing excited on phone",
-          "relevancia": 0.6,
-          "inicio_s": 0.4,
-          "movimiento": 1.65,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a young man typing an excited message on his phone",
+          "semilla": 9354653,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-070/e2_p1.jpg",
           "caras": [
             [
-              0.375,
-              0.3063,
-              0.3944,
-              0.2656
+              0.5273,
+              0.2051,
+              0.3802,
+              0.2853
+            ],
+            [
+              0.3385,
+              0.6287,
+              0.3008,
+              0.1846
             ]
           ]
         },
@@ -254,32 +249,21 @@
             7.77
           ],
           "frase": "A tu amigo, quizá, solo le faltó una carita. Eso sí, era gente imaginando chats;",
-          "fuente": "pexels",
-          "id": 7447927,
-          "pagina": "https://www.pexels.com/video/man-talking-on-the-phone-7447927/",
-          "titulo": "man talking on the phone",
-          "autor": "August de Richelieu",
-          "autor_url": "https://www.pexels.com/@august-de-richelieu",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 22.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/7447927/7447927-hd_1080_1920_25fps.mp4",
-          "tipo": "video",
-          "consulta": "man smiling at phone",
-          "relevancia": 0.667,
-          "inicio_s": 0.4,
-          "movimiento": 2.05,
-          "encuadre": {
-            "x": 0.5,
-            "y": 0.5
-          },
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a young man smiling with relief at his phone",
+          "semilla": 4537875,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-070/e6_p1.jpg",
           "caras": [
             [
-              0.2278,
-              0.2609,
-              0.5,
-              0.3984
+              0.3646,
+              0.2419,
+              0.2734,
+              0.1963
             ]
           ]
         },
