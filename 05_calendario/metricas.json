@@ -160461,6 +160461,497 @@
   },
   {
    "leido": "2026-11-16",
+   "id": "MDS-012.es",
+   "video_id": "hfw7TQf6sMw",
+   "titulo": "Cómo contar un chiste bien: el mismo chiste contado dos veces",
+   "formato": "corto",
+   "serie": "",
+   "publicado": "2026-09-08",
+   "privacidad": "public",
+   "dias_publicado": 69,
+   "duracion_s": 52.0,
+   "visualizaciones": 16,
+   "duracion_media_s": 18.0,
+   "porcentaje_visto": 34.9,
+   "minutos_vistos": 1.0,
+   "suscriptores": 0,
+   "me_gusta": 0,
+   "comentarios": 0,
+   "compartidos": 0,
+   "retencion": {
+    "puntos": 0
+   },
+   "trafico_pct": {
+    "YT_SEARCH": 50.0,
+    "SHORTS": 37.5,
+    "SUBSCRIBER": 12.5,
+    "NO_LINK_OTHER": 0.0
+   },
+   "vistas_48h": 9,
+   "se_quedaron_48h": {
+    "vistas": 9,
+    "comprometidas": 2,
+    "pct": 22.2
+   },
+   "se_quedaron_total": {
+    "vistas": 16,
+    "comprometidas": 4,
+    "pct": 25.0
+   },
+   "impresiones": null,
+   "ctr": null
+  },
+  {
+   "leido": "2026-11-16",
+   "id": "MDS-057.es",
+   "video_id": "o1UmmSFC7us",
+   "titulo": "¿Los gorilas tienen cosquillas?",
+   "formato": "corto",
+   "serie": "",
+   "publicado": "2026-11-02",
+   "privacidad": "public",
+   "dias_publicado": 14,
+   "duracion_s": 41.0,
+   "visualizaciones": 430,
+   "duracion_media_s": 19.0,
+   "porcentaje_visto": 47.5,
+   "minutos_vistos": 65.0,
+   "suscriptores": 0,
+   "me_gusta": 9,
+   "comentarios": 1,
+   "compartidos": 0,
+   "retencion": {
+    "puntos": 100,
+    "a_30s_pct": 30.1,
+    "caida_primer_10_pct": 5.4,
+    "curva": [
+     {
+      "t": 0.4,
+      "ratio": 1.1505
+     },
+     {
+      "t": 0.8,
+      "ratio": 1.1398
+     },
+     {
+      "t": 1.2,
+      "ratio": 1.1398
+     },
+     {
+      "t": 1.6,
+      "ratio": 1.1344
+     },
+     {
+      "t": 2.1,
+      "ratio": 1.129
+     },
+     {
+      "t": 2.5,
+      "ratio": 1.1183
+     },
+     {
+      "t": 2.9,
+      "ratio": 1.1129
+     },
+     {
+      "t": 3.3,
+      "ratio": 1.1075
+     },
+     {
+      "t": 3.7,
+      "ratio": 1.1075
+     },
+     {
+      "t": 4.1,
+      "ratio": 1.1075
+     },
+     {
+      "t": 4.5,
+      "ratio": 1.0968
+     },
+     {
+      "t": 4.9,
+      "ratio": 1.0484
+     },
+     {
+      "t": 5.3,
+      "ratio": 0.9355
+     },
+     {
+      "t": 5.7,
+      "ratio": 0.8065
+     },
+     {
+      "t": 6.1,
+      "ratio": 0.7742
+     },
+     {
+      "t": 6.6,
+      "ratio": 0.7527
+     },
+     {
+      "t": 7.0,
+      "ratio": 0.7473
+     },
+     {
+      "t": 7.4,
+      "ratio": 0.7151
+     },
+     {
+      "t": 7.8,
+      "ratio": 0.6989
+     },
+     {
+      "t": 8.2,
+      "ratio": 0.6882
+     },
+     {
+      "t": 8.6,
+      "ratio": 0.6774
+     },
+     {
+      "t": 9.0,
+      "ratio": 0.672
+     },
+     {
+      "t": 9.4,
+      "ratio": 0.6559
+     },
+     {
+      "t": 9.8,
+      "ratio": 0.6344
+     },
+     {
+      "t": 10.2,
+      "ratio": 0.629
+     },
+     {
+      "t": 10.7,
+      "ratio": 0.629
+     },
+     {
+      "t": 11.1,
+      "ratio": 0.5968
+     },
+     {
+      "t": 11.5,
+      "ratio": 0.5753
+     },
+     {
+      "t": 11.9,
+      "ratio": 0.5538
+     },
+     {
+      "t": 12.3,
+      "ratio": 0.5323
+     },
+     {
+      "t": 12.7,
+      "ratio": 0.5161
+     },
+     {
+      "t": 13.1,
+      "ratio": 0.5108
+     },
+     {
+      "t": 13.5,
+      "ratio": 0.5054
+     },
+     {
+      "t": 13.9,
+      "ratio": 0.4839
+     },
+     {
+      "t": 14.3,
+      "ratio": 0.4785
+     },
+     {
+      "t": 14.8,
+      "ratio": 0.4731
+     },
+     {
+      "t": 15.2,
+      "ratio": 0.457
+     },
+     {
+      "t": 15.6,
+      "ratio": 0.4409
+     },
+     {
+      "t": 16.0,
+      "ratio": 0.4301
+     },
+     {
+      "t": 16.4,
+      "ratio": 0.4247
+     },
+     {
+      "t": 16.8,
+      "ratio": 0.4194
+     },
+     {
+      "t": 17.2,
+      "ratio": 0.4194
+     },
+     {
+      "t": 17.6,
+      "ratio": 0.4086
+     },
+     {
+      "t": 18.0,
+      "ratio": 0.4086
+     },
+     {
+      "t": 18.4,
+      "ratio": 0.4032
+     },
+     {
+      "t": 18.9,
+      "ratio": 0.3978
+     },
+     {
+      "t": 19.3,
+      "ratio": 0.3978
+     },
+     {
+      "t": 19.7,
+      "ratio": 0.3925
+     },
+     {
+      "t": 20.1,
+      "ratio": 0.3871
+     },
+     {
+      "t": 20.5,
+      "ratio": 0.3871
+     },
+     {
+      "t": 20.9,
+      "ratio": 0.3817
+     },
+     {
+      "t": 21.3,
+      "ratio": 0.3817
+     },
+     {
+      "t": 21.7,
+      "ratio": 0.3817
+     },
+     {
+      "t": 22.1,
+      "ratio": 0.3763
+     },
+     {
+      "t": 22.6,
+      "ratio": 0.371
+     },
+     {
+      "t": 23.0,
+      "ratio": 0.371
+     },
+     {
+      "t": 23.4,
+      "ratio": 0.371
+     },
+     {
+      "t": 23.8,
+      "ratio": 0.3656
+     },
+     {
+      "t": 24.2,
+      "ratio": 0.3602
+     },
+     {
+      "t": 24.6,
+      "ratio": 0.3441
+     },
+     {
+      "t": 25.0,
+      "ratio": 0.3441
+     },
+     {
+      "t": 25.4,
+      "ratio": 0.3441
+     },
+     {
+      "t": 25.8,
+      "ratio": 0.3441
+     },
+     {
+      "t": 26.2,
+      "ratio": 0.3441
+     },
+     {
+      "t": 26.7,
+      "ratio": 0.3226
+     },
+     {
+      "t": 27.1,
+      "ratio": 0.3172
+     },
+     {
+      "t": 27.5,
+      "ratio": 0.3172
+     },
+     {
+      "t": 27.9,
+      "ratio": 0.3172
+     },
+     {
+      "t": 28.3,
+      "ratio": 0.3172
+     },
+     {
+      "t": 28.7,
+      "ratio": 0.3118
+     },
+     {
+      "t": 29.1,
+      "ratio": 0.3065
+     },
+     {
+      "t": 29.5,
+      "ratio": 0.3065
+     },
+     {
+      "t": 29.9,
+      "ratio": 0.3011
+     },
+     {
+      "t": 30.3,
+      "ratio": 0.2903
+     },
+     {
+      "t": 30.8,
+      "ratio": 0.2903
+     },
+     {
+      "t": 31.2,
+      "ratio": 0.2742
+     },
+     {
+      "t": 31.6,
+      "ratio": 0.2688
+     },
+     {
+      "t": 32.0,
+      "ratio": 0.2634
+     },
+     {
+      "t": 32.4,
+      "ratio": 0.2634
+     },
+     {
+      "t": 32.8,
+      "ratio": 0.2634
+     },
+     {
+      "t": 33.2,
+      "ratio": 0.2634
+     },
+     {
+      "t": 33.6,
+      "ratio": 0.2634
+     },
+     {
+      "t": 34.0,
+      "ratio": 0.2581
+     },
+     {
+      "t": 34.4,
+      "ratio": 0.2581
+     },
+     {
+      "t": 34.9,
+      "ratio": 0.2473
+     },
+     {
+      "t": 35.3,
+      "ratio": 0.2366
+     },
+     {
+      "t": 35.7,
+      "ratio": 0.2312
+     },
+     {
+      "t": 36.1,
+      "ratio": 0.2312
+     },
+     {
+      "t": 36.5,
+      "ratio": 0.2258
+     },
+     {
+      "t": 36.9,
+      "ratio": 0.2258
+     },
+     {
+      "t": 37.3,
+      "ratio": 0.2204
+     },
+     {
+      "t": 37.7,
+      "ratio": 0.2204
+     },
+     {
+      "t": 38.1,
+      "ratio": 0.2204
+     },
+     {
+      "t": 38.5,
+      "ratio": 0.2151
+     },
+     {
+      "t": 38.9,
+      "ratio": 0.2043
+     },
+     {
+      "t": 39.4,
+      "ratio": 0.2043
+     },
+     {
+      "t": 39.8,
+      "ratio": 0.1989
+     },
+     {
+      "t": 40.2,
+      "ratio": 0.1828
+     },
+     {
+      "t": 40.6,
+      "ratio": 0.1774
+     },
+     {
+      "t": 41.0,
+      "ratio": 0.1667
+     }
+    ]
+   },
+   "trafico_pct": {
+    "SHORTS": 94.7,
+    "YT_SEARCH": 4.0,
+    "PLAYLIST": 0.7,
+    "SUBSCRIBER": 0.5,
+    "EXT_URL": 0.2,
+    "NO_LINK_OTHER": 0.0,
+    "YT_OTHER_PAGE": 0.0
+   },
+   "vistas_48h": 428,
+   "se_quedaron_48h": {
+    "vistas": 428,
+    "comprometidas": 186,
+    "pct": 43.5
+   },
+   "se_quedaron_total": {
+    "vistas": 430,
+    "comprometidas": 187,
+    "pct": 43.5
+   },
+   "impresiones": null,
+   "ctr": null
+  },
+  {
+   "leido": "2026-11-16",
    "id": "MDH-001.es",
    "video_id": "nmADYAksYoo",
    "titulo": "Nadie nace gracioso — lo que 50 años de investigación han medido de verdad",
@@ -161823,10 +162314,7 @@
     "puntos": 0
    },
    "trafico_pct": {
-    "YT_SEARCH": 81.2,
-    "YT_CHANNEL": 12.5,
-    "SUBSCRIBER": 6.2,
-    "NO_LINK_OTHER": 0.0
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-08-29&endDate=2026-11-15&metrics=views&di"
    },
    "vistas_48h": 0,
    "se_quedaron_48h": {
@@ -163632,48 +164120,6 @@
     "vistas": 30,
     "comprometidas": 12,
     "pct": 40.0
-   },
-   "impresiones": null,
-   "ctr": null
-  },
-  {
-   "leido": "2026-11-16",
-   "id": "MDS-012.es",
-   "video_id": "hfw7TQf6sMw",
-   "titulo": "Cómo contar un chiste bien: el mismo chiste contado dos veces",
-   "formato": "corto",
-   "serie": "",
-   "publicado": "2026-09-08",
-   "privacidad": "public",
-   "dias_publicado": 69,
-   "duracion_s": 52.0,
-   "visualizaciones": 16,
-   "duracion_media_s": 18.0,
-   "porcentaje_visto": 34.9,
-   "minutos_vistos": 1.0,
-   "suscriptores": 0,
-   "me_gusta": 0,
-   "comentarios": 0,
-   "compartidos": 0,
-   "retencion": {
-    "puntos": 0
-   },
-   "trafico_pct": {
-    "YT_SEARCH": 50.0,
-    "SHORTS": 37.5,
-    "SUBSCRIBER": 12.5,
-    "NO_LINK_OTHER": 0.0
-   },
-   "vistas_48h": 9,
-   "se_quedaron_48h": {
-    "vistas": 9,
-    "comprometidas": 2,
-    "pct": 22.2
-   },
-   "se_quedaron_total": {
-    "vistas": 16,
-    "comprometidas": 4,
-    "pct": 25.0
    },
    "impresiones": null,
    "ctr": null
@@ -167531,9 +167977,7 @@
     "pct": 32.3
    },
    "se_quedaron_total": {
-    "vistas": 74,
-    "comprometidas": 25,
-    "pct": 33.8
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-29&endDate=2026-11-15&metrics=views%2CengagedViews&filters=video%3D%3DqlvJWEGc8hM&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "impresiones": null,
    "ctr": null
@@ -167573,9 +168017,7 @@
     "pct": 40.0
    },
    "se_quedaron_total": {
-    "vistas": 10,
-    "comprometidas": 3,
-    "pct": 30.0
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-09-30&endDate=2026-11-15&metrics=views%2CengagedViews&filters=video%3D%3DU1UDw-UP3bM&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "impresiones": null,
    "ctr": null
@@ -175217,455 +175659,6 @@
   },
   {
    "leido": "2026-11-16",
-   "id": "MDS-057.es",
-   "video_id": "o1UmmSFC7us",
-   "titulo": "¿Los gorilas tienen cosquillas?",
-   "formato": "corto",
-   "serie": "",
-   "publicado": "2026-11-02",
-   "privacidad": "public",
-   "dias_publicado": 14,
-   "duracion_s": 41.0,
-   "visualizaciones": 430,
-   "duracion_media_s": 19.0,
-   "porcentaje_visto": 47.5,
-   "minutos_vistos": 65.0,
-   "suscriptores": 0,
-   "me_gusta": 9,
-   "comentarios": 1,
-   "compartidos": 0,
-   "retencion": {
-    "puntos": 100,
-    "a_30s_pct": 30.1,
-    "caida_primer_10_pct": 5.4,
-    "curva": [
-     {
-      "t": 0.4,
-      "ratio": 1.1505
-     },
-     {
-      "t": 0.8,
-      "ratio": 1.1398
-     },
-     {
-      "t": 1.2,
-      "ratio": 1.1398
-     },
-     {
-      "t": 1.6,
-      "ratio": 1.1344
-     },
-     {
-      "t": 2.1,
-      "ratio": 1.129
-     },
-     {
-      "t": 2.5,
-      "ratio": 1.1183
-     },
-     {
-      "t": 2.9,
-      "ratio": 1.1129
-     },
-     {
-      "t": 3.3,
-      "ratio": 1.1075
-     },
-     {
-      "t": 3.7,
-      "ratio": 1.1075
-     },
-     {
-      "t": 4.1,
-      "ratio": 1.1075
-     },
-     {
-      "t": 4.5,
-      "ratio": 1.0968
-     },
-     {
-      "t": 4.9,
-      "ratio": 1.0484
-     },
-     {
-      "t": 5.3,
-      "ratio": 0.9355
-     },
-     {
-      "t": 5.7,
-      "ratio": 0.8065
-     },
-     {
-      "t": 6.1,
-      "ratio": 0.7742
-     },
-     {
-      "t": 6.6,
-      "ratio": 0.7527
-     },
-     {
-      "t": 7.0,
-      "ratio": 0.7473
-     },
-     {
-      "t": 7.4,
-      "ratio": 0.7151
-     },
-     {
-      "t": 7.8,
-      "ratio": 0.6989
-     },
-     {
-      "t": 8.2,
-      "ratio": 0.6882
-     },
-     {
-      "t": 8.6,
-      "ratio": 0.6774
-     },
-     {
-      "t": 9.0,
-      "ratio": 0.672
-     },
-     {
-      "t": 9.4,
-      "ratio": 0.6559
-     },
-     {
-      "t": 9.8,
-      "ratio": 0.6344
-     },
-     {
-      "t": 10.2,
-      "ratio": 0.629
-     },
-     {
-      "t": 10.7,
-      "ratio": 0.629
-     },
-     {
-      "t": 11.1,
-      "ratio": 0.5968
-     },
-     {
-      "t": 11.5,
-      "ratio": 0.5753
-     },
-     {
-      "t": 11.9,
-      "ratio": 0.5538
-     },
-     {
-      "t": 12.3,
-      "ratio": 0.5323
-     },
-     {
-      "t": 12.7,
-      "ratio": 0.5161
-     },
-     {
-      "t": 13.1,
-      "ratio": 0.5108
-     },
-     {
-      "t": 13.5,
-      "ratio": 0.5054
-     },
-     {
-      "t": 13.9,
-      "ratio": 0.4839
-     },
-     {
-      "t": 14.3,
-      "ratio": 0.4785
-     },
-     {
-      "t": 14.8,
-      "ratio": 0.4731
-     },
-     {
-      "t": 15.2,
-      "ratio": 0.457
-     },
-     {
-      "t": 15.6,
-      "ratio": 0.4409
-     },
-     {
-      "t": 16.0,
-      "ratio": 0.4301
-     },
-     {
-      "t": 16.4,
-      "ratio": 0.4247
-     },
-     {
-      "t": 16.8,
-      "ratio": 0.4194
-     },
-     {
-      "t": 17.2,
-      "ratio": 0.4194
-     },
-     {
-      "t": 17.6,
-      "ratio": 0.4086
-     },
-     {
-      "t": 18.0,
-      "ratio": 0.4086
-     },
-     {
-      "t": 18.4,
-      "ratio": 0.4032
-     },
-     {
-      "t": 18.9,
-      "ratio": 0.3978
-     },
-     {
-      "t": 19.3,
-      "ratio": 0.3978
-     },
-     {
-      "t": 19.7,
-      "ratio": 0.3925
-     },
-     {
-      "t": 20.1,
-      "ratio": 0.3871
-     },
-     {
-      "t": 20.5,
-      "ratio": 0.3871
-     },
-     {
-      "t": 20.9,
-      "ratio": 0.3817
-     },
-     {
-      "t": 21.3,
-      "ratio": 0.3817
-     },
-     {
-      "t": 21.7,
-      "ratio": 0.3817
-     },
-     {
-      "t": 22.1,
-      "ratio": 0.3763
-     },
-     {
-      "t": 22.6,
-      "ratio": 0.371
-     },
-     {
-      "t": 23.0,
-      "ratio": 0.371
-     },
-     {
-      "t": 23.4,
-      "ratio": 0.371
-     },
-     {
-      "t": 23.8,
-      "ratio": 0.3656
-     },
-     {
-      "t": 24.2,
-      "ratio": 0.3602
-     },
-     {
-      "t": 24.6,
-      "ratio": 0.3441
-     },
-     {
-      "t": 25.0,
-      "ratio": 0.3441
-     },
-     {
-      "t": 25.4,
-      "ratio": 0.3441
-     },
-     {
-      "t": 25.8,
-      "ratio": 0.3441
-     },
-     {
-      "t": 26.2,
-      "ratio": 0.3441
-     },
-     {
-      "t": 26.7,
-      "ratio": 0.3226
-     },
-     {
-      "t": 27.1,
-      "ratio": 0.3172
-     },
-     {
-      "t": 27.5,
-      "ratio": 0.3172
-     },
-     {
-      "t": 27.9,
-      "ratio": 0.3172
-     },
-     {
-      "t": 28.3,
-      "ratio": 0.3172
-     },
-     {
-      "t": 28.7,
-      "ratio": 0.3118
-     },
-     {
-      "t": 29.1,
-      "ratio": 0.3065
-     },
-     {
-      "t": 29.5,
-      "ratio": 0.3065
-     },
-     {
-      "t": 29.9,
-      "ratio": 0.3011
-     },
-     {
-      "t": 30.3,
-      "ratio": 0.2903
-     },
-     {
-      "t": 30.8,
-      "ratio": 0.2903
-     },
-     {
-      "t": 31.2,
-      "ratio": 0.2742
-     },
-     {
-      "t": 31.6,
-      "ratio": 0.2688
-     },
-     {
-      "t": 32.0,
-      "ratio": 0.2634
-     },
-     {
-      "t": 32.4,
-      "ratio": 0.2634
-     },
-     {
-      "t": 32.8,
-      "ratio": 0.2634
-     },
-     {
-      "t": 33.2,
-      "ratio": 0.2634
-     },
-     {
-      "t": 33.6,
-      "ratio": 0.2634
-     },
-     {
-      "t": 34.0,
-      "ratio": 0.2581
-     },
-     {
-      "t": 34.4,
-      "ratio": 0.2581
-     },
-     {
-      "t": 34.9,
-      "ratio": 0.2473
-     },
-     {
-      "t": 35.3,
-      "ratio": 0.2366
-     },
-     {
-      "t": 35.7,
-      "ratio": 0.2312
-     },
-     {
-      "t": 36.1,
-      "ratio": 0.2312
-     },
-     {
-      "t": 36.5,
-      "ratio": 0.2258
-     },
-     {
-      "t": 36.9,
-      "ratio": 0.2258
-     },
-     {
-      "t": 37.3,
-      "ratio": 0.2204
-     },
-     {
-      "t": 37.7,
-      "ratio": 0.2204
-     },
-     {
-      "t": 38.1,
-      "ratio": 0.2204
-     },
-     {
-      "t": 38.5,
-      "ratio": 0.2151
-     },
-     {
-      "t": 38.9,
-      "ratio": 0.2043
-     },
-     {
-      "t": 39.4,
-      "ratio": 0.2043
-     },
-     {
-      "t": 39.8,
-      "ratio": 0.1989
-     },
-     {
-      "t": 40.2,
-      "ratio": 0.1828
-     },
-     {
-      "t": 40.6,
-      "ratio": 0.1774
-     },
-     {
-      "t": 41.0,
-      "ratio": 0.1667
-     }
-    ]
-   },
-   "trafico_pct": {
-    "SHORTS": 94.7,
-    "YT_SEARCH": 4.0,
-    "PLAYLIST": 0.7,
-    "SUBSCRIBER": 0.5,
-    "EXT_URL": 0.2,
-    "NO_LINK_OTHER": 0.0,
-    "YT_OTHER_PAGE": 0.0
-   },
-   "vistas_48h": 428,
-   "se_quedaron_48h": {
-    "vistas": 428,
-    "comprometidas": 186,
-    "pct": 43.5
-   },
-   "se_quedaron_total": {
-    "vistas": 430,
-    "comprometidas": 187,
-    "pct": 43.5
-   },
-   "impresiones": null,
-   "ctr": null
-  },
-  {
-   "leido": "2026-11-16",
    "id": "MDS-058.es",
    "video_id": "W_Hwzc3mrEk",
    "titulo": "¿Por qué duele que dejen de contestarte?",
@@ -176435,7 +176428,7 @@
   }
  ],
  "miniaturas": [],
- "actualizado_utc": "2026-11-16T13:48:50Z",
+ "actualizado_utc": "2026-11-16T18:51:53Z",
  "control_c26": {
   "mediana_vistas_48h": 21.5,
   "n_videos": 20,
