@@ -1,7 +1,7 @@
 {
   "pexels": "ok",
   "pixabay": "ok",
-  "caras": "ok: YuNet, OpenCV 5.0.0",
+  "caras": "ok: YuNet, OpenCV 5.1.0",
   "cloudflare_token": "ok: active",
   "cloudflare_token_de_cuenta": "no aplica: el token es de usuario (verificado arriba)",
   "cloudflare_imagen": "ok con @cf/black-forest-labs/flux-2-klein-4b (256x256)"
