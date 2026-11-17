@@ -1188,12 +1188,13 @@
       "guion": "05_calendario/guiones/MDS-069.es.json",
       "video_id": "V3EvaMNR_Dc",
       "url": "https://youtu.be/V3EvaMNR_Dc",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-11-17T18:00:00Z",
       "musica": "cama_13_embrace_sappheiros.mp3",
       "subido_utc": "2026-11-17T09:21:51Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-11-17T18:30:42Z"
     }
   ],
-  "_estado_leido_utc": "2026-11-16T18:51:02Z"
+  "_estado_leido_utc": "2026-11-17T18:30:42Z"
 }
