@@ -1,9 +1,9 @@
 {
   "guion": "MDS-071",
   "version": 2,
-  "firma": "3054143f487c5a0c",
-  "resuelto_utc": "2026-11-12T22:46:09Z",
-  "detector_caras": "ok: YuNet, OpenCV 5.0.0",
+  "firma": "5cca9a6e68fb40b9",
+  "resuelto_utc": "2026-11-18T10:33:35Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.1.0",
   "escenas": {
     "1": {
       "narracion_sha": "218dfa538143",
@@ -104,37 +104,37 @@
           ],
           "frase": "Sacas la pelota, y de repente empieza a jadear como si se partiera de risa.",
           "fuente": "pexels",
-          "id": 20242966,
-          "pagina": "https://www.pexels.com/video/a-man-holding-a-dog-in-front-of-a-bubble-20242966/",
-          "titulo": "a man holding a dog in front of a bubble",
-          "autor": "K",
-          "autor_url": "https://www.pexels.com/@kelly",
+          "id": 37676969,
+          "pagina": "https://www.pexels.com/video/playful-dog-fetching-ball-in-sunny-park-37676969/",
+          "titulo": "playful dog fetching ball in sunny park",
+          "autor": "Maicon Marcelino",
+          "autor_url": "https://www.pexels.com/@maicon-marcelino-2159017504",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 38.0,
+          "duracion_s": 31.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/20242966/20242966-hd_1080_1920_24fps.mp4",
+          "url": "https://videos.pexels.com/video-files/37676969/15973285_1080_1920_24fps.mp4",
           "tipo": "video",
-          "consulta": "man holding ball dog excited",
-          "relevancia": 0.6,
+          "consulta": "dog running with a ball in its mouth",
+          "relevancia": 0.5,
           "inicio_s": 0.4,
-          "movimiento": 11.47,
+          "movimiento": 8.21,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.3306,
-              0.1437,
-              0.3278,
-              0.2687
+              0.4528,
+              0.4594,
+              0.0472,
+              0.0344
             ],
             [
-              0.1361,
-              0.1578,
-              0.2444,
-              0.1641
+              0.45,
+              0.4156,
+              0.0417,
+              0.0297
             ]
           ]
         }
@@ -226,26 +226,33 @@
           ],
           "frase": "Ese jadeo casi no salía al entrenar ni al descansar. Salía al jugar, y también con cosquillas y mimos.",
           "fuente": "pexels",
-          "id": 8473404,
-          "pagina": "https://www.pexels.com/video/a-person-tickling-a-dog-8473404/",
-          "titulo": "a person tickling a dog",
-          "autor": "Cup of  Couple",
-          "autor_url": "https://www.pexels.com/@cup-of-couple",
+          "id": 5794702,
+          "pagina": "https://www.pexels.com/video/dog-giving-paw-to-his-owner-5794702/",
+          "titulo": "dog giving paw to his owner",
+          "autor": "https://kaboompics.com/",
+          "autor_url": "https://www.pexels.com/@karola-g",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 9.0,
+          "duracion_s": 8.0,
           "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/8473404/8473404-hd_1080_1920_25fps.mp4",
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/5794702/5794702-hd_1080_2048_25fps.mp4",
           "tipo": "video",
-          "consulta": "person tickling dog belly",
-          "relevancia": 0.75,
+          "consulta": "dog panting happily while playing with owner",
+          "relevancia": 0.4,
           "inicio_s": 0.0,
-          "movimiento": 8.1,
+          "movimiento": 10.36,
           "encuadre": {
             "x": 0.5,
-            "y": 0.5
+            "y": 0
           },
-          "caras": []
+          "caras": [
+            [
+              0.2905,
+              0.2845,
+              0.2451,
+              0.2277
+            ]
+          ]
         }
       ]
     },
@@ -261,40 +268,27 @@
             6.47
           ],
           "frase": "Así que con la pelota tu perro hace el ruido más parecido a una risa. Ojo:",
-          "fuente": "pexels",
-          "id": 37676969,
-          "pagina": "https://www.pexels.com/video/playful-dog-fetching-ball-in-sunny-park-37676969/",
-          "titulo": "playful dog fetching ball in sunny park",
-          "autor": "Maicon Marcelino",
-          "autor_url": "https://www.pexels.com/@maicon-marcelino-2159017504",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 31.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/37676969/15973285_1080_1920_24fps.mp4",
+          "fuente": "pixabay",
+          "id": 8251,
+          "pagina": "https://pixabay.com/videos/id-8251/",
+          "titulo": "dog, running, walking the dog, man, boy, park, pet, canine, animal id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 15.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2017/03/08/8251-207598589_large.mp4",
           "tipo": "video",
           "consulta": "dog running with ball park",
           "relevancia": 0.75,
           "inicio_s": 0.4,
-          "movimiento": 8.21,
+          "movimiento": 9.9,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
-          "caras": [
-            [
-              0.4528,
-              0.4594,
-              0.0472,
-              0.0344
-            ],
-            [
-              0.45,
-              0.4156,
-              0.0417,
-              0.0297
-            ]
-          ]
+          "caras": []
         },
         {
           "k": 2,
