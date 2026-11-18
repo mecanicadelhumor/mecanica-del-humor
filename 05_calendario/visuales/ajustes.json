@@ -774,5 +774,24 @@
     "6.1": {
       "fuente": "ia"
     }
+  },
+  "MDS-071": {
+    "3.1": {
+      "excluir": [
+        "pexels:20242966"
+      ],
+      "busqueda": [
+        "dog running with a ball in its mouth",
+        "dog playing fetch with ball"
+      ]
+    },
+    "5.1": {
+      "excluir": [
+        "pexels:8473404"
+      ],
+      "busqueda": [
+        "dog panting happily while playing with owner"
+      ]
+    }
   }
 }
