@@ -1194,6 +1194,21 @@
       "subido_utc": "2026-11-17T09:21:51Z",
       "revisado": false,
       "pregunta_publicada": "2026-11-17T18:30:42Z"
+    },
+    {
+      "id": "MDS-070.es",
+      "episodio": "MDS-070",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué un «Qué bien» sin emoji suena frío?",
+      "guion": "05_calendario/guiones/MDS-070.es.json",
+      "video_id": "9Ey66vWJTK0",
+      "url": "https://youtu.be/9Ey66vWJTK0",
+      "estado": "private",
+      "publicar_en": "2026-11-18T18:00:00Z",
+      "musica": "cama_14_alone_two_days_ago_artificial_music.mp3",
+      "subido_utc": "2026-11-18T08:49:54Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-11-17T18:30:42Z"
