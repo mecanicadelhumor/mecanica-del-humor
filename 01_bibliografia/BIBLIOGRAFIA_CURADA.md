@@ -3,7 +3,7 @@
 > Base de conocimiento de **Mecánica del Humor / Humor Mechanics**.
 > Generado desde `data/semillas.json`. No edites este archivo a mano: edita el JSON y vuelve a ejecutar `scripts/generar_md.py`.
 
-**148 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
+**160 obras** en 12 pilares temáticos. Cada pilar alimenta una serie de vídeos.
 
 ## Cómo se ha curado
 
@@ -26,12 +26,12 @@ y fusiona repetidos antes de que nadie los lea. Están marcados y excluidos del 
 - **A. Teorias fundacionales del humor** — 9 obras
 - **B. Diferencias individuales, estilos y medicion** — 7 obras
 - **C. Produccion de humor: habilidad, creatividad e inteligencia** — 6 obras
-- **D. Humor, vinculos sociales, atraccion y estatus** — 15 obras
-- **E. Risa: etologia, acustica y contagio** — 26 obras
-- **F. Neurociencia y cognicion del humor** — 25 obras
-- **G. Humor aplicado: trabajo, aula, salud, persuasion** — 10 obras
+- **D. Humor, vinculos sociales, atraccion y estatus** — 17 obras
+- **E. Risa: etologia, acustica y contagio** — 30 obras
+- **F. Neurociencia y cognicion del humor** — 26 obras
+- **G. Humor aplicado: trabajo, aula, salud, persuasion** — 11 obras
 - **H. Entrenabilidad: el humor se puede aprender** — 6 obras
-- **I. Linguistica y estructura del chiste** — 24 obras
+- **I. Linguistica y estructura del chiste** — 28 obras
 - **J. El lado oscuro: gelotofobia, burla, humor que falla** — 8 obras
 - **K. Humor computacional e IA** — 4 obras
 - **L. Oficio: manuales de stand-up, improvisacion y guion** — 8 obras
@@ -346,6 +346,22 @@ Tipo: articulo
 
 Ponerse colorado ayuda: tras una metedura de pata o una falta, quien se sonroja cae mejor y parece mas de fiar que quien no. Para «¿sirve para algo ponerse rojo?». Metodo: unas 130 personas leyeron una historia de una falta o un percance y despues vieron fotos de caras con o sin rubor y las puntuaron en simpatia, confianza, etc.
 
+### `D16` ★ Flustered and faithful: Embarrassment as a signal of prosociality
+
+**Feinberg, M.; Willer, R.; Keltner, D. J.** (2011) · *Journal of Personality and Social Psychology, 102(1), 81-97*  
+DOI: [`10.1037/a0025403`](https://doi.org/10.1037/a0025403) · verificado 19/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Ponerse en evidencia tiene premio: a quien muestra verguenza tras una metedura de pata se le ve mas buena persona, se confia mas en el y se le da mas. Para «¿para que sirve pasar verguenza?» (junto a D15 y E14). Metodo: cinco estudios; en los principales, observadores veian a una persona con cara de verguenza, con otra emocion o sin emocion, puntuaban lo buena persona que parecia y repartian recursos con ella.
+
+### `D17` ★ Long gaps between turns are awkward for strangers but not for friends
+
+**Templeton, E. M.; Chang, L. J.; Reynolds, E. A.; Cone LeBeaumont, M. D.; Wheatley, T. P.** (2023) · *Philosophical Transactions of the Royal Society B, 378(1875), 20210471*  
+DOI: [`10.1098/rstb.2021.0471`](https://doi.org/10.1098/rstb.2021.0471) · verificado 19/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+El silencio incomodo solo es incomodo entre desconocidos: entre amigos, los silencios largos (mas de 2 segundos) son mas frecuentes, van con mas risa genuina y marcan momentos de mas conexion. Para el Short «el silencio incomodo». Metodo: se grabaron conversaciones entre desconocidos y entre amigos, se localizaron los silencios de mas de 2 s y jueces independientes puntuaron lo incomodos que parecian.
+
 
 ---
 
@@ -562,6 +578,38 @@ Tipo: articulo
 
 La cara de juego (la «risa» de los simios) se contagia: un orangutan copia la boca abierta de su companero de juego en un segundo o menos. Apoyo para contagio de la risa y para E03. Metodo: observacion de 25 orangutanes jugando por parejas en su dia a dia, midiendo si devolvian la cara de boca abierta y en cuanto tiempo.
 
+### `E27` ★ Social Facilitation of Laughter and Smiles in Preschool Children
+
+**Addyman, C.; Fogelquist, C.; Levakova, L.; Rees, S.** (2018) · *Frontiers in Psychology, 9, 1048*  
+DOI: [`10.3389/fpsyg.2018.01048`](https://doi.org/10.3389/fpsyg.2018.01048) · verificado 19/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Los ninos pequenos se rien ocho veces mas viendo dibujos acompanados que solos, aunque los dibujos no les parezcan mas graciosos: basta un solo companero. Para el Short «la risa es social desde los 3 anos». Metodo: 20 ninos de 2 a 4 anos vieron tres dibujos animados solos, por parejas o en grupos de 6-8 y se contaron sus risas y sonrisas.
+
+### `E28` ★ The different shades of laughter: when do we laugh and when do we mimic other's laughter?
+
+**Mauersberger, H.; Kastendieck, T.; Hetmann, A.; Schöll, A.; Heß, U.** (2022) · *Philosophical Transactions of the Royal Society B, 377(1863), 20210188*  
+DOI: [`10.1098/rstb.2021.0188`](https://doi.org/10.1098/rstb.2021.0188) · verificado 19/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+No toda risa se contagia: reirse de algo gracioso parece apropiado y se imita; reirse de la desgracia ajena o de algo asqueroso parece fuera de lugar y se imita mucho menos. Para «reirse en el momento inadecuado». Metodo: 329 personas vieron escenas graciosas, de mal ajeno y asquerosas, y luego a personas que supuestamente se reian de ellas, mientras se grababa su cara.
+
+### `E29` ★ Is it a Match? Yawn Contagion and Smile Mimicry in Toddlers
+
+**Norscia, I.; Caselli, M.; Scianna, C.; Morone, S.; Brescini, M.; Cordoni, G.** (2025) · *Human Nature, 36(1), 70-97*  
+DOI: [`10.1007/s12110-025-09488-8`](https://doi.org/10.1007/s12110-025-09488-8) · verificado 19/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+En la guarderia la sonrisa y el bostezo ya se contagian: un bebe sonrie en menos de un segundo al ver sonreir a otro, y bosteza en unos minutos si otro bosteza. Para el Short del contagio (risa, sonrisa, bostezo) junto a E12 y E26. Metodo: observacion durante cuatro meses de ninos de 10 a 36 meses en una guarderia de Turin, grabando sonrisas en el juego y bostezos en el dia a dia.
+
+### `E30` ★ Laughter Indicates Perceived Similarity Among Friends and Strangers
+
+**Wood, A.; Chadha, S.; Liu, C.; Yuan, Q.; Davis, A.; Elnakouri, A.; Scholer, A. A.; Boker, S. M.** (2026) · *Journal of Nonverbal Behavior, 50(1), 59-85*  
+DOI: [`10.1007/s10919-026-00501-x`](https://doi.org/10.1007/s10919-026-00501-x) · verificado 19/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Nos reimos mas con quien sentimos parecido a nosotros (aunque no lo sea de verdad), y los amigos se rien todavia mas cuando hablan de en que son distintos. Para el Short «te ries mas con tus amigos». Metodo: 132 parejas charlaron un rato con un amigo y otro con un desconocido sobre en que se parecian y en que no, y se contaron las risas.
+
 
 ---
 
@@ -767,6 +815,14 @@ Tipo: articulo
 
 Ponerse colorado. Verte a ti mismo cantando karaoke te pone mas rojo que ver a otros, y el sonrojo va con zonas de activacion emocional, no de «pensar en uno mismo». Para «¿por que te pones rojo?». Metodo: 40 jovenes de 16-20 anos vieron en un escaner videos de si mismos (o de otros) cantando karaoke mientras se media la temperatura de sus mejillas y su actividad cerebral.
 
+### `F26` ★ The spotlight effect in social judgment: An egocentric bias in estimates of the salience of one's own actions and appearance
+
+**Gilovich, T. D.; Medvec, V. H.; Savitsky, K.** (2000) · *Journal of Personality and Social Psychology, 78(2), 211-222*  
+DOI: [`10.1037/0022-3514.78.2.211`](https://doi.org/10.1037/0022-3514.78.2.211) · verificado 19/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Efecto foco: creemos que los demas se fijan en nuestra camiseta ridicula o en lo que dijimos mucho mas de lo que de verdad se fijan. Para el Short de la verguenza «nadie te esta mirando tanto». Metodo: estudiantes entraban en una sala con una camiseta potencialmente bochornosa (o favorecedora) y estimaban cuantos de los presentes recordarian el dibujo; luego se comparaba con cuantos lo recordaban de verdad.
+
 
 ---
 
@@ -853,6 +909,14 @@ DOI: [`10.1080/00221300109598909`](https://doi.org/10.1080/00221300109598909) ·
 Tipo: articulo
 
 La letra pequena de G07: un video de humor y uno de relajacion suben los dos el umbral de molestia, y los dos mas si te han dicho que va a funcionar. Apoyo para el cierre honesto de «¿reirse quita el dolor?».
+
+### `G11` ★ How fun are your meetings? Investigating the relationship between humor patterns in team interactions and team performance
+
+**Lehmann-Willenbrock, N.; Allen, J. A.** (2014) · *Journal of Applied Psychology, 99(6), 1278-1287*  
+DOI: [`10.1037/a0038083`](https://doi.org/10.1037/a0038083) · verificado 19/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Humor en el trabajo: en las reuniones, las cadenas de chiste-risa-otro chiste van con equipos que rinden mejor, ese dia y dos anos despues; un chiste suelto o una risa suelta no. Para el Short «las reuniones con risas funcionan mejor». Metodo: se grabaron y codificaron 54 reuniones reales de equipos de empresa y los jefes puntuaron el rendimiento del equipo justo despues y mas tarde.
 
 
 ---
@@ -1100,6 +1164,38 @@ DOI: [`10.1016/j.chbr.2022.100242`](https://doi.org/10.1016/j.chbr.2022.100242) 
 Tipo: articulo
 
 Familia «mensajes». Un emoji que no pega con el texto hace el mensaje menos claro que no poner ninguno; uno que pega amplifica la emocion y lo calido que parece quien escribe. Metodo: 60 personas leyeron online 60 mensajes (negativos, neutros o positivos, sin emoji o con cara triste, neutra, alegre o un objeto) y puntuaron el tono, la claridad y lo calido y el estado de animo del remitente.
+
+### `I25` ★ Is the period really “pissed”? The effect of punctuation and message length on perceptions in digital communication
+
+**Kemp, N.; Kovacic, R.; Beyersmann, E.** (2025) · *Telematics and Informatics, 97, 102241*  
+DOI: [`10.1016/j.tele.2025.102241`](https://doi.org/10.1016/j.tele.2025.102241) · verificado 19/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Familia «mensajes». El punto final hace que un mensaje corto («Si.») parezca mas frio o negativo, pero en un mensaje largo el punto ya no cambia nada. Para el Short del «punto final borde» (actualiza a I06). Metodo: 200 universitarios australianos leyeron 30 conversaciones inventadas que acababan en un mensaje corto, medio o largo, con o sin punto, y puntuaron de 1 a 7 como creian que se sentia el amigo.
+
+### `I26` ★ Read. This. Slowly: mimicking spoken pauses in text messages
+
+**Poirier, R. C.; Cook, A. M.; Klin, C. M.** (2025) · *Frontiers in Psychology, 16, 1410698*  
+DOI: [`10.3389/fpsyg.2025.1410698`](https://doi.org/10.3389/fpsyg.2025.1410698) · verificado 19/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Familia «mensajes». Poner un punto detras de cada palabra («No. Ya. Vete.») o mandar la frase troceada en varios mensajes de una palabra se lee como enfado y hartazgo: el texto imita las pausas de la voz. Para el Short «escribir con puntos es gritar en silencio». Metodo: tres experimentos en los que la gente leia intercambios de mensajes con y sin esos recursos y puntuaba en una escala que emocion transmitian (el resumen no da el numero de participantes).
+
+### `I27` ★ Exploring the Emotional Experience During Instant Messaging Among Young Adults: An Experimental Study Incorporating Physiological Correlates of Arousal
+
+**Camerini, A.-L.; Marciano, L.; Annoni, A. M.; Ort, A.; Petrocchi, S.** (2022) · *Frontiers in Psychology, 13, 840845*  
+DOI: [`10.3389/fpsyg.2022.840845`](https://doi.org/10.3389/fpsyg.2022.840845) · verificado 19/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Familia «mensajes». Ver el «escribiendo...» activa el cuerpo: la sudoracion de la piel sube desde que el otro empieza a escribir hasta que llega la respuesta, sobre todo si tarda; pero la gente no dice sentirse distinta. Para el Short «los tres puntitos que te ponen nervioso». Metodo: 65 jovenes chatearon con un supuesto companero (ficticio) que contestaba al minuto o a los 7 minutos, con respuesta buena o mala, mientras se les media pulso y actividad electrodermica.
+
+### `I28` ★ Examining the effects of reciprocal emoji use on interpersonal and communication outcomes
+
+**Cavalheiro, B. P.; Prada, M.; Rodrigues, D. L.** (2024) · *Journal of Social and Personal Relationships, 41(8), 2147-2168*  
+DOI: [`10.1177/02654075231219032`](https://doi.org/10.1177/02654075231219032) · verificado 19/11/2026: titulo y DOI juntos en api.openalex.org (registro con resumen)  
+Tipo: articulo
+
+Familia «mensajes» y trabajo. Entre companeros de trabajo, devolver el emoji que te han puesto hace que te vean mas calido y jugueton y la conversacion mas positiva; pero en un conflicto el emoji ya no arregla nada. Para el Short «¿contesto al emoji del jefe?». Metodo: 568 personas en dos experimentos leyeron un intercambio de mensajes entre colegas, con o sin emoji y con o sin devolverlo, y puntuaron al remitente y la conversacion.
 
 
 ---

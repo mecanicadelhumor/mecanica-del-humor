@@ -1,8 +1,8 @@
 {
  "_que_es": "Lo que la planificación de los jueves le pide a explorador_de_demanda.py que mida la semana siguiente. Lo lee .github/workflows/demanda.yml los jueves a las 12:00 UTC y deja los números en demanda_bruta.json. Dueño de este fichero: la planificación. Dueño de demanda_bruta.json: el workflow.",
- "_generado_utc": "2026-11-12T23:59:00Z",
- "_por_que_esta_lista": "Undécima medición buena: el método no se toca. Salen las ya contestadas (sonreír a la fuerza, MDS-069; los perros se ríen, MDS-071). Entran las de los Shorts de la semana (las ratas que se ríen, el «Qué bien» sin emoji) y las de las fichas nuevas de cosquillas y mensajes (aguantar las cosquillas, F21; tardar en contestar, I23; los animales que se ríen, E19/E25; ponerse rojo, F25/D15).",
- "_las_fichas_libres_hoy": "Trece fichas nuevas esta noche (I14, I15, I16, G07, G08, G09, G10, E15, E16, E17, E18, D14) y D08 y E03 con resumen verificado; E03 con el título corregido y H04 con el DOI corregido. Pasan a centrales esta semana E03, I13, G10, I15, E16 y E10. Libres con hallazgo y nunca centrales tras esta semana: D08, D10, D14, E09, E13, E14, E15, E17, E18, F11, F13, F14, F16, F17, F18, F20, G07, G08, G09, I08, I14, I16.",
+ "_generado_utc": "2026-11-19T23:30:00Z",
+ "_por_que_esta_lista": "19/11: sale «por qué me pongo roja cuando me río» (contestada de lado por MDS-072). Entran las de los temas intentados esta noche (entrenar el humor, H01; miedo a que se rían de ti, J02; la errata del chat, I17) y las de las fichas nuevas (el punto final, I25; la risa de los niños en grupo, E27).",
+ "_las_fichas_libres_hoy": "19/11: doce fichas nuevas (I25-I28, D16, D17, F26, E27-E30, G11). Pasa a central F25 (MDS-072).",
  "_lo_que_hay_que_arreglar_en_la_bibliografia": "C02 (Greengross, Silvia y Nusbaum, meta-análisis de la producción de humor): el DOI de la ficha (10.1037/aca0000158) es de un artículo sobre aptitud musical y alexitimia. Hay que buscar el bueno con título y DOI juntos; esta noche Crossref devolvió 429 y no se pudo. Mientras, C02 no vale como fuente central.",
  "preguntas": [
   "las ratas tienen cosquillas",
@@ -21,7 +21,6 @@
   "por que hacen gracia los chistes internos",
   "un profesor gracioso enseña mejor",
   "por que nos reimos a la vez con los amigos",
-  "por que me pongo roja cuando me rio",
   "por que un chiste malo hace gracia si alguien se rie",
   "por que lloramos de alegria",
   "por que se contagia la risa",
@@ -37,7 +36,14 @@
   "por que molesta que tarden en contestar",
   "que significa responder sin emoji",
   "por que me pongo rojo al reirme",
-  "los animales se rien"
+  "los animales se rien",
+  "por que me pongo rojo al verme en un video",
+  "es normal pensar que se rien de ti",
+  "se puede entrenar el sentido del humor",
+  "como saber si el chat es un bot",
+  "por que molesta el punto final en un mensaje",
+  "por que los niños se rien mas con otros niños",
+  "por que me da verguenza ajena verme cantar"
  ],
  "_de_donde_sale_cada_pregunta_nueva": "12/11: «por qué las ratas se ríen» (MDS-068), «por qué te ríes cuando te hacen cosquillas» y «cómo aguantar las cosquillas» (F21, E23), «por qué molesta que tarden en contestar» (I23), «qué significa responder sin emoji» (MDS-070, D10, I24), «por qué me pongo rojo al reírme» (F25, D15), «los animales se ríen» (E19, E25).",
  "_lo_que_se_retira": "12/11: «sonreír a la fuerza te hace feliz» (hecho, MDS-069) y «los perros se ríen» (hecho, MDS-071)."

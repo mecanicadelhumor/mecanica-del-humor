@@ -1,9 +1,9 @@
 {
- "generado_utc": "2026-11-12T23:59:00Z",
+ "generado_utc": "2026-11-19T23:30:00Z",
  "_que_es": "El juicio de la planificación sobre demanda_bruta.json: cada pregunta cruzada con la bibliografía. Dueño: la planificación.",
  "_estado_de_la_medicion": "demanda_bruta.json del 2026-11-12T20:14:25Z, 25 consultas, avisos vacío. Undécima medición buena.",
- "_lo_que_ha_mandado_esta_semana": "Ha mandado la lectura en frío, y después las métricas: el tanteo de cosquillas (MDS-050, 913; MDS-055, 695; MDS-057, 428) pesó más que la demanda. De los cuatro aprobados, tres salen de preguntas medidas aquí (las ratas y las cosquillas, sonreír a la fuerza, los perros se ríen) y uno de una situación que cualquiera reconoce (el «Qué bien» sin emoji). Ver bitacora/2026-11/2026-11-12-planificacion.md.",
- "_actualidad_c52": "Ningún gancho: las tendencias de Google son fútbol, una muerte, política y un programa de televisión con polémica electoral; nada cumple C52 (ni sucesos, ni política, ni personas reales).",
+ "_lo_que_ha_mandado_esta_semana": "19/11: manda el feed (situación reconocible) y la lectura en frío. De la demanda medida (demanda_bruta.json de las 20:52 UTC, 25 consultas, sin avisos) sale el único aprobado: «por qué me pongo roja cuando me río» (514,9 M en el top 10) → MDS-072 (F25). Las preguntas de mensajes medidas (errata, móvil en la mesa, emoji del banco) se intentaron y cayeron en la lectura.",
+ "_actualidad_c52": "19/11: ningún gancho. Tendencias: ataques en Kiev (embajadas), fútbol femenino europeo, sucesos; nada cumple C52.",
  "candidatos": [
   {
    "pregunta": "los gorilas tienen cosquillas",
@@ -189,26 +189,27 @@
   },
   {
    "pregunta": "por que me molesta que me dejen en visto",
-   "vistas_top10": 5314337,
+   "vistas_top10": 1907296,
    "competencia": "media",
    "por_que_esa_competencia": "Consejos de pareja sin estudio.",
    "respaldo_bibliografico": [
-    "I13"
+    "I27"
    ],
-   "apto": false,
-   "decision": "HECHO (cerca): MDS-058 (3/11)."
+   "apto": true,
+   "decision": "Solo de lado con I27 (la espera); sin ficha directa del «visto»."
   },
   {
    "pregunta": "por que tarda tanto en contestar los mensajes",
-   "vistas_top10": 273894,
+   "vistas_top10": 275801,
    "competencia": "baja",
    "por_que_esa_competencia": "Consejos de ligue.",
    "respaldo_bibliografico": [
     "I23",
+    "I27",
     "I16"
    ],
    "apto": true,
-   "decision": "I23 (ficha nueva) intentado: cayó por el método (reserva)."
+   "decision": "I27 (el «escribiendo…» y la espera, ficha nueva del 19/11) puede sostenerlo; sin intentar."
   },
   {
    "pregunta": "la gente graciosa es mas inteligente",
@@ -268,12 +269,50 @@
   },
   {
    "pregunta": "por que me pongo roja cuando me rio",
-   "vistas_top10": 13143374,
+   "vistas_top10": 514866509,
    "competencia": "media (fuera de tema)",
    "por_que_esa_competencia": "Vídeos médicos.",
-   "respaldo_bibliografico": [],
-   "apto": false,
-   "decision": "Fichas nuevas sobre ruborizarse (F25, D15), pero ninguna sobre la risa: sigue sin fuente para esta pregunta."
+   "respaldo_bibliografico": [
+    "F25",
+    "D15",
+    "D16"
+   ],
+   "apto": true,
+   "decision": "Hecho de lado: MDS-072 (sábado 21/11), ponerse rojo al verte cantar (F25). D15 cayó en la lectura en frío (reserva)."
+  },
+  {
+   "pregunta": "una errata te hace parecer mas humano",
+   "vistas_top10": 50285931,
+   "competencia": "sin medir a mano",
+   "por_que_esa_competencia": "Top 10 de entretenimiento; nadie responde con un estudio (no revisado uno a uno esta noche).",
+   "respaldo_bibliografico": [
+    "I17"
+   ],
+   "apto": true,
+   "decision": "Intentado el 19/11 (tres vueltas, cae por los rótulos): reserva."
+  },
+  {
+   "pregunta": "el movil en la mesa estropea la conversacion",
+   "vistas_top10": 8825159,
+   "competencia": "sin medir a mano",
+   "por_que_esa_competencia": "Top 10 de entretenimiento; nadie responde con un estudio (no revisado uno a uno esta noche).",
+   "respaldo_bibliografico": [
+    "I21",
+    "I18"
+   ],
+   "apto": true,
+   "decision": "Intentado el 19/11 con I21 (cae por el cierre): reserva."
+  },
+  {
+   "pregunta": "queda mal un emoji del banco",
+   "vistas_top10": 85086769,
+   "competencia": "sin medir a mano",
+   "por_que_esa_competencia": "Top 10 de entretenimiento; nadie responde con un estudio (no revisado uno a uno esta noche).",
+   "respaldo_bibliografico": [
+    "I22"
+   ],
+   "apto": true,
+   "decision": "Tres semanas en la reserva; no se reintenta. I24 (emoji que no pega) cayó el 19/11."
   }
  ]
 }
