@@ -778,7 +778,8 @@
   "MDS-071": {
     "3.1": {
       "excluir": [
-        "pexels:20242966"
+        "pexels:20242966",
+        "pexels:37676969"
       ],
       "busqueda": [
         "dog running with a ball in its mouth",
@@ -791,6 +792,15 @@
       ],
       "busqueda": [
         "dog panting happily while playing with owner"
+      ]
+    },
+    "6.1": {
+      "excluir": [
+        "pixabay:8251"
+      ],
+      "busqueda": [
+        "dog panting happily playing in the park",
+        "happy dog with open mouth playing"
       ]
     }
   }
