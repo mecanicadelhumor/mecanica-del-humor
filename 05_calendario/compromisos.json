@@ -134,7 +134,7 @@
       "id": "C61-esquina-libre",
       "que": "Que el personaje de la esquina no tape lo importante del plano: elegir la esquina con menos contenido (caras, manos, movimiento) en cada plano, con muestra para el codirector",
       "dueno": "direccion",
-      "fecha": "2026-11-19",
+      "fecha": "2026-11-23",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -151,6 +151,11 @@
           "de": "2026-11-16",
           "a": "2026-11-19",
           "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
+        },
+        {
+          "de": "2026-11-19",
+          "a": "2026-11-23",
+          "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
         }
       ],
       "origen": "Respuesta del codirector a la tarea 2 del 23/10"
@@ -198,7 +203,7 @@
       "id": "largo-voz-tandas",
       "que": "Voz del largo con el modelo 3.8 elegido y C36 por tandas, probada en vivo (era con 2.5-flash: caduca el 17/11)",
       "dueno": "direccion",
-      "fecha": "2026-11-19",
+      "fecha": "2026-11-23",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -225,6 +230,11 @@
           "de": "2026-11-16",
           "a": "2026-11-19",
           "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
+        },
+        {
+          "de": "2026-11-19",
+          "a": "2026-11-23",
+          "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
         }
       ],
       "origen": "Plan v23",
@@ -245,7 +255,7 @@
       "id": "iteracion-14",
       "que": "Catorce Shorts a la semana desde B2 (5/11): producción y publicación de un segundo Short al día (13:00 en España, la hora propuesta), planificación con 14 guiones, y el workflow cambiado preparado en 00_estrategia/tareas/workflows_<fecha>/ para que lo mueva el codirector",
       "dueno": "direccion",
-      "fecha": "2026-11-19",
+      "fecha": "2026-11-23",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -262,6 +272,11 @@
           "de": "2026-11-16",
           "a": "2026-11-19",
           "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
+        },
+        {
+          "de": "2026-11-19",
+          "a": "2026-11-23",
+          "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
         }
       ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
@@ -312,7 +327,7 @@
       "id": "iteracion-filtro",
       "que": "Filtro de lectores sintéticos sobre variantes de guion antes de producir",
       "dueno": "direccion",
-      "fecha": "2026-11-19",
+      "fecha": "2026-11-23",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -324,6 +339,11 @@
           "de": "2026-11-16",
           "a": "2026-11-19",
           "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
+        },
+        {
+          "de": "2026-11-19",
+          "a": "2026-11-23",
+          "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
         }
       ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
@@ -332,7 +352,7 @@
       "id": "calidad-patron",
       "que": "Patrón de calidad medido con veinte Shorts ajenos de divulgación en español (>100.000 vistas) y los nuestros; después, la ficha automática en qa.py",
       "dueno": "direccion",
-      "fecha": "2026-11-19",
+      "fecha": "2026-11-23",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -354,6 +374,11 @@
           "de": "2026-11-16",
           "a": "2026-11-19",
           "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
+        },
+        {
+          "de": "2026-11-19",
+          "a": "2026-11-23",
+          "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
         }
       ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
@@ -384,7 +409,7 @@
       "id": "largo-ensayo",
       "que": "Render de prueba del largo entero; decide 8/11 o 15/11",
       "dueno": "direccion",
-      "fecha": "2026-11-19",
+      "fecha": "2026-11-23",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -406,6 +431,11 @@
           "de": "2026-11-16",
           "a": "2026-11-19",
           "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
+        },
+        {
+          "de": "2026-11-19",
+          "a": "2026-11-23",
+          "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
         }
       ],
       "origen": "Plan v23"
@@ -425,13 +455,18 @@
       "id": "C51.3-brazo-caras",
       "que": "Cuando la persona sintética entre en experimentos: un brazo cara 2 frente a cara 6",
       "dueno": "direccion",
-      "fecha": "2026-11-19",
+      "fecha": "2026-11-23",
       "estado": "pendiente",
       "aplazamientos": [
         {
           "de": "2026-11-16",
           "a": "2026-11-19",
           "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
+        },
+        {
+          "de": "2026-11-19",
+          "a": "2026-11-23",
+          "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
         }
       ],
       "origen": "Codirector, 23/10 (elección de caras)"
@@ -548,7 +583,7 @@
       "id": "C51.3-cara-fija",
       "que": "La opción menor del codirector si no hay labios creíbles: la cara 2 fija, sin mover los labios, como imagen del canal en algunos Shorts. Muestra en vídeo para el codirector y, si dice que sí, un brazo con las pruebas habituales",
       "dueno": "direccion",
-      "fecha": "2026-11-19",
+      "fecha": "2026-11-23",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -560,6 +595,11 @@
           "de": "2026-11-16",
           "a": "2026-11-19",
           "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
+        },
+        {
+          "de": "2026-11-19",
+          "a": "2026-11-23",
+          "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
         }
       ],
       "origen": "Respuesta del codirector a la tarea 2 del 26/10",
@@ -630,7 +670,7 @@
       "id": "C51.3-prueba",
       "que": "Probar EchoMimic V3-Flash en la T4 de Kaggle (workflow del presentador) y preparar LongCat-Video-Avatar en un Space de ZeroGPU: misma cara 2, 3 s de voz, semilla fija; medir tiempo y memoria; vídeo para el codirector",
       "dueno": "direccion",
-      "fecha": "2026-11-19",
+      "fecha": "2026-11-23",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -642,6 +682,11 @@
           "de": "2026-11-16",
           "a": "2026-11-19",
           "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
+        },
+        {
+          "de": "2026-11-19",
+          "a": "2026-11-23",
+          "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
         }
       ],
       "origen": "Informe C51.3-alternativas del 02/11"
@@ -730,13 +775,18 @@
       "id": "visual-archivo-personas",
       "que": "Archivo (Pexels/Pixabay) solo para planos de personas y sitios; las frases de concepto, dato o estudio («unos psicólogos…», «la carita del guiño») van con imagen generada o con texto/animación. Cambio en visual.py con hoja de contactos de muestra para el codirector (regla 11.2)",
       "dueno": "direccion",
-      "fecha": "2026-11-19",
+      "fecha": "2026-11-23",
       "estado": "pendiente",
       "aplazamientos": [
         {
           "de": "2026-11-16",
           "a": "2026-11-19",
           "porque": "El codirector no ha contestado a C26 (sigue o se para) ni a la elección de voz. Sin esa decisión no empiezo trabajo de mejora que sobraría si el canal se para; el 16/11 se dedicó entero al cambio obligatorio de voz (Google apaga 3.1 y 2.5 el 17/11). Siguiente ejecución de la dirección: jueves 19/11"
+        },
+        {
+          "de": "2026-11-19",
+          "a": "2026-11-23",
+          "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
         }
       ],
       "origen": "visual-recuento del 12/11 (1,75 planos que no pegan por Short)"
@@ -783,10 +833,37 @@
       "id": "voz-3.8-vigilar",
       "que": "Mirar la voz de los tres primeros Shorts con 3.8 (MDS-069, 070, 071): duración, ficha de calidad y lo que diga la revisión diaria; si una producción no sale, por qué",
       "dueno": "direccion",
+      "fecha": "2026-11-23",
+      "estado": "pendiente",
+      "aplazamientos": [
+        {
+          "de": "2026-11-19",
+          "a": "2026-11-23",
+          "porque": "Dos de tres mirados el 19/11 (MDS-069 y MDS-070: bien). MDS-071 se produce en la madrugada del 20/11: se mira el lunes 23/11"
+        }
+      ],
+      "origen": "Plan v32 (16/11)",
+      "nota": "19/11: MDS-069 (36,6 s; 5 llamadas, voz_fiel sin palabras ajenas) y MDS-070 (37,2 s; una toma C36, voz_fiel 12/12…23/24, 0 trozos repetidos) salieron con gemini-3.8-flash-tts, sin mezclar voces, lufs −14,3. Duraciones en la franja de antes (MDS-066/067/068: 40,3 / 35,2 / 38,3 s). Ninguna producción falló. La voz no la ha oído nadie todavía (voz-3.8-oir-2)"
+    },
+    {
+      "id": "C26-parar-preparado",
+      "que": "Dejar preparado el cambio de «se para» (producir.yml sin cron) en 00_estrategia/tareas/workflows_2026-11-19/, con instrucciones al codirector",
+      "dueno": "direccion",
       "fecha": "2026-11-19",
+      "estado": "hecho",
+      "hecho_el": "2026-11-19",
+      "aplazamientos": [],
+      "origen": "Plan v33 (19/11)"
+    },
+    {
+      "id": "visual-negro-cierre",
+      "que": "Si el canal sigue: que visual.py no elija clips abstractos (degradados, fondos) en los planos del cierre y que descarte clips que empiezan en negro (fotograma de control de MDS-070 a 32,78 s, pixabay 697, negro y sin texto). Con hoja de contactos de muestra (regla 11.2)",
+      "dueno": "direccion",
+      "fecha": "2026-11-23",
       "estado": "pendiente",
       "aplazamientos": [],
-      "origen": "Plan v32 (16/11)"
+      "origen": "Revisión diaria del 18/11 (MDS-070)",
+      "nota": "Depende de C26-decision: si «se para», sin objeto"
     }
   ]
 }

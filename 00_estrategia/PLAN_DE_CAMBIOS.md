@@ -6891,3 +6891,28 @@ contrario.
 ## Lo que NO cambia hoy
 
 - B2 (brazos, `orden`, regla), los guiones ya escritos (regla 11.4), las rutinas, los umbrales de C26.
+
+# Versión 33 · 19 de noviembre de 2026 (jueves, en diferido) — C26 sin respuesta: «se para» queda preparado
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario.
+
+| Qué | Decisión |
+|---|---|
+| **C26** | **Tercera ejecución sin respuesta del codirector** (`C26-decision`, vencido el 15/11). Los datos no mejoran: mediana de los últimos veinte a 48 h **21,5** (`metricas.json`, `control_c26`), y los Shorts de noviembre con lectura completa están en **1-7 vistas a 48 h** (`MDS-063` 2, `MDS-066` 7, `MDS-067` 3, `MDS-068` 1; `069` y `070` aún sin dato por el retraso de Analytics). Mi recomendación sigue siendo **parar**. Lo que decido hoy: **dejar preparado el cambio de «se para»** para que cualquiera de las dos respuestas sea una sola acción del codirector: `00_estrategia/tareas/workflows_2026-11-19/producir.yml` es `producir.yml` de hoy **sin el bloque `schedule:`** (sin los tres cron); el `workflow_dispatch` y el `push` con `[producir]` se quedan. Moverlo es lo que para el canal. No lo muevo yo (no puedo, regla 4) ni lo doy por decidido |
+| **Mientras no conteste** | Igual que el 16/11: el canal **sigue publicando** (`MDS-071` sale el 20/11) y **no empiezo mejoras**. `C61-esquina-libre`, `largo-voz-tandas`, `largo-ensayo`, `calidad-patron`, `iteracion-14`, `iteracion-filtro`, `visual-archivo-personas`, `C51.3-*` al **23/11**. Si «sigue», el 23/11 escribo la regla nueva con fecha única (como se propuso el 12/11) antes de retomarlas |
+| **Voz 3.8** (`voz-3.8-vigilar`) | `MDS-069` (36,6 s, 5 llamadas) y `MDS-070` (37,2 s, una toma C36) salieron con `gemini-3.8-flash-tts`, sin mezcla, lufs −14,3, `voz_fiel` sin palabras ajenas. Duraciones en la franja de antes (35-40 s). Ninguna producción falló. Falta `MDS-071` (madrugada del 20/11): **23/11** |
+| **`MDS-070`, plano 6.2** | La revisión del 18/11 vio el fotograma de control (32,78 s) negro y sin texto: clip abstracto (pixabay 697, degradado) en el cierre. Ya está publicado: no se resube (C54). Si el canal sigue, `visual.py` no elegirá clips abstractos en el cierre y descartará los que empiezan en negro (`visual-negro-cierre`, 23/11, con hoja de muestra por regla 11.2) |
+| B2 | Sin veredictos (`resultados.json` del 18/11: «faltan datos» en A, D y AD; cuatro Shorts apartados por menos de 10 vistas). Nada que aplicar |
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Viernes 20, 19:00 (España) | `MDS-071` (se produce a las 01:13 UTC). Después no hay nada en la parrilla: la planificación del jueves la rellena como siempre |
+| Cuando pueda | Codirector: «sigue» o «se para» (C26) y, si «se para», mover `workflows_2026-11-19/producir.yml`; oír la muestra nº 16; borrar `40Ao-mOfuIg` |
+| Lunes 23/11 | Dirección: `MDS-071` (voz 3.8); `voz-sdk-3`; lo que diga C26 |
+
+## Lo que NO cambia hoy
+
+- B2 (brazos, `orden`, regla), los guiones ya escritos (regla 11.4), las rutinas, los umbrales de C26, el código de producción.

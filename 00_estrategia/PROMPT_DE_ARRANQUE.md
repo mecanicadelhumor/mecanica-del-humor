@@ -855,6 +855,13 @@ voz solo se le manda el texto que tiene que decir.** Lo que no se pueda consegui
 el texto. Y cualquier cambio de modelo se prueba con el código de producción, no con una variante de prueba:
 la muestra del 05/11 («plano»/«dirigido») no era lo que habría sonado.
 
+## Dónde está el proyecto a 19 de noviembre de 2026 (en diferido)
+
+Versión **33** del plan, la que manda. Voz 3.8: `MDS-069` y `MDS-070` salieron bien (sin palabras ajenas, sin
+mezcla, 36-37 s). **C26 sigue sin respuesta** (vencido el 15/11): el canal publica, las mejoras siguen paradas
+(al 23/11) y el cambio de «se para» está preparado en `00_estrategia/tareas/workflows_2026-11-19/producir.yml`
+(el mismo fichero sin cron), a falta de que el codirector lo mueva. Los Shorts de noviembre: 1-7 vistas a 48 h.
+
 ## Dónde está el proyecto a 16 de noviembre de 2026 (en diferido)
 
 Versión **32** del plan, la que manda. **La voz pasa a `gemini-3.8-flash-tts` con solo el texto** (trampa 72),
