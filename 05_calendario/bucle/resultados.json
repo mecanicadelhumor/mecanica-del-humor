@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-19T16:03:53Z",
+ "actualizado_utc": "2026-11-19T21:51:25Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -442,7 +442,7 @@
      "porcentaje_visto_media": null,
      "vistas_48h_mediana": null,
      "me_gusta_por_100": null,
-     "ceros_de_feed": 0,
+     "ceros_de_feed": 1,
      "shorts": []
     }
    },
@@ -475,7 +475,7 @@
       "porcentaje_visto_media": 59.5,
       "vistas_48h_mediana": 193.5,
       "me_gusta_por_100": 0.25,
-      "ceros_de_feed": 1
+      "ceros_de_feed": 2
      },
      "no": {
       "n": 2,
@@ -497,7 +497,7 @@
       "porcentaje_visto_media": 64.5,
       "vistas_48h_mediana": 27,
       "me_gusta_por_100": 0.0,
-      "ceros_de_feed": 1
+      "ceros_de_feed": 2
      },
      "no": {
       "n": 3,
@@ -548,14 +548,16 @@
      "cero_de_feed": true,
      "vistas_48h": 1,
      "motivo": "pocas vistas: 1 a 48 h (menos de 10); no cuenta en «se quedaron»"
-    }
-   ],
-   "pendientes": [
+    },
     {
      "id": "MDS-069",
      "variante": "AD",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    },
+     "cero_de_feed": true,
+     "vistas_48h": 5,
+     "motivo": "pocas vistas: 5 a 48 h (menos de 10); no cuenta en «se quedaron»"
+    }
+   ],
+   "pendientes": [
     {
      "id": "MDS-070",
      "variante": "control",
