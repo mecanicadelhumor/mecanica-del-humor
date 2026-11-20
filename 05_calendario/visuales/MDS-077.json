@@ -1,0 +1,306 @@
+{
+  "guion": "MDS-077",
+  "version": 2,
+  "firma": "c5d4a6c46f5ca3ea",
+  "resuelto_utc": "2026-11-20T22:50:36Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.1.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "d8c2767969d4",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.52
+          ],
+          "frase": "Si te sacan el móvil mientras hablas, te sientes apartado.",
+          "fuente": "pexels",
+          "id": 6521520,
+          "pagina": "https://www.pexels.com/video/woman-looking-at-the-cellphone-of-a-man-6521520/",
+          "titulo": "woman looking at the cellphone of a man",
+          "autor": "Budgeron Bach",
+          "autor_url": "https://www.pexels.com/@budgeron-bach",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6521520/6521520-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "man looking at phone ignoring friend",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 4.25,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.05,
+              0.2859,
+              0.1556,
+              0.1187
+            ],
+            [
+              0.7972,
+              0.3422,
+              0.1528,
+              0.1125
+            ],
+            [
+              0.65,
+              0.3203,
+              0.1194,
+              0.1094
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "1cb8b946c118",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.83
+          ],
+          "frase": "Le cuentas a un amigo cómo te fue la entrevista de trabajo.",
+          "fuente": "pexels",
+          "id": 6381006,
+          "pagina": "https://www.pexels.com/video/woman-talking-to-her-friend-on-coffee-6381006/",
+          "titulo": "woman talking to her friend on coffee",
+          "autor": "Liza Summer",
+          "autor_url": "https://www.pexels.com/@liza-summer",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6381006/6381006-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "friends talking at table",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 3.84,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4944,
+              0.1859,
+              0.225,
+              0.175
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Y a los dos minutos",
+          "t_estimado": [
+            5.83,
+            10.23
+          ],
+          "frase": "Y a los dos minutos, saca el móvil.",
+          "fuente": "pexels",
+          "id": 13802092,
+          "pagina": "https://www.pexels.com/video/a-man-in-corporate-attire-using-his-phone-in-the-street-13802092/",
+          "titulo": "a man in corporate attire using his phone in the street",
+          "autor": "Mizuno K",
+          "autor_url": "https://www.pexels.com/@mizunokozuki",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/13802092/13802092-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "man takes phone out of pocket",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 1.34,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5111,
+              0.1812,
+              0.1361,
+              0.1141
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "1c1bc2bb4f39",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.67
+          ],
+          "frase": "En un experimento, cien jóvenes charlaban con un actor contratado.",
+          "fuente": "pixabay",
+          "id": 26666,
+          "pagina": "https://pixabay.com/videos/id-26666/",
+          "titulo": "shanghai jiao tong university, jiaotong university, delay, new ceremony, students, people id",
+          "autor": "jeremy888",
+          "autor_url": "https://pixabay.com/users/jeremy888-8000982/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 9.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2019/09/08/26666-359268463_large.mp4",
+          "tipo": "video",
+          "consulta": "two young people talking university",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 7.95,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "A algunos",
+          "t_estimado": [
+            5.67,
+            11.1
+          ],
+          "frase": "A algunos, el actor les sacaba el móvil a los dos minutos.",
+          "fuente": "pexels",
+          "id": 7247818,
+          "pagina": "https://www.pexels.com/video/a-woman-talking-on-the-phone-while-checking-on-some-documents-7247818/",
+          "titulo": "a woman talking on the phone while checking on some documents",
+          "autor": "Leeloo The First",
+          "autor_url": "https://www.pexels.com/@leeloothefirst",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 16.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7247818/7247818-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "person checking phone during talk",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 9.62,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3694,
+              0.3016,
+              0.2972,
+              0.1953
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "93664b0eaa3b",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.87
+          ],
+          "frase": "Cuando el actor sacaba el móvil, se sentían más excluidos y menos cerca de él.",
+          "fuente": "pexels",
+          "id": 6670419,
+          "pagina": "https://www.pexels.com/video/a-woman-sitting-on-the-floor-while-feeling-sad-6670419/",
+          "titulo": "a woman sitting on the floor while feeling sad",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6670419/6670419-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "woman sitting alone feeling ignored",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 4.13,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2556,
+              0.3719,
+              0.1944,
+              0.1453
+            ]
+          ]
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "6ffe8344bae4",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.93
+          ],
+          "frase": "Eso sí, si el actor decía que era algo importante, se sentían algo menos apartados que si era una tontería.",
+          "fuente": "pexels",
+          "id": 7691593,
+          "pagina": "https://www.pexels.com/video/man-showing-the-screen-of-his-cellphone-7691593/",
+          "titulo": "man showing the screen of his cellphone",
+          "autor": "Yan Krukau",
+          "autor_url": "https://www.pexels.com/@yankrukov",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 7.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7691593/7691593-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man apologizing showing phone",
+          "relevancia": 0.75,
+          "inicio_s": 0.0,
+          "movimiento": 16.31,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3639,
+              0.0047,
+              0.3833,
+              0.2875
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}
