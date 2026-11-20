@@ -1,0 +1,199 @@
+{
+ "id": "MDS-074",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué confunde un emoji que no pega?",
+ "tesis": "Un emoji que no pega con el texto hace el mensaje menos claro que no poner ninguno; uno que pega amplifica la emoción.",
+ "pilares": [
+  "I"
+ ],
+ "duracion_objetivo_s": 44,
+ "bloqueos": [],
+ "ciclo": "B2",
+ "variante": "AD",
+ "familia_tema": "mensajes",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué confunde un emoji que no pega con el mensaje?",
+  "respuesta": "Porque un emoji que no pega hace el mensaje menos claro que si no llevara ninguno.",
+  "puente": "El «He suspendido el carné» con carita sonriente de tu amiga es lo que leían en el experimento: mensajes con caritas que pegaban, que no pegaban o sin carita."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — tu amiga te escribe «He suspendido el carné» con una carita sonriente; qué gira — no sabes si consolarla o felicitarla; cómo acaba — en un experimento, con una carita que no pegaba el mensaje se entendía peor que sin ninguna.",
+  "POSICIÓN B2 20 (martes 24/11): brazo AD (receta B, cinco escenas, 45 s como mucho, y animación en las escenas de mecanismo, la 3 y la 4). Escrito con cinco escenas desde el principio: la escena del remate («Y no sabes si consolarla o felicitarla») va dentro de la 2. La lectura se hizo sobre esta versión.",
+  "BRAZO B (receta del control de B2): la escena 1 es el hallazgo en once palabras, con su fuente; la pantalla dice lo mismo.",
+  "FUENTE: I24 (Hand, Burd, Oliver y Robus, 2022, Computers in Human Behavior Reports 8, 100242, DOI 10.1016/j.chbr.2022.100242), nunca central. Resumen (ficha, OpenAlex 12/11/2026), literal: «Sixty participants each processed 60 stimuli counterbalanced across conditions, rating messages' emotional tone and clarity, and senders’ warmth and emotional state»; «incongruent emoji detracted from message clarity vs. no emoji (or congruent emoji). Congruent emoji typically amplified emotional perceptions of messages and senders». «Se entendía peor» = «detracted from message clarity».",
+  "«He suspendido el carné» es la situación del Short, no un mensaje del estudio (el estudio usaba mensajes negativos, neutros o positivos inventados).",
+  "LÍMITE (regla 12): eran mensajes inventados leídos en una encuesta; con mensajes de amigos de verdad no se ha probado. Dos lectores lo entienden pero no ven qué implica: queda en la bitácora como sugerencia.",
+  "FRASE QUE SOBRA (criterio c): los tres quitarían «Sin la carita, a tu amiga la habrías entendido mejor». Se queda: es la vuelta al ejemplo de la escena 2 (la prueba 1, el sujeto vuelve) y sostiene la salvedad que viene detrás."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "I24",
+   "icono": "i-ruptura",
+   "texto": "Un emoji que no pega *confunde*",
+   "narracion": "Un emoji que no pega con el mensaje lo hace más confuso.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "person confused reading phone",
+      "man puzzled looking at smartphone"
+     ],
+     "prompt": "a young man looking puzzled at a message on his phone"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "«He suspendido el carné», con una *carita sonriente*",
+   "narracion": "Tu amiga te escribe: «He suspendido el carné», con una carita sonriente. Y no sabes si consolarla o felicitarla.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "driving school car learner",
+      "learner driver car"
+     ],
+     "prompt": "a small driving school car parked on a street"
+    },
+    {
+     "desde": "Y no sabes",
+     "busqueda": [
+      "woman confused looking at phone",
+      "person frowning at phone message"
+     ],
+     "prompt": "a young woman frowning at her phone, unsure how to reply"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "fuente": "I24",
+   "puntos": [
+    "Mensajes con una carita que *pega*",
+    "con una que no pega, o sin carita"
+   ],
+   "narracion": "En un experimento, sesenta personas leyeron mensajes con una carita que pegaba, con una que no pegaba, o sin carita.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "people reading phones",
+      "person reading text message"
+     ],
+     "prompt": "several people reading messages on their phones"
+    },
+    {
+     "desde": "con una que no pegaba",
+     "busqueda": [
+      "smiley emoji on phone screen",
+      "emoji keyboard phone"
+     ],
+     "prompt": "a phone screen showing an emoji keyboard"
+    }
+   ],
+   "animar": true,
+   "animacion": "Tres burbujas de chat dibujadas en línea con el mismo texto: una con carita triste, otra con carita sonriente y otra sin carita; en «con una que no pegaba» la sonriente se tambalea."
+  },
+  {
+   "tipo": "dato",
+   "fuente": "I24",
+   "personaje": "entiende",
+   "cifra": "Se entiende *peor*",
+   "pie": "que sin ninguna carita",
+   "narracion": "Con la carita que no pegaba, el mensaje se entendía peor que sin ninguna.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "person shrugging confused",
+      "woman shrugging phone"
+     ],
+     "prompt": "a woman shrugging while holding her phone"
+    }
+   ],
+   "animar": true,
+   "animacion": "Una barra de «claridad» por burbuja: la de la carita que no pega se vacía en «se entendía peor», por debajo de la que no lleva carita."
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "I24",
+   "personaje": "piensa",
+   "titulo": "Sin carita, se entiende *mejor*",
+   "subtitulo": "Fuente: Hand y otros, 2022",
+   "narracion": "Sin la carita, a tu amiga la habrías entendido mejor. Eso sí, eran mensajes inventados; con amigos de verdad no se probó.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "friends hugging consoling",
+      "woman comforting friend"
+     ],
+     "prompt": "a woman comforting her friend with a hug"
+    },
+    {
+     "desde": "Eso sí",
+     "busqueda": [
+      "strangers phone messages",
+      "person reading phone alone"
+     ],
+     "prompt": "a person reading a message from an unknown number"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "tres subagentes sin contexto, decide la mayoría (precisión del 02/11/2026)",
+  "fecha": "2026-11-20",
+  "vuelta": 1,
+  "recuento": "Vuelta 1 (cinco escenas, la versión que sale): los tres «me quedo». La única frase que copian dos lectores es la salvedad del cierre, y los dos dicen entenderla («lo entiendo, pero no sé qué consecuencia saco»; «no tengo claro qué cambia eso respecto a la conclusión»): es la clase «la entendió pero no sabe por qué se la cuentan» de la precisión del 28/09, que va a notas y no bloquea. La frase del método la copia uno (la narración) y otro copia su rótulo: no es la misma frase. De qué va: los tres, la misma idea que la historia.",
+  "de_que_va": "Un emoji que no pega con el mensaje hace que se entienda peor que si no llevara ninguno.",
+  "pregunta_y_respuesta": "¿Un emoji ayuda o estorba? Si no pega con el texto, el mensaje se entiende peor que sin emoji; probado con mensajes inventados.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "«Sin la carita, a tu amiga la habrías entendido mejor.» (los tres; ver notas_humor)",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "Firma de la fuente: dos lectores (no bloquea).",
+   "Dos lectores: la salvedad del cierre la entienden pero no saben qué consecuencia sacar (no bloquea; dicho en la bitácora, regla 12).",
+   "Un lector: la frase del método, «tardé en separar las tres condiciones»; otro, el rótulo del método («pegaba») y qué es «se entendía peor»."
+  ],
+  "veredicto": "pasa",
+  "lectores": [
+   {
+    "de_que_va": "Un emoji que no encaja con el mensaje lo hace más difícil de entender, incluso que no poner ninguno.",
+    "pregunta_y_respuesta": "¿Un emoji ayuda o estorba a entender un mensaje? Depende: si pega, ayuda; si no pega, confunde más que no poner nada. Sale de un experimento con sesenta personas, con mensajes inventados.",
+    "frases_que_no_se_entienden": [
+     "ninguna"
+    ],
+    "frase_que_sobra": "«Sin la carita, a tu amiga la habrías entendido mejor.» (repite la escena 4)",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Un emoji que no encaja con el mensaje hace que se entienda peor que si no pones ninguno.",
+    "pregunta_y_respuesta": "¿Qué pasa cuando el emoji no pega con lo que escribes? Confunde: con el emoji que no pegaba se entendía peor que sin emoji; con mensajes inventados, no con amigos de verdad.",
+    "frases_que_no_se_entienden": [
+     "«Sesenta personas leyeron mensajes con una carita que pegaba, con una que no pegaba, o sin carita.» (tardé en separar las tres condiciones)",
+     "«Eso sí, eran mensajes inventados; con amigos de verdad no se probó.» (no tengo claro qué cambia eso respecto a la conclusión)",
+     "«Fuente: Hand y otros, 2022»"
+    ],
+    "frase_que_sobra": "«Sin la carita, a tu amiga la habrías entendido mejor.» o la 4, no las dos",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Un emoji que no encaja con lo que dice el mensaje hace que se entienda peor, según un experimento.",
+    "pregunta_y_respuesta": "¿Los emojis ayudan a entender un mensaje? Depende: si pegan, bien; si no pegan, confunden más que no poner ninguno.",
+    "frases_que_no_se_entienden": [
+     "[Mensajes con una carita que pega · con una que no pega, o sin carita] (no tenía claro qué era «pegaba»; tampoco qué significa «se entendía peor»)",
+     "«Eso sí, eran mensajes inventados; con amigos de verdad no se probó.» (lo entiendo, pero no sé qué consecuencia saco)",
+     "«Hand y otros, 2022»"
+    ],
+    "frase_que_sobra": "«Sin la carita, a tu amiga la habrías entendido mejor.» (repite la 4)",
+    "donde_me_iria": "me quedo (quizá un poco en la escena 3)"
+   }
+  ]
+ }
+}

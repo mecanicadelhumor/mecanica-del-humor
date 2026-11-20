@@ -1,0 +1,200 @@
+{
+ "id": "MDS-073",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué el silencio incómodo no lo es con amigos?",
+ "tesis": "Un silencio de más de dos segundos solo se vive como incómodo entre desconocidos; entre amigos, en esos silencios se sienten más conectados y hay más risa.",
+ "pilares": [
+  "D",
+  "E"
+ ],
+ "duracion_objetivo_s": 48,
+ "bloqueos": [],
+ "ciclo": "B2",
+ "variante": "D",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué un silencio es incómodo con un desconocido y no con un amigo?",
+  "respuesta": "Porque en un silencio largo los desconocidos se sienten menos conectados y los amigos, más; entre amigos esos silencios vienen con más risas.",
+  "puente": "El ascensor con el vecino y el coche con tu amigo son las dos charlas que grabaron en el estudio: entre desconocidos y entre amigos, mirando qué pasaba en los silencios de más de dos segundos."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — en el coche con tu mejor amigo pasáis diez minutos callados y a gusto; qué gira — un silencio largo solo incomoda entre desconocidos; cómo acaba — en un experimento, en esos silencios los amigos se sentían más unidos y los desconocidos, menos.",
+  "POSICIÓN B2 19 (lunes 23/11): brazo D (receta B, cinco escenas, 45 s como mucho). Escrito con seis escenas antes de mirar el brazo; la escena que sobraba era la 2 (el ascensor con el vecino: la escena 1 ya cuenta el lado de los desconocidos). La lectura que pasa (vuelta 2) se hizo sobre esta versión de cinco escenas, la que sale.",
+  "BRAZO B (receta del control de B2): la escena 1 es el hallazgo en ocho palabras, con su fuente; la pantalla dice lo mismo. La situación va en la 2.",
+  "FUENTE: D17 (Templeton, Chang, Reynolds, Cone LeBeaumont y Wheatley, 2023, Philosophical Transactions of the Royal Society B 378(1875), DOI 10.1098/rstb.2021.0471), nunca central. Resumen (ficha, OpenAlex 19/11/2026), literal: «only the long gaps between strangers were rated as awkward, and increasingly so the longer they lasted»; «compared to strangers, long gaps between friends include more genuine laughter and are less likely to precede a topic change». Texto completo leído el 20/11/2026 (Europe PMC, PMC9985966), literal: «Here, we considered gaps to be ‘long’ when they lasted more than 2 s»; «friends' feelings of connection increased going into a long gap (b = 0.49, s.e. = 0.23, p = 0.043), whereas strangers’ ratings decreased (b = −0.58, s.e. = 0.27, p = 0.038)». Método: conversaciones libres de 10 minutos grabadas, entre desconocidos y entre amigos; después cada uno vio su vídeo y movió un deslizador de 0 a 100 con lo conectado que se sentía en cada momento.",
+  "«Más unidos» = «feelings of connection increased» (deslizador continuo); «se reían más» = la risa genuina de los amigos en los silencios largos (estudio 2, jueces independientes). «Diez minutos callados» es la situación del Short, no un dato del estudio (en el estudio, «largo» es más de dos segundos).",
+  "CIERRE (regla 12): el estudio es correlacional: no dice que callar acerque, sino que entre amigos el silencio no pesa. Se dice dentro de la historia, con el sujeto del Short.",
+  "FRASE QUE SOBRA (criterio c): un lector quitaría la frase del «Ojo», otro la del método y otro el detalle del deslizador; ninguna con mayoría. Se quedan: el «Ojo» es el cierre honesto y el método es lo que sostiene el dato."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "D17",
+   "icono": "i-pausa",
+   "texto": "El silencio solo incomoda entre *desconocidos*",
+   "narracion": "Un silencio largo solo incomoda entre desconocidos.",
+   "pausa_despues_s": 1.2,
+   "visual": [
+    {
+     "busqueda": [
+      "two strangers in elevator awkward silence",
+      "people standing in elevator silent"
+     ],
+     "prompt": "two strangers standing in an elevator in awkward silence, looking up at the floor numbers"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Con tu amigo, callados y a *gusto*",
+   "narracion": "En el coche con tu mejor amigo, en cambio, pasáis diez minutos callados tan a gusto.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "two friends driving car relaxed silence",
+      "friends road trip car quiet"
+     ],
+     "prompt": "two friends in a car on a road trip, driving in relaxed silence, smiling slightly"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "fuente": "D17",
+   "puntos": [
+    "Grabaron charlas de amigos y de *desconocidos*",
+    "Cada uno marcó lo unido que se sentía"
+   ],
+   "narracion": "En un experimento grabaron charlas entre desconocidos y entre amigos. Luego, cada uno marcó en su vídeo lo unido que se sintió.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "two people talking at cafe table",
+      "young people conversation table"
+     ],
+     "prompt": "two young people sitting face to face at a small café table, talking"
+    },
+    {
+     "desde": "Luego, cada uno",
+     "busqueda": [
+      "two people sitting quietly at table",
+      "pause in conversation cafe"
+     ],
+     "prompt": "two young people at a café table in a moment of silence, one looking away"
+    }
+   ]
+  },
+  {
+   "tipo": "dato",
+   "fuente": "D17",
+   "personaje": "entiende",
+   "cifra": "Los amigos, más *unidos*",
+   "pie": "en los silencios largos",
+   "narracion": "En los silencios largos, los desconocidos se sentían menos unidos. Los amigos, al revés: más unidos, y se reían más.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "strangers awkward look away",
+      "two people uncomfortable pause"
+     ],
+     "prompt": "two strangers at a table looking away from each other, uncomfortable"
+    },
+    {
+     "desde": "Los amigos, al revés",
+     "busqueda": [
+      "two friends laughing together table",
+      "friends laughing quietly"
+     ],
+     "prompt": "two close friends at a table laughing quietly together"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "D17",
+   "personaje": "piensa",
+   "titulo": "Callar juntos es *buena señal*",
+   "subtitulo": "Fuente: Templeton y otros, 2023",
+   "narracion": "Callar con tu amigo es buena señal. Ojo: no es que callar os haga amigos; es que, entre amigos, callar no pesa.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "friends in car smiling silence",
+      "two friends driving at sunset"
+     ],
+     "prompt": "two friends in a car at sunset, quiet and smiling"
+    },
+    {
+     "desde": "Ojo: no es",
+     "busqueda": [
+      "students talking at table university",
+      "university students conversation"
+     ],
+     "prompt": "university students talking at a table"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "tres subagentes sin contexto por vuelta, decide la mayoría (precisión del 02/11/2026); lectores nuevos en cada vuelta",
+  "fecha": "2026-11-20",
+  "vuelta": 2,
+  "recuento": "Vuelta 2 (cinco escenas): ninguna frase la copian dos lectores (la firma de la fuente aparte, a notas). Dos «me quedo»; uno se iría en la 3 (el método) y dice que quizá aguantaría a la 4. De qué va: los tres, la misma idea que la historia.",
+  "de_que_va": "El silencio largo solo incomoda entre desconocidos; entre amigos es buena señal: en esos silencios se sienten más unidos.",
+  "pregunta_y_respuesta": "¿Es malo quedarse callado con alguien? Depende de con quién: con desconocidos, el silencio aleja; con amigos, se sienten más unidos y se ríen más. El silencio no crea la amistad: solo deja de pesar cuando ya existe.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "ninguna con mayoría (una cada lector; ver notas_humor)",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "Firma de la fuente («Templeton y otros, 2023»): los tres (no bloquea).",
+   "Un lector: «marcó en su vídeo», no sabe qué significa; y «menos unidos», ¿que qué?; se iría en la 3.",
+   "Un lector: el «Ojo» del cierre tuvo que darle la vuelta (lo entiende).",
+   "Un lector: la escena del método la quitaría, aunque da credibilidad."
+  ],
+  "historial": [
+   "Vuelta 1 (seis escenas, 54 s): el cierre «Eso sí, eran universitarios charlando a una mesa, no en un ascensor» (3/3: no sé qué implica) y «miraron qué pasaba en los silencios» (2/3: ¿cómo lo midieron?); dos se irían en la 4 (el método).",
+   "Vuelta 2 (cinco escenas, sin la del ascensor; método contado con el deslizador de cada uno; cierre nuevo): ninguna frase con mayoría; dos «me quedo», uno se iría en la 3. Pasa."
+  ],
+  "veredicto": "pasa",
+  "lectores": [
+   {
+    "de_que_va": "Callarse un rato largo solo resulta incómodo con desconocidos, mientras que entre buenos amigos el silencio es buena señal de confianza.",
+    "pregunta_y_respuesta": "¿Por qué con unos puedo estar callado y con otros no? Según un experimento, en los silencios largos los desconocidos se sienten menos unidos y los amigos más unidos y ríen más; el silencio no crea la amistad, solo deja de pesar cuando ya existe.",
+    "frases_que_no_se_entienden": [
+     "«Luego, cada uno marcó en su vídeo lo unido que se sintió.» (no sé qué significa «marcó en su vídeo»)",
+     "«En los silencios largos, los desconocidos se sentían menos unidos.» (¿menos que qué?)",
+     "«Fuente: Templeton y otros, 2023»"
+    ],
+    "frase_que_sobra": "«Ojo: no es que callar os haga amigos; es que, entre amigos, callar no pesa.»",
+    "donde_me_iria": "Me habría ido en la escena 3: se vuelve una explicación de cómo se hizo el experimento. Es posible que aguantara hasta la 4 por curiosidad."
+   },
+   {
+    "de_que_va": "Callarse mucho rato incomoda con desconocidos, pero con un buen amigo el silencio es cómodo y es buena señal.",
+    "pregunta_y_respuesta": "¿Es raro o malo quedarse callado con alguien? Depende de quién sea: con desconocidos sí, con amigos no; los amigos en silencio se sienten más unidos.",
+    "frases_que_no_se_entienden": [
+     "ninguna"
+    ],
+    "frase_que_sobra": "«En un experimento grabaron charlas entre desconocidos y entre amigos.» (aunque tampoco la quitaría)",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Callarse mucho rato con un amigo es buena señal, mientras que con desconocidos incomoda.",
+    "pregunta_y_respuesta": "¿Es raro o malo quedarse en silencio con alguien? Depende: con desconocidos incomoda y se sienten menos unidos; con amigos no pesa, se sienten más unidos y se ríen más.",
+    "frases_que_no_se_entienden": [
+     "«Ojo: no es que callar os haga amigos; es que, entre amigos, callar no pesa.» (tuve que pararme a darle la vuelta)",
+     "«Fuente: Templeton y otros, 2023»"
+    ],
+    "frase_que_sobra": "«Luego, cada uno marcó en su vídeo lo unido que se sintió.» (pero no es que sobre del todo)",
+    "donde_me_iria": "me quedo"
+   }
+  ]
+ }
+}

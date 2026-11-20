@@ -1,0 +1,208 @@
+{
+ "id": "MDS-075",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Las reuniones con chistes funcionan mejor?",
+ "tesis": "En las reuniones de trabajo, las cadenas de chiste, risa y otro chiste van con equipos que rinden más, ese día y dos años después; un chiste suelto no.",
+ "pilares": [
+  "G"
+ ],
+ "duracion_objetivo_s": 50,
+ "bloqueos": [],
+ "ciclo": "B2",
+ "variante": "A",
+ "familia_tema": "ciencia_del_chiste",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Las reuniones con chistes funcionan mejor?",
+  "respuesta": "Las que tienen cadenas de chistes —uno suelta una broma, otro se ríe y añade otra— van con equipos que rinden más; un chiste suelto, sin respuesta, no.",
+  "puente": "La reunión del lunes en la que una broma lleva a otra es lo que grabaron en el estudio: reuniones reales en las que contaron cada chiste y cada risa, y luego miraron cómo rendía el equipo."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — en la reunión del lunes alguien suelta una broma y una compañera añade otra; qué gira — se ríe toda la mesa; cómo acaba — en reuniones reales, donde a un chiste le seguían una risa y otro chiste, el equipo salía mejor puntuado.",
+  "POSICIÓN B2 18 (domingo 22/11): brazo A (receta B, seis escenas, y animación en las escenas de mecanismo, la 3 y la 4). Escrito con seis escenas antes de mirar el brazo. Si la rutina Animación no deja la página a tiempo, sale como el control y se aparta del ciclo.",
+  "BRAZO B (receta del control de B2): la escena 1 es el hallazgo, con su fuente; la pantalla dice lo mismo.",
+  "FUENTE: G11 (Lehmann-Willenbrock y Allen, 2014, Journal of Applied Psychology 99(6), 1278-1287, DOI 10.1037/a0038083), nunca central. Resumen (ficha, OpenAlex 19/11/2026), literal: «We examined behavioral patterns of humor and laughter in real teams by videotaping and coding humor and laughter during 54 regular organizational team meetings»; «At the team level, humor patterns (but not humor or laughter alone) positively related to team performance, both immediately and 2 years later». Ficha: «los jefes puntuaron el rendimiento del equipo justo después y más tarde». No es acceso abierto: el método se cuenta solo con lo que dice el resumen.",
+  "«Un chiste solo, sin risa ni respuesta, no había diferencia» = «humor patterns (but not humor or laughter alone)». La broma del café es la situación del Short, no un dato del estudio.",
+  "CIERRE (regla 12): es correlacional; puede que los equipos que ya van bien se rían más. La ficha añade que el efecto desaparece con mucha inseguridad laboral: no cabe en el Short y va a la descripción.",
+  "FRASE QUE SOBRA (criterio c): los tres quitarían la escena 2. Se queda: es la situación que reconoce quien desliza y el ejemplo del que habla el estudio (la cadena chiste-risa-chiste)."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "G11",
+   "icono": "i-bocadillos",
+   "texto": "Un chiste lleva a otro: el equipo *rinde más*",
+   "narracion": "Los equipos en los que un chiste lleva a otro rinden más.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "coworkers laughing in meeting room",
+      "office meeting people laughing"
+     ],
+     "prompt": "coworkers laughing together around a meeting table"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "Una broma, otra… y se ríe toda la *mesa*",
+   "narracion": "En la reunión del lunes alguien suelta una broma, una compañera añade otra, y se ríe toda la mesa.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "man joking in meeting",
+      "coworker making joke meeting"
+     ],
+     "prompt": "a man making a joke in a Monday meeting, holding a coffee cup"
+    },
+    {
+     "desde": "y se ríe toda",
+     "busqueda": [
+      "coworkers laughing together office",
+      "team laughing meeting table"
+     ],
+     "prompt": "a whole team laughing around a meeting table"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "fuente": "G11",
+   "puntos": [
+    "Grabaron *54* reuniones de trabajo",
+    "y anotaron cada chiste y cada risa"
+   ],
+   "narracion": "En un estudio grabaron cincuenta y cuatro reuniones de trabajo reales, y anotaron cada chiste y cada risa.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "video camera recording meeting",
+      "camera on tripod office"
+     ],
+     "prompt": "a small video camera on a tripod recording an office meeting"
+    },
+    {
+     "desde": "y anotaron",
+     "busqueda": [
+      "person taking notes watching video",
+      "researcher writing notes"
+     ],
+     "prompt": "a researcher taking notes while watching a recording"
+    }
+   ],
+   "animar": true,
+   "animacion": "Una mesa de reunión dibujada en línea vista desde arriba; en «anotaron cada chiste» salen bocadillos de chiste y, en «cada risa», onditas de risa alrededor de las sillas."
+  },
+  {
+   "tipo": "dato",
+   "fuente": "G11",
+   "personaje": "entiende",
+   "cifra": "Chiste, risa y otro: mejor *nota*",
+   "pie": "también dos años después",
+   "narracion": "Donde a un chiste le seguían una risa y otro chiste, los jefes puntuaban mejor al equipo, también dos años después.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "team celebrating success office",
+      "coworkers high five"
+     ],
+     "prompt": "a work team celebrating a success in the office"
+    }
+   ],
+   "animar": true,
+   "animacion": "Tres fichas que caen en cadena —chiste, risa, chiste— y una barra de «nota del equipo» que sube en «los jefes puntuaban mejor»; en «dos años después» aparece un calendario que pasa hojas y la barra sigue arriba."
+  },
+  {
+   "tipo": "enunciado",
+   "fuente": "G11",
+   "texto": "Un chiste *solo* no cambiaba nada",
+   "narracion": "Pero si el chiste se quedaba solo, sin risa ni respuesta, no había diferencia.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "man telling joke nobody laughs",
+      "awkward silence meeting"
+     ],
+     "prompt": "a man telling a joke in a meeting while nobody reacts"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "G11",
+   "personaje": "piensa",
+   "titulo": "¿Se ríen porque les va *bien*?",
+   "subtitulo": "Fuente: Lehmann-Willenbrock y Allen, 2014",
+   "narracion": "Eso sí, no prueba que los chistes hagan rendir: puede que los equipos que ya van bien se rían más.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "happy team working together",
+      "coworkers smiling at desk"
+     ],
+     "prompt": "a relaxed team working together and smiling at their desks"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "tres subagentes sin contexto por vuelta, decide la mayoría (precisión del 02/11/2026); lectores nuevos en cada vuelta",
+  "fecha": "2026-11-20",
+  "vuelta": 2,
+  "recuento": "Vuelta 2: dos lectores no copian ninguna frase; el tercero copia la escena 1 y la 4 (a notas). Los tres «me quedo». De qué va: los tres, la misma idea que la historia.",
+  "de_que_va": "En las reuniones, cuando un chiste lleva a otro, el equipo rinde más, aunque el estudio no prueba que los chistes sean la causa.",
+  "pregunta_y_respuesta": "¿Las reuniones con chistes funcionan mejor? Donde a un chiste le seguían una risa y otro chiste, los jefes puntuaban mejor al equipo, también dos años después; un chiste solo, no. Puede ser al revés: que los equipos que van bien se rían más.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "La escena 2 (la reunión del lunes), los tres; ver notas_humor",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "Firma de la fuente: dos lectores (no bloquea).",
+   "Un lector: «rinden» en la escena 1 (¿en serio o se desmonta luego?) y «los jefes puntuaban… dos años después» (¿qué y de qué?)."
+  ],
+  "historial": [
+   "Vuelta 1 (seis escenas, con la reunión contada en dos): «Con uno suelto, no» (2/3: ¿uno qué?), «incluso dos años después» (2/3: ¿qué se midió?) y los tres se irían en la 2-3 (anécdota de oficina genérica).",
+   "Vuelta 2 (la reunión en una sola escena; el resultado dice quién puntuaba —los jefes— y el chiste solo va en su propia escena): ninguna frase con mayoría; los tres «me quedo». Pasa."
+  ],
+  "veredicto": "pasa",
+  "lectores": [
+   {
+    "de_que_va": "Un estudio vio que los equipos en los que un chiste lleva a otro rinden mejor, con la duda de si es causa o consecuencia.",
+    "pregunta_y_respuesta": "¿Bromear en las reuniones tiene que ver con cómo rinde un equipo? Sí hay relación: cuando a un chiste le sigue una risa y otro chiste, los jefes puntuaban mejor al equipo, incluso dos años después; si el chiste se queda solo, no cambia nada. No se sabe si es causa o si los equipos que ya van bien se ríen más.",
+    "frases_que_no_se_entienden": [
+     "ninguna (la firma «Lehmann-Willenbrock y Allen, 2014» no sé quiénes son)"
+    ],
+    "frase_que_sobra": "«En la reunión del lunes alguien suelta una broma, una compañera añade otra, y se ríe toda la mesa.»",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Los equipos en los que un chiste lleva a otro rinden más, según un estudio con reuniones grabadas, aunque no está probado que sea causa y efecto.",
+    "pregunta_y_respuesta": "¿Bromear juntos en el trabajo tiene que ver con que un equipo funcione bien? Hay relación: con chiste, risa y otro chiste, los jefes puntúan mejor al equipo, incluso dos años después; pero quizá los equipos que ya van bien se ríen más.",
+    "frases_que_no_se_entienden": [
+     "ninguna"
+    ],
+    "frase_que_sobra": "«En la reunión del lunes alguien suelta una broma, una compañera añade otra, y se ríe toda la mesa.»",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Un estudio vio que los equipos en los que un chiste lleva a otro puntúan mejor, aunque no demuestra que los chistes sean la causa.",
+    "pregunta_y_respuesta": "¿Los chistes hacen que un equipo rinda más? En reuniones reales, cuando un chiste tenía risa y otro detrás, los jefes puntuaban mejor al equipo, incluso dos años después; un chiste solo, no. Quizá los equipos que ya iban bien se ríen más.",
+    "frases_que_no_se_entienden": [
+     "«Los equipos en los que un chiste lleva a otro rinden más.» (no sé si «rinden» va en serio o luego se desmonta)",
+     "«los jefes puntuaban mejor al equipo, también dos años después.» (quién puntuaba, qué, dos años después de qué)",
+     "«Fuente: Lehmann-Willenbrock y Allen, 2014»"
+    ],
+    "frase_que_sobra": "«En la reunión del lunes alguien suelta una broma…» (el ejemplo)",
+    "donde_me_iria": "me quedo"
+   }
+  ]
+ }
+}

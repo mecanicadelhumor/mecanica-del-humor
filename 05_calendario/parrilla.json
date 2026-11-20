@@ -785,6 +785,46 @@
    "modo": "automatico",
    "hora": "19:00",
    "nota": "Sábado. B2, posición 17: control (receta B). Serie «El experimento»: el vídeo de tu karaoke que saca tu primo en la cena de Navidad. Pregunta: «¿te pones más rojo al verte cantar a ti?» (cerca de «por qué me pongo roja cuando me río», 514,9 M en el top 10). Fuente F25 (Nikolić y otros, 2024), nunca central; método leído en el texto completo (PMC). Lectura en frío: pasa a la tercera vuelta y otra vez, en la quinta, tras recortarla a 49 s. Único guion aprobado de la noche del 19/11 (diecisiete temas intentados)."
+  },
+  {
+   "fecha": "2026-11-22",
+   "episodio": "MDS-075",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Domingo. B2, posición 18: brazo A (escenas 3 y 4 con animar; rutina Animación). Serie «El experimento»: la reunión del lunes en la que una broma lleva a otra. Pregunta: «¿las reuniones con chistes funcionan mejor?». Fuente G11 (Lehmann-Willenbrock y Allen, 2014), nunca central; solo resumen (no es acceso abierto). Lectura en frío: pasa a la segunda vuelta. Si la rutina Animación no deja la página, sale como el control y se aparta."
+  },
+  {
+   "fecha": "2026-11-23",
+   "episodio": "MDS-073",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Lunes. B2, posición 19: brazo D (cinco escenas, 45 s como mucho). Serie «El experimento»: el coche con tu mejor amigo, diez minutos callados y tan a gusto. Pregunta: «¿por qué el silencio incómodo no lo es con amigos?». Fuente D17 (Templeton y otros, 2023), nunca central; método leído en el texto completo (PMC). Lectura en frío: pasa a la segunda vuelta, con cinco escenas. Único guion aprobado del reintento del viernes 20/11 (diez temas intentados)."
+  },
+  {
+   "fecha": "2026-11-24",
+   "episodio": "MDS-074",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Martes. B2, posición 20: brazo AD (cinco escenas, 45 s como mucho; escenas 3 y 4 con animar). Serie «El experimento»: «He suspendido el carné», con una carita sonriente. Pregunta: «¿por qué confunde un emoji que no pega?». Familia mensajes. Fuente I24 (Hand y otros, 2022), nunca central. Lectura en frío: pasa a la primera vuelta."
+  },
+  {
+   "fecha": "2026-11-25",
+   "episodio": "MDS-076",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Miércoles. B2, posición 21: brazo A (escenas 4 y 5 con animar). Serie «El experimento»: «Ya estaría hecho, si hicieras tu parte», con un emoji (la conversación del propio estudio). Pregunta: «¿un reproche con emoji suena menos borde?». Familia mensajes. Fuente I28 (Cavalheiro y otros, 2024), nunca central; método leído en el texto completo (repositorio del ISCTE). Lectura en frío: pasa a la primera vuelta y en una comprobación tras cambiar el arranque del cierre."
   }
  ],
  "_archivadas": {
@@ -831,5 +871,6 @@
  "_banco": [],
  "_cambio_05_noviembre_noche": "Planificación del 05/11/2026 (semana del 9 al 15/11, B2 posiciones 5-11). Tres lectores por vuelta y decide la mayoría (versión 28). Se intentaron catorce temas en 108 lecturas; pasan tres: MDS-064 (miércoles 11, A), MDS-065 (jueves 12, control) y MDS-066 (viernes 13, control). Lunes 9 (D), martes 10 (AD), sábado 14 (D) y domingo 15 (AD) se quedan sin Short: sus posiciones quedan vacías (ciclos.json, «_orden»). Ningún aprobado sobra, así que el banco está vacío. Los once temas que no pasaron, a temas_en_reserva.md. Detalle en bitacora/2026-11/2026-11-05-planificacion.md.",
  "_cambio_12_noviembre_noche": "Planificación del 12/11/2026 (semana del 16 al 22/11, B2 posiciones 12-18). Tres lectores por vuelta y decide la mayoría. Se intentaron catorce temas (más dos versiones cortas) en 42 vueltas de tres lectores; pasan cuatro: MDS-068 (lunes 16, A), MDS-069 (martes 17, AD), MDS-070 (miércoles 18, control) y MDS-071 (viernes 20, A). Jueves 19 (D), sábado 21 (control) y domingo 22 (A) se quedan sin Short y sus posiciones quedan vacías (ciclos.json, «_orden»); el domingo 15 (posición 11) sigue vacío. Ningún aprobado sobra: banco vacío. Los temas que no pasaron, a temas_en_reserva.md. Ninguna emisión lleva rehacer_video_id (C54). Detalle en bitacora/2026-11/2026-11-12-planificacion.md.",
- "_cambio_19_noviembre_noche": "Planificación del 19/11: una sola emisión nueva, MDS-072 el sábado 21/11 (posición 17 de B2, control). Diecisiete temas intentados con tres lectores por vuelta (unas 190 lecturas); pasa uno. Quedan sin Short el domingo 22 y toda la semana del 23 al 29/11 (posiciones 18-24 de B2 vacías; el 29/11 ya cae fuera de B2). El banco sigue vacío. Detalle en bitacora/2026-11/2026-11-19-planificacion.md."
+ "_cambio_19_noviembre_noche": "Planificación del 19/11: una sola emisión nueva, MDS-072 el sábado 21/11 (posición 17 de B2, control). Diecisiete temas intentados con tres lectores por vuelta (unas 190 lecturas); pasa uno. Quedan sin Short el domingo 22 y toda la semana del 23 al 29/11 (posiciones 18-24 de B2 vacías; el 29/11 ya cae fuera de B2). El banco sigue vacío. Detalle en bitacora/2026-11/2026-11-19-planificacion.md.",
+ "_cambio_20_noviembre_reintento": "Reintento del viernes 20/11 (el lunes 23 estaba vacío, así que el paso 0 no paró): cuatro emisiones nuevas, MDS-075 (domingo 22, posición 18, A), MDS-073 (lunes 23, posición 19, D), MDS-074 (martes 24, posición 20, AD) y MDS-076 (miércoles 25, posición 21, A). Trece temas con tres lectores por vuelta; pasan cuatro. Quedan sin Short del jueves 26 al domingo 29 (posiciones 22-24 y el 29 fuera de B2). Banco vacío. Detalle en bitacora/2026-11/2026-11-20-planificacion.md."
 }

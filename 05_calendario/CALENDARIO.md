@@ -596,7 +596,7 @@ las 19:00 (hora de España), `"modo": "automatico"`, `"idiomas": ["es"]`. El dom
 | Jueves 19 | — | D (15) | — | **sin emisión** | — |
 | Viernes 20 | `MDS-071` | A (16), escenas 4 y 5 animadas | El experimento | ¿los perros se ríen? | `E25` (nueva) |
 | Sábado 21 | `MDS-072` | control (17) | El experimento | ¿te pones más rojo al verte cantar a ti? | `F25` (añadido el 19/11) |
-| Domingo 22 | — | A (18) | — | **sin emisión** | — |
+| Domingo 22 | `MDS-075` | A (18), escenas 3 y 4 animadas | El experimento | ¿las reuniones con chistes funcionan mejor? (escrito el 20/11) | `G11` |
 
 **Tanteo de cosquillas (C46):** `MDS-068` (risa de las ratas con cosquillas). **Familia `mensajes`: uno**
 (`MDS-070`); la regla pide dos y los otros tres temas de mensajes cayeron. **Banco vacío.** Fichas nuevas:
@@ -604,19 +604,22 @@ doce (`E23`-`E26`, `F21`-`F25`, `D15`, `I23`, `I24`). Detalle en `bitacora/2026-
 
 ## Semana del 23 al 29 de noviembre de 2026 · B2, posiciones 19 a 24 (y el 29, fuera de B2)
 
-Escrita la noche del **jueves 19 de noviembre**. **Ningún Short para esta semana.** Se intentaron diecisiete
-temas con tres lectores por vuelta (unas 190 lecturas) y pasó uno, `MDS-072`, que se coloca en el primer hueco
-libre: el **sábado 21** (posición 17, control). El domingo 22 (posición 18, A) también queda vacío.
+Escrita la noche del **jueves 19 de noviembre** (ningún Short; pasó solo `MDS-072`, que se colocó el sábado 21) y
+**completada en el reintento del viernes 20**: trece temas con tres lectores por vuelta, pasan cuatro. Uno al día a
+las 19:00 (hora de España), `"modo": "automatico"`, `"idiomas": ["es"]`. El **domingo 22** (semana anterior,
+posición 18) también se cubre esa noche: `MDS-075`.
 
-| Día | Emisión | B2 · brazo (posición) |
-|---|---|---|
-| Lunes 23 | — **sin emisión** | D (19) |
-| Martes 24 | — **sin emisión** | AD (20) |
-| Miércoles 25 | — **sin emisión** | A (21) |
-| Jueves 26 | — **sin emisión** | AD (22) |
-| Viernes 27 | — **sin emisión** | control (23) |
-| Sábado 28 | — **sin emisión** | D (24, la última de B2) |
-| Domingo 29 | — **sin emisión** | (fuera de B2; ciclo sin definir) |
+| Día | Emisión | B2 · brazo (posición) | Serie | Pregunta | Ficha |
+|---|---|---|---|---|---|
+| Domingo 22 | `MDS-075` | A (18), escenas 3 y 4 animadas | El experimento | ¿las reuniones con chistes funcionan mejor? | `G11` (nueva el 19/11) |
+| Lunes 23 | `MDS-073` | D (19), cinco escenas | El experimento | ¿por qué el silencio incómodo no lo es con amigos? | `D17` (nueva el 19/11) |
+| Martes 24 | `MDS-074` | AD (20), cinco escenas, 3 y 4 animadas | El experimento | ¿por qué confunde un emoji que no pega? · *mensajes* | `I24` |
+| Miércoles 25 | `MDS-076` | A (21), escenas 4 y 5 animadas | El experimento | ¿un reproche con emoji suena menos borde? · *mensajes* | `I28` (nueva el 19/11) |
+| Jueves 26 | — **sin emisión** | AD (22) | — | — | — |
+| Viernes 27 | — **sin emisión** | control (23) | — | — | — |
+| Sábado 28 | — **sin emisión** | D (24, la última de B2) | — | — | — |
+| Domingo 29 | — **sin emisión** | (fuera de B2; ciclo sin definir) | — | — | — |
 
-**Banco vacío.** Los temas que no pasaron, a `temas_en_reserva.md`. Detalle en
-`bitacora/2026-11/2026-11-19-planificacion.md`.
+**Familia `mensajes`: dos** (`MDS-074`, `MDS-076`). **Tanteo de cosquillas: ninguno** (cayó `E23`, tercera semana).
+**Banco vacío.** Los temas que no pasaron, a `temas_en_reserva.md` («Caídos el 20/11/2026»). Detalle en
+`bitacora/2026-11/2026-11-20-planificacion.md`.

@@ -1,0 +1,197 @@
+{
+ "id": "MDS-076",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Un reproche con emoji suena menos borde?",
+ "tesis": "Entre compañeros de trabajo, un reproche que lleva un emoji al final se lee algo menos negativo y a quien lo escribe se le ve más cálido; pero sigue sonando a reproche.",
+ "pilares": [
+  "I"
+ ],
+ "duracion_objetivo_s": 44,
+ "bloqueos": [],
+ "ciclo": "B2",
+ "variante": "A",
+ "familia_tema": "mensajes",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Un reproche con emoji suena menos borde?",
+  "respuesta": "Un poco: con el emoji, el reproche parecía algo menos negativo y quien lo escribía, más cálido; pero seguía sonando a reproche.",
+  "puente": "El «Ya estaría hecho, si hicieras tu parte» de tu compañera es, casi palabra por palabra, la conversación del experimento, que la gente leía con o sin un emoji al final."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — tu compañera te pregunta cómo va el informe; qué gira — te contesta «Ya estaría hecho, si hicieras tu parte», con un emoji; cómo acaba — esa misma conversación, con emoji, se leía algo menos negativa, pero seguía siendo un reproche.",
+  "POSICIÓN B2 21 (miércoles 25/11): brazo A (receta B, seis escenas, y animación en las escenas de mecanismo, la 4 y la 5). Escrito con seis escenas antes de mirar el brazo. Si la rutina Animación no deja la página, sale como el control y se aparta del ciclo.",
+  "BRAZO B (receta del control de B2): la escena 1 es el hallazgo, con su fuente; la pantalla dice lo mismo.",
+  "FUENTE: I28 (Cavalheiro, Prada y Rodrigues, 2024, Journal of Social and Personal Relationships 41(8), 2147-2168, DOI 10.1177/02654075231219032), nunca central. Resumen (ficha, OpenAlex 19/11/2026), literal: «In two experiments ( N = 568), we examined if using emoji, and reciprocating emoji use, in a work context (i.e., message between colleagues) influenced inferences about interlocutors and communication outcomes»; «reciprocating emoji use ([Formula: see text] vs. no emoji) resulted in higher perceptions of warmth, playfulness, and communication positivity». Texto completo leído el 20/11/2026 (repositorio del ISCTE, hdl 10071/31318), Estudio 1, literal: «A sample of 369 individuals living in Portugal volunteered to participate in an online survey»; «This interaction occurred between two colleagues who are preparing a report together»; «interlocutor A writing “How’s the report?”, followed by interlocutor B’s reply “Still needs a lot of work…”, and ending with interlocutor A’s reply “It could be done already…if you did your part”»; «interlocutor A’s messages were perceived as less negative with [emoji] (M = 2.76, SE = .11) than without emoji (M = 2.43, SE = .09)»; y en la discusión: «in most cases average scores were still below the scale mid-point or close to it».",
+  "La conversación del Short es la del estudio traducida («¿Cómo va el informe?» / «Aún falta mucho» / «Ya estaría hecho, si hicieras tu parte»). No se nombra el emoji: el texto que tenemos no lo reproduce (en el PDF sale como un hueco). «Casi cuatrocientas personas» = 369 del Estudio 1. «Más cálido» = «warmth» del resumen.",
+  "CIERRE (regla 12): el efecto era pequeño y las puntuaciones seguían por debajo de la mitad de la escala: con emoji o sin él, seguía sonando a reproche (y el Estudio 2 no encontró efecto del emoji cuando el conflicto era mayor; no cabe en el Short, va a la descripción).",
+  "FRASE QUE SOBRA (criterio c): cada lector nombra una distinta; ninguna con mayoría."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "I28",
+   "icono": "i-bocadillos",
+   "texto": "Un reproche con emoji suena *menos* borde",
+   "narracion": "Un reproche con un emoji al final suena un poco menos borde.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "woman reading work chat laptop",
+      "office worker reading message laptop"
+     ],
+     "prompt": "a woman at an office desk reading a chat message on her laptop, raising an eyebrow"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "texto": "«¿Cómo va el *informe*?»",
+   "narracion": "Tu compañera te pregunta cómo va el informe. Le dices que aún falta mucho.",
+   "pausa_despues_s": 1.3,
+   "visual": [
+    {
+     "busqueda": [
+      "coworkers chatting laptop office",
+      "person typing message work chat"
+     ],
+     "prompt": "a person typing a message in a work chat on a laptop"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "«Ya estaría hecho, si hicieras tu *parte*»",
+   "narracion": "Y te contesta: «Ya estaría hecho, si hicieras tu parte». Con un emoji.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "man reading message frowning office",
+      "office worker surprised at screen"
+     ],
+     "prompt": "a man at his desk frowning at a message on his screen"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "fuente": "I28",
+   "puntos": [
+    "Leyeron la misma *conversación*",
+    "con emoji al final o sin él"
+   ],
+   "narracion": "En un experimento, casi cuatrocientas personas leyeron esa misma conversación: unas con un emoji al final del reproche, y otras sin él.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "people reading on phones",
+      "person reading smartphone couch"
+     ],
+     "prompt": "several people reading a chat conversation on their phones"
+    },
+    {
+     "desde": "unas con un emoji",
+     "busqueda": [
+      "emoji keyboard smartphone",
+      "phone screen emoji"
+     ],
+     "prompt": "close-up of a phone screen with an emoji keyboard"
+    }
+   ],
+   "animar": true,
+   "animacion": "Dos burbujas de chat iguales dibujadas en línea, una al lado de la otra, con «Ya estaría hecho…»: en «unas con un emoji» a la de la izquierda le aparece una carita al final; la de la derecha se queda sin ella."
+  },
+  {
+   "tipo": "dato",
+   "fuente": "I28",
+   "personaje": "entiende",
+   "cifra": "Con emoji, el reproche parece menos *negativo*",
+   "pie": "y quien lo escribe, más cálido",
+   "narracion": "Con el emoji, el reproche les parecía algo menos negativo, y quien lo escribía, más cálido.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "woman smiling slightly at laptop",
+      "coworker small smile desk"
+     ],
+     "prompt": "a woman at her desk with a small, softened smile"
+    }
+   ],
+   "animar": true,
+   "animacion": "Bajo cada burbuja, un termómetro de «borde»: el de la burbuja con carita baja un poco en «algo menos negativo», pero los dos siguen en la zona roja."
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "I28",
+   "personaje": "piensa",
+   "titulo": "Con emoji, sigue siendo un *reproche*",
+   "subtitulo": "Fuente: Cavalheiro y otros, 2024",
+   "narracion": "Pero solo un poco: con emoji o sin él, seguía sonando a reproche.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "man sighing at desk",
+      "office worker rubbing forehead"
+     ],
+     "prompt": "a man at his office desk sighing and rubbing his forehead"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "tres subagentes sin contexto, decide la mayoría (precisión del 02/11/2026)",
+  "fecha": "2026-11-20",
+  "vuelta": 2,
+  "recuento": "Vuelta 1 (seis escenas, la versión que sale): los tres «ninguna» en la pregunta 3 y los tres «me quedo». Cada uno quitaría una frase distinta. De qué va: los tres, la misma idea que la historia.",
+  "de_que_va": "Poner un emoji al final de un reproche lo hace sonar un poco menos borde, aunque sigue siendo un reproche.",
+  "pregunta_y_respuesta": "¿Un emoji suaviza un reproche? Un poco: parece algo menos negativo y quien lo escribe, más cálido; pero sigue sonando a reproche.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "ninguna con mayoría (una distinta cada lector)",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "Un lector dudó un momento con la firma de la fuente (no bloquea).",
+   "Dos lectores señalan la escena del método como la más seca, sin irse."
+  ],
+  "historial": [
+   "Vuelta 1: pasa (ninguna frase marcada; los tres «me quedo»). El cierre empezaba «Eso sí, solo un poco».",
+   "Comprobación (tres lectores nuevos): el cierre pasa a «Pero solo un poco» para no repetir el arranque «Eso sí» de MDS-075 (C48.1). Dos «ninguna» y uno solo la firma de la fuente; los tres «me quedo». Pasa."
+  ],
+  "veredicto": "pasa",
+  "lectores": [
+   {
+    "de_que_va": "Poner un emoji al final de un reproche lo hace sonar un poco menos borde, según un experimento.",
+    "pregunta_y_respuesta": "¿Un emoji suaviza un reproche? Sí, pero poco: el reproche parece algo menos negativo y quien lo escribe más cálido, aunque sigue sonando a reproche.",
+    "frases_que_no_se_entienden": [
+     "ninguna"
+    ],
+    "frase_que_sobra": "«Un reproche con un emoji al final suena un poco menos borde.» (se repite luego)",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Poner un emoji al final de un reproche lo hace sonar algo menos borde, según un experimento.",
+    "pregunta_y_respuesta": "¿Un emoji suaviza un reproche? Sí, un poco: el reproche parece menos negativo y quien lo escribe más cálido, pero sigue sonando a reproche.",
+    "frases_que_no_se_entienden": [
+     "ninguna (dudé un momento con «Fuente: Cavalheiro y otros, 2024»)"
+    ],
+    "frase_que_sobra": "«Tu compañera te pregunta cómo va el informe. Le dices que aún falta mucho.»",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Un experimento que mide si poner un emoji al final de un reproche lo hace sonar menos borde: sí, pero solo un poco.",
+    "pregunta_y_respuesta": "¿Un emoji suaviza un reproche? Sí: parece algo menos negativo y quien lo escribe, más cálido. Pero sigue sonando a reproche.",
+    "frases_que_no_se_entienden": [
+     "ninguna"
+    ],
+    "frase_que_sobra": "«Eso sí, solo un poco: con emoji o sin él, seguía sonando a reproche.» (lo dice ya la pantalla)",
+    "donde_me_iria": "me quedo"
+   }
+  ]
+ }
+}
