@@ -1,6 +1,6 @@
 {
  "_nota": "C47: lectura ligera diaria de los vídeos publicados en los últimos 10 días: visualizaciones, vistas_48h y, desde el 05/10/2026 (C60), se_quedaron_48h («Se quedaron viendo» de Studio = engagedViews/views), porcentaje_visto, me_gusta, suscriptores y compartidos. Sin curvas de retención a propósito (ver la cabecera de escribir_metricas_diarias() en 04_agentes/metricas.py). Se SOBRESCRIBE entero cada vez: es una ventana rodante, no una serie histórica. La lectura completa semanal (metricas.json, control_c26) es la que manda y no cambia con este fichero.",
- "actualizado_utc": "2026-11-20T15:45:16Z",
+ "actualizado_utc": "2026-11-20T21:33:57Z",
  "videos": [
   {
    "id": "MDS-062.es",
@@ -35,29 +35,29 @@
   {
    "id": "MDS-064.es",
    "publicado": "2026-11-11",
-   "visualizaciones": 21,
+   "visualizaciones": 28,
    "vistas_48h": 14,
    "se_quedaron_48h": {
     "vistas": 14,
     "comprometidas": 3,
     "pct": 21.4
    },
-   "porcentaje_visto": 78.5,
+   "porcentaje_visto": 58.8,
    "me_gusta": 0,
-   "suscriptores": 0,
+   "suscriptores": 1,
    "compartidos": 0
   },
   {
    "id": "MDS-065.es",
    "publicado": "2026-11-12",
-   "visualizaciones": 34,
+   "visualizaciones": 35,
    "vistas_48h": 28,
    "se_quedaron_48h": {
     "vistas": 28,
     "comprometidas": 8,
     "pct": 28.6
    },
-   "porcentaje_visto": 27.8,
+   "porcentaje_visto": 31.3,
    "me_gusta": 1,
    "suscriptores": 0,
    "compartidos": 0
@@ -65,7 +65,7 @@
   {
    "id": "MDS-066.es",
    "publicado": "2026-11-13",
-   "visualizaciones": 7,
+   "visualizaciones": 8,
    "vistas_48h": 7,
    "se_quedaron_48h": {
     "vistas": 7,
@@ -80,14 +80,14 @@
   {
    "id": "MDS-068.es",
    "publicado": "2026-11-16",
-   "visualizaciones": 1,
+   "visualizaciones": 2,
    "vistas_48h": 1,
    "se_quedaron_48h": {
     "vistas": 1,
     "comprometidas": 1,
     "pct": 100.0
    },
-   "porcentaje_visto": 25.9,
+   "porcentaje_visto": 15.5,
    "me_gusta": 0,
    "suscriptores": 0,
    "compartidos": 0
@@ -110,14 +110,14 @@
   {
    "id": "MDS-070.es",
    "publicado": "2026-11-18",
-   "visualizaciones": 0,
-   "vistas_48h": 0,
+   "visualizaciones": 28,
+   "vistas_48h": 28,
    "se_quedaron_48h": {
-    "vistas": 0,
-    "comprometidas": 0,
-    "pct": null
+    "vistas": 28,
+    "comprometidas": 4,
+    "pct": 14.3
    },
-   "porcentaje_visto": 0.0,
+   "porcentaje_visto": 76.5,
    "me_gusta": 0,
    "suscriptores": 0,
    "compartidos": 0
