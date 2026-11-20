@@ -1,0 +1,191 @@
+{
+ "id": "MDS-077",
+ "formato": "corto",
+ "serie": "El experimento",
+ "idioma": "es",
+ "titulo_trabajo": "¿Por qué sienta tan mal que saquen el móvil?",
+ "tesis": "Cuando la persona con la que hablas saca el móvil, te sientes más excluido y menos cerca, sea cual sea la razón; con una razón importante, algo menos.",
+ "pilares": [
+  "I"
+ ],
+ "duracion_objetivo_s": 44,
+ "bloqueos": [],
+ "ciclo": "B2",
+ "variante": "AD",
+ "familia_tema": "mensajes",
+ "chiste": "otro",
+ "historia": {
+  "pregunta": "¿Por qué sienta tan mal que saquen el móvil mientras les hablas?",
+  "respuesta": "Porque te deja fuera: cuando el otro saca el móvil te sientes más excluido y menos cerca, dé la razón que dé; con una razón importante, algo menos.",
+  "puente": "El amigo que saca el móvil a los dos minutos de tu historia es lo que hizo el ayudante del experimento: sacarlo a los dos minutos de charla."
+ },
+ "notas_humor": [
+  "LAS TRES FRASES (prueba 1, mismo sujeto): qué pasa — le cuentas a un amigo cómo te fue la entrevista; qué gira — a los dos minutos saca el móvil; cómo acaba — en un experimento, cuando el otro sacaba el móvil a los dos minutos, la gente se sentía más excluida y menos cerca.",
+  "POSICIÓN B2 22 (jueves 26/11): brazo AD (receta B, cinco escenas, 45 s como mucho, y animación en las escenas 3 y 4). Escrito con cinco escenas: el remate («Y a los dos minutos, saca el móvil») va dentro de la 2. La lectura se hizo sobre esta versión.",
+  "BRAZO B (receta del control de B2): la escena 1 es el hallazgo, con su fuente; la pantalla dice lo mismo.",
+  "FUENTE: I20 (McDaniel y Wesselmann, 2021, Human Behavior and Emerging Technologies 3(3), DOI 10.1002/hbe2.255), nunca central. Resumen (ficha, OpenAlex 05/11/2026), literal: «We randomly assigned 99 young adults into one of three conditions: no phone use, important use, or trivial use»; «the participant's interaction partner (a confederate) pulled out their phone 2 min into the interaction»; «Phubbed individuals reported feeling more excluded, less close, and like the partner was more distracted in the phone use conditions, regardless of reason»; «individuals phubbed for an important reason reported feeling less excluded».",
+  "«Cien jóvenes» = 99 young adults; «un actor contratado» = «a confederate»; «algo importante / una tontería» = «important use / trivial use». La entrevista de trabajo es la situación del Short, no del estudio. No es acceso abierto: el método se cuenta solo con lo que dice el resumen.",
+  "CIERRE (regla 12): el matiz del propio estudio: la razón importante rebaja la exclusión, pero no la quita. No se ha medido con amigos de verdad (el compañero era un desconocido contratado): va a la descripción.",
+  "FRASE QUE SOBRA (criterio c): dos lectores quitarían la escena 1. Se queda: es el arranque con el dato del brazo B (la receta lo pide)."
+ ],
+ "escenas": [
+  {
+   "tipo": "enunciado",
+   "fuente": "I20",
+   "icono": "i-ruptura",
+   "texto": "Si sacan el móvil, te quedas *fuera*",
+   "narracion": "Si te sacan el móvil mientras hablas, te sientes apartado.",
+   "pausa_despues_s": 0.4,
+   "visual": [
+    {
+     "busqueda": [
+      "man looking at phone ignoring friend",
+      "friend checking phone during conversation"
+     ],
+     "prompt": "a young man looking at his phone while his friend is talking to him at a table"
+    }
+   ]
+  },
+  {
+   "tipo": "enunciado",
+   "personaje": "rie",
+   "texto": "A los dos minutos, saca el *móvil*",
+   "narracion": "Le cuentas a un amigo cómo te fue la entrevista de trabajo. Y a los dos minutos, saca el móvil.",
+   "pausa_despues_s": 0.5,
+   "visual": [
+    {
+     "busqueda": [
+      "woman telling story to friend cafe",
+      "friends talking at table"
+     ],
+     "prompt": "a young woman eagerly telling a story to a friend at a café table"
+    },
+    {
+     "desde": "Y a los dos minutos",
+     "busqueda": [
+      "man takes phone out of pocket",
+      "hand pulling phone from pocket"
+     ],
+     "prompt": "a man pulling his phone out of his pocket mid-conversation"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "fuente": "I20",
+   "puntos": [
+    "Charlaban con un *actor*",
+    "que a veces sacaba el móvil a los dos minutos"
+   ],
+   "narracion": "En un experimento, cien jóvenes charlaban con un actor contratado. A algunos, el actor les sacaba el móvil a los dos minutos.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "two young people talking university",
+      "students conversation table"
+     ],
+     "prompt": "two young adults talking at a table in a university room"
+    },
+    {
+     "desde": "A algunos",
+     "busqueda": [
+      "person checking phone during talk",
+      "phone in hand at table"
+     ],
+     "prompt": "a person checking a phone at a table while the other waits"
+    }
+   ],
+   "animar": true,
+   "animacion": "Dos figuras dibujadas en línea charlando en una mesa con bocadillos de diálogo; en «a los dos minutos» un reloj marca el minuto 2 y una de las figuras saca un móvil."
+  },
+  {
+   "tipo": "dato",
+   "fuente": "I20",
+   "personaje": "entiende",
+   "cifra": "Si saca el móvil, más *excluido*",
+   "pie": "y menos cerca",
+   "narracion": "Cuando el actor sacaba el móvil, se sentían más excluidos y menos cerca de él.",
+   "pausa_despues_s": 0.45,
+   "visual": [
+    {
+     "busqueda": [
+      "woman sitting alone feeling ignored",
+      "person looking away sad table"
+     ],
+     "prompt": "a young woman at a table looking away, feeling left out"
+    }
+   ],
+   "animar": true,
+   "animacion": "La otra figura se aleja un poco y se encoge; un marcador de «cerca» baja en «menos cerca de él» y uno de «excluido» sube en «más excluidos»."
+  },
+  {
+   "tipo": "cierre",
+   "fuente": "I20",
+   "personaje": "piensa",
+   "titulo": "Con una buena excusa, algo *menos*",
+   "subtitulo": "Fuente: McDaniel y Wesselmann, 2021",
+   "narracion": "Eso sí, si el actor decía que era algo importante, se sentían algo menos apartados que si era una tontería.",
+   "pausa_despues_s": 0.2,
+   "visual": [
+    {
+     "busqueda": [
+      "man apologizing showing phone",
+      "person explaining phone call"
+     ],
+     "prompt": "a man apologetically showing his phone screen to his friend"
+    }
+   ]
+  }
+ ],
+ "lectura_en_frio": {
+  "lector": "tres subagentes sin contexto por vuelta, decide la mayoría (precisión del 02/11/2026); lectores nuevos en cada vuelta",
+  "fecha": "2026-11-20",
+  "vuelta": 2,
+  "recuento": "Vuelta 2: dos lectores «ninguna»; el tercero copia el cierre, el método y la firma (a notas). Los tres «me quedo». De qué va: los tres, la misma idea que la historia.",
+  "de_que_va": "Si alguien saca el móvil mientras le hablas, te sientes excluido y menos cerca; con una excusa importante, algo menos.",
+  "pregunta_y_respuesta": "¿Por qué sienta mal que saquen el móvil mientras hablas? Te sientes apartado y menos cerca del otro; si da una razón importante, solo un poco menos.",
+  "frases_que_no_se_entienden": [],
+  "frase_que_sobra": "La escena 1, dos lectores (ver notas_humor)",
+  "donde_me_iria": "me quedo",
+  "notas": [
+   "Un lector: el cierre, ¿«algo importante» es la excusa o lo que había en el móvil?; el «actor contratado», no sabía que era del equipo; la firma de la fuente."
+  ],
+  "historial": [
+   "Vuelta 1: el cierre («una razón importante», 3/3: ¿cuál?, ¿qué dolía?), «diera la razón que diera» (2/3: choca con el cierre) y «el ayudante» (2/3: ¿de quién?).",
+   "Vuelta 2 (el ayudante pasa a «actor contratado»; el resultado sin «diera la razón que diera»; el cierre compara con «si era una tontería»): pasa."
+  ],
+  "veredicto": "pasa",
+  "lectores": [
+   {
+    "de_que_va": "Un estudio muestra que si alguien saca el móvil mientras hablas con él, te sientes excluido y menos cerca, aunque con una buena excusa un poco menos mal.",
+    "pregunta_y_respuesta": "¿Cómo te afecta que te saquen el móvil en plena conversación? Te sientes apartado y menos conectado; una excusa importante lo suaviza solo un poco.",
+    "frases_que_no_se_entienden": [
+     "ninguna"
+    ],
+    "frase_que_sobra": "La escena 2 (la entrevista), o la 3 (el método)",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Un experimento muestra que, si alguien saca el móvil mientras le hablas, te sientes excluido y menos cercano, aunque un poco menos si da una buena excusa.",
+    "pregunta_y_respuesta": "¿Qué nos pasa cuando alguien saca el móvil mientras hablamos con él? Nos sentimos apartados y menos cerca; una excusa importante lo suaviza solo un poco.",
+    "frases_que_no_se_entienden": [
+     "ninguna"
+    ],
+    "frase_que_sobra": "«Si te sacan el móvil mientras hablas, te sientes apartado.» (la repite la escena 4)",
+    "donde_me_iria": "me quedo"
+   },
+   {
+    "de_que_va": "Si alguien saca el móvil mientras le hablas, te sientes excluido y menos cercano, aunque un poco menos si da una buena excusa.",
+    "pregunta_y_respuesta": "¿Por qué me molesta que mi amigo mire el móvil mientras le hablo? Es normal: quienes veían al otro sacar el móvil se sentían más excluidos y menos cerca; con una excusa importante, algo menos.",
+    "frases_que_no_se_entienden": [
+     "«Eso sí, si el actor decía que era algo importante…» (¿la excusa o lo que había en el móvil?)",
+     "«Fuente: McDaniel y Wesselmann, 2021»",
+     "«En un experimento, cien jóvenes charlaban con un actor contratado.» (no sabía que el actor era del equipo)"
+    ],
+    "frase_que_sobra": "«Si te sacan el móvil mientras hablas, te sientes apartado.»",
+    "donde_me_iria": "me quedo"
+   }
+  ]
+ }
+}

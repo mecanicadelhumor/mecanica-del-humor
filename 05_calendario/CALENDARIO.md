@@ -605,7 +605,7 @@ doce (`E23`-`E26`, `F21`-`F25`, `D15`, `I23`, `I24`). Detalle en `bitacora/2026-
 ## Semana del 23 al 29 de noviembre de 2026 · B2, posiciones 19 a 24 (y el 29, fuera de B2)
 
 Escrita la noche del **jueves 19 de noviembre** (ningún Short; pasó solo `MDS-072`, que se colocó el sábado 21) y
-**completada en el reintento del viernes 20**: trece temas con tres lectores por vuelta, pasan cuatro. Uno al día a
+**completada en el reintento del viernes 20**, en dos entregas: dieciséis temas con tres lectores por vuelta, pasan cinco. Uno al día a
 las 19:00 (hora de España), `"modo": "automatico"`, `"idiomas": ["es"]`. El **domingo 22** (semana anterior,
 posición 18) también se cubre esa noche: `MDS-075`.
 
@@ -615,11 +615,11 @@ posición 18) también se cubre esa noche: `MDS-075`.
 | Lunes 23 | `MDS-073` | D (19), cinco escenas | El experimento | ¿por qué el silencio incómodo no lo es con amigos? | `D17` (nueva el 19/11) |
 | Martes 24 | `MDS-074` | AD (20), cinco escenas, 3 y 4 animadas | El experimento | ¿por qué confunde un emoji que no pega? · *mensajes* | `I24` |
 | Miércoles 25 | `MDS-076` | A (21), escenas 4 y 5 animadas | El experimento | ¿un reproche con emoji suena menos borde? · *mensajes* | `I28` (nueva el 19/11) |
-| Jueves 26 | — **sin emisión** | AD (22) | — | — | — |
+| Jueves 26 | `MDS-077` | AD (22), cinco escenas, 3 y 4 animadas | El experimento | ¿por qué sienta tan mal que saquen el móvil? · *mensajes* | `I20` |
 | Viernes 27 | — **sin emisión** | control (23) | — | — | — |
 | Sábado 28 | — **sin emisión** | D (24, la última de B2) | — | — | — |
 | Domingo 29 | — **sin emisión** | (fuera de B2; ciclo sin definir) | — | — | — |
 
-**Familia `mensajes`: dos** (`MDS-074`, `MDS-076`). **Tanteo de cosquillas: ninguno** (cayó `E23`, tercera semana).
+**Familia `mensajes`: tres** (`MDS-074`, `MDS-076`, `MDS-077`). **Tanteo de cosquillas: ninguno** (cayó `E23`, tercera semana).
 **Banco vacío.** Los temas que no pasaron, a `temas_en_reserva.md` («Caídos el 20/11/2026»). Detalle en
 `bitacora/2026-11/2026-11-20-planificacion.md`.

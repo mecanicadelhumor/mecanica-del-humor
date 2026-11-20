@@ -7,8 +7,9 @@ lunes 23 no tenía emisión en `parrilla.json` y no había ninguna rama `claude/
 que la semana no estaba hecha y he trabajado como si fuera jueves (la planificación del 19/11 dejó un solo Short,
 `MDS-072`, para el sábado 21).
 
-**Resultado: cuatro Shorts nuevos, del domingo 22 al miércoles 25.** Trece temas con tres lectores por vuelta
-(31 vueltas, 93 lecturas más 3 de comprobación); pasan cuatro. **Del jueves 26 al domingo 29 sigue sin Short.**
+**Resultado: cinco Shorts nuevos, del domingo 22 al jueves 26**, en dos entregas la misma noche (cuatro en la primera,
+`MDS-077` en la segunda; ver el anexo al final). Dieciséis temas con tres lectores por vuelta (38 vueltas, 114
+lecturas más 3 de comprobación); pasan cinco. **Del viernes 27 al domingo 29 sigue sin Short.**
 
 ```
 $ git log --oneline -5 origin/main
@@ -168,11 +169,11 @@ y dos salidas), esta bitácora y `08_comunicacion/2026-11/2026-11-20-planificaci
 
 ## Para el codirector
 
-1. **Del jueves 26 al domingo 29 no hay Short.** Cuatro aprobados de trece. **El reintento del sábado (22:07 UTC del
+1. **Del viernes 27 al domingo 29 no hay Short.** Cinco aprobados de dieciséis. **El reintento del sábado (22:07 UTC del
    21) no los va a intentar:** el paso 0 mira solo el lunes siguiente, el 23, que ahora tiene emisión, así que
-   terminará sin tocar nada. Si la dirección quiere que alguien intente el 26-28, hace falta decirlo en
+   terminará sin tocar nada. Si la dirección quiere que alguien intente el 27-28, hace falta decirlo en
    `08_comunicacion/` o cambiar el paso 0 para que mire el primer hueco vacío (ver «Sugerencias»).
-2. **B2 cierra el 28/11 con las posiciones 22-24 vacías.** Con lo escrito hoy: A n = 4-5, D n = 2, AD n = 1-2,
+2. **B2 cierra el 28/11 con las posiciones 23 y 24 vacías.** Con lo escrito hoy: A n = 4-5, D n = 2, AD n = 2-3,
    control n = 3. Ningún factor llegará a n = 6 por lado. El 29/11 no tiene ciclo.
 3. **Cinco fichas sin texto completo accesible** (`I25`, `F26`, `D15`, `H01`, `I21`): cuatro de ellas tienen temas
    que los lectores entienden y en los que se quedan; caen por no poder contar el método. Si alguien deja los PDF en
@@ -199,7 +200,32 @@ y dos salidas), esta bitácora y `08_comunicacion/2026-11/2026-11-20-planificaci
 
 ## Lo que falta
 
-- **Cuatro días vacíos** (26 a 29/11). **Banco vacío.**
-- **Familia `mensajes`: dos** (`MDS-074`, `MDS-076`); la regla pide dos por semana: cumplida para la del 23.
+- **Tres días vacíos** (27 a 29/11). **Banco vacío.**
+- **Familia `mensajes`: tres** (`MDS-074`, `MDS-076`, `MDS-077`); la regla pide dos por semana: cumplida para la del 23.
 - **Tanteo de cosquillas: ninguno** (cayó `E23`).
 - El largo `MDH-008` no lo he tocado (es de la dirección).
+
+---
+
+## Anexo · segunda entrega de la noche (22:50 UTC, 23:50 de España)
+
+La primera entrega (commit `db5cc38`, rama `claude/entrega-planificacion-20261120-2245`) llegó a `main` como
+`98656dd` en un par de minutos. Como quedaba margen, he seguido con los huecos del 26 al 28:
+
+| Tema (ficha) | Vueltas | Resultado |
+|---|---|---|
+| **¿Por qué sienta tan mal que saquen el móvil? (`I20`)** · *mensajes* | 2 | **pasa → `MDS-077`, jueves 26, AD** |
+| ¿Por qué te dan ganas de apretar a un cachorro? (`E15`) | 3 | cae (el resultado de tres cosas en una frase; el límite) |
+| ¿El móvil en la mesa estropea la charla? (`I18`) · *mensajes* | 3 | cae (la escena del café no es lo que se midió) |
+
+- **`MDS-077`** · tesis: «cuando la persona con la que hablas saca el móvil, te sientes más excluido y menos cerca,
+  sea cual sea la razón; con una razón importante, algo menos». Lector: «Si alguien saca el móvil mientras le hablas,
+  te sientes excluido y menos cercano, aunque un poco menos si da una buena excusa». Fuente `I20` (solo resumen; la
+  situación del Short es la del estudio: el compañero que saca el móvil a los dos minutos). Cierre «Eso sí, si el
+  actor decía…»: no repite arranque con ningún otro de la semana del 23 al 29.
+- Confirma la sugerencia `H-estimulo-literal`: los dos que se cayeron hasta el final (`E15`, `I18`) contaban una
+  situación distinta de la medida; el que pasó contaba la misma.
+- Tocado en esta segunda entrega: `guiones/MDS-077.es.json`, `publicaciones/MDS-077.es.json`, `parrilla.json` (una
+  emisión y la nota `_cambio_20_noviembre_reintento`), `CALENDARIO.md`, `temas_en_reserva.md` (las líneas de `E15` e
+  `I18`), esta bitácora y mi nota de `08_comunicacion/`.
+- Me paro aquí: el viernes 27 (control, seis escenas) y el sábado 28 (D, cinco) quedan vacíos.

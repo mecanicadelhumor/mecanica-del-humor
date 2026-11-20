@@ -825,6 +825,16 @@
    "modo": "automatico",
    "hora": "19:00",
    "nota": "Miércoles. B2, posición 21: brazo A (escenas 4 y 5 con animar). Serie «El experimento»: «Ya estaría hecho, si hicieras tu parte», con un emoji (la conversación del propio estudio). Pregunta: «¿un reproche con emoji suena menos borde?». Familia mensajes. Fuente I28 (Cavalheiro y otros, 2024), nunca central; método leído en el texto completo (repositorio del ISCTE). Lectura en frío: pasa a la primera vuelta y en una comprobación tras cambiar el arranque del cierre."
+  },
+  {
+   "fecha": "2026-11-26",
+   "episodio": "MDS-077",
+   "idiomas": [
+    "es"
+   ],
+   "modo": "automatico",
+   "hora": "19:00",
+   "nota": "Jueves. B2, posición 22: brazo AD (cinco escenas, 45 s como mucho; escenas 3 y 4 con animar). Serie «El experimento»: le cuentas a un amigo tu entrevista y a los dos minutos saca el móvil. Pregunta: «¿por qué sienta tan mal que saquen el móvil?». Familia mensajes. Fuente I20 (McDaniel y Wesselmann, 2021), nunca central; solo resumen. Lectura en frío: pasa a la segunda vuelta. Escrito tras la primera entrega de la noche del 20/11."
   }
  ],
  "_archivadas": {
@@ -872,5 +882,5 @@
  "_cambio_05_noviembre_noche": "Planificación del 05/11/2026 (semana del 9 al 15/11, B2 posiciones 5-11). Tres lectores por vuelta y decide la mayoría (versión 28). Se intentaron catorce temas en 108 lecturas; pasan tres: MDS-064 (miércoles 11, A), MDS-065 (jueves 12, control) y MDS-066 (viernes 13, control). Lunes 9 (D), martes 10 (AD), sábado 14 (D) y domingo 15 (AD) se quedan sin Short: sus posiciones quedan vacías (ciclos.json, «_orden»). Ningún aprobado sobra, así que el banco está vacío. Los once temas que no pasaron, a temas_en_reserva.md. Detalle en bitacora/2026-11/2026-11-05-planificacion.md.",
  "_cambio_12_noviembre_noche": "Planificación del 12/11/2026 (semana del 16 al 22/11, B2 posiciones 12-18). Tres lectores por vuelta y decide la mayoría. Se intentaron catorce temas (más dos versiones cortas) en 42 vueltas de tres lectores; pasan cuatro: MDS-068 (lunes 16, A), MDS-069 (martes 17, AD), MDS-070 (miércoles 18, control) y MDS-071 (viernes 20, A). Jueves 19 (D), sábado 21 (control) y domingo 22 (A) se quedan sin Short y sus posiciones quedan vacías (ciclos.json, «_orden»); el domingo 15 (posición 11) sigue vacío. Ningún aprobado sobra: banco vacío. Los temas que no pasaron, a temas_en_reserva.md. Ninguna emisión lleva rehacer_video_id (C54). Detalle en bitacora/2026-11/2026-11-12-planificacion.md.",
  "_cambio_19_noviembre_noche": "Planificación del 19/11: una sola emisión nueva, MDS-072 el sábado 21/11 (posición 17 de B2, control). Diecisiete temas intentados con tres lectores por vuelta (unas 190 lecturas); pasa uno. Quedan sin Short el domingo 22 y toda la semana del 23 al 29/11 (posiciones 18-24 de B2 vacías; el 29/11 ya cae fuera de B2). El banco sigue vacío. Detalle en bitacora/2026-11/2026-11-19-planificacion.md.",
- "_cambio_20_noviembre_reintento": "Reintento del viernes 20/11 (el lunes 23 estaba vacío, así que el paso 0 no paró): cuatro emisiones nuevas, MDS-075 (domingo 22, posición 18, A), MDS-073 (lunes 23, posición 19, D), MDS-074 (martes 24, posición 20, AD) y MDS-076 (miércoles 25, posición 21, A). Trece temas con tres lectores por vuelta; pasan cuatro. Quedan sin Short del jueves 26 al domingo 29 (posiciones 22-24 y el 29 fuera de B2). Banco vacío. Detalle en bitacora/2026-11/2026-11-20-planificacion.md."
+ "_cambio_20_noviembre_reintento": "Reintento del viernes 20/11 (el lunes 23 estaba vacío, así que el paso 0 no paró): cinco emisiones nuevas, MDS-075 (domingo 22, posición 18, A), MDS-073 (lunes 23, posición 19, D), MDS-074 (martes 24, posición 20, AD), MDS-076 (miércoles 25, posición 21, A) y, en una segunda entrega la misma noche, MDS-077 (jueves 26, posición 22, AD). Dieciséis temas con tres lectores por vuelta; pasan cinco. Quedan sin Short el viernes 27, el sábado 28 (posiciones 23-24) y el domingo 29 (fuera de B2). Banco vacío. Detalle en bitacora/2026-11/2026-11-20-planificacion.md."
 }
