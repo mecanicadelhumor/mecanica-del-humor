@@ -1,0 +1,311 @@
+{
+  "guion": "MDS-073",
+  "version": 2,
+  "firma": "7ebd3c5d66da27e7",
+  "resuelto_utc": "2026-11-20T22:46:48Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.1.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "0dd90080c2b4",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.93
+          ],
+          "frase": "Un silencio largo solo incomoda entre desconocidos.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "two strangers standing in an elevator in awkward silence, looking up at the floor numbers",
+          "semilla": 11579922,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-073/e1_p1.jpg",
+          "caras": [
+            [
+              0.3138,
+              0.3574,
+              0.0781,
+              0.0581
+            ],
+            [
+              0.6224,
+              0.35,
+              0.0716,
+              0.0551
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "ecc62a882115",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.38
+          ],
+          "frase": "En el coche con tu mejor amigo, en cambio, pasáis diez minutos callados tan a gusto.",
+          "fuente": "pixabay",
+          "id": 536,
+          "pagina": "https://pixabay.com/videos/id-536/",
+          "titulo": "driving, car, road trip, audi, automobile, travel, vacation, road, street, traffic, luxury, couple, love, trip, excursion, 114063706 id",
+          "autor": "Vimeo-Free-Videos",
+          "autor_url": "https://pixabay.com/users/Vimeo-Free-Videos-1283884/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 20.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2015/08/23/536-137078182_large.mp4",
+          "tipo": "video",
+          "consulta": "friends road trip car quiet",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 15.68,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "74910ac1c7ae",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.77
+          ],
+          "frase": "En un experimento grabaron charlas entre desconocidos y entre amigos.",
+          "fuente": "pixabay",
+          "id": 8252,
+          "pagina": "https://pixabay.com/videos/id-8252/",
+          "titulo": "discussion, desk, people, office, team, meeting, business, businessman, brainstorming, group, table, workplace, worker, corporate, creative, discussing, communication, teamwork, talking id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 18.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2017/03/08/8252-207598592_large.mp4",
+          "tipo": "video",
+          "consulta": "two people talking at cafe table",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 0.64,
+          "encuadre": {
+            "x": 0.75,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.7054,
+              0.4472,
+              0.1236,
+              0.1056
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Luego, cada uno",
+          "t_estimado": [
+            5.77,
+            11.1
+          ],
+          "frase": "Luego, cada uno marcó en su vídeo lo unido que se sintió.",
+          "fuente": "pexels",
+          "id": 4828603,
+          "pagina": "https://www.pexels.com/video/two-persons-sitting-by-the-table-while-drinking-their-coffee-4828603/",
+          "titulo": "two persons sitting by the table while drinking their coffee",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 28.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/4828603/4828603-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "two people sitting quietly at table",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 7.21,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "98580d9c6165",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.37
+          ],
+          "frase": "En los silencios largos, los desconocidos se sentían menos unidos.",
+          "fuente": "pixabay",
+          "id": 114,
+          "pagina": "https://pixabay.com/videos/id-114/",
+          "titulo": "bench, park, people, rest, pause, break, green, city, town, skyline, san francisco, usa, summer, sun, heat id",
+          "autor": "Coverr-Free-Footage",
+          "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 15.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2015/08/08/114-135736328_large.mp4",
+          "tipo": "video",
+          "consulta": "two people uncomfortable pause",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 0.53,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Los amigos, al revés",
+          "t_estimado": [
+            5.37,
+            10.18
+          ],
+          "frase": "Los amigos, al revés: más unidos, y se reían más.",
+          "fuente": "pixabay",
+          "id": 33663,
+          "pagina": "https://pixabay.com/videos/id-33663/",
+          "titulo": "smooch, love for animals, damm wild, deer, albino, cuddle, fur, friendship, female, together, relationship, animal, love, romantic, two, fur care, white id",
+          "autor": "dianakuehn30010",
+          "autor_url": "https://pixabay.com/users/dianakuehn30010-850136/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 17.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2020/03/14/33663-398256809_large.mp4",
+          "tipo": "video",
+          "consulta": "two friends laughing together table",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 4.76,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "2705e6c91ee9",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            3.3
+          ],
+          "frase": "Callar con tu amigo es buena señal.",
+          "fuente": "pexels",
+          "id": 6954280,
+          "pagina": "https://www.pexels.com/video/friends-dancing-ang-singing-while-inside-a-car-6954280/",
+          "titulo": "friends dancing ang singing while inside a car",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 25.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6954280/6954280-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "friends in car smiling silence",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 25.63,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.3656,
+              0.2089,
+              0.3103,
+              0.2622
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "Ojo: no es",
+          "t_estimado": [
+            3.3,
+            10.85
+          ],
+          "frase": "Ojo: no es que callar os haga amigos; es que, entre amigos, callar no pesa.",
+          "fuente": "pexels",
+          "id": 6145667,
+          "pagina": "https://www.pexels.com/video/men-talking-while-studying-6145667/",
+          "titulo": "men talking while studying",
+          "autor": "Keira Burton",
+          "autor_url": "https://www.pexels.com/@keira-burton",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6145667/6145667-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "students talking at table university",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 2.21,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.1861,
+              0.4844,
+              0.1083,
+              0.0781
+            ],
+            [
+              0.5694,
+              0.4813,
+              0.1056,
+              0.0797
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

@@ -1,0 +1,294 @@
+{
+  "guion": "MDS-076",
+  "version": 2,
+  "firma": "0fc8ff9b981636f0",
+  "resuelto_utc": "2026-11-20T22:47:30Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.1.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "a79d34faeae2",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.44
+          ],
+          "frase": "Un reproche con un emoji al final suena un poco menos borde.",
+          "fuente": "pexels",
+          "id": 7026692,
+          "pagina": "https://www.pexels.com/video/a-woman-working-on-her-laptop-7026692/",
+          "titulo": "a woman working on her laptop",
+          "autor": "George Milton",
+          "autor_url": "https://www.pexels.com/@george-milton",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7026692/7026692-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "woman reading work chat laptop",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 0.99,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.3944,
+              0.2953,
+              0.1722,
+              0.1328
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "d42ba9b9e370",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.26
+          ],
+          "frase": "Tu compañera te pregunta cómo va el informe. Le dices que aún falta mucho.",
+          "fuente": "pixabay",
+          "id": 95126,
+          "pagina": "https://pixabay.com/videos/id-95126/",
+          "titulo": "office, corporate, business, attractive, businessman, business people, businesswoman, colleagues, employees, confident, laptop, working, talking, professional, partner, technology, women, men, colleagues chatting, coworkers, discussing, entrepreneurs, executives, using, team id",
+          "autor": "aframeinmotion",
+          "autor_url": "https://pixabay.com/users/aframeinmotion-24244781/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 35.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2021/11/08/95126-645704295_large.mp4",
+          "tipo": "video",
+          "consulta": "coworkers chatting laptop office",
+          "relevancia": 1.0,
+          "inicio_s": 0.4,
+          "movimiento": 0.78,
+          "encuadre": {
+            "x": 0.573,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.2016,
+              0.2,
+              0.1283,
+              0.0917
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "b912fdbdcbc1",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.0
+          ],
+          "frase": "Y te contesta: «Ya estaría hecho, si hicieras tu parte». Con un emoji.",
+          "fuente": "pixabay",
+          "id": 26771,
+          "pagina": "https://pixabay.com/videos/id-26771/",
+          "titulo": "letter, writting, pen, book, office, poem, message, hand, man id",
+          "autor": "SecretPoems",
+          "autor_url": "https://pixabay.com/users/SecretPoems-11586270/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 41.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2019/09/11/26771-359604145_large.mp4",
+          "tipo": "video",
+          "consulta": "man reading message frowning office",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 7.31,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "e70eac5abb51",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.1
+          ],
+          "frase": "En un experimento, casi cuatrocientas personas leyeron esa misma conversación:",
+          "fuente": "pexels",
+          "id": 7195465,
+          "pagina": "https://www.pexels.com/video/man-on-phone-and-woman-reading-a-book-7195465/",
+          "titulo": "man on phone and woman reading a book",
+          "autor": "SHVETS production",
+          "autor_url": "https://www.pexels.com/@shvets-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7195465/7195465-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "people reading on phones",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 10.49,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "unas con un emoji",
+          "t_estimado": [
+            6.1,
+            11.1
+          ],
+          "frase": "unas con un emoji al final del reproche, y otras sin él.",
+          "fuente": "pexels",
+          "id": 19798253,
+          "pagina": "https://www.pexels.com/video/a-2024-planner-by-a-wireless-keyboard-and-a-smartphone-19798253/",
+          "titulo": "a 2024 planner by a wireless keyboard and a smartphone",
+          "autor": "Ali  Alcántara",
+          "autor_url": "https://www.pexels.com/@alialcantara",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 6.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/19798253/19798253-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "emoji keyboard smartphone",
+          "relevancia": 0.667,
+          "inicio_s": 0.0,
+          "movimiento": 3.28,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "bb66fc9eb496",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            8.33
+          ],
+          "frase": "Con el emoji, el reproche les parecía algo menos negativo, y quien lo escribía, más cálido.",
+          "fuente": "pexels",
+          "id": 7155123,
+          "pagina": "https://www.pexels.com/video/a-woman-smiling-while-using-laptop-7155123/",
+          "titulo": "a woman smiling while using laptop",
+          "autor": "Yan Krukau",
+          "autor_url": "https://www.pexels.com/@yankrukov",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 17.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7155123/7155123-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman smiling slightly at laptop",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 2.15,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6444,
+              0.3328,
+              0.2028,
+              0.1422
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "ce173e60b86d",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.7
+          ],
+          "frase": "Pero solo un poco: con emoji o sin él, seguía sonando a reproche.",
+          "fuente": "pixabay",
+          "id": 377601,
+          "pagina": "https://pixabay.com/videos/id-377601/",
+          "titulo": "women, vietnam, feminism, friends, nature, computer, business, office, laptop, work, working, writing, man, study, technology, desk, typing, coffee, meeting id",
+          "autor": "MuhammadAhmad10",
+          "autor_url": "https://pixabay.com/users/MuhammadAhmad10-46165548/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 20.0,
+          "ancho": 2048,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2026/09/19/377601_large.mp4",
+          "tipo": "video",
+          "consulta": "man sighing at desk",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 8.07,
+          "encuadre": {
+            "x": 0.654,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.1594,
+              0.125,
+              0.682,
+              0.5306
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [
+    {
+      "escena": 6,
+      "plano": 1,
+      "id": "pixabay:42305",
+      "titulo": "man, computer, work, pc, home, mac, windows, desk, clics, house, mouse, books, table, office, modern, at work, black, busy, working, email, screen, electronic id",
+      "motivo": "quieto (movimiento 0.38)"
+    }
+  ],
+  "errores_ia": [],
+  "incompleto": false
+}

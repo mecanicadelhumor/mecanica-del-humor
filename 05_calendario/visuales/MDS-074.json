@@ -1,0 +1,309 @@
+{
+  "guion": "MDS-074",
+  "version": 2,
+  "firma": "8e0e4f7f0a48a222",
+  "resuelto_utc": "2026-11-20T22:47:00Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.1.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "0d09f60b423d",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.44
+          ],
+          "frase": "Un emoji que no pega con el mensaje lo hace más confuso.",
+          "fuente": "pexels",
+          "id": 3627321,
+          "pagina": "https://www.pexels.com/video/a-person-scrolling-photos-stored-on-a-smartphone-3627321/",
+          "titulo": "a person scrolling photos stored on a smartphone",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 13.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/3627321/3627321-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "person confused reading phone",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 13.75,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "2da908147bd5",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.87
+          ],
+          "frase": "Tu amiga te escribe: «He suspendido el carné», con una carita sonriente.",
+          "fuente": "pexels",
+          "id": 38515297,
+          "pagina": "https://www.pexels.com/video/vintage-car-drives-down-tree-lined-road-38515297/",
+          "titulo": "vintage car drives down tree lined road",
+          "autor": "Gönüldenbirkare",
+          "autor_url": "https://www.pexels.com/@gonuldenbirkare-2148244190",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/38515297/16356685_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "driving school car learner",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 19.05,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Y no sabes",
+          "t_estimado": [
+            5.87,
+            9.77
+          ],
+          "frase": "Y no sabes si consolarla o felicitarla.",
+          "fuente": "pexels",
+          "id": 7279746,
+          "pagina": "https://www.pexels.com/video/a-lonely-woman-thinking-while-holding-her-mobile-phone-7279746/",
+          "titulo": "a lonely woman thinking while holding her mobile phone",
+          "autor": "MART  PRODUCTION",
+          "autor_url": "https://www.pexels.com/@mart-production",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 25.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7279746/7279746-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "woman confused looking at phone",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 1.2,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4833,
+              0.3609,
+              0.2833,
+              0.2047
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "77a8c7d722e8",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.43
+          ],
+          "frase": "En un experimento, sesenta personas leyeron mensajes con una carita que pegaba,",
+          "fuente": "pexels",
+          "id": 8526600,
+          "pagina": "https://www.pexels.com/video/person-using-a-phone-while-a-man-is-reading-8526600/",
+          "titulo": "person using a phone while a man is reading",
+          "autor": "Ron Lach",
+          "autor_url": "https://www.pexels.com/@ron-lach",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 59.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8526600/8526600-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "people reading phones",
+          "relevancia": 1.0,
+          "inicio_s": 0.4,
+          "movimiento": 2.75,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.5178,
+              0.1067,
+              0.2806,
+              0.1922
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "con una que no pegaba",
+          "t_estimado": [
+            6.43,
+            10.18
+          ],
+          "frase": "con una que no pegaba, o sin carita.",
+          "fuente": "pexels",
+          "id": 38410502,
+          "pagina": "https://www.pexels.com/video/scrolling-social-media-on-smartphone-screen-38410502/",
+          "titulo": "scrolling social media on smartphone screen",
+          "autor": "Hamim Rony",
+          "autor_url": "https://www.pexels.com/@hamimrony",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 22.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/38410502/16310030_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "smiley emoji on phone screen",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 3.71,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4806,
+              0.3937,
+              0.0806,
+              0.0578
+            ],
+            [
+              0.4917,
+              0.5875,
+              0.075,
+              0.0547
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "1134eebb72a9",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.41
+          ],
+          "frase": "Con la carita que no pegaba, el mensaje se entendía peor que sin ninguna.",
+          "fuente": "pixabay",
+          "id": 296593,
+          "pagina": "https://pixabay.com/videos/id-296593/",
+          "titulo": "stickman, cartoon, man, character, figure, person, pointing, finger, point, hand, angry, gesture, gif, whatever, something, carefree, any, shrug, shrugging, confused, unsure, doubt, question, uncertainty, what id",
+          "autor": "DEZYNE_3D",
+          "autor_url": "https://pixabay.com/users/DEZYNE_3D-23887218/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 10.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2025/08/10/296593_large.mp4",
+          "tipo": "video",
+          "consulta": "person shrugging confused",
+          "relevancia": 1.0,
+          "inicio_s": 0.0,
+          "movimiento": 2.82,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "9d175d236878",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            4.63
+          ],
+          "frase": "Sin la carita, a tu amiga la habrías entendido mejor.",
+          "fuente": "pexels",
+          "id": 7413803,
+          "pagina": "https://www.pexels.com/video/friends-hugging-and-jumping-around-7413803/",
+          "titulo": "friends hugging and jumping around",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7413803/7413803-hd_1080_1920_24fps.mp4",
+          "tipo": "video",
+          "consulta": "friends hugging consoling",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 24.21,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "Eso sí",
+          "t_estimado": [
+            4.63,
+            10.85
+          ],
+          "frase": "Eso sí, eran mensajes inventados; con amigos de verdad no se probó.",
+          "fuente": "pixabay",
+          "id": 64289,
+          "pagina": "https://pixabay.com/videos/id-64289/",
+          "titulo": "young woman, smartphone, message, the internet, write, phone, sit, young id",
+          "autor": "Tanya50",
+          "autor_url": "https://pixabay.com/users/Tanya50-11123149/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 9.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2021/02/06/64289-509985357_large.mp4",
+          "tipo": "video",
+          "consulta": "strangers phone messages",
+          "relevancia": 0.667,
+          "inicio_s": 0.0,
+          "movimiento": 1.18,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}

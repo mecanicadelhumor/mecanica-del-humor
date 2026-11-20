@@ -1,0 +1,416 @@
+{
+  "guion": "MDS-075",
+  "version": 2,
+  "firma": "513958ac5caab191",
+  "resuelto_utc": "2026-11-20T22:47:19Z",
+  "detector_caras": "ok: YuNet, OpenCV 5.1.0",
+  "escenas": {
+    "1": {
+      "narracion_sha": "4f0224471d2c",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.44
+          ],
+          "frase": "Los equipos en los que un chiste lleva a otro rinden más.",
+          "fuente": "pexels",
+          "id": 7687960,
+          "pagina": "https://www.pexels.com/video/coworkers-having-a-meeting-7687960/",
+          "titulo": "coworkers having a meeting",
+          "autor": "Kindel Media",
+          "autor_url": "https://www.pexels.com/@kindelmedia",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 9.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7687960/7687960-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "coworkers laughing in meeting room",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 14.63,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.0583,
+              0.3203,
+              0.1806,
+              0.1547
+            ],
+            [
+              0.6111,
+              0.1766,
+              0.15,
+              0.1125
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "narracion_sha": "785090c312ea",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            6.9
+          ],
+          "frase": "En la reunión del lunes alguien suelta una broma, una compañera añade otra,",
+          "fuente": "pexels",
+          "id": 7812402,
+          "pagina": "https://www.pexels.com/video/man-presenting-at-a-meeting-7812402/",
+          "titulo": "man presenting at a meeting",
+          "autor": "Pavel Danilyuk",
+          "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 20.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7812402/7812402-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "man joking in meeting",
+          "relevancia": 0.667,
+          "inicio_s": 0.4,
+          "movimiento": 6.41,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.6083,
+              0.1094,
+              0.1444,
+              0.1109
+            ],
+            [
+              0.7028,
+              0.1375,
+              0.1306,
+              0.1016
+            ]
+          ]
+        },
+        {
+          "k": 2,
+          "desde": "y se ríe toda",
+          "t_estimado": [
+            6.9,
+            9.77
+          ],
+          "frase": "y se ríe toda la mesa.",
+          "fuente": "pexels",
+          "id": 8513135,
+          "pagina": "https://www.pexels.com/video/female-coworkers-laughing-and-talking-in-an-office-8513135/",
+          "titulo": "female coworkers laughing and talking in an office",
+          "autor": "Artem Podrez",
+          "autor_url": "https://www.pexels.com/@artempodrez",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 9.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/8513135/8513135-hd_1080_1920_30fps.mp4",
+          "tipo": "video",
+          "consulta": "coworkers laughing together office",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 9.02,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.5056,
+              0.3984,
+              0.2333,
+              0.1469
+            ],
+            [
+              0.7333,
+              0.3656,
+              0.2139,
+              0.1469
+            ],
+            [
+              0.1444,
+              0.2906,
+              0.1944,
+              0.1594
+            ]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "narracion_sha": "2d5e13b401dc",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            5.63
+          ],
+          "frase": "En un estudio grabaron cincuenta y cuatro reuniones de trabajo reales,",
+          "fuente": "pexels",
+          "id": 40454251,
+          "pagina": "https://www.pexels.com/video/cameraman-using-video-recorder-on-green-screen-40454251/",
+          "titulo": "cameraman using video recorder on green screen",
+          "autor": "Andy Edgewood",
+          "autor_url": "https://www.pexels.com/@andy-edgewood-2165101499",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 15.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/40454251/17286357_1080_1920_60fps.mp4",
+          "tipo": "video",
+          "consulta": "video camera recording meeting",
+          "relevancia": 0.75,
+          "inicio_s": 0.4,
+          "movimiento": 1.7,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": []
+        },
+        {
+          "k": 2,
+          "desde": "y anotaron",
+          "t_estimado": [
+            5.63,
+            9.26
+          ],
+          "frase": "y anotaron cada chiste y cada risa.",
+          "fuente": "pexels",
+          "id": 8539651,
+          "pagina": "https://www.pexels.com/video/a-person-taking-down-notes-8539651/",
+          "titulo": "a person taking down notes",
+          "autor": "kaboompics",
+          "autor_url": "https://www.pexels.com/@karola-g",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 26.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/8539651/8539651-hd_1080_2048_25fps.mp4",
+          "tipo": "video",
+          "consulta": "person taking notes watching video",
+          "relevancia": 0.6,
+          "inicio_s": 0.4,
+          "movimiento": 3.35,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0
+          },
+          "caras": [
+            [
+              0.0044,
+              0.01,
+              0.4735,
+              0.3581
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "narracion_sha": "ce5d616b2918",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            10.64
+          ],
+          "frase": "Donde a un chiste le seguían una risa y otro chiste, los jefes puntuaban mejor al equipo, también dos años después.",
+          "fuente": "pixabay",
+          "id": 137265,
+          "pagina": "https://pixabay.com/videos/id-137265/",
+          "titulo": "office, business, contemporary, computer, work, desk, table, technology, specialist, internet, meeting, group, professional, teamwork, brainstorming, strategy, team, laptop, communication, businessman, discussion, success, indoors, talking, executive id",
+          "autor": "blackmarketmusic",
+          "autor_url": "https://pixabay.com/users/blackmarketmusic-2976878/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 14.0,
+          "ancho": 3840,
+          "alto": 2160,
+          "url": "https://cdn.pixabay.com/video/2022/10/31/137265-766326232_large.mp4",
+          "tipo": "video",
+          "consulta": "team celebrating success office",
+          "relevancia": 0.75,
+          "inicio_s": 0.0,
+          "movimiento": 4.86,
+          "encuadre": {
+            "x": 0.386,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              -0.1823,
+              0.1944,
+              0.2544,
+              0.2667
+            ],
+            [
+              0.3067,
+              0.5917,
+              0.2396,
+              0.2181
+            ],
+            [
+              0.0029,
+              0.2319,
+              0.2272,
+              0.2208
+            ],
+            [
+              0.85,
+              0.1403,
+              0.2026,
+              0.1833
+            ]
+          ]
+        }
+      ]
+    },
+    "5": {
+      "narracion_sha": "e2cfef8019e2",
+      "texto_pos": "arriba",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            7.41
+          ],
+          "frase": "Pero si el chiste se quedaba solo, sin risa ni respuesta, no había diferencia.",
+          "fuente": "ia",
+          "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
+          "prompt": "a man telling a joke in a meeting while nobody reacts",
+          "semilla": 15171845,
+          "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
+          "ancho": 768,
+          "alto": 1360,
+          "tipo": "imagen",
+          "fichero": "05_calendario/visuales/MDS-075/e5_p1.jpg",
+          "caras": [
+            [
+              0.8828,
+              0.5985,
+              0.0781,
+              0.0757
+            ],
+            [
+              0.4766,
+              0.2904,
+              0.0742,
+              0.0603
+            ],
+            [
+              0.7865,
+              0.4963,
+              0.0664,
+              0.0515
+            ],
+            [
+              0.0924,
+              0.5059,
+              0.0651,
+              0.0522
+            ],
+            [
+              0.1979,
+              0.4853,
+              0.0638,
+              0.05
+            ],
+            [
+              0.7161,
+              0.4743,
+              0.0638,
+              0.05
+            ],
+            [
+              0.8724,
+              0.5066,
+              0.0573,
+              0.0551
+            ]
+          ]
+        }
+      ]
+    },
+    "6": {
+      "narracion_sha": "bb278115ddb1",
+      "texto_pos": "abajo",
+      "planos": [
+        {
+          "k": 1,
+          "desde": null,
+          "t_estimado": [
+            0.0,
+            9.93
+          ],
+          "frase": "Eso sí, no prueba que los chistes hagan rendir: puede que los equipos que ya van bien se rían más.",
+          "fuente": "pexels",
+          "id": 7165664,
+          "pagina": "https://www.pexels.com/video/man-and-women-are-happy-working-together-7165664/",
+          "titulo": "man and women are happy working together",
+          "autor": "Antoni Shkraba",
+          "autor_url": "https://www.pexels.com/@shkrabaanthony",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 11.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/7165664/7165664-hd_1080_1920_25fps.mp4",
+          "tipo": "video",
+          "consulta": "happy team working together",
+          "relevancia": 0.75,
+          "inicio_s": 0.0,
+          "movimiento": 4.04,
+          "encuadre": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "caras": [
+            [
+              0.4194,
+              0.2938,
+              0.0972,
+              0.0719
+            ],
+            [
+              0.1889,
+              0.4109,
+              0.0917,
+              0.0688
+            ],
+            [
+              0.7,
+              0.4453,
+              0.0917,
+              0.0656
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "descartes": [],
+  "errores_ia": [],
+  "incompleto": false
+}
