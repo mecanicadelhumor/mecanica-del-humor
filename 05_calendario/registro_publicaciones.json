@@ -1210,6 +1210,21 @@
       "subido_utc": "2026-11-18T08:49:54Z",
       "revisado": false,
       "pregunta_publicada": "2026-11-18T23:25:37Z"
+    },
+    {
+      "id": "MDS-071.es",
+      "episodio": "MDS-071",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Los perros se ríen?",
+      "guion": "05_calendario/guiones/MDS-071.es.json",
+      "video_id": "6ys0fcEufJY",
+      "url": "https://youtu.be/6ys0fcEufJY",
+      "estado": "private",
+      "publicar_en": "2026-11-20T18:00:00Z",
+      "musica": "cama_01_crying_over_you_christophermorrow.mp3",
+      "subido_utc": "2026-11-20T08:42:29Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-11-18T23:25:37Z"
