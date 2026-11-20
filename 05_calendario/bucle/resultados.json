@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-19T21:51:25Z",
+ "actualizado_utc": "2026-11-20T15:45:16Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -379,7 +379,7 @@
        "porcentaje_visto": 27.8,
        "me_gusta": 1,
        "visualizaciones": 34,
-       "leido": "2026-11-19"
+       "leido": "2026-11-20"
       }
      ]
     },
@@ -400,7 +400,7 @@
        "porcentaje_visto": 40.5,
        "me_gusta": 1,
        "visualizaciones": 375,
-       "leido": "2026-11-19"
+       "leido": "2026-11-20"
       },
       {
        "id": "MDS-064",
@@ -410,7 +410,7 @@
        "porcentaje_visto": 78.5,
        "me_gusta": 0,
        "visualizaciones": 21,
-       "leido": "2026-11-19"
+       "leido": "2026-11-20"
       }
      ]
     },
@@ -566,7 +566,12 @@
     {
      "id": "MDS-071",
      "variante": "A",
-     "motivo": "sin ficha de producción todavía"
+     "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-072",
+     "variante": "control",
+     "motivo": "sin «se quedaron» a 48 h todavía"
     }
    ]
   }
@@ -607,6 +612,9 @@
   },
   "MDS-069": {
    "animacion.escenas_animadas": 1
+  },
+  "MDS-071": {
+   "animacion.escenas_animadas": 2
   }
  }
 }
