@@ -1,8 +1,8 @@
 {
   "guion": "MDS-073",
   "version": 2,
-  "firma": "7ebd3c5d66da27e7",
-  "resuelto_utc": "2026-11-20T22:46:48Z",
+  "firma": "19c41b16c4ad7eef",
+  "resuelto_utc": "2026-11-21T10:35:37Z",
   "detector_caras": "ok: YuNet, OpenCV 5.1.0",
   "escenas": {
     "1": {
@@ -28,16 +28,16 @@
           "fichero": "05_calendario/visuales/MDS-073/e1_p1.jpg",
           "caras": [
             [
-              0.3138,
-              0.3574,
-              0.0781,
-              0.0581
+              0.6237,
+              0.3044,
+              0.1107,
+              0.0846
             ],
             [
-              0.6224,
-              0.35,
-              0.0716,
-              0.0551
+              0.2253,
+              0.3419,
+              0.0964,
+              0.0846
             ]
           ]
         }
@@ -55,27 +55,40 @@
             8.38
           ],
           "frase": "En el coche con tu mejor amigo, en cambio, pasáis diez minutos callados tan a gusto.",
-          "fuente": "pixabay",
-          "id": 536,
-          "pagina": "https://pixabay.com/videos/id-536/",
-          "titulo": "driving, car, road trip, audi, automobile, travel, vacation, road, street, traffic, luxury, couple, love, trip, excursion, 114063706 id",
-          "autor": "Vimeo-Free-Videos",
-          "autor_url": "https://pixabay.com/users/Vimeo-Free-Videos-1283884/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 20.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2015/08/23/536-137078182_large.mp4",
+          "fuente": "pexels",
+          "id": 6954279,
+          "pagina": "https://www.pexels.com/video/friends-blogging-inside-a-car-6954279/",
+          "titulo": "friends blogging inside a car",
+          "autor": "cottonbro studio",
+          "autor_url": "https://www.pexels.com/@cottonbro",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 10.0,
+          "ancho": 1080,
+          "alto": 2048,
+          "url": "https://videos.pexels.com/video-files/6954279/6954279-hd_1080_2048_25fps.mp4",
           "tipo": "video",
-          "consulta": "friends road trip car quiet",
-          "relevancia": 0.6,
-          "inicio_s": 0.4,
-          "movimiento": 15.68,
+          "consulta": "two friends sitting in a car in silence",
+          "relevancia": 0.5,
+          "inicio_s": 0.0,
+          "movimiento": 16.93,
           "encuadre": {
             "x": 0.5,
-            "y": 0.5
+            "y": 0.218
           },
-          "caras": []
+          "caras": [
+            [
+              0.581,
+              0.2966,
+              0.2866,
+              0.2244
+            ],
+            [
+              0.164,
+              0.3699,
+              0.1976,
+              0.1489
+            ]
+          ]
         }
       ]
     },
@@ -195,26 +208,39 @@
           ],
           "frase": "Los amigos, al revés: más unidos, y se reían más.",
           "fuente": "pixabay",
-          "id": 33663,
-          "pagina": "https://pixabay.com/videos/id-33663/",
-          "titulo": "smooch, love for animals, damm wild, deer, albino, cuddle, fur, friendship, female, together, relationship, animal, love, romantic, two, fur care, white id",
-          "autor": "dianakuehn30010",
-          "autor_url": "https://pixabay.com/users/dianakuehn30010-850136/",
+          "id": 74540,
+          "pagina": "https://pixabay.com/videos/id-74540/",
+          "titulo": "children, kids, boys, friends, happy, happiness, brother, together, young, water, childhood, portrait, joy, fun, nature, outdoors id",
+          "autor": "FnBTV",
+          "autor_url": "https://pixabay.com/users/FnBTV-14057698/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 17.0,
+          "duracion_s": 18.0,
           "ancho": 1920,
           "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2020/03/14/33663-398256809_large.mp4",
+          "url": "https://cdn.pixabay.com/video/2021/05/19/74540-552602429_large.mp4",
           "tipo": "video",
-          "consulta": "two friends laughing together table",
-          "relevancia": 0.5,
+          "consulta": "two friends laughing together outdoors",
+          "relevancia": 0.75,
           "inicio_s": 0.4,
-          "movimiento": 4.76,
+          "movimiento": 7.21,
           "encuadre": {
-            "x": 0.5,
+            "x": 0.492,
             "y": 0.5
           },
-          "caras": []
+          "caras": [
+            [
+              -0.1395,
+              0.3,
+              0.2816,
+              0.2111
+            ],
+            [
+              0.9519,
+              0.2972,
+              0.232,
+              0.225
+            ]
+          ]
         }
       ]
     },

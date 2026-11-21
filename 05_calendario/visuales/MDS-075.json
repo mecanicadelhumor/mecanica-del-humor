@@ -1,8 +1,8 @@
 {
   "guion": "MDS-075",
   "version": 2,
-  "firma": "513958ac5caab191",
-  "resuelto_utc": "2026-11-20T22:47:19Z",
+  "firma": "5d540f70f9dffb19",
+  "resuelto_utc": "2026-11-21T10:35:55Z",
   "detector_caras": "ok: YuNet, OpenCV 5.1.0",
   "escenas": {
     "1": {
@@ -55,7 +55,7 @@
       ]
     },
     "2": {
-      "narracion_sha": "785090c312ea",
+      "narracion_sha": "09634b83f7e7",
       "texto_pos": "abajo",
       "planos": [
         {
@@ -63,9 +63,9 @@
           "desde": null,
           "t_estimado": [
             0.0,
-            6.9
+            4.77
           ],
-          "frase": "En la reunión del lunes alguien suelta una broma, una compañera añade otra,",
+          "frase": "En la reunión del lunes alguien suelta una broma",
           "fuente": "pexels",
           "id": 7812402,
           "pagina": "https://www.pexels.com/video/man-presenting-at-a-meeting-7812402/",
@@ -105,8 +105,8 @@
           "k": 2,
           "desde": "y se ríe toda",
           "t_estimado": [
-            6.9,
-            9.77
+            4.77,
+            7.92
           ],
           "frase": "y se ríe toda la mesa.",
           "fuente": "pexels",
@@ -164,22 +164,22 @@
             5.63
           ],
           "frase": "En un estudio grabaron cincuenta y cuatro reuniones de trabajo reales,",
-          "fuente": "pexels",
-          "id": 40454251,
-          "pagina": "https://www.pexels.com/video/cameraman-using-video-recorder-on-green-screen-40454251/",
-          "titulo": "cameraman using video recorder on green screen",
-          "autor": "Andy Edgewood",
-          "autor_url": "https://www.pexels.com/@andy-edgewood-2165101499",
-          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 15.0,
-          "ancho": 1080,
-          "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/40454251/17286357_1080_1920_60fps.mp4",
+          "fuente": "pixabay",
+          "id": 3132,
+          "pagina": "https://pixabay.com/videos/id-3132/",
+          "titulo": "work space, meeting, startup, notebook, laptops, teamwork, office, corporate, communication, people, computer, internet, businessman, professional, group, coworking, network, brainstorming, conference, discussion, table, seminar id",
+          "autor": "Life-Of-Vids",
+          "autor_url": "https://pixabay.com/users/Life-Of-Vids-1282862/",
+          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+          "duracion_s": 33.0,
+          "ancho": 1920,
+          "alto": 1080,
+          "url": "https://cdn.pixabay.com/video/2016/05/12/3132-166335897_large.mp4",
           "tipo": "video",
-          "consulta": "video camera recording meeting",
-          "relevancia": 0.75,
+          "consulta": "colleagues in office meeting with notes on table",
+          "relevancia": 0.8,
           "inicio_s": 0.4,
-          "movimiento": 1.7,
+          "movimiento": 2.48,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
@@ -226,7 +226,7 @@
       ]
     },
     "4": {
-      "narracion_sha": "ce5d616b2918",
+      "narracion_sha": "078c729cabcc",
       "texto_pos": "abajo",
       "planos": [
         {
@@ -234,70 +234,88 @@
           "desde": null,
           "t_estimado": [
             0.0,
-            10.64
+            11.1
           ],
-          "frase": "Donde a un chiste le seguían una risa y otro chiste, los jefes puntuaban mejor al equipo, también dos años después.",
-          "fuente": "pixabay",
-          "id": 137265,
-          "pagina": "https://pixabay.com/videos/id-137265/",
-          "titulo": "office, business, contemporary, computer, work, desk, table, technology, specialist, internet, meeting, group, professional, teamwork, brainstorming, strategy, team, laptop, communication, businessman, discussion, success, indoors, talking, executive id",
-          "autor": "blackmarketmusic",
-          "autor_url": "https://pixabay.com/users/blackmarketmusic-2976878/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 14.0,
-          "ancho": 3840,
-          "alto": 2160,
-          "url": "https://cdn.pixabay.com/video/2022/10/31/137265-766326232_large.mp4",
+          "frase": "Donde a un chiste le seguían una risa y otro chiste, los jefes puntuaban mejor su rendimiento, y dos años después, también.",
+          "fuente": "pexels",
+          "id": 6519497,
+          "pagina": "https://www.pexels.com/video/people-getting-together-for-christmas-celebration-6519497/",
+          "titulo": "people getting together for christmas celebration",
+          "autor": "RDNE Stock project",
+          "autor_url": "https://www.pexels.com/@rdne",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 17.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6519497/6519497-hd_1080_1920_24fps.mp4",
           "tipo": "video",
-          "consulta": "team celebrating success office",
-          "relevancia": 0.75,
-          "inicio_s": 0.0,
-          "movimiento": 4.86,
+          "consulta": "team celebrating together in office",
+          "relevancia": 0.5,
+          "inicio_s": 0.4,
+          "movimiento": 25.29,
           "encuadre": {
-            "x": 0.386,
+            "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              -0.1823,
-              0.1944,
-              0.2544,
-              0.2667
+              0.8417,
+              0.2734,
+              0.1333,
+              0.15
             ],
             [
-              0.3067,
-              0.5917,
-              0.2396,
-              0.2181
+              0.7389,
+              0.3125,
+              0.1028,
+              0.1187
             ],
             [
-              0.0029,
-              0.2319,
-              0.2272,
-              0.2208
+              0.4472,
+              0.2859,
+              0.1028,
+              0.0828
             ],
             [
-              0.85,
-              0.1403,
-              0.2026,
-              0.1833
+              0.0306,
+              0.3172,
+              0.0861,
+              0.0609
+            ],
+            [
+              0.3917,
+              0.3047,
+              0.0833,
+              0.0578
+            ],
+            [
+              0.3306,
+              0.3688,
+              0.0639,
+              0.0547
+            ],
+            [
+              0.2556,
+              0.3234,
+              0.0556,
+              0.0422
             ]
           ]
         }
       ]
     },
     "5": {
-      "narracion_sha": "e2cfef8019e2",
-      "texto_pos": "arriba",
+      "narracion_sha": "d38634ed9fd7",
+      "texto_pos": "abajo",
       "planos": [
         {
           "k": 1,
           "desde": null,
           "t_estimado": [
             0.0,
-            7.41
+            7.87
           ],
-          "frase": "Pero si el chiste se quedaba solo, sin risa ni respuesta, no había diferencia.",
+          "frase": "Pero si el chiste se quedaba solo, sin risa ni respuesta, la puntuación no subía.",
           "fuente": "ia",
           "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
           "prompt": "a man telling a joke in a meeting while nobody reacts",
@@ -309,46 +327,28 @@
           "fichero": "05_calendario/visuales/MDS-075/e5_p1.jpg",
           "caras": [
             [
-              0.8828,
-              0.5985,
-              0.0781,
+              0.8294,
+              0.5787,
+              0.1159,
+              0.1044
+            ],
+            [
+              0.4831,
+              0.3971,
+              0.1016,
+              0.0926
+            ],
+            [
+              0.2018,
+              0.4037,
+              0.0977,
               0.0757
             ],
             [
-              0.4766,
-              0.2904,
-              0.0742,
-              0.0603
-            ],
-            [
-              0.7865,
-              0.4963,
-              0.0664,
-              0.0515
-            ],
-            [
-              0.0924,
-              0.5059,
-              0.0651,
-              0.0522
-            ],
-            [
-              0.1979,
-              0.4853,
-              0.0638,
-              0.05
-            ],
-            [
-              0.7161,
-              0.4743,
-              0.0638,
-              0.05
-            ],
-            [
-              0.8724,
-              0.5066,
-              0.0573,
-              0.0551
+              0.8763,
+              0.4647,
+              0.082,
+              0.0809
             ]
           ]
         }
