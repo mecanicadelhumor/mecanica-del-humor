@@ -1236,12 +1236,13 @@
       "guion": "05_calendario/guiones/MDS-072.es.json",
       "video_id": "Z0P1tNyCLc0",
       "url": "https://youtu.be/Z0P1tNyCLc0",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-11-21T18:00:00Z",
       "musica": "cama_02_dusk_next_route.mp3",
       "subido_utc": "2026-11-21T08:23:38Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-11-21T22:13:34Z"
     }
   ],
-  "_estado_leido_utc": "2026-11-20T23:10:39Z"
+  "_estado_leido_utc": "2026-11-21T22:13:34Z"
 }
