@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-21T14:55:58Z",
+ "actualizado_utc": "2026-11-21T20:16:15Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -365,10 +365,10 @@
     "control": {
      "nombre": "B (arranque con el dato), duración normal, sin animación",
      "n": 2,
-     "se_quedaron_media": 21.5,
-     "porcentaje_visto_media": 53.9,
-     "vistas_48h_mediana": 28.0,
-     "me_gusta_por_100": 1.59,
+     "se_quedaron_media": 19.7,
+     "porcentaje_visto_media": 55.0,
+     "vistas_48h_mediana": 46.5,
+     "me_gusta_por_100": 1.0,
      "ceros_de_feed": 2,
      "shorts": [
       {
@@ -384,11 +384,11 @@
       {
        "id": "MDS-070",
        "publicado": "2026-11-18",
-       "se_quedaron_pct": 14.3,
-       "vistas_48h": 28,
-       "porcentaje_visto": 76.5,
+       "se_quedaron_pct": 10.8,
+       "vistas_48h": 65,
+       "porcentaje_visto": 78.7,
        "me_gusta": 0,
-       "visualizaciones": 28,
+       "visualizaciones": 65,
        "leido": "2026-11-21"
       }
      ]
@@ -489,10 +489,10 @@
      },
      "no": {
       "n": 3,
-      "se_quedaron_media": 22.9,
-      "porcentaje_visto_media": 57.4,
+      "se_quedaron_media": 21.8,
+      "porcentaje_visto_media": 58.2,
       "vistas_48h_mediana": 28,
-      "me_gusta_por_100": 1.09,
+      "me_gusta_por_100": 0.78,
       "ceros_de_feed": 3
      },
      "diferencia_pp": null,
@@ -511,10 +511,10 @@
      },
      "no": {
       "n": 4,
-      "se_quedaron_media": 20.3,
-      "porcentaje_visto_media": 51.8,
-      "vistas_48h_mediana": 28.0,
-      "me_gusta_por_100": 0.42,
+      "se_quedaron_media": 19.4,
+      "porcentaje_visto_media": 52.3,
+      "vistas_48h_mediana": 46.5,
+      "me_gusta_por_100": 0.39,
       "ceros_de_feed": 3
      },
      "diferencia_pp": null,
