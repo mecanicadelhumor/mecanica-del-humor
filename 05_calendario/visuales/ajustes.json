@@ -803,5 +803,45 @@
         "happy dog with open mouth playing"
       ]
     }
+  },
+  "MDS-075": {
+    "3.1": {
+      "excluir": [
+        "pexels:40454251"
+      ],
+      "busqueda": [
+        "colleagues in office meeting with notes on table",
+        "team meeting laughing around a table"
+      ]
+    },
+    "4.1": {
+      "excluir": [
+        "pixabay:137265"
+      ],
+      "busqueda": [
+        "manager and team smiling in a meeting room",
+        "team celebrating together in office"
+      ]
+    }
+  },
+  "MDS-073": {
+    "2.1": {
+      "excluir": [
+        "pixabay:536"
+      ],
+      "busqueda": [
+        "two friends sitting in a car in silence",
+        "friends driving together relaxed"
+      ]
+    },
+    "4.2": {
+      "excluir": [
+        "pixabay:33663"
+      ],
+      "busqueda": [
+        "two friends laughing together outdoors",
+        "friends laughing on a bench"
+      ]
+    }
   }
 }
