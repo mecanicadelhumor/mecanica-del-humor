@@ -1226,6 +1226,21 @@
       "subido_utc": "2026-11-20T08:42:29Z",
       "revisado": false,
       "pregunta_publicada": "2026-11-20T23:10:39Z"
+    },
+    {
+      "id": "MDS-072.es",
+      "episodio": "MDS-072",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Te pones más rojo al verte cantar a ti?",
+      "guion": "05_calendario/guiones/MDS-072.es.json",
+      "video_id": "Z0P1tNyCLc0",
+      "url": "https://youtu.be/Z0P1tNyCLc0",
+      "estado": "private",
+      "publicar_en": "2026-11-21T18:00:00Z",
+      "musica": "cama_02_dusk_next_route.mp3",
+      "subido_utc": "2026-11-21T08:23:38Z",
+      "revisado": false
     }
   ],
   "_estado_leido_utc": "2026-11-20T23:10:39Z"

@@ -1,15 +1,15 @@
 {
-  "id": "MDS-066.es",
-  "duracion_final_s": 40.3,
-  "tamano_mb": 23.5,
+  "id": "MDS-072.es",
+  "duracion_final_s": 40.5,
+  "tamano_mb": 26.1,
   "audio": {
-    "lufs": -14.63,
-    "pico_dbtp": -1.39,
-    "rango_lu": 4.1
+    "lufs": -14.88,
+    "pico_dbtp": -1.28,
+    "rango_lu": 7.0
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.128,
+    "acaba_s": 0.129,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,11 +17,7 @@
     "silencios_s": [
       [
         0.0,
-        0.128
-      ],
-      [
-        1.62,
-        2.042
+        0.129
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -46,54 +42,59 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 39.18,
-    "duracion_real_voz_mp3_s": 39.18,
+    "duracion_calculada_s": 39.38,
+    "duracion_real_voz_mp3_s": 39.38,
     "desfase_s": 0.0,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_10_farewell_galaxytones.mp3",
-    "sha256": "69dcf8f36cf5cd76332baaa29681a990c569856a97b4c0334e86a27e906c01dc"
+    "archivo": "cama_02_dusk_next_route.mp3",
+    "sha256": "3f93cfef7318ae5e93a365a3fe16282de13c279e2733dd7c18fcfbe38f530c74"
   },
   "guion": {
-    "titulo_trabajo": "¿Por qué se te pega la risa de otro?",
+    "titulo_trabajo": "¿Te pones más rojo al verte cantar a ti?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 39.18,
+    "duracion_narracion_s": 39.38,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 8.726,
+    "escena_mas_larga_s": 10.32,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
-      "gemini-3.1-flash-tts-preview": 6
+      "gemini-3.8-flash-tts": 6
     },
-    "modelo_voz": "gemini-3.1-flash-tts-preview",
+    "modelo_voz": "gemini-3.8-flash-tts",
     "voz_mezclada": false,
     "origen_voz": [
-      "una toma (C36)",
-      "una toma (C36)",
-      "una toma (C36)",
-      "una toma (C36)",
-      "una toma (C36)",
-      "una toma (C36)"
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada"
     ],
     "direccion_voz": [
       "apertura",
       "planteamiento",
       "remate",
-      "enumeracion",
-      "cifra",
+      "planteamiento",
+      "planteamiento",
       "objecion"
     ],
-    "escenas_ritmo_fuera_de_rango": [],
+    "escenas_ritmo_fuera_de_rango": [
+      [
+        3,
+        1.42
+      ]
+    ],
     "voz_fiel": [
       "13/12 palabras, 0 trozos repetidos",
-      "15/15 palabras, 0 trozos repetidos",
-      "13/13 palabras, 0 trozos repetidos",
-      "18/18 palabras, 0 trozos repetidos",
-      "22/21 palabras, 0 trozos repetidos",
-      "22/19 palabras, 0 trozos repetidos"
+      "19/18 palabras, 0 trozos repetidos",
+      "6/6 palabras, 0 trozos repetidos",
+      "24/24 palabras, 0 trozos repetidos",
+      "9/9 palabras, 0 trozos repetidos",
+      "22/24 palabras, 0 trozos repetidos"
     ]
   },
   "visual": {
@@ -102,101 +103,81 @@
         "escena": 1,
         "desde_s": 0.0,
         "hasta_s": 4.5,
-        "fuente": "ia",
-        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "a man on a city bus laughing out loud at his phone, other passengers around",
-        "tipo": "imagen"
-      },
-      {
-        "escena": 2,
-        "desde_s": 4.5,
-        "hasta_s": 8.47,
         "fuente": "pexels",
-        "id": 7251030,
-        "pagina": "https://www.pexels.com/video/man-sitting-at-bus-stop-7251030/",
-        "autor": "MART  PRODUCTION",
-        "autor_url": "https://www.pexels.com/@mart-production",
+        "id": 9463674,
+        "pagina": "https://www.pexels.com/video/people-covering-the-face-of-a-woman-9463674/",
+        "autor": "Ron Lach",
+        "autor_url": "https://www.pexels.com/@ron-lach",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 8.47,
-        "hasta_s": 10.53,
+        "desde_s": 4.5,
+        "hasta_s": 8.57,
         "fuente": "pexels",
-        "id": 6686339,
-        "pagina": "https://www.pexels.com/video/a-woman-riding-a-bus-while-listening-to-music-6686339/",
-        "autor": "cottonbro studio",
-        "autor_url": "https://www.pexels.com/@cottonbro",
+        "id": 6306038,
+        "pagina": "https://www.pexels.com/video/family-eating-christmas-dinner-6306038/",
+        "autor": "Anastasia  Shuraeva",
+        "autor_url": "https://www.pexels.com/@anastasia-shuraeva",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 8.57,
+        "hasta_s": 11.97,
+        "fuente": "pexels",
+        "id": 7940822,
+        "pagina": "https://www.pexels.com/video/a-girl-singing-while-holding-a-microphone-toy-7940822/",
+        "autor": "Nicola Barts",
+        "autor_url": "https://www.pexels.com/@nicola-barts",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 3,
-        "desde_s": 10.53,
-        "hasta_s": 15.5,
+        "desde_s": 11.97,
+        "hasta_s": 16.7,
         "fuente": "pexels",
-        "id": 6686343,
-        "pagina": "https://www.pexels.com/video/woman-listening-to-music-while-riding-a-bus-6686343/",
-        "autor": "cottonbro studio",
-        "autor_url": "https://www.pexels.com/@cottonbro",
+        "id": 5848456,
+        "pagina": "https://www.pexels.com/video/a-young-woman-talking-at-a-dinning-table-5848456/",
+        "autor": "RDNE Stock project",
+        "autor_url": "https://www.pexels.com/@rdne",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 4,
-        "desde_s": 15.5,
-        "hasta_s": 19.87,
-        "fuente": "ia",
-        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "a modern MRI scanner in a hospital room",
-        "tipo": "imagen"
+        "desde_s": 16.7,
+        "hasta_s": 20.5,
+        "fuente": "pexels",
+        "id": 7940816,
+        "pagina": "https://www.pexels.com/video/cute-girl-singing-while-looking-at-the-screen-7940816/",
+        "autor": "Nicola Barts",
+        "autor_url": "https://www.pexels.com/@nicola-barts",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
       },
       {
         "escena": 4,
-        "desde_s": 19.87,
-        "hasta_s": 22.97,
+        "desde_s": 20.5,
+        "hasta_s": 24.93,
         "fuente": "pexels",
-        "id": 8005689,
-        "pagina": "https://www.pexels.com/video/close-up-of-a-wireless-headphones-8005689/",
-        "autor": "Pavel Danilyuk",
-        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+        "id": 7940813,
+        "pagina": "https://www.pexels.com/video/a-girl-watching-on-a-tablet-7940813/",
+        "autor": "Nicola Barts",
+        "autor_url": "https://www.pexels.com/@nicola-barts",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 5,
-        "desde_s": 22.97,
-        "hasta_s": 29.23,
+        "desde_s": 24.93,
+        "hasta_s": 29.07,
         "fuente": "pexels",
-        "id": 6010753,
-        "pagina": "https://www.pexels.com/video/doctor-showing-scans-to-the-patient-6010753/",
-        "autor": "Tima Miroshnichenko",
-        "autor_url": "https://www.pexels.com/@tima-miroshnichenko",
-        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 5,
-        "desde_s": 29.23,
-        "hasta_s": 30.47,
-        "fuente": "pixabay",
-        "id": 352660,
-        "pagina": "https://pixabay.com/videos/id-352660/",
-        "autor": "flutie8211",
-        "autor_url": "https://pixabay.com/users/flutie8211-17475707/",
-        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 6,
-        "desde_s": 30.47,
-        "hasta_s": 35.93,
-        "fuente": "pexels",
-        "id": 6686353,
-        "pagina": "https://www.pexels.com/video/a-woman-riding-bus-while-listening-to-music-6686353/",
+        "id": 8751249,
+        "pagina": "https://www.pexels.com/video/a-geisha-face-looking-at-camera-8751249/",
         "autor": "cottonbro studio",
         "autor_url": "https://www.pexels.com/@cottonbro",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
@@ -204,27 +185,39 @@
       },
       {
         "escena": 6,
-        "desde_s": 35.93,
-        "hasta_s": 37.7,
+        "desde_s": 29.07,
+        "hasta_s": 31.93,
         "fuente": "pexels",
-        "id": 6998336,
-        "pagina": "https://www.pexels.com/video/a-doctor-doing-ultrasound-scan-6998336/",
-        "autor": "Pavel Danilyuk",
-        "autor_url": "https://www.pexels.com/@pavel-danilyuk",
+        "id": 5974766,
+        "pagina": "https://www.pexels.com/video/a-woman-having-a-video-call-through-the-smartphone-5974766/",
+        "autor": "KATRIN  BOLOVTSOVA",
+        "autor_url": "https://www.pexels.com/@ekaterina-bolovtsova",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 6,
+        "desde_s": 31.93,
+        "hasta_s": 37.9,
+        "fuente": "pexels",
+        "id": 12879700,
+        "pagina": "https://www.pexels.com/video/two-teenage-girls-taking-selfies-in-a-street-12879700/",
+        "autor": "Mizuno K",
+        "autor_url": "https://www.pexels.com/@mizunokozuki",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       }
     ],
-    "sintetico": true
+    "sintetico": false
   },
   "animacion": null,
   "fotogramas_s": [
     2.8,
-    8.22,
-    13.6,
-    20.07,
-    27.55,
-    35.79
+    9.08,
+    14.91,
+    21.74,
+    27.51,
+    35.35
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
