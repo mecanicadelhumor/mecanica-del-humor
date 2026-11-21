@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-20T21:33:57Z",
+ "actualizado_utc": "2026-11-21T14:55:58Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -379,7 +379,7 @@
        "porcentaje_visto": 31.3,
        "me_gusta": 1,
        "visualizaciones": 35,
-       "leido": "2026-11-20"
+       "leido": "2026-11-21"
       },
       {
        "id": "MDS-070",
@@ -389,28 +389,28 @@
        "porcentaje_visto": 76.5,
        "me_gusta": 0,
        "visualizaciones": 28,
-       "leido": "2026-11-20"
+       "leido": "2026-11-21"
       }
      ]
     },
     "A": {
      "nombre": "B + animación de mecanismo",
      "n": 2,
-     "se_quedaron_media": 19.5,
+     "se_quedaron_media": 19.2,
      "porcentaje_visto_media": 49.6,
-     "vistas_48h_mediana": 193.5,
-     "me_gusta_por_100": 0.25,
+     "vistas_48h_mediana": 201.0,
+     "me_gusta_por_100": 0.24,
      "ceros_de_feed": 1,
      "shorts": [
       {
        "id": "MDS-062",
        "publicado": "2026-11-10",
-       "se_quedaron_pct": 17.7,
-       "vistas_48h": 373,
+       "se_quedaron_pct": 17.0,
+       "vistas_48h": 388,
        "porcentaje_visto": 40.5,
        "me_gusta": 1,
-       "visualizaciones": 375,
-       "leido": "2026-11-20"
+       "visualizaciones": 390,
+       "leido": "2026-11-17"
       },
       {
        "id": "MDS-064",
@@ -420,7 +420,7 @@
        "porcentaje_visto": 58.8,
        "me_gusta": 0,
        "visualizaciones": 28,
-       "leido": "2026-11-20"
+       "leido": "2026-11-21"
       }
      ]
     },
@@ -481,10 +481,10 @@
      "que": "Animación a medida en las escenas de mecanismo (viene de A de B1, que ganó con reparo)",
      "si": {
       "n": 2,
-      "se_quedaron_media": 19.5,
+      "se_quedaron_media": 19.2,
       "porcentaje_visto_media": 49.6,
-      "vistas_48h_mediana": 193.5,
-      "me_gusta_por_100": 0.25,
+      "vistas_48h_mediana": 201.0,
+      "me_gusta_por_100": 0.24,
       "ceros_de_feed": 2
      },
      "no": {
@@ -511,10 +511,10 @@
      },
      "no": {
       "n": 4,
-      "se_quedaron_media": 20.5,
+      "se_quedaron_media": 20.3,
       "porcentaje_visto_media": 51.8,
       "vistas_48h_mediana": 28.0,
-      "me_gusta_por_100": 0.43,
+      "me_gusta_por_100": 0.42,
       "ceros_de_feed": 3
      },
      "diferencia_pp": null,
@@ -577,6 +577,31 @@
      "id": "MDS-072",
      "variante": "control",
      "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-073",
+     "variante": "D",
+     "motivo": "sin «se quedaron» a 48 h todavía"
+    },
+    {
+     "id": "MDS-074",
+     "variante": "AD",
+     "motivo": "sin ficha de producción todavía"
+    },
+    {
+     "id": "MDS-075",
+     "variante": "A",
+     "motivo": "sin ficha de producción todavía"
+    },
+    {
+     "id": "MDS-076",
+     "variante": "A",
+     "motivo": "sin ficha de producción todavía"
+    },
+    {
+     "id": "MDS-077",
+     "variante": "AD",
+     "motivo": "sin ficha de producción todavía"
     }
    ]
   }
