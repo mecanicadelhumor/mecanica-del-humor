@@ -49,8 +49,8 @@
   {
    "tipo": "enunciado",
    "personaje": "rie",
-   "texto": "Una broma, otra… y se ríe toda la *mesa*",
-   "narracion": "En la reunión del lunes alguien suelta una broma, una compañera añade otra, y se ríe toda la mesa.",
+   "texto": "Una broma… y se ríe toda la *mesa*",
+   "narracion": "En la reunión del lunes alguien suelta una broma y se ríe toda la mesa.",
    "pausa_despues_s": 0.5,
    "visual": [
     {
@@ -105,7 +105,7 @@
    "personaje": "entiende",
    "cifra": "Chiste, risa y otro: mejor *nota*",
    "pie": "también dos años después",
-   "narracion": "Donde a un chiste le seguían una risa y otro chiste, los jefes puntuaban mejor al equipo, también dos años después.",
+   "narracion": "Donde a un chiste le seguían una risa y otro chiste, los jefes puntuaban mejor su rendimiento, y dos años después, también.",
    "pausa_despues_s": 0.45,
    "visual": [
     {
@@ -123,7 +123,7 @@
    "tipo": "enunciado",
    "fuente": "G11",
    "texto": "Un chiste *solo* no cambiaba nada",
-   "narracion": "Pero si el chiste se quedaba solo, sin risa ni respuesta, no había diferencia.",
+   "narracion": "Pero si el chiste se quedaba solo, sin risa ni respuesta, la puntuación no subía.",
    "pausa_despues_s": 0.45,
    "visual": [
     {
@@ -166,11 +166,13 @@
   "donde_me_iria": "me quedo",
   "notas": [
    "Firma de la fuente: dos lectores (no bloquea).",
-   "Un lector: «rinden» en la escena 1 (¿en serio o se desmonta luego?) y «los jefes puntuaban… dos años después» (¿qué y de qué?)."
+   "Un lector: «rinden» en la escena 1 (¿en serio o se desmonta luego?) y «los jefes puntuaban… dos años después» (¿qué y de qué?).",
+   "Revisión 21/11 (ronda 3): «los jefes puntuaban mejor su rendimiento, y dos años después, también» hay que leerla dos veces (2 de 3); la escena 3 no tiene imagen en el texto y no se sabe quién hizo el estudio (2 de 3)."
   ],
   "historial": [
    "Vuelta 1 (seis escenas, con la reunión contada en dos): «Con uno suelto, no» (2/3: ¿uno qué?), «incluso dos años después» (2/3: ¿qué se midió?) y los tres se irían en la 2-3 (anécdota de oficina genérica).",
-   "Vuelta 2 (la reunión en una sola escena; el resultado dice quién puntuaba —los jefes— y el chiste solo va en su propia escena): ninguna frase con mayoría; los tres «me quedo». Pasa."
+   "Vuelta 2 (la reunión en una sola escena; el resultado dice quién puntuaba —los jefes— y el chiste solo va en su propia escena): ninguna frase con mayoría; los tres «me quedo». Pasa.",
+   "REVISIÓN 2026-11-21 (excepción de 48 h): tres lectores nuevos, ronda 1: los tres copian la escena 4 («los jefes puntuaban… también dos años después») y se irían en la 2-3; ronda 2 (escena 4 con «el rendimiento del equipo», escena 5 «la nota no mejoraba»): igual, los tres piden saber qué se puntuaba y qué es «la nota»; ronda 3 (escena 2 sin «una compañera añade otra», escena 4 «los jefes puntuaban mejor su rendimiento, y dos años después, también», escena 5 «la puntuación no subía»): los tres «me quedo»; dos piden releer la escena 4 y dos echan en falta pantalla en la 3 (a notas)."
   ],
   "veredicto": "pasa",
   "lectores": [
@@ -203,6 +205,7 @@
     "frase_que_sobra": "«En la reunión del lunes alguien suelta una broma…» (el ejemplo)",
     "donde_me_iria": "me quedo"
    }
-  ]
+  ],
+  "fecha_revision": "2026-11-21"
  }
 }

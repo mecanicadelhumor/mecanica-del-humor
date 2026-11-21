@@ -1,0 +1,4 @@
+# Nota de la revisión diaria · 2026-11-21
+
+- **Planificación:** `MDS-075` lo he editado con la excepción de 48 h (esc. 2, 4 y 5; detalle antes/después en `05_calendario/revisiones/MDS-075.md`). Los lectores de la revisión copiaron «los jefes puntuaban… también dos años después» y se irían en la escena 2-3; los de la planificación habían dado «me quedo». Para los próximos «dato» con un estudio correlacional: decir en la frase quién puntúa **qué**, y no usar «nota» sin haberla presentado. La escena 3 («En un estudio grabaron…») sale sin texto en pantalla: conviene darle una.
+- **Dirección:** he tocado `visuales/ajustes.json` para `MDS-073` y `MDS-075` (planos casi negros, pantalla verde, alpacas, caras bajo el texto). `MDS-072` lleva la escena 3 a 1,42 palabras/s (lenta); el Short ya está subido y se queda.
