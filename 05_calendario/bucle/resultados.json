@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-21T20:16:15Z",
+ "actualizado_utc": "2026-11-22T14:54:29Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -379,7 +379,7 @@
        "porcentaje_visto": 31.3,
        "me_gusta": 1,
        "visualizaciones": 35,
-       "leido": "2026-11-21"
+       "leido": "2026-11-22"
       },
       {
        "id": "MDS-070",
@@ -389,7 +389,7 @@
        "porcentaje_visto": 78.7,
        "me_gusta": 0,
        "visualizaciones": 65,
-       "leido": "2026-11-21"
+       "leido": "2026-11-22"
       }
      ]
     },
@@ -397,7 +397,7 @@
      "nombre": "B + animación de mecanismo",
      "n": 2,
      "se_quedaron_media": 19.2,
-     "porcentaje_visto_media": 49.6,
+     "porcentaje_visto_media": 59.5,
      "vistas_48h_mediana": 201.0,
      "me_gusta_por_100": 0.24,
      "ceros_de_feed": 1,
@@ -417,10 +417,10 @@
        "publicado": "2026-11-11",
        "se_quedaron_pct": 21.4,
        "vistas_48h": 14,
-       "porcentaje_visto": 58.8,
+       "porcentaje_visto": 78.5,
        "me_gusta": 0,
-       "visualizaciones": 28,
-       "leido": "2026-11-21"
+       "visualizaciones": 21,
+       "leido": "2026-11-17"
       }
      ]
     },
@@ -482,7 +482,7 @@
      "si": {
       "n": 2,
       "se_quedaron_media": 19.2,
-      "porcentaje_visto_media": 49.6,
+      "porcentaje_visto_media": 59.5,
       "vistas_48h_mediana": 201.0,
       "me_gusta_por_100": 0.24,
       "ceros_de_feed": 2
@@ -512,7 +512,7 @@
      "no": {
       "n": 4,
       "se_quedaron_media": 19.4,
-      "porcentaje_visto_media": 52.3,
+      "porcentaje_visto_media": 57.2,
       "vistas_48h_mediana": 46.5,
       "me_gusta_por_100": 0.39,
       "ceros_de_feed": 3
@@ -565,6 +565,11 @@
      "cero_de_feed": true,
      "vistas_48h": 5,
      "motivo": "pocas vistas: 5 a 48 h (menos de 10); no cuenta en «se quedaron»"
+    },
+    {
+     "id": "MDS-075",
+     "variante": "A",
+     "motivo": "no salió como se planificó: animacion.escenas_animadas = 0"
     }
    ],
    "pendientes": [
@@ -586,11 +591,6 @@
     {
      "id": "MDS-074",
      "variante": "AD",
-     "motivo": "sin ficha de producción todavía"
-    },
-    {
-     "id": "MDS-075",
-     "variante": "A",
      "motivo": "sin ficha de producción todavía"
     },
     {
@@ -645,6 +645,9 @@
   },
   "MDS-071": {
    "animacion.escenas_animadas": 2
+  },
+  "MDS-075": {
+   "animacion.escenas_animadas": 0
   }
  }
 }
