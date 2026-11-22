@@ -1,8 +1,8 @@
 {
   "guion": "MDS-074",
   "version": 2,
-  "firma": "8e0e4f7f0a48a222",
-  "resuelto_utc": "2026-11-20T22:47:00Z",
+  "firma": "b9a4cc41ce1ed978",
+  "resuelto_utc": "2026-11-22T10:32:25Z",
   "detector_caras": "ok: YuNet, OpenCV 5.1.0",
   "escenas": {
     "1": {
@@ -84,31 +84,31 @@
           ],
           "frase": "Y no sabes si consolarla o felicitarla.",
           "fuente": "pexels",
-          "id": 7279746,
-          "pagina": "https://www.pexels.com/video/a-lonely-woman-thinking-while-holding-her-mobile-phone-7279746/",
-          "titulo": "a lonely woman thinking while holding her mobile phone",
-          "autor": "MART  PRODUCTION",
-          "autor_url": "https://www.pexels.com/@mart-production",
+          "id": 8052328,
+          "pagina": "https://www.pexels.com/video/woman-got-worried-after-a-phone-call-8052328/",
+          "titulo": "woman got worried after a phone call",
+          "autor": "Kampus Production",
+          "autor_url": "https://www.pexels.com/@kampus",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 25.0,
+          "duracion_s": 15.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/7279746/7279746-hd_1080_1920_25fps.mp4",
+          "url": "https://videos.pexels.com/video-files/8052328/8052328-hd_1080_1920_25fps.mp4",
           "tipo": "video",
-          "consulta": "woman confused looking at phone",
-          "relevancia": 0.5,
+          "consulta": "woman reading message on phone worried",
+          "relevancia": 0.6,
           "inicio_s": 0.4,
-          "movimiento": 1.2,
+          "movimiento": 7.98,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
           "caras": [
             [
-              0.4833,
-              0.3609,
-              0.2833,
-              0.2047
+              0.4694,
+              0.1078,
+              0.3111,
+              0.2359
             ]
           ]
         }
