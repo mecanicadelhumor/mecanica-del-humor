@@ -836,11 +836,28 @@
     },
     "4.2": {
       "excluir": [
-        "pixabay:33663"
+        "pixabay:74540"
       ],
       "busqueda": [
-        "two friends laughing together outdoors",
-        "friends laughing on a bench"
+        "friends laughing together outdoors"
+      ]
+    },
+    "5.2": {
+      "excluir": [
+        "pexels:6145667"
+      ],
+      "busqueda": [
+        "two friends sitting quietly together on a bench"
+      ]
+    }
+  },
+  "MDS-074": {
+    "2.2": {
+      "excluir": [
+        "pexels:7279746"
+      ],
+      "busqueda": [
+        "woman reading message on phone worried"
       ]
     }
   }

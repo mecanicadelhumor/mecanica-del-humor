@@ -70,7 +70,7 @@
     "Grabaron charlas de amigos y de *desconocidos*",
     "Cada uno marcó lo unido que se sentía"
    ],
-   "narracion": "En un experimento grabaron charlas entre desconocidos y entre amigos. Luego, cada uno marcó en su vídeo lo unido que se sintió.",
+   "narracion": "En un experimento grabaron charlas entre desconocidos y entre amigos. Luego, cada uno puntuó de uno a diez lo unido que se sintió.",
    "pausa_despues_s": 0.45,
    "visual": [
     {
@@ -122,7 +122,7 @@
    "personaje": "piensa",
    "titulo": "Callar juntos es *buena señal*",
    "subtitulo": "Fuente: Templeton y otros, 2023",
-   "narracion": "Callar con tu amigo es buena señal. Ojo: no es que callar os haga amigos; es que, entre amigos, callar no pesa.",
+   "narracion": "Callar con tu amigo es buena señal. Ojo: callar no os hace amigos; ya sois amigos, y por eso callar no pesa.",
    "pausa_despues_s": 0.2,
    "visual": [
     {
@@ -195,6 +195,12 @@
     "frase_que_sobra": "«Luego, cada uno marcó en su vídeo lo unido que se sintió.» (pero no es que sobre del todo)",
     "donde_me_iria": "me quedo"
    }
-  ]
+  ],
+  "revision_2026-11-22": {
+   "ronda_1": "tres lectores sobre el texto del 20/11: dos copian «Luego, cada uno marcó en su vídeo lo unido que se sintió» (no saben qué es «marcar en su vídeo»); los tres quitarían la escena 2; uno se iría en la 3.",
+   "ronda_2": "escena 3 «…vio su charla y puntuó lo unido que se sintió»: los tres vuelven a copiar la escena 3 y la frase «Ojo: no es que callar os haga amigos…» (tuvieron que pensarla dos veces); los tres «me quedo».",
+   "ronda_3": "tres lectores sobre: esc. 3 «…cada uno vio su charla y puntuó de uno a diez lo unido que se sintió» (en el guion final, sin «vio su charla», por los 12 s) y esc. 5 «Ojo: callar no os hace amigos; ya sois amigos, y por eso callar no pesa». Los tres entienden la causalidad y dicen «me quedo» (uno habría deslizado en la 3, solo él: a notas). Los tres anotan en la 3 que falta quién hizo el experimento y cuánta gente (lo entienden, no es no entender: notas). Uno: «se reían más» chirría. Validador sin errores.",
+   "notas": "Lo que queda marcado es la falta de detalle del estudio (quién, cuánta gente), que es del género y no se arregla en 12 s. Todos quitarían la escena 2 (el coche) pero es la situación del brazo B; se queda."
+  }
  }
 }
