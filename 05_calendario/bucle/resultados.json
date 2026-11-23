@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-23T18:44:31Z",
+ "actualizado_utc": "2026-11-23T20:31:11Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -25,7 +25,7 @@
     "n": 10,
     "se_quedaron_media": 34.3,
     "porcentaje_visto_media": 57.4,
-    "vistas_48h_mediana": 62.0,
+    "vistas_48h_mediana": 62,
     "me_gusta_por_100": 0.67,
     "ceros_de_feed": 2,
     "ids": [
@@ -58,7 +58,7 @@
        "vistas_48h": 20,
        "porcentaje_visto": 165.1,
        "me_gusta": 0,
-       "visualizaciones": 22,
+       "visualizaciones": 23,
        "leido": "2026-11-23"
       },
       {
@@ -78,7 +78,7 @@
        "vistas_48h": 112,
        "porcentaje_visto": 48.4,
        "me_gusta": 0,
-       "visualizaciones": 127,
+       "visualizaciones": 129,
        "leido": "2026-11-23"
       },
       {
@@ -209,7 +209,7 @@
        "vistas_48h": 695,
        "porcentaje_visto": 36.6,
        "me_gusta": 6,
-       "visualizaciones": 714,
+       "visualizaciones": 715,
        "leido": "2026-11-23"
       },
       {
@@ -364,11 +364,11 @@
    "brazos": {
     "control": {
      "nombre": "B (arranque con el dato), duración normal, sin animación",
-     "n": 2,
-     "se_quedaron_media": 19.7,
-     "porcentaje_visto_media": 55.0,
-     "vistas_48h_mediana": 46.5,
-     "me_gusta_por_100": 0.99,
+     "n": 3,
+     "se_quedaron_media": 31.5,
+     "porcentaje_visto_media": 43.6,
+     "vistas_48h_mediana": 28,
+     "me_gusta_por_100": 2.48,
      "ceros_de_feed": 2,
      "shorts": [
       {
@@ -390,15 +390,25 @@
        "me_gusta": 0,
        "visualizaciones": 66,
        "leido": "2026-11-23"
+      },
+      {
+       "id": "MDS-072",
+       "publicado": "2026-11-21",
+       "se_quedaron_pct": 55.0,
+       "vistas_48h": 20,
+       "porcentaje_visto": 20.9,
+       "me_gusta": 2,
+       "visualizaciones": 20,
+       "leido": "2026-11-23"
       }
      ]
     },
     "A": {
      "nombre": "B + animación de mecanismo",
      "n": 3,
-     "se_quedaron_media": 20.9,
-     "porcentaje_visto_media": 44.5,
-     "vistas_48h_mediana": 165,
+     "se_quedaron_media": 21.1,
+     "porcentaje_visto_media": 45.0,
+     "vistas_48h_mediana": 170,
      "me_gusta_por_100": 0.18,
      "ceros_de_feed": 1,
      "shorts": [
@@ -425,11 +435,11 @@
       {
        "id": "MDS-071",
        "publicado": "2026-11-20",
-       "se_quedaron_pct": 23.6,
-       "vistas_48h": 165,
-       "porcentaje_visto": 34.2,
+       "se_quedaron_pct": 24.1,
+       "vistas_48h": 170,
+       "porcentaje_visto": 35.6,
        "me_gusta": 0,
-       "visualizaciones": 165,
+       "visualizaciones": 170,
        "leido": "2026-11-23"
       }
      ]
@@ -491,18 +501,18 @@
      "que": "Animación a medida en las escenas de mecanismo (viene de A de B1, que ganó con reparo)",
      "si": {
       "n": 3,
-      "se_quedaron_media": 20.9,
-      "porcentaje_visto_media": 44.5,
-      "vistas_48h_mediana": 165,
+      "se_quedaron_media": 21.1,
+      "porcentaje_visto_media": 45.0,
+      "vistas_48h_mediana": 170,
       "me_gusta_por_100": 0.18,
       "ceros_de_feed": 2
      },
      "no": {
-      "n": 3,
-      "se_quedaron_media": 21.8,
-      "porcentaje_visto_media": 58.2,
-      "vistas_48h_mediana": 28,
-      "me_gusta_por_100": 0.77,
+      "n": 4,
+      "se_quedaron_media": 30.1,
+      "porcentaje_visto_media": 48.9,
+      "vistas_48h_mediana": 27.5,
+      "me_gusta_por_100": 2.0,
       "ceros_de_feed": 3
      },
      "diferencia_pp": null,
@@ -520,11 +530,11 @@
       "ceros_de_feed": 2
      },
      "no": {
-      "n": 5,
-      "se_quedaron_media": 20.4,
-      "porcentaje_visto_media": 48.7,
-      "vistas_48h_mediana": 65,
-      "me_gusta_por_100": 0.3,
+      "n": 6,
+      "se_quedaron_media": 26.3,
+      "porcentaje_visto_media": 44.3,
+      "vistas_48h_mediana": 46.5,
+      "me_gusta_por_100": 0.58,
       "ceros_de_feed": 3
      },
      "diferencia_pp": null,
@@ -583,11 +593,6 @@
     }
    ],
    "pendientes": [
-    {
-     "id": "MDS-072",
-     "variante": "control",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    },
     {
      "id": "MDS-073",
      "variante": "D",

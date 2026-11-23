@@ -193626,9 +193626,7 @@
    },
    "vistas_48h": 10,
    "se_quedaron_48h": {
-    "vistas": 10,
-    "comprometidas": 4,
-    "pct": 40.0
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-08-26&endDate=2026-08-27&metrics=views%2CengagedViews&filters=video%3D%3DcZqCpC0aoF4&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "se_quedaron_total": {
     "vistas": 16,
@@ -199602,9 +199600,7 @@
    },
    "vistas_48h": 156,
    "se_quedaron_48h": {
-    "vistas": 156,
-    "comprometidas": 59,
-    "pct": 37.8
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-10-02&endDate=2026-10-03&metrics=views%2CengagedViews&filters=video%3D%3D_bfR8VOquU8&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "se_quedaron_total": {
     "vistas": 169,
@@ -200130,7 +200126,7 @@
     "YT_SEARCH": 50.0,
     "SHORTS": 50.0
    },
-   "vistas_48h": 1,
+   "vistas_48h": null,
    "se_quedaron_48h": {
     "vistas": 1,
     "comprometidas": 1,
@@ -201495,7 +201491,7 @@
    "privacidad": "public",
    "dias_publicado": 41,
    "duracion_s": 49.0,
-   "visualizaciones": 22,
+   "visualizaciones": 23,
    "duracion_media_s": 80.0,
    "porcentaje_visto": 165.1,
    "minutos_vistos": 3.0,
@@ -201507,9 +201503,9 @@
     "puntos": 0
    },
    "trafico_pct": {
-    "SHORTS": 81.8,
-    "SUBSCRIBER": 9.1,
-    "YT_SEARCH": 9.1,
+    "SHORTS": 78.3,
+    "YT_SEARCH": 13.0,
+    "SUBSCRIBER": 8.7,
     "NO_LINK_OTHER": 0.0
    },
    "vistas_48h": 20,
@@ -201519,9 +201515,9 @@
     "pct": 10.0
    },
    "se_quedaron_total": {
-    "vistas": 22,
+    "vistas": 23,
     "comprometidas": 2,
-    "pct": 9.1
+    "pct": 8.7
    },
    "impresiones": null,
    "ctr": null
@@ -203404,7 +203400,7 @@
    "privacidad": "public",
    "dias_publicado": 34,
    "duracion_s": 45.0,
-   "visualizaciones": 127,
+   "visualizaciones": 129,
    "duracion_media_s": 21.0,
    "porcentaje_visto": 48.4,
    "minutos_vistos": 7.0,
@@ -203820,9 +203816,9 @@
     ]
    },
    "trafico_pct": {
-    "SHORTS": 52.8,
-    "YT_SEARCH": 44.9,
-    "SUBSCRIBER": 2.4,
+    "SHORTS": 51.9,
+    "YT_SEARCH": 45.7,
+    "SUBSCRIBER": 2.3,
     "NO_LINK_OTHER": 0.0,
     "YT_CHANNEL": 0.0
    },
@@ -203833,9 +203829,9 @@
     "pct": 13.4
    },
    "se_quedaron_total": {
-    "vistas": 127,
+    "vistas": 129,
     "comprometidas": 17,
-    "pct": 13.4
+    "pct": 13.2
    },
    "impresiones": null,
    "ctr": null
@@ -206266,9 +206262,7 @@
     "pct": 36.7
    },
    "se_quedaron_total": {
-    "vistas": 32,
-    "comprometidas": 12,
-    "pct": 37.5
+    "error": "<HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-10-30&endDate=2026-11-22&metrics=views%2CengagedViews&filters=video%3D%3Dkl4xTFn1CG8&alt=json returned \"Internal error encountered.\". Details: \"[{'message': 'Internal error encounte"
    },
    "impresiones": null,
    "ctr": null
@@ -206284,7 +206278,7 @@
    "privacidad": "public",
    "dias_publicado": 23,
    "duracion_s": 41.0,
-   "visualizaciones": 714,
+   "visualizaciones": 715,
    "duracion_media_s": 14.0,
    "porcentaje_visto": 36.6,
    "minutos_vistos": 58.0,
@@ -206700,8 +206694,8 @@
     ]
    },
    "trafico_pct": {
-    "SHORTS": 91.6,
-    "YT_SEARCH": 8.3,
+    "SHORTS": 91.5,
+    "YT_SEARCH": 8.4,
     "PLAYLIST": 0.1,
     "NO_LINK_OTHER": 0.0,
     "EXT_URL": 0.0
@@ -206713,7 +206707,7 @@
     "pct": 25.5
    },
    "se_quedaron_total": {
-    "vistas": 714,
+    "vistas": 715,
     "comprometidas": 183,
     "pct": 25.6
    },
@@ -207855,9 +207849,9 @@
     "pct": 21.4
    },
    "se_quedaron_total": {
-    "vistas": 28,
+    "vistas": 26,
     "comprometidas": 4,
-    "pct": 14.3
+    "pct": 15.4
    },
    "impresiones": null,
    "ctr": null
@@ -208118,436 +208112,437 @@
    "privacidad": "public",
    "dias_publicado": 3,
    "duracion_s": 45.0,
-   "visualizaciones": 165,
-   "duracion_media_s": 15.0,
-   "porcentaje_visto": 34.2,
-   "minutos_vistos": 13.0,
+   "visualizaciones": 170,
+   "duracion_media_s": 16.0,
+   "porcentaje_visto": 35.6,
+   "minutos_vistos": 14.0,
    "suscriptores": 0,
    "me_gusta": 0,
    "comentarios": 1,
    "compartidos": 0,
    "retencion": {
     "puntos": 100,
-    "a_30s_pct": 20.5,
-    "caida_primer_10_pct": 15.4,
+    "a_30s_pct": 21.9,
+    "caida_primer_10_pct": 17.1,
     "curva": [
      {
       "t": 0.5,
-      "ratio": 1.0769
+      "ratio": 1.0976
      },
      {
       "t": 0.9,
-      "ratio": 1.0769
+      "ratio": 1.0976
      },
      {
       "t": 1.3,
-      "ratio": 1.0769
+      "ratio": 1.0976
      },
      {
       "t": 1.8,
-      "ratio": 1.0513
+      "ratio": 1.0732
      },
      {
       "t": 2.2,
-      "ratio": 1.0513
+      "ratio": 1.0732
      },
      {
       "t": 2.7,
-      "ratio": 1.0513
+      "ratio": 1.0488
      },
      {
       "t": 3.2,
-      "ratio": 1.0513
+      "ratio": 1.0488
      },
      {
       "t": 3.6,
-      "ratio": 1.0513
+      "ratio": 1.0488
      },
      {
       "t": 4.0,
-      "ratio": 1.0513
+      "ratio": 1.0488
      },
      {
       "t": 4.5,
-      "ratio": 1.0513
+      "ratio": 1.0488
      },
      {
       "t": 5.0,
-      "ratio": 0.9231
+      "ratio": 0.9268
      },
      {
       "t": 5.4,
-      "ratio": 0.9231
+      "ratio": 0.9268
      },
      {
       "t": 5.9,
-      "ratio": 0.7949
+      "ratio": 0.7805
      },
      {
       "t": 6.3,
-      "ratio": 0.7179
+      "ratio": 0.7317
      },
      {
       "t": 6.8,
-      "ratio": 0.6154
+      "ratio": 0.6341
      },
      {
       "t": 7.2,
-      "ratio": 0.5897
+      "ratio": 0.6098
      },
      {
       "t": 7.7,
-      "ratio": 0.5641
+      "ratio": 0.5854
      },
      {
       "t": 8.1,
-      "ratio": 0.5128
+      "ratio": 0.5366
      },
      {
       "t": 8.6,
-      "ratio": 0.4103
+      "ratio": 0.439
      },
      {
       "t": 9.0,
-      "ratio": 0.359
+      "ratio": 0.3902
      },
      {
       "t": 9.4,
-      "ratio": 0.3333
+      "ratio": 0.3659
      },
      {
       "t": 9.9,
-      "ratio": 0.3333
+      "ratio": 0.3659
      },
      {
       "t": 10.3,
-      "ratio": 0.3333
+      "ratio": 0.3659
      },
      {
       "t": 10.8,
-      "ratio": 0.3333
+      "ratio": 0.3659
      },
      {
       "t": 11.2,
-      "ratio": 0.3333
+      "ratio": 0.3659
      },
      {
       "t": 11.7,
-      "ratio": 0.3333
+      "ratio": 0.3415
      },
      {
       "t": 12.2,
-      "ratio": 0.3333
+      "ratio": 0.3415
      },
      {
       "t": 12.6,
-      "ratio": 0.3333
+      "ratio": 0.3415
      },
      {
       "t": 13.0,
-      "ratio": 0.3333
+      "ratio": 0.3415
      },
      {
       "t": 13.5,
-      "ratio": 0.3333
+      "ratio": 0.3415
      },
      {
       "t": 13.9,
-      "ratio": 0.3333
+      "ratio": 0.3415
      },
      {
       "t": 14.4,
-      "ratio": 0.3333
+      "ratio": 0.3415
      },
      {
       "t": 14.9,
-      "ratio": 0.3333
+      "ratio": 0.3415
      },
      {
       "t": 15.3,
-      "ratio": 0.3333
+      "ratio": 0.3415
      },
      {
       "t": 15.7,
-      "ratio": 0.3333
+      "ratio": 0.3415
      },
      {
       "t": 16.2,
-      "ratio": 0.3333
+      "ratio": 0.3415
      },
      {
       "t": 16.6,
-      "ratio": 0.3333
+      "ratio": 0.3415
      },
      {
       "t": 17.1,
-      "ratio": 0.3333
+      "ratio": 0.3415
      },
      {
       "t": 17.6,
-      "ratio": 0.3077
+      "ratio": 0.3171
      },
      {
       "t": 18.0,
-      "ratio": 0.2564
+      "ratio": 0.2683
      },
      {
       "t": 18.4,
-      "ratio": 0.2564
+      "ratio": 0.2683
      },
      {
       "t": 18.9,
-      "ratio": 0.2564
+      "ratio": 0.2683
      },
      {
       "t": 19.4,
-      "ratio": 0.2564
+      "ratio": 0.2683
      },
      {
       "t": 19.8,
-      "ratio": 0.2308
+      "ratio": 0.2439
      },
      {
       "t": 20.2,
-      "ratio": 0.2308
+      "ratio": 0.2439
      },
      {
       "t": 20.7,
-      "ratio": 0.2308
+      "ratio": 0.2439
      },
      {
       "t": 21.1,
-      "ratio": 0.2308
+      "ratio": 0.2439
      },
      {
       "t": 21.6,
-      "ratio": 0.2308
+      "ratio": 0.2439
      },
      {
       "t": 22.1,
-      "ratio": 0.2308
+      "ratio": 0.2439
      },
      {
       "t": 22.5,
-      "ratio": 0.2308
+      "ratio": 0.2439
      },
      {
       "t": 22.9,
-      "ratio": 0.2308
+      "ratio": 0.2439
      },
      {
       "t": 23.4,
-      "ratio": 0.2308
+      "ratio": 0.2439
      },
      {
       "t": 23.9,
-      "ratio": 0.2308
+      "ratio": 0.2439
      },
      {
       "t": 24.3,
-      "ratio": 0.2308
+      "ratio": 0.2439
      },
      {
       "t": 24.8,
-      "ratio": 0.2308
+      "ratio": 0.2439
      },
      {
       "t": 25.2,
-      "ratio": 0.2308
+      "ratio": 0.2439
      },
      {
       "t": 25.6,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 26.1,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 26.5,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 27.0,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 27.4,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 27.9,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 28.4,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 28.8,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 29.2,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 29.7,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 30.2,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 30.6,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 31.0,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 31.5,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 31.9,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 32.4,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 32.9,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 33.3,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 33.8,
-      "ratio": 0.2051
+      "ratio": 0.2195
      },
      {
       "t": 34.2,
-      "ratio": 0.1795
+      "ratio": 0.1951
      },
      {
       "t": 34.6,
-      "ratio": 0.1795
+      "ratio": 0.1951
      },
      {
       "t": 35.1,
-      "ratio": 0.1795
+      "ratio": 0.1951
      },
      {
       "t": 35.6,
-      "ratio": 0.1795
+      "ratio": 0.1951
      },
      {
       "t": 36.0,
-      "ratio": 0.1795
+      "ratio": 0.1951
      },
      {
       "t": 36.5,
-      "ratio": 0.1795
+      "ratio": 0.1951
      },
      {
       "t": 36.9,
-      "ratio": 0.1795
+      "ratio": 0.1951
      },
      {
       "t": 37.4,
-      "ratio": 0.1795
+      "ratio": 0.1951
      },
      {
       "t": 37.8,
-      "ratio": 0.1795
+      "ratio": 0.1951
      },
      {
       "t": 38.2,
-      "ratio": 0.1795
+      "ratio": 0.1951
      },
      {
       "t": 38.7,
-      "ratio": 0.1538
+      "ratio": 0.1707
      },
      {
       "t": 39.1,
-      "ratio": 0.1538
+      "ratio": 0.1707
      },
      {
       "t": 39.6,
-      "ratio": 0.1538
+      "ratio": 0.1707
      },
      {
       "t": 40.0,
-      "ratio": 0.1538
+      "ratio": 0.1707
      },
      {
       "t": 40.5,
-      "ratio": 0.1538
+      "ratio": 0.1707
      },
      {
       "t": 41.0,
-      "ratio": 0.1538
+      "ratio": 0.1707
      },
      {
       "t": 41.4,
-      "ratio": 0.1282
+      "ratio": 0.1463
      },
      {
       "t": 41.9,
-      "ratio": 0.1282
+      "ratio": 0.1463
      },
      {
       "t": 42.3,
-      "ratio": 0.1282
+      "ratio": 0.1463
      },
      {
       "t": 42.8,
-      "ratio": 0.1282
+      "ratio": 0.1463
      },
      {
       "t": 43.2,
-      "ratio": 0.1282
+      "ratio": 0.1463
      },
      {
       "t": 43.6,
-      "ratio": 0.1026
+      "ratio": 0.122
      },
      {
       "t": 44.1,
-      "ratio": 0.0769
+      "ratio": 0.0976
      },
      {
       "t": 44.5,
-      "ratio": 0.0769
+      "ratio": 0.0976
      },
      {
       "t": 45.0,
-      "ratio": 0.0769
+      "ratio": 0.0976
      }
     ]
    },
    "trafico_pct": {
-    "SHORTS": 97.0,
-    "YT_SEARCH": 3.0,
+    "SHORTS": 95.9,
+    "YT_SEARCH": 3.5,
+    "SUBSCRIBER": 0.6,
     "NO_LINK_OTHER": 0.0
    },
-   "vistas_48h": 165,
+   "vistas_48h": 170,
    "se_quedaron_48h": {
-    "vistas": 165,
-    "comprometidas": 39,
-    "pct": 23.6
+    "vistas": 170,
+    "comprometidas": 41,
+    "pct": 24.1
    },
    "se_quedaron_total": {
-    "vistas": 165,
-    "comprometidas": 39,
-    "pct": 23.6
+    "vistas": 170,
+    "comprometidas": 41,
+    "pct": 24.1
    },
    "impresiones": null,
    "ctr": null
@@ -208563,35 +208558,443 @@
    "privacidad": "public",
    "dias_publicado": 2,
    "duracion_s": 41.0,
-   "visualizaciones": 0,
-   "duracion_media_s": 0.0,
-   "porcentaje_visto": 0.0,
-   "minutos_vistos": 0.0,
-   "suscriptores": 0,
-   "me_gusta": 0,
+   "visualizaciones": 20,
+   "duracion_media_s": 8.0,
+   "porcentaje_visto": 20.9,
+   "minutos_vistos": 1.0,
+   "suscriptores": 1,
+   "me_gusta": 2,
    "comentarios": 0,
    "compartidos": 0,
    "retencion": {
-    "puntos": 0
+    "puntos": 100,
+    "a_30s_pct": 9.1,
+    "caida_primer_10_pct": 18.2,
+    "curva": [
+     {
+      "t": 0.4,
+      "ratio": 1.0909
+     },
+     {
+      "t": 0.8,
+      "ratio": 1
+     },
+     {
+      "t": 1.2,
+      "ratio": 1
+     },
+     {
+      "t": 1.6,
+      "ratio": 1
+     },
+     {
+      "t": 2.1,
+      "ratio": 1
+     },
+     {
+      "t": 2.5,
+      "ratio": 0.9091
+     },
+     {
+      "t": 2.9,
+      "ratio": 1
+     },
+     {
+      "t": 3.3,
+      "ratio": 1
+     },
+     {
+      "t": 3.7,
+      "ratio": 1
+     },
+     {
+      "t": 4.1,
+      "ratio": 1
+     },
+     {
+      "t": 4.5,
+      "ratio": 0.9091
+     },
+     {
+      "t": 4.9,
+      "ratio": 0.8182
+     },
+     {
+      "t": 5.3,
+      "ratio": 0.7273
+     },
+     {
+      "t": 5.7,
+      "ratio": 0.5455
+     },
+     {
+      "t": 6.1,
+      "ratio": 0.3636
+     },
+     {
+      "t": 6.6,
+      "ratio": 0.2727
+     },
+     {
+      "t": 7.0,
+      "ratio": 0.1818
+     },
+     {
+      "t": 7.4,
+      "ratio": 0.1818
+     },
+     {
+      "t": 7.8,
+      "ratio": 0.1818
+     },
+     {
+      "t": 8.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 8.6,
+      "ratio": 0.0909
+     },
+     {
+      "t": 9.0,
+      "ratio": 0.0909
+     },
+     {
+      "t": 9.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 9.8,
+      "ratio": 0.0909
+     },
+     {
+      "t": 10.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 10.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 11.1,
+      "ratio": 0.0909
+     },
+     {
+      "t": 11.5,
+      "ratio": 0.0909
+     },
+     {
+      "t": 11.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 12.3,
+      "ratio": 0.0909
+     },
+     {
+      "t": 12.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 13.1,
+      "ratio": 0.0909
+     },
+     {
+      "t": 13.5,
+      "ratio": 0.0909
+     },
+     {
+      "t": 13.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 14.3,
+      "ratio": 0.0909
+     },
+     {
+      "t": 14.8,
+      "ratio": 0.0909
+     },
+     {
+      "t": 15.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 15.6,
+      "ratio": 0.0909
+     },
+     {
+      "t": 16.0,
+      "ratio": 0.0909
+     },
+     {
+      "t": 16.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 16.8,
+      "ratio": 0.0909
+     },
+     {
+      "t": 17.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 17.6,
+      "ratio": 0.0909
+     },
+     {
+      "t": 18.0,
+      "ratio": 0.0909
+     },
+     {
+      "t": 18.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 18.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 19.3,
+      "ratio": 0.0909
+     },
+     {
+      "t": 19.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 20.1,
+      "ratio": 0.0909
+     },
+     {
+      "t": 20.5,
+      "ratio": 0.0909
+     },
+     {
+      "t": 20.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 21.3,
+      "ratio": 0.0909
+     },
+     {
+      "t": 21.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 22.1,
+      "ratio": 0.0909
+     },
+     {
+      "t": 22.6,
+      "ratio": 0.0909
+     },
+     {
+      "t": 23.0,
+      "ratio": 0.0909
+     },
+     {
+      "t": 23.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 23.8,
+      "ratio": 0.0909
+     },
+     {
+      "t": 24.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 24.6,
+      "ratio": 0.0909
+     },
+     {
+      "t": 25.0,
+      "ratio": 0.0909
+     },
+     {
+      "t": 25.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 25.8,
+      "ratio": 0.0909
+     },
+     {
+      "t": 26.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 26.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 27.1,
+      "ratio": 0.0909
+     },
+     {
+      "t": 27.5,
+      "ratio": 0.0909
+     },
+     {
+      "t": 27.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 28.3,
+      "ratio": 0.0909
+     },
+     {
+      "t": 28.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 29.1,
+      "ratio": 0.0909
+     },
+     {
+      "t": 29.5,
+      "ratio": 0.0909
+     },
+     {
+      "t": 29.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 30.3,
+      "ratio": 0.0909
+     },
+     {
+      "t": 30.8,
+      "ratio": 0.0909
+     },
+     {
+      "t": 31.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 31.6,
+      "ratio": 0.0909
+     },
+     {
+      "t": 32.0,
+      "ratio": 0.0909
+     },
+     {
+      "t": 32.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 32.8,
+      "ratio": 0.0909
+     },
+     {
+      "t": 33.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 33.6,
+      "ratio": 0.0909
+     },
+     {
+      "t": 34.0,
+      "ratio": 0.0909
+     },
+     {
+      "t": 34.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 34.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 35.3,
+      "ratio": 0.0909
+     },
+     {
+      "t": 35.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 36.1,
+      "ratio": 0.0909
+     },
+     {
+      "t": 36.5,
+      "ratio": 0.0909
+     },
+     {
+      "t": 36.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 37.3,
+      "ratio": 0.0909
+     },
+     {
+      "t": 37.7,
+      "ratio": 0.0909
+     },
+     {
+      "t": 38.1,
+      "ratio": 0.0909
+     },
+     {
+      "t": 38.5,
+      "ratio": 0.0909
+     },
+     {
+      "t": 38.9,
+      "ratio": 0.0909
+     },
+     {
+      "t": 39.4,
+      "ratio": 0.0909
+     },
+     {
+      "t": 39.8,
+      "ratio": 0.0909
+     },
+     {
+      "t": 40.2,
+      "ratio": 0.0909
+     },
+     {
+      "t": 40.6,
+      "ratio": 0.0909
+     },
+     {
+      "t": 41.0,
+      "ratio": 0.0909
+     }
+    ]
    },
-   "trafico_pct": {},
-   "vistas_48h": 0,
+   "trafico_pct": {
+    "SHORTS": 95.0,
+    "YT_SEARCH": 5.0,
+    "NO_LINK_OTHER": 0.0
+   },
+   "vistas_48h": 20,
    "se_quedaron_48h": {
-    "vistas": 0,
-    "comprometidas": 0,
-    "pct": null
+    "vistas": 20,
+    "comprometidas": 11,
+    "pct": 55.0
    },
    "se_quedaron_total": {
-    "vistas": 0,
-    "comprometidas": 0,
-    "pct": null
+    "vistas": 20,
+    "comprometidas": 11,
+    "pct": 55.0
    },
    "impresiones": null,
    "ctr": null
   }
  ],
  "miniaturas": [],
- "actualizado_utc": "2026-11-23T16:11:20Z",
+ "actualizado_utc": "2026-11-23T20:31:06Z",
  "control_c26": {
   "mediana_vistas_48h": 15.0,
   "n_videos": 20,
