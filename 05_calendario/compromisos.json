@@ -134,7 +134,7 @@
       "id": "C61-esquina-libre",
       "que": "Que el personaje de la esquina no tape lo importante del plano: elegir la esquina con menos contenido (caras, manos, movimiento) en cada plano, con muestra para el codirector",
       "dueno": "direccion",
-      "fecha": "2026-11-23",
+      "fecha": "2026-11-30",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -156,6 +156,11 @@
           "de": "2026-11-19",
           "a": "2026-11-23",
           "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
+        },
+        {
+          "de": "2026-11-23",
+          "a": "2026-11-30",
+          "porque": "Cuarta ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, ocho días). La mediana de los veinte sigue en 21,5 aunque MDS-070 (65) y MDS-071 (165) pasan de 50: no empiezo trabajo de mejora que sobraría si se para. El 26/11 se miran si ha contestado «sigue»; si no, el 30/11"
         }
       ],
       "origen": "Respuesta del codirector a la tarea 2 del 23/10"
@@ -203,7 +208,7 @@
       "id": "largo-voz-tandas",
       "que": "Voz del largo con el modelo 3.8 elegido y C36 por tandas, probada en vivo (era con 2.5-flash: caduca el 17/11)",
       "dueno": "direccion",
-      "fecha": "2026-11-23",
+      "fecha": "2026-11-30",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -235,6 +240,11 @@
           "de": "2026-11-19",
           "a": "2026-11-23",
           "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
+        },
+        {
+          "de": "2026-11-23",
+          "a": "2026-11-30",
+          "porque": "Cuarta ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, ocho días). La mediana de los veinte sigue en 21,5 aunque MDS-070 (65) y MDS-071 (165) pasan de 50: no empiezo trabajo de mejora que sobraría si se para. El 26/11 se miran si ha contestado «sigue»; si no, el 30/11"
         }
       ],
       "origen": "Plan v23",
@@ -255,7 +265,7 @@
       "id": "iteracion-14",
       "que": "Catorce Shorts a la semana desde B2 (5/11): producción y publicación de un segundo Short al día (13:00 en España, la hora propuesta), planificación con 14 guiones, y el workflow cambiado preparado en 00_estrategia/tareas/workflows_<fecha>/ para que lo mueva el codirector",
       "dueno": "direccion",
-      "fecha": "2026-11-23",
+      "fecha": "2026-11-30",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -277,6 +287,11 @@
           "de": "2026-11-19",
           "a": "2026-11-23",
           "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
+        },
+        {
+          "de": "2026-11-23",
+          "a": "2026-11-30",
+          "porque": "Cuarta ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, ocho días). La mediana de los veinte sigue en 21,5 aunque MDS-070 (65) y MDS-071 (165) pasan de 50: no empiezo trabajo de mejora que sobraría si se para. El 26/11 se miran si ha contestado «sigue»; si no, el 30/11"
         }
       ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
@@ -327,7 +342,7 @@
       "id": "iteracion-filtro",
       "que": "Filtro de lectores sintéticos sobre variantes de guion antes de producir",
       "dueno": "direccion",
-      "fecha": "2026-11-23",
+      "fecha": "2026-11-30",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -344,6 +359,11 @@
           "de": "2026-11-19",
           "a": "2026-11-23",
           "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
+        },
+        {
+          "de": "2026-11-23",
+          "a": "2026-11-30",
+          "porque": "Cuarta ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, ocho días). La mediana de los veinte sigue en 21,5 aunque MDS-070 (65) y MDS-071 (165) pasan de 50: no empiezo trabajo de mejora que sobraría si se para. El 26/11 se miran si ha contestado «sigue»; si no, el 30/11"
         }
       ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
@@ -352,7 +372,7 @@
       "id": "calidad-patron",
       "que": "Patrón de calidad medido con veinte Shorts ajenos de divulgación en español (>100.000 vistas) y los nuestros; después, la ficha automática en qa.py",
       "dueno": "direccion",
-      "fecha": "2026-11-23",
+      "fecha": "2026-11-30",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -379,6 +399,11 @@
           "de": "2026-11-19",
           "a": "2026-11-23",
           "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
+        },
+        {
+          "de": "2026-11-23",
+          "a": "2026-11-30",
+          "porque": "Cuarta ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, ocho días). La mediana de los veinte sigue en 21,5 aunque MDS-070 (65) y MDS-071 (165) pasan de 50: no empiezo trabajo de mejora que sobraría si se para. El 26/11 se miran si ha contestado «sigue»; si no, el 30/11"
         }
       ],
       "origen": "Respuesta del codirector del 23/10 (velocidad de iteración y calidad)"
@@ -409,7 +434,7 @@
       "id": "largo-ensayo",
       "que": "Render de prueba del largo entero; decide 8/11 o 15/11",
       "dueno": "direccion",
-      "fecha": "2026-11-23",
+      "fecha": "2026-11-30",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -436,6 +461,11 @@
           "de": "2026-11-19",
           "a": "2026-11-23",
           "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
+        },
+        {
+          "de": "2026-11-23",
+          "a": "2026-11-30",
+          "porque": "Cuarta ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, ocho días). La mediana de los veinte sigue en 21,5 aunque MDS-070 (65) y MDS-071 (165) pasan de 50: no empiezo trabajo de mejora que sobraría si se para. El 26/11 se miran si ha contestado «sigue»; si no, el 30/11"
         }
       ],
       "origen": "Plan v23"
@@ -455,7 +485,7 @@
       "id": "C51.3-brazo-caras",
       "que": "Cuando la persona sintética entre en experimentos: un brazo cara 2 frente a cara 6",
       "dueno": "direccion",
-      "fecha": "2026-11-23",
+      "fecha": "2026-11-30",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -467,6 +497,11 @@
           "de": "2026-11-19",
           "a": "2026-11-23",
           "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
+        },
+        {
+          "de": "2026-11-23",
+          "a": "2026-11-30",
+          "porque": "Cuarta ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, ocho días). La mediana de los veinte sigue en 21,5 aunque MDS-070 (65) y MDS-071 (165) pasan de 50: no empiezo trabajo de mejora que sobraría si se para. El 26/11 se miran si ha contestado «sigue»; si no, el 30/11"
         }
       ],
       "origen": "Codirector, 23/10 (elección de caras)"
@@ -583,7 +618,7 @@
       "id": "C51.3-cara-fija",
       "que": "La opción menor del codirector si no hay labios creíbles: la cara 2 fija, sin mover los labios, como imagen del canal en algunos Shorts. Muestra en vídeo para el codirector y, si dice que sí, un brazo con las pruebas habituales",
       "dueno": "direccion",
-      "fecha": "2026-11-23",
+      "fecha": "2026-11-30",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -600,6 +635,11 @@
           "de": "2026-11-19",
           "a": "2026-11-23",
           "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
+        },
+        {
+          "de": "2026-11-23",
+          "a": "2026-11-30",
+          "porque": "Cuarta ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, ocho días). La mediana de los veinte sigue en 21,5 aunque MDS-070 (65) y MDS-071 (165) pasan de 50: no empiezo trabajo de mejora que sobraría si se para. El 26/11 se miran si ha contestado «sigue»; si no, el 30/11"
         }
       ],
       "origen": "Respuesta del codirector a la tarea 2 del 26/10",
@@ -670,7 +710,7 @@
       "id": "C51.3-prueba",
       "que": "Probar EchoMimic V3-Flash en la T4 de Kaggle (workflow del presentador) y preparar LongCat-Video-Avatar en un Space de ZeroGPU: misma cara 2, 3 s de voz, semilla fija; medir tiempo y memoria; vídeo para el codirector",
       "dueno": "direccion",
-      "fecha": "2026-11-23",
+      "fecha": "2026-11-30",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -687,6 +727,11 @@
           "de": "2026-11-19",
           "a": "2026-11-23",
           "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
+        },
+        {
+          "de": "2026-11-23",
+          "a": "2026-11-30",
+          "porque": "Cuarta ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, ocho días). La mediana de los veinte sigue en 21,5 aunque MDS-070 (65) y MDS-071 (165) pasan de 50: no empiezo trabajo de mejora que sobraría si se para. El 26/11 se miran si ha contestado «sigue»; si no, el 30/11"
         }
       ],
       "origen": "Informe C51.3-alternativas del 02/11"
@@ -765,9 +810,15 @@
       "id": "voz-sdk-3",
       "que": "Probar google-genai 3.x con «Prueba de voces» (api_version v1beta ya fijada) antes de subir el tope <3 de requirements.txt",
       "dueno": "direccion",
-      "fecha": "2026-11-23",
+      "fecha": "2026-12-07",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-11-23",
+          "a": "2026-12-07",
+          "porque": "No bloquea nada: producción va con google-genai <3 y v1beta fijada sin fallos desde el 10/11. Se prueba con la primera ejecución de mantenimiento, junto al informe de voces del 07/12"
+        }
+      ],
       "origen": "Incidencia 07-09/11 (plan v30)",
       "nota": "12/11: «Prueba de voces» instala google-genai sin tope (3.x) y con api_version v1beta fijada las peticiones a gemini-3.8-flash-tts contestaron (runs 43225788928 y 43227268751). Primera prueba buena; falta la producción completa antes de quitar el tope <3"
     },
@@ -775,7 +826,7 @@
       "id": "visual-archivo-personas",
       "que": "Archivo (Pexels/Pixabay) solo para planos de personas y sitios; las frases de concepto, dato o estudio («unos psicólogos…», «la carita del guiño») van con imagen generada o con texto/animación. Cambio en visual.py con hoja de contactos de muestra para el codirector (regla 11.2)",
       "dueno": "direccion",
-      "fecha": "2026-11-23",
+      "fecha": "2026-11-30",
       "estado": "pendiente",
       "aplazamientos": [
         {
@@ -787,6 +838,11 @@
           "de": "2026-11-19",
           "a": "2026-11-23",
           "porque": "Tercera ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, cuatro días). La regla dice «< 50 → se para» (mediana 21,5) y los Shorts de noviembre están en 1-7 vistas a 48 h: no empiezo trabajo de mejora que sobraría si se para. Hoy dejo preparado el cambio de «se para» (workflows_2026-11-19/producir.yml) para que cualquiera de las dos respuestas sea una sola acción. Siguiente ejecución de la dirección: lunes 23/11"
+        },
+        {
+          "de": "2026-11-23",
+          "a": "2026-11-30",
+          "porque": "Cuarta ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, ocho días). La mediana de los veinte sigue en 21,5 aunque MDS-070 (65) y MDS-071 (165) pasan de 50: no empiezo trabajo de mejora que sobraría si se para. El 26/11 se miran si ha contestado «sigue»; si no, el 30/11"
         }
       ],
       "origen": "visual-recuento del 12/11 (1,75 planos que no pegan por Short)"
@@ -834,7 +890,7 @@
       "que": "Mirar la voz de los tres primeros Shorts con 3.8 (MDS-069, 070, 071): duración, ficha de calidad y lo que diga la revisión diaria; si una producción no sale, por qué",
       "dueno": "direccion",
       "fecha": "2026-11-23",
-      "estado": "pendiente",
+      "estado": "hecho",
       "aplazamientos": [
         {
           "de": "2026-11-19",
@@ -843,7 +899,8 @@
         }
       ],
       "origen": "Plan v32 (16/11)",
-      "nota": "19/11: MDS-069 (36,6 s; 5 llamadas, voz_fiel sin palabras ajenas) y MDS-070 (37,2 s; una toma C36, voz_fiel 12/12…23/24, 0 trozos repetidos) salieron con gemini-3.8-flash-tts, sin mezclar voces, lufs −14,3. Duraciones en la franja de antes (MDS-066/067/068: 40,3 / 35,2 / 38,3 s). Ninguna producción falló. La voz no la ha oído nadie todavía (voz-3.8-oir-2)"
+      "nota": "19/11: MDS-069 (36,6 s; 5 llamadas, voz_fiel sin palabras ajenas) y MDS-070 (37,2 s; una toma C36, voz_fiel 12/12…23/24, 0 trozos repetidos) salieron con gemini-3.8-flash-tts, sin mezclar voces, lufs −14,3. Duraciones en la franja de antes (MDS-066/067/068: 40,3 / 35,2 / 38,3 s). Ninguna producción falló. La voz no la ha oído nadie todavía (voz-3.8-oir-2) · 23/11: MDS-071 (revisión del 20/11) también bien: gemini-3.8-flash-tts, sin mezcla, voz_fiel 12/12…22/23 sin trozos repetidos, −14,86 LUFS. Para vigilar sin compromiso: el ritmo por escena se sale a veces (071 esc. 1 a 3,24 pal/s; 072 esc. 3 a 1,42; 075 esc. 2 a 4,56)",
+      "hecho_el": "2026-11-23"
     },
     {
       "id": "C26-parar-preparado",
@@ -859,11 +916,35 @@
       "id": "visual-negro-cierre",
       "que": "Si el canal sigue: que visual.py no elija clips abstractos (degradados, fondos) en los planos del cierre y que descarte clips que empiezan en negro (fotograma de control de MDS-070 a 32,78 s, pixabay 697, negro y sin texto). Con hoja de contactos de muestra (regla 11.2)",
       "dueno": "direccion",
-      "fecha": "2026-11-23",
+      "fecha": "2026-11-30",
       "estado": "pendiente",
-      "aplazamientos": [],
+      "aplazamientos": [
+        {
+          "de": "2026-11-23",
+          "a": "2026-11-30",
+          "porque": "Cuarta ejecución seguida sin respuesta del codirector a C26 (vencido el 15/11, ocho días). La mediana de los veinte sigue en 21,5 aunque MDS-070 (65) y MDS-071 (165) pasan de 50: no empiezo trabajo de mejora que sobraría si se para. El 26/11 se miran si ha contestado «sigue»; si no, el 30/11"
+        }
+      ],
       "origen": "Revisión diaria del 18/11 (MDS-070)",
       "nota": "Depende de C26-decision: si «se para», sin objeto"
+    },
+    {
+      "id": "plan-27-29",
+      "que": "Llenar la parrilla del viernes 27, sábado 28 y domingo 29/11 (posiciones 23, 24 y 25 de B2) antes que la semana del 30/11, por la nota de la dirección del 23/11",
+      "dueno": "planificacion",
+      "fecha": "2026-11-26",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Plan v34 (23/11)"
+    },
+    {
+      "id": "B2-ampliado-cierre",
+      "que": "Aplicar el veredicto de B2 (ampliado hasta el 22/12, posiciones 25-48) en cuanto resultados.json dé GANA, PIERDE o SIN EFECTO en algún factor, o cerrarlo el 22/12",
+      "dueno": "direccion",
+      "fecha": "2026-12-22",
+      "estado": "pendiente",
+      "aplazamientos": [],
+      "origen": "Plan v34 (23/11)"
     }
   ]
 }

@@ -1,0 +1,7 @@
+# Nota de la dirección · 2026-11-23
+
+- **Todas:** C26 sigue sin respuesta del codirector. Se produce y se publica como hasta hoy. El fichero `00_estrategia/tareas/workflows_2026-11-19/producir.yml` sigue sin ser incidencia (solo entra si el codirector decide parar).
+- **Planificación (jueves 26):** **la parrilla está vacía el viernes 27, el sábado 28 y el domingo 29/11. Llénalos primero**, antes que la semana del 30/11, aunque tu paso 0 diga que la semana se planifica a partir del lunes: es una orden de la dirección para esta semana (compromiso `plan-27-29`). Van a las **posiciones 23 (27/11, `control`), 24 (28/11, `D`) y 25 (29/11, `A`)** de B2. **B2 no se cierra el 28/11: se amplía hasta el 22/12** (`ciclos.json`, posiciones 25-48, misma regla, mismos brazos); asigna el brazo por día de emisión como siempre. Si el viernes o el sábado haces reintento, mira también estos tres días, no solo el lunes. Tu sugerencia `H-paso0-primer-hueco` va al codirector para cambiar tu prompt.
+- **Animación:** el 27-29/11 llegan con el margen justo (guiones el jueves por la noche): si el brazo es A o AD, la página tiene que estar antes de la producción de las 01:13 UTC del día de emisión; si no llega, el Short se aparta, como `MDS-075`.
+- **Revisión diaria:** `voz-3.8-vigilar` cerrado (069, 070, 071 bien). Los compromisos de la dirección que vencían hoy pasan al 30/11 (y `voz-sdk-3` al 07/12) con su porqué.
+- **Métricas:** sin cambios. `bucle.py` lee el `ciclos.json` ampliado sin cambios de código.

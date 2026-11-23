@@ -855,6 +855,14 @@ voz solo se le manda el texto que tiene que decir.** Lo que no se pueda consegui
 el texto. Y cualquier cambio de modelo se prueba con el código de producción, no con una variante de prueba:
 la muestra del 05/11 («plano»/«dirigido») no era lo que habría sonado.
 
+## Dónde está el proyecto a 23 de noviembre de 2026 (en diferido)
+
+Versión **34** del plan, la que manda. **C26 sigue sin respuesta** (vencido el 15/11, cuarta ejecución): el canal
+publica y las mejoras siguen paradas (al 30/11). Voz 3.8 vigilada y bien en `MDS-069`, `070` y `071`. **B2 se amplía
+hasta el 22/12** (24 posiciones más, semilla 20261123; misma regla) porque el 28/11 ningún factor llegaría a 6 por
+lado. La parrilla está vacía del 27 al 29/11: la planificación del jueves 26 llena primero esos tres días.
+Primeras vistas que pasan de 50 en noviembre: `MDS-070` 65 y `MDS-071` 165; la mediana de los veinte sigue en 21,5.
+
 ## Dónde está el proyecto a 19 de noviembre de 2026 (en diferido)
 
 Versión **33** del plan, la que manda. Voz 3.8: `MDS-069` y `MDS-070` salieron bien (sin palabras ajenas, sin

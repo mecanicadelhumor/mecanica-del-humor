@@ -96,8 +96,8 @@
   {
    "id": "B2",
    "desde": "2026-11-05",
-   "hasta": "2026-11-28",
-   "_hasta": "Veinticuatro Shorts a uno por día (5/11 → 28/11). Con el factorial, cada factor tiene doce Shorts por lado al terminar. Si los catorce a la semana llegan antes, el orden se agota antes y el ciclo se cierra antes.",
+   "hasta": "2026-12-22",
+   "_hasta": "Veinticuatro Shorts a uno por día (5/11 → 28/11). Con el factorial, cada factor tiene doce Shorts por lado al terminar. Si los catorce a la semana llegan antes, el orden se agota antes y el ciclo se cierra antes. · AMPLIADO EL 23/11/2026 (dirección en diferido): a 28/11 ningún factor llega a 6 Shorts por lado con dato (n_min de la regla), así que B2 sigue 24 posiciones más, del 29/11 (posición 25) al 22/12 (posición 48), con la misma regla, el mismo control y los mismos brazos. Se cierra antes si un factor da veredicto o si los dos llegan a 12 por lado.",
    "control": "control",
    "pregunta": "¿Retiene más un Short más corto (una escena menos) y/o con el mecanismo animado, partiendo del arranque con el dato (B)?",
    "metrica_principal": "se_quedaron_48h.pct (Se quedaron viendo, primeras 48 h), sin los Shorts de menos de 10 vistas a 48 h; % visto como freno (y, para el factor «corto», como segunda lectura: se espera que suba solo por durar menos)",
@@ -184,10 +184,41 @@
     "A",
     "AD",
     "control",
-    "D"
+    "D",
+    "A",
+    "D",
+    "control",
+    "AD",
+    "AD",
+    "A",
+    "D",
+    "control",
+    "A",
+    "control",
+    "D",
+    "AD",
+    "A",
+    "AD",
+    "D",
+    "control",
+    "AD",
+    "D",
+    "A",
+    "control",
+    "A",
+    "AD",
+    "D",
+    "control"
    ],
-   "_orden": "Bloques de cuatro con los cuatro brazos barajados (random.Random(20261102).shuffle en cada bloque; semilla = la fecha en que se escribió). DESDE B2 LAS POSICIONES VAN POR DÍA DE EMISIÓN (escrito el 02/11, antes del primer dato): la posición 1 es el jueves 5/11, la 2 el viernes 6, y así; un día sin Short deja su posición vacía y nadie corre un puesto. Si hay dos Shorts en un día (iteracion-14), el día ocupa dos posiciones seguidas, en orden de hora. Así un hueco de la parrilla no cambia el brazo de los Shorts ya escritos. Las cuatro primeras posiciones ya tenían tema (escritos el 29/10 como «B2 / control» antes de saber su brazo) y la dirección los ajustó el 02/11: MDS-060 jueves 5 (D, quitada la escena 3), viernes 6 (AD: MDS-061, borrador en 07_pruebas/MDS-061-2026-11-02/, solo si pasa la lectura en frío el jueves 5), MDS-062 sábado 7 (A, escenas 4 y 5 animadas), MDS-063 domingo 8 (control).",
-   "decisiones": []
+   "_orden": "Bloques de cuatro con los cuatro brazos barajados (random.Random(20261102).shuffle en cada bloque; semilla = la fecha en que se escribió). DESDE B2 LAS POSICIONES VAN POR DÍA DE EMISIÓN (escrito el 02/11, antes del primer dato): la posición 1 es el jueves 5/11, la 2 el viernes 6, y así; un día sin Short deja su posición vacía y nadie corre un puesto. Si hay dos Shorts en un día (iteracion-14), el día ocupa dos posiciones seguidas, en orden de hora. Así un hueco de la parrilla no cambia el brazo de los Shorts ya escritos. Las cuatro primeras posiciones ya tenían tema (escritos el 29/10 como «B2 / control» antes de saber su brazo) y la dirección los ajustó el 02/11: MDS-060 jueves 5 (D, quitada la escena 3), viernes 6 (AD: MDS-061, borrador en 07_pruebas/MDS-061-2026-11-02/, solo si pasa la lectura en frío el jueves 5), MDS-062 sábado 7 (A, escenas 4 y 5 animadas), MDS-063 domingo 8 (control). · Posiciones 25-48 (29/11 → 22/12), añadidas el 23/11/2026: seis bloques más con random.Random(20261123).shuffle en cada bloque (semilla = la fecha en que se escribieron), sin mirar ningún dato de brazo.",
+   "decisiones": [
+    {
+     "fecha": "2026-11-23",
+     "quien": "direccion (en diferido)",
+     "que": "B2 se amplía hasta el 22/12 (24 posiciones más, semilla 20261123). La regla no cambia.",
+     "porque": "resultados.json del 22/11: todos los brazos «faltan datos» (control n=2, A n=3, D n=1, AD n=0 con dato; la planificación calcula que el 28/11 ningún factor pasará de 5 por lado). Cerrar B2 sin veredicto tiraría el experimento; el 29/11 no tenía ciclo y la planificación del jueves 26 lo necesita. Si C26 decide parar el canal, esto no tiene efecto."
+    }
+   ]
   }
  ]
 }

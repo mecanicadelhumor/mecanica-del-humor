@@ -6916,3 +6916,30 @@ contrario.
 ## Lo que NO cambia hoy
 
 - B2 (brazos, `orden`, regla), los guiones ya escritos (regla 11.4), las rutinas, los umbrales de C26, el código de producción.
+
+# Versión 34 · 23 de noviembre de 2026 (lunes, en diferido) — B2 se amplía; la planificación llena el 27-29/11
+
+**Esta es la versión que manda.** Todo lo anterior sigue vigente salvo donde aquí se diga lo
+contrario.
+
+| Qué | Decisión |
+|---|---|
+| **C26** | **Cuarta ejecución sin respuesta del codirector** (`C26-decision`, vencido el 15/11, ocho días). Lo nuevo: `MDS-070` **65** y `MDS-071` **165** vistas a 48 h, los dos primeros de noviembre por encima de 50 desde `MDS-062` (388). La mediana de los últimos veinte con dato sigue en **21,5** (6 de 20 por encima de 50). Dos Shorts no cambian la regla: mi recomendación sigue siendo **parar**, y el cambio sigue preparado en `00_estrategia/tareas/workflows_2026-11-19/producir.yml`. Mientras no conteste, el canal publica y las mejoras esperan |
+| **B2 se amplía hasta el 22/12** | `resultados.json` del 22/11: «faltan datos» en todo (con dato: control 2, A 3, D 1, AD 0; seis apartados por menos de 10 vistas o sin animación). El 28/11 ningún factor llegaría a los 6 por lado que pide la regla. Cerrarlo sin veredicto tiraría tres semanas, y el 29/11 no tenía ciclo. **Decido ampliarlo 24 posiciones (25-48, del 29/11 al 22/12)**, seis bloques de cuatro con `random.Random(20261123)`, sin mirar ningún dato de brazo. **La regla no cambia** (umbral 0,90, n_min 6, n_cierre 12, mínimo 10 vistas). Si C26 decide parar, no tiene efecto. Escrito en `ciclos.json` (`hasta`, `orden`, `decisiones`) |
+| **La parrilla del 27 al 29/11** | Vacía: el reintento de la planificación solo mira el lunes siguiente (su sugerencia `H-paso0-primer-hueco`). Por nota de hoy en `08_comunicacion/`, **la planificación del jueves 26 llena primero el 27, 28 y 29/11** (posiciones 23, 24 y 25) y después la semana del 30/11. El cambio del paso 0 para siempre se lo propongo al codirector, porque el prompt de la planificación lo escribe la dirección interactiva |
+| **Voz 3.8** (`voz-3.8-vigilar`) | **Hecho.** `MDS-071` (revisión del 20/11): `gemini-3.8-flash-tts`, sin mezcla, `voz_fiel` sin palabras ajenas, lufs −14,9. Los tres primeros, bien. Para vigilar sin compromiso: el ritmo por escena se sale a veces (`MDS-071` escena 1 a 3,24 pal/s; `MDS-072` escena 3 a 1,42; `MDS-075` escena 2 a 4,56): la toma única no deja dirigir el ritmo frase a frase |
+| **`MDS-075` sin animación** | Salió como el control (`animacion.escenas_animadas = 0`) y el marcador lo aparta, como dice la receta: no había página de animación cuando se produjo (el guion entró el viernes 20 por la noche, en el reintento). Con la planificación del jueves a tiempo no debería repetirse |
+| Lo vencido hoy | `voz-3.8-vigilar` **hecho**. `voz-sdk-3` al **07/12** (no hay prisa: `<3` funciona). Los once que dependen de C26 al **30/11** |
+
+## El calendario
+
+| Cuándo | Qué |
+|---|---|
+| Hoy, mañana, 25 y 26/11 | `MDS-073`, `074`, `076`, `077` |
+| Jueves 26/11 | Dirección: lo que diga C26. Planificación (22:07 UTC): 27, 28 y 29/11 primero |
+| Cuando pueda | Codirector: «sigue» o «se para» (C26); oír la voz; borrar `40Ao-mOfuIg` |
+| Lunes 30/11 | Dirección: las mejoras, si el canal sigue |
+
+## Lo que NO cambia hoy
+
+- La regla de B2, sus brazos y las posiciones 1-24; los guiones ya escritos (regla 11.4); las rutinas; los umbrales de C26; el código de producción.
