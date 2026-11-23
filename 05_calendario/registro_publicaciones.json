@@ -1244,6 +1244,21 @@
       "pregunta_publicada": "2026-11-21T22:13:34Z"
     },
     {
+      "id": "MDS-073.es",
+      "episodio": "MDS-073",
+      "idioma": "es",
+      "canal": "Mecánica del Humor",
+      "titulo": "¿Por qué el silencio incómodo no lo es con amigos?",
+      "guion": "05_calendario/guiones/MDS-073.es.json",
+      "video_id": "Y9nFb9cPHCY",
+      "url": "https://youtu.be/Y9nFb9cPHCY",
+      "estado": "private",
+      "publicar_en": "2026-11-23T18:00:00Z",
+      "musica": "cama_03_haru_lofi_roa.mp3",
+      "subido_utc": "2026-11-23T09:09:41Z",
+      "revisado": false
+    },
+    {
       "id": "MDS-075.es",
       "episodio": "MDS-075",
       "idioma": "es",

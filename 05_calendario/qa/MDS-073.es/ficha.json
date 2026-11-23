@@ -1,15 +1,15 @@
 {
-  "id": "MDS-068.es",
-  "duracion_final_s": 38.3,
-  "tamano_mb": 15.4,
+  "id": "MDS-073.es",
+  "duracion_final_s": 39.33,
+  "tamano_mb": 26.2,
   "audio": {
-    "lufs": -14.63,
-    "pico_dbtp": -1.41,
-    "rango_lu": 3.3
+    "lufs": -14.61,
+    "pico_dbtp": -1.34,
+    "rango_lu": 4.8
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.128,
+    "acaba_s": 0.127,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,7 +17,7 @@
     "silencios_s": [
       [
         0.0,
-        0.128
+        0.127
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -42,41 +42,39 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 37.22,
-    "duracion_real_voz_mp3_s": 37.22,
+    "duracion_calculada_s": 38.24,
+    "duracion_real_voz_mp3_s": 38.24,
     "desfase_s": 0.0,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_12_lights_sappheiros.mp3",
-    "sha256": "ec8432272d68db1bf39afb8df8546f0783eca7ee54f486c9963e8e7dad1bab23"
+    "archivo": "cama_03_haru_lofi_roa.mp3",
+    "sha256": "68fe871bcd427b465aa11f71d2f2fc889de234166af65fac305170c0f5bddd6b"
   },
   "guion": {
-    "titulo_trabajo": "¿Las ratas se ríen con las cosquillas?",
+    "titulo_trabajo": "¿Por qué el silencio incómodo no lo es con amigos?",
     "idioma": "es",
     "voz": "Charon",
-    "escenas": 6,
-    "duracion_narracion_s": 37.22,
+    "escenas": 5,
+    "duracion_narracion_s": 38.24,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 8.509,
+    "escena_mas_larga_s": 9.6,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
-      "gemini-3.1-flash-tts-preview": 6
+      "gemini-3.8-flash-tts": 5
     },
-    "modelo_voz": "gemini-3.1-flash-tts-preview",
+    "modelo_voz": "gemini-3.8-flash-tts",
     "voz_mezclada": false,
     "origen_voz": [
-      "una toma (C36)",
-      "una toma (C36)",
-      "una toma (C36)",
-      "una toma (C36)",
-      "una toma (C36)",
-      "una toma (C36)"
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada",
+      "llamada"
     ],
     "direccion_voz": [
       "apertura",
-      "planteamiento",
       "remate",
       "enumeracion",
       "cifra",
@@ -84,12 +82,11 @@
     ],
     "escenas_ritmo_fuera_de_rango": [],
     "voz_fiel": [
-      "12/12 palabras, 0 trozos repetidos",
-      "18/15 palabras, 0 trozos repetidos",
-      "15/14 palabras, 0 trozos repetidos",
-      "17/17 palabras, 0 trozos repetidos",
-      "15/15 palabras, 0 trozos repetidos",
-      "21/23 palabras, 0 trozos repetidos"
+      "8/7 palabras, 0 trozos repetidos",
+      "15/16 palabras, 0 trozos repetidos",
+      "23/23 palabras, 0 trozos repetidos",
+      "20/20 palabras, 0 trozos repetidos",
+      "21/22 palabras, 0 trozos repetidos"
     ]
   },
   "visual": {
@@ -97,88 +94,105 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 4.57,
+        "hasta_s": 4.47,
         "fuente": "ia",
         "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
         "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "a hand gently tickling the belly of a white pet rat, close-up, soft light",
+        "prompt": "two strangers standing in an elevator in awkward silence, looking up at the floor numbers",
         "tipo": "imagen"
       },
       {
         "escena": 2,
-        "desde_s": 4.57,
-        "hasta_s": 8.0,
-        "fuente": "ia",
-        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "a white laboratory rat on a lab table, quiet room",
-        "tipo": "imagen"
-      },
-      {
-        "escena": 2,
-        "desde_s": 8.0,
-        "hasta_s": 10.2,
-        "fuente": "ia",
-        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "close-up of a white rat looking straight at the camera",
-        "tipo": "imagen"
-      },
-      {
-        "escena": 3,
-        "desde_s": 10.2,
-        "hasta_s": 15.93,
+        "desde_s": 4.47,
+        "hasta_s": 10.73,
         "fuente": "pexels",
-        "id": 35235434,
-        "pagina": "https://www.pexels.com/video/modern-dj-software-on-laptop-screen-in-studio-35235434/",
-        "autor": "Wolf  Art",
-        "autor_url": "https://www.pexels.com/@wolfart",
+        "id": 6954279,
+        "pagina": "https://www.pexels.com/video/friends-blogging-inside-a-car-6954279/",
+        "autor": "cottonbro studio",
+        "autor_url": "https://www.pexels.com/@cottonbro",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
-        "escena": 6,
-        "desde_s": 28.7,
-        "hasta_s": 33.87,
-        "fuente": "ia",
-        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "a person holding a pet rat in both hands, smiling",
-        "tipo": "imagen"
+        "escena": 3,
+        "desde_s": 10.73,
+        "hasta_s": 15.4,
+        "fuente": "pixabay",
+        "id": 8252,
+        "pagina": "https://pixabay.com/videos/id-8252/",
+        "autor": "Coverr-Free-Footage",
+        "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
       },
       {
-        "escena": 6,
-        "desde_s": 33.87,
-        "hasta_s": 35.7,
+        "escena": 3,
+        "desde_s": 15.4,
+        "hasta_s": 20.23,
+        "fuente": "pexels",
+        "id": 4828603,
+        "pagina": "https://www.pexels.com/video/two-persons-sitting-by-the-table-while-drinking-their-coffee-4828603/",
+        "autor": "cottonbro studio",
+        "autor_url": "https://www.pexels.com/@cottonbro",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 4,
+        "desde_s": 20.23,
+        "hasta_s": 24.4,
+        "fuente": "pixabay",
+        "id": 114,
+        "pagina": "https://pixabay.com/videos/id-114/",
+        "autor": "Coverr-Free-Footage",
+        "autor_url": "https://pixabay.com/users/Coverr-Free-Footage-1281706/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 4,
+        "desde_s": 24.4,
+        "hasta_s": 28.63,
+        "fuente": "pexels",
+        "id": 9187875,
+        "pagina": "https://www.pexels.com/video/women-laughing-together-9187875/",
+        "autor": "Darina Belonogova",
+        "autor_url": "https://www.pexels.com/@darina-belonogova",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 28.63,
+        "hasta_s": 33.43,
+        "fuente": "pexels",
+        "id": 6954280,
+        "pagina": "https://www.pexels.com/video/friends-dancing-ang-singing-while-inside-a-car-6954280/",
+        "autor": "cottonbro studio",
+        "autor_url": "https://www.pexels.com/@cottonbro",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 33.43,
+        "hasta_s": 36.73,
         "fuente": "ia",
         "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
         "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "a white rat looking up curiously, shallow depth of field",
+        "prompt": "university students talking at a table",
         "tipo": "imagen"
       }
     ],
     "sintetico": true
   },
-  "animacion": {
-    "escenas_animadas": 2,
-    "escenas": [
-      4,
-      5
-    ],
-    "pedidas": [
-      4,
-      5
-    ],
-    "descartadas": {},
-    "pagina": "05_calendario/animaciones/MDS-068/animacion.html"
-  },
+  "animacion": null,
   "fotogramas_s": [
-    2.84,
-    8.06,
-    13.75,
-    20.16,
-    26.44,
-    33.91
+    2.79,
+    8.34,
+    16.54,
+    25.38,
+    34.5
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
