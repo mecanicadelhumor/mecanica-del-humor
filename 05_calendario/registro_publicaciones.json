@@ -1268,11 +1268,12 @@
       "guion": "05_calendario/guiones/MDS-074.es.json",
       "video_id": "lXOEhN5QOP0",
       "url": "https://youtu.be/lXOEhN5QOP0",
-      "estado": "private",
+      "estado": "public",
       "publicar_en": "2026-11-24T18:00:00Z",
       "musica": "cama_04_reverie_piano_version_ft_adarsh_lucjo.mp3",
       "subido_utc": "2026-11-24T10:58:45Z",
-      "revisado": false
+      "revisado": false,
+      "pregunta_publicada": "2026-11-24T19:43:36Z"
     },
     {
       "id": "MDS-075.es",
@@ -1291,5 +1292,5 @@
       "pregunta_publicada": "2026-11-22T22:33:12Z"
     }
   ],
-  "_estado_leido_utc": "2026-11-23T20:29:44Z"
+  "_estado_leido_utc": "2026-11-24T19:43:36Z"
 }
