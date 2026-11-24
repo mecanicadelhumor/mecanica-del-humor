@@ -860,5 +860,35 @@
         "woman reading message on phone worried"
       ]
     }
+  },
+  "MDS-076": {
+    "6.1": {
+      "excluir": [
+        "pixabay:377601"
+      ],
+      "busqueda": [
+        "woman reading message on phone unimpressed",
+        "person frowning at smartphone screen"
+      ]
+    }
+  },
+  "MDS-077": {
+    "3.1": {
+      "excluir": [
+        "pixabay:26666"
+      ],
+      "busqueda": [
+        "group of young people chatting in a room",
+        "students talking in a circle"
+      ]
+    },
+    "3.2": {
+      "excluir": [
+        "pexels:7247818"
+      ],
+      "busqueda": [
+        "young man checking smartphone while talking to someone"
+      ]
+    }
   }
 }
