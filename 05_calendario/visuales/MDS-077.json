@@ -1,8 +1,8 @@
 {
   "guion": "MDS-077",
   "version": 2,
-  "firma": "c5d4a6c46f5ca3ea",
-  "resuelto_utc": "2026-11-20T22:50:36Z",
+  "firma": "79fbd390abea1f6c",
+  "resuelto_utc": "2026-11-24T10:31:50Z",
   "detector_caras": "ok: YuNet, OpenCV 5.1.0",
   "escenas": {
     "1": {
@@ -152,27 +152,52 @@
             5.67
           ],
           "frase": "En un experimento, cien jóvenes charlaban con un actor contratado.",
-          "fuente": "pixabay",
-          "id": 26666,
-          "pagina": "https://pixabay.com/videos/id-26666/",
-          "titulo": "shanghai jiao tong university, jiaotong university, delay, new ceremony, students, people id",
-          "autor": "jeremy888",
-          "autor_url": "https://pixabay.com/users/jeremy888-8000982/",
-          "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 9.0,
-          "ancho": 1920,
-          "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2019/09/08/26666-359268463_large.mp4",
+          "fuente": "pexels",
+          "id": 6962194,
+          "pagina": "https://www.pexels.com/video/young-people-chatting-in-bar-6962194/",
+          "titulo": "young people chatting in bar",
+          "autor": "Ivan S",
+          "autor_url": "https://www.pexels.com/@ivan-s",
+          "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+          "duracion_s": 12.0,
+          "ancho": 1080,
+          "alto": 1920,
+          "url": "https://videos.pexels.com/video-files/6962194/6962194-hd_1080_1920_25fps.mp4",
           "tipo": "video",
-          "consulta": "two young people talking university",
-          "relevancia": 0.5,
+          "consulta": "group of young people chatting in a room",
+          "relevancia": 0.6,
           "inicio_s": 0.4,
-          "movimiento": 7.95,
+          "movimiento": 6.75,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
-          "caras": []
+          "caras": [
+            [
+              0.5917,
+              0.3578,
+              0.1139,
+              0.0875
+            ],
+            [
+              0.4861,
+              0.3625,
+              0.1111,
+              0.0875
+            ],
+            [
+              0.225,
+              0.3859,
+              0.0917,
+              0.0859
+            ],
+            [
+              0.175,
+              0.3891,
+              0.0806,
+              0.0781
+            ]
+          ]
         },
         {
           "k": 2,
@@ -183,33 +208,26 @@
           ],
           "frase": "A algunos, el actor les sacaba el móvil a los dos minutos.",
           "fuente": "pexels",
-          "id": 7247818,
-          "pagina": "https://www.pexels.com/video/a-woman-talking-on-the-phone-while-checking-on-some-documents-7247818/",
-          "titulo": "a woman talking on the phone while checking on some documents",
-          "autor": "Leeloo The First",
-          "autor_url": "https://www.pexels.com/@leeloothefirst",
+          "id": 6931579,
+          "pagina": "https://www.pexels.com/video/man-talking-on-the-phone-while-drinking-coffee-6931579/",
+          "titulo": "man talking on the phone while drinking coffee",
+          "autor": "Mikhail Nilov",
+          "autor_url": "https://www.pexels.com/@mikhail-nilov",
           "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
-          "duracion_s": 16.0,
+          "duracion_s": 14.0,
           "ancho": 1080,
           "alto": 1920,
-          "url": "https://videos.pexels.com/video-files/7247818/7247818-hd_1080_1920_30fps.mp4",
+          "url": "https://videos.pexels.com/video-files/6931579/6931579-hd_1080_1920_25fps.mp4",
           "tipo": "video",
-          "consulta": "person checking phone during talk",
+          "consulta": "young man checking smartphone while talking to someone",
           "relevancia": 0.6,
           "inicio_s": 0.4,
-          "movimiento": 9.62,
+          "movimiento": 11.1,
           "encuadre": {
             "x": 0.5,
             "y": 0.5
           },
-          "caras": [
-            [
-              0.3694,
-              0.3016,
-              0.2972,
-              0.1953
-            ]
-          ]
+          "caras": []
         }
       ]
     },

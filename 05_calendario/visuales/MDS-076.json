@@ -1,8 +1,8 @@
 {
   "guion": "MDS-076",
   "version": 2,
-  "firma": "0fc8ff9b981636f0",
-  "resuelto_utc": "2026-11-20T22:47:30Z",
+  "firma": "35d4a62944d02a86",
+  "resuelto_utc": "2026-11-24T10:31:39Z",
   "detector_caras": "ok: YuNet, OpenCV 5.1.0",
   "escenas": {
     "1": {
@@ -249,46 +249,31 @@
           ],
           "frase": "Pero solo un poco: con emoji o sin él, seguía sonando a reproche.",
           "fuente": "pixabay",
-          "id": 377601,
-          "pagina": "https://pixabay.com/videos/id-377601/",
-          "titulo": "women, vietnam, feminism, friends, nature, computer, business, office, laptop, work, working, writing, man, study, technology, desk, typing, coffee, meeting id",
-          "autor": "MuhammadAhmad10",
-          "autor_url": "https://pixabay.com/users/MuhammadAhmad10-46165548/",
+          "id": 9490,
+          "pagina": "https://pixabay.com/videos/id-9490/",
+          "titulo": "mobile phone, message, boy, man, human, sms, young, happy, lifestyle, smartphone, technology, letter, the internet, dial, communication, watch, business, network, street, wireless, chat, reading id",
+          "autor": "chayka1270",
+          "autor_url": "https://pixabay.com/users/chayka1270-5469348/",
           "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-          "duracion_s": 20.0,
-          "ancho": 2048,
+          "duracion_s": 9.0,
+          "ancho": 1920,
           "alto": 1080,
-          "url": "https://cdn.pixabay.com/video/2026/09/19/377601_large.mp4",
+          "url": "https://cdn.pixabay.com/video/2017/06/02/9490-220088148_large.mp4",
           "tipo": "video",
-          "consulta": "man sighing at desk",
-          "relevancia": 0.667,
-          "inicio_s": 0.4,
-          "movimiento": 8.07,
+          "consulta": "woman reading message on phone unimpressed",
+          "relevancia": 0.6,
+          "inicio_s": 0.0,
+          "movimiento": 8.11,
           "encuadre": {
-            "x": 0.654,
+            "x": 0.5,
             "y": 0.5
           },
-          "caras": [
-            [
-              0.1594,
-              0.125,
-              0.682,
-              0.5306
-            ]
-          ]
+          "caras": []
         }
       ]
     }
   },
-  "descartes": [
-    {
-      "escena": 6,
-      "plano": 1,
-      "id": "pixabay:42305",
-      "titulo": "man, computer, work, pc, home, mac, windows, desk, clics, house, mouse, books, table, office, modern, at work, black, busy, working, email, screen, electronic id",
-      "motivo": "quieto (movimiento 0.38)"
-    }
-  ],
+  "descartes": [],
   "errores_ia": [],
   "incompleto": false
 }
