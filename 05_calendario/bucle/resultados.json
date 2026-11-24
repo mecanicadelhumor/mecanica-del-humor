@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-23T22:32:51Z",
+ "actualizado_utc": "2026-11-24T01:15:10Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -389,7 +389,7 @@
        "porcentaje_visto": 78.7,
        "me_gusta": 0,
        "visualizaciones": 66,
-       "leido": "2026-11-23"
+       "leido": "2026-11-24"
       },
       {
        "id": "MDS-072",
@@ -399,7 +399,7 @@
        "porcentaje_visto": 20.9,
        "me_gusta": 2,
        "visualizaciones": 20,
-       "leido": "2026-11-23"
+       "leido": "2026-11-24"
       }
      ]
     },
@@ -440,7 +440,7 @@
        "porcentaje_visto": 35.6,
        "me_gusta": 0,
        "visualizaciones": 170,
-       "leido": "2026-11-23"
+       "leido": "2026-11-24"
       }
      ]
     },
