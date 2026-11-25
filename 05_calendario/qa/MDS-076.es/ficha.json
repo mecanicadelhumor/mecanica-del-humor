@@ -1,15 +1,15 @@
 {
-  "id": "MDS-070.es",
-  "duracion_final_s": 37.2,
-  "tamano_mb": 17.9,
+  "id": "MDS-076.es",
+  "duracion_final_s": 34.87,
+  "tamano_mb": 16.6,
   "audio": {
-    "lufs": -14.3,
-    "pico_dbtp": -1.45,
-    "rango_lu": 4.5
+    "lufs": -14.26,
+    "pico_dbtp": -1.41,
+    "rango_lu": 4.1
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.122,
+    "acaba_s": 0.126,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,7 +17,11 @@
     "silencios_s": [
       [
         0.0,
-        0.122
+        0.126
+      ],
+      [
+        3.677,
+        4.0
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -42,24 +46,24 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 36.11,
-    "duracion_real_voz_mp3_s": 36.11,
+    "duracion_calculada_s": 33.79,
+    "duracion_real_voz_mp3_s": 33.79,
     "desfase_s": 0.0,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_14_alone_two_days_ago_artificial_music.mp3",
-    "sha256": "406c1a0a6684bb038da74a0e5cd18824ab6a4d85f8ea4f0cf668170cdf56e99e"
+    "archivo": "cama_06_prelude_no_20_chris_zabriskie.mp3",
+    "sha256": "82f9edf6eab772e453e740b5415a54b892c9ac85c58c28d8318ac9011360def1"
   },
   "guion": {
-    "titulo_trabajo": "¿Por qué un «Qué bien» sin emoji suena frío?",
+    "titulo_trabajo": "¿Un reproche con emoji suena menos borde?",
     "idioma": "es",
     "voz": "Charon",
     "escenas": 6,
-    "duracion_narracion_s": 36.11,
+    "duracion_narracion_s": 33.79,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 8.577,
+    "escena_mas_larga_s": 8.039,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
       "gemini-3.8-flash-tts": 6
@@ -85,11 +89,11 @@
     "escenas_ritmo_fuera_de_rango": [],
     "voz_fiel": [
       "12/12 palabras, 0 trozos repetidos",
-      "15/15 palabras, 0 trozos repetidos",
+      "15/14 palabras, 0 trozos repetidos",
       "13/13 palabras, 0 trozos repetidos",
-      "18/17 palabras, 0 trozos repetidos",
-      "21/20 palabras, 0 trozos repetidos",
-      "23/24 palabras, 0 trozos repetidos"
+      "22/22 palabras, 0 trozos repetidos",
+      "16/16 palabras, 0 trozos repetidos",
+      "14/13 palabras, 0 trozos repetidos"
     ]
   },
   "visual": {
@@ -97,106 +101,110 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 4.13,
-        "fuente": "pixabay",
-        "id": 204526,
-        "pagina": "https://pixabay.com/videos/id-204526/",
-        "autor": "conte_public",
-        "autor_url": "https://pixabay.com/users/conte_public-41658361/",
-        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
-        "tipo": "video"
-      },
-      {
-        "escena": 2,
-        "desde_s": 4.13,
-        "hasta_s": 7.07,
-        "fuente": "ia",
-        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "a young man typing an excited message on his phone",
-        "tipo": "imagen"
-      },
-      {
-        "escena": 2,
-        "desde_s": 7.07,
-        "hasta_s": 9.93,
+        "hasta_s": 3.97,
         "fuente": "pexels",
-        "id": 8165693,
-        "pagina": "https://www.pexels.com/video/a-person-using-a-smartphone-with-a-blank-screen-8165693/",
-        "autor": "MART  PRODUCTION",
-        "autor_url": "https://www.pexels.com/@mart-production",
+        "id": 7026692,
+        "pagina": "https://www.pexels.com/video/a-woman-working-on-her-laptop-7026692/",
+        "autor": "George Milton",
+        "autor_url": "https://www.pexels.com/@george-milton",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
+        "escena": 2,
+        "desde_s": 3.97,
+        "hasta_s": 9.27,
+        "fuente": "pixabay",
+        "id": 95126,
+        "pagina": "https://pixabay.com/videos/id-95126/",
+        "autor": "aframeinmotion",
+        "autor_url": "https://pixabay.com/users/aframeinmotion-24244781/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
         "escena": 3,
-        "desde_s": 9.93,
-        "hasta_s": 15.0,
+        "desde_s": 9.27,
+        "hasta_s": 14.0,
+        "fuente": "pixabay",
+        "id": 26771,
+        "pagina": "https://pixabay.com/videos/id-26771/",
+        "autor": "SecretPoems",
+        "autor_url": "https://pixabay.com/users/SecretPoems-11586270/",
+        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 4,
+        "desde_s": 14.0,
+        "hasta_s": 18.77,
         "fuente": "pexels",
-        "id": 7226924,
-        "pagina": "https://www.pexels.com/video/man-using-smartphone-and-headset-while-lying-on-sofa-7226924/",
-        "autor": "Thirdman",
-        "autor_url": "https://www.pexels.com/@thirdman",
+        "id": 7195465,
+        "pagina": "https://www.pexels.com/video/man-on-phone-and-woman-reading-a-book-7195465/",
+        "autor": "SHVETS production",
+        "autor_url": "https://www.pexels.com/@shvets-production",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 4,
-        "desde_s": 15.0,
-        "hasta_s": 20.97,
+        "desde_s": 18.77,
+        "hasta_s": 22.03,
         "fuente": "pexels",
-        "id": 30718267,
-        "pagina": "https://www.pexels.com/video/smartphone-with-chatgpt-on-wooden-desk-30718267/",
-        "autor": "Airam Dato-on",
-        "autor_url": "https://www.pexels.com/@airamdphoto",
+        "id": 19798253,
+        "pagina": "https://www.pexels.com/video/a-2024-planner-by-a-wireless-keyboard-and-a-smartphone-19798253/",
+        "autor": "Ali  Alcántara",
+        "autor_url": "https://www.pexels.com/@alialcantara",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 5,
-        "desde_s": 20.97,
-        "hasta_s": 27.53,
+        "desde_s": 22.03,
+        "hasta_s": 27.97,
         "fuente": "pexels",
-        "id": 6919216,
-        "pagina": "https://www.pexels.com/video/women-smiling-while-hugging-each-other-6919216/",
-        "autor": "KATRIN  BOLOVTSOVA",
-        "autor_url": "https://www.pexels.com/@ekaterina-bolovtsova",
+        "id": 7155123,
+        "pagina": "https://www.pexels.com/video/a-woman-smiling-while-using-laptop-7155123/",
+        "autor": "Yan Krukau",
+        "autor_url": "https://www.pexels.com/@yankrukov",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 6,
-        "desde_s": 27.53,
-        "hasta_s": 32.6,
-        "fuente": "ia",
-        "licencia": "Imagen generada con IA (flux-2-klein-4b, Black Forest Labs) en Cloudflare Workers AI. Se declara en la descripción y como contenido sintético.",
-        "modelo": "@cf/black-forest-labs/flux-2-klein-4b",
-        "prompt": "a young man smiling with relief at his phone",
-        "tipo": "imagen"
-      },
-      {
-        "escena": 6,
-        "desde_s": 32.6,
-        "hasta_s": 34.6,
+        "desde_s": 27.97,
+        "hasta_s": 32.27,
         "fuente": "pixabay",
-        "id": 697,
-        "pagina": "https://pixabay.com/videos/id-697/",
-        "autor": "geralt",
-        "autor_url": "https://pixabay.com/users/geralt-9301/",
+        "id": 9490,
+        "pagina": "https://pixabay.com/videos/id-9490/",
+        "autor": "chayka1270",
+        "autor_url": "https://pixabay.com/users/chayka1270-5469348/",
         "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
         "tipo": "video"
       }
     ],
-    "sintetico": true
+    "sintetico": false
   },
-  "animacion": null,
+  "animacion": {
+    "escenas_animadas": 0,
+    "escenas": [],
+    "pedidas": [
+      4,
+      5
+    ],
+    "descartadas": {
+      "4": "no hay página: falta 05_calendario/animaciones/MDS-076/animacion.html",
+      "5": "no hay página: falta 05_calendario/animaciones/MDS-076/animacion.html"
+    },
+    "pagina": "05_calendario/animaciones/MDS-076/animacion.html"
+  },
   "fotogramas_s": [
-    2.58,
-    7.71,
-    13.09,
-    18.69,
-    25.01,
-    32.78
+    2.49,
+    7.27,
+    12.23,
+    18.94,
+    25.72,
+    31.57
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
