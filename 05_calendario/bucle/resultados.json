@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-25T17:37:40Z",
+ "actualizado_utc": "2026-11-25T22:49:08Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -446,10 +446,10 @@
     },
     "D": {
      "nombre": "B corto: una escena menos",
-     "n": 1,
-     "se_quedaron_media": 25.9,
-     "porcentaje_visto_media": 64.5,
-     "vistas_48h_mediana": 27,
+     "n": 2,
+     "se_quedaron_media": 20.6,
+     "porcentaje_visto_media": 46.3,
+     "vistas_48h_mediana": 69.0,
      "me_gusta_por_100": 0.0,
      "ceros_de_feed": 1,
      "shorts": [
@@ -462,6 +462,16 @@
        "me_gusta": 0,
        "visualizaciones": 29,
        "leido": "2026-11-24"
+      },
+      {
+       "id": "MDS-073",
+       "publicado": "2026-11-23",
+       "se_quedaron_pct": 15.3,
+       "vistas_48h": 111,
+       "porcentaje_visto": 28.1,
+       "me_gusta": 0,
+       "visualizaciones": 111,
+       "leido": "2026-11-25"
       }
      ]
     },
@@ -508,11 +518,11 @@
       "ceros_de_feed": 2
      },
      "no": {
-      "n": 4,
-      "se_quedaron_media": 25.2,
-      "porcentaje_visto_media": 49.3,
-      "vistas_48h_mediana": 42.0,
-      "me_gusta_por_100": 1.61,
+      "n": 5,
+      "se_quedaron_media": 23.3,
+      "porcentaje_visto_media": 45.1,
+      "vistas_48h_mediana": 56,
+      "me_gusta_por_100": 1.01,
       "ceros_de_feed": 3
      },
      "diferencia_pp": null,
@@ -522,10 +532,10 @@
     "corto": {
      "que": "Una escena menos (cinco), 45 s como mucho (H-duracion)",
      "si": {
-      "n": 1,
-      "se_quedaron_media": 25.9,
-      "porcentaje_visto_media": 64.5,
-      "vistas_48h_mediana": 27,
+      "n": 2,
+      "se_quedaron_media": 20.6,
+      "porcentaje_visto_media": 46.3,
+      "vistas_48h_mediana": 69.0,
       "me_gusta_por_100": 0.0,
       "ceros_de_feed": 2
      },
@@ -603,11 +613,6 @@
     }
    ],
    "pendientes": [
-    {
-     "id": "MDS-073",
-     "variante": "D",
-     "motivo": "sin «se quedaron» a 48 h todavía"
-    },
     {
      "id": "MDS-077",
      "variante": "AD",
