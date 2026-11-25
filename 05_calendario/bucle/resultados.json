@@ -1,6 +1,6 @@
 {
  "_nota": "Lo escribe 04_agentes/bucle.py desde metricas.yml (C60). No se edita a mano: se corrige ciclos.json o el guion, y se vuelve a calcular.",
- "actualizado_utc": "2026-11-24T23:16:50Z",
+ "actualizado_utc": "2026-11-25T17:37:40Z",
  "regla": {
   "temprano": {
    "n": 4,
@@ -389,7 +389,7 @@
        "porcentaje_visto": 78.7,
        "me_gusta": 0,
        "visualizaciones": 66,
-       "leido": "2026-11-24"
+       "leido": "2026-11-25"
       },
       {
        "id": "MDS-072",
@@ -399,7 +399,7 @@
        "porcentaje_visto": 22.8,
        "me_gusta": 2,
        "visualizaciones": 56,
-       "leido": "2026-11-24"
+       "leido": "2026-11-25"
       }
      ]
     },
@@ -440,7 +440,7 @@
        "porcentaje_visto": 37.0,
        "me_gusta": 0,
        "visualizaciones": 171,
-       "leido": "2026-11-24"
+       "leido": "2026-11-25"
       }
      ]
     },
@@ -595,6 +595,11 @@
      "id": "MDS-075",
      "variante": "A",
      "motivo": "no salió como se planificó: animacion.escenas_animadas = 0"
+    },
+    {
+     "id": "MDS-076",
+     "variante": "A",
+     "motivo": "no salió como se planificó: animacion.escenas_animadas = 0"
     }
    ],
    "pendientes": [
@@ -602,11 +607,6 @@
      "id": "MDS-073",
      "variante": "D",
      "motivo": "sin «se quedaron» a 48 h todavía"
-    },
-    {
-     "id": "MDS-076",
-     "variante": "A",
-     "motivo": "sin ficha de producción todavía"
     },
     {
      "id": "MDS-077",
@@ -660,6 +660,9 @@
    "animacion.escenas_animadas": 0
   },
   "MDS-075": {
+   "animacion.escenas_animadas": 0
+  },
+  "MDS-076": {
    "animacion.escenas_animadas": 0
   }
  }
