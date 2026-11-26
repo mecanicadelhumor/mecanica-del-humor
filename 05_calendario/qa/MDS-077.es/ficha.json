@@ -1,15 +1,15 @@
 {
-  "id": "MDS-071.es",
-  "duracion_final_s": 44.3,
-  "tamano_mb": 25.5,
+  "id": "MDS-077.es",
+  "duracion_final_s": 30.27,
+  "tamano_mb": 21.4,
   "audio": {
-    "lufs": -14.86,
-    "pico_dbtp": -1.31,
-    "rango_lu": 4.2
+    "lufs": -14.65,
+    "pico_dbtp": -1.38,
+    "rango_lu": 12.2
   },
   "silencio_inicial": {
     "empieza_s": -0.021,
-    "acaba_s": 0.13,
+    "acaba_s": 0.036,
     "esperado_s": 0.1,
     "_nota": "Debe rondar «esperado_s»: es el colchón de entrada (0,1 s en los Shorts desde C58, el 02/10/2026; 0,6 s en los largos). Un 0 en un largo significa que el vídeo entra en seco."
   },
@@ -17,7 +17,7 @@
     "silencios_s": [
       [
         0.0,
-        0.13
+        0.1
       ]
     ],
     "fragmento_antes_de_la_narracion": false,
@@ -25,8 +25,19 @@
     "_nota": "En true, el sintetizador ha metido una sílaba suelta antes de la primera frase. Ojo: «silencio_inicial» NO lo detecta, porque el colchón de entrada acaba donde debe (0,629 s medidos en MDH-002.en con el defecto presente)."
   },
   "fragmentos": {
-    "instantes": [],
-    "cuantos": 0,
+    "instantes": [
+      {
+        "s": 21.485,
+        "mmss": "0:21.5",
+        "dura_s": 0.379
+      },
+      {
+        "s": 22.071,
+        "mmss": "0:22.1",
+        "dura_s": 0.004
+      }
+    ],
+    "cuantos": 2,
     "_nota": "Cada entrada es un trozo de audio de menos de 0.45 s rodeado de silencio: casi seguro una sílaba suelta que el sintetizador ha metido al empezar una escena. «mmss» es el minuto exacto para ir a escucharlo. Debe estar vacío."
   },
   "subtitulos": {
@@ -42,59 +53,51 @@
     "_nota": "Desde el 20/08 «quemados» DEBE ser false: es decisión de canal, no un fallo, y el .srt va a YouTube como pista de subtítulos. Lo que sí hay que vigilar es «lineas_ass» CUANDO EL MOTOR ES edge: si cae a 0 con ass_existe en true, edge-tts ha dejado de devolver marcas de palabra (WordBoundary) y el .srt saldrá inservible. Desde C7 (07-09/09/2026) esto ya no vale para escenas con motor gemini: la API no da WordBoundary y el .ass de esas escenas sale vacío A PROPÓSITO (ver voz.py). Para esas producciones el canario es «sincronia_voz», más abajo en esta ficha — compara duración calculada y duración real, que es lo que de verdad importa. «quemados» sale null si montaje.py no ha dejado manifiesto (ver «quemados_origen»): antes se adivinaba a partir de lineas_ass y salía mal en cuanto quemar_subs pasó a False por defecto (corregido 24/08)."
   },
   "sincronia_voz": {
-    "duracion_calculada_s": 43.17,
-    "duracion_real_voz_mp3_s": 43.17,
+    "duracion_calculada_s": 29.17,
+    "duracion_real_voz_mp3_s": 29.17,
     "desfase_s": 0.0,
     "_esperado": "desfase_s < 0.5",
     "_nota": "Sustituye a «lineas_ass» como canario de sincronía cuando el motor es Gemini (sin marcas de palabra, el .ass de esas escenas sale vacío a propósito). Un desfase alto significa que voz.py y render.py no están de acuerdo en cuánto dura la narración, y eso desincroniza imagen y voz sin que nada más lo detecte."
   },
   "musica": {
-    "archivo": "cama_01_crying_over_you_christophermorrow.mp3",
-    "sha256": "4143a4c48067539963eeff663f43e8c1f880f4e4c1428972a69ed75d0aa28e44"
+    "archivo": "cama_07_cylinder_one_chris_zabriskie.mp3",
+    "sha256": "ea941f18640ca2829b748a0017662ecb299ea2bf742cf2ea166640b7a32e4edb"
   },
   "guion": {
-    "titulo_trabajo": "¿Los perros se ríen?",
+    "titulo_trabajo": "¿Por qué sienta tan mal que saquen el móvil?",
     "idioma": "es",
     "voz": "Charon",
-    "escenas": 6,
-    "duracion_narracion_s": 43.17,
+    "escenas": 5,
+    "duracion_narracion_s": 29.17,
     "escenas_por_encima_de_14s": [],
-    "escena_mas_larga_s": 10.12,
+    "escena_mas_larga_s": 7.807,
     "motor_voz_pedido": "gemini",
     "motores_por_escena": {
-      "gemini-3.8-flash-tts": 6
+      "gemini-3.8-flash-tts": 5
     },
     "modelo_voz": "gemini-3.8-flash-tts",
     "voz_mezclada": false,
     "origen_voz": [
-      "llamada",
-      "llamada",
-      "llamada",
-      "llamada",
-      "llamada",
-      "llamada"
+      "una toma (C36)",
+      "una toma (C36)",
+      "una toma (C36)",
+      "una toma (C36)",
+      "una toma (C36)"
     ],
     "direccion_voz": [
       "apertura",
       "planteamiento",
-      "remate",
       "enumeracion",
       "cifra",
       "objecion"
     ],
-    "escenas_ritmo_fuera_de_rango": [
-      [
-        1,
-        3.24
-      ]
-    ],
+    "escenas_ritmo_fuera_de_rango": [],
     "voz_fiel": [
-      "12/12 palabras, 0 trozos repetidos",
-      "14/15 palabras, 0 trozos repetidos",
+      "10/10 palabras, 0 trozos repetidos",
+      "20/20 palabras, 0 trozos repetidos",
+      "23/22 palabras, 0 trozos repetidos",
       "15/15 palabras, 0 trozos repetidos",
-      "16/16 palabras, 0 trozos repetidos",
-      "19/19 palabras, 0 trozos repetidos",
-      "22/23 palabras, 0 trozos repetidos"
+      "19/20 palabras, 0 trozos repetidos"
     ]
   },
   "visual": {
@@ -102,60 +105,84 @@
       {
         "escena": 1,
         "desde_s": 0.0,
-        "hasta_s": 4.1,
-        "fuente": "pixabay",
-        "id": 180135,
-        "pagina": "https://pixabay.com/videos/id-180135/",
-        "autor": "jodywhiteley",
-        "autor_url": "https://pixabay.com/users/jodywhiteley-7660204/",
-        "licencia": "Licencia de contenido de Pixabay (uso gratuito, también comercial; https://pixabay.com/service/license-summary/)",
+        "hasta_s": 3.43,
+        "fuente": "pexels",
+        "id": 6521520,
+        "pagina": "https://www.pexels.com/video/woman-looking-at-the-cellphone-of-a-man-6521520/",
+        "autor": "Budgeron Bach",
+        "autor_url": "https://www.pexels.com/@budgeron-bach",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 2,
-        "desde_s": 4.1,
-        "hasta_s": 11.03,
+        "desde_s": 3.43,
+        "hasta_s": 6.37,
         "fuente": "pexels",
-        "id": 7199252,
-        "pagina": "https://www.pexels.com/video/woman-training-a-dog-7199252/",
-        "autor": "Blue Bird",
-        "autor_url": "https://www.pexels.com/@blue-bird",
+        "id": 6381006,
+        "pagina": "https://www.pexels.com/video/woman-talking-to-her-friend-on-coffee-6381006/",
+        "autor": "Liza Summer",
+        "autor_url": "https://www.pexels.com/@liza-summer",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 2,
+        "desde_s": 6.37,
+        "hasta_s": 8.93,
+        "fuente": "pexels",
+        "id": 13802092,
+        "pagina": "https://www.pexels.com/video/a-man-in-corporate-attire-using-his-phone-in-the-street-13802092/",
+        "autor": "Mizuno K",
+        "autor_url": "https://www.pexels.com/@mizunokozuki",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
         "escena": 3,
-        "desde_s": 11.03,
-        "hasta_s": 16.27,
+        "desde_s": 8.93,
+        "hasta_s": 12.57,
         "fuente": "pexels",
-        "id": 38794068,
-        "pagina": "https://www.pexels.com/video/dog-playing-on-sandy-beach-with-ball-38794068/",
-        "autor": "Peggy Anke",
-        "autor_url": "https://www.pexels.com/@reisefreiheit",
+        "id": 6962194,
+        "pagina": "https://www.pexels.com/video/young-people-chatting-in-bar-6962194/",
+        "autor": "Ivan S",
+        "autor_url": "https://www.pexels.com/@ivan-s",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
-        "escena": 6,
-        "desde_s": 33.07,
-        "hasta_s": 38.37,
+        "escena": 3,
+        "desde_s": 12.57,
+        "hasta_s": 15.97,
         "fuente": "pexels",
-        "id": 39417737,
-        "pagina": "https://www.pexels.com/video/happy-dog-playing-with-frisbee-in-sunny-park-39417737/",
-        "autor": "Michal Petráš",
-        "autor_url": "https://www.pexels.com/@michal-petras-2152077115",
+        "id": 6931579,
+        "pagina": "https://www.pexels.com/video/man-talking-on-the-phone-while-drinking-coffee-6931579/",
+        "autor": "Mikhail Nilov",
+        "autor_url": "https://www.pexels.com/@mikhail-nilov",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       },
       {
-        "escena": 6,
-        "desde_s": 38.37,
-        "hasta_s": 41.7,
+        "escena": 4,
+        "desde_s": 15.97,
+        "hasta_s": 21.37,
         "fuente": "pexels",
-        "id": 19059257,
-        "pagina": "https://www.pexels.com/video/two-dogs-sitting-in-the-woods-with-a-sign-that-says-we-are-the-best-dogs-19059257/",
-        "autor": "Andreas Schnabl",
-        "autor_url": "https://www.pexels.com/@andreas-schnabl-1775843",
+        "id": 6670419,
+        "pagina": "https://www.pexels.com/video/a-woman-sitting-on-the-floor-while-feeling-sad-6670419/",
+        "autor": "RDNE Stock project",
+        "autor_url": "https://www.pexels.com/@rdne",
+        "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
+        "tipo": "video"
+      },
+      {
+        "escena": 5,
+        "desde_s": 21.37,
+        "hasta_s": 27.67,
+        "fuente": "pexels",
+        "id": 7691593,
+        "pagina": "https://www.pexels.com/video/man-showing-the-screen-of-his-cellphone-7691593/",
+        "autor": "Yan Krukau",
+        "autor_url": "https://www.pexels.com/@yankrukov",
         "licencia": "Licencia de Pexels (uso gratuito, también comercial; https://www.pexels.com/license/)",
         "tipo": "video"
       }
@@ -163,25 +190,24 @@
     "sintetico": false
   },
   "animacion": {
-    "escenas_animadas": 2,
-    "escenas": [
-      4,
-      5
-    ],
+    "escenas_animadas": 0,
+    "escenas": [],
     "pedidas": [
-      4,
-      5
+      3,
+      4
     ],
-    "descartadas": {},
-    "pagina": "05_calendario/animaciones/MDS-071/animacion.html"
+    "descartadas": {
+      "3": "no hay página: falta 05_calendario/animaciones/MDS-077/animacion.html",
+      "4": "no hay página: falta 05_calendario/animaciones/MDS-077/animacion.html"
+    },
+    "pagina": "05_calendario/animaciones/MDS-077/animacion.html"
   },
   "fotogramas_s": [
-    2.56,
-    8.37,
-    14.28,
-    21.58,
-    29.91,
-    39.22
+    2.16,
+    6.83,
+    13.24,
+    19.29,
+    26.14
   ],
   "_nota": "Lo genera qa.py al final de cada producción. Sirve para que la revisión diaria pueda juzgar el vídeo leyendo el repositorio, sin credenciales y sin descargar el mp4."
 }
